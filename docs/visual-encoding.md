@@ -6,7 +6,7 @@
 
 Even when all layers are on, exact component identity always wins. Related colors are a **possible mnemonic**, not a requirement; discriminating recurring pieces is the primary purpose of the default palette. Never collapse a family into one flat color.
 
-**Current pilot:** [40-component identity palette](../palettes/mandarin-component-identity-v0.1.json), [swatch sheet](../palettes/mandarin-component-identity-v0.1.svg), and [component color policy](component-color-policy.md). Semantic group metadata does not promise adjacent hues.
+**Current catalog:** [513-identity full palette v0.2](../palettes/mandarin-component-identity-v0.2.json), [all-color swatch sheet](../palettes/mandarin-component-identity-v0.2.svg), [GF reference mapping](../palettes/gf0014-2009-records-v0.2.json), and [inventory caveats](complete-component-palette.md). The original [40-color pilot](../palettes/mandarin-component-identity-v0.1.json) remains intact. Semantic group metadata does not promise adjacent hues.
 
 ## Distinct channels
 

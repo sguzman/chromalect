@@ -9,18 +9,20 @@ This is a sequence of **evidence gates**, not a promise to build a large applica
 - [x] Record test specimens, research questions, experiment versioning, licensing policy.
 - [x] Locate an authoritative public description of GF 0014-2009 and its limited 3,500-character scope.
 - [x] Define an **experimental** shape-variant policy and a bounded 40-component pilot inventory.
+- [x] Assign unique colors to **all 514 transcribed GF 0014 records** through a 510-key identity registry; preserve 3 extra pilot macros for 513 total colored identities.
+- [ ] Verify the transcription and the 30 descriptive forms against the official standard and obtain glyph geometry.
 - [ ] Verify each selected component and compound decomposition with an authoritative source and geometry.
 
-## Phase 1 — palette experiment [pilot assigned, still untested]
+## Phase 1 — palette experiment [full reference catalog assigned, still untested]
 
-- [x] Assign 40 unique exact colors to stable component IDs; record relations among visual variants.
-- [x] Produce a machine-readable palette, versioned sample hypotheses, and a standalone swatch sheet.
+- [x] Assign 40 unique exact colors to stable component IDs; preserve them in a 513-identity expanded catalog.
+- [x] Produce machine-readable v0.1 and v0.2 palettes, a 514-record standard index, candidate specimens, and standalone SVG swatch sheets.
 - [ ] Verify stroke geometry and produce a true component-colored compound renderer (not just a swatch).
 - [ ] Compare plain, identity-only, and independently specified semantic-family variants.
 - [ ] Test legibility, distinctions at real glyph sizes, recall, and transfer.
 - [ ] Document failure cases and iterate with **new palette versions**.
 
-**Gate:** repeatable, linguistically accurate component rendering and defensible experimental comparisons. Do not expand to thousands of components merely because official counts exist.
+**Gate:** repeatable, linguistically accurate component rendering and defensible experimental comparisons. Do not mistake complete catalog assignment for complete glyph-level rendering or learning evidence.
 
 ## Phase 2 — phonetic notation experiment [proposed]
 

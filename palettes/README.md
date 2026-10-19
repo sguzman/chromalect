@@ -12,3 +12,12 @@ The relationships in the palette are **metadata**; it is primarily a visual disc
 Versioning: references must include the palette ID and version. A distinct perceptual-distance-optimized alternative or semantics-first alternative is a new *scheme*, not a silent update to these 40 values.
 
 **Important:** a colored glyph preview needs *component geometry*; coloring a full Unicode text string character-by-character is not a valid test of component identity.
+
+## Expanded complete catalog (v0.2)
+
+- [Complete 513-identity swatch sheet](mandarin-component-identity-v0.2.svg)
+- [513 component IDs and exact colors](mandarin-component-identity-v0.2.json)
+- [514 source-standard records mapped to identities](gf0014-2009-records-v0.2.json)
+- [Full catalog details, exceptions and provenance](../docs/complete-component-palette.md)
+
+The initial 40 entries are frozen and unchanged. 30 descriptive forms are **assigned colors but have no validated drawable glyph**. Actual character-interior rendering remains future work.

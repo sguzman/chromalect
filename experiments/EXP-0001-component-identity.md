@@ -1,7 +1,7 @@
 # EXP-0001: stable component identity colors
 
-**Status:** in design, untested  
-**Current specification:** v0.2.0 (pilot assignments added 2026-10-19)  
+**Status:** palette assignment extended; still untested  
+**Current specification:** v0.3.0 (full GF reference inventory assigned 2026-10-19)  
 **Language:** Mainland Standard Mandarin, simplified Chinese  
 **Implementation:** no code or renderer
 
@@ -50,10 +50,14 @@ Within one palette version, a character such as 清 must display 氵 with its ex
 - Record identification errors, recognition time, delayed recall, new-character transfer, small-scale legibility and color-vision/accessibility failures.
 - Reject or revise assignments that repeatedly cause confusions; changing a color creates a new palette revision.
 
+## Catalog extension
+
+The [GF 0014 full reference mapping](../palettes/gf0014-2009-records-v0.2.json) and [v0.2 complete color registry](../palettes/mandarin-component-identity-v0.2.json) are documented in [the expansion report](../docs/complete-component-palette.md). Assignment coverage is now complete **for that reference list**, not for all possible historical Chinese characters.
+
 ## What has and has not happened
 
-**Completed:** frozen pilot component IDs, 40 distinct colors, optional mnemonic family tags, explicit variant relations, standalone SVG swatch inventory, and 31 candidate decomposition specimens.
+**Completed:** 40 frozen pilot IDs and colors; 513 distinct colored component identities (510 GF transcription shapes plus 3 pilot-only macro units); a complete mapping of all 514 source records to those identities; 30 explicitly flagged non-renderable descriptions; SVG swatch inventories; and 31 candidate decomposition specimens.
 
-**Not completed:** authority-backed exhaustive component inventory; verified decomposition/stroke geometry; compound-glyph color renderer; end-user study; measured performance, semantic-family control, or published learning result.
+**Not completed:** independent authority-level verification of each transcribed inventory item; verified decomposition/stroke geometry; compound-glyph color renderer; end-user study; measured performance, semantic-family control, or published learning result.
 
 The outcome remains unknown. A pretty set of swatches is not an experiment result.

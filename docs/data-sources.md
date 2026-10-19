@@ -30,3 +30,9 @@ For every third-party dataset actually adopted, record:
 **MIT applies to original Chromalect material only; it does not relicense external corpora, graphics, or fonts.** Links are informational, not permission grants.
 
 The initial research work can proceed using short independently authored and checked specimens; full corpus import is not a prerequisite.
+
+## GF 0014-2009 transcription used for v0.2
+
+A third-party [zispace/hanzi-chars-ext transcription](https://github.com/zispace/hanzi-chars-ext) at blob `3e1b8f893a5df24c92be76b05084dab964678eb1` provides 514 numbered component-form records and 441 group codes. The [Ministry of Education description](https://www.moe.gov.cn/jyb_xwfb/gzdt_gzdt/moe_1485/tnull_45766.html) corroborates the inventory totals, but **individual copied entries have not been manually checked against a definitive edition**. The transcription includes 30 shape descriptions (rather than rendered glyphs) and four pairs of identical visible forms.
+
+Chromalect v0.2 records factual component-form identifiers, row numbers and group numbers plus its own color mappings; it does **not** import the transcription's example words or descriptions. Upstream data rights remain to be verified before redistributing an integrated dataset package. See [complete catalog documentation](complete-component-palette.md).

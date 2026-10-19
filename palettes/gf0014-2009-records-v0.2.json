@@ -1,0 +1,4136 @@
+{
+  "schema": "chromalect.GF0014-reference.v0",
+  "standard": "GF 0014-2009",
+  "status": "third-party transcription; not authoritative verified source",
+  "palette_ref": "mandarin-component-identity@0.2.0",
+  "counts": {
+    "rows": 514,
+    "groups": 441,
+    "unique_form_ids": 510,
+    "duplicate_form_rows": 4,
+    "non_glyph_description_rows": 30
+  },
+  "provenance": {
+    "gf0014_standard": "GF 0014-2009, Modern Common Chinese Character Components and Component Names",
+    "official_summary_url": "https://www.moe.gov.cn/jyb_xwfb/gzdt_gzdt/moe_1485/tnull_45766.html",
+    "transcription_repository": "https://github.com/zispace/hanzi-chars-ext",
+    "transcription_path": "汉字部件/GF 0014-2009《现代常用字部件及部件名称规范》-现代常用字部件表.txt",
+    "transcription_blob_sha": "3e1b8f893a5df24c92be76b05084dab964678eb1",
+    "caution": "Third-party transcription contains explicitly noted OCR errors in example data (not redistributed here), duplicate visible forms, 30 non-Unicode brace-delimited descriptions and rare characters. Catalog is not certified against the original publication. Licensing of upstream standard/transcription needs independent verification."
+  },
+  "note": "Includes only minimal component form, ordinal, official group index, stable Chromalect ID and color; component names and OCR example-character data intentionally omitted.",
+  "entries": [
+    {
+      "source_ordinal": 1,
+      "source_group": 1,
+      "component_id": "cmp-0041",
+      "form": "卬",
+      "color": "#79393F",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 2,
+      "source_group": 2,
+      "component_id": "cmp-0042",
+      "form": "凹",
+      "color": "#5921B6",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 3,
+      "source_group": 3,
+      "component_id": "cmp-0043",
+      "form": "𫠤",
+      "color": "#801680",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 4,
+      "source_group": 4,
+      "component_id": "cmp-0044",
+      "form": "{⿱丿𭁨}",
+      "color": "#51457D",
+      "form_type": "descriptive_nonfont_expression"
+    },
+    {
+      "source_ordinal": 5,
+      "source_group": 5,
+      "component_id": "cmp-0045",
+      "form": "八",
+      "color": "#585202",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 6,
+      "source_group": 5,
+      "component_id": "cmp-0046",
+      "form": "丷",
+      "color": "#0232D0",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 7,
+      "source_group": 6,
+      "component_id": "cmp-0047",
+      "form": "巴",
+      "color": "#18827B",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 8,
+      "source_group": 7,
+      "component_id": "cmp-0048",
+      "form": "白",
+      "color": "#066482",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 9,
+      "source_group": 8,
+      "component_id": "cmp-0049",
+      "form": "百",
+      "color": "#0EA6C8",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 10,
+      "source_group": 9,
+      "component_id": "cmp-0050",
+      "form": "{⿱一丰}",
+      "color": "#952C63",
+      "form_type": "descriptive_nonfont_expression"
+    },
+    {
+      "source_ordinal": 11,
+      "source_group": 10,
+      "component_id": "cmp-0051",
+      "form": "办",
+      "color": "#A586C0",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 12,
+      "source_group": 11,
+      "component_id": "cmp-0052",
+      "form": "半",
+      "color": "#924F54",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 13,
+      "source_group": 12,
+      "component_id": "cmp-0035",
+      "form": "宀",
+      "color": "#D95AF5",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 14,
+      "source_group": 13,
+      "component_id": "cmp-0053",
+      "form": "卑",
+      "color": "#9D300F",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 15,
+      "source_group": 14,
+      "component_id": "cmp-0054",
+      "form": "贝",
+      "color": "#7F4D20",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 16,
+      "source_group": 15,
+      "component_id": "cmp-0055",
+      "form": "卄",
+      "color": "#811FAD",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 17,
+      "source_group": 16,
+      "component_id": "cmp-0056",
+      "form": "本",
+      "color": "#029AFD",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 18,
+      "source_group": 17,
+      "component_id": "cmp-0057",
+      "form": "丌",
+      "color": "#5449AA",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 19,
+      "source_group": 18,
+      "component_id": "cmp-0058",
+      "form": "匕",
+      "color": "#784771",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 20,
+      "source_group": 18,
+      "component_id": "cmp-0059",
+      "form": "{⿰二丨}",
+      "color": "#045F42",
+      "form_type": "descriptive_nonfont_expression"
+    },
+    {
+      "source_ordinal": 21,
+      "source_group": 19,
+      "component_id": "cmp-0060",
+      "form": "必",
+      "color": "#AC685F",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 22,
+      "source_group": 20,
+      "component_id": "cmp-0061",
+      "form": "㡀",
+      "color": "#65A864",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 23,
+      "source_group": 21,
+      "component_id": "cmp-0062",
+      "form": "釆",
+      "color": "#1B4F90",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 24,
+      "source_group": 22,
+      "component_id": "cmp-0063",
+      "form": "丙",
+      "color": "#4E2FDB",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 25,
+      "source_group": 23,
+      "component_id": "cmp-0064",
+      "form": "秉",
+      "color": "#BC8C30",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 26,
+      "source_group": 24,
+      "component_id": "cmp-0065",
+      "form": "疒",
+      "color": "#6E3FD1",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 27,
+      "source_group": 25,
+      "component_id": "cmp-0066",
+      "form": "卜",
+      "color": "#E26C5F",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 28,
+      "source_group": 25,
+      "component_id": "cmp-0067",
+      "form": "⺊",
+      "color": "#67318D",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 29,
+      "source_group": 26,
+      "component_id": "cmp-0068",
+      "form": "不",
+      "color": "#A70F3F",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 30,
+      "source_group": 27,
+      "component_id": "cmp-0069",
+      "form": "才",
+      "color": "#396FC8",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 31,
+      "source_group": 28,
+      "component_id": "cmp-0070",
+      "form": "{⿻[:-1]艹日}",
+      "color": "#2840B0",
+      "form_type": "descriptive_nonfont_expression"
+    },
+    {
+      "source_ordinal": 32,
+      "source_group": 29,
+      "component_id": "cmp-0010",
+      "form": "艹",
+      "color": "#178529",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 33,
+      "source_group": 30,
+      "component_id": "cmp-0071",
+      "form": "册",
+      "color": "#6A7AB3",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 34,
+      "source_group": 30,
+      "component_id": "cmp-0072",
+      "form": "𠕁",
+      "color": "#6C6AE4",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 35,
+      "source_group": 30,
+      "component_id": "cmp-0073",
+      "form": "{⿻〢𠔼}",
+      "color": "#476699",
+      "form_type": "descriptive_nonfont_expression"
+    },
+    {
+      "source_ordinal": 36,
+      "source_group": 31,
+      "component_id": "cmp-0074",
+      "form": "{⿱丷⿴囗⺌}",
+      "color": "#A56787",
+      "form_type": "descriptive_nonfont_expression"
+    },
+    {
+      "source_ordinal": 37,
+      "source_group": 32,
+      "component_id": "cmp-0075",
+      "form": "叉",
+      "color": "#B471E9",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 38,
+      "source_group": 33,
+      "component_id": "cmp-0076",
+      "form": "产",
+      "color": "#7C631F",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 39,
+      "source_group": 34,
+      "component_id": "cmp-0077",
+      "form": "长",
+      "color": "#2357DC",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 40,
+      "source_group": 35,
+      "component_id": "cmp-0078",
+      "form": "厂",
+      "color": "#C677AC",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 41,
+      "source_group": 36,
+      "component_id": "cmp-0032",
+      "form": "车",
+      "color": "#6863B1",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 42,
+      "source_group": 37,
+      "component_id": "cmp-0079",
+      "form": "臣",
+      "color": "#DB59CD",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 43,
+      "source_group": 37,
+      "component_id": "cmp-0080",
+      "form": "〢",
+      "color": "#9C25A8",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 44,
+      "source_group": 38,
+      "component_id": "cmp-0081",
+      "form": "辰",
+      "color": "#DE4F74",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 45,
+      "source_group": 39,
+      "component_id": "cmp-0082",
+      "form": "丞",
+      "color": "#2E5E0C",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 46,
+      "source_group": 40,
+      "component_id": "cmp-0083",
+      "form": "承",
+      "color": "#3799A2",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 47,
+      "source_group": 41,
+      "component_id": "cmp-0084",
+      "form": "尺",
+      "color": "#C78076",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 48,
+      "source_group": 42,
+      "component_id": "cmp-0085",
+      "form": "斥",
+      "color": "#B74CAC",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 49,
+      "source_group": 43,
+      "component_id": "cmp-0086",
+      "form": "赤",
+      "color": "#C545E0",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 50,
+      "source_group": 44,
+      "component_id": "cmp-0087",
+      "form": "虫",
+      "color": "#69AB14",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 51,
+      "source_group": 45,
+      "component_id": "cmp-0088",
+      "form": "丑",
+      "color": "#DF33B5",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 52,
+      "source_group": 46,
+      "component_id": "cmp-0089",
+      "form": "出",
+      "color": "#468157",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 53,
+      "source_group": 47,
+      "component_id": "cmp-0090",
+      "form": "川",
+      "color": "#7413C9",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 54,
+      "source_group": 47,
+      "component_id": "cmp-0091",
+      "form": "𫶧",
+      "color": "#AA5069",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 55,
+      "source_group": 47,
+      "component_id": "cmp-0092",
+      "form": "巛",
+      "color": "#349516",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 56,
+      "source_group": 48,
+      "component_id": "cmp-0093",
+      "form": "串",
+      "color": "#901C2B",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 57,
+      "source_group": 49,
+      "component_id": "cmp-0094",
+      "form": "垂",
+      "color": "#715890",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 58,
+      "source_group": 50,
+      "component_id": "cmp-0095",
+      "form": "𡗗",
+      "color": "#F92725",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 59,
+      "source_group": 51,
+      "component_id": "cmp-0096",
+      "form": "朿",
+      "color": "#0EA361",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 60,
+      "source_group": 52,
+      "component_id": "cmp-0097",
+      "form": "匆",
+      "color": "#267C98",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 61,
+      "source_group": 53,
+      "component_id": "cmp-0098",
+      "form": "囱",
+      "color": "#833407",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 62,
+      "source_group": 54,
+      "component_id": "cmp-0099",
+      "form": "寸",
+      "color": "#B60372",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 63,
+      "source_group": 55,
+      "component_id": "cmp-0100",
+      "form": "大",
+      "color": "#18936A",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 64,
+      "source_group": 56,
+      "component_id": "cmp-0101",
+      "form": "歹",
+      "color": "#793064",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 65,
+      "source_group": 56,
+      "component_id": "cmp-0102",
+      "form": "歺",
+      "color": "#8F5DD6",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 66,
+      "source_group": 57,
+      "component_id": "cmp-0103",
+      "form": "卅",
+      "color": "#8D8ADC",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 67,
+      "source_group": 58,
+      "component_id": "cmp-0104",
+      "form": "丹",
+      "color": "#82813E",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 68,
+      "source_group": 59,
+      "component_id": "cmp-0105",
+      "form": "单",
+      "color": "#5B7FF5",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 69,
+      "source_group": 60,
+      "component_id": "cmp-0106",
+      "form": "刀",
+      "color": "#CC369B",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 70,
+      "source_group": 60,
+      "component_id": "cmp-0046",
+      "form": "丷",
+      "color": "#0232D0",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 71,
+      "source_group": 60,
+      "component_id": "cmp-0107",
+      "form": "{⿹勹丿}",
+      "color": "#A88147",
+      "form_type": "descriptive_nonfont_expression"
+    },
+    {
+      "source_ordinal": 72,
+      "source_group": 60,
+      "component_id": "cmp-0108",
+      "form": "刂",
+      "color": "#FC4E51",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 73,
+      "source_group": 61,
+      "component_id": "cmp-0109",
+      "form": "癶",
+      "color": "#C6515E",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 74,
+      "source_group": 62,
+      "component_id": "cmp-0110",
+      "form": "{⿳亠丷冖}",
+      "color": "#5D996E",
+      "form_type": "descriptive_nonfont_expression"
+    },
+    {
+      "source_ordinal": 75,
+      "source_group": 63,
+      "component_id": "cmp-0111",
+      "form": "弟",
+      "color": "#4F54CA",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 76,
+      "source_group": 63,
+      "component_id": "cmp-0112",
+      "form": "𢎨",
+      "color": "#6E9923",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 77,
+      "source_group": 64,
+      "component_id": "cmp-0113",
+      "form": "丶",
+      "color": "#4C6429",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 78,
+      "source_group": 65,
+      "component_id": "cmp-0114",
+      "form": "电",
+      "color": "#823689",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 79,
+      "source_group": 66,
+      "component_id": "cmp-0115",
+      "form": "刁",
+      "color": "#D01E1C",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 80,
+      "source_group": 67,
+      "component_id": "cmp-0116",
+      "form": "丁",
+      "color": "#AA24C5",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 81,
+      "source_group": 68,
+      "component_id": "cmp-0117",
+      "form": "鼎",
+      "color": "#A93755",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 82,
+      "source_group": 69,
+      "component_id": "cmp-0118",
+      "form": "夂",
+      "color": "#8F0161",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 83,
+      "source_group": 70,
+      "component_id": "cmp-0119",
+      "form": "东",
+      "color": "#FC399A",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 84,
+      "source_group": 71,
+      "component_id": "cmp-0120",
+      "form": "兜",
+      "color": "#639BC9",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 85,
+      "source_group": 72,
+      "component_id": "cmp-0121",
+      "form": "斗",
+      "color": "#97048D",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 86,
+      "source_group": 73,
+      "component_id": "cmp-0122",
+      "form": "豆",
+      "color": "#B06A26",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 87,
+      "source_group": 74,
+      "component_id": "cmp-0123",
+      "form": "{⿷⿻𠂆一二}",
+      "color": "#6F4FB1",
+      "form_type": "descriptive_nonfont_expression"
+    },
+    {
+      "source_ordinal": 88,
+      "source_group": 75,
+      "component_id": "cmp-0124",
+      "form": "而",
+      "color": "#6D37AE",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 89,
+      "source_group": 76,
+      "component_id": "cmp-0125",
+      "form": "⺈",
+      "color": "#9E45ED",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 90,
+      "source_group": 77,
+      "component_id": "cmp-0024",
+      "form": "耳",
+      "color": "#A84DCD",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 91,
+      "source_group": 78,
+      "component_id": "cmp-0126",
+      "form": "二",
+      "color": "#9067FB",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 92,
+      "source_group": 79,
+      "component_id": "cmp-0127",
+      "form": "发",
+      "color": "#A775A5",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 93,
+      "source_group": 80,
+      "component_id": "cmp-0128",
+      "form": "凡",
+      "color": "#913949",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 94,
+      "source_group": 81,
+      "component_id": "cmp-0129",
+      "form": "𠂆",
+      "color": "#22765C",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 95,
+      "source_group": 82,
+      "component_id": "cmp-0130",
+      "form": "攵",
+      "color": "#1590DC",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 96,
+      "source_group": 82,
+      "component_id": "cmp-0131",
+      "form": "攴",
+      "color": "#C76A5F",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 97,
+      "source_group": 83,
+      "component_id": "cmp-0132",
+      "form": "方",
+      "color": "#6A4791",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 98,
+      "source_group": 84,
+      "component_id": "cmp-0133",
+      "form": "飞",
+      "color": "#8A7FBB",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 99,
+      "source_group": 85,
+      "component_id": "cmp-0134",
+      "form": "非",
+      "color": "#7058D2",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 100,
+      "source_group": 86,
+      "component_id": "cmp-0135",
+      "form": "丰",
+      "color": "#A26DCE",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 101,
+      "source_group": 86,
+      "component_id": "cmp-0136",
+      "form": "{⿻三丿}",
+      "color": "#DB6A98",
+      "form_type": "descriptive_nonfont_expression"
+    },
+    {
+      "source_ordinal": 102,
+      "source_group": 87,
+      "component_id": "cmp-0137",
+      "form": "风",
+      "color": "#9F4932",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 103,
+      "source_group": 87,
+      "component_id": "cmp-0138",
+      "form": "𠘨",
+      "color": "#4D558D",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 104,
+      "source_group": 88,
+      "component_id": "cmp-0139",
+      "form": "缶",
+      "color": "#235EFA",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 105,
+      "source_group": 89,
+      "component_id": "cmp-0140",
+      "form": "夫",
+      "color": "#A243AB",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 106,
+      "source_group": 90,
+      "component_id": "cmp-0141",
+      "form": "巿",
+      "color": "#8A9F60",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 107,
+      "source_group": 91,
+      "component_id": "cmp-0142",
+      "form": "弗",
+      "color": "#98456D",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 108,
+      "source_group": 92,
+      "component_id": "cmp-0143",
+      "form": "甫",
+      "color": "#48A79F",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 109,
+      "source_group": 93,
+      "component_id": "cmp-0144",
+      "form": "父",
+      "color": "#D37E07",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 110,
+      "source_group": 94,
+      "component_id": "cmp-0145",
+      "form": "丐",
+      "color": "#F32078",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 111,
+      "source_group": 95,
+      "component_id": "cmp-0146",
+      "form": "干",
+      "color": "#91A00E",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 112,
+      "source_group": 96,
+      "component_id": "cmp-0147",
+      "form": "尢",
+      "color": "#6E8FF1",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 113,
+      "source_group": 97,
+      "component_id": "cmp-0148",
+      "form": "甘",
+      "color": "#E15247",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 114,
+      "source_group": 98,
+      "component_id": "cmp-0149",
+      "form": "高",
+      "color": "#D92D6F",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 115,
+      "source_group": 99,
+      "component_id": "cmp-0150",
+      "form": "戈",
+      "color": "#866195",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 116,
+      "source_group": 100,
+      "component_id": "cmp-0151",
+      "form": "革",
+      "color": "#BE885B",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 117,
+      "source_group": 101,
+      "component_id": "cmp-0152",
+      "form": "个",
+      "color": "#BA367C",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 118,
+      "source_group": 102,
+      "component_id": "cmp-0153",
+      "form": "艮",
+      "color": "#8B1D4C",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 119,
+      "source_group": 103,
+      "component_id": "cmp-0154",
+      "form": "{⿻人⺕}",
+      "color": "#6B14AA",
+      "form_type": "descriptive_nonfont_expression"
+    },
+    {
+      "source_ordinal": 120,
+      "source_group": 104,
+      "component_id": "cmp-0155",
+      "form": "更",
+      "color": "#EA6A09",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 121,
+      "source_group": 105,
+      "component_id": "cmp-0156",
+      "form": "工",
+      "color": "#3B22CE",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 122,
+      "source_group": 106,
+      "component_id": "cmp-0157",
+      "form": "弓",
+      "color": "#2377B2",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 123,
+      "source_group": 107,
+      "component_id": "cmp-0158",
+      "form": "冎",
+      "color": "#6C4801",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 124,
+      "source_group": 108,
+      "component_id": "cmp-0159",
+      "form": "谷",
+      "color": "#BE08A5",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 125,
+      "source_group": 109,
+      "component_id": "cmp-0160",
+      "form": "瓜",
+      "color": "#3943CD",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 126,
+      "source_group": 110,
+      "component_id": "cmp-0161",
+      "form": "夬",
+      "color": "#5776D6",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 127,
+      "source_group": 111,
+      "component_id": "cmp-0162",
+      "form": "毌",
+      "color": "#C37E93",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 128,
+      "source_group": 112,
+      "component_id": "cmp-0163",
+      "form": "广",
+      "color": "#906A2F",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 129,
+      "source_group": 113,
+      "component_id": "cmp-0164",
+      "form": "龟",
+      "color": "#C361A5",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 130,
+      "source_group": 114,
+      "component_id": "cmp-0165",
+      "form": "鬼",
+      "color": "#8833C0",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 131,
+      "source_group": 115,
+      "component_id": "cmp-0166",
+      "form": "果",
+      "color": "#653E6E",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 132,
+      "source_group": 116,
+      "component_id": "cmp-0038",
+      "form": "亥",
+      "color": "#6D7607",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 133,
+      "source_group": 117,
+      "component_id": "cmp-0167",
+      "form": "𠀎",
+      "color": "#0E5E9A",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 134,
+      "source_group": 118,
+      "component_id": "cmp-0168",
+      "form": "丂",
+      "color": "#06567A",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 135,
+      "source_group": 119,
+      "component_id": "cmp-0011",
+      "form": "禾",
+      "color": "#1D7339",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 136,
+      "source_group": 120,
+      "component_id": "cmp-0169",
+      "form": "隺",
+      "color": "#86463A",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 137,
+      "source_group": 121,
+      "component_id": "cmp-0170",
+      "form": "黑",
+      "color": "#4E723C",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 138,
+      "source_group": 122,
+      "component_id": "cmp-0171",
+      "form": "一",
+      "color": "#1F6D02",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 139,
+      "source_group": 123,
+      "component_id": "cmp-0172",
+      "form": "乙",
+      "color": "#543999",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 140,
+      "source_group": 123,
+      "component_id": "cmp-0173",
+      "form": "乛",
+      "color": "#983D86",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 141,
+      "source_group": 123,
+      "component_id": "cmp-0174",
+      "form": "𠃍",
+      "color": "#4A93B6",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 142,
+      "source_group": 123,
+      "component_id": "cmp-0175",
+      "form": "𠃌",
+      "color": "#2B8B9C",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 143,
+      "source_group": 124,
+      "component_id": "cmp-0176",
+      "form": "后",
+      "color": "#B62A12",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 144,
+      "source_group": 125,
+      "component_id": "cmp-0177",
+      "form": "乎",
+      "color": "#7A70C0",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 145,
+      "source_group": 126,
+      "component_id": "cmp-0178",
+      "form": "虍",
+      "color": "#CF1745",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 146,
+      "source_group": 127,
+      "component_id": "cmp-0179",
+      "form": "互",
+      "color": "#2E8F83",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 147,
+      "source_group": 128,
+      "component_id": "cmp-0180",
+      "form": "户",
+      "color": "#B74B21",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 148,
+      "source_group": 129,
+      "component_id": "cmp-0181",
+      "form": "凵",
+      "color": "#9813BF",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 149,
+      "source_group": 130,
+      "component_id": "cmp-0182",
+      "form": "奂",
+      "color": "#DE3417",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 150,
+      "source_group": 131,
+      "component_id": "cmp-0183",
+      "form": "黄",
+      "color": "#603BE6",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 151,
+      "source_group": 132,
+      "component_id": "cmp-0184",
+      "form": "{⿱⿻十日⿰一丶}",
+      "color": "#C94EC8",
+      "form_type": "descriptive_nonfont_expression"
+    },
+    {
+      "source_ordinal": 152,
+      "source_group": 133,
+      "component_id": "cmp-0005",
+      "form": "火",
+      "color": "#EA5202",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 153,
+      "source_group": 133,
+      "component_id": "cmp-0006",
+      "form": "灬",
+      "color": "#C75615",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 154,
+      "source_group": 134,
+      "component_id": "cmp-0185",
+      "form": "击",
+      "color": "#A69552",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 155,
+      "source_group": 135,
+      "component_id": "cmp-0186",
+      "form": "及",
+      "color": "#7346F1",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 156,
+      "source_group": 136,
+      "component_id": "cmp-0187",
+      "form": "{⿸𢀳丶}",
+      "color": "#EA2998",
+      "form_type": "descriptive_nonfont_expression"
+    },
+    {
+      "source_ordinal": 157,
+      "source_group": 137,
+      "component_id": "cmp-0188",
+      "form": "几",
+      "color": "#5063D9",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 158,
+      "source_group": 138,
+      "component_id": "cmp-0189",
+      "form": "己",
+      "color": "#70570F",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 159,
+      "source_group": 138,
+      "component_id": "cmp-0190",
+      "form": "已",
+      "color": "#E1697C",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 160,
+      "source_group": 138,
+      "component_id": "cmp-0191",
+      "form": "{⿰𠄌丶}",
+      "color": "#2C7FD3",
+      "form_type": "descriptive_nonfont_expression"
+    },
+    {
+      "source_ordinal": 161,
+      "source_group": 138,
+      "component_id": "cmp-0192",
+      "form": "巳",
+      "color": "#8E5632",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 162,
+      "source_group": 139,
+      "component_id": "cmp-0193",
+      "form": "旡",
+      "color": "#AD524E",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 163,
+      "source_group": 140,
+      "component_id": "cmp-0194",
+      "form": "夹",
+      "color": "#A6619D",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 164,
+      "source_group": 141,
+      "component_id": "cmp-0195",
+      "form": "甲",
+      "color": "#844D90",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 165,
+      "source_group": 142,
+      "component_id": "cmp-0196",
+      "form": "叚",
+      "color": "#9E5F48",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 166,
+      "source_group": 143,
+      "component_id": "cmp-0197",
+      "form": "兼",
+      "color": "#037287",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 167,
+      "source_group": 144,
+      "component_id": "cmp-0198",
+      "form": "柬",
+      "color": "#5D35C6",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 168,
+      "source_group": 144,
+      "component_id": "cmp-0199",
+      "form": "𫠣",
+      "color": "#993EC8",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 169,
+      "source_group": 145,
+      "component_id": "cmp-0200",
+      "form": "廴",
+      "color": "#8B81FE",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 170,
+      "source_group": 146,
+      "component_id": "cmp-0201",
+      "form": "见",
+      "color": "#5771A6",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 171,
+      "source_group": 147,
+      "component_id": "cmp-0202",
+      "form": "纟",
+      "color": "#DA62B7",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 172,
+      "source_group": 148,
+      "component_id": "cmp-0203",
+      "form": "糸",
+      "color": "#3752AE",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 173,
+      "source_group": 149,
+      "component_id": "cmp-0204",
+      "form": "角",
+      "color": "#29B06D",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 174,
+      "source_group": 149,
+      "component_id": "cmp-0205",
+      "form": "卩",
+      "color": "#60A682",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 175,
+      "source_group": 149,
+      "component_id": "cmp-0206",
+      "form": "𰆊",
+      "color": "#0C42DE",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 176,
+      "source_group": 150,
+      "component_id": "cmp-0207",
+      "form": "㔾",
+      "color": "#3F4790",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 177,
+      "source_group": 151,
+      "component_id": "cmp-0208",
+      "form": "疌",
+      "color": "#13954E",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 178,
+      "source_group": 152,
+      "component_id": "cmp-0209",
+      "form": "巾",
+      "color": "#B358E3",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 179,
+      "source_group": 153,
+      "component_id": "cmp-0210",
+      "form": "斤",
+      "color": "#B239DA",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 180,
+      "source_group": 154,
+      "component_id": "cmp-0211",
+      "form": "今",
+      "color": "#508135",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 181,
+      "source_group": 154,
+      "component_id": "cmp-0028",
+      "form": "金",
+      "color": "#5D8D40",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 182,
+      "source_group": 154,
+      "component_id": "cmp-0029",
+      "form": "钅",
+      "color": "#BA3E3C",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 183,
+      "source_group": 155,
+      "component_id": "cmp-0212",
+      "form": "堇",
+      "color": "#566AF7",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 184,
+      "source_group": 156,
+      "component_id": "cmp-0213",
+      "form": "京",
+      "color": "#216A49",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 185,
+      "source_group": 157,
+      "component_id": "cmp-0214",
+      "form": "井",
+      "color": "#B75C75",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 186,
+      "source_group": 158,
+      "component_id": "cmp-0215",
+      "form": "丩",
+      "color": "#D2643C",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 187,
+      "source_group": 159,
+      "component_id": "cmp-0216",
+      "form": "九",
+      "color": "#804ADB",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 188,
+      "source_group": 160,
+      "component_id": "cmp-0217",
+      "form": "久",
+      "color": "#106BA5",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 189,
+      "source_group": 161,
+      "component_id": "cmp-0218",
+      "form": "韭",
+      "color": "#86517A",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 190,
+      "source_group": 162,
+      "component_id": "cmp-0219",
+      "form": "臼",
+      "color": "#7E9354",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 191,
+      "source_group": 163,
+      "component_id": "cmp-0220",
+      "form": "𰀁",
+      "color": "#8C3BAA",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 192,
+      "source_group": 164,
+      "component_id": "cmp-0221",
+      "form": "勹",
+      "color": "#985B7B",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 193,
+      "source_group": 165,
+      "component_id": "cmp-0222",
+      "form": "巨",
+      "color": "#961E7A",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 194,
+      "source_group": 166,
+      "component_id": "cmp-0223",
+      "form": "乑",
+      "color": "#C55AFD",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 195,
+      "source_group": 167,
+      "component_id": "cmp-0224",
+      "form": "具",
+      "color": "#397804",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 196,
+      "source_group": 168,
+      "component_id": "cmp-0225",
+      "form": "龹",
+      "color": "#CD5D8C",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 197,
+      "source_group": 169,
+      "component_id": "cmp-0226",
+      "form": "卡",
+      "color": "#B976D3",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 198,
+      "source_group": 170,
+      "component_id": "cmp-0227",
+      "form": "开",
+      "color": "#3188F3",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 199,
+      "source_group": 171,
+      "component_id": "cmp-0116",
+      "form": "丁",
+      "color": "#AA24C5",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 200,
+      "source_group": 172,
+      "component_id": "cmp-0020",
+      "form": "口",
+      "color": "#DB3649",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 201,
+      "source_group": 173,
+      "component_id": "cmp-0228",
+      "form": "来",
+      "color": "#727EE2",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 202,
+      "source_group": 174,
+      "component_id": "cmp-0229",
+      "form": "老",
+      "color": "#A3861D",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 203,
+      "source_group": 174,
+      "component_id": "cmp-0230",
+      "form": "耂",
+      "color": "#B12562",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 204,
+      "source_group": 175,
+      "component_id": "cmp-0231",
+      "form": "乐",
+      "color": "#129FE7",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 205,
+      "source_group": 176,
+      "component_id": "cmp-0232",
+      "form": "耒",
+      "color": "#7E732E",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 206,
+      "source_group": 177,
+      "component_id": "cmp-0233",
+      "form": "禸",
+      "color": "#A91515",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 207,
+      "source_group": 178,
+      "component_id": "cmp-0234",
+      "form": "里",
+      "color": "#A47DE3",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 208,
+      "source_group": 179,
+      "component_id": "cmp-0040",
+      "form": "力",
+      "color": "#9130DB",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 209,
+      "source_group": 180,
+      "component_id": "cmp-0235",
+      "form": "立",
+      "color": "#4F5FAA",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 210,
+      "source_group": 181,
+      "component_id": "cmp-0236",
+      "form": "吏",
+      "color": "#AB4787",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 211,
+      "source_group": 182,
+      "component_id": "cmp-0237",
+      "form": "丽",
+      "color": "#27B24F",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 212,
+      "source_group": 183,
+      "component_id": "cmp-0238",
+      "form": "隶",
+      "color": "#7B5BBE",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 213,
+      "source_group": 184,
+      "component_id": "cmp-0239",
+      "form": "鬲",
+      "color": "#7F29D7",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 214,
+      "source_group": 185,
+      "component_id": "cmp-0003",
+      "form": "冫",
+      "color": "#2A76F1",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 215,
+      "source_group": 185,
+      "component_id": "cmp-0240",
+      "form": "⺀",
+      "color": "#A72B7F",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 216,
+      "source_group": 186,
+      "component_id": "cmp-0241",
+      "form": "两",
+      "color": "#A31257",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 217,
+      "source_group": 187,
+      "component_id": "cmp-0242",
+      "form": "𡗜",
+      "color": "#82445C",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 218,
+      "source_group": 188,
+      "component_id": "cmp-0243",
+      "form": "了",
+      "color": "#4A35AC",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 219,
+      "source_group": 189,
+      "component_id": "cmp-0244",
+      "form": "{⿱𠂉丶}",
+      "color": "#8F410E",
+      "form_type": "descriptive_nonfont_expression"
+    },
+    {
+      "source_ordinal": 220,
+      "source_group": 190,
+      "component_id": "cmp-0245",
+      "form": "𫩏",
+      "color": "#B62538",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 221,
+      "source_group": 191,
+      "component_id": "cmp-0246",
+      "form": "六",
+      "color": "#3BB212",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 222,
+      "source_group": 192,
+      "component_id": "cmp-0247",
+      "form": "龙",
+      "color": "#A45CB4",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 223,
+      "source_group": 193,
+      "component_id": "cmp-0248",
+      "form": "卤",
+      "color": "#741F90",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 224,
+      "source_group": 194,
+      "component_id": "cmp-0249",
+      "form": "彐",
+      "color": "#568C5E",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 225,
+      "source_group": 195,
+      "component_id": "cmp-0250",
+      "form": "鹿",
+      "color": "#8292CD",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 226,
+      "source_group": 196,
+      "component_id": "cmp-0251",
+      "form": "𧘇",
+      "color": "#6057E7",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 227,
+      "source_group": 197,
+      "component_id": "cmp-0252",
+      "form": "卵",
+      "color": "#B86243",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 228,
+      "source_group": 198,
+      "component_id": "cmp-0253",
+      "form": "仑",
+      "color": "#EE633E",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 229,
+      "source_group": 199,
+      "component_id": "cmp-0254",
+      "form": "罒",
+      "color": "#743955",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 230,
+      "source_group": 200,
+      "component_id": "cmp-0033",
+      "form": "马",
+      "color": "#8D77E5",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 231,
+      "source_group": 201,
+      "component_id": "cmp-0255",
+      "form": "毛",
+      "color": "#B3728F",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 232,
+      "source_group": 202,
+      "component_id": "cmp-0256",
+      "form": "矛",
+      "color": "#609B53",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 233,
+      "source_group": 203,
+      "component_id": "cmp-0257",
+      "form": "卯",
+      "color": "#B8765F",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 234,
+      "source_group": 203,
+      "component_id": "cmp-0258",
+      "form": "{⿰𱍸刀}",
+      "color": "#676B27",
+      "form_type": "descriptive_nonfont_expression"
+    },
+    {
+      "source_ordinal": 235,
+      "source_group": 204,
+      "component_id": "cmp-0259",
+      "form": "冃",
+      "color": "#CB60E3",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 236,
+      "source_group": 205,
+      "component_id": "cmp-0260",
+      "form": "么",
+      "color": "#5082B0",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 237,
+      "source_group": 206,
+      "component_id": "cmp-0261",
+      "form": "𠃜",
+      "color": "#ED3E51",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 238,
+      "source_group": 207,
+      "component_id": "cmp-0034",
+      "form": "门",
+      "color": "#A3591C",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 239,
+      "source_group": 208,
+      "component_id": "cmp-0262",
+      "form": "米",
+      "color": "#9E743C",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 240,
+      "source_group": 209,
+      "component_id": "cmp-0263",
+      "form": "免",
+      "color": "#B97276",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 241,
+      "source_group": 210,
+      "component_id": "cmp-0264",
+      "form": "面",
+      "color": "#51A015",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 242,
+      "source_group": 211,
+      "component_id": "cmp-0265",
+      "form": "民",
+      "color": "#8571AB",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 243,
+      "source_group": 212,
+      "component_id": "cmp-0266",
+      "form": "皿",
+      "color": "#D45D6A",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 244,
+      "source_group": 213,
+      "component_id": "cmp-0267",
+      "form": "末",
+      "color": "#9E2B36",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 245,
+      "source_group": 214,
+      "component_id": "cmp-0268",
+      "form": "母",
+      "color": "#D37A5B",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 246,
+      "source_group": 215,
+      "component_id": "cmp-0009",
+      "form": "木",
+      "color": "#05A92E",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 247,
+      "source_group": 216,
+      "component_id": "cmp-0023",
+      "form": "目",
+      "color": "#8B4EB3",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 248,
+      "source_group": 217,
+      "component_id": "cmp-0269",
+      "form": "𭃂",
+      "color": "#C65440",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 249,
+      "source_group": 218,
+      "component_id": "cmp-0270",
+      "form": "乃",
+      "color": "#677A3D",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 250,
+      "source_group": 219,
+      "component_id": "cmp-0271",
+      "form": "南",
+      "color": "#527DC4",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 251,
+      "source_group": 220,
+      "component_id": "cmp-0272",
+      "form": "{⿱𰀉冖}",
+      "color": "#873B6B",
+      "form_type": "descriptive_nonfont_expression"
+    },
+    {
+      "source_ordinal": 252,
+      "source_group": 221,
+      "component_id": "cmp-0273",
+      "form": "内",
+      "color": "#7287C0",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 253,
+      "source_group": 222,
+      "component_id": "cmp-0274",
+      "form": "屰",
+      "color": "#C96FBE",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 254,
+      "source_group": 223,
+      "component_id": "cmp-0275",
+      "form": "年",
+      "color": "#815EAA",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 255,
+      "source_group": 224,
+      "component_id": "cmp-0276",
+      "form": "廿",
+      "color": "#E946CC",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 256,
+      "source_group": 225,
+      "component_id": "cmp-0277",
+      "form": "鸟",
+      "color": "#9B6AE4",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 257,
+      "source_group": 225,
+      "component_id": "cmp-0278",
+      "form": "{⿱丿⿴#(-𠃌㇉)丶}",
+      "color": "#587110",
+      "form_type": "descriptive_nonfont_expression"
+    },
+    {
+      "source_ordinal": 258,
+      "source_group": 226,
+      "component_id": "cmp-0279",
+      "form": "牛",
+      "color": "#B8445A",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 259,
+      "source_group": 226,
+      "component_id": "cmp-0280",
+      "form": "𠂒",
+      "color": "#A571BA",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 260,
+      "source_group": 227,
+      "component_id": "cmp-0281",
+      "form": "农",
+      "color": "#638D0D",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 261,
+      "source_group": 228,
+      "component_id": "cmp-0282",
+      "form": "廾",
+      "color": "#B97BBF",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 262,
+      "source_group": 228,
+      "component_id": "cmp-0283",
+      "form": "{⿱一八}",
+      "color": "#D120A9",
+      "form_type": "descriptive_nonfont_expression"
+    },
+    {
+      "source_ordinal": 263,
+      "source_group": 229,
+      "component_id": "cmp-0014",
+      "form": "女",
+      "color": "#DE0784",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 264,
+      "source_group": 230,
+      "component_id": "cmp-0284",
+      "form": "爿",
+      "color": "#CB6C0F",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 265,
+      "source_group": 230,
+      "component_id": "cmp-0285",
+      "form": "丬",
+      "color": "#A91A92",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 266,
+      "source_group": 231,
+      "component_id": "cmp-0286",
+      "form": "皮",
+      "color": "#DE4DDE",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 267,
+      "source_group": 232,
+      "component_id": "cmp-0287",
+      "form": "片",
+      "color": "#1368E9",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 268,
+      "source_group": 233,
+      "component_id": "cmp-0288",
+      "form": "丿",
+      "color": "#E852B4",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 269,
+      "source_group": 234,
+      "component_id": "cmp-0289",
+      "form": "乒",
+      "color": "#C956B2",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 270,
+      "source_group": 234,
+      "component_id": "cmp-0290",
+      "form": "乓",
+      "color": "#661FD2",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 271,
+      "source_group": 235,
+      "component_id": "cmp-0291",
+      "form": "平",
+      "color": "#EA0413",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 272,
+      "source_group": 236,
+      "component_id": "cmp-0292",
+      "form": "七",
+      "color": "#E63E84",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 273,
+      "source_group": 237,
+      "component_id": "cmp-0293",
+      "form": "妻",
+      "color": "#852F28",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 274,
+      "source_group": 238,
+      "component_id": "cmp-0294",
+      "form": "其",
+      "color": "#817ECF",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 275,
+      "source_group": 239,
+      "component_id": "cmp-0295",
+      "form": "气",
+      "color": "#9F5B5F",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 276,
+      "source_group": 240,
+      "component_id": "cmp-0296",
+      "form": "千",
+      "color": "#FA4C72",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 277,
+      "source_group": 241,
+      "component_id": "cmp-0297",
+      "form": "䒑",
+      "color": "#364E81",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 278,
+      "source_group": 242,
+      "component_id": "cmp-0298",
+      "form": "戋",
+      "color": "#D57576",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 279,
+      "source_group": 243,
+      "component_id": "cmp-0299",
+      "form": "欠",
+      "color": "#654CC5",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 280,
+      "source_group": 244,
+      "component_id": "cmp-0300",
+      "form": "{⿰丿丨}",
+      "color": "#7D42B8",
+      "form_type": "descriptive_nonfont_expression"
+    },
+    {
+      "source_ordinal": 281,
+      "source_group": 245,
+      "component_id": "cmp-0301",
+      "form": "且",
+      "color": "#B681AE",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 282,
+      "source_group": 246,
+      "component_id": "cmp-0302",
+      "form": "龶",
+      "color": "#48A4B5",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 283,
+      "source_group": 247,
+      "component_id": "cmp-0303",
+      "form": "𢀖",
+      "color": "#D53AC8",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 284,
+      "source_group": 248,
+      "component_id": "cmp-0304",
+      "form": "丘",
+      "color": "#968A47",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 285,
+      "source_group": 249,
+      "component_id": "cmp-0305",
+      "form": "求",
+      "color": "#B643C2",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 286,
+      "source_group": 250,
+      "component_id": "cmp-0306",
+      "form": "匚",
+      "color": "#EF5D66",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 287,
+      "source_group": 251,
+      "component_id": "cmp-0307",
+      "form": "曲",
+      "color": "#6363C6",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 288,
+      "source_group": 252,
+      "component_id": "cmp-0308",
+      "form": "去",
+      "color": "#993499",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 289,
+      "source_group": 253,
+      "component_id": "cmp-0309",
+      "form": "犬",
+      "color": "#76401B",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 290,
+      "source_group": 253,
+      "component_id": "cmp-0310",
+      "form": "犭",
+      "color": "#752A7D",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 291,
+      "source_group": 254,
+      "component_id": "cmp-0311",
+      "form": "冉",
+      "color": "#8000BE",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 292,
+      "source_group": 255,
+      "component_id": "cmp-0012",
+      "form": "人",
+      "color": "#C04E8A",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 293,
+      "source_group": 255,
+      "component_id": "cmp-0013",
+      "form": "亻",
+      "color": "#DF4B9D",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 294,
+      "source_group": 255,
+      "component_id": "cmp-0312",
+      "form": "儿",
+      "color": "#B260D1",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 295,
+      "source_group": 255,
+      "component_id": "cmp-0125",
+      "form": "⺈",
+      "color": "#9E45ED",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 296,
+      "source_group": 255,
+      "component_id": "cmp-0313",
+      "form": "𠂉",
+      "color": "#AE32AE",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 297,
+      "source_group": 256,
+      "component_id": "cmp-0314",
+      "form": "壬",
+      "color": "#68A945",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 298,
+      "source_group": 257,
+      "component_id": "cmp-0315",
+      "form": "刃",
+      "color": "#7367A2",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 299,
+      "source_group": 258,
+      "component_id": "cmp-0007",
+      "form": "日",
+      "color": "#C67544",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 300,
+      "source_group": 258,
+      "component_id": "cmp-0316",
+      "form": "曰",
+      "color": "#8C57E9",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 301,
+      "source_group": 259,
+      "component_id": "cmp-0317",
+      "form": "入",
+      "color": "#7A8523",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 302,
+      "source_group": 260,
+      "component_id": "cmp-0318",
+      "form": "三",
+      "color": "#B26BFC",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 303,
+      "source_group": 261,
+      "component_id": "cmp-0319",
+      "form": "伞",
+      "color": "#304CEC",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 304,
+      "source_group": 262,
+      "component_id": "cmp-0320",
+      "form": "{⿻土丷}",
+      "color": "#842B98",
+      "form_type": "descriptive_nonfont_expression"
+    },
+    {
+      "source_ordinal": 305,
+      "source_group": 263,
+      "component_id": "cmp-0321",
+      "form": "色",
+      "color": "#3860BB",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 306,
+      "source_group": 264,
+      "component_id": "cmp-0027",
+      "form": "山",
+      "color": "#C41F5F",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 307,
+      "source_group": 265,
+      "component_id": "cmp-0322",
+      "form": "彡",
+      "color": "#41591D",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 308,
+      "source_group": 266,
+      "component_id": "cmp-0323",
+      "form": "{⿳亠丷冂}",
+      "color": "#C71D75",
+      "form_type": "descriptive_nonfont_expression"
+    },
+    {
+      "source_ordinal": 309,
+      "source_group": 267,
+      "component_id": "cmp-0324",
+      "form": "上",
+      "color": "#E45EA1",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 310,
+      "source_group": 268,
+      "component_id": "cmp-0325",
+      "form": "勺",
+      "color": "#B87A2B",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 311,
+      "source_group": 269,
+      "component_id": "cmp-0326",
+      "form": "少",
+      "color": "#33AC87",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 312,
+      "source_group": 270,
+      "component_id": "cmp-0327",
+      "form": "舌",
+      "color": "#832D43",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 313,
+      "source_group": 271,
+      "component_id": "cmp-0328",
+      "form": "申",
+      "color": "#622AA1",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 314,
+      "source_group": 272,
+      "component_id": "cmp-0329",
+      "form": "身",
+      "color": "#D14160",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 315,
+      "source_group": 273,
+      "component_id": "cmp-0330",
+      "form": "升",
+      "color": "#CC4279",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 316,
+      "source_group": 274,
+      "component_id": "cmp-0331",
+      "form": "生",
+      "color": "#3035C0",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 317,
+      "source_group": 275,
+      "component_id": "cmp-0332",
+      "form": "尸",
+      "color": "#118659",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 318,
+      "source_group": 276,
+      "component_id": "cmp-0333",
+      "form": "失",
+      "color": "#5B99DD",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 319,
+      "source_group": 277,
+      "component_id": "cmp-0334",
+      "form": "十",
+      "color": "#9577C7",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 320,
+      "source_group": 278,
+      "component_id": "cmp-0026",
+      "form": "石",
+      "color": "#91922F",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 321,
+      "source_group": 279,
+      "component_id": "cmp-0335",
+      "form": "食",
+      "color": "#5B3D87",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 322,
+      "source_group": 279,
+      "component_id": "cmp-0336",
+      "form": "饣",
+      "color": "#A86D49",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 323,
+      "source_group": 280,
+      "component_id": "cmp-0337",
+      "form": "史",
+      "color": "#5649D9",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 324,
+      "source_group": 281,
+      "component_id": "cmp-0338",
+      "form": "矢",
+      "color": "#8667CB",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 325,
+      "source_group": 282,
+      "component_id": "cmp-0339",
+      "form": "豕",
+      "color": "#7461F3",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 326,
+      "source_group": 282,
+      "component_id": "cmp-0340",
+      "form": "𧰨",
+      "color": "#C969D3",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 327,
+      "source_group": 283,
+      "component_id": "cmp-0341",
+      "form": "士",
+      "color": "#8E7E0B",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 328,
+      "source_group": 284,
+      "component_id": "cmp-0342",
+      "form": "氏",
+      "color": "#B24574",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 329,
+      "source_group": 285,
+      "component_id": "cmp-0343",
+      "form": "示",
+      "color": "#604F87",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 330,
+      "source_group": 285,
+      "component_id": "cmp-0344",
+      "form": "礻",
+      "color": "#F95801",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 331,
+      "source_group": 286,
+      "component_id": "cmp-0345",
+      "form": "世",
+      "color": "#90589D",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 332,
+      "source_group": 287,
+      "component_id": "cmp-0346",
+      "form": "事",
+      "color": "#375C8C",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 333,
+      "source_group": 288,
+      "component_id": "cmp-0018",
+      "form": "手",
+      "color": "#C86B82",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 334,
+      "source_group": 288,
+      "component_id": "cmp-0019",
+      "form": "扌",
+      "color": "#FA588B",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 335,
+      "source_group": 289,
+      "component_id": "cmp-0347",
+      "form": "首",
+      "color": "#C43B10",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 336,
+      "source_group": 290,
+      "component_id": "cmp-0348",
+      "form": "殳",
+      "color": "#1C5FCB",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 337,
+      "source_group": 291,
+      "component_id": "cmp-0349",
+      "form": "书",
+      "color": "#7E49A7",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 338,
+      "source_group": 292,
+      "component_id": "cmp-0350",
+      "form": "鼠",
+      "color": "#2C93C8",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 339,
+      "source_group": 293,
+      "component_id": "cmp-0351",
+      "form": "丨",
+      "color": "#8451C9",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 340,
+      "source_group": 294,
+      "component_id": "cmp-0352",
+      "form": "𠃊",
+      "color": "#379F70",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 341,
+      "source_group": 294,
+      "component_id": "cmp-0353",
+      "form": "乚",
+      "color": "#A29834",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 342,
+      "source_group": 295,
+      "component_id": "cmp-0354",
+      "form": "术",
+      "color": "#763B96",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 343,
+      "source_group": 296,
+      "component_id": "cmp-0355",
+      "form": "束",
+      "color": "#106ED7",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 344,
+      "source_group": 297,
+      "component_id": "cmp-0356",
+      "form": "{⿻口一}",
+      "color": "#409B8B",
+      "form_type": "descriptive_nonfont_expression"
+    },
+    {
+      "source_ordinal": 345,
+      "source_group": 298,
+      "component_id": "cmp-0357",
+      "form": "甩",
+      "color": "#7777F2",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 346,
+      "source_group": 299,
+      "component_id": "cmp-0358",
+      "form": "{⿰冫⿱丿丶}",
+      "color": "#AB3A31",
+      "form_type": "descriptive_nonfont_expression"
+    },
+    {
+      "source_ordinal": 347,
+      "source_group": 300,
+      "component_id": "cmp-0359",
+      "form": "阝",
+      "color": "#D24922",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 348,
+      "source_group": 301,
+      "component_id": "cmp-0360",
+      "form": "彳",
+      "color": "#2350BE",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 349,
+      "source_group": 302,
+      "component_id": "cmp-0001",
+      "form": "水",
+      "color": "#025EB8",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 350,
+      "source_group": 302,
+      "component_id": "cmp-0002",
+      "form": "氵",
+      "color": "#1587BA",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 351,
+      "source_group": 302,
+      "component_id": "cmp-0361",
+      "form": "氺",
+      "color": "#6857A4",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 352,
+      "source_group": 302,
+      "component_id": "cmp-0362",
+      "form": "{⿱䒑八}",
+      "color": "#DF7240",
+      "form_type": "descriptive_nonfont_expression"
+    },
+    {
+      "source_ordinal": 353,
+      "source_group": 303,
+      "component_id": "cmp-0363",
+      "form": "厶",
+      "color": "#3D41A0",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 354,
+      "source_group": 304,
+      "component_id": "cmp-0364",
+      "form": "司",
+      "color": "#8E4296",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 355,
+      "source_group": 305,
+      "component_id": "cmp-0365",
+      "form": "丝",
+      "color": "#536DB7",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 356,
+      "source_group": 306,
+      "component_id": "cmp-0366",
+      "form": "四",
+      "color": "#956B9F",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 357,
+      "source_group": 307,
+      "component_id": "cmp-0367",
+      "form": "镸",
+      "color": "#594D99",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 358,
+      "source_group": 308,
+      "component_id": "cmp-0368",
+      "form": "𦥔",
+      "color": "#5087E3",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 359,
+      "source_group": 309,
+      "component_id": "cmp-0369",
+      "form": "肃",
+      "color": "#286D93",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 360,
+      "source_group": 310,
+      "component_id": "cmp-0370",
+      "form": "太",
+      "color": "#9B2A4B",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 361,
+      "source_group": 311,
+      "component_id": "cmp-0371",
+      "form": "肀",
+      "color": "#39691C",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 362,
+      "source_group": 312,
+      "component_id": "cmp-0372",
+      "form": "天",
+      "color": "#4D45BB",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 363,
+      "source_group": 313,
+      "component_id": "cmp-0039",
+      "form": "田",
+      "color": "#FB255B",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 364,
+      "source_group": 314,
+      "component_id": "cmp-0373",
+      "form": "冂",
+      "color": "#47A049",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 365,
+      "source_group": 315,
+      "component_id": "cmp-0374",
+      "form": "头",
+      "color": "#842164",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 366,
+      "source_group": 316,
+      "component_id": "cmp-0375",
+      "form": "冖",
+      "color": "#B2569F",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 367,
+      "source_group": 317,
+      "component_id": "cmp-0376",
+      "form": "凸",
+      "color": "#605E17",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 368,
+      "source_group": 318,
+      "component_id": "cmp-0025",
+      "form": "土",
+      "color": "#9E7604",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 369,
+      "source_group": 319,
+      "component_id": "cmp-0377",
+      "form": "屯",
+      "color": "#AA3F11",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 370,
+      "source_group": 320,
+      "component_id": "cmp-0378",
+      "form": "乇",
+      "color": "#154AA0",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 371,
+      "source_group": 321,
+      "component_id": "cmp-0379",
+      "form": "瓦",
+      "color": "#A24B98",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 372,
+      "source_group": 322,
+      "component_id": "cmp-0380",
+      "form": "丸",
+      "color": "#5857B9",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 373,
+      "source_group": 323,
+      "component_id": "cmp-0381",
+      "form": "万",
+      "color": "#6E884C",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 374,
+      "source_group": 324,
+      "component_id": "cmp-0382",
+      "form": "亡",
+      "color": "#8CA044",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 375,
+      "source_group": 325,
+      "component_id": "cmp-0383",
+      "form": "王",
+      "color": "#BA5E5A",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 376,
+      "source_group": 326,
+      "component_id": "cmp-0384",
+      "form": "囗",
+      "color": "#3CA0D5",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 377,
+      "source_group": 327,
+      "component_id": "cmp-0385",
+      "form": "韦",
+      "color": "#8E4F68",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 378,
+      "source_group": 328,
+      "component_id": "cmp-0386",
+      "form": "卫",
+      "color": "#3739DE",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 379,
+      "source_group": 329,
+      "component_id": "cmp-0387",
+      "form": "𰀠",
+      "color": "#ED4428",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 380,
+      "source_group": 330,
+      "component_id": "cmp-0388",
+      "form": "为",
+      "color": "#D36CAC",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 381,
+      "source_group": 331,
+      "component_id": "cmp-0389",
+      "form": "未",
+      "color": "#7E3F7C",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 382,
+      "source_group": 332,
+      "component_id": "cmp-0390",
+      "form": "文",
+      "color": "#69377B",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 383,
+      "source_group": 333,
+      "component_id": "cmp-0391",
+      "form": "我",
+      "color": "#90200E",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 384,
+      "source_group": 334,
+      "component_id": "cmp-0392",
+      "form": "乌",
+      "color": "#8588EF",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 385,
+      "source_group": 335,
+      "component_id": "cmp-0393",
+      "form": "无",
+      "color": "#AB6673",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 386,
+      "source_group": 336,
+      "component_id": "cmp-0394",
+      "form": "五",
+      "color": "#4F8207",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 387,
+      "source_group": 337,
+      "component_id": "cmp-0395",
+      "form": "午",
+      "color": "#746DD2",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 388,
+      "source_group": 338,
+      "component_id": "cmp-0396",
+      "form": "{⿳𠂉卌一}",
+      "color": "#605E98",
+      "form_type": "descriptive_nonfont_expression"
+    },
+    {
+      "source_ordinal": 389,
+      "source_group": 339,
+      "component_id": "cmp-0397",
+      "form": "兀",
+      "color": "#C12287",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 390,
+      "source_group": 340,
+      "component_id": "cmp-0398",
+      "form": "勿",
+      "color": "#BD6996",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 391,
+      "source_group": 341,
+      "component_id": "cmp-0399",
+      "form": "戊",
+      "color": "#9F4549",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 392,
+      "source_group": 342,
+      "component_id": "cmp-0400",
+      "form": "夕",
+      "color": "#5296EF",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 393,
+      "source_group": 342,
+      "component_id": "cmp-0401",
+      "form": "{⿴夂丶}",
+      "color": "#A03A75",
+      "form_type": "descriptive_nonfont_expression"
+    },
+    {
+      "source_ordinal": 394,
+      "source_group": 343,
+      "component_id": "cmp-0402",
+      "form": "龷",
+      "color": "#7592DF",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 395,
+      "source_group": 344,
+      "component_id": "cmp-0403",
+      "form": "西",
+      "color": "#B05D8A",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 396,
+      "source_group": 344,
+      "component_id": "cmp-0404",
+      "form": "覀",
+      "color": "#CD8046",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 397,
+      "source_group": 345,
+      "component_id": "cmp-0405",
+      "form": "习",
+      "color": "#A179F5",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 398,
+      "source_group": 346,
+      "component_id": "cmp-0406",
+      "form": "丆",
+      "color": "#98500C",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 399,
+      "source_group": 347,
+      "component_id": "cmp-0407",
+      "form": "下",
+      "color": "#37579E",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 400,
+      "source_group": 348,
+      "component_id": "cmp-0408",
+      "form": "乡",
+      "color": "#C03DB3",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 401,
+      "source_group": 349,
+      "component_id": "cmp-0409",
+      "form": "向",
+      "color": "#8B317A",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 402,
+      "source_group": 350,
+      "component_id": "cmp-0410",
+      "form": "象",
+      "color": "#442DBD",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 403,
+      "source_group": 351,
+      "component_id": "cmp-0411",
+      "form": "小",
+      "color": "#D81496",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 404,
+      "source_group": 351,
+      "component_id": "cmp-0412",
+      "form": "⺌",
+      "color": "#B36CA9",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 405,
+      "source_group": 352,
+      "component_id": "cmp-0413",
+      "form": "𦈢",
+      "color": "#3F77A2",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 406,
+      "source_group": 353,
+      "component_id": "cmp-0016",
+      "form": "心",
+      "color": "#B42C92",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 407,
+      "source_group": 353,
+      "component_id": "cmp-0414",
+      "form": "㣺",
+      "color": "#EC5C80",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 408,
+      "source_group": 353,
+      "component_id": "cmp-0017",
+      "form": "忄",
+      "color": "#98518A",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 409,
+      "source_group": 354,
+      "component_id": "cmp-0415",
+      "form": "辛",
+      "color": "#D2748D",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 410,
+      "source_group": 355,
+      "component_id": "cmp-0416",
+      "form": "囟",
+      "color": "#EB3C67",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 411,
+      "source_group": 356,
+      "component_id": "cmp-0417",
+      "form": "戌",
+      "color": "#843EEA",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 412,
+      "source_group": 357,
+      "component_id": "cmp-0418",
+      "form": "亠",
+      "color": "#C35073",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 413,
+      "source_group": 358,
+      "component_id": "cmp-0419",
+      "form": "𭕄",
+      "color": "#4C43EB",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 414,
+      "source_group": 359,
+      "component_id": "cmp-0420",
+      "form": "穴",
+      "color": "#C4344C",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 415,
+      "source_group": 360,
+      "component_id": "cmp-0421",
+      "form": "𫜹",
+      "color": "#6443A4",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 416,
+      "source_group": 360,
+      "component_id": "cmp-0422",
+      "form": "𰀂",
+      "color": "#923B33",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 417,
+      "source_group": 361,
+      "component_id": "cmp-0423",
+      "form": "血",
+      "color": "#A582D1",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 418,
+      "source_group": 362,
+      "component_id": "cmp-0424",
+      "form": "熏",
+      "color": "#B519B6",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 419,
+      "source_group": 363,
+      "component_id": "cmp-0425",
+      "form": "卂",
+      "color": "#9F2DD3",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 420,
+      "source_group": 364,
+      "component_id": "cmp-0426",
+      "form": "丫",
+      "color": "#AB5637",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 421,
+      "source_group": 365,
+      "component_id": "cmp-0427",
+      "form": "牙",
+      "color": "#8C1FCC",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 422,
+      "source_group": 366,
+      "component_id": "cmp-0428",
+      "form": "亚",
+      "color": "#9661C1",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 423,
+      "source_group": 367,
+      "component_id": "cmp-0429",
+      "form": "{⿹⿺㇉一灬}",
+      "color": "#D56054",
+      "form_type": "descriptive_nonfont_expression"
+    },
+    {
+      "source_ordinal": 424,
+      "source_group": 368,
+      "component_id": "cmp-0430",
+      "form": "𠂛",
+      "color": "#F24E99",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 425,
+      "source_group": 369,
+      "component_id": "cmp-0431",
+      "form": "严",
+      "color": "#DD2C5B",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 426,
+      "source_group": 370,
+      "component_id": "cmp-0021",
+      "form": "言",
+      "color": "#AF56FD",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 427,
+      "source_group": 370,
+      "component_id": "cmp-0022",
+      "form": "讠",
+      "color": "#9367B2",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 428,
+      "source_group": 371,
+      "component_id": "cmp-0432",
+      "form": "央",
+      "color": "#469234",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 429,
+      "source_group": 372,
+      "component_id": "cmp-0433",
+      "form": "𠃓",
+      "color": "#9F61F2",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 430,
+      "source_group": 373,
+      "component_id": "cmp-0434",
+      "form": "羊",
+      "color": "#8B17A1",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 431,
+      "source_group": 373,
+      "component_id": "cmp-0435",
+      "form": "𦍌",
+      "color": "#3F61EA",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 432,
+      "source_group": 373,
+      "component_id": "cmp-0436",
+      "form": "{⿱䒑夫}",
+      "color": "#7A953C",
+      "form_type": "descriptive_nonfont_expression"
+    },
+    {
+      "source_ordinal": 433,
+      "source_group": 374,
+      "component_id": "cmp-0437",
+      "form": "幺",
+      "color": "#7132E0",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 434,
+      "source_group": 375,
+      "component_id": "cmp-0438",
+      "form": "夭",
+      "color": "#7627B7",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 435,
+      "source_group": 376,
+      "component_id": "cmp-0439",
+      "form": "𭠍",
+      "color": "#184ACE",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 436,
+      "source_group": 377,
+      "component_id": "cmp-0440",
+      "form": "也",
+      "color": "#8F4880",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 437,
+      "source_group": 378,
+      "component_id": "cmp-0441",
+      "form": "业",
+      "color": "#D8508D",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 438,
+      "source_group": 379,
+      "component_id": "cmp-0442",
+      "form": "页",
+      "color": "#FC5236",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 439,
+      "source_group": 380,
+      "component_id": "cmp-0443",
+      "form": "曳",
+      "color": "#D646B0",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 440,
+      "source_group": 381,
+      "component_id": "cmp-0444",
+      "form": "衣",
+      "color": "#4D3CCB",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 441,
+      "source_group": 381,
+      "component_id": "cmp-0251",
+      "form": "𧘇",
+      "color": "#6057E7",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 442,
+      "source_group": 381,
+      "component_id": "cmp-0445",
+      "form": "衤",
+      "color": "#A438BB",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 443,
+      "source_group": 382,
+      "component_id": "cmp-0446",
+      "form": "彑",
+      "color": "#9A51E0",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 444,
+      "source_group": 383,
+      "component_id": "cmp-0447",
+      "form": "夷",
+      "color": "#5073E7",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 445,
+      "source_group": 384,
+      "component_id": "cmp-0448",
+      "form": "𦣞",
+      "color": "#922CB4",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 446,
+      "source_group": 385,
+      "component_id": "cmp-0449",
+      "form": "乂",
+      "color": "#B84CEF",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 447,
+      "source_group": 386,
+      "component_id": "cmp-0450",
+      "form": "弋",
+      "color": "#9F6202",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 448,
+      "source_group": 387,
+      "component_id": "cmp-0451",
+      "form": "义",
+      "color": "#0D3CC0",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 449,
+      "source_group": 388,
+      "component_id": "cmp-0452",
+      "form": "亦",
+      "color": "#BE53D6",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 450,
+      "source_group": 389,
+      "component_id": "cmp-0453",
+      "form": "㐆",
+      "color": "#4250DB",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 451,
+      "source_group": 390,
+      "component_id": "cmp-0454",
+      "form": "冘",
+      "color": "#7C39C9",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 452,
+      "source_group": 391,
+      "component_id": "cmp-0455",
+      "form": "尹",
+      "color": "#A3517E",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 453,
+      "source_group": 392,
+      "component_id": "cmp-0456",
+      "form": "庸",
+      "color": "#D2318A",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 454,
+      "source_group": 393,
+      "component_id": "cmp-0457",
+      "form": "龴",
+      "color": "#9750A7",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 455,
+      "source_group": 394,
+      "component_id": "cmp-0458",
+      "form": "永",
+      "color": "#B01083",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 456,
+      "source_group": 395,
+      "component_id": "cmp-0459",
+      "form": "用",
+      "color": "#3D762F",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 457,
+      "source_group": 396,
+      "component_id": "cmp-0460",
+      "form": "尤",
+      "color": "#C24697",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 458,
+      "source_group": 397,
+      "component_id": "cmp-0461",
+      "form": "由",
+      "color": "#C065F0",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 459,
+      "source_group": 398,
+      "component_id": "cmp-0462",
+      "form": "酉",
+      "color": "#6A2EC0",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 460,
+      "source_group": 399,
+      "component_id": "cmp-0463",
+      "form": "又",
+      "color": "#7250E2",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 461,
+      "source_group": 400,
+      "component_id": "cmp-0464",
+      "form": "于",
+      "color": "#449053",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 462,
+      "source_group": 401,
+      "component_id": "cmp-0465",
+      "form": "鱼",
+      "color": "#8E44D2",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 463,
+      "source_group": 402,
+      "component_id": "cmp-0466",
+      "form": "禺",
+      "color": "#AA52BE",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 464,
+      "source_group": 403,
+      "component_id": "cmp-0467",
+      "form": "与",
+      "color": "#613DB5",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 465,
+      "source_group": 404,
+      "component_id": "cmp-0468",
+      "form": "予",
+      "color": "#12808A",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 466,
+      "source_group": 405,
+      "component_id": "cmp-0004",
+      "form": "雨",
+      "color": "#608CD5",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 467,
+      "source_group": 406,
+      "component_id": "cmp-0469",
+      "form": "禹",
+      "color": "#9C196C",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 468,
+      "source_group": 407,
+      "component_id": "cmp-0470",
+      "form": "玉",
+      "color": "#3B65AA",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 469,
+      "source_group": 407,
+      "component_id": "cmp-0471",
+      "form": "𤣩",
+      "color": "#608DBE",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 470,
+      "source_group": 408,
+      "component_id": "cmp-0472",
+      "form": "聿",
+      "color": "#DD5B0A",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 471,
+      "source_group": 409,
+      "component_id": "cmp-0008",
+      "form": "月",
+      "color": "#8352FE",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 472,
+      "source_group": 409,
+      "component_id": "cmp-0473",
+      "form": "肉",
+      "color": "#AE3D99",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 473,
+      "source_group": 409,
+      "component_id": "cmp-0474",
+      "form": "⺝",
+      "color": "#8C268C",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 474,
+      "source_group": 409,
+      "component_id": "cmp-0475",
+      "form": "𱼀",
+      "color": "#6E4A7D",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 475,
+      "source_group": 410,
+      "component_id": "cmp-0476",
+      "form": "戉",
+      "color": "#D053A3",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 476,
+      "source_group": 411,
+      "component_id": "cmp-0477",
+      "form": "云",
+      "color": "#B37B52",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 477,
+      "source_group": 412,
+      "component_id": "cmp-0478",
+      "form": "再",
+      "color": "#9947B7",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 478,
+      "source_group": 413,
+      "component_id": "cmp-0479",
+      "form": "乍",
+      "color": "#9B79B1",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 479,
+      "source_group": 414,
+      "component_id": "cmp-0480",
+      "form": "丈",
+      "color": "#6577C4",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 480,
+      "source_group": 415,
+      "component_id": "cmp-0481",
+      "form": "爪",
+      "color": "#77A36E",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 481,
+      "source_group": 415,
+      "component_id": "cmp-0482",
+      "form": "𰀄",
+      "color": "#890A6E",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 482,
+      "source_group": 415,
+      "component_id": "cmp-0483",
+      "form": "爫",
+      "color": "#968BC8",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 483,
+      "source_group": 416,
+      "component_id": "cmp-0484",
+      "form": "兆",
+      "color": "#793B2F",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 484,
+      "source_group": 417,
+      "component_id": "cmp-0485",
+      "form": "争",
+      "color": "#925241",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 485,
+      "source_group": 418,
+      "component_id": "cmp-0486",
+      "form": "正",
+      "color": "#B42452",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 486,
+      "source_group": 419,
+      "component_id": "cmp-0487",
+      "form": "之",
+      "color": "#B58E53",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 487,
+      "source_group": 420,
+      "component_id": "cmp-0488",
+      "form": "直",
+      "color": "#53A0C1",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 488,
+      "source_group": 421,
+      "component_id": "cmp-0489",
+      "form": "止",
+      "color": "#02766C",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 489,
+      "source_group": 421,
+      "component_id": "cmp-0490",
+      "form": "㐄",
+      "color": "#986438",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 490,
+      "source_group": 421,
+      "component_id": "cmp-0491",
+      "form": "龰",
+      "color": "#75529D",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 491,
+      "source_group": 421,
+      "component_id": "cmp-0492",
+      "form": "𣥂",
+      "color": "#438E6F",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 492,
+      "source_group": 422,
+      "component_id": "cmp-0493",
+      "form": "至",
+      "color": "#9B58CE",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 493,
+      "source_group": 423,
+      "component_id": "cmp-0494",
+      "form": "{⿻牛冂}",
+      "color": "#E05630",
+      "form_type": "descriptive_nonfont_expression"
+    },
+    {
+      "source_ordinal": 494,
+      "source_group": 424,
+      "component_id": "cmp-0495",
+      "form": "豸",
+      "color": "#907B39",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 495,
+      "source_group": 425,
+      "component_id": "cmp-0496",
+      "form": "中",
+      "color": "#4EAB76",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 496,
+      "source_group": 426,
+      "component_id": "cmp-0497",
+      "form": "重",
+      "color": "#318267",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 497,
+      "source_group": 427,
+      "component_id": "cmp-0498",
+      "form": "⺆",
+      "color": "#8262DD",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 498,
+      "source_group": 428,
+      "component_id": "cmp-0499",
+      "form": "舟",
+      "color": "#4E428D",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 499,
+      "source_group": 429,
+      "component_id": "cmp-0500",
+      "form": "州",
+      "color": "#8D395D",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 500,
+      "source_group": 430,
+      "component_id": "cmp-0501",
+      "form": "朱",
+      "color": "#A765DB",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 501,
+      "source_group": 431,
+      "component_id": "cmp-0502",
+      "form": "竹",
+      "color": "#865D24",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 502,
+      "source_group": 431,
+      "component_id": "cmp-0503",
+      "form": "𥫗",
+      "color": "#D3453B",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 503,
+      "source_group": 432,
+      "component_id": "cmp-0504",
+      "form": "主",
+      "color": "#0667B8",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 504,
+      "source_group": 433,
+      "component_id": "cmp-0505",
+      "form": "专",
+      "color": "#9D4459",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 505,
+      "source_group": 434,
+      "component_id": "cmp-0506",
+      "form": "𠂤",
+      "color": "#396839",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 506,
+      "source_group": 434,
+      "component_id": "cmp-0507",
+      "form": "㠯",
+      "color": "#3B59CB",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 507,
+      "source_group": 434,
+      "component_id": "cmp-0508",
+      "form": "リ",
+      "color": "#3A754C",
+      "form_type": "approximation_requires_glyph_validation"
+    },
+    {
+      "source_ordinal": 508,
+      "source_group": 435,
+      "component_id": "cmp-0509",
+      "form": "隹",
+      "color": "#4A529D",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 509,
+      "source_group": 436,
+      "component_id": "cmp-0510",
+      "form": "豖",
+      "color": "#388447",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 510,
+      "source_group": 437,
+      "component_id": "cmp-0015",
+      "form": "子",
+      "color": "#FA47BD",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 511,
+      "source_group": 438,
+      "component_id": "cmp-0511",
+      "form": "𠂔",
+      "color": "#D265C6",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 512,
+      "source_group": 439,
+      "component_id": "cmp-0512",
+      "form": "自",
+      "color": "#BD32CB",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 513,
+      "source_group": 440,
+      "component_id": "cmp-0030",
+      "form": "辶",
+      "color": "#BB66C1",
+      "form_type": "unicode_glyph_candidate"
+    },
+    {
+      "source_ordinal": 514,
+      "source_group": 441,
+      "component_id": "cmp-0513",
+      "form": "𠂇",
+      "color": "#285D32",
+      "form_type": "unicode_glyph_candidate"
+    }
+  ]
+}

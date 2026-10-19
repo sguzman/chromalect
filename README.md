@@ -4,7 +4,7 @@
 
 Chromalect investigates whether writing can be made easier to learn by adding reversible, digital-only visual layers: **stable colors for graphemes and reusable components, semantic families, compositional phonetic notation, tone and prosody marks, and optional mnemonic animation**.
 
-**Status:** research phase; a documented **40-component experimental palette** now exists. No component-colored compound renderer, validated study results, phonetic alphabet, or Rust crate exists yet.
+**Status:** research phase; color identities for **all 514 transcribed GF 0014-2009 component entries** are now assigned (510 distinct form keys), with 3 preserved pilot macros for **513 stable colored identities**. No component-colored glyph renderer, verified study results, phonetic alphabet, or Rust crate exists yet.
 
 ## Starting point
 
@@ -54,11 +54,13 @@ It is **not** a branch of another knowledge base or a general language-learning 
 | [Roadmap](docs/roadmap.md) | Research-first development sequence |
 | [Contributing](CONTRIBUTING.md) | Proposal and documentation discipline |
 
-## Current palette pilot
+## Full component identity catalog (v0.2)
 
-![Forty component identity colors](palettes/mandarin-component-identity-v0.1.svg)
+![513 stable component colors](palettes/mandarin-component-identity-v0.2.svg)
 
-Each component has one exact stable color, reused in any supported character combination. The swatch sheet is **not** a claim that glyph-level component coloring has been implemented. The [pilot policy](docs/component-color-policy.md) explains what gets colored and how visible variants relate.
+**[Complete palette and evidence limits](docs/complete-component-palette.md)** · [machine-readable 513-color registry](palettes/mandarin-component-identity-v0.2.json) · [514 GF standard entry index](palettes/gf0014-2009-records-v0.2.json) · [preserved 40-color pilot](palettes/mandarin-component-identity-v0.1.json).
+
+All **40 pilot colors are unchanged**. A repeated visible shape keeps the same color. The standard contains duplicate shapes and 30 descriptive placeholders. This is an exhaustive **assignment for the transcribed reference inventory**, not a finished within-glyph renderer or a complete list of every possible Chinese character component. The [policy](docs/component-color-policy.md) explains the distinction.
 
 ## Why version experiments?
 
