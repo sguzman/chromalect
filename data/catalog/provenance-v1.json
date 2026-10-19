@@ -39,7 +39,10 @@
     "size": 1000,
     "characters_with_known_IDS": 1000,
     "statuses": {
-      "undefined": 998,
+      "atomic_recognizer": 276,
+      "partial_components": 13,
+      "resolved_structural_membership": 700,
+      "non_disjoint_structure": 9,
       "nonstandard_ids_not_parsed": 2
     },
     "characters_with_at_least_one_palette_component": 998,
