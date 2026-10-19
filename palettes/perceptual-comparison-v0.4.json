@@ -1,0 +1,59 @@
+{
+  "schema": "chromalect.perceptual-comparison.v1",
+  "date": "2026-10-19",
+  "status": "computational-only-no-human-testing",
+  "baseline": "mandarin-component-identity@0.3.0",
+  "candidate": "mandarin-component-identity@0.4.0",
+  "frozen_identity_assignments": 0,
+  "changed_original_40": 39,
+  "changed_assignments": 512,
+  "unique_colors": 513,
+  "source": {
+    "transcription_blob_sha": "3e1b8f893a5df24c92be76b05084dab964678eb1",
+    "provisional_pilot_specimens": 31,
+    "graph_edges": 315,
+    "graph_weight_rules": {
+      "pilot": 15,
+      "lookalike": 12,
+      "variant": 4,
+      "third-party-example": 1
+    }
+  },
+  "method": {
+    "perceptual_models": [
+      "CIEDE2000",
+      "OKLab"
+    ],
+    "color_vision_proxy": "protan and deutan approximate linear RGB projections",
+    "global_palette_set": "same 513 hex colors as v0.3, permuted freely to avoid sacrificing global spacing",
+    "optimizer": "weighted graph degree greedy all 513 IDs unlocked, plus deterministic greedy swap search",
+    "swap_trials": 40000,
+    "swaps_accepted": 0,
+    "random_seed": 4213373,
+    "greedy_loss": 0,
+    "final_loss": 0
+  },
+  "before": {
+    "min_ciede2000": 3.99695,
+    "min_oklab": 0.02109,
+    "weighted_mean_candidate_deltaE00": 40.00805,
+    "low_contrast_candidate_pairs_under_12": 6,
+    "low_contrast_candidate_pairs_under_20": 14,
+    "simulated_protan_edges_under_9": 7,
+    "simulated_deutan_edges_under_9": 12,
+    "colors_under_white_contrast_3": 44,
+    "colors_under_black_contrast_2_5": 9
+  },
+  "after": {
+    "min_ciede2000": 3.99695,
+    "min_oklab": 0.02109,
+    "weighted_mean_candidate_deltaE00": 44.07611,
+    "low_contrast_candidate_pairs_under_12": 0,
+    "low_contrast_candidate_pairs_under_20": 0,
+    "simulated_protan_edges_under_9": 0,
+    "simulated_deutan_edges_under_9": 0,
+    "colors_under_white_contrast_3": 44,
+    "colors_under_black_contrast_2_5": 9
+  },
+  "warning": "Does not prove global color-set optimality or real-world recognizability. All 513 HEX values were eligible to be reassigned; no prototype anchors."
+}

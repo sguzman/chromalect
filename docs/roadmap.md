@@ -13,11 +13,12 @@ This is a sequence of **evidence gates**, not a promise to build a large applica
 - [ ] Verify the transcription and the 30 descriptive forms against the official standard and obtain glyph geometry.
 - [ ] Verify each selected component and compound decomposition with an authoritative source and geometry.
 
-## Phase 1 — palette experiment [v0.3 computationally assessed; human evaluation pending]
+## Phase 1 — palette experiment [v0.4 all-identities reassigned; human testing pending]
 
 - [x] Assign 40 unique exact colors to stable component IDs; preserve them in a 513-identity expanded catalog.
 - [x] Produce machine-readable v0.1, v0.2, and v0.3 color catalogs, corresponding reference indices and swatch sheets.
-- [x] Compute and document perceptual v0.3 optimization and objective comparisons, preserving 40 original colors.
+- [x] Compute and document v0.3 with historic protected-40 constraint.
+- [x] Correct that constraint: v0.4 freely reassigns all 513 identities without sacrificing global color separation.
 - [ ] Verify stroke geometry and produce a true component-colored compound renderer (not just a swatch).
 - [ ] Compare plain, identity-only, and independently specified semantic-family variants.
 - [ ] Test legibility, distinctions at real glyph sizes, recall, and transfer.

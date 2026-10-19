@@ -31,3 +31,13 @@ The initial 40 entries are frozen and unchanged. 30 descriptive forms are **assi
 - [Methodology and limitations](../docs/perceptual-palette-v0.3.md)
 
 v0.2 and v0.1 remain unmodified and available.
+
+## Unfrozen color assignment v0.4
+
+- [513-identity JSON palette](mandarin-component-identity-v0.4.json)
+- [Full color swatch sheet](mandarin-component-identity-v0.4.svg)
+- [514-record mapping](gf0014-2009-records-v0.4.json)
+- [Before/after perceptual model measurements](perceptual-comparison-v0.4.json)
+- [Methodology and limitations](../docs/perceptual-palette-v0.4.md)
+
+All original first-40 color mappings are free to change in any new version. Previous versions remain unmodified.

@@ -1,6 +1,8 @@
 # What Chromalect colors: identity-first pilot
 
-**Status:** provisional design, 2026-10-19. See [the exact 40-color registry](../palettes/mandarin-component-identity-v0.1.json) and its [swatch sheet](../palettes/mandarin-component-identity-v0.1.svg).
+**Status:** provisional design, 2026-10-19.
+
+**Explicit correction:** the first 40 colors are *not* protected in new palettes. [v0.4](../palettes/mandarin-component-identity-v0.4.json) can reassign every component's color. A stable ID-to-color mapping is defined only **within each specific palette version**. See [the exact 40-color registry](../palettes/mandarin-component-identity-v0.1.json) and its [swatch sheet](../palettes/mandarin-component-identity-v0.1.svg).
 
 ## Color the reusable component, not the dictionary's indexing category
 

@@ -1,7 +1,7 @@
 # EXP-0001: stable component identity colors
 
 **Status:** computational comparison complete; not human-tested  
-**Current specification:** v0.4.0 (v0.3 perceptual color experiment 2026-10-19)  
+**Current specification:** v0.5.0 (unfrozen 513-color identity reassignment, 2026-10-19)  
 **Language:** Mainland Standard Mandarin, simplified Chinese  
 **Implementation:** no code or renderer
 
@@ -49,6 +49,10 @@ Within one palette version, a character such as 清 must display 氵 with its ex
 - Compute pairwise differences in a perceptual color space, giving extra scrutiny to components that **co-occur in the same glyph**.
 - Record identification errors, recognition time, delayed recall, new-character transfer, small-scale legibility and color-vision/accessibility failures.
 - Reject or revise assignments that repeatedly cause confusions; changing a color creates a new palette revision.
+
+## v0.4 correction: none of the prototype colors are sacred
+
+[Version v0.4](../palettes/mandarin-component-identity-v0.4.json) unlocks all 513 component IDs for recoloring, fixing the unjustified freeze of the first 40 from v0.3. The palette intentionally retains the same full set of color values as v0.3 because an attempted new 513-color set worsened global minimum separation; all values are reassigned where useful. See [computational metrics](../palettes/perceptual-comparison-v0.4.json) and [methodology](../docs/perceptual-palette-v0.4.md).
 
 ## Perceptual color experiment
 
