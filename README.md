@@ -4,7 +4,7 @@
 
 Chromalect investigates whether writing can be made easier to learn by adding reversible, digital-only visual layers: **stable colors for graphemes and reusable components, semantic families, compositional phonetic notation, tone and prosody marks, and optional mnemonic animation**.
 
-**Status:** research phase; color identities for **all 514 transcribed GF 0014-2009 component entries** are now assigned (510 distinct form keys), with 3 preserved pilot macros for **513 stable colored identities**. No component-colored glyph renderer, verified study results, phonetic alphabet, or Rust crate exists yet.
+**Status:** research phase; 513 stable component identities have a v0.2 baseline and now a **v0.3 perceptually optimized** palette covering the 514 reference-standard entries. No within-glyph color renderer, human-tested results, phonetic alphabet, or Rust crate yet.
 
 ## Starting point
 
@@ -54,11 +54,11 @@ It is **not** a branch of another knowledge base or a general language-learning 
 | [Roadmap](docs/roadmap.md) | Research-first development sequence |
 | [Contributing](CONTRIBUTING.md) | Proposal and documentation discipline |
 
-## Full component identity catalog (v0.2)
+## Perceptually optimized catalog (v0.3)
 
-![513 stable component colors](palettes/mandarin-component-identity-v0.2.svg)
+![513 optimized component colors](palettes/mandarin-component-identity-v0.3.svg)
 
-**[Complete palette and evidence limits](docs/complete-component-palette.md)** · [machine-readable 513-color registry](palettes/mandarin-component-identity-v0.2.json) · [514 GF standard entry index](palettes/gf0014-2009-records-v0.2.json) · [preserved 40-color pilot](palettes/mandarin-component-identity-v0.1.json).
+**[v0.3 method and comparison](docs/perceptual-palette-v0.3.md)** · [v0.3 registry](palettes/mandarin-component-identity-v0.3.json) · [v0.3 model metrics](palettes/perceptual-comparison-v0.3.json) · [v0.2 baseline](palettes/mandarin-component-identity-v0.2.json) · [original 40-color pilot](palettes/mandarin-component-identity-v0.1.json).
 
 All **40 pilot colors are unchanged**. A repeated visible shape keeps the same color. The standard contains duplicate shapes and 30 descriptive placeholders. This is an exhaustive **assignment for the transcribed reference inventory**, not a finished within-glyph renderer or a complete list of every possible Chinese character component. The [policy](docs/component-color-policy.md) explains the distinction.
 

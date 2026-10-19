@@ -1,7 +1,7 @@
 # EXP-0001: stable component identity colors
 
-**Status:** palette assignment extended; still untested  
-**Current specification:** v0.3.0 (full GF reference inventory assigned 2026-10-19)  
+**Status:** computational comparison complete; not human-tested  
+**Current specification:** v0.4.0 (v0.3 perceptual color experiment 2026-10-19)  
 **Language:** Mainland Standard Mandarin, simplified Chinese  
 **Implementation:** no code or renderer
 
@@ -49,6 +49,12 @@ Within one palette version, a character such as 清 must display 氵 with its ex
 - Compute pairwise differences in a perceptual color space, giving extra scrutiny to components that **co-occur in the same glyph**.
 - Record identification errors, recognition time, delayed recall, new-character transfer, small-scale legibility and color-vision/accessibility failures.
 - Reject or revise assignments that repeatedly cause confusions; changing a color creates a new palette revision.
+
+## Perceptual color experiment
+
+The new [v0.3 palette](../palettes/mandarin-component-identity-v0.3.json) and [model comparison report](../palettes/perceptual-comparison-v0.3.json) use both OKLab and CIEDE2000, prioritizing co-occurring components and likely visual confusions. [Read methodology](../docs/perceptual-palette-v0.3.md). Every v0.1 color stays exact; v0.2 remains a separate immutable comparison.
+
+There is still no human reading or learning evaluation.
 
 ## Catalog extension
 

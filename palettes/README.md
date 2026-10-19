@@ -21,3 +21,13 @@ Versioning: references must include the palette ID and version. A distinct perce
 - [Full catalog details, exceptions and provenance](../docs/complete-component-palette.md)
 
 The initial 40 entries are frozen and unchanged. 30 descriptive forms are **assigned colors but have no validated drawable glyph**. Actual character-interior rendering remains future work.
+
+## Perceptual v0.3
+
+- [513-color v0.3 palette](mandarin-component-identity-v0.3.json)
+- [v0.3 full swatch sheet](mandarin-component-identity-v0.3.svg)
+- [514-record v0.3 mapping](gf0014-2009-records-v0.3.json)
+- [Quantitative comparison](perceptual-comparison-v0.3.json)
+- [Methodology and limitations](../docs/perceptual-palette-v0.3.md)
+
+v0.2 and v0.1 remain unmodified and available.
