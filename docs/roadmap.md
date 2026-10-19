@@ -2,24 +2,25 @@
 
 This is a sequence of **evidence gates**, not a promise to build a large application.
 
-## Phase 0 — research foundation [documentation started]
+## Phase 0 — research foundation [documentation and pilot design underway]
 
 - [x] Establish independent repository scope and first Mandarin language profile.
 - [x] Define independent semantics, identity, historical-phonetic-role, actual-sound, tone, and animation channels.
 - [x] Record test specimens, research questions, experiment versioning, licensing policy.
-- [ ] Verify each proposed character decomposition with reputable evidence.
-- [ ] Locate the authoritative component-standard text and verify coverage.
-- [ ] Select an experimental normalization policy and small component inventory.
+- [x] Locate an authoritative public description of GF 0014-2009 and its limited 3,500-character scope.
+- [x] Define an **experimental** shape-variant policy and a bounded 40-component pilot inventory.
+- [ ] Verify each selected component and compound decomposition with an authoritative source and geometry.
 
-## Phase 1 — palette experiment [proposed]
+## Phase 1 — palette experiment [pilot assigned, still untested]
 
-- [ ] Pick a bounded set of frequent components (small enough to audit manually).
-- [ ] Assign every normalized component a stable, unique color within a semantic-family neighborhood.
-- [ ] Produce precise, non-generative specimens of the same text under plain, identity, and semantic modes.
-- [ ] Test whether users can reliably distinguish the selected identities and remember them.
-- [ ] Version the palette and record failures and revisions.
+- [x] Assign 40 unique exact colors to stable component IDs; record relations among visual variants.
+- [x] Produce a machine-readable palette, versioned sample hypotheses, and a standalone swatch sheet.
+- [ ] Verify stroke geometry and produce a true component-colored compound renderer (not just a swatch).
+- [ ] Compare plain, identity-only, and independently specified semantic-family variants.
+- [ ] Test legibility, distinctions at real glyph sizes, recall, and transfer.
+- [ ] Document failure cases and iterate with **new palette versions**.
 
-**Gate:** repeatable, internally consistent component rendering. Do not expand to thousands of components before this.
+**Gate:** repeatable, linguistically accurate component rendering and defensible experimental comparisons. Do not expand to thousands of components merely because official counts exist.
 
 ## Phase 2 — phonetic notation experiment [proposed]
 

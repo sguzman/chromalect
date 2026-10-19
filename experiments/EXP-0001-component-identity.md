@@ -1,48 +1,59 @@
 # EXP-0001: stable component identity colors
 
-**Status:** proposed  
-**Current specification:** v0.1.0 (draft, 2026-10-19)  
+**Status:** in design, untested  
+**Current specification:** v0.2.0 (pilot assignments added 2026-10-19)  
 **Language:** Mainland Standard Mandarin, simplified Chinese  
-**Implementation:** none
+**Implementation:** no code or renderer
 
 ## Question
 
-Do *unique, stable* colors for reusable components, organized into semantic-family neighborhoods, improve the ability to distinguish and remember Chinese characters?
+Do *unique, stable* colors for recurring components improve Chinese character recognition compared with monochrome text, random stroke coloring, or arbitrary character coloring? Are loose semantic neighborhoods a useful additional memory cue?
 
-## Hypothesis
+## Primary design decision
 
-Stable component-identity colors will outperform random per-character or per-stroke coloration on recognition and delayed identification. Semantic neighborhoods may add a second, learnable grouping signal.
+**Component identity comes first.** The color is keyed to an individual normalized visual component, not to a dictionary index, lexical meaning, or historical semantic role.
 
-## Invariant
+- [Complete policy](../docs/component-color-policy.md)
+- [40-component palette v0.1.0](../palettes/mandarin-component-identity-v0.1.json)
+- [Exact-color swatch sheet](../palettes/mandarin-component-identity-v0.1.svg)
+- [Candidate compound specimens](../specimens/mandarin-component-pilot-v0.1.json)
 
-A normalized component ID is assigned **one exact color** in the current palette. The same ID preserves that color across all character appearances. A component can have different character-specific roles, but that does not recolor it. If several distinguishable components occur inside one character, each may have its own stable color.
+Colors are **unique across the current 40 IDs** and immutable within that version. Recurring components always repeat exactly the same hex value. Related *visible variants* have distinct but linked IDs (e.g. 水 and 氵). Their exact colors are independent of the separate phonetic and tone schemes.
 
-The project must explicitly decide whether variant forms such as 水/氵 share a normalized ID or use linked but distinct IDs. **Unresolved**, not silently equated.
+## Hypotheses
 
-## Experimental arms
+H1: Stable component-identity colors improve re-identification and delayed recognition versus plain or per-stroke-randomized text.
 
-- A: ordinary monochrome rendering.
-- B: arbitrary random per-stroke colors (negative control for misleading visuals).
-- C: stable unique component colors with no semantic clustering.
-- D: stable unique colors arranged in semantically motivated neighborhoods.
+H2: Exact component consistency improves transfer to unfamiliar characters composed of previously learned parts.
 
-Control the source characters, font, size, presentation duration, and training schedule.
+H3: Identity-first palettes optimized for simultaneous visual discrimination can outperform palettes constrained by semantic grouping; a meaningful-family scheme might instead improve recall. Competing claims require competing experimental arms.
 
-## Starter specimens
+## Proposed comparisons
 
-清 / 情 / 请 / 晴 for a repeated 青 component, plus 妈, 孩 and independently attested examples of recurring component shapes. Verify exact decomposition before making stroke-level graphics.
+- A: monochrome Chinese text.
+- B: random colors on each appearance or stroke (deliberate negative control).
+- C: stable, individually distinct component colors from this identity-first pilot.
+- D: stable component colors with a stricter semantic-neighborhood constraint (separate *future* palette, not yet built).
 
-## Metrics
+Keep text, decomposition, glyph geometry, reading time, font and presentation environment fixed. Alternate scheme assignment across readers to avoid color-memory order effects.
 
-Component re-identification, character discrimination, retention after delay, accuracy for unfamiliar compounds, time-to-recognition, confusion matrix among similar hues, self-reported readability.
+## Pilot stimuli
 
-## Open design questions
+The candidate IDS topology files contain examples such as 清, 情, 请, 晴, 妈, 好, 林, 河, 男, 孩, and other recurring units. These decompositions are **illustrative and require independent verification** before experimental use.
 
-- Choice of decomposition granularity, canonicalization policy, source dataset.
-- Color-space and exact color-distance constraints by display mode.
-- Whether hue regions accurately describe semantic *origin*, modern gloss, or a manually chosen mnemonic.
-- How unique colors scale and which non-color cues are needed.
+Within one palette version, a character such as 清 must display 氵 with its exact color and 青 with its exact color; both retain those colors in other characters. The shape rendering itself is **not complete**.
 
-## Output expectations
+## Measurement plan
 
-A palette manifest with all IDs/HEX assignments, component and character tests with independently checked geometry, a representative specimen, and recorded comparisons. None exist yet.
+- Test whether an inspector can reconstruct component IDs/color assignments without collisions.
+- Compute pairwise differences in a perceptual color space, giving extra scrutiny to components that **co-occur in the same glyph**.
+- Record identification errors, recognition time, delayed recall, new-character transfer, small-scale legibility and color-vision/accessibility failures.
+- Reject or revise assignments that repeatedly cause confusions; changing a color creates a new palette revision.
+
+## What has and has not happened
+
+**Completed:** frozen pilot component IDs, 40 distinct colors, optional mnemonic family tags, explicit variant relations, standalone SVG swatch inventory, and 31 candidate decomposition specimens.
+
+**Not completed:** authority-backed exhaustive component inventory; verified decomposition/stroke geometry; compound-glyph color renderer; end-user study; measured performance, semantic-family control, or published learning result.
+
+The outcome remains unknown. A pretty set of swatches is not an experiment result.

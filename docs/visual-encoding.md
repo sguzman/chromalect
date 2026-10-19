@@ -4,7 +4,9 @@
 
 **One normalized component identity -> one stable color per palette version.** A glyph can have multiple colors only because it contains multiple independently identified components. **The strokes of one component cannot be randomly recolored.**
 
-Even when all layers are on, colors remain semantically organized but individually discriminative. No "one family = one flat color" collapse.
+Even when all layers are on, exact component identity always wins. Related colors are a **possible mnemonic**, not a requirement; discriminating recurring pieces is the primary purpose of the default palette. Never collapse a family into one flat color.
+
+**Current pilot:** [40-component identity palette](../palettes/mandarin-component-identity-v0.1.json), [swatch sheet](../palettes/mandarin-component-identity-v0.1.svg), and [component color policy](component-color-policy.md). Semantic group metadata does not promise adjacent hues.
 
 ## Distinct channels
 

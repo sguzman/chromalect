@@ -4,7 +4,7 @@
 
 Chromalect investigates whether writing can be made easier to learn by adding reversible, digital-only visual layers: **stable colors for graphemes and reusable components, semantic families, compositional phonetic notation, tone and prosody marks, and optional mnemonic animation**.
 
-**Status:** research/documentation bootstrap. No application, renderer, datasets, phonetic alphabet, validated palette, or Rust crate exists yet. Proposals are not results.
+**Status:** research phase; a documented **40-component experimental palette** now exists. No component-colored compound renderer, validated study results, phonetic alphabet, or Rust crate exists yet.
 
 ## Starting point
 
@@ -15,7 +15,7 @@ The first research profile is **Mainland Standard Mandarin (Putonghua), modern s
 Compare a plain rendering with alternate overlays of the *same underlying text*:
 
 1. **Identity:** every normalized reusable component gets a stable, uniquely assigned color.
-2. **Semantics:** colors cluster into meaningful families without collapsing distinct identities into one color.
+2. **Semantics:** semantic families may optionally influence hue neighborhoods; **distinct identity and recognition take precedence**.
 3. **Structure:** decomposition reveals component boundaries and positions.
 4. **Historical sound clues:** identify which component plays a phonetic role *in this character*, if any.
 5. **Actual pronunciation:** a separately designed compositional visual phonetic code, ideally inside the glyph cell, plus a clear fallback to verified phonetic transcription.
@@ -39,6 +39,10 @@ It is **not** a branch of another knowledge base or a general language-learning 
 | [Terminology](docs/terminology.md) | Precise linguistic and design terms |
 | [Architecture](docs/architecture.md) | Conceptual information model; no code |
 | [Color and rendering](docs/visual-encoding.md) | Identity invariants and independent channels |
+| **[Component color policy](docs/component-color-policy.md)** | What gets colored, variants, nesting, and invariants |
+| **[Palette v0.1 preview](palettes/mandarin-component-identity-v0.1.svg)** | Exact colors for 40 Mandarin components |
+| [Palette registry](palettes/mandarin-component-identity-v0.1.json) | Machine-readable versioned color IDs and groups |
+| [Pilot compound specimens](specimens/mandarin-component-pilot-v0.1.json) | Testable structural decomposition candidates |
 | [Phonetic notation](docs/phonetic-notation.md) | Sound-glyph research and falsifiable constraints |
 | [Mandarin baseline](docs/mandarin-baseline.md) | First language and orthographic targets |
 | [Reference corpus](docs/specimens.md) | Controlled test cases; avoid misleading samples |
@@ -49,6 +53,12 @@ It is **not** a branch of another knowledge base or a general language-learning 
 | [Decisions](decisions/README.md) | Accepted, tentative, and rejected choices |
 | [Roadmap](docs/roadmap.md) | Research-first development sequence |
 | [Contributing](CONTRIBUTING.md) | Proposal and documentation discipline |
+
+## Current palette pilot
+
+![Forty component identity colors](palettes/mandarin-component-identity-v0.1.svg)
+
+Each component has one exact stable color, reused in any supported character combination. The swatch sheet is **not** a claim that glyph-level component coloring has been implemented. The [pilot policy](docs/component-color-policy.md) explains what gets colored and how visible variants relate.
 
 ## Why version experiments?
 

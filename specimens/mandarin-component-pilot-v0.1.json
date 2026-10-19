@@ -1,0 +1,290 @@
+{
+  "schema": "chromalect.structural-specimens.v0",
+  "id": "mandarin-component-pilot-specimens",
+  "version": "0.1.0",
+  "status": "candidate-decompositions-not-stroke-geometry-certified",
+  "palette_ref": "mandarin-component-identity-pilot@0.1.0",
+  "notes": "Conventional visual analyses in simplified Chinese, offered as reproducible hypotheses. Unicode IDS strings describe topology only; they are not instructions to rasterize/split a font glyph and do not assert historical phonetic or semantic roles. Validate against a chosen source before stroke-level rendering.",
+  "specimens": [
+    {
+      "character": "清",
+      "ids": "⿰氵青",
+      "component_ids": [
+        "cmp-0002",
+        "cmp-0036"
+      ],
+      "validation": "illustrative-structure-candidate"
+    },
+    {
+      "character": "情",
+      "ids": "⿰忄青",
+      "component_ids": [
+        "cmp-0017",
+        "cmp-0036"
+      ],
+      "validation": "illustrative-structure-candidate"
+    },
+    {
+      "character": "请",
+      "ids": "⿰讠青",
+      "component_ids": [
+        "cmp-0022",
+        "cmp-0036"
+      ],
+      "validation": "illustrative-structure-candidate"
+    },
+    {
+      "character": "晴",
+      "ids": "⿰日青",
+      "component_ids": [
+        "cmp-0007",
+        "cmp-0036"
+      ],
+      "validation": "illustrative-structure-candidate"
+    },
+    {
+      "character": "妈",
+      "ids": "⿰女马",
+      "component_ids": [
+        "cmp-0014",
+        "cmp-0033"
+      ],
+      "validation": "illustrative-structure-candidate"
+    },
+    {
+      "character": "好",
+      "ids": "⿰女子",
+      "component_ids": [
+        "cmp-0014",
+        "cmp-0015"
+      ],
+      "validation": "illustrative-structure-candidate"
+    },
+    {
+      "character": "林",
+      "ids": "⿰木木",
+      "component_ids": [
+        "cmp-0009",
+        "cmp-0009"
+      ],
+      "validation": "illustrative-structure-candidate"
+    },
+    {
+      "character": "森",
+      "ids": "⿱木⿰木木",
+      "component_ids": [
+        "cmp-0009",
+        "cmp-0009",
+        "cmp-0009"
+      ],
+      "validation": "illustrative-structure-candidate"
+    },
+    {
+      "character": "河",
+      "ids": "⿰氵可",
+      "component_ids": [
+        "cmp-0002",
+        "cmp-0037"
+      ],
+      "validation": "illustrative-structure-candidate"
+    },
+    {
+      "character": "男",
+      "ids": "⿱田力",
+      "component_ids": [
+        "cmp-0039",
+        "cmp-0040"
+      ],
+      "validation": "illustrative-structure-candidate"
+    },
+    {
+      "character": "孩",
+      "ids": "⿰子亥",
+      "component_ids": [
+        "cmp-0015",
+        "cmp-0038"
+      ],
+      "validation": "illustrative-structure-candidate"
+    },
+    {
+      "character": "明",
+      "ids": "⿰日月",
+      "component_ids": [
+        "cmp-0007",
+        "cmp-0008"
+      ],
+      "validation": "illustrative-structure-candidate"
+    },
+    {
+      "character": "休",
+      "ids": "⿰亻木",
+      "component_ids": [
+        "cmp-0013",
+        "cmp-0009"
+      ],
+      "validation": "illustrative-structure-candidate"
+    },
+    {
+      "character": "吗",
+      "ids": "⿰口马",
+      "component_ids": [
+        "cmp-0020",
+        "cmp-0033"
+      ],
+      "validation": "illustrative-structure-candidate"
+    },
+    {
+      "character": "炎",
+      "ids": "⿱火火",
+      "component_ids": [
+        "cmp-0005",
+        "cmp-0005"
+      ],
+      "validation": "illustrative-structure-candidate"
+    },
+    {
+      "character": "灾",
+      "ids": "⿱宀火",
+      "component_ids": [
+        "cmp-0035",
+        "cmp-0005"
+      ],
+      "validation": "illustrative-structure-candidate"
+    },
+    {
+      "character": "沁",
+      "ids": "⿰氵心",
+      "component_ids": [
+        "cmp-0002",
+        "cmp-0016"
+      ],
+      "validation": "illustrative-structure-candidate"
+    },
+    {
+      "character": "泪",
+      "ids": "⿰氵目",
+      "component_ids": [
+        "cmp-0002",
+        "cmp-0023"
+      ],
+      "validation": "illustrative-structure-candidate"
+    },
+    {
+      "character": "岩",
+      "ids": "⿱山石",
+      "component_ids": [
+        "cmp-0027",
+        "cmp-0026"
+      ],
+      "validation": "illustrative-structure-candidate"
+    },
+    {
+      "character": "苗",
+      "ids": "⿱艹田",
+      "component_ids": [
+        "cmp-0010",
+        "cmp-0039"
+      ],
+      "validation": "illustrative-structure-candidate"
+    },
+    {
+      "character": "雷",
+      "ids": "⿱雨田",
+      "component_ids": [
+        "cmp-0004",
+        "cmp-0039"
+      ],
+      "validation": "illustrative-structure-candidate"
+    },
+    {
+      "character": "杏",
+      "ids": "⿱木口",
+      "component_ids": [
+        "cmp-0009",
+        "cmp-0020"
+      ],
+      "validation": "illustrative-structure-candidate"
+    },
+    {
+      "character": "灶",
+      "ids": "⿰火土",
+      "component_ids": [
+        "cmp-0005",
+        "cmp-0025"
+      ],
+      "validation": "illustrative-structure-candidate"
+    },
+    {
+      "character": "闷",
+      "ids": "⿵门心",
+      "component_ids": [
+        "cmp-0034",
+        "cmp-0016"
+      ],
+      "validation": "illustrative-structure-candidate"
+    },
+    {
+      "character": "间",
+      "ids": "⿵门日",
+      "component_ids": [
+        "cmp-0034",
+        "cmp-0007"
+      ],
+      "validation": "illustrative-structure-candidate"
+    },
+    {
+      "character": "问",
+      "ids": "⿵门口",
+      "component_ids": [
+        "cmp-0034",
+        "cmp-0020"
+      ],
+      "validation": "illustrative-structure-candidate"
+    },
+    {
+      "character": "冰",
+      "ids": "⿰冫水",
+      "component_ids": [
+        "cmp-0003",
+        "cmp-0001"
+      ],
+      "validation": "illustrative-structure-candidate"
+    },
+    {
+      "character": "安",
+      "ids": "⿱宀女",
+      "component_ids": [
+        "cmp-0035",
+        "cmp-0014"
+      ],
+      "validation": "illustrative-structure-candidate"
+    },
+    {
+      "character": "宋",
+      "ids": "⿱宀木",
+      "component_ids": [
+        "cmp-0035",
+        "cmp-0009"
+      ],
+      "validation": "illustrative-structure-candidate"
+    },
+    {
+      "character": "如",
+      "ids": "⿰女口",
+      "component_ids": [
+        "cmp-0014",
+        "cmp-0020"
+      ],
+      "validation": "illustrative-structure-candidate"
+    },
+    {
+      "character": "仙",
+      "ids": "⿰亻山",
+      "component_ids": [
+        "cmp-0013",
+        "cmp-0027"
+      ],
+      "validation": "illustrative-structure-candidate"
+    }
+  ]
+}

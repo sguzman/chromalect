@@ -1,0 +1,296 @@
+{
+  "schema": "chromalect.component-palette.v0",
+  "id": "mandarin-component-identity-pilot",
+  "version": "0.1.0",
+  "status": "experimental-not-validated",
+  "language_profile": "zh-CN-mainland-standard-mandarin-simplified",
+  "date": "2026-10-19",
+  "priority": "stable-identity-first",
+  "component_unit": "selected nonoverlapping named components at the pilot decomposition cut",
+  "variant_policy": "distinct visible shapes use distinct IDs/colors; explicitly linked related shapes; no automatic collapse",
+  "palette_space": "sRGB",
+  "mnemonic_group_semantics": "loose, non-authoritative metadata; identity contrast wins when in conflict",
+  "unknown_component": "render in neutral monochrome; do not silently invent a color or imply coverage",
+  "components": [
+    {
+      "id": "cmp-0001",
+      "shape": "水",
+      "color": "#025EB8",
+      "mnemonic_group_hint": "water-fluid",
+      "related_shape_group": "water-shapes"
+    },
+    {
+      "id": "cmp-0002",
+      "shape": "氵",
+      "color": "#1587BA",
+      "mnemonic_group_hint": "water-fluid",
+      "related_shape_group": "water-shapes"
+    },
+    {
+      "id": "cmp-0003",
+      "shape": "冫",
+      "color": "#2A76F1",
+      "mnemonic_group_hint": "water-fluid",
+      "related_shape_group": null
+    },
+    {
+      "id": "cmp-0004",
+      "shape": "雨",
+      "color": "#608CD5",
+      "mnemonic_group_hint": "water-fluid",
+      "related_shape_group": null
+    },
+    {
+      "id": "cmp-0005",
+      "shape": "火",
+      "color": "#EA5202",
+      "mnemonic_group_hint": "heat-light",
+      "related_shape_group": "fire-shapes"
+    },
+    {
+      "id": "cmp-0006",
+      "shape": "灬",
+      "color": "#C75615",
+      "mnemonic_group_hint": "heat-light",
+      "related_shape_group": "fire-shapes"
+    },
+    {
+      "id": "cmp-0007",
+      "shape": "日",
+      "color": "#C67544",
+      "mnemonic_group_hint": "heat-light",
+      "related_shape_group": null
+    },
+    {
+      "id": "cmp-0008",
+      "shape": "月",
+      "color": "#8352FE",
+      "mnemonic_group_hint": "heat-light",
+      "related_shape_group": null
+    },
+    {
+      "id": "cmp-0009",
+      "shape": "木",
+      "color": "#05A92E",
+      "mnemonic_group_hint": "plant-growth",
+      "related_shape_group": null
+    },
+    {
+      "id": "cmp-0010",
+      "shape": "艹",
+      "color": "#178529",
+      "mnemonic_group_hint": "plant-growth",
+      "related_shape_group": null
+    },
+    {
+      "id": "cmp-0011",
+      "shape": "禾",
+      "color": "#1D7339",
+      "mnemonic_group_hint": "plant-growth",
+      "related_shape_group": null
+    },
+    {
+      "id": "cmp-0012",
+      "shape": "人",
+      "color": "#C04E8A",
+      "mnemonic_group_hint": "human-body",
+      "related_shape_group": "person-shapes"
+    },
+    {
+      "id": "cmp-0013",
+      "shape": "亻",
+      "color": "#DF4B9D",
+      "mnemonic_group_hint": "human-body",
+      "related_shape_group": "person-shapes"
+    },
+    {
+      "id": "cmp-0014",
+      "shape": "女",
+      "color": "#DE0784",
+      "mnemonic_group_hint": "human-body",
+      "related_shape_group": null
+    },
+    {
+      "id": "cmp-0015",
+      "shape": "子",
+      "color": "#FA47BD",
+      "mnemonic_group_hint": "human-body",
+      "related_shape_group": null
+    },
+    {
+      "id": "cmp-0016",
+      "shape": "心",
+      "color": "#B42C92",
+      "mnemonic_group_hint": "human-body",
+      "related_shape_group": "heart-shapes"
+    },
+    {
+      "id": "cmp-0017",
+      "shape": "忄",
+      "color": "#98518A",
+      "mnemonic_group_hint": "human-body",
+      "related_shape_group": "heart-shapes"
+    },
+    {
+      "id": "cmp-0018",
+      "shape": "手",
+      "color": "#C86B82",
+      "mnemonic_group_hint": "human-body",
+      "related_shape_group": "hand-shapes"
+    },
+    {
+      "id": "cmp-0019",
+      "shape": "扌",
+      "color": "#FA588B",
+      "mnemonic_group_hint": "human-body",
+      "related_shape_group": "hand-shapes"
+    },
+    {
+      "id": "cmp-0020",
+      "shape": "口",
+      "color": "#DB3649",
+      "mnemonic_group_hint": "speech-senses",
+      "related_shape_group": null
+    },
+    {
+      "id": "cmp-0021",
+      "shape": "言",
+      "color": "#AF56FD",
+      "mnemonic_group_hint": "speech-senses",
+      "related_shape_group": "speech-shapes"
+    },
+    {
+      "id": "cmp-0022",
+      "shape": "讠",
+      "color": "#9367B2",
+      "mnemonic_group_hint": "speech-senses",
+      "related_shape_group": "speech-shapes"
+    },
+    {
+      "id": "cmp-0023",
+      "shape": "目",
+      "color": "#8B4EB3",
+      "mnemonic_group_hint": "speech-senses",
+      "related_shape_group": null
+    },
+    {
+      "id": "cmp-0024",
+      "shape": "耳",
+      "color": "#A84DCD",
+      "mnemonic_group_hint": "speech-senses",
+      "related_shape_group": null
+    },
+    {
+      "id": "cmp-0025",
+      "shape": "土",
+      "color": "#9E7604",
+      "mnemonic_group_hint": "earth-material",
+      "related_shape_group": null
+    },
+    {
+      "id": "cmp-0026",
+      "shape": "石",
+      "color": "#91922F",
+      "mnemonic_group_hint": "earth-material",
+      "related_shape_group": null
+    },
+    {
+      "id": "cmp-0027",
+      "shape": "山",
+      "color": "#C41F5F",
+      "mnemonic_group_hint": "earth-material",
+      "related_shape_group": null
+    },
+    {
+      "id": "cmp-0028",
+      "shape": "金",
+      "color": "#5D8D40",
+      "mnemonic_group_hint": "earth-material",
+      "related_shape_group": "metal-shapes"
+    },
+    {
+      "id": "cmp-0029",
+      "shape": "钅",
+      "color": "#BA3E3C",
+      "mnemonic_group_hint": "earth-material",
+      "related_shape_group": "metal-shapes"
+    },
+    {
+      "id": "cmp-0030",
+      "shape": "辶",
+      "color": "#BB66C1",
+      "mnemonic_group_hint": "movement-space",
+      "related_shape_group": null
+    },
+    {
+      "id": "cmp-0031",
+      "shape": "足",
+      "color": "#504FF6",
+      "mnemonic_group_hint": "movement-space",
+      "related_shape_group": null
+    },
+    {
+      "id": "cmp-0032",
+      "shape": "车",
+      "color": "#6863B1",
+      "mnemonic_group_hint": "movement-space",
+      "related_shape_group": null
+    },
+    {
+      "id": "cmp-0033",
+      "shape": "马",
+      "color": "#8D77E5",
+      "mnemonic_group_hint": "movement-space",
+      "related_shape_group": null
+    },
+    {
+      "id": "cmp-0034",
+      "shape": "门",
+      "color": "#A3591C",
+      "mnemonic_group_hint": "movement-space",
+      "related_shape_group": null
+    },
+    {
+      "id": "cmp-0035",
+      "shape": "宀",
+      "color": "#D95AF5",
+      "mnemonic_group_hint": "movement-space",
+      "related_shape_group": null
+    },
+    {
+      "id": "cmp-0036",
+      "shape": "青",
+      "color": "#05A388",
+      "mnemonic_group_hint": "structural-series",
+      "related_shape_group": null
+    },
+    {
+      "id": "cmp-0037",
+      "shape": "可",
+      "color": "#C52BBF",
+      "mnemonic_group_hint": "structural-series",
+      "related_shape_group": null
+    },
+    {
+      "id": "cmp-0038",
+      "shape": "亥",
+      "color": "#6D7607",
+      "mnemonic_group_hint": "structural-series",
+      "related_shape_group": null
+    },
+    {
+      "id": "cmp-0039",
+      "shape": "田",
+      "color": "#FB255B",
+      "mnemonic_group_hint": "structural-series",
+      "related_shape_group": null
+    },
+    {
+      "id": "cmp-0040",
+      "shape": "力",
+      "color": "#9130DB",
+      "mnemonic_group_hint": "structural-series",
+      "related_shape_group": null
+    }
+  ]
+}
