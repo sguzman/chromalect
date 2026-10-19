@@ -1,0 +1,8638 @@
+{
+  "schema": "chromalect.radical-participation.v1",
+  "tranche": "0001-1000",
+  "radical_standard": "GF 0011-2009",
+  "palette_version": "0.4.0",
+  "note": "Visible form membership inferred from IDS cut; not the character's official dictionary indexing radical",
+  "radicals": [
+    {
+      "id": "gf0011-main-001",
+      "form": "一",
+      "role": "principal",
+      "reported_strokes": 1,
+      "component_id": "cmp-0171",
+      "color": "#8D2929",
+      "tranche_0001_1000_count": 26,
+      "characters": [
+        {
+          "rank": 1,
+          "character": "一"
+        },
+        {
+          "rank": 223,
+          "character": "灭"
+        },
+        {
+          "rank": 235,
+          "character": "旦"
+        },
+        {
+          "rank": 281,
+          "character": "丛"
+        },
+        {
+          "rank": 285,
+          "character": "印"
+        },
+        {
+          "rank": 371,
+          "character": "共"
+        },
+        {
+          "rank": 413,
+          "character": "师"
+        },
+        {
+          "rank": 427,
+          "character": "同"
+        },
+        {
+          "rank": 483,
+          "character": "行"
+        },
+        {
+          "rank": 487,
+          "character": "杀"
+        },
+        {
+          "rank": 488,
+          "character": "合"
+        },
+        {
+          "rank": 498,
+          "character": "杂"
+        },
+        {
+          "rank": 525,
+          "character": "充"
+        },
+        {
+          "rank": 544,
+          "character": "兴"
+        },
+        {
+          "rank": 774,
+          "character": "但"
+        },
+        {
+          "rank": 795,
+          "character": "余"
+        },
+        {
+          "rank": 797,
+          "character": "坐"
+        },
+        {
+          "rank": 816,
+          "character": "条"
+        },
+        {
+          "rank": 836,
+          "character": "应"
+        },
+        {
+          "rank": 842,
+          "character": "弃"
+        },
+        {
+          "rank": 901,
+          "character": "即"
+        },
+        {
+          "rank": 946,
+          "character": "武"
+        },
+        {
+          "rank": 956,
+          "character": "坯"
+        },
+        {
+          "rank": 962,
+          "character": "坦"
+        },
+        {
+          "rank": 963,
+          "character": "担"
+        },
+        {
+          "rank": 1000,
+          "character": "昔"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-main-002",
+      "form": "丨",
+      "role": "principal",
+      "reported_strokes": 1,
+      "component_id": "cmp-0351",
+      "color": "#4B7D4D",
+      "tranche_0001_1000_count": 13,
+      "characters": [
+        {
+          "rank": 140,
+          "character": "介"
+        },
+        {
+          "rank": 176,
+          "character": "引"
+        },
+        {
+          "rank": 227,
+          "character": "北"
+        },
+        {
+          "rank": 232,
+          "character": "旧"
+        },
+        {
+          "rank": 388,
+          "character": "在"
+        },
+        {
+          "rank": 391,
+          "character": "存"
+        },
+        {
+          "rank": 452,
+          "character": "乔"
+        },
+        {
+          "rank": 469,
+          "character": "价"
+        },
+        {
+          "rank": 518,
+          "character": "齐"
+        },
+        {
+          "rank": 574,
+          "character": "阶"
+        },
+        {
+          "rank": 667,
+          "character": "芥"
+        },
+        {
+          "rank": 705,
+          "character": "尬"
+        },
+        {
+          "rank": 797,
+          "character": "坐"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-main-003",
+      "form": "丿",
+      "role": "principal",
+      "reported_strokes": 1,
+      "component_id": "cmp-0288",
+      "color": "#7D3B37",
+      "tranche_0001_1000_count": 17,
+      "characters": [
+        {
+          "rank": 132,
+          "character": "化"
+        },
+        {
+          "rank": 134,
+          "character": "币"
+        },
+        {
+          "rank": 140,
+          "character": "介"
+        },
+        {
+          "rank": 147,
+          "character": "乏"
+        },
+        {
+          "rank": 447,
+          "character": "丢"
+        },
+        {
+          "rank": 448,
+          "character": "廷"
+        },
+        {
+          "rank": 452,
+          "character": "乔"
+        },
+        {
+          "rank": 469,
+          "character": "价"
+        },
+        {
+          "rank": 472,
+          "character": "华"
+        },
+        {
+          "rank": 518,
+          "character": "齐"
+        },
+        {
+          "rank": 555,
+          "character": "讹"
+        },
+        {
+          "rank": 574,
+          "character": "阶"
+        },
+        {
+          "rank": 665,
+          "character": "花"
+        },
+        {
+          "rank": 667,
+          "character": "芥"
+        },
+        {
+          "rank": 705,
+          "character": "尬"
+        },
+        {
+          "rank": 825,
+          "character": "系"
+        },
+        {
+          "rank": 865,
+          "character": "泛"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-main-004",
+      "form": "丶",
+      "role": "principal",
+      "reported_strokes": 1,
+      "component_id": "cmp-0113",
+      "color": "#B45C6C",
+      "tranche_0001_1000_count": 14,
+      "characters": [
+        {
+          "rank": 182,
+          "character": "以"
+        },
+        {
+          "rank": 282,
+          "character": "令"
+        },
+        {
+          "rank": 385,
+          "character": "压"
+        },
+        {
+          "rank": 481,
+          "character": "似"
+        },
+        {
+          "rank": 657,
+          "character": "拟"
+        },
+        {
+          "rank": 779,
+          "character": "伶"
+        },
+        {
+          "rank": 781,
+          "character": "低"
+        },
+        {
+          "rank": 801,
+          "character": "邻"
+        },
+        {
+          "rank": 838,
+          "character": "冷"
+        },
+        {
+          "rank": 884,
+          "character": "良"
+        },
+        {
+          "rank": 901,
+          "character": "即"
+        },
+        {
+          "rank": 959,
+          "character": "拔"
+        },
+        {
+          "rank": 973,
+          "character": "拎"
+        },
+        {
+          "rank": 975,
+          "character": "抵"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-main-005",
+      "form": "乛",
+      "role": "principal",
+      "reported_strokes": 1,
+      "component_id": "cmp-0173",
+      "color": "#C34EA2",
+      "tranche_0001_1000_count": 1,
+      "characters": [
+        {
+          "rank": 588,
+          "character": "买"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-main-006",
+      "form": "十",
+      "role": "principal",
+      "reported_strokes": 2,
+      "component_id": "cmp-0334",
+      "color": "#967F4E",
+      "tranche_0001_1000_count": 19,
+      "characters": [
+        {
+          "rank": 4,
+          "character": "十"
+        },
+        {
+          "rank": 89,
+          "character": "支"
+        },
+        {
+          "rank": 129,
+          "character": "什"
+        },
+        {
+          "rank": 168,
+          "character": "计"
+        },
+        {
+          "rank": 200,
+          "character": "卉"
+        },
+        {
+          "rank": 208,
+          "character": "古"
+        },
+        {
+          "rank": 238,
+          "character": "叶"
+        },
+        {
+          "rank": 308,
+          "character": "汁"
+        },
+        {
+          "rank": 383,
+          "character": "协"
+        },
+        {
+          "rank": 409,
+          "character": "毕"
+        },
+        {
+          "rank": 419,
+          "character": "早"
+        },
+        {
+          "rank": 472,
+          "character": "华"
+        },
+        {
+          "rank": 615,
+          "character": "技"
+        },
+        {
+          "rank": 675,
+          "character": "克"
+        },
+        {
+          "rank": 723,
+          "character": "吱"
+        },
+        {
+          "rank": 757,
+          "character": "针"
+        },
+        {
+          "rank": 769,
+          "character": "估"
+        },
+        {
+          "rank": 918,
+          "character": "妓"
+        },
+        {
+          "rank": 999,
+          "character": "苦"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-main-007",
+      "form": "厂",
+      "role": "principal",
+      "reported_strokes": 2,
+      "component_id": "cmp-0078",
+      "color": "#AF84DE",
+      "tranche_0001_1000_count": 10,
+      "characters": [
+        {
+          "rank": 6,
+          "character": "厂"
+        },
+        {
+          "rank": 90,
+          "character": "厅"
+        },
+        {
+          "rank": 95,
+          "character": "历"
+        },
+        {
+          "rank": 215,
+          "character": "厉"
+        },
+        {
+          "rank": 385,
+          "character": "压"
+        },
+        {
+          "rank": 386,
+          "character": "厌"
+        },
+        {
+          "rank": 499,
+          "character": "危"
+        },
+        {
+          "rank": 619,
+          "character": "扼"
+        },
+        {
+          "rank": 702,
+          "character": "励"
+        },
+        {
+          "rank": 859,
+          "character": "沥"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-main-008",
+      "form": "匚",
+      "role": "principal",
+      "reported_strokes": 2,
+      "component_id": "cmp-0306",
+      "color": "#3A8286",
+      "tranche_0001_1000_count": 10,
+      "characters": [
+        {
+          "rank": 94,
+          "character": "区"
+        },
+        {
+          "rank": 99,
+          "character": "匹"
+        },
+        {
+          "rank": 309,
+          "character": "汇"
+        },
+        {
+          "rank": 394,
+          "character": "匠"
+        },
+        {
+          "rank": 617,
+          "character": "抠"
+        },
+        {
+          "rank": 692,
+          "character": "匣"
+        },
+        {
+          "rank": 700,
+          "character": "医"
+        },
+        {
+          "rank": 725,
+          "character": "呕"
+        },
+        {
+          "rank": 753,
+          "character": "岖"
+        },
+        {
+          "rank": 930,
+          "character": "驱"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-main-009",
+      "form": "卜",
+      "role": "principal",
+      "reported_strokes": 2,
+      "component_id": "cmp-0066",
+      "color": "#706419",
+      "tranche_0001_1000_count": 8,
+      "characters": [
+        {
+          "rank": 8,
+          "character": "卜"
+        },
+        {
+          "rank": 131,
+          "character": "仆"
+        },
+        {
+          "rank": 199,
+          "character": "扑"
+        },
+        {
+          "rank": 293,
+          "character": "外"
+        },
+        {
+          "rank": 294,
+          "character": "处"
+        },
+        {
+          "rank": 376,
+          "character": "朴"
+        },
+        {
+          "rank": 888,
+          "character": "补"
+        },
+        {
+          "rank": 954,
+          "character": "卦"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-main-010",
+      "form": "冂",
+      "role": "principal",
+      "reported_strokes": 2,
+      "component_id": "cmp-0373",
+      "color": "#157491",
+      "tranche_0001_1000_count": 6,
+      "characters": [
+        {
+          "rank": 115,
+          "character": "冈"
+        },
+        {
+          "rank": 427,
+          "character": "同"
+        },
+        {
+          "rank": 441,
+          "character": "刚"
+        },
+        {
+          "rank": 442,
+          "character": "网"
+        },
+        {
+          "rank": 754,
+          "character": "岗"
+        },
+        {
+          "rank": 933,
+          "character": "纲"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-main-011",
+      "form": "八",
+      "role": "principal",
+      "reported_strokes": 2,
+      "component_id": "cmp-0045",
+      "color": "#6645AA",
+      "tranche_0001_1000_count": 21,
+      "characters": [
+        {
+          "rank": 9,
+          "character": "八"
+        },
+        {
+          "rank": 146,
+          "character": "分"
+        },
+        {
+          "rank": 148,
+          "character": "公"
+        },
+        {
+          "rank": 201,
+          "character": "扒"
+        },
+        {
+          "rank": 246,
+          "character": "只"
+        },
+        {
+          "rank": 247,
+          "character": "叭"
+        },
+        {
+          "rank": 371,
+          "character": "共"
+        },
+        {
+          "rank": 471,
+          "character": "份"
+        },
+        {
+          "rank": 487,
+          "character": "杀"
+        },
+        {
+          "rank": 498,
+          "character": "杂"
+        },
+        {
+          "rank": 544,
+          "character": "兴"
+        },
+        {
+          "rank": 557,
+          "character": "讼"
+        },
+        {
+          "rank": 636,
+          "character": "扮"
+        },
+        {
+          "rank": 668,
+          "character": "芬"
+        },
+        {
+          "rank": 741,
+          "character": "吩"
+        },
+        {
+          "rank": 768,
+          "character": "兵"
+        },
+        {
+          "rank": 795,
+          "character": "余"
+        },
+        {
+          "rank": 802,
+          "character": "岔"
+        },
+        {
+          "rank": 816,
+          "character": "条"
+        },
+        {
+          "rank": 892,
+          "character": "识"
+        },
+        {
+          "rank": 937,
+          "character": "纷"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-main-012",
+      "form": "人",
+      "role": "principal",
+      "reported_strokes": 2,
+      "component_id": "cmp-0012",
+      "color": "#8B4EB3",
+      "tranche_0001_1000_count": 37,
+      "characters": [
+        {
+          "rank": 10,
+          "character": "人"
+        },
+        {
+          "rank": 140,
+          "character": "介"
+        },
+        {
+          "rank": 142,
+          "character": "从"
+        },
+        {
+          "rank": 149,
+          "character": "仓"
+        },
+        {
+          "rank": 171,
+          "character": "认"
+        },
+        {
+          "rank": 180,
+          "character": "队"
+        },
+        {
+          "rank": 182,
+          "character": "以"
+        },
+        {
+          "rank": 261,
+          "character": "囚"
+        },
+        {
+          "rank": 281,
+          "character": "丛"
+        },
+        {
+          "rank": 282,
+          "character": "令"
+        },
+        {
+          "rank": 305,
+          "character": "闪"
+        },
+        {
+          "rank": 469,
+          "character": "价"
+        },
+        {
+          "rank": 481,
+          "character": "似"
+        },
+        {
+          "rank": 485,
+          "character": "全"
+        },
+        {
+          "rank": 486,
+          "character": "会"
+        },
+        {
+          "rank": 488,
+          "character": "合"
+        },
+        {
+          "rank": 490,
+          "character": "企"
+        },
+        {
+          "rank": 491,
+          "character": "众"
+        },
+        {
+          "rank": 494,
+          "character": "创"
+        },
+        {
+          "rank": 574,
+          "character": "阶"
+        },
+        {
+          "rank": 637,
+          "character": "抢"
+        },
+        {
+          "rank": 657,
+          "character": "拟"
+        },
+        {
+          "rank": 667,
+          "character": "芥"
+        },
+        {
+          "rank": 669,
+          "character": "苍"
+        },
+        {
+          "rank": 686,
+          "character": "巫"
+        },
+        {
+          "rank": 705,
+          "character": "尬"
+        },
+        {
+          "rank": 742,
+          "character": "呛"
+        },
+        {
+          "rank": 779,
+          "character": "伶"
+        },
+        {
+          "rank": 795,
+          "character": "余"
+        },
+        {
+          "rank": 797,
+          "character": "坐"
+        },
+        {
+          "rank": 801,
+          "character": "邻"
+        },
+        {
+          "rank": 838,
+          "character": "冷"
+        },
+        {
+          "rank": 866,
+          "character": "沧"
+        },
+        {
+          "rank": 896,
+          "character": "诊"
+        },
+        {
+          "rank": 917,
+          "character": "坠"
+        },
+        {
+          "rank": 936,
+          "character": "纵"
+        },
+        {
+          "rank": 973,
+          "character": "拎"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-main-013",
+      "form": "勹",
+      "role": "principal",
+      "reported_strokes": 2,
+      "component_id": "cmp-0221",
+      "color": "#349317",
+      "tranche_0001_1000_count": 9,
+      "characters": [
+        {
+          "rank": 156,
+          "character": "匀"
+        },
+        {
+          "rank": 158,
+          "character": "勾"
+        },
+        {
+          "rank": 288,
+          "character": "句"
+        },
+        {
+          "rank": 500,
+          "character": "旬"
+        },
+        {
+          "rank": 504,
+          "character": "匈"
+        },
+        {
+          "rank": 640,
+          "character": "均"
+        },
+        {
+          "rank": 809,
+          "character": "甸"
+        },
+        {
+          "rank": 868,
+          "character": "沟"
+        },
+        {
+          "rank": 976,
+          "character": "拘"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-main-014",
+      "form": "儿",
+      "role": "principal",
+      "reported_strokes": 2,
+      "component_id": "cmp-0312",
+      "color": "#FB255B",
+      "tranche_0001_1000_count": 15,
+      "characters": [
+        {
+          "rank": 12,
+          "character": "儿"
+        },
+        {
+          "rank": 80,
+          "character": "元"
+        },
+        {
+          "rank": 99,
+          "character": "匹"
+        },
+        {
+          "rank": 183,
+          "character": "允"
+        },
+        {
+          "rank": 250,
+          "character": "兄"
+        },
+        {
+          "rank": 446,
+          "character": "先"
+        },
+        {
+          "rank": 525,
+          "character": "充"
+        },
+        {
+          "rank": 608,
+          "character": "远"
+        },
+        {
+          "rank": 675,
+          "character": "克"
+        },
+        {
+          "rank": 726,
+          "character": "园"
+        },
+        {
+          "rank": 752,
+          "character": "吮"
+        },
+        {
+          "rank": 830,
+          "character": "况"
+        },
+        {
+          "rank": 850,
+          "character": "兑"
+        },
+        {
+          "rank": 877,
+          "character": "完"
+        },
+        {
+          "rank": 944,
+          "character": "玩"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-main-015",
+      "form": "匕",
+      "role": "principal",
+      "reported_strokes": 2,
+      "component_id": "cmp-0058",
+      "color": "#7C7DF6",
+      "tranche_0001_1000_count": 12,
+      "characters": [
+        {
+          "rank": 13,
+          "character": "匕"
+        },
+        {
+          "rank": 105,
+          "character": "比"
+        },
+        {
+          "rank": 227,
+          "character": "北"
+        },
+        {
+          "rank": 314,
+          "character": "它"
+        },
+        {
+          "rank": 326,
+          "character": "尼"
+        },
+        {
+          "rank": 400,
+          "character": "死"
+        },
+        {
+          "rank": 409,
+          "character": "毕"
+        },
+        {
+          "rank": 411,
+          "character": "此"
+        },
+        {
+          "rank": 501,
+          "character": "旨"
+        },
+        {
+          "rank": 622,
+          "character": "批"
+        },
+        {
+          "rank": 833,
+          "character": "庇"
+        },
+        {
+          "rank": 903,
+          "character": "屁"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-main-016",
+      "form": "几",
+      "role": "principal",
+      "reported_strokes": 2,
+      "component_id": "cmp-0188",
+      "color": "#849666",
+      "tranche_0001_1000_count": 16,
+      "characters": [
+        {
+          "rank": 14,
+          "character": "几"
+        },
+        {
+          "rank": 159,
+          "character": "凤"
+        },
+        {
+          "rank": 162,
+          "character": "亢"
+        },
+        {
+          "rank": 172,
+          "character": "冗"
+        },
+        {
+          "rank": 173,
+          "character": "讥"
+        },
+        {
+          "rank": 251,
+          "character": "叽"
+        },
+        {
+          "rank": 299,
+          "character": "饥"
+        },
+        {
+          "rank": 377,
+          "character": "机"
+        },
+        {
+          "rank": 495,
+          "character": "肌"
+        },
+        {
+          "rank": 497,
+          "character": "朵"
+        },
+        {
+          "rank": 645,
+          "character": "坑"
+        },
+        {
+          "rank": 646,
+          "character": "抗"
+        },
+        {
+          "rank": 650,
+          "character": "壳"
+        },
+        {
+          "rank": 746,
+          "character": "吭"
+        },
+        {
+          "rank": 764,
+          "character": "秃"
+        },
+        {
+          "rank": 871,
+          "character": "沉"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-main-017",
+      "form": "亠",
+      "role": "principal",
+      "reported_strokes": 2,
+      "component_id": "cmp-0418",
+      "color": "#915271",
+      "tranche_0001_1000_count": 8,
+      "characters": [
+        {
+          "rank": 162,
+          "character": "亢"
+        },
+        {
+          "rank": 301,
+          "character": "市"
+        },
+        {
+          "rank": 304,
+          "character": "玄"
+        },
+        {
+          "rank": 519,
+          "character": "交"
+        },
+        {
+          "rank": 645,
+          "character": "坑"
+        },
+        {
+          "rank": 646,
+          "character": "抗"
+        },
+        {
+          "rank": 746,
+          "character": "吭"
+        },
+        {
+          "rank": 829,
+          "character": "亩"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-main-018",
+      "form": "冫",
+      "role": "principal",
+      "reported_strokes": 2,
+      "component_id": "cmp-0003",
+      "color": "#C86B82",
+      "tranche_0001_1000_count": 11,
+      "characters": [
+        {
+          "rank": 156,
+          "character": "匀"
+        },
+        {
+          "rank": 303,
+          "character": "冯"
+        },
+        {
+          "rank": 511,
+          "character": "冲"
+        },
+        {
+          "rank": 513,
+          "character": "冰"
+        },
+        {
+          "rank": 521,
+          "character": "次"
+        },
+        {
+          "rank": 523,
+          "character": "决"
+        },
+        {
+          "rank": 640,
+          "character": "均"
+        },
+        {
+          "rank": 827,
+          "character": "冻"
+        },
+        {
+          "rank": 830,
+          "character": "况"
+        },
+        {
+          "rank": 838,
+          "character": "冷"
+        },
+        {
+          "rank": 843,
+          "character": "冶"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-main-019",
+      "form": "冖",
+      "role": "principal",
+      "reported_strokes": 2,
+      "component_id": "cmp-0375",
+      "color": "#5D8D40",
+      "tranche_0001_1000_count": 6,
+      "characters": [
+        {
+          "rank": 172,
+          "character": "冗"
+        },
+        {
+          "rank": 316,
+          "character": "写"
+        },
+        {
+          "rank": 552,
+          "character": "军"
+        },
+        {
+          "rank": 650,
+          "character": "壳"
+        },
+        {
+          "rank": 674,
+          "character": "劳"
+        },
+        {
+          "rank": 871,
+          "character": "沉"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-main-020",
+      "form": "凵",
+      "role": "principal",
+      "reported_strokes": 2,
+      "component_id": "cmp-0181",
+      "color": "#5151A7",
+      "tranche_0001_1000_count": 3,
+      "characters": [
+        {
+          "rank": 145,
+          "character": "凶"
+        },
+        {
+          "rank": 504,
+          "character": "匈"
+        },
+        {
+          "rank": 864,
+          "character": "汹"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-main-021",
+      "form": "卩",
+      "role": "principal",
+      "reported_strokes": 2,
+      "component_id": "cmp-0205",
+      "color": "#B81C6F",
+      "tranche_0001_1000_count": 5,
+      "characters": [
+        {
+          "rank": 254,
+          "character": "叩"
+        },
+        {
+          "rank": 285,
+          "character": "印"
+        },
+        {
+          "rank": 656,
+          "character": "报"
+        },
+        {
+          "rank": 658,
+          "character": "却"
+        },
+        {
+          "rank": 901,
+          "character": "即"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-main-022",
+      "form": "刀",
+      "role": "principal",
+      "reported_strokes": 2,
+      "component_id": "cmp-0106",
+      "color": "#BA3E3C",
+      "tranche_0001_1000_count": 14,
+      "characters": [
+        {
+          "rank": 18,
+          "character": "刀"
+        },
+        {
+          "rank": 107,
+          "character": "切"
+        },
+        {
+          "rank": 146,
+          "character": "分"
+        },
+        {
+          "rank": 255,
+          "character": "叨"
+        },
+        {
+          "rank": 334,
+          "character": "召"
+        },
+        {
+          "rank": 471,
+          "character": "份"
+        },
+        {
+          "rank": 636,
+          "character": "扮"
+        },
+        {
+          "rank": 668,
+          "character": "芬"
+        },
+        {
+          "rank": 741,
+          "character": "吩"
+        },
+        {
+          "rank": 792,
+          "character": "彻"
+        },
+        {
+          "rank": 802,
+          "character": "岔"
+        },
+        {
+          "rank": 889,
+          "character": "初"
+        },
+        {
+          "rank": 937,
+          "character": "纷"
+        },
+        {
+          "rank": 988,
+          "character": "招"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-main-023",
+      "form": "力",
+      "role": "principal",
+      "reported_strokes": 2,
+      "component_id": "cmp-0040",
+      "color": "#9367B2",
+      "tranche_0001_1000_count": 28,
+      "characters": [
+        {
+          "rank": 19,
+          "character": "力"
+        },
+        {
+          "rank": 95,
+          "character": "历"
+        },
+        {
+          "rank": 186,
+          "character": "劝"
+        },
+        {
+          "rank": 202,
+          "character": "功"
+        },
+        {
+          "rank": 219,
+          "character": "夯"
+        },
+        {
+          "rank": 256,
+          "character": "另"
+        },
+        {
+          "rank": 297,
+          "character": "务"
+        },
+        {
+          "rank": 335,
+          "character": "加"
+        },
+        {
+          "rank": 337,
+          "character": "边"
+        },
+        {
+          "rank": 346,
+          "character": "幼"
+        },
+        {
+          "rank": 353,
+          "character": "动"
+        },
+        {
+          "rank": 416,
+          "character": "劣"
+        },
+        {
+          "rank": 468,
+          "character": "伤"
+        },
+        {
+          "rank": 496,
+          "character": "肋"
+        },
+        {
+          "rank": 642,
+          "character": "抛"
+        },
+        {
+          "rank": 660,
+          "character": "劫"
+        },
+        {
+          "rank": 674,
+          "character": "劳"
+        },
+        {
+          "rank": 702,
+          "character": "励"
+        },
+        {
+          "rank": 719,
+          "character": "助"
+        },
+        {
+          "rank": 733,
+          "character": "男"
+        },
+        {
+          "rank": 751,
+          "character": "别"
+        },
+        {
+          "rank": 859,
+          "character": "沥"
+        },
+        {
+          "rank": 882,
+          "character": "穷"
+        },
+        {
+          "rank": 924,
+          "character": "努"
+        },
+        {
+          "rank": 926,
+          "character": "劲"
+        },
+        {
+          "rank": 967,
+          "character": "拐"
+        },
+        {
+          "rank": 977,
+          "character": "势"
+        },
+        {
+          "rank": 995,
+          "character": "拗"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-main-024",
+      "form": "又",
+      "role": "principal",
+      "reported_strokes": 2,
+      "component_id": "cmp-0463",
+      "color": "#445CCD",
+      "tranche_0001_1000_count": 32,
+      "characters": [
+        {
+          "rank": 21,
+          "character": "又"
+        },
+        {
+          "rank": 89,
+          "character": "支"
+        },
+        {
+          "rank": 97,
+          "character": "友"
+        },
+        {
+          "rank": 136,
+          "character": "仅"
+        },
+        {
+          "rank": 139,
+          "character": "反"
+        },
+        {
+          "rank": 159,
+          "character": "凤"
+        },
+        {
+          "rank": 185,
+          "character": "邓"
+        },
+        {
+          "rank": 186,
+          "character": "劝"
+        },
+        {
+          "rank": 187,
+          "character": "双"
+        },
+        {
+          "rank": 257,
+          "character": "叹"
+        },
+        {
+          "rank": 311,
+          "character": "汉"
+        },
+        {
+          "rank": 333,
+          "character": "奴"
+        },
+        {
+          "rank": 340,
+          "character": "圣"
+        },
+        {
+          "rank": 341,
+          "character": "对"
+        },
+        {
+          "rank": 378,
+          "character": "权"
+        },
+        {
+          "rank": 584,
+          "character": "戏"
+        },
+        {
+          "rank": 586,
+          "character": "观"
+        },
+        {
+          "rank": 587,
+          "character": "欢"
+        },
+        {
+          "rank": 615,
+          "character": "技"
+        },
+        {
+          "rank": 634,
+          "character": "扳"
+        },
+        {
+          "rank": 656,
+          "character": "报"
+        },
+        {
+          "rank": 712,
+          "character": "坚"
+        },
+        {
+          "rank": 723,
+          "character": "吱"
+        },
+        {
+          "rank": 794,
+          "character": "返"
+        },
+        {
+          "rank": 823,
+          "character": "饭"
+        },
+        {
+          "rank": 898,
+          "character": "译"
+        },
+        {
+          "rank": 918,
+          "character": "妓"
+        },
+        {
+          "rank": 924,
+          "character": "努"
+        },
+        {
+          "rank": 928,
+          "character": "鸡"
+        },
+        {
+          "rank": 959,
+          "character": "拔"
+        },
+        {
+          "rank": 992,
+          "character": "择"
+        },
+        {
+          "rank": 997,
+          "character": "取"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-main-025",
+      "form": "厶",
+      "role": "principal",
+      "reported_strokes": 2,
+      "component_id": "cmp-0363",
+      "color": "#A97E5B",
+      "tranche_0001_1000_count": 17,
+      "characters": [
+        {
+          "rank": 148,
+          "character": "公"
+        },
+        {
+          "rank": 158,
+          "character": "勾"
+        },
+        {
+          "rank": 183,
+          "character": "允"
+        },
+        {
+          "rank": 329,
+          "character": "弘"
+        },
+        {
+          "rank": 342,
+          "character": "台"
+        },
+        {
+          "rank": 447,
+          "character": "丢"
+        },
+        {
+          "rank": 525,
+          "character": "充"
+        },
+        {
+          "rank": 557,
+          "character": "讼"
+        },
+        {
+          "rank": 720,
+          "character": "县"
+        },
+        {
+          "rank": 752,
+          "character": "吮"
+        },
+        {
+          "rank": 766,
+          "character": "私"
+        },
+        {
+          "rank": 842,
+          "character": "弃"
+        },
+        {
+          "rank": 843,
+          "character": "冶"
+        },
+        {
+          "rank": 868,
+          "character": "沟"
+        },
+        {
+          "rank": 879,
+          "character": "宏"
+        },
+        {
+          "rank": 927,
+          "character": "矣"
+        },
+        {
+          "rank": 993,
+          "character": "抬"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-main-026",
+      "form": "廴",
+      "role": "principal",
+      "reported_strokes": 2,
+      "component_id": "cmp-0200",
+      "color": "#B04F79",
+      "tranche_0001_1000_count": 2,
+      "characters": [
+        {
+          "rank": 448,
+          "character": "廷"
+        },
+        {
+          "rank": 464,
+          "character": "延"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-main-027",
+      "form": "干",
+      "role": "principal",
+      "reported_strokes": 3,
+      "component_id": "cmp-0146",
+      "color": "#A02951",
+      "tranche_0001_1000_count": 10,
+      "characters": [
+        {
+          "rank": 23,
+          "character": "干"
+        },
+        {
+          "rank": 191,
+          "character": "刊"
+        },
+        {
+          "rank": 536,
+          "character": "汗"
+        },
+        {
+          "rank": 577,
+          "character": "奸"
+        },
+        {
+          "rank": 678,
+          "character": "杆"
+        },
+        {
+          "rank": 709,
+          "character": "轩"
+        },
+        {
+          "rank": 714,
+          "character": "旱"
+        },
+        {
+          "rank": 803,
+          "character": "肝"
+        },
+        {
+          "rank": 895,
+          "character": "罕"
+        },
+        {
+          "rank": 983,
+          "character": "幸"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-main-028",
+      "form": "工",
+      "role": "principal",
+      "reported_strokes": 3,
+      "component_id": "cmp-0156",
+      "color": "#B86E03",
+      "tranche_0001_1000_count": 16,
+      "characters": [
+        {
+          "rank": 26,
+          "character": "工"
+        },
+        {
+          "rank": 197,
+          "character": "巧"
+        },
+        {
+          "rank": 202,
+          "character": "功"
+        },
+        {
+          "rank": 214,
+          "character": "左"
+        },
+        {
+          "rank": 349,
+          "character": "式"
+        },
+        {
+          "rank": 354,
+          "character": "扛"
+        },
+        {
+          "rank": 361,
+          "character": "巩"
+        },
+        {
+          "rank": 538,
+          "character": "江"
+        },
+        {
+          "rank": 589,
+          "character": "红"
+        },
+        {
+          "rank": 627,
+          "character": "贡"
+        },
+        {
+          "rank": 628,
+          "character": "汞"
+        },
+        {
+          "rank": 630,
+          "character": "攻"
+        },
+        {
+          "rank": 679,
+          "character": "杠"
+        },
+        {
+          "rank": 686,
+          "character": "巫"
+        },
+        {
+          "rank": 772,
+          "character": "佐"
+        },
+        {
+          "rank": 804,
+          "character": "肛"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-main-029",
+      "form": "土",
+      "role": "principal",
+      "reported_strokes": 3,
+      "component_id": "cmp-0025",
+      "color": "#9E7604",
+      "tranche_0001_1000_count": 40,
+      "characters": [
+        {
+          "rank": 27,
+          "character": "土"
+        },
+        {
+          "rank": 340,
+          "character": "圣"
+        },
+        {
+          "rank": 355,
+          "character": "寺"
+        },
+        {
+          "rank": 362,
+          "character": "圾"
+        },
+        {
+          "rank": 366,
+          "character": "地"
+        },
+        {
+          "rank": 367,
+          "character": "场"
+        },
+        {
+          "rank": 385,
+          "character": "压"
+        },
+        {
+          "rank": 388,
+          "character": "在"
+        },
+        {
+          "rank": 414,
+          "character": "尘"
+        },
+        {
+          "rank": 421,
+          "character": "吐"
+        },
+        {
+          "rank": 447,
+          "character": "丢"
+        },
+        {
+          "rank": 448,
+          "character": "廷"
+        },
+        {
+          "rank": 514,
+          "character": "庄"
+        },
+        {
+          "rank": 614,
+          "character": "坛"
+        },
+        {
+          "rank": 616,
+          "character": "坏"
+        },
+        {
+          "rank": 623,
+          "character": "址"
+        },
+        {
+          "rank": 625,
+          "character": "走"
+        },
+        {
+          "rank": 629,
+          "character": "坝"
+        },
+        {
+          "rank": 639,
+          "character": "坎"
+        },
+        {
+          "rank": 640,
+          "character": "均"
+        },
+        {
+          "rank": 644,
+          "character": "坟"
+        },
+        {
+          "rank": 645,
+          "character": "坑"
+        },
+        {
+          "rank": 647,
+          "character": "坊"
+        },
+        {
+          "rank": 652,
+          "character": "块"
+        },
+        {
+          "rank": 680,
+          "character": "杜"
+        },
+        {
+          "rank": 712,
+          "character": "坚"
+        },
+        {
+          "rank": 759,
+          "character": "牡"
+        },
+        {
+          "rank": 805,
+          "character": "肚"
+        },
+        {
+          "rank": 851,
+          "character": "灶"
+        },
+        {
+          "rank": 890,
+          "character": "社"
+        },
+        {
+          "rank": 917,
+          "character": "坠"
+        },
+        {
+          "rank": 954,
+          "character": "卦"
+        },
+        {
+          "rank": 955,
+          "character": "坷"
+        },
+        {
+          "rank": 956,
+          "character": "坯"
+        },
+        {
+          "rank": 960,
+          "character": "坪"
+        },
+        {
+          "rank": 962,
+          "character": "坦"
+        },
+        {
+          "rank": 964,
+          "character": "坤"
+        },
+        {
+          "rank": 980,
+          "character": "垃"
+        },
+        {
+          "rank": 983,
+          "character": "幸"
+        },
+        {
+          "rank": 989,
+          "character": "坡"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-main-030",
+      "form": "艹",
+      "role": "principal",
+      "reported_strokes": 3,
+      "component_id": "cmp-0010",
+      "color": "#8D77E5",
+      "tranche_0001_1000_count": 25,
+      "characters": [
+        {
+          "rank": 86,
+          "character": "艺"
+        },
+        {
+          "rank": 207,
+          "character": "艾"
+        },
+        {
+          "rank": 209,
+          "character": "节"
+        },
+        {
+          "rank": 370,
+          "character": "芋"
+        },
+        {
+          "rank": 371,
+          "character": "共"
+        },
+        {
+          "rank": 372,
+          "character": "芒"
+        },
+        {
+          "rank": 374,
+          "character": "芝"
+        },
+        {
+          "rank": 661,
+          "character": "芙"
+        },
+        {
+          "rank": 662,
+          "character": "芜"
+        },
+        {
+          "rank": 663,
+          "character": "苇"
+        },
+        {
+          "rank": 664,
+          "character": "芽"
+        },
+        {
+          "rank": 665,
+          "character": "花"
+        },
+        {
+          "rank": 666,
+          "character": "芹"
+        },
+        {
+          "rank": 667,
+          "character": "芥"
+        },
+        {
+          "rank": 668,
+          "character": "芬"
+        },
+        {
+          "rank": 669,
+          "character": "苍"
+        },
+        {
+          "rank": 670,
+          "character": "芳"
+        },
+        {
+          "rank": 672,
+          "character": "芦"
+        },
+        {
+          "rank": 673,
+          "character": "芯"
+        },
+        {
+          "rank": 674,
+          "character": "劳"
+        },
+        {
+          "rank": 676,
+          "character": "芭"
+        },
+        {
+          "rank": 677,
+          "character": "苏"
+        },
+        {
+          "rank": 998,
+          "character": "茉"
+        },
+        {
+          "rank": 999,
+          "character": "苦"
+        },
+        {
+          "rank": 1000,
+          "character": "昔"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-main-031",
+      "form": "寸",
+      "role": "principal",
+      "reported_strokes": 3,
+      "component_id": "cmp-0099",
+      "color": "#40AC6F",
+      "tranche_0001_1000_count": 15,
+      "characters": [
+        {
+          "rank": 31,
+          "character": "寸"
+        },
+        {
+          "rank": 269,
+          "character": "付"
+        },
+        {
+          "rank": 315,
+          "character": "讨"
+        },
+        {
+          "rank": 341,
+          "character": "对"
+        },
+        {
+          "rank": 355,
+          "character": "寺"
+        },
+        {
+          "rank": 379,
+          "character": "过"
+        },
+        {
+          "rank": 396,
+          "character": "夺"
+        },
+        {
+          "rank": 546,
+          "character": "守"
+        },
+        {
+          "rank": 563,
+          "character": "寻"
+        },
+        {
+          "rank": 567,
+          "character": "导"
+        },
+        {
+          "rank": 599,
+          "character": "寿"
+        },
+        {
+          "rank": 682,
+          "character": "村"
+        },
+        {
+          "rank": 717,
+          "character": "时"
+        },
+        {
+          "rank": 806,
+          "character": "肘"
+        },
+        {
+          "rank": 916,
+          "character": "附"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-main-032",
+      "form": "廾",
+      "role": "principal",
+      "reported_strokes": 3,
+      "component_id": "cmp-0282",
+      "color": "#7D5234",
+      "tranche_0001_1000_count": 6,
+      "characters": [
+        {
+          "rank": 200,
+          "character": "卉"
+        },
+        {
+          "rank": 531,
+          "character": "并"
+        },
+        {
+          "rank": 568,
+          "character": "异"
+        },
+        {
+          "rank": 600,
+          "character": "弄"
+        },
+        {
+          "rank": 606,
+          "character": "戒"
+        },
+        {
+          "rank": 842,
+          "character": "弃"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-main-033",
+      "form": "大",
+      "role": "principal",
+      "reported_strokes": 3,
+      "component_id": "cmp-0100",
+      "color": "#256451",
+      "tranche_0001_1000_count": 11,
+      "characters": [
+        {
+          "rank": 32,
+          "character": "大"
+        },
+        {
+          "rank": 219,
+          "character": "夯"
+        },
+        {
+          "rank": 395,
+          "character": "夸"
+        },
+        {
+          "rank": 396,
+          "character": "夺"
+        },
+        {
+          "rank": 398,
+          "character": "达"
+        },
+        {
+          "rank": 415,
+          "character": "尖"
+        },
+        {
+          "rank": 430,
+          "character": "因"
+        },
+        {
+          "rank": 452,
+          "character": "乔"
+        },
+        {
+          "rank": 515,
+          "character": "庆"
+        },
+        {
+          "rank": 532,
+          "character": "关"
+        },
+        {
+          "rank": 590,
+          "character": "驮"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-main-034",
+      "form": "尢",
+      "role": "principal",
+      "reported_strokes": 3,
+      "component_id": "cmp-0147",
+      "color": "#AB875D",
+      "tranche_0001_1000_count": 1,
+      "characters": [
+        {
+          "rank": 705,
+          "character": "尬"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-main-035",
+      "form": "弋",
+      "role": "principal",
+      "reported_strokes": 3,
+      "component_id": "cmp-0450",
+      "color": "#4F8FBA",
+      "tranche_0001_1000_count": 3,
+      "characters": [
+        {
+          "rank": 271,
+          "character": "代"
+        },
+        {
+          "rank": 349,
+          "character": "式"
+        },
+        {
+          "rank": 946,
+          "character": "武"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-main-036",
+      "form": "小",
+      "role": "principal",
+      "reported_strokes": 3,
+      "component_id": "cmp-0411",
+      "color": "#5C76A0",
+      "tranche_0001_1000_count": 6,
+      "characters": [
+        {
+          "rank": 37,
+          "character": "小"
+        },
+        {
+          "rank": 286,
+          "character": "尔"
+        },
+        {
+          "rank": 414,
+          "character": "尘"
+        },
+        {
+          "rank": 415,
+          "character": "尖"
+        },
+        {
+          "rank": 570,
+          "character": "孙"
+        },
+        {
+          "rank": 782,
+          "character": "你"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-main-037",
+      "form": "口",
+      "role": "principal",
+      "reported_strokes": 3,
+      "component_id": "cmp-0020",
+      "color": "#1587BA",
+      "tranche_0001_1000_count": 85,
+      "characters": [
+        {
+          "rank": 38,
+          "character": "口"
+        },
+        {
+          "rank": 208,
+          "character": "古"
+        },
+        {
+          "rank": 217,
+          "character": "右"
+        },
+        {
+          "rank": 228,
+          "character": "占"
+        },
+        {
+          "rank": 238,
+          "character": "叶"
+        },
+        {
+          "rank": 241,
+          "character": "叮"
+        },
+        {
+          "rank": 243,
+          "character": "号"
+        },
+        {
+          "rank": 246,
+          "character": "只"
+        },
+        {
+          "rank": 247,
+          "character": "叭"
+        },
+        {
+          "rank": 250,
+          "character": "兄"
+        },
+        {
+          "rank": 251,
+          "character": "叽"
+        },
+        {
+          "rank": 252,
+          "character": "叼"
+        },
+        {
+          "rank": 253,
+          "character": "叫"
+        },
+        {
+          "rank": 254,
+          "character": "叩"
+        },
+        {
+          "rank": 255,
+          "character": "叨"
+        },
+        {
+          "rank": 256,
+          "character": "另"
+        },
+        {
+          "rank": 257,
+          "character": "叹"
+        },
+        {
+          "rank": 288,
+          "character": "句"
+        },
+        {
+          "rank": 334,
+          "character": "召"
+        },
+        {
+          "rank": 335,
+          "character": "加"
+        },
+        {
+          "rank": 342,
+          "character": "台"
+        },
+        {
+          "rank": 356,
+          "character": "吉"
+        },
+        {
+          "rank": 357,
+          "character": "扣"
+        },
+        {
+          "rank": 420,
+          "character": "吁"
+        },
+        {
+          "rank": 421,
+          "character": "吐"
+        },
+        {
+          "rank": 422,
+          "character": "吓"
+        },
+        {
+          "rank": 426,
+          "character": "吕"
+        },
+        {
+          "rank": 427,
+          "character": "同"
+        },
+        {
+          "rank": 428,
+          "character": "吊"
+        },
+        {
+          "rank": 429,
+          "character": "吃"
+        },
+        {
+          "rank": 431,
+          "character": "吸"
+        },
+        {
+          "rank": 432,
+          "character": "吗"
+        },
+        {
+          "rank": 433,
+          "character": "吆"
+        },
+        {
+          "rank": 438,
+          "character": "回"
+        },
+        {
+          "rank": 488,
+          "character": "合"
+        },
+        {
+          "rank": 505,
+          "character": "名"
+        },
+        {
+          "rank": 506,
+          "character": "各"
+        },
+        {
+          "rank": 528,
+          "character": "问"
+        },
+        {
+          "rank": 578,
+          "character": "如"
+        },
+        {
+          "rank": 607,
+          "character": "吞"
+        },
+        {
+          "rank": 675,
+          "character": "克"
+        },
+        {
+          "rank": 684,
+          "character": "杏"
+        },
+        {
+          "rank": 695,
+          "character": "吾"
+        },
+        {
+          "rank": 703,
+          "character": "否"
+        },
+        {
+          "rank": 716,
+          "character": "呈"
+        },
+        {
+          "rank": 718,
+          "character": "吴"
+        },
+        {
+          "rank": 722,
+          "character": "呆"
+        },
+        {
+          "rank": 723,
+          "character": "吱"
+        },
+        {
+          "rank": 724,
+          "character": "吠"
+        },
+        {
+          "rank": 725,
+          "character": "呕"
+        },
+        {
+          "rank": 729,
+          "character": "呀"
+        },
+        {
+          "rank": 730,
+          "character": "吨"
+        },
+        {
+          "rank": 735,
+          "character": "吵"
+        },
+        {
+          "rank": 737,
+          "character": "员"
+        },
+        {
+          "rank": 738,
+          "character": "呐"
+        },
+        {
+          "rank": 739,
+          "character": "听"
+        },
+        {
+          "rank": 740,
+          "character": "吟"
+        },
+        {
+          "rank": 741,
+          "character": "吩"
+        },
+        {
+          "rank": 742,
+          "character": "呛"
+        },
+        {
+          "rank": 743,
+          "character": "吻"
+        },
+        {
+          "rank": 744,
+          "character": "吹"
+        },
+        {
+          "rank": 745,
+          "character": "呜"
+        },
+        {
+          "rank": 746,
+          "character": "吭"
+        },
+        {
+          "rank": 747,
+          "character": "吧"
+        },
+        {
+          "rank": 748,
+          "character": "邑"
+        },
+        {
+          "rank": 749,
+          "character": "吼"
+        },
+        {
+          "rank": 751,
+          "character": "别"
+        },
+        {
+          "rank": 752,
+          "character": "吮"
+        },
+        {
+          "rank": 760,
+          "character": "告"
+        },
+        {
+          "rank": 769,
+          "character": "估"
+        },
+        {
+          "rank": 773,
+          "character": "佑"
+        },
+        {
+          "rank": 800,
+          "character": "含"
+        },
+        {
+          "rank": 830,
+          "character": "况"
+        },
+        {
+          "rank": 835,
+          "character": "吝"
+        },
+        {
+          "rank": 843,
+          "character": "冶"
+        },
+        {
+          "rank": 850,
+          "character": "兑"
+        },
+        {
+          "rank": 886,
+          "character": "启"
+        },
+        {
+          "rank": 892,
+          "character": "识"
+        },
+        {
+          "rank": 899,
+          "character": "君"
+        },
+        {
+          "rank": 907,
+          "character": "局"
+        },
+        {
+          "rank": 967,
+          "character": "拐"
+        },
+        {
+          "rank": 976,
+          "character": "拘"
+        },
+        {
+          "rank": 988,
+          "character": "招"
+        },
+        {
+          "rank": 993,
+          "character": "抬"
+        },
+        {
+          "rank": 999,
+          "character": "苦"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-main-038",
+      "form": "囗",
+      "role": "principal",
+      "reported_strokes": 3,
+      "component_id": "cmp-0384",
+      "color": "#9C5768",
+      "tranche_0001_1000_count": 8,
+      "characters": [
+        {
+          "rank": 261,
+          "character": "囚"
+        },
+        {
+          "rank": 425,
+          "character": "团"
+        },
+        {
+          "rank": 430,
+          "character": "因"
+        },
+        {
+          "rank": 438,
+          "character": "回"
+        },
+        {
+          "rank": 726,
+          "character": "园"
+        },
+        {
+          "rank": 728,
+          "character": "围"
+        },
+        {
+          "rank": 734,
+          "character": "困"
+        },
+        {
+          "rank": 750,
+          "character": "囤"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-main-039",
+      "form": "山",
+      "role": "principal",
+      "reported_strokes": 3,
+      "component_id": "cmp-0027",
+      "color": "#FA588B",
+      "tranche_0001_1000_count": 10,
+      "characters": [
+        {
+          "rank": 39,
+          "character": "山"
+        },
+        {
+          "rank": 272,
+          "character": "仙"
+        },
+        {
+          "rank": 434,
+          "character": "屿"
+        },
+        {
+          "rank": 435,
+          "character": "屹"
+        },
+        {
+          "rank": 436,
+          "character": "岁"
+        },
+        {
+          "rank": 439,
+          "character": "岂"
+        },
+        {
+          "rank": 753,
+          "character": "岖"
+        },
+        {
+          "rank": 754,
+          "character": "岗"
+        },
+        {
+          "rank": 802,
+          "character": "岔"
+        },
+        {
+          "rank": 852,
+          "character": "灿"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-main-040",
+      "form": "巾",
+      "role": "principal",
+      "reported_strokes": 3,
+      "component_id": "cmp-0209",
+      "color": "#6B9BBD",
+      "tranche_0001_1000_count": 10,
+      "characters": [
+        {
+          "rank": 40,
+          "character": "巾"
+        },
+        {
+          "rank": 134,
+          "character": "币"
+        },
+        {
+          "rank": 218,
+          "character": "布"
+        },
+        {
+          "rank": 233,
+          "character": "帅"
+        },
+        {
+          "rank": 301,
+          "character": "市"
+        },
+        {
+          "rank": 413,
+          "character": "师"
+        },
+        {
+          "rank": 428,
+          "character": "吊"
+        },
+        {
+          "rank": 437,
+          "character": "帆"
+        },
+        {
+          "rank": 755,
+          "character": "帐"
+        },
+        {
+          "rank": 796,
+          "character": "希"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-main-041",
+      "form": "彳",
+      "role": "principal",
+      "reported_strokes": 3,
+      "component_id": "cmp-0360",
+      "color": "#6680BA",
+      "tranche_0001_1000_count": 3,
+      "characters": [
+        {
+          "rank": 483,
+          "character": "行"
+        },
+        {
+          "rank": 792,
+          "character": "彻"
+        },
+        {
+          "rank": 793,
+          "character": "役"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-main-042",
+      "form": "彡",
+      "role": "principal",
+      "reported_strokes": 3,
+      "component_id": "cmp-0322",
+      "color": "#808A08",
+      "tranche_0001_1000_count": 4,
+      "characters": [
+        {
+          "rank": 604,
+          "character": "形"
+        },
+        {
+          "rank": 685,
+          "character": "杉"
+        },
+        {
+          "rank": 817,
+          "character": "彤"
+        },
+        {
+          "rank": 896,
+          "character": "诊"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-main-043",
+      "form": "夕",
+      "role": "principal",
+      "reported_strokes": 3,
+      "component_id": "cmp-0400",
+      "color": "#CA8A66",
+      "tranche_0001_1000_count": 5,
+      "characters": [
+        {
+          "rank": 46,
+          "character": "夕"
+        },
+        {
+          "rank": 293,
+          "character": "外"
+        },
+        {
+          "rank": 436,
+          "character": "岁"
+        },
+        {
+          "rank": 505,
+          "character": "名"
+        },
+        {
+          "rank": 507,
+          "character": "多"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-main-044",
+      "form": "夂",
+      "role": "principal",
+      "reported_strokes": 3,
+      "component_id": "cmp-0118",
+      "color": "#A06976",
+      "tranche_0001_1000_count": 6,
+      "characters": [
+        {
+          "rank": 294,
+          "character": "处"
+        },
+        {
+          "rank": 295,
+          "character": "冬"
+        },
+        {
+          "rank": 297,
+          "character": "务"
+        },
+        {
+          "rank": 506,
+          "character": "各"
+        },
+        {
+          "rank": 601,
+          "character": "麦"
+        },
+        {
+          "rank": 816,
+          "character": "条"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-main-045",
+      "form": "丬",
+      "role": "principal",
+      "reported_strokes": 3,
+      "component_id": "cmp-0285",
+      "color": "#956D30",
+      "tranche_0001_1000_count": 3,
+      "characters": [
+        {
+          "rank": 510,
+          "character": "壮"
+        },
+        {
+          "rank": 512,
+          "character": "妆"
+        },
+        {
+          "rank": 828,
+          "character": "状"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-main-046",
+      "form": "广",
+      "role": "principal",
+      "reported_strokes": 3,
+      "component_id": "cmp-0163",
+      "color": "#0478A8",
+      "tranche_0001_1000_count": 11,
+      "characters": [
+        {
+          "rank": 53,
+          "character": "广"
+        },
+        {
+          "rank": 364,
+          "character": "扩"
+        },
+        {
+          "rank": 514,
+          "character": "庄"
+        },
+        {
+          "rank": 515,
+          "character": "庆"
+        },
+        {
+          "rank": 727,
+          "character": "旷"
+        },
+        {
+          "rank": 831,
+          "character": "床"
+        },
+        {
+          "rank": 832,
+          "character": "库"
+        },
+        {
+          "rank": 833,
+          "character": "庇"
+        },
+        {
+          "rank": 836,
+          "character": "应"
+        },
+        {
+          "rank": 839,
+          "character": "庐"
+        },
+        {
+          "rank": 840,
+          "character": "序"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-main-047",
+      "form": "门",
+      "role": "principal",
+      "reported_strokes": 3,
+      "component_id": "cmp-0034",
+      "color": "#178529",
+      "tranche_0001_1000_count": 10,
+      "characters": [
+        {
+          "rank": 55,
+          "character": "门"
+        },
+        {
+          "rank": 273,
+          "character": "们"
+        },
+        {
+          "rank": 305,
+          "character": "闪"
+        },
+        {
+          "rank": 527,
+          "character": "闭"
+        },
+        {
+          "rank": 528,
+          "character": "问"
+        },
+        {
+          "rank": 529,
+          "character": "闯"
+        },
+        {
+          "rank": 845,
+          "character": "闰"
+        },
+        {
+          "rank": 846,
+          "character": "闲"
+        },
+        {
+          "rank": 847,
+          "character": "间"
+        },
+        {
+          "rank": 848,
+          "character": "闷"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-main-048",
+      "form": "宀",
+      "role": "principal",
+      "reported_strokes": 3,
+      "component_id": "cmp-0035",
+      "color": "#8352FE",
+      "tranche_0001_1000_count": 13,
+      "characters": [
+        {
+          "rank": 312,
+          "character": "宁"
+        },
+        {
+          "rank": 314,
+          "character": "它"
+        },
+        {
+          "rank": 545,
+          "character": "宇"
+        },
+        {
+          "rank": 546,
+          "character": "守"
+        },
+        {
+          "rank": 547,
+          "character": "宅"
+        },
+        {
+          "rank": 548,
+          "character": "字"
+        },
+        {
+          "rank": 549,
+          "character": "安"
+        },
+        {
+          "rank": 877,
+          "character": "完"
+        },
+        {
+          "rank": 878,
+          "character": "宋"
+        },
+        {
+          "rank": 879,
+          "character": "宏"
+        },
+        {
+          "rank": 880,
+          "character": "牢"
+        },
+        {
+          "rank": 883,
+          "character": "灾"
+        },
+        {
+          "rank": 985,
+          "character": "拧"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-main-049",
+      "form": "辶",
+      "role": "principal",
+      "reported_strokes": 3,
+      "component_id": "cmp-0030",
+      "color": "#601CCF",
+      "tranche_0001_1000_count": 21,
+      "characters": [
+        {
+          "rank": 331,
+          "character": "辽"
+        },
+        {
+          "rank": 337,
+          "character": "边"
+        },
+        {
+          "rank": 350,
+          "character": "迂"
+        },
+        {
+          "rank": 379,
+          "character": "过"
+        },
+        {
+          "rank": 398,
+          "character": "达"
+        },
+        {
+          "rank": 408,
+          "character": "迈"
+        },
+        {
+          "rank": 451,
+          "character": "迁"
+        },
+        {
+          "rank": 453,
+          "character": "迄"
+        },
+        {
+          "rank": 565,
+          "character": "迅"
+        },
+        {
+          "rank": 598,
+          "character": "巡"
+        },
+        {
+          "rank": 605,
+          "character": "进"
+        },
+        {
+          "rank": 608,
+          "character": "远"
+        },
+        {
+          "rank": 609,
+          "character": "违"
+        },
+        {
+          "rank": 611,
+          "character": "运"
+        },
+        {
+          "rank": 704,
+          "character": "还"
+        },
+        {
+          "rank": 708,
+          "character": "连"
+        },
+        {
+          "rank": 791,
+          "character": "近"
+        },
+        {
+          "rank": 794,
+          "character": "返"
+        },
+        {
+          "rank": 822,
+          "character": "迎"
+        },
+        {
+          "rank": 837,
+          "character": "这"
+        },
+        {
+          "rank": 906,
+          "character": "迟"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-main-050",
+      "form": "彐",
+      "role": "principal",
+      "reported_strokes": 3,
+      "component_id": "cmp-0249",
+      "color": "#6085AC",
+      "tranche_0001_1000_count": 0,
+      "characters": []
+    },
+    {
+      "id": "gf0011-main-051",
+      "form": "尸",
+      "role": "principal",
+      "reported_strokes": 3,
+      "component_id": "cmp-0332",
+      "color": "#8393C2",
+      "tranche_0001_1000_count": 8,
+      "characters": [
+        {
+          "rank": 59,
+          "character": "尸"
+        },
+        {
+          "rank": 230,
+          "character": "卢"
+        },
+        {
+          "rank": 326,
+          "character": "尼"
+        },
+        {
+          "rank": 902,
+          "character": "层"
+        },
+        {
+          "rank": 903,
+          "character": "屁"
+        },
+        {
+          "rank": 904,
+          "character": "尿"
+        },
+        {
+          "rank": 905,
+          "character": "尾"
+        },
+        {
+          "rank": 907,
+          "character": "局"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-main-052",
+      "form": "己",
+      "role": "principal",
+      "reported_strokes": 3,
+      "component_id": "cmp-0189",
+      "color": "#1D7339",
+      "tranche_0001_1000_count": 7,
+      "characters": [
+        {
+          "rank": 60,
+          "character": "己"
+        },
+        {
+          "rank": 323,
+          "character": "记"
+        },
+        {
+          "rank": 439,
+          "character": "岂"
+        },
+        {
+          "rank": 580,
+          "character": "妃"
+        },
+        {
+          "rank": 595,
+          "character": "纪"
+        },
+        {
+          "rank": 908,
+          "character": "改"
+        },
+        {
+          "rank": 910,
+          "character": "忌"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-main-053",
+      "form": "弓",
+      "role": "principal",
+      "reported_strokes": 3,
+      "component_id": "cmp-0157",
+      "color": "#5B98AF",
+      "tranche_0001_1000_count": 5,
+      "characters": [
+        {
+          "rank": 63,
+          "character": "弓"
+        },
+        {
+          "rank": 176,
+          "character": "引"
+        },
+        {
+          "rank": 329,
+          "character": "弘"
+        },
+        {
+          "rank": 569,
+          "character": "弛"
+        },
+        {
+          "rank": 909,
+          "character": "张"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-main-054",
+      "form": "子",
+      "role": "principal",
+      "reported_strokes": 3,
+      "component_id": "cmp-0015",
+      "color": "#98518A",
+      "tranche_0001_1000_count": 11,
+      "characters": [
+        {
+          "rank": 64,
+          "character": "子"
+        },
+        {
+          "rank": 179,
+          "character": "孔"
+        },
+        {
+          "rank": 276,
+          "character": "仔"
+        },
+        {
+          "rank": 338,
+          "character": "孕"
+        },
+        {
+          "rank": 391,
+          "character": "存"
+        },
+        {
+          "rank": 548,
+          "character": "字"
+        },
+        {
+          "rank": 570,
+          "character": "孙"
+        },
+        {
+          "rank": 581,
+          "character": "好"
+        },
+        {
+          "rank": 638,
+          "character": "孝"
+        },
+        {
+          "rank": 688,
+          "character": "李"
+        },
+        {
+          "rank": 749,
+          "character": "吼"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-main-055",
+      "form": "屮",
+      "role": "principal",
+      "reported_strokes": 3,
+      "component_id": null,
+      "color": null,
+      "tranche_0001_1000_count": 0,
+      "characters": []
+    },
+    {
+      "id": "gf0011-main-056",
+      "form": "女",
+      "role": "principal",
+      "reported_strokes": 3,
+      "component_id": "cmp-0014",
+      "color": "#EA5202",
+      "tranche_0001_1000_count": 22,
+      "characters": [
+        {
+          "rank": 67,
+          "character": "女"
+        },
+        {
+          "rank": 332,
+          "character": "奶"
+        },
+        {
+          "rank": 333,
+          "character": "奴"
+        },
+        {
+          "rank": 512,
+          "character": "妆"
+        },
+        {
+          "rank": 526,
+          "character": "妄"
+        },
+        {
+          "rank": 541,
+          "character": "汝"
+        },
+        {
+          "rank": 549,
+          "character": "安"
+        },
+        {
+          "rank": 577,
+          "character": "奸"
+        },
+        {
+          "rank": 578,
+          "character": "如"
+        },
+        {
+          "rank": 579,
+          "character": "妇"
+        },
+        {
+          "rank": 580,
+          "character": "妃"
+        },
+        {
+          "rank": 581,
+          "character": "好"
+        },
+        {
+          "rank": 582,
+          "character": "她"
+        },
+        {
+          "rank": 583,
+          "character": "妈"
+        },
+        {
+          "rank": 799,
+          "character": "妥"
+        },
+        {
+          "rank": 918,
+          "character": "妓"
+        },
+        {
+          "rank": 919,
+          "character": "妙"
+        },
+        {
+          "rank": 920,
+          "character": "妖"
+        },
+        {
+          "rank": 921,
+          "character": "姊"
+        },
+        {
+          "rank": 922,
+          "character": "妨"
+        },
+        {
+          "rank": 923,
+          "character": "妒"
+        },
+        {
+          "rank": 924,
+          "character": "努"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-main-057",
+      "form": "飞",
+      "role": "principal",
+      "reported_strokes": 3,
+      "component_id": "cmp-0133",
+      "color": "#876083",
+      "tranche_0001_1000_count": 1,
+      "characters": [
+        {
+          "rank": 69,
+          "character": "飞"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-main-058",
+      "form": "马",
+      "role": "principal",
+      "reported_strokes": 3,
+      "component_id": "cmp-0033",
+      "color": "#C41F5F",
+      "tranche_0001_1000_count": 12,
+      "characters": [
+        {
+          "rank": 72,
+          "character": "马"
+        },
+        {
+          "rank": 303,
+          "character": "冯"
+        },
+        {
+          "rank": 432,
+          "character": "吗"
+        },
+        {
+          "rank": 529,
+          "character": "闯"
+        },
+        {
+          "rank": 583,
+          "character": "妈"
+        },
+        {
+          "rank": 590,
+          "character": "驮"
+        },
+        {
+          "rank": 592,
+          "character": "驯"
+        },
+        {
+          "rank": 596,
+          "character": "驰"
+        },
+        {
+          "rank": 603,
+          "character": "玛"
+        },
+        {
+          "rank": 930,
+          "character": "驱"
+        },
+        {
+          "rank": 935,
+          "character": "驳"
+        },
+        {
+          "rank": 941,
+          "character": "驴"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-main-059",
+      "form": "么",
+      "role": "principal",
+      "reported_strokes": 3,
+      "component_id": "cmp-0260",
+      "color": "#B28630",
+      "tranche_0001_1000_count": 1,
+      "characters": [
+        {
+          "rank": 48,
+          "character": "么"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-main-060",
+      "form": "巛",
+      "role": "principal",
+      "reported_strokes": 3,
+      "component_id": "cmp-0092",
+      "color": "#4C682B",
+      "tranche_0001_1000_count": 1,
+      "characters": [
+        {
+          "rank": 598,
+          "character": "巡"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-main-061",
+      "form": "王",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0383",
+      "color": "#9E7CC6",
+      "tranche_0001_1000_count": 13,
+      "characters": [
+        {
+          "rank": 75,
+          "character": "王"
+        },
+        {
+          "rank": 485,
+          "character": "全"
+        },
+        {
+          "rank": 600,
+          "character": "弄"
+        },
+        {
+          "rank": 602,
+          "character": "玖"
+        },
+        {
+          "rank": 603,
+          "character": "玛"
+        },
+        {
+          "rank": 716,
+          "character": "呈"
+        },
+        {
+          "rank": 811,
+          "character": "狂"
+        },
+        {
+          "rank": 845,
+          "character": "闰"
+        },
+        {
+          "rank": 855,
+          "character": "汪"
+        },
+        {
+          "rank": 944,
+          "character": "玩"
+        },
+        {
+          "rank": 945,
+          "character": "环"
+        },
+        {
+          "rank": 949,
+          "character": "现"
+        },
+        {
+          "rank": 950,
+          "character": "玫"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-main-062",
+      "form": "无",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0393",
+      "color": "#A21C62",
+      "tranche_0001_1000_count": 3,
+      "characters": [
+        {
+          "rank": 81,
+          "character": "无"
+        },
+        {
+          "rank": 613,
+          "character": "抚"
+        },
+        {
+          "rank": 662,
+          "character": "芜"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-main-063",
+      "form": "韦",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0385",
+      "color": "#60612E",
+      "tranche_0001_1000_count": 7,
+      "characters": [
+        {
+          "rank": 454,
+          "character": "伟"
+        },
+        {
+          "rank": 551,
+          "character": "讳"
+        },
+        {
+          "rank": 609,
+          "character": "违"
+        },
+        {
+          "rank": 610,
+          "character": "韧"
+        },
+        {
+          "rank": 663,
+          "character": "苇"
+        },
+        {
+          "rank": 728,
+          "character": "围"
+        },
+        {
+          "rank": 929,
+          "character": "纬"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-main-064",
+      "form": "木",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0009",
+      "color": "#C67544",
+      "tranche_0001_1000_count": 24,
+      "characters": [
+        {
+          "rank": 87,
+          "character": "木"
+        },
+        {
+          "rank": 375,
+          "character": "朽"
+        },
+        {
+          "rank": 376,
+          "character": "朴"
+        },
+        {
+          "rank": 377,
+          "character": "机"
+        },
+        {
+          "rank": 378,
+          "character": "权"
+        },
+        {
+          "rank": 458,
+          "character": "休"
+        },
+        {
+          "rank": 497,
+          "character": "朵"
+        },
+        {
+          "rank": 678,
+          "character": "杆"
+        },
+        {
+          "rank": 679,
+          "character": "杠"
+        },
+        {
+          "rank": 680,
+          "character": "杜"
+        },
+        {
+          "rank": 681,
+          "character": "材"
+        },
+        {
+          "rank": 682,
+          "character": "村"
+        },
+        {
+          "rank": 683,
+          "character": "杖"
+        },
+        {
+          "rank": 684,
+          "character": "杏"
+        },
+        {
+          "rank": 685,
+          "character": "杉"
+        },
+        {
+          "rank": 687,
+          "character": "极"
+        },
+        {
+          "rank": 688,
+          "character": "李"
+        },
+        {
+          "rank": 689,
+          "character": "杨"
+        },
+        {
+          "rank": 722,
+          "character": "呆"
+        },
+        {
+          "rank": 734,
+          "character": "困"
+        },
+        {
+          "rank": 831,
+          "character": "床"
+        },
+        {
+          "rank": 846,
+          "character": "闲"
+        },
+        {
+          "rank": 856,
+          "character": "沐"
+        },
+        {
+          "rank": 878,
+          "character": "宋"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-main-065",
+      "form": "支",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": null,
+      "color": null,
+      "tranche_0001_1000_count": 0,
+      "characters": []
+    },
+    {
+      "id": "gf0011-main-066",
+      "form": "犬",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0309",
+      "color": "#035C92",
+      "tranche_0001_1000_count": 5,
+      "characters": [
+        {
+          "rank": 92,
+          "character": "犬"
+        },
+        {
+          "rank": 386,
+          "character": "厌"
+        },
+        {
+          "rank": 460,
+          "character": "伏"
+        },
+        {
+          "rank": 724,
+          "character": "吠"
+        },
+        {
+          "rank": 828,
+          "character": "状"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-main-067",
+      "form": "歹",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0101",
+      "color": "#6863B1",
+      "tranche_0001_1000_count": 4,
+      "characters": [
+        {
+          "rank": 96,
+          "character": "歹"
+        },
+        {
+          "rank": 399,
+          "character": "列"
+        },
+        {
+          "rank": 400,
+          "character": "死"
+        },
+        {
+          "rank": 706,
+          "character": "歼"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-main-068",
+      "form": "车",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0032",
+      "color": "#A04E3A",
+      "tranche_0001_1000_count": 8,
+      "characters": [
+        {
+          "rank": 100,
+          "character": "车"
+        },
+        {
+          "rank": 224,
+          "character": "轧"
+        },
+        {
+          "rank": 404,
+          "character": "轨"
+        },
+        {
+          "rank": 552,
+          "character": "军"
+        },
+        {
+          "rank": 571,
+          "character": "阵"
+        },
+        {
+          "rank": 708,
+          "character": "连"
+        },
+        {
+          "rank": 709,
+          "character": "轩"
+        },
+        {
+          "rank": 832,
+          "character": "库"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-main-069",
+      "form": "牙",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0427",
+      "color": "#DE5634",
+      "tranche_0001_1000_count": 5,
+      "characters": [
+        {
+          "rank": 102,
+          "character": "牙"
+        },
+        {
+          "rank": 405,
+          "character": "邪"
+        },
+        {
+          "rank": 553,
+          "character": "讶"
+        },
+        {
+          "rank": 664,
+          "character": "芽"
+        },
+        {
+          "rank": 729,
+          "character": "呀"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-main-070",
+      "form": "戈",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0150",
+      "color": "#7B499C",
+      "tranche_0001_1000_count": 7,
+      "characters": [
+        {
+          "rank": 104,
+          "character": "戈"
+        },
+        {
+          "rank": 352,
+          "character": "戎"
+        },
+        {
+          "rank": 407,
+          "character": "划"
+        },
+        {
+          "rank": 463,
+          "character": "伐"
+        },
+        {
+          "rank": 584,
+          "character": "戏"
+        },
+        {
+          "rank": 606,
+          "character": "戒"
+        },
+        {
+          "rank": 621,
+          "character": "找"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-main-071",
+      "form": "比",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": null,
+      "color": null,
+      "tranche_0001_1000_count": 0,
+      "characters": []
+    },
+    {
+      "id": "gf0011-main-072",
+      "form": "瓦",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0379",
+      "color": "#DD1F5D",
+      "tranche_0001_1000_count": 1,
+      "characters": [
+        {
+          "rank": 108,
+          "character": "瓦"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-main-073",
+      "form": "止",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0489",
+      "color": "#D78164",
+      "tranche_0001_1000_count": 7,
+      "characters": [
+        {
+          "rank": 109,
+          "character": "止"
+        },
+        {
+          "rank": 411,
+          "character": "此"
+        },
+        {
+          "rank": 490,
+          "character": "企"
+        },
+        {
+          "rank": 623,
+          "character": "址"
+        },
+        {
+          "rank": 624,
+          "character": "扯"
+        },
+        {
+          "rank": 710,
+          "character": "步"
+        },
+        {
+          "rank": 946,
+          "character": "武"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-main-074",
+      "form": "攴",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0131",
+      "color": "#C07967",
+      "tranche_0001_1000_count": 0,
+      "characters": []
+    },
+    {
+      "id": "gf0011-main-075",
+      "form": "日",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0007",
+      "color": "#2A76F1",
+      "tranche_0001_1000_count": 17,
+      "characters": [
+        {
+          "rank": 112,
+          "character": "日"
+        },
+        {
+          "rank": 232,
+          "character": "旧"
+        },
+        {
+          "rank": 235,
+          "character": "旦"
+        },
+        {
+          "rank": 419,
+          "character": "早"
+        },
+        {
+          "rank": 500,
+          "character": "旬"
+        },
+        {
+          "rank": 501,
+          "character": "旨"
+        },
+        {
+          "rank": 502,
+          "character": "旭"
+        },
+        {
+          "rank": 572,
+          "character": "阳"
+        },
+        {
+          "rank": 714,
+          "character": "旱"
+        },
+        {
+          "rank": 717,
+          "character": "时"
+        },
+        {
+          "rank": 727,
+          "character": "旷"
+        },
+        {
+          "rank": 774,
+          "character": "但"
+        },
+        {
+          "rank": 847,
+          "character": "间"
+        },
+        {
+          "rank": 962,
+          "character": "坦"
+        },
+        {
+          "rank": 963,
+          "character": "担"
+        },
+        {
+          "rank": 969,
+          "character": "者"
+        },
+        {
+          "rank": 1000,
+          "character": "昔"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-main-076",
+      "form": "贝",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0054",
+      "color": "#438E56",
+      "tranche_0001_1000_count": 10,
+      "characters": [
+        {
+          "rank": 114,
+          "character": "贝"
+        },
+        {
+          "rank": 412,
+          "character": "贞"
+        },
+        {
+          "rank": 440,
+          "character": "则"
+        },
+        {
+          "rank": 503,
+          "character": "负"
+        },
+        {
+          "rank": 627,
+          "character": "贡"
+        },
+        {
+          "rank": 629,
+          "character": "坝"
+        },
+        {
+          "rank": 737,
+          "character": "员"
+        },
+        {
+          "rank": 756,
+          "character": "财"
+        },
+        {
+          "rank": 813,
+          "character": "狈"
+        },
+        {
+          "rank": 948,
+          "character": "责"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-main-077",
+      "form": "水",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0001",
+      "color": "#AF56FD",
+      "tranche_0001_1000_count": 4,
+      "characters": [
+        {
+          "rank": 117,
+          "character": "水"
+        },
+        {
+          "rank": 513,
+          "character": "冰"
+        },
+        {
+          "rank": 628,
+          "character": "汞"
+        },
+        {
+          "rank": 904,
+          "character": "尿"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-main-078",
+      "form": "见",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0201",
+      "color": "#B97696",
+      "tranche_0001_1000_count": 4,
+      "characters": [
+        {
+          "rank": 118,
+          "character": "见"
+        },
+        {
+          "rank": 586,
+          "character": "观"
+        },
+        {
+          "rank": 949,
+          "character": "现"
+        },
+        {
+          "rank": 952,
+          "character": "规"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-main-079",
+      "form": "牛",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0279",
+      "color": "#D95AF5",
+      "tranche_0001_1000_count": 4,
+      "characters": [
+        {
+          "rank": 120,
+          "character": "牛"
+        },
+        {
+          "rank": 466,
+          "character": "件"
+        },
+        {
+          "rank": 759,
+          "character": "牡"
+        },
+        {
+          "rank": 880,
+          "character": "牢"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-main-080",
+      "form": "手",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0018",
+      "color": "#9130DB",
+      "tranche_0001_1000_count": 1,
+      "characters": [
+        {
+          "rank": 121,
+          "character": "手"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-main-081",
+      "form": "气",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0295",
+      "color": "#CE8674",
+      "tranche_0001_1000_count": 2,
+      "characters": [
+        {
+          "rank": 122,
+          "character": "气"
+        },
+        {
+          "rank": 861,
+          "character": "汽"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-main-082",
+      "form": "毛",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0255",
+      "color": "#4B501E",
+      "tranche_0001_1000_count": 2,
+      "characters": [
+        {
+          "rank": 123,
+          "character": "毛"
+        },
+        {
+          "rank": 905,
+          "character": "尾"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-main-083",
+      "form": "长",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0077",
+      "color": "#427E95",
+      "tranche_0001_1000_count": 3,
+      "characters": [
+        {
+          "rank": 127,
+          "character": "长"
+        },
+        {
+          "rank": 755,
+          "character": "帐"
+        },
+        {
+          "rank": 909,
+          "character": "张"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-main-084",
+      "form": "片",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0287",
+      "color": "#6F4157",
+      "tranche_0001_1000_count": 1,
+      "characters": [
+        {
+          "rank": 130,
+          "character": "片"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-main-085",
+      "form": "斤",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0210",
+      "color": "#7C7028",
+      "tranche_0001_1000_count": 6,
+      "characters": [
+        {
+          "rank": 137,
+          "character": "斤"
+        },
+        {
+          "rank": 394,
+          "character": "匠"
+        },
+        {
+          "rank": 632,
+          "character": "折"
+        },
+        {
+          "rank": 666,
+          "character": "芹"
+        },
+        {
+          "rank": 739,
+          "character": "听"
+        },
+        {
+          "rank": 791,
+          "character": "近"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-main-086",
+      "form": "爪",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0481",
+      "color": "#A469A7",
+      "tranche_0001_1000_count": 2,
+      "characters": [
+        {
+          "rank": 138,
+          "character": "爪"
+        },
+        {
+          "rank": 633,
+          "character": "抓"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-main-087",
+      "form": "父",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0144",
+      "color": "#445780",
+      "tranche_0001_1000_count": 3,
+      "characters": [
+        {
+          "rank": 141,
+          "character": "父"
+        },
+        {
+          "rank": 492,
+          "character": "爷"
+        },
+        {
+          "rank": 519,
+          "character": "交"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-main-088",
+      "form": "月",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0008",
+      "color": "#DB3649",
+      "tranche_0001_1000_count": 9,
+      "characters": [
+        {
+          "rank": 150,
+          "character": "月"
+        },
+        {
+          "rank": 495,
+          "character": "肌"
+        },
+        {
+          "rank": 496,
+          "character": "肋"
+        },
+        {
+          "rank": 575,
+          "character": "阴"
+        },
+        {
+          "rank": 803,
+          "character": "肝"
+        },
+        {
+          "rank": 804,
+          "character": "肛"
+        },
+        {
+          "rank": 805,
+          "character": "肚"
+        },
+        {
+          "rank": 806,
+          "character": "肘"
+        },
+        {
+          "rank": 807,
+          "character": "肠"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-main-089",
+      "form": "氏",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0342",
+      "color": "#4F8BA2",
+      "tranche_0001_1000_count": 4,
+      "characters": [
+        {
+          "rank": 151,
+          "character": "氏"
+        },
+        {
+          "rank": 781,
+          "character": "低"
+        },
+        {
+          "rank": 938,
+          "character": "纸"
+        },
+        {
+          "rank": 975,
+          "character": "抵"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-main-090",
+      "form": "欠",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0299",
+      "color": "#8C2F03",
+      "tranche_0001_1000_count": 6,
+      "characters": [
+        {
+          "rank": 153,
+          "character": "欠"
+        },
+        {
+          "rank": 521,
+          "character": "次"
+        },
+        {
+          "rank": 587,
+          "character": "欢"
+        },
+        {
+          "rank": 639,
+          "character": "坎"
+        },
+        {
+          "rank": 744,
+          "character": "吹"
+        },
+        {
+          "rank": 824,
+          "character": "饮"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-main-091",
+      "form": "风",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0137",
+      "color": "#1D6173",
+      "tranche_0001_1000_count": 2,
+      "characters": [
+        {
+          "rank": 154,
+          "character": "风"
+        },
+        {
+          "rank": 559,
+          "character": "讽"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-main-092",
+      "form": "殳",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0348",
+      "color": "#593FC5",
+      "tranche_0001_1000_count": 4,
+      "characters": [
+        {
+          "rank": 560,
+          "character": "设"
+        },
+        {
+          "rank": 643,
+          "character": "投"
+        },
+        {
+          "rank": 793,
+          "character": "役"
+        },
+        {
+          "rank": 867,
+          "character": "没"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-main-093",
+      "form": "文",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0390",
+      "color": "#FF4659",
+      "tranche_0001_1000_count": 7,
+      "characters": [
+        {
+          "rank": 161,
+          "character": "文"
+        },
+        {
+          "rank": 517,
+          "character": "刘"
+        },
+        {
+          "rank": 518,
+          "character": "齐"
+        },
+        {
+          "rank": 644,
+          "character": "坟"
+        },
+        {
+          "rank": 835,
+          "character": "吝"
+        },
+        {
+          "rank": 837,
+          "character": "这"
+        },
+        {
+          "rank": 939,
+          "character": "纹"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-main-094",
+      "form": "方",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0132",
+      "color": "#CA7EB1",
+      "tranche_0001_1000_count": 8,
+      "characters": [
+        {
+          "rank": 163,
+          "character": "方"
+        },
+        {
+          "rank": 474,
+          "character": "仿"
+        },
+        {
+          "rank": 561,
+          "character": "访"
+        },
+        {
+          "rank": 576,
+          "character": "防"
+        },
+        {
+          "rank": 647,
+          "character": "坊"
+        },
+        {
+          "rank": 670,
+          "character": "芳"
+        },
+        {
+          "rank": 922,
+          "character": "妨"
+        },
+        {
+          "rank": 940,
+          "character": "纺"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-main-095",
+      "form": "火",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0005",
+      "color": "#DE0784",
+      "tranche_0001_1000_count": 11,
+      "characters": [
+        {
+          "rank": 164,
+          "character": "火"
+        },
+        {
+          "rank": 223,
+          "character": "灭"
+        },
+        {
+          "rank": 397,
+          "character": "灰"
+        },
+        {
+          "rank": 475,
+          "character": "伙"
+        },
+        {
+          "rank": 534,
+          "character": "灯"
+        },
+        {
+          "rank": 819,
+          "character": "灸"
+        },
+        {
+          "rank": 851,
+          "character": "灶"
+        },
+        {
+          "rank": 852,
+          "character": "灿"
+        },
+        {
+          "rank": 853,
+          "character": "灼"
+        },
+        {
+          "rank": 883,
+          "character": "灾"
+        },
+        {
+          "rank": 900,
+          "character": "灵"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-main-096",
+      "form": "斗",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0121",
+      "color": "#2A8D7E",
+      "tranche_0001_1000_count": 2,
+      "characters": [
+        {
+          "rank": 166,
+          "character": "斗"
+        },
+        {
+          "rank": 648,
+          "character": "抖"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-main-097",
+      "form": "户",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0180",
+      "color": "#914C48",
+      "tranche_0001_1000_count": 8,
+      "characters": [
+        {
+          "rank": 170,
+          "character": "户"
+        },
+        {
+          "rank": 649,
+          "character": "护"
+        },
+        {
+          "rank": 672,
+          "character": "芦"
+        },
+        {
+          "rank": 839,
+          "character": "庐"
+        },
+        {
+          "rank": 869,
+          "character": "沪"
+        },
+        {
+          "rank": 886,
+          "character": "启"
+        },
+        {
+          "rank": 923,
+          "character": "妒"
+        },
+        {
+          "rank": 941,
+          "character": "驴"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-main-098",
+      "form": "心",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0016",
+      "color": "#C04E8A",
+      "tranche_0001_1000_count": 8,
+      "characters": [
+        {
+          "rank": 174,
+          "character": "心"
+        },
+        {
+          "rank": 651,
+          "character": "志"
+        },
+        {
+          "rank": 673,
+          "character": "芯"
+        },
+        {
+          "rank": 844,
+          "character": "忘"
+        },
+        {
+          "rank": 848,
+          "character": "闷"
+        },
+        {
+          "rank": 872,
+          "character": "沁"
+        },
+        {
+          "rank": 910,
+          "character": "忌"
+        },
+        {
+          "rank": 925,
+          "character": "忍"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-main-099",
+      "form": "毋",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": null,
+      "color": null,
+      "tranche_0001_1000_count": 0,
+      "characters": []
+    },
+    {
+      "id": "gf0011-main-100",
+      "form": "示",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0343",
+      "color": "#285AF8",
+      "tranche_0001_1000_count": 5,
+      "characters": [
+        {
+          "rank": 194,
+          "character": "示"
+        },
+        {
+          "rank": 318,
+          "character": "礼"
+        },
+        {
+          "rank": 890,
+          "character": "社"
+        },
+        {
+          "rank": 891,
+          "character": "祀"
+        },
+        {
+          "rank": 911,
+          "character": "际"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-main-101",
+      "form": "甘",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0148",
+      "color": "#758B4B",
+      "tranche_0001_1000_count": 1,
+      "characters": [
+        {
+          "rank": 205,
+          "character": "甘"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-main-102",
+      "form": "石",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0026",
+      "color": "#744049",
+      "tranche_0001_1000_count": 2,
+      "characters": [
+        {
+          "rank": 216,
+          "character": "石"
+        },
+        {
+          "rank": 957,
+          "character": "拓"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-main-103",
+      "form": "龙",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0247",
+      "color": "#F21D74",
+      "tranche_0001_1000_count": 2,
+      "characters": [
+        {
+          "rank": 221,
+          "character": "龙"
+        },
+        {
+          "rank": 958,
+          "character": "拢"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-main-104",
+      "form": "业",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0441",
+      "color": "#C274BC",
+      "tranche_0001_1000_count": 1,
+      "characters": [
+        {
+          "rank": 231,
+          "character": "业"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-main-105",
+      "form": "目",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0023",
+      "color": "#91922F",
+      "tranche_0001_1000_count": 2,
+      "characters": [
+        {
+          "rank": 236,
+          "character": "目"
+        },
+        {
+          "rank": 715,
+          "character": "盯"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-main-106",
+      "form": "田",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0039",
+      "color": "#05A92E",
+      "tranche_0001_1000_count": 5,
+      "characters": [
+        {
+          "rank": 244,
+          "character": "田"
+        },
+        {
+          "rank": 733,
+          "character": "男"
+        },
+        {
+          "rank": 776,
+          "character": "佃"
+        },
+        {
+          "rank": 809,
+          "character": "甸"
+        },
+        {
+          "rank": 829,
+          "character": "亩"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-main-107",
+      "form": "罒",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0254",
+      "color": "#C23A71",
+      "tranche_0001_1000_count": 0,
+      "characters": []
+    },
+    {
+      "id": "gf0011-main-108",
+      "form": "皿",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0266",
+      "color": "#D77C8B",
+      "tranche_0001_1000_count": 1,
+      "characters": [
+        {
+          "rank": 259,
+          "character": "皿"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-main-109",
+      "form": "生",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0331",
+      "color": "#9E594E",
+      "tranche_0001_1000_count": 1,
+      "characters": [
+        {
+          "rank": 263,
+          "character": "生"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-main-110",
+      "form": "矢",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0338",
+      "color": "#644E1D",
+      "tranche_0001_1000_count": 3,
+      "characters": [
+        {
+          "rank": 264,
+          "character": "矢"
+        },
+        {
+          "rank": 700,
+          "character": "医"
+        },
+        {
+          "rank": 927,
+          "character": "矣"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-main-111",
+      "form": "禾",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0011",
+      "color": "#808754",
+      "tranche_0001_1000_count": 5,
+      "characters": [
+        {
+          "rank": 267,
+          "character": "禾"
+        },
+        {
+          "rank": 763,
+          "character": "利"
+        },
+        {
+          "rank": 764,
+          "character": "秃"
+        },
+        {
+          "rank": 765,
+          "character": "秀"
+        },
+        {
+          "rank": 766,
+          "character": "私"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-main-112",
+      "form": "白",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0048",
+      "color": "#7541ED",
+      "tranche_0001_1000_count": 4,
+      "characters": [
+        {
+          "rank": 275,
+          "character": "白"
+        },
+        {
+          "rank": 778,
+          "character": "伯"
+        },
+        {
+          "rank": 787,
+          "character": "皂"
+        },
+        {
+          "rank": 970,
+          "character": "拍"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-main-113",
+      "form": "瓜",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0160",
+      "color": "#85760B",
+      "tranche_0001_1000_count": 1,
+      "characters": [
+        {
+          "rank": 279,
+          "character": "瓜"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-main-114",
+      "form": "鸟",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0277",
+      "color": "#94614F",
+      "tranche_0001_1000_count": 2,
+      "characters": [
+        {
+          "rank": 296,
+          "character": "鸟"
+        },
+        {
+          "rank": 928,
+          "character": "鸡"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-main-115",
+      "form": "疒",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0065",
+      "color": "#5B7AFD",
+      "tranche_0001_1000_count": 1,
+      "characters": [
+        {
+          "rank": 834,
+          "character": "疗"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-main-116",
+      "form": "立",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0235",
+      "color": "#464E79",
+      "tranche_0001_1000_count": 4,
+      "characters": [
+        {
+          "rank": 302,
+          "character": "立"
+        },
+        {
+          "rank": 784,
+          "character": "位"
+        },
+        {
+          "rank": 980,
+          "character": "垃"
+        },
+        {
+          "rank": 981,
+          "character": "拉"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-main-117",
+      "form": "穴",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0420",
+      "color": "#DB673D",
+      "tranche_0001_1000_count": 3,
+      "characters": [
+        {
+          "rank": 313,
+          "character": "穴"
+        },
+        {
+          "rank": 881,
+          "character": "究"
+        },
+        {
+          "rank": 882,
+          "character": "穷"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-main-118",
+      "form": "疋",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": null,
+      "color": null,
+      "tranche_0001_1000_count": 0,
+      "characters": []
+    },
+    {
+      "id": "gf0011-main-119",
+      "form": "皮",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0286",
+      "color": "#834047",
+      "tranche_0001_1000_count": 3,
+      "characters": [
+        {
+          "rank": 336,
+          "character": "皮"
+        },
+        {
+          "rank": 989,
+          "character": "坡"
+        },
+        {
+          "rank": 990,
+          "character": "披"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-main-120",
+      "form": "癶",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0109",
+      "color": "#AE4A92",
+      "tranche_0001_1000_count": 0,
+      "characters": []
+    },
+    {
+      "id": "gf0011-main-121",
+      "form": "矛",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0256",
+      "color": "#25672B",
+      "tranche_0001_1000_count": 1,
+      "characters": [
+        {
+          "rank": 343,
+          "character": "矛"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-main-122",
+      "form": "耒",
+      "role": "principal",
+      "reported_strokes": 6,
+      "component_id": "cmp-0232",
+      "color": "#279393",
+      "tranche_0001_1000_count": 0,
+      "characters": []
+    },
+    {
+      "id": "gf0011-main-123",
+      "form": "老",
+      "role": "principal",
+      "reported_strokes": 6,
+      "component_id": "cmp-0229",
+      "color": "#158681",
+      "tranche_0001_1000_count": 1,
+      "characters": [
+        {
+          "rank": 360,
+          "character": "老"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-main-124",
+      "form": "耳",
+      "role": "principal",
+      "reported_strokes": 6,
+      "component_id": "cmp-0024",
+      "color": "#6D4D84",
+      "tranche_0001_1000_count": 2,
+      "characters": [
+        {
+          "rank": 369,
+          "character": "耳"
+        },
+        {
+          "rank": 997,
+          "character": "取"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-main-125",
+      "form": "臣",
+      "role": "principal",
+      "reported_strokes": 6,
+      "component_id": "cmp-0079",
+      "color": "#724703",
+      "tranche_0001_1000_count": 1,
+      "characters": [
+        {
+          "rank": 380,
+          "character": "臣"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-main-126",
+      "form": "覀",
+      "role": "principal",
+      "reported_strokes": 6,
+      "component_id": "cmp-0404",
+      "color": "#86603B",
+      "tranche_0001_1000_count": 0,
+      "characters": []
+    },
+    {
+      "id": "gf0011-main-127",
+      "form": "而",
+      "role": "principal",
+      "reported_strokes": 6,
+      "component_id": "cmp-0124",
+      "color": "#A83902",
+      "tranche_0001_1000_count": 1,
+      "characters": [
+        {
+          "rank": 392,
+          "character": "而"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-main-128",
+      "form": "页",
+      "role": "principal",
+      "reported_strokes": 6,
+      "component_id": "cmp-0442",
+      "color": "#3696AB",
+      "tranche_0001_1000_count": 2,
+      "characters": [
+        {
+          "rank": 393,
+          "character": "页"
+        },
+        {
+          "rank": 971,
+          "character": "顶"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-main-129",
+      "form": "至",
+      "role": "principal",
+      "reported_strokes": 6,
+      "component_id": "cmp-0493",
+      "color": "#5493D1",
+      "tranche_0001_1000_count": 1,
+      "characters": [
+        {
+          "rank": 410,
+          "character": "至"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-main-130",
+      "form": "虍",
+      "role": "principal",
+      "reported_strokes": 6,
+      "component_id": "cmp-0178",
+      "color": "#9C52AD",
+      "tranche_0001_1000_count": 0,
+      "characters": []
+    },
+    {
+      "id": "gf0011-main-131",
+      "form": "虫",
+      "role": "principal",
+      "reported_strokes": 6,
+      "component_id": "cmp-0087",
+      "color": "#9B8BE8",
+      "tranche_0001_1000_count": 1,
+      "characters": [
+        {
+          "rank": 423,
+          "character": "虫"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-main-132",
+      "form": "肉",
+      "role": "principal",
+      "reported_strokes": 6,
+      "component_id": "cmp-0473",
+      "color": "#878CD9",
+      "tranche_0001_1000_count": 1,
+      "characters": [
+        {
+          "rank": 443,
+          "character": "肉"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-main-133",
+      "form": "缶",
+      "role": "principal",
+      "reported_strokes": 6,
+      "component_id": "cmp-0139",
+      "color": "#BA1103",
+      "tranche_0001_1000_count": 0,
+      "characters": []
+    },
+    {
+      "id": "gf0011-main-134",
+      "form": "舌",
+      "role": "principal",
+      "reported_strokes": 6,
+      "component_id": "cmp-0327",
+      "color": "#5CA1AD",
+      "tranche_0001_1000_count": 2,
+      "characters": [
+        {
+          "rank": 449,
+          "character": "舌"
+        },
+        {
+          "rank": 762,
+          "character": "乱"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-main-135",
+      "form": "竹",
+      "role": "principal",
+      "reported_strokes": 6,
+      "component_id": "cmp-0502",
+      "color": "#226640",
+      "tranche_0001_1000_count": 1,
+      "characters": [
+        {
+          "rank": 450,
+          "character": "竹"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-main-136",
+      "form": "臼",
+      "role": "principal",
+      "reported_strokes": 6,
+      "component_id": "cmp-0219",
+      "color": "#803255",
+      "tranche_0001_1000_count": 1,
+      "characters": [
+        {
+          "rank": 462,
+          "character": "臼"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-main-137",
+      "form": "自",
+      "role": "principal",
+      "reported_strokes": 6,
+      "component_id": "cmp-0512",
+      "color": "#427693",
+      "tranche_0001_1000_count": 1,
+      "characters": [
+        {
+          "rank": 477,
+          "character": "自"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-main-138",
+      "form": "血",
+      "role": "principal",
+      "reported_strokes": 6,
+      "component_id": "cmp-0423",
+      "color": "#0D9AD4",
+      "tranche_0001_1000_count": 1,
+      "characters": [
+        {
+          "rank": 479,
+          "character": "血"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-main-139",
+      "form": "舟",
+      "role": "principal",
+      "reported_strokes": 6,
+      "component_id": "cmp-0499",
+      "color": "#951E13",
+      "tranche_0001_1000_count": 1,
+      "characters": [
+        {
+          "rank": 484,
+          "character": "舟"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-main-140",
+      "form": "色",
+      "role": "principal",
+      "reported_strokes": 6,
+      "component_id": "cmp-0321",
+      "color": "#939D44",
+      "tranche_0001_1000_count": 1,
+      "characters": [
+        {
+          "rank": 509,
+          "character": "色"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-main-141",
+      "form": "齐",
+      "role": "principal",
+      "reported_strokes": 6,
+      "component_id": null,
+      "color": null,
+      "tranche_0001_1000_count": 0,
+      "characters": []
+    },
+    {
+      "id": "gf0011-main-142",
+      "form": "衣",
+      "role": "principal",
+      "reported_strokes": 6,
+      "component_id": "cmp-0444",
+      "color": "#BA7639",
+      "tranche_0001_1000_count": 1,
+      "characters": [
+        {
+          "rank": 520,
+          "character": "衣"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-main-143",
+      "form": "羊",
+      "role": "principal",
+      "reported_strokes": 6,
+      "component_id": "cmp-0434",
+      "color": "#8C16C5",
+      "tranche_0001_1000_count": 1,
+      "characters": [
+        {
+          "rank": 530,
+          "character": "羊"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-main-144",
+      "form": "米",
+      "role": "principal",
+      "reported_strokes": 6,
+      "component_id": "cmp-0262",
+      "color": "#99444E",
+      "tranche_0001_1000_count": 1,
+      "characters": [
+        {
+          "rank": 533,
+          "character": "米"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-main-145",
+      "form": "聿",
+      "role": "principal",
+      "reported_strokes": 6,
+      "component_id": "cmp-0472",
+      "color": "#5E6939",
+      "tranche_0001_1000_count": 0,
+      "characters": []
+    },
+    {
+      "id": "gf0011-main-146",
+      "form": "艮",
+      "role": "principal",
+      "reported_strokes": 6,
+      "component_id": "cmp-0153",
+      "color": "#683788",
+      "tranche_0001_1000_count": 1,
+      "characters": [
+        {
+          "rank": 884,
+          "character": "良"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-main-147",
+      "form": "羽",
+      "role": "principal",
+      "reported_strokes": 6,
+      "component_id": null,
+      "color": null,
+      "tranche_0001_1000_count": 0,
+      "characters": []
+    },
+    {
+      "id": "gf0011-main-148",
+      "form": "糸",
+      "role": "principal",
+      "reported_strokes": 6,
+      "component_id": "cmp-0203",
+      "color": "#FD5A73",
+      "tranche_0001_1000_count": 1,
+      "characters": [
+        {
+          "rank": 825,
+          "character": "系"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-main-149",
+      "form": "麦",
+      "role": "principal",
+      "reported_strokes": 7,
+      "component_id": null,
+      "color": null,
+      "tranche_0001_1000_count": 0,
+      "characters": []
+    },
+    {
+      "id": "gf0011-main-150",
+      "form": "走",
+      "role": "principal",
+      "reported_strokes": 7,
+      "component_id": null,
+      "color": null,
+      "tranche_0001_1000_count": 0,
+      "characters": []
+    },
+    {
+      "id": "gf0011-main-151",
+      "form": "赤",
+      "role": "principal",
+      "reported_strokes": 7,
+      "component_id": "cmp-0086",
+      "color": "#4A936E",
+      "tranche_0001_1000_count": 1,
+      "characters": [
+        {
+          "rank": 631,
+          "character": "赤"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-main-152",
+      "form": "豆",
+      "role": "principal",
+      "reported_strokes": 7,
+      "component_id": "cmp-0122",
+      "color": "#689571",
+      "tranche_0001_1000_count": 1,
+      "characters": [
+        {
+          "rank": 696,
+          "character": "豆"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-main-153",
+      "form": "酉",
+      "role": "principal",
+      "reported_strokes": 7,
+      "component_id": "cmp-0462",
+      "color": "#C01643",
+      "tranche_0001_1000_count": 1,
+      "characters": [
+        {
+          "rank": 698,
+          "character": "酉"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-main-154",
+      "form": "辰",
+      "role": "principal",
+      "reported_strokes": 7,
+      "component_id": "cmp-0081",
+      "color": "#8E1C56",
+      "tranche_0001_1000_count": 1,
+      "characters": [
+        {
+          "rank": 701,
+          "character": "辰"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-main-155",
+      "form": "豕",
+      "role": "principal",
+      "reported_strokes": 7,
+      "component_id": "cmp-0339",
+      "color": "#8D9D5A",
+      "tranche_0001_1000_count": 0,
+      "characters": []
+    },
+    {
+      "id": "gf0011-main-156",
+      "form": "卤",
+      "role": "principal",
+      "reported_strokes": 7,
+      "component_id": "cmp-0248",
+      "color": "#E65760",
+      "tranche_0001_1000_count": 1,
+      "characters": [
+        {
+          "rank": 711,
+          "character": "卤"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-main-157",
+      "form": "里",
+      "role": "principal",
+      "reported_strokes": 7,
+      "component_id": "cmp-0234",
+      "color": "#438206",
+      "tranche_0001_1000_count": 1,
+      "characters": [
+        {
+          "rank": 721,
+          "character": "里"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-main-158",
+      "form": "足",
+      "role": "principal",
+      "reported_strokes": 7,
+      "component_id": "cmp-0031",
+      "color": "#BA60DF",
+      "tranche_0001_1000_count": 1,
+      "characters": [
+        {
+          "rank": 731,
+          "character": "足"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-main-159",
+      "form": "邑",
+      "role": "principal",
+      "reported_strokes": 7,
+      "component_id": null,
+      "color": null,
+      "tranche_0001_1000_count": 0,
+      "characters": []
+    },
+    {
+      "id": "gf0011-main-160",
+      "form": "身",
+      "role": "principal",
+      "reported_strokes": 7,
+      "component_id": "cmp-0329",
+      "color": "#985DBF",
+      "tranche_0001_1000_count": 1,
+      "characters": [
+        {
+          "rank": 786,
+          "character": "身"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-main-161",
+      "form": "釆",
+      "role": "principal",
+      "reported_strokes": 7,
+      "component_id": "cmp-0062",
+      "color": "#5064AB",
+      "tranche_0001_1000_count": 0,
+      "characters": []
+    },
+    {
+      "id": "gf0011-main-162",
+      "form": "谷",
+      "role": "principal",
+      "reported_strokes": 7,
+      "component_id": "cmp-0159",
+      "color": "#B26A70",
+      "tranche_0001_1000_count": 1,
+      "characters": [
+        {
+          "rank": 798,
+          "character": "谷"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-main-163",
+      "form": "豸",
+      "role": "principal",
+      "reported_strokes": 7,
+      "component_id": "cmp-0495",
+      "color": "#0BAAA4",
+      "tranche_0001_1000_count": 0,
+      "characters": []
+    },
+    {
+      "id": "gf0011-main-164",
+      "form": "龟",
+      "role": "principal",
+      "reported_strokes": 7,
+      "component_id": "cmp-0164",
+      "color": "#EA36AF",
+      "tranche_0001_1000_count": 1,
+      "characters": [
+        {
+          "rank": 808,
+          "character": "龟"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-main-165",
+      "form": "角",
+      "role": "principal",
+      "reported_strokes": 7,
+      "component_id": "cmp-0204",
+      "color": "#825B1B",
+      "tranche_0001_1000_count": 1,
+      "characters": [
+        {
+          "rank": 814,
+          "character": "角"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-main-166",
+      "form": "言",
+      "role": "principal",
+      "reported_strokes": 7,
+      "component_id": "cmp-0021",
+      "color": "#99610B",
+      "tranche_0001_1000_count": 1,
+      "characters": [
+        {
+          "rank": 826,
+          "character": "言"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-main-167",
+      "form": "辛",
+      "role": "principal",
+      "reported_strokes": 7,
+      "component_id": "cmp-0415",
+      "color": "#EE7313",
+      "tranche_0001_1000_count": 1,
+      "characters": [
+        {
+          "rank": 841,
+          "character": "辛"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-main-168",
+      "form": "青",
+      "role": "principal",
+      "reported_strokes": 8,
+      "component_id": "cmp-0036",
+      "color": "#C75615",
+      "tranche_0001_1000_count": 1,
+      "characters": [
+        {
+          "rank": 947,
+          "character": "青"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-main-169",
+      "form": "龺",
+      "role": "principal",
+      "reported_strokes": 8,
+      "component_id": null,
+      "color": null,
+      "tranche_0001_1000_count": 0,
+      "characters": []
+    },
+    {
+      "id": "gf0011-main-170",
+      "form": "雨",
+      "role": "principal",
+      "reported_strokes": 8,
+      "component_id": "cmp-0004",
+      "color": "#C52BBF",
+      "tranche_0001_1000_count": 0,
+      "characters": []
+    },
+    {
+      "id": "gf0011-main-171",
+      "form": "非",
+      "role": "principal",
+      "reported_strokes": 8,
+      "component_id": "cmp-0134",
+      "color": "#DF7D50",
+      "tranche_0001_1000_count": 0,
+      "characters": []
+    },
+    {
+      "id": "gf0011-main-172",
+      "form": "齿",
+      "role": "principal",
+      "reported_strokes": 8,
+      "component_id": null,
+      "color": null,
+      "tranche_0001_1000_count": 0,
+      "characters": []
+    },
+    {
+      "id": "gf0011-main-173",
+      "form": "黾",
+      "role": "principal",
+      "reported_strokes": 8,
+      "component_id": null,
+      "color": null,
+      "tranche_0001_1000_count": 0,
+      "characters": []
+    },
+    {
+      "id": "gf0011-main-174",
+      "form": "隹",
+      "role": "principal",
+      "reported_strokes": 8,
+      "component_id": "cmp-0509",
+      "color": "#787946",
+      "tranche_0001_1000_count": 0,
+      "characters": []
+    },
+    {
+      "id": "gf0011-main-175",
+      "form": "阜",
+      "role": "principal",
+      "reported_strokes": 8,
+      "component_id": null,
+      "color": null,
+      "tranche_0001_1000_count": 0,
+      "characters": []
+    },
+    {
+      "id": "gf0011-main-176",
+      "form": "金",
+      "role": "principal",
+      "reported_strokes": 8,
+      "component_id": "cmp-0028",
+      "color": "#055179",
+      "tranche_0001_1000_count": 0,
+      "characters": []
+    },
+    {
+      "id": "gf0011-main-177",
+      "form": "鱼",
+      "role": "principal",
+      "reported_strokes": 8,
+      "component_id": "cmp-0465",
+      "color": "#209B33",
+      "tranche_0001_1000_count": 0,
+      "characters": []
+    },
+    {
+      "id": "gf0011-main-178",
+      "form": "隶",
+      "role": "principal",
+      "reported_strokes": 8,
+      "component_id": "cmp-0238",
+      "color": "#853522",
+      "tranche_0001_1000_count": 0,
+      "characters": []
+    },
+    {
+      "id": "gf0011-main-179",
+      "form": "革",
+      "role": "principal",
+      "reported_strokes": 9,
+      "component_id": "cmp-0151",
+      "color": "#525D2D",
+      "tranche_0001_1000_count": 0,
+      "characters": []
+    },
+    {
+      "id": "gf0011-main-180",
+      "form": "面",
+      "role": "principal",
+      "reported_strokes": 9,
+      "component_id": "cmp-0264",
+      "color": "#5D6693",
+      "tranche_0001_1000_count": 0,
+      "characters": []
+    },
+    {
+      "id": "gf0011-main-181",
+      "form": "韭",
+      "role": "principal",
+      "reported_strokes": 9,
+      "component_id": "cmp-0218",
+      "color": "#414A8F",
+      "tranche_0001_1000_count": 0,
+      "characters": []
+    },
+    {
+      "id": "gf0011-main-182",
+      "form": "骨",
+      "role": "principal",
+      "reported_strokes": 9,
+      "component_id": null,
+      "color": null,
+      "tranche_0001_1000_count": 0,
+      "characters": []
+    },
+    {
+      "id": "gf0011-main-183",
+      "form": "香",
+      "role": "principal",
+      "reported_strokes": 9,
+      "component_id": null,
+      "color": null,
+      "tranche_0001_1000_count": 0,
+      "characters": []
+    },
+    {
+      "id": "gf0011-main-184",
+      "form": "鬼",
+      "role": "principal",
+      "reported_strokes": 9,
+      "component_id": "cmp-0165",
+      "color": "#C8233C",
+      "tranche_0001_1000_count": 0,
+      "characters": []
+    },
+    {
+      "id": "gf0011-main-185",
+      "form": "食",
+      "role": "principal",
+      "reported_strokes": 9,
+      "component_id": "cmp-0335",
+      "color": "#599681",
+      "tranche_0001_1000_count": 0,
+      "characters": []
+    },
+    {
+      "id": "gf0011-main-186",
+      "form": "音",
+      "role": "principal",
+      "reported_strokes": 9,
+      "component_id": null,
+      "color": null,
+      "tranche_0001_1000_count": 0,
+      "characters": []
+    },
+    {
+      "id": "gf0011-main-187",
+      "form": "首",
+      "role": "principal",
+      "reported_strokes": 9,
+      "component_id": "cmp-0347",
+      "color": "#2C7676",
+      "tranche_0001_1000_count": 0,
+      "characters": []
+    },
+    {
+      "id": "gf0011-main-188",
+      "form": "髟",
+      "role": "principal",
+      "reported_strokes": 10,
+      "component_id": null,
+      "color": null,
+      "tranche_0001_1000_count": 0,
+      "characters": []
+    },
+    {
+      "id": "gf0011-main-189",
+      "form": "鬲",
+      "role": "principal",
+      "reported_strokes": 10,
+      "component_id": "cmp-0239",
+      "color": "#D36D53",
+      "tranche_0001_1000_count": 0,
+      "characters": []
+    },
+    {
+      "id": "gf0011-main-190",
+      "form": "鬥",
+      "role": "principal",
+      "reported_strokes": 10,
+      "component_id": null,
+      "color": null,
+      "tranche_0001_1000_count": 0,
+      "characters": []
+    },
+    {
+      "id": "gf0011-main-191",
+      "form": "高",
+      "role": "principal",
+      "reported_strokes": 10,
+      "component_id": "cmp-0149",
+      "color": "#A66DBF",
+      "tranche_0001_1000_count": 0,
+      "characters": []
+    },
+    {
+      "id": "gf0011-main-192",
+      "form": "黄",
+      "role": "principal",
+      "reported_strokes": 11,
+      "component_id": "cmp-0183",
+      "color": "#6F8C60",
+      "tranche_0001_1000_count": 0,
+      "characters": []
+    },
+    {
+      "id": "gf0011-main-193",
+      "form": "麻",
+      "role": "principal",
+      "reported_strokes": 11,
+      "component_id": null,
+      "color": null,
+      "tranche_0001_1000_count": 0,
+      "characters": []
+    },
+    {
+      "id": "gf0011-main-194",
+      "form": "鹿",
+      "role": "principal",
+      "reported_strokes": 11,
+      "component_id": "cmp-0250",
+      "color": "#C48B81",
+      "tranche_0001_1000_count": 0,
+      "characters": []
+    },
+    {
+      "id": "gf0011-main-195",
+      "form": "鼎",
+      "role": "principal",
+      "reported_strokes": 12,
+      "component_id": "cmp-0117",
+      "color": "#8F327F",
+      "tranche_0001_1000_count": 0,
+      "characters": []
+    },
+    {
+      "id": "gf0011-main-196",
+      "form": "黑",
+      "role": "principal",
+      "reported_strokes": 12,
+      "component_id": "cmp-0170",
+      "color": "#B55E58",
+      "tranche_0001_1000_count": 0,
+      "characters": []
+    },
+    {
+      "id": "gf0011-main-197",
+      "form": "黍",
+      "role": "principal",
+      "reported_strokes": 12,
+      "component_id": null,
+      "color": null,
+      "tranche_0001_1000_count": 0,
+      "characters": []
+    },
+    {
+      "id": "gf0011-main-198",
+      "form": "鼓",
+      "role": "principal",
+      "reported_strokes": 13,
+      "component_id": null,
+      "color": null,
+      "tranche_0001_1000_count": 0,
+      "characters": []
+    },
+    {
+      "id": "gf0011-main-199",
+      "form": "鼠",
+      "role": "principal",
+      "reported_strokes": 13,
+      "component_id": "cmp-0350",
+      "color": "#AD4865",
+      "tranche_0001_1000_count": 0,
+      "characters": []
+    },
+    {
+      "id": "gf0011-main-200",
+      "form": "鼻",
+      "role": "principal",
+      "reported_strokes": 14,
+      "component_id": null,
+      "color": null,
+      "tranche_0001_1000_count": 0,
+      "characters": []
+    },
+    {
+      "id": "gf0011-main-201",
+      "form": "龠",
+      "role": "principal",
+      "reported_strokes": 17,
+      "component_id": null,
+      "color": null,
+      "tranche_0001_1000_count": 0,
+      "characters": []
+    },
+    {
+      "id": "gf0011-variant-001",
+      "form": "亅",
+      "role": "listed_variant",
+      "reported_strokes": 1,
+      "related_principal_forms": [
+        "丨"
+      ],
+      "component_id": null,
+      "color": null,
+      "tranche_0001_1000_count": 0,
+      "characters": []
+    },
+    {
+      "id": "gf0011-variant-002",
+      "form": "𠂆",
+      "role": "listed_variant",
+      "reported_strokes": 2,
+      "related_principal_forms": [
+        "厂"
+      ],
+      "component_id": "cmp-0129",
+      "color": "#695F9B",
+      "tranche_0001_1000_count": 5,
+      "characters": [
+        {
+          "rank": 139,
+          "character": "反"
+        },
+        {
+          "rank": 285,
+          "character": "印"
+        },
+        {
+          "rank": 634,
+          "character": "扳"
+        },
+        {
+          "rank": 794,
+          "character": "返"
+        },
+        {
+          "rank": 823,
+          "character": "饭"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-variant-003",
+      "form": "⺊",
+      "role": "listed_variant",
+      "reported_strokes": 2,
+      "related_principal_forms": [
+        "卜"
+      ],
+      "component_id": "cmp-0067",
+      "color": "#BC65A1",
+      "tranche_0001_1000_count": 3,
+      "characters": [
+        {
+          "rank": 228,
+          "character": "占"
+        },
+        {
+          "rank": 230,
+          "character": "卢"
+        },
+        {
+          "rank": 412,
+          "character": "贞"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-variant-004",
+      "form": "⺆",
+      "role": "listed_variant",
+      "reported_strokes": 2,
+      "related_principal_forms": [
+        "冂"
+      ],
+      "component_id": "cmp-0498",
+      "color": "#637F54",
+      "tranche_0001_1000_count": 0,
+      "characters": []
+    },
+    {
+      "id": "gf0011-variant-005",
+      "form": "丷",
+      "role": "listed_variant",
+      "reported_strokes": 2,
+      "related_principal_forms": [
+        "八"
+      ],
+      "component_id": "cmp-0046",
+      "color": "#FA47BD",
+      "tranche_0001_1000_count": 4,
+      "characters": [
+        {
+          "rank": 306,
+          "character": "兰"
+        },
+        {
+          "rank": 850,
+          "character": "兑"
+        },
+        {
+          "rank": 982,
+          "character": "拦"
+        },
+        {
+          "rank": 983,
+          "character": "幸"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-variant-006",
+      "form": "亻",
+      "role": "listed_variant",
+      "reported_strokes": 2,
+      "related_principal_forms": [
+        "人"
+      ],
+      "component_id": "cmp-0013",
+      "color": "#608CD5",
+      "tranche_0001_1000_count": 59,
+      "characters": [
+        {
+          "rank": 44,
+          "character": "亿"
+        },
+        {
+          "rank": 128,
+          "character": "仁"
+        },
+        {
+          "rank": 129,
+          "character": "什"
+        },
+        {
+          "rank": 131,
+          "character": "仆"
+        },
+        {
+          "rank": 132,
+          "character": "化"
+        },
+        {
+          "rank": 133,
+          "character": "仇"
+        },
+        {
+          "rank": 135,
+          "character": "仍"
+        },
+        {
+          "rank": 136,
+          "character": "仅"
+        },
+        {
+          "rank": 269,
+          "character": "付"
+        },
+        {
+          "rank": 270,
+          "character": "仗"
+        },
+        {
+          "rank": 271,
+          "character": "代"
+        },
+        {
+          "rank": 272,
+          "character": "仙"
+        },
+        {
+          "rank": 273,
+          "character": "们"
+        },
+        {
+          "rank": 274,
+          "character": "仪"
+        },
+        {
+          "rank": 276,
+          "character": "仔"
+        },
+        {
+          "rank": 277,
+          "character": "他"
+        },
+        {
+          "rank": 454,
+          "character": "伟"
+        },
+        {
+          "rank": 455,
+          "character": "传"
+        },
+        {
+          "rank": 458,
+          "character": "休"
+        },
+        {
+          "rank": 459,
+          "character": "伍"
+        },
+        {
+          "rank": 460,
+          "character": "伏"
+        },
+        {
+          "rank": 461,
+          "character": "优"
+        },
+        {
+          "rank": 463,
+          "character": "伐"
+        },
+        {
+          "rank": 465,
+          "character": "仲"
+        },
+        {
+          "rank": 466,
+          "character": "件"
+        },
+        {
+          "rank": 467,
+          "character": "任"
+        },
+        {
+          "rank": 468,
+          "character": "伤"
+        },
+        {
+          "rank": 469,
+          "character": "价"
+        },
+        {
+          "rank": 470,
+          "character": "伦"
+        },
+        {
+          "rank": 471,
+          "character": "份"
+        },
+        {
+          "rank": 472,
+          "character": "华"
+        },
+        {
+          "rank": 473,
+          "character": "仰"
+        },
+        {
+          "rank": 474,
+          "character": "仿"
+        },
+        {
+          "rank": 475,
+          "character": "伙"
+        },
+        {
+          "rank": 476,
+          "character": "伪"
+        },
+        {
+          "rank": 478,
+          "character": "伊"
+        },
+        {
+          "rank": 481,
+          "character": "似"
+        },
+        {
+          "rank": 555,
+          "character": "讹"
+        },
+        {
+          "rank": 665,
+          "character": "花"
+        },
+        {
+          "rank": 769,
+          "character": "估"
+        },
+        {
+          "rank": 770,
+          "character": "体"
+        },
+        {
+          "rank": 771,
+          "character": "何"
+        },
+        {
+          "rank": 772,
+          "character": "佐"
+        },
+        {
+          "rank": 773,
+          "character": "佑"
+        },
+        {
+          "rank": 774,
+          "character": "但"
+        },
+        {
+          "rank": 775,
+          "character": "伸"
+        },
+        {
+          "rank": 776,
+          "character": "佃"
+        },
+        {
+          "rank": 777,
+          "character": "作"
+        },
+        {
+          "rank": 778,
+          "character": "伯"
+        },
+        {
+          "rank": 779,
+          "character": "伶"
+        },
+        {
+          "rank": 780,
+          "character": "佣"
+        },
+        {
+          "rank": 781,
+          "character": "低"
+        },
+        {
+          "rank": 782,
+          "character": "你"
+        },
+        {
+          "rank": 783,
+          "character": "住"
+        },
+        {
+          "rank": 784,
+          "character": "位"
+        },
+        {
+          "rank": 785,
+          "character": "伴"
+        },
+        {
+          "rank": 788,
+          "character": "伺"
+        },
+        {
+          "rank": 789,
+          "character": "佛"
+        },
+        {
+          "rank": 916,
+          "character": "附"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-variant-007",
+      "form": "入",
+      "role": "listed_variant",
+      "reported_strokes": 2,
+      "related_principal_forms": [
+        "人"
+      ],
+      "component_id": "cmp-0317",
+      "color": "#A22F11",
+      "tranche_0001_1000_count": 1,
+      "characters": [
+        {
+          "rank": 11,
+          "character": "入"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-variant-008",
+      "form": "𠘨",
+      "role": "listed_variant",
+      "reported_strokes": 2,
+      "related_principal_forms": [
+        "几"
+      ],
+      "component_id": "cmp-0138",
+      "color": "#8C6F99",
+      "tranche_0001_1000_count": 0,
+      "characters": []
+    },
+    {
+      "id": "gf0011-variant-009",
+      "form": "㔾",
+      "role": "listed_variant",
+      "reported_strokes": 2,
+      "related_principal_forms": [
+        "卩"
+      ],
+      "component_id": "cmp-0207",
+      "color": "#A55E5E",
+      "tranche_0001_1000_count": 9,
+      "characters": [
+        {
+          "rank": 149,
+          "character": "仓"
+        },
+        {
+          "rank": 292,
+          "character": "犯"
+        },
+        {
+          "rank": 494,
+          "character": "创"
+        },
+        {
+          "rank": 499,
+          "character": "危"
+        },
+        {
+          "rank": 619,
+          "character": "扼"
+        },
+        {
+          "rank": 637,
+          "character": "抢"
+        },
+        {
+          "rank": 669,
+          "character": "苍"
+        },
+        {
+          "rank": 742,
+          "character": "呛"
+        },
+        {
+          "rank": 866,
+          "character": "沧"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-variant-010",
+      "form": "刂",
+      "role": "listed_variant",
+      "reported_strokes": 2,
+      "related_principal_forms": [
+        "刀"
+      ],
+      "component_id": "cmp-0108",
+      "color": "#216A63",
+      "tranche_0001_1000_count": 13,
+      "characters": [
+        {
+          "rank": 191,
+          "character": "刊"
+        },
+        {
+          "rank": 351,
+          "character": "刑"
+        },
+        {
+          "rank": 399,
+          "character": "列"
+        },
+        {
+          "rank": 407,
+          "character": "划"
+        },
+        {
+          "rank": 440,
+          "character": "则"
+        },
+        {
+          "rank": 441,
+          "character": "刚"
+        },
+        {
+          "rank": 494,
+          "character": "创"
+        },
+        {
+          "rank": 517,
+          "character": "刘"
+        },
+        {
+          "rank": 751,
+          "character": "别"
+        },
+        {
+          "rank": 763,
+          "character": "利"
+        },
+        {
+          "rank": 815,
+          "character": "删"
+        },
+        {
+          "rank": 821,
+          "character": "刨"
+        },
+        {
+          "rank": 849,
+          "character": "判"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-variant-011",
+      "form": "⺈",
+      "role": "listed_variant",
+      "reported_strokes": 2,
+      "related_principal_forms": [
+        "刀"
+      ],
+      "component_id": "cmp-0125",
+      "color": "#6D7607",
+      "tranche_0001_1000_count": 4,
+      "characters": [
+        {
+          "rank": 286,
+          "character": "尔"
+        },
+        {
+          "rank": 499,
+          "character": "危"
+        },
+        {
+          "rank": 503,
+          "character": "负"
+        },
+        {
+          "rank": 782,
+          "character": "你"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-variant-012",
+      "form": "士",
+      "role": "listed_variant",
+      "reported_strokes": 3,
+      "related_principal_forms": [
+        "土"
+      ],
+      "component_id": "cmp-0341",
+      "color": "#CD635D",
+      "tranche_0001_1000_count": 6,
+      "characters": [
+        {
+          "rank": 28,
+          "character": "士"
+        },
+        {
+          "rank": 356,
+          "character": "吉"
+        },
+        {
+          "rank": 510,
+          "character": "壮"
+        },
+        {
+          "rank": 650,
+          "character": "壳"
+        },
+        {
+          "rank": 651,
+          "character": "志"
+        },
+        {
+          "rank": 654,
+          "character": "声"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-variant-013",
+      "form": "艸",
+      "role": "listed_variant",
+      "reported_strokes": 3,
+      "related_principal_forms": [
+        "艹"
+      ],
+      "component_id": null,
+      "color": null,
+      "tranche_0001_1000_count": 0,
+      "characters": []
+    },
+    {
+      "id": "gf0011-variant-014",
+      "form": "兀",
+      "role": "listed_variant",
+      "reported_strokes": 3,
+      "related_principal_forms": [
+        "尢"
+      ],
+      "component_id": "cmp-0397",
+      "color": "#683F71",
+      "tranche_0001_1000_count": 2,
+      "characters": [
+        {
+          "rank": 406,
+          "character": "尧"
+        },
+        {
+          "rank": 417,
+          "character": "光"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-variant-015",
+      "form": "尣",
+      "role": "listed_variant",
+      "reported_strokes": 3,
+      "related_principal_forms": [
+        "尢"
+      ],
+      "component_id": null,
+      "color": null,
+      "tranche_0001_1000_count": 0,
+      "characters": []
+    },
+    {
+      "id": "gf0011-variant-016",
+      "form": "⺌",
+      "role": "listed_variant",
+      "reported_strokes": 3,
+      "related_principal_forms": [
+        "小"
+      ],
+      "component_id": "cmp-0412",
+      "color": "#F71E46",
+      "tranche_0001_1000_count": 3,
+      "characters": [
+        {
+          "rank": 417,
+          "character": "光"
+        },
+        {
+          "rank": 418,
+          "character": "当"
+        },
+        {
+          "rank": 713,
+          "character": "肖"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-variant-017",
+      "form": "爿",
+      "role": "listed_variant",
+      "reported_strokes": 3,
+      "related_principal_forms": [
+        "丬"
+      ],
+      "component_id": "cmp-0284",
+      "color": "#1F528F",
+      "tranche_0001_1000_count": 0,
+      "characters": []
+    },
+    {
+      "id": "gf0011-variant-018",
+      "form": "門",
+      "role": "listed_variant",
+      "reported_strokes": 3,
+      "related_principal_forms": [
+        "门"
+      ],
+      "component_id": null,
+      "color": null,
+      "tranche_0001_1000_count": 0,
+      "characters": []
+    },
+    {
+      "id": "gf0011-variant-019",
+      "form": "辵",
+      "role": "listed_variant",
+      "reported_strokes": 3,
+      "related_principal_forms": [
+        "辶"
+      ],
+      "component_id": null,
+      "color": null,
+      "tranche_0001_1000_count": 0,
+      "characters": []
+    },
+    {
+      "id": "gf0011-variant-020",
+      "form": "⺕",
+      "role": "listed_variant",
+      "reported_strokes": 3,
+      "related_principal_forms": [
+        "彐"
+      ],
+      "component_id": null,
+      "color": null,
+      "tranche_0001_1000_count": 0,
+      "characters": []
+    },
+    {
+      "id": "gf0011-variant-021",
+      "form": "彑",
+      "role": "listed_variant",
+      "reported_strokes": 3,
+      "related_principal_forms": [
+        "彐"
+      ],
+      "component_id": "cmp-0446",
+      "color": "#D87903",
+      "tranche_0001_1000_count": 0,
+      "characters": []
+    },
+    {
+      "id": "gf0011-variant-022",
+      "form": "已",
+      "role": "listed_variant",
+      "reported_strokes": 3,
+      "related_principal_forms": [
+        "己"
+      ],
+      "component_id": "cmp-0190",
+      "color": "#504FF6",
+      "tranche_0001_1000_count": 1,
+      "characters": [
+        {
+          "rank": 61,
+          "character": "已"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-variant-023",
+      "form": "巳",
+      "role": "listed_variant",
+      "reported_strokes": 3,
+      "related_principal_forms": [
+        "己"
+      ],
+      "component_id": "cmp-0192",
+      "color": "#DF4B9D",
+      "tranche_0001_1000_count": 5,
+      "characters": [
+        {
+          "rank": 62,
+          "character": "巳"
+        },
+        {
+          "rank": 567,
+          "character": "导"
+        },
+        {
+          "rank": 568,
+          "character": "异"
+        },
+        {
+          "rank": 891,
+          "character": "祀"
+        },
+        {
+          "rank": 901,
+          "character": "即"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-variant-024",
+      "form": "飛",
+      "role": "listed_variant",
+      "reported_strokes": 3,
+      "related_principal_forms": [
+        "飞"
+      ],
+      "component_id": null,
+      "color": null,
+      "tranche_0001_1000_count": 0,
+      "characters": []
+    },
+    {
+      "id": "gf0011-variant-025",
+      "form": "馬",
+      "role": "listed_variant",
+      "reported_strokes": 3,
+      "related_principal_forms": [
+        "马"
+      ],
+      "component_id": null,
+      "color": null,
+      "tranche_0001_1000_count": 0,
+      "characters": []
+    },
+    {
+      "id": "gf0011-variant-026",
+      "form": "玉",
+      "role": "listed_variant",
+      "reported_strokes": 4,
+      "related_principal_forms": [
+        "王"
+      ],
+      "component_id": "cmp-0470",
+      "color": "#086687",
+      "tranche_0001_1000_count": 1,
+      "characters": [
+        {
+          "rank": 190,
+          "character": "玉"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-variant-027",
+      "form": "旡",
+      "role": "listed_variant",
+      "reported_strokes": 4,
+      "related_principal_forms": [
+        "无"
+      ],
+      "component_id": "cmp-0193",
+      "color": "#930A82",
+      "tranche_0001_1000_count": 0,
+      "characters": []
+    },
+    {
+      "id": "gf0011-variant-028",
+      "form": "韋",
+      "role": "listed_variant",
+      "reported_strokes": 4,
+      "related_principal_forms": [
+        "韦"
+      ],
+      "component_id": null,
+      "color": null,
+      "tranche_0001_1000_count": 0,
+      "characters": []
+    },
+    {
+      "id": "gf0011-variant-029",
+      "form": "朩",
+      "role": "listed_variant",
+      "reported_strokes": 4,
+      "related_principal_forms": [
+        "木"
+      ],
+      "component_id": null,
+      "color": null,
+      "tranche_0001_1000_count": 0,
+      "characters": []
+    },
+    {
+      "id": "gf0011-variant-030",
+      "form": "犭",
+      "role": "listed_variant",
+      "reported_strokes": 4,
+      "related_principal_forms": [
+        "犬"
+      ],
+      "component_id": "cmp-0310",
+      "color": "#256812",
+      "tranche_0001_1000_count": 4,
+      "characters": [
+        {
+          "rank": 292,
+          "character": "犯"
+        },
+        {
+          "rank": 811,
+          "character": "狂"
+        },
+        {
+          "rank": 812,
+          "character": "犹"
+        },
+        {
+          "rank": 813,
+          "character": "狈"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-variant-031",
+      "form": "歺",
+      "role": "listed_variant",
+      "reported_strokes": 4,
+      "related_principal_forms": [
+        "歹"
+      ],
+      "component_id": "cmp-0102",
+      "color": "#EC4B72",
+      "tranche_0001_1000_count": 0,
+      "characters": []
+    },
+    {
+      "id": "gf0011-variant-032",
+      "form": "車",
+      "role": "listed_variant",
+      "reported_strokes": 4,
+      "related_principal_forms": [
+        "车"
+      ],
+      "component_id": null,
+      "color": null,
+      "tranche_0001_1000_count": 0,
+      "characters": []
+    },
+    {
+      "id": "gf0011-variant-033",
+      "form": "攵",
+      "role": "listed_variant",
+      "reported_strokes": 4,
+      "related_principal_forms": [
+        "攴"
+      ],
+      "component_id": "cmp-0130",
+      "color": "#902099",
+      "tranche_0001_1000_count": 4,
+      "characters": [
+        {
+          "rank": 573,
+          "character": "收"
+        },
+        {
+          "rank": 630,
+          "character": "攻"
+        },
+        {
+          "rank": 908,
+          "character": "改"
+        },
+        {
+          "rank": 950,
+          "character": "玫"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-variant-034",
+      "form": "⺜",
+      "role": "listed_variant",
+      "reported_strokes": 4,
+      "related_principal_forms": [
+        "日"
+      ],
+      "component_id": null,
+      "color": null,
+      "tranche_0001_1000_count": 0,
+      "characters": []
+    },
+    {
+      "id": "gf0011-variant-035",
+      "form": "曰",
+      "role": "listed_variant",
+      "reported_strokes": 4,
+      "related_principal_forms": [
+        "日"
+      ],
+      "component_id": "cmp-0316",
+      "color": "#A85F91",
+      "tranche_0001_1000_count": 1,
+      "characters": [
+        {
+          "rank": 111,
+          "character": "曰"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-variant-036",
+      "form": "貝",
+      "role": "listed_variant",
+      "reported_strokes": 4,
+      "related_principal_forms": [
+        "贝"
+      ],
+      "component_id": null,
+      "color": null,
+      "tranche_0001_1000_count": 0,
+      "characters": []
+    },
+    {
+      "id": "gf0011-variant-037",
+      "form": "氵",
+      "role": "listed_variant",
+      "reported_strokes": 4,
+      "related_principal_forms": [
+        "水"
+      ],
+      "component_id": "cmp-0002",
+      "color": "#025EB8",
+      "tranche_0001_1000_count": 28,
+      "characters": [
+        {
+          "rank": 308,
+          "character": "汁"
+        },
+        {
+          "rank": 309,
+          "character": "汇"
+        },
+        {
+          "rank": 311,
+          "character": "汉"
+        },
+        {
+          "rank": 536,
+          "character": "汗"
+        },
+        {
+          "rank": 537,
+          "character": "污"
+        },
+        {
+          "rank": 538,
+          "character": "江"
+        },
+        {
+          "rank": 539,
+          "character": "汛"
+        },
+        {
+          "rank": 540,
+          "character": "池"
+        },
+        {
+          "rank": 541,
+          "character": "汝"
+        },
+        {
+          "rank": 542,
+          "character": "汤"
+        },
+        {
+          "rank": 855,
+          "character": "汪"
+        },
+        {
+          "rank": 856,
+          "character": "沐"
+        },
+        {
+          "rank": 857,
+          "character": "沛"
+        },
+        {
+          "rank": 858,
+          "character": "汰"
+        },
+        {
+          "rank": 859,
+          "character": "沥"
+        },
+        {
+          "rank": 860,
+          "character": "沙"
+        },
+        {
+          "rank": 861,
+          "character": "汽"
+        },
+        {
+          "rank": 862,
+          "character": "沃"
+        },
+        {
+          "rank": 863,
+          "character": "沦"
+        },
+        {
+          "rank": 864,
+          "character": "汹"
+        },
+        {
+          "rank": 865,
+          "character": "泛"
+        },
+        {
+          "rank": 866,
+          "character": "沧"
+        },
+        {
+          "rank": 867,
+          "character": "没"
+        },
+        {
+          "rank": 868,
+          "character": "沟"
+        },
+        {
+          "rank": 869,
+          "character": "沪"
+        },
+        {
+          "rank": 870,
+          "character": "沈"
+        },
+        {
+          "rank": 871,
+          "character": "沉"
+        },
+        {
+          "rank": 872,
+          "character": "沁"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-variant-038",
+      "form": "氺",
+      "role": "listed_variant",
+      "reported_strokes": 4,
+      "related_principal_forms": [
+        "水"
+      ],
+      "component_id": "cmp-0361",
+      "color": "#87455B",
+      "tranche_0001_1000_count": 0,
+      "characters": []
+    },
+    {
+      "id": "gf0011-variant-039",
+      "form": "見",
+      "role": "listed_variant",
+      "reported_strokes": 4,
+      "related_principal_forms": [
+        "见"
+      ],
+      "component_id": null,
+      "color": null,
+      "tranche_0001_1000_count": 0,
+      "characters": []
+    },
+    {
+      "id": "gf0011-variant-040",
+      "form": "牜",
+      "role": "listed_variant",
+      "reported_strokes": 4,
+      "related_principal_forms": [
+        "牛"
+      ],
+      "component_id": null,
+      "color": null,
+      "tranche_0001_1000_count": 0,
+      "characters": []
+    },
+    {
+      "id": "gf0011-variant-041",
+      "form": "扌",
+      "role": "listed_variant",
+      "reported_strokes": 4,
+      "related_principal_forms": [
+        "手"
+      ],
+      "component_id": "cmp-0019",
+      "color": "#E36DA0",
+      "tranche_0001_1000_count": 72,
+      "characters": [
+        {
+          "rank": 85,
+          "character": "扎"
+        },
+        {
+          "rank": 196,
+          "character": "打"
+        },
+        {
+          "rank": 199,
+          "character": "扑"
+        },
+        {
+          "rank": 201,
+          "character": "扒"
+        },
+        {
+          "rank": 203,
+          "character": "扔"
+        },
+        {
+          "rank": 354,
+          "character": "扛"
+        },
+        {
+          "rank": 357,
+          "character": "扣"
+        },
+        {
+          "rank": 359,
+          "character": "托"
+        },
+        {
+          "rank": 363,
+          "character": "执"
+        },
+        {
+          "rank": 364,
+          "character": "扩"
+        },
+        {
+          "rank": 365,
+          "character": "扫"
+        },
+        {
+          "rank": 368,
+          "character": "扬"
+        },
+        {
+          "rank": 612,
+          "character": "扶"
+        },
+        {
+          "rank": 613,
+          "character": "抚"
+        },
+        {
+          "rank": 615,
+          "character": "技"
+        },
+        {
+          "rank": 617,
+          "character": "抠"
+        },
+        {
+          "rank": 618,
+          "character": "扰"
+        },
+        {
+          "rank": 619,
+          "character": "扼"
+        },
+        {
+          "rank": 620,
+          "character": "拒"
+        },
+        {
+          "rank": 621,
+          "character": "找"
+        },
+        {
+          "rank": 622,
+          "character": "批"
+        },
+        {
+          "rank": 624,
+          "character": "扯"
+        },
+        {
+          "rank": 626,
+          "character": "抄"
+        },
+        {
+          "rank": 632,
+          "character": "折"
+        },
+        {
+          "rank": 633,
+          "character": "抓"
+        },
+        {
+          "rank": 634,
+          "character": "扳"
+        },
+        {
+          "rank": 635,
+          "character": "抡"
+        },
+        {
+          "rank": 636,
+          "character": "扮"
+        },
+        {
+          "rank": 637,
+          "character": "抢"
+        },
+        {
+          "rank": 641,
+          "character": "抑"
+        },
+        {
+          "rank": 642,
+          "character": "抛"
+        },
+        {
+          "rank": 643,
+          "character": "投"
+        },
+        {
+          "rank": 646,
+          "character": "抗"
+        },
+        {
+          "rank": 648,
+          "character": "抖"
+        },
+        {
+          "rank": 649,
+          "character": "护"
+        },
+        {
+          "rank": 653,
+          "character": "扭"
+        },
+        {
+          "rank": 655,
+          "character": "把"
+        },
+        {
+          "rank": 656,
+          "character": "报"
+        },
+        {
+          "rank": 657,
+          "character": "拟"
+        },
+        {
+          "rank": 659,
+          "character": "抒"
+        },
+        {
+          "rank": 953,
+          "character": "抹"
+        },
+        {
+          "rank": 957,
+          "character": "拓"
+        },
+        {
+          "rank": 958,
+          "character": "拢"
+        },
+        {
+          "rank": 959,
+          "character": "拔"
+        },
+        {
+          "rank": 961,
+          "character": "拣"
+        },
+        {
+          "rank": 963,
+          "character": "担"
+        },
+        {
+          "rank": 965,
+          "character": "押"
+        },
+        {
+          "rank": 966,
+          "character": "抽"
+        },
+        {
+          "rank": 967,
+          "character": "拐"
+        },
+        {
+          "rank": 968,
+          "character": "拖"
+        },
+        {
+          "rank": 970,
+          "character": "拍"
+        },
+        {
+          "rank": 972,
+          "character": "拆"
+        },
+        {
+          "rank": 973,
+          "character": "拎"
+        },
+        {
+          "rank": 974,
+          "character": "拥"
+        },
+        {
+          "rank": 975,
+          "character": "抵"
+        },
+        {
+          "rank": 976,
+          "character": "拘"
+        },
+        {
+          "rank": 977,
+          "character": "势"
+        },
+        {
+          "rank": 978,
+          "character": "抱"
+        },
+        {
+          "rank": 979,
+          "character": "拄"
+        },
+        {
+          "rank": 981,
+          "character": "拉"
+        },
+        {
+          "rank": 982,
+          "character": "拦"
+        },
+        {
+          "rank": 984,
+          "character": "拌"
+        },
+        {
+          "rank": 985,
+          "character": "拧"
+        },
+        {
+          "rank": 986,
+          "character": "拂"
+        },
+        {
+          "rank": 987,
+          "character": "拙"
+        },
+        {
+          "rank": 988,
+          "character": "招"
+        },
+        {
+          "rank": 990,
+          "character": "披"
+        },
+        {
+          "rank": 991,
+          "character": "拨"
+        },
+        {
+          "rank": 992,
+          "character": "择"
+        },
+        {
+          "rank": 993,
+          "character": "抬"
+        },
+        {
+          "rank": 994,
+          "character": "拇"
+        },
+        {
+          "rank": 995,
+          "character": "拗"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-variant-042",
+      "form": "龵",
+      "role": "listed_variant",
+      "reported_strokes": 4,
+      "related_principal_forms": [
+        "手"
+      ],
+      "component_id": null,
+      "color": null,
+      "tranche_0001_1000_count": 0,
+      "characters": []
+    },
+    {
+      "id": "gf0011-variant-043",
+      "form": "镸",
+      "role": "listed_variant",
+      "reported_strokes": 4,
+      "related_principal_forms": [
+        "长"
+      ],
+      "component_id": "cmp-0367",
+      "color": "#6D5984",
+      "tranche_0001_1000_count": 0,
+      "characters": []
+    },
+    {
+      "id": "gf0011-variant-044",
+      "form": "長",
+      "role": "listed_variant",
+      "reported_strokes": 4,
+      "related_principal_forms": [
+        "长"
+      ],
+      "component_id": null,
+      "color": null,
+      "tranche_0001_1000_count": 0,
+      "characters": []
+    },
+    {
+      "id": "gf0011-variant-045",
+      "form": "爫",
+      "role": "listed_variant",
+      "reported_strokes": 4,
+      "related_principal_forms": [
+        "爪"
+      ],
+      "component_id": "cmp-0483",
+      "color": "#286E7D",
+      "tranche_0001_1000_count": 1,
+      "characters": [
+        {
+          "rank": 799,
+          "character": "妥"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-variant-046",
+      "form": "⺝",
+      "role": "listed_variant",
+      "reported_strokes": 4,
+      "related_principal_forms": [
+        "月"
+      ],
+      "component_id": "cmp-0474",
+      "color": "#684365",
+      "tranche_0001_1000_count": 2,
+      "characters": [
+        {
+          "rank": 390,
+          "character": "有"
+        },
+        {
+          "rank": 713,
+          "character": "肖"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-variant-047",
+      "form": "風",
+      "role": "listed_variant",
+      "reported_strokes": 4,
+      "related_principal_forms": [
+        "风"
+      ],
+      "component_id": null,
+      "color": null,
+      "tranche_0001_1000_count": 0,
+      "characters": []
+    },
+    {
+      "id": "gf0011-variant-048",
+      "form": "灬",
+      "role": "listed_variant",
+      "reported_strokes": 4,
+      "related_principal_forms": [
+        "火"
+      ],
+      "component_id": "cmp-0006",
+      "color": "#6C4FC6",
+      "tranche_0001_1000_count": 0,
+      "characters": []
+    },
+    {
+      "id": "gf0011-variant-049",
+      "form": "忄",
+      "role": "listed_variant",
+      "reported_strokes": 4,
+      "related_principal_forms": [
+        "心"
+      ],
+      "component_id": "cmp-0017",
+      "color": "#5477CB",
+      "tranche_0001_1000_count": 6,
+      "characters": [
+        {
+          "rank": 167,
+          "character": "忆"
+        },
+        {
+          "rank": 543,
+          "character": "忙"
+        },
+        {
+          "rank": 873,
+          "character": "怀"
+        },
+        {
+          "rank": 874,
+          "character": "忧"
+        },
+        {
+          "rank": 875,
+          "character": "忱"
+        },
+        {
+          "rank": 876,
+          "character": "快"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-variant-050",
+      "form": "⺗",
+      "role": "listed_variant",
+      "reported_strokes": 4,
+      "related_principal_forms": [
+        "心"
+      ],
+      "component_id": null,
+      "color": null,
+      "tranche_0001_1000_count": 0,
+      "characters": []
+    },
+    {
+      "id": "gf0011-variant-051",
+      "form": "母",
+      "role": "listed_variant",
+      "reported_strokes": 4,
+      "related_principal_forms": [
+        "毋"
+      ],
+      "component_id": "cmp-0268",
+      "color": "#7D4480",
+      "tranche_0001_1000_count": 3,
+      "characters": [
+        {
+          "rank": 345,
+          "character": "母"
+        },
+        {
+          "rank": 767,
+          "character": "每"
+        },
+        {
+          "rank": 994,
+          "character": "拇"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-variant-052",
+      "form": "礻",
+      "role": "listed_variant",
+      "reported_strokes": 4,
+      "related_principal_forms": [
+        "示"
+      ],
+      "component_id": "cmp-0344",
+      "color": "#814D45",
+      "tranche_0001_1000_count": 0,
+      "characters": []
+    },
+    {
+      "id": "gf0011-variant-053",
+      "form": "龍",
+      "role": "listed_variant",
+      "reported_strokes": 4,
+      "related_principal_forms": [
+        "龙"
+      ],
+      "component_id": null,
+      "color": null,
+      "tranche_0001_1000_count": 0,
+      "characters": []
+    },
+    {
+      "id": "gf0011-variant-054",
+      "form": "鳥",
+      "role": "listed_variant",
+      "reported_strokes": 4,
+      "related_principal_forms": [
+        "鸟"
+      ],
+      "component_id": null,
+      "color": null,
+      "tranche_0001_1000_count": 0,
+      "characters": []
+    },
+    {
+      "id": "gf0011-variant-055",
+      "form": "𤴔",
+      "role": "listed_variant",
+      "reported_strokes": 4,
+      "related_principal_forms": [
+        "疋"
+      ],
+      "component_id": null,
+      "color": null,
+      "tranche_0001_1000_count": 0,
+      "characters": []
+    },
+    {
+      "id": "gf0011-variant-056",
+      "form": "耂",
+      "role": "listed_variant",
+      "reported_strokes": 6,
+      "related_principal_forms": [
+        "老"
+      ],
+      "component_id": "cmp-0230",
+      "color": "#AD7249",
+      "tranche_0001_1000_count": 3,
+      "characters": [
+        {
+          "rank": 358,
+          "character": "考"
+        },
+        {
+          "rank": 638,
+          "character": "孝"
+        },
+        {
+          "rank": 969,
+          "character": "者"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-variant-057",
+      "form": "襾",
+      "role": "listed_variant",
+      "reported_strokes": 6,
+      "related_principal_forms": [
+        "覀"
+      ],
+      "component_id": null,
+      "color": null,
+      "tranche_0001_1000_count": 0,
+      "characters": []
+    },
+    {
+      "id": "gf0011-variant-058",
+      "form": "西",
+      "role": "listed_variant",
+      "reported_strokes": 6,
+      "related_principal_forms": [
+        "覀"
+      ],
+      "component_id": "cmp-0403",
+      "color": "#057460",
+      "tranche_0001_1000_count": 1,
+      "characters": [
+        {
+          "rank": 384,
+          "character": "西"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-variant-059",
+      "form": "頁",
+      "role": "listed_variant",
+      "reported_strokes": 6,
+      "related_principal_forms": [
+        "页"
+      ],
+      "component_id": null,
+      "color": null,
+      "tranche_0001_1000_count": 0,
+      "characters": []
+    },
+    {
+      "id": "gf0011-variant-060",
+      "form": "虎",
+      "role": "listed_variant",
+      "reported_strokes": 6,
+      "related_principal_forms": [
+        "虍"
+      ],
+      "component_id": null,
+      "color": null,
+      "tranche_0001_1000_count": 0,
+      "characters": []
+    },
+    {
+      "id": "gf0011-variant-061",
+      "form": "𥫗",
+      "role": "listed_variant",
+      "reported_strokes": 6,
+      "related_principal_forms": [
+        "竹"
+      ],
+      "component_id": "cmp-0503",
+      "color": "#6F73BE",
+      "tranche_0001_1000_count": 0,
+      "characters": []
+    },
+    {
+      "id": "gf0011-variant-062",
+      "form": "𦥑",
+      "role": "listed_variant",
+      "reported_strokes": 6,
+      "related_principal_forms": [
+        "臼"
+      ],
+      "component_id": null,
+      "color": null,
+      "tranche_0001_1000_count": 0,
+      "characters": []
+    },
+    {
+      "id": "gf0011-variant-063",
+      "form": "齊",
+      "role": "listed_variant",
+      "reported_strokes": 6,
+      "related_principal_forms": [
+        "齐"
+      ],
+      "component_id": null,
+      "color": null,
+      "tranche_0001_1000_count": 0,
+      "characters": []
+    },
+    {
+      "id": "gf0011-variant-064",
+      "form": "衤",
+      "role": "listed_variant",
+      "reported_strokes": 6,
+      "related_principal_forms": [
+        "衣"
+      ],
+      "component_id": "cmp-0445",
+      "color": "#BB66C1",
+      "tranche_0001_1000_count": 2,
+      "characters": [
+        {
+          "rank": 888,
+          "character": "补"
+        },
+        {
+          "rank": 889,
+          "character": "初"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-variant-065",
+      "form": "⺶",
+      "role": "listed_variant",
+      "reported_strokes": 6,
+      "related_principal_forms": [
+        "羊"
+      ],
+      "component_id": null,
+      "color": null,
+      "tranche_0001_1000_count": 0,
+      "characters": []
+    },
+    {
+      "id": "gf0011-variant-066",
+      "form": "𦍌",
+      "role": "listed_variant",
+      "reported_strokes": 6,
+      "related_principal_forms": [
+        "羊"
+      ],
+      "component_id": "cmp-0435",
+      "color": "#F36D3B",
+      "tranche_0001_1000_count": 0,
+      "characters": []
+    },
+    {
+      "id": "gf0011-variant-067",
+      "form": "肀",
+      "role": "listed_variant",
+      "reported_strokes": 6,
+      "related_principal_forms": [
+        "聿"
+      ],
+      "component_id": "cmp-0371",
+      "color": "#8267A1",
+      "tranche_0001_1000_count": 0,
+      "characters": []
+    },
+    {
+      "id": "gf0011-variant-068",
+      "form": "⺻",
+      "role": "listed_variant",
+      "reported_strokes": 6,
+      "related_principal_forms": [
+        "聿"
+      ],
+      "component_id": null,
+      "color": null,
+      "tranche_0001_1000_count": 0,
+      "characters": []
+    },
+    {
+      "id": "gf0011-variant-069",
+      "form": "纟",
+      "role": "listed_variant",
+      "reported_strokes": 6,
+      "related_principal_forms": [
+        "糸"
+      ],
+      "component_id": "cmp-0202",
+      "color": "#94439A",
+      "tranche_0001_1000_count": 18,
+      "characters": [
+        {
+          "rank": 344,
+          "character": "纠"
+        },
+        {
+          "rank": 589,
+          "character": "红"
+        },
+        {
+          "rank": 591,
+          "character": "纤"
+        },
+        {
+          "rank": 593,
+          "character": "约"
+        },
+        {
+          "rank": 594,
+          "character": "级"
+        },
+        {
+          "rank": 595,
+          "character": "纪"
+        },
+        {
+          "rank": 597,
+          "character": "纫"
+        },
+        {
+          "rank": 929,
+          "character": "纬"
+        },
+        {
+          "rank": 931,
+          "character": "纯"
+        },
+        {
+          "rank": 932,
+          "character": "纱"
+        },
+        {
+          "rank": 933,
+          "character": "纲"
+        },
+        {
+          "rank": 934,
+          "character": "纳"
+        },
+        {
+          "rank": 936,
+          "character": "纵"
+        },
+        {
+          "rank": 937,
+          "character": "纷"
+        },
+        {
+          "rank": 938,
+          "character": "纸"
+        },
+        {
+          "rank": 939,
+          "character": "纹"
+        },
+        {
+          "rank": 940,
+          "character": "纺"
+        },
+        {
+          "rank": 942,
+          "character": "纽"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-variant-070",
+      "form": "糹",
+      "role": "listed_variant",
+      "reported_strokes": 6,
+      "related_principal_forms": [
+        "糸"
+      ],
+      "component_id": null,
+      "color": null,
+      "tranche_0001_1000_count": 0,
+      "characters": []
+    },
+    {
+      "id": "gf0011-variant-071",
+      "form": "麥",
+      "role": "listed_variant",
+      "reported_strokes": 7,
+      "related_principal_forms": [
+        "麦"
+      ],
+      "component_id": null,
+      "color": null,
+      "tranche_0001_1000_count": 0,
+      "characters": []
+    },
+    {
+      "id": "gf0011-variant-072",
+      "form": "鹵",
+      "role": "listed_variant",
+      "reported_strokes": 7,
+      "related_principal_forms": [
+        "卤"
+      ],
+      "component_id": null,
+      "color": null,
+      "tranche_0001_1000_count": 0,
+      "characters": []
+    },
+    {
+      "id": "gf0011-variant-073",
+      "form": "𧾷",
+      "role": "listed_variant",
+      "reported_strokes": 7,
+      "related_principal_forms": [
+        "足"
+      ],
+      "component_id": null,
+      "color": null,
+      "tranche_0001_1000_count": 0,
+      "characters": []
+    },
+    {
+      "id": "gf0011-variant-074",
+      "form": "⻏",
+      "role": "listed_variant",
+      "reported_strokes": 7,
+      "related_principal_forms": [
+        "邑"
+      ],
+      "component_id": null,
+      "color": null,
+      "tranche_0001_1000_count": 0,
+      "characters": []
+    },
+    {
+      "id": "gf0011-variant-075",
+      "form": "龜",
+      "role": "listed_variant",
+      "reported_strokes": 7,
+      "related_principal_forms": [
+        "龟"
+      ],
+      "component_id": null,
+      "color": null,
+      "tranche_0001_1000_count": 0,
+      "characters": []
+    },
+    {
+      "id": "gf0011-variant-076",
+      "form": "讠",
+      "role": "listed_variant",
+      "reported_strokes": 7,
+      "related_principal_forms": [
+        "言"
+      ],
+      "component_id": "cmp-0022",
+      "color": "#B42C92",
+      "tranche_0001_1000_count": 29,
+      "characters": [
+        {
+          "rank": 168,
+          "character": "计"
+        },
+        {
+          "rank": 169,
+          "character": "订"
+        },
+        {
+          "rank": 171,
+          "character": "认"
+        },
+        {
+          "rank": 173,
+          "character": "讥"
+        },
+        {
+          "rank": 315,
+          "character": "讨"
+        },
+        {
+          "rank": 317,
+          "character": "让"
+        },
+        {
+          "rank": 319,
+          "character": "训"
+        },
+        {
+          "rank": 320,
+          "character": "议"
+        },
+        {
+          "rank": 322,
+          "character": "讯"
+        },
+        {
+          "rank": 323,
+          "character": "记"
+        },
+        {
+          "rank": 550,
+          "character": "讲"
+        },
+        {
+          "rank": 551,
+          "character": "讳"
+        },
+        {
+          "rank": 553,
+          "character": "讶"
+        },
+        {
+          "rank": 554,
+          "character": "许"
+        },
+        {
+          "rank": 555,
+          "character": "讹"
+        },
+        {
+          "rank": 556,
+          "character": "论"
+        },
+        {
+          "rank": 557,
+          "character": "讼"
+        },
+        {
+          "rank": 559,
+          "character": "讽"
+        },
+        {
+          "rank": 560,
+          "character": "设"
+        },
+        {
+          "rank": 561,
+          "character": "访"
+        },
+        {
+          "rank": 562,
+          "character": "诀"
+        },
+        {
+          "rank": 885,
+          "character": "证"
+        },
+        {
+          "rank": 887,
+          "character": "评"
+        },
+        {
+          "rank": 892,
+          "character": "识"
+        },
+        {
+          "rank": 893,
+          "character": "诈"
+        },
+        {
+          "rank": 894,
+          "character": "诉"
+        },
+        {
+          "rank": 896,
+          "character": "诊"
+        },
+        {
+          "rank": 897,
+          "character": "词"
+        },
+        {
+          "rank": 898,
+          "character": "译"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-variant-077",
+      "form": "齒",
+      "role": "listed_variant",
+      "reported_strokes": 8,
+      "related_principal_forms": [
+        "齿"
+      ],
+      "component_id": null,
+      "color": null,
+      "tranche_0001_1000_count": 0,
+      "characters": []
+    },
+    {
+      "id": "gf0011-variant-078",
+      "form": "黽",
+      "role": "listed_variant",
+      "reported_strokes": 8,
+      "related_principal_forms": [
+        "黾"
+      ],
+      "component_id": null,
+      "color": null,
+      "tranche_0001_1000_count": 0,
+      "characters": []
+    },
+    {
+      "id": "gf0011-variant-079",
+      "form": "⻖",
+      "role": "listed_variant",
+      "reported_strokes": 8,
+      "related_principal_forms": [
+        "阜"
+      ],
+      "component_id": null,
+      "color": null,
+      "tranche_0001_1000_count": 0,
+      "characters": []
+    },
+    {
+      "id": "gf0011-variant-080",
+      "form": "钅",
+      "role": "listed_variant",
+      "reported_strokes": 8,
+      "related_principal_forms": [
+        "金"
+      ],
+      "component_id": "cmp-0029",
+      "color": "#89A10C",
+      "tranche_0001_1000_count": 2,
+      "characters": [
+        {
+          "rank": 757,
+          "character": "针"
+        },
+        {
+          "rank": 758,
+          "character": "钉"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-variant-081",
+      "form": "魚",
+      "role": "listed_variant",
+      "reported_strokes": 8,
+      "related_principal_forms": [
+        "鱼"
+      ],
+      "component_id": null,
+      "color": null,
+      "tranche_0001_1000_count": 0,
+      "characters": []
+    },
+    {
+      "id": "gf0011-variant-082",
+      "form": "饣",
+      "role": "listed_variant",
+      "reported_strokes": 9,
+      "related_principal_forms": [
+        "食"
+      ],
+      "component_id": "cmp-0336",
+      "color": "#C4623E",
+      "tranche_0001_1000_count": 3,
+      "characters": [
+        {
+          "rank": 299,
+          "character": "饥"
+        },
+        {
+          "rank": 823,
+          "character": "饭"
+        },
+        {
+          "rank": 824,
+          "character": "饮"
+        }
+      ]
+    },
+    {
+      "id": "gf0011-variant-083",
+      "form": "飠",
+      "role": "listed_variant",
+      "reported_strokes": 9,
+      "related_principal_forms": [
+        "食"
+      ],
+      "component_id": null,
+      "color": null,
+      "tranche_0001_1000_count": 0,
+      "characters": []
+    }
+  ]
+}

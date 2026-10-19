@@ -1,0 +1,56 @@
+{
+  "schema": "chromalect.catalog-provenance.v1",
+  "scope": "mainland-simplified-modern-standard-2013-primary-characters-0001-1000",
+  "baseline_palette": "mandarin-component-identity@0.4.0",
+  "sources": {
+    "characters": {
+      "standard": "通用规范汉字表 2013 level 1",
+      "transcription_repository": "lqfeng/ChineseCharacters",
+      "source_path": "通用规范汉字表(2013)一级字表(3500字).txt",
+      "blob_sha": "e38b5d3077f516054ecc5573c9251b3aa3628140",
+      "license": "Apache-2.0 in upstream repository; only factual ordinal and glyph used"
+    },
+    "IDS": {
+      "repository": "yi-bai/ids",
+      "source_path": "ids_lv1.txt",
+      "license": "MIT",
+      "fetched_from": "https://api.github.com/repos/yi-bai/ids/contents/ids_lv1.txt",
+      "variant_policy": "primary alternative (column 2) first expression, trailing region parenthesis removed only when clearly outside sequence; unsupported syntax flagged"
+    },
+    "modern_radicals": {
+      "standard": "GF 0011-2009",
+      "repository": "zispace/hanzi-chars-ext",
+      "blob_sha": "8cfe6600bd7cd4c991cd5862faab277672037a2e",
+      "license": "not verified; only factual forms and status used"
+    },
+    "kangxi_radicals": {
+      "unicode_block": "U+2F00..U+2FD5",
+      "count": 214,
+      "normalization": "NFKC candidate matching"
+    },
+    "components": {
+      "palette": "mandarin-component-identity@0.4.0",
+      "count": 513,
+      "component_standard": "GF 0014-2009 transcription"
+    }
+  },
+  "summary": {
+    "tranche": "0001-1000",
+    "size": 1000,
+    "characters_with_known_IDS": 1000,
+    "statuses": {
+      "undefined": 998,
+      "nonstandard_ids_not_parsed": 2
+    },
+    "characters_with_at_least_one_palette_component": 998,
+    "characters_with_no_unmatched_parts": 987,
+    "characters_with_unresolved_participation": 15,
+    "characters_with_modern_radical_membership": 829,
+    "distinct_palette_components_used": 368,
+    "distinct_GF_radical_forms_used": 176,
+    "unresolved_nonpalette_references": 5,
+    "geometry_rendered": 0
+  },
+  "interpretation": "A radical used as a visible piece differs from dictionary indexing radical. IDS membership does not guarantee physical stroke ownership. No glyph files, fonts, outlines or real colored Han characters were generated.",
+  "source_verification": "third-party transcriptions: not yet independently audited against primary standards"
+}

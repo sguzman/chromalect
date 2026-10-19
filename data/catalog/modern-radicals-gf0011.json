@@ -1,0 +1,2533 @@
+{
+  "schema": "chromalect.modern-radical-inventory.v1",
+  "standard": "GF 0011-2009",
+  "status": "third-party transcription; extracted main/variant standalone rows only",
+  "main_count": 201,
+  "explicit_variant_row_count": 83,
+  "source_reference_rows": 69,
+  "standard_attached_variant_count_claimed_by_transcription": 99,
+  "palette_version": "0.4.0",
+  "radicals": [
+    {
+      "id": "gf0011-main-001",
+      "form": "一",
+      "role": "principal",
+      "reported_strokes": 1,
+      "component_id": "cmp-0171",
+      "color": "#8D2929"
+    },
+    {
+      "id": "gf0011-main-002",
+      "form": "丨",
+      "role": "principal",
+      "reported_strokes": 1,
+      "component_id": "cmp-0351",
+      "color": "#4B7D4D"
+    },
+    {
+      "id": "gf0011-main-003",
+      "form": "丿",
+      "role": "principal",
+      "reported_strokes": 1,
+      "component_id": "cmp-0288",
+      "color": "#7D3B37"
+    },
+    {
+      "id": "gf0011-main-004",
+      "form": "丶",
+      "role": "principal",
+      "reported_strokes": 1,
+      "component_id": "cmp-0113",
+      "color": "#B45C6C"
+    },
+    {
+      "id": "gf0011-main-005",
+      "form": "乛",
+      "role": "principal",
+      "reported_strokes": 1,
+      "component_id": "cmp-0173",
+      "color": "#C34EA2"
+    },
+    {
+      "id": "gf0011-main-006",
+      "form": "十",
+      "role": "principal",
+      "reported_strokes": 2,
+      "component_id": "cmp-0334",
+      "color": "#967F4E"
+    },
+    {
+      "id": "gf0011-main-007",
+      "form": "厂",
+      "role": "principal",
+      "reported_strokes": 2,
+      "component_id": "cmp-0078",
+      "color": "#AF84DE"
+    },
+    {
+      "id": "gf0011-main-008",
+      "form": "匚",
+      "role": "principal",
+      "reported_strokes": 2,
+      "component_id": "cmp-0306",
+      "color": "#3A8286"
+    },
+    {
+      "id": "gf0011-main-009",
+      "form": "卜",
+      "role": "principal",
+      "reported_strokes": 2,
+      "component_id": "cmp-0066",
+      "color": "#706419"
+    },
+    {
+      "id": "gf0011-main-010",
+      "form": "冂",
+      "role": "principal",
+      "reported_strokes": 2,
+      "component_id": "cmp-0373",
+      "color": "#157491"
+    },
+    {
+      "id": "gf0011-main-011",
+      "form": "八",
+      "role": "principal",
+      "reported_strokes": 2,
+      "component_id": "cmp-0045",
+      "color": "#6645AA"
+    },
+    {
+      "id": "gf0011-main-012",
+      "form": "人",
+      "role": "principal",
+      "reported_strokes": 2,
+      "component_id": "cmp-0012",
+      "color": "#8B4EB3"
+    },
+    {
+      "id": "gf0011-main-013",
+      "form": "勹",
+      "role": "principal",
+      "reported_strokes": 2,
+      "component_id": "cmp-0221",
+      "color": "#349317"
+    },
+    {
+      "id": "gf0011-main-014",
+      "form": "儿",
+      "role": "principal",
+      "reported_strokes": 2,
+      "component_id": "cmp-0312",
+      "color": "#FB255B"
+    },
+    {
+      "id": "gf0011-main-015",
+      "form": "匕",
+      "role": "principal",
+      "reported_strokes": 2,
+      "component_id": "cmp-0058",
+      "color": "#7C7DF6"
+    },
+    {
+      "id": "gf0011-main-016",
+      "form": "几",
+      "role": "principal",
+      "reported_strokes": 2,
+      "component_id": "cmp-0188",
+      "color": "#849666"
+    },
+    {
+      "id": "gf0011-main-017",
+      "form": "亠",
+      "role": "principal",
+      "reported_strokes": 2,
+      "component_id": "cmp-0418",
+      "color": "#915271"
+    },
+    {
+      "id": "gf0011-main-018",
+      "form": "冫",
+      "role": "principal",
+      "reported_strokes": 2,
+      "component_id": "cmp-0003",
+      "color": "#C86B82"
+    },
+    {
+      "id": "gf0011-main-019",
+      "form": "冖",
+      "role": "principal",
+      "reported_strokes": 2,
+      "component_id": "cmp-0375",
+      "color": "#5D8D40"
+    },
+    {
+      "id": "gf0011-main-020",
+      "form": "凵",
+      "role": "principal",
+      "reported_strokes": 2,
+      "component_id": "cmp-0181",
+      "color": "#5151A7"
+    },
+    {
+      "id": "gf0011-main-021",
+      "form": "卩",
+      "role": "principal",
+      "reported_strokes": 2,
+      "component_id": "cmp-0205",
+      "color": "#B81C6F"
+    },
+    {
+      "id": "gf0011-main-022",
+      "form": "刀",
+      "role": "principal",
+      "reported_strokes": 2,
+      "component_id": "cmp-0106",
+      "color": "#BA3E3C"
+    },
+    {
+      "id": "gf0011-main-023",
+      "form": "力",
+      "role": "principal",
+      "reported_strokes": 2,
+      "component_id": "cmp-0040",
+      "color": "#9367B2"
+    },
+    {
+      "id": "gf0011-main-024",
+      "form": "又",
+      "role": "principal",
+      "reported_strokes": 2,
+      "component_id": "cmp-0463",
+      "color": "#445CCD"
+    },
+    {
+      "id": "gf0011-main-025",
+      "form": "厶",
+      "role": "principal",
+      "reported_strokes": 2,
+      "component_id": "cmp-0363",
+      "color": "#A97E5B"
+    },
+    {
+      "id": "gf0011-main-026",
+      "form": "廴",
+      "role": "principal",
+      "reported_strokes": 2,
+      "component_id": "cmp-0200",
+      "color": "#B04F79"
+    },
+    {
+      "id": "gf0011-main-027",
+      "form": "干",
+      "role": "principal",
+      "reported_strokes": 3,
+      "component_id": "cmp-0146",
+      "color": "#A02951"
+    },
+    {
+      "id": "gf0011-main-028",
+      "form": "工",
+      "role": "principal",
+      "reported_strokes": 3,
+      "component_id": "cmp-0156",
+      "color": "#B86E03"
+    },
+    {
+      "id": "gf0011-main-029",
+      "form": "土",
+      "role": "principal",
+      "reported_strokes": 3,
+      "component_id": "cmp-0025",
+      "color": "#9E7604"
+    },
+    {
+      "id": "gf0011-main-030",
+      "form": "艹",
+      "role": "principal",
+      "reported_strokes": 3,
+      "component_id": "cmp-0010",
+      "color": "#8D77E5"
+    },
+    {
+      "id": "gf0011-main-031",
+      "form": "寸",
+      "role": "principal",
+      "reported_strokes": 3,
+      "component_id": "cmp-0099",
+      "color": "#40AC6F"
+    },
+    {
+      "id": "gf0011-main-032",
+      "form": "廾",
+      "role": "principal",
+      "reported_strokes": 3,
+      "component_id": "cmp-0282",
+      "color": "#7D5234"
+    },
+    {
+      "id": "gf0011-main-033",
+      "form": "大",
+      "role": "principal",
+      "reported_strokes": 3,
+      "component_id": "cmp-0100",
+      "color": "#256451"
+    },
+    {
+      "id": "gf0011-main-034",
+      "form": "尢",
+      "role": "principal",
+      "reported_strokes": 3,
+      "component_id": "cmp-0147",
+      "color": "#AB875D"
+    },
+    {
+      "id": "gf0011-main-035",
+      "form": "弋",
+      "role": "principal",
+      "reported_strokes": 3,
+      "component_id": "cmp-0450",
+      "color": "#4F8FBA"
+    },
+    {
+      "id": "gf0011-main-036",
+      "form": "小",
+      "role": "principal",
+      "reported_strokes": 3,
+      "component_id": "cmp-0411",
+      "color": "#5C76A0"
+    },
+    {
+      "id": "gf0011-main-037",
+      "form": "口",
+      "role": "principal",
+      "reported_strokes": 3,
+      "component_id": "cmp-0020",
+      "color": "#1587BA"
+    },
+    {
+      "id": "gf0011-main-038",
+      "form": "囗",
+      "role": "principal",
+      "reported_strokes": 3,
+      "component_id": "cmp-0384",
+      "color": "#9C5768"
+    },
+    {
+      "id": "gf0011-main-039",
+      "form": "山",
+      "role": "principal",
+      "reported_strokes": 3,
+      "component_id": "cmp-0027",
+      "color": "#FA588B"
+    },
+    {
+      "id": "gf0011-main-040",
+      "form": "巾",
+      "role": "principal",
+      "reported_strokes": 3,
+      "component_id": "cmp-0209",
+      "color": "#6B9BBD"
+    },
+    {
+      "id": "gf0011-main-041",
+      "form": "彳",
+      "role": "principal",
+      "reported_strokes": 3,
+      "component_id": "cmp-0360",
+      "color": "#6680BA"
+    },
+    {
+      "id": "gf0011-main-042",
+      "form": "彡",
+      "role": "principal",
+      "reported_strokes": 3,
+      "component_id": "cmp-0322",
+      "color": "#808A08"
+    },
+    {
+      "id": "gf0011-main-043",
+      "form": "夕",
+      "role": "principal",
+      "reported_strokes": 3,
+      "component_id": "cmp-0400",
+      "color": "#CA8A66"
+    },
+    {
+      "id": "gf0011-main-044",
+      "form": "夂",
+      "role": "principal",
+      "reported_strokes": 3,
+      "component_id": "cmp-0118",
+      "color": "#A06976"
+    },
+    {
+      "id": "gf0011-main-045",
+      "form": "丬",
+      "role": "principal",
+      "reported_strokes": 3,
+      "component_id": "cmp-0285",
+      "color": "#956D30"
+    },
+    {
+      "id": "gf0011-main-046",
+      "form": "广",
+      "role": "principal",
+      "reported_strokes": 3,
+      "component_id": "cmp-0163",
+      "color": "#0478A8"
+    },
+    {
+      "id": "gf0011-main-047",
+      "form": "门",
+      "role": "principal",
+      "reported_strokes": 3,
+      "component_id": "cmp-0034",
+      "color": "#178529"
+    },
+    {
+      "id": "gf0011-main-048",
+      "form": "宀",
+      "role": "principal",
+      "reported_strokes": 3,
+      "component_id": "cmp-0035",
+      "color": "#8352FE"
+    },
+    {
+      "id": "gf0011-main-049",
+      "form": "辶",
+      "role": "principal",
+      "reported_strokes": 3,
+      "component_id": "cmp-0030",
+      "color": "#601CCF"
+    },
+    {
+      "id": "gf0011-main-050",
+      "form": "彐",
+      "role": "principal",
+      "reported_strokes": 3,
+      "component_id": "cmp-0249",
+      "color": "#6085AC"
+    },
+    {
+      "id": "gf0011-main-051",
+      "form": "尸",
+      "role": "principal",
+      "reported_strokes": 3,
+      "component_id": "cmp-0332",
+      "color": "#8393C2"
+    },
+    {
+      "id": "gf0011-main-052",
+      "form": "己",
+      "role": "principal",
+      "reported_strokes": 3,
+      "component_id": "cmp-0189",
+      "color": "#1D7339"
+    },
+    {
+      "id": "gf0011-main-053",
+      "form": "弓",
+      "role": "principal",
+      "reported_strokes": 3,
+      "component_id": "cmp-0157",
+      "color": "#5B98AF"
+    },
+    {
+      "id": "gf0011-main-054",
+      "form": "子",
+      "role": "principal",
+      "reported_strokes": 3,
+      "component_id": "cmp-0015",
+      "color": "#98518A"
+    },
+    {
+      "id": "gf0011-main-055",
+      "form": "屮",
+      "role": "principal",
+      "reported_strokes": 3,
+      "component_id": null,
+      "color": null
+    },
+    {
+      "id": "gf0011-main-056",
+      "form": "女",
+      "role": "principal",
+      "reported_strokes": 3,
+      "component_id": "cmp-0014",
+      "color": "#EA5202"
+    },
+    {
+      "id": "gf0011-main-057",
+      "form": "飞",
+      "role": "principal",
+      "reported_strokes": 3,
+      "component_id": "cmp-0133",
+      "color": "#876083"
+    },
+    {
+      "id": "gf0011-main-058",
+      "form": "马",
+      "role": "principal",
+      "reported_strokes": 3,
+      "component_id": "cmp-0033",
+      "color": "#C41F5F"
+    },
+    {
+      "id": "gf0011-main-059",
+      "form": "么",
+      "role": "principal",
+      "reported_strokes": 3,
+      "component_id": "cmp-0260",
+      "color": "#B28630"
+    },
+    {
+      "id": "gf0011-main-060",
+      "form": "巛",
+      "role": "principal",
+      "reported_strokes": 3,
+      "component_id": "cmp-0092",
+      "color": "#4C682B"
+    },
+    {
+      "id": "gf0011-main-061",
+      "form": "王",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0383",
+      "color": "#9E7CC6"
+    },
+    {
+      "id": "gf0011-main-062",
+      "form": "无",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0393",
+      "color": "#A21C62"
+    },
+    {
+      "id": "gf0011-main-063",
+      "form": "韦",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0385",
+      "color": "#60612E"
+    },
+    {
+      "id": "gf0011-main-064",
+      "form": "木",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0009",
+      "color": "#C67544"
+    },
+    {
+      "id": "gf0011-main-065",
+      "form": "支",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": null,
+      "color": null
+    },
+    {
+      "id": "gf0011-main-066",
+      "form": "犬",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0309",
+      "color": "#035C92"
+    },
+    {
+      "id": "gf0011-main-067",
+      "form": "歹",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0101",
+      "color": "#6863B1"
+    },
+    {
+      "id": "gf0011-main-068",
+      "form": "车",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0032",
+      "color": "#A04E3A"
+    },
+    {
+      "id": "gf0011-main-069",
+      "form": "牙",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0427",
+      "color": "#DE5634"
+    },
+    {
+      "id": "gf0011-main-070",
+      "form": "戈",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0150",
+      "color": "#7B499C"
+    },
+    {
+      "id": "gf0011-main-071",
+      "form": "比",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": null,
+      "color": null
+    },
+    {
+      "id": "gf0011-main-072",
+      "form": "瓦",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0379",
+      "color": "#DD1F5D"
+    },
+    {
+      "id": "gf0011-main-073",
+      "form": "止",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0489",
+      "color": "#D78164"
+    },
+    {
+      "id": "gf0011-main-074",
+      "form": "攴",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0131",
+      "color": "#C07967"
+    },
+    {
+      "id": "gf0011-main-075",
+      "form": "日",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0007",
+      "color": "#2A76F1"
+    },
+    {
+      "id": "gf0011-main-076",
+      "form": "贝",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0054",
+      "color": "#438E56"
+    },
+    {
+      "id": "gf0011-main-077",
+      "form": "水",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0001",
+      "color": "#AF56FD"
+    },
+    {
+      "id": "gf0011-main-078",
+      "form": "见",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0201",
+      "color": "#B97696"
+    },
+    {
+      "id": "gf0011-main-079",
+      "form": "牛",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0279",
+      "color": "#D95AF5"
+    },
+    {
+      "id": "gf0011-main-080",
+      "form": "手",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0018",
+      "color": "#9130DB"
+    },
+    {
+      "id": "gf0011-main-081",
+      "form": "气",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0295",
+      "color": "#CE8674"
+    },
+    {
+      "id": "gf0011-main-082",
+      "form": "毛",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0255",
+      "color": "#4B501E"
+    },
+    {
+      "id": "gf0011-main-083",
+      "form": "长",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0077",
+      "color": "#427E95"
+    },
+    {
+      "id": "gf0011-main-084",
+      "form": "片",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0287",
+      "color": "#6F4157"
+    },
+    {
+      "id": "gf0011-main-085",
+      "form": "斤",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0210",
+      "color": "#7C7028"
+    },
+    {
+      "id": "gf0011-main-086",
+      "form": "爪",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0481",
+      "color": "#A469A7"
+    },
+    {
+      "id": "gf0011-main-087",
+      "form": "父",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0144",
+      "color": "#445780"
+    },
+    {
+      "id": "gf0011-main-088",
+      "form": "月",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0008",
+      "color": "#DB3649"
+    },
+    {
+      "id": "gf0011-main-089",
+      "form": "氏",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0342",
+      "color": "#4F8BA2"
+    },
+    {
+      "id": "gf0011-main-090",
+      "form": "欠",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0299",
+      "color": "#8C2F03"
+    },
+    {
+      "id": "gf0011-main-091",
+      "form": "风",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0137",
+      "color": "#1D6173"
+    },
+    {
+      "id": "gf0011-main-092",
+      "form": "殳",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0348",
+      "color": "#593FC5"
+    },
+    {
+      "id": "gf0011-main-093",
+      "form": "文",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0390",
+      "color": "#FF4659"
+    },
+    {
+      "id": "gf0011-main-094",
+      "form": "方",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0132",
+      "color": "#CA7EB1"
+    },
+    {
+      "id": "gf0011-main-095",
+      "form": "火",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0005",
+      "color": "#DE0784"
+    },
+    {
+      "id": "gf0011-main-096",
+      "form": "斗",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0121",
+      "color": "#2A8D7E"
+    },
+    {
+      "id": "gf0011-main-097",
+      "form": "户",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0180",
+      "color": "#914C48"
+    },
+    {
+      "id": "gf0011-main-098",
+      "form": "心",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0016",
+      "color": "#C04E8A"
+    },
+    {
+      "id": "gf0011-main-099",
+      "form": "毋",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": null,
+      "color": null
+    },
+    {
+      "id": "gf0011-main-100",
+      "form": "示",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0343",
+      "color": "#285AF8"
+    },
+    {
+      "id": "gf0011-main-101",
+      "form": "甘",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0148",
+      "color": "#758B4B"
+    },
+    {
+      "id": "gf0011-main-102",
+      "form": "石",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0026",
+      "color": "#744049"
+    },
+    {
+      "id": "gf0011-main-103",
+      "form": "龙",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0247",
+      "color": "#F21D74"
+    },
+    {
+      "id": "gf0011-main-104",
+      "form": "业",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0441",
+      "color": "#C274BC"
+    },
+    {
+      "id": "gf0011-main-105",
+      "form": "目",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0023",
+      "color": "#91922F"
+    },
+    {
+      "id": "gf0011-main-106",
+      "form": "田",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0039",
+      "color": "#05A92E"
+    },
+    {
+      "id": "gf0011-main-107",
+      "form": "罒",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0254",
+      "color": "#C23A71"
+    },
+    {
+      "id": "gf0011-main-108",
+      "form": "皿",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0266",
+      "color": "#D77C8B"
+    },
+    {
+      "id": "gf0011-main-109",
+      "form": "生",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0331",
+      "color": "#9E594E"
+    },
+    {
+      "id": "gf0011-main-110",
+      "form": "矢",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0338",
+      "color": "#644E1D"
+    },
+    {
+      "id": "gf0011-main-111",
+      "form": "禾",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0011",
+      "color": "#808754"
+    },
+    {
+      "id": "gf0011-main-112",
+      "form": "白",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0048",
+      "color": "#7541ED"
+    },
+    {
+      "id": "gf0011-main-113",
+      "form": "瓜",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0160",
+      "color": "#85760B"
+    },
+    {
+      "id": "gf0011-main-114",
+      "form": "鸟",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0277",
+      "color": "#94614F"
+    },
+    {
+      "id": "gf0011-main-115",
+      "form": "疒",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0065",
+      "color": "#5B7AFD"
+    },
+    {
+      "id": "gf0011-main-116",
+      "form": "立",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0235",
+      "color": "#464E79"
+    },
+    {
+      "id": "gf0011-main-117",
+      "form": "穴",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0420",
+      "color": "#DB673D"
+    },
+    {
+      "id": "gf0011-main-118",
+      "form": "疋",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": null,
+      "color": null
+    },
+    {
+      "id": "gf0011-main-119",
+      "form": "皮",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0286",
+      "color": "#834047"
+    },
+    {
+      "id": "gf0011-main-120",
+      "form": "癶",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0109",
+      "color": "#AE4A92"
+    },
+    {
+      "id": "gf0011-main-121",
+      "form": "矛",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0256",
+      "color": "#25672B"
+    },
+    {
+      "id": "gf0011-main-122",
+      "form": "耒",
+      "role": "principal",
+      "reported_strokes": 6,
+      "component_id": "cmp-0232",
+      "color": "#279393"
+    },
+    {
+      "id": "gf0011-main-123",
+      "form": "老",
+      "role": "principal",
+      "reported_strokes": 6,
+      "component_id": "cmp-0229",
+      "color": "#158681"
+    },
+    {
+      "id": "gf0011-main-124",
+      "form": "耳",
+      "role": "principal",
+      "reported_strokes": 6,
+      "component_id": "cmp-0024",
+      "color": "#6D4D84"
+    },
+    {
+      "id": "gf0011-main-125",
+      "form": "臣",
+      "role": "principal",
+      "reported_strokes": 6,
+      "component_id": "cmp-0079",
+      "color": "#724703"
+    },
+    {
+      "id": "gf0011-main-126",
+      "form": "覀",
+      "role": "principal",
+      "reported_strokes": 6,
+      "component_id": "cmp-0404",
+      "color": "#86603B"
+    },
+    {
+      "id": "gf0011-main-127",
+      "form": "而",
+      "role": "principal",
+      "reported_strokes": 6,
+      "component_id": "cmp-0124",
+      "color": "#A83902"
+    },
+    {
+      "id": "gf0011-main-128",
+      "form": "页",
+      "role": "principal",
+      "reported_strokes": 6,
+      "component_id": "cmp-0442",
+      "color": "#3696AB"
+    },
+    {
+      "id": "gf0011-main-129",
+      "form": "至",
+      "role": "principal",
+      "reported_strokes": 6,
+      "component_id": "cmp-0493",
+      "color": "#5493D1"
+    },
+    {
+      "id": "gf0011-main-130",
+      "form": "虍",
+      "role": "principal",
+      "reported_strokes": 6,
+      "component_id": "cmp-0178",
+      "color": "#9C52AD"
+    },
+    {
+      "id": "gf0011-main-131",
+      "form": "虫",
+      "role": "principal",
+      "reported_strokes": 6,
+      "component_id": "cmp-0087",
+      "color": "#9B8BE8"
+    },
+    {
+      "id": "gf0011-main-132",
+      "form": "肉",
+      "role": "principal",
+      "reported_strokes": 6,
+      "component_id": "cmp-0473",
+      "color": "#878CD9"
+    },
+    {
+      "id": "gf0011-main-133",
+      "form": "缶",
+      "role": "principal",
+      "reported_strokes": 6,
+      "component_id": "cmp-0139",
+      "color": "#BA1103"
+    },
+    {
+      "id": "gf0011-main-134",
+      "form": "舌",
+      "role": "principal",
+      "reported_strokes": 6,
+      "component_id": "cmp-0327",
+      "color": "#5CA1AD"
+    },
+    {
+      "id": "gf0011-main-135",
+      "form": "竹",
+      "role": "principal",
+      "reported_strokes": 6,
+      "component_id": "cmp-0502",
+      "color": "#226640"
+    },
+    {
+      "id": "gf0011-main-136",
+      "form": "臼",
+      "role": "principal",
+      "reported_strokes": 6,
+      "component_id": "cmp-0219",
+      "color": "#803255"
+    },
+    {
+      "id": "gf0011-main-137",
+      "form": "自",
+      "role": "principal",
+      "reported_strokes": 6,
+      "component_id": "cmp-0512",
+      "color": "#427693"
+    },
+    {
+      "id": "gf0011-main-138",
+      "form": "血",
+      "role": "principal",
+      "reported_strokes": 6,
+      "component_id": "cmp-0423",
+      "color": "#0D9AD4"
+    },
+    {
+      "id": "gf0011-main-139",
+      "form": "舟",
+      "role": "principal",
+      "reported_strokes": 6,
+      "component_id": "cmp-0499",
+      "color": "#951E13"
+    },
+    {
+      "id": "gf0011-main-140",
+      "form": "色",
+      "role": "principal",
+      "reported_strokes": 6,
+      "component_id": "cmp-0321",
+      "color": "#939D44"
+    },
+    {
+      "id": "gf0011-main-141",
+      "form": "齐",
+      "role": "principal",
+      "reported_strokes": 6,
+      "component_id": null,
+      "color": null
+    },
+    {
+      "id": "gf0011-main-142",
+      "form": "衣",
+      "role": "principal",
+      "reported_strokes": 6,
+      "component_id": "cmp-0444",
+      "color": "#BA7639"
+    },
+    {
+      "id": "gf0011-main-143",
+      "form": "羊",
+      "role": "principal",
+      "reported_strokes": 6,
+      "component_id": "cmp-0434",
+      "color": "#8C16C5"
+    },
+    {
+      "id": "gf0011-main-144",
+      "form": "米",
+      "role": "principal",
+      "reported_strokes": 6,
+      "component_id": "cmp-0262",
+      "color": "#99444E"
+    },
+    {
+      "id": "gf0011-main-145",
+      "form": "聿",
+      "role": "principal",
+      "reported_strokes": 6,
+      "component_id": "cmp-0472",
+      "color": "#5E6939"
+    },
+    {
+      "id": "gf0011-main-146",
+      "form": "艮",
+      "role": "principal",
+      "reported_strokes": 6,
+      "component_id": "cmp-0153",
+      "color": "#683788"
+    },
+    {
+      "id": "gf0011-main-147",
+      "form": "羽",
+      "role": "principal",
+      "reported_strokes": 6,
+      "component_id": null,
+      "color": null
+    },
+    {
+      "id": "gf0011-main-148",
+      "form": "糸",
+      "role": "principal",
+      "reported_strokes": 6,
+      "component_id": "cmp-0203",
+      "color": "#FD5A73"
+    },
+    {
+      "id": "gf0011-main-149",
+      "form": "麦",
+      "role": "principal",
+      "reported_strokes": 7,
+      "component_id": null,
+      "color": null
+    },
+    {
+      "id": "gf0011-main-150",
+      "form": "走",
+      "role": "principal",
+      "reported_strokes": 7,
+      "component_id": null,
+      "color": null
+    },
+    {
+      "id": "gf0011-main-151",
+      "form": "赤",
+      "role": "principal",
+      "reported_strokes": 7,
+      "component_id": "cmp-0086",
+      "color": "#4A936E"
+    },
+    {
+      "id": "gf0011-main-152",
+      "form": "豆",
+      "role": "principal",
+      "reported_strokes": 7,
+      "component_id": "cmp-0122",
+      "color": "#689571"
+    },
+    {
+      "id": "gf0011-main-153",
+      "form": "酉",
+      "role": "principal",
+      "reported_strokes": 7,
+      "component_id": "cmp-0462",
+      "color": "#C01643"
+    },
+    {
+      "id": "gf0011-main-154",
+      "form": "辰",
+      "role": "principal",
+      "reported_strokes": 7,
+      "component_id": "cmp-0081",
+      "color": "#8E1C56"
+    },
+    {
+      "id": "gf0011-main-155",
+      "form": "豕",
+      "role": "principal",
+      "reported_strokes": 7,
+      "component_id": "cmp-0339",
+      "color": "#8D9D5A"
+    },
+    {
+      "id": "gf0011-main-156",
+      "form": "卤",
+      "role": "principal",
+      "reported_strokes": 7,
+      "component_id": "cmp-0248",
+      "color": "#E65760"
+    },
+    {
+      "id": "gf0011-main-157",
+      "form": "里",
+      "role": "principal",
+      "reported_strokes": 7,
+      "component_id": "cmp-0234",
+      "color": "#438206"
+    },
+    {
+      "id": "gf0011-main-158",
+      "form": "足",
+      "role": "principal",
+      "reported_strokes": 7,
+      "component_id": "cmp-0031",
+      "color": "#BA60DF"
+    },
+    {
+      "id": "gf0011-main-159",
+      "form": "邑",
+      "role": "principal",
+      "reported_strokes": 7,
+      "component_id": null,
+      "color": null
+    },
+    {
+      "id": "gf0011-main-160",
+      "form": "身",
+      "role": "principal",
+      "reported_strokes": 7,
+      "component_id": "cmp-0329",
+      "color": "#985DBF"
+    },
+    {
+      "id": "gf0011-main-161",
+      "form": "釆",
+      "role": "principal",
+      "reported_strokes": 7,
+      "component_id": "cmp-0062",
+      "color": "#5064AB"
+    },
+    {
+      "id": "gf0011-main-162",
+      "form": "谷",
+      "role": "principal",
+      "reported_strokes": 7,
+      "component_id": "cmp-0159",
+      "color": "#B26A70"
+    },
+    {
+      "id": "gf0011-main-163",
+      "form": "豸",
+      "role": "principal",
+      "reported_strokes": 7,
+      "component_id": "cmp-0495",
+      "color": "#0BAAA4"
+    },
+    {
+      "id": "gf0011-main-164",
+      "form": "龟",
+      "role": "principal",
+      "reported_strokes": 7,
+      "component_id": "cmp-0164",
+      "color": "#EA36AF"
+    },
+    {
+      "id": "gf0011-main-165",
+      "form": "角",
+      "role": "principal",
+      "reported_strokes": 7,
+      "component_id": "cmp-0204",
+      "color": "#825B1B"
+    },
+    {
+      "id": "gf0011-main-166",
+      "form": "言",
+      "role": "principal",
+      "reported_strokes": 7,
+      "component_id": "cmp-0021",
+      "color": "#99610B"
+    },
+    {
+      "id": "gf0011-main-167",
+      "form": "辛",
+      "role": "principal",
+      "reported_strokes": 7,
+      "component_id": "cmp-0415",
+      "color": "#EE7313"
+    },
+    {
+      "id": "gf0011-main-168",
+      "form": "青",
+      "role": "principal",
+      "reported_strokes": 8,
+      "component_id": "cmp-0036",
+      "color": "#C75615"
+    },
+    {
+      "id": "gf0011-main-169",
+      "form": "龺",
+      "role": "principal",
+      "reported_strokes": 8,
+      "component_id": null,
+      "color": null
+    },
+    {
+      "id": "gf0011-main-170",
+      "form": "雨",
+      "role": "principal",
+      "reported_strokes": 8,
+      "component_id": "cmp-0004",
+      "color": "#C52BBF"
+    },
+    {
+      "id": "gf0011-main-171",
+      "form": "非",
+      "role": "principal",
+      "reported_strokes": 8,
+      "component_id": "cmp-0134",
+      "color": "#DF7D50"
+    },
+    {
+      "id": "gf0011-main-172",
+      "form": "齿",
+      "role": "principal",
+      "reported_strokes": 8,
+      "component_id": null,
+      "color": null
+    },
+    {
+      "id": "gf0011-main-173",
+      "form": "黾",
+      "role": "principal",
+      "reported_strokes": 8,
+      "component_id": null,
+      "color": null
+    },
+    {
+      "id": "gf0011-main-174",
+      "form": "隹",
+      "role": "principal",
+      "reported_strokes": 8,
+      "component_id": "cmp-0509",
+      "color": "#787946"
+    },
+    {
+      "id": "gf0011-main-175",
+      "form": "阜",
+      "role": "principal",
+      "reported_strokes": 8,
+      "component_id": null,
+      "color": null
+    },
+    {
+      "id": "gf0011-main-176",
+      "form": "金",
+      "role": "principal",
+      "reported_strokes": 8,
+      "component_id": "cmp-0028",
+      "color": "#055179"
+    },
+    {
+      "id": "gf0011-main-177",
+      "form": "鱼",
+      "role": "principal",
+      "reported_strokes": 8,
+      "component_id": "cmp-0465",
+      "color": "#209B33"
+    },
+    {
+      "id": "gf0011-main-178",
+      "form": "隶",
+      "role": "principal",
+      "reported_strokes": 8,
+      "component_id": "cmp-0238",
+      "color": "#853522"
+    },
+    {
+      "id": "gf0011-main-179",
+      "form": "革",
+      "role": "principal",
+      "reported_strokes": 9,
+      "component_id": "cmp-0151",
+      "color": "#525D2D"
+    },
+    {
+      "id": "gf0011-main-180",
+      "form": "面",
+      "role": "principal",
+      "reported_strokes": 9,
+      "component_id": "cmp-0264",
+      "color": "#5D6693"
+    },
+    {
+      "id": "gf0011-main-181",
+      "form": "韭",
+      "role": "principal",
+      "reported_strokes": 9,
+      "component_id": "cmp-0218",
+      "color": "#414A8F"
+    },
+    {
+      "id": "gf0011-main-182",
+      "form": "骨",
+      "role": "principal",
+      "reported_strokes": 9,
+      "component_id": null,
+      "color": null
+    },
+    {
+      "id": "gf0011-main-183",
+      "form": "香",
+      "role": "principal",
+      "reported_strokes": 9,
+      "component_id": null,
+      "color": null
+    },
+    {
+      "id": "gf0011-main-184",
+      "form": "鬼",
+      "role": "principal",
+      "reported_strokes": 9,
+      "component_id": "cmp-0165",
+      "color": "#C8233C"
+    },
+    {
+      "id": "gf0011-main-185",
+      "form": "食",
+      "role": "principal",
+      "reported_strokes": 9,
+      "component_id": "cmp-0335",
+      "color": "#599681"
+    },
+    {
+      "id": "gf0011-main-186",
+      "form": "音",
+      "role": "principal",
+      "reported_strokes": 9,
+      "component_id": null,
+      "color": null
+    },
+    {
+      "id": "gf0011-main-187",
+      "form": "首",
+      "role": "principal",
+      "reported_strokes": 9,
+      "component_id": "cmp-0347",
+      "color": "#2C7676"
+    },
+    {
+      "id": "gf0011-main-188",
+      "form": "髟",
+      "role": "principal",
+      "reported_strokes": 10,
+      "component_id": null,
+      "color": null
+    },
+    {
+      "id": "gf0011-main-189",
+      "form": "鬲",
+      "role": "principal",
+      "reported_strokes": 10,
+      "component_id": "cmp-0239",
+      "color": "#D36D53"
+    },
+    {
+      "id": "gf0011-main-190",
+      "form": "鬥",
+      "role": "principal",
+      "reported_strokes": 10,
+      "component_id": null,
+      "color": null
+    },
+    {
+      "id": "gf0011-main-191",
+      "form": "高",
+      "role": "principal",
+      "reported_strokes": 10,
+      "component_id": "cmp-0149",
+      "color": "#A66DBF"
+    },
+    {
+      "id": "gf0011-main-192",
+      "form": "黄",
+      "role": "principal",
+      "reported_strokes": 11,
+      "component_id": "cmp-0183",
+      "color": "#6F8C60"
+    },
+    {
+      "id": "gf0011-main-193",
+      "form": "麻",
+      "role": "principal",
+      "reported_strokes": 11,
+      "component_id": null,
+      "color": null
+    },
+    {
+      "id": "gf0011-main-194",
+      "form": "鹿",
+      "role": "principal",
+      "reported_strokes": 11,
+      "component_id": "cmp-0250",
+      "color": "#C48B81"
+    },
+    {
+      "id": "gf0011-main-195",
+      "form": "鼎",
+      "role": "principal",
+      "reported_strokes": 12,
+      "component_id": "cmp-0117",
+      "color": "#8F327F"
+    },
+    {
+      "id": "gf0011-main-196",
+      "form": "黑",
+      "role": "principal",
+      "reported_strokes": 12,
+      "component_id": "cmp-0170",
+      "color": "#B55E58"
+    },
+    {
+      "id": "gf0011-main-197",
+      "form": "黍",
+      "role": "principal",
+      "reported_strokes": 12,
+      "component_id": null,
+      "color": null
+    },
+    {
+      "id": "gf0011-main-198",
+      "form": "鼓",
+      "role": "principal",
+      "reported_strokes": 13,
+      "component_id": null,
+      "color": null
+    },
+    {
+      "id": "gf0011-main-199",
+      "form": "鼠",
+      "role": "principal",
+      "reported_strokes": 13,
+      "component_id": "cmp-0350",
+      "color": "#AD4865"
+    },
+    {
+      "id": "gf0011-main-200",
+      "form": "鼻",
+      "role": "principal",
+      "reported_strokes": 14,
+      "component_id": null,
+      "color": null
+    },
+    {
+      "id": "gf0011-main-201",
+      "form": "龠",
+      "role": "principal",
+      "reported_strokes": 17,
+      "component_id": null,
+      "color": null
+    },
+    {
+      "id": "gf0011-variant-001",
+      "form": "亅",
+      "role": "listed_variant",
+      "reported_strokes": 1,
+      "related_principal_forms": [
+        "丨"
+      ],
+      "component_id": null,
+      "color": null
+    },
+    {
+      "id": "gf0011-variant-002",
+      "form": "𠂆",
+      "role": "listed_variant",
+      "reported_strokes": 2,
+      "related_principal_forms": [
+        "厂"
+      ],
+      "component_id": "cmp-0129",
+      "color": "#695F9B"
+    },
+    {
+      "id": "gf0011-variant-003",
+      "form": "⺊",
+      "role": "listed_variant",
+      "reported_strokes": 2,
+      "related_principal_forms": [
+        "卜"
+      ],
+      "component_id": "cmp-0067",
+      "color": "#BC65A1"
+    },
+    {
+      "id": "gf0011-variant-004",
+      "form": "⺆",
+      "role": "listed_variant",
+      "reported_strokes": 2,
+      "related_principal_forms": [
+        "冂"
+      ],
+      "component_id": "cmp-0498",
+      "color": "#637F54"
+    },
+    {
+      "id": "gf0011-variant-005",
+      "form": "丷",
+      "role": "listed_variant",
+      "reported_strokes": 2,
+      "related_principal_forms": [
+        "八"
+      ],
+      "component_id": "cmp-0046",
+      "color": "#FA47BD"
+    },
+    {
+      "id": "gf0011-variant-006",
+      "form": "亻",
+      "role": "listed_variant",
+      "reported_strokes": 2,
+      "related_principal_forms": [
+        "人"
+      ],
+      "component_id": "cmp-0013",
+      "color": "#608CD5"
+    },
+    {
+      "id": "gf0011-variant-007",
+      "form": "入",
+      "role": "listed_variant",
+      "reported_strokes": 2,
+      "related_principal_forms": [
+        "人"
+      ],
+      "component_id": "cmp-0317",
+      "color": "#A22F11"
+    },
+    {
+      "id": "gf0011-variant-008",
+      "form": "𠘨",
+      "role": "listed_variant",
+      "reported_strokes": 2,
+      "related_principal_forms": [
+        "几"
+      ],
+      "component_id": "cmp-0138",
+      "color": "#8C6F99"
+    },
+    {
+      "id": "gf0011-variant-009",
+      "form": "㔾",
+      "role": "listed_variant",
+      "reported_strokes": 2,
+      "related_principal_forms": [
+        "卩"
+      ],
+      "component_id": "cmp-0207",
+      "color": "#A55E5E"
+    },
+    {
+      "id": "gf0011-variant-010",
+      "form": "刂",
+      "role": "listed_variant",
+      "reported_strokes": 2,
+      "related_principal_forms": [
+        "刀"
+      ],
+      "component_id": "cmp-0108",
+      "color": "#216A63"
+    },
+    {
+      "id": "gf0011-variant-011",
+      "form": "⺈",
+      "role": "listed_variant",
+      "reported_strokes": 2,
+      "related_principal_forms": [
+        "刀"
+      ],
+      "component_id": "cmp-0125",
+      "color": "#6D7607"
+    },
+    {
+      "id": "gf0011-variant-012",
+      "form": "士",
+      "role": "listed_variant",
+      "reported_strokes": 3,
+      "related_principal_forms": [
+        "土"
+      ],
+      "component_id": "cmp-0341",
+      "color": "#CD635D"
+    },
+    {
+      "id": "gf0011-variant-013",
+      "form": "艸",
+      "role": "listed_variant",
+      "reported_strokes": 3,
+      "related_principal_forms": [
+        "艹"
+      ],
+      "component_id": null,
+      "color": null
+    },
+    {
+      "id": "gf0011-variant-014",
+      "form": "兀",
+      "role": "listed_variant",
+      "reported_strokes": 3,
+      "related_principal_forms": [
+        "尢"
+      ],
+      "component_id": "cmp-0397",
+      "color": "#683F71"
+    },
+    {
+      "id": "gf0011-variant-015",
+      "form": "尣",
+      "role": "listed_variant",
+      "reported_strokes": 3,
+      "related_principal_forms": [
+        "尢"
+      ],
+      "component_id": null,
+      "color": null
+    },
+    {
+      "id": "gf0011-variant-016",
+      "form": "⺌",
+      "role": "listed_variant",
+      "reported_strokes": 3,
+      "related_principal_forms": [
+        "小"
+      ],
+      "component_id": "cmp-0412",
+      "color": "#F71E46"
+    },
+    {
+      "id": "gf0011-variant-017",
+      "form": "爿",
+      "role": "listed_variant",
+      "reported_strokes": 3,
+      "related_principal_forms": [
+        "丬"
+      ],
+      "component_id": "cmp-0284",
+      "color": "#1F528F"
+    },
+    {
+      "id": "gf0011-variant-018",
+      "form": "門",
+      "role": "listed_variant",
+      "reported_strokes": 3,
+      "related_principal_forms": [
+        "门"
+      ],
+      "component_id": null,
+      "color": null
+    },
+    {
+      "id": "gf0011-variant-019",
+      "form": "辵",
+      "role": "listed_variant",
+      "reported_strokes": 3,
+      "related_principal_forms": [
+        "辶"
+      ],
+      "component_id": null,
+      "color": null
+    },
+    {
+      "id": "gf0011-variant-020",
+      "form": "⺕",
+      "role": "listed_variant",
+      "reported_strokes": 3,
+      "related_principal_forms": [
+        "彐"
+      ],
+      "component_id": null,
+      "color": null
+    },
+    {
+      "id": "gf0011-variant-021",
+      "form": "彑",
+      "role": "listed_variant",
+      "reported_strokes": 3,
+      "related_principal_forms": [
+        "彐"
+      ],
+      "component_id": "cmp-0446",
+      "color": "#D87903"
+    },
+    {
+      "id": "gf0011-variant-022",
+      "form": "已",
+      "role": "listed_variant",
+      "reported_strokes": 3,
+      "related_principal_forms": [
+        "己"
+      ],
+      "component_id": "cmp-0190",
+      "color": "#504FF6"
+    },
+    {
+      "id": "gf0011-variant-023",
+      "form": "巳",
+      "role": "listed_variant",
+      "reported_strokes": 3,
+      "related_principal_forms": [
+        "己"
+      ],
+      "component_id": "cmp-0192",
+      "color": "#DF4B9D"
+    },
+    {
+      "id": "gf0011-variant-024",
+      "form": "飛",
+      "role": "listed_variant",
+      "reported_strokes": 3,
+      "related_principal_forms": [
+        "飞"
+      ],
+      "component_id": null,
+      "color": null
+    },
+    {
+      "id": "gf0011-variant-025",
+      "form": "馬",
+      "role": "listed_variant",
+      "reported_strokes": 3,
+      "related_principal_forms": [
+        "马"
+      ],
+      "component_id": null,
+      "color": null
+    },
+    {
+      "id": "gf0011-variant-026",
+      "form": "玉",
+      "role": "listed_variant",
+      "reported_strokes": 4,
+      "related_principal_forms": [
+        "王"
+      ],
+      "component_id": "cmp-0470",
+      "color": "#086687"
+    },
+    {
+      "id": "gf0011-variant-027",
+      "form": "旡",
+      "role": "listed_variant",
+      "reported_strokes": 4,
+      "related_principal_forms": [
+        "无"
+      ],
+      "component_id": "cmp-0193",
+      "color": "#930A82"
+    },
+    {
+      "id": "gf0011-variant-028",
+      "form": "韋",
+      "role": "listed_variant",
+      "reported_strokes": 4,
+      "related_principal_forms": [
+        "韦"
+      ],
+      "component_id": null,
+      "color": null
+    },
+    {
+      "id": "gf0011-variant-029",
+      "form": "朩",
+      "role": "listed_variant",
+      "reported_strokes": 4,
+      "related_principal_forms": [
+        "木"
+      ],
+      "component_id": null,
+      "color": null
+    },
+    {
+      "id": "gf0011-variant-030",
+      "form": "犭",
+      "role": "listed_variant",
+      "reported_strokes": 4,
+      "related_principal_forms": [
+        "犬"
+      ],
+      "component_id": "cmp-0310",
+      "color": "#256812"
+    },
+    {
+      "id": "gf0011-variant-031",
+      "form": "歺",
+      "role": "listed_variant",
+      "reported_strokes": 4,
+      "related_principal_forms": [
+        "歹"
+      ],
+      "component_id": "cmp-0102",
+      "color": "#EC4B72"
+    },
+    {
+      "id": "gf0011-variant-032",
+      "form": "車",
+      "role": "listed_variant",
+      "reported_strokes": 4,
+      "related_principal_forms": [
+        "车"
+      ],
+      "component_id": null,
+      "color": null
+    },
+    {
+      "id": "gf0011-variant-033",
+      "form": "攵",
+      "role": "listed_variant",
+      "reported_strokes": 4,
+      "related_principal_forms": [
+        "攴"
+      ],
+      "component_id": "cmp-0130",
+      "color": "#902099"
+    },
+    {
+      "id": "gf0011-variant-034",
+      "form": "⺜",
+      "role": "listed_variant",
+      "reported_strokes": 4,
+      "related_principal_forms": [
+        "日"
+      ],
+      "component_id": null,
+      "color": null
+    },
+    {
+      "id": "gf0011-variant-035",
+      "form": "曰",
+      "role": "listed_variant",
+      "reported_strokes": 4,
+      "related_principal_forms": [
+        "日"
+      ],
+      "component_id": "cmp-0316",
+      "color": "#A85F91"
+    },
+    {
+      "id": "gf0011-variant-036",
+      "form": "貝",
+      "role": "listed_variant",
+      "reported_strokes": 4,
+      "related_principal_forms": [
+        "贝"
+      ],
+      "component_id": null,
+      "color": null
+    },
+    {
+      "id": "gf0011-variant-037",
+      "form": "氵",
+      "role": "listed_variant",
+      "reported_strokes": 4,
+      "related_principal_forms": [
+        "水"
+      ],
+      "component_id": "cmp-0002",
+      "color": "#025EB8"
+    },
+    {
+      "id": "gf0011-variant-038",
+      "form": "氺",
+      "role": "listed_variant",
+      "reported_strokes": 4,
+      "related_principal_forms": [
+        "水"
+      ],
+      "component_id": "cmp-0361",
+      "color": "#87455B"
+    },
+    {
+      "id": "gf0011-variant-039",
+      "form": "見",
+      "role": "listed_variant",
+      "reported_strokes": 4,
+      "related_principal_forms": [
+        "见"
+      ],
+      "component_id": null,
+      "color": null
+    },
+    {
+      "id": "gf0011-variant-040",
+      "form": "牜",
+      "role": "listed_variant",
+      "reported_strokes": 4,
+      "related_principal_forms": [
+        "牛"
+      ],
+      "component_id": null,
+      "color": null
+    },
+    {
+      "id": "gf0011-variant-041",
+      "form": "扌",
+      "role": "listed_variant",
+      "reported_strokes": 4,
+      "related_principal_forms": [
+        "手"
+      ],
+      "component_id": "cmp-0019",
+      "color": "#E36DA0"
+    },
+    {
+      "id": "gf0011-variant-042",
+      "form": "龵",
+      "role": "listed_variant",
+      "reported_strokes": 4,
+      "related_principal_forms": [
+        "手"
+      ],
+      "component_id": null,
+      "color": null
+    },
+    {
+      "id": "gf0011-variant-043",
+      "form": "镸",
+      "role": "listed_variant",
+      "reported_strokes": 4,
+      "related_principal_forms": [
+        "长"
+      ],
+      "component_id": "cmp-0367",
+      "color": "#6D5984"
+    },
+    {
+      "id": "gf0011-variant-044",
+      "form": "長",
+      "role": "listed_variant",
+      "reported_strokes": 4,
+      "related_principal_forms": [
+        "长"
+      ],
+      "component_id": null,
+      "color": null
+    },
+    {
+      "id": "gf0011-variant-045",
+      "form": "爫",
+      "role": "listed_variant",
+      "reported_strokes": 4,
+      "related_principal_forms": [
+        "爪"
+      ],
+      "component_id": "cmp-0483",
+      "color": "#286E7D"
+    },
+    {
+      "id": "gf0011-variant-046",
+      "form": "⺝",
+      "role": "listed_variant",
+      "reported_strokes": 4,
+      "related_principal_forms": [
+        "月"
+      ],
+      "component_id": "cmp-0474",
+      "color": "#684365"
+    },
+    {
+      "id": "gf0011-variant-047",
+      "form": "風",
+      "role": "listed_variant",
+      "reported_strokes": 4,
+      "related_principal_forms": [
+        "风"
+      ],
+      "component_id": null,
+      "color": null
+    },
+    {
+      "id": "gf0011-variant-048",
+      "form": "灬",
+      "role": "listed_variant",
+      "reported_strokes": 4,
+      "related_principal_forms": [
+        "火"
+      ],
+      "component_id": "cmp-0006",
+      "color": "#6C4FC6"
+    },
+    {
+      "id": "gf0011-variant-049",
+      "form": "忄",
+      "role": "listed_variant",
+      "reported_strokes": 4,
+      "related_principal_forms": [
+        "心"
+      ],
+      "component_id": "cmp-0017",
+      "color": "#5477CB"
+    },
+    {
+      "id": "gf0011-variant-050",
+      "form": "⺗",
+      "role": "listed_variant",
+      "reported_strokes": 4,
+      "related_principal_forms": [
+        "心"
+      ],
+      "component_id": null,
+      "color": null
+    },
+    {
+      "id": "gf0011-variant-051",
+      "form": "母",
+      "role": "listed_variant",
+      "reported_strokes": 4,
+      "related_principal_forms": [
+        "毋"
+      ],
+      "component_id": "cmp-0268",
+      "color": "#7D4480"
+    },
+    {
+      "id": "gf0011-variant-052",
+      "form": "礻",
+      "role": "listed_variant",
+      "reported_strokes": 4,
+      "related_principal_forms": [
+        "示"
+      ],
+      "component_id": "cmp-0344",
+      "color": "#814D45"
+    },
+    {
+      "id": "gf0011-variant-053",
+      "form": "龍",
+      "role": "listed_variant",
+      "reported_strokes": 4,
+      "related_principal_forms": [
+        "龙"
+      ],
+      "component_id": null,
+      "color": null
+    },
+    {
+      "id": "gf0011-variant-054",
+      "form": "鳥",
+      "role": "listed_variant",
+      "reported_strokes": 4,
+      "related_principal_forms": [
+        "鸟"
+      ],
+      "component_id": null,
+      "color": null
+    },
+    {
+      "id": "gf0011-variant-055",
+      "form": "𤴔",
+      "role": "listed_variant",
+      "reported_strokes": 4,
+      "related_principal_forms": [
+        "疋"
+      ],
+      "component_id": null,
+      "color": null
+    },
+    {
+      "id": "gf0011-variant-056",
+      "form": "耂",
+      "role": "listed_variant",
+      "reported_strokes": 6,
+      "related_principal_forms": [
+        "老"
+      ],
+      "component_id": "cmp-0230",
+      "color": "#AD7249"
+    },
+    {
+      "id": "gf0011-variant-057",
+      "form": "襾",
+      "role": "listed_variant",
+      "reported_strokes": 6,
+      "related_principal_forms": [
+        "覀"
+      ],
+      "component_id": null,
+      "color": null
+    },
+    {
+      "id": "gf0011-variant-058",
+      "form": "西",
+      "role": "listed_variant",
+      "reported_strokes": 6,
+      "related_principal_forms": [
+        "覀"
+      ],
+      "component_id": "cmp-0403",
+      "color": "#057460"
+    },
+    {
+      "id": "gf0011-variant-059",
+      "form": "頁",
+      "role": "listed_variant",
+      "reported_strokes": 6,
+      "related_principal_forms": [
+        "页"
+      ],
+      "component_id": null,
+      "color": null
+    },
+    {
+      "id": "gf0011-variant-060",
+      "form": "虎",
+      "role": "listed_variant",
+      "reported_strokes": 6,
+      "related_principal_forms": [
+        "虍"
+      ],
+      "component_id": null,
+      "color": null
+    },
+    {
+      "id": "gf0011-variant-061",
+      "form": "𥫗",
+      "role": "listed_variant",
+      "reported_strokes": 6,
+      "related_principal_forms": [
+        "竹"
+      ],
+      "component_id": "cmp-0503",
+      "color": "#6F73BE"
+    },
+    {
+      "id": "gf0011-variant-062",
+      "form": "𦥑",
+      "role": "listed_variant",
+      "reported_strokes": 6,
+      "related_principal_forms": [
+        "臼"
+      ],
+      "component_id": null,
+      "color": null
+    },
+    {
+      "id": "gf0011-variant-063",
+      "form": "齊",
+      "role": "listed_variant",
+      "reported_strokes": 6,
+      "related_principal_forms": [
+        "齐"
+      ],
+      "component_id": null,
+      "color": null
+    },
+    {
+      "id": "gf0011-variant-064",
+      "form": "衤",
+      "role": "listed_variant",
+      "reported_strokes": 6,
+      "related_principal_forms": [
+        "衣"
+      ],
+      "component_id": "cmp-0445",
+      "color": "#BB66C1"
+    },
+    {
+      "id": "gf0011-variant-065",
+      "form": "⺶",
+      "role": "listed_variant",
+      "reported_strokes": 6,
+      "related_principal_forms": [
+        "羊"
+      ],
+      "component_id": null,
+      "color": null
+    },
+    {
+      "id": "gf0011-variant-066",
+      "form": "𦍌",
+      "role": "listed_variant",
+      "reported_strokes": 6,
+      "related_principal_forms": [
+        "羊"
+      ],
+      "component_id": "cmp-0435",
+      "color": "#F36D3B"
+    },
+    {
+      "id": "gf0011-variant-067",
+      "form": "肀",
+      "role": "listed_variant",
+      "reported_strokes": 6,
+      "related_principal_forms": [
+        "聿"
+      ],
+      "component_id": "cmp-0371",
+      "color": "#8267A1"
+    },
+    {
+      "id": "gf0011-variant-068",
+      "form": "⺻",
+      "role": "listed_variant",
+      "reported_strokes": 6,
+      "related_principal_forms": [
+        "聿"
+      ],
+      "component_id": null,
+      "color": null
+    },
+    {
+      "id": "gf0011-variant-069",
+      "form": "纟",
+      "role": "listed_variant",
+      "reported_strokes": 6,
+      "related_principal_forms": [
+        "糸"
+      ],
+      "component_id": "cmp-0202",
+      "color": "#94439A"
+    },
+    {
+      "id": "gf0011-variant-070",
+      "form": "糹",
+      "role": "listed_variant",
+      "reported_strokes": 6,
+      "related_principal_forms": [
+        "糸"
+      ],
+      "component_id": null,
+      "color": null
+    },
+    {
+      "id": "gf0011-variant-071",
+      "form": "麥",
+      "role": "listed_variant",
+      "reported_strokes": 7,
+      "related_principal_forms": [
+        "麦"
+      ],
+      "component_id": null,
+      "color": null
+    },
+    {
+      "id": "gf0011-variant-072",
+      "form": "鹵",
+      "role": "listed_variant",
+      "reported_strokes": 7,
+      "related_principal_forms": [
+        "卤"
+      ],
+      "component_id": null,
+      "color": null
+    },
+    {
+      "id": "gf0011-variant-073",
+      "form": "𧾷",
+      "role": "listed_variant",
+      "reported_strokes": 7,
+      "related_principal_forms": [
+        "足"
+      ],
+      "component_id": null,
+      "color": null
+    },
+    {
+      "id": "gf0011-variant-074",
+      "form": "⻏",
+      "role": "listed_variant",
+      "reported_strokes": 7,
+      "related_principal_forms": [
+        "邑"
+      ],
+      "component_id": null,
+      "color": null
+    },
+    {
+      "id": "gf0011-variant-075",
+      "form": "龜",
+      "role": "listed_variant",
+      "reported_strokes": 7,
+      "related_principal_forms": [
+        "龟"
+      ],
+      "component_id": null,
+      "color": null
+    },
+    {
+      "id": "gf0011-variant-076",
+      "form": "讠",
+      "role": "listed_variant",
+      "reported_strokes": 7,
+      "related_principal_forms": [
+        "言"
+      ],
+      "component_id": "cmp-0022",
+      "color": "#B42C92"
+    },
+    {
+      "id": "gf0011-variant-077",
+      "form": "齒",
+      "role": "listed_variant",
+      "reported_strokes": 8,
+      "related_principal_forms": [
+        "齿"
+      ],
+      "component_id": null,
+      "color": null
+    },
+    {
+      "id": "gf0011-variant-078",
+      "form": "黽",
+      "role": "listed_variant",
+      "reported_strokes": 8,
+      "related_principal_forms": [
+        "黾"
+      ],
+      "component_id": null,
+      "color": null
+    },
+    {
+      "id": "gf0011-variant-079",
+      "form": "⻖",
+      "role": "listed_variant",
+      "reported_strokes": 8,
+      "related_principal_forms": [
+        "阜"
+      ],
+      "component_id": null,
+      "color": null
+    },
+    {
+      "id": "gf0011-variant-080",
+      "form": "钅",
+      "role": "listed_variant",
+      "reported_strokes": 8,
+      "related_principal_forms": [
+        "金"
+      ],
+      "component_id": "cmp-0029",
+      "color": "#89A10C"
+    },
+    {
+      "id": "gf0011-variant-081",
+      "form": "魚",
+      "role": "listed_variant",
+      "reported_strokes": 8,
+      "related_principal_forms": [
+        "鱼"
+      ],
+      "component_id": null,
+      "color": null
+    },
+    {
+      "id": "gf0011-variant-082",
+      "form": "饣",
+      "role": "listed_variant",
+      "reported_strokes": 9,
+      "related_principal_forms": [
+        "食"
+      ],
+      "component_id": "cmp-0336",
+      "color": "#C4623E"
+    },
+    {
+      "id": "gf0011-variant-083",
+      "form": "飠",
+      "role": "listed_variant",
+      "reported_strokes": 9,
+      "related_principal_forms": [
+        "食"
+      ],
+      "component_id": null,
+      "color": null
+    }
+  ]
+}

@@ -1,0 +1,1719 @@
+{
+  "schema": "chromalect.kangxi-radicals.v1",
+  "status": "Unicode radical symbol block with NFKC lookup, not modern GF0011 mapping",
+  "palette_version": "0.4.0",
+  "items": [
+    {
+      "number": 1,
+      "symbol": "⼀",
+      "normalized_form": "一",
+      "component_id": "cmp-0171",
+      "color": "#8D2929",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 2,
+      "symbol": "⼁",
+      "normalized_form": "丨",
+      "component_id": "cmp-0351",
+      "color": "#4B7D4D",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 3,
+      "symbol": "⼂",
+      "normalized_form": "丶",
+      "component_id": "cmp-0113",
+      "color": "#B45C6C",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 4,
+      "symbol": "⼃",
+      "normalized_form": "丿",
+      "component_id": "cmp-0288",
+      "color": "#7D3B37",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 5,
+      "symbol": "⼄",
+      "normalized_form": "乙",
+      "component_id": "cmp-0172",
+      "color": "#A74824",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 6,
+      "symbol": "⼅",
+      "normalized_form": "亅",
+      "component_id": null,
+      "color": null,
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 7,
+      "symbol": "⼆",
+      "normalized_form": "二",
+      "component_id": "cmp-0126",
+      "color": "#115469",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 8,
+      "symbol": "⼇",
+      "normalized_form": "亠",
+      "component_id": "cmp-0418",
+      "color": "#915271",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 9,
+      "symbol": "⼈",
+      "normalized_form": "人",
+      "component_id": "cmp-0012",
+      "color": "#8B4EB3",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 10,
+      "symbol": "⼉",
+      "normalized_form": "儿",
+      "component_id": "cmp-0312",
+      "color": "#FB255B",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 11,
+      "symbol": "⼊",
+      "normalized_form": "入",
+      "component_id": "cmp-0317",
+      "color": "#A22F11",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 12,
+      "symbol": "⼋",
+      "normalized_form": "八",
+      "component_id": "cmp-0045",
+      "color": "#6645AA",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 13,
+      "symbol": "⼌",
+      "normalized_form": "冂",
+      "component_id": "cmp-0373",
+      "color": "#157491",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 14,
+      "symbol": "⼍",
+      "normalized_form": "冖",
+      "component_id": "cmp-0375",
+      "color": "#5D8D40",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 15,
+      "symbol": "⼎",
+      "normalized_form": "冫",
+      "component_id": "cmp-0003",
+      "color": "#C86B82",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 16,
+      "symbol": "⼏",
+      "normalized_form": "几",
+      "component_id": "cmp-0188",
+      "color": "#849666",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 17,
+      "symbol": "⼐",
+      "normalized_form": "凵",
+      "component_id": "cmp-0181",
+      "color": "#5151A7",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 18,
+      "symbol": "⼑",
+      "normalized_form": "刀",
+      "component_id": "cmp-0106",
+      "color": "#BA3E3C",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 19,
+      "symbol": "⼒",
+      "normalized_form": "力",
+      "component_id": "cmp-0040",
+      "color": "#9367B2",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 20,
+      "symbol": "⼓",
+      "normalized_form": "勹",
+      "component_id": "cmp-0221",
+      "color": "#349317",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 21,
+      "symbol": "⼔",
+      "normalized_form": "匕",
+      "component_id": "cmp-0058",
+      "color": "#7C7DF6",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 22,
+      "symbol": "⼕",
+      "normalized_form": "匚",
+      "component_id": "cmp-0306",
+      "color": "#3A8286",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 23,
+      "symbol": "⼖",
+      "normalized_form": "匸",
+      "component_id": null,
+      "color": null,
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 24,
+      "symbol": "⼗",
+      "normalized_form": "十",
+      "component_id": "cmp-0334",
+      "color": "#967F4E",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 25,
+      "symbol": "⼘",
+      "normalized_form": "卜",
+      "component_id": "cmp-0066",
+      "color": "#706419",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 26,
+      "symbol": "⼙",
+      "normalized_form": "卩",
+      "component_id": "cmp-0205",
+      "color": "#B81C6F",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 27,
+      "symbol": "⼚",
+      "normalized_form": "厂",
+      "component_id": "cmp-0078",
+      "color": "#AF84DE",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 28,
+      "symbol": "⼛",
+      "normalized_form": "厶",
+      "component_id": "cmp-0363",
+      "color": "#A97E5B",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 29,
+      "symbol": "⼜",
+      "normalized_form": "又",
+      "component_id": "cmp-0463",
+      "color": "#445CCD",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 30,
+      "symbol": "⼝",
+      "normalized_form": "口",
+      "component_id": "cmp-0020",
+      "color": "#1587BA",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 31,
+      "symbol": "⼞",
+      "normalized_form": "囗",
+      "component_id": "cmp-0384",
+      "color": "#9C5768",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 32,
+      "symbol": "⼟",
+      "normalized_form": "土",
+      "component_id": "cmp-0025",
+      "color": "#9E7604",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 33,
+      "symbol": "⼠",
+      "normalized_form": "士",
+      "component_id": "cmp-0341",
+      "color": "#CD635D",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 34,
+      "symbol": "⼡",
+      "normalized_form": "夂",
+      "component_id": "cmp-0118",
+      "color": "#A06976",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 35,
+      "symbol": "⼢",
+      "normalized_form": "夊",
+      "component_id": null,
+      "color": null,
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 36,
+      "symbol": "⼣",
+      "normalized_form": "夕",
+      "component_id": "cmp-0400",
+      "color": "#CA8A66",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 37,
+      "symbol": "⼤",
+      "normalized_form": "大",
+      "component_id": "cmp-0100",
+      "color": "#256451",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 38,
+      "symbol": "⼥",
+      "normalized_form": "女",
+      "component_id": "cmp-0014",
+      "color": "#EA5202",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 39,
+      "symbol": "⼦",
+      "normalized_form": "子",
+      "component_id": "cmp-0015",
+      "color": "#98518A",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 40,
+      "symbol": "⼧",
+      "normalized_form": "宀",
+      "component_id": "cmp-0035",
+      "color": "#8352FE",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 41,
+      "symbol": "⼨",
+      "normalized_form": "寸",
+      "component_id": "cmp-0099",
+      "color": "#40AC6F",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 42,
+      "symbol": "⼩",
+      "normalized_form": "小",
+      "component_id": "cmp-0411",
+      "color": "#5C76A0",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 43,
+      "symbol": "⼪",
+      "normalized_form": "尢",
+      "component_id": "cmp-0147",
+      "color": "#AB875D",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 44,
+      "symbol": "⼫",
+      "normalized_form": "尸",
+      "component_id": "cmp-0332",
+      "color": "#8393C2",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 45,
+      "symbol": "⼬",
+      "normalized_form": "屮",
+      "component_id": null,
+      "color": null,
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 46,
+      "symbol": "⼭",
+      "normalized_form": "山",
+      "component_id": "cmp-0027",
+      "color": "#FA588B",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 47,
+      "symbol": "⼮",
+      "normalized_form": "巛",
+      "component_id": "cmp-0092",
+      "color": "#4C682B",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 48,
+      "symbol": "⼯",
+      "normalized_form": "工",
+      "component_id": "cmp-0156",
+      "color": "#B86E03",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 49,
+      "symbol": "⼰",
+      "normalized_form": "己",
+      "component_id": "cmp-0189",
+      "color": "#1D7339",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 50,
+      "symbol": "⼱",
+      "normalized_form": "巾",
+      "component_id": "cmp-0209",
+      "color": "#6B9BBD",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 51,
+      "symbol": "⼲",
+      "normalized_form": "干",
+      "component_id": "cmp-0146",
+      "color": "#A02951",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 52,
+      "symbol": "⼳",
+      "normalized_form": "幺",
+      "component_id": "cmp-0437",
+      "color": "#E65A48",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 53,
+      "symbol": "⼴",
+      "normalized_form": "广",
+      "component_id": "cmp-0163",
+      "color": "#0478A8",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 54,
+      "symbol": "⼵",
+      "normalized_form": "廴",
+      "component_id": "cmp-0200",
+      "color": "#B04F79",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 55,
+      "symbol": "⼶",
+      "normalized_form": "廾",
+      "component_id": "cmp-0282",
+      "color": "#7D5234",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 56,
+      "symbol": "⼷",
+      "normalized_form": "弋",
+      "component_id": "cmp-0450",
+      "color": "#4F8FBA",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 57,
+      "symbol": "⼸",
+      "normalized_form": "弓",
+      "component_id": "cmp-0157",
+      "color": "#5B98AF",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 58,
+      "symbol": "⼹",
+      "normalized_form": "彐",
+      "component_id": "cmp-0249",
+      "color": "#6085AC",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 59,
+      "symbol": "⼺",
+      "normalized_form": "彡",
+      "component_id": "cmp-0322",
+      "color": "#808A08",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 60,
+      "symbol": "⼻",
+      "normalized_form": "彳",
+      "component_id": "cmp-0360",
+      "color": "#6680BA",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 61,
+      "symbol": "⼼",
+      "normalized_form": "心",
+      "component_id": "cmp-0016",
+      "color": "#C04E8A",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 62,
+      "symbol": "⼽",
+      "normalized_form": "戈",
+      "component_id": "cmp-0150",
+      "color": "#7B499C",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 63,
+      "symbol": "⼾",
+      "normalized_form": "戶",
+      "component_id": null,
+      "color": null,
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 64,
+      "symbol": "⼿",
+      "normalized_form": "手",
+      "component_id": "cmp-0018",
+      "color": "#9130DB",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 65,
+      "symbol": "⽀",
+      "normalized_form": "支",
+      "component_id": null,
+      "color": null,
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 66,
+      "symbol": "⽁",
+      "normalized_form": "攴",
+      "component_id": "cmp-0131",
+      "color": "#C07967",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 67,
+      "symbol": "⽂",
+      "normalized_form": "文",
+      "component_id": "cmp-0390",
+      "color": "#FF4659",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 68,
+      "symbol": "⽃",
+      "normalized_form": "斗",
+      "component_id": "cmp-0121",
+      "color": "#2A8D7E",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 69,
+      "symbol": "⽄",
+      "normalized_form": "斤",
+      "component_id": "cmp-0210",
+      "color": "#7C7028",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 70,
+      "symbol": "⽅",
+      "normalized_form": "方",
+      "component_id": "cmp-0132",
+      "color": "#CA7EB1",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 71,
+      "symbol": "⽆",
+      "normalized_form": "无",
+      "component_id": "cmp-0393",
+      "color": "#A21C62",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 72,
+      "symbol": "⽇",
+      "normalized_form": "日",
+      "component_id": "cmp-0007",
+      "color": "#2A76F1",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 73,
+      "symbol": "⽈",
+      "normalized_form": "曰",
+      "component_id": "cmp-0316",
+      "color": "#A85F91",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 74,
+      "symbol": "⽉",
+      "normalized_form": "月",
+      "component_id": "cmp-0008",
+      "color": "#DB3649",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 75,
+      "symbol": "⽊",
+      "normalized_form": "木",
+      "component_id": "cmp-0009",
+      "color": "#C67544",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 76,
+      "symbol": "⽋",
+      "normalized_form": "欠",
+      "component_id": "cmp-0299",
+      "color": "#8C2F03",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 77,
+      "symbol": "⽌",
+      "normalized_form": "止",
+      "component_id": "cmp-0489",
+      "color": "#D78164",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 78,
+      "symbol": "⽍",
+      "normalized_form": "歹",
+      "component_id": "cmp-0101",
+      "color": "#6863B1",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 79,
+      "symbol": "⽎",
+      "normalized_form": "殳",
+      "component_id": "cmp-0348",
+      "color": "#593FC5",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 80,
+      "symbol": "⽏",
+      "normalized_form": "毋",
+      "component_id": null,
+      "color": null,
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 81,
+      "symbol": "⽐",
+      "normalized_form": "比",
+      "component_id": null,
+      "color": null,
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 82,
+      "symbol": "⽑",
+      "normalized_form": "毛",
+      "component_id": "cmp-0255",
+      "color": "#4B501E",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 83,
+      "symbol": "⽒",
+      "normalized_form": "氏",
+      "component_id": "cmp-0342",
+      "color": "#4F8BA2",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 84,
+      "symbol": "⽓",
+      "normalized_form": "气",
+      "component_id": "cmp-0295",
+      "color": "#CE8674",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 85,
+      "symbol": "⽔",
+      "normalized_form": "水",
+      "component_id": "cmp-0001",
+      "color": "#AF56FD",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 86,
+      "symbol": "⽕",
+      "normalized_form": "火",
+      "component_id": "cmp-0005",
+      "color": "#DE0784",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 87,
+      "symbol": "⽖",
+      "normalized_form": "爪",
+      "component_id": "cmp-0481",
+      "color": "#A469A7",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 88,
+      "symbol": "⽗",
+      "normalized_form": "父",
+      "component_id": "cmp-0144",
+      "color": "#445780",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 89,
+      "symbol": "⽘",
+      "normalized_form": "爻",
+      "component_id": null,
+      "color": null,
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 90,
+      "symbol": "⽙",
+      "normalized_form": "爿",
+      "component_id": "cmp-0284",
+      "color": "#1F528F",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 91,
+      "symbol": "⽚",
+      "normalized_form": "片",
+      "component_id": "cmp-0287",
+      "color": "#6F4157",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 92,
+      "symbol": "⽛",
+      "normalized_form": "牙",
+      "component_id": "cmp-0427",
+      "color": "#DE5634",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 93,
+      "symbol": "⽜",
+      "normalized_form": "牛",
+      "component_id": "cmp-0279",
+      "color": "#D95AF5",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 94,
+      "symbol": "⽝",
+      "normalized_form": "犬",
+      "component_id": "cmp-0309",
+      "color": "#035C92",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 95,
+      "symbol": "⽞",
+      "normalized_form": "玄",
+      "component_id": null,
+      "color": null,
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 96,
+      "symbol": "⽟",
+      "normalized_form": "玉",
+      "component_id": "cmp-0470",
+      "color": "#086687",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 97,
+      "symbol": "⽠",
+      "normalized_form": "瓜",
+      "component_id": "cmp-0160",
+      "color": "#85760B",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 98,
+      "symbol": "⽡",
+      "normalized_form": "瓦",
+      "component_id": "cmp-0379",
+      "color": "#DD1F5D",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 99,
+      "symbol": "⽢",
+      "normalized_form": "甘",
+      "component_id": "cmp-0148",
+      "color": "#758B4B",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 100,
+      "symbol": "⽣",
+      "normalized_form": "生",
+      "component_id": "cmp-0331",
+      "color": "#9E594E",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 101,
+      "symbol": "⽤",
+      "normalized_form": "用",
+      "component_id": "cmp-0459",
+      "color": "#4D4983",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 102,
+      "symbol": "⽥",
+      "normalized_form": "田",
+      "component_id": "cmp-0039",
+      "color": "#05A92E",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 103,
+      "symbol": "⽦",
+      "normalized_form": "疋",
+      "component_id": null,
+      "color": null,
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 104,
+      "symbol": "⽧",
+      "normalized_form": "疒",
+      "component_id": "cmp-0065",
+      "color": "#5B7AFD",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 105,
+      "symbol": "⽨",
+      "normalized_form": "癶",
+      "component_id": "cmp-0109",
+      "color": "#AE4A92",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 106,
+      "symbol": "⽩",
+      "normalized_form": "白",
+      "component_id": "cmp-0048",
+      "color": "#7541ED",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 107,
+      "symbol": "⽪",
+      "normalized_form": "皮",
+      "component_id": "cmp-0286",
+      "color": "#834047",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 108,
+      "symbol": "⽫",
+      "normalized_form": "皿",
+      "component_id": "cmp-0266",
+      "color": "#D77C8B",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 109,
+      "symbol": "⽬",
+      "normalized_form": "目",
+      "component_id": "cmp-0023",
+      "color": "#91922F",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 110,
+      "symbol": "⽭",
+      "normalized_form": "矛",
+      "component_id": "cmp-0256",
+      "color": "#25672B",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 111,
+      "symbol": "⽮",
+      "normalized_form": "矢",
+      "component_id": "cmp-0338",
+      "color": "#644E1D",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 112,
+      "symbol": "⽯",
+      "normalized_form": "石",
+      "component_id": "cmp-0026",
+      "color": "#744049",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 113,
+      "symbol": "⽰",
+      "normalized_form": "示",
+      "component_id": "cmp-0343",
+      "color": "#285AF8",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 114,
+      "symbol": "⽱",
+      "normalized_form": "禸",
+      "component_id": "cmp-0233",
+      "color": "#D7114A",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 115,
+      "symbol": "⽲",
+      "normalized_form": "禾",
+      "component_id": "cmp-0011",
+      "color": "#808754",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 116,
+      "symbol": "⽳",
+      "normalized_form": "穴",
+      "component_id": "cmp-0420",
+      "color": "#DB673D",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 117,
+      "symbol": "⽴",
+      "normalized_form": "立",
+      "component_id": "cmp-0235",
+      "color": "#464E79",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 118,
+      "symbol": "⽵",
+      "normalized_form": "竹",
+      "component_id": "cmp-0502",
+      "color": "#226640",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 119,
+      "symbol": "⽶",
+      "normalized_form": "米",
+      "component_id": "cmp-0262",
+      "color": "#99444E",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 120,
+      "symbol": "⽷",
+      "normalized_form": "糸",
+      "component_id": "cmp-0203",
+      "color": "#FD5A73",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 121,
+      "symbol": "⽸",
+      "normalized_form": "缶",
+      "component_id": "cmp-0139",
+      "color": "#BA1103",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 122,
+      "symbol": "⽹",
+      "normalized_form": "网",
+      "component_id": null,
+      "color": null,
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 123,
+      "symbol": "⽺",
+      "normalized_form": "羊",
+      "component_id": "cmp-0434",
+      "color": "#8C16C5",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 124,
+      "symbol": "⽻",
+      "normalized_form": "羽",
+      "component_id": null,
+      "color": null,
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 125,
+      "symbol": "⽼",
+      "normalized_form": "老",
+      "component_id": "cmp-0229",
+      "color": "#158681",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 126,
+      "symbol": "⽽",
+      "normalized_form": "而",
+      "component_id": "cmp-0124",
+      "color": "#A83902",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 127,
+      "symbol": "⽾",
+      "normalized_form": "耒",
+      "component_id": "cmp-0232",
+      "color": "#279393",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 128,
+      "symbol": "⽿",
+      "normalized_form": "耳",
+      "component_id": "cmp-0024",
+      "color": "#6D4D84",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 129,
+      "symbol": "⾀",
+      "normalized_form": "聿",
+      "component_id": "cmp-0472",
+      "color": "#5E6939",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 130,
+      "symbol": "⾁",
+      "normalized_form": "肉",
+      "component_id": "cmp-0473",
+      "color": "#878CD9",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 131,
+      "symbol": "⾂",
+      "normalized_form": "臣",
+      "component_id": "cmp-0079",
+      "color": "#724703",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 132,
+      "symbol": "⾃",
+      "normalized_form": "自",
+      "component_id": "cmp-0512",
+      "color": "#427693",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 133,
+      "symbol": "⾄",
+      "normalized_form": "至",
+      "component_id": "cmp-0493",
+      "color": "#5493D1",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 134,
+      "symbol": "⾅",
+      "normalized_form": "臼",
+      "component_id": "cmp-0219",
+      "color": "#803255",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 135,
+      "symbol": "⾆",
+      "normalized_form": "舌",
+      "component_id": "cmp-0327",
+      "color": "#5CA1AD",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 136,
+      "symbol": "⾇",
+      "normalized_form": "舛",
+      "component_id": null,
+      "color": null,
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 137,
+      "symbol": "⾈",
+      "normalized_form": "舟",
+      "component_id": "cmp-0499",
+      "color": "#951E13",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 138,
+      "symbol": "⾉",
+      "normalized_form": "艮",
+      "component_id": "cmp-0153",
+      "color": "#683788",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 139,
+      "symbol": "⾊",
+      "normalized_form": "色",
+      "component_id": "cmp-0321",
+      "color": "#939D44",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 140,
+      "symbol": "⾋",
+      "normalized_form": "艸",
+      "component_id": null,
+      "color": null,
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 141,
+      "symbol": "⾌",
+      "normalized_form": "虍",
+      "component_id": "cmp-0178",
+      "color": "#9C52AD",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 142,
+      "symbol": "⾍",
+      "normalized_form": "虫",
+      "component_id": "cmp-0087",
+      "color": "#9B8BE8",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 143,
+      "symbol": "⾎",
+      "normalized_form": "血",
+      "component_id": "cmp-0423",
+      "color": "#0D9AD4",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 144,
+      "symbol": "⾏",
+      "normalized_form": "行",
+      "component_id": null,
+      "color": null,
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 145,
+      "symbol": "⾐",
+      "normalized_form": "衣",
+      "component_id": "cmp-0444",
+      "color": "#BA7639",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 146,
+      "symbol": "⾑",
+      "normalized_form": "襾",
+      "component_id": null,
+      "color": null,
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 147,
+      "symbol": "⾒",
+      "normalized_form": "見",
+      "component_id": null,
+      "color": null,
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 148,
+      "symbol": "⾓",
+      "normalized_form": "角",
+      "component_id": "cmp-0204",
+      "color": "#825B1B",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 149,
+      "symbol": "⾔",
+      "normalized_form": "言",
+      "component_id": "cmp-0021",
+      "color": "#99610B",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 150,
+      "symbol": "⾕",
+      "normalized_form": "谷",
+      "component_id": "cmp-0159",
+      "color": "#B26A70",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 151,
+      "symbol": "⾖",
+      "normalized_form": "豆",
+      "component_id": "cmp-0122",
+      "color": "#689571",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 152,
+      "symbol": "⾗",
+      "normalized_form": "豕",
+      "component_id": "cmp-0339",
+      "color": "#8D9D5A",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 153,
+      "symbol": "⾘",
+      "normalized_form": "豸",
+      "component_id": "cmp-0495",
+      "color": "#0BAAA4",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 154,
+      "symbol": "⾙",
+      "normalized_form": "貝",
+      "component_id": null,
+      "color": null,
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 155,
+      "symbol": "⾚",
+      "normalized_form": "赤",
+      "component_id": "cmp-0086",
+      "color": "#4A936E",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 156,
+      "symbol": "⾛",
+      "normalized_form": "走",
+      "component_id": null,
+      "color": null,
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 157,
+      "symbol": "⾜",
+      "normalized_form": "足",
+      "component_id": "cmp-0031",
+      "color": "#BA60DF",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 158,
+      "symbol": "⾝",
+      "normalized_form": "身",
+      "component_id": "cmp-0329",
+      "color": "#985DBF",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 159,
+      "symbol": "⾞",
+      "normalized_form": "車",
+      "component_id": null,
+      "color": null,
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 160,
+      "symbol": "⾟",
+      "normalized_form": "辛",
+      "component_id": "cmp-0415",
+      "color": "#EE7313",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 161,
+      "symbol": "⾠",
+      "normalized_form": "辰",
+      "component_id": "cmp-0081",
+      "color": "#8E1C56",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 162,
+      "symbol": "⾡",
+      "normalized_form": "辵",
+      "component_id": null,
+      "color": null,
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 163,
+      "symbol": "⾢",
+      "normalized_form": "邑",
+      "component_id": null,
+      "color": null,
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 164,
+      "symbol": "⾣",
+      "normalized_form": "酉",
+      "component_id": "cmp-0462",
+      "color": "#C01643",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 165,
+      "symbol": "⾤",
+      "normalized_form": "釆",
+      "component_id": "cmp-0062",
+      "color": "#5064AB",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 166,
+      "symbol": "⾥",
+      "normalized_form": "里",
+      "component_id": "cmp-0234",
+      "color": "#438206",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 167,
+      "symbol": "⾦",
+      "normalized_form": "金",
+      "component_id": "cmp-0028",
+      "color": "#055179",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 168,
+      "symbol": "⾧",
+      "normalized_form": "長",
+      "component_id": null,
+      "color": null,
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 169,
+      "symbol": "⾨",
+      "normalized_form": "門",
+      "component_id": null,
+      "color": null,
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 170,
+      "symbol": "⾩",
+      "normalized_form": "阜",
+      "component_id": null,
+      "color": null,
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 171,
+      "symbol": "⾪",
+      "normalized_form": "隶",
+      "component_id": "cmp-0238",
+      "color": "#853522",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 172,
+      "symbol": "⾫",
+      "normalized_form": "隹",
+      "component_id": "cmp-0509",
+      "color": "#787946",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 173,
+      "symbol": "⾬",
+      "normalized_form": "雨",
+      "component_id": "cmp-0004",
+      "color": "#C52BBF",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 174,
+      "symbol": "⾭",
+      "normalized_form": "靑",
+      "component_id": null,
+      "color": null,
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 175,
+      "symbol": "⾮",
+      "normalized_form": "非",
+      "component_id": "cmp-0134",
+      "color": "#DF7D50",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 176,
+      "symbol": "⾯",
+      "normalized_form": "面",
+      "component_id": "cmp-0264",
+      "color": "#5D6693",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 177,
+      "symbol": "⾰",
+      "normalized_form": "革",
+      "component_id": "cmp-0151",
+      "color": "#525D2D",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 178,
+      "symbol": "⾱",
+      "normalized_form": "韋",
+      "component_id": null,
+      "color": null,
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 179,
+      "symbol": "⾲",
+      "normalized_form": "韭",
+      "component_id": "cmp-0218",
+      "color": "#414A8F",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 180,
+      "symbol": "⾳",
+      "normalized_form": "音",
+      "component_id": null,
+      "color": null,
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 181,
+      "symbol": "⾴",
+      "normalized_form": "頁",
+      "component_id": null,
+      "color": null,
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 182,
+      "symbol": "⾵",
+      "normalized_form": "風",
+      "component_id": null,
+      "color": null,
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 183,
+      "symbol": "⾶",
+      "normalized_form": "飛",
+      "component_id": null,
+      "color": null,
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 184,
+      "symbol": "⾷",
+      "normalized_form": "食",
+      "component_id": "cmp-0335",
+      "color": "#599681",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 185,
+      "symbol": "⾸",
+      "normalized_form": "首",
+      "component_id": "cmp-0347",
+      "color": "#2C7676",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 186,
+      "symbol": "⾹",
+      "normalized_form": "香",
+      "component_id": null,
+      "color": null,
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 187,
+      "symbol": "⾺",
+      "normalized_form": "馬",
+      "component_id": null,
+      "color": null,
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 188,
+      "symbol": "⾻",
+      "normalized_form": "骨",
+      "component_id": null,
+      "color": null,
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 189,
+      "symbol": "⾼",
+      "normalized_form": "高",
+      "component_id": "cmp-0149",
+      "color": "#A66DBF",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 190,
+      "symbol": "⾽",
+      "normalized_form": "髟",
+      "component_id": null,
+      "color": null,
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 191,
+      "symbol": "⾾",
+      "normalized_form": "鬥",
+      "component_id": null,
+      "color": null,
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 192,
+      "symbol": "⾿",
+      "normalized_form": "鬯",
+      "component_id": null,
+      "color": null,
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 193,
+      "symbol": "⿀",
+      "normalized_form": "鬲",
+      "component_id": "cmp-0239",
+      "color": "#D36D53",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 194,
+      "symbol": "⿁",
+      "normalized_form": "鬼",
+      "component_id": "cmp-0165",
+      "color": "#C8233C",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 195,
+      "symbol": "⿂",
+      "normalized_form": "魚",
+      "component_id": null,
+      "color": null,
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 196,
+      "symbol": "⿃",
+      "normalized_form": "鳥",
+      "component_id": null,
+      "color": null,
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 197,
+      "symbol": "⿄",
+      "normalized_form": "鹵",
+      "component_id": null,
+      "color": null,
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 198,
+      "symbol": "⿅",
+      "normalized_form": "鹿",
+      "component_id": "cmp-0250",
+      "color": "#C48B81",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 199,
+      "symbol": "⿆",
+      "normalized_form": "麥",
+      "component_id": null,
+      "color": null,
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 200,
+      "symbol": "⿇",
+      "normalized_form": "麻",
+      "component_id": null,
+      "color": null,
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 201,
+      "symbol": "⿈",
+      "normalized_form": "黃",
+      "component_id": null,
+      "color": null,
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 202,
+      "symbol": "⿉",
+      "normalized_form": "黍",
+      "component_id": null,
+      "color": null,
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 203,
+      "symbol": "⿊",
+      "normalized_form": "黑",
+      "component_id": "cmp-0170",
+      "color": "#B55E58",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 204,
+      "symbol": "⿋",
+      "normalized_form": "黹",
+      "component_id": null,
+      "color": null,
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 205,
+      "symbol": "⿌",
+      "normalized_form": "黽",
+      "component_id": null,
+      "color": null,
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 206,
+      "symbol": "⿍",
+      "normalized_form": "鼎",
+      "component_id": "cmp-0117",
+      "color": "#8F327F",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 207,
+      "symbol": "⿎",
+      "normalized_form": "鼓",
+      "component_id": null,
+      "color": null,
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 208,
+      "symbol": "⿏",
+      "normalized_form": "鼠",
+      "component_id": "cmp-0350",
+      "color": "#AD4865",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 209,
+      "symbol": "⿐",
+      "normalized_form": "鼻",
+      "component_id": null,
+      "color": null,
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 210,
+      "symbol": "⿑",
+      "normalized_form": "齊",
+      "component_id": null,
+      "color": null,
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 211,
+      "symbol": "⿒",
+      "normalized_form": "齒",
+      "component_id": null,
+      "color": null,
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 212,
+      "symbol": "⿓",
+      "normalized_form": "龍",
+      "component_id": null,
+      "color": null,
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 213,
+      "symbol": "⿔",
+      "normalized_form": "龜",
+      "component_id": null,
+      "color": null,
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    },
+    {
+      "number": 214,
+      "symbol": "⿕",
+      "normalized_form": "龠",
+      "component_id": null,
+      "color": null,
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs"
+    }
+  ]
+}
