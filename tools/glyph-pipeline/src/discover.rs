@@ -430,10 +430,10 @@ mod tests {
         let matched = matches_decomposition(&dictionary,&catalog,&shapes).unwrap().1;
         let graphics = serde_json::json!({
             "strokes":[
-                "M 1 2 L 4 5 Z",
-                "M 1 2 L 4 5 Z",
-                "M 1 2 L 4 5 Z",
-                "M 1 2 L 4 5 Z"
+                "M 100 200 L 400 500 Z",
+                "M 100 200 L 400 500 Z",
+                "M 100 200 L 400 500 Z",
+                "M 100 200 L 400 500 Z"
             ]
         });
         // The parser refuses geometric inventions: only exact, source-owned
