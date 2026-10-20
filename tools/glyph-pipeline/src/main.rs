@@ -4,6 +4,7 @@ mod browse;
 mod coverage;
 mod color_registry;
 mod diagnostics;
+mod review;
 
 use serde_json::Value;
 use std::collections::{BTreeMap, BTreeSet};
@@ -178,7 +179,7 @@ fn pager(glyphs: &[Glyph], page: usize) -> String {
         let current = if i == page { " aria-current=\"page\"" } else { "" };
         result.push_str(&format!("<a href=\"{}\"{}>{}</a>", page_name(i), current, label));
     }
-    result.push_str("<a href=\"by-component/index.html\">Browse by component</a><a href=\"unmapped.html\">Unmapped characters</a><a href=\"diagnostics.html\">Coverage diagnostics</a></nav>");
+    result.push_str("<a href=\"by-component/index.html\">Browse by component</a><a href=\"unmapped.html\">Unmapped characters</a><a href=\"diagnostics.html\">Coverage diagnostics</a><a href=\"review/index.html\">Geometry review</a></nav>");
     result
 }
 
@@ -214,6 +215,7 @@ fn build(glyphs: &[Glyph]) -> Result<(), String> {
     }
     browse::generate(glyphs, &target)?;
     coverage::generate(glyphs, &target)?;
+    review::generate(glyphs, &target)?;
     println!("Generated {} component-colored SVGs across {} gallery pages.", glyphs.len(), glyphs.len().div_ceil(PAGE_SIZE));
     Ok(())
 }
