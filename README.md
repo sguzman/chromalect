@@ -4,7 +4,7 @@
 
 Chromalect investigates whether writing can be made easier to learn by adding reversible, digital-only visual layers: **stable colors for graphemes and reusable components, semantic families, compositional phonetic notation, tone and prosody marks, and optional mnemonic animation**.
 
-**Status:** research prototype with the v0.4 palette (513 distinct component identities), a Rust stroke-rendering pipeline, a static GitHub Pages atlas, and 12 curated source-aligned glyphs. The pinned-source pipeline now generates 802 source-aligned glyphs (including the 12 original specimens), covering 795 of the first 1,000 cataloged characters. Automated candidates still need independent visual review. No human learning study or finalized phonetic alphabet yet.
+**Status:** research prototype with the v0.4 palette (513 distinct component identities), a Rust stroke-rendering pipeline, a static GitHub Pages atlas, and 12 curated source-aligned glyphs. The pinned-source pipeline now generates 804 source-aligned glyphs (including the 12 original specimens), covering 797 of the first 1,000 cataloged characters. Automated candidates still need independent visual review. No human learning study or finalized phonetic alphabet yet.
 
 ## Starting point
 
@@ -33,7 +33,7 @@ It is **not** a branch of another knowledge base or a general language-learning 
 
 ## Real colored character strokes
 
-The [stroke gallery](site/strokes.html) demonstrates **12 actual Chinese glyphs made of separately colored component strokes**, with machine-readable [path ownership](data/catalog/colored-strokes-v0.1.json). The v0.4 colors remain intact. The Rust [glyph pipeline](tools/glyph-pipeline/README.md) builds a separate SVG for each assigned character; its source-backed importer handles exact leaf ownership for nested and enclosing component structures and whole-component atomic glyphs. The generated [coverage report](https://sguzman.github.io/chromalect/glyphs/coverage.json) distinguishes mapped and unmapped characters; visual auditing remains necessary.
+The [stroke gallery](site/strokes.html) demonstrates **12 actual Chinese glyphs made of separately colored component strokes**, with machine-readable [path ownership](data/catalog/colored-strokes-v0.1.json). The v0.4 colors remain intact. The Rust [glyph pipeline](tools/glyph-pipeline/README.md) builds a separate SVG for each assigned character; its source-backed importer handles exact leaf ownership for nested and enclosing component structures and whole-component atomic glyphs. The generated [coverage report](https://sguzman.github.io/chromalect/glyphs/coverage.json) distinguishes mapped and unmapped characters. [Source diagnostics](https://sguzman.github.io/chromalect/glyphs/diagnostics.html) classify the 203 remaining gaps, while [geometry contact sheets](https://sguzman.github.io/chromalect/glyphs/review/) show native-font glyphs alongside source SVGs for visual review. None of these checks constitutes independent visual certification.
 
 ## Public color references
 
