@@ -8,6 +8,10 @@ on:
       - "data/catalog/colored-strokes-v0.1.json"
       - "palettes/mandarin-component-identity-v0.4.json"
       - "site/strokes.html"
+      - "site/layers-v0.1.json"
+      - "site/colors.html"
+      - "site/index.html"
+      - "docs/color-registry.md"
       - ".github/workflows/glyph-integrity.yml"
   workflow_dispatch:
 
