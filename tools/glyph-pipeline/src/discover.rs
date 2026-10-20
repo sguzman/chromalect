@@ -436,6 +436,7 @@ pub(super) fn run(dictionary: &Path, graphics: &Path) -> Result<(), String> {
     alternatives::generate(&alternative_glyphs,&all,&root().join("site/glyphs"))?;
     unknown::generate(&unknown_glyphs,&all,&root().join("site/glyphs"))?;
     diagnostics::generate(dictionary, &all, &root().join("site/glyphs"))?;
+    profile::generate(&all, &root().join("site"))?;
     println!(
         "Generated {} SVGs: {} curated and {} source-derived candidates; {} incomplete geometry cases; {} source candidates without usable geometry.",
         all.len(), curated.len(), count, rejected, pending.len()
