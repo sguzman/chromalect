@@ -34,6 +34,8 @@ jobs:
       - name: Configure Pages
         uses: actions/configure-pages@v5
       - uses: dtolnay/rust-toolchain@stable
+      - name: Check site JavaScript syntax
+        run: node --check site/theme.js && node --check site/search.js
       - name: Resolve Rust dependencies
         run: cargo generate-lockfile --manifest-path tools/glyph-pipeline/Cargo.toml
       - name: Validate component-colored glyph data
