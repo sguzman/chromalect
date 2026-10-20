@@ -7,7 +7,7 @@
 
 ## Question
 
-Can we encode the *actual sound* of a syllable with a systematic, compact visual shape that does not merely spell a letter sequence or mark a historical phonetic component?
+Can a systematic, compact visual shape encode the *actual sound* of a syllable without merely spelling a letter sequence or marking a historical phonetic component?
 
 ## Hypothesis
 
