@@ -22,6 +22,7 @@ fn source_records(glyphs: &[Glyph]) -> Result<Value,String> {
     let readings=load(&root().join("site/pronunciation-citations-0001-1000.json"))?;
     let layers=load(&root().join("site/layers-v0.1.json"))?;
     let vocabulary=load(&root().join("ontology/ontology-v1.json"))?;
+    if !entries(&vocabulary,"bindings")?.iter().any(|binding|binding.get("id").and_then(Value::as_str)==Some("mandarin-1000-ontology-profile")) { return Err("generated profile has no canonical ontology binding".into()); }
     if !entries(&vocabulary,"profiles")?.iter().any(|p|p.get("id").and_then(Value::as_str)==Some(PROFILE_ID)) {
         return Err("Mandarin profile is absent from the formal ontology".into());
     }
