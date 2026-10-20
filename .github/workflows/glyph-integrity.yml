@@ -38,3 +38,28 @@ jobs:
             done
       - name: Verify exact upstream path arrays
         run: cargo run --quiet --locked --manifest-path tools/glyph-pipeline/Cargo.toml -- verify-source "$RUNNER_TEMP/chromalect-hanzi-writer"
+      - name: Download pinned component ownership sources
+        shell: bash
+        run: |
+          set -euo pipefail
+          REV=bddc96d41bef78427ed0e034e9f7e31d71fd1b92
+          curl --fail --show-error --silent --location --retry 3 \
+            "https://raw.githubusercontent.com/skishore/makemeahanzi/$REV/dictionary.txt" \
+            --output "$RUNNER_TEMP/chromalect-dictionary.txt"
+          curl --fail --show-error --silent --location --retry 3 \
+            "https://raw.githubusercontent.com/skishore/makemeahanzi/$REV/graphics.txt" \
+            --output "$RUNNER_TEMP/chromalect-graphics.txt"
+      - name: Dry-run source-backed expansion
+        shell: bash
+        run: |
+          set -euo pipefail
+          cargo run --quiet --locked --manifest-path tools/glyph-pipeline/Cargo.toml -- \
+            discover "$RUNNER_TEMP/chromalect-dictionary.txt" "$RUNNER_TEMP/chromalect-graphics.txt"
+          test -s site/glyphs/index.html
+          test "$(find site/glyphs -name '*.svg' | wc -l)" -gt 12
+      - name: Upload discovery report and sample assets
+        uses: actions/upload-artifact@v4
+        with:
+          name: chromalect-stroke-discovery
+          path: site/glyphs/
+          retention-days: 7
