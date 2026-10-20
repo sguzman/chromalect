@@ -1,4 +1,5 @@
 mod discover;
+mod atlas;
 
 use serde_json::Value;
 use std::collections::{BTreeMap, BTreeSet};
