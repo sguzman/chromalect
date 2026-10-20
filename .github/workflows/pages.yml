@@ -67,6 +67,8 @@ jobs:
         run: test -s site/glyphs/unknown-components/index.html && test -s site/glyphs/unknown-components/records.json
       - name: Check source alternative comparisons
         run: test -s site/glyphs/alternatives/index.html && test -s site/glyphs/alternatives/records.json
+      - name: Check ontology-backed Mandarin search profile
+        run: test -s site/profiles/mandarin-1000-v1.json && test -s site/search.html && test -s site/search.js
       - name: Check published machine-readable mappings
         run: test -s site/glyphs/mappings.json
       - name: Check generated geometry review
