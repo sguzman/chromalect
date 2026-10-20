@@ -6,6 +6,12 @@ Chromalect investigates whether writing can be made easier to learn by adding re
 
 **Status:** research prototype with the v0.4 palette (513 distinct component identities), a Rust stroke-rendering pipeline, a static GitHub Pages atlas, and 12 curated source-aligned glyphs. The pinned-source pipeline now generates 804 source-aligned glyphs (including the 12 original specimens), covering 797 of the first 1,000 cataloged characters. Automated candidates still need independent visual review. No human learning study or finalized phonetic alphabet yet.
 
+## Ontology and independent project structure
+
+Chromalect contains its own [constitution](CONSTITUTION.md), [agent guidance](AGENTS.md), and versioned [formal multilingual ontology](ONTOLOGY.md). The ontology publishes **37 entity types**, **39 typed relations**, [JSON Schema definitions](ontology/vocabulary.schema.json), and a [source-grounded Mandarin instance graph](ontology/specimens-v1.json). The [public ontology gallery](site/ontology.html) exposes these distinctions independently of the Mandarin color prototype.
+
+Ontological types support writing systems, alphabets, graphemes, phonemes, words, morphology, lexical meaning, prosody, and the relationship between evidence and reversible visual encodings. Types do not imply that corresponding corpora or learning experiments are already complete. The independent repo hosts the ontology and presentation; an external registry may link here but is not a prerequisite.
+
 ## Starting point
 
 The first research profile is **Mainland Standard Mandarin (Putonghua), modern simplified Chinese, and Hanyu Pinyin**. This scope is deliberately narrow enough to test while the underlying concepts can later be evaluated on Latin alphabets, Arabic, Hangul, other Chinese language varieties, and additional writing systems.
@@ -58,6 +64,8 @@ The [human-readable catalog](CATALOG.md) distinguishes **modern radicals (201 pr
 
 | Document | Role |
 | --- | --- |
+| [Formal ontology](ONTOLOGY.md) | Typed multilingual classes, relations, evidence and encoding semantics |
+| [Ontology instance graph](ontology/specimens-v1.json) | Source-grounded typed example and provenance |
 | [Vision](docs/vision.md) | Motivation, scope, constraints |
 | [Terminology](docs/terminology.md) | Precise linguistic and design terms |
 | [Architecture](docs/architecture.md) | Conceptual information model; no code |
