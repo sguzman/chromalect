@@ -4,7 +4,7 @@ use std::io::{BufRead, BufReader};
 
 const SOURCE_REV: &str = "bddc96d41bef78427ed0e034e9f7e31d71fd1b92";
 
-struct Decomposition {
+pub(super) struct Decomposition {
     forms: Vec<String>,
     ids: Vec<String>,
     colors: Vec<String>,
@@ -12,7 +12,7 @@ struct Decomposition {
     original: String,
 }
 
-fn parse_parts(
+pub(super) fn parse_parts(
     chars: &[char],
     cursor: &mut usize,
     path: &mut Vec<usize>,
@@ -47,7 +47,7 @@ fn parse_parts(
     Some(())
 }
 
-fn source_records(path: &Path, mut f: impl FnMut(Value) -> Result<(), String>) -> Result<(), String> {
+pub(super) fn source_records(path: &Path, mut f: impl FnMut(Value) -> Result<(), String>) -> Result<(), String> {
     let file = fs::File::open(path).map_err(|e| format!("{}: {e}", path.display()))?;
     for (i, line) in BufReader::new(file).lines().enumerate() {
         let line = line.map_err(|e| e.to_string())?;
@@ -59,7 +59,7 @@ fn source_records(path: &Path, mut f: impl FnMut(Value) -> Result<(), String>) -
     Ok(())
 }
 
-fn catalog_map() -> Result<HashMap<String, HashSet<String>>, String> {
+pub(super) fn catalog_map() -> Result<HashMap<String, HashSet<String>>, String> {
     let v = load(&root().join("data/catalog/characters-0001-1000.json"))?;
     let mut map = HashMap::new();
     for record in entries(&v, "characters")? {
@@ -73,7 +73,7 @@ fn catalog_map() -> Result<HashMap<String, HashSet<String>>, String> {
     Ok(map)
 }
 
-fn atomic_components() -> Result<HashMap<String, (String, String)>, String> {
+pub(super) fn atomic_components() -> Result<HashMap<String, (String, String)>, String> {
     let palette = load(&root().join("palettes/mandarin-component-identity-v0.4.json"))?;
     let catalog = load(&root().join("data/catalog/characters-0001-1000.json"))?;
     let mut identities = HashMap::new();
@@ -104,7 +104,7 @@ fn atomic_components() -> Result<HashMap<String, (String, String)>, String> {
     Ok(result)
 }
 
-fn palette_shapes() -> Result<HashMap<String, (String, String)>, String> {
+pub(super) fn palette_shapes() -> Result<HashMap<String, (String, String)>, String> {
     let v = load(&root().join("palettes/mandarin-component-identity-v0.4.json"))?;
     let mut unique = HashMap::new();
     let mut duplicates = HashSet::new();
@@ -118,7 +118,7 @@ fn palette_shapes() -> Result<HashMap<String, (String, String)>, String> {
     Ok(unique)
 }
 
-fn matches_decomposition(
+pub(super) fn matches_decomposition(
     item: &Value,
     catalog: &HashMap<String, HashSet<String>>,
     shapes: &HashMap<String, (String, String)>,
@@ -162,6 +162,52 @@ fn matches_decomposition(
     Some((ch, Decomposition {
         forms, ids, colors, matches: stroke_matches, original,
     }))
+}
+
+pub(super) fn explain_dictionary_rejection(
+    item: &Value,
+    catalog: &HashMap<String, HashSet<String>>,
+    shapes: &HashMap<String, (String, String)>,
+) -> &'static str {
+    if matches_decomposition(item, catalog, shapes).is_some() {
+        return "source_owned_but_geometry_unavailable";
+    }
+    let original = match item.get("decomposition").and_then(Value::as_str) {
+        Some(source) => source,
+        None => return "no_dictionary_decomposition",
+    };
+    let chars: Vec<char> = original.chars().collect();
+    if chars.contains(&'⿻') {
+        return "overlapping_components_unresolved";
+    }
+    if chars.len() < 3 || !matches!(
+        chars[0],
+        '⿰' | '⿱' | '⿲' | '⿳' | '⿴' | '⿵' | '⿶' | '⿷' | '⿸' | '⿹' | '⿺'
+    ) {
+        return "unsupported_source_structure";
+    }
+    let ch = match item.get("character").and_then(Value::as_str) {
+        Some(ch) => ch,
+        None => return "invalid_dictionary_character",
+    };
+    let known = match catalog.get(ch) {
+        Some(known) => known,
+        None => return "not_in_catalog",
+    };
+    let any_palette: HashSet<String> =
+        shapes.values().map(|(id, _)| id.clone()).collect();
+    let mut cursor = 0;
+    let mut parts = Vec::new();
+    if parse_parts(&chars, &mut cursor, &mut Vec::new(), &mut parts, &any_palette, shapes).is_none()
+        || cursor != chars.len()
+        || parts.len() < 2
+    {
+        return "unresolved_source_components";
+    }
+    if parts.iter().any(|(_, _, id, _)| !known.contains(id)) {
+        return "source_catalog_component_disagreement";
+    }
+    "ambiguous_or_partial_source_stroke_ownership"
 }
 
 fn load_matches(path: &Path) -> Result<HashMap<String, Decomposition>, String> {
