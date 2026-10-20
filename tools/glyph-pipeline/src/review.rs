@@ -167,7 +167,7 @@ pub(super) fn generate(glyphs: &[Glyph], root: &Path) -> Result<(), String> {
         }));
     }
     for page in 0..glyphs.len().div_ceil(REVIEW_PAGE_SIZE) {
-        let mut html = String::from("<!doctype html><html lang=\"en\"><head><meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"><title>Geometry review · Chromalect</title><link rel=\"stylesheet\" href=\"../../style.css\"></head><body><main class=\"wrap\"><p><a href=\"../../index.html\">Chromalect</a> / <a href=\"../index.html\">Colored glyphs</a> / Geometry review</p><h1>Side-by-side geometry review</h1><p class=\"intro\">The left glyph uses the native browser font. The right glyph uses the pinned source-aligned SVG outlines with component colors. Differences in style are expected; source ownership and glyph shape still require independent visual validation. Automatic placement flags only prioritize review; they are not certifications.</p><p><a href=\"report.json\">Machine-readable geometry review report</a></p>");
+        let mut html = String::from("<!doctype html><html lang=\"en\"><head><meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"><title>Geometry review · Chromalect</title><link rel=\"stylesheet\" href=\"../../style.css\"></head><body><main class=\"wrap\"><p><a href=\"../../index.html\">Chromalect</a> / <a href=\"../index.html\">Colored glyphs</a> / Geometry review</p><h1>Side-by-side geometry review</h1><p class=\"intro\">The left glyph uses the native browser font. The right glyph uses the pinned source-aligned SVG outlines with component colors. Differences in style are expected; source ownership and glyph shape still require independent visual validation. Automatic placement and color-distinction flags only prioritize review; they are not certifications.</p><p><a href=\"report.json\">Machine-readable geometry review report</a></p>");
         html.push_str(&review_navigation(glyphs.len(), page));
         html.push_str("<div class=\"review-grid\">");
         for glyph in glyphs.iter().skip(page * REVIEW_PAGE_SIZE).take(REVIEW_PAGE_SIZE) {
@@ -193,6 +193,7 @@ pub(super) fn generate(glyphs: &[Glyph], root: &Path) -> Result<(), String> {
         "schema": "chromalect.geometry-review.v1",
         "total_glyphs": glyphs.len(),
         "flagged_for_additional_review": flagged_count,
+        "review_flags_are_certifications": false,
         "independently_certified_count": 0,
         "method": "Non-certifying path extents, horizontal/vertical grouping and close OKLab component-color pair flags. These are review hints, not verified shape, linguistic or learning outcomes.",
         "glyphs": records,
@@ -200,6 +201,9 @@ pub(super) fn generate(glyphs: &[Glyph], root: &Path) -> Result<(), String> {
     fs::write(path.join("report.json"),format!("{}\n",serde_json::to_string_pretty(&report).map_err(|e| e.to_string())?))
         .map_err(|e| e.to_string())?;
     println!("Geometry review: {} glyphs, {} flagged for closer inspection.",glyphs.len(),flagged_count);
+    for glyph in glyphs.iter().filter(|g| !flags(g).is_empty()).take(24) {
+        println!("  {}: {}", glyph.character, flags(glyph).join(", "));
+    }
     Ok(())
 }
 
