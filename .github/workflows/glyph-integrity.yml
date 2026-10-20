@@ -20,6 +20,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: dtolnay/rust-toolchain@stable
+      - name: Resolve Rust dependencies
+        run: cargo generate-lockfile --manifest-path tools/glyph-pipeline/Cargo.toml
       - name: Rust tests
         run: cargo test --manifest-path tools/glyph-pipeline/Cargo.toml --locked
       - name: Validate palette, stroke ownership and published gallery
