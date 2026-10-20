@@ -223,18 +223,78 @@ fn load_matches(path: &Path) -> Result<HashMap<String, Decomposition>, String> {
     Ok(known)
 }
 
+fn documented_alternatives(path: &Path) -> Result<HashMap<String, Decomposition>, String> {
+    let catalog = load(&root().join("data/catalog/characters-0001-1000.json"))?;
+    let mut by_character = HashMap::new();
+    for item in entries(&catalog,"characters")? {
+        by_character.insert(string(item,"character")?.to_owned(), item.clone());
+    }
+    let shapes = palette_shapes()?;
+    let palette_ids: HashSet<String> = shapes.values().map(|(id,_)| id.clone()).collect();
+    let mut alternatives = HashMap::new();
+    source_records(path, |dictionary| {
+        let Some(ch) = dictionary.get("character").and_then(Value::as_str) else {
+            return Ok(());
+        };
+        let Some(catalog) = by_character.get(ch) else { return Ok(()); };
+        if !diagnostics::source_is_declared_alternative(catalog, &dictionary) {
+            return Ok(());
+        }
+        let ids = HashMap::from([(ch.to_owned(),palette_ids.clone())]);
+        if let Some((name, decomposition)) = matches_decomposition(&dictionary, &ids, &shapes) {
+            if alternatives.insert(name.clone(), decomposition).is_some() {
+                return Err(format!("duplicate documented alternative mapping for {name}"));
+            }
+        }
+        Ok(())
+    })?;
+    Ok(alternatives)
+}
+
+fn alternative_from_source(ch: &str, info: Decomposition, graphic: &Value) -> Option<Glyph> {
+    let paths = graphic.get("strokes")?.as_array()?;
+    if paths.is_empty() || paths.len() != info.matches.len() { return None; }
+    let mut strokes = Vec::with_capacity(paths.len());
+    for (path, index) in paths.iter().zip(&info.matches) {
+        let path = path.as_str()?;
+        if !valid_path(path) { return None; }
+        strokes.push(Stroke {
+            path: path.to_owned(),
+            id: info.ids.get(*index)?.clone(),
+            color: info.colors.get(*index)?.clone(),
+        });
+    }
+    let parts = (0..info.forms.len()).map(|i|(
+        info.forms[i].clone(),info.ids[i].clone(),info.colors[i].clone()
+    )).collect();
+    Some(Glyph {
+        character: ch.to_owned(),
+        decomposition: info.original,
+        parts,
+        strokes,
+        candidate: true,
+    })
+}
+
 pub(super) fn run(dictionary: &Path, graphics: &Path) -> Result<(), String> {
     let mut pending = load_matches(dictionary)?;
+    let mut alternate_source = documented_alternatives(dictionary)?;
     let mut atomics = atomic_components()?;
     let existing = validate()?;
     let curated: HashSet<String> = existing.iter().map(|g| g.character.clone()).collect();
     let mut discovered: Vec<Glyph> = Vec::new();
+    let mut alternative_glyphs: Vec<Glyph> = Vec::new();
     let mut rejected = 0_usize;
     source_records(graphics, |record| {
         let ch = match record.get("character").and_then(Value::as_str) {
             Some(ch) => ch, None => return Ok(()),
         };
         if curated.contains(ch) { return Ok(()); }
+        if let Some(info) = alternate_source.remove(ch) {
+            if let Some(candidate) = alternative_from_source(ch,info,&record) {
+                alternative_glyphs.push(candidate);
+            }
+        }
         let mapping = pending.remove(ch);
         let atomic = if mapping.is_none() { atomics.remove(ch) } else { None };
         if mapping.is_none() && atomic.is_none() { return Ok(()); }
@@ -289,6 +349,7 @@ pub(super) fn run(dictionary: &Path, graphics: &Path) -> Result<(), String> {
     all.extend(discovered);
     build(&all)?;
     atlas::integrate(&all)?;
+    alternatives::generate(&alternative_glyphs,&all,&root().join("site/glyphs"))?;
     diagnostics::generate(dictionary, &all, &root().join("site/glyphs"))?;
     println!(
         "Generated {} SVGs: {} curated and {} source-derived candidates; {} incomplete geometry cases; {} source candidates without usable geometry.",
