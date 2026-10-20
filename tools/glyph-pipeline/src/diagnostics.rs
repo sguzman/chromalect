@@ -31,6 +31,34 @@ fn dictionary_entries(path: &Path, allowed: &HashSet<String>) -> Result<HashMap<
     Ok(entries)
 }
 
+fn reason_description(reason: &str) -> &'static str {
+    match reason {
+        "unknown_component_in_source" =>
+            "The reference decomposition contains an unidentified component (？). A catalog candidate is recorded, but stroke ownership has not been reconciled.",
+        "source_matches_declared_catalog_alternative" =>
+            "The stroke source agrees with a recorded alternate decomposition, not the selected primary catalog components. Direct and Marker identities must remain consistent.",
+        "source_catalog_component_disagreement" =>
+            "The source and selected catalog analysis disagree about which recognizable parts are present.",
+        "unresolved_source_components" =>
+            "At least one source part is absent from the uniquely mapped v0.4 component shapes or has unsupported decomposition structure.",
+        "overlapping_components_unresolved" =>
+            "The source has an overlapping structural form without complete independently identified stroke ownership.",
+        "atomic_geometry_missing" =>
+            "The catalog treats this character as one component, but the corresponding complete source outline was not available.",
+        "dictionary_entry_missing" =>
+            "No matching character-level decomposition was present in the pinned dictionary source.",
+        "ambiguous_or_partial_source_stroke_ownership" =>
+            "At least one stroke is unassigned, shared, or matched to an unresolved component subtree.",
+        "source_owned_but_geometry_unavailable" =>
+            "The source structure is compatible, but exact complete stroke-outline geometry has not been admitted.",
+        "no_dictionary_decomposition" =>
+            "No decomposition is recorded in the pinned source dictionary.",
+        "unsupported_source_structure" =>
+            "The source uses a structural representation that cannot be safely decoded by the current parser.",
+        _ => "Additional source and component verification is required before assigning any new stroke colors.",
+    }
+}
+
 pub(super) fn generate(dictionary: &Path, glyphs: &[Glyph], dest: &Path) -> Result<(), String> {
     let catalog_data = load(&root().join("data/catalog/characters-0001-1000.json"))?;
     let catalog = entries(&catalog_data, "characters")?;
@@ -115,12 +143,17 @@ pub(super) fn generate(dictionary: &Path, glyphs: &[Glyph], dest: &Path) -> Resu
     }
     html.push_str("</nav>");
     for (reason, rows) in &by_reason {
-        html.push_str(&format!("<section class=\"cards-section\" id=\"reason-{}\"><h2>{} ({})</h2><div class=\"browse\">",escape(reason), escape(reason).replace('_'," "), rows.len()));
+        html.push_str(&format!("<section class=\"cards-section\" id=\"reason-{}\"><h2>{} ({})</h2><p class=\"hint\">{}</p><div class=\"browse\">",
+            escape(reason), escape(reason).replace('_'," "), rows.len(), escape(reason_description(reason))));
         for row in rows {
             let rank = row["rank"].as_u64().ok_or("invalid diagnostic rank")? as usize;
             let character = row["character"].as_str().ok_or("invalid diagnostic character")?;
             let start = ((rank - 1) / 100) * 100 + 1;
-            html.push_str(&format!("<a class=\"tile\" href=\"../characters/{:04}-{:04}.html#c{:04}\" style=\"padding:9px 12px;display:block;text-decoration:none\"><span class=\"rank\">#{rank:04}</span><div lang=\"zh-Hans\" style=\"font-size:34px;text-align:center\">{}</div><div class=\"hint\">{}</div></a>", start, start + 99, rank, escape(character), escape(row["catalog_structural_status"].as_str().unwrap_or("unknown"))));
+            html.push_str(&format!("<a class=\"tile\" href=\"../characters/{:04}-{:04}.html#c{:04}\" style=\"padding:9px 12px;display:block;text-decoration:none\"><span class=\"rank\">#{rank:04}</span><div lang=\"zh-Hans\" style=\"font-size:34px;text-align:center\">{}</div><div class=\"hint\">{}</div><div class=\"mono\" style=\"font-size:11px;overflow-wrap:anywhere;margin-top:6px\">Source: {}<p style=\"margin:2px 0;font-size:11px\">Catalog: {}</p></div></a>",
+                start, start + 99, rank, escape(character),
+                escape(row["catalog_structural_status"].as_str().unwrap_or("unknown")),
+                escape(row["source_decomposition"].as_str().unwrap_or("unknown")),
+                escape(row["catalog_primary_structure"].as_str().unwrap_or("unknown"))));
         }
         html.push_str("</div></section>");
     }
