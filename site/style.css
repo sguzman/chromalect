@@ -88,3 +88,20 @@ body:has(#component-direct:checked) .glyph-with-strokes::after{display:none}
 .review-native{display:flex;justify-content:center;align-items:center;width:112px;height:112px;font-family:"Noto Sans CJK SC","Noto Sans SC","Source Han Sans SC",sans-serif;font-size:73px;color:#edf3fb}
 .review-pair small{color:var(--sub);font-size:11px;margin-bottom:5px}
 @media(max-width:490px){.review-grid{grid-template-columns:1fr 1fr;gap:8px}.review-item{padding:8px}.review-native{font-size:54px;width:88px;height:88px}.review-pair img{width:88px;height:88px}.review-pair>div{min-height:112px;gap:0}.review-pair small{font-size:9px}.review-item p{font-size:11px}}
+
+/* Chromalect multilingual ontology catalogue. */
+.ontology-section{margin:28px 0}
+.ontology-section h2 small{font-size:13px;color:var(--sub);font-weight:400}
+.ontology-terms{display:grid;grid-template-columns:repeat(auto-fit,minmax(265px,1fr));gap:10px}
+.ontology-term{border:1px solid var(--border);background:var(--panel);border-radius:10px;padding:10px 13px;min-width:0}
+.ontology-term strong{font-size:13px;color:var(--ink);overflow-wrap:anywhere}
+.ontology-term code{white-space:normal}
+.ontology-term p{font-size:12px;margin:5px 0 0}
+.flow-ontology{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0}
+.flow-ontology span{display:inline-flex;align-items:center;min-height:42px;padding:8px 12px;border:1px solid var(--border);border-radius:8px;background:var(--panel);font-size:12px;color:var(--ink)}
+.flow-ontology span:not(:last-child):after{content:"›";color:var(--sub);font-weight:bold;margin-left:12px}
+.ontology-example{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+.ontology-char{display:flex;align-items:center;justify-content:center;min-height:110px;width:110px;border-radius:10px;background:var(--bg);color:var(--ink);font-size:74px;font-family:"Noto Sans CJK SC","Noto Sans SC",sans-serif}
+.ontology-data{display:grid;gap:9px;font-size:13px}
+.ontology-data>div{display:flex;align-items:center;gap:9px;flex-wrap:wrap}
+@media(max-width:620px){.ontology-terms{grid-template-columns:1fr}.flow-ontology span:not(:last-child):after{display:none}}
