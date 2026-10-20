@@ -13,7 +13,7 @@ The first motivation is dense Chinese characters: their recurring pieces can be 
 - Put tone/prosody into an independent visual channel.
 - Test static versus contextual versus motion-based memory aids.
 - Make every overlay toggleable and customizable while preserving information integrity.
-- Generalize to other languages **only once the Mandarin experiment teaches us which abstractions survive**.
+- Define a language-independent ontology now; use Mandarin as the first implemented research profile and validate additional language-specific encodings with their own sources.
 
 ## Non-goals now
 
