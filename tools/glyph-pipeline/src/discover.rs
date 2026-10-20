@@ -349,6 +349,10 @@ pub(super) fn run(dictionary: &Path, graphics: &Path) -> Result<(), String> {
     all.extend(discovered);
     build(&all)?;
     atlas::integrate(&all)?;
+    // Some sources list alternates for already-rendered characters.
+    // Only publish this comparison queue for characters not in the active atlas.
+    let active: HashSet<&str> = all.iter().map(|g| g.character.as_str()).collect();
+    alternative_glyphs.retain(|g| !active.contains(g.character.as_str()));
     alternatives::generate(&alternative_glyphs,&all,&root().join("site/glyphs"))?;
     diagnostics::generate(dictionary, &all, &root().join("site/glyphs"))?;
     println!(
