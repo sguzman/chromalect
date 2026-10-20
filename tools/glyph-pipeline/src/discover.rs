@@ -251,6 +251,32 @@ fn documented_alternatives(path: &Path) -> Result<HashMap<String, Decomposition>
     Ok(alternatives)
 }
 
+fn unresolved_component_matches(path: &Path) -> Result<HashMap<String,Decomposition>,String> {
+    let catalog = catalog_map()?;
+    let mut shapes = palette_shapes()?;
+    shapes.insert(
+        "？".to_owned(),
+        (unknown::UNKNOWN_ID.to_owned(),unknown::UNKNOWN_FILL.to_owned())
+    );
+    let mut eligible = HashMap::new();
+    source_records(path, |row| {
+        let Some(ch) = row.get("character").and_then(Value::as_str) else { return Ok(()); };
+        let Some(source) = row.get("decomposition").and_then(Value::as_str) else { return Ok(()); };
+        if source.chars().filter(|c|*c == '？').count() != 1 { return Ok(()); }
+        let Some(known_ids) = catalog.get(ch) else { return Ok(()); };
+        let mut allowed = known_ids.clone();
+        allowed.insert(unknown::UNKNOWN_ID.to_owned());
+        let selected = HashMap::from([(ch.to_owned(),allowed)]);
+        if let Some((ch,info)) = matches_decomposition(&row,&selected,&shapes) {
+            if eligible.insert(ch.clone(), info).is_some() {
+                return Err(format!("duplicate unknown-source mapping for {ch}"));
+            }
+        }
+        Ok(())
+    })?;
+    Ok(eligible)
+}
+
 fn alternative_from_source(ch: &str, info: Decomposition, graphic: &Value) -> Option<Glyph> {
     let paths = graphic.get("strokes")?.as_array()?;
     if paths.is_empty() || paths.len() != info.matches.len() { return None; }
@@ -279,11 +305,13 @@ fn alternative_from_source(ch: &str, info: Decomposition, graphic: &Value) -> Op
 pub(super) fn run(dictionary: &Path, graphics: &Path) -> Result<(), String> {
     let mut pending = load_matches(dictionary)?;
     let mut alternate_source = documented_alternatives(dictionary)?;
+    let mut unknown_source = unresolved_component_matches(dictionary)?;
     let mut atomics = atomic_components()?;
     let existing = validate()?;
     let curated: HashSet<String> = existing.iter().map(|g| g.character.clone()).collect();
     let mut discovered: Vec<Glyph> = Vec::new();
     let mut alternative_glyphs: Vec<Glyph> = Vec::new();
+    let mut unknown_glyphs: Vec<Glyph> = Vec::new();
     let mut rejected = 0_usize;
     source_records(graphics, |record| {
         let ch = match record.get("character").and_then(Value::as_str) {
@@ -293,6 +321,11 @@ pub(super) fn run(dictionary: &Path, graphics: &Path) -> Result<(), String> {
         if let Some(info) = alternate_source.remove(ch) {
             if let Some(candidate) = alternative_from_source(ch,info,&record) {
                 alternative_glyphs.push(candidate);
+            }
+        }
+        if let Some(info) = unknown_source.remove(ch) {
+            if let Some(candidate) = alternative_from_source(ch,info,&record) {
+                unknown_glyphs.push(candidate);
             }
         }
         let mapping = pending.remove(ch);
@@ -353,7 +386,9 @@ pub(super) fn run(dictionary: &Path, graphics: &Path) -> Result<(), String> {
     // Only publish this comparison queue for characters not in the active atlas.
     let active: HashSet<&str> = all.iter().map(|g| g.character.as_str()).collect();
     alternative_glyphs.retain(|g| !active.contains(g.character.as_str()));
+    unknown_glyphs.retain(|g| !active.contains(g.character.as_str()));
     alternatives::generate(&alternative_glyphs,&all,&root().join("site/glyphs"))?;
+    unknown::generate(&unknown_glyphs,&all,&root().join("site/glyphs"))?;
     diagnostics::generate(dictionary, &all, &root().join("site/glyphs"))?;
     println!(
         "Generated {} SVGs: {} curated and {} source-derived candidates; {} incomplete geometry cases; {} source candidates without usable geometry.",
@@ -374,6 +409,39 @@ mod tests {
         assert_eq!(id, "cmp-0171");
         assert_eq!(color, "#8D2929");
         assert!(!atomics.contains_key("好"));
+    }
+
+    #[test]
+    fn unknown_source_leaf_keeps_known_color_and_neutral_review_fill() {
+        let mut shapes = HashMap::from([
+            ("又".into(), ("cmp-0463".into(), "#111111".into())),
+        ]);
+        shapes.insert(
+            "？".into(),
+            (unknown::UNKNOWN_ID.into(),unknown::UNKNOWN_FILL.into()),
+        );
+        let catalog = HashMap::from([("友".into(),HashSet::from([
+            "cmp-0463".into(),unknown::UNKNOWN_ID.into()
+        ]))]);
+        let dictionary = serde_json::json!({
+            "character":"友","decomposition":"⿸？又",
+            "matches":[[0],[0],[1],[1]]
+        });
+        let matched = matches_decomposition(&dictionary,&catalog,&shapes).unwrap().1;
+        let graphics = serde_json::json!({
+            "strokes":[
+                "M 1 2 L 4 5 Z",
+                "M 1 2 L 4 5 Z",
+                "M 1 2 L 4 5 Z",
+                "M 1 2 L 4 5 Z"
+            ]
+        });
+        // The parser refuses geometric inventions: only exact, source-owned
+        // paths are retained, and unknown ownership has no component color.
+        let glyph = alternative_from_source("友",matched,&graphics).unwrap();
+        assert_eq!(glyph.strokes[0].id,unknown::UNKNOWN_ID);
+        assert_eq!(glyph.strokes[0].color,unknown::UNKNOWN_FILL);
+        assert_eq!(glyph.strokes[3].id,"cmp-0463");
     }
 
     #[test]
