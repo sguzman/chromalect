@@ -4,7 +4,7 @@
 
 Chromalect investigates whether writing can be made easier to learn by adding reversible, digital-only visual layers: **stable colors for graphemes and reusable components, semantic families, compositional phonetic notation, tone and prosody marks, and optional mnemonic animation**.
 
-**Status:** research phase; **v0.4 reassigns all 513 component colors with no frozen first-40 anchors**, while preserving earlier palette versions. No component-colored glyph renderer, human study, phonetic alphabet, or Rust crate yet.
+**Status:** research prototype with the v0.4 palette (513 distinct component identities), a Rust stroke-rendering pipeline, a static GitHub Pages atlas, and 12 curated source-aligned glyphs. Pinned-source import has generated 436 additional two-component candidates, explicitly marked pending visual review. No human learning study or finalized phonetic alphabet yet.
 
 ## Starting point
 
@@ -27,21 +27,21 @@ Compare a plain rendering with alternate overlays of the *same underlying text*:
 
 ## What this repository is
 
-A place to record hypotheses, design proposals, competing schemes, controlled test cases, critiques, and evaluation results **before** deciding what to implement.
+A repository for hypotheses, competing visual encodings, reproducible component data, validated rendering tools, and controlled experiments.
 
-It is **not** a branch of another knowledge base or a general language-learning platform. Any future executable code will be written in **Rust**, but there is no need to create a Cargo project before an experiment requires one. No UI, web stack, external service, or product direction has been selected.
+It is **not** a branch of another knowledge base or a general language-learning platform. The SVG pipeline is written in Rust and GitHub Pages hosts the static browser prototype. More extensive software architecture remains undecided.
 
 ## Real colored character strokes
 
-The [stroke gallery](site/strokes.html) demonstrates **12 actual Chinese glyphs made of separately colored component strokes**, with machine-readable [path ownership](data/catalog/colored-strokes-v0.1.json). The v0.4 colors remain intact. Broader coverage is an incremental data-validation effort, not a missing rendering capability.
+The [stroke gallery](site/strokes.html) demonstrates **12 actual Chinese glyphs made of separately colored component strokes**, with machine-readable [path ownership](data/catalog/colored-strokes-v0.1.json). The v0.4 colors remain intact. The Rust [glyph pipeline](tools/glyph-pipeline/README.md) builds a separate SVG for each assigned character; its source-backed import currently finds 436 additional first-tranche candidates, subject to independent visual auditing.
 
 ## Web presentation prototype
 
-The [static GitHub Pages prototype](site/index.html) uses independent **off/direct/marker** settings for component identity, orthographic Pinyin initial/final, and tone; semantics are unavailable until source-backed meaning data exists. It renders character-cell treatments and floating markers, **not** invented multicolor strokes. See the [layer architecture](docs/web-layer-architecture.md), [machine-readable layer schema](site/layers-v0.1.json), and [one-time Pages setup](site/README.md). Publication requires GitHub Pages to be enabled for Actions in repository settings.
+The [static GitHub Pages prototype](site/index.html) uses independent **off/direct/marker** settings for component identity, orthographic Pinyin initial/final, and tone; semantics are unavailable until source-backed meaning data exists. Direct component mode uses source-aligned colored stroke geometry where available and a cell-level fallback elsewhere. See the [layer architecture](docs/web-layer-architecture.md), [machine-readable layer schema](site/layers-v0.1.json), and [one-time Pages setup](site/README.md). Publication requires GitHub Pages to be enabled for Actions in repository settings.
 
 ## Radical, component, and character catalogs
 
-The [human-readable catalog](CATALOG.md) distinguishes **modern radicals (201 principal + explicitly listed variants)**, **214 traditional Kangxi radicals**, **513 component color identities**, and **characters 0001–1000** in ten 100-character pages. Their [machine-readable JSON and inverse indexes](CATALOG.md) include explicit unresolved structures; accurate colored glyph shapes are not yet implemented. Third-party data attribution is recorded in [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
+The [human-readable catalog](CATALOG.md) distinguishes **modern radicals (201 principal + explicitly listed variants)**, **214 traditional Kangxi radicals**, **513 component color identities**, and **characters 0001–1000** in ten 100-character pages. Their [machine-readable JSON and inverse indexes](CATALOG.md) include explicit unresolved structures; some source-aligned component-colored SVGs are implemented, with incomplete corpus coverage. Third-party data attribution is recorded in [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
 
 ## Documentation map
 
