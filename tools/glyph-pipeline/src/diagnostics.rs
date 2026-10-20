@@ -7,9 +7,9 @@ const DICTIONARY_REVISION: &str = "bddc96d41bef78427ed0e034e9f7e31d71fd1b92";
 fn dictionary_entries(path: &Path, allowed: &HashSet<String>) -> Result<HashMap<String, Value>, String> {
     let mut entries = HashMap::new();
     discover::source_records(path, |row| {
-        if let Some(ch) = row.get("character").and_then(Value::as_str) {
-            if allowed.contains(ch) && entries.insert(ch.to_owned(), row).is_some() {
-                return Err(format!("multiple dictionary entries for {ch}"));
+        if let Some(character) = row.get("character").and_then(Value::as_str).map(str::to_owned) {
+            if allowed.contains(&character) && entries.insert(character.clone(), row).is_some() {
+                return Err(format!("multiple dictionary entries for {character}"));
             }
         }
         Ok(())
