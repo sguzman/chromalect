@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark"><meta name="description" content="Search the first 1,000 Mandarin Chinese characters by writing, Pinyin, component, and source-mapping status."><title>Mandarin character search · Chromalect</title><script src="theme.js"></script><script src="search.js" defer></script><link rel="stylesheet" href="style.css"></head>
+<body><header class="wrap"><div class="brand"><div><b>CHROMALECT</b><small>Language, made visible</small></div><nav class="toplinks" aria-label="Primary"><a href="index.html">Overview</a><a href="search.html" class="current" aria-current="page">Search</a><a href="characters/0001-0100.html">Character atlas</a><a href="ontology.html">Ontology</a><a href="colors.html">Colors</a></nav></div></header>
+<main class="wrap">
+<div class="eyebrow">Mandarin-only research profile · first 1,000 characters</div><h1>Explore the character catalog</h1>
+<p class="intro">Search by character, catalog rank, written Pinyin, component shape or ID. Every entry links to its existing atlas card. The component and citation-reading data is source-backed; colored vector geometry is identified separately from unresolved mappings.</p>
+<div class="palette-explain"><div class="search-form">
+<label for="character-search">Character, Pinyin or component</label>
+<input id="character-search" type="search" inputmode="search" autocomplete="off" placeholder="好, hao, 女, cmp-0014, #581" aria-controls="search-results">
+<label for="geometry-filter">Geometry</label>
+<select id="geometry-filter"><option value="all">All 1,000 characters</option><option value="mapped">Source-aligned colored SVG</option><option value="unmapped">Needs geometry review</option></select>
+</div><p id="search-status" class="hint" role="status" aria-live="polite">Loading the Mandarin research profile…</p>
+<p class="hint">Reading colors encode written Hanyu Pinyin segments, not phonemes or contextual sandhi. A missing SVG does not mean the character is missing from the catalog.</p>
+</div>
+<div id="search-results" class="search-results" aria-label="Matching characters"></div>
+<noscript><p>Search needs browser JavaScript. The <a href="characters/0001-0100.html">static character atlas</a> and <a href="glyphs/unmapped.html">unmapped-character catalog</a> remain available without it.</p></noscript>
+<section class="palette-explain"><h2>Published data</h2><p>The search index is built from <a href="profiles/mandarin-1000-v1.json">versioned Mandarin profile JSON</a>, reconciled with the <a href="ontology.html">formal ontology</a>, the <a href="colors.html">color registry</a>, and the <a href="glyphs/coverage.json">source geometry coverage report</a>. Other language profiles are outside this implementation.</p></section>
+</main><footer class="wrap"><a href="index.html">Chromalect</a> · <a href="https://github.com/sguzman/chromalect">Repository</a></footer></body></html>
