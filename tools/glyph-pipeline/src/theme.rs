@@ -2,7 +2,7 @@ use super::*;
 
 const SOURCE_PAGES: &[&str] = &[
     "index.html", "colors.html", "components.html", "radicals.html",
-    "kangxi.html", "ontology.html", "strokes.html",
+    "kangxi.html", "ontology.html", "strokes.html", "search.html",
 ];
 
 pub(super) fn check() -> Result<(),String> {
@@ -49,7 +49,7 @@ pub(super) fn check() -> Result<(),String> {
             return Err(format!("{path}: obsolete forced dark mode"));
         }
     }
-    println!("Site appearance validated: System / Light / Dark on 17 authored pages.");
+    println!("Site appearance validated: System / Light / Dark on 18 authored pages.");
     Ok(())
 }
 
