@@ -7,6 +7,7 @@ mod manifest;
 mod alternatives;
 mod unknown;
 mod phonetics;
+mod component_audit;
 mod diagnostics;
 mod review;
 
@@ -279,6 +280,7 @@ fn run() -> Result<(), String> {
             check_site(&glyphs)?;
             color_registry::validate_color_registry()?;
             phonetics::check()?;
+            component_audit::check()?;
             println!("Validated {} glyphs and their v0.4 component assignments.", glyphs.len());
         }
         Some("build") => build(&glyphs)?,
