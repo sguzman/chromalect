@@ -3,6 +3,7 @@ mod atlas;
 mod browse;
 mod coverage;
 mod color_registry;
+mod manifest;
 mod diagnostics;
 mod review;
 
@@ -185,7 +186,7 @@ fn pager(glyphs: &[Glyph], page: usize) -> String {
 
 fn index(glyphs: &[Glyph], page: usize) -> String {
     let mut s = String::from(
-        "<!doctype html>\n<html lang=\"en\"><head><meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"><title>Component glyph atlas · Chromalect</title><link rel=\"stylesheet\" href=\"../style.css\"></head>\n<body><main class=\"wrap\"><p><a href=\"../index.html\">Chromalect</a> / <a href=\"../strokes.html\">Colored glyph gallery</a></p>\n<h1>Component-colored SVG atlas</h1><p class=\"intro\">Source-aligned vector strokes, colored by v0.4 component identity. Stroke ownership is algorithmically checked but requires independent visual review.</p>\n<div class=\"stroke-gallery\">\n"
+        "<!doctype html>\n<html lang=\"en\"><head><meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"><title>Component glyph atlas · Chromalect</title><link rel=\"stylesheet\" href=\"../style.css\"></head>\n<body><main class=\"wrap\"><p><a href=\"../index.html\">Chromalect</a> / <a href=\"../strokes.html\">Colored glyph gallery</a></p>\n<h1>Component-colored SVG atlas</h1><p class=\"intro\">Source-aligned vector strokes, colored by v0.4 component identity. Stroke ownership is algorithmically checked but requires independent visual review. <a href=\"mappings.json\">Machine-readable mapping manifest (JSON)</a>.</p>\n<div class=\"stroke-gallery\">\n"
     );
     s.push_str(&pager(glyphs, page));
     for g in glyphs.iter().skip(page * PAGE_SIZE).take(PAGE_SIZE) {
@@ -215,6 +216,7 @@ fn build(glyphs: &[Glyph]) -> Result<(), String> {
     }
     browse::generate(glyphs, &target)?;
     coverage::generate(glyphs, &target)?;
+    manifest::generate(glyphs, &target)?;
     review::generate(glyphs, &target)?;
     println!("Generated {} component-colored SVGs across {} gallery pages.", glyphs.len(), glyphs.len().div_ceil(PAGE_SIZE));
     Ok(())
