@@ -9,6 +9,8 @@ on:
       - "palettes/mandarin-component-identity-v0.4.json"
       - "site/strokes.html"
       - "site/layers-v0.1.json"
+      - "site/search.html"
+      - "site/search.js"
       - "site/colors.html"
       - "site/index.html"
       - "site/style.css"
@@ -69,6 +71,7 @@ jobs:
           test -s site/glyphs/index.html
           test -s site/glyphs/diagnostics.json
           test -s site/glyphs/mappings.json
+          test -s site/profiles/mandarin-1000-v1.json
           test -s site/glyphs/alternatives/index.html
           test -s site/glyphs/alternatives/records.json
           test -s site/glyphs/unknown-components/index.html
