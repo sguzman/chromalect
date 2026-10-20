@@ -73,6 +73,14 @@ jobs:
         run: test -s site/glyphs/review/index.html && test -s site/glyphs/review/report.json && test -s site/glyphs/review/flagged.html
       - name: Check generated diagnostic coverage
         run: test -s site/glyphs/diagnostics.json && test -s site/glyphs/diagnostics.html
+      - name: Check appearance controls across generated pages
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -s site/theme.js
+          while IFS= read -r -d '' file; do
+            grep -Fq 'theme.js' "$file" || { echo "Missing appearance controls: $file"; exit 1; }
+          done < <(find site/glyphs -type f -name '*.html' -print0)
       - name: Upload static Pages content
         uses: actions/upload-pages-artifact@v4
         with:
