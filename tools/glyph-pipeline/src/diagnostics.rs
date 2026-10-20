@@ -4,7 +4,7 @@ use std::collections::{BTreeMap, HashMap, HashSet};
 
 const DICTIONARY_REVISION: &str = "bddc96d41bef78427ed0e034e9f7e31d71fd1b92";
 
-fn source_is_declared_alternative(catalog: &Value, dictionary: &Value) -> bool {
+pub(super) fn source_is_declared_alternative(catalog: &Value, dictionary: &Value) -> bool {
     let Some(source) = dictionary.get("decomposition").and_then(Value::as_str) else {
         return false;
     };
