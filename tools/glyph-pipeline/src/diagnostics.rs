@@ -98,6 +98,15 @@ pub(super) fn generate(dictionary: &Path, glyphs: &[Glyph], dest: &Path) -> Resu
         }));
     }
 
+    // The Direct and Marker component layers must describe the same identities.
+    // Reject a publication that colors geometry using a different catalog set.
+    if !mapped_component_disagreements.is_empty() {
+        return Err(format!(
+            "{} mapped glyphs disagree with the catalog component IDs; refusing to publish mismatched Direct/Marker annotations",
+            mapped_component_disagreements.len()
+        ));
+    }
+
     let mut summaries = Vec::new();
     let mut html = String::from("<!doctype html><html lang=\"en\"><head><meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"><title>Unmapped glyph diagnostics · Chromalect</title><link rel=\"stylesheet\" href=\"../style.css\"></head><body><main class=\"wrap\"><p><a href=\"../index.html\">Chromalect</a> / <a href=\"index.html\">Colored glyphs</a> / <a href=\"unmapped.html\">Unmapped characters</a></p><h1>Unmapped glyph diagnostics</h1><p class=\"intro\">This report classifies why a character is not yet eligible for stroke-based component coloring. Source structure, palette identity, catalog component choice, and complete stroke ownership are distinct requirements. A source agreement is not a visual accuracy certificate.</p><p><a href=\"diagnostics.json\">Machine-readable diagnostics JSON</a></p><nav class=\"quick-links\" aria-label=\"Diagnostic categories\">");
     for (reason, rows) in &by_reason {
