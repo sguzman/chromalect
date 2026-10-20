@@ -3,7 +3,7 @@
 **Status:** computational comparison complete; not human-tested  
 **Current specification:** v0.5.0 (unfrozen 513-color identity reassignment, 2026-10-19)  
 **Language:** Mainland Standard Mandarin, simplified Chinese  
-**Implementation:** no code or renderer
+**Implementation:** Rust SVG generator and integrity checks; human study remains pending
 
 ## Question
 
@@ -41,7 +41,7 @@ Keep text, decomposition, glyph geometry, reading time, font and presentation en
 
 The candidate IDS topology files contain examples such as 清, 情, 请, 晴, 妈, 好, 林, 河, 男, 孩, and other recurring units. These decompositions are **illustrative and require independent verification** before experimental use.
 
-Within one palette version, a character such as 清 must display 氵 with its exact color and 青 with its exact color; both retain those colors in other characters. The shape rendering itself is **not complete**.
+Within one palette version, a character such as 清 must display 氵 with its exact color and 青 with its exact color; both retain those colors in other characters. Stroke-level shape rendering works for a source-aligned subset; broad component coverage and independent visual validation remain incomplete.
 
 ## Measurement plan
 
@@ -68,6 +68,6 @@ The [GF 0014 full reference mapping](../palettes/gf0014-2009-records-v0.2.json) 
 
 **Completed:** 40 frozen pilot IDs and colors; 513 distinct colored component identities (510 GF transcription shapes plus 3 pilot-only macro units); a complete mapping of all 514 source records to those identities; 30 explicitly flagged non-renderable descriptions; SVG swatch inventories; and 31 candidate decomposition specimens.
 
-**Not completed:** independent authority-level verification of each transcribed inventory item; verified decomposition/stroke geometry; compound-glyph color renderer; end-user study; measured performance, semantic-family control, or published learning result.
+**Not completed:** independent authority-level verification of each transcribed inventory item; verified decomposition/stroke geometry; complete, independently audited compound-glyph coverage; end-user study; measured performance, semantic-family control, or published learning result.
 
 The outcome remains unknown. A pretty set of swatches is not an experiment result.
