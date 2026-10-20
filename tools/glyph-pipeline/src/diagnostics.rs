@@ -59,6 +59,35 @@ fn reason_description(reason: &str) -> &'static str {
     }
 }
 
+fn selected_palette_components(
+    catalog_row: &Value,
+    identities: &HashMap<String,(String,String)>
+) -> Result<Vec<Value>,String> {
+    let mut parts = Vec::new();
+    for id in entries(catalog_row,"component_ids")? {
+        let id = id.as_str().ok_or("catalog component ID must be a string")?;
+        let (form, color) = identities.get(id)
+            .ok_or_else(||format!("catalog component {id} absent from v0.4 palette"))?;
+        parts.push(json!({"id":id, "form":form, "hex":color}));
+    }
+    Ok(parts)
+}
+
+fn render_palette_chips(parts: &Value) -> Result<String,String> {
+    let parts = parts.as_array().ok_or("catalog palette components must be an array")?;
+    let mut html = String::from("<div class=\"stroke-token-row\" aria-label=\"Catalog-selected component colors\">");
+    for item in parts {
+        html.push_str(&format!(
+            "<span class=\"stroke-token\" title=\"{}\"><i class=\"stroke-dot\" style=\"background:{}\"></i>{}</span>",
+            escape(string(item,"id")?),
+            escape(string(item,"hex")?),
+            escape(string(item,"form")?),
+        ));
+    }
+    html.push_str("</div>");
+    Ok(html)
+}
+
 pub(super) fn generate(dictionary: &Path, glyphs: &[Glyph], dest: &Path) -> Result<(), String> {
     let catalog_data = load(&root().join("data/catalog/characters-0001-1000.json"))?;
     let catalog = entries(&catalog_data, "characters")?;
@@ -68,6 +97,11 @@ pub(super) fn generate(dictionary: &Path, glyphs: &[Glyph], dest: &Path) -> Resu
     let known_ids = discover::catalog_map()?;
     let shapes = discover::palette_shapes()?;
     let atomics = discover::atomic_components()?;
+    let palette = load(&root().join("palettes/mandarin-component-identity-v0.4.json"))?;
+    let identities = entries(&palette,"components")?.iter().map(|component|Ok((
+        string(component,"id")?.to_owned(),
+        (string(component,"shape")?.to_owned(),string(component,"color")?.to_owned()),
+    ))).collect::<Result<HashMap<String,(String,String)>,String>>()?;
     let available: HashSet<&str> = glyphs.iter().map(|g| g.character.as_str()).collect();
     let mapped_glyphs: HashMap<&str, &Glyph> =
         glyphs.iter().map(|g| (g.character.as_str(), g)).collect();
@@ -120,6 +154,7 @@ pub(super) fn generate(dictionary: &Path, glyphs: &[Glyph], dest: &Path) -> Resu
             "character": character,
             "catalog_structural_status": string(row, "structural_status")?,
             "catalog_component_ids": get(row, "component_ids")?,
+            "catalog_palette_components": selected_palette_components(row,&identities)?,
             "catalog_primary_structure": get(row, "ids_primary")?,
             "source_decomposition": dictionary.get(character)
                 .and_then(|v| v.get("decomposition")).cloned(),
@@ -136,7 +171,7 @@ pub(super) fn generate(dictionary: &Path, glyphs: &[Glyph], dest: &Path) -> Resu
     }
 
     let mut summaries = Vec::new();
-    let mut html = String::from("<!doctype html><html lang=\"en\"><head><meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"><title>Unmapped glyph diagnostics · Chromalect</title><link rel=\"stylesheet\" href=\"../style.css\"></head><body><main class=\"wrap\"><p><a href=\"../index.html\">Chromalect</a> / <a href=\"index.html\">Colored glyphs</a> / <a href=\"unmapped.html\">Unmapped characters</a></p><h1>Unmapped glyph diagnostics</h1><p class=\"intro\">This report classifies why a character is not yet eligible for stroke-based component coloring. Source structure, palette identity, catalog component choice, and complete stroke ownership are distinct requirements. A source agreement is not a visual accuracy certificate.</p><p><a href=\"diagnostics.json\">Machine-readable diagnostics JSON</a></p><nav class=\"quick-links\" aria-label=\"Diagnostic categories\">");
+    let mut html = String::from("<!doctype html><html lang=\"en\"><head><meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"><title>Unmapped glyph diagnostics · Chromalect</title><link rel=\"stylesheet\" href=\"../style.css\"></head><body><main class=\"wrap\"><p><a href=\"../index.html\">Chromalect</a> / <a href=\"index.html\">Colored glyphs</a> / <a href=\"unmapped.html\">Unmapped characters</a></p><h1>Unmapped glyph diagnostics</h1><p class=\"intro\">This report classifies why a character is not yet eligible for stroke-based component coloring. Source structure, palette identity, catalog component choice, and complete stroke ownership are distinct requirements. The displayed swatches represent catalog-selected component identities, not validated stroke geometry. A source agreement is not a visual accuracy certificate.</p><p><a href=\"diagnostics.json\">Machine-readable diagnostics JSON</a></p><nav class=\"quick-links\" aria-label=\"Diagnostic categories\">");
     for (reason, rows) in &by_reason {
         summaries.push(json!({"reason": reason, "count": rows.len()}));
         html.push_str(&format!("<a href=\"#reason-{}\">{}: {}</a>", escape(reason), escape(reason), rows.len()));
@@ -149,11 +184,12 @@ pub(super) fn generate(dictionary: &Path, glyphs: &[Glyph], dest: &Path) -> Resu
             let rank = row["rank"].as_u64().ok_or("invalid diagnostic rank")? as usize;
             let character = row["character"].as_str().ok_or("invalid diagnostic character")?;
             let start = ((rank - 1) / 100) * 100 + 1;
-            html.push_str(&format!("<a class=\"tile\" href=\"../characters/{:04}-{:04}.html#c{:04}\" style=\"padding:9px 12px;display:block;text-decoration:none\"><span class=\"rank\">#{rank:04}</span><div lang=\"zh-Hans\" style=\"font-size:34px;text-align:center\">{}</div><div class=\"hint\">{}</div><div class=\"mono\" style=\"font-size:11px;overflow-wrap:anywhere;margin-top:6px\">Source: {}<p style=\"margin:2px 0;font-size:11px\">Catalog: {}</p></div></a>",
+            html.push_str(&format!("<a class=\"tile\" href=\"../characters/{:04}-{:04}.html#c{:04}\" style=\"padding:9px 12px;display:block;text-decoration:none\"><span class=\"rank\">#{rank:04}</span><div lang=\"zh-Hans\" style=\"font-size:34px;text-align:center\">{}</div><div class=\"hint\">{}</div><div class=\"mono\" style=\"font-size:11px;overflow-wrap:anywhere;margin-top:6px\">Source: {}<p style=\"margin:2px 0;font-size:11px\">Catalog: {}</p></div>{}</a>",
                 start, start + 99, rank, escape(character),
                 escape(row["catalog_structural_status"].as_str().unwrap_or("unknown")),
                 escape(row["source_decomposition"].as_str().unwrap_or("unknown")),
-                escape(row["catalog_primary_structure"].as_str().unwrap_or("unknown"))));
+                escape(row["catalog_primary_structure"].as_str().unwrap_or("unknown")),
+                render_palette_chips(&row["catalog_palette_components"])?));
         }
         html.push_str("</div></section>");
     }
@@ -207,6 +243,23 @@ mod tests {
         assert!(!source_is_declared_alternative(
             &variants, &json!({"decomposition":"⿰亻𠤎"})
         ));
+    }
+
+    #[test]
+    fn diagnostic_swatches_preserve_selected_palette_assignments() {
+        let catalog = load(&root().join("data/catalog/characters-0001-1000.json")).unwrap();
+        let palette = load(&root().join("palettes/mandarin-component-identity-v0.4.json")).unwrap();
+        let map = entries(&palette,"components").unwrap().iter().map(|c|(
+            string(c,"id").unwrap().to_owned(),
+            (string(c,"shape").unwrap().to_owned(),string(c,"color").unwrap().to_owned())
+        )).collect::<HashMap<_,_>>();
+        let glyph = entries(&catalog,"characters").unwrap().iter()
+            .find(|c|c["character"]=="卉").unwrap();
+        let parts = selected_palette_components(glyph,&map).unwrap();
+        assert_eq!(parts.len(),2);
+        assert_eq!(parts[0]["form"],"十");
+        assert_eq!(parts[1]["form"],"廾");
+        assert!(render_palette_chips(&json!(parts)).unwrap().contains("Catalog-selected component colors"));
     }
 
     #[test]
