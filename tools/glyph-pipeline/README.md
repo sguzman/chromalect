@@ -15,12 +15,12 @@ cargo run --manifest-path tools/glyph-pipeline/Cargo.toml -- build
 
 `build` creates the curated 12-glyph SVG gallery from the committed dataset.
 The deployment process additionally runs `discover` against pinned Make Me A Hanzi
-sources, generating 790 first-tranche candidates in the current pinned build. It then augments eligible
+sources, generating 792 source-derived candidates in the current pinned build. It then augments eligible
 character atlas cards with SVG links, adds paginated browsing and reverse
 component-to-character pages under `site/glyphs/by-component/`, along with a
 machine-readable `site/glyphs/coverage.json` and an unmapped-character browser.
-The current production build colors 795 of the 1,000 cataloged characters:
-519 multicomponent and 276 whole-component glyphs. Generated
+The current production build colors 797 of the 1,000 cataloged characters:
+521 multicomponent and 276 whole-component glyphs. Generated
 outputs are assembled in CI and are not committed as manually edited HTML.
 
 ## Upstream geometry verification
@@ -76,6 +76,8 @@ colored as one whole component when the component form exactly equals the
 character. Unrecognized shapes, overlapping IDS forms, unknown fragments,
 missing ownership, ambiguous paths, and incomplete outlines are excluded.
 The entire outline path array must be present and use accepted vector commands.
+
+Generated outputs include `site/glyphs/diagnostics.json` with per-character source/canonical disagreements, plus paginated `site/glyphs/review/` sheets comparing native and source-aligned appearances. Simple spatial placement checks are advisory only and do not certify accuracy.
 
 The importer uses the source-provided stroke assignment for each path. It does
 not algorithmically infer ownership from stroke coordinates. Source alignment
