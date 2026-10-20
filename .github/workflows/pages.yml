@@ -24,6 +24,8 @@ jobs:
     steps:
       - name: Checkout main
         uses: actions/checkout@v4
+      # One-time prerequisite: Settings > Pages > Build and deployment > Source: GitHub Actions.
+      # Do not set enablement: true here: the default GITHUB_TOKEN cannot create a Pages site.
       - name: Configure Pages
         uses: actions/configure-pages@v5
       - name: Upload static Pages content
