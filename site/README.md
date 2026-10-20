@@ -6,6 +6,10 @@ The published directory is `site/`, deployed by `.github/workflows/pages.yml` fr
 
 **Layer modes:** OFF / DIRECT / MARKER independently per channel. Direct uses actual component-colored vector strokes where mappings exist and cell-level stripes elsewhere. Marker supplies anchored chips/symbols. Semantic unavailable (no verified sense dataset). Pinyin preview uses a **first-listed citation reading** as a display default; additional readings are visible in each inspector. `y` and `w` are orthographic spelling initials, not claimed true consonant phonemes. Colors for phonetic initials/finals and tone are intentionally separate namespaces from component colors.
 
+## First-1,000 Mandarin exploration
+
+The [character search](search.html) searches the complete first-1,000 catalog across written characters, Pinyin citations, component identities, and SVG ownership status. It reads a **generated, versioned, Mandarin-only ontology profile** at [`profiles/mandarin-1000-v1.json`](profiles/mandarin-1000-v1.json). The Rust pipeline constructs the profile from committed catalog, pronunciation, palette, ontology, and source-geometry records; no linguistic facts are inferred by browser JavaScript. Unmapped characters are present, with their glyph geometry explicitly marked unresolved. No other language profile is introduced here.
+
 ## Website appearance
 
 The website has three appearance settings: **System (default)**, **Light**, and **Dark**. The appearance control is available on all authored pages and Rust-generated galleries. System follows the browser's `prefers-color-scheme` media query and responds when that preference changes, without refreshing. Explicit Light/Dark overrides are saved only in this site's browser `localStorage`, so navigation keeps the chosen theme; choosing System removes the stored override. No appearance settings are sent to an external service.
