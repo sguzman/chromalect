@@ -1,6 +1,6 @@
 # Chromalect static GitHub Pages prototype
 
-The published directory is `site/`, deployed by `.github/workflows/pages.yml` from the existing `main` branch. It publishes **plain HTML, CSS and SVG with a small, local-only JavaScript appearance controller**. Rust tooling builds the stroke-colored SVG gallery and enhances supported character cards during deployment. Native radio inputs, CSS `:has()`, and `details`/`summary` control the page.
+The published directory is `site/`, deployed by `.github/workflows/pages.yml` from the existing `main` branch. It publishes **plain HTML, CSS and SVG with small local-only JavaScript helpers for theme selection, Mandarin catalog search, and remembering presentation-layer choices**. Rust tooling builds the stroke-colored SVG gallery and enhances supported character cards during deployment. Native radio inputs, CSS `:has()`, and `details`/`summary` control the page.
 
 **Preview structure:** overview + 10 pages of 100 Chinese characters, one-to-one with the first 1000 records in `data/catalog/characters-0001-1000.json`; colors from `palettes/mandarin-component-identity-v0.4.json`; listed Pinyin readings from the upstream Apache-2.0 level-1 standard transcription (see [source](pronunciation-citations-0001-1000.json) and `THIRD_PARTY_NOTICES.md`). The static pages reflect their generated snapshot and must be regenerated when those data files change.
 
