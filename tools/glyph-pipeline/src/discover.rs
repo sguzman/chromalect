@@ -149,6 +149,7 @@ pub(super) fn run(dictionary: &Path, graphics: &Path) -> Result<(), String> {
     let mut all = existing;
     all.extend(discovered);
     build(&all)?;
+    atlas::integrate(&all)?;
     println!(
         "Generated {} SVGs: {} curated and {} source-derived candidates; {} incomplete geometry cases; {} source candidates without usable geometry.",
         all.len(), curated.len(), count, rejected, pending.len()
