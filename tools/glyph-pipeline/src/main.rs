@@ -1,5 +1,6 @@
 mod discover;
 mod atlas;
+mod browse;
 
 use serde_json::Value;
 use std::collections::{BTreeMap, BTreeSet};
@@ -174,7 +175,7 @@ fn pager(glyphs: &[Glyph], page: usize) -> String {
         let current = if i == page { " aria-current=\"page\"" } else { "" };
         result.push_str(&format!("<a href=\"{}\"{}>{}</a>", page_name(i), current, label));
     }
-    result.push_str("</nav>");
+    result.push_str("<a href=\"by-component/index.html\">Browse by component</a></nav>");
     result
 }
 
@@ -208,6 +209,7 @@ fn build(glyphs: &[Glyph]) -> Result<(), String> {
     for page in 0..glyphs.len().div_ceil(PAGE_SIZE) {
         fs::write(target.join(page_name(page)), index(glyphs, page)).map_err(|e| e.to_string())?;
     }
+    browse::generate(glyphs, &target)?;
     println!("Generated {} component-colored SVGs across {} gallery pages.", glyphs.len(), glyphs.len().div_ceil(PAGE_SIZE));
     Ok(())
 }
