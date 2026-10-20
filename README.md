@@ -31,6 +31,10 @@ A place to record hypotheses, design proposals, competing schemes, controlled te
 
 It is **not** a branch of another knowledge base or a general language-learning platform. Any future executable code will be written in **Rust**, but there is no need to create a Cargo project before an experiment requires one. No UI, web stack, external service, or product direction has been selected.
 
+## Web presentation prototype
+
+The [static GitHub Pages prototype](site/index.html) uses independent **off/direct/marker** settings for component identity, orthographic Pinyin initial/final, and tone; semantics are unavailable until source-backed meaning data exists. It renders character-cell treatments and floating markers, **not** invented multicolor strokes. See the [layer architecture](docs/web-layer-architecture.md), [machine-readable layer schema](site/layers-v0.1.json), and [one-time Pages setup](site/README.md). Publication requires GitHub Pages to be enabled for Actions in repository settings.
+
 ## Radical, component, and character catalogs
 
 The [human-readable catalog](CATALOG.md) distinguishes **modern radicals (201 principal + explicitly listed variants)**, **214 traditional Kangxi radicals**, **513 component color identities**, and **characters 0001–1000** in ten 100-character pages. Their [machine-readable JSON and inverse indexes](CATALOG.md) include explicit unresolved structures; accurate colored glyph shapes are not yet implemented. Third-party data attribution is recorded in [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).

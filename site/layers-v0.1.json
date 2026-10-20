@@ -1,0 +1,169 @@
+{
+  "schema": "chromalect.presentation-layers.v0",
+  "version": "0.1.0",
+  "design": "Each layer may be off, direct treatment, or an anchored floating marker. Modes are independent. A layer can declare direct unavailable if exact glyph ownership or data is absent.",
+  "palette_domains": {
+    "component": {
+      "palette_ref": "mandarin-component-identity@0.4.0",
+      "color_key": "component_id"
+    },
+    "initial": {
+      "scope": "orthographic Hanyu Pinyin initial token, not necessarily phonemic onset",
+      "tokens": {
+        "b": "#9F4E64",
+        "c": "#649D5D",
+        "ch": "#5F64AA",
+        "d": "#BE7A45",
+        "f": "#007F7E",
+        "g": "#B372AA",
+        "h": "#71700F",
+        "j": "#4F92CB",
+        "k": "#A24F4C",
+        "l": "#43A177",
+        "m": "#755CA2",
+        "n": "#B28235",
+        "p": "#007B92",
+        "q": "#BF6F94",
+        "r": "#57782C",
+        "s": "#6D8ACF",
+        "sh": "#9F5432",
+        "t": "#1AA291",
+        "w": "#875594",
+        "x": "#9F8C33",
+        "y": "#0475A1",
+        "z": "#C56E7B",
+        "zh": "#367D47",
+        "∅": "#8781CC"
+      }
+    },
+    "final": {
+      "scope": "orthographic Hanyu Pinyin spelling remainder, not IPA rime",
+      "tokens": {
+        "a": "#6D7215",
+        "ai": "#5690CC",
+        "an": "#A25047",
+        "ang": "#3BA17C",
+        "ao": "#795BA0",
+        "e": "#AF8433",
+        "ei": "#007A96",
+        "en": "#C06F8F",
+        "eng": "#527932",
+        "er": "#7388CF",
+        "i": "#9E562D",
+        "ia": "#11A196",
+        "ian": "#8A5490",
+        "iang": "#9B8E34",
+        "iao": "#1774A4",
+        "ie": "#C66F76",
+        "in": "#2E7E4C",
+        "ing": "#8C80CA",
+        "iong": "#955E11",
+        "iu": "#009FAC",
+        "o": "#97507C",
+        "ong": "#839644",
+        "ou": "#426CAB",
+        "u": "#C5725D",
+        "ua": "#008066",
+        "uai": "#A178BE",
+        "uan": "#866700",
+        "uang": "#2A99BF",
+        "ue": "#9F4E65",
+        "ui": "#669D5C",
+        "un": "#5E64AA",
+        "uo": "#BF7946",
+        "ü": "#007F7D"
+      }
+    },
+    "tone": {
+      "scope": "listed citation tone, not tone-sandhi or contextual reading",
+      "tokens": {
+        "0": "#8794A7",
+        "1": "#1587BA",
+        "2": "#21966F",
+        "3": "#9B65D7",
+        "4": "#D57E38"
+      },
+      "symbols": {
+        "0": "·",
+        "1": "—",
+        "2": "↗",
+        "3": "⌄",
+        "4": "↘"
+      }
+    }
+  },
+  "layers": [
+    {
+      "id": "component_identity",
+      "target": "character",
+      "modes": [
+        "off",
+        "direct",
+        "marker"
+      ],
+      "direct": {
+        "implemented": "colored underline stripe on character cell; DOES NOT color component strokes",
+        "needs": "trusted font/stroke geometry to paint per-component character interiors"
+      },
+      "marker": {
+        "implemented": "individually colored chips adjacent to glyph"
+      },
+      "data": "513 v0.4 component IDs with path references"
+    },
+    {
+      "id": "pronunciation",
+      "target": "character_reading",
+      "modes": [
+        "off",
+        "direct",
+        "marker"
+      ],
+      "direct": {
+        "implemented": "two independent narrow color edges around glyph for first listed orthographic initial and final; not glyph-stroke editing"
+      },
+      "marker": {
+        "implemented": "colored pinyin segmented into initial and remainder, attached below glyph"
+      },
+      "data": "citation pinyin first listed reading; all alternatives in inspector"
+    },
+    {
+      "id": "tone",
+      "target": "character_reading",
+      "modes": [
+        "off",
+        "direct",
+        "marker"
+      ],
+      "direct": {
+        "implemented": "colored top edge of glyph cell encoding citation tone"
+      },
+      "marker": {
+        "implemented": "small anchored tone symbol with distinct color"
+      },
+      "data": "tone extracted from first listed Pinyin reading; not contextual sandhi"
+    },
+    {
+      "id": "semantic",
+      "target": "character_sense",
+      "modes": [
+        "off",
+        "direct",
+        "marker"
+      ],
+      "direct": {
+        "availability": "not_implemented",
+        "needs": "verified per-character/word sense data"
+      },
+      "marker": {
+        "availability": "not_implemented",
+        "needs": "verified per-character/word sense data"
+      }
+    }
+  ],
+  "ui": {
+    "implementation": "native HTML radio buttons and CSS :has() selectors; no client JavaScript",
+    "mode_selection_scope": "per page, resets on navigation; no saved tracking",
+    "accessibility": "all markers retain textual cues and inspector; color not sole semantic carrier"
+  },
+  "rendered_glyph_geometry": "none: all Chinese codepoints in native fonts; layout only"
+}
