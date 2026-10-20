@@ -87,7 +87,7 @@ fn source_records(glyphs: &[Glyph]) -> Result<Value,String> {
         }
         if citation_readings.is_empty() {return Err(format!("{ch}: empty reading list"));}
         let start=(rank-1)/100*100+1;
-        let href=format!("characters/{start:04}-{:04}.html#c{rank:04}");
+        let href=format!("characters/{start:04}-{:04}.html#c{rank:04}",start+99);
         let glyph=available.get(ch);
         let geometry=if let Some(g)=glyph {
             if g.parts.iter().map(|part|part.1.as_str()).collect::<HashSet<_>>()!=selected {
