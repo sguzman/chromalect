@@ -17,3 +17,13 @@ footer{margin:50px auto 20px;padding:22px 0;border-top:1px solid var(--border);f
 @media(max-width:850px){.layers{grid-template-columns:repeat(2,minmax(0,1fr))}.browse{grid-template-columns:repeat(auto-fill,minmax(130px,1fr))}}
 @media(max-width:490px){.layers{grid-template-columns:1fr 1fr}.controls{padding:10px}.layer{padding:6px}.choices label{padding:4px}.browse{grid-template-columns:repeat(2,minmax(0,1fr));gap:7px}.tile>summary{padding:7px}.glyph{min-width:70px;font-size:56px}.wrap{width:calc(100% - 22px)}}
 @media(prefers-reduced-motion:no-preference){a,.tile{transition:background-color .12s ease,border-color .12s ease}}
+/* Radical and component browse galleries. Does not change the original palette. */
+.radical-gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(145px,1fr));gap:11px;margin:16px 0 32px}
+.radical-card{border:1px solid var(--border);border-radius:11px;background:#132030;overflow:hidden;padding:10px;min-width:0;border-top:4px solid var(--identity-color)}
+.radical-shape{height:98px;display:flex;align-items:center;justify-content:center;color:var(--identity-color)}
+.radical-svg{width:95px;height:95px}
+.radical-fallback{font-family:"Noto Sans CJK SC","Noto Sans SC",sans-serif;font-size:66px;line-height:1.2}
+.radical-meta{font-family:ui-monospace,monospace;font-size:12px;color:#b8c6d5;overflow-wrap:anywhere}
+.radical-meta b{color:#eff6ff}
+.radical-notes{font-size:11px;color:#91a6bc;margin-top:3px;min-height:27px}
+.radical-examples{font-size:19px;font-family:"Noto Sans CJK SC","Noto Sans SC",sans-serif;display:flex;flex-wrap:wrap;gap:9px;margin:5px 0 0}

@@ -1,0 +1,5564 @@
+{
+  "schema": "chromalect.radical-display-colors.v0",
+  "version": "0.1.0",
+  "palette_ref": "mandarin-component-identity@0.4.0",
+  "scope": "GF0011 gallery, not palette reoptimization",
+  "counts": {
+    "modern": 284,
+    "canonical": 220,
+    "inherited": 33,
+    "supplemental": 31,
+    "kangxi": 214
+  },
+  "modern": [
+    {
+      "id": "gf0011-main-001",
+      "form": "一",
+      "role": "principal",
+      "reported_strokes": 1,
+      "component_id": "cmp-0171",
+      "color": "#8D2929",
+      "display_color": "#8D2929",
+      "color_source": "palette_v0.4",
+      "example_count": 26
+    },
+    {
+      "id": "gf0011-main-002",
+      "form": "丨",
+      "role": "principal",
+      "reported_strokes": 1,
+      "component_id": "cmp-0351",
+      "color": "#4B7D4D",
+      "display_color": "#4B7D4D",
+      "color_source": "palette_v0.4",
+      "example_count": 13
+    },
+    {
+      "id": "gf0011-main-003",
+      "form": "丿",
+      "role": "principal",
+      "reported_strokes": 1,
+      "component_id": "cmp-0288",
+      "color": "#7D3B37",
+      "display_color": "#7D3B37",
+      "color_source": "palette_v0.4",
+      "example_count": 17
+    },
+    {
+      "id": "gf0011-main-004",
+      "form": "丶",
+      "role": "principal",
+      "reported_strokes": 1,
+      "component_id": "cmp-0113",
+      "color": "#B45C6C",
+      "display_color": "#B45C6C",
+      "color_source": "palette_v0.4",
+      "example_count": 14
+    },
+    {
+      "id": "gf0011-main-005",
+      "form": "乛",
+      "role": "principal",
+      "reported_strokes": 1,
+      "component_id": "cmp-0173",
+      "color": "#C34EA2",
+      "display_color": "#C34EA2",
+      "color_source": "palette_v0.4",
+      "example_count": 1
+    },
+    {
+      "id": "gf0011-main-006",
+      "form": "十",
+      "role": "principal",
+      "reported_strokes": 2,
+      "component_id": "cmp-0334",
+      "color": "#967F4E",
+      "display_color": "#967F4E",
+      "color_source": "palette_v0.4",
+      "example_count": 19
+    },
+    {
+      "id": "gf0011-main-007",
+      "form": "厂",
+      "role": "principal",
+      "reported_strokes": 2,
+      "component_id": "cmp-0078",
+      "color": "#AF84DE",
+      "display_color": "#AF84DE",
+      "color_source": "palette_v0.4",
+      "example_count": 10
+    },
+    {
+      "id": "gf0011-main-008",
+      "form": "匚",
+      "role": "principal",
+      "reported_strokes": 2,
+      "component_id": "cmp-0306",
+      "color": "#3A8286",
+      "display_color": "#3A8286",
+      "color_source": "palette_v0.4",
+      "example_count": 10
+    },
+    {
+      "id": "gf0011-main-009",
+      "form": "卜",
+      "role": "principal",
+      "reported_strokes": 2,
+      "component_id": "cmp-0066",
+      "color": "#706419",
+      "display_color": "#706419",
+      "color_source": "palette_v0.4",
+      "example_count": 8
+    },
+    {
+      "id": "gf0011-main-010",
+      "form": "冂",
+      "role": "principal",
+      "reported_strokes": 2,
+      "component_id": "cmp-0373",
+      "color": "#157491",
+      "display_color": "#157491",
+      "color_source": "palette_v0.4",
+      "example_count": 6
+    },
+    {
+      "id": "gf0011-main-011",
+      "form": "八",
+      "role": "principal",
+      "reported_strokes": 2,
+      "component_id": "cmp-0045",
+      "color": "#6645AA",
+      "display_color": "#6645AA",
+      "color_source": "palette_v0.4",
+      "example_count": 21
+    },
+    {
+      "id": "gf0011-main-012",
+      "form": "人",
+      "role": "principal",
+      "reported_strokes": 2,
+      "component_id": "cmp-0012",
+      "color": "#8B4EB3",
+      "display_color": "#8B4EB3",
+      "color_source": "palette_v0.4",
+      "example_count": 37
+    },
+    {
+      "id": "gf0011-main-013",
+      "form": "勹",
+      "role": "principal",
+      "reported_strokes": 2,
+      "component_id": "cmp-0221",
+      "color": "#349317",
+      "display_color": "#349317",
+      "color_source": "palette_v0.4",
+      "example_count": 9
+    },
+    {
+      "id": "gf0011-main-014",
+      "form": "儿",
+      "role": "principal",
+      "reported_strokes": 2,
+      "component_id": "cmp-0312",
+      "color": "#FB255B",
+      "display_color": "#FB255B",
+      "color_source": "palette_v0.4",
+      "example_count": 15
+    },
+    {
+      "id": "gf0011-main-015",
+      "form": "匕",
+      "role": "principal",
+      "reported_strokes": 2,
+      "component_id": "cmp-0058",
+      "color": "#7C7DF6",
+      "display_color": "#7C7DF6",
+      "color_source": "palette_v0.4",
+      "example_count": 12
+    },
+    {
+      "id": "gf0011-main-016",
+      "form": "几",
+      "role": "principal",
+      "reported_strokes": 2,
+      "component_id": "cmp-0188",
+      "color": "#849666",
+      "display_color": "#849666",
+      "color_source": "palette_v0.4",
+      "example_count": 16
+    },
+    {
+      "id": "gf0011-main-017",
+      "form": "亠",
+      "role": "principal",
+      "reported_strokes": 2,
+      "component_id": "cmp-0418",
+      "color": "#915271",
+      "display_color": "#915271",
+      "color_source": "palette_v0.4",
+      "example_count": 8
+    },
+    {
+      "id": "gf0011-main-018",
+      "form": "冫",
+      "role": "principal",
+      "reported_strokes": 2,
+      "component_id": "cmp-0003",
+      "color": "#C86B82",
+      "display_color": "#C86B82",
+      "color_source": "palette_v0.4",
+      "example_count": 11
+    },
+    {
+      "id": "gf0011-main-019",
+      "form": "冖",
+      "role": "principal",
+      "reported_strokes": 2,
+      "component_id": "cmp-0375",
+      "color": "#5D8D40",
+      "display_color": "#5D8D40",
+      "color_source": "palette_v0.4",
+      "example_count": 6
+    },
+    {
+      "id": "gf0011-main-020",
+      "form": "凵",
+      "role": "principal",
+      "reported_strokes": 2,
+      "component_id": "cmp-0181",
+      "color": "#5151A7",
+      "display_color": "#5151A7",
+      "color_source": "palette_v0.4",
+      "example_count": 3
+    },
+    {
+      "id": "gf0011-main-021",
+      "form": "卩",
+      "role": "principal",
+      "reported_strokes": 2,
+      "component_id": "cmp-0205",
+      "color": "#B81C6F",
+      "display_color": "#B81C6F",
+      "color_source": "palette_v0.4",
+      "example_count": 5
+    },
+    {
+      "id": "gf0011-main-022",
+      "form": "刀",
+      "role": "principal",
+      "reported_strokes": 2,
+      "component_id": "cmp-0106",
+      "color": "#BA3E3C",
+      "display_color": "#BA3E3C",
+      "color_source": "palette_v0.4",
+      "example_count": 14
+    },
+    {
+      "id": "gf0011-main-023",
+      "form": "力",
+      "role": "principal",
+      "reported_strokes": 2,
+      "component_id": "cmp-0040",
+      "color": "#9367B2",
+      "display_color": "#9367B2",
+      "color_source": "palette_v0.4",
+      "example_count": 28
+    },
+    {
+      "id": "gf0011-main-024",
+      "form": "又",
+      "role": "principal",
+      "reported_strokes": 2,
+      "component_id": "cmp-0463",
+      "color": "#445CCD",
+      "display_color": "#445CCD",
+      "color_source": "palette_v0.4",
+      "example_count": 32
+    },
+    {
+      "id": "gf0011-main-025",
+      "form": "厶",
+      "role": "principal",
+      "reported_strokes": 2,
+      "component_id": "cmp-0363",
+      "color": "#A97E5B",
+      "display_color": "#A97E5B",
+      "color_source": "palette_v0.4",
+      "example_count": 17
+    },
+    {
+      "id": "gf0011-main-026",
+      "form": "廴",
+      "role": "principal",
+      "reported_strokes": 2,
+      "component_id": "cmp-0200",
+      "color": "#B04F79",
+      "display_color": "#B04F79",
+      "color_source": "palette_v0.4",
+      "example_count": 2
+    },
+    {
+      "id": "gf0011-main-027",
+      "form": "干",
+      "role": "principal",
+      "reported_strokes": 3,
+      "component_id": "cmp-0146",
+      "color": "#A02951",
+      "display_color": "#A02951",
+      "color_source": "palette_v0.4",
+      "example_count": 10
+    },
+    {
+      "id": "gf0011-main-028",
+      "form": "工",
+      "role": "principal",
+      "reported_strokes": 3,
+      "component_id": "cmp-0156",
+      "color": "#B86E03",
+      "display_color": "#B86E03",
+      "color_source": "palette_v0.4",
+      "example_count": 16
+    },
+    {
+      "id": "gf0011-main-029",
+      "form": "土",
+      "role": "principal",
+      "reported_strokes": 3,
+      "component_id": "cmp-0025",
+      "color": "#9E7604",
+      "display_color": "#9E7604",
+      "color_source": "palette_v0.4",
+      "example_count": 40
+    },
+    {
+      "id": "gf0011-main-030",
+      "form": "艹",
+      "role": "principal",
+      "reported_strokes": 3,
+      "component_id": "cmp-0010",
+      "color": "#8D77E5",
+      "display_color": "#8D77E5",
+      "color_source": "palette_v0.4",
+      "example_count": 25
+    },
+    {
+      "id": "gf0011-main-031",
+      "form": "寸",
+      "role": "principal",
+      "reported_strokes": 3,
+      "component_id": "cmp-0099",
+      "color": "#40AC6F",
+      "display_color": "#40AC6F",
+      "color_source": "palette_v0.4",
+      "example_count": 15
+    },
+    {
+      "id": "gf0011-main-032",
+      "form": "廾",
+      "role": "principal",
+      "reported_strokes": 3,
+      "component_id": "cmp-0282",
+      "color": "#7D5234",
+      "display_color": "#7D5234",
+      "color_source": "palette_v0.4",
+      "example_count": 6
+    },
+    {
+      "id": "gf0011-main-033",
+      "form": "大",
+      "role": "principal",
+      "reported_strokes": 3,
+      "component_id": "cmp-0100",
+      "color": "#256451",
+      "display_color": "#256451",
+      "color_source": "palette_v0.4",
+      "example_count": 11
+    },
+    {
+      "id": "gf0011-main-034",
+      "form": "尢",
+      "role": "principal",
+      "reported_strokes": 3,
+      "component_id": "cmp-0147",
+      "color": "#AB875D",
+      "display_color": "#AB875D",
+      "color_source": "palette_v0.4",
+      "example_count": 1
+    },
+    {
+      "id": "gf0011-main-035",
+      "form": "弋",
+      "role": "principal",
+      "reported_strokes": 3,
+      "component_id": "cmp-0450",
+      "color": "#4F8FBA",
+      "display_color": "#4F8FBA",
+      "color_source": "palette_v0.4",
+      "example_count": 3
+    },
+    {
+      "id": "gf0011-main-036",
+      "form": "小",
+      "role": "principal",
+      "reported_strokes": 3,
+      "component_id": "cmp-0411",
+      "color": "#5C76A0",
+      "display_color": "#5C76A0",
+      "color_source": "palette_v0.4",
+      "example_count": 6
+    },
+    {
+      "id": "gf0011-main-037",
+      "form": "口",
+      "role": "principal",
+      "reported_strokes": 3,
+      "component_id": "cmp-0020",
+      "color": "#1587BA",
+      "display_color": "#1587BA",
+      "color_source": "palette_v0.4",
+      "example_count": 85
+    },
+    {
+      "id": "gf0011-main-038",
+      "form": "囗",
+      "role": "principal",
+      "reported_strokes": 3,
+      "component_id": "cmp-0384",
+      "color": "#9C5768",
+      "display_color": "#9C5768",
+      "color_source": "palette_v0.4",
+      "example_count": 8
+    },
+    {
+      "id": "gf0011-main-039",
+      "form": "山",
+      "role": "principal",
+      "reported_strokes": 3,
+      "component_id": "cmp-0027",
+      "color": "#FA588B",
+      "display_color": "#FA588B",
+      "color_source": "palette_v0.4",
+      "example_count": 10
+    },
+    {
+      "id": "gf0011-main-040",
+      "form": "巾",
+      "role": "principal",
+      "reported_strokes": 3,
+      "component_id": "cmp-0209",
+      "color": "#6B9BBD",
+      "display_color": "#6B9BBD",
+      "color_source": "palette_v0.4",
+      "example_count": 10
+    },
+    {
+      "id": "gf0011-main-041",
+      "form": "彳",
+      "role": "principal",
+      "reported_strokes": 3,
+      "component_id": "cmp-0360",
+      "color": "#6680BA",
+      "display_color": "#6680BA",
+      "color_source": "palette_v0.4",
+      "example_count": 3
+    },
+    {
+      "id": "gf0011-main-042",
+      "form": "彡",
+      "role": "principal",
+      "reported_strokes": 3,
+      "component_id": "cmp-0322",
+      "color": "#808A08",
+      "display_color": "#808A08",
+      "color_source": "palette_v0.4",
+      "example_count": 4
+    },
+    {
+      "id": "gf0011-main-043",
+      "form": "夕",
+      "role": "principal",
+      "reported_strokes": 3,
+      "component_id": "cmp-0400",
+      "color": "#CA8A66",
+      "display_color": "#CA8A66",
+      "color_source": "palette_v0.4",
+      "example_count": 5
+    },
+    {
+      "id": "gf0011-main-044",
+      "form": "夂",
+      "role": "principal",
+      "reported_strokes": 3,
+      "component_id": "cmp-0118",
+      "color": "#A06976",
+      "display_color": "#A06976",
+      "color_source": "palette_v0.4",
+      "example_count": 6
+    },
+    {
+      "id": "gf0011-main-045",
+      "form": "丬",
+      "role": "principal",
+      "reported_strokes": 3,
+      "component_id": "cmp-0285",
+      "color": "#956D30",
+      "display_color": "#956D30",
+      "color_source": "palette_v0.4",
+      "example_count": 3
+    },
+    {
+      "id": "gf0011-main-046",
+      "form": "广",
+      "role": "principal",
+      "reported_strokes": 3,
+      "component_id": "cmp-0163",
+      "color": "#0478A8",
+      "display_color": "#0478A8",
+      "color_source": "palette_v0.4",
+      "example_count": 11
+    },
+    {
+      "id": "gf0011-main-047",
+      "form": "门",
+      "role": "principal",
+      "reported_strokes": 3,
+      "component_id": "cmp-0034",
+      "color": "#178529",
+      "display_color": "#178529",
+      "color_source": "palette_v0.4",
+      "example_count": 10
+    },
+    {
+      "id": "gf0011-main-048",
+      "form": "宀",
+      "role": "principal",
+      "reported_strokes": 3,
+      "component_id": "cmp-0035",
+      "color": "#8352FE",
+      "display_color": "#8352FE",
+      "color_source": "palette_v0.4",
+      "example_count": 13
+    },
+    {
+      "id": "gf0011-main-049",
+      "form": "辶",
+      "role": "principal",
+      "reported_strokes": 3,
+      "component_id": "cmp-0030",
+      "color": "#601CCF",
+      "display_color": "#601CCF",
+      "color_source": "palette_v0.4",
+      "example_count": 21
+    },
+    {
+      "id": "gf0011-main-050",
+      "form": "彐",
+      "role": "principal",
+      "reported_strokes": 3,
+      "component_id": "cmp-0249",
+      "color": "#6085AC",
+      "display_color": "#6085AC",
+      "color_source": "palette_v0.4",
+      "example_count": 0
+    },
+    {
+      "id": "gf0011-main-051",
+      "form": "尸",
+      "role": "principal",
+      "reported_strokes": 3,
+      "component_id": "cmp-0332",
+      "color": "#8393C2",
+      "display_color": "#8393C2",
+      "color_source": "palette_v0.4",
+      "example_count": 8
+    },
+    {
+      "id": "gf0011-main-052",
+      "form": "己",
+      "role": "principal",
+      "reported_strokes": 3,
+      "component_id": "cmp-0189",
+      "color": "#1D7339",
+      "display_color": "#1D7339",
+      "color_source": "palette_v0.4",
+      "example_count": 7
+    },
+    {
+      "id": "gf0011-main-053",
+      "form": "弓",
+      "role": "principal",
+      "reported_strokes": 3,
+      "component_id": "cmp-0157",
+      "color": "#5B98AF",
+      "display_color": "#5B98AF",
+      "color_source": "palette_v0.4",
+      "example_count": 5
+    },
+    {
+      "id": "gf0011-main-054",
+      "form": "子",
+      "role": "principal",
+      "reported_strokes": 3,
+      "component_id": "cmp-0015",
+      "color": "#98518A",
+      "display_color": "#98518A",
+      "color_source": "palette_v0.4",
+      "example_count": 11
+    },
+    {
+      "id": "gf0011-main-055",
+      "form": "屮",
+      "role": "principal",
+      "reported_strokes": 3,
+      "component_id": null,
+      "color": null,
+      "display_color": "#568CD5",
+      "color_source": "supplemental_v0.1",
+      "example_count": 0
+    },
+    {
+      "id": "gf0011-main-056",
+      "form": "女",
+      "role": "principal",
+      "reported_strokes": 3,
+      "component_id": "cmp-0014",
+      "color": "#EA5202",
+      "display_color": "#EA5202",
+      "color_source": "palette_v0.4",
+      "example_count": 22
+    },
+    {
+      "id": "gf0011-main-057",
+      "form": "飞",
+      "role": "principal",
+      "reported_strokes": 3,
+      "component_id": "cmp-0133",
+      "color": "#876083",
+      "display_color": "#876083",
+      "color_source": "palette_v0.4",
+      "example_count": 1
+    },
+    {
+      "id": "gf0011-main-058",
+      "form": "马",
+      "role": "principal",
+      "reported_strokes": 3,
+      "component_id": "cmp-0033",
+      "color": "#C41F5F",
+      "display_color": "#C41F5F",
+      "color_source": "palette_v0.4",
+      "example_count": 12
+    },
+    {
+      "id": "gf0011-main-059",
+      "form": "么",
+      "role": "principal",
+      "reported_strokes": 3,
+      "component_id": "cmp-0260",
+      "color": "#B28630",
+      "display_color": "#B28630",
+      "color_source": "palette_v0.4",
+      "example_count": 1
+    },
+    {
+      "id": "gf0011-main-060",
+      "form": "巛",
+      "role": "principal",
+      "reported_strokes": 3,
+      "component_id": "cmp-0092",
+      "color": "#4C682B",
+      "display_color": "#4C682B",
+      "color_source": "palette_v0.4",
+      "example_count": 1
+    },
+    {
+      "id": "gf0011-main-061",
+      "form": "王",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0383",
+      "color": "#9E7CC6",
+      "display_color": "#9E7CC6",
+      "color_source": "palette_v0.4",
+      "example_count": 13
+    },
+    {
+      "id": "gf0011-main-062",
+      "form": "无",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0393",
+      "color": "#A21C62",
+      "display_color": "#A21C62",
+      "color_source": "palette_v0.4",
+      "example_count": 3
+    },
+    {
+      "id": "gf0011-main-063",
+      "form": "韦",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0385",
+      "color": "#60612E",
+      "display_color": "#60612E",
+      "color_source": "palette_v0.4",
+      "example_count": 7
+    },
+    {
+      "id": "gf0011-main-064",
+      "form": "木",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0009",
+      "color": "#C67544",
+      "display_color": "#C67544",
+      "color_source": "palette_v0.4",
+      "example_count": 24
+    },
+    {
+      "id": "gf0011-main-065",
+      "form": "支",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": null,
+      "color": null,
+      "display_color": "#30A170",
+      "color_source": "supplemental_v0.1",
+      "example_count": 0
+    },
+    {
+      "id": "gf0011-main-066",
+      "form": "犬",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0309",
+      "color": "#035C92",
+      "display_color": "#035C92",
+      "color_source": "palette_v0.4",
+      "example_count": 5
+    },
+    {
+      "id": "gf0011-main-067",
+      "form": "歹",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0101",
+      "color": "#6863B1",
+      "display_color": "#6863B1",
+      "color_source": "palette_v0.4",
+      "example_count": 4
+    },
+    {
+      "id": "gf0011-main-068",
+      "form": "车",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0032",
+      "color": "#A04E3A",
+      "display_color": "#A04E3A",
+      "color_source": "palette_v0.4",
+      "example_count": 8
+    },
+    {
+      "id": "gf0011-main-069",
+      "form": "牙",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0427",
+      "color": "#DE5634",
+      "display_color": "#DE5634",
+      "color_source": "palette_v0.4",
+      "example_count": 5
+    },
+    {
+      "id": "gf0011-main-070",
+      "form": "戈",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0150",
+      "color": "#7B499C",
+      "display_color": "#7B499C",
+      "color_source": "palette_v0.4",
+      "example_count": 7
+    },
+    {
+      "id": "gf0011-main-071",
+      "form": "比",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": null,
+      "color": null,
+      "display_color": "#3956A0",
+      "color_source": "supplemental_v0.1",
+      "example_count": 0
+    },
+    {
+      "id": "gf0011-main-072",
+      "form": "瓦",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0379",
+      "color": "#DD1F5D",
+      "display_color": "#DD1F5D",
+      "color_source": "palette_v0.4",
+      "example_count": 1
+    },
+    {
+      "id": "gf0011-main-073",
+      "form": "止",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0489",
+      "color": "#D78164",
+      "display_color": "#D78164",
+      "color_source": "palette_v0.4",
+      "example_count": 7
+    },
+    {
+      "id": "gf0011-main-074",
+      "form": "攴",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0131",
+      "color": "#C07967",
+      "display_color": "#C07967",
+      "color_source": "palette_v0.4",
+      "example_count": 0
+    },
+    {
+      "id": "gf0011-main-075",
+      "form": "日",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0007",
+      "color": "#2A76F1",
+      "display_color": "#2A76F1",
+      "color_source": "palette_v0.4",
+      "example_count": 17
+    },
+    {
+      "id": "gf0011-main-076",
+      "form": "贝",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0054",
+      "color": "#438E56",
+      "display_color": "#438E56",
+      "color_source": "palette_v0.4",
+      "example_count": 10
+    },
+    {
+      "id": "gf0011-main-077",
+      "form": "水",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0001",
+      "color": "#AF56FD",
+      "display_color": "#AF56FD",
+      "color_source": "palette_v0.4",
+      "example_count": 4
+    },
+    {
+      "id": "gf0011-main-078",
+      "form": "见",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0201",
+      "color": "#B97696",
+      "display_color": "#B97696",
+      "color_source": "palette_v0.4",
+      "example_count": 4
+    },
+    {
+      "id": "gf0011-main-079",
+      "form": "牛",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0279",
+      "color": "#D95AF5",
+      "display_color": "#D95AF5",
+      "color_source": "palette_v0.4",
+      "example_count": 4
+    },
+    {
+      "id": "gf0011-main-080",
+      "form": "手",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0018",
+      "color": "#9130DB",
+      "display_color": "#9130DB",
+      "color_source": "palette_v0.4",
+      "example_count": 1
+    },
+    {
+      "id": "gf0011-main-081",
+      "form": "气",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0295",
+      "color": "#CE8674",
+      "display_color": "#CE8674",
+      "color_source": "palette_v0.4",
+      "example_count": 2
+    },
+    {
+      "id": "gf0011-main-082",
+      "form": "毛",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0255",
+      "color": "#4B501E",
+      "display_color": "#4B501E",
+      "color_source": "palette_v0.4",
+      "example_count": 2
+    },
+    {
+      "id": "gf0011-main-083",
+      "form": "长",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0077",
+      "color": "#427E95",
+      "display_color": "#427E95",
+      "color_source": "palette_v0.4",
+      "example_count": 3
+    },
+    {
+      "id": "gf0011-main-084",
+      "form": "片",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0287",
+      "color": "#6F4157",
+      "display_color": "#6F4157",
+      "color_source": "palette_v0.4",
+      "example_count": 1
+    },
+    {
+      "id": "gf0011-main-085",
+      "form": "斤",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0210",
+      "color": "#7C7028",
+      "display_color": "#7C7028",
+      "color_source": "palette_v0.4",
+      "example_count": 6
+    },
+    {
+      "id": "gf0011-main-086",
+      "form": "爪",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0481",
+      "color": "#A469A7",
+      "display_color": "#A469A7",
+      "color_source": "palette_v0.4",
+      "example_count": 2
+    },
+    {
+      "id": "gf0011-main-087",
+      "form": "父",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0144",
+      "color": "#445780",
+      "display_color": "#445780",
+      "color_source": "palette_v0.4",
+      "example_count": 3
+    },
+    {
+      "id": "gf0011-main-088",
+      "form": "月",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0008",
+      "color": "#DB3649",
+      "display_color": "#DB3649",
+      "color_source": "palette_v0.4",
+      "example_count": 9
+    },
+    {
+      "id": "gf0011-main-089",
+      "form": "氏",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0342",
+      "color": "#4F8BA2",
+      "display_color": "#4F8BA2",
+      "color_source": "palette_v0.4",
+      "example_count": 4
+    },
+    {
+      "id": "gf0011-main-090",
+      "form": "欠",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0299",
+      "color": "#8C2F03",
+      "display_color": "#8C2F03",
+      "color_source": "palette_v0.4",
+      "example_count": 6
+    },
+    {
+      "id": "gf0011-main-091",
+      "form": "风",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0137",
+      "color": "#1D6173",
+      "display_color": "#1D6173",
+      "color_source": "palette_v0.4",
+      "example_count": 2
+    },
+    {
+      "id": "gf0011-main-092",
+      "form": "殳",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0348",
+      "color": "#593FC5",
+      "display_color": "#593FC5",
+      "color_source": "palette_v0.4",
+      "example_count": 4
+    },
+    {
+      "id": "gf0011-main-093",
+      "form": "文",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0390",
+      "color": "#FF4659",
+      "display_color": "#FF4659",
+      "color_source": "palette_v0.4",
+      "example_count": 7
+    },
+    {
+      "id": "gf0011-main-094",
+      "form": "方",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0132",
+      "color": "#CA7EB1",
+      "display_color": "#CA7EB1",
+      "color_source": "palette_v0.4",
+      "example_count": 8
+    },
+    {
+      "id": "gf0011-main-095",
+      "form": "火",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0005",
+      "color": "#DE0784",
+      "display_color": "#DE0784",
+      "color_source": "palette_v0.4",
+      "example_count": 11
+    },
+    {
+      "id": "gf0011-main-096",
+      "form": "斗",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0121",
+      "color": "#2A8D7E",
+      "display_color": "#2A8D7E",
+      "color_source": "palette_v0.4",
+      "example_count": 2
+    },
+    {
+      "id": "gf0011-main-097",
+      "form": "户",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0180",
+      "color": "#914C48",
+      "display_color": "#914C48",
+      "color_source": "palette_v0.4",
+      "example_count": 8
+    },
+    {
+      "id": "gf0011-main-098",
+      "form": "心",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0016",
+      "color": "#C04E8A",
+      "display_color": "#C04E8A",
+      "color_source": "palette_v0.4",
+      "example_count": 8
+    },
+    {
+      "id": "gf0011-main-099",
+      "form": "毋",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": null,
+      "color": null,
+      "display_color": "#2D945D",
+      "color_source": "supplemental_v0.1",
+      "example_count": 0
+    },
+    {
+      "id": "gf0011-main-100",
+      "form": "示",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0343",
+      "color": "#285AF8",
+      "display_color": "#285AF8",
+      "color_source": "palette_v0.4",
+      "example_count": 5
+    },
+    {
+      "id": "gf0011-main-101",
+      "form": "甘",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0148",
+      "color": "#758B4B",
+      "display_color": "#758B4B",
+      "color_source": "palette_v0.4",
+      "example_count": 1
+    },
+    {
+      "id": "gf0011-main-102",
+      "form": "石",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0026",
+      "color": "#744049",
+      "display_color": "#744049",
+      "color_source": "palette_v0.4",
+      "example_count": 2
+    },
+    {
+      "id": "gf0011-main-103",
+      "form": "龙",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0247",
+      "color": "#F21D74",
+      "display_color": "#F21D74",
+      "color_source": "palette_v0.4",
+      "example_count": 2
+    },
+    {
+      "id": "gf0011-main-104",
+      "form": "业",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0441",
+      "color": "#C274BC",
+      "display_color": "#C274BC",
+      "color_source": "palette_v0.4",
+      "example_count": 1
+    },
+    {
+      "id": "gf0011-main-105",
+      "form": "目",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0023",
+      "color": "#91922F",
+      "display_color": "#91922F",
+      "color_source": "palette_v0.4",
+      "example_count": 2
+    },
+    {
+      "id": "gf0011-main-106",
+      "form": "田",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0039",
+      "color": "#05A92E",
+      "display_color": "#05A92E",
+      "color_source": "palette_v0.4",
+      "example_count": 5
+    },
+    {
+      "id": "gf0011-main-107",
+      "form": "罒",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0254",
+      "color": "#C23A71",
+      "display_color": "#C23A71",
+      "color_source": "palette_v0.4",
+      "example_count": 0
+    },
+    {
+      "id": "gf0011-main-108",
+      "form": "皿",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0266",
+      "color": "#D77C8B",
+      "display_color": "#D77C8B",
+      "color_source": "palette_v0.4",
+      "example_count": 1
+    },
+    {
+      "id": "gf0011-main-109",
+      "form": "生",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0331",
+      "color": "#9E594E",
+      "display_color": "#9E594E",
+      "color_source": "palette_v0.4",
+      "example_count": 1
+    },
+    {
+      "id": "gf0011-main-110",
+      "form": "矢",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0338",
+      "color": "#644E1D",
+      "display_color": "#644E1D",
+      "color_source": "palette_v0.4",
+      "example_count": 3
+    },
+    {
+      "id": "gf0011-main-111",
+      "form": "禾",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0011",
+      "color": "#808754",
+      "display_color": "#808754",
+      "color_source": "palette_v0.4",
+      "example_count": 5
+    },
+    {
+      "id": "gf0011-main-112",
+      "form": "白",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0048",
+      "color": "#7541ED",
+      "display_color": "#7541ED",
+      "color_source": "palette_v0.4",
+      "example_count": 4
+    },
+    {
+      "id": "gf0011-main-113",
+      "form": "瓜",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0160",
+      "color": "#85760B",
+      "display_color": "#85760B",
+      "color_source": "palette_v0.4",
+      "example_count": 1
+    },
+    {
+      "id": "gf0011-main-114",
+      "form": "鸟",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0277",
+      "color": "#94614F",
+      "display_color": "#94614F",
+      "color_source": "palette_v0.4",
+      "example_count": 2
+    },
+    {
+      "id": "gf0011-main-115",
+      "form": "疒",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0065",
+      "color": "#5B7AFD",
+      "display_color": "#5B7AFD",
+      "color_source": "palette_v0.4",
+      "example_count": 1
+    },
+    {
+      "id": "gf0011-main-116",
+      "form": "立",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0235",
+      "color": "#464E79",
+      "display_color": "#464E79",
+      "color_source": "palette_v0.4",
+      "example_count": 4
+    },
+    {
+      "id": "gf0011-main-117",
+      "form": "穴",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0420",
+      "color": "#DB673D",
+      "display_color": "#DB673D",
+      "color_source": "palette_v0.4",
+      "example_count": 3
+    },
+    {
+      "id": "gf0011-main-118",
+      "form": "疋",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": null,
+      "color": null,
+      "display_color": "#2B76B7",
+      "color_source": "supplemental_v0.1",
+      "example_count": 0
+    },
+    {
+      "id": "gf0011-main-119",
+      "form": "皮",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0286",
+      "color": "#834047",
+      "display_color": "#834047",
+      "color_source": "palette_v0.4",
+      "example_count": 3
+    },
+    {
+      "id": "gf0011-main-120",
+      "form": "癶",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0109",
+      "color": "#AE4A92",
+      "display_color": "#AE4A92",
+      "color_source": "palette_v0.4",
+      "example_count": 0
+    },
+    {
+      "id": "gf0011-main-121",
+      "form": "矛",
+      "role": "principal",
+      "reported_strokes": 4,
+      "component_id": "cmp-0256",
+      "color": "#25672B",
+      "display_color": "#25672B",
+      "color_source": "palette_v0.4",
+      "example_count": 1
+    },
+    {
+      "id": "gf0011-main-122",
+      "form": "耒",
+      "role": "principal",
+      "reported_strokes": 6,
+      "component_id": "cmp-0232",
+      "color": "#279393",
+      "display_color": "#279393",
+      "color_source": "palette_v0.4",
+      "example_count": 0
+    },
+    {
+      "id": "gf0011-main-123",
+      "form": "老",
+      "role": "principal",
+      "reported_strokes": 6,
+      "component_id": "cmp-0229",
+      "color": "#158681",
+      "display_color": "#158681",
+      "color_source": "palette_v0.4",
+      "example_count": 1
+    },
+    {
+      "id": "gf0011-main-124",
+      "form": "耳",
+      "role": "principal",
+      "reported_strokes": 6,
+      "component_id": "cmp-0024",
+      "color": "#6D4D84",
+      "display_color": "#6D4D84",
+      "color_source": "palette_v0.4",
+      "example_count": 2
+    },
+    {
+      "id": "gf0011-main-125",
+      "form": "臣",
+      "role": "principal",
+      "reported_strokes": 6,
+      "component_id": "cmp-0079",
+      "color": "#724703",
+      "display_color": "#724703",
+      "color_source": "palette_v0.4",
+      "example_count": 1
+    },
+    {
+      "id": "gf0011-main-126",
+      "form": "覀",
+      "role": "principal",
+      "reported_strokes": 6,
+      "component_id": "cmp-0404",
+      "color": "#86603B",
+      "display_color": "#86603B",
+      "color_source": "palette_v0.4",
+      "example_count": 0
+    },
+    {
+      "id": "gf0011-main-127",
+      "form": "而",
+      "role": "principal",
+      "reported_strokes": 6,
+      "component_id": "cmp-0124",
+      "color": "#A83902",
+      "display_color": "#A83902",
+      "color_source": "palette_v0.4",
+      "example_count": 1
+    },
+    {
+      "id": "gf0011-main-128",
+      "form": "页",
+      "role": "principal",
+      "reported_strokes": 6,
+      "component_id": "cmp-0442",
+      "color": "#3696AB",
+      "display_color": "#3696AB",
+      "color_source": "palette_v0.4",
+      "example_count": 2
+    },
+    {
+      "id": "gf0011-main-129",
+      "form": "至",
+      "role": "principal",
+      "reported_strokes": 6,
+      "component_id": "cmp-0493",
+      "color": "#5493D1",
+      "display_color": "#5493D1",
+      "color_source": "palette_v0.4",
+      "example_count": 1
+    },
+    {
+      "id": "gf0011-main-130",
+      "form": "虍",
+      "role": "principal",
+      "reported_strokes": 6,
+      "component_id": "cmp-0178",
+      "color": "#9C52AD",
+      "display_color": "#9C52AD",
+      "color_source": "palette_v0.4",
+      "example_count": 0
+    },
+    {
+      "id": "gf0011-main-131",
+      "form": "虫",
+      "role": "principal",
+      "reported_strokes": 6,
+      "component_id": "cmp-0087",
+      "color": "#9B8BE8",
+      "display_color": "#9B8BE8",
+      "color_source": "palette_v0.4",
+      "example_count": 1
+    },
+    {
+      "id": "gf0011-main-132",
+      "form": "肉",
+      "role": "principal",
+      "reported_strokes": 6,
+      "component_id": "cmp-0473",
+      "color": "#878CD9",
+      "display_color": "#878CD9",
+      "color_source": "palette_v0.4",
+      "example_count": 1
+    },
+    {
+      "id": "gf0011-main-133",
+      "form": "缶",
+      "role": "principal",
+      "reported_strokes": 6,
+      "component_id": "cmp-0139",
+      "color": "#BA1103",
+      "display_color": "#BA1103",
+      "color_source": "palette_v0.4",
+      "example_count": 0
+    },
+    {
+      "id": "gf0011-main-134",
+      "form": "舌",
+      "role": "principal",
+      "reported_strokes": 6,
+      "component_id": "cmp-0327",
+      "color": "#5CA1AD",
+      "display_color": "#5CA1AD",
+      "color_source": "palette_v0.4",
+      "example_count": 2
+    },
+    {
+      "id": "gf0011-main-135",
+      "form": "竹",
+      "role": "principal",
+      "reported_strokes": 6,
+      "component_id": "cmp-0502",
+      "color": "#226640",
+      "display_color": "#226640",
+      "color_source": "palette_v0.4",
+      "example_count": 1
+    },
+    {
+      "id": "gf0011-main-136",
+      "form": "臼",
+      "role": "principal",
+      "reported_strokes": 6,
+      "component_id": "cmp-0219",
+      "color": "#803255",
+      "display_color": "#803255",
+      "color_source": "palette_v0.4",
+      "example_count": 1
+    },
+    {
+      "id": "gf0011-main-137",
+      "form": "自",
+      "role": "principal",
+      "reported_strokes": 6,
+      "component_id": "cmp-0512",
+      "color": "#427693",
+      "display_color": "#427693",
+      "color_source": "palette_v0.4",
+      "example_count": 1
+    },
+    {
+      "id": "gf0011-main-138",
+      "form": "血",
+      "role": "principal",
+      "reported_strokes": 6,
+      "component_id": "cmp-0423",
+      "color": "#0D9AD4",
+      "display_color": "#0D9AD4",
+      "color_source": "palette_v0.4",
+      "example_count": 1
+    },
+    {
+      "id": "gf0011-main-139",
+      "form": "舟",
+      "role": "principal",
+      "reported_strokes": 6,
+      "component_id": "cmp-0499",
+      "color": "#951E13",
+      "display_color": "#951E13",
+      "color_source": "palette_v0.4",
+      "example_count": 1
+    },
+    {
+      "id": "gf0011-main-140",
+      "form": "色",
+      "role": "principal",
+      "reported_strokes": 6,
+      "component_id": "cmp-0321",
+      "color": "#939D44",
+      "display_color": "#939D44",
+      "color_source": "palette_v0.4",
+      "example_count": 1
+    },
+    {
+      "id": "gf0011-main-141",
+      "form": "齐",
+      "role": "principal",
+      "reported_strokes": 6,
+      "component_id": null,
+      "color": null,
+      "display_color": "#3657A0",
+      "color_source": "supplemental_v0.1",
+      "example_count": 0
+    },
+    {
+      "id": "gf0011-main-142",
+      "form": "衣",
+      "role": "principal",
+      "reported_strokes": 6,
+      "component_id": "cmp-0444",
+      "color": "#BA7639",
+      "display_color": "#BA7639",
+      "color_source": "palette_v0.4",
+      "example_count": 1
+    },
+    {
+      "id": "gf0011-main-143",
+      "form": "羊",
+      "role": "principal",
+      "reported_strokes": 6,
+      "component_id": "cmp-0434",
+      "color": "#8C16C5",
+      "display_color": "#8C16C5",
+      "color_source": "palette_v0.4",
+      "example_count": 1
+    },
+    {
+      "id": "gf0011-main-144",
+      "form": "米",
+      "role": "principal",
+      "reported_strokes": 6,
+      "component_id": "cmp-0262",
+      "color": "#99444E",
+      "display_color": "#99444E",
+      "color_source": "palette_v0.4",
+      "example_count": 1
+    },
+    {
+      "id": "gf0011-main-145",
+      "form": "聿",
+      "role": "principal",
+      "reported_strokes": 6,
+      "component_id": "cmp-0472",
+      "color": "#5E6939",
+      "display_color": "#5E6939",
+      "color_source": "palette_v0.4",
+      "example_count": 0
+    },
+    {
+      "id": "gf0011-main-146",
+      "form": "艮",
+      "role": "principal",
+      "reported_strokes": 6,
+      "component_id": "cmp-0153",
+      "color": "#683788",
+      "display_color": "#683788",
+      "color_source": "palette_v0.4",
+      "example_count": 1
+    },
+    {
+      "id": "gf0011-main-147",
+      "form": "羽",
+      "role": "principal",
+      "reported_strokes": 6,
+      "component_id": null,
+      "color": null,
+      "display_color": "#545DAD",
+      "color_source": "supplemental_v0.1",
+      "example_count": 0
+    },
+    {
+      "id": "gf0011-main-148",
+      "form": "糸",
+      "role": "principal",
+      "reported_strokes": 6,
+      "component_id": "cmp-0203",
+      "color": "#FD5A73",
+      "display_color": "#FD5A73",
+      "color_source": "palette_v0.4",
+      "example_count": 1
+    },
+    {
+      "id": "gf0011-main-149",
+      "form": "麦",
+      "role": "principal",
+      "reported_strokes": 7,
+      "component_id": null,
+      "color": null,
+      "display_color": "#4380C6",
+      "color_source": "supplemental_v0.1",
+      "example_count": 0
+    },
+    {
+      "id": "gf0011-main-150",
+      "form": "走",
+      "role": "principal",
+      "reported_strokes": 7,
+      "component_id": null,
+      "color": null,
+      "display_color": "#B36DB0",
+      "color_source": "supplemental_v0.1",
+      "example_count": 0
+    },
+    {
+      "id": "gf0011-main-151",
+      "form": "赤",
+      "role": "principal",
+      "reported_strokes": 7,
+      "component_id": "cmp-0086",
+      "color": "#4A936E",
+      "display_color": "#4A936E",
+      "color_source": "palette_v0.4",
+      "example_count": 1
+    },
+    {
+      "id": "gf0011-main-152",
+      "form": "豆",
+      "role": "principal",
+      "reported_strokes": 7,
+      "component_id": "cmp-0122",
+      "color": "#689571",
+      "display_color": "#689571",
+      "color_source": "palette_v0.4",
+      "example_count": 1
+    },
+    {
+      "id": "gf0011-main-153",
+      "form": "酉",
+      "role": "principal",
+      "reported_strokes": 7,
+      "component_id": "cmp-0462",
+      "color": "#C01643",
+      "display_color": "#C01643",
+      "color_source": "palette_v0.4",
+      "example_count": 1
+    },
+    {
+      "id": "gf0011-main-154",
+      "form": "辰",
+      "role": "principal",
+      "reported_strokes": 7,
+      "component_id": "cmp-0081",
+      "color": "#8E1C56",
+      "display_color": "#8E1C56",
+      "color_source": "palette_v0.4",
+      "example_count": 1
+    },
+    {
+      "id": "gf0011-main-155",
+      "form": "豕",
+      "role": "principal",
+      "reported_strokes": 7,
+      "component_id": "cmp-0339",
+      "color": "#8D9D5A",
+      "display_color": "#8D9D5A",
+      "color_source": "palette_v0.4",
+      "example_count": 0
+    },
+    {
+      "id": "gf0011-main-156",
+      "form": "卤",
+      "role": "principal",
+      "reported_strokes": 7,
+      "component_id": "cmp-0248",
+      "color": "#E65760",
+      "display_color": "#E65760",
+      "color_source": "palette_v0.4",
+      "example_count": 1
+    },
+    {
+      "id": "gf0011-main-157",
+      "form": "里",
+      "role": "principal",
+      "reported_strokes": 7,
+      "component_id": "cmp-0234",
+      "color": "#438206",
+      "display_color": "#438206",
+      "color_source": "palette_v0.4",
+      "example_count": 1
+    },
+    {
+      "id": "gf0011-main-158",
+      "form": "足",
+      "role": "principal",
+      "reported_strokes": 7,
+      "component_id": "cmp-0031",
+      "color": "#BA60DF",
+      "display_color": "#BA60DF",
+      "color_source": "palette_v0.4",
+      "example_count": 1
+    },
+    {
+      "id": "gf0011-main-159",
+      "form": "邑",
+      "role": "principal",
+      "reported_strokes": 7,
+      "component_id": null,
+      "color": null,
+      "display_color": "#6B8B2F",
+      "color_source": "supplemental_v0.1",
+      "example_count": 0
+    },
+    {
+      "id": "gf0011-main-160",
+      "form": "身",
+      "role": "principal",
+      "reported_strokes": 7,
+      "component_id": "cmp-0329",
+      "color": "#985DBF",
+      "display_color": "#985DBF",
+      "color_source": "palette_v0.4",
+      "example_count": 1
+    },
+    {
+      "id": "gf0011-main-161",
+      "form": "釆",
+      "role": "principal",
+      "reported_strokes": 7,
+      "component_id": "cmp-0062",
+      "color": "#5064AB",
+      "display_color": "#5064AB",
+      "color_source": "palette_v0.4",
+      "example_count": 0
+    },
+    {
+      "id": "gf0011-main-162",
+      "form": "谷",
+      "role": "principal",
+      "reported_strokes": 7,
+      "component_id": "cmp-0159",
+      "color": "#B26A70",
+      "display_color": "#B26A70",
+      "color_source": "palette_v0.4",
+      "example_count": 1
+    },
+    {
+      "id": "gf0011-main-163",
+      "form": "豸",
+      "role": "principal",
+      "reported_strokes": 7,
+      "component_id": "cmp-0495",
+      "color": "#0BAAA4",
+      "display_color": "#0BAAA4",
+      "color_source": "palette_v0.4",
+      "example_count": 0
+    },
+    {
+      "id": "gf0011-main-164",
+      "form": "龟",
+      "role": "principal",
+      "reported_strokes": 7,
+      "component_id": "cmp-0164",
+      "color": "#EA36AF",
+      "display_color": "#EA36AF",
+      "color_source": "palette_v0.4",
+      "example_count": 1
+    },
+    {
+      "id": "gf0011-main-165",
+      "form": "角",
+      "role": "principal",
+      "reported_strokes": 7,
+      "component_id": "cmp-0204",
+      "color": "#825B1B",
+      "display_color": "#825B1B",
+      "color_source": "palette_v0.4",
+      "example_count": 1
+    },
+    {
+      "id": "gf0011-main-166",
+      "form": "言",
+      "role": "principal",
+      "reported_strokes": 7,
+      "component_id": "cmp-0021",
+      "color": "#99610B",
+      "display_color": "#99610B",
+      "color_source": "palette_v0.4",
+      "example_count": 1
+    },
+    {
+      "id": "gf0011-main-167",
+      "form": "辛",
+      "role": "principal",
+      "reported_strokes": 7,
+      "component_id": "cmp-0415",
+      "color": "#EE7313",
+      "display_color": "#EE7313",
+      "color_source": "palette_v0.4",
+      "example_count": 1
+    },
+    {
+      "id": "gf0011-main-168",
+      "form": "青",
+      "role": "principal",
+      "reported_strokes": 8,
+      "component_id": "cmp-0036",
+      "color": "#C75615",
+      "display_color": "#C75615",
+      "color_source": "palette_v0.4",
+      "example_count": 1
+    },
+    {
+      "id": "gf0011-main-169",
+      "form": "龺",
+      "role": "principal",
+      "reported_strokes": 8,
+      "component_id": null,
+      "color": null,
+      "display_color": "#B26A1F",
+      "color_source": "supplemental_v0.1",
+      "example_count": 0
+    },
+    {
+      "id": "gf0011-main-170",
+      "form": "雨",
+      "role": "principal",
+      "reported_strokes": 8,
+      "component_id": "cmp-0004",
+      "color": "#C52BBF",
+      "display_color": "#C52BBF",
+      "color_source": "palette_v0.4",
+      "example_count": 0
+    },
+    {
+      "id": "gf0011-main-171",
+      "form": "非",
+      "role": "principal",
+      "reported_strokes": 8,
+      "component_id": "cmp-0134",
+      "color": "#DF7D50",
+      "display_color": "#DF7D50",
+      "color_source": "palette_v0.4",
+      "example_count": 0
+    },
+    {
+      "id": "gf0011-main-172",
+      "form": "齿",
+      "role": "principal",
+      "reported_strokes": 8,
+      "component_id": null,
+      "color": null,
+      "display_color": "#2F7835",
+      "color_source": "supplemental_v0.1",
+      "example_count": 0
+    },
+    {
+      "id": "gf0011-main-173",
+      "form": "黾",
+      "role": "principal",
+      "reported_strokes": 8,
+      "component_id": null,
+      "color": null,
+      "display_color": "#3275B8",
+      "color_source": "supplemental_v0.1",
+      "example_count": 0
+    },
+    {
+      "id": "gf0011-main-174",
+      "form": "隹",
+      "role": "principal",
+      "reported_strokes": 8,
+      "component_id": "cmp-0509",
+      "color": "#787946",
+      "display_color": "#787946",
+      "color_source": "palette_v0.4",
+      "example_count": 0
+    },
+    {
+      "id": "gf0011-main-175",
+      "form": "阜",
+      "role": "principal",
+      "reported_strokes": 8,
+      "component_id": null,
+      "color": null,
+      "display_color": "#1BA279",
+      "color_source": "supplemental_v0.1",
+      "example_count": 0
+    },
+    {
+      "id": "gf0011-main-176",
+      "form": "金",
+      "role": "principal",
+      "reported_strokes": 8,
+      "component_id": "cmp-0028",
+      "color": "#055179",
+      "display_color": "#055179",
+      "color_source": "palette_v0.4",
+      "example_count": 0
+    },
+    {
+      "id": "gf0011-main-177",
+      "form": "鱼",
+      "role": "principal",
+      "reported_strokes": 8,
+      "component_id": "cmp-0465",
+      "color": "#209B33",
+      "display_color": "#209B33",
+      "color_source": "palette_v0.4",
+      "example_count": 0
+    },
+    {
+      "id": "gf0011-main-178",
+      "form": "隶",
+      "role": "principal",
+      "reported_strokes": 8,
+      "component_id": "cmp-0238",
+      "color": "#853522",
+      "display_color": "#853522",
+      "color_source": "palette_v0.4",
+      "example_count": 0
+    },
+    {
+      "id": "gf0011-main-179",
+      "form": "革",
+      "role": "principal",
+      "reported_strokes": 9,
+      "component_id": "cmp-0151",
+      "color": "#525D2D",
+      "display_color": "#525D2D",
+      "color_source": "palette_v0.4",
+      "example_count": 0
+    },
+    {
+      "id": "gf0011-main-180",
+      "form": "面",
+      "role": "principal",
+      "reported_strokes": 9,
+      "component_id": "cmp-0264",
+      "color": "#5D6693",
+      "display_color": "#5D6693",
+      "color_source": "palette_v0.4",
+      "example_count": 0
+    },
+    {
+      "id": "gf0011-main-181",
+      "form": "韭",
+      "role": "principal",
+      "reported_strokes": 9,
+      "component_id": "cmp-0218",
+      "color": "#414A8F",
+      "display_color": "#414A8F",
+      "color_source": "palette_v0.4",
+      "example_count": 0
+    },
+    {
+      "id": "gf0011-main-182",
+      "form": "骨",
+      "role": "principal",
+      "reported_strokes": 9,
+      "component_id": null,
+      "color": null,
+      "display_color": "#9D4C17",
+      "color_source": "supplemental_v0.1",
+      "example_count": 0
+    },
+    {
+      "id": "gf0011-main-183",
+      "form": "香",
+      "role": "principal",
+      "reported_strokes": 9,
+      "component_id": null,
+      "color": null,
+      "display_color": "#6568B9",
+      "color_source": "supplemental_v0.1",
+      "example_count": 0
+    },
+    {
+      "id": "gf0011-main-184",
+      "form": "鬼",
+      "role": "principal",
+      "reported_strokes": 9,
+      "component_id": "cmp-0165",
+      "color": "#C8233C",
+      "display_color": "#C8233C",
+      "color_source": "palette_v0.4",
+      "example_count": 0
+    },
+    {
+      "id": "gf0011-main-185",
+      "form": "食",
+      "role": "principal",
+      "reported_strokes": 9,
+      "component_id": "cmp-0335",
+      "color": "#599681",
+      "display_color": "#599681",
+      "color_source": "palette_v0.4",
+      "example_count": 0
+    },
+    {
+      "id": "gf0011-main-186",
+      "form": "音",
+      "role": "principal",
+      "reported_strokes": 9,
+      "component_id": null,
+      "color": null,
+      "display_color": "#4054A0",
+      "color_source": "supplemental_v0.1",
+      "example_count": 0
+    },
+    {
+      "id": "gf0011-main-187",
+      "form": "首",
+      "role": "principal",
+      "reported_strokes": 9,
+      "component_id": "cmp-0347",
+      "color": "#2C7676",
+      "display_color": "#2C7676",
+      "color_source": "palette_v0.4",
+      "example_count": 0
+    },
+    {
+      "id": "gf0011-main-188",
+      "form": "髟",
+      "role": "principal",
+      "reported_strokes": 10,
+      "component_id": null,
+      "color": null,
+      "display_color": "#22874F",
+      "color_source": "supplemental_v0.1",
+      "example_count": 0
+    },
+    {
+      "id": "gf0011-main-189",
+      "form": "鬲",
+      "role": "principal",
+      "reported_strokes": 10,
+      "component_id": "cmp-0239",
+      "color": "#D36D53",
+      "display_color": "#D36D53",
+      "color_source": "palette_v0.4",
+      "example_count": 0
+    },
+    {
+      "id": "gf0011-main-190",
+      "form": "鬥",
+      "role": "principal",
+      "reported_strokes": 10,
+      "component_id": null,
+      "color": null,
+      "display_color": "#BB7B24",
+      "color_source": "supplemental_v0.1",
+      "example_count": 0
+    },
+    {
+      "id": "gf0011-main-191",
+      "form": "高",
+      "role": "principal",
+      "reported_strokes": 10,
+      "component_id": "cmp-0149",
+      "color": "#A66DBF",
+      "display_color": "#A66DBF",
+      "color_source": "palette_v0.4",
+      "example_count": 0
+    },
+    {
+      "id": "gf0011-main-192",
+      "form": "黄",
+      "role": "principal",
+      "reported_strokes": 11,
+      "component_id": "cmp-0183",
+      "color": "#6F8C60",
+      "display_color": "#6F8C60",
+      "color_source": "palette_v0.4",
+      "example_count": 0
+    },
+    {
+      "id": "gf0011-main-193",
+      "form": "麻",
+      "role": "principal",
+      "reported_strokes": 11,
+      "component_id": null,
+      "color": null,
+      "display_color": "#677D15",
+      "color_source": "supplemental_v0.1",
+      "example_count": 0
+    },
+    {
+      "id": "gf0011-main-194",
+      "form": "鹿",
+      "role": "principal",
+      "reported_strokes": 11,
+      "component_id": "cmp-0250",
+      "color": "#C48B81",
+      "display_color": "#C48B81",
+      "color_source": "palette_v0.4",
+      "example_count": 0
+    },
+    {
+      "id": "gf0011-main-195",
+      "form": "鼎",
+      "role": "principal",
+      "reported_strokes": 12,
+      "component_id": "cmp-0117",
+      "color": "#8F327F",
+      "display_color": "#8F327F",
+      "color_source": "palette_v0.4",
+      "example_count": 0
+    },
+    {
+      "id": "gf0011-main-196",
+      "form": "黑",
+      "role": "principal",
+      "reported_strokes": 12,
+      "component_id": "cmp-0170",
+      "color": "#B55E58",
+      "display_color": "#B55E58",
+      "color_source": "palette_v0.4",
+      "example_count": 0
+    },
+    {
+      "id": "gf0011-main-197",
+      "form": "黍",
+      "role": "principal",
+      "reported_strokes": 12,
+      "component_id": null,
+      "color": null,
+      "display_color": "#7E4F9A",
+      "color_source": "supplemental_v0.1",
+      "example_count": 0
+    },
+    {
+      "id": "gf0011-main-198",
+      "form": "鼓",
+      "role": "principal",
+      "reported_strokes": 13,
+      "component_id": null,
+      "color": null,
+      "display_color": "#697C12",
+      "color_source": "supplemental_v0.1",
+      "example_count": 0
+    },
+    {
+      "id": "gf0011-main-199",
+      "form": "鼠",
+      "role": "principal",
+      "reported_strokes": 13,
+      "component_id": "cmp-0350",
+      "color": "#AD4865",
+      "display_color": "#AD4865",
+      "color_source": "palette_v0.4",
+      "example_count": 0
+    },
+    {
+      "id": "gf0011-main-200",
+      "form": "鼻",
+      "role": "principal",
+      "reported_strokes": 14,
+      "component_id": null,
+      "color": null,
+      "display_color": "#C86781",
+      "color_source": "supplemental_v0.1",
+      "example_count": 0
+    },
+    {
+      "id": "gf0011-main-201",
+      "form": "龠",
+      "role": "principal",
+      "reported_strokes": 17,
+      "component_id": null,
+      "color": null,
+      "display_color": "#2A6B23",
+      "color_source": "supplemental_v0.1",
+      "example_count": 0
+    },
+    {
+      "id": "gf0011-variant-001",
+      "form": "亅",
+      "role": "listed_variant",
+      "reported_strokes": 1,
+      "related_principal_forms": [
+        "丨"
+      ],
+      "component_id": null,
+      "color": null,
+      "display_color": "#4B7D4D",
+      "color_source": "variant_parent",
+      "example_count": 0,
+      "parent_form": "丨"
+    },
+    {
+      "id": "gf0011-variant-002",
+      "form": "𠂆",
+      "role": "listed_variant",
+      "reported_strokes": 2,
+      "related_principal_forms": [
+        "厂"
+      ],
+      "component_id": "cmp-0129",
+      "color": "#695F9B",
+      "display_color": "#695F9B",
+      "color_source": "palette_v0.4",
+      "example_count": 5
+    },
+    {
+      "id": "gf0011-variant-003",
+      "form": "⺊",
+      "role": "listed_variant",
+      "reported_strokes": 2,
+      "related_principal_forms": [
+        "卜"
+      ],
+      "component_id": "cmp-0067",
+      "color": "#BC65A1",
+      "display_color": "#BC65A1",
+      "color_source": "palette_v0.4",
+      "example_count": 3
+    },
+    {
+      "id": "gf0011-variant-004",
+      "form": "⺆",
+      "role": "listed_variant",
+      "reported_strokes": 2,
+      "related_principal_forms": [
+        "冂"
+      ],
+      "component_id": "cmp-0498",
+      "color": "#637F54",
+      "display_color": "#637F54",
+      "color_source": "palette_v0.4",
+      "example_count": 0
+    },
+    {
+      "id": "gf0011-variant-005",
+      "form": "丷",
+      "role": "listed_variant",
+      "reported_strokes": 2,
+      "related_principal_forms": [
+        "八"
+      ],
+      "component_id": "cmp-0046",
+      "color": "#FA47BD",
+      "display_color": "#FA47BD",
+      "color_source": "palette_v0.4",
+      "example_count": 4
+    },
+    {
+      "id": "gf0011-variant-006",
+      "form": "亻",
+      "role": "listed_variant",
+      "reported_strokes": 2,
+      "related_principal_forms": [
+        "人"
+      ],
+      "component_id": "cmp-0013",
+      "color": "#608CD5",
+      "display_color": "#608CD5",
+      "color_source": "palette_v0.4",
+      "example_count": 59
+    },
+    {
+      "id": "gf0011-variant-007",
+      "form": "入",
+      "role": "listed_variant",
+      "reported_strokes": 2,
+      "related_principal_forms": [
+        "人"
+      ],
+      "component_id": "cmp-0317",
+      "color": "#A22F11",
+      "display_color": "#A22F11",
+      "color_source": "palette_v0.4",
+      "example_count": 1
+    },
+    {
+      "id": "gf0011-variant-008",
+      "form": "𠘨",
+      "role": "listed_variant",
+      "reported_strokes": 2,
+      "related_principal_forms": [
+        "几"
+      ],
+      "component_id": "cmp-0138",
+      "color": "#8C6F99",
+      "display_color": "#8C6F99",
+      "color_source": "palette_v0.4",
+      "example_count": 0
+    },
+    {
+      "id": "gf0011-variant-009",
+      "form": "㔾",
+      "role": "listed_variant",
+      "reported_strokes": 2,
+      "related_principal_forms": [
+        "卩"
+      ],
+      "component_id": "cmp-0207",
+      "color": "#A55E5E",
+      "display_color": "#A55E5E",
+      "color_source": "palette_v0.4",
+      "example_count": 9
+    },
+    {
+      "id": "gf0011-variant-010",
+      "form": "刂",
+      "role": "listed_variant",
+      "reported_strokes": 2,
+      "related_principal_forms": [
+        "刀"
+      ],
+      "component_id": "cmp-0108",
+      "color": "#216A63",
+      "display_color": "#216A63",
+      "color_source": "palette_v0.4",
+      "example_count": 13
+    },
+    {
+      "id": "gf0011-variant-011",
+      "form": "⺈",
+      "role": "listed_variant",
+      "reported_strokes": 2,
+      "related_principal_forms": [
+        "刀"
+      ],
+      "component_id": "cmp-0125",
+      "color": "#6D7607",
+      "display_color": "#6D7607",
+      "color_source": "palette_v0.4",
+      "example_count": 4
+    },
+    {
+      "id": "gf0011-variant-012",
+      "form": "士",
+      "role": "listed_variant",
+      "reported_strokes": 3,
+      "related_principal_forms": [
+        "土"
+      ],
+      "component_id": "cmp-0341",
+      "color": "#CD635D",
+      "display_color": "#CD635D",
+      "color_source": "palette_v0.4",
+      "example_count": 6
+    },
+    {
+      "id": "gf0011-variant-013",
+      "form": "艸",
+      "role": "listed_variant",
+      "reported_strokes": 3,
+      "related_principal_forms": [
+        "艹"
+      ],
+      "component_id": null,
+      "color": null,
+      "display_color": "#8D77E5",
+      "color_source": "variant_parent",
+      "example_count": 0,
+      "parent_form": "艹"
+    },
+    {
+      "id": "gf0011-variant-014",
+      "form": "兀",
+      "role": "listed_variant",
+      "reported_strokes": 3,
+      "related_principal_forms": [
+        "尢"
+      ],
+      "component_id": "cmp-0397",
+      "color": "#683F71",
+      "display_color": "#683F71",
+      "color_source": "palette_v0.4",
+      "example_count": 2
+    },
+    {
+      "id": "gf0011-variant-015",
+      "form": "尣",
+      "role": "listed_variant",
+      "reported_strokes": 3,
+      "related_principal_forms": [
+        "尢"
+      ],
+      "component_id": null,
+      "color": null,
+      "display_color": "#AB875D",
+      "color_source": "variant_parent",
+      "example_count": 0,
+      "parent_form": "尢"
+    },
+    {
+      "id": "gf0011-variant-016",
+      "form": "⺌",
+      "role": "listed_variant",
+      "reported_strokes": 3,
+      "related_principal_forms": [
+        "小"
+      ],
+      "component_id": "cmp-0412",
+      "color": "#F71E46",
+      "display_color": "#F71E46",
+      "color_source": "palette_v0.4",
+      "example_count": 3
+    },
+    {
+      "id": "gf0011-variant-017",
+      "form": "爿",
+      "role": "listed_variant",
+      "reported_strokes": 3,
+      "related_principal_forms": [
+        "丬"
+      ],
+      "component_id": "cmp-0284",
+      "color": "#1F528F",
+      "display_color": "#1F528F",
+      "color_source": "palette_v0.4",
+      "example_count": 0
+    },
+    {
+      "id": "gf0011-variant-018",
+      "form": "門",
+      "role": "listed_variant",
+      "reported_strokes": 3,
+      "related_principal_forms": [
+        "门"
+      ],
+      "component_id": null,
+      "color": null,
+      "display_color": "#178529",
+      "color_source": "variant_parent",
+      "example_count": 0,
+      "parent_form": "门"
+    },
+    {
+      "id": "gf0011-variant-019",
+      "form": "辵",
+      "role": "listed_variant",
+      "reported_strokes": 3,
+      "related_principal_forms": [
+        "辶"
+      ],
+      "component_id": null,
+      "color": null,
+      "display_color": "#601CCF",
+      "color_source": "variant_parent",
+      "example_count": 0,
+      "parent_form": "辶"
+    },
+    {
+      "id": "gf0011-variant-020",
+      "form": "⺕",
+      "role": "listed_variant",
+      "reported_strokes": 3,
+      "related_principal_forms": [
+        "彐"
+      ],
+      "component_id": null,
+      "color": null,
+      "display_color": "#6085AC",
+      "color_source": "variant_parent",
+      "example_count": 0,
+      "parent_form": "彐"
+    },
+    {
+      "id": "gf0011-variant-021",
+      "form": "彑",
+      "role": "listed_variant",
+      "reported_strokes": 3,
+      "related_principal_forms": [
+        "彐"
+      ],
+      "component_id": "cmp-0446",
+      "color": "#D87903",
+      "display_color": "#D87903",
+      "color_source": "palette_v0.4",
+      "example_count": 0
+    },
+    {
+      "id": "gf0011-variant-022",
+      "form": "已",
+      "role": "listed_variant",
+      "reported_strokes": 3,
+      "related_principal_forms": [
+        "己"
+      ],
+      "component_id": "cmp-0190",
+      "color": "#504FF6",
+      "display_color": "#504FF6",
+      "color_source": "palette_v0.4",
+      "example_count": 1
+    },
+    {
+      "id": "gf0011-variant-023",
+      "form": "巳",
+      "role": "listed_variant",
+      "reported_strokes": 3,
+      "related_principal_forms": [
+        "己"
+      ],
+      "component_id": "cmp-0192",
+      "color": "#DF4B9D",
+      "display_color": "#DF4B9D",
+      "color_source": "palette_v0.4",
+      "example_count": 5
+    },
+    {
+      "id": "gf0011-variant-024",
+      "form": "飛",
+      "role": "listed_variant",
+      "reported_strokes": 3,
+      "related_principal_forms": [
+        "飞"
+      ],
+      "component_id": null,
+      "color": null,
+      "display_color": "#876083",
+      "color_source": "variant_parent",
+      "example_count": 0,
+      "parent_form": "飞"
+    },
+    {
+      "id": "gf0011-variant-025",
+      "form": "馬",
+      "role": "listed_variant",
+      "reported_strokes": 3,
+      "related_principal_forms": [
+        "马"
+      ],
+      "component_id": null,
+      "color": null,
+      "display_color": "#C41F5F",
+      "color_source": "variant_parent",
+      "example_count": 0,
+      "parent_form": "马"
+    },
+    {
+      "id": "gf0011-variant-026",
+      "form": "玉",
+      "role": "listed_variant",
+      "reported_strokes": 4,
+      "related_principal_forms": [
+        "王"
+      ],
+      "component_id": "cmp-0470",
+      "color": "#086687",
+      "display_color": "#086687",
+      "color_source": "palette_v0.4",
+      "example_count": 1
+    },
+    {
+      "id": "gf0011-variant-027",
+      "form": "旡",
+      "role": "listed_variant",
+      "reported_strokes": 4,
+      "related_principal_forms": [
+        "无"
+      ],
+      "component_id": "cmp-0193",
+      "color": "#930A82",
+      "display_color": "#930A82",
+      "color_source": "palette_v0.4",
+      "example_count": 0
+    },
+    {
+      "id": "gf0011-variant-028",
+      "form": "韋",
+      "role": "listed_variant",
+      "reported_strokes": 4,
+      "related_principal_forms": [
+        "韦"
+      ],
+      "component_id": null,
+      "color": null,
+      "display_color": "#60612E",
+      "color_source": "variant_parent",
+      "example_count": 0,
+      "parent_form": "韦"
+    },
+    {
+      "id": "gf0011-variant-029",
+      "form": "朩",
+      "role": "listed_variant",
+      "reported_strokes": 4,
+      "related_principal_forms": [
+        "木"
+      ],
+      "component_id": null,
+      "color": null,
+      "display_color": "#C67544",
+      "color_source": "variant_parent",
+      "example_count": 0,
+      "parent_form": "木"
+    },
+    {
+      "id": "gf0011-variant-030",
+      "form": "犭",
+      "role": "listed_variant",
+      "reported_strokes": 4,
+      "related_principal_forms": [
+        "犬"
+      ],
+      "component_id": "cmp-0310",
+      "color": "#256812",
+      "display_color": "#256812",
+      "color_source": "palette_v0.4",
+      "example_count": 4
+    },
+    {
+      "id": "gf0011-variant-031",
+      "form": "歺",
+      "role": "listed_variant",
+      "reported_strokes": 4,
+      "related_principal_forms": [
+        "歹"
+      ],
+      "component_id": "cmp-0102",
+      "color": "#EC4B72",
+      "display_color": "#EC4B72",
+      "color_source": "palette_v0.4",
+      "example_count": 0
+    },
+    {
+      "id": "gf0011-variant-032",
+      "form": "車",
+      "role": "listed_variant",
+      "reported_strokes": 4,
+      "related_principal_forms": [
+        "车"
+      ],
+      "component_id": null,
+      "color": null,
+      "display_color": "#A04E3A",
+      "color_source": "variant_parent",
+      "example_count": 0,
+      "parent_form": "车"
+    },
+    {
+      "id": "gf0011-variant-033",
+      "form": "攵",
+      "role": "listed_variant",
+      "reported_strokes": 4,
+      "related_principal_forms": [
+        "攴"
+      ],
+      "component_id": "cmp-0130",
+      "color": "#902099",
+      "display_color": "#902099",
+      "color_source": "palette_v0.4",
+      "example_count": 4
+    },
+    {
+      "id": "gf0011-variant-034",
+      "form": "⺜",
+      "role": "listed_variant",
+      "reported_strokes": 4,
+      "related_principal_forms": [
+        "日"
+      ],
+      "component_id": null,
+      "color": null,
+      "display_color": "#2A76F1",
+      "color_source": "variant_parent",
+      "example_count": 0,
+      "parent_form": "日"
+    },
+    {
+      "id": "gf0011-variant-035",
+      "form": "曰",
+      "role": "listed_variant",
+      "reported_strokes": 4,
+      "related_principal_forms": [
+        "日"
+      ],
+      "component_id": "cmp-0316",
+      "color": "#A85F91",
+      "display_color": "#A85F91",
+      "color_source": "palette_v0.4",
+      "example_count": 1
+    },
+    {
+      "id": "gf0011-variant-036",
+      "form": "貝",
+      "role": "listed_variant",
+      "reported_strokes": 4,
+      "related_principal_forms": [
+        "贝"
+      ],
+      "component_id": null,
+      "color": null,
+      "display_color": "#438E56",
+      "color_source": "variant_parent",
+      "example_count": 0,
+      "parent_form": "贝"
+    },
+    {
+      "id": "gf0011-variant-037",
+      "form": "氵",
+      "role": "listed_variant",
+      "reported_strokes": 4,
+      "related_principal_forms": [
+        "水"
+      ],
+      "component_id": "cmp-0002",
+      "color": "#025EB8",
+      "display_color": "#025EB8",
+      "color_source": "palette_v0.4",
+      "example_count": 28
+    },
+    {
+      "id": "gf0011-variant-038",
+      "form": "氺",
+      "role": "listed_variant",
+      "reported_strokes": 4,
+      "related_principal_forms": [
+        "水"
+      ],
+      "component_id": "cmp-0361",
+      "color": "#87455B",
+      "display_color": "#87455B",
+      "color_source": "palette_v0.4",
+      "example_count": 0
+    },
+    {
+      "id": "gf0011-variant-039",
+      "form": "見",
+      "role": "listed_variant",
+      "reported_strokes": 4,
+      "related_principal_forms": [
+        "见"
+      ],
+      "component_id": null,
+      "color": null,
+      "display_color": "#B97696",
+      "color_source": "variant_parent",
+      "example_count": 0,
+      "parent_form": "见"
+    },
+    {
+      "id": "gf0011-variant-040",
+      "form": "牜",
+      "role": "listed_variant",
+      "reported_strokes": 4,
+      "related_principal_forms": [
+        "牛"
+      ],
+      "component_id": null,
+      "color": null,
+      "display_color": "#D95AF5",
+      "color_source": "variant_parent",
+      "example_count": 0,
+      "parent_form": "牛"
+    },
+    {
+      "id": "gf0011-variant-041",
+      "form": "扌",
+      "role": "listed_variant",
+      "reported_strokes": 4,
+      "related_principal_forms": [
+        "手"
+      ],
+      "component_id": "cmp-0019",
+      "color": "#E36DA0",
+      "display_color": "#E36DA0",
+      "color_source": "palette_v0.4",
+      "example_count": 72
+    },
+    {
+      "id": "gf0011-variant-042",
+      "form": "龵",
+      "role": "listed_variant",
+      "reported_strokes": 4,
+      "related_principal_forms": [
+        "手"
+      ],
+      "component_id": null,
+      "color": null,
+      "display_color": "#9130DB",
+      "color_source": "variant_parent",
+      "example_count": 0,
+      "parent_form": "手"
+    },
+    {
+      "id": "gf0011-variant-043",
+      "form": "镸",
+      "role": "listed_variant",
+      "reported_strokes": 4,
+      "related_principal_forms": [
+        "长"
+      ],
+      "component_id": "cmp-0367",
+      "color": "#6D5984",
+      "display_color": "#6D5984",
+      "color_source": "palette_v0.4",
+      "example_count": 0
+    },
+    {
+      "id": "gf0011-variant-044",
+      "form": "長",
+      "role": "listed_variant",
+      "reported_strokes": 4,
+      "related_principal_forms": [
+        "长"
+      ],
+      "component_id": null,
+      "color": null,
+      "display_color": "#427E95",
+      "color_source": "variant_parent",
+      "example_count": 0,
+      "parent_form": "长"
+    },
+    {
+      "id": "gf0011-variant-045",
+      "form": "爫",
+      "role": "listed_variant",
+      "reported_strokes": 4,
+      "related_principal_forms": [
+        "爪"
+      ],
+      "component_id": "cmp-0483",
+      "color": "#286E7D",
+      "display_color": "#286E7D",
+      "color_source": "palette_v0.4",
+      "example_count": 1
+    },
+    {
+      "id": "gf0011-variant-046",
+      "form": "⺝",
+      "role": "listed_variant",
+      "reported_strokes": 4,
+      "related_principal_forms": [
+        "月"
+      ],
+      "component_id": "cmp-0474",
+      "color": "#684365",
+      "display_color": "#684365",
+      "color_source": "palette_v0.4",
+      "example_count": 2
+    },
+    {
+      "id": "gf0011-variant-047",
+      "form": "風",
+      "role": "listed_variant",
+      "reported_strokes": 4,
+      "related_principal_forms": [
+        "风"
+      ],
+      "component_id": null,
+      "color": null,
+      "display_color": "#1D6173",
+      "color_source": "variant_parent",
+      "example_count": 0,
+      "parent_form": "风"
+    },
+    {
+      "id": "gf0011-variant-048",
+      "form": "灬",
+      "role": "listed_variant",
+      "reported_strokes": 4,
+      "related_principal_forms": [
+        "火"
+      ],
+      "component_id": "cmp-0006",
+      "color": "#6C4FC6",
+      "display_color": "#6C4FC6",
+      "color_source": "palette_v0.4",
+      "example_count": 0
+    },
+    {
+      "id": "gf0011-variant-049",
+      "form": "忄",
+      "role": "listed_variant",
+      "reported_strokes": 4,
+      "related_principal_forms": [
+        "心"
+      ],
+      "component_id": "cmp-0017",
+      "color": "#5477CB",
+      "display_color": "#5477CB",
+      "color_source": "palette_v0.4",
+      "example_count": 6
+    },
+    {
+      "id": "gf0011-variant-050",
+      "form": "⺗",
+      "role": "listed_variant",
+      "reported_strokes": 4,
+      "related_principal_forms": [
+        "心"
+      ],
+      "component_id": null,
+      "color": null,
+      "display_color": "#C04E8A",
+      "color_source": "variant_parent",
+      "example_count": 0,
+      "parent_form": "心"
+    },
+    {
+      "id": "gf0011-variant-051",
+      "form": "母",
+      "role": "listed_variant",
+      "reported_strokes": 4,
+      "related_principal_forms": [
+        "毋"
+      ],
+      "component_id": "cmp-0268",
+      "color": "#7D4480",
+      "display_color": "#7D4480",
+      "color_source": "palette_v0.4",
+      "example_count": 3
+    },
+    {
+      "id": "gf0011-variant-052",
+      "form": "礻",
+      "role": "listed_variant",
+      "reported_strokes": 4,
+      "related_principal_forms": [
+        "示"
+      ],
+      "component_id": "cmp-0344",
+      "color": "#814D45",
+      "display_color": "#814D45",
+      "color_source": "palette_v0.4",
+      "example_count": 0
+    },
+    {
+      "id": "gf0011-variant-053",
+      "form": "龍",
+      "role": "listed_variant",
+      "reported_strokes": 4,
+      "related_principal_forms": [
+        "龙"
+      ],
+      "component_id": null,
+      "color": null,
+      "display_color": "#F21D74",
+      "color_source": "variant_parent",
+      "example_count": 0,
+      "parent_form": "龙"
+    },
+    {
+      "id": "gf0011-variant-054",
+      "form": "鳥",
+      "role": "listed_variant",
+      "reported_strokes": 4,
+      "related_principal_forms": [
+        "鸟"
+      ],
+      "component_id": null,
+      "color": null,
+      "display_color": "#94614F",
+      "color_source": "variant_parent",
+      "example_count": 0,
+      "parent_form": "鸟"
+    },
+    {
+      "id": "gf0011-variant-055",
+      "form": "𤴔",
+      "role": "listed_variant",
+      "reported_strokes": 4,
+      "related_principal_forms": [
+        "疋"
+      ],
+      "component_id": null,
+      "color": null,
+      "display_color": "#226C28",
+      "color_source": "supplemental_v0.1",
+      "example_count": 0
+    },
+    {
+      "id": "gf0011-variant-056",
+      "form": "耂",
+      "role": "listed_variant",
+      "reported_strokes": 6,
+      "related_principal_forms": [
+        "老"
+      ],
+      "component_id": "cmp-0230",
+      "color": "#AD7249",
+      "display_color": "#AD7249",
+      "color_source": "palette_v0.4",
+      "example_count": 3
+    },
+    {
+      "id": "gf0011-variant-057",
+      "form": "襾",
+      "role": "listed_variant",
+      "reported_strokes": 6,
+      "related_principal_forms": [
+        "覀"
+      ],
+      "component_id": null,
+      "color": null,
+      "display_color": "#86603B",
+      "color_source": "variant_parent",
+      "example_count": 0,
+      "parent_form": "覀"
+    },
+    {
+      "id": "gf0011-variant-058",
+      "form": "西",
+      "role": "listed_variant",
+      "reported_strokes": 6,
+      "related_principal_forms": [
+        "覀"
+      ],
+      "component_id": "cmp-0403",
+      "color": "#057460",
+      "display_color": "#057460",
+      "color_source": "palette_v0.4",
+      "example_count": 1
+    },
+    {
+      "id": "gf0011-variant-059",
+      "form": "頁",
+      "role": "listed_variant",
+      "reported_strokes": 6,
+      "related_principal_forms": [
+        "页"
+      ],
+      "component_id": null,
+      "color": null,
+      "display_color": "#3696AB",
+      "color_source": "variant_parent",
+      "example_count": 0,
+      "parent_form": "页"
+    },
+    {
+      "id": "gf0011-variant-060",
+      "form": "虎",
+      "role": "listed_variant",
+      "reported_strokes": 6,
+      "related_principal_forms": [
+        "虍"
+      ],
+      "component_id": null,
+      "color": null,
+      "display_color": "#9C52AD",
+      "color_source": "variant_parent",
+      "example_count": 0,
+      "parent_form": "虍"
+    },
+    {
+      "id": "gf0011-variant-061",
+      "form": "𥫗",
+      "role": "listed_variant",
+      "reported_strokes": 6,
+      "related_principal_forms": [
+        "竹"
+      ],
+      "component_id": "cmp-0503",
+      "color": "#6F73BE",
+      "display_color": "#6F73BE",
+      "color_source": "palette_v0.4",
+      "example_count": 0
+    },
+    {
+      "id": "gf0011-variant-062",
+      "form": "𦥑",
+      "role": "listed_variant",
+      "reported_strokes": 6,
+      "related_principal_forms": [
+        "臼"
+      ],
+      "component_id": null,
+      "color": null,
+      "display_color": "#803255",
+      "color_source": "variant_parent",
+      "example_count": 0,
+      "parent_form": "臼"
+    },
+    {
+      "id": "gf0011-variant-063",
+      "form": "齊",
+      "role": "listed_variant",
+      "reported_strokes": 6,
+      "related_principal_forms": [
+        "齐"
+      ],
+      "component_id": null,
+      "color": null,
+      "display_color": "#02956B",
+      "color_source": "supplemental_v0.1",
+      "example_count": 0
+    },
+    {
+      "id": "gf0011-variant-064",
+      "form": "衤",
+      "role": "listed_variant",
+      "reported_strokes": 6,
+      "related_principal_forms": [
+        "衣"
+      ],
+      "component_id": "cmp-0445",
+      "color": "#BB66C1",
+      "display_color": "#BB66C1",
+      "color_source": "palette_v0.4",
+      "example_count": 2
+    },
+    {
+      "id": "gf0011-variant-065",
+      "form": "⺶",
+      "role": "listed_variant",
+      "reported_strokes": 6,
+      "related_principal_forms": [
+        "羊"
+      ],
+      "component_id": null,
+      "color": null,
+      "display_color": "#8C16C5",
+      "color_source": "variant_parent",
+      "example_count": 0,
+      "parent_form": "羊"
+    },
+    {
+      "id": "gf0011-variant-066",
+      "form": "𦍌",
+      "role": "listed_variant",
+      "reported_strokes": 6,
+      "related_principal_forms": [
+        "羊"
+      ],
+      "component_id": "cmp-0435",
+      "color": "#F36D3B",
+      "display_color": "#F36D3B",
+      "color_source": "palette_v0.4",
+      "example_count": 0
+    },
+    {
+      "id": "gf0011-variant-067",
+      "form": "肀",
+      "role": "listed_variant",
+      "reported_strokes": 6,
+      "related_principal_forms": [
+        "聿"
+      ],
+      "component_id": "cmp-0371",
+      "color": "#8267A1",
+      "display_color": "#8267A1",
+      "color_source": "palette_v0.4",
+      "example_count": 0
+    },
+    {
+      "id": "gf0011-variant-068",
+      "form": "⺻",
+      "role": "listed_variant",
+      "reported_strokes": 6,
+      "related_principal_forms": [
+        "聿"
+      ],
+      "component_id": null,
+      "color": null,
+      "display_color": "#5E6939",
+      "color_source": "variant_parent",
+      "example_count": 0,
+      "parent_form": "聿"
+    },
+    {
+      "id": "gf0011-variant-069",
+      "form": "纟",
+      "role": "listed_variant",
+      "reported_strokes": 6,
+      "related_principal_forms": [
+        "糸"
+      ],
+      "component_id": "cmp-0202",
+      "color": "#94439A",
+      "display_color": "#94439A",
+      "color_source": "palette_v0.4",
+      "example_count": 18
+    },
+    {
+      "id": "gf0011-variant-070",
+      "form": "糹",
+      "role": "listed_variant",
+      "reported_strokes": 6,
+      "related_principal_forms": [
+        "糸"
+      ],
+      "component_id": null,
+      "color": null,
+      "display_color": "#FD5A73",
+      "color_source": "variant_parent",
+      "example_count": 0,
+      "parent_form": "糸"
+    },
+    {
+      "id": "gf0011-variant-071",
+      "form": "麥",
+      "role": "listed_variant",
+      "reported_strokes": 7,
+      "related_principal_forms": [
+        "麦"
+      ],
+      "component_id": null,
+      "color": null,
+      "display_color": "#156BA9",
+      "color_source": "supplemental_v0.1",
+      "example_count": 0
+    },
+    {
+      "id": "gf0011-variant-072",
+      "form": "鹵",
+      "role": "listed_variant",
+      "reported_strokes": 7,
+      "related_principal_forms": [
+        "卤"
+      ],
+      "component_id": null,
+      "color": null,
+      "display_color": "#E65760",
+      "color_source": "variant_parent",
+      "example_count": 0,
+      "parent_form": "卤"
+    },
+    {
+      "id": "gf0011-variant-073",
+      "form": "𧾷",
+      "role": "listed_variant",
+      "reported_strokes": 7,
+      "related_principal_forms": [
+        "足"
+      ],
+      "component_id": null,
+      "color": null,
+      "display_color": "#BA60DF",
+      "color_source": "variant_parent",
+      "example_count": 0,
+      "parent_form": "足"
+    },
+    {
+      "id": "gf0011-variant-074",
+      "form": "⻏",
+      "role": "listed_variant",
+      "reported_strokes": 7,
+      "related_principal_forms": [
+        "邑"
+      ],
+      "component_id": null,
+      "color": null,
+      "display_color": "#2994CC",
+      "color_source": "supplemental_v0.1",
+      "example_count": 0
+    },
+    {
+      "id": "gf0011-variant-075",
+      "form": "龜",
+      "role": "listed_variant",
+      "reported_strokes": 7,
+      "related_principal_forms": [
+        "龟"
+      ],
+      "component_id": null,
+      "color": null,
+      "display_color": "#EA36AF",
+      "color_source": "variant_parent",
+      "example_count": 0,
+      "parent_form": "龟"
+    },
+    {
+      "id": "gf0011-variant-076",
+      "form": "讠",
+      "role": "listed_variant",
+      "reported_strokes": 7,
+      "related_principal_forms": [
+        "言"
+      ],
+      "component_id": "cmp-0022",
+      "color": "#B42C92",
+      "display_color": "#B42C92",
+      "color_source": "palette_v0.4",
+      "example_count": 29
+    },
+    {
+      "id": "gf0011-variant-077",
+      "form": "齒",
+      "role": "listed_variant",
+      "reported_strokes": 8,
+      "related_principal_forms": [
+        "齿"
+      ],
+      "component_id": null,
+      "color": null,
+      "display_color": "#7263B6",
+      "color_source": "supplemental_v0.1",
+      "example_count": 0
+    },
+    {
+      "id": "gf0011-variant-078",
+      "form": "黽",
+      "role": "listed_variant",
+      "reported_strokes": 8,
+      "related_principal_forms": [
+        "黾"
+      ],
+      "component_id": null,
+      "color": null,
+      "display_color": "#AF6D13",
+      "color_source": "supplemental_v0.1",
+      "example_count": 0
+    },
+    {
+      "id": "gf0011-variant-079",
+      "form": "⻖",
+      "role": "listed_variant",
+      "reported_strokes": 8,
+      "related_principal_forms": [
+        "阜"
+      ],
+      "component_id": null,
+      "color": null,
+      "display_color": "#2595CB",
+      "color_source": "supplemental_v0.1",
+      "example_count": 0
+    },
+    {
+      "id": "gf0011-variant-080",
+      "form": "钅",
+      "role": "listed_variant",
+      "reported_strokes": 8,
+      "related_principal_forms": [
+        "金"
+      ],
+      "component_id": "cmp-0029",
+      "color": "#89A10C",
+      "display_color": "#89A10C",
+      "color_source": "palette_v0.4",
+      "example_count": 2
+    },
+    {
+      "id": "gf0011-variant-081",
+      "form": "魚",
+      "role": "listed_variant",
+      "reported_strokes": 8,
+      "related_principal_forms": [
+        "鱼"
+      ],
+      "component_id": null,
+      "color": null,
+      "display_color": "#209B33",
+      "color_source": "variant_parent",
+      "example_count": 0,
+      "parent_form": "鱼"
+    },
+    {
+      "id": "gf0011-variant-082",
+      "form": "饣",
+      "role": "listed_variant",
+      "reported_strokes": 9,
+      "related_principal_forms": [
+        "食"
+      ],
+      "component_id": "cmp-0336",
+      "color": "#C4623E",
+      "display_color": "#C4623E",
+      "color_source": "palette_v0.4",
+      "example_count": 3
+    },
+    {
+      "id": "gf0011-variant-083",
+      "form": "飠",
+      "role": "listed_variant",
+      "reported_strokes": 9,
+      "related_principal_forms": [
+        "食"
+      ],
+      "component_id": null,
+      "color": null,
+      "display_color": "#599681",
+      "color_source": "variant_parent",
+      "example_count": 0,
+      "parent_form": "食"
+    }
+  ],
+  "kangxi": [
+    {
+      "number": 1,
+      "symbol": "⼀",
+      "normalized_form": "一",
+      "component_id": "cmp-0171",
+      "color": "#8D2929",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#8D2929",
+      "color_source": "palette_v0.4"
+    },
+    {
+      "number": 2,
+      "symbol": "⼁",
+      "normalized_form": "丨",
+      "component_id": "cmp-0351",
+      "color": "#4B7D4D",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#4B7D4D",
+      "color_source": "palette_v0.4"
+    },
+    {
+      "number": 3,
+      "symbol": "⼂",
+      "normalized_form": "丶",
+      "component_id": "cmp-0113",
+      "color": "#B45C6C",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#B45C6C",
+      "color_source": "palette_v0.4"
+    },
+    {
+      "number": 4,
+      "symbol": "⼃",
+      "normalized_form": "丿",
+      "component_id": "cmp-0288",
+      "color": "#7D3B37",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#7D3B37",
+      "color_source": "palette_v0.4"
+    },
+    {
+      "number": 5,
+      "symbol": "⼄",
+      "normalized_form": "乙",
+      "component_id": "cmp-0172",
+      "color": "#A74824",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#A74824",
+      "color_source": "palette_v0.4"
+    },
+    {
+      "number": 6,
+      "symbol": "⼅",
+      "normalized_form": "亅",
+      "component_id": null,
+      "color": null,
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#4B7D4D",
+      "color_source": "modern_display"
+    },
+    {
+      "number": 7,
+      "symbol": "⼆",
+      "normalized_form": "二",
+      "component_id": "cmp-0126",
+      "color": "#115469",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#115469",
+      "color_source": "palette_v0.4"
+    },
+    {
+      "number": 8,
+      "symbol": "⼇",
+      "normalized_form": "亠",
+      "component_id": "cmp-0418",
+      "color": "#915271",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#915271",
+      "color_source": "palette_v0.4"
+    },
+    {
+      "number": 9,
+      "symbol": "⼈",
+      "normalized_form": "人",
+      "component_id": "cmp-0012",
+      "color": "#8B4EB3",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#8B4EB3",
+      "color_source": "palette_v0.4"
+    },
+    {
+      "number": 10,
+      "symbol": "⼉",
+      "normalized_form": "儿",
+      "component_id": "cmp-0312",
+      "color": "#FB255B",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#FB255B",
+      "color_source": "palette_v0.4"
+    },
+    {
+      "number": 11,
+      "symbol": "⼊",
+      "normalized_form": "入",
+      "component_id": "cmp-0317",
+      "color": "#A22F11",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#A22F11",
+      "color_source": "palette_v0.4"
+    },
+    {
+      "number": 12,
+      "symbol": "⼋",
+      "normalized_form": "八",
+      "component_id": "cmp-0045",
+      "color": "#6645AA",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#6645AA",
+      "color_source": "palette_v0.4"
+    },
+    {
+      "number": 13,
+      "symbol": "⼌",
+      "normalized_form": "冂",
+      "component_id": "cmp-0373",
+      "color": "#157491",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#157491",
+      "color_source": "palette_v0.4"
+    },
+    {
+      "number": 14,
+      "symbol": "⼍",
+      "normalized_form": "冖",
+      "component_id": "cmp-0375",
+      "color": "#5D8D40",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#5D8D40",
+      "color_source": "palette_v0.4"
+    },
+    {
+      "number": 15,
+      "symbol": "⼎",
+      "normalized_form": "冫",
+      "component_id": "cmp-0003",
+      "color": "#C86B82",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#C86B82",
+      "color_source": "palette_v0.4"
+    },
+    {
+      "number": 16,
+      "symbol": "⼏",
+      "normalized_form": "几",
+      "component_id": "cmp-0188",
+      "color": "#849666",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#849666",
+      "color_source": "palette_v0.4"
+    },
+    {
+      "number": 17,
+      "symbol": "⼐",
+      "normalized_form": "凵",
+      "component_id": "cmp-0181",
+      "color": "#5151A7",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#5151A7",
+      "color_source": "palette_v0.4"
+    },
+    {
+      "number": 18,
+      "symbol": "⼑",
+      "normalized_form": "刀",
+      "component_id": "cmp-0106",
+      "color": "#BA3E3C",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#BA3E3C",
+      "color_source": "palette_v0.4"
+    },
+    {
+      "number": 19,
+      "symbol": "⼒",
+      "normalized_form": "力",
+      "component_id": "cmp-0040",
+      "color": "#9367B2",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#9367B2",
+      "color_source": "palette_v0.4"
+    },
+    {
+      "number": 20,
+      "symbol": "⼓",
+      "normalized_form": "勹",
+      "component_id": "cmp-0221",
+      "color": "#349317",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#349317",
+      "color_source": "palette_v0.4"
+    },
+    {
+      "number": 21,
+      "symbol": "⼔",
+      "normalized_form": "匕",
+      "component_id": "cmp-0058",
+      "color": "#7C7DF6",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#7C7DF6",
+      "color_source": "palette_v0.4"
+    },
+    {
+      "number": 22,
+      "symbol": "⼕",
+      "normalized_form": "匚",
+      "component_id": "cmp-0306",
+      "color": "#3A8286",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#3A8286",
+      "color_source": "palette_v0.4"
+    },
+    {
+      "number": 23,
+      "symbol": "⼖",
+      "normalized_form": "匸",
+      "component_id": null,
+      "color": null,
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": null,
+      "color_source": "not_yet_color_assigned"
+    },
+    {
+      "number": 24,
+      "symbol": "⼗",
+      "normalized_form": "十",
+      "component_id": "cmp-0334",
+      "color": "#967F4E",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#967F4E",
+      "color_source": "palette_v0.4"
+    },
+    {
+      "number": 25,
+      "symbol": "⼘",
+      "normalized_form": "卜",
+      "component_id": "cmp-0066",
+      "color": "#706419",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#706419",
+      "color_source": "palette_v0.4"
+    },
+    {
+      "number": 26,
+      "symbol": "⼙",
+      "normalized_form": "卩",
+      "component_id": "cmp-0205",
+      "color": "#B81C6F",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#B81C6F",
+      "color_source": "palette_v0.4"
+    },
+    {
+      "number": 27,
+      "symbol": "⼚",
+      "normalized_form": "厂",
+      "component_id": "cmp-0078",
+      "color": "#AF84DE",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#AF84DE",
+      "color_source": "palette_v0.4"
+    },
+    {
+      "number": 28,
+      "symbol": "⼛",
+      "normalized_form": "厶",
+      "component_id": "cmp-0363",
+      "color": "#A97E5B",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#A97E5B",
+      "color_source": "palette_v0.4"
+    },
+    {
+      "number": 29,
+      "symbol": "⼜",
+      "normalized_form": "又",
+      "component_id": "cmp-0463",
+      "color": "#445CCD",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#445CCD",
+      "color_source": "palette_v0.4"
+    },
+    {
+      "number": 30,
+      "symbol": "⼝",
+      "normalized_form": "口",
+      "component_id": "cmp-0020",
+      "color": "#1587BA",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#1587BA",
+      "color_source": "palette_v0.4"
+    },
+    {
+      "number": 31,
+      "symbol": "⼞",
+      "normalized_form": "囗",
+      "component_id": "cmp-0384",
+      "color": "#9C5768",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#9C5768",
+      "color_source": "palette_v0.4"
+    },
+    {
+      "number": 32,
+      "symbol": "⼟",
+      "normalized_form": "土",
+      "component_id": "cmp-0025",
+      "color": "#9E7604",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#9E7604",
+      "color_source": "palette_v0.4"
+    },
+    {
+      "number": 33,
+      "symbol": "⼠",
+      "normalized_form": "士",
+      "component_id": "cmp-0341",
+      "color": "#CD635D",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#CD635D",
+      "color_source": "palette_v0.4"
+    },
+    {
+      "number": 34,
+      "symbol": "⼡",
+      "normalized_form": "夂",
+      "component_id": "cmp-0118",
+      "color": "#A06976",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#A06976",
+      "color_source": "palette_v0.4"
+    },
+    {
+      "number": 35,
+      "symbol": "⼢",
+      "normalized_form": "夊",
+      "component_id": null,
+      "color": null,
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": null,
+      "color_source": "not_yet_color_assigned"
+    },
+    {
+      "number": 36,
+      "symbol": "⼣",
+      "normalized_form": "夕",
+      "component_id": "cmp-0400",
+      "color": "#CA8A66",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#CA8A66",
+      "color_source": "palette_v0.4"
+    },
+    {
+      "number": 37,
+      "symbol": "⼤",
+      "normalized_form": "大",
+      "component_id": "cmp-0100",
+      "color": "#256451",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#256451",
+      "color_source": "palette_v0.4"
+    },
+    {
+      "number": 38,
+      "symbol": "⼥",
+      "normalized_form": "女",
+      "component_id": "cmp-0014",
+      "color": "#EA5202",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#EA5202",
+      "color_source": "palette_v0.4"
+    },
+    {
+      "number": 39,
+      "symbol": "⼦",
+      "normalized_form": "子",
+      "component_id": "cmp-0015",
+      "color": "#98518A",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#98518A",
+      "color_source": "palette_v0.4"
+    },
+    {
+      "number": 40,
+      "symbol": "⼧",
+      "normalized_form": "宀",
+      "component_id": "cmp-0035",
+      "color": "#8352FE",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#8352FE",
+      "color_source": "palette_v0.4"
+    },
+    {
+      "number": 41,
+      "symbol": "⼨",
+      "normalized_form": "寸",
+      "component_id": "cmp-0099",
+      "color": "#40AC6F",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#40AC6F",
+      "color_source": "palette_v0.4"
+    },
+    {
+      "number": 42,
+      "symbol": "⼩",
+      "normalized_form": "小",
+      "component_id": "cmp-0411",
+      "color": "#5C76A0",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#5C76A0",
+      "color_source": "palette_v0.4"
+    },
+    {
+      "number": 43,
+      "symbol": "⼪",
+      "normalized_form": "尢",
+      "component_id": "cmp-0147",
+      "color": "#AB875D",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#AB875D",
+      "color_source": "palette_v0.4"
+    },
+    {
+      "number": 44,
+      "symbol": "⼫",
+      "normalized_form": "尸",
+      "component_id": "cmp-0332",
+      "color": "#8393C2",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#8393C2",
+      "color_source": "palette_v0.4"
+    },
+    {
+      "number": 45,
+      "symbol": "⼬",
+      "normalized_form": "屮",
+      "component_id": null,
+      "color": null,
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#568CD5",
+      "color_source": "modern_display"
+    },
+    {
+      "number": 46,
+      "symbol": "⼭",
+      "normalized_form": "山",
+      "component_id": "cmp-0027",
+      "color": "#FA588B",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#FA588B",
+      "color_source": "palette_v0.4"
+    },
+    {
+      "number": 47,
+      "symbol": "⼮",
+      "normalized_form": "巛",
+      "component_id": "cmp-0092",
+      "color": "#4C682B",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#4C682B",
+      "color_source": "palette_v0.4"
+    },
+    {
+      "number": 48,
+      "symbol": "⼯",
+      "normalized_form": "工",
+      "component_id": "cmp-0156",
+      "color": "#B86E03",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#B86E03",
+      "color_source": "palette_v0.4"
+    },
+    {
+      "number": 49,
+      "symbol": "⼰",
+      "normalized_form": "己",
+      "component_id": "cmp-0189",
+      "color": "#1D7339",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#1D7339",
+      "color_source": "palette_v0.4"
+    },
+    {
+      "number": 50,
+      "symbol": "⼱",
+      "normalized_form": "巾",
+      "component_id": "cmp-0209",
+      "color": "#6B9BBD",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#6B9BBD",
+      "color_source": "palette_v0.4"
+    },
+    {
+      "number": 51,
+      "symbol": "⼲",
+      "normalized_form": "干",
+      "component_id": "cmp-0146",
+      "color": "#A02951",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#A02951",
+      "color_source": "palette_v0.4"
+    },
+    {
+      "number": 52,
+      "symbol": "⼳",
+      "normalized_form": "幺",
+      "component_id": "cmp-0437",
+      "color": "#E65A48",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#E65A48",
+      "color_source": "palette_v0.4"
+    },
+    {
+      "number": 53,
+      "symbol": "⼴",
+      "normalized_form": "广",
+      "component_id": "cmp-0163",
+      "color": "#0478A8",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#0478A8",
+      "color_source": "palette_v0.4"
+    },
+    {
+      "number": 54,
+      "symbol": "⼵",
+      "normalized_form": "廴",
+      "component_id": "cmp-0200",
+      "color": "#B04F79",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#B04F79",
+      "color_source": "palette_v0.4"
+    },
+    {
+      "number": 55,
+      "symbol": "⼶",
+      "normalized_form": "廾",
+      "component_id": "cmp-0282",
+      "color": "#7D5234",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#7D5234",
+      "color_source": "palette_v0.4"
+    },
+    {
+      "number": 56,
+      "symbol": "⼷",
+      "normalized_form": "弋",
+      "component_id": "cmp-0450",
+      "color": "#4F8FBA",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#4F8FBA",
+      "color_source": "palette_v0.4"
+    },
+    {
+      "number": 57,
+      "symbol": "⼸",
+      "normalized_form": "弓",
+      "component_id": "cmp-0157",
+      "color": "#5B98AF",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#5B98AF",
+      "color_source": "palette_v0.4"
+    },
+    {
+      "number": 58,
+      "symbol": "⼹",
+      "normalized_form": "彐",
+      "component_id": "cmp-0249",
+      "color": "#6085AC",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#6085AC",
+      "color_source": "palette_v0.4"
+    },
+    {
+      "number": 59,
+      "symbol": "⼺",
+      "normalized_form": "彡",
+      "component_id": "cmp-0322",
+      "color": "#808A08",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#808A08",
+      "color_source": "palette_v0.4"
+    },
+    {
+      "number": 60,
+      "symbol": "⼻",
+      "normalized_form": "彳",
+      "component_id": "cmp-0360",
+      "color": "#6680BA",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#6680BA",
+      "color_source": "palette_v0.4"
+    },
+    {
+      "number": 61,
+      "symbol": "⼼",
+      "normalized_form": "心",
+      "component_id": "cmp-0016",
+      "color": "#C04E8A",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#C04E8A",
+      "color_source": "palette_v0.4"
+    },
+    {
+      "number": 62,
+      "symbol": "⼽",
+      "normalized_form": "戈",
+      "component_id": "cmp-0150",
+      "color": "#7B499C",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#7B499C",
+      "color_source": "palette_v0.4"
+    },
+    {
+      "number": 63,
+      "symbol": "⼾",
+      "normalized_form": "戶",
+      "component_id": null,
+      "color": null,
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": null,
+      "color_source": "not_yet_color_assigned"
+    },
+    {
+      "number": 64,
+      "symbol": "⼿",
+      "normalized_form": "手",
+      "component_id": "cmp-0018",
+      "color": "#9130DB",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#9130DB",
+      "color_source": "palette_v0.4"
+    },
+    {
+      "number": 65,
+      "symbol": "⽀",
+      "normalized_form": "支",
+      "component_id": null,
+      "color": null,
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#30A170",
+      "color_source": "modern_display"
+    },
+    {
+      "number": 66,
+      "symbol": "⽁",
+      "normalized_form": "攴",
+      "component_id": "cmp-0131",
+      "color": "#C07967",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#C07967",
+      "color_source": "palette_v0.4"
+    },
+    {
+      "number": 67,
+      "symbol": "⽂",
+      "normalized_form": "文",
+      "component_id": "cmp-0390",
+      "color": "#FF4659",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#FF4659",
+      "color_source": "palette_v0.4"
+    },
+    {
+      "number": 68,
+      "symbol": "⽃",
+      "normalized_form": "斗",
+      "component_id": "cmp-0121",
+      "color": "#2A8D7E",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#2A8D7E",
+      "color_source": "palette_v0.4"
+    },
+    {
+      "number": 69,
+      "symbol": "⽄",
+      "normalized_form": "斤",
+      "component_id": "cmp-0210",
+      "color": "#7C7028",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#7C7028",
+      "color_source": "palette_v0.4"
+    },
+    {
+      "number": 70,
+      "symbol": "⽅",
+      "normalized_form": "方",
+      "component_id": "cmp-0132",
+      "color": "#CA7EB1",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#CA7EB1",
+      "color_source": "palette_v0.4"
+    },
+    {
+      "number": 71,
+      "symbol": "⽆",
+      "normalized_form": "无",
+      "component_id": "cmp-0393",
+      "color": "#A21C62",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#A21C62",
+      "color_source": "palette_v0.4"
+    },
+    {
+      "number": 72,
+      "symbol": "⽇",
+      "normalized_form": "日",
+      "component_id": "cmp-0007",
+      "color": "#2A76F1",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#2A76F1",
+      "color_source": "palette_v0.4"
+    },
+    {
+      "number": 73,
+      "symbol": "⽈",
+      "normalized_form": "曰",
+      "component_id": "cmp-0316",
+      "color": "#A85F91",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#A85F91",
+      "color_source": "palette_v0.4"
+    },
+    {
+      "number": 74,
+      "symbol": "⽉",
+      "normalized_form": "月",
+      "component_id": "cmp-0008",
+      "color": "#DB3649",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#DB3649",
+      "color_source": "palette_v0.4"
+    },
+    {
+      "number": 75,
+      "symbol": "⽊",
+      "normalized_form": "木",
+      "component_id": "cmp-0009",
+      "color": "#C67544",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#C67544",
+      "color_source": "palette_v0.4"
+    },
+    {
+      "number": 76,
+      "symbol": "⽋",
+      "normalized_form": "欠",
+      "component_id": "cmp-0299",
+      "color": "#8C2F03",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#8C2F03",
+      "color_source": "palette_v0.4"
+    },
+    {
+      "number": 77,
+      "symbol": "⽌",
+      "normalized_form": "止",
+      "component_id": "cmp-0489",
+      "color": "#D78164",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#D78164",
+      "color_source": "palette_v0.4"
+    },
+    {
+      "number": 78,
+      "symbol": "⽍",
+      "normalized_form": "歹",
+      "component_id": "cmp-0101",
+      "color": "#6863B1",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#6863B1",
+      "color_source": "palette_v0.4"
+    },
+    {
+      "number": 79,
+      "symbol": "⽎",
+      "normalized_form": "殳",
+      "component_id": "cmp-0348",
+      "color": "#593FC5",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#593FC5",
+      "color_source": "palette_v0.4"
+    },
+    {
+      "number": 80,
+      "symbol": "⽏",
+      "normalized_form": "毋",
+      "component_id": null,
+      "color": null,
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#2D945D",
+      "color_source": "modern_display"
+    },
+    {
+      "number": 81,
+      "symbol": "⽐",
+      "normalized_form": "比",
+      "component_id": null,
+      "color": null,
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#3956A0",
+      "color_source": "modern_display"
+    },
+    {
+      "number": 82,
+      "symbol": "⽑",
+      "normalized_form": "毛",
+      "component_id": "cmp-0255",
+      "color": "#4B501E",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#4B501E",
+      "color_source": "palette_v0.4"
+    },
+    {
+      "number": 83,
+      "symbol": "⽒",
+      "normalized_form": "氏",
+      "component_id": "cmp-0342",
+      "color": "#4F8BA2",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#4F8BA2",
+      "color_source": "palette_v0.4"
+    },
+    {
+      "number": 84,
+      "symbol": "⽓",
+      "normalized_form": "气",
+      "component_id": "cmp-0295",
+      "color": "#CE8674",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#CE8674",
+      "color_source": "palette_v0.4"
+    },
+    {
+      "number": 85,
+      "symbol": "⽔",
+      "normalized_form": "水",
+      "component_id": "cmp-0001",
+      "color": "#AF56FD",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#AF56FD",
+      "color_source": "palette_v0.4"
+    },
+    {
+      "number": 86,
+      "symbol": "⽕",
+      "normalized_form": "火",
+      "component_id": "cmp-0005",
+      "color": "#DE0784",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#DE0784",
+      "color_source": "palette_v0.4"
+    },
+    {
+      "number": 87,
+      "symbol": "⽖",
+      "normalized_form": "爪",
+      "component_id": "cmp-0481",
+      "color": "#A469A7",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#A469A7",
+      "color_source": "palette_v0.4"
+    },
+    {
+      "number": 88,
+      "symbol": "⽗",
+      "normalized_form": "父",
+      "component_id": "cmp-0144",
+      "color": "#445780",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#445780",
+      "color_source": "palette_v0.4"
+    },
+    {
+      "number": 89,
+      "symbol": "⽘",
+      "normalized_form": "爻",
+      "component_id": null,
+      "color": null,
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": null,
+      "color_source": "not_yet_color_assigned"
+    },
+    {
+      "number": 90,
+      "symbol": "⽙",
+      "normalized_form": "爿",
+      "component_id": "cmp-0284",
+      "color": "#1F528F",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#1F528F",
+      "color_source": "palette_v0.4"
+    },
+    {
+      "number": 91,
+      "symbol": "⽚",
+      "normalized_form": "片",
+      "component_id": "cmp-0287",
+      "color": "#6F4157",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#6F4157",
+      "color_source": "palette_v0.4"
+    },
+    {
+      "number": 92,
+      "symbol": "⽛",
+      "normalized_form": "牙",
+      "component_id": "cmp-0427",
+      "color": "#DE5634",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#DE5634",
+      "color_source": "palette_v0.4"
+    },
+    {
+      "number": 93,
+      "symbol": "⽜",
+      "normalized_form": "牛",
+      "component_id": "cmp-0279",
+      "color": "#D95AF5",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#D95AF5",
+      "color_source": "palette_v0.4"
+    },
+    {
+      "number": 94,
+      "symbol": "⽝",
+      "normalized_form": "犬",
+      "component_id": "cmp-0309",
+      "color": "#035C92",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#035C92",
+      "color_source": "palette_v0.4"
+    },
+    {
+      "number": 95,
+      "symbol": "⽞",
+      "normalized_form": "玄",
+      "component_id": null,
+      "color": null,
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": null,
+      "color_source": "not_yet_color_assigned"
+    },
+    {
+      "number": 96,
+      "symbol": "⽟",
+      "normalized_form": "玉",
+      "component_id": "cmp-0470",
+      "color": "#086687",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#086687",
+      "color_source": "palette_v0.4"
+    },
+    {
+      "number": 97,
+      "symbol": "⽠",
+      "normalized_form": "瓜",
+      "component_id": "cmp-0160",
+      "color": "#85760B",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#85760B",
+      "color_source": "palette_v0.4"
+    },
+    {
+      "number": 98,
+      "symbol": "⽡",
+      "normalized_form": "瓦",
+      "component_id": "cmp-0379",
+      "color": "#DD1F5D",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#DD1F5D",
+      "color_source": "palette_v0.4"
+    },
+    {
+      "number": 99,
+      "symbol": "⽢",
+      "normalized_form": "甘",
+      "component_id": "cmp-0148",
+      "color": "#758B4B",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#758B4B",
+      "color_source": "palette_v0.4"
+    },
+    {
+      "number": 100,
+      "symbol": "⽣",
+      "normalized_form": "生",
+      "component_id": "cmp-0331",
+      "color": "#9E594E",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#9E594E",
+      "color_source": "palette_v0.4"
+    },
+    {
+      "number": 101,
+      "symbol": "⽤",
+      "normalized_form": "用",
+      "component_id": "cmp-0459",
+      "color": "#4D4983",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#4D4983",
+      "color_source": "palette_v0.4"
+    },
+    {
+      "number": 102,
+      "symbol": "⽥",
+      "normalized_form": "田",
+      "component_id": "cmp-0039",
+      "color": "#05A92E",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#05A92E",
+      "color_source": "palette_v0.4"
+    },
+    {
+      "number": 103,
+      "symbol": "⽦",
+      "normalized_form": "疋",
+      "component_id": null,
+      "color": null,
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#2B76B7",
+      "color_source": "modern_display"
+    },
+    {
+      "number": 104,
+      "symbol": "⽧",
+      "normalized_form": "疒",
+      "component_id": "cmp-0065",
+      "color": "#5B7AFD",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#5B7AFD",
+      "color_source": "palette_v0.4"
+    },
+    {
+      "number": 105,
+      "symbol": "⽨",
+      "normalized_form": "癶",
+      "component_id": "cmp-0109",
+      "color": "#AE4A92",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#AE4A92",
+      "color_source": "palette_v0.4"
+    },
+    {
+      "number": 106,
+      "symbol": "⽩",
+      "normalized_form": "白",
+      "component_id": "cmp-0048",
+      "color": "#7541ED",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#7541ED",
+      "color_source": "palette_v0.4"
+    },
+    {
+      "number": 107,
+      "symbol": "⽪",
+      "normalized_form": "皮",
+      "component_id": "cmp-0286",
+      "color": "#834047",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#834047",
+      "color_source": "palette_v0.4"
+    },
+    {
+      "number": 108,
+      "symbol": "⽫",
+      "normalized_form": "皿",
+      "component_id": "cmp-0266",
+      "color": "#D77C8B",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#D77C8B",
+      "color_source": "palette_v0.4"
+    },
+    {
+      "number": 109,
+      "symbol": "⽬",
+      "normalized_form": "目",
+      "component_id": "cmp-0023",
+      "color": "#91922F",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#91922F",
+      "color_source": "palette_v0.4"
+    },
+    {
+      "number": 110,
+      "symbol": "⽭",
+      "normalized_form": "矛",
+      "component_id": "cmp-0256",
+      "color": "#25672B",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#25672B",
+      "color_source": "palette_v0.4"
+    },
+    {
+      "number": 111,
+      "symbol": "⽮",
+      "normalized_form": "矢",
+      "component_id": "cmp-0338",
+      "color": "#644E1D",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#644E1D",
+      "color_source": "palette_v0.4"
+    },
+    {
+      "number": 112,
+      "symbol": "⽯",
+      "normalized_form": "石",
+      "component_id": "cmp-0026",
+      "color": "#744049",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#744049",
+      "color_source": "palette_v0.4"
+    },
+    {
+      "number": 113,
+      "symbol": "⽰",
+      "normalized_form": "示",
+      "component_id": "cmp-0343",
+      "color": "#285AF8",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#285AF8",
+      "color_source": "palette_v0.4"
+    },
+    {
+      "number": 114,
+      "symbol": "⽱",
+      "normalized_form": "禸",
+      "component_id": "cmp-0233",
+      "color": "#D7114A",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#D7114A",
+      "color_source": "palette_v0.4"
+    },
+    {
+      "number": 115,
+      "symbol": "⽲",
+      "normalized_form": "禾",
+      "component_id": "cmp-0011",
+      "color": "#808754",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#808754",
+      "color_source": "palette_v0.4"
+    },
+    {
+      "number": 116,
+      "symbol": "⽳",
+      "normalized_form": "穴",
+      "component_id": "cmp-0420",
+      "color": "#DB673D",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#DB673D",
+      "color_source": "palette_v0.4"
+    },
+    {
+      "number": 117,
+      "symbol": "⽴",
+      "normalized_form": "立",
+      "component_id": "cmp-0235",
+      "color": "#464E79",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#464E79",
+      "color_source": "palette_v0.4"
+    },
+    {
+      "number": 118,
+      "symbol": "⽵",
+      "normalized_form": "竹",
+      "component_id": "cmp-0502",
+      "color": "#226640",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#226640",
+      "color_source": "palette_v0.4"
+    },
+    {
+      "number": 119,
+      "symbol": "⽶",
+      "normalized_form": "米",
+      "component_id": "cmp-0262",
+      "color": "#99444E",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#99444E",
+      "color_source": "palette_v0.4"
+    },
+    {
+      "number": 120,
+      "symbol": "⽷",
+      "normalized_form": "糸",
+      "component_id": "cmp-0203",
+      "color": "#FD5A73",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#FD5A73",
+      "color_source": "palette_v0.4"
+    },
+    {
+      "number": 121,
+      "symbol": "⽸",
+      "normalized_form": "缶",
+      "component_id": "cmp-0139",
+      "color": "#BA1103",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#BA1103",
+      "color_source": "palette_v0.4"
+    },
+    {
+      "number": 122,
+      "symbol": "⽹",
+      "normalized_form": "网",
+      "component_id": null,
+      "color": null,
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": null,
+      "color_source": "not_yet_color_assigned"
+    },
+    {
+      "number": 123,
+      "symbol": "⽺",
+      "normalized_form": "羊",
+      "component_id": "cmp-0434",
+      "color": "#8C16C5",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#8C16C5",
+      "color_source": "palette_v0.4"
+    },
+    {
+      "number": 124,
+      "symbol": "⽻",
+      "normalized_form": "羽",
+      "component_id": null,
+      "color": null,
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#545DAD",
+      "color_source": "modern_display"
+    },
+    {
+      "number": 125,
+      "symbol": "⽼",
+      "normalized_form": "老",
+      "component_id": "cmp-0229",
+      "color": "#158681",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#158681",
+      "color_source": "palette_v0.4"
+    },
+    {
+      "number": 126,
+      "symbol": "⽽",
+      "normalized_form": "而",
+      "component_id": "cmp-0124",
+      "color": "#A83902",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#A83902",
+      "color_source": "palette_v0.4"
+    },
+    {
+      "number": 127,
+      "symbol": "⽾",
+      "normalized_form": "耒",
+      "component_id": "cmp-0232",
+      "color": "#279393",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#279393",
+      "color_source": "palette_v0.4"
+    },
+    {
+      "number": 128,
+      "symbol": "⽿",
+      "normalized_form": "耳",
+      "component_id": "cmp-0024",
+      "color": "#6D4D84",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#6D4D84",
+      "color_source": "palette_v0.4"
+    },
+    {
+      "number": 129,
+      "symbol": "⾀",
+      "normalized_form": "聿",
+      "component_id": "cmp-0472",
+      "color": "#5E6939",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#5E6939",
+      "color_source": "palette_v0.4"
+    },
+    {
+      "number": 130,
+      "symbol": "⾁",
+      "normalized_form": "肉",
+      "component_id": "cmp-0473",
+      "color": "#878CD9",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#878CD9",
+      "color_source": "palette_v0.4"
+    },
+    {
+      "number": 131,
+      "symbol": "⾂",
+      "normalized_form": "臣",
+      "component_id": "cmp-0079",
+      "color": "#724703",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#724703",
+      "color_source": "palette_v0.4"
+    },
+    {
+      "number": 132,
+      "symbol": "⾃",
+      "normalized_form": "自",
+      "component_id": "cmp-0512",
+      "color": "#427693",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#427693",
+      "color_source": "palette_v0.4"
+    },
+    {
+      "number": 133,
+      "symbol": "⾄",
+      "normalized_form": "至",
+      "component_id": "cmp-0493",
+      "color": "#5493D1",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#5493D1",
+      "color_source": "palette_v0.4"
+    },
+    {
+      "number": 134,
+      "symbol": "⾅",
+      "normalized_form": "臼",
+      "component_id": "cmp-0219",
+      "color": "#803255",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#803255",
+      "color_source": "palette_v0.4"
+    },
+    {
+      "number": 135,
+      "symbol": "⾆",
+      "normalized_form": "舌",
+      "component_id": "cmp-0327",
+      "color": "#5CA1AD",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#5CA1AD",
+      "color_source": "palette_v0.4"
+    },
+    {
+      "number": 136,
+      "symbol": "⾇",
+      "normalized_form": "舛",
+      "component_id": null,
+      "color": null,
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": null,
+      "color_source": "not_yet_color_assigned"
+    },
+    {
+      "number": 137,
+      "symbol": "⾈",
+      "normalized_form": "舟",
+      "component_id": "cmp-0499",
+      "color": "#951E13",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#951E13",
+      "color_source": "palette_v0.4"
+    },
+    {
+      "number": 138,
+      "symbol": "⾉",
+      "normalized_form": "艮",
+      "component_id": "cmp-0153",
+      "color": "#683788",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#683788",
+      "color_source": "palette_v0.4"
+    },
+    {
+      "number": 139,
+      "symbol": "⾊",
+      "normalized_form": "色",
+      "component_id": "cmp-0321",
+      "color": "#939D44",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#939D44",
+      "color_source": "palette_v0.4"
+    },
+    {
+      "number": 140,
+      "symbol": "⾋",
+      "normalized_form": "艸",
+      "component_id": null,
+      "color": null,
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#8D77E5",
+      "color_source": "modern_display"
+    },
+    {
+      "number": 141,
+      "symbol": "⾌",
+      "normalized_form": "虍",
+      "component_id": "cmp-0178",
+      "color": "#9C52AD",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#9C52AD",
+      "color_source": "palette_v0.4"
+    },
+    {
+      "number": 142,
+      "symbol": "⾍",
+      "normalized_form": "虫",
+      "component_id": "cmp-0087",
+      "color": "#9B8BE8",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#9B8BE8",
+      "color_source": "palette_v0.4"
+    },
+    {
+      "number": 143,
+      "symbol": "⾎",
+      "normalized_form": "血",
+      "component_id": "cmp-0423",
+      "color": "#0D9AD4",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#0D9AD4",
+      "color_source": "palette_v0.4"
+    },
+    {
+      "number": 144,
+      "symbol": "⾏",
+      "normalized_form": "行",
+      "component_id": null,
+      "color": null,
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": null,
+      "color_source": "not_yet_color_assigned"
+    },
+    {
+      "number": 145,
+      "symbol": "⾐",
+      "normalized_form": "衣",
+      "component_id": "cmp-0444",
+      "color": "#BA7639",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#BA7639",
+      "color_source": "palette_v0.4"
+    },
+    {
+      "number": 146,
+      "symbol": "⾑",
+      "normalized_form": "襾",
+      "component_id": null,
+      "color": null,
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#86603B",
+      "color_source": "modern_display"
+    },
+    {
+      "number": 147,
+      "symbol": "⾒",
+      "normalized_form": "見",
+      "component_id": null,
+      "color": null,
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#B97696",
+      "color_source": "modern_display"
+    },
+    {
+      "number": 148,
+      "symbol": "⾓",
+      "normalized_form": "角",
+      "component_id": "cmp-0204",
+      "color": "#825B1B",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#825B1B",
+      "color_source": "palette_v0.4"
+    },
+    {
+      "number": 149,
+      "symbol": "⾔",
+      "normalized_form": "言",
+      "component_id": "cmp-0021",
+      "color": "#99610B",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#99610B",
+      "color_source": "palette_v0.4"
+    },
+    {
+      "number": 150,
+      "symbol": "⾕",
+      "normalized_form": "谷",
+      "component_id": "cmp-0159",
+      "color": "#B26A70",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#B26A70",
+      "color_source": "palette_v0.4"
+    },
+    {
+      "number": 151,
+      "symbol": "⾖",
+      "normalized_form": "豆",
+      "component_id": "cmp-0122",
+      "color": "#689571",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#689571",
+      "color_source": "palette_v0.4"
+    },
+    {
+      "number": 152,
+      "symbol": "⾗",
+      "normalized_form": "豕",
+      "component_id": "cmp-0339",
+      "color": "#8D9D5A",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#8D9D5A",
+      "color_source": "palette_v0.4"
+    },
+    {
+      "number": 153,
+      "symbol": "⾘",
+      "normalized_form": "豸",
+      "component_id": "cmp-0495",
+      "color": "#0BAAA4",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#0BAAA4",
+      "color_source": "palette_v0.4"
+    },
+    {
+      "number": 154,
+      "symbol": "⾙",
+      "normalized_form": "貝",
+      "component_id": null,
+      "color": null,
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#438E56",
+      "color_source": "modern_display"
+    },
+    {
+      "number": 155,
+      "symbol": "⾚",
+      "normalized_form": "赤",
+      "component_id": "cmp-0086",
+      "color": "#4A936E",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#4A936E",
+      "color_source": "palette_v0.4"
+    },
+    {
+      "number": 156,
+      "symbol": "⾛",
+      "normalized_form": "走",
+      "component_id": null,
+      "color": null,
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#B36DB0",
+      "color_source": "modern_display"
+    },
+    {
+      "number": 157,
+      "symbol": "⾜",
+      "normalized_form": "足",
+      "component_id": "cmp-0031",
+      "color": "#BA60DF",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#BA60DF",
+      "color_source": "palette_v0.4"
+    },
+    {
+      "number": 158,
+      "symbol": "⾝",
+      "normalized_form": "身",
+      "component_id": "cmp-0329",
+      "color": "#985DBF",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#985DBF",
+      "color_source": "palette_v0.4"
+    },
+    {
+      "number": 159,
+      "symbol": "⾞",
+      "normalized_form": "車",
+      "component_id": null,
+      "color": null,
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#A04E3A",
+      "color_source": "modern_display"
+    },
+    {
+      "number": 160,
+      "symbol": "⾟",
+      "normalized_form": "辛",
+      "component_id": "cmp-0415",
+      "color": "#EE7313",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#EE7313",
+      "color_source": "palette_v0.4"
+    },
+    {
+      "number": 161,
+      "symbol": "⾠",
+      "normalized_form": "辰",
+      "component_id": "cmp-0081",
+      "color": "#8E1C56",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#8E1C56",
+      "color_source": "palette_v0.4"
+    },
+    {
+      "number": 162,
+      "symbol": "⾡",
+      "normalized_form": "辵",
+      "component_id": null,
+      "color": null,
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#601CCF",
+      "color_source": "modern_display"
+    },
+    {
+      "number": 163,
+      "symbol": "⾢",
+      "normalized_form": "邑",
+      "component_id": null,
+      "color": null,
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#6B8B2F",
+      "color_source": "modern_display"
+    },
+    {
+      "number": 164,
+      "symbol": "⾣",
+      "normalized_form": "酉",
+      "component_id": "cmp-0462",
+      "color": "#C01643",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#C01643",
+      "color_source": "palette_v0.4"
+    },
+    {
+      "number": 165,
+      "symbol": "⾤",
+      "normalized_form": "釆",
+      "component_id": "cmp-0062",
+      "color": "#5064AB",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#5064AB",
+      "color_source": "palette_v0.4"
+    },
+    {
+      "number": 166,
+      "symbol": "⾥",
+      "normalized_form": "里",
+      "component_id": "cmp-0234",
+      "color": "#438206",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#438206",
+      "color_source": "palette_v0.4"
+    },
+    {
+      "number": 167,
+      "symbol": "⾦",
+      "normalized_form": "金",
+      "component_id": "cmp-0028",
+      "color": "#055179",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#055179",
+      "color_source": "palette_v0.4"
+    },
+    {
+      "number": 168,
+      "symbol": "⾧",
+      "normalized_form": "長",
+      "component_id": null,
+      "color": null,
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#427E95",
+      "color_source": "modern_display"
+    },
+    {
+      "number": 169,
+      "symbol": "⾨",
+      "normalized_form": "門",
+      "component_id": null,
+      "color": null,
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#178529",
+      "color_source": "modern_display"
+    },
+    {
+      "number": 170,
+      "symbol": "⾩",
+      "normalized_form": "阜",
+      "component_id": null,
+      "color": null,
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#1BA279",
+      "color_source": "modern_display"
+    },
+    {
+      "number": 171,
+      "symbol": "⾪",
+      "normalized_form": "隶",
+      "component_id": "cmp-0238",
+      "color": "#853522",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#853522",
+      "color_source": "palette_v0.4"
+    },
+    {
+      "number": 172,
+      "symbol": "⾫",
+      "normalized_form": "隹",
+      "component_id": "cmp-0509",
+      "color": "#787946",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#787946",
+      "color_source": "palette_v0.4"
+    },
+    {
+      "number": 173,
+      "symbol": "⾬",
+      "normalized_form": "雨",
+      "component_id": "cmp-0004",
+      "color": "#C52BBF",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#C52BBF",
+      "color_source": "palette_v0.4"
+    },
+    {
+      "number": 174,
+      "symbol": "⾭",
+      "normalized_form": "靑",
+      "component_id": null,
+      "color": null,
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": null,
+      "color_source": "not_yet_color_assigned"
+    },
+    {
+      "number": 175,
+      "symbol": "⾮",
+      "normalized_form": "非",
+      "component_id": "cmp-0134",
+      "color": "#DF7D50",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#DF7D50",
+      "color_source": "palette_v0.4"
+    },
+    {
+      "number": 176,
+      "symbol": "⾯",
+      "normalized_form": "面",
+      "component_id": "cmp-0264",
+      "color": "#5D6693",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#5D6693",
+      "color_source": "palette_v0.4"
+    },
+    {
+      "number": 177,
+      "symbol": "⾰",
+      "normalized_form": "革",
+      "component_id": "cmp-0151",
+      "color": "#525D2D",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#525D2D",
+      "color_source": "palette_v0.4"
+    },
+    {
+      "number": 178,
+      "symbol": "⾱",
+      "normalized_form": "韋",
+      "component_id": null,
+      "color": null,
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#60612E",
+      "color_source": "modern_display"
+    },
+    {
+      "number": 179,
+      "symbol": "⾲",
+      "normalized_form": "韭",
+      "component_id": "cmp-0218",
+      "color": "#414A8F",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#414A8F",
+      "color_source": "palette_v0.4"
+    },
+    {
+      "number": 180,
+      "symbol": "⾳",
+      "normalized_form": "音",
+      "component_id": null,
+      "color": null,
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#4054A0",
+      "color_source": "modern_display"
+    },
+    {
+      "number": 181,
+      "symbol": "⾴",
+      "normalized_form": "頁",
+      "component_id": null,
+      "color": null,
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#3696AB",
+      "color_source": "modern_display"
+    },
+    {
+      "number": 182,
+      "symbol": "⾵",
+      "normalized_form": "風",
+      "component_id": null,
+      "color": null,
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#1D6173",
+      "color_source": "modern_display"
+    },
+    {
+      "number": 183,
+      "symbol": "⾶",
+      "normalized_form": "飛",
+      "component_id": null,
+      "color": null,
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#876083",
+      "color_source": "modern_display"
+    },
+    {
+      "number": 184,
+      "symbol": "⾷",
+      "normalized_form": "食",
+      "component_id": "cmp-0335",
+      "color": "#599681",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#599681",
+      "color_source": "palette_v0.4"
+    },
+    {
+      "number": 185,
+      "symbol": "⾸",
+      "normalized_form": "首",
+      "component_id": "cmp-0347",
+      "color": "#2C7676",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#2C7676",
+      "color_source": "palette_v0.4"
+    },
+    {
+      "number": 186,
+      "symbol": "⾹",
+      "normalized_form": "香",
+      "component_id": null,
+      "color": null,
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#6568B9",
+      "color_source": "modern_display"
+    },
+    {
+      "number": 187,
+      "symbol": "⾺",
+      "normalized_form": "馬",
+      "component_id": null,
+      "color": null,
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#C41F5F",
+      "color_source": "modern_display"
+    },
+    {
+      "number": 188,
+      "symbol": "⾻",
+      "normalized_form": "骨",
+      "component_id": null,
+      "color": null,
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#9D4C17",
+      "color_source": "modern_display"
+    },
+    {
+      "number": 189,
+      "symbol": "⾼",
+      "normalized_form": "高",
+      "component_id": "cmp-0149",
+      "color": "#A66DBF",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#A66DBF",
+      "color_source": "palette_v0.4"
+    },
+    {
+      "number": 190,
+      "symbol": "⾽",
+      "normalized_form": "髟",
+      "component_id": null,
+      "color": null,
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#22874F",
+      "color_source": "modern_display"
+    },
+    {
+      "number": 191,
+      "symbol": "⾾",
+      "normalized_form": "鬥",
+      "component_id": null,
+      "color": null,
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#BB7B24",
+      "color_source": "modern_display"
+    },
+    {
+      "number": 192,
+      "symbol": "⾿",
+      "normalized_form": "鬯",
+      "component_id": null,
+      "color": null,
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": null,
+      "color_source": "not_yet_color_assigned"
+    },
+    {
+      "number": 193,
+      "symbol": "⿀",
+      "normalized_form": "鬲",
+      "component_id": "cmp-0239",
+      "color": "#D36D53",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#D36D53",
+      "color_source": "palette_v0.4"
+    },
+    {
+      "number": 194,
+      "symbol": "⿁",
+      "normalized_form": "鬼",
+      "component_id": "cmp-0165",
+      "color": "#C8233C",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#C8233C",
+      "color_source": "palette_v0.4"
+    },
+    {
+      "number": 195,
+      "symbol": "⿂",
+      "normalized_form": "魚",
+      "component_id": null,
+      "color": null,
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#209B33",
+      "color_source": "modern_display"
+    },
+    {
+      "number": 196,
+      "symbol": "⿃",
+      "normalized_form": "鳥",
+      "component_id": null,
+      "color": null,
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#94614F",
+      "color_source": "modern_display"
+    },
+    {
+      "number": 197,
+      "symbol": "⿄",
+      "normalized_form": "鹵",
+      "component_id": null,
+      "color": null,
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#E65760",
+      "color_source": "modern_display"
+    },
+    {
+      "number": 198,
+      "symbol": "⿅",
+      "normalized_form": "鹿",
+      "component_id": "cmp-0250",
+      "color": "#C48B81",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#C48B81",
+      "color_source": "palette_v0.4"
+    },
+    {
+      "number": 199,
+      "symbol": "⿆",
+      "normalized_form": "麥",
+      "component_id": null,
+      "color": null,
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#156BA9",
+      "color_source": "modern_display"
+    },
+    {
+      "number": 200,
+      "symbol": "⿇",
+      "normalized_form": "麻",
+      "component_id": null,
+      "color": null,
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#677D15",
+      "color_source": "modern_display"
+    },
+    {
+      "number": 201,
+      "symbol": "⿈",
+      "normalized_form": "黃",
+      "component_id": null,
+      "color": null,
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": null,
+      "color_source": "not_yet_color_assigned"
+    },
+    {
+      "number": 202,
+      "symbol": "⿉",
+      "normalized_form": "黍",
+      "component_id": null,
+      "color": null,
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#7E4F9A",
+      "color_source": "modern_display"
+    },
+    {
+      "number": 203,
+      "symbol": "⿊",
+      "normalized_form": "黑",
+      "component_id": "cmp-0170",
+      "color": "#B55E58",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#B55E58",
+      "color_source": "palette_v0.4"
+    },
+    {
+      "number": 204,
+      "symbol": "⿋",
+      "normalized_form": "黹",
+      "component_id": null,
+      "color": null,
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": null,
+      "color_source": "not_yet_color_assigned"
+    },
+    {
+      "number": 205,
+      "symbol": "⿌",
+      "normalized_form": "黽",
+      "component_id": null,
+      "color": null,
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#AF6D13",
+      "color_source": "modern_display"
+    },
+    {
+      "number": 206,
+      "symbol": "⿍",
+      "normalized_form": "鼎",
+      "component_id": "cmp-0117",
+      "color": "#8F327F",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#8F327F",
+      "color_source": "palette_v0.4"
+    },
+    {
+      "number": 207,
+      "symbol": "⿎",
+      "normalized_form": "鼓",
+      "component_id": null,
+      "color": null,
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#697C12",
+      "color_source": "modern_display"
+    },
+    {
+      "number": 208,
+      "symbol": "⿏",
+      "normalized_form": "鼠",
+      "component_id": "cmp-0350",
+      "color": "#AD4865",
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#AD4865",
+      "color_source": "palette_v0.4"
+    },
+    {
+      "number": 209,
+      "symbol": "⿐",
+      "normalized_form": "鼻",
+      "component_id": null,
+      "color": null,
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#C86781",
+      "color_source": "modern_display"
+    },
+    {
+      "number": 210,
+      "symbol": "⿑",
+      "normalized_form": "齊",
+      "component_id": null,
+      "color": null,
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#02956B",
+      "color_source": "modern_display"
+    },
+    {
+      "number": 211,
+      "symbol": "⿒",
+      "normalized_form": "齒",
+      "component_id": null,
+      "color": null,
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#7263B6",
+      "color_source": "modern_display"
+    },
+    {
+      "number": 212,
+      "symbol": "⿓",
+      "normalized_form": "龍",
+      "component_id": null,
+      "color": null,
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#F21D74",
+      "color_source": "modern_display"
+    },
+    {
+      "number": 213,
+      "symbol": "⿔",
+      "normalized_form": "龜",
+      "component_id": null,
+      "color": null,
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#EA36AF",
+      "color_source": "modern_display"
+    },
+    {
+      "number": 214,
+      "symbol": "⿕",
+      "normalized_form": "龠",
+      "component_id": null,
+      "color": null,
+      "note": "compatibility-normalization only; not a claim of identical historical glyphs",
+      "display_color": "#2A6B23",
+      "color_source": "modern_display"
+    }
+  ],
+  "provenance": "Supplemental gallery colors for missing modern listed forms are separate from frozen v0.4 identities, not new component identities."
+}

@@ -257,3 +257,7 @@ Traditional radical order from Unicode Kangxi Radicals block U+2F00..U+2FD5 (214
 ## Palette v0.4
 
 The [Chromalect color data](palettes/mandarin-component-identity-v0.4.json) and [component standard mapping](palettes/gf0014-2009-records-v0.4.json) are separate internal references. Source integrity, rights, correctness and glyph availability limitations are described in [catalog methodology](docs/catalog-methodology.md).
+
+## Make Me a Hanzi — real stroke outlines
+
+The original SVG stroke outline paths used in the radical and component galleries are derived from `graphics.txt` in [skishore/makemeahanzi](https://github.com/skishore/makemeahanzi), originating from fonts by Arphic Technology Co., Ltd. They are used pursuant to the **Arphic Public License** (© 1999 Arphic Technology), reproduced verbatim in [licenses/ARPHICPL.TXT](licenses/ARPHICPL.TXT). Future per-stroke ownership analysis also uses its separately **LGPL-3.0-or-later** licensed dictionary decomposition and match data, with a copy of the license at [licenses/LGPL-3.0.txt](licenses/LGPL-3.0.txt). The repository's MIT license does not override these source licenses.
