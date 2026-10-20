@@ -18,4 +18,4 @@ Early concept illustrations colored arbitrary strokes inconsistently and used ou
 
 ## Consequences
 
-A displayed character may have several colors because it contains several components, **never** because strokes inside one component are assigned ad hoc colors. Failed image mockups cannot establish linguistic accuracy. Version and test every mapping.
+A displayed character may have several colors because it contains several components, **never** because strokes inside one component are assigned ad hoc colors. Illustrative image mockups do not establish linguistic accuracy. Version and test every mapping.
