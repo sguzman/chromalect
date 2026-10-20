@@ -141,8 +141,46 @@ fn source_records(glyphs: &[Glyph]) -> Result<Value,String> {
     }))
 }
 
+fn attach_research_diagnostics(profile:&mut Value, data:&Value)->Result<(),String>{
+    if string(data,"schema")?!="chromalect.glyph-diagnostics.v1"{
+        return Err("Mandarin profile received an unknown source diagnostics schema".into());
+    }
+    let sections=get(data,"unmapped_by_reason")?.as_object().ok_or("missing diagnostics categories")?;
+    let mut by_character=HashMap::new();
+    for (reason,records) in sections {
+        let rows=records.as_array().ok_or("diagnostics category must be array")?;
+        for row in rows {
+            let character=string(row,"character")?;
+            if by_character.insert(character.to_owned(),json!({
+                "reason":reason,
+                "ontology_type":"Claim",
+                "status":"unresolved",
+                "source_decomposition":row.get("source_decomposition").cloned().unwrap_or(Value::Null),
+                "review_assets":get(row,"review_assets")?,
+                "source_revision":string(data,"source_revision")?,
+            })).is_some(){return Err(format!("duplicate source diagnostics for {character}"));}
+        }
+    }
+    if by_character.len()!=get(profile,"unresolved_geometry_count")?.as_u64().unwrap_or(0) as usize {
+        return Err("Mandarin unresolved count differs from source diagnostics".into());
+    }
+    for row in profile["characters"].as_array_mut().ok_or("profile characters missing")?{
+        let character=string(row,"character")?.to_owned();
+        let unresolved=row["geometry"]["status"]=="unresolved_geometry";
+        match (unresolved,by_character.remove(&character)){
+            (true,Some(v))=>row["source_diagnostics"]=v,
+            (false,None)=>row["source_diagnostics"]=Value::Null,
+            _=>return Err(format!("{character}: source diagnostics disagree with source geometry")),
+        }
+    }
+    if !by_character.is_empty(){return Err("orphan source diagnostics remain".into());}
+    Ok(())
+}
+
 pub(super) fn generate(glyphs:&[Glyph],destination:&Path)->Result<(),String> {
-    let data=source_records(glyphs)?;
+    let mut data=source_records(glyphs)?;
+    let diagnostics=load(&destination.join("glyphs/diagnostics.json"))?;
+    attach_research_diagnostics(&mut data,&diagnostics)?;
     let folder=destination.join("profiles");
     fs::create_dir_all(&folder).map_err(|e|e.to_string())?;
     fs::write(folder.join("mandarin-1000-v1.json"),
@@ -169,6 +207,25 @@ mod tests{
         assert_eq!(hao["citation_readings"][1]["display"],"hào");
         assert_eq!(hao["geometry"]["status"],"source_aligned_visual_review_pending");
     }
+    #[test]
+    fn can_annotate_unmapped_records_without_promoting_geometry(){
+        let mut data=source_records(&[]).unwrap();
+        let entries=data["characters"].as_array().unwrap();
+        let sections=entries.iter().map(|row|json!({
+            "character":row["character"],"source_decomposition":Value::Null,
+            "review_assets":[]
+        })).collect::<Vec<_>>();
+        let diag=json!({
+            "schema":"chromalect.glyph-diagnostics.v1",
+            "source_revision":"test-revision",
+            "unmapped_by_reason":{"unresolved_source_components":sections},
+        });
+        attach_research_diagnostics(&mut data,&diag).unwrap();
+        assert_eq!(data["characters"][580]["source_diagnostics"]["reason"],
+                   "unresolved_source_components");
+        assert_eq!(data["characters"][580]["geometry"]["svg"],Value::Null);
+    }
+
     #[test]
     fn unknown_geometry_is_distinct_from_missing_character_data(){
         let data=source_records(&[]).unwrap();
