@@ -12,6 +12,7 @@ mod diagnostics;
 mod review;
 mod ontology;
 mod theme;
+mod profile;
 
 use serde_json::Value;
 use std::collections::{BTreeMap, BTreeSet};
