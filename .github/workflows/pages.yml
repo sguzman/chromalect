@@ -36,8 +36,19 @@ jobs:
         run: cargo generate-lockfile --manifest-path tools/glyph-pipeline/Cargo.toml
       - name: Validate component-colored glyph data
         run: cargo run --quiet --locked --manifest-path tools/glyph-pipeline/Cargo.toml -- check
-      - name: Build component-colored SVG atlas
-        run: cargo run --quiet --locked --manifest-path tools/glyph-pipeline/Cargo.toml -- build
+      - name: Download pinned stroke geometry and ownership data
+        shell: bash
+        run: |
+          set -euo pipefail
+          REV=bddc96d41bef78427ed0e034e9f7e31d71fd1b92
+          curl --fail --show-error --silent --location --retry 3 \
+            "https://raw.githubusercontent.com/skishore/makemeahanzi/$REV/dictionary.txt" \
+            --output "$RUNNER_TEMP/chromalect-dictionary.txt"
+          curl --fail --show-error --silent --location --retry 3 \
+            "https://raw.githubusercontent.com/skishore/makemeahanzi/$REV/graphics.txt" \
+            --output "$RUNNER_TEMP/chromalect-graphics.txt"
+      - name: Generate source-backed glyphs and extend atlas
+        run: cargo run --quiet --locked --manifest-path tools/glyph-pipeline/Cargo.toml -- discover "$RUNNER_TEMP/chromalect-dictionary.txt" "$RUNNER_TEMP/chromalect-graphics.txt"
       - name: Upload static Pages content
         uses: actions/upload-pages-artifact@v4
         with:
