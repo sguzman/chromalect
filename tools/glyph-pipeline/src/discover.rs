@@ -23,10 +23,11 @@ fn parse_parts(
     if path.len() > 6 || parts.len() > 8 { return None; }
     let token = *chars.get(*cursor)?;
     *cursor += 1;
-    // Non-overlapping horizontal/vertical arrangements only. Enclosures,
-    // overlapping forms, variants and unspecified fragments need separate review.
+    // Accept standard binary IDS arrangements only when each stroke points
+    // to an exact terminal leaf. Overlap (⿻), unknown fragments and
+    // unsupported operators are rejected instead of receiving inferred colors.
     let arity = match token {
-        '⿰' | '⿱' => 2,
+        '⿰' | '⿱' | '⿴' | '⿵' | '⿶' | '⿷' | '⿸' | '⿹' | '⿺' => 2,
         '⿲' | '⿳' => 3,
         _ => 0,
     };
@@ -95,7 +96,7 @@ fn matches_decomposition(
     let known = catalog.get(&ch)?;
     let original = item.get("decomposition")?.as_str()?.to_owned();
     let chars: Vec<char> = original.chars().collect();
-    if chars.len() < 3 || !matches!(chars[0], '⿰' | '⿱' | '⿲' | '⿳') {
+    if chars.len() < 3 || !matches!(chars[0], '⿰' | '⿱' | '⿲' | '⿳' | '⿴' | '⿵' | '⿶' | '⿷' | '⿸' | '⿹' | '⿺') {
         return None;
     }
     let mut cursor = 0;
@@ -247,6 +248,30 @@ mod tests {
     }
 
     #[test]
+    fn enclosure_requires_exact_stroke_to_leaf_ownership() {
+        let catalog = HashMap::from([("死".into(), HashSet::from([
+            "cmp-0101".into(), "cmp-0058".into(),
+        ]))]);
+        let shapes = HashMap::from([
+            ("歹".into(), ("cmp-0101".into(), "#6863B1".into())),
+            ("匕".into(), ("cmp-0058".into(), "#7C7DF6".into())),
+        ]);
+        let item = serde_json::json!({
+            "character":"死", "decomposition":"⿸歹匕",
+            "matches":[[0],[0],[1],[1]]
+        });
+        assert_eq!(
+            matches_decomposition(&item, &catalog, &shapes).unwrap().1.matches,
+            [0,0,1,1],
+        );
+        let uncertain = serde_json::json!({
+            "character":"死", "decomposition":"⿸歹匕",
+            "matches":[[0],null,[1],[1]]
+        });
+        assert!(matches_decomposition(&uncertain, &catalog, &shapes).is_none());
+    }
+
+    #[test]
     fn rejected_decomposition_types_are_not_guessed() {
         let catalog = HashMap::from([("字".into(), HashSet::from([
             "cmp-a".into(), "cmp-b".into()
@@ -255,7 +280,7 @@ mod tests {
             ("宀".into(), ("cmp-a".into(), "#111111".into())),
             ("子".into(), ("cmp-b".into(), "#222222".into())),
         ]);
-        for ids in ["⿴宀子", "⿰宀？", "⿰宀", "⿰宀子子"] {
+        for ids in ["⿻宀子", "⿰宀？", "⿰宀", "⿰宀子子"] {
             let row = serde_json::json!({
                 "character":"字", "decomposition":ids, "matches":[[0],[1]]
             });
