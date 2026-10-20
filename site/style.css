@@ -74,3 +74,17 @@ body:has(#component-direct:checked) .glyph-with-strokes::after{display:none}
 .palette-examples span{display:inline-flex;align-items:center;gap:7px;font-size:13px;color:#d5e4f2}
 .palette-example small{display:block;font-size:11px}
 @media(max-width:490px){.palette-table th,.palette-table td{padding:7px 8px}.palette-example{gap:14px}}
+
+/* Source-aligned glyph geometry inspection, with native and vector glyphs side by side. */
+.review-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(265px,1fr));gap:14px;margin:20px 0 34px}
+.review-item{background:var(--panel);border:1px solid var(--border);padding:14px;border-radius:12px;min-width:0}
+.review-item p{font-size:12px;margin:9px 0}
+.review-item p b{font-family:"Noto Sans CJK SC","Noto Sans SC",sans-serif;color:#eff5fd}
+.review-item .stroke-token-row{justify-content:flex-start;gap:5px}
+.review-item .stroke-token{font-size:13px;padding:2px 5px}
+.review-pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.review-pair>div{display:flex;flex-direction:column;align-items:center;justify-content:center;background:#0b1725;border-radius:9px;min-height:143px}
+.review-pair img{max-width:100%;object-fit:contain}
+.review-native{display:flex;justify-content:center;align-items:center;width:112px;height:112px;font-family:"Noto Sans CJK SC","Noto Sans SC","Source Han Sans SC",sans-serif;font-size:73px;color:#edf3fb}
+.review-pair small{color:var(--sub);font-size:11px;margin-bottom:5px}
+@media(max-width:490px){.review-grid{grid-template-columns:1fr 1fr;gap:8px}.review-item{padding:8px}.review-native{font-size:54px;width:88px;height:88px}.review-pair img{width:88px;height:88px}.review-pair>div{min-height:112px;gap:0}.review-pair small{font-size:9px}.review-item p{font-size:11px}}
