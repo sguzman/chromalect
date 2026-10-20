@@ -73,6 +73,37 @@ fn catalog_map() -> Result<HashMap<String, HashSet<String>>, String> {
     Ok(map)
 }
 
+fn atomic_components() -> Result<HashMap<String, (String, String)>, String> {
+    let palette = load(&root().join("palettes/mandarin-component-identity-v0.4.json"))?;
+    let catalog = load(&root().join("data/catalog/characters-0001-1000.json"))?;
+    let mut identities = HashMap::new();
+    for component in entries(&palette, "components")? {
+        identities.insert(
+            string(component, "id")?.to_owned(),
+            (string(component, "shape")?.to_owned(), string(component, "color")?.to_owned()),
+        );
+    }
+    let mut result = HashMap::new();
+    for row in entries(&catalog, "characters")? {
+        if row.get("structural_status").and_then(Value::as_str) != Some("atomic_recognizer") {
+            continue;
+        }
+        let character = string(row, "character")?;
+        let instances = entries(row, "component_instances")?;
+        if instances.len() != 1 { continue; }
+        let part = &instances[0];
+        if part.get("path").and_then(Value::as_str) != Some("root")
+            || part.get("form").and_then(Value::as_str) != Some(character)
+        { continue; }
+        let id = string(part, "id")?;
+        let Some((shape, color)) = identities.get(id) else { continue; };
+        if shape == character {
+            result.insert(character.to_owned(), (id.to_owned(), color.clone()));
+        }
+    }
+    Ok(result)
+}
+
 fn palette_shapes() -> Result<HashMap<String, (String, String)>, String> {
     let v = load(&root().join("palettes/mandarin-component-identity-v0.4.json"))?;
     let mut unique = HashMap::new();
@@ -148,6 +179,7 @@ fn load_matches(path: &Path) -> Result<HashMap<String, Decomposition>, String> {
 
 pub(super) fn run(dictionary: &Path, graphics: &Path) -> Result<(), String> {
     let mut pending = load_matches(dictionary)?;
+    let mut atomics = atomic_components()?;
     let existing = validate()?;
     let curated: HashSet<String> = existing.iter().map(|g| g.character.clone()).collect();
     let mut discovered: Vec<Glyph> = Vec::new();
@@ -157,34 +189,49 @@ pub(super) fn run(dictionary: &Path, graphics: &Path) -> Result<(), String> {
             Some(ch) => ch, None => return Ok(()),
         };
         if curated.contains(ch) { return Ok(()); }
-        let info = match pending.remove(ch) {
-            Some(info) => info, None => return Ok(()),
-        };
+        let mapping = pending.remove(ch);
+        let atomic = if mapping.is_none() { atomics.remove(ch) } else { None };
+        if mapping.is_none() && atomic.is_none() { return Ok(()); }
         let paths = match record.get("strokes").and_then(Value::as_array) {
-            Some(paths) if paths.len() == info.matches.len() => paths,
+            Some(paths) if !paths.is_empty()
+                && mapping.as_ref().is_none_or(|info| paths.len() == info.matches.len()) => paths,
             _ => { rejected += 1; return Ok(()); }
         };
         let mut strokes = Vec::new();
-        for (path, part) in paths.iter().zip(&info.matches) {
+        for (index, path) in paths.iter().enumerate() {
             let p = match path.as_str() {
                 Some(p) if super::valid_path(p) => p,
                 _ => { rejected += 1; return Ok(()); }
             };
+            let (id, color) = if let Some(info) = &mapping {
+                let part = info.matches[index];
+                (&info.ids[part], &info.colors[part])
+            } else {
+                let a = atomic.as_ref().expect("single component identity");
+                (&a.0, &a.1)
+            };
             strokes.push(Stroke {
                 path: p.to_owned(),
-                id: info.ids[*part].clone(),
-                color: info.colors[*part].clone(),
+                id: id.clone(),
+                color: color.clone(),
             });
         }
         if strokes.is_empty() { rejected += 1; return Ok(()); }
+        let (decomposition, parts) = if let Some(info) = mapping {
+            (
+                info.original,
+                (0..info.forms.len()).map(|i| (
+                    info.forms[i].clone(), info.ids[i].clone(), info.colors[i].clone()
+                )).collect()
+            )
+        } else {
+            let (id, color) = atomic.expect("single component identity");
+            (ch.to_owned(), vec![(ch.to_owned(), id, color)])
+        };
         discovered.push(Glyph {
             character: ch.to_owned(),
-            decomposition: info.original,
-            parts: (0..info.forms.len()).map(|i| (
-                info.forms[i].clone(),
-                info.ids[i].clone(),
-                info.colors[i].clone(),
-            )).collect(),
+            decomposition,
+            parts,
             strokes,
             candidate: true,
         });
@@ -208,6 +255,15 @@ pub(super) fn source_revision() -> &'static str { SOURCE_REV }
 #[cfg(test)]
 mod tests {
     use super::*;
+    #[test]
+    fn atomic_root_component_is_colorable_as_a_whole_glyph() {
+        let atomics = atomic_components().unwrap();
+        let (id, color) = atomics.get("一").unwrap();
+        assert_eq!(id, "cmp-0171");
+        assert_eq!(color, "#8D2929");
+        assert!(!atomics.contains_key("好"));
+    }
+
     #[test]
     fn simple_two_component_dictionary_record() {
         let catalog = HashMap::from([("好".into(), HashSet::from(["cmp-0014".into(), "cmp-0015".into()]))]);
