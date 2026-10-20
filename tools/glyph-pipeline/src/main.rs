@@ -10,6 +10,7 @@ mod phonetics;
 mod component_audit;
 mod diagnostics;
 mod review;
+mod ontology;
 
 use serde_json::Value;
 use std::collections::{BTreeMap, BTreeSet};
@@ -282,6 +283,7 @@ fn run() -> Result<(), String> {
             color_registry::validate_color_registry()?;
             phonetics::check()?;
             component_audit::check()?;
+            ontology::check()?;
             println!("Validated {} glyphs and their v0.4 component assignments.", glyphs.len());
         }
         Some("build") => build(&glyphs)?,
