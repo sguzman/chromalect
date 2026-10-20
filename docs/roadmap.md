@@ -47,7 +47,7 @@ This is a sequence of **evidence gates**, not a promise to build a large applica
 
 ## Phase 4 — software decision [deferred]
 
-Only after an experiment needs reproducible generation should we choose an implementation. **Any implementation source will be Rust.** Prefer an isolated, testable renderer and data model; choose UI/WebAssembly/native details by proven requirements rather than preference.
+Choose an implementation only when an experiment requires reproducible generation. **Implementation source must be Rust.** Prefer an isolated, testable renderer and data model; choose UI/WebAssembly/native details by proven requirements rather than preference.
 
 ## Future language profiles [not committed]
 
