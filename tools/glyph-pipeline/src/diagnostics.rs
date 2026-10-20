@@ -4,6 +4,20 @@ use std::collections::{BTreeMap, HashMap, HashSet};
 
 const DICTIONARY_REVISION: &str = "bddc96d41bef78427ed0e034e9f7e31d71fd1b92";
 
+fn source_is_declared_alternative(catalog: &Value, dictionary: &Value) -> bool {
+    let Some(source) = dictionary.get("decomposition").and_then(Value::as_str) else {
+        return false;
+    };
+    let Some(variants) = catalog.get("ids_primary").and_then(Value::as_str) else {
+        return false;
+    };
+    // Variant qualifiers like (H,T) are metadata, not component glyphs.
+    // Only compare a complete expression, never a prefix or substring.
+    variants.split(';').skip(1).any(|variant| {
+        variant.trim().split('(').next().unwrap_or("").trim() == source
+    })
+}
+
 fn dictionary_entries(path: &Path, allowed: &HashSet<String>) -> Result<HashMap<String, Value>, String> {
     let mut entries = HashMap::new();
     discover::source_records(path, |row| {
@@ -37,7 +51,21 @@ pub(super) fn generate(dictionary: &Path, glyphs: &[Glyph], dest: &Path) -> Resu
             None if atomics.contains_key(character) => "atomic_geometry_missing",
             None => "dictionary_entry_missing",
             Some(_) if atomics.contains_key(character) => "atomic_geometry_missing",
-            Some(source) => discover::explain_dictionary_rejection(source, &known_ids, &shapes),
+            Some(source) => {
+                let reason = discover::explain_dictionary_rejection(source, &known_ids, &shapes);
+                if reason == "source_catalog_component_disagreement"
+                    && source_is_declared_alternative(row, source)
+                {
+                    "source_matches_declared_catalog_alternative"
+                } else if reason == "unresolved_source_components"
+                    && source.get("decomposition").and_then(Value::as_str)
+                        .is_some_and(|s| s.contains('？'))
+                {
+                    "unknown_component_in_source"
+                } else {
+                    reason
+                }
+            }
         };
         total_missing += 1;
         by_reason.entry(reason.to_owned()).or_default().push(json!({
@@ -100,6 +128,20 @@ pub(super) fn generate(dictionary: &Path, glyphs: &[Glyph], dest: &Path) -> Resu
 #[cfg(test)]
 mod tests {
     use super::*;
+    #[test]
+    fn documented_variant_must_match_the_whole_source_expression() {
+        let variants = json!({"ids_primary":"⿰亻𠤎(.);⿰亻匕(H,T)"});
+        assert!(source_is_declared_alternative(
+            &variants, &json!({"decomposition":"⿰亻匕"})
+        ));
+        assert!(!source_is_declared_alternative(
+            &variants, &json!({"decomposition":"⿰亻"})
+        ));
+        assert!(!source_is_declared_alternative(
+            &variants, &json!({"decomposition":"⿰亻𠤎"})
+        ));
+    }
+
     #[test]
     fn empty_source_cannot_claim_stroke_ownership() {
         let known = HashMap::from([("好".into(), HashSet::from(["cmp-0014".into(),"cmp-0015".into()]))]);
