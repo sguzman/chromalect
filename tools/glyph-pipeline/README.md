@@ -77,7 +77,7 @@ character. Unrecognized shapes, overlapping IDS forms, unknown fragments,
 missing ownership, ambiguous paths, and incomplete outlines are excluded.
 The entire outline path array must be present and use accepted vector commands.
 
-Generated outputs include `site/glyphs/diagnostics.json` with per-character source/canonical disagreements, plus paginated `site/glyphs/review/` sheets comparing native and source-aligned appearances. Simple spatial placement checks are advisory only and do not certify accuracy.
+Generated outputs include `site/glyphs/diagnostics.json` with per-character source/canonical disagreements, plus paginated `site/glyphs/review/` sheets comparing native and source-aligned appearances. Simple spatial placement checks and close-pair OKLab distances (below 0.07) are advisory only and do not certify accuracy. The generated [priority contact sheet](../../site/glyphs/review/flagged.html) highlights 16 glyphs under the current source and palette combination; this does not change any v0.4 color assignments.
 
 The importer uses the source-provided stroke assignment for each path. It does
 not algorithmically infer ownership from stroke coordinates. Source alignment
