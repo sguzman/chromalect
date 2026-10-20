@@ -31,6 +31,6 @@ The v0.4 palette supplies **513 distinct recurring component colors**. It is **n
 
 **Coverage:** 998/1000 characters identify at least one known component; 987/1000 have no unmatched component tokens. 829/1000 have a listed modern radical form in their chosen decomposition cut. All 1,000 characters have records; unresolved members are retained as explicit issues rather than invented.
 
-**Rendering:** the separate source-aligned stroke dataset contains 12 curated specimens, and the Rust importer can derive 436 additional candidates from pinned upstream stroke-ownership and outline records. Geometry and IDS membership are distinct evidence; automated alignment does not replace independent visual auditing.
+**Rendering:** the separate source-aligned stroke dataset contains 12 curated specimens, and the Rust importer currently derives 790 further candidates from pinned upstream stroke-ownership and outline records, including 276 single-component glyphs. The generated site includes 802 glyphs total, of which 795 occur in the first 1,000-character catalog. The [coverage report](https://sguzman.github.io/chromalect/glyphs/coverage.json) lists the remaining 205 unmapped characters. Geometry and IDS membership are distinct evidence; automated alignment does not replace independent visual auditing.
 
 [Method and exceptions](docs/catalog-methodology.md) · [Third-party attribution](THIRD_PARTY_NOTICES.md)
