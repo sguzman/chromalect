@@ -1,6 +1,6 @@
-# Conceptual architecture (no implementation yet)
+# Conceptual architecture and ontology boundaries
 
-The model should remain independent of any renderer or font. **No Rust types are being specified as public API at this stage.**
+The model should remain independent of any renderer or font. **The public typed model is defined in [ONTOLOGY.md](../ONTOLOGY.md) and [ontology/ontology-v1.json](../ontology/ontology-v1.json).** Rust build tools implement and validate a source-backed subset without making Rust types the public ontology API.
 
 ## Distinct layers
 
@@ -40,8 +40,8 @@ A **render configuration** could contain: palette ID and version; pronunciation-
 
 An **experiment record** could contain: ID, revision, hypotheses, comparison conditions, specimen IDs, controlled inputs, measured results, and status.
 
-This is a separation-of-concerns proposal, not a commitment to JSON/TOML/Rust schema shape.
+The formal ontology now uses versioned JSON records and JSON Schemas. This section describes additional implementation candidates; it does not override the canonical ontology vocabulary or instantiate unsupported linguistic facts.
 
 ## Future implementation discipline
 
-When a renderer becomes justified, plan Rust-first with a pure data/annotation model separate from presentation. Evaluate Unicode and font shaping, stroke-level rendering, script-specific decomposition, and source-offset alignment before selecting a frontend. Do not start a monorepo or web app by default.
+The existing Rust renderer validates a source-aligned Mandarin subset. Continue Rust-first with a pure data/annotation model separate from presentation. Evaluate Unicode and font shaping, stroke-level rendering, script-specific decomposition, and source-offset alignment before selecting a frontend. Do not start a monorepo or web app by default.
