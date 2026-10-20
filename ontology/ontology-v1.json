@@ -705,6 +705,16 @@
       "kind": "RenderedSpecimen",
       "path": "site/glyphs/mappings.json",
       "status": "generated_during_pages_build_source_aligned_not_independently_certified"
+    },
+    {
+      "id": "mandarin-1000-ontology-profile",
+      "kind": "Character",
+      "path": "site/profiles/mandarin-1000-v1.json",
+      "schema": "chromalect.mandarin-character-profile.v1",
+      "version": "1.0.0",
+      "identityKey": "characters[].character",
+      "count": 1000,
+      "status": "generated_from_committed_sources_during_pages_build"
     }
   ],
   "dataBoundary": {
