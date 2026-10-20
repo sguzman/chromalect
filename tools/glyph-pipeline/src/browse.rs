@@ -24,7 +24,7 @@ fn lookup<'a>(glyphs: &'a [Glyph]) -> BTreeMap<String, Component<'a>> {
 
 fn page_header(title: &str) -> String {
     format!(
-        "<!doctype html>\n<html lang=\"en\"><head><meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"><title>{} · Chromalect</title><link rel=\"stylesheet\" href=\"../../style.css\"></head><body><main class=\"wrap\"><p><a href=\"../../index.html\">Chromalect</a> / <a href=\"../index.html\">Colored glyphs</a> / <a href=\"index.html\">Components</a></p>",
+        "<!doctype html>\n<html lang=\"en\"><head><meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"><title>{} · Chromalect</title><meta name=\"color-scheme\" content=\"light dark\"><script src=\"../../theme.js\"></script><link rel=\"stylesheet\" href=\"../../style.css\"></head><body><main class=\"wrap\"><p><a href=\"../../index.html\">Chromalect</a> / <a href=\"../index.html\">Colored glyphs</a> / <a href=\"index.html\">Components</a></p>",
         escape(title)
     )
 }
