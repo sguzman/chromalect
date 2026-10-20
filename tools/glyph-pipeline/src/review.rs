@@ -78,6 +78,33 @@ fn perceptual_distance(a: &str, b: &str) -> Option<f64> {
     Some(((l1-l2).powi(2) + (a1-a2).powi(2) + (b1-b2).powi(2)).sqrt())
 }
 
+fn nearby_component_pairs(glyph: &Glyph) -> Vec<Value> {
+    let mut seen = std::collections::BTreeSet::new();
+    let mut conflicts = Vec::new();
+    for (i, (left_form, left_id, left_color)) in glyph.parts.iter().enumerate() {
+        for (right_form, right_id, right_color) in glyph.parts.iter().skip(i+1) {
+            if left_id == right_id { continue; }
+            let pair = if left_id < right_id {
+                (left_id.clone(),right_id.clone())
+            } else {
+                (right_id.clone(),left_id.clone())
+            };
+            if !seen.insert(pair) { continue; }
+            if let Some(distance) = perceptual_distance(left_color,right_color) {
+                if distance < 0.07 {
+                    conflicts.push(json!({
+                        "component_a": {"form":left_form,"id":left_id,"hex":left_color},
+                        "component_b": {"form":right_form,"id":right_id,"hex":right_color},
+                        "oklab_distance": (distance * 10000.0).round()/10000.0,
+                        "review_only": true,
+                    }));
+                }
+            }
+        }
+    }
+    conflicts
+}
+
 fn flags(glyph: &Glyph) -> Vec<&'static str> {
     let mut problems = Vec::new();
     let mut owners: BTreeMap<&str, Bounds> = BTreeMap::new();
@@ -115,16 +142,8 @@ fn flags(glyph: &Glyph) -> Vec<&'static str> {
             }
         }
     }
-    for (i, (_, left_id, left_color)) in glyph.parts.iter().enumerate() {
-        for (_, right_id, right_color) in glyph.parts.iter().skip(i + 1) {
-            if left_id != right_id
-                && perceptual_distance(left_color, right_color).is_some_and(|delta| delta < 0.07)
-            {
-                if !problems.contains(&"nearby_component_colors") {
-                    problems.push("nearby_component_colors");
-                }
-            }
-        }
+    if !nearby_component_pairs(glyph).is_empty() {
+        problems.push("nearby_component_colors");
     }
     problems
 }
@@ -163,6 +182,7 @@ pub(super) fn generate(glyphs: &[Glyph], root: &Path) -> Result<(), String> {
             "component_ids": glyph.parts.iter().map(|p| p.1.clone()).collect::<Vec<_>>(),
             "stroke_count": glyph.strokes.len(),
             "geometry_review_flags": problems,
+            "component_color_pairs_below_0_07_oklab": nearby_component_pairs(glyph),
             "independently_visually_reviewed": false,
         }));
     }
@@ -193,10 +213,25 @@ pub(super) fn generate(glyphs: &[Glyph], root: &Path) -> Result<(), String> {
         .filter(|glyph| !flags(glyph).is_empty()).collect();
     let mut flagged_html = String::from("<!doctype html><html lang=\"en\"><head><meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"><title>Component contrast review · Chromalect</title><link rel=\"stylesheet\" href=\"../../style.css\"></head><body><main class=\"wrap\"><p><a href=\"../../index.html\">Chromalect</a> / <a href=\"index.html\">Geometry review</a></p><h1>Additional visual review candidates</h1><p class=\"intro\">Automatic checks identify glyphs whose component colors are close in OKLab space or whose estimated path geometry needs closer inspection. The review flags do not establish that any coloring or linguistic analysis is wrong, and no palette assignments have been changed.</p><div class=\"review-grid\">");
     for glyph in flagged_glyphs {
+        let pairs = nearby_component_pairs(glyph);
+        let swatches = pairs.iter().map(|pair| {
+            let left = &pair["component_a"];
+            let right = &pair["component_b"];
+            format!(
+                "<span class=\"stroke-token\"><i class=\"stroke-dot\" style=\"background:{}\"></i>{} <small>{}</small> ↔ <i class=\"stroke-dot\" style=\"background:{}\"></i>{} <small>{}</small> · ΔOK {:.4}</span>",
+                escape(left["hex"].as_str().unwrap_or("")),
+                escape(left["form"].as_str().unwrap_or("")),
+                escape(left["id"].as_str().unwrap_or("")),
+                escape(right["hex"].as_str().unwrap_or("")),
+                escape(right["form"].as_str().unwrap_or("")),
+                escape(right["id"].as_str().unwrap_or("")),
+                pair["oklab_distance"].as_f64().unwrap_or(0.0),
+            )
+        }).collect::<Vec<_>>().join("");
         flagged_html.push_str(&format!(
-            "<article class=\"review-item\"><div class=\"review-pair\"><div><span class=\"review-native\" lang=\"zh-Hans\">{}</span><small>Native font</small></div><div><img src=\"../{}\" width=\"112\" height=\"112\" loading=\"lazy\" alt=\"Colored source outlines for {}\"><small>Source SVG</small></div></div><p>{} · {} strokes</p><p class=\"hint\">{}</p><a href=\"../{}\">Open SVG</a></article>",
+            "<article class=\"review-item\"><div class=\"review-pair\"><div><span class=\"review-native\" lang=\"zh-Hans\">{}</span><small>Native font</small></div><div><img src=\"../{}\" width=\"112\" height=\"112\" loading=\"lazy\" alt=\"Colored source outlines for {}\"><small>Source SVG</small></div></div><p>{} · {} strokes</p><p class=\"hint\">{}</p><div class=\"stroke-token-row\">{}</div><a href=\"../{}\">Open SVG</a></article>",
             escape(&glyph.character), file_name(glyph), escape(&glyph.character),
-            escape(&glyph.decomposition), glyph.strokes.len(), escape(&flags(glyph).join(", ")), file_name(glyph)
+            escape(&glyph.decomposition), glyph.strokes.len(), escape(&flags(glyph).join(", ")), swatches, file_name(glyph)
         ));
     }
     flagged_html.push_str("</div></main></body></html>");
@@ -232,6 +267,23 @@ mod tests {
         assert_eq!(b.max_y, 60.0);
         assert!(outline_bounds("M 30 Z").is_none());
     }
+    #[test]
+    fn reports_exact_ids_and_colors_for_cooccurring_similar_pairs() {
+        let glyph = Glyph {
+            character:"试".into(),decomposition:"⿰甲乙".into(),
+            parts:vec![
+                ("甲".into(),"cmp-test-a".into(),"#777777".into()),
+                ("乙".into(),"cmp-test-b".into(),"#797979".into()),
+            ],
+            strokes:vec![],candidate:true,
+        };
+        let pairs = nearby_component_pairs(&glyph);
+        assert_eq!(pairs.len(),1);
+        assert_eq!(pairs[0]["component_a"]["id"],"cmp-test-a");
+        assert_eq!(pairs[0]["component_b"]["hex"],"#797979");
+        assert!(pairs[0]["oklab_distance"].as_f64().unwrap() < 0.07);
+    }
+
     #[test]
     fn close_colors_are_detected_without_changing_palette_assignments() {
         let black_white = perceptual_distance("#000000","#FFFFFF").unwrap();
