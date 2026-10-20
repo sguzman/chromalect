@@ -5,11 +5,45 @@ use std::io::{BufRead, BufReader};
 const SOURCE_REV: &str = "bddc96d41bef78427ed0e034e9f7e31d71fd1b92";
 
 struct Decomposition {
-    forms: [String; 2],
-    ids: [String; 2],
-    colors: [String; 2],
+    forms: Vec<String>,
+    ids: Vec<String>,
+    colors: Vec<String>,
     matches: Vec<usize>,
     original: String,
+}
+
+fn parse_parts(
+    chars: &[char],
+    cursor: &mut usize,
+    path: &mut Vec<usize>,
+    parts: &mut Vec<(Vec<usize>, String, String, String)>,
+    known: &HashSet<String>,
+    shapes: &HashMap<String, (String, String)>,
+) -> Option<()> {
+    if path.len() > 6 || parts.len() > 8 { return None; }
+    let token = *chars.get(*cursor)?;
+    *cursor += 1;
+    // Non-overlapping horizontal/vertical arrangements only. Enclosures,
+    // overlapping forms, variants and unspecified fragments need separate review.
+    let arity = match token {
+        '⿰' | '⿱' => 2,
+        '⿲' | '⿳' => 3,
+        _ => 0,
+    };
+    if arity > 0 {
+        for index in 0..arity {
+            path.push(index);
+            parse_parts(chars, cursor, path, parts, known, shapes)?;
+            path.pop();
+        }
+    } else {
+        let form = token.to_string();
+        let (id, color) = shapes.get(&form)?.clone();
+        if !known.contains(&id) { return None; }
+        parts.push((path.clone(), form, id, color));
+        if parts.len() > 8 { return None; }
+    }
+    Some(())
 }
 
 fn source_records(path: &Path, mut f: impl FnMut(Value) -> Result<(), String>) -> Result<(), String> {
@@ -61,29 +95,40 @@ fn matches_decomposition(
     let known = catalog.get(&ch)?;
     let original = item.get("decomposition")?.as_str()?.to_owned();
     let chars: Vec<char> = original.chars().collect();
-    // For non-overlapping two-way arrangements only. Nested and enclosure
-    // layouts need explicit recursive ownership support and visual review.
-    if chars.len() != 3 || !matches!(chars[0], '⿰' | '⿱') { return None; }
-    let first = chars[1].to_string();
-    let second = chars[2].to_string();
-    let (id0, c0) = shapes.get(&first)?.clone();
-    let (id1, c1) = shapes.get(&second)?.clone();
-    if !known.contains(&id0) || !known.contains(&id1) { return None; }
+    if chars.len() < 3 || !matches!(chars[0], '⿰' | '⿱' | '⿲' | '⿳') {
+        return None;
+    }
+    let mut cursor = 0;
+    let mut leaves = Vec::new();
+    parse_parts(&chars, &mut cursor, &mut Vec::new(), &mut leaves, known, shapes)?;
+    if cursor != chars.len() || leaves.len() < 2 { return None; }
+    let mut ownership = HashMap::new();
+    let mut forms = Vec::new();
+    let mut ids = Vec::new();
+    let mut colors = Vec::new();
+    for (index, (path, form, id, color)) in leaves.into_iter().enumerate() {
+        if ownership.insert(path, index).is_some() { return None; }
+        forms.push(form);
+        ids.push(id);
+        colors.push(color);
+    }
     let raw = item.get("matches")?.as_array()?;
+    if raw.is_empty() { return None; }
     let mut stroke_matches = Vec::new();
-    let mut counts = [0_usize; 2];
+    let mut counts = vec![0_usize; forms.len()];
     for match_item in raw {
-        let path = match_item.as_array()?;
-        if path.len() != 1 { return None; }
-        let idx = usize::try_from(path[0].as_u64()?).ok()?;
-        if idx > 1 { return None; }
+        let indices = match_item.as_array()?;
+        let mut path = Vec::new();
+        for step in indices {
+            path.push(usize::try_from(step.as_u64()?).ok()?);
+        }
+        let idx = *ownership.get(&path)?;
         counts[idx] += 1;
         stroke_matches.push(idx);
     }
     if counts.contains(&0) { return None; }
     Some((ch, Decomposition {
-        forms: [first, second], ids: [id0, id1], colors: [c0, c1],
-        matches: stroke_matches, original,
+        forms, ids, colors, matches: stroke_matches, original,
     }))
 }
 
@@ -134,7 +179,7 @@ pub(super) fn run(dictionary: &Path, graphics: &Path) -> Result<(), String> {
         discovered.push(Glyph {
             character: ch.to_owned(),
             decomposition: info.original,
-            parts: (0..2).map(|i| (
+            parts: (0..info.forms.len()).map(|i| (
                 info.forms[i].clone(),
                 info.ids[i].clone(),
                 info.colors[i].clone(),
@@ -177,6 +222,47 @@ mod tests {
         assert_eq!(result.matches, [0,0,0,1,1,1]);
         assert_eq!(result.ids, ["cmp-0014","cmp-0015"]);
     }
+    #[test]
+    fn nested_components_are_resolved_by_exact_leaf_paths() {
+        let catalog = HashMap::from([("例".into(), HashSet::from([
+            "cmp-a".into(), "cmp-b".into(), "cmp-c".into(),
+        ]))]);
+        let shapes = HashMap::from([
+            ("亻".into(), ("cmp-a".into(), "#111111".into())),
+            ("歹".into(), ("cmp-b".into(), "#222222".into())),
+            ("刂".into(), ("cmp-c".into(), "#333333".into())),
+        ]);
+        let item = serde_json::json!({
+            "character":"例", "decomposition":"⿰亻⿰歹刂",
+            "matches":[[0],[0],[1,0],[1,0],[1,1],[1,1]]
+        });
+        let r = matches_decomposition(&item, &catalog, &shapes).unwrap().1;
+        assert_eq!(r.forms, ["亻", "歹", "刂"]);
+        assert_eq!(r.matches, [0,0,1,1,2,2]);
+        let ambiguous = serde_json::json!({
+            "character":"例", "decomposition":"⿰亻⿰歹刂",
+            "matches":[[0],[1],[1,0],[1,1]]
+        });
+        assert!(matches_decomposition(&ambiguous, &catalog, &shapes).is_none());
+    }
+
+    #[test]
+    fn rejected_decomposition_types_are_not_guessed() {
+        let catalog = HashMap::from([("字".into(), HashSet::from([
+            "cmp-a".into(), "cmp-b".into()
+        ]))]);
+        let shapes = HashMap::from([
+            ("宀".into(), ("cmp-a".into(), "#111111".into())),
+            ("子".into(), ("cmp-b".into(), "#222222".into())),
+        ]);
+        for ids in ["⿴宀子", "⿰宀？", "⿰宀", "⿰宀子子"] {
+            let row = serde_json::json!({
+                "character":"字", "decomposition":ids, "matches":[[0],[1]]
+            });
+            assert!(matches_decomposition(&row, &catalog, &shapes).is_none());
+        }
+    }
+
     #[test]
     fn ambiguous_mapping_is_rejected() {
         let catalog = HashMap::from([("好".into(), HashSet::from(["cmp-0014".into(), "cmp-0015".into()]))]);
