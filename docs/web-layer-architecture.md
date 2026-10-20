@@ -6,7 +6,7 @@
 
 Every layer's colors are **scoped to that information channel**. A green component identity and a green tone or consonant need not encode the same thing; their location, shape, and legend identify the channel. Future users may combine modes arbitrarily.
 
-The [machine-readable contract](../site/layers-v0.1.json) is the reference. The [static Pages prototype](../site/index.html) demonstrates the design without JavaScript.
+The [machine-readable contract](../site/layers-v0.1.json) is the reference. The [full public color key](../site/colors.html) and [repository Markdown tables](color-registry.md) enumerate every initial, final, and tone color; the v0.4 component assignments have a separate complete JSON registry. Output values are verified against the source palettes by the Rust build. The [static Pages prototype](../site/index.html) demonstrates the design without JavaScript.
 
 | Channel | Direct expression now | Floating marker now | Evidence |
 | --- | --- | --- | --- |
@@ -36,6 +36,10 @@ Markers use reserved anchor zones: component dots above, Pinyin below, tone top-
 - Browser native `details` inspectors expose component IDs, alternative readings and analysis uncertainty.
 - Stroke-level geometry is available for a 12-character source-aligned subset; unsupported characters retain a cell-level fallback.
 - For 1,000 characters the presentation is chunked into **ten pages of 100**, distinct from the JSON's 1,000-entry tranche. Data and presentation chunking can evolve separately.
+
+### Stroke geometry versus stroke order
+
+Component coloring requires the shape and component ownership of each individual outline. Where upstream data maps stroke-path indices to decomposition leaves, exact indexing is retained to ensure ownership remains correct. This is an engineering requirement of the source dataset, **not** a handwriting-order encoding. No stroke-order learning experience is planned.
 
 ### Future Rust implementation
 
