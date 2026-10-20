@@ -6,6 +6,15 @@ The published directory is `site/`, deployed by `.github/workflows/pages.yml` fr
 
 **Layer modes:** OFF / DIRECT / MARKER independently per channel. Direct uses actual component-colored vector strokes where mappings exist and cell-level stripes elsewhere. Marker supplies anchored chips/symbols. Semantic unavailable (no verified sense dataset). Pinyin preview uses a **first-listed citation reading** as a display default; additional readings are visible in each inspector. `y` and `w` are orthographic spelling initials, not claimed true consonant phonemes. Colors for phonetic initials/finals and tone are intentionally separate namespaces from component colors.
 
+## Human and machine color reference
+
+- [Website color registry](colors.html): visible tables and swatches for Pinyin initial, final, and tone colors, plus links to all component swatches.
+- [Canonical presentation-layer JSON](layers-v0.1.json): the 24 initial, 33 final, and five tone assignments.
+- [Source component palette](../palettes/mandarin-component-identity-v0.4.json): all 513 graphic component identity colors, copied into `site/palettes/` at deployment for public machine access.
+- [Repository Markdown color registry](../docs/color-registry.md): human-readable token/color mappings with scope and versioning.
+
+The Rust pipeline validates that human-facing reference tables match their canonical JSON. Stroke path order is used only as a source-data index for component ownership, never as an educational goal.
+
 ## Deployment setup (one-time owner action)
 
 1. In GitHub repository **Settings → Pages**, under **Build and deployment → Source**, choose **GitHub Actions**.
