@@ -19,7 +19,8 @@ This is a sequence of **evidence gates**, not a promise to build a large applica
 - [x] Produce machine-readable v0.1, v0.2, and v0.3 color catalogs, corresponding reference indices and swatch sheets.
 - [x] Compute and document v0.3 with historic protected-40 constraint.
 - [x] Correct that constraint: v0.4 freely reassigns all 513 identities without sacrificing global color separation.
-- [ ] Verify stroke geometry and produce a true component-colored compound renderer (not just a swatch).
+- [x] Produce a Rust-based source-aligned component-colored compound SVG renderer; validate against pinned stroke-outline records.
+- [ ] Independently visually audit stroke ownership and expand beyond the currently source-aligned two-component subset.
 - [ ] Compare plain, identity-only, and independently specified semantic-family variants.
 - [ ] Test legibility, distinctions at real glyph sizes, recall, and transfer.
 - [ ] Document failure cases and iterate with **new palette versions**.
