@@ -49,6 +49,10 @@ jobs:
             --output "$RUNNER_TEMP/chromalect-graphics.txt"
       - name: Generate source-backed glyphs and extend atlas
         run: cargo run --quiet --locked --manifest-path tools/glyph-pipeline/Cargo.toml -- discover "$RUNNER_TEMP/chromalect-dictionary.txt" "$RUNNER_TEMP/chromalect-graphics.txt"
+      - name: Include machine-readable component palette
+        run: |
+          mkdir -p site/palettes
+          cp palettes/mandarin-component-identity-v0.4.json site/palettes/
       - name: Upload static Pages content
         uses: actions/upload-pages-artifact@v4
         with:
