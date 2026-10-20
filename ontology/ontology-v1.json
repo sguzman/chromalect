@@ -1,0 +1,716 @@
+{
+  "schema": "chromalect.ontology.v1",
+  "version": "1.0.0",
+  "namespace": "https://sguzman.github.io/chromalect/ontology/v1#",
+  "project": "Chromalect",
+  "scope": "Visual encoding of linguistic information across languages and writing systems; Mandarin is the first implementation.",
+  "publication": "public",
+  "status": "initial_formal_vocabulary_not_complete_linguistic_database",
+  "designPrinciples": [
+    "Language and script are distinct; no writing system is presumed to consist of Chinese components.",
+    "Character identity, glyph geometry, orthographic segmentation, phoneme, and pronunciation are not interchangeable.",
+    "An encoding scheme maps an explicitly typed linguistic target to a reversible presentation without rewriting source text.",
+    "An instance carries one v0.4 component identity irrespective of its character context; a role is contextual.",
+    "Citation readings and contextual readings have separate evidence and neither implies the other.",
+    "A source-aligned geometric mapping is not independent visual or linguistic certification.",
+    "Unknown facts and competing analyses remain explicit and cannot be silently promoted.",
+    "Stroke path indices document geometry-to-component alignment only, not handwriting instruction.",
+    "Each record is independently sourced, publicly distributable and versioned where appropriate."
+  ],
+  "classes": [
+    {
+      "id": "Language",
+      "group": "language",
+      "definition": "An identified language as a linguistic system."
+    },
+    {
+      "id": "LanguageVariety",
+      "group": "language",
+      "definition": "A regional, social, or standardized variety of a language."
+    },
+    {
+      "id": "Script",
+      "group": "writing",
+      "definition": "A conventional collection of written graphic signs; not a language."
+    },
+    {
+      "id": "WritingSystem",
+      "group": "writing",
+      "definition": "Conventions for using a script to represent a language or its units."
+    },
+    {
+      "id": "Orthography",
+      "group": "writing",
+      "definition": "A documented set of spelling and character-use conventions for a language variety."
+    },
+    {
+      "id": "Text",
+      "group": "writing",
+      "definition": "Preserved source writing with its original sequence of characters."
+    },
+    {
+      "id": "TextSpan",
+      "group": "writing",
+      "definition": "A source-addressable span of written text with explicit offsets."
+    },
+    {
+      "id": "Grapheme",
+      "group": "writing",
+      "definition": "A contrastive graphic unit defined relative to a writing system."
+    },
+    {
+      "id": "Character",
+      "group": "writing",
+      "definition": "An abstract written character; distinguished from Unicode encoding and a rendered glyph."
+    },
+    {
+      "id": "Glyph",
+      "group": "writing",
+      "definition": "A particular visual realization of a character or written unit in a font or drawing system."
+    },
+    {
+      "id": "GraphicComponent",
+      "group": "writing",
+      "definition": "A reusable graphic constituent with an explicitly defined identity and normalization policy."
+    },
+    {
+      "id": "ComponentInstance",
+      "group": "writing",
+      "definition": "A located occurrence of a graphic component inside a particular glyph or decomposition."
+    },
+    {
+      "id": "Decomposition",
+      "group": "writing",
+      "definition": "A source-attributed structural analysis; may have competing alternatives."
+    },
+    {
+      "id": "RadicalClassification",
+      "group": "writing",
+      "definition": "A dictionary or standard-specific indexing category, distinct from exhaustive graphic components."
+    },
+    {
+      "id": "OrthographicSegment",
+      "group": "phonology",
+      "definition": "A token of a particular transcription or spelling system, such as a Pinyin initial or final."
+    },
+    {
+      "id": "Phone",
+      "group": "phonology",
+      "definition": "A speech-sound realization in a specified phonetic context."
+    },
+    {
+      "id": "Phoneme",
+      "group": "phonology",
+      "definition": "A contrastive sound unit of a particular language variety."
+    },
+    {
+      "id": "PhoneticFeature",
+      "group": "phonology",
+      "definition": "An independently defined articulatory or acoustic property."
+    },
+    {
+      "id": "Syllable",
+      "group": "phonology",
+      "definition": "A syllabic unit within a specified pronunciation analysis."
+    },
+    {
+      "id": "CitationReading",
+      "group": "phonology",
+      "definition": "A documented out-of-context reading of a written unit."
+    },
+    {
+      "id": "ContextualReading",
+      "group": "phonology",
+      "definition": "A pronunciation realized in a particular lexical or textual context."
+    },
+    {
+      "id": "ToneCategory",
+      "group": "phonology",
+      "definition": "A defined tone category under a language-specific phonological analysis."
+    },
+    {
+      "id": "ProsodicFeature",
+      "group": "phonology",
+      "definition": "A suprasegmental feature or realization, including stress, timing, intonation, or tone contour."
+    },
+    {
+      "id": "Morpheme",
+      "group": "lexicon",
+      "definition": "A minimal meaning-bearing or grammatical linguistic form in an analysis."
+    },
+    {
+      "id": "Lexeme",
+      "group": "lexicon",
+      "definition": "An abstract lexical entry, not identical to a printed word token."
+    },
+    {
+      "id": "WordOccurrence",
+      "group": "lexicon",
+      "definition": "An instance of a word in context with optional source offsets and sense resolution."
+    },
+    {
+      "id": "Sense",
+      "group": "lexicon",
+      "definition": "A source-supported interpretation associated with a lexical unit in context."
+    },
+    {
+      "id": "SemanticFamily",
+      "group": "lexicon",
+      "definition": "A justified grouping of meanings or forms, not an identity color by itself."
+    },
+    {
+      "id": "EncodingScheme",
+      "group": "visual",
+      "definition": "A versioned policy mapping specified information domains into visual representations."
+    },
+    {
+      "id": "Palette",
+      "group": "visual",
+      "definition": "A versioned registry of color assignments and related accessibility metadata."
+    },
+    {
+      "id": "VisualAssignment",
+      "group": "visual",
+      "definition": "One typed mapping from a declared linguistic target to a visual value or symbol."
+    },
+    {
+      "id": "VisualLayer",
+      "group": "visual",
+      "definition": "A configurable channel connecting an information domain to an independently selected presentation mode."
+    },
+    {
+      "id": "RenderedSpecimen",
+      "group": "visual",
+      "definition": "A concrete rendered example with source, scheme, layer state, and review status."
+    },
+    {
+      "id": "Source",
+      "group": "evidence",
+      "definition": "An identified external or internal evidence source with revision and licensing context."
+    },
+    {
+      "id": "Evidence",
+      "group": "evidence",
+      "definition": "A traceable support item connecting a source to a bounded claim."
+    },
+    {
+      "id": "Claim",
+      "group": "evidence",
+      "definition": "An asserted interpretation or observed result with epistemic status and support."
+    },
+    {
+      "id": "Experiment",
+      "group": "research",
+      "definition": "A reproducible comparison of encoding conditions, hypotheses, and outcomes."
+    }
+  ],
+  "relations": [
+    {
+      "id": "hasVariety",
+      "domain": "Language",
+      "range": [
+        "LanguageVariety"
+      ],
+      "definition": "A named variety belongs to a language.",
+      "multiplicity": "0..n",
+      "sourceRequired": false
+    },
+    {
+      "id": "usesScript",
+      "domain": "WritingSystem",
+      "range": [
+        "Script"
+      ],
+      "definition": "A writing system uses a particular script.",
+      "multiplicity": "0..n",
+      "sourceRequired": false
+    },
+    {
+      "id": "servesVariety",
+      "domain": "WritingSystem",
+      "range": [
+        "LanguageVariety"
+      ],
+      "definition": "A writing system is defined for a language variety.",
+      "multiplicity": "0..n",
+      "sourceRequired": false
+    },
+    {
+      "id": "definesOrthography",
+      "domain": "WritingSystem",
+      "range": [
+        "Orthography"
+      ],
+      "definition": "A writing system has a documented orthographic convention.",
+      "multiplicity": "0..n",
+      "sourceRequired": false
+    },
+    {
+      "id": "containsSpan",
+      "domain": "Text",
+      "range": [
+        "TextSpan"
+      ],
+      "definition": "A source text contains an addressable span.",
+      "multiplicity": "0..n",
+      "sourceRequired": false
+    },
+    {
+      "id": "representsGrapheme",
+      "domain": "TextSpan",
+      "range": [
+        "Grapheme"
+      ],
+      "definition": "A span encodes an orthographically defined grapheme.",
+      "multiplicity": "0..n",
+      "sourceRequired": false
+    },
+    {
+      "id": "includesCharacter",
+      "domain": "Orthography",
+      "range": [
+        "Character"
+      ],
+      "definition": "A character is admitted under a particular orthography.",
+      "multiplicity": "0..n",
+      "sourceRequired": false
+    },
+    {
+      "id": "hasGlyph",
+      "domain": "Character",
+      "range": [
+        "Glyph"
+      ],
+      "definition": "A character has a renderer-dependent visual realization.",
+      "multiplicity": "0..n",
+      "sourceRequired": false
+    },
+    {
+      "id": "containsComponent",
+      "domain": "Glyph",
+      "range": [
+        "ComponentInstance"
+      ],
+      "definition": "A glyph contains an instance of a reusable graphic component.",
+      "multiplicity": "0..n",
+      "sourceRequired": false
+    },
+    {
+      "id": "instantiatesComponent",
+      "domain": "ComponentInstance",
+      "range": [
+        "GraphicComponent"
+      ],
+      "definition": "An occurrence carries a normalized component identity.",
+      "multiplicity": "0..n",
+      "sourceRequired": false
+    },
+    {
+      "id": "classifiedByRadical",
+      "domain": "Character",
+      "range": [
+        "RadicalClassification"
+      ],
+      "definition": "A character has a source-specific indexing classification.",
+      "multiplicity": "0..n",
+      "sourceRequired": true
+    },
+    {
+      "id": "hasDecomposition",
+      "domain": "Character",
+      "range": [
+        "Decomposition"
+      ],
+      "definition": "A character has a cited structural analysis; alternatives remain separate.",
+      "multiplicity": "0..n",
+      "sourceRequired": true
+    },
+    {
+      "id": "includesComponentInstance",
+      "domain": "Decomposition",
+      "range": [
+        "ComponentInstance"
+      ],
+      "definition": "A decomposition includes a positioned component occurrence.",
+      "multiplicity": "0..n",
+      "sourceRequired": false
+    },
+    {
+      "id": "hasCitationReading",
+      "domain": "Character",
+      "range": [
+        "CitationReading"
+      ],
+      "definition": "A character is attested with an out-of-context reading.",
+      "multiplicity": "0..n",
+      "sourceRequired": true
+    },
+    {
+      "id": "hasOrthographicSegment",
+      "domain": "CitationReading",
+      "range": [
+        "OrthographicSegment"
+      ],
+      "definition": "A citation transcription contains spelling-system segments.",
+      "multiplicity": "0..n",
+      "sourceRequired": false
+    },
+    {
+      "id": "hasSyllable",
+      "domain": "CitationReading",
+      "range": [
+        "Syllable"
+      ],
+      "definition": "A citation reading is analyzed with one or more syllables.",
+      "multiplicity": "0..n",
+      "sourceRequired": false
+    },
+    {
+      "id": "hasToneCategory",
+      "domain": "CitationReading",
+      "range": [
+        "ToneCategory"
+      ],
+      "definition": "A language-specific citation tone is assigned without inferring sandhi.",
+      "multiplicity": "0..n",
+      "sourceRequired": false
+    },
+    {
+      "id": "contextuallyReadAs",
+      "domain": "WordOccurrence",
+      "range": [
+        "ContextualReading"
+      ],
+      "definition": "A word occurrence has context-dependent pronunciation.",
+      "multiplicity": "0..n",
+      "sourceRequired": false
+    },
+    {
+      "id": "realizesPhoneme",
+      "domain": "Phone",
+      "range": [
+        "Phoneme"
+      ],
+      "definition": "A phonetic realization is analyzed as a phoneme in context.",
+      "multiplicity": "0..n",
+      "sourceRequired": false
+    },
+    {
+      "id": "hasPhoneticFeature",
+      "domain": "Phone",
+      "range": [
+        "PhoneticFeature"
+      ],
+      "definition": "A phone has a defined phonetic feature.",
+      "multiplicity": "0..n",
+      "sourceRequired": false
+    },
+    {
+      "id": "syllableContainsPhone",
+      "domain": "Syllable",
+      "range": [
+        "Phone"
+      ],
+      "definition": "A syllable contains a phone under a selected transcription.",
+      "multiplicity": "0..n",
+      "sourceRequired": false
+    },
+    {
+      "id": "hasProsodicFeature",
+      "domain": "ContextualReading",
+      "range": [
+        "ProsodicFeature"
+      ],
+      "definition": "A contextual pronunciation bears a prosodic realization.",
+      "multiplicity": "0..n",
+      "sourceRequired": false
+    },
+    {
+      "id": "representsMorpheme",
+      "domain": "TextSpan",
+      "range": [
+        "Morpheme"
+      ],
+      "definition": "A written span is analyzed as a morpheme.",
+      "multiplicity": "0..n",
+      "sourceRequired": false
+    },
+    {
+      "id": "instanceOfLexeme",
+      "domain": "WordOccurrence",
+      "range": [
+        "Lexeme"
+      ],
+      "definition": "A word occurrence instantiates a lexeme.",
+      "multiplicity": "0..n",
+      "sourceRequired": false
+    },
+    {
+      "id": "hasSense",
+      "domain": "Lexeme",
+      "range": [
+        "Sense"
+      ],
+      "definition": "A lexeme has a source-attributed sense.",
+      "multiplicity": "0..n",
+      "sourceRequired": true
+    },
+    {
+      "id": "selectedSense",
+      "domain": "WordOccurrence",
+      "range": [
+        "Sense"
+      ],
+      "definition": "A contextual occurrence selects a justified sense.",
+      "multiplicity": "0..n",
+      "sourceRequired": true
+    },
+    {
+      "id": "memberOfFamily",
+      "domain": "GraphicComponent",
+      "range": [
+        "SemanticFamily"
+      ],
+      "definition": "A component is grouped by documented evidence, not just matching hue.",
+      "multiplicity": "0..n",
+      "sourceRequired": true
+    },
+    {
+      "id": "cuesReading",
+      "domain": "ComponentInstance",
+      "range": [
+        "CitationReading"
+      ],
+      "definition": "A source-substantiated phonetic role in a specific character, not guaranteed modern pronunciation.",
+      "multiplicity": "0..n",
+      "sourceRequired": true
+    },
+    {
+      "id": "usesPalette",
+      "domain": "EncodingScheme",
+      "range": [
+        "Palette"
+      ],
+      "definition": "A visual encoding scheme references a particular palette version.",
+      "multiplicity": "0..n",
+      "sourceRequired": false
+    },
+    {
+      "id": "containsAssignment",
+      "domain": "EncodingScheme",
+      "range": [
+        "VisualAssignment"
+      ],
+      "definition": "A scheme declares a reproducible visual assignment.",
+      "multiplicity": "0..n",
+      "sourceRequired": false
+    },
+    {
+      "id": "assignmentTargets",
+      "domain": "VisualAssignment",
+      "range": [
+        "GraphicComponent",
+        "Grapheme",
+        "OrthographicSegment",
+        "Phoneme",
+        "PhoneticFeature",
+        "ToneCategory",
+        "ProsodicFeature",
+        "Morpheme",
+        "Sense",
+        "Lexeme"
+      ],
+      "definition": "A visual assignment names its precise target information domain.",
+      "multiplicity": "0..n",
+      "sourceRequired": false
+    },
+    {
+      "id": "controlsLayer",
+      "domain": "EncodingScheme",
+      "range": [
+        "VisualLayer"
+      ],
+      "definition": "A scheme defines one independently configurable visual channel.",
+      "multiplicity": "0..n",
+      "sourceRequired": false
+    },
+    {
+      "id": "rendersWithScheme",
+      "domain": "RenderedSpecimen",
+      "range": [
+        "EncodingScheme"
+      ],
+      "definition": "A specimen was rendered using a declared scheme version.",
+      "multiplicity": "0..n",
+      "sourceRequired": false
+    },
+    {
+      "id": "appliesLayer",
+      "domain": "RenderedSpecimen",
+      "range": [
+        "VisualLayer"
+      ],
+      "definition": "A specimen applies an individually selected information layer.",
+      "multiplicity": "0..n",
+      "sourceRequired": false
+    },
+    {
+      "id": "illustratesCharacter",
+      "domain": "RenderedSpecimen",
+      "range": [
+        "Character"
+      ],
+      "definition": "A specimen depicts a specific written character.",
+      "multiplicity": "0..n",
+      "sourceRequired": false
+    },
+    {
+      "id": "illustratesWord",
+      "domain": "RenderedSpecimen",
+      "range": [
+        "WordOccurrence"
+      ],
+      "definition": "A specimen depicts a particular word occurrence.",
+      "multiplicity": "0..n",
+      "sourceRequired": false
+    },
+    {
+      "id": "sourcedFrom",
+      "domain": "Evidence",
+      "range": [
+        "Source"
+      ],
+      "definition": "Evidence points to a revision-addressable source.",
+      "multiplicity": "0..n",
+      "sourceRequired": false
+    },
+    {
+      "id": "supportsClaim",
+      "domain": "Evidence",
+      "range": [
+        "Claim"
+      ],
+      "definition": "Evidence supports a bounded factual or interpretive claim.",
+      "multiplicity": "0..n",
+      "sourceRequired": false
+    },
+    {
+      "id": "evaluatesScheme",
+      "domain": "Experiment",
+      "range": [
+        "EncodingScheme"
+      ],
+      "definition": "A controlled experiment studies a specified visual scheme.",
+      "multiplicity": "0..n",
+      "sourceRequired": false
+    }
+  ],
+  "controlledTerms": {
+    "evidenceStatus": [
+      "source_aligned",
+      "candidate",
+      "unresolved",
+      "independently_verified",
+      "illustrative",
+      "not_implemented"
+    ],
+    "layerMode": [
+      "off",
+      "direct",
+      "marker"
+    ],
+    "assignmentMedium": [
+      "fill_color",
+      "edge_color",
+      "outline",
+      "marker",
+      "shape",
+      "position",
+      "typography",
+      "animation"
+    ],
+    "sourceLevel": [
+      "external_standard",
+      "external_dataset",
+      "local_catalog",
+      "derived_data",
+      "research_proposal"
+    ]
+  },
+  "profiles": [
+    {
+      "id": "zh-cn-putonghua-simplified",
+      "label": "Standard Mandarin / Mainland simplified Chinese",
+      "languageVariety": "Modern Standard Mandarin (Putonghua)",
+      "script": "Han",
+      "orthography": "Mainland simplified Chinese",
+      "transcription": "Hanyu Pinyin",
+      "status": "implemented_research_prototype",
+      "notes": "Current Pinyin initial/final splits are spelling segments, not universal consonant/vowel divisions."
+    }
+  ],
+  "bindings": [
+    {
+      "id": "mandarin-component-palette",
+      "kind": "Palette",
+      "path": "palettes/mandarin-component-identity-v0.4.json",
+      "schema": "chromalect.component-palette.v0",
+      "version": "0.4.0",
+      "identityKey": "components[].id",
+      "count": 513,
+      "status": "implemented"
+    },
+    {
+      "id": "mandarin-character-catalog",
+      "kind": "Character",
+      "path": "data/catalog/characters-0001-1000.json",
+      "schema": "chromalect.character-tranche.v1",
+      "identityKey": "characters[].character",
+      "count": 1000,
+      "status": "source_catalog"
+    },
+    {
+      "id": "mandarin-citation-readings",
+      "kind": "CitationReading",
+      "path": "site/pronunciation-citations-0001-1000.json",
+      "schema": "chromalect.pronunciation-citations.v0",
+      "count": 1000,
+      "status": "first_listed_display_not_contextual"
+    },
+    {
+      "id": "phonetic-and-tone-presentation",
+      "kind": "EncodingScheme",
+      "path": "site/layers-v0.1.json",
+      "schema": "chromalect.presentation-layers.v0",
+      "version": "0.1.0",
+      "status": "implemented_orthographic_preview"
+    },
+    {
+      "id": "source-aligned-strokes",
+      "kind": "Glyph",
+      "path": "data/catalog/colored-strokes-v0.1.json",
+      "schema": "chromalect.glyph-strokes.v0",
+      "count": 12,
+      "status": "curated_pilot_not_independently_certified"
+    },
+    {
+      "id": "provenance",
+      "kind": "Source",
+      "path": "data/catalog/provenance-v1.json",
+      "schema": "chromalect.catalog-provenance.v1",
+      "status": "documented"
+    },
+    {
+      "id": "rendered-mappings",
+      "kind": "RenderedSpecimen",
+      "path": "site/glyphs/mappings.json",
+      "status": "generated_during_pages_build_source_aligned_not_independently_certified"
+    }
+  ],
+  "dataBoundary": {
+    "selfContained": true,
+    "externalRegistryMembership": "not_inferred",
+    "privateInputs": "not_reproduced",
+    "generatedBindingsMayBeAbsentFromGitTree": true
+  }
+}
