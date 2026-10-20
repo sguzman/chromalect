@@ -2,6 +2,7 @@ mod discover;
 mod atlas;
 mod browse;
 mod coverage;
+mod color_registry;
 
 use serde_json::Value;
 use std::collections::{BTreeMap, BTreeSet};
@@ -268,6 +269,7 @@ fn run() -> Result<(), String> {
     match args.next().as_deref() {
         Some("check") => {
             check_site(&glyphs)?;
+            color_registry::validate_color_registry()?;
             println!("Validated {} glyphs and their v0.4 component assignments.", glyphs.len());
         }
         Some("build") => build(&glyphs)?,
