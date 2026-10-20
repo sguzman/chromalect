@@ -42,7 +42,7 @@ needed to publish the site.
 
 ## Acceptance criteria for additional glyphs
 
-1. Record source geometry and its attribution, with all strokes in original order.
+1. Record source geometry and its attribution, preserving the indexing required to associate each outline with a source component. These indices are **not** a handwriting-order feature.
 2. Map every stroke to an explicit component ID defined in v0.4. All stroke colors
    must be the palette color for the owner.
 3. Record the decomposition and parts, distinguishing repeated instances (for
@@ -73,9 +73,13 @@ ternary, or enclosing IDS decompositions are accepted only when **every stroke**
 has an exact terminal-leaf path in the pinned source, and each leaf has a
 unique v0.4 identity present in the catalog. Atomic-recognizer entries may be
 colored as one whole component when the component form exactly equals the
-character. Unrecognized shapes, overlapping IDS forms, unknown fragments,
+character. Unrecognized shapes, unowned overlapping stroke paths, unknown fragments,
 missing ownership, ambiguous paths, and incomplete outlines are excluded.
 The entire outline path array must be present and use accepted vector commands.
+
+The [glyph mapping manifest](../../site/glyphs/mappings.json) records each active glyph's component identities, colors, SVG path owners, provenance and source revisions as portable machine-readable data. Path indexes represent geometry-to-component correspondence, not handwriting instruction.
+
+The [source alternative comparison gallery](../../site/glyphs/alternatives/index.html) currently contains 8 complete stroke-source decompositions that are documented catalog alternatives but use a different component identity set. These are not promoted into Direct or Marker mode. The [unknown-source gallery](../../site/glyphs/unknown-components/index.html) shows 27 research candidates with confirmed owned strokes colored and every unresolved stroke in neutral gray. Neutral gray is a review fill, **not a 514th component color**. Both galleries are excluded from official renderer coverage.
 
 Generated outputs include `site/glyphs/diagnostics.json` with per-character source/canonical disagreements, plus paginated `site/glyphs/review/` sheets comparing native and source-aligned appearances. Simple spatial placement checks and close-pair OKLab distances (below 0.07) are advisory only and do not certify accuracy. The generated [priority contact sheet](../../site/glyphs/review/flagged.html) highlights 16 glyphs under the current source and palette combination; this does not change any v0.4 color assignments.
 
