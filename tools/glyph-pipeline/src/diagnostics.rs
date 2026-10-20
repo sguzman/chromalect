@@ -83,8 +83,16 @@ pub(super) fn generate(dictionary: &Path, glyphs: &[Glyph], dest: &Path) -> Resu
     fs::write(dest.join("diagnostics.json"), format!("{json}\n")).map_err(|e| e.to_string())?;
     fs::write(dest.join("diagnostics.html"), html).map_err(|e| e.to_string())?;
     println!("Glyph diagnostics: {total_missing} unmapped characters.");
-    for category in report["reason_counts"].as_array().ok_or("missing reason counts")? {
-        println!("  {}: {}",category["reason"].as_str().unwrap_or("unknown"), category["count"]);
+    for (reason, examples) in &by_reason {
+        println!("  {reason}: {}", examples.len());
+        for entry in examples.iter().take(14) {
+            println!("    #{} {} source={} catalog={}",
+                entry["rank"],
+                entry["character"].as_str().unwrap_or("?"),
+                entry["source_decomposition"].as_str().unwrap_or("unknown"),
+                entry["catalog_primary_structure"].as_str().unwrap_or("unknown"),
+            );
+        }
     }
     Ok(())
 }
