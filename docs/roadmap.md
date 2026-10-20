@@ -22,6 +22,7 @@ This is a sequence of **evidence gates**, not a promise to build a large applica
 - [x] Produce a Rust-based source-aligned component-colored compound SVG renderer; validate against pinned stroke-outline records.
 - [x] Expand source-aligned coloring to nested/enclosing structures and single-component atomic glyphs (797 of the first 1,000 characters in the current build).
 - [x] Produce machine-readable source rejection diagnostics and side-by-side SVG/native-font review sheets, with non-certifying checks for component placement and perceptually close co-occurring colors.
+- [x] Publish portable per-glyph source ownership records and isolated review images for 8 documented alternate decompositions and 27 partial unknown-source cases. Keep incomplete cases out of the active renderer.
 - [ ] Independently visually audit all stroke ownership mappings and resolve the 203 remaining unmapped catalog entries.
 - [ ] Compare plain, identity-only, and independently specified semantic-family variants.
 - [ ] Test legibility, distinctions at real glyph sizes, recall, and transfer.
