@@ -11,6 +11,8 @@ on:
       - "site/layers-v0.1.json"
       - "site/colors.html"
       - "site/index.html"
+      - "site/style.css"
+      - "site/theme.js"
       - "site/ontology.html"
       - "ontology/**"
       - "ONTOLOGY.md"
@@ -76,6 +78,9 @@ jobs:
           test -s site/glyphs/review/report.json
           test -s site/glyphs/review/flagged.html
           test "$(find site/glyphs -name '*.svg' | wc -l)" -gt 12
+          while IFS= read -r -d '' file; do
+            grep -Fq 'theme.js' "$file" || { echo "Missing appearance controls: $file"; exit 1; }
+          done < <(find site/glyphs -type f -name '*.html' -print0)
       - name: Upload discovery report and sample assets
         uses: actions/upload-artifact@v4
         with:
