@@ -251,6 +251,57 @@ fn documented_alternatives(path: &Path) -> Result<HashMap<String, Decomposition>
     Ok(alternatives)
 }
 
+fn partially_owned_source(
+    row: &Value,
+    catalog_ids: &HashSet<String>,
+    shapes: &HashMap<String,(String,String)>
+) -> Option<Decomposition> {
+    let source = row.get("decomposition")?.as_str()?.to_owned();
+    if source.chars().filter(|ch|*ch == '？').count() != 1 { return None; }
+    let chars:Vec<char> = source.chars().collect();
+    if chars.len() < 3 { return None; }
+    let mut cursor = 0;
+    let mut leaves = Vec::new();
+    let mut allowed = catalog_ids.clone();
+    allowed.insert(unknown::UNKNOWN_ID.to_owned());
+    parse_parts(&chars, &mut cursor, &mut Vec::new(), &mut leaves, &allowed, shapes)?;
+    if cursor != chars.len() || leaves.len() < 2 { return None; }
+    let mut paths = HashMap::new();
+    let mut unknown_index = None;
+    let mut forms = Vec::new();
+    let mut ids = Vec::new();
+    let mut colors = Vec::new();
+    for (index, (path, form, id, color)) in leaves.into_iter().enumerate() {
+        if id == unknown::UNKNOWN_ID { unknown_index = Some(index); }
+        if paths.insert(path,index).is_some() { return None; }
+        forms.push(form);
+        ids.push(id);
+        colors.push(color);
+    }
+    let unknown_index = unknown_index?;
+    let source_matches = row.get("matches")?.as_array()?;
+    if source_matches.is_empty() { return None; }
+    let mut matched_known = 0_usize;
+    let mut matched_unknown = 0_usize;
+    let mut matches = Vec::with_capacity(source_matches.len());
+    for source_match in source_matches {
+        // Only an exact terminal path counts as positively owned.
+        // Null, non-leaf, or ambiguous mappings are neutral.
+        let exact = source_match.as_array().and_then(|steps| {
+            let steps:Option<Vec<usize>> = steps.iter()
+                .map(|item|item.as_u64().and_then(|n|usize::try_from(n).ok()))
+                .collect();
+            steps.and_then(|steps|paths.get(&steps).copied())
+        });
+        let index = exact.unwrap_or(unknown_index);
+        if index == unknown_index { matched_unknown += 1; }
+        else { matched_known += 1; }
+        matches.push(index);
+    }
+    if matched_known == 0 || matched_unknown == 0 { return None; }
+    Some(Decomposition { forms,ids,colors,matches,original:source })
+}
+
 fn unresolved_component_matches(path: &Path) -> Result<HashMap<String,Decomposition>,String> {
     let catalog = catalog_map()?;
     let mut shapes = palette_shapes()?;
@@ -261,15 +312,10 @@ fn unresolved_component_matches(path: &Path) -> Result<HashMap<String,Decomposit
     let mut eligible = HashMap::new();
     source_records(path, |row| {
         let Some(ch) = row.get("character").and_then(Value::as_str) else { return Ok(()); };
-        let Some(source) = row.get("decomposition").and_then(Value::as_str) else { return Ok(()); };
-        if source.chars().filter(|c|*c == '？').count() != 1 { return Ok(()); }
         let Some(known_ids) = catalog.get(ch) else { return Ok(()); };
-        let mut allowed = known_ids.clone();
-        allowed.insert(unknown::UNKNOWN_ID.to_owned());
-        let selected = HashMap::from([(ch.to_owned(),allowed)]);
-        if let Some((ch,info)) = matches_decomposition(&row,&selected,&shapes) {
-            if eligible.insert(ch.clone(), info).is_some() {
-                return Err(format!("duplicate unknown-source mapping for {ch}"));
+        if let Some(info) = partially_owned_source(&row,known_ids,&shapes) {
+            if eligible.insert(ch.to_owned(),info).is_some() {
+                return Err(format!("duplicate source unknown-component review for {ch}"));
             }
         }
         Ok(())
@@ -409,6 +455,27 @@ mod tests {
         assert_eq!(id, "cmp-0171");
         assert_eq!(color, "#8D2929");
         assert!(!atomics.contains_key("好"));
+    }
+
+    #[test]
+    fn partial_unknown_paths_only_color_confirmed_known_owners() {
+        let mut shapes = HashMap::from([
+            ("又".into(), ("cmp-0463".into(), "#111111".into()))
+        ]);
+        shapes.insert(
+            "？".into(),
+            (unknown::UNKNOWN_ID.into(), unknown::UNKNOWN_FILL.into())
+        );
+        let catalog = HashSet::from(["cmp-0463".into()]);
+        let record = serde_json::json!({
+            "character":"友","decomposition":"⿸？又",
+            "matches":[null,[1],[0],[1,0],[1]]
+        });
+        let matched = partially_owned_source(&record,&catalog,&shapes).unwrap();
+        // Null or nonterminal paths never receive the known color.
+        assert_eq!(matched.matches,[0,1,0,0,1]);
+        assert_eq!(matched.ids[0],unknown::UNKNOWN_ID);
+        assert_eq!(matched.ids[1],"cmp-0463");
     }
 
     #[test]
