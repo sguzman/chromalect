@@ -34,7 +34,7 @@ Markers use reserved anchor zones: component dots above, Pinyin below, tone top-
 
 - CSS-only controls reset when navigating to another static page; no saved preferences.
 - Browser native `details` inspectors expose component IDs, alternative readings and analysis uncertainty.
-- Stroke-level geometry is available for a 12-character source-aligned subset; unsupported characters retain a cell-level fallback.
+- Stroke-level geometry is available for 804 source-aligned glyphs in the current build, 797 within the first 1,000-character catalog. The 12 initial specimens remain in the original gallery; unsupported characters retain a cell-level fallback. Source-aligned colors are not independently visually certified.
 - For 1,000 characters the presentation is chunked into **ten pages of 100**, distinct from the JSON's 1,000-entry tranche. Data and presentation chunking can evolve separately.
 
 ### Stroke geometry versus stroke order
