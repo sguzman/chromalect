@@ -53,6 +53,8 @@ jobs:
         run: |
           mkdir -p site/palettes
           cp palettes/mandarin-component-identity-v0.4.json site/palettes/
+      - name: Check generated diagnostic coverage
+        run: test -s site/glyphs/diagnostics.json && test -s site/glyphs/diagnostics.html
       - name: Upload static Pages content
         uses: actions/upload-pages-artifact@v4
         with:
