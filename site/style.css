@@ -52,3 +52,25 @@ footer{margin:50px auto 20px;padding:22px 0;border-top:1px solid var(--border);f
 body:has(#component-direct:checked) .glyph-with-strokes{color:transparent}
 body:has(#component-direct:checked) .glyph-with-strokes .stroke-svg{display:block;position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
 body:has(#component-direct:checked) .glyph-with-strokes::after{display:none}
+
+/* Public human-readable color registry. Swatches expose canonical JSON values. */
+.palette-explain{border:1px solid var(--border);border-radius:12px;background:var(--panel);padding:13px 17px;margin:16px 0}
+.palette-explain h2{margin:3px 0 9px;font-size:18px}
+.palette-explain p{font-size:13px;margin:7px 0;max-width:940px}
+.palette-section{margin:28px 0}
+.palette-section h2{margin-bottom:6px}
+.palette-section h2 small{font-size:13px;font-weight:400;color:var(--sub)}
+.palette-section>p{font-size:13px;margin:4px 0 13px}
+.palette-scroll{overflow-x:auto;border:1px solid var(--border);border-radius:11px;background:var(--panel)}
+.palette-table{border-collapse:collapse;width:100%;font-size:13px;text-align:left}
+.palette-table th,.palette-table td{padding:9px 14px;border-bottom:1px solid var(--border)}
+.palette-table tbody tr:last-child th,.palette-table tbody tr:last-child td{border-bottom:0}
+.palette-table thead th{background:#1c2c40;color:#d9e5f4;font-size:12px}
+.palette-table code{font-size:13px;color:#e9f2fe}
+.palette-swatch{display:inline-block;width:23px;height:23px;border:1px solid #ffffff42;border-radius:6px;vertical-align:middle;flex-shrink:0}
+.palette-example{display:flex;align-items:center;gap:25px;flex-wrap:wrap;background:var(--panel2);border:1px solid var(--border);border-radius:12px;padding:17px 20px;margin:16px 0}
+.palette-example-character{font-family:"Noto Sans CJK SC","Noto Sans SC","Source Han Sans SC",sans-serif;font-size:68px;font-weight:500;min-width:90px;height:104px;line-height:94px;text-align:center;color:#edf3fb;border:3px solid transparent;border-top-color:var(--tone-color);border-radius:11px;box-shadow:inset 5px 0 0 var(--onset-color),inset -5px 0 0 var(--rime-color)}
+.palette-examples{display:flex;align-items:center;flex-wrap:wrap;gap:8px 18px;margin:9px 0}
+.palette-examples span{display:inline-flex;align-items:center;gap:7px;font-size:13px;color:#d5e4f2}
+.palette-example small{display:block;font-size:11px}
+@media(max-width:490px){.palette-table th,.palette-table td{padding:7px 8px}.palette-example{gap:14px}}
