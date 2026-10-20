@@ -3,6 +3,7 @@ mod atlas;
 mod browse;
 mod coverage;
 mod color_registry;
+mod diagnostics;
 
 use serde_json::Value;
 use std::collections::{BTreeMap, BTreeSet};
