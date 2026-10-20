@@ -35,6 +35,17 @@ It is **not** a branch of another knowledge base or a general language-learning 
 
 The [stroke gallery](site/strokes.html) demonstrates **12 actual Chinese glyphs made of separately colored component strokes**, with machine-readable [path ownership](data/catalog/colored-strokes-v0.1.json). The v0.4 colors remain intact. The Rust [glyph pipeline](tools/glyph-pipeline/README.md) builds a separate SVG for each assigned character; its source-backed importer handles exact leaf ownership for nested and enclosing component structures and whole-component atomic glyphs. The generated [coverage report](https://sguzman.github.io/chromalect/glyphs/coverage.json) distinguishes mapped and unmapped characters; visual auditing remains necessary.
 
+## Public color references
+
+- [Human-readable color registry](site/colors.html): component identities, 24 written Pinyin initials, 33 Pinyin finals, and all five citation-tone assignments.
+- [Human-readable repository tables](docs/color-registry.md): the same token-to-color values with channel scope and examples.
+- [Machine-readable pronunciation/tone palette](site/layers-v0.1.json): authoritative JSON for initial, final, and tone channels.
+- [Machine-readable component palette](palettes/mandarin-component-identity-v0.4.json): authoritative JSON for all 513 component identities.
+
+The displayed sound colors encode **Pinyin spelling** for the selected citation reading, not a complete phonetic analysis. The left, right, and top glyph-cell edges encode initial, final, and tone separately.
+
+**Stroke order is not a learning objective.** Stroke paths are indexed solely to associate source outlines with component ownership; the visual system does not teach handwriting sequence.
+
 ## Web presentation prototype
 
 The [static GitHub Pages prototype](site/index.html) uses independent **off/direct/marker** settings for component identity, orthographic Pinyin initial/final, and tone; semantics are unavailable until source-backed meaning data exists. Direct component mode uses source-aligned colored stroke geometry where available and a cell-level fallback elsewhere. See the [layer architecture](docs/web-layer-architecture.md), [machine-readable layer schema](site/layers-v0.1.json), and [one-time Pages setup](site/README.md). Publication requires GitHub Pages to be enabled for Actions in repository settings.
