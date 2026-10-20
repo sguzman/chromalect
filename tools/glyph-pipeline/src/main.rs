@@ -14,6 +14,7 @@ mod ontology;
 mod theme;
 mod profile;
 mod contrast;
+mod layer_state;
 
 use serde_json::Value;
 use std::collections::{BTreeMap, BTreeSet};
@@ -289,6 +290,7 @@ fn run() -> Result<(), String> {
             ontology::check()?;
             theme::check()?;
             contrast::check()?;
+            layer_state::check()?;
             println!("Validated {} glyphs and their v0.4 component assignments.", glyphs.len());
         }
         Some("build") => build(&glyphs)?,
