@@ -4,6 +4,8 @@ on:
     branches: [main]
     paths:
       - "site/**"
+      - "ontology/**"
+      - "ONTOLOGY.md"
       - "tools/glyph-pipeline/**"
       - "data/catalog/colored-strokes-v0.1.json"
       - "palettes/mandarin-component-identity-v0.4.json"
@@ -53,6 +55,14 @@ jobs:
         run: |
           mkdir -p site/palettes
           cp palettes/mandarin-component-identity-v0.4.json site/palettes/
+      - name: Publish ontology vocabulary, schemas and specimens
+        run: |
+          mkdir -p site/ontology
+          cp ontology/*.json site/ontology/
+          test -s site/ontology/ontology-v1.json
+          test -s site/ontology/specimens-v1.json
+          test -s site/ontology/vocabulary.schema.json
+          test -s site/ontology/instances.schema.json
       - name: Check neutral unknown-component comparisons
         run: test -s site/glyphs/unknown-components/index.html && test -s site/glyphs/unknown-components/records.json
       - name: Check source alternative comparisons
