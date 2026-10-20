@@ -14,7 +14,7 @@ pub(super) fn generate(glyphs: &[Glyph], destination: &Path) -> Result<(), Strin
     let mut mapped_atomic = 0_usize;
     let mut missing_by_status: BTreeMap<String, usize> = BTreeMap::new();
     let mut html = String::from(
-        "<!doctype html><html lang=\"en\"><head><meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"><title>Unmapped characters · Chromalect</title><link rel=\"stylesheet\" href=\"../style.css\"></head><body><main class=\"wrap\"><p><a href=\"../index.html\">Chromalect</a> / <a href=\"index.html\">Colored glyphs</a></p><h1>Characters awaiting stroke ownership</h1><p class=\"intro\">This catalog lists characters without a complete source-aligned stroke-to-component mapping. Their original Unicode characters remain available in the atlas. No component geometry has been inferred for them.</p><div class=\"browse\">"
+        "<!doctype html><html lang=\"en\"><head><meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"><title>Unmapped characters · Chromalect</title><link rel=\"stylesheet\" href=\"../style.css\"></head><body><main class=\"wrap\"><p><a href=\"../index.html\">Chromalect</a> / <a href=\"index.html\">Colored glyphs</a></p><h1>Characters awaiting stroke ownership</h1><p class=\"intro\">This catalog lists characters without a complete source-aligned stroke-to-component mapping. Their original Unicode characters remain available in the atlas. No component geometry has been inferred for them. <a href=\"diagnostics.html\">See the source-data diagnosis for each unmapped character</a>.</p><div class=\"browse\">"
     );
     let entries = entries(&catalog, "characters")?;
     for entry in entries {
