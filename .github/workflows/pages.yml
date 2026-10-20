@@ -53,6 +53,8 @@ jobs:
         run: |
           mkdir -p site/palettes
           cp palettes/mandarin-component-identity-v0.4.json site/palettes/
+      - name: Check published machine-readable mappings
+        run: test -s site/glyphs/mappings.json
       - name: Check generated geometry review
         run: test -s site/glyphs/review/index.html && test -s site/glyphs/review/report.json && test -s site/glyphs/review/flagged.html
       - name: Check generated diagnostic coverage
