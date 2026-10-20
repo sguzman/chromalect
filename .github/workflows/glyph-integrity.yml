@@ -60,6 +60,8 @@ jobs:
           cargo run --quiet --locked --manifest-path tools/glyph-pipeline/Cargo.toml -- \
             discover "$RUNNER_TEMP/chromalect-dictionary.txt" "$RUNNER_TEMP/chromalect-graphics.txt"
           test -s site/glyphs/index.html
+          test -s site/glyphs/diagnostics.json
+          test -s site/glyphs/diagnostics.html
           test "$(find site/glyphs -name '*.svg' | wc -l)" -gt 12
       - name: Upload discovery report and sample assets
         uses: actions/upload-artifact@v4
