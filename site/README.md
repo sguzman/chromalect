@@ -1,10 +1,18 @@
 # Chromalect static GitHub Pages prototype
 
-The published directory is `site/`, deployed by `.github/workflows/pages.yml` from the existing `main` branch. It publishes **plain HTML, CSS and SVG without browser-side JavaScript**. Rust tooling builds the stroke-colored SVG gallery and enhances supported character cards during deployment. Native radio inputs, CSS `:has()`, and `details`/`summary` control the page.
+The published directory is `site/`, deployed by `.github/workflows/pages.yml` from the existing `main` branch. It publishes **plain HTML, CSS and SVG with a small, local-only JavaScript appearance controller**. Rust tooling builds the stroke-colored SVG gallery and enhances supported character cards during deployment. Native radio inputs, CSS `:has()`, and `details`/`summary` control the page.
 
 **Preview structure:** overview + 10 pages of 100 Chinese characters, one-to-one with the first 1000 records in `data/catalog/characters-0001-1000.json`; colors from `palettes/mandarin-component-identity-v0.4.json`; listed Pinyin readings from the upstream Apache-2.0 level-1 standard transcription (see [source](pronunciation-citations-0001-1000.json) and `THIRD_PARTY_NOTICES.md`). The static pages reflect their generated snapshot and must be regenerated when those data files change.
 
 **Layer modes:** OFF / DIRECT / MARKER independently per channel. Direct uses actual component-colored vector strokes where mappings exist and cell-level stripes elsewhere. Marker supplies anchored chips/symbols. Semantic unavailable (no verified sense dataset). Pinyin preview uses a **first-listed citation reading** as a display default; additional readings are visible in each inspector. `y` and `w` are orthographic spelling initials, not claimed true consonant phonemes. Colors for phonetic initials/finals and tone are intentionally separate namespaces from component colors.
+
+## Website appearance
+
+The website has three appearance settings: **System (default)**, **Light**, and **Dark**. The appearance control is available on all authored pages and Rust-generated galleries. System follows the browser's `prefers-color-scheme` media query and responds when that preference changes, without refreshing. Explicit Light/Dark overrides are saved only in this site's browser `localStorage`, so navigation keeps the chosen theme; choosing System removes the stored override. No appearance settings are sent to an external service.
+
+On Linux, a theme scheduler such as darkman can drive System mode **if the browser exposes the scheduler's light/dark preference**. The website reads the browser's preference, not darkman's internal state or files.
+
+Only website interface tokens are theme-dependent; **v0.4 component identity colors, Pinyin and tone color assignments, source SVG fills, and original text never change**. The existing Off / Direct / Marker language layers are independent of the appearance setting.
 
 ## Human and machine color reference
 
@@ -22,7 +30,7 @@ The Rust pipeline validates that human-facing reference tables match their canon
 3. The workflow runs on changes to `site/**` or via **Actions → Publish Chromalect → Run workflow**. It does not create or push any branches.
 4. Expected project site is `https://sguzman.github.io/chromalect/` **only after a successful GitHub Pages deployment**. Creating this workflow alone does not establish live publication.
 
-No npm, server, web JS, special fonts, paid services, or Rust code are needed for this static-first proof of concept. If interactive filtering, precise glyph masks, and context-dependent readings become necessary, future application logic will be written in Rust. The project remains Rust-only for implementation source code.
+No npm, external server, JavaScript framework, special fonts, or paid services are needed for the published static interface. If interactive filtering, precise glyph masks, and context-dependent readings become necessary, future application logic will be written in Rust. The project remains Rust-only for implementation source code.
 
 ## Development constraints
 
