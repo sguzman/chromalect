@@ -320,6 +320,22 @@ mod tests {
         assert!(html.contains("U+597D.svg"));
     }
     #[test]
+    fn homepage_demo_shows_real_components_without_competing_default_overlays() {
+        let html = fs::read_to_string(root().join("site/index.html")).unwrap();
+        for ch in ["好", "妈", "休", "男"] {
+            let pilot = validate().unwrap().into_iter().find(|g| g.character == ch).unwrap();
+            assert!(html.contains(&format!("aria-label=\"{} with colored components\"", ch)));
+            for stroke in &pilot.strokes {
+                assert!(html.contains(&format!("fill=\"{}\" d=\"{}\"", stroke.color, stroke.path)));
+            }
+        }
+        assert!(html.contains("id=\"component-direct\" name=\"component\" type=\"radio\" value=\"direct\" checked"));
+        assert!(html.contains("id=\"reading-off\" name=\"reading\" type=\"radio\" value=\"off\" checked"));
+        assert!(html.contains("id=\"tone-off\" name=\"tone\" type=\"radio\" value=\"off\" checked"));
+        assert!(!html.contains("Direct does not mean full glyph recoloring yet"));
+    }
+
+    #[test]
     fn site_html_paths_match_the_source_dataset() {
         check_site(&validate().unwrap()).unwrap();
     }
