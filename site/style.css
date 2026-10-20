@@ -145,3 +145,6 @@ main.wrap>.appearance-controls{width:max-content;max-width:100%;margin:16px 0 8p
 .search-card .hint{font-size:11px;line-height:1.4;margin:10px 0 0}
 @media(max-width:500px){.search-results{grid-template-columns:repeat(2,minmax(0,1fr));gap:7px}.search-card{padding:9px}.search-character-link strong{font-size:43px}}
 @media(prefers-reduced-motion:reduce){.search-results *{animation:none!important;transition:none!important}}
+
+.search-diagnostic{font-size:11px;color:var(--sub);margin:9px 0 4px;overflow-wrap:anywhere}
+.search-evidence-link{font-size:11px;display:block;margin-top:5px;overflow-wrap:anywhere}
