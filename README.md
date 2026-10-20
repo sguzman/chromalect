@@ -31,6 +31,10 @@ A place to record hypotheses, design proposals, competing schemes, controlled te
 
 It is **not** a branch of another knowledge base or a general language-learning platform. Any future executable code will be written in **Rust**, but there is no need to create a Cargo project before an experiment requires one. No UI, web stack, external service, or product direction has been selected.
 
+## Real colored character strokes
+
+The [stroke gallery](site/strokes.html) demonstrates **12 actual Chinese glyphs made of separately colored component strokes**, with machine-readable [path ownership](data/catalog/colored-strokes-v0.1.json). The v0.4 colors remain intact. Broader coverage is an incremental data-validation effort, not a missing rendering capability.
+
 ## Web presentation prototype
 
 The [static GitHub Pages prototype](site/index.html) uses independent **off/direct/marker** settings for component identity, orthographic Pinyin initial/final, and tone; semantics are unavailable until source-backed meaning data exists. It renders character-cell treatments and floating markers, **not** invented multicolor strokes. See the [layer architecture](docs/web-layer-architecture.md), [machine-readable layer schema](site/layers-v0.1.json), and [one-time Pages setup](site/README.md). Publication requires GitHub Pages to be enabled for Actions in repository settings.

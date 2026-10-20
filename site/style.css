@@ -27,3 +27,28 @@ footer{margin:50px auto 20px;padding:22px 0;border-top:1px solid var(--border);f
 .radical-meta b{color:#eff6ff}
 .radical-notes{font-size:11px;color:#91a6bc;margin-top:3px;min-height:27px}
 .radical-examples{font-size:19px;font-family:"Noto Sans CJK SC","Noto Sans SC",sans-serif;display:flex;flex-wrap:wrap;gap:9px;margin:5px 0 0}
+
+/* Component-colored actual stroke outlines; no extra libraries or scripts. */
+.stroke-svg{display:block;overflow:visible}
+.stroke-gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:13px;margin:20px 0 38px}
+.stroke-item{background:var(--panel);border:1px solid var(--border);border-radius:13px;padding:15px;min-width:0}
+.stroke-art{height:200px;display:flex;align-items:center;justify-content:center}
+.stroke-art .stroke-svg{width:185px;height:185px}
+.stroke-info{border-top:1px solid var(--border);padding-top:10px}
+.stroke-info>b{font-family:"Noto Sans CJK SC","Noto Sans SC",sans-serif;font-size:28px}
+.stroke-info>span{font-size:13px;color:var(--sub)}
+.stroke-info>p{font-size:12px}
+.stroke-tokens,.stroke-token-row{display:flex;justify-content:center;flex-wrap:wrap;gap:6px;margin-top:8px}
+.stroke-token{display:inline-flex;align-items:center;gap:5px;background:#24394b;border:1px solid #39536a;border-radius:6px;padding:3px 7px;font-size:15px}
+.stroke-token small{font-size:10px;color:#adc3d9;font-family:ui-monospace,monospace}
+.stroke-dot{display:inline-block;width:12px;height:12px;border-radius:50%;border:1px solid #fff5;flex-shrink:0}
+.colored-highlight{border:1px solid var(--border);border-radius:13px;padding:16px;background:#17283b;margin:18px 0}
+.colored-highlight h2{margin:6px 0}.colored-highlight p{margin:0 0 12px}
+.highlight-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:9px}
+.highlight-tile{min-width:0;background:#0c1826;border-radius:9px;padding:10px;text-align:center}
+.highlight-tile>.stroke-svg{width:145px;max-width:100%;height:145px;margin:0 auto}
+/* Atlas: in Direct component mode, replace the font glyph only for source-aligned characters. */
+.glyph .stroke-svg{display:none}
+body:has(#component-direct:checked) .glyph-with-strokes{color:transparent}
+body:has(#component-direct:checked) .glyph-with-strokes .stroke-svg{display:block;position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+body:has(#component-direct:checked) .glyph-with-strokes::after{display:none}

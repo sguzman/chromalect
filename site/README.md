@@ -21,3 +21,9 @@ No npm, server, web JS, special fonts, paid services, or Rust code are needed fo
 - Glyph geometry and semantic truth are not invented.
 - Historical reading/corpus data comes with attribution; see repository third-party notices.
 - The prototype does **not** include word segmentation, accurate character-internal multicolor glyphs, contextual readings, hidden tracking or persistence.
+
+## Actual component-colored Chinese strokes
+
+The [colored glyph gallery](strokes.html) contains 12 source-aligned examples with actual vector paths for each stroke. The paths are from Hanzi Writer Data (Arphic Public License) and stroke/component correspondence from Make Me A Hanzi (LGPL-3.0-or-later). Colors use the v0.4 component identity registry. The [machine JSON](../data/catalog/colored-strokes-v0.1.json) is the portable reference.
+
+This is not full character corpus coverage. Only complete two-component source matches with congruent path/stroke counts are included, with separate visual auditing still required. The browser can show these actual paths without JavaScript.

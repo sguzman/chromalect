@@ -46,3 +46,9 @@ Once advanced capabilities are needed (search/filter, persistent layer controls,
 The [Pages workflow](../.github/workflows/pages.yml) uploads `site/` directly on main. Owner must select **Settings → Pages → GitHub Actions** once. The workflow's presence is not proof a site is live.
 
 Source attribution, unverified glyph data and dataset copyrights remain governed by [THIRD_PARTY_NOTICES](../THIRD_PARTY_NOTICES.md).
+
+## Working multicolor character strokes
+
+The [source-aligned glyph gallery](../site/strokes.html) now renders 12 actual multicolored characters. [Stroke assignments and source paths](../data/catalog/colored-strokes-v0.1.json) are machine-readable. This is an initial subset with complete two-component data, not a geometry solver for all Chinese characters.
+
+The original stripe mode remains the **fallback** for characters without stroke ownership. It must not be presented as exact component coloring. All 513 v0.4 component color assignments are unchanged.
