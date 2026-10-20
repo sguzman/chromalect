@@ -24,7 +24,7 @@ A graph of **315 pairs** was assembled from the repository's 31 candidate specim
 
 The transcription is at blob `3e1b8f893a5df24c92be76b05084dab964678eb1`. Example overlaps are **noisy indications**, not verified decompositions; some source examples have OCR errors. Variant and lookalike relationships are about confusion, not necessarily actual character co-occurrence. The graph is not representative of all 3,500 source characters, much less all modern Chinese.
 
-We reused only the factual component inventory, source group indices and derived pair relationships. The upstream source's copyright and terms remain to be assessed before packaging third-party corpora.
+The palette experiment reused only the factual component inventory, source group indices, and derived pair relationships. The upstream source's copyright and terms remain to be assessed before packaging third-party corpora.
 
 ## Reproducible algorithm parameters
 
