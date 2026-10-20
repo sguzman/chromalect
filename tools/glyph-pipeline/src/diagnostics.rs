@@ -88,12 +88,61 @@ fn render_palette_chips(parts: &Value) -> Result<String,String> {
     Ok(html)
 }
 
+fn linked_review_characters(report: &Value, collection: &str) -> Result<HashSet<String>,String> {
+    let mut out = HashSet::new();
+    for item in entries(report, collection)? {
+        let character = string(item,"character")?;
+        if !out.insert(character.to_owned()) {
+            return Err(format!("duplicate review character in {collection}: {character}"));
+        }
+    }
+    Ok(out)
+}
+
+fn record_review_links(character: &str, alternate: bool, partial: bool) -> Vec<Value> {
+    let Some(first) = character.chars().next() else { return Vec::new(); };
+    if character.chars().count() != 1 { return Vec::new(); }
+    let svg = format!("U+{:04X}.svg",first as u32);
+    let mut links = Vec::new();
+    if alternate {
+        links.push(json!({
+            "kind": "documented_alternate_source_mapping",
+            "href": format!("alternatives/{svg}"),
+        }));
+    }
+    if partial {
+        links.push(json!({
+            "kind": "partially_owned_source_preview",
+            "href": format!("unknown-components/{svg}"),
+        }));
+    }
+    links
+}
+
+fn render_review_links(row: &Value) -> Result<String,String> {
+    let mut html = String::new();
+    for entry in entries(row,"review_assets")? {
+        let href = string(entry,"href")?;
+        let label = match string(entry,"kind")? {
+            "documented_alternate_source_mapping" => "Compare source alternative",
+            "partially_owned_source_preview" => "Inspect partial source ownership",
+            _ => return Err("unknown review-asset kind".into()),
+        };
+        html.push_str(&format!("<a href=\"{}\" style=\"display:block;font-size:11px;margin-top:6px\">{label}</a>",escape(href)));
+    }
+    Ok(html)
+}
+
 pub(super) fn generate(dictionary: &Path, glyphs: &[Glyph], dest: &Path) -> Result<(), String> {
     let catalog_data = load(&root().join("data/catalog/characters-0001-1000.json"))?;
     let catalog = entries(&catalog_data, "characters")?;
     let allowed = catalog.iter().map(|r| string(r, "character").map(str::to_owned))
         .collect::<Result<HashSet<_>, _>>()?;
     let dictionary = dictionary_entries(dictionary, &allowed)?;
+    let source_alternatives = load(&dest.join("alternatives/records.json"))?;
+    let partial_source = load(&dest.join("unknown-components/records.json"))?;
+    let alternative_chars = linked_review_characters(&source_alternatives,"alternatives")?;
+    let partial_chars = linked_review_characters(&partial_source,"glyphs")?;
     let known_ids = discover::catalog_map()?;
     let shapes = discover::palette_shapes()?;
     let atomics = discover::atomic_components()?;
@@ -155,6 +204,9 @@ pub(super) fn generate(dictionary: &Path, glyphs: &[Glyph], dest: &Path) -> Resu
             "catalog_structural_status": string(row, "structural_status")?,
             "catalog_component_ids": get(row, "component_ids")?,
             "catalog_palette_components": selected_palette_components(row,&identities)?,
+            "review_assets": record_review_links(
+                character,alternative_chars.contains(character),partial_chars.contains(character)
+            ),
             "catalog_primary_structure": get(row, "ids_primary")?,
             "source_decomposition": dictionary.get(character)
                 .and_then(|v| v.get("decomposition")).cloned(),
@@ -184,12 +236,13 @@ pub(super) fn generate(dictionary: &Path, glyphs: &[Glyph], dest: &Path) -> Resu
             let rank = row["rank"].as_u64().ok_or("invalid diagnostic rank")? as usize;
             let character = row["character"].as_str().ok_or("invalid diagnostic character")?;
             let start = ((rank - 1) / 100) * 100 + 1;
-            html.push_str(&format!("<a class=\"tile\" href=\"../characters/{:04}-{:04}.html#c{:04}\" style=\"padding:9px 12px;display:block;text-decoration:none\"><span class=\"rank\">#{rank:04}</span><div lang=\"zh-Hans\" style=\"font-size:34px;text-align:center\">{}</div><div class=\"hint\">{}</div><div class=\"mono\" style=\"font-size:11px;overflow-wrap:anywhere;margin-top:6px\">Source: {}<p style=\"margin:2px 0;font-size:11px\">Catalog: {}</p></div>{}</a>",
+            html.push_str(&format!("<div class=\"tile\" style=\"padding:9px 12px\"><a href=\"../characters/{:04}-{:04}.html#c{:04}\" style=\"display:block;text-decoration:none\"><span class=\"rank\">#{rank:04}</span><div lang=\"zh-Hans\" style=\"font-size:34px;text-align:center\">{}</div><div class=\"hint\">{}</div><div class=\"mono\" style=\"font-size:11px;overflow-wrap:anywhere;margin-top:6px\">Source: {}<p style=\"margin:2px 0;font-size:11px\">Catalog: {}</p></div>{}</a>{}</div>",
                 start, start + 99, rank, escape(character),
                 escape(row["catalog_structural_status"].as_str().unwrap_or("unknown")),
                 escape(row["source_decomposition"].as_str().unwrap_or("unknown")),
                 escape(row["catalog_primary_structure"].as_str().unwrap_or("unknown")),
-                render_palette_chips(&row["catalog_palette_components"])?));
+                render_palette_chips(&row["catalog_palette_components"])?,
+                render_review_links(row)?));
         }
         html.push_str("</div></section>");
     }
@@ -243,6 +296,16 @@ mod tests {
         assert!(!source_is_declared_alternative(
             &variants, &json!({"decomposition":"⿰亻𠤎"})
         ));
+    }
+
+    #[test]
+    fn review_asset_links_are_separate_from_active_catalog_cards() {
+        let links = record_review_links("妇",true,true);
+        assert_eq!(links.len(),2);
+        let html = render_review_links(&json!({"review_assets":links})).unwrap();
+        assert!(html.contains("alternatives/U+5987.svg"));
+        assert!(html.contains("unknown-components/U+5987.svg"));
+        assert!(!html.contains("Direct mode"));
     }
 
     #[test]
