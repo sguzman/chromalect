@@ -64,6 +64,7 @@ jobs:
           test -s site/glyphs/diagnostics.html
           test -s site/glyphs/review/index.html
           test -s site/glyphs/review/report.json
+          test -s site/glyphs/review/flagged.html
           test "$(find site/glyphs -name '*.svg' | wc -l)" -gt 12
       - name: Upload discovery report and sample assets
         uses: actions/upload-artifact@v4
