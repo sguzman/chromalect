@@ -83,6 +83,23 @@
       ? "Source-aligned strokes · visual review pending"
       : "Stroke ownership unresolved · native-font fallback";
     article.append(geometry);
+    if (row.source_diagnostics) {
+      const reason = document.createElement("p");
+      reason.className = "search-diagnostic";
+      reason.textContent = "Source review: " +
+        row.source_diagnostics.reason.replaceAll("_", " ");
+      article.appendChild(reason);
+      for (const asset of row.source_diagnostics.review_assets || []) {
+        if (!/^(alternatives|unknown-components)\/U\+[0-9A-F]+\.svg$/.test(asset.href)) continue;
+        const link = document.createElement("a");
+        link.href = "glyphs/" + asset.href;
+        link.className = "search-evidence-link";
+        link.textContent = asset.kind === "documented_alternate_source_mapping"
+          ? "Alternate source SVG"
+          : "Partial source SVG";
+        article.appendChild(link);
+      }
+    }
     return article;
   }
 
