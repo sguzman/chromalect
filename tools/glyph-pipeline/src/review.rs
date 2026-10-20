@@ -144,7 +144,7 @@ fn review_navigation(count: usize, page: usize) -> String {
             review_page_name(index), if page == index { " aria-current=\"page\"" } else { "" }
         ));
     }
-    html.push_str("</nav>");
+    html.push_str("<a href=\"flagged.html\">Review warnings</a></nav>");
     html
 }
 
@@ -189,6 +189,19 @@ pub(super) fn generate(glyphs: &[Glyph], root: &Path) -> Result<(), String> {
         html.push_str("</main></body></html>");
         fs::write(path.join(review_page_name(page)), html).map_err(|e| e.to_string())?;
     }
+    let flagged_glyphs: Vec<&Glyph> = glyphs.iter()
+        .filter(|glyph| !flags(glyph).is_empty()).collect();
+    let mut flagged_html = String::from("<!doctype html><html lang=\"en\"><head><meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"><title>Component contrast review · Chromalect</title><link rel=\"stylesheet\" href=\"../../style.css\"></head><body><main class=\"wrap\"><p><a href=\"../../index.html\">Chromalect</a> / <a href=\"index.html\">Geometry review</a></p><h1>Additional visual review candidates</h1><p class=\"intro\">Automatic checks identify glyphs whose component colors are close in OKLab space or whose estimated path geometry needs closer inspection. The review flags do not establish that any coloring or linguistic analysis is wrong, and no palette assignments have been changed.</p><div class=\"review-grid\">");
+    for glyph in flagged_glyphs {
+        flagged_html.push_str(&format!(
+            "<article class=\"review-item\"><div class=\"review-pair\"><div><span class=\"review-native\" lang=\"zh-Hans\">{}</span><small>Native font</small></div><div><img src=\"../{}\" width=\"112\" height=\"112\" loading=\"lazy\" alt=\"Colored source outlines for {}\"><small>Source SVG</small></div></div><p>{} · {} strokes</p><p class=\"hint\">{}</p><a href=\"../{}\">Open SVG</a></article>",
+            escape(&glyph.character), file_name(glyph), escape(&glyph.character),
+            escape(&glyph.decomposition), glyph.strokes.len(), escape(&flags(glyph).join(", ")), file_name(glyph)
+        ));
+    }
+    flagged_html.push_str("</div></main></body></html>");
+    fs::write(path.join("flagged.html"), flagged_html).map_err(|e| e.to_string())?;
+
     let report = json!({
         "schema": "chromalect.geometry-review.v1",
         "total_glyphs": glyphs.len(),
