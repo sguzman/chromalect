@@ -1,7 +1,7 @@
 {
   "schema": "chromalect.ontology.v1",
   "version": "1.0.0",
-  "namespace": "https://sguzman.github.io/chromalect/ontology/v1#",
+  "namespace": "https://sguzman.github.io/chromalect/ontology/ontology-v1.json#",
   "project": "Chromalect",
   "scope": "Visual encoding of linguistic information across languages and writing systems; Mandarin is the first implementation.",
   "publication": "public",
