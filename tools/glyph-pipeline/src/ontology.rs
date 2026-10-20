@@ -72,7 +72,7 @@ fn verify_bindings(vocab: &Value) -> Result<(),String> {
         let id = string(b,"id")?;
         if !seen.insert(id) { return Err(format!("duplicate binding {id}")); }
         let path = string(b,"path")?;
-        if path.starts_with("site/glyphs/") { continue; } // generated in Pages CI
+        if path.starts_with("site/glyphs/") || path.starts_with("site/profiles/") { continue; } // generated in Pages CI
         let target = load(&root().join(path))?;
         if let Some(schema) = b.get("schema").and_then(Value::as_str) {
             if string(&target,"schema")? != schema {
