@@ -11,6 +11,8 @@ on:
       - "site/layers-v0.1.json"
       - "site/colors.html"
       - "site/index.html"
+      - "site/characters/**"
+      - "site/pronunciation-citations-0001-1000.json"
       - "docs/color-registry.md"
       - ".github/workflows/glyph-integrity.yml"
   workflow_dispatch:
