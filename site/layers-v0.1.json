@@ -102,8 +102,8 @@
         "marker"
       ],
       "direct": {
-        "implemented": "colored underline stripe on character cell; DOES NOT color component strokes",
-        "needs": "trusted font/stroke geometry to paint per-component character interiors"
+        "implemented": "source-aligned vector stroke coloring where mapped, with a segmented cell underline as fallback",
+        "needs": "verified path-to-component assignments for unsupported characters; independent visual and linguistic auditing"
       },
       "marker": {
         "implemented": "individually colored chips adjacent to glyph"
@@ -165,5 +165,6 @@
     "mode_selection_scope": "per page, resets on navigation; no saved tracking",
     "accessibility": "all markers retain textual cues and inspector; color not sole semantic carrier"
   },
-  "rendered_glyph_geometry": "none: all Chinese codepoints in native fonts; layout only"
+  "rendered_glyph_geometry": "source-aligned SVG glyph outlines for mapped characters in component-direct mode; native font glyphs in other modes and when geometry is not available",
+  "stroke_order_policy": "stroke paths retain source indices for geometry-to-component ownership alignment; no handwriting-order encoding or training requirement"
 }
