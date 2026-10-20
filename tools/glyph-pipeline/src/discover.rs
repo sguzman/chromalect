@@ -289,6 +289,7 @@ pub(super) fn run(dictionary: &Path, graphics: &Path) -> Result<(), String> {
     all.extend(discovered);
     build(&all)?;
     atlas::integrate(&all)?;
+    diagnostics::generate(dictionary, &all, &root().join("site/glyphs"))?;
     println!(
         "Generated {} SVGs: {} curated and {} source-derived candidates; {} incomplete geometry cases; {} source candidates without usable geometry.",
         all.len(), curated.len(), count, rejected, pending.len()
