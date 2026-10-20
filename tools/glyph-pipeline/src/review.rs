@@ -53,6 +53,31 @@ fn outline_bounds(path: &str) -> Option<Bounds> {
     Some(b)
 }
 
+fn oklab(hex: &str) -> Option<(f64,f64,f64)> {
+    if hex.len() != 7 || !hex.starts_with('#') { return None; }
+    let mut rgb = [0.0_f64; 3];
+    for (index, value) in rgb.iter_mut().enumerate() {
+        let v = u8::from_str_radix(&hex[1 + 2*index..3 + 2*index], 16).ok()? as f64 / 255.0;
+        *value = if v <= 0.04045 { v / 12.92 }
+            else { ((v + 0.055) / 1.055).powf(2.4) };
+    }
+    let [r,g,b] = rgb;
+    let l = (0.4122214708*r + 0.5363325363*g + 0.0514459929*b).cbrt();
+    let m = (0.2119034982*r + 0.6806995451*g + 0.1073969566*b).cbrt();
+    let s = (0.0883024619*r + 0.2817188376*g + 0.6299787005*b).cbrt();
+    Some((
+        0.2104542553*l + 0.7936177850*m - 0.0040720468*s,
+        1.9779984951*l - 2.4285922050*m + 0.4505937099*s,
+        0.0259040371*l + 0.7827717662*m - 0.8086757660*s,
+    ))
+}
+
+fn perceptual_distance(a: &str, b: &str) -> Option<f64> {
+    let (l1,a1,b1) = oklab(a)?;
+    let (l2,a2,b2) = oklab(b)?;
+    Some(((l1-l2).powi(2) + (a1-a2).powi(2) + (b1-b2).powi(2)).sqrt())
+}
+
 fn flags(glyph: &Glyph) -> Vec<&'static str> {
     let mut problems = Vec::new();
     let mut owners: BTreeMap<&str, Bounds> = BTreeMap::new();
@@ -87,6 +112,17 @@ fn flags(glyph: &Glyph) -> Vec<&'static str> {
                 '⿰' if a.center_x() >= b.center_x() => problems.push("horizontal_component_order_check"),
                 '⿱' if a.center_y() <= b.center_y() => problems.push("vertical_component_order_check"),
                 _ => {}
+            }
+        }
+    }
+    for (i, (_, left_id, left_color)) in glyph.parts.iter().enumerate() {
+        for (_, right_id, right_color) in glyph.parts.iter().skip(i + 1) {
+            if left_id != right_id
+                && perceptual_distance(left_color, right_color).is_some_and(|delta| delta < 0.07)
+            {
+                if !problems.contains(&"nearby_component_colors") {
+                    problems.push("nearby_component_colors");
+                }
             }
         }
     }
@@ -158,7 +194,7 @@ pub(super) fn generate(glyphs: &[Glyph], root: &Path) -> Result<(), String> {
         "total_glyphs": glyphs.len(),
         "flagged_for_additional_review": flagged_count,
         "independently_certified_count": 0,
-        "method": "Non-certifying path extent and simple horizontal/vertical grouping checks. Source geometry and catalog component interpretation still need independent human/visual validation.",
+        "method": "Non-certifying path extents, horizontal/vertical grouping and close OKLab component-color pair flags. These are review hints, not verified shape, linguistic or learning outcomes.",
         "glyphs": records,
     });
     fs::write(path.join("report.json"),format!("{}\n",serde_json::to_string_pretty(&report).map_err(|e| e.to_string())?))
@@ -179,6 +215,15 @@ mod tests {
         assert_eq!(b.max_y, 60.0);
         assert!(outline_bounds("M 30 Z").is_none());
     }
+    #[test]
+    fn close_colors_are_detected_without_changing_palette_assignments() {
+        let black_white = perceptual_distance("#000000","#FFFFFF").unwrap();
+        assert!(black_white > 0.99);
+        assert!(perceptual_distance("#777777","#777777").unwrap() < 1e-12);
+        assert!(perceptual_distance("#777777","#797979").unwrap() < 0.07);
+        assert!(perceptual_distance("#ff0000","#0000ff").unwrap() > 0.1);
+    }
+
     #[test]
     fn pilot_glyphs_have_reviewable_geometry() {
         let glyphs = validate().unwrap();
