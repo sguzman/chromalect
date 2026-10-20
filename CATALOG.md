@@ -1,6 +1,6 @@
 # Chromalect: radicals, primitives, and characters
 
-**Catalog phase:** machine-readable and human-readable reference indexes; not yet a colored-glyph renderer.
+**Catalog phase:** reference indexes, source-aligned colored stroke specimens, and automated SVG generation. Stroke-level coverage remains incomplete.
 
 The v0.4 palette supplies **513 distinct recurring component colors**. It is **not** itself a dictionary radical list. In the 2013 standard, the first 3,500 commonly taught characters constitute tier 1; Chromalect is indexing these in 1,000-character tranches, beginning with **0001–1000**.
 
@@ -31,6 +31,6 @@ The v0.4 palette supplies **513 distinct recurring component colors**. It is **n
 
 **Coverage:** 998/1000 characters identify at least one known component; 987/1000 have no unmatched component tokens. 829/1000 have a listed modern radical form in their chosen decomposition cut. All 1,000 characters have records; unresolved members are retained as explicit issues rather than invented.
 
-**Rendering:** 0 accurate component-colored whole characters. IDS provides structural operators and candidate participants, not pixel geometry, stroke ownership, or font-compatible clipping. No fake embedded glyph artwork is presented.
+**Rendering:** the separate source-aligned stroke dataset contains 12 curated specimens, and the Rust importer can derive 436 additional candidates from pinned upstream stroke-ownership and outline records. Geometry and IDS membership are distinct evidence; automated alignment does not replace independent visual auditing.
 
 [Method and exceptions](docs/catalog-methodology.md) · [Third-party attribution](THIRD_PARTY_NOTICES.md)
