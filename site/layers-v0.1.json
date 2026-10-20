@@ -161,9 +161,9 @@
     }
   ],
   "ui": {
-    "implementation": "native HTML radio buttons and CSS :has() selectors; no client JavaScript",
-    "mode_selection_scope": "per page, resets on navigation; no saved tracking",
-    "accessibility": "all markers retain textual cues and inspector; color not sole semantic carrier"
+    "implementation": "native HTML radio controls with CSS :has() treatments; minimal JavaScript persists enabled layer choices",
+    "mode_selection_scope": "site-local, across homepage and 10 character atlas pages; saved by channel in localStorage when available; defaults remain effective without storage",
+    "accessibility": "textual cues accompany visible markers; high-level colors are not the only distinctions; radio controls remain keyboard accessible"
   },
   "rendered_glyph_geometry": "source-aligned SVG glyph outlines for mapped characters in component-direct mode; native font glyphs in other modes and when geometry is not available",
   "stroke_order_policy": "stroke paths retain source indices for geometry-to-component ownership alignment; no handwriting-order encoding or training requirement"
