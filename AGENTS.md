@@ -2,11 +2,11 @@
 
 ## Scope
 
-This file guides contributors and automated development agents working on **Chromalect**, an independent multilingual visual-language-encoding project. Read [CONSTITUTION.md](CONSTITUTION.md) before making changes. Apply it to source, data, documentation, the generated site, tests, and public Git metadata.
+This file guides contributors and automated development agents working on **Chromalect**, an independent multilingual visual-language-encoding project. Read [CONSTITUTION.md](CONSTITUTION.md) and [ONTOLOGY.md](ONTOLOGY.md) before making changes. Apply it to source, data, documentation, the generated site, tests, and public Git metadata.
 
 ## Project intent
 
-- Develop a self-contained **formal ontology and public gallery** for visual encodings of linguistic information.
+- Maintain a self-contained **formal ontology and public gallery** for visual encodings of linguistic information. Preserve typed definitions in `ontology/ontology-v1.json`, structure in `ontology/*.schema.json`, the sourced example in `ontology/specimens-v1.json`, and the public overview in `site/ontology.html`.
 - Support languages, alphabets, characters, graphemes, components, phonetic and prosodic structure, morphemes, words, and contextual annotations where evidenced by suitable language profiles.
 - Treat Mandarin as the **first implemented profile**, not the project's scope limit. Do not force other scripts into Chinese component or Pinyin models.
 - Keep source text, linguistic analysis, encoding schemes, and rendering separate. Make meaningful structures, mappings, provenance, and coverage available in human- and machine-readable forms.
