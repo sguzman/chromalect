@@ -1,0 +1,280 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://sguzman.github.io/chromalect/ontology/vocabulary.schema.json",
+  "title": "Chromalect typed ontology vocabulary v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema",
+    "version",
+    "namespace",
+    "project",
+    "scope",
+    "publication",
+    "status",
+    "designPrinciples",
+    "classes",
+    "relations",
+    "controlledTerms",
+    "profiles",
+    "bindings",
+    "dataBoundary"
+  ],
+  "properties": {
+    "schema": {
+      "const": "chromalect.ontology.v1"
+    },
+    "version": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+    },
+    "namespace": {
+      "type": "string",
+      "minLength": 10
+    },
+    "project": {
+      "const": "Chromalect"
+    },
+    "scope": {
+      "type": "string",
+      "minLength": 20
+    },
+    "publication": {
+      "const": "public"
+    },
+    "status": {
+      "type": "string"
+    },
+    "designPrinciples": {
+      "type": "array",
+      "minItems": 5,
+      "items": {
+        "type": "string"
+      }
+    },
+    "classes": {
+      "type": "array",
+      "minItems": 25,
+      "uniqueItems": true,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "group",
+          "definition"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[A-Z][A-Za-z]+$"
+          },
+          "group": {
+            "enum": [
+              "language",
+              "writing",
+              "phonology",
+              "lexicon",
+              "visual",
+              "evidence",
+              "research"
+            ]
+          },
+          "definition": {
+            "type": "string",
+            "minLength": 12
+          }
+        }
+      }
+    },
+    "relations": {
+      "type": "array",
+      "minItems": 25,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "domain",
+          "range",
+          "definition",
+          "multiplicity",
+          "sourceRequired"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z][A-Za-z]+$"
+          },
+          "domain": {
+            "type": "string"
+          },
+          "range": {
+            "type": "array",
+            "minItems": 1,
+            "uniqueItems": true,
+            "items": {
+              "type": "string"
+            }
+          },
+          "definition": {
+            "type": "string"
+          },
+          "multiplicity": {
+            "enum": [
+              "0..n",
+              "0..1",
+              "1",
+              "1..n"
+            ]
+          },
+          "sourceRequired": {
+            "type": "boolean"
+          }
+        }
+      }
+    },
+    "controlledTerms": {
+      "type": "object",
+      "required": [
+        "evidenceStatus",
+        "layerMode",
+        "assignmentMedium",
+        "sourceLevel"
+      ],
+      "properties": {
+        "evidenceStatus": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "layerMode": {
+          "type": "array",
+          "items": {
+            "enum": [
+              "off",
+              "direct",
+              "marker"
+            ]
+          }
+        },
+        "assignmentMedium": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "sourceLevel": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "profiles": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "label",
+          "languageVariety",
+          "script",
+          "orthography",
+          "status"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "label": {
+            "type": "string"
+          },
+          "languageVariety": {
+            "type": "string"
+          },
+          "script": {
+            "type": "string"
+          },
+          "orthography": {
+            "type": "string"
+          },
+          "transcription": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string"
+          },
+          "notes": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "bindings": {
+      "type": "array",
+      "minItems": 5,
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "kind",
+          "path",
+          "status"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "kind": {
+            "type": "string"
+          },
+          "path": {
+            "type": "string"
+          },
+          "schema": {
+            "type": "string"
+          },
+          "version": {
+            "type": "string"
+          },
+          "identityKey": {
+            "type": "string"
+          },
+          "count": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "status": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "dataBoundary": {
+      "type": "object",
+      "required": [
+        "selfContained",
+        "externalRegistryMembership",
+        "privateInputs",
+        "generatedBindingsMayBeAbsentFromGitTree"
+      ],
+      "properties": {
+        "selfContained": {
+          "const": true
+        },
+        "externalRegistryMembership": {
+          "const": "not_inferred"
+        },
+        "privateInputs": {
+          "const": "not_reproduced"
+        },
+        "generatedBindingsMayBeAbsentFromGitTree": {
+          "type": "boolean"
+        }
+      }
+    }
+  }
+}
