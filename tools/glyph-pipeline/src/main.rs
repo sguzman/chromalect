@@ -1,3 +1,5 @@
+mod discover;
+
 use serde_json::Value;
 use std::collections::{BTreeMap, BTreeSet};
 use std::env;
@@ -18,6 +20,7 @@ struct Glyph {
     decomposition: String,
     parts: Vec<(String, String, String)>, // form, component ID, color
     strokes: Vec<Stroke>,
+    candidate: bool,
 }
 
 fn root() -> PathBuf {
@@ -39,6 +42,12 @@ fn entries<'a>(object: &'a Value, key: &str) -> Result<&'a Vec<Value>, String> {
 fn load(path: &Path) -> Result<Value, String> {
     let text = fs::read_to_string(path).map_err(|e| format!("{}: {e}", path.display()))?;
     serde_json::from_str(&text).map_err(|e| format!("{}: {e}", path.display()))
+}
+
+fn valid_path(path: &str) -> bool {
+    path.starts_with("M ") && path.ends_with('Z') && path.len() >= 16
+        && path.chars().all(|c| c.is_ascii_digit()
+            || matches!(c, ' ' | ',' | '-' | '+' | '.' | 'M' | 'L' | 'Q' | 'C' | 'Z'))
 }
 
 fn validate() -> Result<Vec<Glyph>, String> {
@@ -107,10 +116,7 @@ fn validate() -> Result<Vec<Glyph>, String> {
             if colors.get(&id).map(|(_, c)| c.as_str()) != Some(color.as_str()) {
                 return Err(format!("{character} stroke {i}: color differs from palette"));
             }
-            if !path.starts_with("M ") || !path.ends_with('Z') || path.len() < 16
-                || !path.chars().all(|c| c.is_ascii_digit()
-                    || matches!(c, ' ' | ',' | '-' | '+' | '.' | 'M' | 'L' | 'Q' | 'C' | 'Z'))
-            {
+            if !valid_path(&path) {
                 return Err(format!("{character} stroke {i}: unexpected SVG path syntax"));
             }
             used.insert(id.clone());
@@ -119,7 +125,7 @@ fn validate() -> Result<Vec<Glyph>, String> {
         if strokes.is_empty() || used != ids {
             return Err(format!("{character}: unassigned strokes or unused component identities"));
         }
-        glyphs.push(Glyph { character, decomposition, parts, strokes });
+        glyphs.push(Glyph { character, decomposition, parts, strokes, candidate: false });
     }
     Ok(glyphs)
 }
@@ -161,10 +167,10 @@ fn index(glyphs: &[Glyph]) -> String {
         let file = file_name(g);
         let labels = g.parts.iter().map(|p| p.0.as_str()).collect::<Vec<_>>().join(" + ");
         s.push_str(&format!(
-            "<article class=\"stroke-item\"><div class=\"stroke-art\"><img width=\"185\" height=\"185\" loading=\"lazy\" alt=\"{}: {}\" src=\"{}\"></div><h2>{}</h2><p>{} · {} strokes</p><p><a href=\"{}\">Open vector glyph</a></p></article>\n",
+            "<article class=\"stroke-item\"><div class=\"stroke-art\"><img width=\"185\" height=\"185\" loading=\"lazy\" alt=\"{}: {}\" src=\"{}\"></div><h2>{}</h2><p>{} · {} strokes</p><p>{}</p><p><a href=\"{}\">Open vector glyph</a></p></article>\n",
             escape(&g.character), escape(&labels), file,
             escape(&g.character), escape(&g.decomposition),
-            g.strokes.len(), file
+            g.strokes.len(), if g.candidate { "Automated source alignment · visual review pending" } else { "Curated pilot · visual review pending" }, file
         ));
     }
     s.push_str("</div></main></body></html>\n");
@@ -237,6 +243,11 @@ fn run() -> Result<(), String> {
             println!("Validated {} glyphs and their v0.4 component assignments.", glyphs.len());
         }
         Some("build") => build(&glyphs)?,
+        Some("discover") => {
+            let dictionary = args.next().ok_or("usage: glyph-pipeline discover DICTIONARY GRAPHICS")?;
+            let graphics = args.next().ok_or("usage: glyph-pipeline discover DICTIONARY GRAPHICS")?;
+            discover::run(Path::new(&dictionary), Path::new(&graphics))?;
+        },
         Some("sources") => sources(&glyphs),
         Some("verify-source") => {
             let dir = args.next().ok_or("usage: glyph-pipeline verify-source DIR")?;
@@ -247,7 +258,7 @@ fn run() -> Result<(), String> {
                 println!("{}: {} strokes, {} component records, {}", g.character, g.strokes.len(), g.parts.len(), g.decomposition);
             }
         }
-        _ => return Err("usage: glyph-pipeline {check|build|sources|verify-source DIR|report}".into()),
+        _ => return Err("usage: glyph-pipeline {check|build|discover DICTIONARY GRAPHICS|sources|verify-source DIR|report}".into()),
     }
     Ok(())
 }
