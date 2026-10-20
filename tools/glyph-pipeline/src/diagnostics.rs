@@ -41,12 +41,31 @@ pub(super) fn generate(dictionary: &Path, glyphs: &[Glyph], dest: &Path) -> Resu
     let shapes = discover::palette_shapes()?;
     let atomics = discover::atomic_components()?;
     let available: HashSet<&str> = glyphs.iter().map(|g| g.character.as_str()).collect();
+    let mapped_glyphs: HashMap<&str, &Glyph> =
+        glyphs.iter().map(|g| (g.character.as_str(), g)).collect();
+    let mut mapped_component_disagreements = Vec::new();
     let mut by_reason: BTreeMap<String, Vec<Value>> = BTreeMap::new();
     let mut total_missing = 0_usize;
 
     for row in catalog {
         let character = string(row, "character")?;
-        if available.contains(character) { continue; }
+        if available.contains(character) {
+            if let Some(glyph) = mapped_glyphs.get(character) {
+                let rendered_ids: HashSet<&str> = glyph.parts.iter()
+                    .map(|(_, id, _)| id.as_str()).collect();
+                let catalog_ids: HashSet<&str> = entries(row, "component_ids")?
+                    .iter().filter_map(Value::as_str).collect();
+                if rendered_ids != catalog_ids {
+                    mapped_component_disagreements.push(json!({
+                        "rank": get(row, "rank")?,
+                        "character": character,
+                        "rendered_component_ids": rendered_ids,
+                        "catalog_component_ids": catalog_ids,
+                    }));
+                }
+            }
+            continue;
+        }
         let reason = match dictionary.get(character) {
             None if atomics.contains_key(character) => "atomic_geometry_missing",
             None => "dictionary_entry_missing",
@@ -103,6 +122,7 @@ pub(super) fn generate(dictionary: &Path, glyphs: &[Glyph], dest: &Path) -> Resu
         "source_revision": DICTIONARY_REVISION,
         "mapped_count": catalog.len() - total_missing,
         "unmapped_count": total_missing,
+        "mapped_component_set_disagreements": mapped_component_disagreements,
         "reason_counts": summaries,
         "unmapped_by_reason": by_reason,
         "method": "Conservative classification of the pinned Make Me A Hanzi source, v0.4 palette, existing catalog identities and accepted geometry; no inferred stroke ownership."
@@ -111,6 +131,11 @@ pub(super) fn generate(dictionary: &Path, glyphs: &[Glyph], dest: &Path) -> Resu
     fs::write(dest.join("diagnostics.json"), format!("{json}\n")).map_err(|e| e.to_string())?;
     fs::write(dest.join("diagnostics.html"), html).map_err(|e| e.to_string())?;
     println!("Glyph diagnostics: {total_missing} unmapped characters.");
+    println!("Mapped glyphs with differing catalog marker identities: {}.", mapped_component_disagreements.len());
+    for entry in mapped_component_disagreements.iter().take(14) {
+        println!("    #{} {} rendered={} catalog={}",
+            entry["rank"], entry["character"], entry["rendered_component_ids"], entry["catalog_component_ids"]);
+    }
     for (reason, examples) in &by_reason {
         println!("  {reason}: {}", examples.len());
         for entry in examples.iter().take(14) {
