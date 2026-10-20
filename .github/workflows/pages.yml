@@ -53,6 +53,8 @@ jobs:
         run: |
           mkdir -p site/palettes
           cp palettes/mandarin-component-identity-v0.4.json site/palettes/
+      - name: Check neutral unknown-component comparisons
+        run: test -s site/glyphs/unknown-components/index.html && test -s site/glyphs/unknown-components/records.json
       - name: Check source alternative comparisons
         run: test -s site/glyphs/alternatives/index.html && test -s site/glyphs/alternatives/records.json
       - name: Check published machine-readable mappings
