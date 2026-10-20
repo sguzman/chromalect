@@ -61,6 +61,7 @@ jobs:
             discover "$RUNNER_TEMP/chromalect-dictionary.txt" "$RUNNER_TEMP/chromalect-graphics.txt"
           test -s site/glyphs/index.html
           test -s site/glyphs/diagnostics.json
+          test -s site/glyphs/mappings.json
           test -s site/glyphs/diagnostics.html
           test -s site/glyphs/review/index.html
           test -s site/glyphs/review/report.json
