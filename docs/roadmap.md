@@ -5,6 +5,7 @@ This is a sequence of **evidence gates**, not a promise to build a large applica
 ## Phase 0 — research foundation [documentation and pilot design underway]
 
 - [x] Establish independent repository scope and first Mandarin language profile.
+- [x] Publish a language-independent typed ontology, JSON Schemas, source-grounded instance graph, and public ontology gallery in this repository.
 - [x] Define independent semantics, identity, historical-phonetic-role, actual-sound, tone, and animation channels.
 - [x] Record test specimens, research questions, experiment versioning, licensing policy.
 - [x] Locate an authoritative public description of GF 0014-2009 and its limited 3,500-character scope.
@@ -53,6 +54,6 @@ This is a sequence of **evidence gates**, not a promise to build a large applica
 
 Choose an implementation only when an experiment requires reproducible generation. **Implementation source must be Rust.** Prefer an isolated, testable renderer and data model; choose UI/WebAssembly/native details by proven requirements rather than preference.
 
-## Future language profiles [not committed]
+## Future language profiles [ontology-ready; implementation pending]
 
-Spanish and other Latin-script languages, Arabic, Korean, and other Chinese varieties can reveal what is genuinely universal and what is script- or language-specific. Do not broaden the initial program before the first Mandarin experiment is measurable.
+Spanish and other Latin-script languages, Arabic, Hebrew, Korean, and other Chinese varieties can reveal what is universal and what is script- or language-specific. The ontology already supports these categories, while a full implemented dataset for each requires separate evidence and validation. The Mandarin prototype remains the initial implementation priority.
