@@ -190,9 +190,10 @@ fn pager(glyphs: &[Glyph], page: usize) -> String {
 
 fn index(glyphs: &[Glyph], page: usize) -> String {
     let mut s = String::from(
-        "<!doctype html>\n<html lang=\"en\"><head><meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"><title>Component glyph atlas · Chromalect</title><link rel=\"stylesheet\" href=\"../style.css\"></head>\n<body><main class=\"wrap\"><p><a href=\"../index.html\">Chromalect</a> / <a href=\"../strokes.html\">Colored glyph gallery</a></p>\n<h1>Component-colored SVG atlas</h1><p class=\"intro\">Source-aligned vector strokes, colored by v0.4 component identity. Stroke ownership is algorithmically checked but requires independent visual review. <a href=\"mappings.json\">Machine-readable mapping manifest (JSON)</a>.</p>\n<div class=\"stroke-gallery\">\n"
+        "<!doctype html>\n<html lang=\"en\"><head><meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"><title>Component glyph atlas · Chromalect</title><link rel=\"stylesheet\" href=\"../style.css\"></head>\n<body><main class=\"wrap\"><p><a href=\"../index.html\">Chromalect</a> / <a href=\"../strokes.html\">Colored glyph gallery</a></p>\n<h1>Component-colored SVG atlas</h1><p class=\"intro\">Source-aligned vector strokes, colored by v0.4 component identity. Stroke ownership is algorithmically checked but requires independent visual review. <a href=\"mappings.json\">Machine-readable mapping manifest (JSON)</a>.</p>\n"
     );
     s.push_str(&pager(glyphs, page));
+    s.push_str("<div class=\"stroke-gallery\">");
     for g in glyphs.iter().skip(page * PAGE_SIZE).take(PAGE_SIZE) {
         let file = file_name(g);
         let labels = g.parts.iter().map(|p| p.0.as_str()).collect::<Vec<_>>().join(" + ");
@@ -334,6 +335,19 @@ mod tests {
         assert_eq!(html.matches("<article ").count(), glyphs.len().min(PAGE_SIZE));
         assert!(html.contains("U+597D.svg"));
     }
+    #[test]
+    fn gallery_navigation_sits_outside_the_card_grid() {
+        let pilot = validate().unwrap();
+        let html = index(&pilot,0);
+        let top_pager = html.find("<nav class=\"pager\"").unwrap();
+        let grid = html.find("<div class=\"stroke-gallery\"").unwrap();
+        let first_article = html.find("<article class=\"stroke-item\"").unwrap();
+        let grid_end = html.rfind("</div>").unwrap();
+        assert!(top_pager < grid && grid < first_article);
+        assert!(html.matches("<nav class=\"pager\"").count() == 2);
+        assert!(grid_end > first_article);
+    }
+
     #[test]
     fn homepage_demo_shows_real_components_without_competing_default_overlays() {
         let html = fs::read_to_string(root().join("site/index.html")).unwrap();
