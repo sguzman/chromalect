@@ -160,11 +160,30 @@ fn svg(g: &Glyph) -> String {
     s
 }
 
-fn index(glyphs: &[Glyph]) -> String {
+const PAGE_SIZE: usize = 48;
+
+fn page_name(page: usize) -> String {
+    if page == 0 { "index.html".into() } else { format!("page-{:02}.html", page + 1) }
+}
+
+fn pager(glyphs: &[Glyph], page: usize) -> String {
+    let count = glyphs.len().div_ceil(PAGE_SIZE);
+    let mut result = String::from("<nav class=\"pager\" aria-label=\"SVG atlas pages\">");
+    for i in 0..count {
+        let label = format!("{}–{}", i * PAGE_SIZE + 1, ((i + 1) * PAGE_SIZE).min(glyphs.len()));
+        let current = if i == page { " aria-current=\"page\"" } else { "" };
+        result.push_str(&format!("<a href=\"{}\"{}>{}</a>", page_name(i), current, label));
+    }
+    result.push_str("</nav>");
+    result
+}
+
+fn index(glyphs: &[Glyph], page: usize) -> String {
     let mut s = String::from(
         "<!doctype html>\n<html lang=\"en\"><head><meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"><title>Component glyph atlas · Chromalect</title><link rel=\"stylesheet\" href=\"../style.css\"></head>\n<body><main class=\"wrap\"><p><a href=\"../index.html\">Chromalect</a> / <a href=\"../strokes.html\">Colored glyph gallery</a></p>\n<h1>Component-colored SVG atlas</h1><p class=\"intro\">Source-aligned vector strokes, colored by v0.4 component identity. Stroke ownership is algorithmically checked but requires independent visual review.</p>\n<div class=\"stroke-gallery\">\n"
     );
-    for g in glyphs {
+    s.push_str(&pager(glyphs, page));
+    for g in glyphs.iter().skip(page * PAGE_SIZE).take(PAGE_SIZE) {
         let file = file_name(g);
         let labels = g.parts.iter().map(|p| p.0.as_str()).collect::<Vec<_>>().join(" + ");
         s.push_str(&format!(
@@ -174,7 +193,9 @@ fn index(glyphs: &[Glyph]) -> String {
             g.strokes.len(), if g.candidate { "Automated source alignment · visual review pending" } else { "Curated pilot · visual review pending" }, file
         ));
     }
-    s.push_str("</div></main></body></html>\n");
+    s.push_str("</div>");
+    s.push_str(&pager(glyphs, page));
+    s.push_str("</main></body></html>\n");
     s
 }
 
@@ -184,8 +205,10 @@ fn build(glyphs: &[Glyph]) -> Result<(), String> {
     for g in glyphs {
         fs::write(target.join(file_name(g)), svg(g)).map_err(|e| e.to_string())?;
     }
-    fs::write(target.join("index.html"), index(glyphs)).map_err(|e| e.to_string())?;
-    println!("Generated {} component-colored SVGs and gallery page.", glyphs.len());
+    for page in 0..glyphs.len().div_ceil(PAGE_SIZE) {
+        fs::write(target.join(page_name(page)), index(glyphs, page)).map_err(|e| e.to_string())?;
+    }
+    println!("Generated {} component-colored SVGs across {} gallery pages.", glyphs.len(), glyphs.len().div_ceil(PAGE_SIZE));
     Ok(())
 }
 
@@ -290,8 +313,8 @@ mod tests {
     #[test]
     fn generated_index_includes_all_source_glyphs() {
         let glyphs = validate().unwrap();
-        let html = index(&glyphs);
-        assert_eq!(html.matches("<article ").count(), glyphs.len());
+        let html = index(&glyphs, 0);
+        assert_eq!(html.matches("<article ").count(), glyphs.len().min(PAGE_SIZE));
         assert!(html.contains("U+597D.svg"));
     }
     #[test]
