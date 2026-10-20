@@ -4,6 +4,9 @@ on:
     branches: [main]
     paths:
       - "site/**"
+      - "tools/glyph-pipeline/**"
+      - "data/catalog/colored-strokes-v0.1.json"
+      - "palettes/mandarin-component-identity-v0.4.json"
       - ".github/workflows/pages.yml"
   workflow_dispatch:
 permissions:
@@ -28,6 +31,13 @@ jobs:
       # Do not set enablement: true here: the default GITHUB_TOKEN cannot create a Pages site.
       - name: Configure Pages
         uses: actions/configure-pages@v5
+      - uses: dtolnay/rust-toolchain@stable
+      - name: Resolve Rust dependencies
+        run: cargo generate-lockfile --manifest-path tools/glyph-pipeline/Cargo.toml
+      - name: Validate component-colored glyph data
+        run: cargo run --quiet --locked --manifest-path tools/glyph-pipeline/Cargo.toml -- check
+      - name: Build component-colored SVG atlas
+        run: cargo run --quiet --locked --manifest-path tools/glyph-pipeline/Cargo.toml -- build
       - name: Upload static Pages content
         uses: actions/upload-pages-artifact@v4
         with:
