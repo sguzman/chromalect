@@ -170,6 +170,7 @@ The source-grounded example [`ontology/specimens-v1.json`](ontology/specimens-v1
 | `source-aligned-strokes` | [`data/catalog/colored-strokes-v0.1.json`](data/catalog/colored-strokes-v0.1.json) | curated_pilot_not_independently_certified |
 | `provenance` | [`data/catalog/provenance-v1.json`](data/catalog/provenance-v1.json) | documented |
 | `rendered-mappings` | [`site/glyphs/mappings.json`](site/glyphs/mappings.json) | generated_during_pages_build_source_aligned_not_independently_certified |
+| `mandarin-1000-ontology-profile` | [`site/profiles/mandarin-1000-v1.json`](site/profiles/mandarin-1000-v1.json) | generated_from_committed_sources_during_pages_build |
 
 Generated site mappings under `site/glyphs/` are built by the Rust pipeline during deployment; they are **not** a committed independent source database. The committed source records and source revisions are authoritative for that generation.
 
