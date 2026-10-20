@@ -1,0 +1,495 @@
+{
+  "schema": "chromalect.ontology-instances.v1",
+  "version": "1.0.0",
+  "ontologyRef": "ontology/ontology-v1.json",
+  "profile": "zh-cn-putonghua-simplified",
+  "status": "source_grounded_demonstration_not_independently_certified",
+  "explanation": "Example graph for 好. Populates only facts evidenced in the existing Mandarin profile. The uninstantiated ontology classes remain available to future language profiles.",
+  "nodes": [
+    {
+      "id": "language:mandarin",
+      "type": "Language",
+      "label": "Mandarin Chinese",
+      "status": "source_aligned",
+      "data": {}
+    },
+    {
+      "id": "variety:putonghua",
+      "type": "LanguageVariety",
+      "label": "Modern Standard Mandarin (Putonghua)",
+      "status": "source_aligned",
+      "data": {
+        "locale": "zh-CN"
+      }
+    },
+    {
+      "id": "script:hani",
+      "type": "Script",
+      "label": "Han script",
+      "status": "source_aligned",
+      "data": {}
+    },
+    {
+      "id": "writing:putonghua-han",
+      "type": "WritingSystem",
+      "label": "Modern Mandarin Han writing",
+      "status": "illustrative",
+      "data": {}
+    },
+    {
+      "id": "orthography:mainland-simplified",
+      "type": "Orthography",
+      "label": "Mainland simplified Chinese",
+      "status": "source_aligned",
+      "data": {}
+    },
+    {
+      "id": "character:U+597D",
+      "type": "Character",
+      "label": "好",
+      "status": "source_aligned",
+      "data": {
+        "unicode": "U+597D",
+        "character": "好",
+        "catalogRank": 581
+      }
+    },
+    {
+      "id": "glyph:U+597D:source",
+      "type": "Glyph",
+      "label": "好 — source-aligned vector geometry",
+      "status": "source_aligned",
+      "data": {
+        "character": "好",
+        "dataset": "data/catalog/colored-strokes-v0.1.json",
+        "independentVisualVerification": false
+      }
+    },
+    {
+      "id": "component:cmp-0014",
+      "type": "GraphicComponent",
+      "label": "女",
+      "status": "source_aligned",
+      "data": {
+        "componentId": "cmp-0014",
+        "form": "女"
+      }
+    },
+    {
+      "id": "component:cmp-0015",
+      "type": "GraphicComponent",
+      "label": "子",
+      "status": "source_aligned",
+      "data": {
+        "componentId": "cmp-0015",
+        "form": "子"
+      }
+    },
+    {
+      "id": "component-instance:U+597D:0",
+      "type": "ComponentInstance",
+      "label": "女, component at IDS path 0",
+      "status": "source_aligned",
+      "data": {
+        "path": "0"
+      }
+    },
+    {
+      "id": "component-instance:U+597D:1",
+      "type": "ComponentInstance",
+      "label": "子, component at IDS path 1",
+      "status": "source_aligned",
+      "data": {
+        "path": "1"
+      }
+    },
+    {
+      "id": "decomposition:U+597D:primary",
+      "type": "Decomposition",
+      "label": "⿰女子",
+      "status": "source_aligned",
+      "data": {
+        "ids": "⿰女子",
+        "sourceStatus": "IDS-derived; independent visual review pending"
+      }
+    },
+    {
+      "id": "reading:U+597D:hao3",
+      "type": "CitationReading",
+      "label": "hǎo",
+      "status": "source_aligned",
+      "data": {
+        "written": "hǎo",
+        "tone": 3,
+        "source": "site/pronunciation-citations-0001-1000.json"
+      }
+    },
+    {
+      "id": "reading:U+597D:hao4",
+      "type": "CitationReading",
+      "label": "hào",
+      "status": "source_aligned",
+      "data": {
+        "written": "hào",
+        "tone": 4,
+        "source": "site/pronunciation-citations-0001-1000.json"
+      }
+    },
+    {
+      "id": "segment:pinyin:h",
+      "type": "OrthographicSegment",
+      "label": "h (Pinyin written initial)",
+      "status": "source_aligned",
+      "data": {
+        "token": "h",
+        "role": "written_initial"
+      }
+    },
+    {
+      "id": "segment:pinyin:ao",
+      "type": "OrthographicSegment",
+      "label": "ao (Pinyin written final)",
+      "status": "source_aligned",
+      "data": {
+        "token": "ao",
+        "role": "written_final"
+      }
+    },
+    {
+      "id": "tone:putonghua:3",
+      "type": "ToneCategory",
+      "label": "Citation tone 3",
+      "status": "source_aligned",
+      "data": {
+        "code": "3",
+        "symbol": "⌄"
+      }
+    },
+    {
+      "id": "tone:putonghua:4",
+      "type": "ToneCategory",
+      "label": "Citation tone 4",
+      "status": "source_aligned",
+      "data": {
+        "code": "4",
+        "symbol": "↘"
+      }
+    },
+    {
+      "id": "palette:mandarin-component@0.4.0",
+      "type": "Palette",
+      "label": "Mandarin component identity palette v0.4",
+      "status": "source_aligned",
+      "data": {
+        "version": "0.4.0",
+        "componentCount": 513
+      }
+    },
+    {
+      "id": "scheme:mandarin-components@0.4.0",
+      "type": "EncodingScheme",
+      "label": "Mandarin component identity color encoding v0.4",
+      "status": "source_aligned",
+      "data": {
+        "paletteRef": "mandarin-component-identity@0.4.0"
+      }
+    },
+    {
+      "id": "assignment:cmp-0014@0.4.0",
+      "type": "VisualAssignment",
+      "label": "女 → #EA5202",
+      "status": "source_aligned",
+      "data": {
+        "value": "#EA5202",
+        "medium": "fill_color"
+      }
+    },
+    {
+      "id": "assignment:cmp-0015@0.4.0",
+      "type": "VisualAssignment",
+      "label": "子 → #98518A",
+      "status": "source_aligned",
+      "data": {
+        "value": "#98518A",
+        "medium": "fill_color"
+      }
+    },
+    {
+      "id": "layer:component_identity",
+      "type": "VisualLayer",
+      "label": "Component identity",
+      "status": "source_aligned",
+      "data": {
+        "modes": [
+          "off",
+          "direct",
+          "marker"
+        ],
+        "defaultSemantics": "Direct colors mapped vector strokes; Marker shows component color chips."
+      }
+    },
+    {
+      "id": "specimen:U+597D:direct",
+      "type": "RenderedSpecimen",
+      "label": "好, source-aligned direct component coloring",
+      "status": "source_aligned",
+      "data": {
+        "character": "好",
+        "format": "SVG",
+        "independentVisualVerification": false
+      }
+    },
+    {
+      "id": "source:catalog-v1",
+      "type": "Source",
+      "label": "Character catalog (2013 standard transcription and IDS)",
+      "status": "source_aligned",
+      "data": {
+        "path": "data/catalog/characters-0001-1000.json"
+      }
+    },
+    {
+      "id": "source:palette-v0.4",
+      "type": "Source",
+      "label": "Component palette v0.4",
+      "status": "source_aligned",
+      "data": {
+        "path": "palettes/mandarin-component-identity-v0.4.json"
+      }
+    },
+    {
+      "id": "source:pronunciation-v0.1",
+      "type": "Source",
+      "label": "Pinyin citation readings dataset",
+      "status": "source_aligned",
+      "data": {
+        "path": "site/pronunciation-citations-0001-1000.json"
+      }
+    },
+    {
+      "id": "source:colored-strokes-v0.1",
+      "type": "Source",
+      "label": "Source-aligned stroke pilot",
+      "status": "source_aligned",
+      "data": {
+        "path": "data/catalog/colored-strokes-v0.1.json"
+      }
+    },
+    {
+      "id": "claim:U+597D:ids",
+      "type": "Claim",
+      "label": "好 has the cited structural decomposition ⿰女子",
+      "status": "candidate",
+      "data": {
+        "validation": "source IDS membership; not independent review"
+      }
+    },
+    {
+      "id": "evidence:U+597D:ids",
+      "type": "Evidence",
+      "label": "Catalog analysis for 好",
+      "status": "source_aligned",
+      "data": {
+        "path": "data/catalog/characters-0001-1000.json",
+        "lookup": {
+          "character": "好"
+        }
+      }
+    }
+  ],
+  "edges": [
+    {
+      "from": "language:mandarin",
+      "relation": "hasVariety",
+      "to": "variety:putonghua"
+    },
+    {
+      "from": "writing:putonghua-han",
+      "relation": "usesScript",
+      "to": "script:hani"
+    },
+    {
+      "from": "writing:putonghua-han",
+      "relation": "servesVariety",
+      "to": "variety:putonghua"
+    },
+    {
+      "from": "writing:putonghua-han",
+      "relation": "definesOrthography",
+      "to": "orthography:mainland-simplified"
+    },
+    {
+      "from": "orthography:mainland-simplified",
+      "relation": "includesCharacter",
+      "to": "character:U+597D"
+    },
+    {
+      "from": "character:U+597D",
+      "relation": "hasGlyph",
+      "to": "glyph:U+597D:source"
+    },
+    {
+      "from": "glyph:U+597D:source",
+      "relation": "containsComponent",
+      "to": "component-instance:U+597D:0"
+    },
+    {
+      "from": "glyph:U+597D:source",
+      "relation": "containsComponent",
+      "to": "component-instance:U+597D:1"
+    },
+    {
+      "from": "component-instance:U+597D:0",
+      "relation": "instantiatesComponent",
+      "to": "component:cmp-0014"
+    },
+    {
+      "from": "component-instance:U+597D:1",
+      "relation": "instantiatesComponent",
+      "to": "component:cmp-0015"
+    },
+    {
+      "from": "character:U+597D",
+      "relation": "hasDecomposition",
+      "to": "decomposition:U+597D:primary"
+    },
+    {
+      "from": "decomposition:U+597D:primary",
+      "relation": "includesComponentInstance",
+      "to": "component-instance:U+597D:0"
+    },
+    {
+      "from": "decomposition:U+597D:primary",
+      "relation": "includesComponentInstance",
+      "to": "component-instance:U+597D:1"
+    },
+    {
+      "from": "character:U+597D",
+      "relation": "hasCitationReading",
+      "to": "reading:U+597D:hao3"
+    },
+    {
+      "from": "character:U+597D",
+      "relation": "hasCitationReading",
+      "to": "reading:U+597D:hao4"
+    },
+    {
+      "from": "reading:U+597D:hao3",
+      "relation": "hasOrthographicSegment",
+      "to": "segment:pinyin:h"
+    },
+    {
+      "from": "reading:U+597D:hao3",
+      "relation": "hasOrthographicSegment",
+      "to": "segment:pinyin:ao"
+    },
+    {
+      "from": "reading:U+597D:hao4",
+      "relation": "hasOrthographicSegment",
+      "to": "segment:pinyin:h"
+    },
+    {
+      "from": "reading:U+597D:hao4",
+      "relation": "hasOrthographicSegment",
+      "to": "segment:pinyin:ao"
+    },
+    {
+      "from": "reading:U+597D:hao3",
+      "relation": "hasToneCategory",
+      "to": "tone:putonghua:3"
+    },
+    {
+      "from": "reading:U+597D:hao4",
+      "relation": "hasToneCategory",
+      "to": "tone:putonghua:4"
+    },
+    {
+      "from": "scheme:mandarin-components@0.4.0",
+      "relation": "usesPalette",
+      "to": "palette:mandarin-component@0.4.0"
+    },
+    {
+      "from": "scheme:mandarin-components@0.4.0",
+      "relation": "containsAssignment",
+      "to": "assignment:cmp-0014@0.4.0"
+    },
+    {
+      "from": "scheme:mandarin-components@0.4.0",
+      "relation": "containsAssignment",
+      "to": "assignment:cmp-0015@0.4.0"
+    },
+    {
+      "from": "assignment:cmp-0014@0.4.0",
+      "relation": "assignmentTargets",
+      "to": "component:cmp-0014"
+    },
+    {
+      "from": "assignment:cmp-0015@0.4.0",
+      "relation": "assignmentTargets",
+      "to": "component:cmp-0015"
+    },
+    {
+      "from": "scheme:mandarin-components@0.4.0",
+      "relation": "controlsLayer",
+      "to": "layer:component_identity"
+    },
+    {
+      "from": "specimen:U+597D:direct",
+      "relation": "rendersWithScheme",
+      "to": "scheme:mandarin-components@0.4.0"
+    },
+    {
+      "from": "specimen:U+597D:direct",
+      "relation": "appliesLayer",
+      "to": "layer:component_identity"
+    },
+    {
+      "from": "specimen:U+597D:direct",
+      "relation": "illustratesCharacter",
+      "to": "character:U+597D"
+    },
+    {
+      "from": "evidence:U+597D:ids",
+      "relation": "sourcedFrom",
+      "to": "source:catalog-v1"
+    },
+    {
+      "from": "evidence:U+597D:ids",
+      "relation": "supportsClaim",
+      "to": "claim:U+597D:ids"
+    }
+  ],
+  "sources": [
+    {
+      "path": "data/catalog/characters-0001-1000.json",
+      "lookup": {
+        "character": "好"
+      },
+      "role": "component membership, IDS primary analysis and ranking"
+    },
+    {
+      "path": "palettes/mandarin-component-identity-v0.4.json",
+      "lookup": {
+        "ids": [
+          "cmp-0014",
+          "cmp-0015"
+        ]
+      },
+      "role": "stable color assignments"
+    },
+    {
+      "path": "site/pronunciation-citations-0001-1000.json",
+      "lookup": {
+        "character": "好"
+      },
+      "role": "two listed citation readings"
+    },
+    {
+      "path": "data/catalog/colored-strokes-v0.1.json",
+      "lookup": {
+        "character": "好"
+      },
+      "role": "source-aligned vector geometry"
+    }
+  ]
+}
