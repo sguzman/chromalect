@@ -10,12 +10,12 @@ The [machine-readable contract](../site/layers-v0.1.json) is the reference. The 
 
 | Channel | Direct expression now | Floating marker now | Evidence |
 | --- | --- | --- | --- |
-| Component identity | Segmented multicolor underline on glyph cell (not individual strokes) | Small color dots above glyph | v0.4 palette + IDS candidate members |
+| Component identity | Component-colored vector strokes where mapped; segmented cell stripe otherwise | Small color dots above glyph | v0.4 palette + IDS candidate members |
 | Pronunciation | Separate onset/orthographic-final colors on opposite glyph cell edges | Segmented Pinyin under glyph | First listed citation reading, no context |
 | Tone | Colored top edge on glyph cell | Miniature color + tone contour shape | Tone in first listed Pinyin |
 | Semantics | **Unavailable** | **Unavailable** | No verified character/word sense inventory yet |
 
-The direct treatment should eventually become an actual glyph-level change **only where geometry and decoding are trustworthy**. A proposed IPA character-stroke redesign failed its earlier feasibility test; we do not smuggle it in. For featural phonetics, markers may be the *primary* representation rather than a fallback.
+Glyph-level direct treatments require verified geometry and independently validated mappings. For featural phonetics, markers may be the primary expression when a reliable glyph-level treatment is unavailable.
 
 ### Independent palettes
 
@@ -30,11 +30,11 @@ The 2013 standard's entry order is not a real-world word-frequency list. Many ch
 
 ### Layout geometry and accessibility
 
-Markers use reserved anchor zones: component dots above, Pinyin below, tone top-right. Direct expressions target color-striped bottom, two colored side edges, and colored top edge. This avoids four overlapping color fills on the glyph. Character interior remains native monochrome. All modes have text, shape or visible IDs; do not rely entirely on colors or on color-vision simulations.
+Markers use reserved anchor zones: component dots above, Pinyin below, tone top-right. Direct expressions target color-striped bottom, two colored side edges, and colored top edge. This avoids four overlapping color fills on the glyph. Character interiors remain monochrome unless source-aligned component-colored stroke geometry is available. All modes have text, shape or visible IDs; do not rely entirely on colors or on color-vision simulations.
 
 - CSS-only controls reset when navigating to another static page; no saved preferences.
 - Browser native `details` inspectors expose component IDs, alternative readings and analysis uncertainty.
-- No glyph geometry, fake colored strokes, SVG masks or animation is claimed.
+- Stroke-level geometry is available for a 12-character source-aligned subset; unsupported characters retain a cell-level fallback.
 - For 1,000 characters the presentation is chunked into **ten pages of 100**, distinct from the JSON's 1,000-entry tranche. Data and presentation chunking can evolve separately.
 
 ### Future Rust implementation
