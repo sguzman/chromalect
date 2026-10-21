@@ -127,6 +127,13 @@ def promote(candidates, catalog, palette, pages):
                       ("罕","⿱⿵冖八干"):"partial_components",
                       ("充","⿱⿱亠厶儿"):"non_disjoint_structure",
                       ("弃","⿱⿱亠厶廾"):"non_disjoint_structure",
+                      **{(ch,cut):"partial_components" for ch,cut in [
+                          ("亏","⿱二㇉"),("以","⿲𠄌丶人"),
+                          ("似","⿰亻⿲𠄌丶人"),("拟","⿰扌⿲𠄌丶人"),
+                          ("余","⿱⿱人一朩"),("杀","⿱㐅朩"),
+                          ("杂","⿱九朩"),("条","⿱夂朩"),
+                          ("夸","⿱大⿱二㇉"),("污","⿰氵⿱二㇉")
+                      ]},
                       **{(ch,cut):"resolved_structural_membership" for ch,cut in [
                           ("礼","⿰礻乚"),("社","⿰礻土"),("祀","⿰礻巳"),
                           ("寻","⿱彐寸"),("当","⿱⺌彐"),("扫","⿰扌彐"),
@@ -134,14 +141,23 @@ def promote(candidates, catalog, palette, pages):
                           ("爷","⿱父卩"),("节","⿱艹卩"),("北","⿰丬匕"),
                           ("在","⿱才土"),("即","⿰艮卩"),
                           ("关","⿱丷天"),("坚","⿱⿲丨丨又土"),
-                          ("尧","⿱⿻一乂兀"),("并","⿱丷开")
+                          ("尧","⿱⿻一乂兀"),("并","⿱丷开"),
+                          ("区","⿷匸㐅"),("呕","⿰口⿷匸㐅"),
+                          ("岖","⿰山⿷匸㐅"),("抠","⿰扌⿷匸㐅"),
+                          ("驱","⿰马⿷匸㐅")
                       ]}}
             status = pinned.get((ch,chosen))
             if not status or row.get("structural_status")!=status:
                 fail(f"{ch}: source reinterpretation is not a pinned incomplete-catalog case")
             if status=="partial_components":
-                if {item["form"] for item in row.get("missing_components",[])}!=({"㓁"} if ch=="罕" else {"包"}):
-                    fail(f"{ch}: incomplete part is not the documented 包 subglyph")
+                missing = {
+                    "罕":"㓁","刨":"包","抱":"包",
+                    "亏":"㇉","以":"𠄌","似":"𠄌","拟":"𠄌",
+                    "夸":"㇉","污":"㇉","余":"亅",
+                    "杀":"亅","杂":"亅","条":"亅"
+                }
+                if ch not in missing or {item["form"] for item in row.get("missing_components",[])}!={missing[ch]}:
+                    fail(f"{ch}: source-selected cut has unsupported missing-catalog provenance")
             elif status=="nonstandard_ids_not_parsed":
                 if row.get("component_instances"):
                     fail(f"{ch}: unparsed source had unexpected selected components")
@@ -235,7 +251,7 @@ def main():
     page_files={str(p):p.read_text() for p in Path("site/characters").glob("[0-9]*-[0-9]*.html")}
     changes=promote(candidates,catalog,palette,page_files)
     required = set("妇延廷有灰灵肖那包岛")
-    optional = set("刨抱罕礼社祀寻当扫帅师归爷节北在即关坚尧并杀杂条充弃")
+    optional = set("刨抱罕礼社祀寻当扫帅师归爷节北在即关坚尧并杀杂条充弃亏以似拟余区匹医呕岖抠驱夸污")
     chosen = {item["character"] for item in changes}
     if not required <= chosen or not chosen <= required | optional:
         fail("pinned source change set contains missing baseline or unauthorized Mandarin cuts")
