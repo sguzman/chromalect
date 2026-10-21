@@ -232,7 +232,7 @@ def main():
     page_files={str(p):p.read_text() for p in Path("site/characters").glob("[0-9]*-[0-9]*.html")}
     changes=promote(candidates,catalog,palette,page_files)
     required = set("妇延廷有灰灵肖那包岛")
-    optional = set("刨抱礼社祀寻当扫帅师归爷节北在即关坚尧并")
+    optional = set("刨抱礼社祀寻当扫帅师归爷节北在即关坚尧并杀杂条")
     chosen = {item["character"] for item in changes}
     if not required <= chosen or not chosen <= required | optional:
         fail("pinned source change set contains missing baseline or unauthorized Mandarin cuts")
