@@ -69,14 +69,70 @@ class Parser:
             raise Reject("invalid_stroke_count")
         return {"form": name, "children": [], "count": count, "split": marker == "split"}
 
+def parse_flat_acjk(source, character):
+    """Decode explicit per-stroke runs when ACJK's split notation is not an IDS tree.
+
+    Accept counted atomic forms only. A named enclosing subglyph with no count
+    is not itself stroke ownership. Shared-stroke (A:B:n), approximate aliases
+    and uncounted paths cannot pass this parser.
+    """
+    if not isinstance(source, str) or not source.startswith(character):
+        raise Reject("missing_or_wrong_acjk_root")
+    i = len(character)
+    segments = []
+    while i < len(source):
+        char = source[i]
+        if char in OPS:
+            i += 1
+            continue
+        if char in ".:~" or char.isdigit() or ord(char) < 128:
+            raise Reject("ambiguous_flat_component_token")
+        i += 1
+        if i < len(source) and source[i] == "~":
+            raise Reject("approximate_component_alias")
+        radical = False
+        if i < len(source) and source[i] == ".":
+            radical = True
+            i += 1
+        split = False
+        if i < len(source) and source[i] == ":":
+            split = True
+            i += 1
+            if i < len(source) and "a" <= source[i] <= "z":
+                i += 1
+            if i < len(source) and source[i] == ":":
+                raise Reject("shared_component_stroke")
+        # Internal named components may contain IDS substructure, in which
+        # case only the fully counted descendants are emitted.
+        if i < len(source) and source[i] in OPS:
+            continue
+        start = i
+        while i < len(source) and source[i].isdigit():
+            i += 1
+        if start == i:
+            raise Reject("flat_component_missing_count")
+        count = int(source[start:i])
+        if not 1 <= count <= 32:
+            raise Reject("invalid_flat_stroke_count")
+        segments.append({"form": char, "children": [], "count": count,
+                         "split": split, "radical": radical})
+    if len(segments) < 2:
+        raise Reject("insufficient_flat_source_components")
+    return {"form": None, "children": segments,
+            "count": sum(item["count"] for item in segments),
+            "split": False, "flat_source": True}
+
 def parse_acjk(source, character):
     if not isinstance(source, str) or len(source) < 3 or source[0] != character:
         raise Reject("missing_or_wrong_acjk_root")
     parser = Parser(source[1:])
-    node = parser.term()
-    if parser.i != len(parser.source):
-        raise Reject("unparsed_acjk_tail")
-    return node
+    try:
+        node = parser.term()
+        if parser.i == len(parser.source):
+            return node
+    except Reject:
+        pass
+    return parse_flat_acjk(source, character)
 
 def count_ownership(node, instances, donor_rows=None):
     wanted = Counter(row["form"] for row in instances)
@@ -246,11 +302,16 @@ def self_test():
         [{"form":"口"},{"form":"𠂉"},{"form":"乙"}], donor_test)
     assert owners == ["口"]*3 + ["𠂉"]*2 + ["乙"]
     assert witnesses == [{"form":"乞","start":3,"count":3}]
-    # The ACJK split notation may contain non-tree sharing. It must never
-    # be silently decoded as a conventional IDS tree.
+    # Split components with uniquely named paths can be counted directly.
+    flat = parse_acjk("那⿰⿻刀:1二2刀:1阝.2", "那")
+    assert flat["flat_source"]
+    assert count_ownership(flat, [{"form":"刀"},{"form":"二"},{"form":"阝"}]) == [
+        "刀","二","二","刀","阝","阝"
+    ]
+    # A shared physical stroke has multiple owners; do not color it as one.
     try:
-        parse_acjk("那⿰⿻刀:1二2刀:1阝.2", "那")
-        raise AssertionError("Ambiguous shared-stroke structure was accepted")
+        parse_acjk("臼.⿱𠀉:3彐:2𠀉:彐:1", "臼")
+        raise AssertionError("Shared source stroke was accepted")
     except Reject:
         pass
     try:
