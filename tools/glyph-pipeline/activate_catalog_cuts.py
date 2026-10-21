@@ -124,7 +124,7 @@ def promote(candidates, catalog, palette, pages):
                       ("岛","⿱鸟山"):"nonstandard_ids_not_parsed",
                       ("刨","⿰⿹勹巳刂"):"partial_components",
                       ("抱","⿰扌⿹勹巳"):"partial_components",
-                      ("罕","⿱⿱冖儿干"):"partial_components",
+                      ("罕","⿱⿵冖八干"):"partial_components",
                       **{(ch,cut):"resolved_structural_membership" for ch,cut in [
                           ("礼","⿰礻乚"),("社","⿰礻土"),("祀","⿰礻巳"),
                           ("寻","⿱彐寸"),("当","⿱⺌彐"),("扫","⿰扌彐"),
