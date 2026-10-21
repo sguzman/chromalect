@@ -1,4 +1,15 @@
-/* Site-only appearance controls. Linguistic palettes and SVG stroke fills are unaffected. */
+/* Site-only appearance controls. Linguistic palettes and SVG stroke fills are unaffected.
+   Every HTML page already loads theme.js, so the shared navigation loads from
+   the same site root even in deeply nested generated research galleries. */
+(() => {
+  const source = document.currentScript;
+  if (!source || !source.src) return;
+  const script = document.createElement("script");
+  script.src = new URL("navigation.js", source.src).href;
+  script.async = false;
+  document.head.appendChild(script);
+})();
+
 (() => {
   "use strict";
   const key = "chromalect-theme";
