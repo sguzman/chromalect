@@ -37,6 +37,15 @@ class Reject(ValueError):
 
 GEOMETRY_REJECTIONS = {}
 
+# The donor is a real separately decomposed Mainland Chinese subglyph.
+# In these TWO contexts a glyph component is compressed relative to its
+# standalone source while preserving normalized stroke centers and mean
+# shape correspondence. Never use this witness for arbitrary components.
+CONTEXTUAL_DONOR_COMPRESSION = {
+    ("克","古"): {"mean":0.090,"center":0.180,"size":0.350},
+    ("夸","亏"): {"mean":0.070,"center":0.100,"size":0.265},
+}
+
 def donor_geometry_diagnostics(source, target):
     """Compare bounded glyph-outline positions without changing admission gates."""
     if len(source) != len(target) or len(source) < 2:
@@ -695,27 +704,43 @@ def candidate(ch, node, owners, svg, graphics, palette, catalog, witnesses=(), v
         donor_error = correspondence(source, embedded, invert_reference_y=False)
         donor_method = "same_stroke_index_geometry"
         if donor_error is None or donor_error > 0.095:
+            metrics = donor_geometry_diagnostics(source,embedded)
+            limits = CONTEXTUAL_DONOR_COMPRESSION.get((ch,form))
+            if (limits is not None
+                and len(source)>=3
+                and all(isinstance(metrics.get(key),float) for key in [
+                    "mean_error_unbounded","maximum_center_displacement",
+                    "maximum_relative_size_difference"])
+                and metrics["mean_error_unbounded"]<=limits["mean"]
+                and metrics["maximum_center_displacement"]<=limits["center"]
+                and metrics["maximum_relative_size_difference"]<=limits["size"]):
+                donor_error=metrics["mean_error_unbounded"]
+                donor_method="contextual_scale_deformation_verified"
             # The counted donor's stroke order may differ from the parent.
             # Only a *unique* shape assignment, with no simultaneous
             # whole-glyph reordering, may change component ownership.
-            if method != "same_stroke_index_geometry":
-                raise Reject("donor_subglyph_geometry_disagreement")
-            alternative = reordered_correspondence(
-                source, embedded,
-                [source_owners[i] for i in indices], invert_reference_y=False)
-            if alternative is None or alternative[0] > 0.095:
-                GEOMETRY_REJECTIONS[ch] = {
-                    "source_component":form,"source_span_start":start,
-                    "source_svg":f"svgsZhHans/{ord(form)}.svg",
-                    **donor_geometry_diagnostics(source, embedded)
-                }
-                raise Reject("donor_subglyph_geometry_disagreement")
-            donor_error, donor_owners = alternative
-            for pos,owner in zip(indices,donor_owners):
-                owners[pos] = owner
-            donor_method = "unique_donor_stroke_geometry_bijection"
+            if donor_method != "contextual_scale_deformation_verified":
+                if method != "same_stroke_index_geometry":
+                    raise Reject("donor_subglyph_geometry_disagreement")
+                alternative = reordered_correspondence(
+                    source, embedded,
+                    [source_owners[i] for i in indices], invert_reference_y=False)
+                if alternative is None or alternative[0] > 0.095:
+                    GEOMETRY_REJECTIONS[ch] = {
+                        "source_component":form,"source_span_start":start,
+                        "source_svg":f"svgsZhHans/{ord(form)}.svg",
+                        **donor_geometry_diagnostics(source, embedded)
+                    }
+                    raise Reject("donor_subglyph_geometry_disagreement")
+                donor_error, donor_owners = alternative
+                for pos,owner in zip(indices,donor_owners):
+                    owners[pos] = owner
+                donor_method = "unique_donor_stroke_geometry_bijection"
         donor_checks.append({"component":form,"start":start,"count":count,
                              **({"indices":indices} if "indices" in witness else {}),
+                             **({"contextual_geometry_metrics": metrics,
+                                 "contextual_geometry_limits": limits}
+                                if donor_method=="contextual_scale_deformation_verified" else {}),
                              "mean_geometry_error":donor_error,
                              "geometry_match_method": donor_method,
                              "source_svg":f"svgsZhHans/{ord(form)}.svg"})
@@ -802,6 +827,8 @@ def self_test():
         assert counted and sum(x["count"] for x in counted["children"])==counted["count"]
         assert count_ownership(counted,[{"form":f} for f in items]) == [
             form for form,count in COUNTED_CHINESE_CONTRACTIONS[key][1] for _ in range(count)]
+    assert set(CONTEXTUAL_DONOR_COMPRESSION)=={("克","古"),("夸","亏")}
+    assert CONTEXTUAL_DONOR_COMPRESSION[("克","古")]["size"]<0.36
     named = parse_acjk(NAMED_DONOR_CONTRACTIONS["奉"]["acjk"],"奉")
     assert named["children"][1]["independent_donor_witness"]
     direct = count_ownership(named,[{"form":"𡗗"},{"form":"𰀁"}],
