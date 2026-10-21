@@ -544,16 +544,34 @@ def main():
             continue
         try:
             node = parse_acjk(rows[ch]["acjk"], ch)
+            plans = []
+            primary_error = None
+            selected_rows = [catalog[ch]] + catalog_alternatives(catalog[ch], palette)
+            for selected in selected_rows:
+                try:
+                    owners, witnesses, variants = count_ownership(
+                        node, selected["component_instances"], rows)
+                    if len(owners) != len(graphics.get(ch, [])):
+                        raise Reject("source_stroke_count_disagreement")
+                    plans.append((owners,witnesses,variants,[],selected))
+                except Reject as e:
+                    if primary_error is None:
+                        primary_error = str(e)
+            # Geometry-based one-to-one replacement is the final, narrow
+            # fallback. Fully source-matched documented alternatives take
+            # precedence and never redefine the v0.4 color identities.
             try:
-                owners, witnesses, variants = count_ownership(
-                    node, catalog[ch]["component_instances"], rows)
-                substitutions = []
-            except Reject:
                 owners, witnesses, variants, substitutions = one_form_substitution(
                     node, catalog[ch]["component_instances"])
-            if len(owners) != len(graphics.get(ch, [])):
-                raise Reject("source_stroke_count_disagreement")
-            eligible[ch] = (node, owners, witnesses, variants, substitutions)
+                if len(owners) != len(graphics.get(ch, [])):
+                    raise Reject("source_stroke_count_disagreement")
+                plans.append((owners,witnesses,variants,substitutions,catalog[ch]))
+            except Reject as e:
+                if primary_error is None:
+                    primary_error = str(e)
+            if not plans:
+                raise Reject(primary_error or "no_complete_source_ownership_plan")
+            eligible[ch] = (node, plans)
         except (KeyError, TypeError, Reject) as e:
             reason = str(e) or "missing_source_data"
             rejected[reason] += 1
@@ -565,19 +583,27 @@ def main():
             ch, xml, reason = future.result()
             outcomes[ch] = (xml, reason)
     recovered = []
-    for ch, (node, owners, witnesses, variants, substitutions) in sorted(eligible.items()):
+    for ch, (node, plans) in sorted(eligible.items()):
         xml, reason = outcomes[ch]
         if reason:
             rejected[reason] += 1
             rejected_ch[ch] = reason
             continue
-        try:
-            row = candidate(ch, node, owners, xml, graphics, palette, catalog, witnesses, variants, substitutions)
-            recovered.append(row)
-        except (ET.ParseError, Reject, ValueError) as e:
-            reason = str(e) or "invalid_chinese_svg"
+        row = None
+        failures = []
+        for owners, witnesses, variants, substitutions, selected in plans:
+            try:
+                row = candidate(ch,node,owners,xml,graphics,palette,catalog,
+                                witnesses,variants,substitutions,selected)
+                break
+            except (ET.ParseError, Reject, ValueError) as e:
+                failures.append(str(e) or "invalid_chinese_svg")
+        if row is None:
+            reason = failures[0] if failures else "no_verified_source_plan"
             rejected[reason] += 1
             rejected_ch[ch] = reason
+        else:
+            recovered.append(row)
     base["candidates"].extend(recovered)
     base["accepted_count"] = len(base["candidates"])
     base["animcjk_revision"] = REV
@@ -588,6 +614,8 @@ def main():
                                     encoding="utf-8")
     print("AnimCJK eligible source counts:", len(eligible), "of", len(missing)-len(existing))
     print("AnimCJK newly admitted candidates:", len(recovered))
+    print("AnimCJK verified catalog alternatives:",
+          "".join(row["character"] for row in recovered if row["source_selected_catalog_alternative"]))
     print("AnimCJK verified form substitutions:",
           "".join(row["character"] for row in recovered if row["form_substitution_witnesses"]))
     print("AnimCJK source-only variant recoveries:",
