@@ -250,7 +250,7 @@ def candidate(ch, node, owners, svg, graphics, palette, catalog, witnesses=()):
         source = donor_strokes(form)
         if len(source) != count:
             raise Reject("donor_svg_count_disagreement")
-        donor_error = correspondence(source, source_paths[start:start + count])
+        donor_error = correspondence(source, source_paths[start:start + count], invert_reference_y=False)
         if donor_error is None or donor_error > 0.095:
             raise Reject("donor_subglyph_geometry_disagreement")
         donor_checks.append({"component":form,"start":start,"count":count,
