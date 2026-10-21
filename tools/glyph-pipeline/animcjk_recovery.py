@@ -18,7 +18,8 @@ from urllib.error import HTTPError, URLError
 from urllib.request import urlopen
 import xml.etree.ElementTree as ET
 
-from hanzivg_recovery import correspondence, reordered_correspondence, local
+from hanzivg_recovery import correspondence, reordered_correspondence, local, coordinates, bounds, normalize
+import math
 
 REV = "3e1253b341cc7be14c3540bb3c045e6163557777"
 BASE = f"https://raw.githubusercontent.com/parsimonhi/animCJK/{REV}/svgsZhHans/"
@@ -33,6 +34,36 @@ SOURCE_ONLY_VARIANTS = {
 
 class Reject(ValueError):
     pass
+
+GEOMETRY_REJECTIONS = {}
+
+def donor_geometry_diagnostics(source, target):
+    """Compare bounded glyph-outline positions without changing admission gates."""
+    if len(source) != len(target) or len(source) < 2:
+        return {"reason":"different_path_counts"}
+    try:
+        donor = [coordinates(path) for path in source]
+        embedded = [coordinates(path) for path in target]
+        donor_bounds = bounds([point for path in donor for point in path])
+        parent_bounds = bounds([point for path in embedded for point in path])
+        measures = []
+        for a,b in zip(donor,embedded):
+            x = normalize(bounds(a), donor_bounds)
+            y = normalize(bounds(b), parent_bounds)
+            center=math.hypot((x[0]+x[2]-y[0]-y[2])/2,
+                              (x[1]+x[3]-y[1]-y[3])/2)
+            size=max(abs(x[2]-x[0]-y[2]+y[0]),
+                     abs(x[3]-x[1]-y[3]+y[1]))
+            measures.append({"center":center,"size":size})
+        return {
+            "mean_error_unbounded":round(sum(m["center"]+.2*m["size"] for m in measures)/len(measures),5),
+            "maximum_center_displacement":round(max(m["center"] for m in measures),5),
+            "maximum_relative_size_difference":round(max(m["size"] for m in measures),5),
+            "component_stroke_count":len(source),
+            "strict_mean_limit":0.095,"strict_center_limit":0.19,"strict_size_limit":0.24
+        }
+    except (ValueError,OverflowError,ZeroDivisionError):
+        return {"reason":"cannot_normalize_source_geometry"}
 
 class Parser:
     def __init__(self, source):
@@ -584,6 +615,11 @@ def candidate(ch, node, owners, svg, graphics, palette, catalog, witnesses=(), v
                 source, source_paths[start:start+count],
                 source_owners[start:start+count], invert_reference_y=False)
             if alternative is None or alternative[0] > 0.095:
+                GEOMETRY_REJECTIONS[ch] = {
+                    "source_component":form,"source_span_start":start,
+                    "source_svg":f"svgsZhHans/{ord(form)}.svg",
+                    **donor_geometry_diagnostics(source, source_paths[start:start+count])
+                }
                 raise Reject("donor_subglyph_geometry_disagreement")
             donor_error, donor_owners = alternative
             owners[start:start+count] = donor_owners
@@ -878,6 +914,7 @@ def main():
     base["animcjk_admitted_count"] = len(accepted)
     base["animcjk_rejected_reasons"] = dict(sorted(rejected.items()))
     base["animcjk_rejected_characters"] = rejected_ch
+    base["animcjk_donor_geometry_diagnostics"] = GEOMETRY_REJECTIONS
     Path(args.candidates).write_text(json.dumps(base, ensure_ascii=False, indent=2) + "\n",
                                     encoding="utf-8")
     print("AnimCJK eligible source counts:", len(eligible), "of", len(missing)-len(existing))
@@ -897,6 +934,8 @@ def main():
     for form in donors:
         if form in rows:
             print("AnimCJK donor source:", form, repr(rows[form].get("acjk", "")))
+    print("AnimCJK geometric donor rejection measurements:",
+          json.dumps(GEOMETRY_REJECTIONS,ensure_ascii=False,sort_keys=True))
     print("AnimCJK rejection summary:", dict(rejected))
     print("AnimCJK rejection stage audit:",
           {"donor_parse":sum(n for key,n in rejected.items() if key.startswith("donor_parse_")),
