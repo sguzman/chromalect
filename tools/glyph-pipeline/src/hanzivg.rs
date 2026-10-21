@@ -129,9 +129,12 @@ pub(super) fn import(
             }
         }
         if let Some(expr) = explicit_source_cut {
-            let permitted = (ch=="包" && expr=="⿹勹巳")
-                || (ch=="岛" && expr=="⿱鸟山");
-            if !permitted || string(selected,"structural_status")?!="nonstandard_ids_not_parsed"
+            let expected_status = match (ch,expr) {
+                ("包","⿹勹巳")|("岛","⿱鸟山") => "nonstandard_ids_not_parsed",
+                ("刨","⿰⿹勹巳刂")|("抱","⿰扌⿹勹巳") => "partial_components",
+                _ => return Err(format!("{ch}: source-only Mandarin cut is not authorized")),
+            };
+            if string(selected,"structural_status")?!=expected_status
                 || selected.get("source_selected_catalog_cut").and_then(Value::as_str)!=Some(expr)
                 || primary!=expr
                 || selected.get("source_original_ids_primary").and_then(Value::as_str)
