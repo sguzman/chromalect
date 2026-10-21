@@ -67,6 +67,8 @@ jobs:
           test -s site/ontology/instances.schema.json
       - name: Check neutral unknown-component comparisons
         run: test -s site/glyphs/unknown-components/index.html && test -s site/glyphs/unknown-components/records.json
+      - name: Check hierarchical source review
+        run: test -s site/glyphs/hierarchical.html && test -s site/glyphs/hierarchical-derivations.json
       - name: Check source alternative comparisons
         run: test -s site/glyphs/alternatives/index.html && test -s site/glyphs/alternatives/records.json
       - name: Check ontology-backed Mandarin search profile
