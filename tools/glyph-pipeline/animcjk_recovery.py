@@ -290,6 +290,12 @@ UNPARSED_SOURCE_CUTS = {
            "source_children": ["包", "刂"], "status": "partial_components"},
     "抱": {"source_acjk": "抱⿰扌.3包5", "cut": "⿰扌⿹勹巳", "forms": ["扌", "勹", "巳"],
            "source_children": ["扌", "包"], "status": "partial_components"},
+    # The four-stroke 㓁 = 冖 + 儿 cut is separately recorded in
+    # https://en.wiktionary.org/wiki/%E3%93%81 . Admission additionally
+    # requires actual pinned AnimCJK source donor decomposition and SVG match.
+    "罕": {"source_acjk":"罕⿱㓁.4干3", "cut":"⿱⿱冖儿干",
+           "forms":["冖","儿","干"],"source_children":["㓁","干"],
+           "status":"partial_components"},
     "礼": {"source_acjk":"礼⿰礻.4乚1", "cut":"⿰礻乚", "forms":["礻","乚"],
            "source_children":["礻","乚"], "status":"resolved_structural_membership"},
     "社": {"source_acjk":"社⿰礻.4土3", "cut":"⿰礻土", "forms":["礻","土"],
@@ -343,7 +349,8 @@ def reviewed_unparsed_source_cut(ch, source_acjk, node, catalog, palette):
     elif record["status"] == "partial_components":
         # A compound unknown part (包) must be precisely the catalog's only
         # missing component; all other identities retain their selected colors.
-        if {item["form"] for item in catalog.get("missing_components", [])}!={"包"}:
+        expected_missing = "㓁" if ch == "罕" else "包"
+        if {item["form"] for item in catalog.get("missing_components", [])}!={expected_missing}:
             raise Reject("unverified_missing_subglyph")
         if not catalog["component_instances"]:
             raise Reject("no_pinned_catalog_components_for_subglyph")
@@ -851,7 +858,7 @@ def main():
     print("AnimCJK verified nested donor recoveries:",
           "".join(row["character"] for row in recovered if row["subglyph_witnesses"]))
     print("AnimCJK new characters:", "".join(row["character"] for row in accepted))
-    donors = ["𠤎","卩","丬","刂","礻","彐","才","月","厂","士","朩","亠","土","艮","犬","㐌","𠆢"]
+    donors = ["𠤎","卩","丬","刂","礻","彐","才","月","厂","士","朩","亠","土","艮","犬","㐌","𠆢","㓁","犮","𠀉","𠫓","𰀁","亼","匸","㐅","𠄌"]
     for form in donors:
         if form in rows:
             print("AnimCJK donor source:", form, repr(rows[form].get("acjk", "")))
