@@ -93,9 +93,18 @@ jobs:
           print("AnimCJK dictionary lines:", len(lines))
           for row in lines[:6]:
               print("AnimCJK initial row:", row[:120])
+          import json
+          rows = {item["character"]: item for line in lines if (item := json.loads(line)).get("character")}
+          missing = json.loads(Path("site/glyphs/coverage.json").read_text())["unmapped"]
+          print("AnimCJK coverage of unresolved:", sum(x["character"] in rows for x in missing), "of", len(missing))
           for ch in "左友右丢吃包在那饭":
-              items = [row for row in lines if row.startswith(ch)]
-              print("AnimCJK selected", ch, ":", [row[:140] for row in items[:2]])
+              row = rows.get(ch, {})
+              print("AnimCJK selected", ch, ":",
+                    {"acjk":row.get("acjk"),"decomposition":row.get("decomposition"),
+                     "n":row.get("n")})
+          for item in missing[:30]:
+              ch = item["character"]
+              print("AnimCJK unresolved sample",ch,rows.get(ch,{}).get("acjk","<absent>"))
           PY
       - name: Enforce first-1000 Mandarin coverage and provenance regression gates
         run: |
