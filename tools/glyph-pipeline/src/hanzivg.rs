@@ -361,8 +361,32 @@ pub(super) fn import(
             }
         }
         let method = string(row, "geometry_match_method")?;
-        if method != "same_stroke_index_geometry" && method != "unique_stroke_geometry_bijection" {
-            return Err(format!("{ch}: unknown stroke geometry correspondence method"));
+        if method == "verified_same_component_stroke_permutation" {
+            let indexes = row.get("source_stroke_permutation")
+                .and_then(Value::as_array)
+                .ok_or_else(||format!("{ch}: missing source-stroke permutation witness"))?;
+            let permutation=indexes.iter()
+                .map(|n|n.as_u64().map(|n|n as usize)
+                    .ok_or_else(||format!("{ch}: invalid source permutation index")))
+                .collect::<Result<Vec<_>,String>>()?;
+            if ch!="肠" || provider!="animcjk_zhhans"
+                || string(row,"decomposition")?!="⿰月𠃓"
+                || permutation != vec![0,1,2,3,5,4,6]
+                || entries(row,"strokes")?.len()!=7
+                || entries(selected,"component_instances")?.iter()
+                    .map(|v|v.get("form").and_then(Value::as_str))
+                    .collect::<Vec<_>>() != vec![Some("月"),Some("𠃓")]
+                || entries(row,"strokes")?.iter().enumerate().any(|(i,v)|
+                    v.get("component_id").and_then(Value::as_str)
+                        != Some(if i<4 {"cmp-0008"} else {"cmp-0433"}))
+            {
+                return Err(format!("{ch}: source permutation changes color ownership or unverified component"));
+            }
+        } else if method != "same_stroke_index_geometry"
+            && method != "unique_stroke_geometry_bijection"
+            || row.get("source_stroke_permutation").is_some_and(|v|!v.is_null())
+        {
+            return Err(format!("{ch}: unknown or unverified stroke geometry correspondence"));
         }
         let error = get(row, "mean_geometry_error")?.as_f64()
             .ok_or_else(||format!("{ch}: no numeric geometry comparison"))?;
@@ -450,6 +474,7 @@ pub(super) fn import(
             "ownership_provider": provider, "ownership_revision": pinned_revision,
             "mean_geometry_error": error, "stroke_count": strokes.len(),
             "geometry_match_method": method,
+            "source_stroke_permutation": row.get("source_stroke_permutation"),
             "ownership_method": ownership_method,
             "source_selected_catalog_alternative": documented_alternative,
             "source_selected_catalog_cut": explicit_source_cut,
