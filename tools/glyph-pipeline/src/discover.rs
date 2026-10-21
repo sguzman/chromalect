@@ -74,7 +74,7 @@ pub(super) fn catalog_map() -> Result<HashMap<String, HashSet<String>>, String> 
 }
 
 pub(super) fn atomic_components() -> Result<HashMap<String, (String, String)>, String> {
-    let palette = load(&root().join("palettes/mandarin-component-identity-v0.5.json"))?;
+    let palette = load(&root().join("palettes/mandarin-component-identity-v0.6.json"))?;
     let catalog = load(&root().join("data/catalog/characters-0001-1000.json"))?;
     let mut identities = HashMap::new();
     for component in entries(&palette, "components")? {
@@ -105,7 +105,7 @@ pub(super) fn atomic_components() -> Result<HashMap<String, (String, String)>, S
 }
 
 pub(super) fn palette_shapes() -> Result<HashMap<String, (String, String)>, String> {
-    let v = load(&root().join("palettes/mandarin-component-identity-v0.5.json"))?;
+    let v = load(&root().join("palettes/mandarin-component-identity-v0.6.json"))?;
     let mut unique = HashMap::new();
     let mut duplicates = HashSet::new();
     for row in entries(&v, "components")? {
@@ -306,7 +306,7 @@ fn load_matches(path: &Path) -> Result<HashMap<String, Decomposition>, String> {
     let catalog_rows=entries(&raw_catalog,"characters")?.iter()
         .map(|row|Ok((string(row,"character")?.to_owned(),row)))
         .collect::<Result<HashMap<_,_>,String>>()?;
-    let palette_data=load(&root().join("palettes/mandarin-component-identity-v0.5.json"))?;
+    let palette_data=load(&root().join("palettes/mandarin-component-identity-v0.6.json"))?;
     let colors=entries(&palette_data,"components")?.iter().map(|item|Ok((
         string(item,"id")?.to_owned(),
         (string(item,"shape")?.to_owned(),string(item,"color")?.to_owned())
