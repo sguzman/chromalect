@@ -193,6 +193,11 @@ pub(super) fn import(
                 {
                     return Err(format!("{ch}: donor witness span out of range"));
                 }
+                let donor_method = string(witness,"geometry_match_method")?;
+                if donor_method != "same_stroke_index_geometry"
+                    && donor_method != "unique_donor_stroke_geometry_bijection" {
+                    return Err(format!("{ch}: unsupported donor alignment methodology"));
+                }
                 let expected = format!("svgsZhHans/{}.svg", source_form.chars().next().unwrap() as u32);
                 if string(witness,"source_svg")? != expected
                     || get(witness,"mean_geometry_error")?.as_f64()
