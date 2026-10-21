@@ -83,11 +83,31 @@ jobs:
           # The initial pass replaces tracked atlas character spans. Rebuild from
           # pristine source templates so integration is applied exactly once.
           git restore --worktree -- site/characters
+          python3 tools/glyph-pipeline/activate_catalog_cuts.py --self-test
+          python3 tools/glyph-pipeline/activate_catalog_cuts.py \
+            --candidates "$RUNNER_TEMP/hanzivg-candidates.json" \
+            --catalog data/catalog/characters-0001-1000.json \
+            --palette palettes/mandarin-component-identity-v0.4.json \
+            --summary site/glyphs/active-catalog-cuts.json
           cargo run --quiet --locked --manifest-path tools/glyph-pipeline/Cargo.toml -- discover \
             "$RUNNER_TEMP/chromalect-dictionary.txt" \
             "$RUNNER_TEMP/chromalect-graphics.txt" \
             "$RUNNER_TEMP/hanzivg-candidates.json"
           test -s site/glyphs/hanzivg-transfers.json
+          # The post-build audit must agree across catalog, marker colors,
+          # all character SVGs and the generated semantic Mandarin profile.
+          cargo run --quiet --locked --manifest-path tools/glyph-pipeline/Cargo.toml -- check
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          summary=json.loads(Path("site/glyphs/active-catalog-cuts.json").read_text())
+          assert summary["count"]==8
+          catalog=json.loads(Path("data/catalog/characters-0001-1000.json").read_text())
+          rows={v["character"]:v for v in catalog["characters"]}
+          assert all(rows[x["character"]]["source_selected_catalog_alternative"]==x["active_cut"]
+                     for x in summary["selected"])
+          print("Confirmed 8 documented source cuts with synchronized Direct/Marker/catalog identities")
+          PY
       - name: Enforce first-1000 Mandarin coverage and provenance regression gates
         run: |
           python3 - <<'PY'
