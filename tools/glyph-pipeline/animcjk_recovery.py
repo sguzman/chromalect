@@ -362,6 +362,53 @@ UNPARSED_SOURCE_CUTS = {
     "弃": {"source_acjk":"弃⿱⿱亠2厶2廾.3", "cut":"⿱⿱亠厶廾",
            "forms":["亠","厶","廾"],"source_children":[None,"廾"],
            "status":"non_disjoint_structure"},
+    # v0.5 registers these explicit source-only Mandarin components
+    # without altering a single ID/color from the previous 513-piece palette.
+    "亏": {"source_acjk":"亏⿱二.2㇉1","cut":"⿱二㇉",
+           "forms":["二","㇉"],"source_children":["二","㇉"],
+           "status":"partial_components"},
+    "以": {"source_acjk":"以⿲𠄌1丶1人.2","cut":"⿲𠄌丶人",
+           "forms":["𠄌","丶","人"],"source_children":["𠄌","丶","人"],
+           "status":"partial_components"},
+    "似": {"source_acjk":"似⿰亻.2以4","cut":"⿰亻⿲𠄌丶人",
+           "forms":["亻","𠄌","丶","人"],"source_children":["亻","以"],
+           "status":"partial_components"},
+    "拟": {"source_acjk":"拟⿰扌.3以4","cut":"⿰扌⿲𠄌丶人",
+           "forms":["扌","𠄌","丶","人"],"source_children":["扌","以"],
+           "status":"partial_components"},
+    "余": {"source_acjk":"余⿱亼⿱𠆢.2一1朩4","cut":"⿱⿱人一朩",
+           "forms":["人","一","朩"],"source_children":["亼","朩"],
+           "status":"partial_components"},
+    "杀": {"source_acjk":"杀⿱㐅2朩.4","cut":"⿱㐅朩",
+           "forms":["㐅","朩"],"source_children":["㐅","朩"],
+           "status":"partial_components"},
+    "杂": {"source_acjk":"杂⿱九2朩.4","cut":"⿱九朩",
+           "forms":["九","朩"],"source_children":["九","朩"],
+           "status":"partial_components"},
+    "条": {"source_acjk":"条⿱夂3朩.4","cut":"⿱夂朩",
+           "forms":["夂","朩"],"source_children":["夂","朩"],
+           "status":"partial_components"},
+    "区": {"source_acjk":"区⿷匸.:1㐅2匸.:1","cut":"⿷匸㐅",
+           "forms":["匸","㐅"],"source_children":["匸","㐅","匸"],
+           "status":"resolved_structural_membership"},
+    "呕": {"source_acjk":"呕⿰口.3区4","cut":"⿰口⿷匸㐅",
+           "forms":["口","匸","㐅"],"source_children":["口","区"],
+           "status":"resolved_structural_membership"},
+    "岖": {"source_acjk":"岖⿰山.3区4","cut":"⿰山⿷匸㐅",
+           "forms":["山","匸","㐅"],"source_children":["山","区"],
+           "status":"resolved_structural_membership"},
+    "抠": {"source_acjk":"抠⿰扌.3区4","cut":"⿰扌⿷匸㐅",
+           "forms":["扌","匸","㐅"],"source_children":["扌","区"],
+           "status":"resolved_structural_membership"},
+    "驱": {"source_acjk":"驱⿰马.3区4","cut":"⿰马⿷匸㐅",
+           "forms":["马","匸","㐅"],"source_children":["马","区"],
+           "status":"resolved_structural_membership"},
+    "夸": {"source_acjk":"夸⿱大.3亏3","cut":"⿱大⿱二㇉",
+           "forms":["大","二","㇉"],"source_children":["大","亏"],
+           "status":"partial_components"},
+    "污": {"source_acjk":"污⿰氵.3亏3","cut":"⿰氵⿱二㇉",
+           "forms":["氵","二","㇉"],"source_children":["氵","亏"],
+           "status":"partial_components"},
     "礼": {"source_acjk":"礼⿰礻.4乚1", "cut":"⿰礻乚", "forms":["礻","乚"],
            "source_children":["礻","乚"], "status":"resolved_structural_membership"},
     "社": {"source_acjk":"社⿰礻.4土3", "cut":"⿰礻土", "forms":["礻","土"],
@@ -415,8 +462,14 @@ def reviewed_unparsed_source_cut(ch, source_acjk, node, catalog, palette):
     elif record["status"] == "partial_components":
         # A compound unknown part (包) must be precisely the catalog's only
         # missing component; all other identities retain their selected colors.
-        expected_missing = "㓁" if ch == "罕" else "包"
-        if {item["form"] for item in catalog.get("missing_components", [])}!={expected_missing}:
+        approved_missing = {
+            "罕":"㓁","刨":"包","抱":"包",
+            "亏":"㇉","以":"𠄌","似":"𠄌","拟":"𠄌",
+            "夸":"㇉","污":"㇉",
+            "余":"亅","杀":"亅","杂":"亅","条":"亅"
+        }
+        expected_missing=approved_missing.get(ch)
+        if not expected_missing or {item["form"] for item in catalog.get("missing_components", [])}!={expected_missing}:
             raise Reject("unverified_missing_subglyph")
         if not catalog["component_instances"]:
             raise Reject("no_pinned_catalog_components_for_subglyph")
