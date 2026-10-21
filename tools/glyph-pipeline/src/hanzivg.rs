@@ -130,7 +130,8 @@ pub(super) fn import(
         }
         // A single attested source-only form may correspond to the catalog's
         // already-chosen 人 identity. Never merge two distinct v0.4 identities.
-        let source_variants = entries(row, "source_variant_witnesses")?;
+        let source_variants: &[Value] = row.get("source_variant_witnesses")
+            .and_then(Value::as_array).map(Vec::as_slice).unwrap_or(&[]);
         if ownership_method == "animcjk_source_variant_alignment" && source_variants.is_empty() {
             return Err(format!("{ch}: variant method without evidence"));
         }
