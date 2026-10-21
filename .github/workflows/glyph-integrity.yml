@@ -72,6 +72,8 @@ jobs:
             discover "$RUNNER_TEMP/chromalect-dictionary.txt" "$RUNNER_TEMP/chromalect-graphics.txt"
           test -s site/glyphs/index.html
           test -s site/glyphs/diagnostics.json
+          test -s site/glyphs/hierarchical-derivations.json
+          test -s site/glyphs/hierarchical.html
           test -s site/glyphs/mappings.json
           test -s site/profiles/mandarin-1000-v1.json
           test -s site/glyphs/alternatives/index.html
