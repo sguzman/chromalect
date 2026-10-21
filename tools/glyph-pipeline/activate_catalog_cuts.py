@@ -123,15 +123,25 @@ def promote(candidates, catalog, palette, pages):
             pinned = {("包","⿹勹巳"):"nonstandard_ids_not_parsed",
                       ("岛","⿱鸟山"):"nonstandard_ids_not_parsed",
                       ("刨","⿰⿹勹巳刂"):"partial_components",
-                      ("抱","⿰扌⿹勹巳"):"partial_components"}
+                      ("抱","⿰扌⿹勹巳"):"partial_components",
+                      **{(ch,cut):"resolved_structural_membership" for ch,cut in [
+                          ("礼","⿰礻乚"),("社","⿰礻土"),("祀","⿰礻巳"),
+                          ("寻","⿱彐寸"),("当","⿱⺌彐"),("扫","⿰扌彐"),
+                          ("帅","⿰刂巾"),("师","⿰刂⿱一巾"),("归","⿰刂彐"),
+                          ("爷","⿱父卩"),("节","⿱艹卩"),("北","⿰丬匕"),
+                          ("在","⿱才土"),("即","⿰艮卩")
+                      ]}}
             status = pinned.get((ch,chosen))
             if not status or row.get("structural_status")!=status:
                 fail(f"{ch}: source reinterpretation is not a pinned incomplete-catalog case")
             if status=="partial_components":
                 if {item["form"] for item in row.get("missing_components",[])}!={"包"}:
                     fail(f"{ch}: incomplete part is not the documented 包 subglyph")
-            elif row.get("component_instances"):
-                fail(f"{ch}: unparsed source had unexpected selected components")
+            elif status=="nonstandard_ids_not_parsed":
+                if row.get("component_instances"):
+                    fail(f"{ch}: unparsed source had unexpected selected components")
+            elif not row.get("component_instances"):
+                fail(f"{ch}: resolved original source was missing component identities")
         cut = leaves(chosen)
         parts = []
         for form,path in cut:
@@ -220,7 +230,7 @@ def main():
     page_files={str(p):p.read_text() for p in Path("site/characters").glob("[0-9]*-[0-9]*.html")}
     changes=promote(candidates,catalog,palette,page_files)
     required = set("妇延廷有灰灵肖那包岛")
-    optional = set("刨抱")
+    optional = set("刨抱礼社祀寻当扫帅师归爷节北在即")
     chosen = {item["character"] for item in changes}
     if not required <= chosen or not chosen <= required | optional:
         fail("pinned source change set contains missing baseline or unauthorized Mandarin cuts")
