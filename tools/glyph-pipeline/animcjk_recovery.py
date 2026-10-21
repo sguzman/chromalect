@@ -195,14 +195,17 @@ def self_test():
         ("左", "左⿱𠂇2工.3", ["𠂇", "工"], ["𠂇"] * 2 + ["工"] * 3),
         ("友", "友⿱𠂇2又.2", ["𠂇", "又"], ["𠂇"] * 2 + ["又"] * 2),
         ("右", "右⿱𠂇2口.3", ["𠂇", "口"], ["𠂇"] * 2 + ["口"] * 3),
-        ("那", "那⿰⿻刀:1二2刀:1阝.2", ["刀", "二", "阝"],
-         ["刀", "二", "二", "刀", "阝", "阝"]),
     ]
     for ch, source, forms, expected in cases:
         node = parse_acjk(source, ch)
         assert count_ownership(node, [{"form": f} for f in forms]) == expected
-    assert count_ownership(parse_acjk("可⿹丁:1口.3丁:1", "可"),
-                           [{"form": "丁"}, {"form": "口"}]) == ["丁", "口", "口", "口", "丁"]
+    # The ACJK split notation may contain non-tree sharing. It must never
+    # be silently decoded as a conventional IDS tree.
+    try:
+        parse_acjk("那⿰⿻刀:1二2刀:1阝.2", "那")
+        raise AssertionError("Ambiguous shared-stroke structure was accepted")
+    except Reject:
+        pass
     try:
         count_ownership(parse_acjk("以⿲𠄌1丶1人.2", "以"),
                         [{"form": "丶"}, {"form": "人"}])
