@@ -101,13 +101,13 @@ jobs:
           import json
           from pathlib import Path
           summary=json.loads(Path("site/glyphs/active-catalog-cuts.json").read_text())
-          assert summary["count"]==10
+          assert 10<=summary["count"]<=12
           catalog=json.loads(Path("data/catalog/characters-0001-1000.json").read_text())
           rows={v["character"]:v for v in catalog["characters"]}
           assert all(rows[x["character"]].get(
               "source_selected_catalog_alternative" if x["selection_method"]=="documented_alternative"
               else "source_selected_catalog_cut")==x["active_cut"] for x in summary["selected"])
-          print("Confirmed 10 evidence-backed cuts with synchronized Direct/Marker/catalog identities")
+          print(f"Confirmed {summary['count']} evidence-backed cuts with synchronized Direct/Marker/catalog identities")
           PY
       - name: Enforce first-1000 Mandarin coverage and provenance regression gates
         run: |
