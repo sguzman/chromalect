@@ -51,6 +51,7 @@ CONTEXTUAL_DONOR_COMPRESSION = {
     ("合","亼"): {"mean":0.200,"center":0.160,"size":0.490},
     ("坐","从"): {"mean":0.120,"center":0.255,"size":0.145},
     ("坐","十"): {"mean":0.185,"center":0.330,"size":0.140},
+    ("坐","土"): {"mean":0.105,"center":0.240,"size":0.060},
     ("巫","从"): {"mean":0.135,"center":0.255,"size":0.155},
     ("邻","令"): {"mean":0.180,"center":0.190,"size":0.240},
 }
@@ -838,7 +839,7 @@ def self_test():
             form for form,count in COUNTED_CHINESE_CONTRACTIONS[key][1] for _ in range(count)]
     assert set(CONTEXTUAL_DONOR_COMPRESSION)=={
         ("克","古"),("夸","亏"),("合","亼"),("坐","从"),
-        ("巫","从"),("邻","令"),("坐","十")}
+        ("巫","从"),("邻","令"),("坐","十"),("坐","土")}
     assert CONTEXTUAL_DONOR_COMPRESSION[("克","古")]["size"]<0.36
     assert all(all(limit>0 for limit in bounds.values())
                for bounds in CONTEXTUAL_DONOR_COMPRESSION.values())
