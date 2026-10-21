@@ -43,7 +43,7 @@ pub(super) fn generate(glyphs: &[Glyph], destination: &Path) -> Result<(), Strin
     }
     let report = json!({
         "schema": "chromalect.glyph-coverage.v1",
-        "palette": "mandarin-component-identity@0.5.0",
+        "palette": "mandarin-component-identity@0.6.0",
         "catalog_size": entries.len(),
         "source_aligned_catalog_glyphs": mapped,
         "source_aligned_atomic": mapped_atomic,
