@@ -105,7 +105,12 @@ pub(super) fn import(
             .split('(').next().unwrap_or("").trim();
         let documented_alternative = row.get("source_selected_catalog_alternative")
             .and_then(Value::as_str);
-        let chosen_decomposition = documented_alternative.unwrap_or(primary);
+        let explicit_source_cut = row.get("source_selected_catalog_cut")
+            .and_then(Value::as_str);
+        if documented_alternative.is_some() && explicit_source_cut.is_some() {
+            return Err(format!("{ch}: conflicting source-selected cut definitions"));
+        }
+        let chosen_decomposition = documented_alternative.or(explicit_source_cut).unwrap_or(primary);
         if string(row, "decomposition")? != chosen_decomposition {
             return Err(format!("{ch}: decomposition does not match selected catalog source cut"));
         }
@@ -121,6 +126,18 @@ pub(super) fn import(
                 || selected.get("source_selected_catalog_alternative")
                     .and_then(Value::as_str) != Some(expr) {
                 return Err(format!("{ch}: source cut is not a synchronized, documented catalog alternative"));
+            }
+        }
+        if let Some(expr) = explicit_source_cut {
+            let permitted = (ch=="包" && expr=="⿹勹巳")
+                || (ch=="岛" && expr=="⿱鸟山");
+            if !permitted || string(selected,"structural_status")?!="nonstandard_ids_not_parsed"
+                || selected.get("source_selected_catalog_cut").and_then(Value::as_str)!=Some(expr)
+                || primary!=expr
+                || selected.get("source_original_ids_primary").and_then(Value::as_str)
+                    .is_none_or(|original| original==catalog_ids)
+            {
+                return Err(format!("{ch}: unsupported or unrecorded original Mandarin source cut"));
             }
         }
         let provider = string(row, "ownership_provider")?;
@@ -345,6 +362,7 @@ pub(super) fn import(
             "geometry_match_method": method,
             "ownership_method": ownership_method,
             "source_selected_catalog_alternative": documented_alternative,
+            "source_selected_catalog_cut": explicit_source_cut,
             "source_variant_witnesses": row.get("source_variant_witnesses"),
             "subglyph_witnesses": row.get("subglyph_witnesses"),
             "form_substitution_witnesses": row.get("form_substitution_witnesses"),
