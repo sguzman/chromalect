@@ -5,11 +5,11 @@ use std::io::{BufRead, BufReader};
 const SOURCE_REV: &str = "bddc96d41bef78427ed0e034e9f7e31d71fd1b92";
 
 pub(super) struct Decomposition {
-    forms: Vec<String>,
-    ids: Vec<String>,
-    colors: Vec<String>,
-    matches: Vec<usize>,
-    original: String,
+    pub(super) forms: Vec<String>,
+    pub(super) ids: Vec<String>,
+    pub(super) colors: Vec<String>,
+    pub(super) matches: Vec<usize>,
+    pub(super) original: String,
 }
 
 pub(super) fn parse_parts(
@@ -232,7 +232,7 @@ fn raw_ids_nodes(chars: &[char], pos: &mut usize, path: &mut Vec<usize>,
     Some(())
 }
 
-fn parse_ids_leaves(decomposition:&str)->Option<HashMap<Vec<usize>,String>>{
+pub(super) fn parse_ids_leaves(decomposition:&str)->Option<HashMap<Vec<usize>,String>>{
     let chars:Vec<char>=decomposition.chars().collect();
     let mut nodes=HashMap::new();
     let mut pos=0;
@@ -463,6 +463,9 @@ fn alternative_from_source(ch: &str, info: Decomposition, graphic: &Value) -> Op
 
 pub(super) fn run(dictionary: &Path, graphics: &Path) -> Result<(), String> {
     let mut pending = load_matches(dictionary)?;
+    let active_keys=pending.keys().cloned().collect::<HashSet<_>>();
+    let mut hierarchical=hierarchy::recover(dictionary,graphics,&active_keys)?;
+    let mut hierarchical_used=Vec::new();
     let mut alternate_source = documented_alternatives(dictionary)?;
     let mut unknown_source = unresolved_component_matches(dictionary)?;
     let mut atomics = atomic_components()?;
@@ -487,7 +490,10 @@ pub(super) fn run(dictionary: &Path, graphics: &Path) -> Result<(), String> {
                 unknown_glyphs.push(candidate);
             }
         }
-        let mapping = pending.remove(ch);
+        let mapping = pending.remove(ch).or_else(||hierarchical.remove(ch).map(|d|{
+            hierarchical_used.push(ch.to_owned());
+            d
+        }));
         let atomic = if mapping.is_none() { atomics.remove(ch) } else { None };
         if mapping.is_none() && atomic.is_none() { return Ok(()); }
         let paths = match record.get("strokes").and_then(Value::as_array) {
@@ -539,6 +545,22 @@ pub(super) fn run(dictionary: &Path, graphics: &Path) -> Result<(), String> {
     let count = discovered.len();
     let mut all = existing;
     all.extend(discovered);
+    // Hierarchical transfer is a separately documented automated candidate
+    // category, not independently certified component ownership.
+    hierarchical_used.sort();
+    let derived=serde_json::json!({
+        "schema":"chromalect.hierarchical-source-transfer.v1",
+        "source_revision":SOURCE_REV,
+        "status":"source_derived_candidates_pending_visual_review",
+        "method":"Exact catalog component paths within pinned subglyph decomposition, matching stroke indices and normalized source outline geometry; no unknown leaf promotion.",
+        "characters":hierarchical_used,
+        "count":hierarchical_used.len()
+    });
+    let target=root().join("site/glyphs");
+    fs::create_dir_all(&target).map_err(|e|e.to_string())?;
+    fs::write(target.join("hierarchical-derivations.json"),
+        format!("{}\n",serde_json::to_string_pretty(&derived).map_err(|e|e.to_string())?))
+        .map_err(|e|e.to_string())?;
     build(&all)?;
     atlas::integrate(&all)?;
     // Some sources list alternates for already-rendered characters.
