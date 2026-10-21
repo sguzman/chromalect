@@ -112,12 +112,12 @@ def normalize(b, outer):
     return ((b[0] - outer[0]) / ow, (b[1] - outer[1]) / oh,
             (b[2] - outer[0]) / ow, (b[3] - outer[1]) / oh)
 
-def correspondence(source_paths, reference_paths):
+def correspondence(source_paths, reference_paths, *, invert_reference_y=True):
     if len(source_paths) != len(reference_paths) or len(source_paths) < 2:
         return None
     try:
         src = [coordinates(p) for p in source_paths]
-        ref = [coordinates(p, invert_y=True) for p in reference_paths]
+        ref = [coordinates(p, invert_y=invert_reference_y) for p in reference_paths]
         all_src = bounds([p for row in src for p in row])
         all_ref = bounds([p for row in ref for p in row])
         errors = []
@@ -345,6 +345,10 @@ def self_test():
     assert coordinates("M 10 10 L 20 20 Z", True)[-1] == (10., -10.)
     assert correspondence(["M 0 0 L 10 10", "M 20 20 L 30 30"],
                           ["M 0 30 L 10 20 Z", "M 20 10 L 30 0 Z"]) == 0.0
+    # Two paths from the *same* SVG coordinate system must not flip Y.
+    assert correspondence(["M 0 0 L 10 10", "M 20 20 L 30 30"],
+                          ["M 0 0 L 10 10", "M 20 20 L 30 30"],
+                          invert_reference_y=False) == 0.0
     sample = """<svg><g><g kvg:element="字"><g kvg:element="宀"><path d="M 0 0 L 10 10"/></g><g kvg:element="子"><path d="M 20 20 L 30 30"/></g></g></g></svg>"""
     sample = sample.replace("<svg>", '<svg xmlns:kvg="http://kanjivg.tagaini.net">')
     got = group_owners(parse_svg(sample), "字", [{"form":"宀"},{"form":"子"}])
