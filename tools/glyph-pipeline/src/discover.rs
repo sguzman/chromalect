@@ -461,7 +461,7 @@ fn alternative_from_source(ch: &str, info: Decomposition, graphic: &Value) -> Op
     })
 }
 
-pub(super) fn run(dictionary: &Path, graphics: &Path) -> Result<(), String> {
+pub(super) fn run(dictionary: &Path, graphics: &Path, hanzivg_source: Option<&Path>) -> Result<(), String> {
     let mut pending = load_matches(dictionary)?;
     let active_keys=pending.keys().cloned().collect::<HashSet<_>>();
     let mut hierarchical=hierarchy::recover(dictionary,graphics,&active_keys)?;
@@ -544,6 +544,14 @@ pub(super) fn run(dictionary: &Path, graphics: &Path) -> Result<(), String> {
     let count = discovered.len();
     let mut all = existing;
     all.extend(discovered);
+    // Separate, auditable ownership source: only Chinese-verified HanziVG
+    // groups matched to the unchanged pinned Make Me a Hanzi outlines.
+    if let Some(path) = hanzivg_source {
+        let folder = root().join("site/glyphs");
+        fs::create_dir_all(&folder).map_err(|e|e.to_string())?;
+        let transfers = hanzivg::import(path, graphics, &all, &folder)?;
+        all.extend(transfers);
+    }
     // Hierarchical transfer is a separately documented automated candidate
     // category, not independently certified component ownership.
     hierarchical_used.sort();
