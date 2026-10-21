@@ -131,7 +131,7 @@ def promote(candidates, catalog, palette, pages):
                           ("爷","⿱父卩"),("节","⿱艹卩"),("北","⿰丬匕"),
                           ("在","⿱才土"),("即","⿰艮卩"),
                           ("关","⿱丷天"),("坚","⿱⿲丨丨又土"),
-                          ("尧","⿱⿻一乂兀")
+                          ("尧","⿱⿻一乂兀"),("并","⿱丷开")
                       ]}}
             status = pinned.get((ch,chosen))
             if not status or row.get("structural_status")!=status:
@@ -232,7 +232,7 @@ def main():
     page_files={str(p):p.read_text() for p in Path("site/characters").glob("[0-9]*-[0-9]*.html")}
     changes=promote(candidates,catalog,palette,page_files)
     required = set("妇延廷有灰灵肖那包岛")
-    optional = set("刨抱礼社祀寻当扫帅师归爷节北在即关坚尧")
+    optional = set("刨抱礼社祀寻当扫帅师归爷节北在即关坚尧并")
     chosen = {item["character"] for item in changes}
     if not required <= chosen or not chosen <= required | optional:
         fail("pinned source change set contains missing baseline or unauthorized Mandarin cuts")
