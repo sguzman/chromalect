@@ -69,7 +69,37 @@ fn build_manifest(glyphs: &[Glyph]) -> Result<Value, String> {
 }
 
 pub(super) fn generate(glyphs: &[Glyph], directory: &Path) -> Result<(), String> {
-    let manifest = build_manifest(glyphs)?;
+    let mut manifest = build_manifest(glyphs)?;
+    let report_path=directory.join("hierarchical-derivations.json");
+    let recovered=if report_path.exists(){
+        let report=load(&report_path)?;
+        if string(&report,"schema")?!="chromalect.hierarchical-source-transfer.v1"{
+            return Err("unrecognized hierarchical provenance schema".into());
+        }
+        entries(&report,"characters")?.iter().map(|ch|{
+            ch.as_str().map(str::to_owned).ok_or("invalid provenance character".to_owned())
+        }).collect::<Result<std::collections::HashSet<_>,_>>()?
+    }else{std::collections::HashSet::new()};
+    let mut marked=0usize;
+    for row in manifest["glyphs"].as_array_mut().ok_or("manifest glyphs are missing")? {
+        let ch=string(row,"character")?.to_owned();
+        let recovery=recovered.contains(&ch);
+        if recovery {marked+=1;}
+        row["alignment_method"]=serde_json::Value::String(if recovery {
+            "source_subglyph_geometry_correspondence"
+        }else if row["assignment_status"]=="curated_source_aligned_pilot"{
+            "curated_direct_source_ownership"
+        }else{
+            "direct_source_decomposition_ownership"
+        }.to_owned());
+    }
+    if marked!=recovered.len(){
+        return Err("hierarchical provenance references missing output glyphs".into());
+    }
+    manifest["hierarchical_source_transfer_count"]=serde_json::json!(marked);
+    manifest["validation_scope"]=serde_json::json!(
+        "Direct source decomposition or source-subglyph geometry correspondence with catalog identity checks; automated research candidates require independent visual and linguistic review."
+    );
     let formatted = serde_json::to_string_pretty(&manifest).map_err(|e| e.to_string())?;
     fs::write(directory.join("mappings.json"), format!("{formatted}\n"))
         .map_err(|e| e.to_string())?;
