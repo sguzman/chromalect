@@ -101,6 +101,7 @@ pub(super) fn import(
             && ownership_method != "explicit_animcjk_component_stroke_counts"
             && ownership_method != "animcjk_verified_nested_component_derivation"
             && ownership_method != "animcjk_source_variant_alignment"
+            && ownership_method != "animcjk_geometrically_verified_form_substitution"
         {
             return Err(format!("{ch}: unknown source component ownership method"));
         }
@@ -156,6 +157,54 @@ pub(super) fn import(
                 path.get("component_id").and_then(Value::as_str) == Some("cmp-0012")
             ) {
                 return Err(format!("{ch}: source variant not assigned to selected 人 identity"));
+            }
+        }
+        let substitutions: &[Value] = row.get("form_substitution_witnesses")
+            .and_then(Value::as_array).map(Vec::as_slice).unwrap_or(&[]);
+        if ownership_method == "animcjk_geometrically_verified_form_substitution"
+            && substitutions.len() != 1 {
+            return Err(format!("{ch}: form reconciliation requires precisely one independent shape witness"));
+        }
+        if !substitutions.is_empty() && ownership_method != "animcjk_geometrically_verified_form_substitution" {
+            return Err(format!("{ch}: unexpected source/catalog shape substitution"));
+        }
+        for witness in substitutions {
+            if provider != "animcjk_zhhans" {
+                return Err(format!("{ch}: external source form comparison not Chinese"));
+            }
+            let source_form = string(witness, "source_form")?;
+            let selected_form = string(witness, "selected_form")?;
+            if source_form.chars().count() != 1 || selected_form.chars().count() != 1
+                || source_form == selected_form {
+                return Err(format!("{ch}: invalid form equivalence identity"));
+            }
+            let start = get(witness,"start")?.as_u64()
+                .ok_or_else(||format!("{ch}: invalid form comparison start"))? as usize;
+            let count = get(witness,"count")?.as_u64()
+                .ok_or_else(||format!("{ch}: invalid form comparison count"))? as usize;
+            if count < 2 || start.checked_add(count).is_none_or(|end|
+                end > row["stroke_count"].as_u64().unwrap_or(0) as usize) {
+                return Err(format!("{ch}: form comparison stroke span invalid"));
+            }
+            for (key,form) in [("source_svg",source_form),("selected_svg",selected_form)] {
+                let expected = format!("svgsZhHans/{}.svg", form.chars().next().unwrap() as u32);
+                if string(witness,key)? != expected {
+                    return Err(format!("{ch}: unpinned form shape provenance"));
+                }
+            }
+            for (key,max) in [("component_geometry_error",0.045),("parent_geometry_error",0.095)] {
+                if get(witness,key)?.as_f64().is_none_or(|score|
+                    !score.is_finite() || !(0.0..=max).contains(&score)) {
+                    return Err(format!("{ch}: form-substitution shape agreement insufficient"));
+                }
+            }
+            let selected_ids: Vec<&str> = entries(selected, "component_instances")?.iter()
+                .filter(|item|item.get("form").and_then(Value::as_str)==Some(selected_form))
+                .filter_map(|item|item.get("id").and_then(Value::as_str)).collect();
+            if selected_ids.len()!=1 || !entries(row,"strokes")?.iter().skip(start).take(count)
+                .all(|stroke|stroke.get("component_id").and_then(Value::as_str)==Some(selected_ids[0]))
+            {
+                return Err(format!("{ch}: compared source group is not owned by selected catalog identity"));
             }
         }
         let method = string(row, "geometry_match_method")?;
@@ -229,6 +278,9 @@ pub(super) fn import(
             "mean_geometry_error": error, "stroke_count": strokes.len(),
             "geometry_match_method": method,
             "ownership_method": ownership_method,
+            "source_variant_witnesses": row.get("source_variant_witnesses"),
+            "subglyph_witnesses": row.get("subglyph_witnesses"),
+            "form_substitution_witnesses": row.get("form_substitution_witnesses"),
             "review_status": "automated_geometry_and_group_match_pending_independent_review"
         }));
         output.push(Glyph {
