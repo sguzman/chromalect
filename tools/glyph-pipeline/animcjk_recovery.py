@@ -259,18 +259,34 @@ def catalog_alternatives(row, palette):
 # stroke-count decompositions and already registered v0.4 color identities.
 # All other characters retain their official selected catalog analysis.
 UNPARSED_SOURCE_CUTS = {
-    "包": {"source_acjk": "包⿹勹.2巳3", "cut": "⿹勹巳", "forms": ["勹", "巳"]},
-    "岛": {"source_acjk": "岛⿱鸟4山.3", "cut": "⿱鸟山", "forms": ["鸟", "山"]},
+    "包": {"source_acjk": "包⿹勹.2巳3", "cut": "⿹勹巳", "forms": ["勹", "巳"],
+           "source_children": ["勹", "巳"], "status": "nonstandard_ids_not_parsed"},
+    "岛": {"source_acjk": "岛⿱鸟4山.3", "cut": "⿱鸟山", "forms": ["鸟", "山"],
+           "source_children": ["鸟", "山"], "status": "nonstandard_ids_not_parsed"},
+    "刨": {"source_acjk": "刨⿰包5刂.2", "cut": "⿰⿹勹巳刂", "forms": ["勹", "巳", "刂"],
+           "source_children": ["包", "刂"], "status": "partial_components"},
+    "抱": {"source_acjk": "抱⿰扌.3包5", "cut": "⿰扌⿹勹巳", "forms": ["扌", "勹", "巳"],
+           "source_children": ["扌", "包"], "status": "partial_components"},
 }
 
 def reviewed_unparsed_source_cut(ch, source_acjk, node, catalog, palette):
     record = UNPARSED_SOURCE_CUTS.get(ch)
     if not record or record["source_acjk"] != source_acjk:
         return None
-    if catalog.get("structural_status") != "nonstandard_ids_not_parsed" or catalog["component_instances"]:
-        raise Reject("original_source_catalog_was_not_unparsed")
+    if catalog.get("structural_status") != record["status"]:
+        raise Reject("original_catalog_status_not_source_backed")
+    if record["status"] == "nonstandard_ids_not_parsed":
+        if catalog["component_instances"]:
+            raise Reject("original_nonstandard_catalog_had_selected_components")
+    else:
+        # A compound unknown part (包) must be precisely the catalog's only
+        # missing component; all other identities retain their selected colors.
+        if {item["form"] for item in catalog.get("missing_components", [])}!={"包"}:
+            raise Reject("unverified_missing_subglyph")
+        if not catalog["component_instances"]:
+            raise Reject("no_pinned_catalog_components_for_subglyph")
     forms = record["forms"]
-    if not node["children"] or [v["form"] for v in node["children"]] != forms:
+    if not node["children"] or [v["form"] for v in node["children"]] != record["source_children"]:
         raise Reject("source_decomposition_does_not_match_approved_cut")
     from collections import defaultdict
     colors=defaultdict(list)
