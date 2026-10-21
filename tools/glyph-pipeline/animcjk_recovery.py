@@ -207,6 +207,53 @@ def count_ownership(node, instances, donor_rows=None):
         raise Reject("source_strokes_not_fully_owned")
     return (segments, witnesses, variants) if donor_rows is not None else segments
 
+def catalog_alternatives(row, palette):
+    """Yield explicitly documented IDS alternative cuts with v0.4 identities.
+
+    This does not invent new components or redefine the primary catalog entry.
+    Each selected cut is carried to the Rust provenance validator verbatim.
+    """
+    from collections import defaultdict
+    identities = defaultdict(list)
+    for component in palette.values():
+        identities[component["shape"]].append(component["id"])
+    alternatives = []
+    original = row.get("ids_primary", "")
+    expressions = original.split(";")
+    primary = expressions[0].split("(")[0].strip()
+    for token in expressions[1:]:
+        expression = token.split("(")[0].strip()
+        if not expression or expression == primary:
+            continue
+        chars = list(expression)
+        cursor = [0]
+        forms = []
+        def leaf(depth):
+            if depth > 8 or cursor[0] >= len(chars):
+                raise Reject("invalid_catalog_alternative")
+            ch = chars[cursor[0]]
+            cursor[0] += 1
+            if ch in OPS:
+                for _ in range(OPS[ch]):
+                    leaf(depth+1)
+            else:
+                forms.append(ch)
+        try:
+            leaf(0)
+        except Reject:
+            continue
+        if cursor[0] != len(chars) or not 2 <= len(forms) <= 8:
+            continue
+        if any(len(identities[form]) != 1 for form in forms):
+            continue
+        items = [{"form":form,"id":identities[form][0]} for form in forms]
+        selected = dict(row, ids_primary=expression,
+                        component_instances=items,
+                        component_ids=[item["id"] for item in items],
+                        source_selected_catalog_alternative=expression)
+        alternatives.append(selected)
+    return alternatives
+
 def one_form_substitution(node, instances):
     """Propose one provenance-tagged source/selected-form reconciliation.
 
@@ -294,7 +341,7 @@ def donor_strokes(form):
         raise Reject("donor_chinese_svg_unavailable")
     return extract_strokes(raw, form)
 
-def candidate(ch, node, owners, svg, graphics, palette, catalog, witnesses=(), variants=(), form_substitutions=()):
+def candidate(ch, node, owners, svg, graphics, palette, catalog, witnesses=(), variants=(), form_substitutions=(), selected_override=None):
     source_paths = extract_strokes(svg, ch)
     refs = graphics.get(ch)
     if not refs or len(refs) != len(source_paths) or len(owners) != len(refs):
@@ -355,7 +402,7 @@ def candidate(ch, node, owners, svg, graphics, palette, catalog, witnesses=(), v
             "parent_geometry_error": parent_score,
             "source_svg":f"svgsZhHans/{ord(source_form)}.svg",
             "selected_svg":f"svgsZhHans/{ord(target_form)}.svg"})
-    selected = catalog[ch]
+    selected = selected_override if selected_override is not None else catalog[ch]
     instances = selected["component_instances"]
     by_form = {}
     parts = []
@@ -388,6 +435,7 @@ def candidate(ch, node, owners, svg, graphics, palette, catalog, witnesses=(), v
             "subglyph_witnesses": donor_checks,
             "source_variant_witnesses": list(variants),
             "form_substitution_witnesses": substitution_checks,
+            "source_selected_catalog_alternative": selected.get("source_selected_catalog_alternative"),
             "source_decomposition": node.get("form") or ch}
 
 def self_test():
@@ -414,6 +462,11 @@ def self_test():
     got = count_ownership(case, [{"form":"亻"},{"form":"人"},{"form":"丿"},{"form":"丨"}], {"none":{}})
     assert got[0] == ["亻"]*2 + ["人"]*2 + ["丿","丨"]
     assert len(got[2]) == 1 and got[2][0]["source_form"] == "𠆢"
+    assert list(x["ids_primary"] for x in catalog_alternatives(
+        {"ids_primary":"⿰女𫜹(.);⿰女彐(J)"},{
+            "A":{"shape":"女","id":"id-woman"},
+            "B":{"shape":"𫜹","id":"id-other"},
+            "C":{"shape":"彐","id":"id-pig"}})) == ["⿰女彐"]
     substitution = one_form_substitution(parse_acjk("妇⿰女3彐3", "妇"),
         [{"form":"女"},{"form":"𫜹"}])
     assert substitution[0] == ["女"]*3 + ["𫜹"]*3
