@@ -1,0 +1,7305 @@
+{
+  "schema": "chromalect.component-palette.v0",
+  "id": "mandarin-component-identity",
+  "version": "0.6.0",
+  "status": "additive-source-decomposition-extension;pending-independent-visual-review",
+  "language_profile": "zh-CN-mainland-standard-mandarin-simplified",
+  "based_on": "mandarin-component-identity@0.5.0",
+  "invariant": "All first 518 component IDs, shapes, and sRGB colors are identical to the v0.5 palette (including immutable v0.4 first 513). Two new source-declared whole-subglyph identities are never merged with their historically decomposed component cuts.",
+  "palette_space": "sRGB",
+  "algorithm": "All 513 v0.4 assignments preserved exactly; five new identity colors selected by OKLab hue-sector diversity (approximately red, yellow, green, blue, purple), bounded mid-lightness 0.45-0.70, and maximin distance from all preserved colors. Research heuristic, not independently CVD-certified. v0.6 adds two more colors using bounded OKLab maximin over all inherited 518 identities; independently verify CVD suitability.",
+  "data_provenance": {
+    "gf0014_standard": "GF 0014-2009, Modern Common Chinese Character Components and Component Names",
+    "official_summary_url": "https://www.moe.gov.cn/jyb_xwfb/gzdt_gzdt/moe_1485/tnull_45766.html",
+    "transcription_repository": "https://github.com/zispace/hanzi-chars-ext",
+    "transcription_path": "汉字部件/GF 0014-2009《现代常用字部件及部件名称规范》-现代常用字部件表.txt",
+    "transcription_blob_sha": "3e1b8f893a5df24c92be76b05084dab964678eb1",
+    "caution": "Third-party transcription contains explicitly noted OCR errors in example data (not redistributed here), duplicate visible forms, 30 non-Unicode brace-delimited descriptions and rare characters. Catalog is not certified against the original publication. Licensing of upstream standard/transcription needs independent verification."
+  },
+  "coverage": {
+    "gf0014_records": 514,
+    "gf0014_groups": 441,
+    "distinct_transcribed_GF_forms": 510,
+    "inherited_pilot_components": 40,
+    "inherited_pilot_shapes_found_in_GF": 37,
+    "inherited_pilot_shapes_outside_GF": [
+      "足",
+      "青",
+      "可"
+    ],
+    "added_component_identities": 473,
+    "total_component_identities": 520,
+    "repeated_visible_forms_shared_ID": 4,
+    "descriptive_nonfont_forms": 30,
+    "source_attested_additional_identities": 7,
+    "additive_new_forms": [
+      "𠄌",
+      "朩",
+      "匸",
+      "㐅",
+      "㇉",
+      "𠀉",
+      "犮"
+    ],
+    "v06_source_attested_identities": 2
+  },
+  "unsupported_form_policy": "Descriptive forms receive distinct IDs/colors, but cannot be correctly colored in text without verified outline/stroke geometry. Plain text retains original glyph.",
+  "components": [
+    {
+      "id": "cmp-0001",
+      "shape": "水",
+      "color": "#AF56FD",
+      "mnemonic_group_hint": "water-fluid",
+      "related_shape_group": "water-shapes",
+      "source_scope": "pilot-preserved",
+      "gf0014_rows": [
+        {
+          "ordinal": 349,
+          "group": 302
+        }
+      ]
+    },
+    {
+      "id": "cmp-0002",
+      "shape": "氵",
+      "color": "#025EB8",
+      "mnemonic_group_hint": "water-fluid",
+      "related_shape_group": "water-shapes",
+      "source_scope": "pilot-preserved",
+      "gf0014_rows": [
+        {
+          "ordinal": 350,
+          "group": 302
+        }
+      ]
+    },
+    {
+      "id": "cmp-0003",
+      "shape": "冫",
+      "color": "#C86B82",
+      "mnemonic_group_hint": "water-fluid",
+      "related_shape_group": null,
+      "source_scope": "pilot-preserved",
+      "gf0014_rows": [
+        {
+          "ordinal": 214,
+          "group": 185
+        }
+      ]
+    },
+    {
+      "id": "cmp-0004",
+      "shape": "雨",
+      "color": "#C52BBF",
+      "mnemonic_group_hint": "water-fluid",
+      "related_shape_group": null,
+      "source_scope": "pilot-preserved",
+      "gf0014_rows": [
+        {
+          "ordinal": 466,
+          "group": 405
+        }
+      ]
+    },
+    {
+      "id": "cmp-0005",
+      "shape": "火",
+      "color": "#DE0784",
+      "mnemonic_group_hint": "heat-light",
+      "related_shape_group": "fire-shapes",
+      "source_scope": "pilot-preserved",
+      "gf0014_rows": [
+        {
+          "ordinal": 152,
+          "group": 133
+        }
+      ]
+    },
+    {
+      "id": "cmp-0006",
+      "shape": "灬",
+      "color": "#6C4FC6",
+      "mnemonic_group_hint": "heat-light",
+      "related_shape_group": "fire-shapes",
+      "source_scope": "pilot-preserved",
+      "gf0014_rows": [
+        {
+          "ordinal": 153,
+          "group": 133
+        }
+      ]
+    },
+    {
+      "id": "cmp-0007",
+      "shape": "日",
+      "color": "#2A76F1",
+      "mnemonic_group_hint": "heat-light",
+      "related_shape_group": null,
+      "source_scope": "pilot-preserved",
+      "gf0014_rows": [
+        {
+          "ordinal": 299,
+          "group": 258
+        }
+      ]
+    },
+    {
+      "id": "cmp-0008",
+      "shape": "月",
+      "color": "#DB3649",
+      "mnemonic_group_hint": "heat-light",
+      "related_shape_group": null,
+      "source_scope": "pilot-preserved",
+      "gf0014_rows": [
+        {
+          "ordinal": 471,
+          "group": 409
+        }
+      ]
+    },
+    {
+      "id": "cmp-0009",
+      "shape": "木",
+      "color": "#C67544",
+      "mnemonic_group_hint": "plant-growth",
+      "related_shape_group": null,
+      "source_scope": "pilot-preserved",
+      "gf0014_rows": [
+        {
+          "ordinal": 246,
+          "group": 215
+        }
+      ]
+    },
+    {
+      "id": "cmp-0010",
+      "shape": "艹",
+      "color": "#8D77E5",
+      "mnemonic_group_hint": "plant-growth",
+      "related_shape_group": null,
+      "source_scope": "pilot-preserved",
+      "gf0014_rows": [
+        {
+          "ordinal": 32,
+          "group": 29
+        }
+      ]
+    },
+    {
+      "id": "cmp-0011",
+      "shape": "禾",
+      "color": "#808754",
+      "mnemonic_group_hint": "plant-growth",
+      "related_shape_group": null,
+      "source_scope": "pilot-preserved",
+      "gf0014_rows": [
+        {
+          "ordinal": 135,
+          "group": 119
+        }
+      ]
+    },
+    {
+      "id": "cmp-0012",
+      "shape": "人",
+      "color": "#8B4EB3",
+      "mnemonic_group_hint": "human-body",
+      "related_shape_group": "person-shapes",
+      "source_scope": "pilot-preserved",
+      "gf0014_rows": [
+        {
+          "ordinal": 292,
+          "group": 255
+        }
+      ]
+    },
+    {
+      "id": "cmp-0013",
+      "shape": "亻",
+      "color": "#608CD5",
+      "mnemonic_group_hint": "human-body",
+      "related_shape_group": "person-shapes",
+      "source_scope": "pilot-preserved",
+      "gf0014_rows": [
+        {
+          "ordinal": 293,
+          "group": 255
+        }
+      ]
+    },
+    {
+      "id": "cmp-0014",
+      "shape": "女",
+      "color": "#EA5202",
+      "mnemonic_group_hint": "human-body",
+      "related_shape_group": null,
+      "source_scope": "pilot-preserved",
+      "gf0014_rows": [
+        {
+          "ordinal": 263,
+          "group": 229
+        }
+      ]
+    },
+    {
+      "id": "cmp-0015",
+      "shape": "子",
+      "color": "#98518A",
+      "mnemonic_group_hint": "human-body",
+      "related_shape_group": null,
+      "source_scope": "pilot-preserved",
+      "gf0014_rows": [
+        {
+          "ordinal": 510,
+          "group": 437
+        }
+      ]
+    },
+    {
+      "id": "cmp-0016",
+      "shape": "心",
+      "color": "#C04E8A",
+      "mnemonic_group_hint": "human-body",
+      "related_shape_group": "heart-shapes",
+      "source_scope": "pilot-preserved",
+      "gf0014_rows": [
+        {
+          "ordinal": 406,
+          "group": 353
+        }
+      ]
+    },
+    {
+      "id": "cmp-0017",
+      "shape": "忄",
+      "color": "#5477CB",
+      "mnemonic_group_hint": "human-body",
+      "related_shape_group": "heart-shapes",
+      "source_scope": "pilot-preserved",
+      "gf0014_rows": [
+        {
+          "ordinal": 408,
+          "group": 353
+        }
+      ]
+    },
+    {
+      "id": "cmp-0018",
+      "shape": "手",
+      "color": "#9130DB",
+      "mnemonic_group_hint": "human-body",
+      "related_shape_group": "hand-shapes",
+      "source_scope": "pilot-preserved",
+      "gf0014_rows": [
+        {
+          "ordinal": 333,
+          "group": 288
+        }
+      ]
+    },
+    {
+      "id": "cmp-0019",
+      "shape": "扌",
+      "color": "#E36DA0",
+      "mnemonic_group_hint": "human-body",
+      "related_shape_group": "hand-shapes",
+      "source_scope": "pilot-preserved",
+      "gf0014_rows": [
+        {
+          "ordinal": 334,
+          "group": 288
+        }
+      ]
+    },
+    {
+      "id": "cmp-0020",
+      "shape": "口",
+      "color": "#1587BA",
+      "mnemonic_group_hint": "speech-senses",
+      "related_shape_group": null,
+      "source_scope": "pilot-preserved",
+      "gf0014_rows": [
+        {
+          "ordinal": 200,
+          "group": 172
+        }
+      ]
+    },
+    {
+      "id": "cmp-0021",
+      "shape": "言",
+      "color": "#99610B",
+      "mnemonic_group_hint": "speech-senses",
+      "related_shape_group": "speech-shapes",
+      "source_scope": "pilot-preserved",
+      "gf0014_rows": [
+        {
+          "ordinal": 426,
+          "group": 370
+        }
+      ]
+    },
+    {
+      "id": "cmp-0022",
+      "shape": "讠",
+      "color": "#B42C92",
+      "mnemonic_group_hint": "speech-senses",
+      "related_shape_group": "speech-shapes",
+      "source_scope": "pilot-preserved",
+      "gf0014_rows": [
+        {
+          "ordinal": 427,
+          "group": 370
+        }
+      ]
+    },
+    {
+      "id": "cmp-0023",
+      "shape": "目",
+      "color": "#91922F",
+      "mnemonic_group_hint": "speech-senses",
+      "related_shape_group": null,
+      "source_scope": "pilot-preserved",
+      "gf0014_rows": [
+        {
+          "ordinal": 247,
+          "group": 216
+        }
+      ]
+    },
+    {
+      "id": "cmp-0024",
+      "shape": "耳",
+      "color": "#6D4D84",
+      "mnemonic_group_hint": "speech-senses",
+      "related_shape_group": null,
+      "source_scope": "pilot-preserved",
+      "gf0014_rows": [
+        {
+          "ordinal": 90,
+          "group": 77
+        }
+      ]
+    },
+    {
+      "id": "cmp-0025",
+      "shape": "土",
+      "color": "#9E7604",
+      "mnemonic_group_hint": "earth-material",
+      "related_shape_group": null,
+      "source_scope": "pilot-preserved",
+      "gf0014_rows": [
+        {
+          "ordinal": 368,
+          "group": 318
+        }
+      ]
+    },
+    {
+      "id": "cmp-0026",
+      "shape": "石",
+      "color": "#744049",
+      "mnemonic_group_hint": "earth-material",
+      "related_shape_group": null,
+      "source_scope": "pilot-preserved",
+      "gf0014_rows": [
+        {
+          "ordinal": 320,
+          "group": 278
+        }
+      ]
+    },
+    {
+      "id": "cmp-0027",
+      "shape": "山",
+      "color": "#FA588B",
+      "mnemonic_group_hint": "earth-material",
+      "related_shape_group": null,
+      "source_scope": "pilot-preserved",
+      "gf0014_rows": [
+        {
+          "ordinal": 306,
+          "group": 264
+        }
+      ]
+    },
+    {
+      "id": "cmp-0028",
+      "shape": "金",
+      "color": "#055179",
+      "mnemonic_group_hint": "earth-material",
+      "related_shape_group": "metal-shapes",
+      "source_scope": "pilot-preserved",
+      "gf0014_rows": [
+        {
+          "ordinal": 181,
+          "group": 154
+        }
+      ]
+    },
+    {
+      "id": "cmp-0029",
+      "shape": "钅",
+      "color": "#89A10C",
+      "mnemonic_group_hint": "earth-material",
+      "related_shape_group": "metal-shapes",
+      "source_scope": "pilot-preserved",
+      "gf0014_rows": [
+        {
+          "ordinal": 182,
+          "group": 154
+        }
+      ]
+    },
+    {
+      "id": "cmp-0030",
+      "shape": "辶",
+      "color": "#601CCF",
+      "mnemonic_group_hint": "movement-space",
+      "related_shape_group": null,
+      "source_scope": "pilot-preserved",
+      "gf0014_rows": [
+        {
+          "ordinal": 513,
+          "group": 440
+        }
+      ]
+    },
+    {
+      "id": "cmp-0031",
+      "shape": "足",
+      "color": "#BA60DF",
+      "mnemonic_group_hint": "movement-space",
+      "related_shape_group": null,
+      "source_scope": "pilot-preserved",
+      "gf0014_rows": []
+    },
+    {
+      "id": "cmp-0032",
+      "shape": "车",
+      "color": "#A04E3A",
+      "mnemonic_group_hint": "movement-space",
+      "related_shape_group": null,
+      "source_scope": "pilot-preserved",
+      "gf0014_rows": [
+        {
+          "ordinal": 41,
+          "group": 36
+        }
+      ]
+    },
+    {
+      "id": "cmp-0033",
+      "shape": "马",
+      "color": "#C41F5F",
+      "mnemonic_group_hint": "movement-space",
+      "related_shape_group": null,
+      "source_scope": "pilot-preserved",
+      "gf0014_rows": [
+        {
+          "ordinal": 230,
+          "group": 200
+        }
+      ]
+    },
+    {
+      "id": "cmp-0034",
+      "shape": "门",
+      "color": "#178529",
+      "mnemonic_group_hint": "movement-space",
+      "related_shape_group": null,
+      "source_scope": "pilot-preserved",
+      "gf0014_rows": [
+        {
+          "ordinal": 238,
+          "group": 207
+        }
+      ]
+    },
+    {
+      "id": "cmp-0035",
+      "shape": "宀",
+      "color": "#8352FE",
+      "mnemonic_group_hint": "movement-space",
+      "related_shape_group": null,
+      "source_scope": "pilot-preserved",
+      "gf0014_rows": [
+        {
+          "ordinal": 13,
+          "group": 12
+        }
+      ]
+    },
+    {
+      "id": "cmp-0036",
+      "shape": "青",
+      "color": "#C75615",
+      "mnemonic_group_hint": "structural-series",
+      "related_shape_group": null,
+      "source_scope": "pilot-preserved",
+      "gf0014_rows": []
+    },
+    {
+      "id": "cmp-0037",
+      "shape": "可",
+      "color": "#555605",
+      "mnemonic_group_hint": "structural-series",
+      "related_shape_group": null,
+      "source_scope": "pilot-preserved",
+      "gf0014_rows": []
+    },
+    {
+      "id": "cmp-0038",
+      "shape": "亥",
+      "color": "#957734",
+      "mnemonic_group_hint": "structural-series",
+      "related_shape_group": null,
+      "source_scope": "pilot-preserved",
+      "gf0014_rows": [
+        {
+          "ordinal": 132,
+          "group": 116
+        }
+      ]
+    },
+    {
+      "id": "cmp-0039",
+      "shape": "田",
+      "color": "#05A92E",
+      "mnemonic_group_hint": "structural-series",
+      "related_shape_group": null,
+      "source_scope": "pilot-preserved",
+      "gf0014_rows": [
+        {
+          "ordinal": 363,
+          "group": 313
+        }
+      ]
+    },
+    {
+      "id": "cmp-0040",
+      "shape": "力",
+      "color": "#9367B2",
+      "mnemonic_group_hint": "structural-series",
+      "related_shape_group": null,
+      "source_scope": "pilot-preserved",
+      "gf0014_rows": [
+        {
+          "ordinal": 208,
+          "group": 179
+        }
+      ]
+    },
+    {
+      "id": "cmp-0041",
+      "shape": "卬",
+      "color": "#3C95FE",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 1,
+          "group": 1
+        }
+      ]
+    },
+    {
+      "id": "cmp-0042",
+      "shape": "凹",
+      "color": "#E96921",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 2,
+          "group": 2
+        }
+      ]
+    },
+    {
+      "id": "cmp-0043",
+      "shape": "𫠤",
+      "color": "#8773BE",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 3,
+          "group": 3
+        }
+      ]
+    },
+    {
+      "id": "cmp-0044",
+      "shape": "{⿱丿𭁨}",
+      "color": "#5B6C0C",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 4,
+          "group": 4
+        }
+      ]
+    },
+    {
+      "id": "cmp-0045",
+      "shape": "八",
+      "color": "#6645AA",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 5,
+          "group": 5
+        }
+      ]
+    },
+    {
+      "id": "cmp-0046",
+      "shape": "丷",
+      "color": "#FA47BD",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 6,
+          "group": 5
+        },
+        {
+          "ordinal": 70,
+          "group": 60
+        }
+      ]
+    },
+    {
+      "id": "cmp-0047",
+      "shape": "巴",
+      "color": "#B6533B",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 7,
+          "group": 6
+        }
+      ]
+    },
+    {
+      "id": "cmp-0048",
+      "shape": "白",
+      "color": "#7541ED",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 8,
+          "group": 7
+        }
+      ]
+    },
+    {
+      "id": "cmp-0049",
+      "shape": "百",
+      "color": "#C44C6F",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 9,
+          "group": 8
+        }
+      ]
+    },
+    {
+      "id": "cmp-0050",
+      "shape": "{⿱一丰}",
+      "color": "#244FCB",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 10,
+          "group": 9
+        }
+      ]
+    },
+    {
+      "id": "cmp-0051",
+      "shape": "办",
+      "color": "#9E42EA",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 11,
+          "group": 10
+        }
+      ]
+    },
+    {
+      "id": "cmp-0052",
+      "shape": "半",
+      "color": "#D55969",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 12,
+          "group": 11
+        }
+      ]
+    },
+    {
+      "id": "cmp-0053",
+      "shape": "卑",
+      "color": "#717FD8",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 14,
+          "group": 13
+        }
+      ]
+    },
+    {
+      "id": "cmp-0054",
+      "shape": "贝",
+      "color": "#438E56",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 15,
+          "group": 14
+        }
+      ]
+    },
+    {
+      "id": "cmp-0055",
+      "shape": "卄",
+      "color": "#9E79A0",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 16,
+          "group": 15
+        }
+      ]
+    },
+    {
+      "id": "cmp-0056",
+      "shape": "本",
+      "color": "#B184A6",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 17,
+          "group": 16
+        }
+      ]
+    },
+    {
+      "id": "cmp-0057",
+      "shape": "丌",
+      "color": "#A7637E",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 18,
+          "group": 17
+        }
+      ]
+    },
+    {
+      "id": "cmp-0058",
+      "shape": "匕",
+      "color": "#7C7DF6",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 19,
+          "group": 18
+        }
+      ]
+    },
+    {
+      "id": "cmp-0059",
+      "shape": "{⿰二丨}",
+      "color": "#C33085",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 20,
+          "group": 18
+        }
+      ]
+    },
+    {
+      "id": "cmp-0060",
+      "shape": "必",
+      "color": "#DE441A",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 21,
+          "group": 19
+        }
+      ]
+    },
+    {
+      "id": "cmp-0061",
+      "shape": "㡀",
+      "color": "#A70793",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 22,
+          "group": 20
+        }
+      ]
+    },
+    {
+      "id": "cmp-0062",
+      "shape": "釆",
+      "color": "#5064AB",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 23,
+          "group": 21
+        }
+      ]
+    },
+    {
+      "id": "cmp-0063",
+      "shape": "丙",
+      "color": "#CF4159",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 24,
+          "group": 22
+        }
+      ]
+    },
+    {
+      "id": "cmp-0064",
+      "shape": "秉",
+      "color": "#496202",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 25,
+          "group": 23
+        }
+      ]
+    },
+    {
+      "id": "cmp-0065",
+      "shape": "疒",
+      "color": "#5B7AFD",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 26,
+          "group": 24
+        }
+      ]
+    },
+    {
+      "id": "cmp-0066",
+      "shape": "卜",
+      "color": "#706419",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 27,
+          "group": 25
+        }
+      ]
+    },
+    {
+      "id": "cmp-0067",
+      "shape": "⺊",
+      "color": "#BC65A1",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 28,
+          "group": 25
+        }
+      ]
+    },
+    {
+      "id": "cmp-0068",
+      "shape": "不",
+      "color": "#A26346",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 29,
+          "group": 26
+        }
+      ]
+    },
+    {
+      "id": "cmp-0069",
+      "shape": "才",
+      "color": "#8F73AF",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 30,
+          "group": 27
+        }
+      ]
+    },
+    {
+      "id": "cmp-0070",
+      "shape": "{⿻[:-1]艹日}",
+      "color": "#3B5619",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 31,
+          "group": 28
+        }
+      ]
+    },
+    {
+      "id": "cmp-0071",
+      "shape": "册",
+      "color": "#8B8D47",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 33,
+          "group": 30
+        }
+      ]
+    },
+    {
+      "id": "cmp-0072",
+      "shape": "𠕁",
+      "color": "#A580FB",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 34,
+          "group": 30
+        }
+      ]
+    },
+    {
+      "id": "cmp-0073",
+      "shape": "{⿻〢𠔼}",
+      "color": "#865543",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 35,
+          "group": 30
+        }
+      ]
+    },
+    {
+      "id": "cmp-0074",
+      "shape": "{⿱丷⿴囗⺌}",
+      "color": "#79A179",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 36,
+          "group": 31
+        }
+      ]
+    },
+    {
+      "id": "cmp-0075",
+      "shape": "叉",
+      "color": "#5B59C0",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 37,
+          "group": 32
+        }
+      ]
+    },
+    {
+      "id": "cmp-0076",
+      "shape": "产",
+      "color": "#2649A6",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 38,
+          "group": 33
+        }
+      ]
+    },
+    {
+      "id": "cmp-0077",
+      "shape": "长",
+      "color": "#427E95",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 39,
+          "group": 34
+        }
+      ]
+    },
+    {
+      "id": "cmp-0078",
+      "shape": "厂",
+      "color": "#AF84DE",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 40,
+          "group": 35
+        }
+      ]
+    },
+    {
+      "id": "cmp-0079",
+      "shape": "臣",
+      "color": "#724703",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 42,
+          "group": 37
+        }
+      ]
+    },
+    {
+      "id": "cmp-0080",
+      "shape": "〢",
+      "color": "#9C8E5B",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 43,
+          "group": 37
+        }
+      ]
+    },
+    {
+      "id": "cmp-0081",
+      "shape": "辰",
+      "color": "#8E1C56",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 44,
+          "group": 38
+        }
+      ]
+    },
+    {
+      "id": "cmp-0082",
+      "shape": "丞",
+      "color": "#7E481E",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 45,
+          "group": 39
+        }
+      ]
+    },
+    {
+      "id": "cmp-0083",
+      "shape": "承",
+      "color": "#AA34A4",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 46,
+          "group": 40
+        }
+      ]
+    },
+    {
+      "id": "cmp-0084",
+      "shape": "尺",
+      "color": "#4E780D",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 47,
+          "group": 41
+        }
+      ]
+    },
+    {
+      "id": "cmp-0085",
+      "shape": "斥",
+      "color": "#39A0A0",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 48,
+          "group": 42
+        }
+      ]
+    },
+    {
+      "id": "cmp-0086",
+      "shape": "赤",
+      "color": "#4A936E",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 49,
+          "group": 43
+        }
+      ]
+    },
+    {
+      "id": "cmp-0087",
+      "shape": "虫",
+      "color": "#9B8BE8",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 50,
+          "group": 44
+        }
+      ]
+    },
+    {
+      "id": "cmp-0088",
+      "shape": "丑",
+      "color": "#7A68F1",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 51,
+          "group": 45
+        }
+      ]
+    },
+    {
+      "id": "cmp-0089",
+      "shape": "出",
+      "color": "#BF8758",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 52,
+          "group": 46
+        }
+      ]
+    },
+    {
+      "id": "cmp-0090",
+      "shape": "川",
+      "color": "#A97723",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 53,
+          "group": 47
+        }
+      ]
+    },
+    {
+      "id": "cmp-0091",
+      "shape": "𫶧",
+      "color": "#965DE4",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 54,
+          "group": 47
+        }
+      ]
+    },
+    {
+      "id": "cmp-0092",
+      "shape": "巛",
+      "color": "#4C682B",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 55,
+          "group": 47
+        }
+      ]
+    },
+    {
+      "id": "cmp-0093",
+      "shape": "串",
+      "color": "#3782FD",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 56,
+          "group": 48
+        }
+      ]
+    },
+    {
+      "id": "cmp-0094",
+      "shape": "垂",
+      "color": "#9E6CD2",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 57,
+          "group": 49
+        }
+      ]
+    },
+    {
+      "id": "cmp-0095",
+      "shape": "𡗗",
+      "color": "#94647F",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 58,
+          "group": 50
+        }
+      ]
+    },
+    {
+      "id": "cmp-0096",
+      "shape": "朿",
+      "color": "#315633",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 59,
+          "group": 51
+        }
+      ]
+    },
+    {
+      "id": "cmp-0097",
+      "shape": "匆",
+      "color": "#6A30DE",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 60,
+          "group": 52
+        }
+      ]
+    },
+    {
+      "id": "cmp-0098",
+      "shape": "囱",
+      "color": "#843143",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 61,
+          "group": 53
+        }
+      ]
+    },
+    {
+      "id": "cmp-0099",
+      "shape": "寸",
+      "color": "#40AC6F",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 62,
+          "group": 54
+        }
+      ]
+    },
+    {
+      "id": "cmp-0100",
+      "shape": "大",
+      "color": "#256451",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 63,
+          "group": 55
+        }
+      ]
+    },
+    {
+      "id": "cmp-0101",
+      "shape": "歹",
+      "color": "#6863B1",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 64,
+          "group": 56
+        }
+      ]
+    },
+    {
+      "id": "cmp-0102",
+      "shape": "歺",
+      "color": "#EC4B72",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 65,
+          "group": 56
+        }
+      ]
+    },
+    {
+      "id": "cmp-0103",
+      "shape": "卅",
+      "color": "#6D7F27",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 66,
+          "group": 57
+        }
+      ]
+    },
+    {
+      "id": "cmp-0104",
+      "shape": "丹",
+      "color": "#845265",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 67,
+          "group": 58
+        }
+      ]
+    },
+    {
+      "id": "cmp-0105",
+      "shape": "单",
+      "color": "#715027",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 68,
+          "group": 59
+        }
+      ]
+    },
+    {
+      "id": "cmp-0106",
+      "shape": "刀",
+      "color": "#BA3E3C",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 69,
+          "group": 60
+        }
+      ]
+    },
+    {
+      "id": "cmp-0107",
+      "shape": "{⿹勹丿}",
+      "color": "#3758A9",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 71,
+          "group": 60
+        }
+      ]
+    },
+    {
+      "id": "cmp-0108",
+      "shape": "刂",
+      "color": "#216A63",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 72,
+          "group": 60
+        }
+      ]
+    },
+    {
+      "id": "cmp-0109",
+      "shape": "癶",
+      "color": "#AE4A92",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 73,
+          "group": 61
+        }
+      ]
+    },
+    {
+      "id": "cmp-0110",
+      "shape": "{⿳亠丷冖}",
+      "color": "#FE4E1F",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 74,
+          "group": 62
+        }
+      ]
+    },
+    {
+      "id": "cmp-0111",
+      "shape": "弟",
+      "color": "#E02430",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 75,
+          "group": 63
+        }
+      ]
+    },
+    {
+      "id": "cmp-0112",
+      "shape": "𢎨",
+      "color": "#2285DA",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 76,
+          "group": 63
+        }
+      ]
+    },
+    {
+      "id": "cmp-0113",
+      "shape": "丶",
+      "color": "#B45C6C",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 77,
+          "group": 64
+        }
+      ]
+    },
+    {
+      "id": "cmp-0114",
+      "shape": "电",
+      "color": "#AB729E",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 78,
+          "group": 65
+        }
+      ]
+    },
+    {
+      "id": "cmp-0115",
+      "shape": "刁",
+      "color": "#574289",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 79,
+          "group": 66
+        }
+      ]
+    },
+    {
+      "id": "cmp-0116",
+      "shape": "丁",
+      "color": "#CB8B49",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 80,
+          "group": 67
+        },
+        {
+          "ordinal": 199,
+          "group": 171
+        }
+      ]
+    },
+    {
+      "id": "cmp-0117",
+      "shape": "鼎",
+      "color": "#8F327F",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 81,
+          "group": 68
+        }
+      ]
+    },
+    {
+      "id": "cmp-0118",
+      "shape": "夂",
+      "color": "#A06976",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 82,
+          "group": 69
+        }
+      ]
+    },
+    {
+      "id": "cmp-0119",
+      "shape": "东",
+      "color": "#A4101D",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 83,
+          "group": 70
+        }
+      ]
+    },
+    {
+      "id": "cmp-0120",
+      "shape": "兜",
+      "color": "#B874FB",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 84,
+          "group": 71
+        }
+      ]
+    },
+    {
+      "id": "cmp-0121",
+      "shape": "斗",
+      "color": "#2A8D7E",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 85,
+          "group": 72
+        }
+      ]
+    },
+    {
+      "id": "cmp-0122",
+      "shape": "豆",
+      "color": "#689571",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 86,
+          "group": 73
+        }
+      ]
+    },
+    {
+      "id": "cmp-0123",
+      "shape": "{⿷⿻𠂆一二}",
+      "color": "#82432D",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 87,
+          "group": 74
+        }
+      ]
+    },
+    {
+      "id": "cmp-0124",
+      "shape": "而",
+      "color": "#A83902",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 88,
+          "group": 75
+        }
+      ]
+    },
+    {
+      "id": "cmp-0125",
+      "shape": "⺈",
+      "color": "#6D7607",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 89,
+          "group": 76
+        },
+        {
+          "ordinal": 295,
+          "group": 255
+        }
+      ]
+    },
+    {
+      "id": "cmp-0126",
+      "shape": "二",
+      "color": "#115469",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 91,
+          "group": 78
+        }
+      ]
+    },
+    {
+      "id": "cmp-0127",
+      "shape": "发",
+      "color": "#AC7E46",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 92,
+          "group": 79
+        }
+      ]
+    },
+    {
+      "id": "cmp-0128",
+      "shape": "凡",
+      "color": "#C0899D",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 93,
+          "group": 80
+        }
+      ]
+    },
+    {
+      "id": "cmp-0129",
+      "shape": "𠂆",
+      "color": "#695F9B",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 94,
+          "group": 81
+        }
+      ]
+    },
+    {
+      "id": "cmp-0130",
+      "shape": "攵",
+      "color": "#902099",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 95,
+          "group": 82
+        }
+      ]
+    },
+    {
+      "id": "cmp-0131",
+      "shape": "攴",
+      "color": "#C07967",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 96,
+          "group": 82
+        }
+      ]
+    },
+    {
+      "id": "cmp-0132",
+      "shape": "方",
+      "color": "#CA7EB1",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 97,
+          "group": 83
+        }
+      ]
+    },
+    {
+      "id": "cmp-0133",
+      "shape": "飞",
+      "color": "#876083",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 98,
+          "group": 84
+        }
+      ]
+    },
+    {
+      "id": "cmp-0134",
+      "shape": "非",
+      "color": "#DF7D50",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 99,
+          "group": 85
+        }
+      ]
+    },
+    {
+      "id": "cmp-0135",
+      "shape": "丰",
+      "color": "#817DCA",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 100,
+          "group": 86
+        }
+      ]
+    },
+    {
+      "id": "cmp-0136",
+      "shape": "{⿻三丿}",
+      "color": "#923768",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 101,
+          "group": 86
+        }
+      ]
+    },
+    {
+      "id": "cmp-0137",
+      "shape": "风",
+      "color": "#1D6173",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 102,
+          "group": 87
+        }
+      ]
+    },
+    {
+      "id": "cmp-0138",
+      "shape": "𠘨",
+      "color": "#8C6F99",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 103,
+          "group": 87
+        }
+      ]
+    },
+    {
+      "id": "cmp-0139",
+      "shape": "缶",
+      "color": "#BA1103",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 104,
+          "group": 88
+        }
+      ]
+    },
+    {
+      "id": "cmp-0140",
+      "shape": "夫",
+      "color": "#25770A",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 105,
+          "group": 89
+        }
+      ]
+    },
+    {
+      "id": "cmp-0141",
+      "shape": "巿",
+      "color": "#72442F",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 106,
+          "group": 90
+        }
+      ]
+    },
+    {
+      "id": "cmp-0142",
+      "shape": "弗",
+      "color": "#7A2980",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 107,
+          "group": 91
+        }
+      ]
+    },
+    {
+      "id": "cmp-0143",
+      "shape": "甫",
+      "color": "#2E6CA8",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 108,
+          "group": 92
+        }
+      ]
+    },
+    {
+      "id": "cmp-0144",
+      "shape": "父",
+      "color": "#445780",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 109,
+          "group": 93
+        }
+      ]
+    },
+    {
+      "id": "cmp-0145",
+      "shape": "丐",
+      "color": "#6A7645",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 110,
+          "group": 94
+        }
+      ]
+    },
+    {
+      "id": "cmp-0146",
+      "shape": "干",
+      "color": "#A02951",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 111,
+          "group": 95
+        }
+      ]
+    },
+    {
+      "id": "cmp-0147",
+      "shape": "尢",
+      "color": "#AB875D",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 112,
+          "group": 96
+        }
+      ]
+    },
+    {
+      "id": "cmp-0148",
+      "shape": "甘",
+      "color": "#758B4B",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 113,
+          "group": 97
+        }
+      ]
+    },
+    {
+      "id": "cmp-0149",
+      "shape": "高",
+      "color": "#A66DBF",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 114,
+          "group": 98
+        }
+      ]
+    },
+    {
+      "id": "cmp-0150",
+      "shape": "戈",
+      "color": "#7B499C",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 115,
+          "group": 99
+        }
+      ]
+    },
+    {
+      "id": "cmp-0151",
+      "shape": "革",
+      "color": "#525D2D",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 116,
+          "group": 100
+        }
+      ]
+    },
+    {
+      "id": "cmp-0152",
+      "shape": "个",
+      "color": "#C13728",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 117,
+          "group": 101
+        }
+      ]
+    },
+    {
+      "id": "cmp-0153",
+      "shape": "艮",
+      "color": "#683788",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 118,
+          "group": 102
+        }
+      ]
+    },
+    {
+      "id": "cmp-0154",
+      "shape": "{⿻人⺕}",
+      "color": "#3E678A",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 119,
+          "group": 103
+        }
+      ]
+    },
+    {
+      "id": "cmp-0155",
+      "shape": "更",
+      "color": "#B45728",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 120,
+          "group": 104
+        }
+      ]
+    },
+    {
+      "id": "cmp-0156",
+      "shape": "工",
+      "color": "#B86E03",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 121,
+          "group": 105
+        }
+      ]
+    },
+    {
+      "id": "cmp-0157",
+      "shape": "弓",
+      "color": "#5B98AF",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 122,
+          "group": 106
+        }
+      ]
+    },
+    {
+      "id": "cmp-0158",
+      "shape": "冎",
+      "color": "#A20B76",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 123,
+          "group": 107
+        }
+      ]
+    },
+    {
+      "id": "cmp-0159",
+      "shape": "谷",
+      "color": "#B26A70",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 124,
+          "group": 108
+        }
+      ]
+    },
+    {
+      "id": "cmp-0160",
+      "shape": "瓜",
+      "color": "#85760B",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 125,
+          "group": 109
+        }
+      ]
+    },
+    {
+      "id": "cmp-0161",
+      "shape": "夬",
+      "color": "#CA7078",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 126,
+          "group": 110
+        }
+      ]
+    },
+    {
+      "id": "cmp-0162",
+      "shape": "毌",
+      "color": "#A59639",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 127,
+          "group": 111
+        }
+      ]
+    },
+    {
+      "id": "cmp-0163",
+      "shape": "广",
+      "color": "#0478A8",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 128,
+          "group": 112
+        }
+      ]
+    },
+    {
+      "id": "cmp-0164",
+      "shape": "龟",
+      "color": "#EA36AF",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 129,
+          "group": 113
+        }
+      ]
+    },
+    {
+      "id": "cmp-0165",
+      "shape": "鬼",
+      "color": "#C8233C",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 130,
+          "group": 114
+        }
+      ]
+    },
+    {
+      "id": "cmp-0166",
+      "shape": "果",
+      "color": "#EE5F5B",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 131,
+          "group": 115
+        }
+      ]
+    },
+    {
+      "id": "cmp-0167",
+      "shape": "𠀎",
+      "color": "#589B49",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 133,
+          "group": 117
+        }
+      ]
+    },
+    {
+      "id": "cmp-0168",
+      "shape": "丂",
+      "color": "#C57A1F",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 134,
+          "group": 118
+        }
+      ]
+    },
+    {
+      "id": "cmp-0169",
+      "shape": "隺",
+      "color": "#773AC0",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 136,
+          "group": 120
+        }
+      ]
+    },
+    {
+      "id": "cmp-0170",
+      "shape": "黑",
+      "color": "#B55E58",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 137,
+          "group": 121
+        }
+      ]
+    },
+    {
+      "id": "cmp-0171",
+      "shape": "一",
+      "color": "#8D2929",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 138,
+          "group": 122
+        }
+      ]
+    },
+    {
+      "id": "cmp-0172",
+      "shape": "乙",
+      "color": "#A74824",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 139,
+          "group": 123
+        }
+      ]
+    },
+    {
+      "id": "cmp-0173",
+      "shape": "乛",
+      "color": "#C34EA2",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 140,
+          "group": 123
+        }
+      ]
+    },
+    {
+      "id": "cmp-0174",
+      "shape": "𠃍",
+      "color": "#045851",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 141,
+          "group": 123
+        }
+      ]
+    },
+    {
+      "id": "cmp-0175",
+      "shape": "𠃌",
+      "color": "#979964",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 142,
+          "group": 123
+        }
+      ]
+    },
+    {
+      "id": "cmp-0176",
+      "shape": "后",
+      "color": "#9F718F",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 143,
+          "group": 124
+        }
+      ]
+    },
+    {
+      "id": "cmp-0177",
+      "shape": "乎",
+      "color": "#128A64",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 144,
+          "group": 125
+        }
+      ]
+    },
+    {
+      "id": "cmp-0178",
+      "shape": "虍",
+      "color": "#9C52AD",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 145,
+          "group": 126
+        }
+      ]
+    },
+    {
+      "id": "cmp-0179",
+      "shape": "互",
+      "color": "#0E7D52",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 146,
+          "group": 127
+        }
+      ]
+    },
+    {
+      "id": "cmp-0180",
+      "shape": "户",
+      "color": "#914C48",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 147,
+          "group": 128
+        }
+      ]
+    },
+    {
+      "id": "cmp-0181",
+      "shape": "凵",
+      "color": "#5151A7",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 148,
+          "group": 129
+        }
+      ]
+    },
+    {
+      "id": "cmp-0182",
+      "shape": "奂",
+      "color": "#B70549",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 149,
+          "group": 130
+        }
+      ]
+    },
+    {
+      "id": "cmp-0183",
+      "shape": "黄",
+      "color": "#6F8C60",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 150,
+          "group": 131
+        }
+      ]
+    },
+    {
+      "id": "cmp-0184",
+      "shape": "{⿱⿻十日⿰一丶}",
+      "color": "#90451F",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 151,
+          "group": 132
+        }
+      ]
+    },
+    {
+      "id": "cmp-0185",
+      "shape": "击",
+      "color": "#375F91",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 154,
+          "group": 134
+        }
+      ]
+    },
+    {
+      "id": "cmp-0186",
+      "shape": "及",
+      "color": "#5281A2",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 155,
+          "group": 135
+        }
+      ]
+    },
+    {
+      "id": "cmp-0187",
+      "shape": "{⿸𢀳丶}",
+      "color": "#D81C0C",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 156,
+          "group": 136
+        }
+      ]
+    },
+    {
+      "id": "cmp-0188",
+      "shape": "几",
+      "color": "#849666",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 157,
+          "group": 137
+        }
+      ]
+    },
+    {
+      "id": "cmp-0189",
+      "shape": "己",
+      "color": "#1D7339",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 158,
+          "group": 138
+        }
+      ]
+    },
+    {
+      "id": "cmp-0190",
+      "shape": "已",
+      "color": "#504FF6",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 159,
+          "group": 138
+        }
+      ]
+    },
+    {
+      "id": "cmp-0191",
+      "shape": "{⿰𠄌丶}",
+      "color": "#9A8741",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 160,
+          "group": 138
+        }
+      ]
+    },
+    {
+      "id": "cmp-0192",
+      "shape": "巳",
+      "color": "#DF4B9D",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 161,
+          "group": 138
+        }
+      ]
+    },
+    {
+      "id": "cmp-0193",
+      "shape": "旡",
+      "color": "#930A82",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 162,
+          "group": 139
+        }
+      ]
+    },
+    {
+      "id": "cmp-0194",
+      "shape": "夹",
+      "color": "#166E50",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 163,
+          "group": 140
+        }
+      ]
+    },
+    {
+      "id": "cmp-0195",
+      "shape": "甲",
+      "color": "#396DFB",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 164,
+          "group": 141
+        }
+      ]
+    },
+    {
+      "id": "cmp-0196",
+      "shape": "叚",
+      "color": "#9B223A",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 165,
+          "group": 142
+        }
+      ]
+    },
+    {
+      "id": "cmp-0197",
+      "shape": "兼",
+      "color": "#894FD6",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 166,
+          "group": 143
+        }
+      ]
+    },
+    {
+      "id": "cmp-0198",
+      "shape": "柬",
+      "color": "#8D4677",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 167,
+          "group": 144
+        }
+      ]
+    },
+    {
+      "id": "cmp-0199",
+      "shape": "𫠣",
+      "color": "#478E96",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 168,
+          "group": 144
+        }
+      ]
+    },
+    {
+      "id": "cmp-0200",
+      "shape": "廴",
+      "color": "#B04F79",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 169,
+          "group": 145
+        }
+      ]
+    },
+    {
+      "id": "cmp-0201",
+      "shape": "见",
+      "color": "#B97696",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 170,
+          "group": 146
+        }
+      ]
+    },
+    {
+      "id": "cmp-0202",
+      "shape": "纟",
+      "color": "#94439A",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 171,
+          "group": 147
+        }
+      ]
+    },
+    {
+      "id": "cmp-0203",
+      "shape": "糸",
+      "color": "#FD5A73",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 172,
+          "group": 148
+        }
+      ]
+    },
+    {
+      "id": "cmp-0204",
+      "shape": "角",
+      "color": "#825B1B",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 173,
+          "group": 149
+        }
+      ]
+    },
+    {
+      "id": "cmp-0205",
+      "shape": "卩",
+      "color": "#B81C6F",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 174,
+          "group": 149
+        }
+      ]
+    },
+    {
+      "id": "cmp-0206",
+      "shape": "𰆊",
+      "color": "#58A786",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 175,
+          "group": 149
+        }
+      ]
+    },
+    {
+      "id": "cmp-0207",
+      "shape": "㔾",
+      "color": "#A55E5E",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 176,
+          "group": 150
+        }
+      ]
+    },
+    {
+      "id": "cmp-0208",
+      "shape": "疌",
+      "color": "#DA8240",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 177,
+          "group": 151
+        }
+      ]
+    },
+    {
+      "id": "cmp-0209",
+      "shape": "巾",
+      "color": "#6B9BBD",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 178,
+          "group": 152
+        }
+      ]
+    },
+    {
+      "id": "cmp-0210",
+      "shape": "斤",
+      "color": "#7C7028",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 179,
+          "group": 153
+        }
+      ]
+    },
+    {
+      "id": "cmp-0211",
+      "shape": "今",
+      "color": "#B74F5B",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 180,
+          "group": 154
+        }
+      ]
+    },
+    {
+      "id": "cmp-0212",
+      "shape": "堇",
+      "color": "#5B4772",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 183,
+          "group": 155
+        }
+      ]
+    },
+    {
+      "id": "cmp-0213",
+      "shape": "京",
+      "color": "#B68C50",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 184,
+          "group": 156
+        }
+      ]
+    },
+    {
+      "id": "cmp-0214",
+      "shape": "井",
+      "color": "#BC8673",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 185,
+          "group": 157
+        }
+      ]
+    },
+    {
+      "id": "cmp-0215",
+      "shape": "丩",
+      "color": "#719548",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 186,
+          "group": 158
+        }
+      ]
+    },
+    {
+      "id": "cmp-0216",
+      "shape": "九",
+      "color": "#DF524E",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 187,
+          "group": 159
+        }
+      ]
+    },
+    {
+      "id": "cmp-0217",
+      "shape": "久",
+      "color": "#5D9F75",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 188,
+          "group": 160
+        }
+      ]
+    },
+    {
+      "id": "cmp-0218",
+      "shape": "韭",
+      "color": "#414A8F",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 189,
+          "group": 161
+        }
+      ]
+    },
+    {
+      "id": "cmp-0219",
+      "shape": "臼",
+      "color": "#803255",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 190,
+          "group": 162
+        }
+      ]
+    },
+    {
+      "id": "cmp-0220",
+      "shape": "𰀁",
+      "color": "#81511B",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 191,
+          "group": 163
+        }
+      ]
+    },
+    {
+      "id": "cmp-0221",
+      "shape": "勹",
+      "color": "#349317",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 192,
+          "group": 164
+        }
+      ]
+    },
+    {
+      "id": "cmp-0222",
+      "shape": "巨",
+      "color": "#259CED",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 193,
+          "group": 165
+        }
+      ]
+    },
+    {
+      "id": "cmp-0223",
+      "shape": "乑",
+      "color": "#1B8397",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 194,
+          "group": 166
+        }
+      ]
+    },
+    {
+      "id": "cmp-0224",
+      "shape": "具",
+      "color": "#517E35",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 195,
+          "group": 167
+        }
+      ]
+    },
+    {
+      "id": "cmp-0225",
+      "shape": "龹",
+      "color": "#B9320A",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 196,
+          "group": 168
+        }
+      ]
+    },
+    {
+      "id": "cmp-0226",
+      "shape": "卡",
+      "color": "#1A9777",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 197,
+          "group": 169
+        }
+      ]
+    },
+    {
+      "id": "cmp-0227",
+      "shape": "开",
+      "color": "#AA3427",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 198,
+          "group": 170
+        }
+      ]
+    },
+    {
+      "id": "cmp-0228",
+      "shape": "来",
+      "color": "#DB22A2",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 201,
+          "group": 173
+        }
+      ]
+    },
+    {
+      "id": "cmp-0229",
+      "shape": "老",
+      "color": "#158681",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 202,
+          "group": 174
+        }
+      ]
+    },
+    {
+      "id": "cmp-0230",
+      "shape": "耂",
+      "color": "#AD7249",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 203,
+          "group": 174
+        }
+      ]
+    },
+    {
+      "id": "cmp-0231",
+      "shape": "乐",
+      "color": "#613599",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 204,
+          "group": 175
+        }
+      ]
+    },
+    {
+      "id": "cmp-0232",
+      "shape": "耒",
+      "color": "#279393",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 205,
+          "group": 176
+        }
+      ]
+    },
+    {
+      "id": "cmp-0233",
+      "shape": "禸",
+      "color": "#D7114A",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 206,
+          "group": 177
+        }
+      ]
+    },
+    {
+      "id": "cmp-0234",
+      "shape": "里",
+      "color": "#438206",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 207,
+          "group": 178
+        }
+      ]
+    },
+    {
+      "id": "cmp-0235",
+      "shape": "立",
+      "color": "#464E79",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 209,
+          "group": 180
+        }
+      ]
+    },
+    {
+      "id": "cmp-0236",
+      "shape": "吏",
+      "color": "#986C09",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 210,
+          "group": 181
+        }
+      ]
+    },
+    {
+      "id": "cmp-0237",
+      "shape": "丽",
+      "color": "#897B48",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 211,
+          "group": 182
+        }
+      ]
+    },
+    {
+      "id": "cmp-0238",
+      "shape": "隶",
+      "color": "#853522",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 212,
+          "group": 183
+        }
+      ]
+    },
+    {
+      "id": "cmp-0239",
+      "shape": "鬲",
+      "color": "#D36D53",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 213,
+          "group": 184
+        }
+      ]
+    },
+    {
+      "id": "cmp-0240",
+      "shape": "⺀",
+      "color": "#4879AA",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 215,
+          "group": 185
+        }
+      ]
+    },
+    {
+      "id": "cmp-0241",
+      "shape": "两",
+      "color": "#208442",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 216,
+          "group": 186
+        }
+      ]
+    },
+    {
+      "id": "cmp-0242",
+      "shape": "𡗜",
+      "color": "#F01905",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 217,
+          "group": 187
+        }
+      ]
+    },
+    {
+      "id": "cmp-0243",
+      "shape": "了",
+      "color": "#5EA39A",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 218,
+          "group": 188
+        }
+      ]
+    },
+    {
+      "id": "cmp-0244",
+      "shape": "{⿱𠂉丶}",
+      "color": "#A26B66",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 219,
+          "group": 189
+        }
+      ]
+    },
+    {
+      "id": "cmp-0245",
+      "shape": "𫩏",
+      "color": "#535691",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 220,
+          "group": 190
+        }
+      ]
+    },
+    {
+      "id": "cmp-0246",
+      "shape": "六",
+      "color": "#7A5EA7",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 221,
+          "group": 191
+        }
+      ]
+    },
+    {
+      "id": "cmp-0247",
+      "shape": "龙",
+      "color": "#F21D74",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 222,
+          "group": 192
+        }
+      ]
+    },
+    {
+      "id": "cmp-0248",
+      "shape": "卤",
+      "color": "#E65760",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 223,
+          "group": 193
+        }
+      ]
+    },
+    {
+      "id": "cmp-0249",
+      "shape": "彐",
+      "color": "#6085AC",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 224,
+          "group": 194
+        }
+      ]
+    },
+    {
+      "id": "cmp-0250",
+      "shape": "鹿",
+      "color": "#C48B81",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 225,
+          "group": 195
+        }
+      ]
+    },
+    {
+      "id": "cmp-0251",
+      "shape": "𧘇",
+      "color": "#41613A",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 226,
+          "group": 196
+        },
+        {
+          "ordinal": 441,
+          "group": 381
+        }
+      ]
+    },
+    {
+      "id": "cmp-0252",
+      "shape": "卵",
+      "color": "#F56855",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 227,
+          "group": 197
+        }
+      ]
+    },
+    {
+      "id": "cmp-0253",
+      "shape": "仑",
+      "color": "#B987BB",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 228,
+          "group": 198
+        }
+      ]
+    },
+    {
+      "id": "cmp-0254",
+      "shape": "罒",
+      "color": "#C23A71",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 229,
+          "group": 199
+        }
+      ]
+    },
+    {
+      "id": "cmp-0255",
+      "shape": "毛",
+      "color": "#4B501E",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 231,
+          "group": 201
+        }
+      ]
+    },
+    {
+      "id": "cmp-0256",
+      "shape": "矛",
+      "color": "#25672B",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 232,
+          "group": 202
+        }
+      ]
+    },
+    {
+      "id": "cmp-0257",
+      "shape": "卯",
+      "color": "#CF8A29",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 233,
+          "group": 203
+        }
+      ]
+    },
+    {
+      "id": "cmp-0258",
+      "shape": "{⿰𱍸刀}",
+      "color": "#5D8953",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 234,
+          "group": 203
+        }
+      ]
+    },
+    {
+      "id": "cmp-0259",
+      "shape": "冃",
+      "color": "#7924A7",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 235,
+          "group": 204
+        }
+      ]
+    },
+    {
+      "id": "cmp-0260",
+      "shape": "么",
+      "color": "#B28630",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 236,
+          "group": 205
+        }
+      ]
+    },
+    {
+      "id": "cmp-0261",
+      "shape": "𠃜",
+      "color": "#927DAB",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 237,
+          "group": 206
+        }
+      ]
+    },
+    {
+      "id": "cmp-0262",
+      "shape": "米",
+      "color": "#99444E",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 239,
+          "group": 208
+        }
+      ]
+    },
+    {
+      "id": "cmp-0263",
+      "shape": "免",
+      "color": "#7786B4",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 240,
+          "group": 209
+        }
+      ]
+    },
+    {
+      "id": "cmp-0264",
+      "shape": "面",
+      "color": "#5D6693",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 241,
+          "group": 210
+        }
+      ]
+    },
+    {
+      "id": "cmp-0265",
+      "shape": "民",
+      "color": "#3E6DBD",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 242,
+          "group": 211
+        }
+      ]
+    },
+    {
+      "id": "cmp-0266",
+      "shape": "皿",
+      "color": "#D77C8B",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 243,
+          "group": 212
+        }
+      ]
+    },
+    {
+      "id": "cmp-0267",
+      "shape": "末",
+      "color": "#B77558",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 244,
+          "group": 213
+        }
+      ]
+    },
+    {
+      "id": "cmp-0268",
+      "shape": "母",
+      "color": "#7D4480",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 245,
+          "group": 214
+        }
+      ]
+    },
+    {
+      "id": "cmp-0269",
+      "shape": "𭃂",
+      "color": "#7C9C35",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 248,
+          "group": 217
+        }
+      ]
+    },
+    {
+      "id": "cmp-0270",
+      "shape": "乃",
+      "color": "#EF3A29",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 249,
+          "group": 218
+        }
+      ]
+    },
+    {
+      "id": "cmp-0271",
+      "shape": "南",
+      "color": "#4A836B",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 250,
+          "group": 219
+        }
+      ]
+    },
+    {
+      "id": "cmp-0272",
+      "shape": "{⿱𰀉冖}",
+      "color": "#9B6468",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 251,
+          "group": 220
+        }
+      ]
+    },
+    {
+      "id": "cmp-0273",
+      "shape": "内",
+      "color": "#EB248F",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 252,
+          "group": 221
+        }
+      ]
+    },
+    {
+      "id": "cmp-0274",
+      "shape": "屰",
+      "color": "#784FB4",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 253,
+          "group": 222
+        }
+      ]
+    },
+    {
+      "id": "cmp-0275",
+      "shape": "年",
+      "color": "#793565",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 254,
+          "group": 223
+        }
+      ]
+    },
+    {
+      "id": "cmp-0276",
+      "shape": "廿",
+      "color": "#D06619",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 255,
+          "group": 224
+        }
+      ]
+    },
+    {
+      "id": "cmp-0277",
+      "shape": "鸟",
+      "color": "#94614F",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 256,
+          "group": 225
+        }
+      ]
+    },
+    {
+      "id": "cmp-0278",
+      "shape": "{⿱丿⿴#(-𠃌㇉)丶}",
+      "color": "#5D5683",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 257,
+          "group": 225
+        }
+      ]
+    },
+    {
+      "id": "cmp-0279",
+      "shape": "牛",
+      "color": "#D95AF5",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 258,
+          "group": 226
+        }
+      ]
+    },
+    {
+      "id": "cmp-0280",
+      "shape": "𠂒",
+      "color": "#AB924E",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 259,
+          "group": 226
+        }
+      ]
+    },
+    {
+      "id": "cmp-0281",
+      "shape": "农",
+      "color": "#B67C80",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 260,
+          "group": 227
+        }
+      ]
+    },
+    {
+      "id": "cmp-0282",
+      "shape": "廾",
+      "color": "#7D5234",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 261,
+          "group": 228
+        }
+      ]
+    },
+    {
+      "id": "cmp-0283",
+      "shape": "{⿱一八}",
+      "color": "#935E9F",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 262,
+          "group": 228
+        }
+      ]
+    },
+    {
+      "id": "cmp-0284",
+      "shape": "爿",
+      "color": "#1F528F",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 264,
+          "group": 230
+        }
+      ]
+    },
+    {
+      "id": "cmp-0285",
+      "shape": "丬",
+      "color": "#956D30",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 265,
+          "group": 230
+        }
+      ]
+    },
+    {
+      "id": "cmp-0286",
+      "shape": "皮",
+      "color": "#834047",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 266,
+          "group": 231
+        }
+      ]
+    },
+    {
+      "id": "cmp-0287",
+      "shape": "片",
+      "color": "#6F4157",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 267,
+          "group": 232
+        }
+      ]
+    },
+    {
+      "id": "cmp-0288",
+      "shape": "丿",
+      "color": "#7D3B37",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 268,
+          "group": 233
+        }
+      ]
+    },
+    {
+      "id": "cmp-0289",
+      "shape": "乒",
+      "color": "#AF3754",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 269,
+          "group": 234
+        }
+      ]
+    },
+    {
+      "id": "cmp-0290",
+      "shape": "乓",
+      "color": "#01A8B6",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 270,
+          "group": 234
+        }
+      ]
+    },
+    {
+      "id": "cmp-0291",
+      "shape": "平",
+      "color": "#0575B8",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 271,
+          "group": 235
+        }
+      ]
+    },
+    {
+      "id": "cmp-0292",
+      "shape": "七",
+      "color": "#048FB5",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 272,
+          "group": 236
+        }
+      ]
+    },
+    {
+      "id": "cmp-0293",
+      "shape": "妻",
+      "color": "#814F7C",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 273,
+          "group": 237
+        }
+      ]
+    },
+    {
+      "id": "cmp-0294",
+      "shape": "其",
+      "color": "#6C5401",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 274,
+          "group": 238
+        }
+      ]
+    },
+    {
+      "id": "cmp-0295",
+      "shape": "气",
+      "color": "#CE8674",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 275,
+          "group": 239
+        }
+      ]
+    },
+    {
+      "id": "cmp-0296",
+      "shape": "千",
+      "color": "#766030",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 276,
+          "group": 240
+        }
+      ]
+    },
+    {
+      "id": "cmp-0297",
+      "shape": "䒑",
+      "color": "#5BAB49",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 277,
+          "group": 241
+        }
+      ]
+    },
+    {
+      "id": "cmp-0298",
+      "shape": "戋",
+      "color": "#278067",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 278,
+          "group": 242
+        }
+      ]
+    },
+    {
+      "id": "cmp-0299",
+      "shape": "欠",
+      "color": "#8C2F03",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 279,
+          "group": 243
+        }
+      ]
+    },
+    {
+      "id": "cmp-0300",
+      "shape": "{⿰丿丨}",
+      "color": "#BD8007",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 280,
+          "group": 244
+        }
+      ]
+    },
+    {
+      "id": "cmp-0301",
+      "shape": "且",
+      "color": "#F656DB",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 281,
+          "group": 245
+        }
+      ]
+    },
+    {
+      "id": "cmp-0302",
+      "shape": "龶",
+      "color": "#0364EB",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 282,
+          "group": 246
+        }
+      ]
+    },
+    {
+      "id": "cmp-0303",
+      "shape": "𢀖",
+      "color": "#9D3F8C",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 283,
+          "group": 247
+        }
+      ]
+    },
+    {
+      "id": "cmp-0304",
+      "shape": "丘",
+      "color": "#8839A7",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 284,
+          "group": 248
+        }
+      ]
+    },
+    {
+      "id": "cmp-0305",
+      "shape": "求",
+      "color": "#D74C3C",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 285,
+          "group": 249
+        }
+      ]
+    },
+    {
+      "id": "cmp-0306",
+      "shape": "匚",
+      "color": "#3A8286",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 286,
+          "group": 250
+        }
+      ]
+    },
+    {
+      "id": "cmp-0307",
+      "shape": "曲",
+      "color": "#948BCA",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 287,
+          "group": 251
+        }
+      ]
+    },
+    {
+      "id": "cmp-0308",
+      "shape": "去",
+      "color": "#CD5DB8",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 288,
+          "group": 252
+        }
+      ]
+    },
+    {
+      "id": "cmp-0309",
+      "shape": "犬",
+      "color": "#035C92",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 289,
+          "group": 253
+        }
+      ]
+    },
+    {
+      "id": "cmp-0310",
+      "shape": "犭",
+      "color": "#256812",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 290,
+          "group": 253
+        }
+      ]
+    },
+    {
+      "id": "cmp-0311",
+      "shape": "冉",
+      "color": "#915108",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 291,
+          "group": 254
+        }
+      ]
+    },
+    {
+      "id": "cmp-0312",
+      "shape": "儿",
+      "color": "#FB255B",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 294,
+          "group": 255
+        }
+      ]
+    },
+    {
+      "id": "cmp-0313",
+      "shape": "𠂉",
+      "color": "#369A8F",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 296,
+          "group": 255
+        }
+      ]
+    },
+    {
+      "id": "cmp-0314",
+      "shape": "壬",
+      "color": "#AF2ACA",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 297,
+          "group": 256
+        }
+      ]
+    },
+    {
+      "id": "cmp-0315",
+      "shape": "刃",
+      "color": "#AA5EBB",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 298,
+          "group": 257
+        }
+      ]
+    },
+    {
+      "id": "cmp-0316",
+      "shape": "曰",
+      "color": "#A85F91",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 300,
+          "group": 258
+        }
+      ]
+    },
+    {
+      "id": "cmp-0317",
+      "shape": "入",
+      "color": "#A22F11",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 301,
+          "group": 259
+        }
+      ]
+    },
+    {
+      "id": "cmp-0318",
+      "shape": "三",
+      "color": "#B90730",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 302,
+          "group": 260
+        }
+      ]
+    },
+    {
+      "id": "cmp-0319",
+      "shape": "伞",
+      "color": "#6B7AA7",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 303,
+          "group": 261
+        }
+      ]
+    },
+    {
+      "id": "cmp-0320",
+      "shape": "{⿻土丷}",
+      "color": "#7DA355",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 304,
+          "group": 262
+        }
+      ]
+    },
+    {
+      "id": "cmp-0321",
+      "shape": "色",
+      "color": "#939D44",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 305,
+          "group": 263
+        }
+      ]
+    },
+    {
+      "id": "cmp-0322",
+      "shape": "彡",
+      "color": "#808A08",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 307,
+          "group": 265
+        }
+      ]
+    },
+    {
+      "id": "cmp-0323",
+      "shape": "{⿳亠丷冂}",
+      "color": "#9D9851",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 308,
+          "group": 266
+        }
+      ]
+    },
+    {
+      "id": "cmp-0324",
+      "shape": "上",
+      "color": "#F74043",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 309,
+          "group": 267
+        }
+      ]
+    },
+    {
+      "id": "cmp-0325",
+      "shape": "勺",
+      "color": "#945835",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 310,
+          "group": 268
+        }
+      ]
+    },
+    {
+      "id": "cmp-0326",
+      "shape": "少",
+      "color": "#A77361",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 311,
+          "group": 269
+        }
+      ]
+    },
+    {
+      "id": "cmp-0327",
+      "shape": "舌",
+      "color": "#5CA1AD",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 312,
+          "group": 270
+        }
+      ]
+    },
+    {
+      "id": "cmp-0328",
+      "shape": "申",
+      "color": "#30734B",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 313,
+          "group": 271
+        }
+      ]
+    },
+    {
+      "id": "cmp-0329",
+      "shape": "身",
+      "color": "#985DBF",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 314,
+          "group": 272
+        }
+      ]
+    },
+    {
+      "id": "cmp-0330",
+      "shape": "升",
+      "color": "#AF786E",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 315,
+          "group": 273
+        }
+      ]
+    },
+    {
+      "id": "cmp-0331",
+      "shape": "生",
+      "color": "#9E594E",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 316,
+          "group": 274
+        }
+      ]
+    },
+    {
+      "id": "cmp-0332",
+      "shape": "尸",
+      "color": "#8393C2",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 317,
+          "group": 275
+        }
+      ]
+    },
+    {
+      "id": "cmp-0333",
+      "shape": "失",
+      "color": "#5C8865",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 318,
+          "group": 276
+        }
+      ]
+    },
+    {
+      "id": "cmp-0334",
+      "shape": "十",
+      "color": "#967F4E",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 319,
+          "group": 277
+        }
+      ]
+    },
+    {
+      "id": "cmp-0335",
+      "shape": "食",
+      "color": "#599681",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 321,
+          "group": 279
+        }
+      ]
+    },
+    {
+      "id": "cmp-0336",
+      "shape": "饣",
+      "color": "#C4623E",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 322,
+          "group": 279
+        }
+      ]
+    },
+    {
+      "id": "cmp-0337",
+      "shape": "史",
+      "color": "#934035",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 323,
+          "group": 280
+        }
+      ]
+    },
+    {
+      "id": "cmp-0338",
+      "shape": "矢",
+      "color": "#644E1D",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 324,
+          "group": 281
+        }
+      ]
+    },
+    {
+      "id": "cmp-0339",
+      "shape": "豕",
+      "color": "#8D9D5A",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 325,
+          "group": 282
+        }
+      ]
+    },
+    {
+      "id": "cmp-0340",
+      "shape": "𧰨",
+      "color": "#D10222",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 326,
+          "group": 282
+        }
+      ]
+    },
+    {
+      "id": "cmp-0341",
+      "shape": "士",
+      "color": "#CD635D",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 327,
+          "group": 283
+        }
+      ]
+    },
+    {
+      "id": "cmp-0342",
+      "shape": "氏",
+      "color": "#4F8BA2",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 328,
+          "group": 284
+        }
+      ]
+    },
+    {
+      "id": "cmp-0343",
+      "shape": "示",
+      "color": "#285AF8",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 329,
+          "group": 285
+        }
+      ]
+    },
+    {
+      "id": "cmp-0344",
+      "shape": "礻",
+      "color": "#814D45",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 330,
+          "group": 285
+        }
+      ]
+    },
+    {
+      "id": "cmp-0345",
+      "shape": "世",
+      "color": "#E2667F",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 331,
+          "group": 286
+        }
+      ]
+    },
+    {
+      "id": "cmp-0346",
+      "shape": "事",
+      "color": "#847E37",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 332,
+          "group": 287
+        }
+      ]
+    },
+    {
+      "id": "cmp-0347",
+      "shape": "首",
+      "color": "#2C7676",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 335,
+          "group": 289
+        }
+      ]
+    },
+    {
+      "id": "cmp-0348",
+      "shape": "殳",
+      "color": "#593FC5",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 336,
+          "group": 290
+        }
+      ]
+    },
+    {
+      "id": "cmp-0349",
+      "shape": "书",
+      "color": "#026A9D",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 337,
+          "group": 291
+        }
+      ]
+    },
+    {
+      "id": "cmp-0350",
+      "shape": "鼠",
+      "color": "#AD4865",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 338,
+          "group": 292
+        }
+      ]
+    },
+    {
+      "id": "cmp-0351",
+      "shape": "丨",
+      "color": "#4B7D4D",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 339,
+          "group": 293
+        }
+      ]
+    },
+    {
+      "id": "cmp-0352",
+      "shape": "𠃊",
+      "color": "#C374E5",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 340,
+          "group": 294
+        }
+      ]
+    },
+    {
+      "id": "cmp-0353",
+      "shape": "乚",
+      "color": "#099A65",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 341,
+          "group": 294
+        }
+      ]
+    },
+    {
+      "id": "cmp-0354",
+      "shape": "术",
+      "color": "#34A20B",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 342,
+          "group": 295
+        }
+      ]
+    },
+    {
+      "id": "cmp-0355",
+      "shape": "束",
+      "color": "#1E9A4B",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 343,
+          "group": 296
+        }
+      ]
+    },
+    {
+      "id": "cmp-0356",
+      "shape": "{⿻口一}",
+      "color": "#133CDA",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 344,
+          "group": 297
+        }
+      ]
+    },
+    {
+      "id": "cmp-0357",
+      "shape": "甩",
+      "color": "#A590BF",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 345,
+          "group": 298
+        }
+      ]
+    },
+    {
+      "id": "cmp-0358",
+      "shape": "{⿰冫⿱丿丶}",
+      "color": "#7D7CAC",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 346,
+          "group": 299
+        }
+      ]
+    },
+    {
+      "id": "cmp-0359",
+      "shape": "阝",
+      "color": "#686F2A",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 347,
+          "group": 300
+        }
+      ]
+    },
+    {
+      "id": "cmp-0360",
+      "shape": "彳",
+      "color": "#6680BA",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 348,
+          "group": 301
+        }
+      ]
+    },
+    {
+      "id": "cmp-0361",
+      "shape": "氺",
+      "color": "#87455B",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 351,
+          "group": 302
+        }
+      ]
+    },
+    {
+      "id": "cmp-0362",
+      "shape": "{⿱䒑八}",
+      "color": "#976133",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 352,
+          "group": 302
+        }
+      ]
+    },
+    {
+      "id": "cmp-0363",
+      "shape": "厶",
+      "color": "#A97E5B",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 353,
+          "group": 303
+        }
+      ]
+    },
+    {
+      "id": "cmp-0364",
+      "shape": "司",
+      "color": "#DB7162",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 354,
+          "group": 304
+        }
+      ]
+    },
+    {
+      "id": "cmp-0365",
+      "shape": "丝",
+      "color": "#EC6342",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 355,
+          "group": 305
+        }
+      ]
+    },
+    {
+      "id": "cmp-0366",
+      "shape": "四",
+      "color": "#FF368F",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 356,
+          "group": 306
+        }
+      ]
+    },
+    {
+      "id": "cmp-0367",
+      "shape": "镸",
+      "color": "#6D5984",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 357,
+          "group": 307
+        }
+      ]
+    },
+    {
+      "id": "cmp-0368",
+      "shape": "𦥔",
+      "color": "#813A02",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 358,
+          "group": 308
+        }
+      ]
+    },
+    {
+      "id": "cmp-0369",
+      "shape": "肃",
+      "color": "#457128",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 359,
+          "group": 309
+        }
+      ]
+    },
+    {
+      "id": "cmp-0370",
+      "shape": "太",
+      "color": "#BD40A9",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 360,
+          "group": 310
+        }
+      ]
+    },
+    {
+      "id": "cmp-0371",
+      "shape": "肀",
+      "color": "#8267A1",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 361,
+          "group": 311
+        }
+      ]
+    },
+    {
+      "id": "cmp-0372",
+      "shape": "天",
+      "color": "#804C54",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 362,
+          "group": 312
+        }
+      ]
+    },
+    {
+      "id": "cmp-0373",
+      "shape": "冂",
+      "color": "#157491",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 364,
+          "group": 314
+        }
+      ]
+    },
+    {
+      "id": "cmp-0374",
+      "shape": "头",
+      "color": "#AC692B",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 365,
+          "group": 315
+        }
+      ]
+    },
+    {
+      "id": "cmp-0375",
+      "shape": "冖",
+      "color": "#5D8D40",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 366,
+          "group": 316
+        }
+      ]
+    },
+    {
+      "id": "cmp-0376",
+      "shape": "凸",
+      "color": "#035B3A",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 367,
+          "group": 317
+        }
+      ]
+    },
+    {
+      "id": "cmp-0377",
+      "shape": "屯",
+      "color": "#AA313C",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 369,
+          "group": 319
+        }
+      ]
+    },
+    {
+      "id": "cmp-0378",
+      "shape": "乇",
+      "color": "#4A9087",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 370,
+          "group": 320
+        }
+      ]
+    },
+    {
+      "id": "cmp-0379",
+      "shape": "瓦",
+      "color": "#DD1F5D",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 371,
+          "group": 321
+        }
+      ]
+    },
+    {
+      "id": "cmp-0380",
+      "shape": "丸",
+      "color": "#716F9E",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 372,
+          "group": 322
+        }
+      ]
+    },
+    {
+      "id": "cmp-0381",
+      "shape": "万",
+      "color": "#6F5077",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 373,
+          "group": 323
+        }
+      ]
+    },
+    {
+      "id": "cmp-0382",
+      "shape": "亡",
+      "color": "#D84F84",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 374,
+          "group": 324
+        }
+      ]
+    },
+    {
+      "id": "cmp-0383",
+      "shape": "王",
+      "color": "#9E7CC6",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 375,
+          "group": 325
+        }
+      ]
+    },
+    {
+      "id": "cmp-0384",
+      "shape": "囗",
+      "color": "#9C5768",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 376,
+          "group": 326
+        }
+      ]
+    },
+    {
+      "id": "cmp-0385",
+      "shape": "韦",
+      "color": "#60612E",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 377,
+          "group": 327
+        }
+      ]
+    },
+    {
+      "id": "cmp-0386",
+      "shape": "卫",
+      "color": "#1D6971",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 378,
+          "group": 328
+        }
+      ]
+    },
+    {
+      "id": "cmp-0387",
+      "shape": "𰀠",
+      "color": "#095D64",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 379,
+          "group": 329
+        }
+      ]
+    },
+    {
+      "id": "cmp-0388",
+      "shape": "为",
+      "color": "#A685C0",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 380,
+          "group": 330
+        }
+      ]
+    },
+    {
+      "id": "cmp-0389",
+      "shape": "未",
+      "color": "#C07ECF",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 381,
+          "group": 331
+        }
+      ]
+    },
+    {
+      "id": "cmp-0390",
+      "shape": "文",
+      "color": "#FF4659",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 382,
+          "group": 332
+        }
+      ]
+    },
+    {
+      "id": "cmp-0391",
+      "shape": "我",
+      "color": "#6E5FD7",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 383,
+          "group": 333
+        }
+      ]
+    },
+    {
+      "id": "cmp-0392",
+      "shape": "乌",
+      "color": "#347B86",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 384,
+          "group": 334
+        }
+      ]
+    },
+    {
+      "id": "cmp-0393",
+      "shape": "无",
+      "color": "#A21C62",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 385,
+          "group": 335
+        }
+      ]
+    },
+    {
+      "id": "cmp-0394",
+      "shape": "五",
+      "color": "#6430B7",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 386,
+          "group": 336
+        }
+      ]
+    },
+    {
+      "id": "cmp-0395",
+      "shape": "午",
+      "color": "#69965F",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 387,
+          "group": 337
+        }
+      ]
+    },
+    {
+      "id": "cmp-0396",
+      "shape": "{⿳𠂉卌一}",
+      "color": "#BC48E8",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 388,
+          "group": 338
+        }
+      ]
+    },
+    {
+      "id": "cmp-0397",
+      "shape": "兀",
+      "color": "#683F71",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 389,
+          "group": 339
+        }
+      ]
+    },
+    {
+      "id": "cmp-0398",
+      "shape": "勿",
+      "color": "#AD7686",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 390,
+          "group": 340
+        }
+      ]
+    },
+    {
+      "id": "cmp-0399",
+      "shape": "戊",
+      "color": "#A84DCD",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 391,
+          "group": 341
+        }
+      ]
+    },
+    {
+      "id": "cmp-0400",
+      "shape": "夕",
+      "color": "#CA8A66",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 392,
+          "group": 342
+        }
+      ]
+    },
+    {
+      "id": "cmp-0401",
+      "shape": "{⿴夂丶}",
+      "color": "#5B8C04",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 393,
+          "group": 342
+        }
+      ]
+    },
+    {
+      "id": "cmp-0402",
+      "shape": "龷",
+      "color": "#509B62",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 394,
+          "group": 343
+        }
+      ]
+    },
+    {
+      "id": "cmp-0403",
+      "shape": "西",
+      "color": "#057460",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 395,
+          "group": 344
+        }
+      ]
+    },
+    {
+      "id": "cmp-0404",
+      "shape": "覀",
+      "color": "#86603B",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 396,
+          "group": 344
+        }
+      ]
+    },
+    {
+      "id": "cmp-0405",
+      "shape": "习",
+      "color": "#D668DD",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 397,
+          "group": 345
+        }
+      ]
+    },
+    {
+      "id": "cmp-0406",
+      "shape": "丆",
+      "color": "#65A768",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 398,
+          "group": 346
+        }
+      ]
+    },
+    {
+      "id": "cmp-0407",
+      "shape": "下",
+      "color": "#FB4FA2",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 399,
+          "group": 347
+        }
+      ]
+    },
+    {
+      "id": "cmp-0408",
+      "shape": "乡",
+      "color": "#5F6CC3",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 400,
+          "group": 348
+        }
+      ]
+    },
+    {
+      "id": "cmp-0409",
+      "shape": "向",
+      "color": "#806D3C",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 401,
+          "group": 349
+        }
+      ]
+    },
+    {
+      "id": "cmp-0410",
+      "shape": "象",
+      "color": "#DF3EC6",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 402,
+          "group": 350
+        }
+      ]
+    },
+    {
+      "id": "cmp-0411",
+      "shape": "小",
+      "color": "#5C76A0",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 403,
+          "group": 351
+        }
+      ]
+    },
+    {
+      "id": "cmp-0412",
+      "shape": "⺌",
+      "color": "#F71E46",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 404,
+          "group": 351
+        }
+      ]
+    },
+    {
+      "id": "cmp-0413",
+      "shape": "𦈢",
+      "color": "#A43B7D",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 405,
+          "group": 352
+        }
+      ]
+    },
+    {
+      "id": "cmp-0414",
+      "shape": "㣺",
+      "color": "#97801E",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 407,
+          "group": 353
+        }
+      ]
+    },
+    {
+      "id": "cmp-0415",
+      "shape": "辛",
+      "color": "#EE7313",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 409,
+          "group": 354
+        }
+      ]
+    },
+    {
+      "id": "cmp-0416",
+      "shape": "囟",
+      "color": "#5B7245",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 410,
+          "group": 355
+        }
+      ]
+    },
+    {
+      "id": "cmp-0417",
+      "shape": "戌",
+      "color": "#A3591C",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 411,
+          "group": 356
+        }
+      ]
+    },
+    {
+      "id": "cmp-0418",
+      "shape": "亠",
+      "color": "#915271",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 412,
+          "group": 357
+        }
+      ]
+    },
+    {
+      "id": "cmp-0419",
+      "shape": "𭕄",
+      "color": "#239CC2",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 413,
+          "group": 358
+        }
+      ]
+    },
+    {
+      "id": "cmp-0420",
+      "shape": "穴",
+      "color": "#DB673D",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 414,
+          "group": 359
+        }
+      ]
+    },
+    {
+      "id": "cmp-0421",
+      "shape": "𫜹",
+      "color": "#8E5858",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 415,
+          "group": 360
+        }
+      ]
+    },
+    {
+      "id": "cmp-0422",
+      "shape": "𰀂",
+      "color": "#7E661E",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 416,
+          "group": 360
+        }
+      ]
+    },
+    {
+      "id": "cmp-0423",
+      "shape": "血",
+      "color": "#0D9AD4",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 417,
+          "group": 361
+        }
+      ]
+    },
+    {
+      "id": "cmp-0424",
+      "shape": "熏",
+      "color": "#6F6C38",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 418,
+          "group": 362
+        }
+      ]
+    },
+    {
+      "id": "cmp-0425",
+      "shape": "卂",
+      "color": "#4D3DA2",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 419,
+          "group": 363
+        }
+      ]
+    },
+    {
+      "id": "cmp-0426",
+      "shape": "丫",
+      "color": "#C57C8D",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 420,
+          "group": 364
+        }
+      ]
+    },
+    {
+      "id": "cmp-0427",
+      "shape": "牙",
+      "color": "#DE5634",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 421,
+          "group": 365
+        }
+      ]
+    },
+    {
+      "id": "cmp-0428",
+      "shape": "亚",
+      "color": "#458836",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 422,
+          "group": 366
+        }
+      ]
+    },
+    {
+      "id": "cmp-0429",
+      "shape": "{⿹⿺㇉一灬}",
+      "color": "#06AB4F",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 423,
+          "group": 367
+        }
+      ]
+    },
+    {
+      "id": "cmp-0430",
+      "shape": "𠂛",
+      "color": "#4045B7",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 424,
+          "group": 368
+        }
+      ]
+    },
+    {
+      "id": "cmp-0431",
+      "shape": "严",
+      "color": "#5C631C",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 425,
+          "group": 369
+        }
+      ]
+    },
+    {
+      "id": "cmp-0432",
+      "shape": "央",
+      "color": "#B38267",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 428,
+          "group": 371
+        }
+      ]
+    },
+    {
+      "id": "cmp-0433",
+      "shape": "𠃓",
+      "color": "#3B7055",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 429,
+          "group": 372
+        }
+      ]
+    },
+    {
+      "id": "cmp-0434",
+      "shape": "羊",
+      "color": "#8C16C5",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 430,
+          "group": 373
+        }
+      ]
+    },
+    {
+      "id": "cmp-0435",
+      "shape": "𦍌",
+      "color": "#F36D3B",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 431,
+          "group": 373
+        }
+      ]
+    },
+    {
+      "id": "cmp-0436",
+      "shape": "{⿱䒑夫}",
+      "color": "#C5628C",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 432,
+          "group": 373
+        }
+      ]
+    },
+    {
+      "id": "cmp-0437",
+      "shape": "幺",
+      "color": "#E65A48",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 433,
+          "group": 374
+        }
+      ]
+    },
+    {
+      "id": "cmp-0438",
+      "shape": "夭",
+      "color": "#E27678",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 434,
+          "group": 375
+        }
+      ]
+    },
+    {
+      "id": "cmp-0439",
+      "shape": "𭠍",
+      "color": "#A36AF3",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 435,
+          "group": 376
+        }
+      ]
+    },
+    {
+      "id": "cmp-0440",
+      "shape": "也",
+      "color": "#2E5D7C",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 436,
+          "group": 377
+        }
+      ]
+    },
+    {
+      "id": "cmp-0441",
+      "shape": "业",
+      "color": "#C274BC",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 437,
+          "group": 378
+        }
+      ]
+    },
+    {
+      "id": "cmp-0442",
+      "shape": "页",
+      "color": "#3696AB",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 438,
+          "group": 379
+        }
+      ]
+    },
+    {
+      "id": "cmp-0443",
+      "shape": "曳",
+      "color": "#606CE2",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 439,
+          "group": 380
+        }
+      ]
+    },
+    {
+      "id": "cmp-0444",
+      "shape": "衣",
+      "color": "#BA7639",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 440,
+          "group": 381
+        }
+      ]
+    },
+    {
+      "id": "cmp-0445",
+      "shape": "衤",
+      "color": "#BB66C1",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 442,
+          "group": 381
+        }
+      ]
+    },
+    {
+      "id": "cmp-0446",
+      "shape": "彑",
+      "color": "#D87903",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 443,
+          "group": 382
+        }
+      ]
+    },
+    {
+      "id": "cmp-0447",
+      "shape": "夷",
+      "color": "#48A2BC",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 444,
+          "group": 383
+        }
+      ]
+    },
+    {
+      "id": "cmp-0448",
+      "shape": "𦣞",
+      "color": "#B2633E",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 445,
+          "group": 384
+        }
+      ]
+    },
+    {
+      "id": "cmp-0449",
+      "shape": "乂",
+      "color": "#AC9061",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 446,
+          "group": 385
+        }
+      ]
+    },
+    {
+      "id": "cmp-0450",
+      "shape": "弋",
+      "color": "#4F8FBA",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 447,
+          "group": 386
+        }
+      ]
+    },
+    {
+      "id": "cmp-0451",
+      "shape": "义",
+      "color": "#BA716B",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 448,
+          "group": 387
+        }
+      ]
+    },
+    {
+      "id": "cmp-0452",
+      "shape": "亦",
+      "color": "#6A86EC",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 449,
+          "group": 388
+        }
+      ]
+    },
+    {
+      "id": "cmp-0453",
+      "shape": "㐆",
+      "color": "#794D6A",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 450,
+          "group": 389
+        }
+      ]
+    },
+    {
+      "id": "cmp-0454",
+      "shape": "冘",
+      "color": "#1D5842",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 451,
+          "group": 390
+        }
+      ]
+    },
+    {
+      "id": "cmp-0455",
+      "shape": "尹",
+      "color": "#6D92B9",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 452,
+          "group": 391
+        }
+      ]
+    },
+    {
+      "id": "cmp-0456",
+      "shape": "庸",
+      "color": "#BB6751",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 453,
+          "group": 392
+        }
+      ]
+    },
+    {
+      "id": "cmp-0457",
+      "shape": "龴",
+      "color": "#D27C9F",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 454,
+          "group": 393
+        }
+      ]
+    },
+    {
+      "id": "cmp-0458",
+      "shape": "永",
+      "color": "#AD54A7",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 455,
+          "group": 394
+        }
+      ]
+    },
+    {
+      "id": "cmp-0459",
+      "shape": "用",
+      "color": "#4D4983",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 456,
+          "group": 395
+        }
+      ]
+    },
+    {
+      "id": "cmp-0460",
+      "shape": "尤",
+      "color": "#6FA90B",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 457,
+          "group": 396
+        }
+      ]
+    },
+    {
+      "id": "cmp-0461",
+      "shape": "由",
+      "color": "#993EBC",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 458,
+          "group": 397
+        }
+      ]
+    },
+    {
+      "id": "cmp-0462",
+      "shape": "酉",
+      "color": "#C01643",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 459,
+          "group": 398
+        }
+      ]
+    },
+    {
+      "id": "cmp-0463",
+      "shape": "又",
+      "color": "#445CCD",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 460,
+          "group": 399
+        }
+      ]
+    },
+    {
+      "id": "cmp-0464",
+      "shape": "于",
+      "color": "#E02D7C",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 461,
+          "group": 400
+        }
+      ]
+    },
+    {
+      "id": "cmp-0465",
+      "shape": "鱼",
+      "color": "#209B33",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 462,
+          "group": 401
+        }
+      ]
+    },
+    {
+      "id": "cmp-0466",
+      "shape": "禺",
+      "color": "#8C383C",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 463,
+          "group": 402
+        }
+      ]
+    },
+    {
+      "id": "cmp-0467",
+      "shape": "与",
+      "color": "#A87CB2",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 464,
+          "group": 403
+        }
+      ]
+    },
+    {
+      "id": "cmp-0468",
+      "shape": "予",
+      "color": "#8464CD",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 465,
+          "group": 404
+        }
+      ]
+    },
+    {
+      "id": "cmp-0469",
+      "shape": "禹",
+      "color": "#C74E4A",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 467,
+          "group": 406
+        }
+      ]
+    },
+    {
+      "id": "cmp-0470",
+      "shape": "玉",
+      "color": "#086687",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 468,
+          "group": 407
+        }
+      ]
+    },
+    {
+      "id": "cmp-0471",
+      "shape": "𤣩",
+      "color": "#615825",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 469,
+          "group": 407
+        }
+      ]
+    },
+    {
+      "id": "cmp-0472",
+      "shape": "聿",
+      "color": "#5E6939",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 470,
+          "group": 408
+        }
+      ]
+    },
+    {
+      "id": "cmp-0473",
+      "shape": "肉",
+      "color": "#878CD9",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 472,
+          "group": 409
+        }
+      ]
+    },
+    {
+      "id": "cmp-0474",
+      "shape": "⺝",
+      "color": "#684365",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 473,
+          "group": 409
+        }
+      ]
+    },
+    {
+      "id": "cmp-0475",
+      "shape": "𱼀",
+      "color": "#06A779",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 474,
+          "group": 409
+        }
+      ]
+    },
+    {
+      "id": "cmp-0476",
+      "shape": "戉",
+      "color": "#05A388",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 475,
+          "group": 410
+        }
+      ]
+    },
+    {
+      "id": "cmp-0477",
+      "shape": "云",
+      "color": "#345F14",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 476,
+          "group": 411
+        }
+      ]
+    },
+    {
+      "id": "cmp-0478",
+      "shape": "再",
+      "color": "#494DD1",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 477,
+          "group": 412
+        }
+      ]
+    },
+    {
+      "id": "cmp-0479",
+      "shape": "乍",
+      "color": "#A16F3C",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 478,
+          "group": 413
+        }
+      ]
+    },
+    {
+      "id": "cmp-0480",
+      "shape": "丈",
+      "color": "#C64ACF",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 479,
+          "group": 414
+        }
+      ]
+    },
+    {
+      "id": "cmp-0481",
+      "shape": "爪",
+      "color": "#A469A7",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 480,
+          "group": 415
+        }
+      ]
+    },
+    {
+      "id": "cmp-0482",
+      "shape": "𰀄",
+      "color": "#966A4C",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 481,
+          "group": 415
+        }
+      ]
+    },
+    {
+      "id": "cmp-0483",
+      "shape": "爫",
+      "color": "#286E7D",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 482,
+          "group": 415
+        }
+      ]
+    },
+    {
+      "id": "cmp-0484",
+      "shape": "兆",
+      "color": "#697F3F",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 483,
+          "group": 416
+        }
+      ]
+    },
+    {
+      "id": "cmp-0485",
+      "shape": "争",
+      "color": "#A2426D",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 484,
+          "group": 417
+        }
+      ]
+    },
+    {
+      "id": "cmp-0486",
+      "shape": "正",
+      "color": "#7D588E",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 485,
+          "group": 418
+        }
+      ]
+    },
+    {
+      "id": "cmp-0487",
+      "shape": "之",
+      "color": "#798B35",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 486,
+          "group": 419
+        }
+      ]
+    },
+    {
+      "id": "cmp-0488",
+      "shape": "直",
+      "color": "#D569AA",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 487,
+          "group": 420
+        }
+      ]
+    },
+    {
+      "id": "cmp-0489",
+      "shape": "止",
+      "color": "#D78164",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 488,
+          "group": 421
+        }
+      ]
+    },
+    {
+      "id": "cmp-0490",
+      "shape": "㐄",
+      "color": "#45703C",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 489,
+          "group": 421
+        }
+      ]
+    },
+    {
+      "id": "cmp-0491",
+      "shape": "龰",
+      "color": "#8090FA",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 490,
+          "group": 421
+        }
+      ]
+    },
+    {
+      "id": "cmp-0492",
+      "shape": "𣥂",
+      "color": "#684C93",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 491,
+          "group": 421
+        }
+      ]
+    },
+    {
+      "id": "cmp-0493",
+      "shape": "至",
+      "color": "#5493D1",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 492,
+          "group": 422
+        }
+      ]
+    },
+    {
+      "id": "cmp-0494",
+      "shape": "{⿻牛冂}",
+      "color": "#015C27",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 493,
+          "group": 423
+        }
+      ]
+    },
+    {
+      "id": "cmp-0495",
+      "shape": "豸",
+      "color": "#0BAAA4",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 494,
+          "group": 424
+        }
+      ]
+    },
+    {
+      "id": "cmp-0496",
+      "shape": "中",
+      "color": "#766693",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 495,
+          "group": 425
+        }
+      ]
+    },
+    {
+      "id": "cmp-0497",
+      "shape": "重",
+      "color": "#C7411E",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 496,
+          "group": 426
+        }
+      ]
+    },
+    {
+      "id": "cmp-0498",
+      "shape": "⺆",
+      "color": "#637F54",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 497,
+          "group": 427
+        }
+      ]
+    },
+    {
+      "id": "cmp-0499",
+      "shape": "舟",
+      "color": "#951E13",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 498,
+          "group": 428
+        }
+      ]
+    },
+    {
+      "id": "cmp-0500",
+      "shape": "州",
+      "color": "#2975CE",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 499,
+          "group": 429
+        }
+      ]
+    },
+    {
+      "id": "cmp-0501",
+      "shape": "朱",
+      "color": "#5C9C2E",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 500,
+          "group": 430
+        }
+      ]
+    },
+    {
+      "id": "cmp-0502",
+      "shape": "竹",
+      "color": "#226640",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 501,
+          "group": 431
+        }
+      ]
+    },
+    {
+      "id": "cmp-0503",
+      "shape": "𥫗",
+      "color": "#6F73BE",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 502,
+          "group": 431
+        }
+      ]
+    },
+    {
+      "id": "cmp-0504",
+      "shape": "主",
+      "color": "#43855D",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 503,
+          "group": 432
+        }
+      ]
+    },
+    {
+      "id": "cmp-0505",
+      "shape": "专",
+      "color": "#7A70DA",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 504,
+          "group": 433
+        }
+      ]
+    },
+    {
+      "id": "cmp-0506",
+      "shape": "𠂤",
+      "color": "#397D71",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 505,
+          "group": 434
+        }
+      ]
+    },
+    {
+      "id": "cmp-0507",
+      "shape": "㠯",
+      "color": "#99734D",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 506,
+          "group": 434
+        }
+      ]
+    },
+    {
+      "id": "cmp-0508",
+      "shape": "リ",
+      "color": "#A708B2",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 507,
+          "group": 434
+        }
+      ]
+    },
+    {
+      "id": "cmp-0509",
+      "shape": "隹",
+      "color": "#787946",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 508,
+          "group": 435
+        }
+      ]
+    },
+    {
+      "id": "cmp-0510",
+      "shape": "豖",
+      "color": "#B59008",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 509,
+          "group": 436
+        }
+      ]
+    },
+    {
+      "id": "cmp-0511",
+      "shape": "𠂔",
+      "color": "#CE8383",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 511,
+          "group": 438
+        }
+      ]
+    },
+    {
+      "id": "cmp-0512",
+      "shape": "自",
+      "color": "#427693",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 512,
+          "group": 439
+        }
+      ]
+    },
+    {
+      "id": "cmp-0513",
+      "shape": "𠂇",
+      "color": "#DB6BC6",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "gf0014-transcribed",
+      "gf0014_rows": [
+        {
+          "ordinal": 514,
+          "group": 441
+        }
+      ]
+    },
+    {
+      "id": "cmp-0514",
+      "shape": "𠄌",
+      "color": "#E85CAC",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "pinned-animcjk-zhhans-first1000-missing-identity",
+      "gf0014_rows": [],
+      "evidence_revision": "3e1253b341cc7be14c3540bb3c045e6163557777"
+    },
+    {
+      "id": "cmp-0515",
+      "shape": "朩",
+      "color": "#ACA20C",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "pinned-animcjk-zhhans-first1000-missing-identity",
+      "gf0014_rows": [],
+      "evidence_revision": "3e1253b341cc7be14c3540bb3c045e6163557777"
+    },
+    {
+      "id": "cmp-0516",
+      "shape": "匸",
+      "color": "#3EB60C",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "pinned-animcjk-zhhans-first1000-missing-identity",
+      "gf0014_rows": [],
+      "evidence_revision": "3e1253b341cc7be14c3540bb3c045e6163557777"
+    },
+    {
+      "id": "cmp-0517",
+      "shape": "㐅",
+      "color": "#20ACDE",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "pinned-animcjk-zhhans-first1000-missing-identity",
+      "gf0014_rows": [],
+      "evidence_revision": "3e1253b341cc7be14c3540bb3c045e6163557777"
+    },
+    {
+      "id": "cmp-0518",
+      "shape": "㇉",
+      "color": "#F20CF2",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "pinned-animcjk-zhhans-first1000-missing-identity",
+      "gf0014_rows": [],
+      "evidence_revision": "3e1253b341cc7be14c3540bb3c045e6163557777"
+    },
+    {
+      "id": "cmp-0519",
+      "shape": "𠀉",
+      "color": "#28D088",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "pinned-animcjk-zhhans-contextual-whole-subglyph",
+      "gf0014_rows": [],
+      "evidence_revision": "3e1253b341cc7be14c3540bb3c045e6163557777",
+      "qualification": "Source-selected whole component: parent and independent standalone differ in stroke count or inner cut; do not infer individual internal strokes."
+    },
+    {
+      "id": "cmp-0520",
+      "shape": "犮",
+      "color": "#A0B8A0",
+      "mnemonic_group_hint": null,
+      "related_shape_group": null,
+      "source_scope": "pinned-animcjk-zhhans-contextual-whole-subglyph",
+      "gf0014_rows": [],
+      "evidence_revision": "3e1253b341cc7be14c3540bb3c045e6163557777",
+      "qualification": "Source-selected whole component: parent and independent standalone differ in stroke count or inner cut; do not infer individual internal strokes."
+    }
+  ],
+  "comparison_report": "palettes/perceptual-comparison-v0.4.json (preserved historical allocations; all seven extra identities await independent CVD review)"
+}
