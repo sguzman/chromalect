@@ -317,8 +317,8 @@ fn load_matches(path: &Path) -> Result<HashMap<String, Decomposition>, String> {
         let direct=matches_decomposition(&record,&catalog,&shapes);
         let aligned=if direct.is_none() {
             record.get("character").and_then(Value::as_str)
-                .and_then(|ch| catalog_rows.get(ch))
-                .and_then(|entry|strict_catalog_path_reconciliation(&record,entry,&colors)
+                .and_then(|ch|catalog_rows.get(ch)
+                    .and_then(|entry|strict_catalog_path_reconciliation(&record,entry,&colors))
                     .map(|d|(ch.to_owned(),d)))
         } else {None};
         if let Some((ch,decomposition))=direct.or(aligned.map(|(ch,d)| {
