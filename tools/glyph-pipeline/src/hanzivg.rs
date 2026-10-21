@@ -204,7 +204,47 @@ pub(super) fn import(
                     return Err(format!("{ch}: donor witness span out of range"));
                 }
                 let donor_method = string(witness,"geometry_match_method")?;
-                if donor_method != "same_stroke_index_geometry"
+                if donor_method == "contextual_scale_deformation_verified" {
+                    // Exception applies only to two individually measured
+                    // Chinese components compressed by their parent glyph.
+                    // Full source component ownership and original path
+                    // bijection must still pass the ordinary glyph checks.
+                    let (max_mean,max_center,max_size) = match (ch,source_form) {
+                        ("克","古") => (0.090,0.180,0.350),
+                        ("夸","亏") => (0.070,0.100,0.265),
+                        _ => return Err(format!("{ch}: undocumented contextual donor shape change")),
+                    };
+                    if witness.get("indices").is_some() {
+                        return Err(format!("{ch}: contextual donor cannot reorder stroke indexes"));
+                    }
+                    let metrics=get(witness,"contextual_geometry_metrics")?;
+                    let limits=get(witness,"contextual_geometry_limits")?;
+                    for (key,limit) in [
+                        ("mean_error_unbounded",max_mean),
+                        ("maximum_center_displacement",max_center),
+                        ("maximum_relative_size_difference",max_size)
+                    ] {
+                        let score=get(metrics,key)?.as_f64()
+                            .ok_or_else(||format!("{ch}: missing measured contextual geometry {key}"))?;
+                        if !score.is_finite() || !(0.0..=limit).contains(&score) {
+                            return Err(format!("{ch}: contextual donor geometry {key} exceeds individual gate"));
+                        }
+                    }
+                    for (key,expected) in [
+                        ("mean",max_mean),("center",max_center),("size",max_size)
+                    ] {
+                        if get(limits,key)?.as_f64()!=Some(expected) {
+                            return Err(format!("{ch}: contextual donor gate parameters were altered"));
+                        }
+                    }
+                    let rounded_mean=get(metrics,"mean_error_unbounded")?.as_f64()
+                        .ok_or_else(||format!("{ch}: no contextual mean"))?;
+                    let witnessed_mean=get(witness,"mean_geometry_error")?.as_f64()
+                        .ok_or_else(||format!("{ch}: no witnessed mean"))?;
+                    if (rounded_mean-witnessed_mean).abs()>0.00001 {
+                        return Err(format!("{ch}: contextual geometry mean and witness disagree"));
+                    }
+                } else if donor_method != "same_stroke_index_geometry"
                     && donor_method != "unique_donor_stroke_geometry_bijection" {
                     return Err(format!("{ch}: unsupported donor alignment methodology"));
                 }
