@@ -65,7 +65,7 @@ def render_card(card, row, chosen, parts, palette):
     ids = [p["id"] for p in parts]
     colors = [palette[id]["color"] for id in ids]
     card,count = re.subn(
-        r'--parts-gradient:linear-gradient\(90deg,[^;]*\);',
+        r'--parts-gradient:(?:linear-gradient\(90deg,[^;]*\)|#[0-9A-Fa-f]{6});',
         '--parts-gradient:' + gradient(colors) + ';',
         card,count=1)
     if count != 1: fail(f"{ch}: no component gradient")
