@@ -210,16 +210,129 @@ pub(super) fn explain_dictionary_rejection(
     "ambiguous_or_partial_source_stroke_ownership"
 }
 
+fn raw_ids_nodes(chars: &[char], pos: &mut usize, path: &mut Vec<usize>,
+    nodes: &mut HashMap<Vec<usize>,String>) -> Option<()> {
+    if path.len()>8 { return None; }
+    let c=*chars.get(*pos)?;
+    *pos+=1;
+    let arity=match c {
+        '⿰'|'⿱'|'⿴'|'⿵'|'⿶'|'⿷'|'⿸'|'⿹'|'⿺'|'⿻'=>2,
+        '⿲'|'⿳'=>3,
+        _=>0,
+    };
+    if arity==0 {
+        nodes.insert(path.clone(),c.to_string());
+    } else {
+        for i in 0..arity {
+            path.push(i);
+            raw_ids_nodes(chars,pos,path,nodes)?;
+            path.pop();
+        }
+    }
+    Some(())
+}
+
+fn parse_ids_leaves(decomposition:&str)->Option<HashMap<Vec<usize>,String>>{
+    let chars:Vec<char>=decomposition.chars().collect();
+    let mut nodes=HashMap::new();
+    let mut pos=0;
+    raw_ids_nodes(&chars,&mut pos,&mut Vec::new(),&mut nodes)?;
+    (pos==chars.len()).then_some(nodes)
+}
+
+fn strict_catalog_path_reconciliation(
+    source:&Value, selected:&Value,
+    palette:&HashMap<String,(String,String)>
+)->Option<Decomposition>{
+    let source_ids=source.get("decomposition")?.as_str()?;
+    let selected_ids=selected.get("ids_primary")?.as_str()?
+        .split(';').next()?.split('(').next()?.trim();
+    if source_ids.starts_with('⿻') || source_ids.contains('？') {return None;}
+    // The catalog and source must at least agree on the enclosing IDS operator.
+    if source_ids.chars().next()?!=selected_ids.chars().next()? {return None;}
+    let source_leaves=parse_ids_leaves(source_ids)?;
+    let selected_leaves=parse_ids_leaves(selected_ids)?;
+    let instances=selected.get("component_instances")?.as_array()?;
+    if instances.len()<2 {return None;}
+    let mut paths=HashMap::new();
+    let mut forms=Vec::new();
+    let mut ids=Vec::new();
+    let mut colors=Vec::new();
+    for item in instances {
+        let raw=item.get("path")?.as_str()?;
+        let path=raw.split('.').map(|part|part.parse::<usize>().ok())
+            .collect::<Option<Vec<usize>>>()?;
+        let form=item.get("form")?.as_str()?;
+        let id=item.get("id")?.as_str()?;
+        let (registered_form,color)=palette.get(id)?;
+        if registered_form!=form || paths.contains_key(&path) { return None; }
+        // A source leaf can cover an entire catalog subtree, but the subtree's
+        // *named* catalog source component must be exactly the same character.
+        // Refuse to invent identities for unknown or differently labeled leaves.
+        let ancestor=source_leaves.iter().filter(|(key,_)|
+            key.len()<=path.len() && path.starts_with(key.as_slice())
+        ).max_by_key(|(key,_)|key.len())?;
+        if ancestor.0.len()==path.len() {
+            if ancestor.1!=form {return None;}
+        } else if selected_leaves.get(ancestor.0)!=Some(ancestor.1) {
+            return None;
+        }
+        paths.insert(path,forms.len());
+        forms.push(form.to_owned());
+        ids.push(id.to_owned());
+        colors.push(color.clone());
+    }
+    let raw_matches=source.get("matches")?.as_array()?;
+    if raw_matches.is_empty(){return None;}
+    let mut counts=vec![0usize;forms.len()];
+    let mut matches=Vec::with_capacity(raw_matches.len());
+    for item in raw_matches {
+        let path=item.as_array()?.iter().map(|n|usize::try_from(n.as_u64()?).ok())
+            .collect::<Option<Vec<usize>>>()?;
+        // Every source stroke must name an exact catalog leaf. No distribution
+        // by stroke order, location, spatial approximation, or character shape.
+        let index=*paths.get(&path)?;
+        counts[index]+=1;
+        matches.push(index);
+    }
+    if counts.contains(&0){return None;}
+    Some(Decomposition{forms,ids,colors,matches,original:source_ids.to_owned()})
+}
+
 fn load_matches(path: &Path) -> Result<HashMap<String, Decomposition>, String> {
     let catalog = catalog_map()?;
     let shapes = palette_shapes()?;
+    let raw_catalog=load(&root().join("data/catalog/characters-0001-1000.json"))?;
+    let catalog_rows=entries(&raw_catalog,"characters")?.iter()
+        .map(|row|Ok((string(row,"character")?.to_owned(),row)))
+        .collect::<Result<HashMap<_,_>,String>>()?;
+    let palette_data=load(&root().join("palettes/mandarin-component-identity-v0.4.json"))?;
+    let colors=entries(&palette_data,"components")?.iter().map(|item|Ok((
+        string(item,"id")?.to_owned(),
+        (string(item,"shape")?.to_owned(),string(item,"color")?.to_owned())
+    ))).collect::<Result<HashMap<_,_>,String>>()?;
+    let mut recovered=Vec::new();
     let mut known = HashMap::new();
     source_records(path, |record| {
-        if let Some((ch, decomposition)) = matches_decomposition(&record, &catalog, &shapes) {
-            known.insert(ch, decomposition);
+        let direct=matches_decomposition(&record,&catalog,&shapes);
+        let aligned=if direct.is_none() {
+            record.get("character").and_then(Value::as_str)
+                .and_then(|ch| catalog_rows.get(ch))
+                .and_then(|entry|strict_catalog_path_reconciliation(&record,entry,&colors)
+                    .map(|d|(ch.to_owned(),d)))
+        } else {None};
+        if let Some((ch,decomposition))=direct.or(aligned.map(|(ch,d)| {
+            recovered.push(ch.clone());
+            (ch,d)
+        })) {
+            known.insert(ch,decomposition);
         }
         Ok(())
     })?;
+    if !recovered.is_empty() {
+        println!("Reconciled {} exact source ownership maps to finer catalog leaf paths: {}",
+            recovered.len(),recovered.join(", "));
+    }
     Ok(known)
 }
 
@@ -510,6 +623,45 @@ mod tests {
         assert_eq!(glyph.strokes[0].id,unknown::UNKNOWN_ID);
         assert_eq!(glyph.strokes[0].color,unknown::UNKNOWN_FILL);
         assert_eq!(glyph.strokes[3].id,"cmp-0463");
+    }
+
+    #[test]
+    fn bridge_requires_explicit_source_paths_for_every_catalog_component() {
+        let palette=HashMap::from([
+            ("cmp-human".into(),("人".into(),"#111111".into())),
+            ("cmp-one".into(),("一".into(),"#222222".into()))
+        ]);
+        let catalog=serde_json::json!({
+            "ids_primary":"⿱从一",
+            "component_instances":[
+                {"path":"0.0","form":"人","id":"cmp-human"},
+                {"path":"0.1","form":"人","id":"cmp-human"},
+                {"path":"1","form":"一","id":"cmp-one"}
+            ]
+        });
+        // This positive case is only allowed when the source labels *each*
+        // nested path; a flat path [0] is not enough to split 从 into two 人.
+        let complete=serde_json::json!({
+            "decomposition":"⿱从一",
+            "matches":[[0,0],[0,0],[0,1],[0,1],[1]]
+        });
+        assert_eq!(strict_catalog_path_reconciliation(&complete,&catalog,&palette)
+            .unwrap().matches,[0,0,1,1,2]);
+        let flattened=serde_json::json!({
+            "decomposition":"⿱从一",
+            "matches":[[0],[0],[0],[0],[1]]
+        });
+        assert!(strict_catalog_path_reconciliation(&flattened,&catalog,&palette).is_none());
+        let ambiguous=serde_json::json!({
+            "decomposition":"⿱从一",
+            "matches":[[0,0],null,[0,1],[0,1],[1]]
+        });
+        assert!(strict_catalog_path_reconciliation(&ambiguous,&catalog,&palette).is_none());
+        let wrong=serde_json::json!({
+            "decomposition":"⿱比一",
+            "matches":[[0,0],[0,0],[0,1],[0,1],[1]]
+        });
+        assert!(strict_catalog_path_reconciliation(&wrong,&catalog,&palette).is_none());
     }
 
     #[test]
