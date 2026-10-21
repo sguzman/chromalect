@@ -20,7 +20,7 @@ import xml.etree.ElementTree as ET
 
 REV = "55ecef6a881d5120cd261587d668e1b6af843ec2"
 BASE = f"https://raw.githubusercontent.com/Connum/hanzivg/{REV}/hanzi/"
-TOKEN = re.compile(r"[MmLlHhVvCcSsQqTtAaZz]|[-+]?(?:\\d*\\.\\d+|\\d+\\.?)(?:[eE][-+]?\\d+)?")
+TOKEN = re.compile(r"[MmLlHhVvCcSsQqTtAaZz]|[-+]?(?:\d*\.\d+|\d+\.?)(?:[eE][-+]?\d+)?")
 PARAMS = {"M": 2, "L": 2, "H": 1, "V": 1, "C": 6, "S": 4,
           "Q": 4, "T": 2, "A": 7, "Z": 0}
 
@@ -35,8 +35,8 @@ def parse_svg(data):
     # HanziVG's historical files declare kvg through an internal DTD.
     # Remove the DTD instead of resolving external entities, and explicitly
     # declare the conventional namespace when missing.
-    data = re.sub(r"<!DOCTYPE\\s+svg\\b.*?\\]>", "", data, flags=re.S)
-    data = re.sub(r"<!DOCTYPE\\s+svg\\b[^>]*>", "", data, flags=re.S)
+    data = re.sub(r"<!DOCTYPE\s+svg\b.*?\]>", "", data, flags=re.S)
+    data = re.sub(r"<!DOCTYPE\s+svg\b[^>]*>", "", data, flags=re.S)
     if "xmlns:kvg=" not in data:
         data = data.replace("<svg ", '<svg xmlns:kvg="http://kanjivg.tagaini.net" ', 1)
     return ET.fromstring(data)
@@ -286,7 +286,7 @@ def main():
             "accepted_count": len(accepted),
             "rejected_reasons": dict(sorted(rejected.items())),
             "candidates": accepted}
-    Path(args.out).write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\\n", encoding="utf-8")
+    Path(args.out).write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(f"HanziVG group alignment: {len(accepted)}/{len(missing)} new candidates; rejection reasons {dict(rejected)}")
     print("New characters:", "".join(row["character"] for row in accepted))
 
