@@ -101,7 +101,7 @@ jobs:
           import json
           from pathlib import Path
           summary=json.loads(Path("site/glyphs/active-catalog-cuts.json").read_text())
-          assert 10<=summary["count"]<=34
+          assert 10<=summary["count"]<=36
           catalog=json.loads(Path("data/catalog/characters-0001-1000.json").read_text())
           rows={v["character"]:v for v in catalog["characters"]}
           assert all(rows[x["character"]].get(
@@ -121,9 +121,9 @@ jobs:
           count = coverage["source_aligned_catalog_glyphs"]
           assert coverage["catalog_size"] == 1000
           assert count + coverage["unmapped_count"] == 1000
-          assert count >= 970, f"Mandarin coverage regressed to {count}/1000"
+          assert count >= 972, f"Mandarin coverage regressed to {count}/1000"
           assert transfers["count"] >= 55, "Verified secondary Chinese mappings disappeared"
-          assert mapping["glyph_count"] >= 977
+          assert mapping["glyph_count"] >= 979
           accepted = [row for row in mapping["glyphs"]
                       if row["assignment_status"] == "hanzivg_group_alignment_candidate"]
           assert len(accepted) == transfers["count"]
