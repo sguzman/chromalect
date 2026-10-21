@@ -438,6 +438,10 @@ def main():
     print("AnimCJK verified nested donor recoveries:",
           "".join(row["character"] for row in recovered if row["subglyph_witnesses"]))
     print("AnimCJK new characters:", "".join(row["character"] for row in recovered))
+    donors = ["𠤎","卩","丬","刂","礻","彐","才","月","厂","士","朩","亠","土","艮","犬","㐌","𠆢"]
+    for form in donors:
+        if form in rows:
+            print("AnimCJK donor source:", form, repr(rows[form].get("acjk", "")))
     print("AnimCJK rejection summary:", dict(rejected))
     print("AnimCJK rejection stage audit:",
           {"donor_parse":sum(n for key,n in rejected.items() if key.startswith("donor_parse_")),
