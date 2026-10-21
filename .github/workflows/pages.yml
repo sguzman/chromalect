@@ -26,6 +26,7 @@ jobs:
       contents: read
       pages: write
       id-token: write
+      statuses: write
     steps:
       - name: Checkout main
         uses: actions/checkout@v4
@@ -70,6 +71,33 @@ jobs:
             "$RUNNER_TEMP/chromalect-graphics.txt" \
             "$RUNNER_TEMP/hanzivg-candidates.json"
           test -s site/glyphs/hanzivg-transfers.json
+      - name: Publish measured Mandarin glyph coverage as a commit status
+        if: success()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python3 - <<'PY'
+          import json, os, urllib.request
+          from pathlib import Path
+          report = json.loads(Path("site/glyphs/coverage.json").read_text())
+          secondary = json.loads(Path("site/glyphs/hanzivg-transfers.json").read_text())
+          count = report["source_aligned_catalog_glyphs"]
+          remaining = report["unmapped_count"]
+          added = secondary["count"]
+          payload = json.dumps({
+              "state": "success",
+              "context": "chromalect/mandarin-coverage",
+              "description": f"{count}/1000 mapped, {remaining} unresolved, +{added} independently grouped"
+          }).encode()
+          url = f"https://api.github.com/repos/{os.environ['GITHUB_REPOSITORY']}/statuses/{os.environ['GITHUB_SHA']}"
+          request = urllib.request.Request(url, data=payload, method="POST", headers={
+              "Authorization": "Bearer " + os.environ["GH_TOKEN"],
+              "Accept": "application/vnd.github+json",
+              "Content-Type": "application/json"
+          })
+          with urllib.request.urlopen(request, timeout=20) as response:
+              assert response.status == 201
+          PY
       - name: Include machine-readable component palette
         run: |
           mkdir -p site/palettes
