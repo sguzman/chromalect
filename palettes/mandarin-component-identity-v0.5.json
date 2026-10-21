@@ -7,7 +7,7 @@
   "based_on": "mandarin-component-identity@0.4.0",
   "invariant": "The first 513 component IDs, shapes, and sRGB colors are identical to v0.4.0. Additional v0.5 components have distinct stable IDs/colors; no existing identity is merged or recolored.",
   "palette_space": "sRGB",
-  "algorithm": "v0.4 historical allocations preserved exactly; five new colors allocated with deterministic greedy farthest-point separation in OKLab from the unchanged 513-color set; experimental, not independent CVD validation.",
+  "algorithm": "All v0.4 identity colors are retained exactly; five new identity colors use deterministic OKLab greedy farthest-point sampling restricted to middle lightness 0.38-0.70 and perceptible chroma. Candidate spacing is a research heuristic, not verified against the v0.4 CVD optimization.",
   "data_provenance": {
     "gf0014_standard": "GF 0014-2009, Modern Common Chinese Character Components and Component Names",
     "official_summary_url": "https://www.moe.gov.cn/jyb_xwfb/gzdt_gzdt/moe_1485/tnull_45766.html",
@@ -7228,7 +7228,7 @@
     {
       "id": "cmp-0514",
       "shape": "𠄌",
-      "color": "#0C0C0C",
+      "color": "#3808BC",
       "mnemonic_group_hint": null,
       "related_shape_group": null,
       "source_scope": "pinned-animcjk-zhhans-first1000-missing-identity",
@@ -7238,7 +7238,7 @@
     {
       "id": "cmp-0515",
       "shape": "朩",
-      "color": "#ECECEC",
+      "color": "#E008EC",
       "mnemonic_group_hint": null,
       "related_shape_group": null,
       "source_scope": "pinned-animcjk-zhhans-first1000-missing-identity",
@@ -7248,7 +7248,7 @@
     {
       "id": "cmp-0516",
       "shape": "匸",
-      "color": "#CCEC0C",
+      "color": "#74085C",
       "mnemonic_group_hint": null,
       "related_shape_group": null,
       "source_scope": "pinned-animcjk-zhhans-first1000-missing-identity",
@@ -7258,7 +7258,7 @@
     {
       "id": "cmp-0517",
       "shape": "㐅",
-      "color": "#0CECCC",
+      "color": "#0808D4",
       "mnemonic_group_hint": null,
       "related_shape_group": null,
       "source_scope": "pinned-animcjk-zhhans-first1000-missing-identity",
@@ -7268,7 +7268,7 @@
     {
       "id": "cmp-0518",
       "shape": "㇉",
-      "color": "#0C0C6C",
+      "color": "#5008A4",
       "mnemonic_group_hint": null,
       "related_shape_group": null,
       "source_scope": "pinned-animcjk-zhhans-first1000-missing-identity",
