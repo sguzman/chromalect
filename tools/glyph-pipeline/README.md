@@ -1,9 +1,11 @@
 # Component-colored glyph pipeline
 
-This Rust tool validates the source-aligned stroke assignments in
-[`colored-strokes-v0.1.json`](../../data/catalog/colored-strokes-v0.1.json),
-checks exact component identity/color matches against the immutable v0.4 palette,
-and generates a deterministic SVG for each mapped character.
+This Rust tool validates the curated source-aligned stroke assignments in
+[`colored-strokes-v0.1.json`](../../data/catalog/colored-strokes-v0.1.json)
+against the immutable v0.4 palette, and validates the generated first-tranche
+Chinese source-aligned assignments against additive v0.6 (520 distinct IDs).
+All previous v0.4 and v0.5 component identities/colors are preserved.
+It generates deterministic colored SVGs with per-stroke source provenance.
 
 From the repository root:
 
@@ -14,20 +16,24 @@ cargo run --manifest-path tools/glyph-pipeline/Cargo.toml -- build
 ```
 
 `build` creates the curated 12-glyph SVG gallery from the committed dataset.
-The deployment process additionally runs `discover` against pinned Make Me A Hanzi
-sources, generating 865 source-derived candidates in the baseline pinned build. It then augments eligible
-character atlas cards with SVG links, adds paginated browsing and reverse
-component-to-character pages under `site/glyphs/by-component/`, along with a
-machine-readable `site/glyphs/coverage.json` and an unmapped-character browser.
-The initial source-only pass colors 870 of the 1,000 cataloged characters (594 multicomponent and 276 whole-component glyphs). The deployment's second, independent Chinese-group pass adds six defensibly aligned candidates, for **876/1,000** production coverage as of 2026-10-21; 124 still require additional source evidence. Generated
-outputs are assembled in CI and are not committed as manually edited HTML.
+The deployment process additionally runs `discover` against pinned Make Me a Hanzi,
+Chinese HanziVG, and AnimCJK ZhHans sources. The historical source-only baseline
+produces 865 source-derived candidates (870 of the first 1,000 cataloged glyphs
+including the curated specimens). The verified October 21, 2026 production pipeline
+now builds **1,000/1,000 first-tranche component-colored Mandarin glyphs**
+(724 multicomponent, 276 atomic), plus the seven curated non-tranche examples
+(**1,007 source-mapped or curated glyph records**). Generated atlas cards,
+source SVGs, paginated reverse component pages, coverage, geometry review,
+and source-provenance manifests are assembled in CI, not committed as manually
+edited markup. All automated source assignments remain **pending independent
+visual/linguistic review**; complete SVG coverage is not a certification.
 
 ## Independently grouped Chinese-source cross-check
 
 The [HanziVG recovery script](hanzivg_recovery.py) downloads only pinned
 Chinese-verified HanziVG `hanzi/` files for the initial unmapped set and
 compares actual element groups against the catalog's selected component
-instances. Every transfer must preserve the v0.4 component palette and match
+instances. Every transfer must preserve v0.4 identities and use the active v0.6 additive registry while matching
 the same indexed stroke outlines in the pinned Make Me a Hanzi graphics.
 A bounded geometry-bijection matcher rejects ambiguous reordering. Source
 outline paths are **not** replaced with Japanese glyphs or HanziVG centerlines.
@@ -59,7 +65,7 @@ needed to publish the site.
 ## Acceptance criteria for additional glyphs
 
 1. Record source geometry and its attribution, preserving the indexing required to associate each outline with a source component. These indices are **not** a handwriting-order feature.
-2. Map every stroke to an explicit component ID defined in v0.4. All stroke colors
+2. Map every stroke to an explicit component ID defined in the active v0.6 registry (preserving all earlier colors). All stroke colors
    must be the palette color for the owner.
 3. Record the decomposition and parts, distinguishing repeated instances (for
    example, the two `木` forms in `林`).
@@ -87,7 +93,7 @@ The importer consumes the line-delimited JSON `dictionary.txt` and
 First-tranche characters with compatible left-right, top-bottom, nested,
 ternary, or enclosing IDS decompositions are accepted only when **every stroke**
 has an exact terminal-leaf path in the pinned source, and each leaf has a
-unique v0.4 identity present in the catalog. Atomic-recognizer entries may be
+unique active v0.6 identity present in the catalog. Atomic-recognizer entries may be
 colored as one whole component when the component form exactly equals the
 character. Unrecognized shapes, unowned overlapping stroke paths, unknown fragments,
 missing ownership, ambiguous paths, and incomplete outlines are excluded.
@@ -97,9 +103,9 @@ The [hierarchical alignment manifest](../../site/glyphs/hierarchical-derivations
 
 The [glyph mapping manifest](../../site/glyphs/mappings.json) records each active glyph's component identities, colors, SVG path owners, provenance and source revisions as portable machine-readable data. Path indexes represent geometry-to-component correspondence, not handwriting instruction.
 
-The [source alternative comparison gallery](../../site/glyphs/alternatives/index.html) currently contains 8 complete stroke-source decompositions that are documented catalog alternatives but use a different component identity set. These are not promoted into Direct or Marker mode. The [unknown-source gallery](../../site/glyphs/unknown-components/index.html) shows 27 research candidates with confirmed owned strokes colored and every unresolved stroke in neutral gray. Neutral gray is a review fill, **not a 514th component color**. Both galleries are excluded from official renderer coverage.
+The [source alternative comparison gallery](../../site/glyphs/alternatives/index.html) and [unknown-source review gallery](../../site/glyphs/unknown-components/index.html) retain separate historical/source-comparison evidence. Complete first-tranche SVG coverage does not certify every proposed decomposition; review-only glyph fragments remain neutral, never assigned a fabricated palette identity. Only validated, synchronized source-selected cuts participate in the active Direct and Marker modes.
 
-Generated outputs include `site/glyphs/diagnostics.json` with per-character source/canonical disagreements, plus paginated `site/glyphs/review/` sheets comparing native and source-aligned appearances. Simple spatial placement checks and close-pair OKLab distances (below 0.07) are advisory only and do not certify accuracy. The generated [priority contact sheet](../../site/glyphs/review/flagged.html) highlights 16 glyphs under the current source and palette combination; this does not change any v0.4 color assignments.
+Generated outputs include `site/glyphs/diagnostics.json` with per-character source/canonical disagreements, plus paginated `site/glyphs/review/` sheets comparing native and source-aligned appearances. Simple spatial placement checks and close-pair OKLab distances (below 0.07) are advisory only and do not certify accuracy. The generated [priority contact sheet](../../site/glyphs/review/flagged.html) highlights 16 glyphs under the current source and palette combination; this does not change any previously registered color assignments.
 
 The importer uses the source-provided stroke assignment for each path. It does
 not algorithmically infer ownership from stroke coordinates. Source alignment
