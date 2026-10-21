@@ -461,6 +461,10 @@ def candidate(ch, node, owners, svg, graphics, palette, catalog, witnesses=(), v
     refs = graphics.get(ch)
     if not refs or len(refs) != len(source_paths) or len(owners) != len(refs):
         raise Reject("chinese_stroke_count_disagreement")
+    # Keep the original source-index owner vector for independently
+    # comparing nested donor SVGs; the full glyph can later have its own
+    # uniquely corroborated source-to-rendered outline permutation.
+    source_owners = list(owners)
     error = correspondence(source_paths, refs)
     method = "same_stroke_index_geometry"
     if error is None:
@@ -485,10 +489,24 @@ def candidate(ch, node, owners, svg, graphics, palette, catalog, witnesses=(), v
         if len(source) != count:
             raise Reject("donor_svg_count_disagreement")
         donor_error = correspondence(source, source_paths[start:start + count], invert_reference_y=False)
+        donor_method = "same_stroke_index_geometry"
         if donor_error is None or donor_error > 0.095:
-            raise Reject("donor_subglyph_geometry_disagreement")
+            # The counted donor's stroke order may differ from the parent.
+            # Only a *unique* shape assignment, with no simultaneous
+            # whole-glyph reordering, may change component ownership.
+            if method != "same_stroke_index_geometry":
+                raise Reject("donor_subglyph_geometry_disagreement")
+            alternative = reordered_correspondence(
+                source, source_paths[start:start+count],
+                source_owners[start:start+count], invert_reference_y=False)
+            if alternative is None or alternative[0] > 0.095:
+                raise Reject("donor_subglyph_geometry_disagreement")
+            donor_error, donor_owners = alternative
+            owners[start:start+count] = donor_owners
+            donor_method = "unique_donor_stroke_geometry_bijection"
         donor_checks.append({"component":form,"start":start,"count":count,
                              "mean_geometry_error":donor_error,
+                             "geometry_match_method": donor_method,
                              "source_svg":f"svgsZhHans/{ord(form)}.svg"})
     # Catalog/source form substitutions are allowed ONLY after comparing the
     # two independent Mainland Chinese COMPONENT glyphs, not simply because
