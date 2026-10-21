@@ -490,10 +490,8 @@ pub(super) fn run(dictionary: &Path, graphics: &Path) -> Result<(), String> {
                 unknown_glyphs.push(candidate);
             }
         }
-        let mapping = pending.remove(ch).or_else(||hierarchical.remove(ch).map(|d|{
-            hierarchical_used.push(ch.to_owned());
-            d
-        }));
+        let hierarchical_candidate=hierarchical.contains_key(ch);
+        let mapping = pending.remove(ch).or_else(||hierarchical.remove(ch));
         let atomic = if mapping.is_none() { atomics.remove(ch) } else { None };
         if mapping.is_none() && atomic.is_none() { return Ok(()); }
         let paths = match record.get("strokes").and_then(Value::as_array) {
@@ -539,6 +537,7 @@ pub(super) fn run(dictionary: &Path, graphics: &Path) -> Result<(), String> {
             strokes,
             candidate: true,
         });
+        if hierarchical_candidate { hierarchical_used.push(ch.to_owned()); }
         Ok(())
     })?;
     discovered.sort_by_key(|g| g.character.chars().next().unwrap() as u32);
@@ -548,12 +547,26 @@ pub(super) fn run(dictionary: &Path, graphics: &Path) -> Result<(), String> {
     // Hierarchical transfer is a separately documented automated candidate
     // category, not independently certified component ownership.
     hierarchical_used.sort();
+    let recovered_records=hierarchical_used.iter().map(|ch|{
+        let g=all.iter().find(|g|&g.character==ch)
+            .ok_or_else(||format!("hierarchical mapping for {ch} was not published"))?;
+        Ok(serde_json::json!({
+            "character":ch,
+            "decomposition":g.decomposition,
+            "svg":format!("glyphs/{}",file_name(g)),
+            "source_path_count":g.strokes.len(),
+            "component_identity_set":g.parts.iter().map(|(_,id,_)|id.as_str())
+                .collect::<std::collections::BTreeSet<_>>(),
+            "independently_visually_certified":false
+        }))
+    }).collect::<Result<Vec<_>,String>>()?;
     let derived=serde_json::json!({
         "schema":"chromalect.hierarchical-source-transfer.v1",
         "source_revision":SOURCE_REV,
         "status":"source_derived_candidates_pending_visual_review",
         "method":"Exact catalog component paths within pinned subglyph decomposition, matching stroke indices and normalized source outline geometry; no unknown leaf promotion.",
         "characters":hierarchical_used,
+        "records":recovered_records,
         "count":hierarchical_used.len()
     });
     let target=root().join("site/glyphs");
