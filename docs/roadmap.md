@@ -21,10 +21,11 @@ This is a sequence of **evidence gates**, not a promise to build a large applica
 - [x] Compute and document v0.3 with historic protected-40 constraint.
 - [x] Correct that constraint: v0.4 freely reassigns all 513 identities without sacrificing global color separation.
 - [x] Produce a Rust-based source-aligned component-colored compound SVG renderer; validate against pinned stroke-outline records.
-- [x] Expand source-aligned coloring to nested/enclosing structures and single-component atomic glyphs (797 of the first 1,000 characters in the current build).
+- [x] Expand source-aligned coloring to nested/enclosing structures and single-component atomic glyphs (870 of the first 1,000 characters in the current build).
 - [x] Produce machine-readable source rejection diagnostics and side-by-side SVG/native-font review sheets, with non-certifying checks for component placement and perceptually close co-occurring colors.
+- [x] Recover 73 additional mappings through source-owned subglyph decompositions, exact catalog identity and vector-geometry checks; retain source provenance and pending-review status.
 - [x] Publish portable per-glyph source ownership records and isolated review images for 8 documented alternate decompositions and 27 partial unknown-source cases. Keep incomplete cases out of the active renderer.
-- [ ] Independently visually audit all stroke ownership mappings and resolve the 203 remaining unmapped catalog entries.
+- [ ] Independently visually audit all stroke ownership mappings and resolve the 130 remaining unmapped catalog entries.
 - [ ] Compare plain, identity-only, and independently specified semantic-family variants.
 - [ ] Test legibility, distinctions at real glyph sizes, recall, and transfer.
 - [ ] Document failure cases and iterate with **new palette versions**.
