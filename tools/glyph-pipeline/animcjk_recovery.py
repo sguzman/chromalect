@@ -930,8 +930,9 @@ def self_test():
     ]
     # Exact spatial correspondence of 肠 can be restored only by
     # exchanging stroke indexes 5/6, both of which remain owned by 𠃓.
-    assert [0,1,2,3,5,4,6][4:6]==[5,4]
-    assert ["月"]*4+["𠃓"]*3 == [["月"]*4+["𠃓"]*3][0]
+    perm=[0,1,2,3,5,4,6]
+    stroke_owners=["月"]*4+["𠃓"]*3
+    assert perm[4:6]==[5,4] and [stroke_owners[i] for i in perm]==stroke_owners
     # A shared physical stroke has multiple owners; do not color it as one.
     try:
         parse_acjk("臼.⿱𠀉:3彐:2𠀉:彐:1", "臼")
