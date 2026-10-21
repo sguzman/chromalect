@@ -131,7 +131,13 @@ def parse_flat_acjk(source, character):
 def parse_acjk(source, character):
     if not isinstance(source, str) or len(source) < 3 or source[0] != character:
         raise Reject("missing_or_wrong_acjk_root")
-    parser = Parser(source[1:])
+    # AnimCJK often prefixes a standalone radical's decomposition with a
+    # period (e.g. 厂.⿱一1丿1). The dot marks radical membership; it is
+    # NOT a stroke and must be consumed before parsing the component tree.
+    body = source[len(character):]
+    if body.startswith(".") and len(body) > 1 and body[1] in OPS:
+        body = body[1:]
+    parser = Parser(body)
     try:
         node = parser.term()
         if parser.i == len(parser.source):
@@ -319,6 +325,11 @@ def self_test():
     for ch, source, forms, expected in cases:
         node = parse_acjk(source, ch)
         assert count_ownership(node, [{"form": f} for f in forms]) == expected
+    prefixed = parse_acjk("厂.⿱一1丿1", "厂")
+    assert prefixed["count"] == 2
+    assert count_ownership(prefixed, [{"form":"一"},{"form":"丿"}]) == ["一","丿"]
+    prefixed = parse_acjk("卩.⿰𠃌1丨1", "卩")
+    assert count_ownership(prefixed, [{"form":"𠃌"},{"form":"丨"}]) == ["𠃌","丨"]
     donor_test = {"乞": {"acjk": "乞⿱𠂉2乙1"}}
     nested = parse_acjk("吃⿰口3乞3", "吃")
     owners, witnesses, variants = count_ownership(nested,
