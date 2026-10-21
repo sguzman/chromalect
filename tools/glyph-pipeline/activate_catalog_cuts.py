@@ -112,9 +112,17 @@ def promote(candidates, catalog, palette, pages):
         if ch in active or ch not in catalog_rows or entry["ownership_provider"] != "animcjk_zhhans":
             fail(f"{ch}: unsupported or duplicate source cut")
         row = catalog_rows[ch]
-        chosen = entry.get("source_selected_catalog_alternative")
-        if not chosen or chosen not in original_alternatives(row["ids_primary"]):
+        alt = entry.get("source_selected_catalog_alternative")
+        unparsed = entry.get("source_selected_catalog_cut")
+        if bool(alt) == bool(unparsed):
+            fail(f"{ch}: missing or ambiguous source selection method")
+        chosen = alt or unparsed
+        if alt and chosen not in original_alternatives(row["ids_primary"]):
             fail(f"{ch}: source cut not declared in catalog")
+        if unparsed and (row.get("structural_status")!="nonstandard_ids_not_parsed"
+            or (ch,chosen) not in {("包","⿹勹巳"),("岛","⿱鸟山")}
+            or row.get("component_instances")):
+            fail(f"{ch}: source reinterpretation is not a pinned incomplete-catalog case")
         cut = leaves(chosen)
         parts = []
         for form,path in cut:
@@ -144,7 +152,10 @@ def promote(candidates, catalog, palette, pages):
         row["source_original_ids_primary"]=original
         row["source_original_component_instances"]=row["component_instances"]
         row["source_original_component_ids"]=row["component_ids"]
-        row["source_selected_catalog_alternative"]=chosen
+        if alt:
+            row["source_selected_catalog_alternative"]=chosen
+        else:
+            row["source_selected_catalog_cut"]=chosen
         row["ids_primary"]=chosen + "(AnimCJK source-aligned);" + original
         row["component_instances"]=parts
         row["component_ids"]=list(dict.fromkeys(p["id"] for p in parts))
@@ -158,6 +169,7 @@ def promote(candidates, catalog, palette, pages):
         row["annotation_note"]="Pinned AnimCJK simplified-Chinese source-selected alternate; original catalog cut retained as source_original_*; independent visual review pending."
         row["glyph_coloring_status"]="source_aligned_candidate_pending_visual_review"
         changes.append({"character":ch,"rank":rank,"active_cut":chosen,
+                        "selection_method":"documented_alternative" if alt else "unparsed_source_reinterpretation",
                         "original_primary":original.split(";")[0],"component_ids":row["component_ids"]})
         candidates["candidates"].append(entry)
         active.add(ch)
@@ -198,8 +210,8 @@ def main():
     palette=json.loads(Path(args.palette).read_text())
     page_files={str(p):p.read_text() for p in Path("site/characters").glob("[0-9]*-[0-9]*.html")}
     changes=promote(candidates,catalog,palette,page_files)
-    if len(changes)!=8 or set(item["character"] for item in changes)!=set("妇延廷有灰灵肖那"):
-        fail("pinned source change set is not the eight previously reviewed cuts")
+    if len(changes)!=10 or set(item["character"] for item in changes)!=set("妇延廷有灰灵肖那包岛"):
+        fail("pinned source change set is not the ten independently sourced cuts")
     for path,html in page_files.items():
         Path(path).write_text(html)
     Path(args.catalog).write_text(json.dumps(catalog,ensure_ascii=False,indent=2)+"\n")
