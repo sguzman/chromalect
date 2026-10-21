@@ -5,6 +5,7 @@ use std::collections::{HashMap, HashSet};
 const SCHEMA: &str = "chromalect.hanzivg-source-transfer.v1";
 const REVISION: &str = "55ecef6a881d5120cd261587d668e1b6af843ec2";
 const KANJIVG_REVISION: &str = "70a0b7ae0c18ceb5cb358274b029cce0234a43bc";
+const ANIMCJK_REVISION: &str = "3e1253b341cc7be14c3540bb3c045e6163557777";
 
 /// Only accept independently grouped Chinese HanziVG ownership when the
 /// importer has matched EVERY indexed path to the pinned Make Me a Hanzi
@@ -19,6 +20,7 @@ pub(super) fn import(
     if string(&source, "schema")? != SCHEMA
         || string(&source, "ownership_revision")? != REVISION
         || string(&source, "comparative_ownership_revision")? != KANJIVG_REVISION
+        || string(&source, "animcjk_revision")? != ANIMCJK_REVISION
         || string(&source, "status")? != "automated_candidates_pending_independent_review"
     {
         return Err("HanziVG transfer provenance or schema not pinned".into());
@@ -37,6 +39,12 @@ pub(super) fn import(
             (string(item, "shape")?.to_owned(), string(item, "color")?.to_owned())))
     }).collect::<Result<HashMap<_, _>, String>>()?;
     let active: HashSet<&str> = already.iter().map(|g| g.character.as_str()).collect();
+    let animcjk_admitted = accepted.iter().filter(|v|v["ownership_provider"] == "animcjk_zhhans").count();
+    if source.get("animcjk_admitted_count").and_then(Value::as_u64)
+        != Some(animcjk_admitted as u64)
+    {
+        return Err("AnimCJK candidate count differs from provenance".into());
+    }
     let mut accepted_chars = HashSet::new();
     let mut wanted = HashSet::new();
     for row in accepted {
@@ -73,9 +81,15 @@ pub(super) fn import(
         let (source_prefix, pinned_revision) = match provider {
             "hanzivg" => ("hanzi", REVISION),
             "kanjivg_comparison" => ("kanji", KANJIVG_REVISION),
+            "animcjk_zhhans" => ("svgsZhHans", ANIMCJK_REVISION),
             _ => return Err(format!("{ch}: unknown ownership comparison provider"))
         };
-        let svg_name = format!("{source_prefix}/{:05x}.svg", ch.chars().next().unwrap() as u32);
+        let number = if provider == "animcjk_zhhans" {
+            (ch.chars().next().unwrap() as u32).to_string()
+        } else {
+            format!("{:05x}", ch.chars().next().unwrap() as u32)
+        };
+        let svg_name = format!("{source_prefix}/{number}.svg");
         if string(row, "ownership_svg")? != svg_name
             || string(row, "ownership_revision")? != pinned_revision
         {
@@ -84,6 +98,7 @@ pub(super) fn import(
         let ownership_method = string(row, "ownership_method")?;
         if ownership_method != "explicit_source_groups"
             && ownership_method != "single_root_residual_catalog_component"
+            && ownership_method != "explicit_animcjk_component_stroke_counts"
         {
             return Err(format!("{ch}: unknown source component ownership method"));
         }
@@ -96,6 +111,8 @@ pub(super) fn import(
         let max_error = if provider == "kanjivg_comparison"
             || ownership_method == "single_root_residual_catalog_component" {
             0.045
+        } else if provider == "animcjk_zhhans" {
+            0.075
         } else { 0.105 };
         if !error.is_finite() || !(0.0..=max_error).contains(&error) {
             return Err(format!("{ch}: geometric correspondence gate failed"));
@@ -169,6 +186,7 @@ pub(super) fn import(
         "ownership_provider": "HanziVG Chinese-reviewed structure and KanjiVG geometry-gated comparison",
         "ownership_revision": REVISION,
         "comparative_ownership_revision": KANJIVG_REVISION,
+        "animcjk_revision": ANIMCJK_REVISION,
         "geometry_provider": "Make Me a Hanzi pinned outlines",
         "geometry_revision": discover::source_revision(),
         "license": "HanziVG group metadata CC BY-SA 3.0; original Make Me a Hanzi vector geometry keeps its original source license",
@@ -182,6 +200,6 @@ pub(super) fn import(
     fs::write(target.join("hanzivg-transfers.json"),
         format!("{}\n", serde_json::to_string_pretty(&summary).map_err(|e|e.to_string())?))
         .map_err(|e|e.to_string())?;
-    println!("Admitted {} conservatively matched HanziVG Chinese structural candidates.", output.len());
+    println!("Admitted {} conservatively matched secondary structural candidates, including {} AnimCJK ZhHans.", output.len(), animcjk_admitted);
     Ok(output)
 }
