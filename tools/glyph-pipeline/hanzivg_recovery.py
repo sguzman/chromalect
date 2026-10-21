@@ -9,6 +9,7 @@ filled outlines. All accepted transfers remain unreviewed research candidates.
 import argparse
 from collections import Counter, defaultdict
 from concurrent.futures import ThreadPoolExecutor, as_completed
+from itertools import permutations
 import json
 import math
 from pathlib import Path
@@ -133,6 +134,61 @@ def correspondence(source_paths, reference_paths):
     except (ValueError, OverflowError, ZeroDivisionError):
         return None
 
+
+def reordered_correspondence(source_paths, reference_paths, source_owners):
+    """Find a unique geometry-supported ownership vector, not merely any swap.
+
+    Bounded to small characters. Different assignments of paths *within the
+    same component* are equivalent; assignments changing a path owner require
+    a clear score gap over the nearest incompatible alternative.
+    """
+    n = len(source_paths)
+    if n < 2 or n > 8 or len(reference_paths) != n or len(source_owners) != n:
+        return None
+    try:
+        src = [coordinates(p) for p in source_paths]
+        ref = [coordinates(p, invert_y=True) for p in reference_paths]
+        all_src = bounds([p for row in src for p in row])
+        all_ref = bounds([p for row in ref for p in row])
+        sa = [normalize(bounds(row), all_src) for row in src]
+        ra = [normalize(bounds(row), all_ref) for row in ref]
+    except (ValueError, OverflowError, ZeroDivisionError):
+        return None
+    score = []
+    for a in sa:
+        line = []
+        for b in ra:
+            center = math.hypot((a[0] + a[2] - b[0] - b[2]) / 2,
+                                (a[1] + a[3] - b[1] - b[3]) / 2)
+            size = max(abs((a[2] - a[0]) - (b[2] - b[0])),
+                       abs((a[3] - a[1]) - (b[3] - b[1])))
+            line.append(center + 0.2 * size if center <= 0.19 and size <= 0.24
+                        else float("inf"))
+        score.append(line)
+    by_owners = {}
+    for pairing in permutations(range(n)):
+        costs = [score[i][dest] for i, dest in enumerate(pairing)]
+        if not all(math.isfinite(c) for c in costs):
+            continue
+        mean = sum(costs) / n
+        if mean > 0.105:
+            continue
+        owners = [None] * n
+        for i, dest in enumerate(pairing):
+            owners[dest] = source_owners[i]
+        key = tuple(owners)
+        if key not in by_owners or mean < by_owners[key]:
+            by_owners[key] = mean
+    if not by_owners:
+        return None
+    ranked = sorted(by_owners.items(), key=lambda item: item[1])
+    if len(ranked) > 1 and ranked[1][1] - ranked[0][1] < 0.04:
+        return None
+    owners, mean = ranked[0]
+    if owners == tuple(source_owners):
+        return None  # This fallback must not bypass the original indexed gate.
+    return round(mean, 5), list(owners)
+
 def group_owners(svg, character, instances):
     wanted = Counter(str(row["form"]) for row in instances)
     forms = defaultdict(set)
@@ -215,8 +271,13 @@ def make_candidate(character, catalog, colors, graphics, xml):
     if not ref_paths or len(ref_paths) != len(owners):
         return None, "source_stroke_count_mismatch"
     error = correspondence(source_paths, ref_paths)
+    match_method = "same_stroke_index_geometry"
     if error is None:
-        return None, "geometry_not_corresponding"
+        reordered = reordered_correspondence(source_paths, ref_paths, owners)
+        if reordered is None:
+            return None, "geometry_not_corresponding"
+        error, owners = reordered
+        match_method = "unique_stroke_geometry_bijection"
     decomposition = catalog.get("ids_primary", "").split(";")[0].split("(")[0].strip()
     strokes = [{"path": p, "component_id": by_form[f],
                 "color": colors[by_form[f]]["color"]}
@@ -224,7 +285,8 @@ def make_candidate(character, catalog, colors, graphics, xml):
     return ({"character": character, "decomposition": decomposition,
              "parts": parts, "strokes": strokes, "mean_geometry_error": error,
              "stroke_count": len(strokes),
-             "ownership_svg": f"hanzi/{ord(character):05x}.svg"}, None)
+             "ownership_svg": f"hanzi/{ord(character):05x}.svg",
+             "geometry_match_method": match_method}, None)
 
 def self_test():
     path = "M 10,10c5,0,5,10,10,10"
@@ -236,6 +298,11 @@ def self_test():
     sample = sample.replace("<svg>", '<svg xmlns:kvg="http://kanjivg.tagaini.net">')
     got = group_owners(parse_svg(sample), "字", [{"form":"宀"},{"form":"子"}])
     assert got and got[0] == ["宀", "子"]
+    reorder = reordered_correspondence(
+        ["M 0 0 L 10 10", "M 30 20 L 40 30"],
+        ["M 30 -20 L 40 -30", "M 0 0 L 10 -10"],
+        ["left", "right"])
+    assert reorder and reorder[1] == ["right", "left"]
     print("HanziVG structural and geometric self-tests passed")
 
 def main():
