@@ -9,6 +9,7 @@ region-variant substitutions are permitted.
 """
 import argparse
 from collections import Counter
+from functools import lru_cache
 from concurrent.futures import ThreadPoolExecutor, as_completed
 import json
 from pathlib import Path
@@ -77,13 +78,15 @@ def parse_acjk(source, character):
         raise Reject("unparsed_acjk_tail")
     return node
 
-def count_ownership(node, instances):
+def count_ownership(node, instances, donor_rows=None):
     wanted = Counter(row["form"] for row in instances)
     if len(instances) < 2 or any(not isinstance(form, str) or not form for form in wanted):
         raise Reject("catalog_not_compositional")
     used = Counter()
     segments = []
-    def visit(part):
+    witnesses = []
+
+    def visit(part, trail=()):
         form = part["form"]
         if form in wanted:
             if part["count"] < 1:
@@ -92,12 +95,22 @@ def count_ownership(node, instances):
             segments.extend([form] * part["count"])
         elif part["children"]:
             for child in part["children"]:
-                visit(child)
+                visit(child, trail)
+        elif donor_rows and form and form in donor_rows and part["count"] >= 2:
+            if form in trail or len(trail) >= 3:
+                raise Reject("recursive_component_cycle")
+            donor_node = parse_acjk(donor_rows[form].get("acjk", ""), form)
+            if donor_node["count"] != part["count"]:
+                raise Reject("donor_stroke_count_disagreement")
+            start = len(segments)
+            visit(donor_node, trail + (form,))
+            if len(segments) - start != part["count"]:
+                raise Reject("donor_subcomponent_ownership_incomplete")
+            witnesses.append({"form": form, "start": start, "count": part["count"]})
         else:
             raise Reject("component_name_disagreement")
+
     visit(node)
-    # A single split component may have multiple separated runs, but all
-    # runs must be explicitly split and must correspond to only one instance.
     found = Counter()
     for form in wanted:
         ordinary = used[(form, False)]
@@ -109,7 +122,7 @@ def count_ownership(node, instances):
         raise Reject("component_instance_disagreement")
     if len(segments) != node["count"]:
         raise Reject("source_strokes_not_fully_owned")
-    return segments
+    return (segments, witnesses) if donor_rows is not None else segments
 
 def fetch_svg(character):
     url = BASE + f"{ord(character)}.svg"
@@ -146,7 +159,14 @@ def extract_strokes(svg, character):
         raise Reject("missing_or_disordered_svg_paths")
     return [strokes[i] for i in range(1, len(strokes) + 1)]
 
-def candidate(ch, node, owners, svg, graphics, palette, catalog):
+@lru_cache(maxsize=256)
+def donor_strokes(form):
+    _, raw, reason = fetch_svg(form)
+    if reason:
+        raise Reject("donor_chinese_svg_unavailable")
+    return extract_strokes(raw, form)
+
+def candidate(ch, node, owners, svg, graphics, palette, catalog, witnesses=()):
     source_paths = extract_strokes(svg, ch)
     refs = graphics.get(ch)
     if not refs or len(refs) != len(source_paths) or len(owners) != len(refs):
@@ -161,6 +181,25 @@ def candidate(ch, node, owners, svg, graphics, palette, catalog):
         method = "unique_stroke_geometry_bijection"
     if error > 0.075:
         raise Reject("weak_chinese_shape_correspondence")
+    # Donor decompositions apply to a *subglyph*, not an entire glyph.
+    # Compare every donor's original Chinese paths to its exact contiguous
+    # stroke span in the parent before admitting any inferred nested owner.
+    donor_checks = []
+    for witness in witnesses:
+        form = witness["form"]
+        start = witness["start"]
+        count = witness["count"]
+        if count < 2 or start < 0 or start + count > len(source_paths):
+            raise Reject("invalid_donor_span")
+        source = donor_strokes(form)
+        if len(source) != count:
+            raise Reject("donor_svg_count_disagreement")
+        donor_error = correspondence(source, source_paths[start:start + count])
+        if donor_error is None or donor_error > 0.095:
+            raise Reject("donor_subglyph_geometry_disagreement")
+        donor_checks.append({"component":form,"start":start,"count":count,
+                             "mean_geometry_error":donor_error,
+                             "source_svg":f"svgsZhHans/{ord(form)}.svg"})
     selected = catalog[ch]
     instances = selected["component_instances"]
     by_form = {}
@@ -186,8 +225,10 @@ def candidate(ch, node, owners, svg, graphics, palette, catalog):
             "ownership_svg": f"svgsZhHans/{ord(ch)}.svg",
             "ownership_provider": "animcjk_zhhans",
             "ownership_revision": REV,
-            "ownership_method": "explicit_animcjk_component_stroke_counts",
+            "ownership_method": ("animcjk_verified_nested_component_derivation"
+                                 if witnesses else "explicit_animcjk_component_stroke_counts"),
             "geometry_match_method": method,
+            "subglyph_witnesses": donor_checks,
             "source_decomposition": node.get("form") or ch}
 
 def self_test():
@@ -199,6 +240,12 @@ def self_test():
     for ch, source, forms, expected in cases:
         node = parse_acjk(source, ch)
         assert count_ownership(node, [{"form": f} for f in forms]) == expected
+    donor_test = {"乞": {"acjk": "乞⿱𠂉2乙1"}}
+    nested = parse_acjk("吃⿰口3乞3", "吃")
+    owners, witnesses = count_ownership(nested,
+        [{"form":"口"},{"form":"𠂉"},{"form":"乙"}], donor_test)
+    assert owners == ["口"]*3 + ["𠂉"]*2 + ["乙"]
+    assert witnesses == [{"form":"乞","start":3,"count":3}]
     # The ACJK split notation may contain non-tree sharing. It must never
     # be silently decoded as a conventional IDS tree.
     try:
@@ -260,10 +307,10 @@ def main():
             continue
         try:
             node = parse_acjk(rows[ch]["acjk"], ch)
-            owners = count_ownership(node, catalog[ch]["component_instances"])
+            owners, witnesses = count_ownership(node, catalog[ch]["component_instances"], rows)
             if len(owners) != len(graphics.get(ch, [])):
                 raise Reject("source_stroke_count_disagreement")
-            eligible[ch] = (node, owners)
+            eligible[ch] = (node, owners, witnesses)
         except (KeyError, TypeError, Reject) as e:
             reason = str(e) or "missing_source_data"
             rejected[reason] += 1
@@ -275,14 +322,14 @@ def main():
             ch, xml, reason = future.result()
             outcomes[ch] = (xml, reason)
     recovered = []
-    for ch, (node, owners) in sorted(eligible.items()):
+    for ch, (node, owners, witnesses) in sorted(eligible.items()):
         xml, reason = outcomes[ch]
         if reason:
             rejected[reason] += 1
             rejected_ch[ch] = reason
             continue
         try:
-            row = candidate(ch, node, owners, xml, graphics, palette, catalog)
+            row = candidate(ch, node, owners, xml, graphics, palette, catalog, witnesses)
             recovered.append(row)
         except (ET.ParseError, Reject, ValueError) as e:
             reason = str(e) or "invalid_chinese_svg"
@@ -298,6 +345,8 @@ def main():
                                     encoding="utf-8")
     print("AnimCJK eligible source counts:", len(eligible), "of", len(missing)-len(existing))
     print("AnimCJK newly admitted candidates:", len(recovered))
+    print("AnimCJK verified nested donor recoveries:",
+          "".join(row["character"] for row in recovered if row["subglyph_witnesses"]))
     print("AnimCJK new characters:", "".join(row["character"] for row in recovered))
     print("AnimCJK rejection summary:", dict(rejected))
 
