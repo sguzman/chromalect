@@ -81,7 +81,7 @@ fn reconcile(parent:&Value,glyph:&Value,selected:&Value,
     let source=parent.get("decomposition")?.as_str()?;
     let primary=selected.get("ids_primary")?.as_str()?.split(';').next()?
         .split('(').next()?.trim();
-    if source.contains('？')||source.contains('⿻')||source.chars().next()!=primary.chars().next(){return None;}
+    if source.contains('？')||source.chars().next()!=primary.chars().next(){return None;}
     let source_leaves=discover::parse_ids_leaves(source)?;
     let primary_leaves=discover::parse_ids_leaves(primary)?;
     let instances=selected.get("component_instances")?.as_array()?;
@@ -117,7 +117,7 @@ fn reconcile(parent:&Value,glyph:&Value,selected:&Value,
         let inner=dictionaries.get(&form)?;
         let inner_glyph=graphics.get(&form)?;
         let inner_decomp=inner.get("decomposition")?.as_str()?;
-        if inner_decomp.contains('？')||inner_decomp.contains('⿻'){return None;}
+        if inner_decomp.contains('？'){return None;}
         let inner_leaves=discover::parse_ids_leaves(inner_decomp)?;
         let inner_paths=inner.get("matches")?.as_array()?;
         let inner_strokes=inner_glyph.get("strokes")?.as_array()?;
