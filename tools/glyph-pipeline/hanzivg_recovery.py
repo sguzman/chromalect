@@ -268,13 +268,16 @@ def main():
             outcomes.append(future.result())
     accepted = []
     rejected = Counter()
+    rejected_characters = defaultdict(list)
     for ch, xml, reason in sorted(outcomes):
         if reason:
             rejected[reason] += 1
+            rejected_characters[reason].append(ch)
             continue
         candidate, reason = make_candidate(ch, catalog[ch], colors, graphics, xml)
         if candidate is None:
             rejected[reason] += 1
+            rejected_characters[reason].append(ch)
         else:
             accepted.append(candidate)
     data = {"schema": "chromalect.hanzivg-source-transfer.v1",
@@ -285,10 +288,14 @@ def main():
             "requested_missing": len(missing),
             "accepted_count": len(accepted),
             "rejected_reasons": dict(sorted(rejected.items())),
+            "rejected_characters": dict(sorted(rejected_characters.items())),
             "candidates": accepted}
     Path(args.out).write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(f"HanziVG group alignment: {len(accepted)}/{len(missing)} new candidates; rejection reasons {dict(rejected)}")
     print("New characters:", "".join(row["character"] for row in accepted))
+    for reason, chars in sorted(rejected_characters.items()):
+        if reason != "no_chinese_verified_svg":
+            print(f"Rejection {reason} ({len(chars)}):", "".join(chars))
 
 if __name__ == "__main__":
     main()
