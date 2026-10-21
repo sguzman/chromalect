@@ -1111,6 +1111,17 @@ def main():
                      "rendered_paths":len(ref),
                      "whole_glyph_index":correspondence(src,ref),
                      "whole_glyph_metrics":donor_geometry_diagnostics(src,ref)}
+            if ch=="肠" and len(src)==len(ref)==7:
+                def x_footprints(paths, invert_y=False):
+                    paths=[coordinates(path,invert_y=invert_y) for path in paths]
+                    outer=bounds([point for stroke in paths for point in stroke])
+                    return [{"i":i+1,"min_x":round(normalize(bounds(stroke),outer)[0],4),
+                             "center_x":round((normalize(bounds(stroke),outer)[0]+
+                                               normalize(bounds(stroke),outer)[2])/2,4),
+                             "max_x":round(normalize(bounds(stroke),outer)[2],4)}
+                             for i,stroke in enumerate(paths)]
+                payload["chinese_source_x_paths"]=x_footprints(src)
+                payload["pinned_rendered_x_paths"]=x_footprints(ref,True)
             if donor:
                 payload["donor"]=donor
                 payload["donor_acjk"]=rows.get(donor,{}).get("acjk")
