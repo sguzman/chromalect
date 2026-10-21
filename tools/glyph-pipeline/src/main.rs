@@ -1,4 +1,5 @@
 mod discover;
+mod hierarchy;
 mod atlas;
 mod browse;
 mod coverage;
