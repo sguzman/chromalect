@@ -72,10 +72,20 @@ pub(super) fn import(
         if ch.chars().count() != 1 { return Err("HanziVG record not one Unicode character".into()); }
         let selected = catalog_map.get(ch)
             .ok_or_else(||format!("HanziVG candidate {ch} missing from first 1000"))?;
-        let expected = string(selected, "ids_primary")?.split(';').next().unwrap_or("")
+        let catalog_ids = string(selected, "ids_primary")?;
+        let primary = catalog_ids.split(';').next().unwrap_or("")
             .split('(').next().unwrap_or("").trim();
-        if string(row, "decomposition")? != expected {
-            return Err(format!("{ch}: source transfer does not match selected IDS"));
+        let documented_alternative = row.get("source_selected_catalog_alternative")
+            .and_then(Value::as_str);
+        let chosen_decomposition = documented_alternative.unwrap_or(primary);
+        if string(row, "decomposition")? != chosen_decomposition {
+            return Err(format!("{ch}: decomposition does not match selected catalog source cut"));
+        }
+        if let Some(expr) = documented_alternative {
+            if !catalog_ids.split(';').skip(1)
+                .any(|entry| entry.split('(').next().unwrap_or("").trim() == expr) {
+                return Err(format!("{ch}: source cut is not a documented catalog alternative"));
+            }
         }
         let provider = string(row, "ownership_provider")?;
         let (source_prefix, pinned_revision) = match provider {
@@ -236,8 +246,28 @@ pub(super) fn import(
             parts.push((form.to_owned(),id.to_owned(),color.to_owned()));
         }
         let mut selected_parts = Vec::new();
-        for item in entries(selected, "component_instances")? {
-            selected_parts.push((string(item, "form")?.to_owned(),string(item, "id")?.to_owned()));
+        if let Some(expression) = documented_alternative {
+            if provider != "animcjk_zhhans" {
+                return Err(format!("{ch}: catalog alternates require simplified Chinese source verification"));
+            }
+            let shapes = discover::palette_shapes()?;
+            let known: HashSet<String> = colors.keys().cloned().collect();
+            let mut out = Vec::new();
+            let mut cursor = 0usize;
+            let mut path = Vec::new();
+            let chars: Vec<char> = expression.chars().collect();
+            if discover::parse_parts(&chars,&mut cursor,&mut path,&mut out,&known,&shapes).is_none()
+                || cursor != chars.len() || !(2..=8).contains(&out.len())
+            {
+                return Err(format!("{ch}: catalog alternative contains unregistered component shape"));
+            }
+            for (_,form,id,_) in out {
+                selected_parts.push((form,id));
+            }
+        } else {
+            for item in entries(selected, "component_instances")? {
+                selected_parts.push((string(item, "form")?.to_owned(),string(item, "id")?.to_owned()));
+            }
         }
         present.sort();
         selected_parts.sort();
@@ -278,13 +308,14 @@ pub(super) fn import(
             "mean_geometry_error": error, "stroke_count": strokes.len(),
             "geometry_match_method": method,
             "ownership_method": ownership_method,
+            "source_selected_catalog_alternative": documented_alternative,
             "source_variant_witnesses": row.get("source_variant_witnesses"),
             "subglyph_witnesses": row.get("subglyph_witnesses"),
             "form_substitution_witnesses": row.get("form_substitution_witnesses"),
             "review_status": "automated_geometry_and_group_match_pending_independent_review"
         }));
         output.push(Glyph {
-            character: ch.to_owned(), decomposition: expected.to_owned(),
+            character: ch.to_owned(), decomposition: chosen_decomposition.to_owned(),
             parts, strokes, candidate: true,
         });
     }
