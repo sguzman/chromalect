@@ -205,6 +205,31 @@ jobs:
           while IFS= read -r -d '' file; do
             grep -Fq 'theme.js' "$file" || { echo "Missing appearance controls: $file"; exit 1; }
           done < <(find site/glyphs -type f -name '*.html' -print0)
+      - name: Audit site-wide navigation on authored and generated pages
+        run: |
+          node --check site/theme.js
+          node --check site/navigation.js
+          python3 - <<'PY'
+          from pathlib import Path
+          import re
+
+          site = Path("site")
+          nav = (site / "navigation.js").read_text(encoding="utf-8")
+          theme = (site / "theme.js").read_text(encoding="utf-8")
+          assert 'new URL("navigation.js", source.src)' in theme
+          assert "chromalect-global-nav" in nav
+          targets = re.findall(r'\bpath:\s*"([^"]+)"', nav)
+          assert len(targets) >= 20, "Important global navigation destinations missing"
+          missing = [target for target in targets if not target.startswith("https://")
+                     and not (site / target).is_file()]
+          assert not missing, f"Broken navigation destinations: {missing}"
+          html = list(site.rglob("*.html"))
+          assert len(html) > 20
+          no_loader = [str(page) for page in html
+                       if "theme.js" not in page.read_text(encoding="utf-8")]
+          assert not no_loader, f"Pages without the global navigation loader: {no_loader[:15]}"
+          print(f"Navigation audit: {len(targets)} destinations and {len(html)} HTML pages")
+          PY
       - name: Upload static Pages content
         uses: actions/upload-pages-artifact@v4
         with:
