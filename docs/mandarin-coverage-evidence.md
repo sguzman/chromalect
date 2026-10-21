@@ -2,13 +2,15 @@
 
 ## Current source-backed coverage
 
-The baseline pinned-source importer produces **877 component-colored SVGs**, of which **870** belong to the first-1,000 Mandarin character catalog (594 multicomponent and 276 atomic). Independently pinned evidence adds **6** Chinese HanziVG grouped mappings and **49** simplified-Chinese AnimCJK stroke-count mappings, 15 of those 49 with separate Chinese donor-subglyph shape checks. The verified October 21, 2026 pipeline produced **932 SVGs**, including **925/1,000** first-tranche characters (649 multicomponent and 276 atomic), with **75 unresolved**. The 73 most recently recovered catalog glyphs use subglyph decomposition with separately recorded subglyph geometry correspondence checks. They are **automated research candidates awaiting independent visual review**, not certified glyphs.
+**Verified October 21, 2026 milestone:** **1,000/1,000 first-tranche Mandarin glyphs** have machine-auditable component-colored outlines (**724 multicomponent; 276 atomic; 0 unmapped**). GitHub Actions successfully ran **48 Rust tests**, source-alignment verification, the catalog/Marker/Direct identity audit on all 1,000 cards, and the exact coverage gate. The active additive palette is **mandarin-component-identity@0.6.0 (520 IDs)**; the first 518 identities remain byte-for-byte equivalent in form/color to v0.5, including the immutable first 513 v0.4 IDs. [Verified deployment](https://github.com/sguzman/chromalect/actions/runs/39684189864).
+
+The original pinned Make Me a Hanzi source importer alone colors **870/1,000** catalog characters; independently sourced and geometry-corresponded Chinese HanziVG and AnimCJK ZhHans evidence, including documented source-selected catalog cuts and newly versioned component identities, resolves the other **130**. Each automated mapping carries source revisions, component ownership IDs and a review qualification. Source-derived candidate status is **not independent visual or linguistic certification**. The original Chinese glyph outlines remain the published drawing source; Chinese evidence SVGs are not silently substituted.
 
 The generated [coverage JSON](https://sguzman.github.io/chromalect/glyphs/coverage.json), [source diagnostics](https://sguzman.github.io/chromalect/glyphs/diagnostics.json), [hierarchical mapping records](https://sguzman.github.io/chromalect/glyphs/hierarchical-derivations.json) and [review gallery](https://sguzman.github.io/chromalect/glyphs/hierarchical.html) are the machine and visual record of the currently accepted mappings.
 
-## Unresolved records
+## Historical unresolved records and their resolution
 
-Before the secondary source, **130** records were grouped by the pinned-source diagnostic logic as follows. 55 were subsequently recovered through two independently documented sources; consult the generated diagnostics for the up-to-date post-recovery distribution:
+Before the secondary sources were integrated, **130** records were outside the baseline importer. The following is the *historical diagnostic grouping*, retained to explain the research path. **None remain unmapped in the current first-tranche build.**
 
 | Reason | Records | Required resolution |
 | --- | ---: | --- |
@@ -20,7 +22,7 @@ Before the secondary source, **130** records were grouped by the pinned-source d
 
 The earlier 6 HanziVG group candidates are **介、同、场、希、每、走**. HanziVG Chinese-verified source-groups and catalog-selected component identities agree, and their indexed centerline paths are normalized and cross-checked against the unchanged Make Me a Hanzi outlines. The second-pass review recorded 101 missing Chinese-verified HanziVG SVGs, 22 catalog/group disagreements, and one geometric disagreement (右); none was silently promoted. A bounded unique-bijection fallback also rejects 右 without sufficient evidence. The generated [HanziVG provenance manifest](https://sguzman.github.io/chromalect/glyphs/hanzivg-transfers.json) records admitted matches and methodology. Automated acceptance is **not** independent visual certification.
 
-**AnimCJK simplified Chinese**: pinned `dictionaryZhHans.txt` contains per-component stroke-count decomposition; `svgsZhHans/` supplies regional Chinese outline comparison under its separate Arphic Public License. Only catalog-consistent source ownership is transferred onto the original Make Me a Hanzi geometry, requiring same-index or unique geometric correspondence. Source-named subglyphs can be split only with a second independently matched Chinese donor glyph. The 49 current additions are automated candidates, **not independent visual certification**. Overlapping, alternative-cut, unknown, and geometrically conflicting cases retain unresolved status. A regression check prevents coverage falling below the verified 925.
+**AnimCJK simplified Chinese**: pinned `dictionaryZhHans.txt` contains per-component stroke-count decomposition; `svgsZhHans/` supplies regional Chinese outline comparison under its separate Arphic Public License. Only catalog-consistent source ownership is transferred onto the original Make Me a Hanzi geometry, requiring same-index or unique geometric correspondence. Source-named subglyphs can be split only with a second independently matched Chinese donor glyph. The final additions are automated source-supported candidates, **not independent visual certification**. Provenance distinguishes exact source-count cuts, nested donor correspondences, contextual geometric deformations confined to named characters, verified source variants, and one intra-component source-stroke permutation. The strict production CI gate now requires exactly **1,000/1,000** mapped and checks consistency with the active v0.6 palette. Uncertainty remains explicit in independent-review status rather than being misreported as missing SVG coverage.
 
 A complete graphic outline alone does not establish which component owns each stroke. Nor does a component inventory that merely names the parts without associating them with individual vector paths.
 
@@ -32,6 +34,13 @@ A complete graphic outline alone does not establish which component owns each st
 
 **HanziVG / KanjiVG** ([HanziVG](https://github.com/Connum/hanzivg), [KanjiVG format](https://kanjivg.tagaini.net/svg-format.html)): these sources supply SVGs with structural groups around stroke paths. Chinese variant compatibility, the reliability of each grouping, and **CC BY-SA 3.0** attribution/share-alike obligations must be evaluated before any grouped vector artwork is adopted. Japanese glyph variants must not silently replace Mainland simplified Chinese forms. The independently grouped, Chinese-reviewed HanziVG `hanzi/` evidence **has now been integrated only for six validated candidates**; KanjiVG fallback files and HanziVG centerline artwork are not embedded in active renderer output. See [third-party notices](../THIRD_PARTY_NOTICES.md) for separate licensing.
 
+## Final source reconciliation examples
+
+- **印 / 拔:** the pinned source names whole forms `𠀉` and `犮`, whose contextual stroke counts or internal historical cuts do not agree with the original expanded catalog. Active v0.6 assigns each whole form its *own new graphic-component ID* instead of inventing a smaller unverified path split; the original catalog cut remains recorded.
+- **合 / 坐 / 巫 / 邻:** source-declared nested donor stroke spans match the full Chinese glyph outlines; their independently rendered standalone donors undergo strict, specifically measured contextual deformation checks. These remain candidates pending expert review, not generalized shape-equivalence rules.
+- **肠:** the pinned simplified-Chinese source and the original renderer differ only in the order of two right-component strokes. Source indexes 5 and 6 are exchanged **within** the same `𠃓` ownership group, restoring a 0.01036 mean normalized outline-geometry error under the ordinary strict whole-glyph threshold, with no color-identity change.
+
+
 ## Completion requirements
 
 - Every displayed **Direct** component fill must be linked to a recognized palette identity and a defensible set of source-owned outline paths; **Marker**, catalog, and ontology identities must match the chosen cut.
@@ -40,4 +49,4 @@ A complete graphic outline alone does not establish which component owns each st
 - The first-1,000 coverage gate is satisfied only when **1,000 characters have supported component-colored glyph geometry** and the coverage report agrees with the renderer. Automated correspondence is not equivalent to independent shape verification.
 - No new language profile or central registry membership is implied by this work.
 
-This document is a statement of evidence and outstanding requirements, not a claim that all 1,000 glyphs are complete.
+**Coverage milestone achieved:** all 1,000 have reproducible source-aligned colored geometry. **Research qualification remains:** these are automatically reviewed source correspondences, not a claim that independent expert visual/linguistic review or a learning-effectiveness study has been completed.
