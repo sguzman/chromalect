@@ -110,9 +110,17 @@ pub(super) fn import(
             return Err(format!("{ch}: decomposition does not match selected catalog source cut"));
         }
         if let Some(expr) = documented_alternative {
-            if !catalog_ids.split(';').skip(1)
-                .any(|entry| entry.split('(').next().unwrap_or("").trim() == expr) {
-                return Err(format!("{ch}: source cut is not a documented catalog alternative"));
+            // During generated-site publication, the vetted cut is activated
+            // as the catalog's effective primary. Its original source entry
+            // must still prove it was an explicitly documented alternative.
+            let original = selected.get("source_original_ids_primary")
+                .and_then(Value::as_str).unwrap_or(catalog_ids);
+            if !original.split(';').skip(1)
+                .any(|entry| entry.split('(').next().unwrap_or("").trim() == expr)
+                || expr != primary
+                || selected.get("source_selected_catalog_alternative")
+                    .and_then(Value::as_str) != Some(expr) {
+                return Err(format!("{ch}: source cut is not a synchronized, documented catalog alternative"));
             }
         }
         let provider = string(row, "ownership_provider")?;
