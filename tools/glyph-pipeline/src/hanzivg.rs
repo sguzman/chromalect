@@ -100,6 +100,7 @@ pub(super) fn import(
             && ownership_method != "single_root_residual_catalog_component"
             && ownership_method != "explicit_animcjk_component_stroke_counts"
             && ownership_method != "animcjk_verified_nested_component_derivation"
+            && ownership_method != "animcjk_source_variant_alignment"
         {
             return Err(format!("{ch}: unknown source component ownership method"));
         }
@@ -125,6 +126,35 @@ pub(super) fn import(
                 {
                     return Err(format!("{ch}: donor witness geometry gate failed"));
                 }
+            }
+        }
+        // A single attested source-only form may correspond to the catalog's
+        // already-chosen 人 identity. Never merge two distinct v0.4 identities.
+        let source_variants = entries(row, "source_variant_witnesses")?;
+        if ownership_method == "animcjk_source_variant_alignment" && source_variants.is_empty() {
+            return Err(format!("{ch}: variant method without evidence"));
+        }
+        for variant in source_variants {
+            if provider != "animcjk_zhhans" || string(variant, "source_form")? != "𠆢"
+                || string(variant, "selected_form")? != "人"
+                || string(variant, "evidence")?
+                    != "https://ctext.org/dictionary.pl?char=%E4%BA%BA&if=en"
+                || get(variant,"count")?.as_u64() != Some(2)
+            {
+                return Err(format!("{ch}: unsupported source form identity correspondence"));
+            }
+            let start = get(variant, "start")?.as_u64()
+                .ok_or_else(||format!("{ch}: malformed variant span"))? as usize;
+            if start.checked_add(2).is_none_or(|end| end > row["stroke_count"].as_u64().unwrap_or(0) as usize) {
+                return Err(format!("{ch}: variant span outside glyph"));
+            }
+            if colors.values().any(|(shape,_)|shape=="𠆢") {
+                return Err(format!("{ch}: source-only form is independently registered in v0.4"));
+            }
+            if !entries(row,"strokes")?.iter().skip(start).take(2).all(|path|
+                path.get("component_id").and_then(Value::as_str) == Some("cmp-0012")
+            ) {
+                return Err(format!("{ch}: source variant not assigned to selected 人 identity"));
             }
         }
         let method = string(row, "geometry_match_method")?;
