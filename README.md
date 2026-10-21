@@ -61,6 +61,10 @@ The [first-1,000 Mandarin search interface](site/search.html) uses a [generated 
 
 The [static GitHub Pages prototype](site/index.html) uses independent **off/direct/marker** settings for component identity, orthographic Pinyin initial/final, and tone; semantics are unavailable until source-backed meaning data exists. Direct component mode uses source-aligned colored stroke geometry where available and a cell-level fallback elsewhere. See the [layer architecture](docs/web-layer-architecture.md), [machine-readable layer schema](site/layers-v0.1.json), and [one-time Pages setup](site/README.md). Publication requires GitHub Pages to be enabled for Actions in repository settings.
 
+## Semantic symbol composition experiment
+
+The [semantic symbol lab](site/semantic-lab.html) explores optional **one-icon, two/three-icon, and gloss-only** displays for selected senses, including cases where pictograms are intentionally rejected. The [experiment design](docs/semantic-pictogram-pilot.md) keeps character uses and word senses distinct. All examples in the lab are illustrative rather than sourced dictionary annotations. **Production semantics remain disabled** until sense provenance and independent symbol review exist; this experiment does not change the completed Mandarin glyphs, component identity colors, or sound layers.
+
 ## Radical, component, and character catalogs
 
 The [human-readable catalog](CATALOG.md) distinguishes **modern radicals (201 principal + explicitly listed variants)**, **214 traditional Kangxi radicals**, **513 original v0.4 component color identities** (extended additively to **520** in v0.6), and **characters 0001–1000** in ten 100-character pages. Their [machine-readable JSON and inverse indexes](CATALOG.md) preserve the original analyses; a generated, source-aligned catalog now has complete first-tranche SVG coverage. Third-party data attribution is recorded in [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
