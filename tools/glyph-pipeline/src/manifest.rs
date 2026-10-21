@@ -127,7 +127,11 @@ pub(super) fn generate(glyphs: &[Glyph], directory: &Path) -> Result<(), String>
                 "provider": provider,
                 "revision": revision,
                 "source_svg_for_comparison": path,
-                "license": "CC BY-SA 3.0 (component-group metadata)",
+                "license": if provider == "animcjk_zhhans" {
+                    "LGPL-3.0-or-later (AnimCJK dictionary); Arphic Public License (SVG reference)"
+                } else {
+                    "CC BY-SA 3.0 (HanziVG/KanjiVG component-group metadata)"
+                },
                 "rendered_outline_provider": "Make Me a Hanzi (Chinese)",
                 "review_status": "pending_independent_visual_and_linguistic_review"
             });
