@@ -4,7 +4,7 @@ use std::collections::HashMap;
 fn check_component_atlas() -> Result<(), String> {
     let root = root();
     let catalog = load(&root.join("data/catalog/characters-0001-1000.json"))?;
-    let palette = load(&root.join("palettes/mandarin-component-identity-v0.4.json"))?;
+    let palette = load(&root.join("palettes/mandarin-component-identity-v0.5.json"))?;
     let mut color_by_id: HashMap<String,(String,String)> = HashMap::new();
     for component in entries(&palette,"components")? {
         let id = string(component,"id")?.to_owned();
@@ -55,7 +55,7 @@ fn check_component_atlas() -> Result<(), String> {
             let (canonical_form,color) = color_by_id.get(id)
                 .ok_or_else(||format!("{character}: unknown palette ID {id}"))?;
             if canonical_form != form {
-                return Err(format!("{character}: {id} form differs from canonical v0.4"));
+                return Err(format!("{character}: {id} form differs from canonical v0.5"));
             }
             let marker = format!("style=\"--color:{color}\" title=\"{form}: {id}\"");
             *required.entry(marker).or_default() += 1;
@@ -84,7 +84,7 @@ fn check_component_atlas() -> Result<(), String> {
             }
         }
     }
-    println!("Component-color audit: all 1000 atlas cards preserve v0.4 colors for source instances, markers, stripes, and inspector chips.");
+    println!("Component-color audit: all 1000 atlas cards preserve v0.5 colors for source instances, markers, stripes, and inspector chips.");
     Ok(())
 }
 
