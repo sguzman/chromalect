@@ -132,6 +132,17 @@ def parse_flat_acjk(source, character):
 # labels. Each explicitly counted source path remains unique, but the inner
 # tags cannot be read as ordinary binary IDS children. Retaining the named
 # enclosing unit is safe only at this already-published component cut.
+# A pinned source names ⿻一十 while the selected catalog names that
+# complete three-stroke component 𰀁. Require standalone donor geometry.
+NAMED_DONOR_CONTRACTIONS = {
+    "奉": {
+        "acjk": "奉⿱𡗗⿻二2大.3⿻一1十2",
+        "standalone_acjk": "𰀁⿻一.1十2",
+        "top": ("𡗗", 5),
+        "bottom": ("𰀁", 3),
+    }
+}
+
 COUNTED_CHINESE_CONTRACTIONS = {
     "㐌": ("㐌⿱𠂉2也⿻乜:𠃌1丨1乜:乚.1",
            [("𠂉",2),("也",3)]),
@@ -140,6 +151,15 @@ COUNTED_CHINESE_CONTRACTIONS = {
 }
 
 def contracted_source(source, character):
+    named = NAMED_DONOR_CONTRACTIONS.get(character)
+    if named is not None and source == named["acjk"]:
+        top_name,top_count = named["top"]
+        bottom_name,bottom_count = named["bottom"]
+        return {"form":None,"count":top_count+bottom_count,"split":False,
+                "children":[
+                    {"form":top_name,"children":[],"count":top_count,"split":False},
+                    {"form":bottom_name,"children":[],"count":bottom_count,
+                     "split":False,"independent_donor_witness":True}]}
     record = COUNTED_CHINESE_CONTRACTIONS.get(character)
     if not record or source != record[0]:
         return None
@@ -183,6 +203,15 @@ def count_ownership(node, instances, donor_rows=None):
         if form in wanted:
             if part["count"] < 1:
                 raise Reject("empty_owner")
+            if part.get("independent_donor_witness"):
+                # This exact Chinese named component must independently exist
+                # in the pinned source, and will be geometry-checked after
+                # parsing rather than accepted by stroke count alone.
+                if not donor_rows or form not in donor_rows:
+                    raise Reject("missing_independent_named_donor")
+                if form != "𰀁" or donor_rows[form].get("acjk") != NAMED_DONOR_CONTRACTIONS["奉"]["standalone_acjk"]:
+                    raise Reject("untrusted_named_donor_decomposition")
+                witnesses.append({"form":form,"start":len(segments),"count":part["count"]})
             used[(form, part["split"])] += 1
             segments.extend([form] * part["count"])
         elif form in SOURCE_ONLY_VARIANTS and SOURCE_ONLY_VARIANTS[form]["selected_form"] in wanted:
@@ -646,6 +675,12 @@ def self_test():
         assert counted and sum(x["count"] for x in counted["children"])==counted["count"]
         assert count_ownership(counted,[{"form":f} for f in items]) == [
             form for form,count in COUNTED_CHINESE_CONTRACTIONS[key][1] for _ in range(count)]
+    named = parse_acjk(NAMED_DONOR_CONTRACTIONS["奉"]["acjk"],"奉")
+    assert named["children"][1]["independent_donor_witness"]
+    direct = count_ownership(named,[{"form":"𡗗"},{"form":"𰀁"}],
+        {"𰀁":{"acjk":NAMED_DONOR_CONTRACTIONS["奉"]["standalone_acjk"]}})
+    assert direct[0] == ["𡗗"]*5+["𰀁"]*3
+    assert direct[1] == [{"form":"𰀁","start":5,"count":3}]
     donor_test = {"乞": {"acjk": "乞⿱𠂉2乙1"}}
     nested = parse_acjk("吃⿰口3乞3", "吃")
     owners, witnesses, variants = count_ownership(nested,
