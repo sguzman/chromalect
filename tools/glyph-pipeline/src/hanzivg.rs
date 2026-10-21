@@ -189,13 +189,13 @@ pub(super) fn import(
         "animcjk_revision": ANIMCJK_REVISION,
         "geometry_provider": "Make Me a Hanzi pinned outlines",
         "geometry_revision": discover::source_revision(),
-        "license": "HanziVG group metadata CC BY-SA 3.0; original Make Me a Hanzi vector geometry keeps its original source license",
+        "license": "HanziVG/KanjiVG grouping CC BY-SA 3.0; AnimCJK Mandarin dictionary LGPL-3.0-or-later and SVG reference Arphic Public License; original Make Me a Hanzi rendered geometry retains the Arphic Public License",
         "count": output.len(),
         "characters": output.iter().map(|g|g.character.as_str()).collect::<Vec<_>>(),
         "records": records,
         "rejected_reasons": source.get("rejected_reasons"),
         "independently_visually_certified": false,
-        "note": "HanziVG Chinese-verified grouping takes priority. A separate KanjiVG comparison is permitted only where catalog component groups match and the original Chinese Make Me a Hanzi outline geometry passes a stronger bound. No Japanese stroke artwork is rendered. All imported grouping data retain CC BY-SA attribution and are awaiting independent visual review."
+        "note": "Chinese-verified HanziVG groupings, geometry-gated KanjiVG comparisons, and independent AnimCJK simplified-Chinese component stroke counts have separate source and licensing records. Only Chinese Make Me a Hanzi geometry is rendered. All automated candidates await independent visual review."
     });
     fs::write(target.join("hanzivg-transfers.json"),
         format!("{}\n", serde_json::to_string_pretty(&summary).map_err(|e|e.to_string())?))
