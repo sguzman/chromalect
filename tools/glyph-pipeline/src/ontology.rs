@@ -102,7 +102,7 @@ fn verify_bindings(vocab: &Value) -> Result<(),String> {
 fn verify_example(graph: &Value) -> Result<(),String> {
     let nodes = graph_nodes(graph)?;
     let catalog = load(&root().join("data/catalog/characters-0001-1000.json"))?;
-    let palette = load(&root().join("palettes/mandarin-component-identity-v0.4.json"))?;
+    let palette = load(&root().join("palettes/mandarin-component-identity-v0.5.json"))?;
     let phonetics = load(&root().join("site/pronunciation-citations-0001-1000.json"))?;
     let ch = entries(&catalog,"characters")?.iter().find(|r|
         r.get("character").and_then(Value::as_str)==Some("好")
