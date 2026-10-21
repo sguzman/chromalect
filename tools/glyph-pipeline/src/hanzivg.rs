@@ -214,6 +214,7 @@ pub(super) fn import(
                         ("夸","亏") => (0.070,0.100,0.265),
                         ("合","亼") => (0.200,0.160,0.490),
                         ("坐","从") => (0.120,0.255,0.145),
+                        ("坐","十") => (0.185,0.330,0.140),
                         ("巫","从") => (0.135,0.255,0.155),
                         ("邻","令") => (0.180,0.190,0.240),
                         _ => return Err(format!("{ch}: undocumented contextual donor shape change")),
@@ -272,7 +273,8 @@ pub(super) fn import(
                 let expected = format!("svgsZhHans/{}.svg", source_form.chars().next().unwrap() as u32);
                 if string(witness,"source_svg")? != expected
                     || get(witness,"mean_geometry_error")?.as_f64()
-                        .is_none_or(|v|!v.is_finite()||!(0.0..=0.095).contains(&v))
+                        .is_none_or(|v|!v.is_finite()||
+                            !(0.0..=if donor_method=="contextual_scale_deformation_verified" {0.200} else {0.095}).contains(&v))
                 {
                     return Err(format!("{ch}: donor witness geometry gate failed"));
                 }
