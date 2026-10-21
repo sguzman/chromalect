@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="description" content="Chromalect experimental semantic annotation lab: one, two or three pictograms or clear glosses, without altering Chinese glyph strokes.">
+<title>Semantic symbol lab · Chromalect</title>
+<script src="theme.js"></script>
+<script src="semantic-lab.js" defer></script>
+<link rel="stylesheet" href="style.css">
+<style>
+.semantic-lab-intro{max-width:850px}
+.semantic-notice{border-left:3px solid var(--active-border);background:var(--panel2);border-radius:0 9px 9px 0;padding:12px 16px;margin:16px 0;color:var(--ink)}
+.semantic-test-controls{display:flex;flex-wrap:wrap;gap:7px;margin:16px 0;align-items:center}
+.semantic-test-controls button{border:1px solid var(--border);border-radius:9px;background:var(--panel);color:var(--ink);padding:9px 14px;font:inherit;font-size:13px;font-weight:700;cursor:pointer}
+.semantic-test-controls button[aria-pressed=true]{background:var(--active-bg);border-color:var(--active-border);color:var(--active-ink)}
+.semantic-test-controls button:focus-visible,.semantic-answer-toggle:focus-within{outline:3px solid var(--accent);outline-offset:2px}
+.semantic-answer-toggle{display:inline-flex;align-items:center;gap:7px;padding:8px 2px;font-size:13px;color:var(--ink);cursor:pointer}
+.semantic-test-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(235px,1fr));gap:12px;margin:16px 0 32px}
+.semantic-specimen{display:flex;flex-direction:column;gap:9px;min-height:200px;background:var(--tile-bg);border:1px solid var(--border);border-radius:12px;padding:18px}
+.semantic-kind{font-size:11px;color:var(--sub);text-transform:uppercase;letter-spacing:.08em}
+.semantic-main{display:flex;align-items:flex-start;gap:15px;flex-wrap:wrap}
+.semantic-hanzi{font-size:58px;line-height:1.24;white-space:nowrap;color:var(--ink)}
+.semantic-expression{display:flex;align-items:center;min-height:70px;gap:4px;font-size:27px;flex-wrap:wrap}
+.semantic-expression .semantic-symbol{font-family:"Noto Color Emoji","Apple Color Emoji","Segoe UI Emoji",system-ui,sans-serif}
+.semantic-operator{font-size:16px;color:var(--sub);font-weight:700}
+.semantic-gloss{font-size:15px;font-weight:650;color:var(--ink)}
+.semantic-abstain{font-size:12px;color:var(--sub);font-weight:500;max-width:160px}
+.semantic-answer{font-size:13px;color:var(--sub);margin:0}
+.semantic-answer[hidden]{display:none}
+.semantic-annotation-note{font-size:12px;color:var(--sub);margin:0;line-height:1.5}
+.semantic-info{max-width:850px}
+</style>
+</head>
+<body>
+<header class="wrap"><div class="brand"><div><b>CHROMALECT</b><small>Language, made visible</small></div></div></header>
+<main class="wrap">
+<div class="eyebrow">Experimental design · Mandarin semantic layer</div>
+<h1>Can small pictograms communicate meaning?</h1>
+<p class="intro semantic-lab-intro">This compares a single emoji, a short pictogram combination, a written gloss, and no annotation. It is an <strong>illustrative interface experiment</strong>, not a source-verified dictionary, and it does not change the completed 1,000-character glyph coloring.</p>
+<div class="semantic-notice"><strong>Important:</strong> Chinese characters can have multiple senses, and compound words often mean more than the sum of their characters. These prototypes annotate <em>selected meanings</em>, never the Hanzi strokes or radicals themselves. We do not assume a composition is valid just because its emoji look plausible.</div>
+<h2>Try the different encodings</h2>
+<div class="semantic-test-controls" role="group" aria-label="Semantic annotation display">
+  <button type="button" data-semantic-mode="single" aria-pressed="true">One emoji</button>
+  <button type="button" data-semantic-mode="compound" aria-pressed="false">Two or three</button>
+  <button type="button" data-semantic-mode="gloss" aria-pressed="false">Written gloss</button>
+  <button type="button" data-semantic-mode="plain" aria-pressed="false">Plain Chinese</button>
+</div>
+<label class="semantic-answer-toggle"><input id="semantic-reveal" type="checkbox"> Reveal the intended meanings (for comparison)</label>
+<p class="hint" id="semantic-lab-status" role="status" aria-live="polite">Showing the one-emoji experiment. Meanings are hidden until revealed.</p>
+<div id="semantic-specimens" class="semantic-test-grid" aria-label="Illustrative semantic annotation comparisons"></div>
+<section class="semantic-info">
+<h2>What the first test can tell us</h2>
+<p>A single pictogram may help with concrete senses such as water, fire or mountains. A two- or three-symbol combination might help with actions or associations, but juxtaposition can also create a wrong meaning. Words such as 火车 (train) need their <em>word-level</em> meaning, not a picture of fire followed by a picture of a vehicle.</p>
+<p>There is no demand for 100% emoji coverage. If a composition is ambiguous, the system should show a clear gloss or abstain. A future source-backed dataset will attach meaning annotations to reviewed <strong>senses</strong> and lexical entries, not blindly to every character shape.</p>
+<p><a href="https://github.com/sguzman/chromalect/blob/main/docs/semantic-pictogram-pilot.md">Read the experiment and acceptance plan</a>. All component identity, Pinyin and tone coloring remain separate and unchanged. The production semantic Direct/Marker mode remains unavailable until a sense inventory and accessible symbol annotations have passed independent review.</p>
+</section>
+</main>
+<footer class="wrap"><a href="index.html">Chromalect overview</a> · <a href="ontology.html">Ontology</a> · <a href="search.html">Mandarin character search</a></footer>
+</body>
+</html>
