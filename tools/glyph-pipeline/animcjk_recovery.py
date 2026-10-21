@@ -1075,6 +1075,28 @@ def main():
         except (Reject,ET.ParseError) as error:
             print("AnimCJK independent Chinese form-pair probe:",source_form,
                   selected_form,"unavailable:",str(error))
+    # Research-only diagnostic: report donor count vs source count and
+    # whole-glyph source geometry for the final unresolved group. It changes
+    # neither admission, owner identities, nor the immutable source paths.
+    for ch, donor in [("合","亼"),("坐","从"),("巫","从"),("邻","令"),
+                      ("印","𠀉"),("拔","犮"),("肠","")]:
+        try:
+            src=donor_strokes(ch)
+            ref=graphics.get(ch,[])
+            payload={"glyph":ch,"source_svg_paths":len(src),
+                     "rendered_paths":len(ref),
+                     "whole_glyph_index":correspondence(src,ref),
+                     "whole_glyph_metrics":donor_geometry_diagnostics(src,ref)}
+            if donor:
+                payload["donor"]=donor
+                payload["donor_acjk"]=rows.get(donor,{}).get("acjk")
+                payload["donor_svg_paths"]=len(donor_strokes(donor))
+                payload["donor_source_count"]=parse_acjk(
+                    rows[donor]["acjk"],donor)["count"]
+            print("AnimCJK final-nine source diagnostic:",
+                  json.dumps(payload,ensure_ascii=False,sort_keys=True))
+        except (Reject,KeyError,ValueError) as err:
+            print("AnimCJK final-nine diagnostic unavailable:",ch,str(err))
     print("AnimCJK geometric donor rejection measurements:",
           json.dumps(GEOMETRY_REJECTIONS,ensure_ascii=False,sort_keys=True))
     print("AnimCJK rejection summary:", dict(rejected))
