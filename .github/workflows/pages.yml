@@ -76,6 +76,27 @@ jobs:
             "$RUNNER_TEMP/chromalect-graphics.txt" \
             "$RUNNER_TEMP/hanzivg-candidates.json"
           test -s site/glyphs/hanzivg-transfers.json
+      - name: Enforce first-1000 Mandarin coverage and provenance regression gates
+        run: |
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          base = Path("site/glyphs")
+          coverage = json.loads((base / "coverage.json").read_text())
+          transfers = json.loads((base / "hanzivg-transfers.json").read_text())
+          mapping = json.loads((base / "mappings.json").read_text())
+          count = coverage["source_aligned_catalog_glyphs"]
+          assert coverage["catalog_size"] == 1000
+          assert count + coverage["unmapped_count"] == 1000
+          assert count >= 876, f"Mandarin coverage regressed to {count}/1000"
+          assert transfers["count"] >= 6, "Verified second-source Chinese mappings disappeared"
+          assert mapping["glyph_count"] >= 883
+          accepted = [row for row in mapping["glyphs"]
+                      if row["assignment_status"] == "hanzivg_group_alignment_candidate"]
+          assert len(accepted) == transfers["count"]
+          assert set(transfers["characters"]) == {row["character"] for row in accepted}
+          print(f"Coverage gate: {count}/1000 Mandarin mappings, {coverage['unmapped_count']} unresolved")
+          PY
       - name: Publish measured Mandarin glyph coverage as a commit status
         if: always()
         env:
