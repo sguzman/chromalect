@@ -80,12 +80,40 @@ pub(super) fn generate(glyphs: &[Glyph], directory: &Path) -> Result<(), String>
             ch.as_str().map(str::to_owned).ok_or("invalid provenance character".to_owned())
         }).collect::<Result<std::collections::HashSet<_>,_>>()?
     }else{std::collections::HashSet::new()};
+    let secondary_path=directory.join("hanzivg-transfers.json");
+    let secondary=if secondary_path.exists(){
+        let report=load(&secondary_path)?;
+        if string(&report,"schema")?!="chromalect.hanzivg-admitted-transfers.v1" {
+            return Err("unrecognized HanziVG provenance schema".into());
+        }
+        entries(&report,"characters")?.iter().map(|ch|{
+            ch.as_str().map(str::to_owned).ok_or("invalid HanziVG provenance character".to_owned())
+        }).collect::<Result<std::collections::HashSet<_>,_>>()?
+    }else{std::collections::HashSet::new()};
+    if !secondary.is_disjoint(&recovered) {
+        return Err("source and HanziVG recovery provenance overlap".into());
+    }
     let mut marked=0usize;
+    let mut secondary_marked=0usize;
     for row in manifest["glyphs"].as_array_mut().ok_or("manifest glyphs are missing")? {
         let ch=string(row,"character")?.to_owned();
         let recovery=recovered.contains(&ch);
         if recovery {marked+=1;}
-        row["alignment_method"]=serde_json::Value::String(if recovery {
+        let chinese_svg=secondary.contains(&ch);
+        if chinese_svg {
+            secondary_marked+=1;
+            row["assignment_status"]=serde_json::json!("hanzivg_group_alignment_candidate");
+            row["ownership_provenance"]=serde_json::json!({
+                "provider":"HanziVG Chinese-reviewed hanzi",
+                "revision":"55ecef6a881d5120cd261587d668e1b6af843ec2",
+                "license":"CC BY-SA 3.0 (component-group metadata)",
+                "outline_provider":"Make Me a Hanzi",
+                "review_status":"pending_independent_visual_and_linguistic_review"
+            });
+        }
+        row["alignment_method"]=serde_json::Value::String(if chinese_svg {
+            "hanzivg_group_and_indexed_geometry_correspondence"
+        }else if recovery {
             "source_subglyph_geometry_correspondence"
         }else if row["assignment_status"]=="curated_source_aligned_pilot"{
             "curated_direct_source_ownership"
@@ -96,9 +124,13 @@ pub(super) fn generate(glyphs: &[Glyph], directory: &Path) -> Result<(), String>
     if marked!=recovered.len(){
         return Err("hierarchical provenance references missing output glyphs".into());
     }
+    if secondary_marked!=secondary.len() {
+        return Err("HanziVG provenance references missing output glyphs".into());
+    }
     manifest["hierarchical_source_transfer_count"]=serde_json::json!(marked);
+    manifest["hanzivg_source_transfer_count"]=serde_json::json!(secondary_marked);
     manifest["validation_scope"]=serde_json::json!(
-        "Direct source decomposition or source-subglyph geometry correspondence with catalog identity checks; automated research candidates require independent visual and linguistic review."
+        "Direct source decomposition, subglyph geometry correspondence, or separately credited HanziVG Chinese SVG group alignment against pinned outlines; all automated candidates require independent visual and linguistic review."
     );
     let formatted = serde_json::to_string_pretty(&manifest).map_err(|e| e.to_string())?;
     fs::write(directory.join("mappings.json"), format!("{formatted}\n"))
