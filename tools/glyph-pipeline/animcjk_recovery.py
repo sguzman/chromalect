@@ -207,6 +207,51 @@ def count_ownership(node, instances, donor_rows=None):
         raise Reject("source_strokes_not_fully_owned")
     return (segments, witnesses, variants) if donor_rows is not None else segments
 
+def one_form_substitution(node, instances):
+    """Propose one provenance-tagged source/selected-form reconciliation.
+
+    This merely identifies one possible correspondence. The admission step
+    MUST additionally match the two independent ZhHans component SVGs,
+    with identical stroke count and index-wise geometry.
+    """
+    wanted = Counter(x["form"] for x in instances)
+    if len(instances) < 2:
+        raise Reject("noncompositional_catalog")
+    used = Counter()
+    strokes = []
+    foreign = []
+
+    def walk(part):
+        form = part["form"]
+        if form in wanted:
+            used[form] += 1
+            strokes.extend([form] * part["count"])
+        elif part["children"]:
+            for child in part["children"]:
+                walk(child)
+        else:
+            start = len(strokes)
+            strokes.extend([None] * part["count"])
+            foreign.append((form, start, part["count"], part["split"]))
+
+    walk(node)
+    if (len(foreign) != 1 or
+            any(used[form] > count for form, count in wanted.items())):
+        raise Reject("not_unique_single_form_substitution")
+    missing = wanted - used
+    if sum(missing.values()) != 1:
+        raise Reject("not_unique_catalog_form")
+    selected_form = next(iter(missing))
+    source_form, start, count, split = foreign[0]
+    if not source_form or split or count < 1 or start < 0:
+        raise Reject("not_atomic_source_form")
+    strokes[start:start + count] = [selected_form] * count
+    if None in strokes or len(strokes) != node["count"]:
+        raise Reject("incomplete_form_substitution")
+    alias = {"source_form":source_form, "selected_form":selected_form,
+             "start":start, "count":count}
+    return strokes, [], [], [alias]
+
 def fetch_svg(character):
     url = BASE + f"{ord(character)}.svg"
     for attempt in range(2):
@@ -249,7 +294,7 @@ def donor_strokes(form):
         raise Reject("donor_chinese_svg_unavailable")
     return extract_strokes(raw, form)
 
-def candidate(ch, node, owners, svg, graphics, palette, catalog, witnesses=(), variants=()):
+def candidate(ch, node, owners, svg, graphics, palette, catalog, witnesses=(), variants=(), form_substitutions=()):
     source_paths = extract_strokes(svg, ch)
     refs = graphics.get(ch)
     if not refs or len(refs) != len(source_paths) or len(owners) != len(refs):
@@ -283,6 +328,33 @@ def candidate(ch, node, owners, svg, graphics, palette, catalog, witnesses=(), v
         donor_checks.append({"component":form,"start":start,"count":count,
                              "mean_geometry_error":donor_error,
                              "source_svg":f"svgsZhHans/{ord(form)}.svg"})
+    # Catalog/source form substitutions are allowed ONLY after comparing the
+    # two independent Mainland Chinese COMPONENT glyphs, not simply because
+    # there was one catalog component remaining.
+    substitution_checks = []
+    for pair in form_substitutions:
+        source_form = pair["source_form"]
+        target_form = pair["selected_form"]
+        start, count = pair["start"], pair["count"]
+        if len(source_form) != 1 or len(target_form) != 1 or start + count > len(source_paths):
+            raise Reject("invalid_single_form_substitution")
+        source = donor_strokes(source_form)
+        target = donor_strokes(target_form)
+        if len(source) != count or len(target) != count:
+            raise Reject("form_substitution_stroke_count_conflict")
+        score = correspondence(source, target, invert_reference_y=False)
+        if score is None or score > 0.045:
+            raise Reject("form_substitution_shape_not_equivalent")
+        # Compare the proposed source form against the actual OWNED span of
+        # this character too, not only against a standalone component image.
+        parent_score = correspondence(source, source_paths[start:start+count],
+                                       invert_reference_y=False)
+        if parent_score is None or parent_score > 0.095:
+            raise Reject("form_substitution_parent_shape_conflict")
+        substitution_checks.append({**pair, "component_geometry_error": score,
+            "parent_geometry_error": parent_score,
+            "source_svg":f"svgsZhHans/{ord(source_form)}.svg",
+            "selected_svg":f"svgsZhHans/{ord(target_form)}.svg"})
     selected = catalog[ch]
     instances = selected["component_instances"]
     by_form = {}
@@ -309,11 +381,13 @@ def candidate(ch, node, owners, svg, graphics, palette, catalog, witnesses=(), v
             "ownership_provider": "animcjk_zhhans",
             "ownership_revision": REV,
             "ownership_method": ("animcjk_verified_nested_component_derivation"
-                                 if witnesses else "animcjk_source_variant_alignment"
+                                 if witnesses else "animcjk_geometrically_verified_form_substitution"
+                                 if form_substitutions else "animcjk_source_variant_alignment"
                                  if variants else "explicit_animcjk_component_stroke_counts"),
             "geometry_match_method": method,
             "subglyph_witnesses": donor_checks,
             "source_variant_witnesses": list(variants),
+            "form_substitution_witnesses": substitution_checks,
             "source_decomposition": node.get("form") or ch}
 
 def self_test():
@@ -340,6 +414,17 @@ def self_test():
     got = count_ownership(case, [{"form":"亻"},{"form":"人"},{"form":"丿"},{"form":"丨"}], {"none":{}})
     assert got[0] == ["亻"]*2 + ["人"]*2 + ["丿","丨"]
     assert len(got[2]) == 1 and got[2][0]["source_form"] == "𠆢"
+    substitution = one_form_substitution(parse_acjk("妇⿰女3彐3", "妇"),
+        [{"form":"女"},{"form":"𫜹"}])
+    assert substitution[0] == ["女"]*3 + ["𫜹"]*3
+    assert substitution[3] == [{"source_form":"彐","selected_form":"𫜹",
+                                "start":3,"count":3}]
+    try:
+        one_form_substitution(parse_acjk("关⿱丷2天4", "关"),
+            [{"form":"䒑"},{"form":"大"}])
+        raise AssertionError("multiple substitutions passed")
+    except Reject:
+        pass
     # Split components with uniquely named paths can be counted directly.
     flat = parse_acjk("那⿰⿻刀:1二2刀:1阝.2", "那")
     assert flat["flat_source"]
@@ -406,10 +491,16 @@ def main():
             continue
         try:
             node = parse_acjk(rows[ch]["acjk"], ch)
-            owners, witnesses, variants = count_ownership(node, catalog[ch]["component_instances"], rows)
+            try:
+                owners, witnesses, variants = count_ownership(
+                    node, catalog[ch]["component_instances"], rows)
+                substitutions = []
+            except Reject:
+                owners, witnesses, variants, substitutions = one_form_substitution(
+                    node, catalog[ch]["component_instances"])
             if len(owners) != len(graphics.get(ch, [])):
                 raise Reject("source_stroke_count_disagreement")
-            eligible[ch] = (node, owners, witnesses, variants)
+            eligible[ch] = (node, owners, witnesses, variants, substitutions)
         except (KeyError, TypeError, Reject) as e:
             reason = str(e) or "missing_source_data"
             rejected[reason] += 1
@@ -421,14 +512,14 @@ def main():
             ch, xml, reason = future.result()
             outcomes[ch] = (xml, reason)
     recovered = []
-    for ch, (node, owners, witnesses, variants) in sorted(eligible.items()):
+    for ch, (node, owners, witnesses, variants, substitutions) in sorted(eligible.items()):
         xml, reason = outcomes[ch]
         if reason:
             rejected[reason] += 1
             rejected_ch[ch] = reason
             continue
         try:
-            row = candidate(ch, node, owners, xml, graphics, palette, catalog, witnesses, variants)
+            row = candidate(ch, node, owners, xml, graphics, palette, catalog, witnesses, variants, substitutions)
             recovered.append(row)
         except (ET.ParseError, Reject, ValueError) as e:
             reason = str(e) or "invalid_chinese_svg"
@@ -444,6 +535,8 @@ def main():
                                     encoding="utf-8")
     print("AnimCJK eligible source counts:", len(eligible), "of", len(missing)-len(existing))
     print("AnimCJK newly admitted candidates:", len(recovered))
+    print("AnimCJK verified form substitutions:",
+          "".join(row["character"] for row in recovered if row["form_substitution_witnesses"]))
     print("AnimCJK source-only variant recoveries:",
           "".join(row["character"] for row in recovered if row["source_variant_witnesses"]))
     print("AnimCJK verified nested donor recoveries:",
