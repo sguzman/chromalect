@@ -6,7 +6,7 @@ const PROFILE_ID: &str = "zh-cn-putonghua-simplified";
 const SCHEMA: &str = "chromalect.mandarin-character-profile.v1";
 
 fn canonical_colors() -> Result<HashMap<String,(String,String)>,String> {
-    let data = load(&root().join("palettes/mandarin-component-identity-v0.5.json"))?;
+    let data = load(&root().join("palettes/mandarin-component-identity-v0.6.json"))?;
     let mut map = HashMap::new();
     for row in entries(&data,"components")? {
         let id=string(row,"id")?;
@@ -60,7 +60,7 @@ fn source_records(glyphs: &[Glyph]) -> Result<Value,String> {
                 "ontology_type":"ComponentInstance",
                 "path":path,"component_id":id,"form":form,"color":hex,
                 "identity_type":"GraphicComponent",
-                "identity_palette":"mandarin-component-identity@0.5.0"
+                "identity_palette":"mandarin-component-identity@0.6.0"
             }));
         }
         let selected: HashSet<&str>=entries(entry,"component_ids")?.iter().map(|id|
@@ -129,7 +129,7 @@ fn source_records(glyphs: &[Glyph]) -> Result<Value,String> {
         "ontology_vocabulary":"ontology/ontology-v1.json",
         "ontology_profile":PROFILE_ID,
         "language_scope":"Modern Standard Mandarin; 2013 first-1000 Chinese character tranche",
-        "palette_ref":"mandarin-component-identity@0.5.0",
+        "palette_ref":"mandarin-component-identity@0.6.0",
         "phonetic_palette_ref":"chromalect.presentation-layers.v0@0.1.0",
         "citation_reading_policy":"all listed readings; the first reading controls static atlas colors; no contextual sandhi",
         "geometry_policy":"source-aligned mappings only; unresolved glyphs retain native font and marker/stripe fallback",
