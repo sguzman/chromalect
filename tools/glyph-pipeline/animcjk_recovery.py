@@ -716,7 +716,7 @@ def candidate(ch, node, owners, svg, graphics, palette, catalog, witnesses=(), v
             metrics = donor_geometry_diagnostics(source,embedded)
             limits = CONTEXTUAL_DONOR_COMPRESSION.get((ch,form))
             if (limits is not None
-                and len(source)>=3
+                and (len(source)>=3 or ((ch,form)==("坐","十") and len(source)==2))
                 and all(isinstance(metrics.get(key),float) for key in [
                     "mean_error_unbounded","maximum_center_displacement",
                     "maximum_relative_size_difference"])
