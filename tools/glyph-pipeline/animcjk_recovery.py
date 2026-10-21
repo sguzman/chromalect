@@ -369,6 +369,54 @@ def reviewed_unparsed_source_cut(ch, source_acjk, node, catalog, palette):
                   source_selected_catalog_cut=record["cut"])
     return selected
 
+# Catalog-documented alternative component cuts that might be equivalent
+# to *unregistered* source-only Chinese forms. This is an attempt queue,
+# never permission to equate shapes: candidate() must independently compare
+# pinned ZhHans standalone source/selected SVGs AND the actual glyph spans.
+# Neither source-only form has a separately assigned v0.4 component ID.
+DOCUMENTED_SOURCE_FORM_CUTS = {
+    "杀": {"acjk":"杀⿱㐅2朩.4","catalog_cut":"⿱乂木",
+          "pairs":[("㐅","乂",2),("朩","木",4)]},
+    "杂": {"acjk":"杂⿱九2朩.4","catalog_cut":"⿱九木",
+          "pairs":[("九","九",2),("朩","木",4)]},
+    "条": {"acjk":"条⿱夂3朩.4","catalog_cut":"⿱夂木",
+          "pairs":[("夂","夂",3),("朩","木",4)]},
+}
+
+def documented_source_form_plans(character, acjk, node, catalog, selected_rows, palette):
+    spec = DOCUMENTED_SOURCE_FORM_CUTS.get(character)
+    if not spec or acjk != spec["acjk"]:
+        return []
+    selected = [r for r in selected_rows
+                if r.get("source_selected_catalog_alternative") == spec["catalog_cut"]]
+    if len(selected) != 1 or spec["catalog_cut"] not in catalog["ids_primary"]:
+        raise Reject("not_a_documented_catalog_cut")
+    selected = selected[0]
+    if len(node["children"]) != len(spec["pairs"]):
+        raise Reject("source_form_tree_disagreement")
+    registered = {item["shape"] for item in palette.values()}
+    owners, substitutions = [], []
+    for index, (source_form, target_form, count) in enumerate(spec["pairs"]):
+        child = node["children"][index]
+        if child["form"] != source_form or child["count"] != count or child["split"]:
+            raise Reject("source_form_stroke_count_disagreement")
+        if source_form != target_form and source_form in registered:
+            raise Reject("registered_source_identity_may_not_be_substituted")
+        if not any(item["form"] == target_form for item in selected["component_instances"]):
+            raise Reject("source_selected_component_missing")
+        start = len(owners)
+        owners.extend([target_form] * count)
+        if source_form != target_form:
+            substitutions.append({"source_form":source_form,"selected_form":target_form,
+                                  "start":start,"count":count})
+    if len(substitutions) < 1 or len(owners) != node["count"]:
+        raise Reject("unverified_source_shape_substitution")
+    if Counter(owners) != Counter({
+            item["form"]: owners.count(item["form"])
+            for item in selected["component_instances"]}):
+        raise Reject("source_selected_component_inventory_disagreement")
+    return [(owners, [], [], substitutions, selected)]
+
 def one_form_substitution(node, instances):
     """Propose one provenance-tagged source/selected-form reconciliation.
 
@@ -606,6 +654,22 @@ def self_test():
             "A":{"shape":"女","id":"id-woman"},
             "B":{"shape":"𫜹","id":"id-other"},
             "C":{"shape":"彐","id":"id-pig"}})) == ["⿰女彐"]
+    # Substitution plans may be proposed only for explicitly cataloged
+    # alternatives with source-only (unregistered) component names.
+    test_palette = {
+        "a":{"shape":"九","id":"a"},"b":{"shape":"木","id":"b"},
+        "c":{"shape":"夂","id":"c"},"d":{"shape":"乂","id":"d"}}
+    for char, acjk in [("杀","杀⿱㐅2朩.4"),("杂","杂⿱九2朩.4"),
+                       ("条","条⿱夂3朩.4")]:
+        spec=DOCUMENTED_SOURCE_FORM_CUTS[char]
+        selected={"ids_primary":spec["catalog_cut"],
+                  "source_selected_catalog_alternative":spec["catalog_cut"],
+                  "component_instances":[{"form":f} for f in (
+                      ["乂","木"] if char=="杀" else
+                      ["九","木"] if char=="杂" else ["夂","木"])]}
+        plans=documented_source_form_plans(char,acjk,parse_acjk(acjk,char),
+            {"ids_primary":"original;"+spec["catalog_cut"]},[selected],test_palette)
+        assert len(plans)==1 and plans[0][3][-1]["selected_form"]=="木"
     substitution = one_form_substitution(parse_acjk("妇⿰女3彐3", "妇"),
         [{"form":"女"},{"form":"𫜹"}])
     assert substitution[0] == ["女"]*3 + ["𫜹"]*3
@@ -699,6 +763,15 @@ def main():
                 except Reject as e:
                     if primary_error is None:
                         primary_error = str(e)
+            # A bounded set of already-documented alternatives allows
+            # independently shape-verified source-only component forms.
+            # These plans remain tentative until each geometry witness passes.
+            try:
+                plans.extend(documented_source_form_plans(
+                    ch, rows[ch]["acjk"], node, catalog[ch], selected_rows, palette))
+            except Reject as e:
+                if primary_error is None:
+                    primary_error = str(e)
             # Geometry-based one-to-one replacement is the final, narrow
             # fallback. Fully source-matched documented alternatives take
             # precedence and never redefine the v0.4 color identities.
