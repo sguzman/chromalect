@@ -21,6 +21,8 @@ import xml.etree.ElementTree as ET
 
 REV = "55ecef6a881d5120cd261587d668e1b6af843ec2"
 BASE = f"https://raw.githubusercontent.com/Connum/hanzivg/{REV}/hanzi/"
+KANJIVG_REV = "70a0b7ae0c18ceb5cb358274b029cce0234a43bc"
+KANJIVG_BASE = f"https://raw.githubusercontent.com/KanjiVG/kanjivg/{KANJIVG_REV}/kanji/"
 TOKEN = re.compile(r"[MmLlHhVvCcSsQqTtAaZz]|[-+]?(?:\d*\.\d+|\d+\.?)(?:[eE][-+]?\d+)?")
 PARAMS = {"M": 2, "L": 2, "H": 1, "V": 1, "C": 6, "S": 4,
           "Q": 4, "T": 2, "A": 7, "Z": 0}
@@ -222,25 +224,39 @@ def group_owners(svg, character, instances):
     return owners, source_paths
 
 def download(character):
-    url = BASE + f"{ord(character):05x}.svg"
-    for attempt in range(2):
-        try:
-            with urlopen(url, timeout=14) as response:
-                data = response.read(250000)
-            if len(data) >= 250000:
-                return (character, None, "oversized_xml")
-            return (character, data.decode("utf-8"), None)
-        except HTTPError as error:
-            if error.code == 404:
-                return (character, None, "no_chinese_verified_svg")
-            if error.code not in (429, 500, 502, 503, 504):
-                return (character, None, "source_http_error")
-        except (OSError, URLError, UnicodeDecodeError):
-            pass
-        time.sleep(attempt + 1)
-    return (character, None, "source_unavailable")
+    """Use Chinese-curated grouping first. KanjiVG is comparison only.
 
-def make_candidate(character, catalog, colors, graphics, xml):
+    Japanese source paths are NEVER used as rendered glyphs. The fallback is
+    eligible only when both indexed group ownership and source outline geometry
+    correspond to pinned Mainland Mandarin glyph vectors.
+    """
+    for provider, base, filename in (
+        ("hanzivg", BASE, f"hanzi/{ord(character):05x}.svg"),
+        ("kanjivg_comparison", KANJIVG_BASE, f"kanji/{ord(character):05x}.svg"),
+    ):
+        url = base + f"{ord(character):05x}.svg"
+        missing = False
+        for attempt in range(2):
+            try:
+                with urlopen(url, timeout=14) as response:
+                    data = response.read(250000)
+                if len(data) >= 250000:
+                    return (character, None, None, None, "oversized_xml")
+                return (character, data.decode("utf-8"), provider, filename, None)
+            except HTTPError as error:
+                if error.code == 404:
+                    missing = True
+                    break
+                if error.code not in (429, 500, 502, 503, 504):
+                    return (character, None, None, None, "source_http_error")
+            except (OSError, URLError, UnicodeDecodeError):
+                pass
+            time.sleep(attempt + 1)
+        if not missing:
+            return (character, None, None, None, "source_unavailable")
+    return (character, None, None, None, "no_grouped_svg")
+
+def make_candidate(character, catalog, colors, graphics, xml, provider, filename):
     instances = catalog.get("component_instances", [])
     if not isinstance(instances, list) or len(instances) < 2:
         return None, "noncompositional_catalog"
@@ -263,7 +279,7 @@ def make_candidate(character, catalog, colors, graphics, xml):
     try:
         grouped = group_owners(parse_svg(xml), character, instances)
     except (ET.ParseError, ValueError):
-        return None, "unparseable_chinese_svg"
+        return None, "unparseable_structural_svg"
     if grouped is None:
         return None, "source_group_catalog_mismatch"
     owners, source_paths = grouped
@@ -278,6 +294,10 @@ def make_candidate(character, catalog, colors, graphics, xml):
             return None, "geometry_not_corresponding"
         error, owners = reordered
         match_method = "unique_stroke_geometry_bijection"
+    # A cross-variety source must agree MORE strongly than Chinese-curated SVGs.
+    # This is an independent corroboration gate, not a Japanese glyph import.
+    if provider == "kanjivg_comparison" and error > 0.045:
+        return None, "cross_variant_geometry_insufficient"
     decomposition = catalog.get("ids_primary", "").split(";")[0].split("(")[0].strip()
     strokes = [{"path": p, "component_id": by_form[f],
                 "color": colors[by_form[f]]["color"]}
@@ -285,7 +305,9 @@ def make_candidate(character, catalog, colors, graphics, xml):
     return ({"character": character, "decomposition": decomposition,
              "parts": parts, "strokes": strokes, "mean_geometry_error": error,
              "stroke_count": len(strokes),
-             "ownership_svg": f"hanzi/{ord(character):05x}.svg",
+             "ownership_svg": filename,
+             "ownership_provider": provider,
+             "ownership_revision": REV if provider == "hanzivg" else KANJIVG_REV,
              "geometry_match_method": match_method}, None)
 
 def self_test():
@@ -336,12 +358,12 @@ def main():
     accepted = []
     rejected = Counter()
     rejected_characters = defaultdict(list)
-    for ch, xml, reason in sorted(outcomes):
+    for ch, xml, provider, filename, reason in sorted(outcomes):
         if reason:
             rejected[reason] += 1
             rejected_characters[reason].append(ch)
             continue
-        candidate, reason = make_candidate(ch, catalog[ch], colors, graphics, xml)
+        candidate, reason = make_candidate(ch, catalog[ch], colors, graphics, xml, provider, filename)
         if candidate is None:
             rejected[reason] += 1
             rejected_characters[reason].append(ch)
@@ -350,6 +372,7 @@ def main():
     data = {"schema": "chromalect.hanzivg-source-transfer.v1",
             "ownership_provider": "HanziVG Chinese-reviewed hanzi directory",
             "ownership_revision": REV,
+            "comparative_ownership_revision": KANJIVG_REV,
             "geometry_provider": "Make Me a Hanzi pinned graphics.txt",
             "status": "automated_candidates_pending_independent_review",
             "requested_missing": len(missing),
@@ -358,10 +381,11 @@ def main():
             "rejected_characters": dict(sorted(rejected_characters.items())),
             "candidates": accepted}
     Path(args.out).write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    print(f"HanziVG group alignment: {len(accepted)}/{len(missing)} new candidates; rejection reasons {dict(rejected)}")
+    print(f"Chinese group and geometry alignment: {len(accepted)}/{len(missing)} new candidates; rejection reasons {dict(rejected)}")
+    print("Breakdown by independent comparison source:", dict(Counter(row["ownership_provider"] for row in accepted)))
     print("New characters:", "".join(row["character"] for row in accepted))
     for reason, chars in sorted(rejected_characters.items()):
-        if reason != "no_chinese_verified_svg":
+        if reason != "no_grouped_svg":
             print(f"Rejection {reason} ({len(chars)}):", "".join(chars))
 
 if __name__ == "__main__":
