@@ -290,11 +290,11 @@ UNPARSED_SOURCE_CUTS = {
            "source_children": ["包", "刂"], "status": "partial_components"},
     "抱": {"source_acjk": "抱⿰扌.3包5", "cut": "⿰扌⿹勹巳", "forms": ["扌", "勹", "巳"],
            "source_children": ["扌", "包"], "status": "partial_components"},
-    # The four-stroke 㓁 = 冖 + 儿 cut is separately recorded in
-    # https://en.wiktionary.org/wiki/%E3%93%81 . Admission additionally
-    # requires actual pinned AnimCJK source donor decomposition and SVG match.
-    "罕": {"source_acjk":"罕⿱㓁.4干3", "cut":"⿱⿱冖儿干",
-           "forms":["冖","儿","干"],"source_children":["㓁","干"],
+    # The pinned AnimCJK ZhHans donor record is 㓁.⿵冖2八2.
+    # Other dictionaries record regionally different shapes; this cut uses
+    # the *actual* pinned Chinese component instance and donor geometry.
+    "罕": {"source_acjk":"罕⿱㓁.4干3", "cut":"⿱⿵冖八干",
+           "forms":["冖","八","干"],"source_children":["㓁","干"],
            "status":"partial_components"},
     "礼": {"source_acjk":"礼⿰礻.4乚1", "cut":"⿰礻乚", "forms":["礻","乚"],
            "source_children":["礻","乚"], "status":"resolved_structural_membership"},
