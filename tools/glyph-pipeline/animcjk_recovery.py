@@ -410,6 +410,11 @@ def main():
           "".join(row["character"] for row in recovered if row["subglyph_witnesses"]))
     print("AnimCJK new characters:", "".join(row["character"] for row in recovered))
     print("AnimCJK rejection summary:", dict(rejected))
+    for reason, total in sorted(rejected.items(), key=lambda pair: (-pair[1],pair[0])):
+        cases = [(ch, rows.get(ch, {}).get("acjk", ""))
+                 for ch, why in sorted(rejected_ch.items()) if why == reason]
+        print(f"AnimCJK research queue [{reason}] ({total}):",
+              " ".join(f"{ch}:{source[:90]}" for ch, source in cases[:55]))
 
 if __name__ == "__main__":
     main()
