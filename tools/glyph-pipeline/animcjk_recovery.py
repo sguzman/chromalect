@@ -696,6 +696,20 @@ def candidate(ch, node, owners, svg, graphics, palette, catalog, witnesses=(), v
     source_owners = list(owners)
     error = correspondence(source_paths, refs)
     method = "same_stroke_index_geometry"
+    same_owner_permutation = None
+    if error is None and ch=="肠" and len(source_paths)==len(refs)==7:
+        # The two central strokes of right-hand 𠃓 have opposite source
+        # stroke order. This swaps *only* two source paths with identical
+        # owner identity; source path count and full Chinese geometry remain
+        # independently pinned and checked under the ordinary strict gate.
+        expected_owners=["月"]*4+["𠃓"]*3
+        perm=[0,1,2,3,5,4,6]
+        if owners==expected_owners:
+            matched=correspondence([source_paths[i] for i in perm],refs)
+            if matched is not None and matched<=0.075:
+                error=matched
+                method="verified_same_component_stroke_permutation"
+                same_owner_permutation=perm
     if error is None:
         alternate = reordered_correspondence(source_paths, refs, owners)
         if alternate is None:
@@ -821,6 +835,7 @@ def candidate(ch, node, owners, svg, graphics, palette, catalog, witnesses=(), v
                                  if form_substitutions else "animcjk_source_variant_alignment"
                                  if variants else "explicit_animcjk_component_stroke_counts"),
             "geometry_match_method": method,
+            "source_stroke_permutation": same_owner_permutation,
             "subglyph_witnesses": donor_checks,
             "source_variant_witnesses": list(variants),
             "form_substitution_witnesses": substitution_checks,
@@ -913,6 +928,10 @@ def self_test():
     assert count_ownership(flat, [{"form":"刀"},{"form":"二"},{"form":"阝"}]) == [
         "刀","二","二","刀","阝","阝"
     ]
+    # Exact spatial correspondence of 肠 can be restored only by
+    # exchanging stroke indexes 5/6, both of which remain owned by 𠃓.
+    assert [0,1,2,3,5,4,6][4:6]==[5,4]
+    assert ["月"]*4+["𠃓"]*3 == [["月"]*4+["𠃓"]*3][0]
     # A shared physical stroke has multiple owners; do not color it as one.
     try:
         parse_acjk("臼.⿱𠀉:3彐:2𠀉:彐:1", "臼")
