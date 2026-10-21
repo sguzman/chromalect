@@ -295,6 +295,14 @@ UNPARSED_SOURCE_CUTS = {
            "source_children":["才","土"], "status":"resolved_structural_membership"},
     "即": {"source_acjk":"即⿰艮5卩.2", "cut":"⿰艮卩", "forms":["艮","卩"],
            "source_children":["艮","卩"], "status":"resolved_structural_membership"},
+    "关": {"source_acjk":"关⿱丷.2天4", "cut":"⿱丷天", "forms":["丷","天"],
+           "source_children":["丷","天"], "status":"resolved_structural_membership"},
+    "坚": {"source_acjk":"坚⿱⿲丨1丨1又2土.3", "cut":"⿱⿲丨丨又土",
+           "forms":["丨","丨","又","土"], "source_children":[None,"土"],
+           "status":"resolved_structural_membership"},
+    "尧": {"source_acjk":"尧⿱⿻一1乂2兀.3", "cut":"⿱⿻一乂兀",
+           "forms":["一","乂","兀"],"source_children":[None,"兀"],
+           "status":"resolved_structural_membership"},
 }
 
 def reviewed_unparsed_source_cut(ch, source_acjk, node, catalog, palette):
