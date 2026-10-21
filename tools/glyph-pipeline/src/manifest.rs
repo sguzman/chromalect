@@ -91,6 +91,7 @@ pub(super) fn generate(glyphs: &[Glyph], directory: &Path) -> Result<(), String>
         }).collect::<Result<std::collections::HashSet<_>,_>>()?
     }else{std::collections::HashSet::new()};
     let mut secondary_providers = std::collections::HashMap::new();
+    let mut catalog_alternatives = std::collections::HashMap::new();
     if secondary_path.exists() {
         let report = load(&secondary_path)?;
         for item in entries(&report, "records")? {
@@ -98,6 +99,9 @@ pub(super) fn generate(glyphs: &[Glyph], directory: &Path) -> Result<(), String>
             let provider = string(item, "ownership_provider")?;
             let revision = string(item, "ownership_revision")?;
             let svg = string(item, "ownership_svg")?;
+            if let Some(cut) = item.get("source_selected_catalog_alternative").and_then(Value::as_str) {
+                catalog_alternatives.insert(ch.to_owned(), cut.to_owned());
+            }
             if !secondary.contains(ch) || secondary_providers.insert(
                 ch.to_owned(), (provider.to_owned(), revision.to_owned(), svg.to_owned())
             ).is_some() {
@@ -123,6 +127,9 @@ pub(super) fn generate(glyphs: &[Glyph], directory: &Path) -> Result<(), String>
             row["assignment_status"]=serde_json::json!("hanzivg_group_alignment_candidate");
             let (provider, revision, path) = secondary_providers.get(&ch)
                 .ok_or_else(|| format!("missing source provenance: {ch}"))?;
+            if let Some(cut) = catalog_alternatives.get(&ch) {
+                row["source_selected_catalog_alternative"] = serde_json::json!(cut);
+            }
             row["ownership_provenance"]=serde_json::json!({
                 "provider": provider,
                 "revision": revision,
@@ -139,6 +146,12 @@ pub(super) fn generate(glyphs: &[Glyph], directory: &Path) -> Result<(), String>
         row["alignment_method"]=serde_json::Value::String(if chinese_svg {
             if secondary_providers.get(&ch).is_some_and(|(p,_,_)| p == "kanjivg_comparison") {
                 "cross_variant_structural_comparison_with_chinese_geometry_gate"
+            } else if secondary_providers.get(&ch).is_some_and(|(p,_,_)| p == "animcjk_zhhans") {
+                if catalog_alternatives.contains_key(&ch) {
+                    "animcjk_zhhans_documented_alternative_and_geometry"
+                } else {
+                    "animcjk_zhhans_source_stroke_ownership_and_geometry"
+                }
             } else {
                 "hanzivg_group_and_indexed_geometry_correspondence"
             }
