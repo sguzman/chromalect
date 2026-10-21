@@ -50,7 +50,7 @@ fn build_manifest(glyphs: &[Glyph]) -> Result<Value, String> {
     }
     Ok(json!({
         "schema": "chromalect.component-stroke-mappings.v1",
-        "palette_ref": "mandarin-component-identity@0.4.0",
+        "palette_ref": "mandarin-component-identity@0.5.0",
         "geometry_sources": {
             "curated": {
                 "provider": "Hanzi Writer Data",
