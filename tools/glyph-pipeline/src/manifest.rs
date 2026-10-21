@@ -90,6 +90,24 @@ pub(super) fn generate(glyphs: &[Glyph], directory: &Path) -> Result<(), String>
             ch.as_str().map(str::to_owned).ok_or("invalid HanziVG provenance character".to_owned())
         }).collect::<Result<std::collections::HashSet<_>,_>>()?
     }else{std::collections::HashSet::new()};
+    let mut secondary_providers = std::collections::HashMap::new();
+    if secondary_path.exists() {
+        let report = load(&secondary_path)?;
+        for item in entries(&report, "records")? {
+            let ch = string(item, "character")?;
+            let provider = string(item, "ownership_provider")?;
+            let revision = string(item, "ownership_revision")?;
+            let svg = string(item, "ownership_svg")?;
+            if !secondary.contains(ch) || secondary_providers.insert(
+                ch.to_owned(), (provider.to_owned(), revision.to_owned(), svg.to_owned())
+            ).is_some() {
+                return Err(format!("invalid or duplicate secondary source provenance: {ch}"));
+            }
+        }
+        if secondary_providers.len() != secondary.len() {
+            return Err("secondary source provenance does not enumerate all candidates".into());
+        }
+    }
     if !secondary.is_disjoint(&recovered) {
         return Err("source and HanziVG recovery provenance overlap".into());
     }
@@ -103,16 +121,23 @@ pub(super) fn generate(glyphs: &[Glyph], directory: &Path) -> Result<(), String>
         if chinese_svg {
             secondary_marked+=1;
             row["assignment_status"]=serde_json::json!("hanzivg_group_alignment_candidate");
+            let (provider, revision, path) = secondary_providers.get(&ch)
+                .ok_or_else(|| format!("missing source provenance: {ch}"))?;
             row["ownership_provenance"]=serde_json::json!({
-                "provider":"HanziVG Chinese-reviewed hanzi",
-                "revision":"55ecef6a881d5120cd261587d668e1b6af843ec2",
-                "license":"CC BY-SA 3.0 (component-group metadata)",
-                "outline_provider":"Make Me a Hanzi",
-                "review_status":"pending_independent_visual_and_linguistic_review"
+                "provider": provider,
+                "revision": revision,
+                "source_svg_for_comparison": path,
+                "license": "CC BY-SA 3.0 (component-group metadata)",
+                "rendered_outline_provider": "Make Me a Hanzi (Chinese)",
+                "review_status": "pending_independent_visual_and_linguistic_review"
             });
         }
         row["alignment_method"]=serde_json::Value::String(if chinese_svg {
-            "hanzivg_group_and_indexed_geometry_correspondence"
+            if secondary_providers.get(&ch).is_some_and(|(p,_,_)| p == "kanjivg_comparison") {
+                "cross_variant_structural_comparison_with_chinese_geometry_gate"
+            } else {
+                "hanzivg_group_and_indexed_geometry_correspondence"
+            }
         }else if recovery {
             "source_subglyph_geometry_correspondence"
         }else if row["assignment_status"]=="curated_source_aligned_pilot"{
@@ -130,7 +155,7 @@ pub(super) fn generate(glyphs: &[Glyph], directory: &Path) -> Result<(), String>
     manifest["hierarchical_source_transfer_count"]=serde_json::json!(marked);
     manifest["hanzivg_source_transfer_count"]=serde_json::json!(secondary_marked);
     manifest["validation_scope"]=serde_json::json!(
-        "Direct source decomposition, subglyph geometry correspondence, or separately credited HanziVG Chinese SVG group alignment against pinned outlines; all automated candidates require independent visual and linguistic review."
+        "Direct source decomposition, subglyph geometry correspondence, or independently credited structural group comparisons strictly checked against pinned Chinese vector outlines; all automated candidates require independent visual and linguistic review."
     );
     let formatted = serde_json::to_string_pretty(&manifest).map_err(|e| e.to_string())?;
     fs::write(directory.join("mappings.json"), format!("{formatted}\n"))
