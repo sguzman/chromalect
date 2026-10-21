@@ -148,7 +148,8 @@ pub(super) fn import(
                 |("尧","⿱⿻一乂兀")|("并","⿱丷开")
                 |("区","⿷匸㐅")|("呕","⿰口⿷匸㐅")
                 |("岖","⿰山⿷匸㐅")|("抠","⿰扌⿷匸㐅")
-                |("驱","⿰马⿷匸㐅") => "resolved_structural_membership",
+                |("驱","⿰马⿷匸㐅")|("印","⿰𠀉卩")|("拔","⿰扌犮")
+                    => "resolved_structural_membership",
                 _ => return Err(format!("{ch}: source-only Mandarin cut is not authorized")),
             };
             if string(selected,"structural_status")?!=expected_status
