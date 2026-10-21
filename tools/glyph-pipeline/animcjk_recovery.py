@@ -128,9 +128,32 @@ def parse_flat_acjk(source, character):
             "count": sum(item["count"] for item in segments),
             "split": False, "flat_source": True}
 
+# These exact pinned source records contain nested interleaved component
+# labels. Each explicitly counted source path remains unique, but the inner
+# tags cannot be read as ordinary binary IDS children. Retaining the named
+# enclosing unit is safe only at this already-published component cut.
+COUNTED_CHINESE_CONTRACTIONS = {
+    "㐌": ("㐌⿱𠂉2也⿻乜:𠃌1丨1乜:乚.1",
+           [("𠂉",2),("也",3)]),
+    "并": ("并⿱丷2开⿻干.:2丿1干.:1",
+           [("丷",2),("开",4)]),
+}
+
+def contracted_source(source, character):
+    record = COUNTED_CHINESE_CONTRACTIONS.get(character)
+    if not record or source != record[0]:
+        return None
+    parts=[{"form":form,"children":[],"count":count,"split":False}
+           for form,count in record[1]]
+    return {"form":None,"children":parts,"count":sum(p["count"] for p in parts),
+            "split":False,"contracted_source":True}
+
 def parse_acjk(source, character):
     if not isinstance(source, str) or len(source) < 3 or source[0] != character:
         raise Reject("missing_or_wrong_acjk_root")
+    contracted=contracted_source(source,character)
+    if contracted is not None:
+        return contracted
     # AnimCJK often prefixes a standalone radical's decomposition with a
     # period (e.g. 厂.⿱一1丿1). The dot marks radical membership; it is
     # NOT a stroke and must be consumed before parsing the component tree.
@@ -303,6 +326,9 @@ UNPARSED_SOURCE_CUTS = {
     "尧": {"source_acjk":"尧⿱⿻一1乂2兀.3", "cut":"⿱⿻一乂兀",
            "forms":["一","乂","兀"],"source_children":[None,"兀"],
            "status":"resolved_structural_membership"},
+    "并": {"source_acjk":"并⿱丷2开⿻干.:2丿1干.:1",
+           "cut":"⿱丷开", "forms":["丷","开"],
+           "source_children":["丷","开"],"status":"resolved_structural_membership"},
 }
 
 def reviewed_unparsed_source_cut(ch, source_acjk, node, catalog, palette):
@@ -542,6 +568,11 @@ def self_test():
     assert count_ownership(prefixed, [{"form":"一"},{"form":"丿"}]) == ["一","丿"]
     prefixed = parse_acjk("卩.⿰𠃌1丨1", "卩")
     assert count_ownership(prefixed, [{"form":"𠃌"},{"form":"丨"}]) == ["𠃌","丨"]
+    for key,items in [("㐌",["𠂉","也"]),("并",["丷","开"])]:
+        counted=contracted_source(COUNTED_CHINESE_CONTRACTIONS[key][0],key)
+        assert counted and sum(x["count"] for x in counted["children"])==counted["count"]
+        assert count_ownership(counted,[{"form":f} for f in items]) == [
+            form for form,count in COUNTED_CHINESE_CONTRACTIONS[key][1] for _ in range(count)]
     donor_test = {"乞": {"acjk": "乞⿱𠂉2乙1"}}
     nested = parse_acjk("吃⿰口3乞3", "吃")
     owners, witnesses, variants = count_ownership(nested,
