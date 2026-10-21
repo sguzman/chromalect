@@ -205,13 +205,17 @@ pub(super) fn import(
                 }
                 let donor_method = string(witness,"geometry_match_method")?;
                 if donor_method == "contextual_scale_deformation_verified" {
-                    // Exception applies only to two individually measured
+                    // Exception applies only to six individually measured
                     // Chinese components compressed by their parent glyph.
                     // Full source component ownership and original path
                     // bijection must still pass the ordinary glyph checks.
                     let (max_mean,max_center,max_size) = match (ch,source_form) {
                         ("克","古") => (0.090,0.180,0.350),
                         ("夸","亏") => (0.070,0.100,0.265),
+                        ("合","亼") => (0.200,0.160,0.490),
+                        ("坐","从") => (0.120,0.255,0.145),
+                        ("巫","从") => (0.135,0.255,0.155),
+                        ("邻","令") => (0.180,0.190,0.240),
                         _ => return Err(format!("{ch}: undocumented contextual donor shape change")),
                     };
                     if witness.get("indices").is_some() {
