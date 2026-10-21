@@ -67,7 +67,7 @@ fn selected_palette_components(
     for id in entries(catalog_row,"component_ids")? {
         let id = id.as_str().ok_or("catalog component ID must be a string")?;
         let (form, color) = identities.get(id)
-            .ok_or_else(||format!("catalog component {id} absent from v0.4 palette"))?;
+            .ok_or_else(||format!("catalog component {id} absent from v0.5 palette"))?;
         parts.push(json!({"id":id, "form":form, "hex":color}));
     }
     Ok(parts)
@@ -146,7 +146,7 @@ pub(super) fn generate(dictionary: &Path, glyphs: &[Glyph], dest: &Path) -> Resu
     let known_ids = discover::catalog_map()?;
     let shapes = discover::palette_shapes()?;
     let atomics = discover::atomic_components()?;
-    let palette = load(&root().join("palettes/mandarin-component-identity-v0.4.json"))?;
+    let palette = load(&root().join("palettes/mandarin-component-identity-v0.5.json"))?;
     let identities = entries(&palette,"components")?.iter().map(|component|Ok((
         string(component,"id")?.to_owned(),
         (string(component,"shape")?.to_owned(),string(component,"color")?.to_owned()),
@@ -256,7 +256,7 @@ pub(super) fn generate(dictionary: &Path, glyphs: &[Glyph], dest: &Path) -> Resu
         "mapped_component_set_disagreements": mapped_component_disagreements,
         "reason_counts": summaries,
         "unmapped_by_reason": by_reason,
-        "method": "Conservative classification of the pinned Make Me A Hanzi source, v0.4 palette, existing catalog identities and accepted geometry; no inferred stroke ownership."
+        "method": "Conservative classification of the pinned Make Me A Hanzi source, v0.5 palette, existing catalog identities and accepted geometry; no inferred stroke ownership."
     });
     let json = serde_json::to_string_pretty(&report).map_err(|e| e.to_string())?;
     fs::write(dest.join("diagnostics.json"), format!("{json}\n")).map_err(|e| e.to_string())?;
@@ -311,7 +311,7 @@ mod tests {
     #[test]
     fn diagnostic_swatches_preserve_selected_palette_assignments() {
         let catalog = load(&root().join("data/catalog/characters-0001-1000.json")).unwrap();
-        let palette = load(&root().join("palettes/mandarin-component-identity-v0.4.json")).unwrap();
+        let palette = load(&root().join("palettes/mandarin-component-identity-v0.5.json")).unwrap();
         let map = entries(&palette,"components").unwrap().iter().map(|c|(
             string(c,"id").unwrap().to_owned(),
             (string(c,"shape").unwrap().to_owned(),string(c,"color").unwrap().to_owned())
