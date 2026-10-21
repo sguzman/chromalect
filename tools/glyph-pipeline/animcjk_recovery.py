@@ -940,6 +940,17 @@ def main():
     for form in donors:
         if form in rows:
             print("AnimCJK donor source:", form, repr(rows[form].get("acjk", "")))
+    for source_form,selected_form in [("匸","匚"),("㐅","乂"),
+                                      ("朩","木"),("𠄌","乚")]:
+        try:
+            a,b=donor_strokes(source_form),donor_strokes(selected_form)
+            print("AnimCJK independent Chinese form-pair probe:", source_form,
+                  selected_form, "stroke_counts:",len(a),len(b),
+                  "shape_gate:",correspondence(a,b,invert_reference_y=False),
+                  "metrics:",json.dumps(donor_geometry_diagnostics(a,b),sort_keys=True))
+        except (Reject,ET.ParseError) as error:
+            print("AnimCJK independent Chinese form-pair probe:",source_form,
+                  selected_form,"unavailable:",str(error))
     print("AnimCJK geometric donor rejection measurements:",
           json.dumps(GEOMETRY_REJECTIONS,ensure_ascii=False,sort_keys=True))
     print("AnimCJK rejection summary:", dict(rejected))
