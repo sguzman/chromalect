@@ -89,7 +89,7 @@ function buildPage(route, authored, rootPath = "/chromalect/") {
     "Theme control lost while replacing navigation");
   assert.equal(body.children[0], header, "Navigation must be above the page content");
   const anchors = collect(nav, e => e.tagName === "a");
-  assert.equal(anchors.length, 21, "Expected stable primary and grouped navigation links");
+  assert.equal(anchors.length, 22, "Expected stable primary and grouped navigation links");
   for (const link of anchors) {
     if (!link.href.startsWith("https://github.com")) {
       assert.ok(link.href.startsWith("https://example.test" + rootPath),
@@ -120,4 +120,4 @@ assert.equal(collect(deep.nav, e => e.tagName === "a" &&
   e.className.includes("is-active")).length, 1, "Nested by-component route must highlight Components");
 assert.equal(root.anchors[0].href, "https://example.test/index.html");
 
-console.log("Navigation smoke: same 21 destinations across home, atlas and nested generated pages; search and active state correct.");
+console.log("Navigation smoke: same 22 destinations across home, atlas and nested generated pages; search and active state correct.");
