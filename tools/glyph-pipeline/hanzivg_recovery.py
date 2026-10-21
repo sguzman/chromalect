@@ -196,32 +196,59 @@ def group_owners(svg, character, instances):
     forms = defaultdict(set)
     owners = []
     source_paths = []
+    unassigned = []
     roots = [g for g in svg.iter() if local(g.tag) == "g"
              and element_name(g) == character]
     if len(roots) != 1 or len(instances) < 2:
         return None
-    def walk(node, groups):
+
+    def walk(node, groups, foreign=False):
         label = element_name(node) if local(node.tag) == "g" else None
-        if label in wanted and node is not roots[0]:
-            groups = groups + [(id(node), label)]
+        if node is not roots[0] and label:
+            if label in wanted:
+                groups = groups + [(id(node), label)]
+            elif not groups:
+                foreign = True
         if local(node.tag) == "path":
-            if not groups or not node.get("d"):
-                raise ValueError("stroke without catalog-owned group")
-            group_id, form = groups[-1]
-            forms[form].add(group_id)
-            owners.append(form)
+            if not node.get("d"):
+                raise ValueError("empty stroke")
             source_paths.append(node.attrib["d"])
+            if groups:
+                group_id, form = groups[-1]
+                forms[form].add(group_id)
+                owners.append(form)
+            elif not foreign:
+                owners.append(None)
+                unassigned.append(len(owners) - 1)
+            else:
+                raise ValueError("uncatalogued source component group")
         for child in node:
-            walk(child, groups)
+            walk(child, groups, foreign)
+
     try:
         walk(roots[0], [])
     except ValueError:
         return None
-    if Counter({k: len(v) for k, v in forms.items()}) != wanted:
-        return None
     if len(owners) < 2 or len(source_paths) != len(owners):
         return None
-    return owners, source_paths
+    explicit = Counter({form: len(groups) for form, groups in forms.items()})
+    if not unassigned:
+        if explicit != wanted:
+            return None
+        return owners, source_paths, "explicit_source_groups"
+    # An otherwise complete segmentation may omit a single group enclosing
+    # root-level paths. Treat their complement as one *provisional* component
+    # only if the external Mandarin catalog names exactly one missing INSTANCE.
+    # Nested foreign groups, additional missing instances and ambiguous
+    # repeated components remain unresolved; this is not a shape guess.
+    remaining = wanted - explicit
+    if (sum(remaining.values()) != 1 or any(explicit[k] > wanted[k] for k in explicit)
+            or not unassigned):
+        return None
+    residual = next(iter(remaining))
+    for index in unassigned:
+        owners[index] = residual
+    return owners, source_paths, "single_root_residual_catalog_component"
 
 def download(character):
     """Use Chinese-curated grouping first. KanjiVG is comparison only.
@@ -282,7 +309,7 @@ def make_candidate(character, catalog, colors, graphics, xml, provider, filename
         return None, "unparseable_structural_svg"
     if grouped is None:
         return None, "source_group_catalog_mismatch"
-    owners, source_paths = grouped
+    owners, source_paths, ownership_method = grouped
     ref_paths = graphics.get(character)
     if not ref_paths or len(ref_paths) != len(owners):
         return None, "source_stroke_count_mismatch"
@@ -294,9 +321,10 @@ def make_candidate(character, catalog, colors, graphics, xml, provider, filename
             return None, "geometry_not_corresponding"
         error, owners = reordered
         match_method = "unique_stroke_geometry_bijection"
-    # A cross-variety source must agree MORE strongly than Chinese-curated SVGs.
-    # This is an independent corroboration gate, not a Japanese glyph import.
-    if provider == "kanjivg_comparison" and error > 0.045:
+    # Comparison-only or residual ownership needs stronger shape agreement.
+    # Neither can bypass source component inventory or uniqueness checks.
+    if (provider == "kanjivg_comparison" or
+            ownership_method == "single_root_residual_catalog_component") and error > 0.045:
         return None, "cross_variant_geometry_insufficient"
     decomposition = catalog.get("ids_primary", "").split(";")[0].split("(")[0].strip()
     strokes = [{"path": p, "component_id": by_form[f],
@@ -308,7 +336,8 @@ def make_candidate(character, catalog, colors, graphics, xml, provider, filename
              "ownership_svg": filename,
              "ownership_provider": provider,
              "ownership_revision": REV if provider == "hanzivg" else KANJIVG_REV,
-             "geometry_match_method": match_method}, None)
+             "geometry_match_method": match_method,
+             "ownership_method": ownership_method}, None)
 
 def self_test():
     path = "M 10,10c5,0,5,10,10,10"
@@ -319,7 +348,13 @@ def self_test():
     sample = """<svg><g><g kvg:element="字"><g kvg:element="宀"><path d="M 0 0 L 10 10"/></g><g kvg:element="子"><path d="M 20 20 L 30 30"/></g></g></g></svg>"""
     sample = sample.replace("<svg>", '<svg xmlns:kvg="http://kanjivg.tagaini.net">')
     got = group_owners(parse_svg(sample), "字", [{"form":"宀"},{"form":"子"}])
-    assert got and got[0] == ["宀", "子"]
+    assert got and got[0] == ["宀", "子"] and got[2] == "explicit_source_groups"
+    residual = """<svg xmlns:kvg="http://kanjivg.tagaini.net"><g kvg:element="左"><path d="M 0 0 L 4 4"/><g kvg:element="工"><path d="M 10 10 L 20 20"/></g></g></svg>"""
+    aligned = group_owners(parse_svg(residual), "左", [{"form":"𠂇"},{"form":"工"}])
+    assert aligned and aligned[0] == ["𠂇","工"]
+    assert aligned[2] == "single_root_residual_catalog_component"
+    assert group_owners(parse_svg(residual), "左",
+                        [{"form":"𠂇"},{"form":"工"},{"form":"丶"}]) is None
     reorder = reordered_correspondence(
         ["M 0 0 L 10 10", "M 30 20 L 40 30"],
         ["M 30 -20 L 40 -30", "M 0 0 L 10 -10"],
