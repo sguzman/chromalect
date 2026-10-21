@@ -4,6 +4,7 @@ use std::collections::{HashMap, HashSet};
 
 const SCHEMA: &str = "chromalect.hanzivg-source-transfer.v1";
 const REVISION: &str = "55ecef6a881d5120cd261587d668e1b6af843ec2";
+const KANJIVG_REVISION: &str = "70a0b7ae0c18ceb5cb358274b029cce0234a43bc";
 
 /// Only accept independently grouped Chinese HanziVG ownership when the
 /// importer has matched EVERY indexed path to the pinned Make Me a Hanzi
@@ -17,6 +18,7 @@ pub(super) fn import(
     let source = load(candidates_path)?;
     if string(&source, "schema")? != SCHEMA
         || string(&source, "ownership_revision")? != REVISION
+        || string(&source, "comparative_ownership_revision")? != KANJIVG_REVISION
         || string(&source, "status")? != "automated_candidates_pending_independent_review"
     {
         return Err("HanziVG transfer provenance or schema not pinned".into());
@@ -67,9 +69,17 @@ pub(super) fn import(
         if string(row, "decomposition")? != expected {
             return Err(format!("{ch}: source transfer does not match selected IDS"));
         }
-        let svg_name = format!("hanzi/{:05x}.svg", ch.chars().next().unwrap() as u32);
-        if string(row, "ownership_svg")? != svg_name {
-            return Err(format!("{ch}: unpinned or mismatched Chinese SVG name"));
+        let provider = string(row, "ownership_provider")?;
+        let (source_prefix, pinned_revision) = match provider {
+            "hanzivg" => ("hanzi", REVISION),
+            "kanjivg_comparison" => ("kanji", KANJIVG_REVISION),
+            _ => return Err(format!("{ch}: unknown ownership comparison provider"))
+        };
+        let svg_name = format!("{source_prefix}/{:05x}.svg", ch.chars().next().unwrap() as u32);
+        if string(row, "ownership_svg")? != svg_name
+            || string(row, "ownership_revision")? != pinned_revision
+        {
+            return Err(format!("{ch}: unpinned or mismatched source SVG name/revision"));
         }
         let method = string(row, "geometry_match_method")?;
         if method != "same_stroke_index_geometry" && method != "unique_stroke_geometry_bijection" {
@@ -77,7 +87,8 @@ pub(super) fn import(
         }
         let error = get(row, "mean_geometry_error")?.as_f64()
             .ok_or_else(||format!("{ch}: no numeric geometry comparison"))?;
-        if !error.is_finite() || !(0.0..=0.105).contains(&error) {
+        let max_error = if provider == "kanjivg_comparison" { 0.045 } else { 0.105 };
+        if !error.is_finite() || !(0.0..=max_error).contains(&error) {
             return Err(format!("{ch}: geometric correspondence gate failed"));
         }
         let mut parts = Vec::new();
@@ -132,6 +143,7 @@ pub(super) fn import(
         }
         records.push(json!({
             "character": ch, "ownership_svg": svg_name,
+            "ownership_provider": provider, "ownership_revision": pinned_revision,
             "mean_geometry_error": error, "stroke_count": strokes.len(),
             "geometry_match_method": method,
             "review_status": "automated_geometry_and_group_match_pending_independent_review"
@@ -144,8 +156,9 @@ pub(super) fn import(
     output.sort_by_key(|g|g.character.chars().next().unwrap() as u32);
     let summary = json!({
         "schema": "chromalect.hanzivg-admitted-transfers.v1",
-        "ownership_provider": "HanziVG Chinese-reviewed hanzi directory",
+        "ownership_provider": "HanziVG Chinese-reviewed structure and KanjiVG geometry-gated comparison",
         "ownership_revision": REVISION,
+        "comparative_ownership_revision": KANJIVG_REVISION,
         "geometry_provider": "Make Me a Hanzi pinned outlines",
         "geometry_revision": discover::source_revision(),
         "license": "HanziVG group metadata CC BY-SA 3.0; original Make Me a Hanzi vector geometry keeps its original source license",
@@ -154,7 +167,7 @@ pub(super) fn import(
         "records": records,
         "rejected_reasons": source.get("rejected_reasons"),
         "independently_visually_certified": false,
-        "note": "HanziVG group ownership is transferred only after exact component-instance and stroke-index geometric correspondence checks. Group data are credited; HanziVG centerline artwork is not redistributed."
+        "note": "HanziVG Chinese-verified grouping takes priority. A separate KanjiVG comparison is permitted only where catalog component groups match and the original Chinese Make Me a Hanzi outline geometry passes a stronger bound. No Japanese stroke artwork is rendered. All imported grouping data retain CC BY-SA attribution and are awaiting independent visual review."
     });
     fs::write(target.join("hanzivg-transfers.json"),
         format!("{}\n", serde_json::to_string_pretty(&summary).map_err(|e|e.to_string())?))
