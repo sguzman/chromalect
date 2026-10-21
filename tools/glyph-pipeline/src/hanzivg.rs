@@ -1,6 +1,6 @@
 use super::*;
 use serde_json::{json, Value};
-use std::collections::{BTreeMap, HashMap, HashSet};
+use std::collections::{HashMap, HashSet};
 
 const SCHEMA: &str = "chromalect.hanzivg-source-transfer.v1";
 const REVISION: &str = "55ecef6a881d5120cd261587d668e1b6af843ec2";
@@ -48,8 +48,8 @@ pub(super) fn import(
     }
     let mut geometry = HashMap::new();
     super::discover::source_records(graphics_path, |record| {
-        let Some(ch) = record.get("character").and_then(Value::as_str) else { return Ok(()); };
-        if wanted.contains(ch) && geometry.insert(ch.to_owned(), record).is_some() {
+        let Some(ch) = record.get("character").and_then(Value::as_str).map(str::to_owned) else { return Ok(()); };
+        if wanted.contains(&ch) && geometry.insert(ch.clone(), record).is_some() {
             return Err(format!("duplicate pinned outline record {ch}"));
         }
         Ok(())
