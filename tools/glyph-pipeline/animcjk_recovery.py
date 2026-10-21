@@ -254,6 +254,37 @@ def catalog_alternatives(row, palette):
         alternatives.append(selected)
     return alternatives
 
+# Reinterpret only source records whose original published IDS was *unparsed*.
+# The source-derived replacements use independently pinned simplified-Chinese
+# stroke-count decompositions and already registered v0.4 color identities.
+# All other characters retain their official selected catalog analysis.
+UNPARSED_SOURCE_CUTS = {
+    "包": {"source_acjk": "包⿹勹.2巳3", "cut": "⿹勹巳", "forms": ["勹", "巳"]},
+    "岛": {"source_acjk": "岛⿱鸟4山.3", "cut": "⿱鸟山", "forms": ["鸟", "山"]},
+}
+
+def reviewed_unparsed_source_cut(ch, source_acjk, node, catalog, palette):
+    record = UNPARSED_SOURCE_CUTS.get(ch)
+    if not record or record["source_acjk"] != source_acjk:
+        return None
+    if catalog.get("structural_status") != "nonstandard_ids_not_parsed" or catalog["component_instances"]:
+        raise Reject("original_source_catalog_was_not_unparsed")
+    forms = record["forms"]
+    if not node["children"] or [v["form"] for v in node["children"]] != forms:
+        raise Reject("source_decomposition_does_not_match_approved_cut")
+    from collections import defaultdict
+    colors=defaultdict(list)
+    for item in palette.values():
+        colors[item["shape"]].append(item)
+    if any(len(colors[form])!=1 for form in forms):
+        raise Reject("unregistered_source_cut_component")
+    instances=[{"form":form,"id":colors[form][0]["id"]} for form in forms]
+    selected=dict(catalog,ids_primary=record["cut"],
+                  component_instances=instances,
+                  component_ids=list(dict.fromkeys(x["id"] for x in instances)),
+                  source_selected_catalog_cut=record["cut"])
+    return selected
+
 def one_form_substitution(node, instances):
     """Propose one provenance-tagged source/selected-form reconciliation.
 
@@ -436,6 +467,7 @@ def candidate(ch, node, owners, svg, graphics, palette, catalog, witnesses=(), v
             "source_variant_witnesses": list(variants),
             "form_substitution_witnesses": substitution_checks,
             "source_selected_catalog_alternative": selected.get("source_selected_catalog_alternative"),
+            "source_selected_catalog_cut": selected.get("source_selected_catalog_cut"),
             "source_decomposition": node.get("form") or ch}
 
 def self_test():
@@ -547,6 +579,9 @@ def main():
             plans = []
             primary_error = None
             selected_rows = [catalog[ch]] + catalog_alternatives(catalog[ch], palette)
+            source_cut = reviewed_unparsed_source_cut(ch,rows[ch]["acjk"],node,catalog[ch],palette)
+            if source_cut is not None:
+                selected_rows.append(source_cut)
             for selected in selected_rows:
                 try:
                     owners, witnesses, variants = count_ownership(
@@ -609,8 +644,10 @@ def main():
     # first-1000 catalog cut. It belongs in a separate review dataset until
     # both the renderer and the Direct/Marker cards select the same cut.
     # Never count such SVGs as mapped while catalog presentation disagrees.
-    review = [item for item in recovered if item.get("source_selected_catalog_alternative")]
-    accepted = [item for item in recovered if not item.get("source_selected_catalog_alternative")]
+    review = [item for item in recovered if item.get("source_selected_catalog_alternative")
+              or item.get("source_selected_catalog_cut")]
+    accepted = [item for item in recovered if not item.get("source_selected_catalog_alternative")
+                and not item.get("source_selected_catalog_cut")]
     base["catalog_alternative_review_candidates"] = review
     base["catalog_alternative_review_count"] = len(review)
     base["candidates"].extend(accepted)
