@@ -1,5 +1,6 @@
 mod discover;
 mod hierarchy;
+mod hanzivg;
 mod atlas;
 mod browse;
 mod coverage;
@@ -298,7 +299,8 @@ fn run() -> Result<(), String> {
         Some("discover") => {
             let dictionary = args.next().ok_or("usage: glyph-pipeline discover DICTIONARY GRAPHICS")?;
             let graphics = args.next().ok_or("usage: glyph-pipeline discover DICTIONARY GRAPHICS")?;
-            discover::run(Path::new(&dictionary), Path::new(&graphics))?;
+            let transfer = args.next();
+            discover::run(Path::new(&dictionary), Path::new(&graphics), transfer.as_deref().map(Path::new))?;
         },
         Some("sources") => sources(&glyphs),
         Some("verify-source") => {
