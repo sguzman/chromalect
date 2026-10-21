@@ -66,6 +66,9 @@ jobs:
             --palette palettes/mandarin-component-identity-v0.4.json \
             --graphics "$RUNNER_TEMP/chromalect-graphics.txt" \
             --out "$RUNNER_TEMP/hanzivg-candidates.json"
+          # The initial pass replaces tracked atlas character spans. Rebuild from
+          # pristine source templates so integration is applied exactly once.
+          git restore --worktree -- site/characters
           cargo run --quiet --locked --manifest-path tools/glyph-pipeline/Cargo.toml -- discover \
             "$RUNNER_TEMP/chromalect-dictionary.txt" \
             "$RUNNER_TEMP/chromalect-graphics.txt" \
