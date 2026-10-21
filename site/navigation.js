@@ -17,6 +17,7 @@
     components: { label: "Components", path: "components.html" },
     glyphs: { label: "Colored glyphs", path: "glyphs/index.html" },
     ontology: { label: "Ontology", path: "ontology.html" },
+    semanticLab: { label: "Semantic symbol lab", path: "semantic-lab.html" },
     radicals: { label: "Modern radicals", path: "radicals.html" },
     kangxi: { label: "Kangxi radicals", path: "kangxi.html" },
     colors: { label: "Color registry · v0.6", path: "colors.html" },
@@ -51,6 +52,7 @@
     if (rel.startsWith("characters/")) return "atlas";
     if (rel === "components.html" || rel.startsWith("glyphs/by-component/")) return "components";
     if (rel === "ontology.html") return "ontology";
+    if (rel === "semantic-lab.html") return "semanticLab";
     if (rel === "radicals.html") return "radicals";
     if (rel === "kangxi.html") return "kangxi";
     if (rel === "colors.html") return "colors";
@@ -66,7 +68,7 @@
   }
   const active = currentKey();
   const browseKeys = new Set(["radicals", "kangxi", "colors", "curated", "directory"]);
-  const reviewKeys = new Set(["diagnostics", "comparisons", "alternatives",
+  const reviewKeys = new Set(["semanticLab", "diagnostics", "comparisons", "alternatives",
     "unknown", "hierarchy", "unmapped"]);
 
   function element(tag, className, label) {
@@ -173,6 +175,7 @@
       { title: "Color and examples", items: ["colors", "curated", "palette"] }
     ], browseKeys));
     primary.appendChild(dropdown("Research & evidence", [
+      { title: "Semantic design experiment", items: ["semanticLab"] },
       { title: "Inspect source alignment", items: ["comparisons", "diagnostics", "hierarchy"] },
       { title: "More investigations", items: ["alternatives", "unknown", "unmapped"] },
       { title: "Data and provenance", items: ["coverage", "mapping", "github", "sources"] }
