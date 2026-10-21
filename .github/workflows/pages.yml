@@ -100,9 +100,9 @@ jobs:
           count = coverage["source_aligned_catalog_glyphs"]
           assert coverage["catalog_size"] == 1000
           assert count + coverage["unmapped_count"] == 1000
-          assert count >= 909, f"Mandarin coverage regressed to {count}/1000"
-          assert transfers["count"] >= 39, "Verified second-source Chinese mappings disappeared"
-          assert mapping["glyph_count"] >= 916
+          assert count >= 925, f"Mandarin coverage regressed to {count}/1000"
+          assert transfers["count"] >= 55, "Verified secondary Chinese mappings disappeared"
+          assert mapping["glyph_count"] >= 932
           accepted = [row for row in mapping["glyphs"]
                       if row["assignment_status"] == "hanzivg_group_alignment_candidate"]
           assert len(accepted) == transfers["count"]
