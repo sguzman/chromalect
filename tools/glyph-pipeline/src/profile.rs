@@ -179,6 +179,33 @@ fn attach_research_diagnostics(profile:&mut Value, data:&Value)->Result<(),Strin
 
 pub(super) fn generate(glyphs:&[Glyph],destination:&Path)->Result<(),String> {
     let mut data=source_records(glyphs)?;
+    let hierarchy=load(&destination.join("glyphs/hierarchical-derivations.json"))?;
+    if string(&hierarchy,"schema")?!="chromalect.hierarchical-source-transfer.v1"{
+        return Err("unexpected hierarchical source report schema".into());
+    }
+    let recovered=entries(&hierarchy,"characters")?.iter()
+        .map(|v|v.as_str().map(str::to_owned).ok_or("invalid recovered character".to_owned()))
+        .collect::<Result<HashSet<_>,_>>()?;
+    let mut annotated=0usize;
+    for row in data["characters"].as_array_mut().ok_or("profile characters missing")?{
+        let character=string(row,"character")?.to_owned();
+        let status=row["geometry"]["status"].as_str().unwrap_or("");
+        if recovered.contains(&character){
+            if status!="source_aligned_visual_review_pending"{
+                return Err(format!("{character}: recovered geometry cannot be unresolved"));
+            }
+            row["geometry"]["alignment_method"]=json!("source_subglyph_geometry_correspondence");
+            annotated+=1;
+        }else if status=="source_aligned_visual_review_pending"{
+            row["geometry"]["alignment_method"]=json!("direct_source_ownership_or_curated_pilot");
+        }
+    }
+    // Some generated SVGs lie outside the first-1000 catalog; the hierarchy
+    // report here is currently restricted to catalog characters only.
+    if annotated!=recovered.len(){
+        return Err("hierarchical provenance is not represented in the Mandarin profile".into());
+    }
+    data["hierarchical_source_transfer_count"]=json!(annotated);
     let diagnostics=load(&destination.join("glyphs/diagnostics.json"))?;
     attach_research_diagnostics(&mut data,&diagnostics)?;
     let folder=destination.join("profiles");
