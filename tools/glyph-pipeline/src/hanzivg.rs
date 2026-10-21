@@ -199,6 +199,23 @@ pub(super) fn import(
                     && donor_method != "unique_donor_stroke_geometry_bijection" {
                     return Err(format!("{ch}: unsupported donor alignment methodology"));
                 }
+                if let Some(raw_indices) = witness.get("indices") {
+                    let indices=raw_indices.as_array()
+                        .ok_or_else(||format!("{ch}: indexed donor positions are not an array"))?;
+                    let indexes=indices.iter().map(|v|v.as_u64().map(|n|n as usize)
+                        .ok_or_else(||format!("{ch}: invalid indexed donor path")))
+                        .collect::<Result<Vec<_>,String>>()?;
+                    if ch!="成" || source_form!="戊" || start!=0 || count!=5
+                        || indexes != vec![0,1,3,4,5] {
+                        return Err(format!("{ch}: indexed donor is not the pinned noncontiguous 戊 source"));
+                    }
+                    let strokes=entries(row,"strokes")?;
+                    if strokes.len()!=6 || strokes.iter().enumerate().any(|(i,stroke)|
+                        stroke.get("component_id").and_then(Value::as_str)
+                            != Some(if i==2 {"cmp-0175"} else {"cmp-0399"})) {
+                        return Err(format!("{ch}: interleaved 戊 source paths have wrong palette ownership"));
+                    }
+                }
                 let expected = format!("svgsZhHans/{}.svg", source_form.chars().next().unwrap() as u32);
                 if string(witness,"source_svg")? != expected
                     || get(witness,"mean_geometry_error")?.as_f64()
