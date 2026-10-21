@@ -155,7 +155,10 @@ def count_ownership(node, instances, donor_rows=None):
         elif donor_rows and form and form in donor_rows and part["count"] >= 2:
             if form in trail or len(trail) >= 3:
                 raise Reject("recursive_component_cycle")
-            donor_node = parse_acjk(donor_rows[form].get("acjk", ""), form)
+            try:
+                donor_node = parse_acjk(donor_rows[form].get("acjk", ""), form)
+            except Reject as problem:
+                raise Reject(f"donor_parse_{form}_{problem}") from problem
             if donor_node["count"] != part["count"]:
                 raise Reject("donor_stroke_count_disagreement")
             start = len(segments)
@@ -410,6 +413,10 @@ def main():
           "".join(row["character"] for row in recovered if row["subglyph_witnesses"]))
     print("AnimCJK new characters:", "".join(row["character"] for row in recovered))
     print("AnimCJK rejection summary:", dict(rejected))
+    print("AnimCJK rejection stage audit:",
+          {"donor_parse":sum(n for key,n in rejected.items() if key.startswith("donor_parse_")),
+           "geometry":sum(n for key,n in rejected.items() if "geometry" in key),
+           "component_identity":rejected.get("component_name_disagreement",0)})
     for reason, total in sorted(rejected.items(), key=lambda pair: (-pair[1],pair[0])):
         cases = [(ch, rows.get(ch, {}).get("acjk", ""))
                  for ch, why in sorted(rejected_ch.items()) if why == reason]
