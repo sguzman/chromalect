@@ -490,6 +490,32 @@ def documented_source_form_plans(character, acjk, node, catalog, selected_rows, 
         raise Reject("source_selected_component_inventory_disagreement")
     return [(owners, [], [], substitutions, selected)]
 
+# In 成, source component 戊 is explicitly interleaved around 𠃌.
+# An indexed witness must match the independent ZhHans 戊 donor shape.
+INTERLEAVED_DONOR_SOURCE = {
+    "成": {"acjk":"成⿵戊⿰戈.:1丿1𠃌1戈.:3",
+           "catalog_cut":"⿵戊𠃌",
+           "owners":["戊","戊","𠃌","戊","戊","戊"],
+           "donor_form":"戊","donor_indices":[0,1,3,4,5]}
+}
+
+def interleaved_donor_plan(ch, acjk, node, selected):
+    pinned=INTERLEAVED_DONOR_SOURCE.get(ch)
+    if not pinned or acjk!=pinned["acjk"]:
+        return []
+    if selected["ids_primary"].split(";")[0].split("(")[0].strip()!=pinned["catalog_cut"]:
+        raise Reject("interleaved_source_catalog_cut_disagreement")
+    if Counter(x["form"] for x in selected["component_instances"])!=Counter(["戊","𠃌"]):
+        raise Reject("interleaved_source_identity_disagreement")
+    owners=pinned["owners"]
+    indices=pinned["donor_indices"]
+    if len(owners)!=node["count"] or [i for i,form in enumerate(owners)
+        if form==pinned["donor_form"]] != indices:
+        raise Reject("interleaved_source_stroke_count_disagreement")
+    witness={"form":pinned["donor_form"],"start":0,"count":len(indices),
+             "indices":indices}
+    return [(list(owners),[witness],[],[],selected)]
+
 def one_form_substitution(node, instances):
     """Propose one provenance-tagged source/selected-form reconciliation.
 
@@ -604,12 +630,16 @@ def candidate(ch, node, owners, svg, graphics, palette, catalog, witnesses=(), v
         form = witness["form"]
         start = witness["start"]
         count = witness["count"]
-        if count < 2 or start < 0 or start + count > len(source_paths):
+        indices = witness.get("indices", list(range(start,start+count)))
+        if (count < 2 or start < 0 or len(indices)!=count
+            or sorted(set(indices))!=list(indices)
+            or any(i < 0 or i >= len(source_paths) for i in indices)):
             raise Reject("invalid_donor_span")
+        embedded = [source_paths[i] for i in indices]
         source = donor_strokes(form)
         if len(source) != count:
             raise Reject("donor_svg_count_disagreement")
-        donor_error = correspondence(source, source_paths[start:start + count], invert_reference_y=False)
+        donor_error = correspondence(source, embedded, invert_reference_y=False)
         donor_method = "same_stroke_index_geometry"
         if donor_error is None or donor_error > 0.095:
             # The counted donor's stroke order may differ from the parent.
@@ -618,19 +648,21 @@ def candidate(ch, node, owners, svg, graphics, palette, catalog, witnesses=(), v
             if method != "same_stroke_index_geometry":
                 raise Reject("donor_subglyph_geometry_disagreement")
             alternative = reordered_correspondence(
-                source, source_paths[start:start+count],
-                source_owners[start:start+count], invert_reference_y=False)
+                source, embedded,
+                [source_owners[i] for i in indices], invert_reference_y=False)
             if alternative is None or alternative[0] > 0.095:
                 GEOMETRY_REJECTIONS[ch] = {
                     "source_component":form,"source_span_start":start,
                     "source_svg":f"svgsZhHans/{ord(form)}.svg",
-                    **donor_geometry_diagnostics(source, source_paths[start:start+count])
+                    **donor_geometry_diagnostics(source, embedded)
                 }
                 raise Reject("donor_subglyph_geometry_disagreement")
             donor_error, donor_owners = alternative
-            owners[start:start+count] = donor_owners
+            for pos,owner in zip(indices,donor_owners):
+                owners[pos] = owner
             donor_method = "unique_donor_stroke_geometry_bijection"
         donor_checks.append({"component":form,"start":start,"count":count,
+                             **({"indices":indices} if "indices" in witness else {}),
                              "mean_geometry_error":donor_error,
                              "geometry_match_method": donor_method,
                              "source_svg":f"svgsZhHans/{ord(form)}.svg"})
@@ -723,6 +755,12 @@ def self_test():
         {"𰀁":{"acjk":NAMED_DONOR_CONTRACTIONS["奉"]["standalone_acjk"]}})
     assert direct[0] == ["𡗗"]*5+["𰀁"]*3
     assert direct[1] == [{"form":"𰀁","start":5,"count":3}]
+    exact=INTERLEAVED_DONOR_SOURCE["成"]
+    interleaved=interleaved_donor_plan("成", exact["acjk"],
+        {"count":6}, {"ids_primary":"⿵戊𠃌",
+            "component_instances":[{"form":"戊"},{"form":"𠃌"}]})
+    assert len(interleaved)==1 and interleaved[0][0] == exact["owners"]
+    assert interleaved[0][1][0]["indices"] == [0,1,3,4,5]
     donor_test = {"乞": {"acjk": "乞⿱𠂉2乙1"}}
     nested = parse_acjk("吃⿰口3乞3", "吃")
     owners, witnesses, variants = count_ownership(nested,
@@ -847,6 +885,12 @@ def main():
                 except Reject as e:
                     if primary_error is None:
                         primary_error = str(e)
+            try:
+                plans.extend(interleaved_donor_plan(
+                    ch,rows[ch]["acjk"],node,catalog[ch]))
+            except Reject as e:
+                if primary_error is None:
+                    primary_error=str(e)
             # A bounded set of already-documented alternatives allows
             # independently shape-verified source-only component forms.
             # These plans remain tentative until each geometry witness passes.
