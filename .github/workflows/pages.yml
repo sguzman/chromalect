@@ -209,6 +209,7 @@ jobs:
         run: |
           node --check site/theme.js
           node --check site/navigation.js
+          node tools/glyph-pipeline/navigation_smoke.mjs
           python3 - <<'PY'
           from pathlib import Path
           import re
