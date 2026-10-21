@@ -53,6 +53,23 @@ jobs:
             --output "$RUNNER_TEMP/chromalect-graphics.txt"
       - name: Generate source-backed glyphs and extend atlas
         run: cargo run --quiet --locked --manifest-path tools/glyph-pipeline/Cargo.toml -- discover "$RUNNER_TEMP/chromalect-dictionary.txt" "$RUNNER_TEMP/chromalect-graphics.txt"
+      - name: Validate independently grouped Chinese recovery parser
+        run: python3 tools/glyph-pipeline/hanzivg_recovery.py --self-test
+      - name: Reconcile remaining glyphs with pinned Chinese HanziVG groups
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 tools/glyph-pipeline/hanzivg_recovery.py \
+            --coverage site/glyphs/coverage.json \
+            --catalog data/catalog/characters-0001-1000.json \
+            --palette palettes/mandarin-component-identity-v0.4.json \
+            --graphics "$RUNNER_TEMP/chromalect-graphics.txt" \
+            --out "$RUNNER_TEMP/hanzivg-candidates.json"
+          cargo run --quiet --locked --manifest-path tools/glyph-pipeline/Cargo.toml -- discover \
+            "$RUNNER_TEMP/chromalect-dictionary.txt" \
+            "$RUNNER_TEMP/chromalect-graphics.txt" \
+            "$RUNNER_TEMP/hanzivg-candidates.json"
+          test -s site/glyphs/hanzivg-transfers.json
       - name: Include machine-readable component palette
         run: |
           mkdir -p site/palettes
