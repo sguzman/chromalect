@@ -41,6 +41,8 @@ jobs:
         run: cargo generate-lockfile --manifest-path tools/glyph-pipeline/Cargo.toml
       - name: Validate component-colored glyph data
         run: cargo run --quiet --locked --manifest-path tools/glyph-pipeline/Cargo.toml -- check
+      - name: Test renderer and source-reconciliation invariants
+        run: cargo test --quiet --locked --manifest-path tools/glyph-pipeline/Cargo.toml
       - name: Download pinned stroke geometry and ownership data
         shell: bash
         run: |
