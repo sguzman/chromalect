@@ -261,3 +261,12 @@ The [Chromalect color data](palettes/mandarin-component-identity-v0.4.json) and 
 ## Make Me a Hanzi — real stroke outlines
 
 The original SVG stroke outline paths used in the radical and component galleries are derived from `graphics.txt` in [skishore/makemeahanzi](https://github.com/skishore/makemeahanzi), originating from fonts by Arphic Technology Co., Ltd. They are used pursuant to the **Arphic Public License** (© 1999 Arphic Technology), reproduced verbatim in [licenses/ARPHICPL.TXT](licenses/ARPHICPL.TXT). Future per-stroke ownership analysis also uses its separately **LGPL-3.0-or-later** licensed dictionary decomposition and match data, with a copy of the license at [licenses/LGPL-3.0.txt](licenses/LGPL-3.0.txt). The repository's MIT license does not override these source licenses.
+
+
+## HanziVG — independent Chinese component-group evidence (CC BY-SA 3.0)
+
+Source: [Connum/hanzivg](https://github.com/Connum/hanzivg), pinned to revision `55ecef6a881d5120cd261587d668e1b6af843ec2`. HanziVG is licensed under [Creative Commons Attribution-ShareAlike 3.0 Unported](https://creativecommons.org/licenses/by-sa/3.0/). It builds in part on [KanjiVG](https://kanjivg.tagaini.net/) by Ulrich Apel (CC BY-SA 3.0) and François Mizessyn's AnimHanzi work (CC BY-SA 3.0).
+
+The optional Mandarin recovery process reads only HanziVG's Chinese-reviewed `hanzi/` files. It consults structural `kvg:element` grouping to associate stroke identities with the catalog, then checks full path count, order and normalized shape placement against the separate pinned Make Me a Hanzi outline geometry. **No HanziVG SVG artwork or paths are embedded in the resulting glyphs**: rendered vector artwork remains sourced from Make Me a Hanzi, governed by its own license. The structurally derived component ownership/provenance is credited to HanziVG in each corresponding mapping record. It has not been independently audited. Should the derived group metadata be distributed as adapted licensed material, the source-group-derived portion is offered under CC BY-SA 3.0, without relicensing the independently authored color palette or the separately licensed outline data.
+
+This usage is conditional on component and stroke correspondence checks; a Japanese KanjiVG fallback is **not** a valid Mainland simplified Chinese geometry source for this pipeline.
