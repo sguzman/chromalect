@@ -61,7 +61,7 @@ pub(super) fn import(
     let catalog_map = entries(&catalog, "characters")?.iter().map(|item| {
         Ok((string(item, "character")?.to_owned(), item))
     }).collect::<Result<HashMap<_, _>, String>>()?;
-    let palette = load(&root().join("palettes/mandarin-component-identity-v0.5.json"))?;
+    let palette = load(&root().join("palettes/mandarin-component-identity-v0.6.json"))?;
     let colors = entries(&palette, "components")?.iter().map(|item| {
         Ok((string(item, "id")?.to_owned(),
             (string(item, "shape")?.to_owned(), string(item, "color")?.to_owned())))
@@ -303,7 +303,7 @@ pub(super) fn import(
                 return Err(format!("{ch}: variant span outside glyph"));
             }
             if colors.values().any(|(shape,_)|shape=="𠆢") {
-                return Err(format!("{ch}: source-only form is independently registered in active v0.5"));
+                return Err(format!("{ch}: source-only form is independently registered in active v0.6"));
             }
             if !entries(row,"strokes")?.iter().skip(start).take(2).all(|path|
                 path.get("component_id").and_then(Value::as_str) == Some("cmp-0012")
