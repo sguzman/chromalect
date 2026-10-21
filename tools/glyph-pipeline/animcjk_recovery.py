@@ -1112,6 +1112,10 @@ def main():
                      "whole_glyph_index":correspondence(src,ref),
                      "whole_glyph_metrics":donor_geometry_diagnostics(src,ref)}
             if ch=="肠" and len(src)==len(ref)==7:
+                perm=[0,1,2,3,5,4,6]
+                remapped=[src[i] for i in perm]
+                payload["source_index_permutation_zero_based"]=perm
+                payload["permuted_chinese_geometry_score"]=correspondence(remapped,ref)
                 def x_footprints(paths, invert_y=False):
                     paths=[coordinates(path,invert_y=invert_y) for path in paths]
                     outer=bounds([point for stroke in paths for point in stroke])
