@@ -137,7 +137,7 @@ def correspondence(source_paths, reference_paths, *, invert_reference_y=True):
         return None
 
 
-def reordered_correspondence(source_paths, reference_paths, source_owners):
+def reordered_correspondence(source_paths, reference_paths, source_owners, *, invert_reference_y=True):
     """Find a unique geometry-supported ownership vector, not merely any swap.
 
     Bounded to small characters. Different assignments of paths *within the
@@ -149,7 +149,7 @@ def reordered_correspondence(source_paths, reference_paths, source_owners):
         return None
     try:
         src = [coordinates(p) for p in source_paths]
-        ref = [coordinates(p, invert_y=True) for p in reference_paths]
+        ref = [coordinates(p, invert_y=invert_reference_y) for p in reference_paths]
         all_src = bounds([p for row in src for p in row])
         all_ref = bounds([p for row in ref for p in row])
         sa = [normalize(bounds(row), all_src) for row in src]
@@ -364,6 +364,11 @@ def self_test():
         ["M 30 -20 L 40 -30", "M 0 0 L 10 -10"],
         ["left", "right"])
     assert reorder and reorder[1] == ["right", "left"]
+    same_y = reordered_correspondence(
+        ["M 0 0 L 10 10", "M 30 20 L 40 30"],
+        ["M 30 20 L 40 30", "M 0 0 L 10 10"],
+        ["left", "right"], invert_reference_y=False)
+    assert same_y and same_y[1] == ["right", "left"]
     print("HanziVG structural and geometric self-tests passed")
 
 def main():
