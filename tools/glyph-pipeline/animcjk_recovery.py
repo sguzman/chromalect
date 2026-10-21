@@ -369,6 +369,16 @@ UNPARSED_SOURCE_CUTS = {
            "source_children": ["包", "刂"], "status": "partial_components"},
     "抱": {"source_acjk": "抱⿰扌.3包5", "cut": "⿰扌⿹勹巳", "forms": ["扌", "勹", "巳"],
            "source_children": ["扌", "包"], "status": "partial_components"},
+    # The original catalog expands these historical forms into leaves that
+    # disagree with the present ZhHans stroke-count labels. Under additive
+    # v0.6, color the entire *source named* parent subglyph instead of
+    # pretending that an unverified internal cut owns its individual paths.
+    "印": {"source_acjk":"印⿰𠀉3卩.2","cut":"⿰𠀉卩",
+           "forms":["𠀉","卩"],"source_children":["𠀉","卩"],
+           "status":"resolved_structural_membership"},
+    "拔": {"source_acjk":"拔⿰扌.3犮5","cut":"⿰扌犮",
+           "forms":["扌","犮"],"source_children":["扌","犮"],
+           "status":"resolved_structural_membership"},
     # The pinned AnimCJK ZhHans donor record is 㓁.⿵冖2八2.
     # Other dictionaries record regionally different shapes; this cut uses
     # the *actual* pinned Chinese component instance and donor geometry.
