@@ -71,6 +71,10 @@ pub(super) fn import(
         if string(row, "ownership_svg")? != svg_name {
             return Err(format!("{ch}: unpinned or mismatched Chinese SVG name"));
         }
+        let method = string(row, "geometry_match_method")?;
+        if method != "same_stroke_index_geometry" && method != "unique_stroke_geometry_bijection" {
+            return Err(format!("{ch}: unknown stroke geometry correspondence method"));
+        }
         let error = get(row, "mean_geometry_error")?.as_f64()
             .ok_or_else(||format!("{ch}: no numeric geometry comparison"))?;
         if !error.is_finite() || !(0.0..=0.105).contains(&error) {
@@ -129,6 +133,7 @@ pub(super) fn import(
         records.push(json!({
             "character": ch, "ownership_svg": svg_name,
             "mean_geometry_error": error, "stroke_count": strokes.len(),
+            "geometry_match_method": method,
             "review_status": "automated_geometry_and_group_match_pending_independent_review"
         }));
         output.push(Glyph {
