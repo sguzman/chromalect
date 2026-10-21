@@ -10,6 +10,7 @@ on:
       - "data/catalog/colored-strokes-v0.1.json"
       - "palettes/mandarin-component-identity-v0.4.json"
       - "palettes/mandarin-component-identity-v0.5.json"
+      - "palettes/mandarin-component-identity-v0.6.json"
       - ".github/workflows/pages.yml"
   workflow_dispatch:
 permissions:
@@ -66,7 +67,7 @@ jobs:
           python3 tools/glyph-pipeline/hanzivg_recovery.py \
             --coverage site/glyphs/coverage.json \
             --catalog data/catalog/characters-0001-1000.json \
-            --palette palettes/mandarin-component-identity-v0.5.json \
+            --palette palettes/mandarin-component-identity-v0.6.json \
             --graphics "$RUNNER_TEMP/chromalect-graphics.txt" \
             --out "$RUNNER_TEMP/hanzivg-candidates.json"
           python3 tools/glyph-pipeline/animcjk_recovery.py --self-test
@@ -78,7 +79,7 @@ jobs:
             --dictionary "$RUNNER_TEMP/chromalect-animcjk-zhhans.txt" \
             --coverage site/glyphs/coverage.json \
             --catalog data/catalog/characters-0001-1000.json \
-            --palette palettes/mandarin-component-identity-v0.5.json \
+            --palette palettes/mandarin-component-identity-v0.6.json \
             --graphics "$RUNNER_TEMP/chromalect-graphics.txt" \
             --candidates "$RUNNER_TEMP/hanzivg-candidates.json"
           # The initial pass replaces tracked atlas character spans. Rebuild from
@@ -88,7 +89,7 @@ jobs:
           python3 tools/glyph-pipeline/activate_catalog_cuts.py \
             --candidates "$RUNNER_TEMP/hanzivg-candidates.json" \
             --catalog data/catalog/characters-0001-1000.json \
-            --palette palettes/mandarin-component-identity-v0.5.json \
+            --palette palettes/mandarin-component-identity-v0.6.json \
             --summary site/glyphs/active-catalog-cuts.json
           cargo run --quiet --locked --manifest-path tools/glyph-pipeline/Cargo.toml -- discover \
             "$RUNNER_TEMP/chromalect-dictionary.txt" \
@@ -122,9 +123,9 @@ jobs:
           count = coverage["source_aligned_catalog_glyphs"]
           assert coverage["catalog_size"] == 1000
           assert count + coverage["unmapped_count"] == 1000
-          assert count >= 993, f"Mandarin coverage regressed to {count}/1000"
+          assert count >= 996, f"Mandarin coverage regressed to {count}/1000"
           assert transfers["count"] >= 55, "Verified secondary Chinese mappings disappeared"
-          assert mapping["glyph_count"] >= 1000
+          assert mapping["glyph_count"] >= 1003
           accepted = [row for row in mapping["glyphs"]
                       if row["assignment_status"] == "hanzivg_group_alignment_candidate"]
           assert len(accepted) == transfers["count"]
@@ -173,6 +174,7 @@ jobs:
           mkdir -p site/palettes
           cp palettes/mandarin-component-identity-v0.4.json site/palettes/
           cp palettes/mandarin-component-identity-v0.5.json site/palettes/
+          cp palettes/mandarin-component-identity-v0.6.json site/palettes/
       - name: Publish ontology vocabulary, schemas and specimens
         run: |
           mkdir -p site/ontology
