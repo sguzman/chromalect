@@ -604,16 +604,27 @@ def main():
             rejected_ch[ch] = reason
         else:
             recovered.append(row)
-    base["candidates"].extend(recovered)
+    # A documented alternate cut may be well-supported geometrically yet
+    # deliberately use *different* component identities than the selected
+    # first-1000 catalog cut. It belongs in a separate review dataset until
+    # both the renderer and the Direct/Marker cards select the same cut.
+    # Never count such SVGs as mapped while catalog presentation disagrees.
+    review = [item for item in recovered if item.get("source_selected_catalog_alternative")]
+    accepted = [item for item in recovered if not item.get("source_selected_catalog_alternative")]
+    base["catalog_alternative_review_candidates"] = review
+    base["catalog_alternative_review_count"] = len(review)
+    base["candidates"].extend(accepted)
     base["accepted_count"] = len(base["candidates"])
     base["animcjk_revision"] = REV
-    base["animcjk_admitted_count"] = len(recovered)
+    base["animcjk_admitted_count"] = len(accepted)
     base["animcjk_rejected_reasons"] = dict(sorted(rejected.items()))
     base["animcjk_rejected_characters"] = rejected_ch
     Path(args.candidates).write_text(json.dumps(base, ensure_ascii=False, indent=2) + "\n",
                                     encoding="utf-8")
     print("AnimCJK eligible source counts:", len(eligible), "of", len(missing)-len(existing))
-    print("AnimCJK newly admitted candidates:", len(recovered))
+    print("AnimCJK newly admitted candidates:", len(accepted))
+    print("AnimCJK catalog-alternative review only (not in Direct/Marker):",
+          "".join(item["character"] for item in review))
     print("AnimCJK verified catalog alternatives:",
           "".join(row["character"] for row in recovered if row["source_selected_catalog_alternative"]))
     print("AnimCJK verified form substitutions:",
@@ -622,7 +633,7 @@ def main():
           "".join(row["character"] for row in recovered if row["source_variant_witnesses"]))
     print("AnimCJK verified nested donor recoveries:",
           "".join(row["character"] for row in recovered if row["subglyph_witnesses"]))
-    print("AnimCJK new characters:", "".join(row["character"] for row in recovered))
+    print("AnimCJK new characters:", "".join(row["character"] for row in accepted))
     donors = ["𠤎","卩","丬","刂","礻","彐","才","月","厂","士","朩","亠","土","艮","犬","㐌","𠆢"]
     for form in donors:
         if form in rows:
