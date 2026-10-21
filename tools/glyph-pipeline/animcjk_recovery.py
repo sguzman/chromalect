@@ -835,8 +835,12 @@ def self_test():
         assert counted and sum(x["count"] for x in counted["children"])==counted["count"]
         assert count_ownership(counted,[{"form":f} for f in items]) == [
             form for form,count in COUNTED_CHINESE_CONTRACTIONS[key][1] for _ in range(count)]
-    assert set(CONTEXTUAL_DONOR_COMPRESSION)=={("克","古"),("夸","亏")}
+    assert set(CONTEXTUAL_DONOR_COMPRESSION)=={
+        ("克","古"),("夸","亏"),("合","亼"),("坐","从"),
+        ("巫","从"),("邻","令")}
     assert CONTEXTUAL_DONOR_COMPRESSION[("克","古")]["size"]<0.36
+    assert all(all(limit>0 for limit in bounds.values())
+               for bounds in CONTEXTUAL_DONOR_COMPRESSION.values())
     named = parse_acjk(NAMED_DONOR_CONTRACTIONS["奉"]["acjk"],"奉")
     assert named["children"][1]["independent_donor_witness"]
     direct = count_ownership(named,[{"form":"𡗗"},{"form":"𰀁"}],
