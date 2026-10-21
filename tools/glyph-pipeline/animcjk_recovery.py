@@ -44,6 +44,14 @@ GEOMETRY_REJECTIONS = {}
 CONTEXTUAL_DONOR_COMPRESSION = {
     ("克","古"): {"mean":0.090,"center":0.180,"size":0.350},
     ("夸","亏"): {"mean":0.070,"center":0.100,"size":0.265},
+    # Independent donor geometry can be distorted when a whole structural
+    # unit is compressed into a parent. All four have exact source-recorded
+    # component stroke counts and a parent SVG-to-rendered alignment < 0.010.
+    # These are per-character measurements; never generalize to other glyphs.
+    ("合","亼"): {"mean":0.200,"center":0.160,"size":0.490},
+    ("坐","从"): {"mean":0.120,"center":0.255,"size":0.145},
+    ("巫","从"): {"mean":0.135,"center":0.255,"size":0.155},
+    ("邻","令"): {"mean":0.180,"center":0.190,"size":0.240},
 }
 
 def donor_geometry_diagnostics(source, target):
