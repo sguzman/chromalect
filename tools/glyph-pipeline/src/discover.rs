@@ -574,6 +574,23 @@ pub(super) fn run(dictionary: &Path, graphics: &Path) -> Result<(), String> {
     fs::write(target.join("hierarchical-derivations.json"),
         format!("{}\n",serde_json::to_string_pretty(&derived).map_err(|e|e.to_string())?))
         .map_err(|e|e.to_string())?;
+    let mut review=String::from(
+        "<!doctype html><html lang=\"en\"><head><meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"><meta name=\"color-scheme\" content=\"light dark\"><title>Subglyph source alignment review · Chromalect</title><script src=\"../theme.js\"></script><link rel=\"stylesheet\" href=\"../style.css\"></head><body><main class=\"wrap\"><p><a href=\"../index.html\">Chromalect</a> / <a href=\"index.html\">Colored glyphs</a> / Subglyph review</p><h1>Hierarchical source alignment</h1><p class=\"intro\">These SVG candidates use pinned source component decompositions and cross-glyph geometry checks to assign individual vector paths. Automated geometric correspondence is not independent visual or linguistic certification. <a href=\"hierarchical-derivations.json\">Machine-readable provenance</a>.</p><div class=\"review-grid\">"
+    );
+    for ch in &hierarchical_used{
+        let g=all.iter().find(|g|&g.character==ch)
+            .ok_or_else(||format!("missing hierarchical review glyph {ch}"))?;
+        let chips=g.parts.iter().map(|(form,id,color)|format!(
+            "<span class=\"stroke-token\"><i class=\"stroke-dot\" style=\"background:{}\"></i>{} <small>{}</small></span>",
+            escape(color),escape(form),escape(id)
+        )).collect::<Vec<_>>().join("");
+        review.push_str(&format!(
+            "<article class=\"review-item\"><div class=\"review-pair\"><div><span class=\"review-native\" lang=\"zh-Hans\">{}</span><small>Native font</small></div><div><img loading=\"lazy\" width=\"112\" height=\"112\" src=\"{}\" alt=\"Source-derived color mapping for {}\"><small>Subglyph source mapping</small></div></div><p><strong>{}</strong> · {} paths · {}</p><div class=\"stroke-token-row\">{}</div><p><a href=\"{}\">Open SVG</a></p></article>",
+            escape(ch),file_name(g),escape(ch),escape(ch),g.strokes.len(),escape(&g.decomposition),chips,file_name(g)
+        ));
+    }
+    review.push_str("</div></main></body></html>");
+    fs::write(target.join("hierarchical.html"),review).map_err(|e|e.to_string())?;
     build(&all)?;
     atlas::integrate(&all)?;
     // Some sources list alternates for already-rendered characters.
