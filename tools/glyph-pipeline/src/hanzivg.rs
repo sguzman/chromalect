@@ -132,6 +132,11 @@ pub(super) fn import(
             let expected_status = match (ch,expr) {
                 ("包","⿹勹巳")|("岛","⿱鸟山") => "nonstandard_ids_not_parsed",
                 ("刨","⿰⿹勹巳刂")|("抱","⿰扌⿹勹巳") => "partial_components",
+                ("礼","⿰礻乚")|("社","⿰礻土")|("祀","⿰礻巳")
+                |("寻","⿱彐寸")|("当","⿱⺌彐")|("扫","⿰扌彐")
+                |("帅","⿰刂巾")|("师","⿰刂⿱一巾")|("归","⿰刂彐")
+                |("爷","⿱父卩")|("节","⿱艹卩")|("北","⿰丬匕")
+                |("在","⿱才土")|("即","⿰艮卩") => "resolved_structural_membership",
                 _ => return Err(format!("{ch}: source-only Mandarin cut is not authorized")),
             };
             if string(selected,"structural_status")?!=expected_status
