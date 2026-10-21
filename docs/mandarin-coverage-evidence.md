@@ -2,13 +2,13 @@
 
 ## Current source-backed coverage
 
-The pinned rendering pipeline publishes **877 component-colored SVGs**, of which **870** belong to the first-1,000 Mandarin character catalog. Of those 870, 594 are multi-component and 276 are whole-component characters. The 73 most recently recovered catalog glyphs use subglyph decomposition with separately recorded subglyph geometry correspondence checks. They are **automated research candidates awaiting independent visual review**, not certified glyphs.
+The initial pinned-source importer publishes **877 component-colored SVGs**, of which **870** belong to the first-1,000 Mandarin character catalog (594 multi-component and 276 atomic). The subsequent pinned Chinese HanziVG structural pass adds **6** catalog characters, yielding **883 SVGs**, **876 / 1,000** catalog coverage (600 multi-component and 276 atomic), and **124 unresolved** in the verified 2026-10-21 deployment. The 73 most recently recovered catalog glyphs use subglyph decomposition with separately recorded subglyph geometry correspondence checks. They are **automated research candidates awaiting independent visual review**, not certified glyphs.
 
 The generated [coverage JSON](https://sguzman.github.io/chromalect/glyphs/coverage.json), [source diagnostics](https://sguzman.github.io/chromalect/glyphs/diagnostics.json), [hierarchical mapping records](https://sguzman.github.io/chromalect/glyphs/hierarchical-derivations.json) and [review gallery](https://sguzman.github.io/chromalect/glyphs/hierarchical.html) are the machine and visual record of the currently accepted mappings.
 
 ## Unresolved records
 
-The remaining **130** records are grouped by the current pinned-source diagnostic logic:
+Before the secondary source, **130** records were grouped by the pinned-source diagnostic logic as follows. Six were subsequently recovered; consult the generated diagnostics for the up-to-date post-recovery distribution:
 
 | Reason | Records | Required resolution |
 | --- | ---: | --- |
@@ -18,7 +18,7 @@ The remaining **130** records are grouped by the current pinned-source diagnosti
 | Documented catalog alternatives | 8 | Compare the source-selected alternative with the catalog's primary cut and present a clearly versioned selection policy if admitted |
 | Overlapping structures | 3 | Validate complete stroke ownership where geometric elements overlap; do not assume visual intersections constitute separate owned paths |
 
-A complete graphic outline alone does not establish which component owns each stroke. Nor does a component inventory that merely names the parts without associating them with individual vector paths.
+The second-pass candidates are **介、同、场、希、每、走**. HanziVG Chinese-verified source-groups and catalog-selected component identities agree, and their indexed centerline paths are normalized and cross-checked against the unchanged Make Me a Hanzi outlines. The second-pass review recorded 101 missing Chinese-verified HanziVG SVGs, 22 catalog/group disagreements, and one geometric disagreement (右); none was silently promoted. A bounded unique-bijection fallback also rejects 右 without sufficient evidence. The generated [HanziVG provenance manifest](https://sguzman.github.io/chromalect/glyphs/hanzivg-transfers.json) records admitted matches and methodology. Automated acceptance is **not** independent visual certification.\n\nA complete graphic outline alone does not establish which component owns each stroke. Nor does a component inventory that merely names the parts without associating them with individual vector paths.
 
 ## External evidence surveyed
 
@@ -26,7 +26,7 @@ A complete graphic outline alone does not establish which component owns each st
 
 **Hanzi stroke data** ([bovacu/hazi_custom_stroke_data](https://github.com/bovacu/hazi_custom_stroke_data), revision `05c4c917218b0cc63f1c2b0d7d909dffac4d690c`): this dataset publishes 9,574 characters and BabelStone-derived IDS component labels under the Arphic Public License. Its XML component labels are listed as self-closing group elements preceding a character's paths, not necessarily nested groups owning specific paths. It is useful for comparing proposed component sets, but a list of components is **not** sufficient evidence for assigning a color to each stroke. The dataset has **not** been imported into the active renderer.
 
-**HanziVG / KanjiVG** ([HanziVG](https://github.com/Connum/hanzivg), [KanjiVG format](https://kanjivg.tagaini.net/svg-format.html)): these sources supply SVGs with structural groups around stroke paths. Chinese variant compatibility, the reliability of each grouping, and **CC BY-SA 3.0** attribution/share-alike obligations must be evaluated before any grouped vector artwork is adopted. Japanese glyph variants must not silently replace Mainland simplified Chinese forms. These sources have **not** been imported into the active renderer.
+**HanziVG / KanjiVG** ([HanziVG](https://github.com/Connum/hanzivg), [KanjiVG format](https://kanjivg.tagaini.net/svg-format.html)): these sources supply SVGs with structural groups around stroke paths. Chinese variant compatibility, the reliability of each grouping, and **CC BY-SA 3.0** attribution/share-alike obligations must be evaluated before any grouped vector artwork is adopted. Japanese glyph variants must not silently replace Mainland simplified Chinese forms. The independently grouped, Chinese-reviewed HanziVG `hanzi/` evidence **has now been integrated only for six validated candidates**; KanjiVG fallback files and HanziVG centerline artwork are not embedded in active renderer output. See [third-party notices](../THIRD_PARTY_NOTICES.md) for separate licensing.
 
 ## Completion requirements
 
