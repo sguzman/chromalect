@@ -24,6 +24,12 @@ REV = "3e1253b341cc7be14c3540bb3c045e6163557777"
 BASE = f"https://raw.githubusercontent.com/parsimonhi/animCJK/{REV}/svgsZhHans/"
 OPS = {"⿰": 2, "⿱": 2, "⿴": 2, "⿵": 2, "⿶": 2, "⿷": 2,
        "⿸": 2, "⿹": 2, "⿺": 2, "⿻": 2, "⿲": 3, "⿳": 3}
+# The ONE source-only form with an attested relation to an existing v0.4 identity.
+# Never fold two separately registered identity tokens into one another.
+SOURCE_ONLY_VARIANTS = {
+    "𠆢": {"selected_form": "人", "stroke_count": 2,
+        "evidence": "https://ctext.org/dictionary.pl?char=%E4%BA%BA&if=en"}
+}
 
 class Reject(ValueError):
     pass
@@ -141,6 +147,7 @@ def count_ownership(node, instances, donor_rows=None):
     used = Counter()
     segments = []
     witnesses = []
+    variants = []
 
     def visit(part, trail=()):
         form = part["form"]
@@ -149,6 +156,17 @@ def count_ownership(node, instances, donor_rows=None):
                 raise Reject("empty_owner")
             used[(form, part["split"])] += 1
             segments.extend([form] * part["count"])
+        elif form in SOURCE_ONLY_VARIANTS and SOURCE_ONLY_VARIANTS[form]["selected_form"] in wanted:
+            variant = SOURCE_ONLY_VARIANTS[form]
+            if part["count"] != variant["stroke_count"] or part["split"]:
+                raise Reject("source_variant_stroke_count_disagreement")
+            selected_form = variant["selected_form"]
+            used[(selected_form, False)] += 1
+            start = len(segments)
+            segments.extend([selected_form] * part["count"])
+            variants.append({"source_form": form, "selected_form": selected_form,
+                             "start": start, "count": part["count"],
+                             "evidence": variant["evidence"]})
         elif part["children"]:
             for child in part["children"]:
                 visit(child, trail)
@@ -181,7 +199,7 @@ def count_ownership(node, instances, donor_rows=None):
         raise Reject("component_instance_disagreement")
     if len(segments) != node["count"]:
         raise Reject("source_strokes_not_fully_owned")
-    return (segments, witnesses) if donor_rows is not None else segments
+    return (segments, witnesses, variants) if donor_rows is not None else segments
 
 def fetch_svg(character):
     url = BASE + f"{ord(character)}.svg"
@@ -225,7 +243,7 @@ def donor_strokes(form):
         raise Reject("donor_chinese_svg_unavailable")
     return extract_strokes(raw, form)
 
-def candidate(ch, node, owners, svg, graphics, palette, catalog, witnesses=()):
+def candidate(ch, node, owners, svg, graphics, palette, catalog, witnesses=(), variants=()):
     source_paths = extract_strokes(svg, ch)
     refs = graphics.get(ch)
     if not refs or len(refs) != len(source_paths) or len(owners) != len(refs):
@@ -285,9 +303,11 @@ def candidate(ch, node, owners, svg, graphics, palette, catalog, witnesses=()):
             "ownership_provider": "animcjk_zhhans",
             "ownership_revision": REV,
             "ownership_method": ("animcjk_verified_nested_component_derivation"
-                                 if witnesses else "explicit_animcjk_component_stroke_counts"),
+                                 if witnesses else "animcjk_source_variant_alignment"
+                                 if variants else "explicit_animcjk_component_stroke_counts"),
             "geometry_match_method": method,
             "subglyph_witnesses": donor_checks,
+            "source_variant_witnesses": list(variants),
             "source_decomposition": node.get("form") or ch}
 
 def self_test():
@@ -301,10 +321,14 @@ def self_test():
         assert count_ownership(node, [{"form": f} for f in forms]) == expected
     donor_test = {"乞": {"acjk": "乞⿱𠂉2乙1"}}
     nested = parse_acjk("吃⿰口3乞3", "吃")
-    owners, witnesses = count_ownership(nested,
+    owners, witnesses, variants = count_ownership(nested,
         [{"form":"口"},{"form":"𠂉"},{"form":"乙"}], donor_test)
     assert owners == ["口"]*3 + ["𠂉"]*2 + ["乙"]
-    assert witnesses == [{"form":"乞","start":3,"count":3}]
+    assert witnesses == [{"form":"乞","start":3,"count":3}] and variants == []
+    case = parse_acjk("价⿰亻2介⿱𠆢2⿰丿1丨1", "价")
+    got = count_ownership(case, [{"form":"亻"},{"form":"人"},{"form":"丿"},{"form":"丨"}], {"none":{}})
+    assert got[0] == ["亻"]*2 + ["人"]*2 + ["丿","丨"]
+    assert len(got[2]) == 1 and got[2][0]["source_form"] == "𠆢"
     # Split components with uniquely named paths can be counted directly.
     flat = parse_acjk("那⿰⿻刀:1二2刀:1阝.2", "那")
     assert flat["flat_source"]
@@ -371,10 +395,10 @@ def main():
             continue
         try:
             node = parse_acjk(rows[ch]["acjk"], ch)
-            owners, witnesses = count_ownership(node, catalog[ch]["component_instances"], rows)
+            owners, witnesses, variants = count_ownership(node, catalog[ch]["component_instances"], rows)
             if len(owners) != len(graphics.get(ch, [])):
                 raise Reject("source_stroke_count_disagreement")
-            eligible[ch] = (node, owners, witnesses)
+            eligible[ch] = (node, owners, witnesses, variants)
         except (KeyError, TypeError, Reject) as e:
             reason = str(e) or "missing_source_data"
             rejected[reason] += 1
@@ -386,14 +410,14 @@ def main():
             ch, xml, reason = future.result()
             outcomes[ch] = (xml, reason)
     recovered = []
-    for ch, (node, owners, witnesses) in sorted(eligible.items()):
+    for ch, (node, owners, witnesses, variants) in sorted(eligible.items()):
         xml, reason = outcomes[ch]
         if reason:
             rejected[reason] += 1
             rejected_ch[ch] = reason
             continue
         try:
-            row = candidate(ch, node, owners, xml, graphics, palette, catalog, witnesses)
+            row = candidate(ch, node, owners, xml, graphics, palette, catalog, witnesses, variants)
             recovered.append(row)
         except (ET.ParseError, Reject, ValueError) as e:
             reason = str(e) or "invalid_chinese_svg"
@@ -409,6 +433,8 @@ def main():
                                     encoding="utf-8")
     print("AnimCJK eligible source counts:", len(eligible), "of", len(missing)-len(existing))
     print("AnimCJK newly admitted candidates:", len(recovered))
+    print("AnimCJK source-only variant recoveries:",
+          "".join(row["character"] for row in recovered if row["source_variant_witnesses"]))
     print("AnimCJK verified nested donor recoveries:",
           "".join(row["character"] for row in recovered if row["subglyph_witnesses"]))
     print("AnimCJK new characters:", "".join(row["character"] for row in recovered))
