@@ -25,6 +25,34 @@ pub(super) fn import(
     {
         return Err("HanziVG transfer provenance or schema not pinned".into());
     }
+    let review = entries(&source, "catalog_alternative_review_candidates")?;
+    if source["catalog_alternative_review_count"].as_u64() != Some(review.len() as u64) {
+        return Err("documented catalog alternative review count mismatch".into());
+    }
+    let live_chars: HashSet<&str> = entries(&source,"candidates")?.iter()
+        .map(|item|string(item,"character"))
+        .collect::<Result<_,_>>()?;
+    let mut review_chars = HashSet::new();
+    for item in review {
+        let ch = string(item,"character")?;
+        let alt = string(item,"source_selected_catalog_alternative")?;
+        if alt.is_empty() || live_chars.contains(ch) || !review_chars.insert(ch.to_owned()) {
+            return Err(format!("{ch}: alternative cut incorrectly admitted or duplicated"));
+        }
+    }
+    let review_report = json!({
+        "schema":"chromalect.catalog-alternative-review.v1",
+        "status":"not_in_live_mandarin_direct_or_marker_coverage",
+        "source":"AnimCJK ZhHans pinned structural comparison",
+        "source_revision":ANIMCJK_REVISION,
+        "count":review.len(),
+        "candidates":review,
+        "note":"Documented source alternatives are kept separate because their component IDs do not agree with selected catalog Direct/Marker identities. Stroke outlines are evidence-only, not certified."
+    });
+    fs::create_dir_all(target).map_err(|e|e.to_string())?;
+    fs::write(target.join("catalog-alternative-source-review.json"),
+        format!("{}\n",serde_json::to_string_pretty(&review_report).map_err(|e|e.to_string())?))
+        .map_err(|e|e.to_string())?;
     let accepted = entries(&source, "candidates")?;
     if source["accepted_count"].as_u64() != Some(accepted.len() as u64) {
         return Err("HanziVG candidate count mismatch".into());
