@@ -267,6 +267,34 @@ UNPARSED_SOURCE_CUTS = {
            "source_children": ["包", "刂"], "status": "partial_components"},
     "抱": {"source_acjk": "抱⿰扌.3包5", "cut": "⿰扌⿹勹巳", "forms": ["扌", "勹", "巳"],
            "source_children": ["扌", "包"], "status": "partial_components"},
+    "礼": {"source_acjk":"礼⿰礻.4乚1", "cut":"⿰礻乚", "forms":["礻","乚"],
+           "source_children":["礻","乚"], "status":"resolved_structural_membership"},
+    "社": {"source_acjk":"社⿰礻.4土3", "cut":"⿰礻土", "forms":["礻","土"],
+           "source_children":["礻","土"], "status":"resolved_structural_membership"},
+    "祀": {"source_acjk":"祀⿰礻.4巳3", "cut":"⿰礻巳", "forms":["礻","巳"],
+           "source_children":["礻","巳"], "status":"resolved_structural_membership"},
+    "寻": {"source_acjk":"寻⿱彐3寸.3", "cut":"⿱彐寸", "forms":["彐","寸"],
+           "source_children":["彐","寸"], "status":"resolved_structural_membership"},
+    "当": {"source_acjk":"当⿱⺌3彐.3", "cut":"⿱⺌彐", "forms":["⺌","彐"],
+           "source_children":["⺌","彐"], "status":"resolved_structural_membership"},
+    "扫": {"source_acjk":"扫⿰扌.3彐3", "cut":"⿰扌彐", "forms":["扌","彐"],
+           "source_children":["扌","彐"], "status":"resolved_structural_membership"},
+    "帅": {"source_acjk":"帅⿰刂2巾.3", "cut":"⿰刂巾", "forms":["刂","巾"],
+           "source_children":["刂","巾"], "status":"resolved_structural_membership"},
+    "师": {"source_acjk":"师⿰刂2帀⿱一1巾.3", "cut":"⿰刂⿱一巾", "forms":["刂","一","巾"],
+           "source_children":["刂","帀"], "status":"resolved_structural_membership"},
+    "归": {"source_acjk":"归⿰刂2彐.3", "cut":"⿰刂彐", "forms":["刂","彐"],
+           "source_children":["刂","彐"], "status":"resolved_structural_membership"},
+    "爷": {"source_acjk":"爷⿱父.4卩2", "cut":"⿱父卩", "forms":["父","卩"],
+           "source_children":["父","卩"], "status":"resolved_structural_membership"},
+    "节": {"source_acjk":"节⿱艹.3卩2", "cut":"⿱艹卩", "forms":["艹","卩"],
+           "source_children":["艹","卩"], "status":"resolved_structural_membership"},
+    "北": {"source_acjk":"北⿰丬3匕.2", "cut":"⿰丬匕", "forms":["丬","匕"],
+           "source_children":["丬","匕"], "status":"resolved_structural_membership"},
+    "在": {"source_acjk":"在⿱才3土.3", "cut":"⿱才土", "forms":["才","土"],
+           "source_children":["才","土"], "status":"resolved_structural_membership"},
+    "即": {"source_acjk":"即⿰艮5卩.2", "cut":"⿰艮卩", "forms":["艮","卩"],
+           "source_children":["艮","卩"], "status":"resolved_structural_membership"},
 }
 
 def reviewed_unparsed_source_cut(ch, source_acjk, node, catalog, palette):
@@ -278,13 +306,19 @@ def reviewed_unparsed_source_cut(ch, source_acjk, node, catalog, palette):
     if record["status"] == "nonstandard_ids_not_parsed":
         if catalog["component_instances"]:
             raise Reject("original_nonstandard_catalog_had_selected_components")
-    else:
+    elif record["status"] == "partial_components":
         # A compound unknown part (包) must be precisely the catalog's only
         # missing component; all other identities retain their selected colors.
         if {item["form"] for item in catalog.get("missing_components", [])}!={"包"}:
             raise Reject("unverified_missing_subglyph")
         if not catalog["component_instances"]:
             raise Reject("no_pinned_catalog_components_for_subglyph")
+    else:
+        # An original complete cut can be replaced only by the explicitly
+        # pinned simplified-Chinese component identities above. Never silently
+        # fold two distinct palette IDs into one.
+        if not catalog["component_instances"] or not catalog["component_ids"]:
+            raise Reject("original_resolved_catalog_missing_pinned_identities")
     forms = record["forms"]
     if not node["children"] or [v["form"] for v in node["children"]] != record["source_children"]:
         raise Reject("source_decomposition_does_not_match_approved_cut")
