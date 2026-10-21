@@ -190,7 +190,7 @@ fn pager(glyphs: &[Glyph], page: usize) -> String {
         let current = if i == page { " aria-current=\"page\"" } else { "" };
         result.push_str(&format!("<a href=\"{}\"{}>{}</a>", page_name(i), current, label));
     }
-    result.push_str("<a href=\"by-component/index.html\">Browse by component</a><a href=\"alternatives/index.html\">Source alternatives</a><a href=\"unknown-components/index.html\">Unidentified source parts</a><a href=\"unmapped.html\">Unmapped characters</a><a href=\"diagnostics.html\">Coverage diagnostics</a><a href=\"review/index.html\">Geometry review</a></nav>");
+    result.push_str("<a href=\"by-component/index.html\">Browse by component</a><a href=\"alternatives/index.html\">Source alternatives</a><a href=\"unknown-components/index.html\">Unidentified source parts</a><a href=\"unmapped.html\">Unmapped characters</a><a href=\"diagnostics.html\">Coverage diagnostics</a><a href=\"review/index.html\">Geometry review</a><a href=\"hierarchical.html\">Subglyph review</a></nav>");
     result
 }
 
