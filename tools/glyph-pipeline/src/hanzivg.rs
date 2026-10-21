@@ -99,8 +99,33 @@ pub(super) fn import(
         if ownership_method != "explicit_source_groups"
             && ownership_method != "single_root_residual_catalog_component"
             && ownership_method != "explicit_animcjk_component_stroke_counts"
+            && ownership_method != "animcjk_verified_nested_component_derivation"
         {
             return Err(format!("{ch}: unknown source component ownership method"));
+        }
+        if ownership_method == "animcjk_verified_nested_component_derivation" {
+            if provider != "animcjk_zhhans" || entries(row, "subglyph_witnesses")?.is_empty() {
+                return Err(format!("{ch}: unverified nested source derivation"));
+            }
+            for witness in entries(row,"subglyph_witnesses")? {
+                let start = get(witness, "start")?.as_u64()
+                    .ok_or_else(||format!("{ch}: invalid donor span start"))? as usize;
+                let count = get(witness, "count")?.as_u64()
+                    .ok_or_else(||format!("{ch}: invalid donor stroke count"))? as usize;
+                let source_form = string(witness, "component")?;
+                if source_form.chars().count() != 1 || count < 2
+                    || start.checked_add(count).is_none_or(|end|end > row["stroke_count"].as_u64().unwrap_or(0) as usize)
+                {
+                    return Err(format!("{ch}: donor witness span out of range"));
+                }
+                let expected = format!("svgsZhHans/{}.svg", source_form.chars().next().unwrap() as u32);
+                if string(witness,"source_svg")? != expected
+                    || get(witness,"mean_geometry_error")?.as_f64()
+                        .is_none_or(|v|!v.is_finite()||!(0.0..=0.095).contains(&v))
+                {
+                    return Err(format!("{ch}: donor witness geometry gate failed"));
+                }
+            }
         }
         let method = string(row, "geometry_match_method")?;
         if method != "same_stroke_index_geometry" && method != "unique_stroke_geometry_bijection" {
