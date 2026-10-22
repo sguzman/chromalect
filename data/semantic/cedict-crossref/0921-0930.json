@@ -1,0 +1,288 @@
+{
+  "schema": "chromalect.mandarin.lexical-crossref-batch.v0.1",
+  "source": {
+    "title": "CC-CEDICT per-headword v2 mirror",
+    "repository": "krmanik/cedict-json",
+    "commit": "63c2569948629323b515833930fdd10f285401b6",
+    "dataLicense": "CC BY-SA 4.0",
+    "upstream": "https://cc-cedict.org/",
+    "mirror": "https://github.com/krmanik/cedict-json",
+    "transform": "Selected single-simplified-character dictionary records, retaining readings and definitions; literal English gloss matching is automated triage only"
+  },
+  "rankStart": 921,
+  "rankEnd": 930,
+  "summary": {
+    "total": 10,
+    "headwordFound": 10,
+    "withCandidate": 8,
+    "withLiteralSupport": 6
+  },
+  "records": [
+    {
+      "rank": 921,
+      "character": "姊",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/姊.json",
+      "sourceBlobSha": "7ef2a160658580ba5c205d3b78042cbff0a0f412",
+      "traditional": "姊",
+      "dictionaryReadings": [
+        "zi3"
+      ],
+      "dictionaryDefinitions": {
+        "zi3": "old variant of 姊[zi3]; older sister; Taiwan pr. [jie3]; "
+      },
+      "selectedSenseChecks": [],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 922,
+      "character": "妨",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/妨.json",
+      "sourceBlobSha": "ac51945b975c460fc02c483c7c294e0fabe87c78",
+      "traditional": "妨",
+      "dictionaryReadings": [
+        "fang2"
+      ],
+      "dictionaryDefinitions": {
+        "fang2": "to hinder; (in the negative or interrogative) (no) harm; (what) harm; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "obstruct",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 923,
+      "character": "妒",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/妒.json",
+      "sourceBlobSha": "5f01fbd7eccf35e40c1cbd5586e9e93919417eba",
+      "traditional": "妬",
+      "dictionaryReadings": [
+        "du4"
+      ],
+      "dictionaryDefinitions": {
+        "du4": "to envy (success, talent); jealous; variant of 妒[du4]; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "jealous",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "du4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 924,
+      "character": "努",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/努.json",
+      "sourceBlobSha": "be1fc9cdeea04e450c21c59f4e008d4436801994",
+      "traditional": "努",
+      "dictionaryReadings": [
+        "nu3"
+      ],
+      "dictionaryDefinitions": {
+        "nu3": "to exert; to strive; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "strive",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "nu3"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 925,
+      "character": "忍",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/忍.json",
+      "sourceBlobSha": "1a043d815b54e0126f3deff45d6721af0182e230",
+      "traditional": "忍",
+      "dictionaryReadings": [
+        "ren3"
+      ],
+      "dictionaryDefinitions": {
+        "ren3": "to bear; to endure; to tolerate; to restrain oneself; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "endure",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "ren3"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 926,
+      "character": "劲",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/劲.json",
+      "sourceBlobSha": "177dabd6966ce3c404d490e687005d54ddeb8091",
+      "traditional": "勁",
+      "dictionaryReadings": [
+        "jin4",
+        "jing4"
+      ],
+      "dictionaryDefinitions": {
+        "jin4": "strength; energy; enthusiasm; spirit; mood; expression; interest; CL:把[ba3]; ",
+        "jing4": "stalwart; sturdy; strong; powerful; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "strong",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "jing4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 927,
+      "character": "矣",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/矣.json",
+      "sourceBlobSha": "c1a195aaccdf4317222b7d08391585644e625cb6",
+      "traditional": "矣",
+      "dictionaryReadings": [
+        "yi3"
+      ],
+      "dictionaryDefinitions": {
+        "yi3": "classical final particle, similar to modern 了[le5]; "
+      },
+      "selectedSenseChecks": [],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 928,
+      "character": "鸡",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/鸡.json",
+      "sourceBlobSha": "eb2d8f8f1b3c272df61f951fe021fae1ca4746d1",
+      "traditional": "雞",
+      "dictionaryReadings": [
+        "ji1"
+      ],
+      "dictionaryDefinitions": {
+        "ji1": "fowl; chicken; CL:隻|只[zhi1]; (slang) prostitute; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "chicken",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "ji1"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 929,
+      "character": "纬",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/纬.json",
+      "sourceBlobSha": "6a92258bec4b514f9528f4411ad8a4e7228deffc",
+      "traditional": "緯",
+      "dictionaryReadings": [
+        "wei3"
+      ],
+      "dictionaryDefinitions": {
+        "wei3": "latitude; woof (horizontal thread in weaving); weft; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "latitude",
+          "sourceGlossGroupIndex": 1,
+          "matchingDictionaryReadings": [
+            "wei3"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 930,
+      "character": "驱",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/驱.json",
+      "sourceBlobSha": "48d9c4ec5a3d78757897299a4df5a93704185853",
+      "traditional": "驅",
+      "dictionaryReadings": [
+        "qu1"
+      ],
+      "dictionaryDefinitions": {
+        "qu1": "variant of 驅|驱[qu1]; old variant of 驅|驱[qu1]; to expel; to urge on; to drive; to run quickly; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "drive away",
+          "sourceGlossGroupIndex": 1,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    }
+  ]
+}
