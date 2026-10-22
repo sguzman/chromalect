@@ -1,0 +1,451 @@
+{
+  "schema": "chromalect.mandarin.lexical-crossref-batch.v0.1",
+  "source": {
+    "title": "CC-CEDICT per-headword v2 mirror",
+    "repository": "krmanik/cedict-json",
+    "commit": "63c2569948629323b515833930fdd10f285401b6",
+    "dataLicense": "CC BY-SA 4.0",
+    "upstream": "https://cc-cedict.org/",
+    "mirror": "https://github.com/krmanik/cedict-json",
+    "transform": "Selected single-simplified-character dictionary records, retaining readings and definitions; literal English gloss matching is automated triage only"
+  },
+  "rankStart": 346,
+  "rankEnd": 360,
+  "summary": {
+    "total": 15,
+    "headwordFound": 15,
+    "withCandidate": 14,
+    "withLiteralSupport": 12
+  },
+  "records": [
+    {
+      "rank": 346,
+      "character": "幼",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/幼.json",
+      "sourceBlobSha": "5cec092fcdb24a3107d0268fba8e2dc42125e685",
+      "traditional": "幼",
+      "dictionaryReadings": [
+        "you4"
+      ],
+      "dictionaryDefinitions": {
+        "you4": "young; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "young child",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 347,
+      "character": "丝",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/丝.json",
+      "sourceBlobSha": "8715152a4084b57b0889aca1972371bf9f8666c0",
+      "traditional": "絲",
+      "dictionaryReadings": [
+        "si1"
+      ],
+      "dictionaryDefinitions": {
+        "si1": "silk; thread; trace; CL:條|条[tiao2]; classifier: a thread (of cloud, smoke etc), a bit, an iota, a hint (of sth) etc; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "silk",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "si1"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 348,
+      "character": "邦",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/邦.json",
+      "sourceBlobSha": "7f905a89299ff647de72fde1ce434534c54c96a5",
+      "traditional": "邦",
+      "dictionaryReadings": [
+        "bang1"
+      ],
+      "dictionaryDefinitions": {
+        "bang1": "country; nation; state; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "country",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "bang1"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 349,
+      "character": "式",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/式.json",
+      "sourceBlobSha": "7ce17b584b6d9e92621746499203a3cb56568cc4",
+      "traditional": "式",
+      "dictionaryReadings": [
+        "shi4"
+      ],
+      "dictionaryDefinitions": {
+        "shi4": "type; form; pattern; style; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "formula",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 350,
+      "character": "迂",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/迂.json",
+      "sourceBlobSha": "486f11ac0fd051693405642778873efc419b2d90",
+      "traditional": "迂",
+      "dictionaryReadings": [
+        "yu1"
+      ],
+      "dictionaryDefinitions": {
+        "yu1": "literal-minded; pedantic; doctrinaire; longwinded; circuitous; "
+      },
+      "selectedSenseChecks": [],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 351,
+      "character": "刑",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/刑.json",
+      "sourceBlobSha": "f2990442424a613031838815d264e2441fd242a9",
+      "traditional": "刑",
+      "dictionaryReadings": [
+        "Xing2",
+        "xing2"
+      ],
+      "dictionaryDefinitions": {
+        "Xing2": "surname Xing; ",
+        "xing2": "punishment; penalty; sentence; torture; corporal punishment; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "punishment",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "xing2"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 352,
+      "character": "戎",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/戎.json",
+      "sourceBlobSha": "b9589601edab3479257ebea5df680136bfd808d7",
+      "traditional": "戎",
+      "dictionaryReadings": [
+        "Rong2",
+        "rong2"
+      ],
+      "dictionaryDefinitions": {
+        "Rong2": "surname Rong; ",
+        "rong2": "generic term for weapons (old); army (matters); military affairs; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "military",
+          "sourceGlossGroupIndex": 1,
+          "matchingDictionaryReadings": [
+            "rong2"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 353,
+      "character": "动",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/动.json",
+      "sourceBlobSha": "543e66858931dfa891f9f884f2d78b8d7f372402",
+      "traditional": "動",
+      "dictionaryReadings": [
+        "dong4"
+      ],
+      "dictionaryDefinitions": {
+        "dong4": "(of sth) to move; to set in movement; to displace; to touch; to make use of; to stir (emotions); to alter; abbr. for 動詞|动词[dong4 ci2], verb; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "move",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "dong4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 354,
+      "character": "扛",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/扛.json",
+      "sourceBlobSha": "58319a238abdc2178d15f4e7ebfbd7ff61af18e1",
+      "traditional": "摃",
+      "dictionaryReadings": [
+        "gang1",
+        "kang2"
+      ],
+      "dictionaryDefinitions": {
+        "gang1": "to raise aloft with both hands; (of two or more people) to carry sth together; old variant of 扛[gang1]; ",
+        "kang2": "to carry on one's shoulder; (fig.) to take on (a burden, duty etc); "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "carry",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "gang1",
+            "kang2"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 355,
+      "character": "寺",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/寺.json",
+      "sourceBlobSha": "717c1058801dfbdd5fe3a1d6bc5a6d88af840fcf",
+      "traditional": "寺",
+      "dictionaryReadings": [
+        "si4"
+      ],
+      "dictionaryDefinitions": {
+        "si4": "Buddhist temple; mosque; government office (old); "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "temple",
+          "sourceGlossGroupIndex": 1,
+          "matchingDictionaryReadings": [
+            "si4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 356,
+      "character": "吉",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/吉.json",
+      "sourceBlobSha": "7c46a46a86959f74d8d3ddb641261abfb3ae6ad7",
+      "traditional": "吉",
+      "dictionaryReadings": [
+        "Ji2",
+        "ji2"
+      ],
+      "dictionaryDefinitions": {
+        "Ji2": "surname Ji; abbr. for Jilin Province 吉林省[Ji2 lin2 Sheng3]; ",
+        "ji2": "lucky; giga- (meaning billion or 10^9); "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "lucky",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "ji2"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 357,
+      "character": "扣",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/扣.json",
+      "sourceBlobSha": "1f0e4daa00edf1bd7d8aac3c34200c1b0dee6a0a",
+      "traditional": "釦",
+      "dictionaryReadings": [
+        "kou4"
+      ],
+      "dictionaryDefinitions": {
+        "kou4": "to fasten; to button; button; buckle; knot; to arrest; to confiscate; to deduct (money); discount; to knock; to smash, spike or dunk (a ball); to cover (with a bowl etc); fig. to tag a label on sb; button; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "knock",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "kou4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 358,
+      "character": "考",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/考.json",
+      "sourceBlobSha": "dc691de6ba98a79b64ff3ca42724715feee2dbbb",
+      "traditional": "考",
+      "dictionaryReadings": [
+        "kao3"
+      ],
+      "dictionaryDefinitions": {
+        "kao3": "to beat; to hit; variant of 考[kao3]; to inspect; to test; to take an exam; to check; to verify; to test; to examine; to take an exam; to take an entrance exam for; deceased father; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "examine",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "kao3"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 359,
+      "character": "托",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/托.json",
+      "sourceBlobSha": "6367f34075e376d2210728b1eeeecfd833d44395",
+      "traditional": "託",
+      "dictionaryReadings": [
+        "tuo1"
+      ],
+      "dictionaryDefinitions": {
+        "tuo1": "prop; support (for weight); rest (e.g. arm rest); thanks to; to hold in one's hand; to support in one's palm; to give; to base; to commit; to set; Torr (unit of pressure); to trust; to entrust; to be entrusted with; to act as trustee; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "support",
+          "sourceGlossGroupIndex": 1,
+          "matchingDictionaryReadings": [
+            "tuo1"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 360,
+      "character": "老",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/老.json",
+      "sourceBlobSha": "68be040d0ee7d5dd2af5f6dfb14fa04a30299d0f",
+      "traditional": "老",
+      "dictionaryReadings": [
+        "lao3"
+      ],
+      "dictionaryDefinitions": {
+        "lao3": "prefix used before the surname of a person or a numeral indicating the order of birth of the children in a family or to indicate affection or familiarity; old (of people); venerable (person); experienced; of long standing; always; all the time; of the past; very; outdated; (of meat etc) tough; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "old",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "lao3"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    }
+  ]
+}
