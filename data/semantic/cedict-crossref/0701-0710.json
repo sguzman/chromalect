@@ -1,0 +1,332 @@
+{
+  "schema": "chromalect.mandarin.lexical-crossref-batch.v0.1",
+  "source": {
+    "title": "CC-CEDICT per-headword v2 mirror",
+    "repository": "krmanik/cedict-json",
+    "commit": "63c2569948629323b515833930fdd10f285401b6",
+    "dataLicense": "CC BY-SA 4.0",
+    "upstream": "https://cc-cedict.org/",
+    "mirror": "https://github.com/krmanik/cedict-json",
+    "transform": "Selected single-simplified-character dictionary records, retaining readings and definitions; literal English gloss matching is automated triage only"
+  },
+  "rankStart": 701,
+  "rankEnd": 710,
+  "summary": {
+    "total": 10,
+    "headwordFound": 10,
+    "withCandidate": 10,
+    "withLiteralSupport": 8
+  },
+  "records": [
+    {
+      "rank": 701,
+      "character": "辰",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/辰.json",
+      "sourceBlobSha": "61a39e151fe3b2fbc5bc89f58711bdf076987809",
+      "traditional": "辰",
+      "dictionaryReadings": [
+        "chen2"
+      ],
+      "dictionaryDefinitions": {
+        "chen2": "5th earthly branch: 7-9 a.m., 3rd solar month (5th April-4th May), year of the Dragon; ancient Chinese compass point: 120°; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "early morning",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 702,
+      "character": "励",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/励.json",
+      "sourceBlobSha": "817d8d83ff53dece1d57795292a575938c22965d",
+      "traditional": "勵",
+      "dictionaryReadings": [
+        "Li4",
+        "li4"
+      ],
+      "dictionaryDefinitions": {
+        "Li4": "surname Li; ",
+        "li4": "to encourage; to urge; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "encourage",
+          "sourceGlossGroupIndex": 1,
+          "matchingDictionaryReadings": [
+            "li4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 703,
+      "character": "否",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/否.json",
+      "sourceBlobSha": "8960f553da5ec6f66853ede91409dffb4795990d",
+      "traditional": "否",
+      "dictionaryReadings": [
+        "fou3",
+        "pi3"
+      ],
+      "dictionaryDefinitions": {
+        "fou3": "to negate; to deny; not; ",
+        "pi3": "clogged; evil; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "not",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "fou3"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 704,
+      "character": "还",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/还.json",
+      "sourceBlobSha": "dd033f16bb95010e4aec6effa68b858ee95e7480",
+      "traditional": "還",
+      "dictionaryReadings": [
+        "Huan2",
+        "hai2",
+        "huan2"
+      ],
+      "dictionaryDefinitions": {
+        "Huan2": "surname Huan; ",
+        "hai2": "still; still in progress; still more; yet; even more; in addition; fairly; passably (good); as early as; even; also; else; ",
+        "huan2": "to pay back; to return; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "still",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "hai2"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 705,
+      "character": "尬",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/尬.json",
+      "sourceBlobSha": "cff26f19024ee74e0eaea89ce8d65855e460201c",
+      "traditional": "尬",
+      "dictionaryReadings": [
+        "ga4"
+      ],
+      "dictionaryDefinitions": {
+        "ga4": "see 尷尬|尴尬[gan1 ga4]; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "embarrass",
+          "sourceGlossGroupIndex": 1,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 706,
+      "character": "歼",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/歼.json",
+      "sourceBlobSha": "e136886475c17591dc968467d5391966940e3791",
+      "traditional": "殲",
+      "dictionaryReadings": [
+        "jian1"
+      ],
+      "dictionaryDefinitions": {
+        "jian1": "to annihilate; abbr. for 殲擊機|歼击机, fighter plane; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "annihilate",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "jian1"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 707,
+      "character": "来",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/来.json",
+      "sourceBlobSha": "8ad32a0862725e91f65dbda95b6359dcef90e717",
+      "traditional": "來",
+      "dictionaryReadings": [
+        "lai2"
+      ],
+      "dictionaryDefinitions": {
+        "lai2": "to come; to arrive; to come round; ever since; next; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "come",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "lai2"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 708,
+      "character": "连",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/连.json",
+      "sourceBlobSha": "730489ce7a20acbc0a555bdf05de56149ff65bf3",
+      "traditional": "連",
+      "dictionaryReadings": [
+        "Lian2",
+        "lian2"
+      ],
+      "dictionaryDefinitions": {
+        "Lian2": "surname Lian; ",
+        "lian2": "to link; to join; to connect; continuously; in succession; including; (used with 也, 都 etc) even; company (military); "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "connect",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "lian2"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 709,
+      "character": "轩",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/轩.json",
+      "sourceBlobSha": "c9edea681cce3ddcd7572e1632daefff772c7ac4",
+      "traditional": "軒",
+      "dictionaryReadings": [
+        "Xuan1",
+        "xuan1"
+      ],
+      "dictionaryDefinitions": {
+        "Xuan1": "surname Xuan; ",
+        "xuan1": "pavilion with a view; high; tall; high fronted, curtained carriage (old); "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "carriage",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "xuan1"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 710,
+      "character": "步",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/步.json",
+      "sourceBlobSha": "ff1f34b871fd6d5f2dd133f50cdc925d02ae627c",
+      "traditional": "步",
+      "dictionaryReadings": [
+        "Bu4",
+        "bu4"
+      ],
+      "dictionaryDefinitions": {
+        "Bu4": "surname Bu; ",
+        "bu4": "a step; a pace; walk; march; stages in a process; situation; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "step",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "bu4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        },
+        {
+          "selectedMeaning": "walk",
+          "sourceGlossGroupIndex": 1,
+          "matchingDictionaryReadings": [
+            "bu4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    }
+  ]
+}
