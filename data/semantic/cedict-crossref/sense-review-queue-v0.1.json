@@ -26,9 +26,10 @@
     "deskAnalyzedHighPriority": 15,
     "independentlyLexicallyApproved": 0,
     "emojiComprehensionApproved": 0,
-    "deskAnalyzedUnclassified": 174,
-    "deskAnalyzedTotal": 200,
-    "deskAnalyzedMediumPriority": 11
+    "deskAnalyzedUnclassified": 222,
+    "deskAnalyzedTotal": 248,
+    "deskAnalyzedMediumPriority": 11,
+    "deskAnalysisPending": 0
   },
   "records": [
     {
@@ -5892,7 +5893,16 @@
       "earlierResearchNote": null,
       "lexicalDecision": "pending",
       "visualComprehensionDecision": "pending",
-      "productionVerified": false
+      "productionVerified": false,
+      "deskAnalysis": {
+        "kind": "emotional_paraphrase",
+        "provisionalNextAction": "inspect_context",
+        "observation": "Depressed, bored or melancholy can overlap gloomy mood; 😔 is plausible but misses airless or shut-in senses.",
+        "sourceExcerpt": "men1: stuffy;  shut indoors;  to smother;  to cover tightly | men4: bored;  depressed;  melancholy;  sealed",
+        "sourceBasis": "pinned_CC-CEDICT_headword_plus_Unihan_candidate",
+        "reviewerIndependent": false,
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+      }
     },
     {
       "rank": 854,
@@ -5915,7 +5925,16 @@
       "earlierResearchNote": null,
       "lexicalDecision": "pending",
       "visualComprehensionDecision": "pending",
-      "productionVerified": false
+      "productionVerified": false,
+      "deskAnalysis": {
+        "kind": "kinship_age_relation",
+        "provisionalNextAction": "inspect_context",
+        "observation": "Younger brother is a relative's position, while 👦 represents a boy and does not identify a sibling.",
+        "sourceExcerpt": "di4: younger brother;  junior male;  I (modest word in letter); | ti4: variant of 悌[ti4];",
+        "sourceBasis": "pinned_CC-CEDICT_headword_plus_Unihan_candidate",
+        "reviewerIndependent": false,
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+      }
     },
     {
       "rank": 855,
@@ -5938,7 +5957,16 @@
       "earlierResearchNote": null,
       "lexicalDecision": "pending",
       "visualComprehensionDecision": "pending",
-      "productionVerified": false
+      "productionVerified": false,
+      "deskAnalysis": {
+        "kind": "water_specific_scope",
+        "provisionalNextAction": "inspect_context",
+        "observation": "A pool or expanse of water can be vast, but 🌊 suggests large waves and misses surname and onomatopoeia.",
+        "sourceExcerpt": "wang1: expanse of water;  ooze;  (onom.) bark;  classifier for liquids: pool, puddle",
+        "sourceBasis": "pinned_CC-CEDICT_headword_plus_Unihan_candidate",
+        "reviewerIndependent": false,
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+      }
     },
     {
       "rank": 858,
@@ -5960,7 +5988,16 @@
       "earlierResearchNote": null,
       "lexicalDecision": "pending",
       "visualComprehensionDecision": "pending",
-      "productionVerified": false
+      "productionVerified": false,
+      "deskAnalysis": {
+        "kind": "source_sense_conflict",
+        "provisionalNextAction": "reassess_or_defer",
+        "observation": "The independent headword emphasizes discard or eliminate, while excessive and 📈 signal too much; check whether this is an obsolete source sense.",
+        "sourceExcerpt": "tai4: to discard;  to eliminate;",
+        "sourceBasis": "pinned_CC-CEDICT_headword_plus_Unihan_candidate",
+        "reviewerIndependent": false,
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+      }
     },
     {
       "rank": 864,
@@ -5982,7 +6019,16 @@
       "earlierResearchNote": null,
       "lexicalDecision": "pending",
       "visualComprehensionDecision": "pending",
-      "productionVerified": false
+      "productionVerified": false,
+      "deskAnalysis": {
+        "kind": "metaphorical_motion",
+        "provisionalNextAction": "inspect_context",
+        "observation": "Torrential rush or tumultuous can evoke turbulence; 🌊 privileges literal water over figurative disturbance.",
+        "sourceExcerpt": "xiong1: torrential rush;  tumultuous;",
+        "sourceBasis": "pinned_CC-CEDICT_headword_plus_Unihan_candidate",
+        "reviewerIndependent": false,
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+      }
     },
     {
       "rank": 870,
@@ -6009,7 +6055,16 @@
       "earlierResearchNote": null,
       "lexicalDecision": "pending",
       "visualComprehensionDecision": "pending",
-      "productionVerified": false
+      "productionVerified": false,
+      "deskAnalysis": {
+        "kind": "reading_and_variant",
+        "provisionalNextAction": "inspect_context",
+        "observation": "The sink reading appears as a variant of 沉, while 沈 is also a common surname; distinguish reading and headword status.",
+        "sourceExcerpt": "chen2: variant of 沉[chen2]; | shen3: liquid;  to pour;",
+        "sourceBasis": "pinned_CC-CEDICT_headword_plus_Unihan_candidate",
+        "reviewerIndependent": false,
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+      }
     },
     {
       "rank": 872,
@@ -6034,7 +6089,16 @@
       "earlierResearchNote": null,
       "lexicalDecision": "pending",
       "visualComprehensionDecision": "pending",
-      "productionVerified": false
+      "productionVerified": false,
+      "deskAnalysis": {
+        "kind": "verb_paraphrase",
+        "provisionalNextAction": "inspect_context",
+        "observation": "Seep or percolate aligns with seep in; 💧 only shows water, not movement into a material.",
+        "sourceExcerpt": "qin4: to seep;  to percolate;",
+        "sourceBasis": "pinned_CC-CEDICT_headword_plus_Unihan_candidate",
+        "reviewerIndependent": false,
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+      }
     },
     {
       "rank": 874,
@@ -6056,7 +6120,16 @@
       "earlierResearchNote": null,
       "lexicalDecision": "pending",
       "visualComprehensionDecision": "pending",
-      "productionVerified": false
+      "productionVerified": false,
+      "deskAnalysis": {
+        "kind": "affective_subtype",
+        "provisionalNextAction": "inspect_context",
+        "observation": "Worry, anxiety and sorrow overlap sad only partly; 😔 is broad and does not encode concern or mourning.",
+        "sourceExcerpt": "you1: to worry;  to concern oneself with;  worried;  anxiety",
+        "sourceBasis": "pinned_CC-CEDICT_headword_plus_Unihan_candidate",
+        "reviewerIndependent": false,
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+      }
     },
     {
       "rank": 876,
@@ -6078,7 +6151,16 @@
       "earlierResearchNote": null,
       "lexicalDecision": "pending",
       "visualComprehensionDecision": "pending",
-      "productionVerified": false
+      "productionVerified": false,
+      "deskAnalysis": {
+        "kind": "speed_cue",
+        "provisionalNextAction": "inspect_context",
+        "observation": "Rapid, quick and speed are explicit glosses; ⚡ may be understood as electricity rather than fast movement.",
+        "sourceExcerpt": "kuai4: rapid;  quick;  speed;  rate",
+        "sourceBasis": "pinned_CC-CEDICT_headword_plus_Unihan_candidate",
+        "reviewerIndependent": false,
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+      }
     },
     {
       "rank": 879,
@@ -6100,7 +6182,16 @@
       "earlierResearchNote": null,
       "lexicalDecision": "pending",
       "visualComprehensionDecision": "pending",
-      "productionVerified": false
+      "productionVerified": false,
+      "deskAnalysis": {
+        "kind": "magnitude_vs_width",
+        "provisionalNextAction": "inspect_context",
+        "observation": "Great, magnificent and macro are broader than width; ↔️ assigns an exclusively spatial interpretation.",
+        "sourceExcerpt": "hong2: great;  magnificent;  macro (computing);  macro-",
+        "sourceBasis": "pinned_CC-CEDICT_headword_plus_Unihan_candidate",
+        "reviewerIndependent": false,
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+      }
     },
     {
       "rank": 887,
@@ -6125,7 +6216,16 @@
       "earlierResearchNote": null,
       "lexicalDecision": "pending",
       "visualComprehensionDecision": "pending",
-      "productionVerified": false
+      "productionVerified": false,
+      "deskAnalysis": {
+        "kind": "judgment_vs_statistics",
+        "provisionalNextAction": "inspect_context",
+        "observation": "Discuss, criticize and judge can involve evaluation, but 📊 suggests quantitative metrics instead of evaluative speech.",
+        "sourceExcerpt": "ping2: to discuss;  to comment;  to criticize;  to judge",
+        "sourceBasis": "pinned_CC-CEDICT_headword_plus_Unihan_candidate",
+        "reviewerIndependent": false,
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+      }
     },
     {
       "rank": 891,
@@ -6150,7 +6250,16 @@
       "earlierResearchNote": null,
       "lexicalDecision": "pending",
       "visualComprehensionDecision": "pending",
-      "productionVerified": false
+      "productionVerified": false,
+      "deskAnalysis": {
+        "kind": "ritual_vs_generic_prayer",
+        "provisionalNextAction": "inspect_context",
+        "observation": "Offering a sacrifice or libation is a specific ritual act; 🙏 implies prayer and may misidentify the action.",
+        "sourceExcerpt": "si4: to sacrifice;  to offer libation to;  variant of 祀[si4];",
+        "sourceBasis": "pinned_CC-CEDICT_headword_plus_Unihan_candidate",
+        "reviewerIndependent": false,
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+      }
     },
     {
       "rank": 892,
@@ -6176,7 +6285,16 @@
       "earlierResearchNote": null,
       "lexicalDecision": "pending",
       "visualComprehensionDecision": "pending",
-      "productionVerified": false
+      "productionVerified": false,
+      "deskAnalysis": {
+        "kind": "knowing_vs_recognizing",
+        "provisionalNextAction": "inspect_context",
+        "observation": "To know or knowledge differs from visual identification; 👀 suggests seeing rather than understanding.",
+        "sourceExcerpt": "shi2: to know;  knowledge;  Taiwan pr. [shi4]; | zhi4: to record;  to write a footnote;",
+        "sourceBasis": "pinned_CC-CEDICT_headword_plus_Unihan_candidate",
+        "reviewerIndependent": false,
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+      }
     },
     {
       "rank": 896,
@@ -6201,7 +6319,16 @@
       "earlierResearchNote": null,
       "lexicalDecision": "pending",
       "visualComprehensionDecision": "pending",
-      "productionVerified": false
+      "productionVerified": false,
+      "deskAnalysis": {
+        "kind": "medical_action_scope",
+        "provisionalNextAction": "inspect_context",
+        "observation": "Medical examination or treatment supports a clinical action, while 🩺 is an instrument not the diagnosis itself.",
+        "sourceExcerpt": "zhen3: to examine or treat medically;",
+        "sourceBasis": "pinned_CC-CEDICT_headword_plus_Unihan_candidate",
+        "reviewerIndependent": false,
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+      }
     },
     {
       "rank": 897,
@@ -6223,7 +6350,16 @@
       "earlierResearchNote": null,
       "lexicalDecision": "pending",
       "visualComprehensionDecision": "pending",
-      "productionVerified": false
+      "productionVerified": false,
+      "deskAnalysis": {
+        "kind": "singular_vs_plural",
+        "provisionalNextAction": "inspect_context",
+        "observation": "The dictionary includes word, statement and lyrics; 🔤 suggests alphabetic text rather than Chinese lexical units.",
+        "sourceExcerpt": "ci2: old variant of 詞|词[ci2];  word;  statement;  speech",
+        "sourceBasis": "pinned_CC-CEDICT_headword_plus_Unihan_candidate",
+        "reviewerIndependent": false,
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+      }
     },
     {
       "rank": 901,
@@ -6245,7 +6381,16 @@
       "earlierResearchNote": null,
       "lexicalDecision": "pending",
       "visualComprehensionDecision": "pending",
-      "productionVerified": false
+      "productionVerified": false,
+      "deskAnalysis": {
+        "kind": "temporal_vs_energy_cue",
+        "provisionalNextAction": "inspect_context",
+        "observation": "At once and prompt overlap immediately; ⚡ connotes energy or speed but not a specific time relation.",
+        "sourceExcerpt": "ji2: namely;  that is;  i.e.;  prompt",
+        "sourceBasis": "pinned_CC-CEDICT_headword_plus_Unihan_candidate",
+        "reviewerIndependent": false,
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+      }
     },
     {
       "rank": 903,
@@ -6267,7 +6412,16 @@
       "earlierResearchNote": null,
       "lexicalDecision": "pending",
       "visualComprehensionDecision": "pending",
-      "productionVerified": false
+      "productionVerified": false,
+      "deskAnalysis": {
+        "kind": "false_friend_body_word",
+        "provisionalNextAction": "reassess_or_defer",
+        "observation": "The source primarily gives fart and flatulence, not buttocks; 🍑 depicts a different referent and should not be approved.",
+        "sourceExcerpt": "pi4: fart;  flatulence;  nonsense;  (usu. in the negative) what",
+        "sourceBasis": "pinned_CC-CEDICT_headword_plus_Unihan_candidate",
+        "reviewerIndependent": false,
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+      }
     },
     {
       "rank": 909,
@@ -6293,7 +6447,16 @@
       "earlierResearchNote": null,
       "lexicalDecision": "pending",
       "visualComprehensionDecision": "pending",
-      "productionVerified": false
+      "productionVerified": false,
+      "deskAnalysis": {
+        "kind": "opening_vs_expansion",
+        "provisionalNextAction": "inspect_context",
+        "observation": "Spread or open may expand something, but ↔️ only indicates lateral extent and not opening a document.",
+        "sourceExcerpt": "zhang1: to open up;  to spread;  sheet of paper;  classifier for flat objects, sheet",
+        "sourceBasis": "pinned_CC-CEDICT_headword_plus_Unihan_candidate",
+        "reviewerIndependent": false,
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+      }
     },
     {
       "rank": 916,
@@ -6318,7 +6481,16 @@
       "earlierResearchNote": null,
       "lexicalDecision": "pending",
       "visualComprehensionDecision": "pending",
-      "productionVerified": false
+      "productionVerified": false,
+      "deskAnalysis": {
+        "kind": "attachment_vs_stationery",
+        "provisionalNextAction": "inspect_context",
+        "observation": "Add or attach supports append broadly; 📎 is an office clip, not all forms of attachment.",
+        "sourceExcerpt": "fu4: variant of 附[fu4];  to add;  to attach;  to be close to",
+        "sourceBasis": "pinned_CC-CEDICT_headword_plus_Unihan_candidate",
+        "reviewerIndependent": false,
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+      }
     },
     {
       "rank": 917,
@@ -6343,7 +6515,16 @@
       "earlierResearchNote": null,
       "lexicalDecision": "pending",
       "visualComprehensionDecision": "pending",
-      "productionVerified": false
+      "productionVerified": false,
+      "deskAnalysis": {
+        "kind": "fall_vs_direction",
+        "provisionalNextAction": "inspect_context",
+        "observation": "To fall or drop aligns with the candidate; ⬇️ shows direction but not an uncontrolled falling event.",
+        "sourceExcerpt": "zhui4: to fall;  to drop;  to weigh down;",
+        "sourceBasis": "pinned_CC-CEDICT_headword_plus_Unihan_candidate",
+        "reviewerIndependent": false,
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+      }
     },
     {
       "rank": 919,
@@ -6365,7 +6546,16 @@
       "earlierResearchNote": null,
       "lexicalDecision": "pending",
       "visualComprehensionDecision": "pending",
-      "productionVerified": false
+      "productionVerified": false,
+      "deskAnalysis": {
+        "kind": "wonderful_vs_mysterious",
+        "provisionalNextAction": "reassess_or_defer",
+        "observation": "The modern headword says clever or wonderful rather than mysterious; ✨ adds magic connotations that may be unsupported.",
+        "sourceExcerpt": "miao4: clever;  wonderful;  variant of 妙[miao4];",
+        "sourceBasis": "pinned_CC-CEDICT_headword_plus_Unihan_candidate",
+        "reviewerIndependent": false,
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+      }
     },
     {
       "rank": 920,
@@ -6387,7 +6577,16 @@
       "earlierResearchNote": null,
       "lexicalDecision": "pending",
       "visualComprehensionDecision": "pending",
-      "productionVerified": false
+      "productionVerified": false,
+      "deskAnalysis": {
+        "kind": "creature_vs_attribute",
+        "provisionalNextAction": "inspect_context",
+        "observation": "Goblin, devil, monster and enchanting are different senses; 👻 depicts a ghost and may over-narrow supernatural.",
+        "sourceExcerpt": "yao1: goblin;  witch;  devil;  bewitching",
+        "sourceBasis": "pinned_CC-CEDICT_headword_plus_Unihan_candidate",
+        "reviewerIndependent": false,
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+      }
     },
     {
       "rank": 922,
@@ -6412,7 +6611,16 @@
       "earlierResearchNote": null,
       "lexicalDecision": "pending",
       "visualComprehensionDecision": "pending",
-      "productionVerified": false
+      "productionVerified": false,
+      "deskAnalysis": {
+        "kind": "obstruction_vs_prohibition",
+        "provisionalNextAction": "inspect_context",
+        "observation": "Hinder overlaps obstruct; 🛑 generally represents prohibition or a stop instruction.",
+        "sourceExcerpt": "fang2: to hinder;  (in the negative or interrogative) (no) harm;  (what) harm;",
+        "sourceBasis": "pinned_CC-CEDICT_headword_plus_Unihan_candidate",
+        "reviewerIndependent": false,
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+      }
     },
     {
       "rank": 930,
@@ -6437,7 +6645,16 @@
       "earlierResearchNote": null,
       "lexicalDecision": "pending",
       "visualComprehensionDecision": "pending",
-      "productionVerified": false
+      "productionVerified": false,
+      "deskAnalysis": {
+        "kind": "expelling_vs_running",
+        "provisionalNextAction": "reassess_or_defer",
+        "observation": "To expel or drive away involves an agent directing someone out; 🏃 depicts the person's own running.",
+        "sourceExcerpt": "qu1: variant of 驅|驱[qu1];  old variant of 驅|驱[qu1];  to expel;  to urge on",
+        "sourceBasis": "pinned_CC-CEDICT_headword_plus_Unihan_candidate",
+        "reviewerIndependent": false,
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+      }
     },
     {
       "rank": 932,
@@ -6459,7 +6676,16 @@
       "earlierResearchNote": null,
       "lexicalDecision": "pending",
       "visualComprehensionDecision": "pending",
-      "productionVerified": false
+      "productionVerified": false,
+      "deskAnalysis": {
+        "kind": "fabric_vs_thread",
+        "provisionalNextAction": "reassess_or_defer",
+        "observation": "Muslin or cotton yarn can relate to gauze, but 🧵 shows thread rather than translucent fabric.",
+        "sourceExcerpt": "sha1: cotton yarn;  muslin;",
+        "sourceBasis": "pinned_CC-CEDICT_headword_plus_Unihan_candidate",
+        "reviewerIndependent": false,
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+      }
     },
     {
       "rank": 935,
@@ -6481,7 +6707,16 @@
       "earlierResearchNote": null,
       "lexicalDecision": "pending",
       "visualComprehensionDecision": "pending",
-      "productionVerified": false
+      "productionVerified": false,
+      "deskAnalysis": {
+        "kind": "pattern_vs_palette",
+        "provisionalNextAction": "inspect_context",
+        "observation": "Variegated or heterogeneous overlaps mixed, while 🎨 suggests color mixing rather than a mixture generally.",
+        "sourceExcerpt": "bo2: variegated;  heterogeneous;  to refute;  to contradict",
+        "sourceBasis": "pinned_CC-CEDICT_headword_plus_Unihan_candidate",
+        "reviewerIndependent": false,
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+      }
     },
     {
       "rank": 937,
@@ -6503,7 +6738,16 @@
       "earlierResearchNote": null,
       "lexicalDecision": "pending",
       "visualComprehensionDecision": "pending",
-      "productionVerified": false
+      "productionVerified": false,
+      "deskAnalysis": {
+        "kind": "disorder_vs_knot",
+        "provisionalNextAction": "inspect_context",
+        "observation": "Numerous or confused expresses disorder; 🪢 depicts one physical knot, too specific for scattered items.",
+        "sourceExcerpt": "fen1: numerous;  confused;  disorderly;",
+        "sourceBasis": "pinned_CC-CEDICT_headword_plus_Unihan_candidate",
+        "reviewerIndependent": false,
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+      }
     },
     {
       "rank": 939,
@@ -6525,7 +6769,16 @@
       "earlierResearchNote": null,
       "lexicalDecision": "pending",
       "visualComprehensionDecision": "pending",
-      "productionVerified": false
+      "productionVerified": false,
+      "deskAnalysis": {
+        "kind": "mark_vs_animal_stripes",
+        "provisionalNextAction": "inspect_context",
+        "observation": "Lines, traces and patterns are broad; 🦓 is an animal striped with a particular pattern.",
+        "sourceExcerpt": "wen2: line;  trace;  mark;  pattern",
+        "sourceBasis": "pinned_CC-CEDICT_headword_plus_Unihan_candidate",
+        "reviewerIndependent": false,
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+      }
     },
     {
       "rank": 940,
@@ -6550,7 +6803,16 @@
       "earlierResearchNote": null,
       "lexicalDecision": "pending",
       "visualComprehensionDecision": "pending",
-      "productionVerified": false
+      "productionVerified": false,
+      "deskAnalysis": {
+        "kind": "spinning_vs_weaving",
+        "provisionalNextAction": "reassess_or_defer",
+        "observation": "The independent entry specifically names spinning, and weaving is a different textile process; 🧵 is just material.",
+        "sourceExcerpt": "fang3: to spin (cotton or hemp etc);  fine woven silk fabric;",
+        "sourceBasis": "pinned_CC-CEDICT_headword_plus_Unihan_candidate",
+        "reviewerIndependent": false,
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+      }
     },
     {
       "rank": 942,
@@ -6572,7 +6834,16 @@
       "earlierResearchNote": null,
       "lexicalDecision": "pending",
       "visualComprehensionDecision": "pending",
-      "productionVerified": false
+      "productionVerified": false,
+      "deskAnalysis": {
+        "kind": "button_vs_knot",
+        "provisionalNextAction": "reassess_or_defer",
+        "observation": "Modern source means button or turning; knot needs additional dated evidence, and 🪢 may mislead.",
+        "sourceExcerpt": "niu3: to turn;  to wrench;  button;  nu (Greek letter Νν)",
+        "sourceBasis": "pinned_CC-CEDICT_headword_plus_Unihan_candidate",
+        "reviewerIndependent": false,
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+      }
     },
     {
       "rank": 950,
@@ -6594,7 +6865,16 @@
       "earlierResearchNote": null,
       "lexicalDecision": "pending",
       "visualComprehensionDecision": "pending",
-      "productionVerified": false
+      "productionVerified": false,
+      "deskAnalysis": {
+        "kind": "compound_dependent_flower",
+        "provisionalNextAction": "inspect_context",
+        "observation": "The independent entry refers to 玫瑰, the rose compound; 🌹 is a strong word-level icon, not necessarily a stand-alone sense.",
+        "sourceExcerpt": "mei2: (fine jade);  see 玫瑰[mei2 gui1];",
+        "sourceBasis": "pinned_CC-CEDICT_headword_plus_Unihan_candidate",
+        "reviewerIndependent": false,
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+      }
     },
     {
       "rank": 952,
@@ -6616,7 +6896,16 @@
       "earlierResearchNote": null,
       "lexicalDecision": "pending",
       "visualComprehensionDecision": "pending",
-      "productionVerified": false
+      "productionVerified": false,
+      "deskAnalysis": {
+        "kind": "regulation_vs_document",
+        "provisionalNextAction": "inspect_context",
+        "observation": "Rule or regulation overlaps rules; 📜 is a document and misses the norm's force.",
+        "sourceExcerpt": "gui1: variant of 規|规[gui1];  compass;  a rule;  regulation",
+        "sourceBasis": "pinned_CC-CEDICT_headword_plus_Unihan_candidate",
+        "reviewerIndependent": false,
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+      }
     },
     {
       "rank": 953,
@@ -6643,7 +6932,16 @@
       "earlierResearchNote": null,
       "lexicalDecision": "pending",
       "visualComprehensionDecision": "pending",
-      "productionVerified": false
+      "productionVerified": false,
+      "deskAnalysis": {
+        "kind": "polyphonic_verb",
+        "provisionalNextAction": "inspect_context",
+        "observation": "Wipe, smear or erase depend on pronunciation and context; 🧽 evokes wiping but not all readings.",
+        "sourceExcerpt": "ma1: to wipe; | mo3: to smear;  to wipe;  to erase;  classifier for wisps of cloud, light-beams etc",
+        "sourceBasis": "pinned_CC-CEDICT_headword_plus_Unihan_candidate",
+        "reviewerIndependent": false,
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+      }
     },
     {
       "rank": 954,
@@ -6665,7 +6963,16 @@
       "earlierResearchNote": null,
       "lexicalDecision": "pending",
       "visualComprehensionDecision": "pending",
-      "productionVerified": false
+      "productionVerified": false,
+      "deskAnalysis": {
+        "kind": "diagram_vs_divination",
+        "provisionalNextAction": "inspect_context",
+        "observation": "A divinatory trigram or hexagram is a named diagram; 🔮 is a generic crystal ball, not the object.",
+        "sourceExcerpt": "gua4: divinatory diagram;  one of the eight divinatory trigrams of the Book of Changes 易經|易经[Yi4 jing1];  one of the sixty-four divinatory hexagrams of the Book of Changes 易經|易经[Yi4 jing1];",
+        "sourceBasis": "pinned_CC-CEDICT_headword_plus_Unihan_candidate",
+        "reviewerIndependent": false,
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+      }
     },
     {
       "rank": 955,
@@ -6687,7 +6994,16 @@
       "earlierResearchNote": null,
       "lexicalDecision": "pending",
       "visualComprehensionDecision": "pending",
-      "productionVerified": false
+      "productionVerified": false,
+      "deskAnalysis": {
+        "kind": "clod_vs_rough_terrain",
+        "provisionalNextAction": "reassess_or_defer",
+        "observation": "The modern dictionary says uneven path or unfortunate, not a lump of earth; 🪨 depicts a stone rather than soil.",
+        "sourceExcerpt": "ke3: uneven (path);  unfortunate (in life);",
+        "sourceBasis": "pinned_CC-CEDICT_headword_plus_Unihan_candidate",
+        "reviewerIndependent": false,
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+      }
     },
     {
       "rank": 956,
@@ -6718,7 +7034,16 @@
       "earlierResearchNote": null,
       "lexicalDecision": "pending",
       "visualComprehensionDecision": "pending",
-      "productionVerified": false
+      "productionVerified": false,
+      "deskAnalysis": {
+        "kind": "source_sense_conflict",
+        "provisionalNextAction": "reassess_or_defer",
+        "observation": "The independent dictionary gives unburnt earthenware or blank, contradicting the dam interpretation; 🌊🧱 should be withheld for this usage.",
+        "sourceExcerpt": "pi1: blank (e.g. for a coin);  unburnt earthenware;  semifinished product;  Taiwan pr. [pei1]",
+        "sourceBasis": "pinned_CC-CEDICT_headword_plus_Unihan_candidate",
+        "reviewerIndependent": false,
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+      }
     },
     {
       "rank": 959,
@@ -6743,7 +7068,16 @@
       "earlierResearchNote": null,
       "lexicalDecision": "pending",
       "visualComprehensionDecision": "pending",
-      "productionVerified": false
+      "productionVerified": false,
+      "deskAnalysis": {
+        "kind": "pull_action_vs_plant",
+        "provisionalNextAction": "inspect_context",
+        "observation": "Pull up or out supports uproot in plant contexts, but 🌱 depicts a seedling without removal.",
+        "sourceExcerpt": "ba2: to pull up;  to pull out;  to draw out by suction;  to select",
+        "sourceBasis": "pinned_CC-CEDICT_headword_plus_Unihan_candidate",
+        "reviewerIndependent": false,
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+      }
     },
     {
       "rank": 960,
@@ -6765,7 +7099,16 @@
       "earlierResearchNote": null,
       "lexicalDecision": "pending",
       "visualComprehensionDecision": "pending",
-      "productionVerified": false
+      "productionVerified": false,
+      "deskAnalysis": {
+        "kind": "land_area_vs_color",
+        "provisionalNextAction": "inspect_context",
+        "observation": "Plain or area measure fits level ground, but 🟩 merely depicts a green square.",
+        "sourceExcerpt": "ping2: a plain;  ping, unit of area equal to approx. 3.3058 square meters (used in Japan and Taiwan);",
+        "sourceBasis": "pinned_CC-CEDICT_headword_plus_Unihan_candidate",
+        "reviewerIndependent": false,
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+      }
     },
     {
       "rank": 965,
@@ -6790,7 +7133,16 @@
       "earlierResearchNote": null,
       "lexicalDecision": "pending",
       "visualComprehensionDecision": "pending",
-      "productionVerified": false
+      "productionVerified": false,
+      "deskAnalysis": {
+        "kind": "pledge_vs_mortgage",
+        "provisionalNextAction": "inspect_context",
+        "observation": "Mortgage or pawn can be a pledge, but 📝 represents signing rather than security or custody.",
+        "sourceExcerpt": "ya1: to mortgage;  to pawn;  to detain in custody;  to escort and protect",
+        "sourceBasis": "pinned_CC-CEDICT_headword_plus_Unihan_candidate",
+        "reviewerIndependent": false,
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+      }
     },
     {
       "rank": 969,
@@ -6812,7 +7164,16 @@
       "earlierResearchNote": null,
       "lexicalDecision": "pending",
       "visualComprehensionDecision": "pending",
-      "productionVerified": false
+      "productionVerified": false,
+      "deskAnalysis": {
+        "kind": "grammatical_nominalizer",
+        "provisionalNextAction": "reassess_or_defer",
+        "observation": "The -er or one who suffix is a grammatical operator, not a group of people; 👥 hides the nominalization function.",
+        "sourceExcerpt": "zhe3: (after a verb or adjective) one who (is) ...;  (after a noun) person involved in ...;  -er;  -ist",
+        "sourceBasis": "pinned_CC-CEDICT_headword_plus_Unihan_candidate",
+        "reviewerIndependent": false,
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+      }
     },
     {
       "rank": 972,
@@ -6837,7 +7198,16 @@
       "earlierResearchNote": null,
       "lexicalDecision": "pending",
       "visualComprehensionDecision": "pending",
-      "productionVerified": false
+      "productionVerified": false,
+      "deskAnalysis": {
+        "kind": "physical_split_vs_emotion",
+        "provisionalNextAction": "reassess_or_defer",
+        "observation": "Tear apart, open or demolish is physical; 💔 signals emotional heartbreak instead of splitting a material object.",
+        "sourceExcerpt": "chai1: to tear open;  to tear down;  to tear apart;  to open",
+        "sourceBasis": "pinned_CC-CEDICT_headword_plus_Unihan_candidate",
+        "reviewerIndependent": false,
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+      }
     },
     {
       "rank": 974,
@@ -6862,7 +7232,16 @@
       "earlierResearchNote": null,
       "lexicalDecision": "pending",
       "visualComprehensionDecision": "pending",
-      "productionVerified": false
+      "productionVerified": false,
+      "deskAnalysis": {
+        "kind": "hug_vs_crowd",
+        "provisionalNextAction": "inspect_context",
+        "observation": "Embrace is an explicit sense, but 🫂 does not convey gather, support or surround alternatives.",
+        "sourceExcerpt": "yong1: to hold;  to embrace;  to wrap around;  to gather around (sb)",
+        "sourceBasis": "pinned_CC-CEDICT_headword_plus_Unihan_candidate",
+        "reviewerIndependent": false,
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+      }
     },
     {
       "rank": 976,
@@ -6887,7 +7266,16 @@
       "earlierResearchNote": null,
       "lexicalDecision": "pending",
       "visualComprehensionDecision": "pending",
-      "productionVerified": false
+      "productionVerified": false,
+      "deskAnalysis": {
+        "kind": "detention_vs_lock",
+        "provisionalNextAction": "inspect_context",
+        "observation": "Capture or restrain overlaps detain; 🔒 symbolizes locking and may miss custody or restriction without a lock.",
+        "sourceExcerpt": "ju1: to capture;  to restrain;  to constrain;  to adhere rigidly to",
+        "sourceBasis": "pinned_CC-CEDICT_headword_plus_Unihan_candidate",
+        "reviewerIndependent": false,
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+      }
     },
     {
       "rank": 980,
@@ -6909,7 +7297,16 @@
       "earlierResearchNote": null,
       "lexicalDecision": "pending",
       "visualComprehensionDecision": "pending",
-      "productionVerified": false
+      "productionVerified": false,
+      "deskAnalysis": {
+        "kind": "compound_dependent_garbage",
+        "provisionalNextAction": "inspect_context",
+        "observation": "The standalone headword refers to 垃圾 as a compound; 🗑️ is a word-level waste cue, not yet evidence for an independent glyph usage.",
+        "sourceExcerpt": "la1: see 垃圾[la1 ji1];  Taiwan pr. [le4];",
+        "sourceBasis": "pinned_CC-CEDICT_headword_plus_Unihan_candidate",
+        "reviewerIndependent": false,
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+      }
     },
     {
       "rank": 990,
@@ -6934,7 +7331,16 @@
       "earlierResearchNote": null,
       "lexicalDecision": "pending",
       "visualComprehensionDecision": "pending",
-      "productionVerified": false
+      "productionVerified": false,
+      "deskAnalysis": {
+        "kind": "draping_vs_generic_wearing",
+        "provisionalNextAction": "inspect_context",
+        "observation": "Draping over shoulders is narrower than wearing clothes; 👕 depicts a shirt rather than the action of draping.",
+        "sourceExcerpt": "pi1: to drape over one's shoulders;  to open;  to unroll;  to split open",
+        "sourceBasis": "pinned_CC-CEDICT_headword_plus_Unihan_candidate",
+        "reviewerIndependent": false,
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+      }
     },
     {
       "rank": 991,
@@ -6959,7 +7365,16 @@
       "earlierResearchNote": null,
       "lexicalDecision": "pending",
       "visualComprehensionDecision": "pending",
-      "productionVerified": false
+      "productionVerified": false,
+      "deskAnalysis": {
+        "kind": "allocation_vs_sending",
+        "provisionalNextAction": "inspect_context",
+        "observation": "Allocate or set aside funds differs from distributing objects; 📤 depicts outgoing transfer, missing resource assignment.",
+        "sourceExcerpt": "bo1: to push aside with the hand, foot, a stick etc;  to dial;  to allocate;  to set aside (money)",
+        "sourceBasis": "pinned_CC-CEDICT_headword_plus_Unihan_candidate",
+        "reviewerIndependent": false,
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+      }
     },
     {
       "rank": 995,
@@ -6982,7 +7397,16 @@
       "earlierResearchNote": null,
       "lexicalDecision": "pending",
       "visualComprehensionDecision": "pending",
-      "productionVerified": false
+      "productionVerified": false,
+      "deskAnalysis": {
+        "kind": "bending_verb_vs_adjective",
+        "provisionalNextAction": "inspect_context",
+        "observation": "The source distinguishes snapping a bend and stubbornness by reading; ➰ signals a curved shape without either action.",
+        "sourceExcerpt": "ao4: variant of 拗[ao4];  to bend in two so as to break;  to defy;  to disobey | niu4: stubborn;  obstinate;",
+        "sourceBasis": "pinned_CC-CEDICT_headword_plus_Unihan_candidate",
+        "reviewerIndependent": false,
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+      }
     },
     {
       "rank": 1000,
@@ -7005,7 +7429,16 @@
       "earlierResearchNote": null,
       "lexicalDecision": "pending",
       "visualComprehensionDecision": "pending",
-      "productionVerified": false
+      "productionVerified": false,
+      "deskAnalysis": {
+        "kind": "past_vs_ancient",
+        "provisionalNextAction": "inspect_context",
+        "observation": "Former times or the past overlaps ancient but not necessarily remote antiquity; 🏺 emphasizes archaeological artifacts.",
+        "sourceExcerpt": "xi1: former times;  the past;  Taiwan pr. [xi2];",
+        "sourceBasis": "pinned_CC-CEDICT_headword_plus_Unihan_candidate",
+        "reviewerIndependent": false,
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+      }
     }
   ]
 }
