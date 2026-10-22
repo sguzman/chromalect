@@ -1,0 +1,409 @@
+{
+  "schema": "chromalect.mandarin.lexical-crossref-batch.v0.1",
+  "source": {
+    "title": "CC-CEDICT per-headword v2 mirror",
+    "repository": "krmanik/cedict-json",
+    "commit": "63c2569948629323b515833930fdd10f285401b6",
+    "dataLicense": "CC BY-SA 4.0",
+    "upstream": "https://cc-cedict.org/",
+    "mirror": "https://github.com/krmanik/cedict-json",
+    "transform": "Selected single-simplified-character dictionary records, retaining readings and definitions; literal English gloss matching is automated triage only"
+  },
+  "rankStart": 16,
+  "rankEnd": 30,
+  "summary": {
+    "total": 15,
+    "headwordFound": 15,
+    "withCandidate": 9,
+    "withLiteralSupport": 7
+  },
+  "records": [
+    {
+      "rank": 16,
+      "character": "刁",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/刁.json",
+      "sourceBlobSha": "882249fdb0b71cc8337f181a81c9e3f1bd7ab849",
+      "traditional": "刁",
+      "dictionaryReadings": [
+        "Diao1",
+        "diao1"
+      ],
+      "dictionaryDefinitions": {
+        "Diao1": "surname Diao; ",
+        "diao1": "artful; wicked; "
+      },
+      "selectedSenseChecks": [],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 17,
+      "character": "了",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/了.json",
+      "sourceBlobSha": "bb0b5492967df714aad529b7b5f37ebd424a33bc",
+      "traditional": "瞭",
+      "dictionaryReadings": [
+        "le5",
+        "liao3",
+        "liao4"
+      ],
+      "dictionaryDefinitions": {
+        "le5": "(modal particle intensifying preceding clause); (completed action marker); ",
+        "liao3": "to finish; to achieve; variant of 瞭|了[liao3]; to understand clearly; (of eyes) bright; clear-sighted; to understand clearly; ",
+        "liao4": "unofficial variant of 瞭[liao4]; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "finish",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "liao3"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 18,
+      "character": "刀",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/刀.json",
+      "sourceBlobSha": "40c8e4811f37d0f105ca1b45f561636e7263dd4c",
+      "traditional": "刀",
+      "dictionaryReadings": [
+        "Dao1",
+        "dao1"
+      ],
+      "dictionaryDefinitions": {
+        "Dao1": "surname Dao; ",
+        "dao1": "knife; blade; single-edged sword; cutlass; CL:把[ba3]; (slang) dollar (loanword); classifier for sets of one hundred sheets (of paper); classifier for knife cuts or stabs; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "knife",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "dao1"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 19,
+      "character": "力",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/力.json",
+      "sourceBlobSha": "964e99027656cfc47a93a92533df9516fb01c856",
+      "traditional": "力",
+      "dictionaryReadings": [
+        "Li4",
+        "li4"
+      ],
+      "dictionaryDefinitions": {
+        "Li4": "surname Li; ",
+        "li4": "power; force; strength; ability; strenuously; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "power",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "li4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 20,
+      "character": "乃",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/乃.json",
+      "sourceBlobSha": "7eb352ac8cfe775cf7f87ff871bc9f077362377a",
+      "traditional": "迺",
+      "dictionaryReadings": [
+        "nai3"
+      ],
+      "dictionaryDefinitions": {
+        "nai3": "to be; thus; so; therefore; then; only; thereupon; variant of 乃[nai3]; variant of 乃[nai3]; "
+      },
+      "selectedSenseChecks": [],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 21,
+      "character": "又",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/又.json",
+      "sourceBlobSha": "c56514befd56c79598f877606b040ec1d803d493",
+      "traditional": "又",
+      "dictionaryReadings": [
+        "you4"
+      ],
+      "dictionaryDefinitions": {
+        "you4": "(once) again; also; both... and...; and yet; (used for emphasis) anyway; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "again",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "you4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 22,
+      "character": "三",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/三.json",
+      "sourceBlobSha": "bd3434987c8333ff004fec893199d3413ef5931c",
+      "traditional": "三",
+      "dictionaryReadings": [
+        "San1",
+        "san1"
+      ],
+      "dictionaryDefinitions": {
+        "San1": "surname San; ",
+        "san1": "three; 3; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "three",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "san1"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 23,
+      "character": "干",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/干.json",
+      "sourceBlobSha": "e468aff2c60ddcc39e5a99fb14fec9c85c6de7f1",
+      "traditional": "幹",
+      "dictionaryReadings": [
+        "gan1",
+        "Gan1",
+        "gan4"
+      ],
+      "dictionaryDefinitions": {
+        "gan1": "old variant of 乾|干[gan1]; dry; clean; in vain; dried food; foster; adoptive; to ignore; variant of 乾|干[gan1]; to concern; to interfere; shield; stem; ",
+        "Gan1": "surname Gan; ",
+        "gan4": "tree trunk; main part of sth; to manage; to work; to do; capable; cadre; to kill (slang); to fuck (vulgar); "
+      },
+      "selectedSenseChecks": [],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 24,
+      "character": "于",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/于.json",
+      "sourceBlobSha": "68a6eee84e97466375569d1cb1e7e36b5ad46948",
+      "traditional": "於",
+      "dictionaryReadings": [
+        "Yu2",
+        "yu2"
+      ],
+      "dictionaryDefinitions": {
+        "Yu2": "surname Yu; ",
+        "yu2": "to go; to take; sentence-final interrogative particle; variant of 於|于[yu2]; in; at; to; from; by; than; out of; "
+      },
+      "selectedSenseChecks": [],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 25,
+      "character": "亏",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/亏.json",
+      "sourceBlobSha": "0420b225a0e0ffa7a30475e71284f8435cf775c6",
+      "traditional": "虧",
+      "dictionaryReadings": [
+        "kui1"
+      ],
+      "dictionaryDefinitions": {
+        "kui1": "deficiency; deficit; luckily; it's lucky that...; (often ironically) fancy that...; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "lose",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 26,
+      "character": "工",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/工.json",
+      "sourceBlobSha": "ede04beb7329e21a764c9b46d362f658b18fedb8",
+      "traditional": "工",
+      "dictionaryReadings": [
+        "gong1"
+      ],
+      "dictionaryDefinitions": {
+        "gong1": "work; worker; skill; profession; trade; craft; labor; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "work",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "gong1"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 27,
+      "character": "土",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/土.json",
+      "sourceBlobSha": "62a04132b129037508f73b84f63b37b296a9db12",
+      "traditional": "土",
+      "dictionaryReadings": [
+        "Tu3",
+        "tu3"
+      ],
+      "dictionaryDefinitions": {
+        "Tu3": "Tu (ethnic group); surname Tu; ",
+        "tu3": "earth; dust; clay; local; indigenous; crude opium; unsophisticated; one of the eight ancient musical instruments 八音[ba1 yin1]; "
+      },
+      "selectedSenseChecks": [],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 28,
+      "character": "士",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/士.json",
+      "sourceBlobSha": "33547746c0fb6d36ea974576aefa16c0dbd7d321",
+      "traditional": "士",
+      "dictionaryReadings": [
+        "Shi4",
+        "shi4"
+      ],
+      "dictionaryDefinitions": {
+        "Shi4": "surname Shi; ",
+        "shi4": "member of the senior ministerial class (old); scholar (old); bachelor; honorific; soldier; noncommissioned officer; specialist worker; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "scholar",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "shi4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 29,
+      "character": "才",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/才.json",
+      "sourceBlobSha": "7b22f1c7ad8f4d8efde155e836fea0810f71566a",
+      "traditional": "纔",
+      "dictionaryReadings": [
+        "cai2"
+      ],
+      "dictionaryDefinitions": {
+        "cai2": "ability; talent; sb of a certain type; a capable individual; only; only then; just now; a moment ago; just now; (indicating sth happening later than expected); (preceded by a clause of condition or reason) not until; (followed by a numerical clause) only; "
+      },
+      "selectedSenseChecks": [],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 30,
+      "character": "下",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/下.json",
+      "sourceBlobSha": "d3e0f05ecc017385ee99b42d47c5b454ec296808",
+      "traditional": "下",
+      "dictionaryReadings": [
+        "xia4"
+      ],
+      "dictionaryDefinitions": {
+        "xia4": "down; downwards; below; lower; later; next (week etc); second (of two parts); to decline; to go down; to arrive at (a decision, conclusion etc); measure word to show the frequency of an action; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "under",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    }
+  ]
+}
