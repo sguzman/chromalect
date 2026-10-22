@@ -1,0 +1,479 @@
+{
+  "schema": "chromalect.mandarin.lexical-crossref-batch.v0.1",
+  "source": {
+    "title": "CC-CEDICT per-headword v2 mirror",
+    "repository": "krmanik/cedict-json",
+    "commit": "63c2569948629323b515833930fdd10f285401b6",
+    "dataLicense": "CC BY-SA 4.0",
+    "upstream": "https://cc-cedict.org/",
+    "mirror": "https://github.com/krmanik/cedict-json",
+    "transform": "Selected single-simplified-character dictionary records, retaining readings and definitions; literal English gloss matching is automated triage only"
+  },
+  "rankStart": 476,
+  "rankEnd": 490,
+  "summary": {
+    "total": 15,
+    "headwordFound": 15,
+    "withCandidate": 15,
+    "withLiteralSupport": 12
+  },
+  "records": [
+    {
+      "rank": 476,
+      "character": "伪",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/伪.json",
+      "sourceBlobSha": "2b0fd6a9b96791e13ce76a9222d35d4f1ee41e51",
+      "traditional": "僞",
+      "dictionaryReadings": [
+        "wei3"
+      ],
+      "dictionaryDefinitions": {
+        "wei3": "false; fake; forged; bogus; Taiwan pr. [wei4]; variant of 偽|伪[wei3]; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "counterfeit",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 477,
+      "character": "自",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/自.json",
+      "sourceBlobSha": "43fcd3408ef46b340d686074c4d3341f8dc8470c",
+      "traditional": "自",
+      "dictionaryReadings": [
+        "zi4"
+      ],
+      "dictionaryDefinitions": {
+        "zi4": "self; oneself; from; since; naturally; surely; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "self",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "zi4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 478,
+      "character": "伊",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/伊.json",
+      "sourceBlobSha": "36ef047e6d87d929ab702d049d9a920d033126ee",
+      "traditional": "伊",
+      "dictionaryReadings": [
+        "Yi1",
+        "yi1"
+      ],
+      "dictionaryDefinitions": {
+        "Yi1": "surname Yi; abbr. for 伊拉克[Yi1 la1 ke4], Iraq; abbr. for 伊朗[Yi1 lang3], Iran; ",
+        "yi1": "he; she; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "he",
+          "sourceGlossGroupIndex": 1,
+          "matchingDictionaryReadings": [
+            "yi1"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 479,
+      "character": "血",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/血.json",
+      "sourceBlobSha": "2985b25317128d9c1e58a83f97acd6157f4301a4",
+      "traditional": "血",
+      "dictionaryReadings": [
+        "xue4"
+      ],
+      "dictionaryDefinitions": {
+        "xue4": "blood; colloquial pr. [xie3]; CL:滴[di1],片[pian4]; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "blood",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "xue4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 480,
+      "character": "向",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/向.json",
+      "sourceBlobSha": "bc0ab202a2d51661f058954e374202d78dbab168",
+      "traditional": "曏",
+      "dictionaryReadings": [
+        "Xiang4",
+        "xiang4"
+      ],
+      "dictionaryDefinitions": {
+        "Xiang4": "surname Xiang; ",
+        "xiang4": "towards; to face; to turn towards; direction; to support; to side with; shortly before; formerly; always; all along; to tend toward; to guide; variant of 向[xiang4]; variant of 向[xiang4]; direction; orientation; to face; to turn toward; to; towards; shortly before; formerly; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "direction",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "xiang4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 481,
+      "character": "似",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/似.json",
+      "sourceBlobSha": "77f250fea5f7a7bbd09ed3eb9c99a11f5c46abc5",
+      "traditional": "佀",
+      "dictionaryReadings": [
+        "shi4",
+        "si4"
+      ],
+      "dictionaryDefinitions": {
+        "shi4": "see 似的[shi4 de5]; ",
+        "si4": "to seem; to appear; to resemble; similar; -like; pseudo-; (more) than; old variant of 似[si4]; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "resemble",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "si4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 482,
+      "character": "后",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/后.json",
+      "sourceBlobSha": "14a1793151b9ba7a8e05e06b0bfa8e56ee9e7839",
+      "traditional": "後",
+      "dictionaryReadings": [
+        "Hou4",
+        "hou4"
+      ],
+      "dictionaryDefinitions": {
+        "Hou4": "surname Hou; ",
+        "hou4": "empress; queen; back; behind; rear; afterwards; after; later; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "empress",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "hou4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        },
+        {
+          "selectedMeaning": "behind",
+          "sourceGlossGroupIndex": 1,
+          "matchingDictionaryReadings": [
+            "hou4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 483,
+      "character": "行",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/行.json",
+      "sourceBlobSha": "6b7ff6e6c6462c2d535229e8804cf0fe210e5308",
+      "traditional": "行",
+      "dictionaryReadings": [
+        "hang2",
+        "xing2"
+      ],
+      "dictionaryDefinitions": {
+        "hang2": "a row; series; age order (of brothers); profession; professional; relating to company; ",
+        "xing2": "to walk; to go; to travel; a visit; temporary; makeshift; current; in circulation; to do; to perform; capable; competent; effective; all right; OK!; will do; behavior; conduct; Taiwan pr. [xing4] for the behavior-conduct sense; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "walk",
+          "sourceGlossGroupIndex": 1,
+          "matchingDictionaryReadings": [
+            "xing2"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 484,
+      "character": "舟",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/舟.json",
+      "sourceBlobSha": "922a6a102e6d96424771d87144a5354077c1309d",
+      "traditional": "舟",
+      "dictionaryReadings": [
+        "zhou1"
+      ],
+      "dictionaryDefinitions": {
+        "zhou1": "boat; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "boat",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "zhou1"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 485,
+      "character": "全",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/全.json",
+      "sourceBlobSha": "b55dc93cc25156742bf392d7216b290bdf4afd65",
+      "traditional": "全",
+      "dictionaryReadings": [
+        "Quan2",
+        "quan2"
+      ],
+      "dictionaryDefinitions": {
+        "Quan2": "surname Quan; ",
+        "quan2": "all; whole; entire; every; complete; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "whole",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "quan2"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 486,
+      "character": "会",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/会.json",
+      "sourceBlobSha": "88f6e9f4d0f052e587b33511898cd1ea98a812a0",
+      "traditional": "會",
+      "dictionaryReadings": [
+        "hui4",
+        "kuai4"
+      ],
+      "dictionaryDefinitions": {
+        "hui4": "can; to be possible; to be able to; will; to be likely to; to be sure to; to assemble; to meet; to gather; to see; union; group; association; CL:個|个[ge4]; a moment (Taiwan pr. for this sense is [hui3]); ",
+        "kuai4": "to balance an account; accountancy; accounting; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "meet together",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 487,
+      "character": "杀",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/杀.json",
+      "sourceBlobSha": "071f83f8b59683c34757a3b359e00add3cee3abb",
+      "traditional": "殺",
+      "dictionaryReadings": [
+        "sha1"
+      ],
+      "dictionaryDefinitions": {
+        "sha1": "to kill; to murder; to attack; to weaken or reduce; to smart (dialect); (used after a verb) extremely; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "kill",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "sha1"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 488,
+      "character": "合",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/合.json",
+      "sourceBlobSha": "7035e8b66ab3eef5cdf8c4799a1d64ac5e430879",
+      "traditional": "閤",
+      "dictionaryReadings": [
+        "ge3",
+        "he2"
+      ],
+      "dictionaryDefinitions": {
+        "ge3": "100 ml; one-tenth of a peck; measure for dry grain equal to one-tenth of sheng 升 or liter, or one-hundredth dou 斗; ",
+        "he2": "to close; to join; to fit; to be equal to; whole; together; round (in battle); conjunction (astronomy); 1st note of pentatonic scale; old variant of 盒[he2]; variant of 合[he2]; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "combine",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 489,
+      "character": "兆",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/兆.json",
+      "sourceBlobSha": "4957dd837e6862e18d5e33e32214b807d62fee5f",
+      "traditional": "兆",
+      "dictionaryReadings": [
+        "Zhao4",
+        "zhao4"
+      ],
+      "dictionaryDefinitions": {
+        "Zhao4": "surname Zhao; ",
+        "zhao4": "omen; to foretell; million; mega-; trillion; tera-; billion (old); "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "omen",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "zhao4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 490,
+      "character": "企",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/企.json",
+      "sourceBlobSha": "59e8c17d33931ce30cb3de725e18cc4f9fc6e2a6",
+      "traditional": "企",
+      "dictionaryReadings": [
+        "qi3"
+      ],
+      "dictionaryDefinitions": {
+        "qi3": "to plan a project; to stand on tiptoe; Taiwan pr. [qi4]; abbr. for 企業|企业[qi3 ye4]; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "plan",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "qi3"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    }
+  ]
+}
