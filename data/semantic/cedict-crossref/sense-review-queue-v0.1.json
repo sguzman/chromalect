@@ -1779,7 +1779,7 @@
         "kind": "modern_versus_historical",
         "provisionalNextAction": "reassess_or_defer",
         "observation": "Headword primarily identifies Liao proper names, not generic distance.",
-        "sourceExcerpt": "",
+        "sourceExcerpt": "Liao2: short name for Liaoning 遼寧|辽宁[Liao2 ning2] province; Liao or Khitan dynasty (907-1125);",
         "sourceBasis": "pinned_CC-CEDICT_headword_plus_Unihan_candidate",
         "reviewerIndependent": false,
         "status": "assistant_preliminary_analysis_not_independent_lexical_review"
