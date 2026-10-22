@@ -1,0 +1,304 @@
+{
+  "schema": "chromalect.mandarin.lexical-crossref-batch.v0.1",
+  "source": {
+    "title": "CC-CEDICT per-headword v2 mirror",
+    "repository": "krmanik/cedict-json",
+    "commit": "63c2569948629323b515833930fdd10f285401b6",
+    "dataLicense": "CC BY-SA 4.0",
+    "upstream": "https://cc-cedict.org/",
+    "mirror": "https://github.com/krmanik/cedict-json",
+    "transform": "Selected single-simplified-character dictionary records, retaining readings and definitions; literal English gloss matching is automated triage only"
+  },
+  "rankStart": 931,
+  "rankEnd": 940,
+  "summary": {
+    "total": 10,
+    "headwordFound": 10,
+    "withCandidate": 10,
+    "withLiteralSupport": 5
+  },
+  "records": [
+    {
+      "rank": 931,
+      "character": "纯",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/纯.json",
+      "sourceBlobSha": "7a327064286239e91ccbcacd476c689c7f56f61a",
+      "traditional": "純",
+      "dictionaryReadings": [
+        "chun2"
+      ],
+      "dictionaryDefinitions": {
+        "chun2": "pure; simple; unmixed; genuine; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "pure",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "chun2"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 932,
+      "character": "纱",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/纱.json",
+      "sourceBlobSha": "88e90a29746585073f64ee19dd301160928d1ea3",
+      "traditional": "紗",
+      "dictionaryReadings": [
+        "sha1"
+      ],
+      "dictionaryDefinitions": {
+        "sha1": "cotton yarn; muslin; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "gauze",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 933,
+      "character": "纲",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/纲.json",
+      "sourceBlobSha": "4d96b1cb2ac8257b77ed74239c1430fab06b891a",
+      "traditional": "綱",
+      "dictionaryReadings": [
+        "gang1"
+      ],
+      "dictionaryDefinitions": {
+        "gang1": "head rope of a fishing net; guiding principle; key link; class (taxonomy); outline; program; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "rope",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "gang1"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 934,
+      "character": "纳",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/纳.json",
+      "sourceBlobSha": "3cac4b47a9b337f46b1aa6f628a26818359496b8",
+      "traditional": "納",
+      "dictionaryReadings": [
+        "Na4",
+        "na4"
+      ],
+      "dictionaryDefinitions": {
+        "Na4": "surname Na; ",
+        "na4": "to receive; to accept; to enjoy; to bring into; to pay (tax etc); nano- (one billionth); to reinforce sole of shoes or stockings by close sewing; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "receive",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "na4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 935,
+      "character": "驳",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/驳.json",
+      "sourceBlobSha": "4a60c87c21504586ed3423d1a1ad936f82ecd575",
+      "traditional": "駮",
+      "dictionaryReadings": [
+        "bo2"
+      ],
+      "dictionaryDefinitions": {
+        "bo2": "variegated; heterogeneous; to refute; to contradict; to ship by barge; a barge; a lighter (ship); variant of 駁|驳[bo2]; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "mixed",
+          "sourceGlossGroupIndex": 1,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 936,
+      "character": "纵",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/纵.json",
+      "sourceBlobSha": "0f76c176aa1a4f20111feede0ce45abaad774e93",
+      "traditional": "縱",
+      "dictionaryReadings": [
+        "zong4"
+      ],
+      "dictionaryDefinitions": {
+        "zong4": "warp (the vertical threads in weaving); vertical; longitudinal; north-south (lines of longitude); lengthwise; to release; to indulge; even if; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "indulge",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "zong4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 937,
+      "character": "纷",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/纷.json",
+      "sourceBlobSha": "db529cb4b29142875b98b16364fef8566084d8d3",
+      "traditional": "紛",
+      "dictionaryReadings": [
+        "fen1"
+      ],
+      "dictionaryDefinitions": {
+        "fen1": "numerous; confused; disorderly; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "tangled",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 938,
+      "character": "纸",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/纸.json",
+      "sourceBlobSha": "ca9335d49f672952df8075e04d9312c8dfd903c1",
+      "traditional": "紙",
+      "dictionaryReadings": [
+        "zhi3"
+      ],
+      "dictionaryDefinitions": {
+        "zhi3": "variant of 紙|纸[zhi3]; paper; CL:張|张[zhang1],沓[da2]; classifier for documents, letter etc; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "paper",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "zhi3"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 939,
+      "character": "纹",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/纹.json",
+      "sourceBlobSha": "15215afacd27070a5d15cc4016ab31e694d09afd",
+      "traditional": "紋",
+      "dictionaryReadings": [
+        "wen2"
+      ],
+      "dictionaryDefinitions": {
+        "wen2": "line; trace; mark; pattern; grain (of wood etc); "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "stripe",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 940,
+      "character": "纺",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/纺.json",
+      "sourceBlobSha": "30effe588ea178fd11e2915612d2842108d740c0",
+      "traditional": "紡",
+      "dictionaryReadings": [
+        "fang3"
+      ],
+      "dictionaryDefinitions": {
+        "fang3": "to spin (cotton or hemp etc); fine woven silk fabric; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "weave",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    }
+  ]
+}
