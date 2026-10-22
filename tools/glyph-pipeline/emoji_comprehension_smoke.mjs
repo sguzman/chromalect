@@ -26,6 +26,11 @@ class Element {
 const elements=Object.fromEntries(ids.map(id=>[id,new Element()]));
 elements["emoji-study-scope"].value="all";
 elements["emoji-study-count"].value="20";
+elements["emoji-study-start"].disabled=true;
+elements["emoji-study-export"].disabled=true;
+elements["emoji-study-session"].hidden=true;
+elements["emoji-study-post"].hidden=true;
+elements["emoji-study-next"].disabled=true;
 const clarity=["clear","partial","misleading","uncertain"].map(v=>{
   const el=new Element("button");el.dataset.clarity=v;return el;
 });
