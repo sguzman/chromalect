@@ -65,16 +65,16 @@ assert.deepEqual(manifest.metrics,{
  expressionLiteralMatches:literal,expressionGlossMismatchOrSynonym:needsReview,
  manualSenseReviewed:0,emojiComprehensionReviewed:0,productionVerified:0
 });
-assert.ok(found>=500,"Independent dictionary intake must not regress below 500 characters");
+assert.ok(found>=620,"Independent dictionary intake must not regress below 620 characters");
 assert.equal(withCandidate,manifest.metrics.charactersWithCandidate);
 assert.equal(expr,manifest.metrics.candidateExpressions);
 assert.equal(literal,manifest.metrics.expressionLiteralMatches);
 assert.equal(needsReview,manifest.metrics.expressionGlossMismatchOrSynonym);
-assert.equal(manifest.metrics.crossReferenced,500);
-assert.equal(manifest.metrics.headwordsFound,500);
-assert.equal(expr,414);
-assert.equal(literal,310);
-assert.equal(needsReview,104);
+assert.equal(manifest.metrics.crossReferenced,620);
+assert.equal(manifest.metrics.headwordsFound,620);
+assert.equal(expr,532);
+assert.equal(literal,393);
+assert.equal(needsReview,139);
 const triage=JSON.parse(fs.readFileSync(base+"triage-0101-0200.json","utf8"));
 assert.equal(triage.schema,"chromalect.semantic.manual-triage.v0.1");
 assert.equal(triage.lexicalApprovalCount,0);
