@@ -51,7 +51,28 @@ for(const entry of queue.records){
   assert.equal(entry.earlierResearchNote,old.note);
  }else assert.equal(entry.earlierResearchNote,null);
 }
-assert.deepEqual(counter,queue.counts);
+assert.deepEqual(counter,{
+ pendingSenseAlignment:queue.counts.pendingSenseAlignment,
+ high:queue.counts.high,medium:queue.counts.medium,
+ unclassified:queue.counts.unclassified,
+ substringOnly:queue.counts.substringOnly,
+ previouslyTriaged:queue.counts.previouslyTriaged
+});
+assert.equal(queue.counts.deskAnalyzedHighPriority,15);
+assert.equal(queue.counts.independentlyLexicallyApproved,0);
+assert.equal(queue.counts.emojiComprehensionApproved,0);
+let deskAnalyzed=0;
+for(const record of queue.records){
+ if(record.priority==="high"){
+  assert.equal(record.deskAnalysis?.status,
+   "assistant_preliminary_analysis_not_independent_lexical_review");
+  assert.ok(record.deskAnalysis.observation.length>45);
+  assert.ok(["reassess_or_defer","redesign_pictogram","redesign_verb_cue",
+    "inspect_existing_alternative","inspect_context"].includes(record.deskAnalysis.provisionalNextAction));
+  deskAnalyzed++;
+ }else assert.equal(record.deskAnalysis,undefined);
+}
+assert.equal(deskAnalyzed,queue.counts.deskAnalyzedHighPriority);
 assert.equal(seen.size,needs.length);
 assert.equal(counter.substringOnly,7);
 assert.equal(counter.high,15);
