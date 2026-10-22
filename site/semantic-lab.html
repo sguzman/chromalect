@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="color-scheme" content="light dark">
 <meta name="description" content="Chromalect experimental Mandarin meaning lab: reusable single or composed emoji expressions alongside the original Chinese text.">
-<title>Semantic symbol lab · Chromalect</title>
+<title>Experimental emoji lab · Chromalect</title>
 <script src="theme.js"></script>
 <script src="layers.js" defer></script>
 <script src="semantic-grammar.js" defer></script>
@@ -19,12 +19,24 @@
 .semantic-test-controls button[aria-pressed=true]{background:var(--active-bg);border-color:var(--active-border);color:var(--active-ink)}
 .semantic-test-controls button:focus-visible,.semantic-answer-toggle:focus-within{outline:3px solid var(--accent);outline-offset:2px}
 .semantic-answer-toggle{display:inline-flex;align-items:center;gap:7px;padding:8px 2px;font-size:13px;color:var(--ink);cursor:pointer}
-.semantic-test-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(235px,1fr));gap:12px;margin:16px 0 32px}
+.semantic-test-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,350px),1fr));gap:14px;margin:16px 0 25px}
 .semantic-specimen{display:flex;flex-direction:column;gap:9px;min-height:200px;background:var(--tile-bg);border:1px solid var(--border);border-radius:12px;padding:18px}
 .semantic-kind{font-size:11px;color:var(--sub);text-transform:uppercase;letter-spacing:.08em}
-.semantic-main{display:flex;align-items:flex-start;gap:15px;flex-wrap:wrap}
+.semantic-main{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:12px;min-height:126px}
+.semantic-main--grammar{display:flex;align-items:center}
+.semantic-main .semantic-word-glyphs{flex-wrap:nowrap;gap:2px;min-width:0}
+.semantic-main .semantic-word-glyphs .glyph-wrap{min-width:78px}
+.semantic-main .semantic-word-glyphs .glyph{min-width:76px}
+.semantic-unmapped-glyph{min-height:115px;min-width:88px;display:flex;align-items:center;justify-content:center;border:1px dashed var(--border);border-radius:8px}
+.semantic-scope{font-size:12px;color:var(--sub);border-top:1px solid var(--border);padding-top:8px;margin:0}
+.semantic-lab-section{margin:28px 0}
+.semantic-lab-section>p{max-width:860px;font-size:13px;color:var(--sub)}
+.semantic-optional{border:1px solid var(--border);border-radius:12px;padding:14px 16px;margin:17px 0}
+.semantic-optional>summary{cursor:pointer;font-weight:700}
+.semantic-optional[open]>summary{margin-bottom:12px}
+@media(max-width:450px){.semantic-main{grid-template-columns:1fr}.semantic-specimen{min-height:0}}
 .semantic-hanzi{font-size:58px;line-height:1.24;white-space:nowrap;color:var(--ink)}
-.semantic-expression{display:flex;align-items:center;min-height:70px;gap:4px;font-size:27px;flex-wrap:wrap}
+.semantic-expression{display:flex;align-items:center;justify-content:flex-end;min-height:70px;gap:4px;font-size:29px;flex-wrap:wrap}.semantic-main--grammar .semantic-expression{justify-content:flex-start}
 .semantic-expression .semantic-symbol{font-family:"Noto Color Emoji","Apple Color Emoji","Segoe UI Emoji",system-ui,sans-serif}
 .semantic-operator{font-size:19px;color:var(--sub);font-weight:650;white-space:pre}
 .semantic-grammar-legend{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:10px;margin:16px 0 24px}
@@ -43,20 +55,39 @@
 <body>
 <header class="wrap"><div class="brand"><div><b>CHROMALECT</b><small>Language, made visible</small></div></div></header>
 <main class="wrap">
-<div class="eyebrow">Experimental design · Mandarin semantic layer</div>
-<h1>Can emoji express meaning?</h1>
-<p class="intro semantic-lab-intro">This shows single and composed emoji expressions together. Their relationships are recorded in machine-readable grammar data; the visible language remains emoji. It is an <strong>illustrative interface experiment</strong>, not a source-verified dictionary, and it does not change the completed 1,000-character glyph coloring.</p>
+<div class="eyebrow">Research sandbox · experimental emoji grammar</div>
+<h1>Emoji composition lab</h1>
+<p class="intro semantic-lab-intro">This is an <strong>experimental scratchpad</strong>, not the first-1,000 semantic browser. Mapped character examples appear first with their component, initial/final and tone layers. Word hypotheses, characters outside the tranche, and grammar-only experiments have separate sections.</p>
 <div class="semantic-notice"><strong>Important:</strong> Chinese characters can have multiple senses, and compound words often mean more than the sum of their characters. These prototypes annotate <em>selected meanings</em>, never the Hanzi strokes or radicals themselves. We do not assume a composition is valid just because its emoji look plausible.</div>
-<h2>Explore emoji expressions</h2>
+<h2>Mapped character meaning examples</h2>
 <div data-character-layer-controls></div>
-<p class="hint">For sourced meanings and measurable progress on the first 1,000 Mandarin characters, see the <a href="semantic-coverage.html">semantic coverage viewer</a>. The samples below remain grammar experiments rather than verified Mandarin sense mappings.</p>
+<p class="semantic-notice"><strong>Main semantic browser:</strong> <a href="semantic-coverage.html">Browse all 1,000 screened characters</a>. Initial screening is complete; independently verified semantic coverage remains 0%. The examples on this page do not increase that count.</p>
 <div class="semantic-test-controls" role="group" aria-label="Semantic annotation display">
-  <button type="button" data-semantic-mode="symbols" aria-pressed="true">Emoji meanings</button>
-  <button type="button" data-semantic-mode="plain" aria-pressed="false">Plain Chinese</button>
+  <button type="button" data-semantic-mode="symbols" aria-pressed="true">Show emoji</button>
+  <button type="button" data-semantic-mode="plain" aria-pressed="false">Hide emoji</button>
 </div>
 <label class="semantic-answer-toggle"><input id="semantic-reveal" type="checkbox"> Reveal the written meanings (for comparison)</label>
 <p class="hint" id="semantic-lab-status" role="status" aria-live="polite">Loading grammar-backed expression examples.</p>
-<div id="semantic-specimens" class="semantic-test-grid" aria-label="Illustrative semantic annotation comparisons"></div>
+<section class="semantic-lab-section" aria-labelledby="lab-char-title">
+<h2 id="lab-char-title">Single-character meanings</h2>
+<p>Only characters with mapped glyph data are shown here. All three presentation controls apply.</p>
+<div id="semantic-specimens" class="semantic-test-grid" aria-label="Mapped character semantic experiments"></div>
+</section>
+<section class="semantic-lab-section" aria-labelledby="lab-word-title">
+<h2 id="lab-word-title">Whole-word meanings</h2>
+<p>Illustrative compound words only. Their whole-word meaning is distinct from the meanings of their characters; no production word inventory has been imported.</p>
+<div id="semantic-words" class="semantic-test-grid" aria-label="Experimental compound words"></div>
+</section>
+<details class="semantic-optional">
+<summary>Outside the first 1,000 — plain characters only (2 examples)</summary>
+<p>These are grammar experiments without mapped character colors, Pinyin or tone; none are fabricated.</p>
+<div id="semantic-outside" class="semantic-test-grid" aria-label="Out of tranche examples"></div>
+</details>
+<details class="semantic-optional">
+<summary>Grammar-only emoji experiments (8 examples)</summary>
+<p>These explore verbs, negation and relations without a Mandarin character assignment.</p>
+<div id="semantic-grammar-examples" class="semantic-test-grid" aria-label="Grammar-only examples"></div>
+</details>
 <details class="semantic-technical">
 <summary>Technical grammar and machine-readable data (optional)</summary>
 <p>The visible expressions use only emoji. Their relationships and verb participant roles are recorded in the underlying typed JSON. Signs such as ▶, ∼ and A: belong to an optional technical notation, not the default visual language. The compact emoji sequence alone may not fully reconstruct the structured meaning.</p>
