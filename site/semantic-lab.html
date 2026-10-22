@@ -7,6 +7,7 @@
 <meta name="description" content="Chromalect experimental Mandarin meaning lab: reusable single or composed emoji expressions alongside the original Chinese text.">
 <title>Semantic symbol lab · Chromalect</title>
 <script src="theme.js"></script>
+<script src="semantic-grammar.js" defer></script>
 <script src="semantic-lab.js" defer></script>
 <link rel="stylesheet" href="style.css">
 <style>
@@ -24,6 +25,10 @@
 .semantic-hanzi{font-size:58px;line-height:1.24;white-space:nowrap;color:var(--ink)}
 .semantic-expression{display:flex;align-items:center;min-height:70px;gap:4px;font-size:27px;flex-wrap:wrap}
 .semantic-expression .semantic-symbol{font-family:"Noto Color Emoji","Apple Color Emoji","Segoe UI Emoji",system-ui,sans-serif}
+.semantic-operator{font-size:19px;color:var(--sub);font-weight:650;white-space:pre}
+.semantic-grammar-legend{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:10px;margin:16px 0 24px}
+.semantic-grammar-rule{display:flex;flex-direction:column;gap:5px;padding:14px;border:1px solid var(--border);border-radius:10px;background:var(--tile-bg);font-size:13px;color:var(--sub)}
+.semantic-grammar-token{color:var(--ink);font-size:23px;font-weight:700}
 .semantic-abstain{font-size:12px;color:var(--sub);font-weight:500;max-width:160px}
 .semantic-answer{font-size:13px;color:var(--sub);margin:0}
 .semantic-answer[hidden]{display:none}
@@ -36,19 +41,23 @@
 <main class="wrap">
 <div class="eyebrow">Experimental design · Mandarin semantic layer</div>
 <h1>Can small pictograms communicate meaning?</h1>
-<p class="intro semantic-lab-intro">This shows single and composed emoji expressions together, with optional written meanings and a plain-text comparison. It is an <strong>illustrative interface experiment</strong>, not a source-verified dictionary, and it does not change the completed 1,000-character glyph coloring.</p>
+<p class="intro semantic-lab-intro">This shows single and composed emoji expressions in one formal grammar, with explicit operators for actions, properties, change, association, and participants. It is an <strong>illustrative interface experiment</strong>, not a source-verified dictionary, and it does not change the completed 1,000-character glyph coloring.</p>
 <div class="semantic-notice"><strong>Important:</strong> Chinese characters can have multiple senses, and compound words often mean more than the sum of their characters. These prototypes annotate <em>selected meanings</em>, never the Hanzi strokes or radicals themselves. We do not assume a composition is valid just because its emoji look plausible.</div>
-<h2>Explore semantic expressions</h2>
+<h2>Grammar operators</h2>
+<p class="semantic-lab-intro">Emojis are reusable pictograms. Operators make the relationship between them explicit. Actions use ▶; optional event participants use A (agent), P (patient), G (goal), S (source), and I (instrument). Grammar validity does not establish that an emoji expression has a particular dictionary meaning.</p>
+<div id="semantic-grammar-legend" class="semantic-grammar-legend" aria-label="Semantic grammar operator reference"></div>
+<p><a href="https://github.com/sguzman/chromalect/blob/main/docs/semantic-expression-grammar-v0.1.md">Full formal grammar</a> · <a href="semantic-grammar-v0.1.json">Machine-readable example expressions</a> · <a href="https://github.com/sguzman/chromalect/blob/main/ontology/semantic-expression-v0.1.schema.json">Recursive expression schema</a></p>
+<h2>Explore grammar-backed expressions</h2>
 <div class="semantic-test-controls" role="group" aria-label="Semantic annotation display">
   <button type="button" data-semantic-mode="symbols" aria-pressed="true">Emoji meanings</button>
   <button type="button" data-semantic-mode="plain" aria-pressed="false">Plain Chinese</button>
 </div>
 <label class="semantic-answer-toggle"><input id="semantic-reveal" type="checkbox"> Reveal the written meanings (for comparison)</label>
-<p class="hint" id="semantic-lab-status" role="status" aria-live="polite">Showing mixed emoji expressions. Written meanings are hidden until revealed.</p>
+<p class="hint" id="semantic-lab-status" role="status" aria-live="polite">Loading grammar-backed expression examples.</p>
 <div id="semantic-specimens" class="semantic-test-grid" aria-label="Illustrative semantic annotation comparisons"></div>
 <section class="semantic-info">
 <h2>What the first test can tell us</h2>
-<p>An individual pictogram may express some meanings directly. Other meanings may benefit from several reusable pictograms in one expression; there is no numerical ceiling or requirement that expressions be unique to characters. Longer expressions are not inherently better, and their interpretation still needs testing. Words such as 火车 (train) need their <em>word-level</em> meaning, not a picture of fire followed by a picture of a vehicle.</p>
+<p>An individual pictogram may express some meanings directly. Multi-icon expressions can use ∼ for association, · for qualification, or an event marker ▶ with explicit participant roles. No emoji-count limit or uniqueness constraint applies. A formal operator makes the structure clear, but a separately documented lexical interpretation is still necessary. Words such as 火车 (train) need their <em>word-level</em> meaning, not a picture of fire followed by a picture of a vehicle.</p>
 <p>There is no demand for 100% emoji coverage. When a pictogram expression is ambiguous, its written meaning remains available; the system can also abstain from proposing a pictogram. A future source-backed dataset will attach meaning annotations to reviewed <strong>senses</strong> and lexical entries, not blindly to every character shape.</p>
 <p><a href="https://github.com/sguzman/chromalect/blob/main/docs/semantic-pictogram-pilot.md">Read the experiment and acceptance plan</a>. All component identity, Pinyin and tone coloring remain separate and unchanged. The production semantic Direct/Marker mode remains unavailable until a sense inventory and accessible symbol annotations have passed independent review.</p>
 </section>

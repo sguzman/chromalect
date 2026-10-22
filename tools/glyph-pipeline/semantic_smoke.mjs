@@ -1,10 +1,11 @@
-// Zero-dependency semantic-lab DOM smoke and variable-length-expression regression.
 import assert from "node:assert/strict";
 import fs from "node:fs";
 import vm from "node:vm";
 
-const source = fs.readFileSync("site/semantic-lab.js", "utf8");
+const grammarSource = fs.readFileSync("site/semantic-grammar.js", "utf8");
+const labSource = fs.readFileSync("site/semantic-lab.js", "utf8");
 const html = fs.readFileSync("site/semantic-lab.html", "utf8");
+const data = JSON.parse(fs.readFileSync("site/semantic-grammar-v0.1.json", "utf8"));
 
 class Element {
   constructor(tag = "div") {
@@ -19,18 +20,16 @@ class Element {
   }
   appendChild(child) { this.append(child); return child; }
   append(...children) { for (const child of children) this.children.push(child); }
-  replaceChildren(child) {
-    this.children = child.tagName === "#fragment" ? [...child.children] : [child];
-  }
+  replaceChildren(child) { this.children = child.tagName === "#fragment" ? [...child.children] : [child]; }
   setAttribute(name, value) { this.attributes[name] = String(value); }
   addEventListener(name, listener) { this.events[name] = listener; }
 }
-const elements = root => [root, ...root.children.flatMap(elements)];
-const descendants = (root, className) =>
-  elements(root).filter(x => x.className === className);
+const all = root => [root, ...root.children.flatMap(all)];
+const descendants = (root, css) => all(root).filter(x => x.className === css);
 
-function execute(script) {
+async function execute() {
   const grid = new Element("div");
+  const legend = new Element("div");
   const checkbox = new Element("input");
   const status = new Element("p");
   const buttons = ["symbols", "plain"].map(mode => {
@@ -40,6 +39,7 @@ function execute(script) {
   });
   const ids = {
     "semantic-specimens": grid,
+    "semantic-grammar-legend": legend,
     "semantic-reveal": checkbox,
     "semantic-lab-status": status
   };
@@ -49,39 +49,46 @@ function execute(script) {
     getElementById: id => ids[id],
     querySelectorAll: selector => selector === "[data-semantic-mode]" ? buttons : []
   };
-  vm.runInNewContext(script, { document });
-  return { grid, checkbox, status, buttons };
+  const sandbox = {
+    document,
+    fetch: async path => {
+      assert.equal(path, "semantic-grammar-v0.1.json");
+      return {ok:true, json:async()=>data};
+    }
+  };
+  sandbox.globalThis = sandbox;
+  vm.runInNewContext(grammarSource, sandbox);
+  vm.runInNewContext(labSource, sandbox);
+  for (let i=0; i<8 && grid.children.length===0; i++) await Promise.resolve();
+  return { grid, legend, checkbox, status, buttons };
 }
 
-assert.match(html, /data-semantic-mode="symbols"/);
-assert.match(html, /data-semantic-mode="plain"/);
+assert.match(html, /semantic-grammar\.js/);
+assert.match(html, /semantic-grammar-legend/);
 assert.doesNotMatch(html, /data-semantic-mode="single"|data-semantic-mode="compound"/);
-const { grid, checkbox, buttons, status } = execute(source);
-assert.equal(grid.children.length, 11, "Expected all illustrative senses");
-const symbolCount = index => descendants(grid.children[index], "semantic-symbol").length;
-assert.equal(symbolCount(0), 1, "山 must retain a one-symbol expression");
-assert.equal(symbolCount(3), 2, "学 must render a multi-symbol expression");
-assert.equal(symbolCount(4), 2, "读 must render a second composite expression");
-assert.equal(symbolCount(8), 0, "Unencoded meanings must not receive invented icons");
-assert.match(status.textContent, /Mixed emoji expressions/);
+const { grid, legend, checkbox, status, buttons } = await execute();
+assert.equal(grid.children.length, data.specimens.length);
+assert.equal(legend.children.length, data.operators.length);
+const index = id => data.specimens.findIndex(s=>s.id===id);
+const symbolCount = id => descendants(grid.children[index(id)], "semantic-symbol").length;
+assert.equal(symbolCount("mountain"), 1);
+assert.equal(symbolCount("study"), 2);
+assert.equal(symbolCount("read"), 2);
+assert.equal(symbolCount("raw"), 0);
+assert.equal(symbolCount("extended-mnemonic"), 5, "No arbitrary three-symbol truncation");
+assert.ok(descendants(grid.children[index("eat-apple")], "semantic-operator")
+  .some(x=>x.textContent==="A:"), "Agent label must be rendered");
+assert.ok(descendants(grid.children[index("eat-apple")], "semantic-operator")
+  .some(x=>x.textContent==="P:"), "Patient label must be rendered");
+assert.match(status.textContent,/Grammar-backed emoji expressions/);
 buttons[1].events.click();
-assert.ok(grid.children.every(card => descendants(card, "semantic-symbol").length === 0),
-  "Plain mode must remove all pictogram annotations");
+assert.ok(grid.children.every(card=>descendants(card,"semantic-symbol").length===0),
+  "Plain mode must remove pictographic annotations");
 buttons[0].events.click();
-assert.equal(symbolCount(0), 1);
-assert.equal(symbolCount(3), 2);
+assert.equal(symbolCount("mountain"),1);
+assert.equal(symbolCount("extended-mnemonic"),5);
 checkbox.checked = true;
 checkbox.events.change();
-assert.ok(grid.children.every(card => descendants(card, "semantic-answer")[0].hidden === false),
-  "Written meaning reveal must be independent of symbol length and mode");
-
-// Extend a test-only expression beyond three tokens: no production claim or artificial cap.
-const fixture = source.replace(
-  "symbols: [emoji.book, emoji.brain]",
-  "symbols: [emoji.book, emoji.brain, emoji.book, emoji.brain]"
-);
-assert.notEqual(fixture, source, "Four-symbol regression fixture was not installed");
-const longer = execute(fixture);
-assert.equal(descendants(longer.grid.children[3], "semantic-symbol").length, 4,
-  "Renderer must not truncate emoji expressions at three");
-console.log("Semantic smoke: mixed one-/multi-symbol view, reusable symbols, Off toggle, meaning reveal, and unbounded expression length.");
+assert.ok(grid.children.every(card=>descendants(card,"semantic-answer")[0].hidden===false),
+  "Written meanings must reveal independently of grammar mode");
+console.log("Semantic lab: versioned grammar data, mixed 1–5 emoji expressions, action roles, Off toggle and written-meaning reveal.");

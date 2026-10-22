@@ -1,59 +1,15 @@
-/* Illustrative semantic expression specimens, not a sourced sense inventory.
-   These examples are excluded from production Mandarin semantic coverage. */
+/* Grammar-backed illustrative semantic expressions, not verified dictionary data. */
 (() => {
   "use strict";
-
-  // Reusable symbols; a pictogram is not reserved for one character or sense.
-  const emoji = Object.freeze({
-    mountain: "⛰️", water: "💧", fire: "🔥", book: "📖",
-    brain: "🧠", eyes: "👀", volcano: "🌋", train: "🚆",
-    pregnant: "🤰", baby: "👶", walker: "🚶", approval: "👍"
-  });
-
-  // Each example names a selected meaning, not a permanent character identity.
-  // The symbol array has no fixed length and may be absent.
-  const examples = [
-    { written: "山", unit: "Illustrative character sense", meaning: "mountain",
-      symbols: [emoji.mountain],
-      note: "One familiar picture conveys this selected sense." },
-    { written: "水", unit: "Illustrative character sense", meaning: "water",
-      symbols: [emoji.water],
-      note: "One symbol is sufficient for this example." },
-    { written: "火", unit: "Illustrative character sense", meaning: "fire",
-      symbols: [emoji.fire],
-      note: "No additional pictograms are needed." },
-    { written: "学", unit: "Illustrative character use", meaning: "learn / study",
-      symbols: [emoji.book, emoji.brain],
-      note: "The book-and-brain expression is a hypothesis, not a fixed emoji definition." },
-    { written: "读", unit: "Illustrative character use", meaning: "read",
-      symbols: [emoji.eyes, emoji.book],
-      note: "The book pictogram is shared with another expression; symbols are reusable." },
-    { written: "火山", unit: "Illustrative word sense", meaning: "volcano",
-      symbols: [emoji.volcano],
-      note: "A single conventional pictogram can be clearer than a literal character-by-character combination." },
-    { written: "火车", unit: "Illustrative word sense", meaning: "train",
-      symbols: [emoji.train],
-      note: "The word-level meaning is not generated from its two characters." },
-    { written: "生", unit: "Illustrative sense A of one character", meaning: "birth / being born",
-      symbols: [emoji.pregnant, emoji.baby],
-      note: "Only one selected usage of 生; other meanings need separate entries." },
-    { written: "生", unit: "Illustrative sense B of one character", meaning: "raw / uncooked",
-      symbols: null,
-      note: "No sufficiently clear expression is proposed for this usage." },
-    { written: "行", unit: "Illustrative selected sense", meaning: "walk / go",
-      symbols: [emoji.walker],
-      note: "Other uses and meanings of 行 are not represented by this selection." },
-    { written: "好", unit: "Illustrative selected sense", meaning: "good",
-      symbols: [emoji.approval],
-      note: "Conventional pictogram meanings still require testing." }
-  ];
-
+  const grammar = globalThis.ChromalectSemanticGrammar;
   const grid = document.getElementById("semantic-specimens");
   const buttons = Array.from(document.querySelectorAll("[data-semantic-mode]"));
   const checkbox = document.getElementById("semantic-reveal");
   const status = document.getElementById("semantic-lab-status");
-  if (!grid || !buttons.length || !checkbox || !status) return;
+  const legend = document.getElementById("semantic-grammar-legend");
+  if (!grammar || !grid || !buttons.length || !checkbox || !status || !legend) return;
   let mode = "symbols";
+  let examples = [];
 
   function node(tag, css, value) {
     const el = document.createElement(tag);
@@ -65,18 +21,19 @@
   function expression(example) {
     const area = node("div", "semantic-expression");
     if (mode === "plain") return area;
-
-    const tokens = example.symbols;
-    if (Array.isArray(tokens) && tokens.length > 0) {
-      area.setAttribute("role", "img");
-      area.setAttribute("aria-label", "Illustrative emoji expression: " + tokens.join(" "));
-      for (const token of tokens) {
-        const symbol = node("span", "semantic-symbol", token);
-        symbol.setAttribute("aria-hidden", "true");
-        area.appendChild(symbol);
-      }
-    } else {
+    if (!example.expr) {
       area.appendChild(node("span", "semantic-abstain", "No clear emoji expression"));
+      return area;
+    }
+    const tokens = grammar.parts(example.expr);
+    area.setAttribute("role", "img");
+    area.setAttribute("aria-label", "Experimental semantic notation: " + grammar.display(example.expr));
+    for (const token of tokens) {
+      const symbol = node("span",
+        token.kind === "emoji" ? "semantic-symbol" : "semantic-operator",
+        token.text);
+      symbol.setAttribute("aria-hidden", "true");
+      area.appendChild(symbol);
     }
     return area;
   }
@@ -85,20 +42,24 @@
     const fragment = document.createDocumentFragment();
     for (const ex of examples) {
       const card = node("article", "semantic-specimen");
-      card.appendChild(node("span", "semantic-kind", ex.unit));
+      card.appendChild(node("span", "semantic-kind",
+        ex.written ? "Illustrative Mandarin meaning" : "Illustrative grammar example"));
       const main = node("div", "semantic-main");
-      const written = node("strong", "semantic-hanzi", ex.written);
-      written.lang = "zh-Hans";
-      main.append(written, expression(ex));
+      if (ex.written) {
+        const written = node("strong", "semantic-hanzi", ex.written);
+        written.lang = "zh-Hans";
+        main.appendChild(written);
+      }
+      main.appendChild(expression(ex));
       card.appendChild(main);
       const meaning = node("p", "semantic-answer", "Written meaning: " + ex.meaning);
       meaning.hidden = !checkbox.checked;
       card.appendChild(meaning);
-      card.appendChild(node("p", "semantic-annotation-note", ex.note));
+      card.appendChild(node("p", "semantic-annotation-note", ex.notes));
       fragment.appendChild(card);
     }
     grid.replaceChildren(fragment);
-    status.textContent = (mode === "symbols" ? "Mixed emoji expressions" : "Plain Chinese") +
+    status.textContent = (mode === "symbols" ? "Grammar-backed emoji expressions" : "Plain Chinese / concepts") +
       " · " + examples.length + " illustrative meanings" +
       (checkbox.checked ? " · written meanings shown" : " · written meanings hidden");
     for (const button of buttons) {
@@ -113,5 +74,38 @@
     });
   }
   checkbox.addEventListener("change", render);
-  render();
+
+  async function load() {
+    try {
+      const response = await fetch("semantic-grammar-v0.1.json");
+      if (!response.ok) throw new Error("Unable to retrieve grammar data");
+      const data = await response.json();
+      if (data.schema !== "chromalect.semantic.grammar.v0.1" ||
+          data.version !== grammar.version ||
+          data.status !== "experimental_not_production_semantics" ||
+          data.verifiedProductionCharacterCount !== 0 ||
+          !Array.isArray(data.specimens) || !Array.isArray(data.operators)) {
+        throw new Error("Unexpected semantic grammar version or verification status");
+      }
+      for (const ex of data.specimens) {
+        if (ex.verification !== "illustrative" || typeof ex.meaning !== "string") {
+          throw new Error("Unreviewed semantic data must remain illustrative");
+        }
+        if (ex.expr !== null) grammar.validate(ex.expr);
+      }
+      examples = data.specimens;
+      const reference = document.createDocumentFragment();
+      for (const entry of data.operators) {
+        const block = node("div", "semantic-grammar-rule");
+        block.appendChild(node("strong", "semantic-grammar-token", entry.display));
+        block.appendChild(node("span", "", entry.interpretation));
+        reference.appendChild(block);
+      }
+      legend.replaceChildren(reference);
+      render();
+    } catch (error) {
+      status.textContent = "Semantic grammar examples could not be loaded.";
+    }
+  }
+  load();
 })();
