@@ -1,0 +1,324 @@
+{
+  "schema": "chromalect.mandarin.lexical-crossref-batch.v0.1",
+  "source": {
+    "title": "CC-CEDICT per-headword v2 mirror",
+    "repository": "krmanik/cedict-json",
+    "commit": "63c2569948629323b515833930fdd10f285401b6",
+    "dataLicense": "CC BY-SA 4.0",
+    "upstream": "https://cc-cedict.org/",
+    "mirror": "https://github.com/krmanik/cedict-json",
+    "transform": "Selected single-simplified-character dictionary records, retaining readings and definitions; literal English gloss matching is automated triage only"
+  },
+  "rankStart": 941,
+  "rankEnd": 950,
+  "summary": {
+    "total": 10,
+    "headwordFound": 10,
+    "withCandidate": 10,
+    "withLiteralSupport": 8
+  },
+  "records": [
+    {
+      "rank": 941,
+      "character": "驴",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/驴.json",
+      "sourceBlobSha": "903360926a9b8840c6a17e933d7593a762ce6f95",
+      "traditional": "驢",
+      "dictionaryReadings": [
+        "lu:2"
+      ],
+      "dictionaryDefinitions": {
+        "lu:2": "variant of 驢|驴[lu:2]; donkey; CL:頭|头[tou2]; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "donkey",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "lu:2"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 942,
+      "character": "纽",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/纽.json",
+      "sourceBlobSha": "52e47b3e71d003bfe49e1e43f3e57c976335fdba",
+      "traditional": "紐",
+      "dictionaryReadings": [
+        "niu3"
+      ],
+      "dictionaryDefinitions": {
+        "niu3": "to turn; to wrench; button; nu (Greek letter Νν); "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "knot",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 943,
+      "character": "奉",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/奉.json",
+      "sourceBlobSha": "78ff03cb7d874f7eadadb3b56743236289bc3358",
+      "traditional": "奉",
+      "dictionaryReadings": [
+        "feng4"
+      ],
+      "dictionaryDefinitions": {
+        "feng4": "to offer (tribute); to present respectfully (to superior, ancestor, deity etc); to esteem; to revere; to believe in (a religion); to wait upon; to accept orders (from superior); "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "offer",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "feng4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 944,
+      "character": "玩",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/玩.json",
+      "sourceBlobSha": "7cac90fdfa2d886a256fd9eeee73f98966a74de4",
+      "traditional": "翫",
+      "dictionaryReadings": [
+        "wan2"
+      ],
+      "dictionaryDefinitions": {
+        "wan2": "to play; to have fun; to trifle with; toy; sth used for amusement; curio or antique (Taiwan pr. [wan4]); to keep sth for entertainment; variant of 玩[wan2]; Taiwan pr. [wan4]; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "play",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "wan2"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 945,
+      "character": "环",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/环.json",
+      "sourceBlobSha": "d6a1cddb1e9ee3eed0937f8468531c7d97d5b7e2",
+      "traditional": "環",
+      "dictionaryReadings": [
+        "Huan2",
+        "huan2"
+      ],
+      "dictionaryDefinitions": {
+        "Huan2": "surname Huan; ",
+        "huan2": "ring; hoop; loop; (chain) link; classifier for scores in archery etc; to surround; to encircle; to hem in; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "ring",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "huan2"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 946,
+      "character": "武",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/武.json",
+      "sourceBlobSha": "f803299bfe1ef7ee00d17a17d80ed92ec4632c66",
+      "traditional": "武",
+      "dictionaryReadings": [
+        "Wu3",
+        "wu3"
+      ],
+      "dictionaryDefinitions": {
+        "Wu3": "surname Wu; ",
+        "wu3": "martial; military; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "military",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "wu3"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 947,
+      "character": "青",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/青.json",
+      "sourceBlobSha": "d09f84f25b43904bfc0c2404eeaaecd3f71e5c1a",
+      "traditional": "青",
+      "dictionaryReadings": [
+        "Qing1",
+        "qing1"
+      ],
+      "dictionaryDefinitions": {
+        "Qing1": "abbr. for 青海[Qing1 hai3], Qinghai Province; ",
+        "qing1": "nature's color; green or blue; greenish black; youth; young (of people); "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "green",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "qing1"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        },
+        {
+          "selectedMeaning": "young",
+          "sourceGlossGroupIndex": 1,
+          "matchingDictionaryReadings": [
+            "qing1"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 948,
+      "character": "责",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/责.json",
+      "sourceBlobSha": "9e7d5056d65d51a80a5bbee6b15a98dc493b378a",
+      "traditional": "責",
+      "dictionaryReadings": [
+        "ze2"
+      ],
+      "dictionaryDefinitions": {
+        "ze2": "duty; responsibility; to reproach; to blame; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "responsibility",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "ze2"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 949,
+      "character": "现",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/现.json",
+      "sourceBlobSha": "faed31f864bc1a8d5f2c002f4f9a95bcd084049e",
+      "traditional": "現",
+      "dictionaryReadings": [
+        "xian4"
+      ],
+      "dictionaryDefinitions": {
+        "xian4": "to appear; present; now; existing; current; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "appear",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "xian4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 950,
+      "character": "玫",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/玫.json",
+      "sourceBlobSha": "25fdfd58ee36ad74240b2305b4ae8b0ec4c66c41",
+      "traditional": "玫",
+      "dictionaryReadings": [
+        "mei2"
+      ],
+      "dictionaryDefinitions": {
+        "mei2": "(fine jade); see 玫瑰[mei2 gui1]; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "rose",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    }
+  ]
+}
