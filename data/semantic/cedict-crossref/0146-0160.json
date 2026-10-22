@@ -1,0 +1,440 @@
+{
+  "schema": "chromalect.mandarin.lexical-crossref-batch.v0.1",
+  "source": {
+    "title": "CC-CEDICT per-headword v2 mirror",
+    "repository": "krmanik/cedict-json",
+    "commit": "63c2569948629323b515833930fdd10f285401b6",
+    "dataLicense": "CC BY-SA 4.0",
+    "upstream": "https://cc-cedict.org/",
+    "mirror": "https://github.com/krmanik/cedict-json",
+    "transform": "Selected single-simplified-character dictionary records, retaining readings and definitions; literal English gloss matching is automated triage only"
+  },
+  "rankStart": 146,
+  "rankEnd": 160,
+  "summary": {
+    "total": 15,
+    "headwordFound": 15,
+    "withCandidate": 12,
+    "withLiteralSupport": 9
+  },
+  "records": [
+    {
+      "rank": 146,
+      "character": "分",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/分.json",
+      "sourceBlobSha": "8afa7c06e68aa3a9ee446ba391660364be3073a1",
+      "traditional": "分",
+      "dictionaryReadings": [
+        "fen1",
+        "fen4"
+      ],
+      "dictionaryDefinitions": {
+        "fen1": "to divide; to separate; to distribute; to allocate; to distinguish (good and bad); part or subdivision; fraction; one tenth (of certain units); unit of length equivalent to 0.33 cm; minute; a point (in sports or games); 0.01 yuan (unit of money); ",
+        "fen4": "part; share; ingredient; component; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "divide",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "fen1"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 147,
+      "character": "乏",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/乏.json",
+      "sourceBlobSha": "26579aade91b71073cc998325c8dd4dc5bfc9a7f",
+      "traditional": "乏",
+      "dictionaryReadings": [
+        "fa2"
+      ],
+      "dictionaryDefinitions": {
+        "fa2": "short of; tired; "
+      },
+      "selectedSenseChecks": [],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 148,
+      "character": "公",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/公.json",
+      "sourceBlobSha": "958ae9f65b9dbda1c0957b94009bcc66d2382335",
+      "traditional": "公",
+      "dictionaryReadings": [
+        "gong1"
+      ],
+      "dictionaryDefinitions": {
+        "gong1": "public; collectively owned; common; international (e.g. high seas, metric system, calendar); make public; fair; just; Duke, highest of five orders of nobility 五等爵位[wu3 deng3 jue2 wei4]; honorable (gentlemen); father-in-law; male (animal); "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "fair",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "gong1"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 149,
+      "character": "仓",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/仓.json",
+      "sourceBlobSha": "33479d6b5c57ded72dd70cd85ddca4284582800a",
+      "traditional": "倉",
+      "dictionaryReadings": [
+        "cang1"
+      ],
+      "dictionaryDefinitions": {
+        "cang1": "barn; granary; storehouse; cabin; hold (in ship); "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "granary",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "cang1"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 150,
+      "character": "月",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/月.json",
+      "sourceBlobSha": "2161f0f4a390f85386136d100e0a5cd203da9299",
+      "traditional": "月",
+      "dictionaryReadings": [
+        "yue4"
+      ],
+      "dictionaryDefinitions": {
+        "yue4": "moon; month; monthly; CL:個|个[ge4],輪|轮[lun2]; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "moon",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "yue4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        },
+        {
+          "selectedMeaning": "month",
+          "sourceGlossGroupIndex": 1,
+          "matchingDictionaryReadings": [
+            "yue4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 151,
+      "character": "氏",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/氏.json",
+      "sourceBlobSha": "144943d4f2eb82c8f3930f9f45ecb2080fac8250",
+      "traditional": "氏",
+      "dictionaryReadings": [
+        "shi4",
+        "zhi1"
+      ],
+      "dictionaryDefinitions": {
+        "shi4": "clan name; maiden name; ",
+        "zhi1": "see 月氏[Yue4 zhi1] and 閼氏|阏氏[yan1 zhi1]; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "family",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 152,
+      "character": "勿",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/勿.json",
+      "sourceBlobSha": "63de7d9a87ccb3209b284e69530168a4f36c70a2",
+      "traditional": "勿",
+      "dictionaryReadings": [
+        "wu4"
+      ],
+      "dictionaryDefinitions": {
+        "wu4": "do not; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "must not",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 153,
+      "character": "欠",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/欠.json",
+      "sourceBlobSha": "aa161764b54a366f4493752e53bfd9f270973444",
+      "traditional": "欠",
+      "dictionaryReadings": [
+        "qian4"
+      ],
+      "dictionaryDefinitions": {
+        "qian4": "deficient; to owe; to lack; yawn; "
+      },
+      "selectedSenseChecks": [],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 154,
+      "character": "风",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/风.json",
+      "sourceBlobSha": "a9ca243dfbab64a117eb15c1d48e15e0605ef08d",
+      "traditional": "風",
+      "dictionaryReadings": [
+        "feng1"
+      ],
+      "dictionaryDefinitions": {
+        "feng1": "wind; news; style; custom; manner; CL:陣|阵[zhen4],絲|丝[si1]; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "wind",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "feng1"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 155,
+      "character": "丹",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/丹.json",
+      "sourceBlobSha": "79bf66e4e6da809bc19b7c204ac636563ff0b2d6",
+      "traditional": "丹",
+      "dictionaryReadings": [
+        "dan1"
+      ],
+      "dictionaryDefinitions": {
+        "dan1": "red; pellet; powder; cinnabar; "
+      },
+      "selectedSenseChecks": [],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 156,
+      "character": "匀",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/匀.json",
+      "sourceBlobSha": "925a53d401289ca0b159f3322d9a39906a2a1155",
+      "traditional": "勻",
+      "dictionaryReadings": [
+        "yun2"
+      ],
+      "dictionaryDefinitions": {
+        "yun2": "even; well-distributed; uniform; to distribute evenly; to share; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "equal",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 157,
+      "character": "乌",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/乌.json",
+      "sourceBlobSha": "280f4aceba59b16853e333c96405bee3c45a0d0c",
+      "traditional": "烏",
+      "dictionaryReadings": [
+        "Wu1",
+        "wu1"
+      ],
+      "dictionaryDefinitions": {
+        "Wu1": "abbr. for Ukraine 烏克蘭|乌克兰[Wu1 ke4 lan2]; surname Wu; ",
+        "wu1": "crow; black; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "crow",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "wu1"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 158,
+      "character": "勾",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/勾.json",
+      "sourceBlobSha": "c0c6469ae93ca323643f5b8ec5981afbb2088f65",
+      "traditional": "勾",
+      "dictionaryReadings": [
+        "Gou1",
+        "gou1",
+        "gou4"
+      ],
+      "dictionaryDefinitions": {
+        "Gou1": "surname Gou; ",
+        "gou1": "to attract; to arouse; to tick; to strike out; to delineate; to collude; variant of 鉤|钩[gou1], hook; ",
+        "gou4": "see 勾當|勾当[gou4 dang4]; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "hook",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "gou1"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 159,
+      "character": "凤",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/凤.json",
+      "sourceBlobSha": "8a1783a1608c1ab27d8abd1863ac7e15c5c98dba",
+      "traditional": "鳳",
+      "dictionaryReadings": [
+        "Feng4",
+        "feng4"
+      ],
+      "dictionaryDefinitions": {
+        "Feng4": "surname Feng; ",
+        "feng4": "phoenix; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "phoenix",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "feng4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 160,
+      "character": "六",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/六.json",
+      "sourceBlobSha": "ca879bdb69567d7d92132ff1bb9cd62bc528ec05",
+      "traditional": "六",
+      "dictionaryReadings": [
+        "liu4"
+      ],
+      "dictionaryDefinitions": {
+        "liu4": "six; 6; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "six",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "liu4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    }
+  ]
+}
