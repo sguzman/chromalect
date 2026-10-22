@@ -7,8 +7,11 @@ assert.equal(manifest.schema,"chromalect.semantic.lexical-crossref-summary.v0.1"
 assert.equal(manifest.status,"independent_dictionary_ingestion_only_not_validated");
 assert.equal(manifest.source.snapshotCommit,"63c2569948629323b515833930fdd10f285401b6");
 assert.equal(manifest.source.dataLicense,"CC BY-SA 4.0");
-assert.equal(manifest.records.length,100);
-assert.equal(manifest.batches.length,7);
+assert.equal(manifest.records.length,200);
+assert.equal(manifest.batches.length,14);
+assert.equal(manifest.metrics.manualSenseReviewed,0);
+assert.equal(manifest.metrics.emojiComprehensionReviewed,0);
+assert.equal(manifest.metrics.productionVerified,0);
 const combined=[];
 for(const group of manifest.batches){
  assert.match(group.path,/^[0-9]{4}-[0-9]{4}\.json$/);
@@ -22,7 +25,7 @@ for(const group of manifest.batches){
  assert.equal(data.summary.total,data.records.length);
  combined.push(...data.records);
 }
-assert.equal(combined.length,100);
+assert.equal(combined.length,200);
 let found=0,withCandidate=0,expr=0,literal=0,needsReview=0,charactersWithLiteral=0;
 for(const [i,row] of combined.entries()){
  const rank=i+1;
@@ -56,15 +59,15 @@ for(const [i,row] of combined.entries()){
  assert.equal(condensed.selectedSenseChecks.length,row.selectedSenseChecks.length);
 }
 assert.deepEqual(manifest.metrics,{
- totalCharacters:1000,initiallyScreened:1000,crossReferenced:100,headwordsFound:found,
+ totalCharacters:1000,initiallyScreened:1000,crossReferenced:200,headwordsFound:found,
  charactersWithCandidate:withCandidate,candidateExpressions:expr,
  charactersWithLiteralCandidateMatch:charactersWithLiteral,
  expressionLiteralMatches:literal,expressionGlossMismatchOrSynonym:needsReview,
  manualSenseReviewed:0,emojiComprehensionReviewed:0,productionVerified:0
 });
-assert.equal(found,100);
-assert.equal(withCandidate,71);
-assert.equal(expr,73);
-assert.equal(literal,64);
-assert.equal(needsReview,9);
-console.log("Lexical cross-reference: 100/1000 imported; 100 headwords; 73 experimental expressions, 64 literal matches, 9 flagged. Human approval: 0.");
+assert.equal(found,200);
+assert.equal(withCandidate,140);
+assert.equal(expr,145);
+assert.equal(literal,117);
+assert.equal(needsReview,28);
+console.log("Lexical cross-reference: 200/1000 imported; 200 headwords; 145 experimental expressions, 117 literal matches, 28 flagged. Human approval: 0.");
