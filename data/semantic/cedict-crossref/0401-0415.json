@@ -1,0 +1,441 @@
+{
+  "schema": "chromalect.mandarin.lexical-crossref-batch.v0.1",
+  "source": {
+    "title": "CC-CEDICT per-headword v2 mirror",
+    "repository": "krmanik/cedict-json",
+    "commit": "63c2569948629323b515833930fdd10f285401b6",
+    "dataLicense": "CC BY-SA 4.0",
+    "upstream": "https://cc-cedict.org/",
+    "mirror": "https://github.com/krmanik/cedict-json",
+    "transform": "Selected single-simplified-character dictionary records, retaining readings and definitions; literal English gloss matching is automated triage only"
+  },
+  "rankStart": 401,
+  "rankEnd": 415,
+  "summary": {
+    "total": 15,
+    "headwordFound": 15,
+    "withCandidate": 13,
+    "withLiteralSupport": 10
+  },
+  "records": [
+    {
+      "rank": 401,
+      "character": "成",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/成.json",
+      "sourceBlobSha": "5d964b0ef79941e9df83ffb5b59c81bea29b5b53",
+      "traditional": "成",
+      "dictionaryReadings": [
+        "Cheng2",
+        "cheng2"
+      ],
+      "dictionaryDefinitions": {
+        "Cheng2": "surname Cheng; ",
+        "cheng2": "to succeed; to finish; to complete; to accomplish; to become; to turn into; to be all right; OK!; one tenth; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "finished",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 402,
+      "character": "夹",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/夹.json",
+      "sourceBlobSha": "51bb61c3d50d7ea609ed0032ea0575afd6fccb4b",
+      "traditional": "裌",
+      "dictionaryReadings": [
+        "jia1",
+        "jia2",
+        "jia4"
+      ],
+      "dictionaryDefinitions": {
+        "jia1": "to press from either side; to place in between; to sandwich; to carry sth under armpit; wedged between; between; to intersperse; to mix; to mingle; clip; folder; Taiwan pr. [jia2]; ",
+        "jia2": "double-layered; lined (garment); variant of 夾|夹[jia2]; ",
+        "jia4": "Taiwan pr. used in 夾生|夹生[jia1 sheng1] and 夾竹桃|夹竹桃[jia1 zhu2 tao2]; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "between",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "jia1"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 403,
+      "character": "夷",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/夷.json",
+      "sourceBlobSha": "f410ef6725d210351630afcf6f245159f223bbc6",
+      "traditional": "夷",
+      "dictionaryReadings": [
+        "yi2"
+      ],
+      "dictionaryDefinitions": {
+        "yi2": "non-Han people, esp. to the East of China; barbarians; to wipe out; to exterminate; to tear down; to raze; "
+      },
+      "selectedSenseChecks": [],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 404,
+      "character": "轨",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/轨.json",
+      "sourceBlobSha": "be73eaf06300583aa8a76bd36f6adf80a07c9641",
+      "traditional": "軌",
+      "dictionaryReadings": [
+        "gui3"
+      ],
+      "dictionaryDefinitions": {
+        "gui3": "course; path; track; rail; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "track",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "gui3"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 405,
+      "character": "邪",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/邪.json",
+      "sourceBlobSha": "175968e0b425b27b31668072e49bb351d507dfd2",
+      "traditional": "邪",
+      "dictionaryReadings": [
+        "xie2"
+      ],
+      "dictionaryDefinitions": {
+        "xie2": "old variant of 邪[xie2]; demonic; iniquitous; nefarious; evil; unhealthy influences that cause disease (Chinese medicine); "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "evil",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "xie2"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 406,
+      "character": "尧",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/尧.json",
+      "sourceBlobSha": "f31f74366213d54a40938d3ab5951519a7ae74d6",
+      "traditional": "堯",
+      "dictionaryReadings": [
+        "Yao2"
+      ],
+      "dictionaryDefinitions": {
+        "Yao2": "surname Yao; Yao or Tang Yao (c. 2200 BC), one of Five legendary Emperors 五帝[wu3 di4], second son of Di Ku 帝嚳|帝喾[Di4 Ku4]; "
+      },
+      "selectedSenseChecks": [],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 407,
+      "character": "划",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/划.json",
+      "sourceBlobSha": "5b509c641bf51c5abcef26a42e73e37313f6cd9e",
+      "traditional": "劃",
+      "dictionaryReadings": [
+        "hua2",
+        "hua4"
+      ],
+      "dictionaryDefinitions": {
+        "hua2": "to row; to paddle; profitable; worth (the effort); it pays (to do sth); to cut; to slash; to scratch (cut into the surface of sth); to strike (a match); ",
+        "hua4": "to delimit; to transfer; to assign; to plan; to draw (a line); stroke of a Chinese character; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "paddle boat",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 408,
+      "character": "迈",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/迈.json",
+      "sourceBlobSha": "c5b2e59a8a1a72ba940f26aa7115be18d88be2e7",
+      "traditional": "邁",
+      "dictionaryReadings": [
+        "mai4"
+      ],
+      "dictionaryDefinitions": {
+        "mai4": "to take a step; to stride; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "stride",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "mai4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 409,
+      "character": "毕",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/毕.json",
+      "sourceBlobSha": "371b229bc7bd493a4c4c795fa8968b9fdde1c694",
+      "traditional": "畢",
+      "dictionaryReadings": [
+        "Bi4",
+        "bi4"
+      ],
+      "dictionaryDefinitions": {
+        "Bi4": "surname Bi; ",
+        "bi4": "the whole of; to finish; to complete; complete; full; finished; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "finish",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "bi4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 410,
+      "character": "至",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/至.json",
+      "sourceBlobSha": "a5c0a3b54241c89ebacea7f454ac7c01689284f4",
+      "traditional": "至",
+      "dictionaryReadings": [
+        "zhi4"
+      ],
+      "dictionaryDefinitions": {
+        "zhi4": "to arrive; most; to; until; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "arrive",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "zhi4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 411,
+      "character": "此",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/此.json",
+      "sourceBlobSha": "46986bfe4c42bf837cf06923a3d31f2c2f2166a5",
+      "traditional": "此",
+      "dictionaryReadings": [
+        "ci3"
+      ],
+      "dictionaryDefinitions": {
+        "ci3": "this; these; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "this",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "ci3"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 412,
+      "character": "贞",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/贞.json",
+      "sourceBlobSha": "1616cb1713fb23b6740195b3ce3eed9acec58cf2",
+      "traditional": "貞",
+      "dictionaryReadings": [
+        "zhen1"
+      ],
+      "dictionaryDefinitions": {
+        "zhen1": "chaste; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "loyal",
+          "sourceGlossGroupIndex": 1,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 413,
+      "character": "师",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/师.json",
+      "sourceBlobSha": "1197b9dd2fe86ceb6aa29454218edefcfed6cc53",
+      "traditional": "師",
+      "dictionaryReadings": [
+        "Shi1",
+        "shi1"
+      ],
+      "dictionaryDefinitions": {
+        "Shi1": "surname Shi; ",
+        "shi1": "teacher; master; expert; model; army division; (old) troops; to dispatch troops; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "teacher",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "shi1"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 414,
+      "character": "尘",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/尘.json",
+      "sourceBlobSha": "067d16c50bbe04362ed8c5369dcb11da206bfb46",
+      "traditional": "塵",
+      "dictionaryReadings": [
+        "chen2"
+      ],
+      "dictionaryDefinitions": {
+        "chen2": "dust; dirt; earth; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "dust",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "chen2"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 415,
+      "character": "尖",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/尖.json",
+      "sourceBlobSha": "d48b7538a785435162d2b25ba6e7b33c56d93a57",
+      "traditional": "尖",
+      "dictionaryReadings": [
+        "jian1"
+      ],
+      "dictionaryDefinitions": {
+        "jian1": "point (of needle); sharp; shrewd; pointed; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "sharp",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "jian1"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    }
+  ]
+}
