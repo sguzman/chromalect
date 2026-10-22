@@ -6,6 +6,7 @@ import {pathToFileURL} from "node:url";
 
 const confidence=new Set(["unsure","low","medium","high"]);
 const clarity=new Set(["clear","partial","misleading","uncertain"]);
+const kinds=new Set(["unsure","action","entity","property","relation","other"]);
 const lexical=new Set(["supported","unsupported","uncertain"]);
 
 export function validateReviewSession(session,audit,queue){
@@ -35,6 +36,8 @@ export function validateReviewSession(session,audit,queue){
    assert.deepEqual(x.automaticRiskFlags,actual.riskFlags);
    assert.ok(typeof x.blindResponse==="string"&&x.blindResponse.length<=15000);
    assert.ok(confidence.has(x.confidence));
+   assert.ok(kinds.has(x.predictedKind));
+   assert.equal(x.targetTypedAsEvent,actual.operators.includes("event"));
    assert.ok(clarity.has(x.clarityRatingAfterReveal));
    assert.equal(actual.independentLexicalReview,"pending");
    assert.equal(actual.independentEmojiComprehensionReview,"pending");

@@ -8,13 +8,13 @@ Chromalect already has 897 **unverified** pictogram expressions attached to sele
 
 1. Select a scope: all candidates, automatically flagged expressions, actions/processes, or multiple-emoji compositions.
 2. Choose a batch size (20, 50, 100, or the entire eligible set). Order is randomized within the selected scope. This randomization is not a statistically representative participant sample.
-3. Each initial trial displays **only the emoji expression**. Do not show the Chinese glyph, English candidate meaning, definition, automated source-match status, or alternative answers before the response. A free-text interpretation may be blank when the participant is unsure. Record confidence before revealing anything.
+3. Each initial trial displays **only the emoji expression**. Do not show the Chinese glyph, English candidate meaning, definition, automated source-match status, or alternative answers before the response. A free-text interpretation may be blank when the participant is unsure. Record confidence and a **blind grammatical-kind guess** (action/process, entity, property/state, relation, other, or unsure) before revealing anything.
 4. Lock the response, then reveal the proposed character meaning. Rate whether the pictogram conveys the proposed meaning: **clear, partial, misleading, or can't judge**. These are subjective ratings, not pass/fail grades.
 5. Export the answers explicitly as JSON. They remain in the browser session unless exported and are never automatically sent to GitHub, Chromalect, or a remote service. Starting another session abandons unexported responses.
 
 ## Machine-readable output
 
-The downloaded \`chromalect.emoji-comprehension-session.v0.1\` object contains the source-audit name, scope, total trial counts, local-only status, and per-trial identifiers, selected characters, visible emoji expression, **blind response**, prereveal confidence, automatic risk flags and **post-reveal clarity rating**. It never marks a record production verified. Avoid including reviewers' names, email addresses, identifying details or medical information in the free-text answers.
+The downloaded \`chromalect.emoji-comprehension-session.v0.1\` object contains the source-audit name, scope, total trial counts, local-only status, and per-trial identifiers, selected characters, visible emoji expression, **blind response**, prereveal confidence, predicted concept kind, the existing machine-readable event-type label (for later comparison), automatic risk flags and **post-reveal clarity rating**. It never marks a record production verified. Avoid including reviewers' names, email addresses, identifying details or medical information in the free-text answers.
 
 ## Validate local export integrity
 

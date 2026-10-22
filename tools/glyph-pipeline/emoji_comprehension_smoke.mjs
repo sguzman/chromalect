@@ -8,7 +8,7 @@ const audit=JSON.parse(fs.readFileSync("data/semantic/cedict-crossref/emoji-visi
 const ids=[
  "emoji-study-scope","emoji-study-count","emoji-study-start","emoji-study-export",
  "emoji-study-status","emoji-study-session","emoji-study-counter","emoji-study-progress",
- "emoji-study-fill","emoji-study-symbol","emoji-study-blind","emoji-study-interpretation",
+ "emoji-study-fill","emoji-study-symbol","emoji-study-blind","emoji-study-interpretation","emoji-study-kind",
  "emoji-study-confidence","emoji-study-reveal","emoji-study-post","emoji-study-target",
  "emoji-study-source","emoji-study-next"
 ];
@@ -76,6 +76,7 @@ const symbol=elements["emoji-study-symbol"].textContent;
 assert.ok(audit.records.some(r=>r.emojiDisplay===symbol));
 elements["emoji-study-interpretation"].value="A possible meaning";
 elements["emoji-study-confidence"].value="medium";
+elements["emoji-study-kind"].value="action";
 elements["emoji-study-reveal"].click();
 assert.equal(elements["emoji-study-blind"].hidden,true);
 assert.equal(elements["emoji-study-post"].hidden,false);
@@ -101,10 +102,13 @@ assert.equal(payload.session.planned,20);
 assert.equal(payload.answers.length,1);
 assert.equal(payload.answers[0].blindResponse,"A possible meaning");
 assert.equal(payload.answers[0].confidence,"medium");
+assert.equal(payload.answers[0].predictedKind,"action");
+assert.equal(typeof payload.answers[0].targetTypedAsEvent,"boolean");
 assert.equal(payload.answers[0].clarityRatingAfterReveal,"partial");
 assert.ok(payload.answers[0].trialId);
 assert.doesNotMatch(JSON.stringify(payload),/productionVerified":true|humanLexicalApproved":\s*[1-9]/);
 assert.match(html,/Nothing is sent to Chromalect or GitHub/);
 assert.match(html,/id="emoji-study-symbol"/);
+assert.match(html,/id="emoji-study-kind"/);
 assert.match(html,/semantic\/emoji-visibility-audit-v0.1\.json/);
 console.log("Blind comprehension: 897 source examples, hidden meaning until answer, required clarity rating, local-only export and 5% session progress.");

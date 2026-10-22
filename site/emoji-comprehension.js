@@ -6,7 +6,7 @@ const $=id=>document.getElementById(id);
 const required=[
  "emoji-study-scope","emoji-study-count","emoji-study-start","emoji-study-export",
  "emoji-study-status","emoji-study-session","emoji-study-counter","emoji-study-progress",
- "emoji-study-fill","emoji-study-symbol","emoji-study-blind","emoji-study-interpretation",
+ "emoji-study-fill","emoji-study-symbol","emoji-study-blind","emoji-study-interpretation","emoji-study-kind",
  "emoji-study-confidence","emoji-study-reveal","emoji-study-post","emoji-study-target",
  "emoji-study-source","emoji-study-next"
 ];
@@ -58,6 +58,7 @@ function render(){
  $("emoji-study-symbol").setAttribute("aria-label","Experimental emoji expression, trial "+(current+1));
  $("emoji-study-interpretation").value="";
  $("emoji-study-confidence").value="unsure";
+ $("emoji-study-kind").value="unsure";
  $("emoji-study-blind").hidden=false;
  $("emoji-study-post").hidden=true;
  locked=null;
@@ -86,6 +87,8 @@ function reveal(){
   proposedMeaning:trial.selectedMeaning,
   blindResponse:$("emoji-study-interpretation").value.trim(),
   confidence:$("emoji-study-confidence").value,
+  predictedKind:$("emoji-study-kind").value,
+  targetTypedAsEvent:trial.operators.includes("event"),
   automaticRiskFlags:trial.riskFlags.slice()
  };
  put("emoji-study-target",trial.character+" — "+trial.selectedMeaning);

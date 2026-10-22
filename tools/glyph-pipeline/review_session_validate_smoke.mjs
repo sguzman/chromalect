@@ -8,7 +8,8 @@ const first=audit.records[0];
 const response={
  trialId:first.id,rank:first.rank,character:first.character,
  displayedEmoji:first.emojiDisplay,proposedMeaning:first.selectedMeaning,
- blindResponse:"one",confidence:"medium",automaticRiskFlags:first.riskFlags,
+ blindResponse:"one",confidence:"medium",predictedKind:"entity",
+ targetTypedAsEvent:first.operators.includes("event"),automaticRiskFlags:first.riskFlags,
  clarityRatingAfterReveal:"clear"
 };
 const trial={
@@ -23,6 +24,10 @@ assert.deepEqual(validateReviewSession(trial,audit,queue),
 const clone=x=>JSON.parse(JSON.stringify(x));
 const wrongEmoji=clone(trial);wrongEmoji.answers[0].displayedEmoji="💀";
 assert.throws(()=>validateReviewSession(wrongEmoji,audit,queue));
+const falseVerb=clone(trial);falseVerb.answers[0].targetTypedAsEvent=!first.operators.includes("event");
+assert.throws(()=>validateReviewSession(falseVerb,audit,queue));
+const invalidKind=clone(trial);invalidKind.answers[0].predictedKind="verified_action";
+assert.throws(()=>validateReviewSession(invalidKind,audit,queue));
 const promoted=clone(trial);promoted.answers[0].productionVerified=true;
 assert.throws(()=>validateReviewSession(promoted,audit,queue));
 const duplicate=clone(trial);duplicate.answers.push(clone(response));
