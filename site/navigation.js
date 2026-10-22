@@ -20,6 +20,7 @@
     semanticCoverage: { label: "Mandarin semantic browser", path: "semantic-coverage.html" },
     semanticLab: { label: "Emoji grammar lab · experimental", path: "semantic-lab.html" },
     emojiComprehension: { label: "Blind emoji comprehension · experimental", path: "emoji-comprehension.html" },
+    lexicalReview: { label: "Mandarin sense review worksheet · experimental", path: "lexical-review.html" },
     radicals: { label: "Modern radicals", path: "radicals.html" },
     kangxi: { label: "Kangxi radicals", path: "kangxi.html" },
     colors: { label: "Color registry · v0.6", path: "colors.html" },
@@ -57,6 +58,7 @@
     if (rel === "semantic-coverage.html") return "semanticCoverage";
     if (rel === "semantic-lab.html") return "semanticLab";
     if (rel === "emoji-comprehension.html") return "emojiComprehension";
+    if (rel === "lexical-review.html") return "lexicalReview";
     if (rel === "radicals.html") return "radicals";
     if (rel === "kangxi.html") return "kangxi";
     if (rel === "colors.html") return "colors";
@@ -72,7 +74,7 @@
   }
   const active = currentKey();
   const browseKeys = new Set(["radicals", "kangxi", "colors", "curated", "directory"]);
-  const reviewKeys = new Set(["semanticCoverage", "semanticLab", "emojiComprehension", "diagnostics", "comparisons", "alternatives",
+  const reviewKeys = new Set(["semanticCoverage", "semanticLab", "emojiComprehension", "lexicalReview", "diagnostics", "comparisons", "alternatives",
     "unknown", "hierarchy", "unmapped"]);
 
   function element(tag, className, label) {
@@ -179,7 +181,7 @@
       { title: "Color and examples", items: ["colors", "curated", "palette"] }
     ], browseKeys));
     primary.appendChild(dropdown("Research & evidence", [
-      { title: "Mandarin semantic research", items: ["semanticCoverage", "semanticLab", "emojiComprehension"] },
+      { title: "Mandarin semantic research", items: ["semanticCoverage", "semanticLab", "lexicalReview", "emojiComprehension"] },
       { title: "Inspect source alignment", items: ["comparisons", "diagnostics", "hierarchy"] },
       { title: "More investigations", items: ["alternatives", "unknown", "unmapped"] },
       { title: "Data and provenance", items: ["coverage", "mapping", "github", "sources"] }
