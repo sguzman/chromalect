@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="description" content="First 1000 Mandarin character meanings: source-linked Unihan definitions, experimental emoji candidates, and honest review progress.">
+<title>Mandarin semantic coverage · Chromalect</title>
+<script src="theme.js"></script>
+<script src="semantic-grammar.js" defer></script>
+<script src="semantic-coverage.js" defer></script>
+<link rel="stylesheet" href="style.css">
+<style>
+.semantic-dashboard{max-width:1200px}
+.semantic-coverage-intro{max-width:900px}
+.semantic-metrics{display:grid;grid-template-columns:repeat(auto-fit,minmax(155px,1fr));gap:12px;margin:22px 0}
+.semantic-metric{background:var(--tile-bg);border:1px solid var(--border);border-radius:12px;padding:15px;display:flex;flex-direction:column;gap:4px}
+.semantic-metric strong{font-size:29px;color:var(--ink);font-variant-numeric:tabular-nums}
+.semantic-metric span{font-size:12px;color:var(--sub)}
+.semantic-progress{width:100%;height:13px;background:var(--panel2);border:1px solid var(--border);border-radius:999px;overflow:hidden}
+.semantic-progress>div{height:100%;background:var(--accent);width:0}
+.semantic-controls{display:flex;flex-wrap:wrap;gap:14px;align-items:flex-end;margin:24px 0}
+.semantic-controls label{display:flex;flex-direction:column;gap:5px;min-width:170px;font-size:13px;color:var(--sub)}
+.semantic-controls input,.semantic-controls select{border:1px solid var(--border);background:var(--panel);color:var(--ink);padding:10px 12px;border-radius:9px;font:inherit}
+.semantic-layers{display:flex;flex-wrap:wrap;gap:20px;border:1px solid var(--border);padding:12px 16px;border-radius:12px;background:var(--panel2);margin:16px 0}
+.semantic-layers label{display:flex;align-items:center;gap:7px}
+.semantic-layers label:has(input:disabled){color:var(--sub)}
+.semantic-rows{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px;margin:18px 0}
+.semantic-entry{background:var(--tile-bg);border:1px solid var(--border);border-radius:12px;padding:15px;min-height:210px}
+.semantic-entry-top{display:flex;justify-content:space-between;align-items:flex-start;gap:8px}
+.semantic-character{font-size:50px;line-height:1.15;color:var(--ink)}
+.semantic-rank{color:var(--sub);font-size:12px}
+.semantic-meaning{font-weight:650;margin:7px 0}
+.semantic-emoji{font-family:"Noto Color Emoji","Apple Color Emoji","Segoe UI Emoji",system-ui,sans-serif;font-size:34px;letter-spacing:.06em;min-height:44px}
+.semantic-emoji[hidden]{display:none}
+.semantic-status{color:var(--sub);font-size:12px}
+.semantic-source{font-size:12px;color:var(--sub);line-height:1.5;margin:10px 0 0;overflow-wrap:anywhere}
+.semantic-entry details{font-size:12px;color:var(--sub);margin-top:10px}
+.semantic-entry details summary{cursor:pointer}
+.semantic-paging{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:26px}
+.semantic-paging button{padding:10px 15px;border:1px solid var(--border);background:var(--panel);color:var(--ink);border-radius:9px;cursor:pointer}
+.semantic-paging button:disabled{opacity:.4;cursor:default}
+.semantic-note{border-left:3px solid var(--active-border);background:var(--panel2);padding:12px 16px;margin:16px 0;border-radius:0 9px 9px 0}
+</style>
+</head>
+<body>
+<header class="wrap"><div class="brand"><div><b>CHROMALECT</b><small>Language, made visible</small></div></div></header>
+<main class="wrap semantic-dashboard">
+<div class="eyebrow">Mandarin · first 1,000 character meanings</div>
+<h1>Semantic screening progress</h1>
+<p class="intro semantic-coverage-intro">Source-supported definition evidence, with a deliberately separate first pass of experimental emoji candidates. Character meanings are the active layer. Whole-word meanings will be a separate, independently selectable layer when a sourced word inventory exists.</p>
+<div class="semantic-note"><strong>Scope and limitations:</strong> The Unicode Unihan definitions are a provisional source snapshot. A screened character is <em>not</em> a fully reviewed list of Mandarin senses, and proposed emoji are <em>not</em> independently validated. The original characters and completed structural and sound layers are untouched.</div>
+<section class="semantic-metrics" aria-label="Semantic progress metrics">
+  <div class="semantic-metric"><span>Meaning source imported</span><strong id="semantic-source-count">—</strong><span id="semantic-source-percent"></span></div>
+  <div class="semantic-metric"><span>Characters screened</span><strong id="semantic-screened-count">—</strong><span id="semantic-screened-percent"></span></div>
+  <div class="semantic-metric"><span>Emoji candidates</span><strong id="semantic-candidate-count">—</strong><span id="semantic-candidate-percent"></span></div>
+  <div class="semantic-metric"><span>Production verified</span><strong id="semantic-verified-count">—</strong><span>Requires independent review</span></div>
+</section>
+<div class="semantic-progress" role="progressbar" id="semantic-progress" aria-label="Characters screened" aria-valuemin="0" aria-valuemax="1000" aria-valuenow="0"><div id="semantic-progress-fill"></div></div>
+<fieldset class="semantic-layers" aria-label="Semantic layer visibility">
+  <legend>Semantic layers</legend>
+  <label><input type="checkbox" id="semantic-layer-character" checked> Character meaning emoji</label>
+  <label><input type="checkbox" id="semantic-layer-word" disabled> Whole-word meaning emoji (not yet populated)</label>
+</fieldset>
+<div class="semantic-controls">
+  <label>Find character, meaning, or rank <input id="semantic-lookup" type="search" placeholder="e.g. 山, mountain, 39"></label>
+  <label>Screening state <select id="semantic-filter"><option value="all">All 1,000</option><option value="candidate">Emoji candidates</option><option value="deferred">Deferred emoji</option><option value="pending">Awaiting screening</option></select></label>
+</div>
+<p class="hint" id="semantic-coverage-status" role="status" aria-live="polite">Loading source-linked meaning inventory.</p>
+<div id="semantic-coverage-rows" class="semantic-rows" aria-label="Mandarin character meaning evidence"></div>
+<nav class="semantic-paging" aria-label="Semantic inventory pagination">
+  <button type="button" id="semantic-prev">Previous</button>
+  <span id="semantic-page-label"></span>
+  <button type="button" id="semantic-next">Next</button>
+</nav>
+<p class="hint">Data: <a href="https://github.com/unicode-org/unihan-database/blob/667c2d180a75ddd749b774dbb7588d4786b63222/kDefinition.txt">Unicode Unihan draft kDefinition, pinned revision</a>, licensed under <a href="https://github.com/sguzman/chromalect/blob/main/licenses/UNICODE-3.0.txt">Unicode License v3</a>. <a href="https://github.com/sguzman/chromalect/blob/main/docs/mandarin-semantic-screening.md">Method and coverage definitions</a>. <a href="semantic-lab.html">Semantic grammar lab</a>.</p>
+</main>
+<footer class="wrap"><a href="index.html">Chromalect overview</a> · <a href="search.html">Character search</a> · <a href="semantic-lab.html">Emoji grammar lab</a></footer>
+</body>
+</html>
