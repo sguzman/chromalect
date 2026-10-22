@@ -1,0 +1,301 @@
+{
+  "schema": "chromalect.mandarin.lexical-crossref-batch.v0.1",
+  "source": {
+    "title": "CC-CEDICT per-headword v2 mirror",
+    "repository": "krmanik/cedict-json",
+    "commit": "63c2569948629323b515833930fdd10f285401b6",
+    "dataLicense": "CC BY-SA 4.0",
+    "upstream": "https://cc-cedict.org/",
+    "mirror": "https://github.com/krmanik/cedict-json",
+    "transform": "Selected single-simplified-character dictionary records, retaining readings and definitions; literal English gloss matching is automated triage only"
+  },
+  "rankStart": 711,
+  "rankEnd": 720,
+  "summary": {
+    "total": 10,
+    "headwordFound": 10,
+    "withCandidate": 9,
+    "withLiteralSupport": 7
+  },
+  "records": [
+    {
+      "rank": 711,
+      "character": "卤",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/卤.json",
+      "sourceBlobSha": "61752b254c01f571cbbdc83a2bde3a0a58a3dbe3",
+      "traditional": "鹵",
+      "dictionaryReadings": [
+        "lu3"
+      ],
+      "dictionaryDefinitions": {
+        "lu3": "to stew in soy sauce and spices; alkaline soil; salt; brine; halogen (chemistry); crass; stupid; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "salt",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "lu3"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 712,
+      "character": "坚",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/坚.json",
+      "sourceBlobSha": "60f1ad3a1be94850d02dc14034ed760f75b55cf7",
+      "traditional": "堅",
+      "dictionaryReadings": [
+        "jian1"
+      ],
+      "dictionaryDefinitions": {
+        "jian1": "strong; solid; firm; unyielding; resolute; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "strong",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "jian1"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 713,
+      "character": "肖",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/肖.json",
+      "sourceBlobSha": "c758ae89ba50601f9c234e300107b69df063d7ac",
+      "traditional": "肖",
+      "dictionaryReadings": [
+        "Xiao1",
+        "xiao4"
+      ],
+      "dictionaryDefinitions": {
+        "Xiao1": "surname Xiao; Taiwan pr. [Xiao4]; ",
+        "xiao4": "similar; resembling; to resemble; to be like; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "resemble",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "xiao4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 714,
+      "character": "旱",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/旱.json",
+      "sourceBlobSha": "1e888d334c20bfe61cbd9d27f3322ad4a83932dd",
+      "traditional": "旱",
+      "dictionaryReadings": [
+        "han4"
+      ],
+      "dictionaryDefinitions": {
+        "han4": "drought; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "drought",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "han4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 715,
+      "character": "盯",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/盯.json",
+      "sourceBlobSha": "0f8d1908fdd324b9231b0096002dd0eee2376df2",
+      "traditional": "盯",
+      "dictionaryReadings": [
+        "ding1"
+      ],
+      "dictionaryDefinitions": {
+        "ding1": "to watch attentively; to fix one's attention on; to stare at; to gaze at; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "keep eyes on",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 716,
+      "character": "呈",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/呈.json",
+      "sourceBlobSha": "efad145f7435cb0b81586b078d21998c97209ccb",
+      "traditional": "呈",
+      "dictionaryReadings": [
+        "cheng2"
+      ],
+      "dictionaryDefinitions": {
+        "cheng2": "to present to a superior; memorial; petition; to present (a certain appearance); to assume (a shape); to be (a certain color); "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "show",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 717,
+      "character": "时",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/时.json",
+      "sourceBlobSha": "640067e6e20326a2623ea19c98161ed57166e80f",
+      "traditional": "時",
+      "dictionaryReadings": [
+        "shi2",
+        "Shi2"
+      ],
+      "dictionaryDefinitions": {
+        "shi2": "old variant of 時|时[shi2]; o'clock; time; when; hour; season; period; ",
+        "Shi2": "surname Shi; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "time",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "shi2"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 718,
+      "character": "吴",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/吴.json",
+      "sourceBlobSha": "c23abd10b82b21dbb24624140326172509934006",
+      "traditional": "吳",
+      "dictionaryReadings": [
+        "Wu2"
+      ],
+      "dictionaryDefinitions": {
+        "Wu2": "surname Wu; area comprising southern Jiangsu, northern Zhejiang and Shanghai; name of states in Southern China at different historical periods; "
+      },
+      "selectedSenseChecks": [],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 719,
+      "character": "助",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/助.json",
+      "sourceBlobSha": "093d648e9151bb10e9aea59e12e4ce41f8c51c0a",
+      "traditional": "助",
+      "dictionaryReadings": [
+        "zhu4"
+      ],
+      "dictionaryDefinitions": {
+        "zhu4": "to help; to assist; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "help",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "zhu4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 720,
+      "character": "县",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/县.json",
+      "sourceBlobSha": "781f8e3f19e143eba2eb8d824c35afe2004bc600",
+      "traditional": "縣",
+      "dictionaryReadings": [
+        "xian4"
+      ],
+      "dictionaryDefinitions": {
+        "xian4": "county; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "county",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "xian4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    }
+  ]
+}
