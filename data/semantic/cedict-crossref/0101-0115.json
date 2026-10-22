@@ -1,0 +1,438 @@
+{
+  "schema": "chromalect.mandarin.lexical-crossref-batch.v0.1",
+  "source": {
+    "title": "CC-CEDICT per-headword v2 mirror",
+    "repository": "krmanik/cedict-json",
+    "commit": "63c2569948629323b515833930fdd10f285401b6",
+    "dataLicense": "CC BY-SA 4.0",
+    "upstream": "https://cc-cedict.org/",
+    "mirror": "https://github.com/krmanik/cedict-json",
+    "transform": "Selected single-simplified-character dictionary records, retaining readings and definitions; literal English gloss matching is automated triage only"
+  },
+  "rankStart": 101,
+  "rankEnd": 115,
+  "summary": {
+    "total": 15,
+    "headwordFound": 15,
+    "withCandidate": 12,
+    "withLiteralSupport": 9
+  },
+  "records": [
+    {
+      "rank": 101,
+      "character": "巨",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/巨.json",
+      "sourceBlobSha": "cfcfadbd84f9a65ef4c66d93c1bfb3f676bfaca2",
+      "traditional": "巨",
+      "dictionaryReadings": [
+        "ju4"
+      ],
+      "dictionaryDefinitions": {
+        "ju4": "very large; huge; tremendous; gigantic; "
+      },
+      "selectedSenseChecks": [],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 102,
+      "character": "牙",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/牙.json",
+      "sourceBlobSha": "85400ae5b0143c3c0d9080e68b4901144c634c98",
+      "traditional": "牙",
+      "dictionaryReadings": [
+        "ya2"
+      ],
+      "dictionaryDefinitions": {
+        "ya2": "tooth; ivory; CL:顆|颗[ke1]; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "tooth",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "ya2"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 103,
+      "character": "屯",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/屯.json",
+      "sourceBlobSha": "9752b70d65adfcd415a059576f0c76eacafb0ec3",
+      "traditional": "屯",
+      "dictionaryReadings": [
+        "tun2",
+        "zhun1"
+      ],
+      "dictionaryDefinitions": {
+        "tun2": "to station (soldiers); to store up; village; ",
+        "zhun1": "difficult; stingy; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "village",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "tun2"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 104,
+      "character": "戈",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/戈.json",
+      "sourceBlobSha": "c9398e58ebc36853f4477bb78dfdc5644447e520",
+      "traditional": "戈",
+      "dictionaryReadings": [
+        "Ge1",
+        "ge1"
+      ],
+      "dictionaryDefinitions": {
+        "Ge1": "surname Ge; ",
+        "ge1": "spear; "
+      },
+      "selectedSenseChecks": [],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 105,
+      "character": "比",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/比.json",
+      "sourceBlobSha": "8fa77f93c25e54b5ee40a9aff254bcb4a09d713c",
+      "traditional": "比",
+      "dictionaryReadings": [
+        "Bi3",
+        "bi3",
+        "bi4"
+      ],
+      "dictionaryDefinitions": {
+        "Bi3": "Belgium; Belgian; abbr. for 比利時|比利时[Bi3 li4 shi2]; ",
+        "bi3": "(particle used for comparison and '-er than'); to compare; to contrast; to gesture (with hands); ratio; ",
+        "bi4": "to associate with; to be near; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "compare",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "bi3"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 106,
+      "character": "互",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/互.json",
+      "sourceBlobSha": "6d3891cdcfc8b04af940bef17afcd479884d85de",
+      "traditional": "互",
+      "dictionaryReadings": [
+        "hu4"
+      ],
+      "dictionaryDefinitions": {
+        "hu4": "mutual; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "mutually",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 107,
+      "character": "切",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/切.json",
+      "sourceBlobSha": "c6b3c2eed685cf51a08fbf76ecbb466b250323dd",
+      "traditional": "切",
+      "dictionaryReadings": [
+        "qie1",
+        "qie4"
+      ],
+      "dictionaryDefinitions": {
+        "qie1": "to cut; to slice; tangent (math); ",
+        "qie4": "definitely; absolutely (not); (scoffing or dismissive interjection) Yeah, right.; Tut!; to grind; close to; eager; to correspond to; see also 反切[fan3 qie4]; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "cut",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "qie1"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 108,
+      "character": "瓦",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/瓦.json",
+      "sourceBlobSha": "d182fe620bcebbe27b8db1e61f59e2a4e27eb474",
+      "traditional": "瓦",
+      "dictionaryReadings": [
+        "wa3"
+      ],
+      "dictionaryDefinitions": {
+        "wa3": "roof tile; abbr. for 瓦特[wa3 te4], watt (loan); "
+      },
+      "selectedSenseChecks": [],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 109,
+      "character": "止",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/止.json",
+      "sourceBlobSha": "6c72016b21b45ffee0d7f6a14ed9641b60d27ddb",
+      "traditional": "止",
+      "dictionaryReadings": [
+        "zhi3"
+      ],
+      "dictionaryDefinitions": {
+        "zhi3": "to stop; to prohibit; until; only; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "stop",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "zhi3"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 110,
+      "character": "少",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/少.json",
+      "sourceBlobSha": "59926b33e4d98d6b19660559119d4116dcb5cb0f",
+      "traditional": "少",
+      "dictionaryReadings": [
+        "shao3",
+        "shao4"
+      ],
+      "dictionaryDefinitions": {
+        "shao3": "few; less; to lack; to be missing; to stop (doing sth); seldom; ",
+        "shao4": "young; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "few",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "shao3"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 111,
+      "character": "曰",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/曰.json",
+      "sourceBlobSha": "fe6cc81f9283da8f8b80f93aafc479c75ef0381a",
+      "traditional": "曰",
+      "dictionaryReadings": [
+        "yue1"
+      ],
+      "dictionaryDefinitions": {
+        "yue1": "to speak; to say; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "say",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "yue1"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 112,
+      "character": "日",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/日.json",
+      "sourceBlobSha": "9014d7bd66b17ca96c0f744ec3521148062865f1",
+      "traditional": "日",
+      "dictionaryReadings": [
+        "Ri4",
+        "ri4"
+      ],
+      "dictionaryDefinitions": {
+        "Ri4": "abbr. for 日本[Ri4 ben3], Japan; ",
+        "ri4": "sun; day; date, day of the month; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "sun",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "ri4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 113,
+      "character": "中",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/中.json",
+      "sourceBlobSha": "29355a1dd6d2acb8a5e4d469c6aaf35bf78083ba",
+      "traditional": "中",
+      "dictionaryReadings": [
+        "Zhong1",
+        "zhong1",
+        "zhong4"
+      ],
+      "dictionaryDefinitions": {
+        "Zhong1": "China; Chinese; surname Zhong; ",
+        "zhong1": "within; among; in; middle; center; while (doing sth); during; (dialect) OK; all right; ",
+        "zhong4": "to hit (the mark); to be hit by; to suffer; to win (a prize, a lottery); "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "center",
+          "sourceGlossGroupIndex": 1,
+          "matchingDictionaryReadings": [
+            "zhong1"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 114,
+      "character": "贝",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/贝.json",
+      "sourceBlobSha": "a810268c15009893445854724a568e2b89452f99",
+      "traditional": "貝",
+      "dictionaryReadings": [
+        "Bei4",
+        "bei4"
+      ],
+      "dictionaryDefinitions": {
+        "Bei4": "surname Bei; ",
+        "bei4": "cowrie; shellfish; currency (archaic); "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "sea shell",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 115,
+      "character": "冈",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/冈.json",
+      "sourceBlobSha": "8b97605c1c767389a6127a69a4784c49dbf5df96",
+      "traditional": "岡",
+      "dictionaryReadings": [
+        "gang1"
+      ],
+      "dictionaryDefinitions": {
+        "gang1": "ridge; mound; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "hill",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    }
+  ]
+}
