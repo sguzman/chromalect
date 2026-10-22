@@ -1,0 +1,415 @@
+{
+  "schema": "chromalect.mandarin.lexical-crossref-batch.v0.1",
+  "source": {
+    "title": "CC-CEDICT per-headword v2 mirror",
+    "repository": "krmanik/cedict-json",
+    "commit": "63c2569948629323b515833930fdd10f285401b6",
+    "dataLicense": "CC BY-SA 4.0",
+    "upstream": "https://cc-cedict.org/",
+    "mirror": "https://github.com/krmanik/cedict-json",
+    "transform": "Selected single-simplified-character dictionary records, retaining readings and definitions; literal English gloss matching is automated triage only"
+  },
+  "rankStart": 246,
+  "rankEnd": 260,
+  "summary": {
+    "total": 15,
+    "headwordFound": 15,
+    "withCandidate": 11,
+    "withLiteralSupport": 7
+  },
+  "records": [
+    {
+      "rank": 246,
+      "character": "只",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/只.json",
+      "sourceBlobSha": "d64ab0170a6bfc01137af7921dac17820dde7fc2",
+      "traditional": "隻",
+      "dictionaryReadings": [
+        "zhi3",
+        "zhi1"
+      ],
+      "dictionaryDefinitions": {
+        "zhi3": "only; merely; just; but; variant of 只[zhi3]; grain that has begun to ripen; variant of 衹|只[zhi3]; variant of 只[zhi3]; ",
+        "zhi1": "classifier for birds and certain animals, one of a pair, some utensils, vessels etc; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "only",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "zhi3"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 247,
+      "character": "叭",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/叭.json",
+      "sourceBlobSha": "86a1504da7987b31f6bc1ef7efb39c430270f6f5",
+      "traditional": "叭",
+      "dictionaryReadings": [
+        "ba1"
+      ],
+      "dictionaryDefinitions": {
+        "ba1": "denote a sound or sharp noise (gunfire etc); "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "trumpet",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 248,
+      "character": "史",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/史.json",
+      "sourceBlobSha": "ea262474b25c9b8c38ffed023a084bfab0a518e7",
+      "traditional": "史",
+      "dictionaryReadings": [
+        "Shi3",
+        "shi3"
+      ],
+      "dictionaryDefinitions": {
+        "Shi3": "surname Shi; ",
+        "shi3": "history; annals; title of an official historian in ancient China; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "history",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "shi3"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 249,
+      "character": "央",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/央.json",
+      "sourceBlobSha": "868701afefc09b4140b59adb4844cc692f1e2d3a",
+      "traditional": "央",
+      "dictionaryReadings": [
+        "yang1"
+      ],
+      "dictionaryDefinitions": {
+        "yang1": "center; end; to beg; to plead; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "center",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "yang1"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 250,
+      "character": "兄",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/兄.json",
+      "sourceBlobSha": "0dda7a58b813a7c1ec7217575726b2d5cc40d48b",
+      "traditional": "兄",
+      "dictionaryReadings": [
+        "xiong1"
+      ],
+      "dictionaryDefinitions": {
+        "xiong1": "elder brother; "
+      },
+      "selectedSenseChecks": [],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 251,
+      "character": "叽",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/叽.json",
+      "sourceBlobSha": "68deeb39412b5a35e047294fd18e0795655f4ec7",
+      "traditional": "嘰",
+      "dictionaryReadings": [
+        "ji1"
+      ],
+      "dictionaryDefinitions": {
+        "ji1": "grumble; "
+      },
+      "selectedSenseChecks": [],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 252,
+      "character": "叼",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/叼.json",
+      "sourceBlobSha": "7ca662351bb1f93d794ba81ea57051784a12fe68",
+      "traditional": "叼",
+      "dictionaryReadings": [
+        "diao1"
+      ],
+      "dictionaryDefinitions": {
+        "diao1": "to hold with one's mouth (as a smoker with a cigarette or a dog with a bone); "
+      },
+      "selectedSenseChecks": [],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 253,
+      "character": "叫",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/叫.json",
+      "sourceBlobSha": "5d7c7c16ee961c06d03d81bd7a875b8fc97bf3e1",
+      "traditional": "呌",
+      "dictionaryReadings": [
+        "jiao4"
+      ],
+      "dictionaryDefinitions": {
+        "jiao4": "to shout; to call; to order; to ask; to be called; by (indicates agent in the passive mood); variant of 叫[jiao4]; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "shout",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "jiao4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 254,
+      "character": "叩",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/叩.json",
+      "sourceBlobSha": "546d939f9e9d35463b08b642d72875a728b1ca44",
+      "traditional": "敂",
+      "dictionaryReadings": [
+        "kou4"
+      ],
+      "dictionaryDefinitions": {
+        "kou4": "to knock; to kowtow; old variant of 叩[kou4]; to knock; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "knock",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "kou4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 255,
+      "character": "叨",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/叨.json",
+      "sourceBlobSha": "b925f0647144a5465200000acf0dc4469665596a",
+      "traditional": "叨",
+      "dictionaryReadings": [
+        "dao1",
+        "tao1"
+      ],
+      "dictionaryDefinitions": {
+        "dao1": "garrulous; ",
+        "tao1": "to receive the benefit of; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "talkative",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 256,
+      "character": "另",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/另.json",
+      "sourceBlobSha": "4c199adf977f6382024bc03110a623300ebc8a57",
+      "traditional": "另",
+      "dictionaryReadings": [
+        "ling4"
+      ],
+      "dictionaryDefinitions": {
+        "ling4": "other; another; separate; separately; "
+      },
+      "selectedSenseChecks": [],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 257,
+      "character": "叹",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/叹.json",
+      "sourceBlobSha": "23d4159767619411f4bc38555310c01c693df14b",
+      "traditional": "歎",
+      "dictionaryReadings": [
+        "tan4"
+      ],
+      "dictionaryDefinitions": {
+        "tan4": "to sigh; to exclaim; variant of 嘆|叹[tan4]; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "sigh",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "tan4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 258,
+      "character": "冉",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/冉.json",
+      "sourceBlobSha": "1941b6ef7e40007435df62c5f0d078a9aec0181b",
+      "traditional": "冉",
+      "dictionaryReadings": [
+        "ran3",
+        "Ran3"
+      ],
+      "dictionaryDefinitions": {
+        "ran3": "variant of 冉[ran3]; edge of a tortoiseshell; see 冉冉[ran3 ran3]; ",
+        "Ran3": "surname Ran; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "tender",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 259,
+      "character": "皿",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/皿.json",
+      "sourceBlobSha": "d507416cf90fcb8ad79503f51c0bf20c352bfece",
+      "traditional": "皿",
+      "dictionaryReadings": [
+        "min3"
+      ],
+      "dictionaryDefinitions": {
+        "min3": "dish; vessel; shallow container; rad. no. 108; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "shallow container",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "min3"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 260,
+      "character": "凹",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/凹.json",
+      "sourceBlobSha": "ffecf676ef8130881c61655cc8ce272b79330388",
+      "traditional": "凹",
+      "dictionaryReadings": [
+        "ao1",
+        "wa1"
+      ],
+      "dictionaryDefinitions": {
+        "ao1": "depressed; sunken; indented; concave; female (connector etc); ",
+        "wa1": "variant of 窪|洼[wa1]; (used in names); "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "hollow",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    }
+  ]
+}
