@@ -1,0 +1,440 @@
+{
+  "schema": "chromalect.mandarin.lexical-crossref-batch.v0.1",
+  "source": {
+    "title": "CC-CEDICT per-headword v2 mirror",
+    "repository": "krmanik/cedict-json",
+    "commit": "63c2569948629323b515833930fdd10f285401b6",
+    "dataLicense": "CC BY-SA 4.0",
+    "upstream": "https://cc-cedict.org/",
+    "mirror": "https://github.com/krmanik/cedict-json",
+    "transform": "Selected single-simplified-character dictionary records, retaining readings and definitions; literal English gloss matching is automated triage only"
+  },
+  "rankStart": 361,
+  "rankEnd": 375,
+  "summary": {
+    "total": 15,
+    "headwordFound": 15,
+    "withCandidate": 14,
+    "withLiteralSupport": 7
+  },
+  "records": [
+    {
+      "rank": 361,
+      "character": "巩",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/巩.json",
+      "sourceBlobSha": "022c791b3985b90131356d9ee3159d11c330893e",
+      "traditional": "鞏",
+      "dictionaryReadings": [
+        "gong3"
+      ],
+      "dictionaryDefinitions": {
+        "gong3": "secure; solid; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "strong",
+          "sourceGlossGroupIndex": 1,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 362,
+      "character": "圾",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/圾.json",
+      "sourceBlobSha": "5fdf9ea675254d11a85ea05e77ff7d466f2ff281",
+      "traditional": "圾",
+      "dictionaryReadings": [
+        "ji1"
+      ],
+      "dictionaryDefinitions": {
+        "ji1": "see 垃圾[la1 ji1]; Taiwan pr. [se4]; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "garbage",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 363,
+      "character": "执",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/执.json",
+      "sourceBlobSha": "2007d6fb9a1e3feca5f91ae49f73bf5b910024ba",
+      "traditional": "執",
+      "dictionaryReadings": [
+        "zhi2"
+      ],
+      "dictionaryDefinitions": {
+        "zhi2": "to execute (a plan); to grasp; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "carry out",
+          "sourceGlossGroupIndex": 2,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 364,
+      "character": "扩",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/扩.json",
+      "sourceBlobSha": "31307235fc09f517d585bd8ef01949c3698f9dbc",
+      "traditional": "擴",
+      "dictionaryReadings": [
+        "kuo4"
+      ],
+      "dictionaryDefinitions": {
+        "kuo4": "enlarge; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "expand",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 365,
+      "character": "扫",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/扫.json",
+      "sourceBlobSha": "3b1452cd239c90706b810ff915d8b83d90d0a21d",
+      "traditional": "掃",
+      "dictionaryReadings": [
+        "sao3",
+        "sao4"
+      ],
+      "dictionaryDefinitions": {
+        "sao3": "to sweep; ",
+        "sao4": "broom; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "sweep",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "sao3"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 366,
+      "character": "地",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/地.json",
+      "sourceBlobSha": "3de6deb3dc62a3129fddfb620b075c790fe0b2a7",
+      "traditional": "地",
+      "dictionaryReadings": [
+        "de5",
+        "di4"
+      ],
+      "dictionaryDefinitions": {
+        "de5": "-ly; structural particle: used before a verb or adjective, linking it to preceding modifying adverbial adjunct; ",
+        "di4": "earth; ground; field; place; land; CL:片[pian4]; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "earth",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "di4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 367,
+      "character": "场",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/场.json",
+      "sourceBlobSha": "76c10d3ecf21e0a62f5b64544298a649f1367350",
+      "traditional": "塲",
+      "dictionaryReadings": [
+        "chang2",
+        "chang3"
+      ],
+      "dictionaryDefinitions": {
+        "chang2": "threshing floor; classifier for events and happenings: spell, episode, bout; variant of 場|场[chang2]; ",
+        "chang3": "large place used for a specific purpose; stage; scene (of a play); classifier for sporting or recreational activities; classifier for number of exams; variant of 場|场[chang3]; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "field",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 368,
+      "character": "扬",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/扬.json",
+      "sourceBlobSha": "d66aaf65315025ca9b1635b74643e9d7cb0e8f48",
+      "traditional": "敭",
+      "dictionaryReadings": [
+        "Yang2",
+        "yang2"
+      ],
+      "dictionaryDefinitions": {
+        "Yang2": "abbr. for 揚州|扬州[Yang2 zhou1]; surname Yang; ",
+        "yang2": "to raise; to hoist; the action of tossing or winnowing; scattering (in the wind); to flutter; to propagate; variant of 揚|扬[yang2]; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "praise",
+          "sourceGlossGroupIndex": 1,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 369,
+      "character": "耳",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/耳.json",
+      "sourceBlobSha": "f4d1de918556d1490a16123f244ceb59cf54bab5",
+      "traditional": "耳",
+      "dictionaryReadings": [
+        "er3"
+      ],
+      "dictionaryDefinitions": {
+        "er3": "ear; handle (archaeology); and that is all (classical Chinese); "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "ear",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "er3"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 370,
+      "character": "芋",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/芋.json",
+      "sourceBlobSha": "1d88fb6d3c9da73c2c6f7c8ca44348b65b2592b5",
+      "traditional": "芋",
+      "dictionaryReadings": [
+        "yu4"
+      ],
+      "dictionaryDefinitions": {
+        "yu4": "taro; Colocasia antiquorum; Colocasia esculenta; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "taro",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "yu4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 371,
+      "character": "共",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/共.json",
+      "sourceBlobSha": "f66f441f56922e1d244303bcad79cc12097e1c5a",
+      "traditional": "共",
+      "dictionaryReadings": [
+        "gong4"
+      ],
+      "dictionaryDefinitions": {
+        "gong4": "common; general; to share; together; total; altogether; abbr. for 共產黨|共产党[Gong4 chan3 dang3], Communist party; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "together",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "gong4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 372,
+      "character": "芒",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/芒.json",
+      "sourceBlobSha": "bacfce779398c6bd684658ad41f333ab0825b15b",
+      "traditional": "芒",
+      "dictionaryReadings": [
+        "mang2"
+      ],
+      "dictionaryDefinitions": {
+        "mang2": "awn (of cereals); arista (of grain); tip (of a blade); Miscanthus sinensis (type of grass); variant of 邙, Mt Mang at Luoyang in Henan; "
+      },
+      "selectedSenseChecks": [],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 373,
+      "character": "亚",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/亚.json",
+      "sourceBlobSha": "4ba7e06fb860e878a9cdd34f7f774395e4459ab4",
+      "traditional": "亞",
+      "dictionaryReadings": [
+        "ya4"
+      ],
+      "dictionaryDefinitions": {
+        "ya4": "Asia; Asian; second; next to; inferior; sub-; Taiwan pr. [ya3]; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "Asia",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "ya4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 374,
+      "character": "芝",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/芝.json",
+      "sourceBlobSha": "1d22b523a52a26003079f35cdc649aa9f5d988f6",
+      "traditional": "芝",
+      "dictionaryReadings": [
+        "zhi1"
+      ],
+      "dictionaryDefinitions": {
+        "zhi1": "Zoysia pungens; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "mushroom",
+          "sourceGlossGroupIndex": 1,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 375,
+      "character": "朽",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/朽.json",
+      "sourceBlobSha": "7809a0088ed44ad6cb8626691423b3f48ac79e61",
+      "traditional": "朽",
+      "dictionaryReadings": [
+        "xiu3"
+      ],
+      "dictionaryDefinitions": {
+        "xiu3": "rotten; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "rotten",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "xiu3"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    }
+  ]
+}
