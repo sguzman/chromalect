@@ -1,0 +1,458 @@
+{
+  "schema": "chromalect.mandarin.lexical-crossref-batch.v0.1",
+  "source": {
+    "title": "CC-CEDICT per-headword v2 mirror",
+    "repository": "krmanik/cedict-json",
+    "commit": "63c2569948629323b515833930fdd10f285401b6",
+    "dataLicense": "CC BY-SA 4.0",
+    "upstream": "https://cc-cedict.org/",
+    "mirror": "https://github.com/krmanik/cedict-json",
+    "transform": "Selected single-simplified-character dictionary records, retaining readings and definitions; literal English gloss matching is automated triage only"
+  },
+  "rankStart": 861,
+  "rankEnd": 875,
+  "summary": {
+    "total": 15,
+    "headwordFound": 15,
+    "withCandidate": 14,
+    "withLiteralSupport": 10
+  },
+  "records": [
+    {
+      "rank": 861,
+      "character": "汽",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/汽.json",
+      "sourceBlobSha": "87b737319a6dc46e4fb500821c0b97e888fc516f",
+      "traditional": "汽",
+      "dictionaryReadings": [
+        "qi4"
+      ],
+      "dictionaryDefinitions": {
+        "qi4": "steam; vapor; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "steam",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "qi4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 862,
+      "character": "沃",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/沃.json",
+      "sourceBlobSha": "21ae725c571cae7e5fd20e1cf0b65117cdc1aa93",
+      "traditional": "沃",
+      "dictionaryReadings": [
+        "wo4"
+      ],
+      "dictionaryDefinitions": {
+        "wo4": "fertile; rich; to irrigate; to wash (of river); "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "irrigate",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "wo4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 863,
+      "character": "沦",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/沦.json",
+      "sourceBlobSha": "d29eef5634bb592768fa4753cf28dc52fb78fdd9",
+      "traditional": "淪",
+      "dictionaryReadings": [
+        "lun2"
+      ],
+      "dictionaryDefinitions": {
+        "lun2": "to sink (into ruin, oblivion); to be reduced to; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "sink",
+          "sourceGlossGroupIndex": 1,
+          "matchingDictionaryReadings": [
+            "lun2"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 864,
+      "character": "汹",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/汹.json",
+      "sourceBlobSha": "58d201aadf06a36f7b8ff4917254957128310929",
+      "traditional": "洶",
+      "dictionaryReadings": [
+        "xiong1"
+      ],
+      "dictionaryDefinitions": {
+        "xiong1": "torrential rush; tumultuous; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "turbulent",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 865,
+      "character": "泛",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/泛.json",
+      "sourceBlobSha": "1a9776281553123a849439d4f08ed4a466f1492a",
+      "traditional": "泛",
+      "dictionaryReadings": [
+        "fan4"
+      ],
+      "dictionaryDefinitions": {
+        "fan4": "variant of 泛[fan4]; variant of 泛[fan4]; to float; to be suffused with; general; extensive; non-specific; flood; pan- (prefix); "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "float",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "fan4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 866,
+      "character": "沧",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/沧.json",
+      "sourceBlobSha": "f8c5917fdde84c6473ba57131af357411d9f5b60",
+      "traditional": "滄",
+      "dictionaryReadings": [
+        "cang1"
+      ],
+      "dictionaryDefinitions": {
+        "cang1": "blue-green or azure (of water); vast (of water); cold; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "blue",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "cang1"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 867,
+      "character": "没",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/没.json",
+      "sourceBlobSha": "60ae97925627fe821dff70e7d4ebfd8cb34b49d8",
+      "traditional": "沒",
+      "dictionaryReadings": [
+        "mei2",
+        "mo4"
+      ],
+      "dictionaryDefinitions": {
+        "mei2": "(negative prefix for verbs); have not; not; ",
+        "mo4": "drowned; to end; to die; to inundate; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "not",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "mei2"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        },
+        {
+          "selectedMeaning": "drown",
+          "sourceGlossGroupIndex": 1,
+          "matchingDictionaryReadings": [
+            "mo4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 868,
+      "character": "沟",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/沟.json",
+      "sourceBlobSha": "032037ad766ea303e3524576c2025467b8d1a0df",
+      "traditional": "溝",
+      "dictionaryReadings": [
+        "gou1"
+      ],
+      "dictionaryDefinitions": {
+        "gou1": "ditch; gutter; groove; gully; ravine; CL:道[dao4]; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "ditch",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "gou1"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 869,
+      "character": "沪",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/沪.json",
+      "sourceBlobSha": "f813a8d50a69e4648596816c099c58caf6b55344",
+      "traditional": "滬",
+      "dictionaryReadings": [
+        "Hu4"
+      ],
+      "dictionaryDefinitions": {
+        "Hu4": "short name for Shanghai; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "Shanghai",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "Hu4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 870,
+      "character": "沈",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/沈.json",
+      "sourceBlobSha": "62a38ea423b1971a348268041eaaa495d5c6c852",
+      "traditional": "瀋",
+      "dictionaryReadings": [
+        "Shen3",
+        "chen2",
+        "shen3"
+      ],
+      "dictionaryDefinitions": {
+        "Shen3": "surname Shen; place name; ",
+        "chen2": "variant of 沉[chen2]; ",
+        "shen3": "liquid; to pour; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "sink",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 871,
+      "character": "沉",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/沉.json",
+      "sourceBlobSha": "c259bd404cd4978a7d8579a45c41f1af17b79a9b",
+      "traditional": "沉",
+      "dictionaryReadings": [
+        "chen1",
+        "chen2"
+      ],
+      "dictionaryDefinitions": {
+        "chen1": "see 黑沉沉[hei1 chen1 chen1]; ",
+        "chen2": "to submerge; to immerse; to sink; to keep down; to lower; to drop; deep; profound; heavy; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "sink",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "chen2"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 872,
+      "character": "沁",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/沁.json",
+      "sourceBlobSha": "0e5f2254bce3db3a4453626b2fe537d33b5e0971",
+      "traditional": "沁",
+      "dictionaryReadings": [
+        "qin4"
+      ],
+      "dictionaryDefinitions": {
+        "qin4": "to seep; to percolate; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "seep in",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 873,
+      "character": "怀",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/怀.json",
+      "sourceBlobSha": "bcaccb9955b2d243b9d37c3728e8766eae5c633a",
+      "traditional": "懷",
+      "dictionaryReadings": [
+        "Huai2",
+        "huai2"
+      ],
+      "dictionaryDefinitions": {
+        "Huai2": "surname Huai; ",
+        "huai2": "bosom; heart; mind; to think of; to harbor in one's mind; to conceive (a child); "
+      },
+      "selectedSenseChecks": [],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 874,
+      "character": "忧",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/忧.json",
+      "sourceBlobSha": "6dea63a548efc0ed64f3ddf71ac3d36a6f9be124",
+      "traditional": "憂",
+      "dictionaryReadings": [
+        "you1"
+      ],
+      "dictionaryDefinitions": {
+        "you1": "to worry; to concern oneself with; worried; anxiety; sorrow; (literary) to observe mourning; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "sad",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 875,
+      "character": "忱",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/忱.json",
+      "sourceBlobSha": "cc6566fed3c7267ead33b0f9f7b34cb09a37118c",
+      "traditional": "忱",
+      "dictionaryReadings": [
+        "chen2"
+      ],
+      "dictionaryDefinitions": {
+        "chen2": "sincerity; honesty; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "sincerity",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "chen2"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    }
+  ]
+}
