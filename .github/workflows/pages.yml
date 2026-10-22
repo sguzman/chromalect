@@ -183,6 +183,14 @@ jobs:
           test -s site/ontology/specimens-v1.json
           test -s site/ontology/vocabulary.schema.json
           test -s site/ontology/instances.schema.json
+      - name: Validate and publish sourced Mandarin semantic screening
+        run: |
+          node --check site/semantic-coverage.js
+          node tools/glyph-pipeline/semantic_inventory_smoke.mjs
+          mkdir -p site/semantic
+          cp data/semantic/mandarin-1000-v0.1.json site/semantic/mandarin-1000-v0.1.json
+          test -s site/semantic/mandarin-1000-v0.1.json
+          test -s site/semantic-coverage.html
       - name: Check neutral unknown-component comparisons
         run: test -s site/glyphs/unknown-components/index.html && test -s site/glyphs/unknown-components/records.json
       - name: Check hierarchical source review
