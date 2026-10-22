@@ -13,7 +13,8 @@
   "criteria": {
     "high": "Seven substring-only false positives plus previously manually flagged high-priority cases",
     "medium": "Previously manually flagged medium-priority cases",
-    "unclassified": "All other whole-term discrepancies; priority not independently assessed"
+    "unclassified": "All other whole-term discrepancies; priority not independently assessed",
+    "deskAnalyzedUnclassified": "Assistant source-grounded desk triage; remains unclassified for independent review and never counts as lexical verification."
   },
   "counts": {
     "pendingSenseAlignment": 248,
@@ -24,7 +25,9 @@
     "previouslyTriaged": 19,
     "deskAnalyzedHighPriority": 15,
     "independentlyLexicallyApproved": 0,
-    "emojiComprehensionApproved": 0
+    "emojiComprehensionApproved": 0,
+    "deskAnalyzedUnclassified": 45,
+    "deskAnalyzedTotal": 60
   },
   "records": [
     {
@@ -654,7 +657,16 @@
       "earlierResearchNote": null,
       "lexicalDecision": "pending",
       "visualComprehensionDecision": "pending",
-      "productionVerified": false
+      "productionVerified": false,
+      "deskAnalysis": {
+        "kind": "modern_versus_historical",
+        "provisionalNextAction": "reassess_or_defer",
+        "observation": "Adult-man cue is not supported by the headword's dominant Heavenly Stem and ordering senses.",
+        "sourceExcerpt": "ding1: fourth of the ten Heavenly Stems 十天干[shi2 tian1 gan1]; fourth in order; letter 'D' or roman 'IV' in list 'A, B, C', or 'I, II, III' etc; ancient Chinese compass point: 195°; butyl; cubes (of",
+        "sourceBasis": "pinned_CC-CEDICT_headword_plus_Unihan_candidate",
+        "reviewerIndependent": false,
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+      }
     },
     {
       "rank": 8,
@@ -673,7 +685,16 @@
       "earlierResearchNote": null,
       "lexicalDecision": "pending",
       "visualComprehensionDecision": "pending",
-      "productionVerified": false
+      "productionVerified": false,
+      "deskAnalysis": {
+        "kind": "part_of_speech",
+        "provisionalNextAction": "redesign_verb_cue",
+        "observation": "Fortune-telling is a practice, while the source describes the action to divine.",
+        "sourceExcerpt": "bu3: to divine; to forecast or estimate; (of a place to live etc) to choose; | bo5: see 蘿蔔|萝卜[luo2 bo5];",
+        "sourceBasis": "pinned_CC-CEDICT_headword_plus_Unihan_candidate",
+        "reviewerIndependent": false,
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+      }
     },
     {
       "rank": 25,
@@ -692,7 +713,16 @@
       "earlierResearchNote": null,
       "lexicalDecision": "pending",
       "visualComprehensionDecision": "pending",
-      "productionVerified": false
+      "productionVerified": false,
+      "deskAnalysis": {
+        "kind": "sense_scope_conflict",
+        "provisionalNextAction": "inspect_context",
+        "observation": "The source highlights deficit or deficiency rather than generic losing.",
+        "sourceExcerpt": "kui1: deficiency; deficit; luckily; it's lucky that...; (often ironically) fancy that...;",
+        "sourceBasis": "pinned_CC-CEDICT_headword_plus_Unihan_candidate",
+        "reviewerIndependent": false,
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+      }
     },
     {
       "rank": 30,
@@ -711,7 +741,16 @@
       "earlierResearchNote": null,
       "lexicalDecision": "pending",
       "visualComprehensionDecision": "pending",
-      "productionVerified": false
+      "productionVerified": false,
+      "deskAnalysis": {
+        "kind": "lexical_paraphrase",
+        "provisionalNextAction": "inspect_context",
+        "observation": "Below and down overlap with under, but location and motion need separation.",
+        "sourceExcerpt": "xia4: down; downwards; below; lower; later; next (week etc); second (of two parts); to decline; to go down; to arrive at (a decision, conclusion etc); measure word to show the frequency of an acti",
+        "sourceBasis": "pinned_CC-CEDICT_headword_plus_Unihan_candidate",
+        "reviewerIndependent": false,
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+      }
     },
     {
       "rank": 47,
@@ -730,7 +769,16 @@
       "earlierResearchNote": null,
       "lexicalDecision": "pending",
       "visualComprehensionDecision": "pending",
-      "productionVerified": false
+      "productionVerified": false,
+      "deskAnalysis": {
+        "kind": "lexical_paraphrase",
+        "provisionalNextAction": "inspect_context",
+        "observation": "Long duration overlaps with long time; hourglass comprehension remains untested.",
+        "sourceExcerpt": "jiu3: (long) time; (long) duration of time;",
+        "sourceBasis": "pinned_CC-CEDICT_headword_plus_Unihan_candidate",
+        "reviewerIndependent": false,
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+      }
     },
     {
       "rank": 54,
@@ -749,7 +797,16 @@
       "earlierResearchNote": null,
       "lexicalDecision": "pending",
       "visualComprehensionDecision": "pending",
-      "productionVerified": false
+      "productionVerified": false,
+      "deskAnalysis": {
+        "kind": "part_of_speech",
+        "provisionalNextAction": "redesign_verb_cue",
+        "observation": "To die and deceased are not automatically the nominal sense death.",
+        "sourceExcerpt": "wang2: to die; to lose; to be gone; to flee; deceased; old variant of 亡[wang2];",
+        "sourceBasis": "pinned_CC-CEDICT_headword_plus_Unihan_candidate",
+        "reviewerIndependent": false,
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+      }
     },
     {
       "rank": 61,
@@ -768,7 +825,16 @@
       "earlierResearchNote": null,
       "lexicalDecision": "pending",
       "visualComprehensionDecision": "pending",
-      "productionVerified": false
+      "productionVerified": false,
+      "deskAnalysis": {
+        "kind": "sense_scope_conflict",
+        "provisionalNextAction": "reassess_or_defer",
+        "observation": "Already or stop does not necessarily entail finished; checkmark may mislead.",
+        "sourceExcerpt": "yi3: already; to stop; then; afterwards;",
+        "sourceBasis": "pinned_CC-CEDICT_headword_plus_Unihan_candidate",
+        "reviewerIndependent": false,
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+      }
     },
     {
       "rank": 68,
@@ -787,7 +853,16 @@
       "earlierResearchNote": null,
       "lexicalDecision": "pending",
       "visualComprehensionDecision": "pending",
-      "productionVerified": false
+      "productionVerified": false,
+      "deskAnalysis": {
+        "kind": "pictogram_specificity",
+        "provisionalNextAction": "redesign_pictogram",
+        "observation": "Edge of a blade is more specific than a complete knife.",
+        "sourceExcerpt": "ren4: edge of blade;",
+        "sourceBasis": "pinned_CC-CEDICT_headword_plus_Unihan_candidate",
+        "reviewerIndependent": false,
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+      }
     },
     {
       "rank": 82,
@@ -806,7 +881,16 @@
       "earlierResearchNote": null,
       "lexicalDecision": "pending",
       "visualComprehensionDecision": "pending",
-      "productionVerified": false
+      "productionVerified": false,
+      "deskAnalysis": {
+        "kind": "lexical_paraphrase",
+        "provisionalNextAction": "inspect_context",
+        "observation": "Cloud is singular while clouds is plural; classical say is separate.",
+        "sourceExcerpt": "yun2: (classical) to say; cloud; CL:朵[duo3];",
+        "sourceBasis": "pinned_CC-CEDICT_headword_plus_Unihan_candidate",
+        "reviewerIndependent": false,
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+      }
     },
     {
       "rank": 204,
@@ -837,7 +921,16 @@
       "earlierResearchNote": null,
       "lexicalDecision": "pending",
       "visualComprehensionDecision": "pending",
-      "productionVerified": false
+      "productionVerified": false,
+      "deskAnalysis": {
+        "kind": "lexical_context",
+        "provisionalNextAction": "inspect_context",
+        "observation": "To go does not always mean to move away without directional context.",
+        "sourceExcerpt": "qu4: to go; to go to (a place); (of a time etc) last; just passed; to send; to remove; to get rid of; to reduce; to be apart from in space or time; to die (euphemism); to play (a part); (when use",
+        "sourceBasis": "pinned_CC-CEDICT_headword_plus_Unihan_candidate",
+        "reviewerIndependent": false,
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+      }
     },
     {
       "rank": 209,
@@ -856,7 +949,16 @@
       "earlierResearchNote": null,
       "lexicalDecision": "pending",
       "visualComprehensionDecision": "pending",
-      "productionVerified": false
+      "productionVerified": false,
+      "deskAnalysis": {
+        "kind": "sense_scope_conflict",
+        "provisionalNextAction": "reassess_or_defer",
+        "observation": "Node, joint and section are broader than rope knot.",
+        "sourceExcerpt": "jie1: see 節骨眼|节骨眼[jie1 gu5 yan3]; | jie2: festival; holiday; node; joint; section; segment; part; to economize; to save; to abridge; moral integrity; classifier for segments, e.g. lessons, train wagons, biblical verses; CL:個|个[ge4];",
+        "sourceBasis": "pinned_CC-CEDICT_headword_plus_Unihan_candidate",
+        "reviewerIndependent": false,
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+      }
     },
     {
       "rank": 211,
@@ -875,7 +977,16 @@
       "earlierResearchNote": null,
       "lexicalDecision": "pending",
       "visualComprehensionDecision": "pending",
-      "productionVerified": false
+      "productionVerified": false,
+      "deskAnalysis": {
+        "kind": "sense_scope_conflict",
+        "provisionalNextAction": "reassess_or_defer",
+        "observation": "Method or technique is not necessarily visual fine art.",
+        "sourceExcerpt": "shu4: method; technique; | zhu2: various genera of flowers of Asteracea family (daisies and chrysanthemums), including Atractylis lancea;",
+        "sourceBasis": "pinned_CC-CEDICT_headword_plus_Unihan_candidate",
+        "reviewerIndependent": false,
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+      }
     },
     {
       "rank": 218,
@@ -894,7 +1005,16 @@
       "earlierResearchNote": null,
       "lexicalDecision": "pending",
       "visualComprehensionDecision": "pending",
-      "productionVerified": false
+      "productionVerified": false,
+      "deskAnalysis": {
+        "kind": "pictogram_specificity",
+        "provisionalNextAction": "redesign_pictogram",
+        "observation": "Cloth is not identical to a spool of thread.",
+        "sourceExcerpt": "bu4: variant of 布[bu4]; to announce; to spread; cloth; to declare; to announce; to spread; to make known;",
+        "sourceBasis": "pinned_CC-CEDICT_headword_plus_Unihan_candidate",
+        "reviewerIndependent": false,
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+      }
     },
     {
       "rank": 219,
@@ -913,7 +1033,16 @@
       "earlierResearchNote": null,
       "lexicalDecision": "pending",
       "visualComprehensionDecision": "pending",
-      "productionVerified": false
+      "productionVerified": false,
+      "deskAnalysis": {
+        "kind": "modern_versus_historical",
+        "provisionalNextAction": "reassess_or_defer",
+        "observation": "Tamping usage does not corroborate selected burden.",
+        "sourceExcerpt": "ben4: variant of 笨[ben4]; | hang1: to tamp; (slang) popular; hot;",
+        "sourceBasis": "pinned_CC-CEDICT_headword_plus_Unihan_candidate",
+        "reviewerIndependent": false,
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+      }
     },
     {
       "rank": 230,
@@ -932,7 +1061,16 @@
       "earlierResearchNote": null,
       "lexicalDecision": "pending",
       "visualComprehensionDecision": "pending",
-      "productionVerified": false
+      "productionVerified": false,
+      "deskAnalysis": {
+        "kind": "modern_versus_historical",
+        "provisionalNextAction": "reassess_or_defer",
+        "observation": "Hut is evidenced only indirectly through an older variant; source also lists surname.",
+        "sourceExcerpt": "lu2: (old) rice vessel; black; old variant of 廬|庐[lu2]; (slang) (Tw) troublesome; fussy;",
+        "sourceBasis": "pinned_CC-CEDICT_headword_plus_Unihan_candidate",
+        "reviewerIndependent": false,
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+      }
     },
     {
       "rank": 231,
@@ -951,7 +1089,16 @@
       "earlierResearchNote": null,
       "lexicalDecision": "pending",
       "visualComprehensionDecision": "pending",
-      "productionVerified": false
+      "productionVerified": false,
+      "deskAnalysis": {
+        "kind": "lexical_paraphrase",
+        "provisionalNextAction": "inspect_context",
+        "observation": "Industry and occupation overlap with profession; worker glyph is narrow.",
+        "sourceExcerpt": "ye4: line of business; industry; occupation; job; employment; school studies; enterprise; property; (Buddhism) karma; deed; to engage in; already;",
+        "sourceBasis": "pinned_CC-CEDICT_headword_plus_Unihan_candidate",
+        "reviewerIndependent": false,
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+      }
     },
     {
       "rank": 232,
@@ -970,7 +1117,16 @@
       "earlierResearchNote": null,
       "lexicalDecision": "pending",
       "visualComprehensionDecision": "pending",
-      "productionVerified": false
+      "productionVerified": false,
+      "deskAnalysis": {
+        "kind": "sense_scope_conflict",
+        "provisionalNextAction": "reassess_or_defer",
+        "observation": "Old or former is not always ancient pottery.",
+        "sourceExcerpt": "jiu4: old; opposite: new 新; former; worn (with age);",
+        "sourceBasis": "pinned_CC-CEDICT_headword_plus_Unihan_candidate",
+        "reviewerIndependent": false,
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+      }
     },
     {
       "rank": 240,
@@ -992,7 +1148,16 @@
       "earlierResearchNote": null,
       "lexicalDecision": "pending",
       "visualComprehensionDecision": "pending",
-      "productionVerified": false
+      "productionVerified": false,
+      "deskAnalysis": {
+        "kind": "part_of_speech",
+        "provisionalNextAction": "redesign_verb_cue",
+        "observation": "To state is an action; a report may denote a document.",
+        "sourceExcerpt": "shen1: to extend; to state; to explain; 9th earthly branch: 3-5 p.m., 7th solar month (7th August-7th September), year of the Monkey; ancient Chinese compass point: 240°;",
+        "sourceBasis": "pinned_CC-CEDICT_headword_plus_Unihan_candidate",
+        "reviewerIndependent": false,
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+      }
     },
     {
       "rank": 247,
@@ -1011,7 +1176,16 @@
       "earlierResearchNote": null,
       "lexicalDecision": "pending",
       "visualComprehensionDecision": "pending",
-      "productionVerified": false
+      "productionVerified": false,
+      "deskAnalysis": {
+        "kind": "word_boundary_confusion",
+        "provisionalNextAction": "reassess_or_defer",
+        "observation": "Onomatopoeic sharp sound does not independently mean trumpet.",
+        "sourceExcerpt": "ba1: denote a sound or sharp noise (gunfire etc);",
+        "sourceBasis": "pinned_CC-CEDICT_headword_plus_Unihan_candidate",
+        "reviewerIndependent": false,
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+      }
     },
     {
       "rank": 255,
@@ -1042,7 +1216,16 @@
       "earlierResearchNote": null,
       "lexicalDecision": "pending",
       "visualComprehensionDecision": "pending",
-      "productionVerified": false
+      "productionVerified": false,
+      "deskAnalysis": {
+        "kind": "lexical_paraphrase",
+        "provisionalNextAction": "inspect_context",
+        "observation": "Garrulous and talkative overlap, but expressive action is a different category.",
+        "sourceExcerpt": "dao1: garrulous; | tao1: to receive the benefit of;",
+        "sourceBasis": "pinned_CC-CEDICT_headword_plus_Unihan_candidate",
+        "reviewerIndependent": false,
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+      }
     },
     {
       "rank": 258,
@@ -1061,7 +1244,16 @@
       "earlierResearchNote": null,
       "lexicalDecision": "pending",
       "visualComprehensionDecision": "pending",
-      "productionVerified": false
+      "productionVerified": false,
+      "deskAnalysis": {
+        "kind": "modern_versus_historical",
+        "provisionalNextAction": "reassess_or_defer",
+        "observation": "Source headword records surname and compound usage rather than tender.",
+        "sourceExcerpt": "ran3: variant of 冉[ran3]; edge of a tortoiseshell; see 冉冉[ran3 ran3];",
+        "sourceBasis": "pinned_CC-CEDICT_headword_plus_Unihan_candidate",
+        "reviewerIndependent": false,
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+      }
     },
     {
       "rank": 260,
@@ -1080,7 +1272,16 @@
       "earlierResearchNote": null,
       "lexicalDecision": "pending",
       "visualComprehensionDecision": "pending",
-      "productionVerified": false
+      "productionVerified": false,
+      "deskAnalysis": {
+        "kind": "pictogram_specificity",
+        "provisionalNextAction": "redesign_pictogram",
+        "observation": "Concavity or indentation is not necessarily a physical hole.",
+        "sourceExcerpt": "ao1: depressed; sunken; indented; concave; female (connector etc); | wa1: variant of 窪|洼[wa1]; (used in names);",
+        "sourceBasis": "pinned_CC-CEDICT_headword_plus_Unihan_candidate",
+        "reviewerIndependent": false,
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+      }
     },
     {
       "rank": 269,
@@ -1102,7 +1303,16 @@
       "earlierResearchNote": null,
       "lexicalDecision": "pending",
       "visualComprehensionDecision": "pending",
-      "productionVerified": false
+      "productionVerified": false,
+      "deskAnalysis": {
+        "kind": "sense_scope_conflict",
+        "provisionalNextAction": "reassess_or_defer",
+        "observation": "To pay or hand over is not necessarily gift-giving.",
+        "sourceExcerpt": "fu4: to pay; to hand over to; classifier for pairs or sets of things;",
+        "sourceBasis": "pinned_CC-CEDICT_headword_plus_Unihan_candidate",
+        "reviewerIndependent": false,
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+      }
     },
     {
       "rank": 270,
@@ -1121,7 +1331,16 @@
       "earlierResearchNote": null,
       "lexicalDecision": "pending",
       "visualComprehensionDecision": "pending",
-      "productionVerified": false
+      "productionVerified": false,
+      "deskAnalysis": {
+        "kind": "part_of_speech",
+        "provisionalNextAction": "inspect_context",
+        "observation": "War or battle can be nominal; fight may be interpreted as a verb.",
+        "sourceExcerpt": "zhang4: weaponry; to hold (a weapon); to wield; to rely on; to depend on; war; battle;",
+        "sourceBasis": "pinned_CC-CEDICT_headword_plus_Unihan_candidate",
+        "reviewerIndependent": false,
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+      }
     },
     {
       "rank": 276,
@@ -1140,7 +1359,16 @@
       "earlierResearchNote": null,
       "lexicalDecision": "pending",
       "visualComprehensionDecision": "pending",
-      "productionVerified": false
+      "productionVerified": false,
+      "deskAnalysis": {
+        "kind": "sense_scope_conflict",
+        "provisionalNextAction": "reassess_or_defer",
+        "observation": "Young domestic animals and human babies are different referents.",
+        "sourceExcerpt": "zai3: variant of 崽[zai3]; | zi1: see 仔肩[zi1 jian1];",
+        "sourceBasis": "pinned_CC-CEDICT_headword_plus_Unihan_candidate",
+        "reviewerIndependent": false,
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+      }
     },
     {
       "rank": 278,
@@ -1171,7 +1399,16 @@
       "earlierResearchNote": null,
       "lexicalDecision": "pending",
       "visualComprehensionDecision": "pending",
-      "productionVerified": false
+      "productionVerified": false,
+      "deskAnalysis": {
+        "kind": "lexical_paraphrase",
+        "provisionalNextAction": "inspect_context",
+        "observation": "To reprove and reprimand overlap with scold; image clarity needs testing.",
+        "sourceExcerpt": "chi4: to blame; to reprove; to reprimand; to expel; to oust; to reconnoiter; (of territory) to expand; saline marsh;",
+        "sourceBasis": "pinned_CC-CEDICT_headword_plus_Unihan_candidate",
+        "reviewerIndependent": false,
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+      }
     },
     {
       "rank": 281,
@@ -1190,7 +1427,16 @@
       "earlierResearchNote": null,
       "lexicalDecision": "pending",
       "visualComprehensionDecision": "pending",
-      "productionVerified": false
+      "productionVerified": false,
+      "deskAnalysis": {
+        "kind": "lexical_paraphrase",
+        "provisionalNextAction": "inspect_context",
+        "observation": "A thicket or vegetation cluster is broader than a twig pictogram.",
+        "sourceExcerpt": "cong2: cluster; collection; collection of books; thicket;",
+        "sourceBasis": "pinned_CC-CEDICT_headword_plus_Unihan_candidate",
+        "reviewerIndependent": false,
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+      }
     },
     {
       "rank": 284,
@@ -1221,7 +1467,16 @@
       "earlierResearchNote": null,
       "lexicalDecision": "pending",
       "visualComprehensionDecision": "pending",
-      "productionVerified": false
+      "productionVerified": false,
+      "deskAnalysis": {
+        "kind": "sense_scope_conflict",
+        "provisionalNextAction": "inspect_context",
+        "observation": "Throwing an object does not always entail discarding it.",
+        "sourceExcerpt": "shuai3: to throw; to fling; to swing; to leave behind; to throw off; to dump (sb);",
+        "sourceBasis": "pinned_CC-CEDICT_headword_plus_Unihan_candidate",
+        "reviewerIndependent": false,
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+      }
     },
     {
       "rank": 289,
@@ -1252,7 +1507,16 @@
       "earlierResearchNote": null,
       "lexicalDecision": "pending",
       "visualComprehensionDecision": "pending",
-      "productionVerified": false
+      "productionVerified": false,
+      "deskAnalysis": {
+        "kind": "part_of_speech",
+        "provisionalNextAction": "inspect_context",
+        "observation": "Hasty and hurriedly differ in English grammatical function.",
+        "sourceExcerpt": "cong1: hurried; hasty; variant of 匆[cong1]; variant of 匆[cong1];",
+        "sourceBasis": "pinned_CC-CEDICT_headword_plus_Unihan_candidate",
+        "reviewerIndependent": false,
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+      }
     },
     {
       "rank": 300,
@@ -1271,7 +1535,16 @@
       "earlierResearchNote": null,
       "lexicalDecision": "pending",
       "visualComprehensionDecision": "pending",
-      "productionVerified": false
+      "productionVerified": false,
+      "deskAnalysis": {
+        "kind": "pictogram_specificity",
+        "provisionalNextAction": "redesign_pictogram",
+        "observation": "Owner and master do not always imply a royal crown.",
+        "sourceExcerpt": "zhu3: owner; master; host; individual or party concerned; God; Lord; main; to indicate or signify; trump card (in card games);",
+        "sourceBasis": "pinned_CC-CEDICT_headword_plus_Unihan_candidate",
+        "reviewerIndependent": false,
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+      }
     },
     {
       "rank": 309,
@@ -1293,7 +1566,16 @@
       "earlierResearchNote": null,
       "lexicalDecision": "pending",
       "visualComprehensionDecision": "pending",
-      "productionVerified": false
+      "productionVerified": false,
+      "deskAnalysis": {
+        "kind": "pictogram_specificity",
+        "provisionalNextAction": "redesign_pictogram",
+        "observation": "Rivers converging is not equivalent to people hugging.",
+        "sourceExcerpt": "hui4: to remit; to converge (of rivers); to exchange; class; collection; variant of 匯|汇[hui4];",
+        "sourceBasis": "pinned_CC-CEDICT_headword_plus_Unihan_candidate",
+        "reviewerIndependent": false,
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+      }
     },
     {
       "rank": 311,
@@ -1312,7 +1594,16 @@
       "earlierResearchNote": null,
       "lexicalDecision": "pending",
       "visualComprehensionDecision": "pending",
-      "productionVerified": false
+      "productionVerified": false,
+      "deskAnalysis": {
+        "kind": "pictogram_specificity",
+        "provisionalNextAction": "redesign_pictogram",
+        "observation": "Mahjong tile is neither Mandarin speech nor Han script.",
+        "sourceExcerpt": "han4: man;",
+        "sourceBasis": "pinned_CC-CEDICT_headword_plus_Unihan_candidate",
+        "reviewerIndependent": false,
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+      }
     },
     {
       "rank": 317,
@@ -1334,7 +1625,16 @@
       "earlierResearchNote": null,
       "lexicalDecision": "pending",
       "visualComprehensionDecision": "pending",
-      "productionVerified": false
+      "productionVerified": false,
+      "deskAnalysis": {
+        "kind": "lexical_paraphrase",
+        "provisionalNextAction": "inspect_context",
+        "observation": "Permit and allow overlap; checkmark may denote approval, not permission.",
+        "sourceExcerpt": "rang4: to yield; to permit; to let sb do sth; to have sb do sth; to make sb (feel sad etc); by (indicates the agent in a passive clause, like 被[bei4]);",
+        "sourceBasis": "pinned_CC-CEDICT_headword_plus_Unihan_candidate",
+        "reviewerIndependent": false,
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+      }
     },
     {
       "rank": 322,
@@ -1356,7 +1656,16 @@
       "earlierResearchNote": null,
       "lexicalDecision": "pending",
       "visualComprehensionDecision": "pending",
-      "productionVerified": false
+      "productionVerified": false,
+      "deskAnalysis": {
+        "kind": "part_of_speech",
+        "provisionalNextAction": "redesign_verb_cue",
+        "observation": "A question mark denotes interrogative content, not the act of asking.",
+        "sourceExcerpt": "xun4: to question; to ask; to interrogate; rapid; speedy; fast; news; information;",
+        "sourceBasis": "pinned_CC-CEDICT_headword_plus_Unihan_candidate",
+        "reviewerIndependent": false,
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+      }
     },
     {
       "rank": 325,
@@ -1378,7 +1687,16 @@
       "earlierResearchNote": null,
       "lexicalDecision": "pending",
       "visualComprehensionDecision": "pending",
-      "productionVerified": false
+      "productionVerified": false,
+      "deskAnalysis": {
+        "kind": "sense_scope_conflict",
+        "provisionalNextAction": "inspect_context",
+        "observation": "Manage and take charge differ from operating physical controls.",
+        "sourceExcerpt": "si1: to take charge of; to manage; department (under a ministry);",
+        "sourceBasis": "pinned_CC-CEDICT_headword_plus_Unihan_candidate",
+        "reviewerIndependent": false,
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+      }
     },
     {
       "rank": 327,
@@ -1397,7 +1715,16 @@
       "earlierResearchNote": null,
       "lexicalDecision": "pending",
       "visualComprehensionDecision": "pending",
-      "productionVerified": false
+      "productionVerified": false,
+      "deskAnalysis": {
+        "kind": "sense_scope_conflict",
+        "provisionalNextAction": "inspect_context",
+        "observation": "People and citizens are different categories; group icon is generic.",
+        "sourceExcerpt": "min2: the people; nationality; citizen;",
+        "sourceBasis": "pinned_CC-CEDICT_headword_plus_Unihan_candidate",
+        "reviewerIndependent": false,
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+      }
     },
     {
       "rank": 329,
@@ -1419,7 +1746,16 @@
       "earlierResearchNote": null,
       "lexicalDecision": "pending",
       "visualComprehensionDecision": "pending",
-      "productionVerified": false
+      "productionVerified": false,
+      "deskAnalysis": {
+        "kind": "modern_usage_conflict",
+        "provisionalNextAction": "reassess_or_defer",
+        "observation": "Great and liberal do not corroborate the selected verb expand.",
+        "sourceExcerpt": "hong2: great; liberal;",
+        "sourceBasis": "pinned_CC-CEDICT_headword_plus_Unihan_candidate",
+        "reviewerIndependent": false,
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+      }
     },
     {
       "rank": 331,
@@ -1438,7 +1774,16 @@
       "earlierResearchNote": null,
       "lexicalDecision": "pending",
       "visualComprehensionDecision": "pending",
-      "productionVerified": false
+      "productionVerified": false,
+      "deskAnalysis": {
+        "kind": "modern_versus_historical",
+        "provisionalNextAction": "reassess_or_defer",
+        "observation": "Headword primarily identifies Liao proper names, not generic distance.",
+        "sourceExcerpt": "",
+        "sourceBasis": "pinned_CC-CEDICT_headword_plus_Unihan_candidate",
+        "reviewerIndependent": false,
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+      }
     },
     {
       "rank": 335,
@@ -1460,7 +1805,16 @@
       "earlierResearchNote": null,
       "lexicalDecision": "pending",
       "visualComprehensionDecision": "pending",
-      "productionVerified": false
+      "productionVerified": false,
+      "deskAnalysis": {
+        "kind": "part_of_speech",
+        "provisionalNextAction": "inspect_context",
+        "observation": "Add and plus can differ from intransitive quantitative growth.",
+        "sourceExcerpt": "jia1: to add; plus; (used after an adverb such as 不, 大, 稍 etc, and before a disyllabic verb, to indicate that the action of the verb is applied to sth or sb previously mentioned); to apply (restri",
+        "sourceBasis": "pinned_CC-CEDICT_headword_plus_Unihan_candidate",
+        "reviewerIndependent": false,
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+      }
     },
     {
       "rank": 346,
@@ -1479,7 +1833,16 @@
       "earlierResearchNote": null,
       "lexicalDecision": "pending",
       "visualComprehensionDecision": "pending",
-      "productionVerified": false
+      "productionVerified": false,
+      "deskAnalysis": {
+        "kind": "sense_scope_conflict",
+        "provisionalNextAction": "reassess_or_defer",
+        "observation": "Young is an adjective and does not necessarily refer to an infant.",
+        "sourceExcerpt": "you4: young;",
+        "sourceBasis": "pinned_CC-CEDICT_headword_plus_Unihan_candidate",
+        "reviewerIndependent": false,
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+      }
     },
     {
       "rank": 349,
@@ -1498,7 +1861,16 @@
       "earlierResearchNote": null,
       "lexicalDecision": "pending",
       "visualComprehensionDecision": "pending",
-      "productionVerified": false
+      "productionVerified": false,
+      "deskAnalysis": {
+        "kind": "sense_scope_conflict",
+        "provisionalNextAction": "reassess_or_defer",
+        "observation": "Type, form and pattern do not necessarily denote a mathematical formula.",
+        "sourceExcerpt": "shi4: type; form; pattern; style;",
+        "sourceBasis": "pinned_CC-CEDICT_headword_plus_Unihan_candidate",
+        "reviewerIndependent": false,
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+      }
     },
     {
       "rank": 361,
@@ -1517,7 +1889,16 @@
       "earlierResearchNote": null,
       "lexicalDecision": "pending",
       "visualComprehensionDecision": "pending",
-      "productionVerified": false
+      "productionVerified": false,
+      "deskAnalysis": {
+        "kind": "pictogram_specificity",
+        "provisionalNextAction": "redesign_pictogram",
+        "observation": "Secure or solid is not necessarily muscular strength.",
+        "sourceExcerpt": "gong3: secure; solid;",
+        "sourceBasis": "pinned_CC-CEDICT_headword_plus_Unihan_candidate",
+        "reviewerIndependent": false,
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+      }
     },
     {
       "rank": 362,
@@ -1536,7 +1917,16 @@
       "earlierResearchNote": null,
       "lexicalDecision": "pending",
       "visualComprehensionDecision": "pending",
-      "productionVerified": false
+      "productionVerified": false,
+      "deskAnalysis": {
+        "kind": "word_boundary_confusion",
+        "provisionalNextAction": "reassess_or_defer",
+        "observation": "Headword points to compound 垃圾 rather than a freestanding noun.",
+        "sourceExcerpt": "ji1: see 垃圾[la1 ji1]; Taiwan pr. [se4];",
+        "sourceBasis": "pinned_CC-CEDICT_headword_plus_Unihan_candidate",
+        "reviewerIndependent": false,
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+      }
     },
     {
       "rank": 363,
@@ -1558,7 +1948,16 @@
       "earlierResearchNote": null,
       "lexicalDecision": "pending",
       "visualComprehensionDecision": "pending",
-      "productionVerified": false
+      "productionVerified": false,
+      "deskAnalysis": {
+        "kind": "part_of_speech",
+        "provisionalNextAction": "redesign_verb_cue",
+        "observation": "Executing a plan is a process, while a checkmark implies completion.",
+        "sourceExcerpt": "zhi2: to execute (a plan); to grasp;",
+        "sourceBasis": "pinned_CC-CEDICT_headword_plus_Unihan_candidate",
+        "reviewerIndependent": false,
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+      }
     },
     {
       "rank": 364,
@@ -1580,7 +1979,16 @@
       "earlierResearchNote": null,
       "lexicalDecision": "pending",
       "visualComprehensionDecision": "pending",
-      "productionVerified": false
+      "productionVerified": false,
+      "deskAnalysis": {
+        "kind": "lexical_paraphrase",
+        "provisionalNextAction": "inspect_context",
+        "observation": "Enlarge overlaps with expand; two-way width arrow needs comprehension testing.",
+        "sourceExcerpt": "kuo4: enlarge;",
+        "sourceBasis": "pinned_CC-CEDICT_headword_plus_Unihan_candidate",
+        "reviewerIndependent": false,
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+      }
     },
     {
       "rank": 367,
