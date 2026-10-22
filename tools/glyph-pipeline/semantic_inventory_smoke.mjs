@@ -48,25 +48,36 @@ for(let i=0;i<1000;i++){
     continue;
   }
   assert.equal(s.status,"screened");
-  assert.equal(s.candidates.length,1,"Initial screening makes one explicit decision per character");
+  assert.ok(s.candidates.length>=1,"Screened character needs an explicit decision");
   screened++;
-  const c=s.candidates[0];
-  if(c.state==="pictogram_deferred"){
-    assert.equal(c.expression,null);
+  const expressed=s.candidates.filter(c=>c.expression!==null);
+  const abstentions=s.candidates.filter(c=>c.expression===null);
+  assert.ok(!(expressed.length && abstentions.length),
+    "Do not mix a whole-character abstention with a selected sense");
+  if(!expressed.length){
+    assert.equal(abstentions.length,1);
+    const c=abstentions[0];
+    assert.equal(c.state,"pictogram_deferred");
     assert.equal(c.selectedMeaning,null);
     assert.ok(c.reason);
     deferred++;
     continue;
   }
-  assert.equal(c.state,"experimental_pictogram_candidate");
-  assert.equal(c.review,"human_linguistic_and_comprehension_review_pending");
-  assert.ok(Number.isInteger(c.sourceGroupIndex));
-  assert.ok(c.sourceGroupIndex>=0&&c.sourceGroupIndex<entry.source.groupCandidates.length);
-  const gloss=entry.source.groupCandidates[c.sourceGroupIndex].toLowerCase();
-  assert.ok(gloss.includes(c.selectedMeaning.toLowerCase()),"Emoji candidate must cite a matching gloss: "+entry.character);
-  assert.equal(grammar.validate(c.expression),true);
-  const icons=grammar.emojiParts(c.expression);
-  assert.ok(icons.length>0&&icons.every(p=>p.kind==="emoji"));
+  const seen=new Set();
+  for(const c of expressed){
+    assert.equal(c.state,"experimental_pictogram_candidate");
+    assert.equal(c.review,"human_linguistic_and_comprehension_review_pending");
+    assert.ok(Number.isInteger(c.sourceGroupIndex));
+    assert.ok(c.sourceGroupIndex>=0&&c.sourceGroupIndex<entry.source.groupCandidates.length);
+    assert.ok(!seen.has(c.selectedMeaning),"Duplicate selected meaning");
+    seen.add(c.selectedMeaning);
+    const gloss=entry.source.groupCandidates[c.sourceGroupIndex].toLowerCase();
+    assert.ok(gloss.includes(c.selectedMeaning.toLowerCase()),
+      "Emoji candidate must cite a matching gloss: "+entry.character);
+    assert.equal(grammar.validate(c.expression),true);
+    const icons=grammar.emojiParts(c.expression);
+    assert.ok(icons.length>0&&icons.every(p=>p.kind==="emoji"));
+  }
   pictograms++;
 }
 const actual={
