@@ -1,0 +1,5249 @@
+{
+  "schema": "chromalect.semantic.lexical-sense-review-queue.v0.1",
+  "status": "unreviewed_prioritization_only",
+  "source": {
+    "base": "manifest-v0.1.json",
+    "boundary": "strict-gloss-index-v0.1.json",
+    "previousTriage": "triage-0101-0200.json",
+    "lexicalDataset": "CC-CEDICT via krmanik/cedict-json",
+    "pinnedRevision": "63c2569948629323b515833930fdd10f285401b6",
+    "dataLicense": "CC BY-SA 4.0",
+    "note": "No automated match, priority, or contextual note constitutes acceptance of a Mandarin meaning or emoji."
+  },
+  "criteria": {
+    "high": "Seven substring-only false positives plus previously manually flagged high-priority cases",
+    "medium": "Previously manually flagged medium-priority cases",
+    "unclassified": "All other whole-term discrepancies; priority not independently assessed"
+  },
+  "counts": {
+    "pendingSenseAlignment": 248,
+    "high": 15,
+    "medium": 11,
+    "unclassified": 222,
+    "substringOnly": 7,
+    "previouslyTriaged": 19
+  },
+  "records": [
+    {
+      "rank": 122,
+      "character": "气",
+      "selectedMeaning": "steam",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "steam, vapor",
+      "dictionarySource": "v2/气.json",
+      "emojiExpression": {
+        "kind": "atom",
+        "emoji": "♨️"
+      },
+      "priority": "high",
+      "reviewOrigin": "prior_research_triage",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": "Steam is narrower than the dictionary's prominent gas, air, and qi readings; do not accept steam as an undifferentiated meaning.",
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 135,
+      "character": "仍",
+      "selectedMeaning": "again",
+      "selectedSourceGlossIndex": 1,
+      "referenceDefinition": "again",
+      "dictionarySource": "v2/仍.json",
+      "emojiExpression": {
+        "kind": "atom",
+        "emoji": "🔁"
+      },
+      "priority": "high",
+      "reviewOrigin": "prior_research_triage",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": "Still or yet versus again; temporal persistence is not necessarily repetition.",
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 137,
+      "character": "斤",
+      "selectedMeaning": "axe",
+      "selectedSourceGlossIndex": 1,
+      "referenceDefinition": "an axe",
+      "dictionarySource": "v2/斤.json",
+      "emojiExpression": {
+        "kind": "atom",
+        "emoji": "🪓"
+      },
+      "priority": "high",
+      "reviewOrigin": "prior_research_triage",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": "Current CC-CEDICT weight measure differs from the selected axe reading; check historic versus modern sense and pictogram.",
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 145,
+      "character": "凶",
+      "selectedMeaning": "sad",
+      "selectedSourceGlossIndex": 2,
+      "referenceDefinition": "bad, sad",
+      "dictionarySource": "v2/凶.json",
+      "emojiExpression": {
+        "kind": "atom",
+        "emoji": "😞"
+      },
+      "priority": "high",
+      "reviewOrigin": "prior_research_triage",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": "Terrible, fierce, ominous versus sad; candidate emotion appears semantically off-target.",
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 164,
+      "character": "火",
+      "selectedMeaning": "burn",
+      "selectedSourceGlossIndex": 1,
+      "referenceDefinition": "burn",
+      "dictionarySource": "v2/火.json",
+      "emojiExpression": {
+        "kind": "event",
+        "predicate": {
+          "kind": "atom",
+          "emoji": "🔥"
+        }
+      },
+      "priority": "high",
+      "reviewOrigin": "prior_research_triage",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": "Selected burn is an action; independent headword emphasizes the noun fire and related uses.",
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 169,
+      "character": "订",
+      "selectedMeaning": "agreement",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "draw up agreement",
+      "dictionarySource": "v2/订.json",
+      "emojiExpression": {
+        "kind": "associate",
+        "items": [
+          {
+            "kind": "atom",
+            "emoji": "📝"
+          },
+          {
+            "kind": "atom",
+            "emoji": "🤝"
+          }
+        ]
+      },
+      "priority": "high",
+      "reviewOrigin": "prior_research_triage",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": "To agree, draw up or order are verbs; selected agreement is a noun and may require a different event cue.",
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 190,
+      "character": "玉",
+      "selectedMeaning": "precious stone",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "jade, precious stone, gem",
+      "dictionarySource": "v2/玉.json",
+      "emojiExpression": {
+        "kind": "atom",
+        "emoji": "💎"
+      },
+      "priority": "high",
+      "reviewOrigin": "prior_research_triage",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": "Jade is more specific than generic precious stone; evaluate whether the icon conveys jade.",
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 199,
+      "character": "扑",
+      "selectedMeaning": "attack",
+      "selectedSourceGlossIndex": 1,
+      "referenceDefinition": "attack",
+      "dictionarySource": "v2/扑.json",
+      "emojiExpression": {
+        "kind": "atom",
+        "emoji": "⚔️"
+      },
+      "priority": "high",
+      "reviewOrigin": "prior_research_triage",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": "Pounce or pat differs from generic attack; verify selected motor action.",
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 268,
+      "character": "丘",
+      "selectedMeaning": "hill",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "hill",
+      "dictionarySource": "v2/丘.json",
+      "emojiExpression": {
+        "kind": "atom",
+        "emoji": "⛰️"
+      },
+      "priority": "high",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "substring_only_false_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 448,
+      "character": "廷",
+      "selectedMeaning": "court",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "court",
+      "dictionarySource": "v2/廷.json",
+      "emojiExpression": {
+        "kind": "atom",
+        "emoji": "⚖️"
+      },
+      "priority": "high",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "substring_only_false_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 687,
+      "character": "极",
+      "selectedMeaning": "extreme",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "extreme, utmost, furthest, final",
+      "dictionarySource": "v2/极.json",
+      "emojiExpression": {
+        "kind": "atom",
+        "emoji": "🔝"
+      },
+      "priority": "high",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "substring_only_false_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 768,
+      "character": "兵",
+      "selectedMeaning": "soldier",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "soldier, troops",
+      "dictionarySource": "v2/兵.json",
+      "emojiExpression": {
+        "kind": "atom",
+        "emoji": "🪖"
+      },
+      "priority": "high",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "substring_only_false_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 828,
+      "character": "状",
+      "selectedMeaning": "shape",
+      "selectedSourceGlossIndex": 2,
+      "referenceDefinition": "shape",
+      "independentReadings": [
+        "zhuang4"
+      ],
+      "dictionarySource": "v2/状.json",
+      "emojiExpression": {
+        "kind": "atom",
+        "emoji": "🔷"
+      },
+      "priority": "high",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "substring_only_false_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 867,
+      "character": "没",
+      "selectedMeaning": "drown",
+      "selectedSourceGlossIndex": 1,
+      "referenceDefinition": "drown, sink",
+      "independentReadings": [
+        "mei2",
+        "mo4"
+      ],
+      "dictionarySource": "v2/没.json",
+      "emojiExpression": {
+        "kind": "event",
+        "predicate": {
+          "kind": "atom",
+          "emoji": "🌊"
+        }
+      },
+      "priority": "high",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "substring_only_false_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 983,
+      "character": "幸",
+      "selectedMeaning": "luck",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "luck(ily), favor, fortunately",
+      "independentReadings": [
+        "xing4",
+        "Xing4"
+      ],
+      "dictionarySource": "v2/幸.json",
+      "emojiExpression": {
+        "kind": "atom",
+        "emoji": "🍀"
+      },
+      "priority": "high",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "substring_only_false_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 106,
+      "character": "互",
+      "selectedMeaning": "mutually",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "mutually, reciprocally",
+      "dictionarySource": "v2/互.json",
+      "emojiExpression": {
+        "kind": "atom",
+        "emoji": "🤝"
+      },
+      "priority": "medium",
+      "reviewOrigin": "prior_research_triage",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": "Mutual versus mutually; verify the relevant grammatical usage without promoting the pictogram.",
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 114,
+      "character": "贝",
+      "selectedMeaning": "sea shell",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "sea shell",
+      "dictionarySource": "v2/贝.json",
+      "emojiExpression": {
+        "kind": "atom",
+        "emoji": "🐚"
+      },
+      "priority": "medium",
+      "reviewOrigin": "prior_research_triage",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": "Cowrie and shellfish versus sea shell; the proposed shell picture may be too generic.",
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 115,
+      "character": "冈",
+      "selectedMeaning": "hill",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "ridge or crest of hill",
+      "dictionarySource": "v2/冈.json",
+      "emojiExpression": {
+        "kind": "atom",
+        "emoji": "⛰️"
+      },
+      "priority": "medium",
+      "reviewOrigin": "prior_research_triage",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": "Ridge or mound versus hill; terrain cues need comparison.",
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 125,
+      "character": "升",
+      "selectedMeaning": "go up",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "arise, go up",
+      "dictionarySource": "v2/升.json",
+      "emojiExpression": {
+        "kind": "atom",
+        "emoji": "⬆️"
+      },
+      "priority": "medium",
+      "reviewOrigin": "prior_research_triage",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": "Ascend or rise in rank versus go up; establish action sense and context.",
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 128,
+      "character": "仁",
+      "selectedMeaning": "benevolence",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "humaneness, benevolence, kindness",
+      "dictionarySource": "v2/仁.json",
+      "emojiExpression": {
+        "kind": "atom",
+        "emoji": "❤️"
+      },
+      "priority": "medium",
+      "reviewOrigin": "prior_research_triage",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": "Humane versus benevolence; ethical meaning may not reduce to a heart symbol.",
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 151,
+      "character": "氏",
+      "selectedMeaning": "family",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "clan, family",
+      "dictionarySource": "v2/氏.json",
+      "emojiExpression": {
+        "kind": "atom",
+        "emoji": "👪"
+      },
+      "priority": "medium",
+      "reviewOrigin": "prior_research_triage",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": "Clan or maiden name is more specific than general family.",
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 152,
+      "character": "勿",
+      "selectedMeaning": "must not",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "must not, do not",
+      "dictionarySource": "v2/勿.json",
+      "emojiExpression": {
+        "kind": "atom",
+        "emoji": "🚫"
+      },
+      "priority": "medium",
+      "reviewOrigin": "prior_research_triage",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": "Do not versus must not; check negation and modality distinctions.",
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 156,
+      "character": "匀",
+      "selectedMeaning": "equal",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "equal",
+      "dictionarySource": "v2/匀.json",
+      "emojiExpression": {
+        "kind": "atom",
+        "emoji": "⚖️"
+      },
+      "priority": "medium",
+      "reviewOrigin": "prior_research_triage",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": "Even or uniform versus equal; distinguish distribution from equality.",
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 162,
+      "character": "亢",
+      "selectedMeaning": "proud",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "high, proud",
+      "dictionarySource": "v2/亢.json",
+      "emojiExpression": {
+        "kind": "atom",
+        "emoji": "😤"
+      },
+      "priority": "medium",
+      "reviewOrigin": "prior_research_triage",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": "High or overbearing versus proud; verify which reading and emotional valence apply.",
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 175,
+      "character": "尺",
+      "selectedMeaning": "Chinese measure",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "Chinese measure approx. 'foot'",
+      "dictionarySource": "v2/尺.json",
+      "emojiExpression": {
+        "kind": "atom",
+        "emoji": "📏"
+      },
+      "priority": "medium",
+      "reviewOrigin": "prior_research_triage",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": "Chinese foot or ruler is more specific than Chinese measure; distinguish object from unit.",
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 189,
+      "character": "幻",
+      "selectedMeaning": "illusion",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "illusion, fantasy, mirage",
+      "dictionarySource": "v2/幻.json",
+      "emojiExpression": {
+        "kind": "atom",
+        "emoji": "🪄"
+      },
+      "priority": "medium",
+      "reviewOrigin": "prior_research_triage",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": "Fantasy versus illusion; overlap is plausible but not guaranteed.",
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 5,
+      "character": "丁",
+      "selectedMeaning": "male adult",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "male adult",
+      "dictionarySource": "v2/丁.json",
+      "emojiExpression": {
+        "kind": "atom",
+        "emoji": "👨"
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 8,
+      "character": "卜",
+      "selectedMeaning": "fortune telling",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "fortune telling",
+      "dictionarySource": "v2/卜.json",
+      "emojiExpression": {
+        "kind": "atom",
+        "emoji": "🔮"
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 25,
+      "character": "亏",
+      "selectedMeaning": "lose",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "lose, fail",
+      "dictionarySource": "v2/亏.json",
+      "emojiExpression": {
+        "kind": "atom",
+        "emoji": "📉"
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 30,
+      "character": "下",
+      "selectedMeaning": "under",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "under, underneath, below",
+      "dictionarySource": "v2/下.json",
+      "emojiExpression": {
+        "kind": "atom",
+        "emoji": "⬇️"
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 47,
+      "character": "久",
+      "selectedMeaning": "long time",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "long time (ago)",
+      "dictionarySource": "v2/久.json",
+      "emojiExpression": {
+        "kind": "atom",
+        "emoji": "⏳"
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 54,
+      "character": "亡",
+      "selectedMeaning": "death",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "death, destroyed",
+      "dictionarySource": "v2/亡.json",
+      "emojiExpression": {
+        "kind": "atom",
+        "emoji": "💀"
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 61,
+      "character": "已",
+      "selectedMeaning": "finished",
+      "selectedSourceGlossIndex": 1,
+      "referenceDefinition": "finished",
+      "dictionarySource": "v2/已.json",
+      "emojiExpression": {
+        "kind": "atom",
+        "emoji": "✅"
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 68,
+      "character": "刃",
+      "selectedMeaning": "knife edge",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "edged tool, cutlery, knife edge",
+      "dictionarySource": "v2/刃.json",
+      "emojiExpression": {
+        "kind": "atom",
+        "emoji": "🔪"
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 82,
+      "character": "云",
+      "selectedMeaning": "clouds",
+      "selectedSourceGlossIndex": 1,
+      "referenceDefinition": "clouds",
+      "dictionarySource": "v2/云.json",
+      "emojiExpression": {
+        "kind": "atom",
+        "emoji": "☁️"
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 204,
+      "character": "去",
+      "selectedMeaning": "go away",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "go away, leave, depart",
+      "dictionarySource": "v2/去.json",
+      "emojiExpression": {
+        "kind": "event",
+        "predicate": {
+          "kind": "associate",
+          "items": [
+            {
+              "kind": "atom",
+              "emoji": "👋"
+            },
+            {
+              "kind": "atom",
+              "emoji": "🚶"
+            }
+          ]
+        }
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 209,
+      "character": "节",
+      "selectedMeaning": "knot",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "knot, node, joint",
+      "dictionarySource": "v2/节.json",
+      "emojiExpression": {
+        "kind": "atom",
+        "emoji": "🪢"
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 211,
+      "character": "术",
+      "selectedMeaning": "art",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "art, skill, special feat",
+      "dictionarySource": "v2/术.json",
+      "emojiExpression": {
+        "kind": "atom",
+        "emoji": "🎨"
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 218,
+      "character": "布",
+      "selectedMeaning": "textiles",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "cotton cloth, textiles, linen",
+      "dictionarySource": "v2/布.json",
+      "emojiExpression": {
+        "kind": "atom",
+        "emoji": "🧵"
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 219,
+      "character": "夯",
+      "selectedMeaning": "burden",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "heavy load, burden",
+      "dictionarySource": "v2/夯.json",
+      "emojiExpression": {
+        "kind": "atom",
+        "emoji": "🏋️"
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 230,
+      "character": "卢",
+      "selectedMeaning": "hut",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "cottage, hut",
+      "dictionarySource": "v2/卢.json",
+      "emojiExpression": {
+        "kind": "atom",
+        "emoji": "🛖"
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 231,
+      "character": "业",
+      "selectedMeaning": "profession",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "profession, business",
+      "dictionarySource": "v2/业.json",
+      "emojiExpression": {
+        "kind": "atom",
+        "emoji": "👷"
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 232,
+      "character": "旧",
+      "selectedMeaning": "ancient",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "old, ancient",
+      "dictionarySource": "v2/旧.json",
+      "emojiExpression": {
+        "kind": "atom",
+        "emoji": "🏺"
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 240,
+      "character": "申",
+      "selectedMeaning": "report",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "to state to a superior, report",
+      "dictionarySource": "v2/申.json",
+      "emojiExpression": {
+        "kind": "event",
+        "predicate": {
+          "kind": "atom",
+          "emoji": "📝"
+        }
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 247,
+      "character": "叭",
+      "selectedMeaning": "trumpet",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "trumpet",
+      "dictionarySource": "v2/叭.json",
+      "emojiExpression": {
+        "kind": "atom",
+        "emoji": "🎺"
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 255,
+      "character": "叨",
+      "selectedMeaning": "talkative",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "talkative",
+      "dictionarySource": "v2/叨.json",
+      "emojiExpression": {
+        "kind": "event",
+        "predicate": {
+          "kind": "associate",
+          "items": [
+            {
+              "kind": "atom",
+              "emoji": "🗣️"
+            },
+            {
+              "kind": "atom",
+              "emoji": "🔁"
+            }
+          ]
+        }
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 258,
+      "character": "冉",
+      "selectedMeaning": "tender",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "tender",
+      "dictionarySource": "v2/冉.json",
+      "emojiExpression": {
+        "kind": "atom",
+        "emoji": "🌱"
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 260,
+      "character": "凹",
+      "selectedMeaning": "hollow",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "concave, hollow, depressed",
+      "dictionarySource": "v2/凹.json",
+      "emojiExpression": {
+        "kind": "atom",
+        "emoji": "🕳️"
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 269,
+      "character": "付",
+      "selectedMeaning": "give",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "give, deliver, pay, hand over",
+      "dictionarySource": "v2/付.json",
+      "emojiExpression": {
+        "kind": "event",
+        "predicate": {
+          "kind": "atom",
+          "emoji": "🎁"
+        }
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 270,
+      "character": "仗",
+      "selectedMeaning": "fight",
+      "selectedSourceGlossIndex": 2,
+      "referenceDefinition": "fight",
+      "dictionarySource": "v2/仗.json",
+      "emojiExpression": {
+        "kind": "atom",
+        "emoji": "⚔️"
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 276,
+      "character": "仔",
+      "selectedMeaning": "child",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "small thing, child",
+      "dictionarySource": "v2/仔.json",
+      "emojiExpression": {
+        "kind": "atom",
+        "emoji": "👶"
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 278,
+      "character": "斥",
+      "selectedMeaning": "scold",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "to scold, upbraid, accuse, reproach",
+      "dictionarySource": "v2/斥.json",
+      "emojiExpression": {
+        "kind": "event",
+        "predicate": {
+          "kind": "associate",
+          "items": [
+            {
+              "kind": "atom",
+              "emoji": "😠"
+            },
+            {
+              "kind": "atom",
+              "emoji": "🗣️"
+            }
+          ]
+        }
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 281,
+      "character": "丛",
+      "selectedMeaning": "bush",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "bush, shrub",
+      "dictionarySource": "v2/丛.json",
+      "emojiExpression": {
+        "kind": "atom",
+        "emoji": "🌿"
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 284,
+      "character": "甩",
+      "selectedMeaning": "throw away",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "throw away, discard",
+      "dictionarySource": "v2/甩.json",
+      "emojiExpression": {
+        "kind": "event",
+        "predicate": {
+          "kind": "associate",
+          "items": [
+            {
+              "kind": "atom",
+              "emoji": "🫳"
+            },
+            {
+              "kind": "atom",
+              "emoji": "🗑️"
+            }
+          ]
+        }
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 289,
+      "character": "匆",
+      "selectedMeaning": "hurriedly",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "hastily, in haste, hurriedly",
+      "dictionarySource": "v2/匆.json",
+      "emojiExpression": {
+        "kind": "event",
+        "predicate": {
+          "kind": "associate",
+          "items": [
+            {
+              "kind": "atom",
+              "emoji": "🏃"
+            },
+            {
+              "kind": "atom",
+              "emoji": "💨"
+            }
+          ]
+        }
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 300,
+      "character": "主",
+      "selectedMeaning": "chief",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "master, chief owner",
+      "dictionarySource": "v2/主.json",
+      "emojiExpression": {
+        "kind": "atom",
+        "emoji": "👑"
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 309,
+      "character": "汇",
+      "selectedMeaning": "gather",
+      "selectedSourceGlossIndex": 1,
+      "referenceDefinition": "flow together, gather",
+      "dictionarySource": "v2/汇.json",
+      "emojiExpression": {
+        "kind": "event",
+        "predicate": {
+          "kind": "atom",
+          "emoji": "🫂"
+        }
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 311,
+      "character": "汉",
+      "selectedMeaning": "Chinese language",
+      "selectedSourceGlossIndex": 1,
+      "referenceDefinition": "Chinese language",
+      "dictionarySource": "v2/汉.json",
+      "emojiExpression": {
+        "kind": "atom",
+        "emoji": "🀄"
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 317,
+      "character": "让",
+      "selectedMeaning": "allow",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "allow, permit, yield, concede",
+      "dictionarySource": "v2/让.json",
+      "emojiExpression": {
+        "kind": "event",
+        "predicate": {
+          "kind": "atom",
+          "emoji": "✅"
+        }
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 322,
+      "character": "讯",
+      "selectedMeaning": "inquire",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "inquire",
+      "dictionarySource": "v2/讯.json",
+      "emojiExpression": {
+        "kind": "event",
+        "predicate": {
+          "kind": "atom",
+          "emoji": "❓"
+        }
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 325,
+      "character": "司",
+      "selectedMeaning": "control",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "take charge of, control, manage",
+      "dictionarySource": "v2/司.json",
+      "emojiExpression": {
+        "kind": "event",
+        "predicate": {
+          "kind": "atom",
+          "emoji": "🎛️"
+        }
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 327,
+      "character": "民",
+      "selectedMeaning": "citizens",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "people, subjects, citizens",
+      "dictionarySource": "v2/民.json",
+      "emojiExpression": {
+        "kind": "atom",
+        "emoji": "👥"
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 329,
+      "character": "弘",
+      "selectedMeaning": "expand",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "enlarge, expand",
+      "dictionarySource": "v2/弘.json",
+      "emojiExpression": {
+        "kind": "event",
+        "predicate": {
+          "kind": "atom",
+          "emoji": "↔️"
+        }
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 331,
+      "character": "辽",
+      "selectedMeaning": "distant",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "distant, far",
+      "dictionarySource": "v2/辽.json",
+      "emojiExpression": {
+        "kind": "atom",
+        "emoji": "🌌"
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 335,
+      "character": "加",
+      "selectedMeaning": "increase",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "add to, increase, augment",
+      "dictionarySource": "v2/加.json",
+      "emojiExpression": {
+        "kind": "event",
+        "predicate": {
+          "kind": "atom",
+          "emoji": "➕"
+        }
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 346,
+      "character": "幼",
+      "selectedMeaning": "young child",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "infant, young child",
+      "dictionarySource": "v2/幼.json",
+      "emojiExpression": {
+        "kind": "atom",
+        "emoji": "👶"
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 349,
+      "character": "式",
+      "selectedMeaning": "formula",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "style, system, formula, rule",
+      "dictionarySource": "v2/式.json",
+      "emojiExpression": {
+        "kind": "atom",
+        "emoji": "🧮"
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 361,
+      "character": "巩",
+      "selectedMeaning": "strong",
+      "selectedSourceGlossIndex": 1,
+      "referenceDefinition": "firm, secure, strong",
+      "dictionarySource": "v2/巩.json",
+      "emojiExpression": {
+        "kind": "atom",
+        "emoji": "💪"
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 362,
+      "character": "圾",
+      "selectedMeaning": "garbage",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "garbage, rubbish",
+      "dictionarySource": "v2/圾.json",
+      "emojiExpression": {
+        "kind": "atom",
+        "emoji": "🗑️"
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 363,
+      "character": "执",
+      "selectedMeaning": "carry out",
+      "selectedSourceGlossIndex": 2,
+      "referenceDefinition": "carry out",
+      "dictionarySource": "v2/执.json",
+      "emojiExpression": {
+        "kind": "event",
+        "predicate": {
+          "kind": "atom",
+          "emoji": "✅"
+        }
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 364,
+      "character": "扩",
+      "selectedMeaning": "expand",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "expand, enlarge, stretch",
+      "dictionarySource": "v2/扩.json",
+      "emojiExpression": {
+        "kind": "event",
+        "predicate": {
+          "kind": "atom",
+          "emoji": "↔️"
+        }
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 367,
+      "character": "场",
+      "selectedMeaning": "field",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "open space, field, market",
+      "dictionarySource": "v2/场.json",
+      "emojiExpression": {
+        "kind": "atom",
+        "emoji": "🏟️"
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 368,
+      "character": "扬",
+      "selectedMeaning": "praise",
+      "selectedSourceGlossIndex": 1,
+      "referenceDefinition": "praise",
+      "dictionarySource": "v2/扬.json",
+      "emojiExpression": {
+        "kind": "event",
+        "predicate": {
+          "kind": "atom",
+          "emoji": "👏"
+        }
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 374,
+      "character": "芝",
+      "selectedMeaning": "mushroom",
+      "selectedSourceGlossIndex": 1,
+      "referenceDefinition": "a purplish or brown mushroom thought to have miraculous powers",
+      "dictionarySource": "v2/芝.json",
+      "emojiExpression": {
+        "kind": "atom",
+        "emoji": "🍄"
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 379,
+      "character": "过",
+      "selectedMeaning": "pass through",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "pass, pass through, go across",
+      "dictionarySource": "v2/过.json",
+      "emojiExpression": {
+        "kind": "event",
+        "predicate": {
+          "kind": "atom",
+          "emoji": "🚶"
+        }
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 380,
+      "character": "臣",
+      "selectedMeaning": "minister",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "minister, statesman, official",
+      "dictionarySource": "v2/臣.json",
+      "emojiExpression": {
+        "kind": "atom",
+        "emoji": "🧑‍💼"
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 386,
+      "character": "厌",
+      "selectedMeaning": "dislike",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "dislike, detest, reject",
+      "dictionarySource": "v2/厌.json",
+      "emojiExpression": {
+        "kind": "atom",
+        "emoji": "👎"
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 389,
+      "character": "百",
+      "selectedMeaning": "one hundred",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "one hundred",
+      "dictionarySource": "v2/百.json",
+      "emojiExpression": {
+        "kind": "atom",
+        "emoji": "💯"
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 394,
+      "character": "匠",
+      "selectedMeaning": "artisan",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "craftsman, artisan",
+      "dictionarySource": "v2/匠.json",
+      "emojiExpression": {
+        "kind": "atom",
+        "emoji": "🧑‍🔧"
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 395,
+      "character": "夸",
+      "selectedMeaning": "handsome",
+      "selectedSourceGlossIndex": 1,
+      "referenceDefinition": "handsome",
+      "dictionarySource": "v2/夸.json",
+      "emojiExpression": {
+        "kind": "atom",
+        "emoji": "😍"
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 396,
+      "character": "夺",
+      "selectedMeaning": "rob",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "take by force, rob, snatch",
+      "dictionarySource": "v2/夺.json",
+      "emojiExpression": {
+        "kind": "event",
+        "predicate": {
+          "kind": "atom",
+          "emoji": "🥷"
+        }
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 397,
+      "character": "灰",
+      "selectedMeaning": "ashes",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "ashes",
+      "dictionarySource": "v2/灰.json",
+      "emojiExpression": {
+        "kind": "atom",
+        "emoji": "⚱️"
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 398,
+      "character": "达",
+      "selectedMeaning": "arrive",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "arrive at, reach",
+      "dictionarySource": "v2/达.json",
+      "emojiExpression": {
+        "kind": "event",
+        "predicate": {
+          "kind": "atom",
+          "emoji": "🏁"
+        }
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 400,
+      "character": "死",
+      "selectedMeaning": "death",
+      "selectedSourceGlossIndex": 2,
+      "referenceDefinition": "death",
+      "dictionarySource": "v2/死.json",
+      "emojiExpression": {
+        "kind": "atom",
+        "emoji": "💀"
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 401,
+      "character": "成",
+      "selectedMeaning": "finished",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "completed, finished, fixed",
+      "dictionarySource": "v2/成.json",
+      "emojiExpression": {
+        "kind": "atom",
+        "emoji": "✅"
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 407,
+      "character": "划",
+      "selectedMeaning": "paddle boat",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "to row or paddle boat",
+      "dictionarySource": "v2/划.json",
+      "emojiExpression": {
+        "kind": "event",
+        "predicate": {
+          "kind": "atom",
+          "emoji": "🛶"
+        }
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 412,
+      "character": "贞",
+      "selectedMeaning": "loyal",
+      "selectedSourceGlossIndex": 1,
+      "referenceDefinition": "loyal",
+      "dictionarySource": "v2/贞.json",
+      "emojiExpression": {
+        "kind": "atom",
+        "emoji": "🤝"
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 418,
+      "character": "当",
+      "selectedMeaning": "undertake",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "bear, accept, undertake",
+      "dictionarySource": "v2/当.json",
+      "emojiExpression": {
+        "kind": "event",
+        "predicate": {
+          "kind": "atom",
+          "emoji": "🛠️"
+        }
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 420,
+      "character": "吁",
+      "selectedMeaning": "sigh",
+      "selectedSourceGlossIndex": 1,
+      "referenceDefinition": "to sigh",
+      "dictionarySource": "v2/吁.json",
+      "emojiExpression": {
+        "kind": "atom",
+        "emoji": "😮‍💨"
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 432,
+      "character": "吗",
+      "selectedMeaning": "interrogative",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "final interrogative particle",
+      "dictionarySource": "v2/吗.json",
+      "emojiExpression": {
+        "kind": "atom",
+        "emoji": "❓"
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 434,
+      "character": "屿",
+      "selectedMeaning": "island",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "island",
+      "dictionarySource": "v2/屿.json",
+      "emojiExpression": {
+        "kind": "atom",
+        "emoji": "🏝️"
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 435,
+      "character": "屹",
+      "selectedMeaning": "stand erect",
+      "selectedSourceGlossIndex": 1,
+      "referenceDefinition": "to stand erect",
+      "dictionarySource": "v2/屹.json",
+      "emojiExpression": {
+        "kind": "event",
+        "predicate": {
+          "kind": "atom",
+          "emoji": "🧍"
+        }
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 440,
+      "character": "则",
+      "selectedMeaning": "law",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "rule, law, regulation",
+      "dictionarySource": "v2/则.json",
+      "emojiExpression": {
+        "kind": "atom",
+        "emoji": "⚖️"
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 447,
+      "character": "丢",
+      "selectedMeaning": "discard",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "discard",
+      "dictionarySource": "v2/丢.json",
+      "emojiExpression": {
+        "kind": "event",
+        "predicate": {
+          "kind": "atom",
+          "emoji": "🗑️"
+        }
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 451,
+      "character": "迁",
+      "selectedMeaning": "relocate",
+      "selectedSourceGlossIndex": 2,
+      "referenceDefinition": "relocate a capital city",
+      "dictionarySource": "v2/迁.json",
+      "emojiExpression": {
+        "kind": "event",
+        "predicate": {
+          "kind": "atom",
+          "emoji": "🚚"
+        }
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 456,
+      "character": "乒",
+      "selectedMeaning": "ping pong",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "(used with 乓) “ping” of “ping pong”",
+      "dictionarySource": "v2/乒.json",
+      "emojiExpression": {
+        "kind": "atom",
+        "emoji": "🏓"
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 457,
+      "character": "乓",
+      "selectedMeaning": "ping pong",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "(used with 乒) “pong” of “ping pong”",
+      "dictionarySource": "v2/乓.json",
+      "emojiExpression": {
+        "kind": "atom",
+        "emoji": "🏓"
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 459,
+      "character": "伍",
+      "selectedMeaning": "troops",
+      "selectedSourceGlossIndex": 1,
+      "referenceDefinition": "troops",
+      "dictionarySource": "v2/伍.json",
+      "emojiExpression": {
+        "kind": "atom",
+        "emoji": "🪖"
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 460,
+      "character": "伏",
+      "selectedMeaning": "crouch",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "crouch, crawl, lie hidden, conceal",
+      "dictionarySource": "v2/伏.json",
+      "emojiExpression": {
+        "kind": "event",
+        "predicate": {
+          "kind": "atom",
+          "emoji": "🧎"
+        }
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 465,
+      "character": "仲",
+      "selectedMeaning": "mediator",
+      "selectedSourceGlossIndex": 1,
+      "referenceDefinition": "go between, mediator",
+      "dictionarySource": "v2/仲.json",
+      "emojiExpression": {
+        "kind": "atom",
+        "emoji": "🤝"
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 466,
+      "character": "件",
+      "selectedMeaning": "article",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "numerary adjunct for article",
+      "dictionarySource": "v2/件.json",
+      "emojiExpression": {
+        "kind": "atom",
+        "emoji": "📦"
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 470,
+      "character": "伦",
+      "selectedMeaning": "relationships",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "normal human relationships",
+      "dictionarySource": "v2/伦.json",
+      "emojiExpression": {
+        "kind": "atom",
+        "emoji": "🫂"
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 471,
+      "character": "份",
+      "selectedMeaning": "portion",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "portion, part",
+      "dictionarySource": "v2/份.json",
+      "emojiExpression": {
+        "kind": "atom",
+        "emoji": "🍰"
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 472,
+      "character": "华",
+      "selectedMeaning": "Chinese",
+      "selectedSourceGlossIndex": 2,
+      "referenceDefinition": "Chinese",
+      "dictionarySource": "v2/华.json",
+      "emojiExpression": {
+        "kind": "atom",
+        "emoji": "🀄"
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 476,
+      "character": "伪",
+      "selectedMeaning": "counterfeit",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "false, counterfeit, bogus",
+      "dictionarySource": "v2/伪.json",
+      "emojiExpression": {
+        "kind": "atom",
+        "emoji": "🎭"
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 486,
+      "character": "会",
+      "selectedMeaning": "meet together",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "assemble, meet together",
+      "dictionarySource": "v2/会.json",
+      "emojiExpression": {
+        "kind": "event",
+        "predicate": {
+          "kind": "atom",
+          "emoji": "🤝"
+        }
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 488,
+      "character": "合",
+      "selectedMeaning": "combine",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "combine, unite, join",
+      "dictionarySource": "v2/合.json",
+      "emojiExpression": {
+        "kind": "event",
+        "predicate": {
+          "kind": "atom",
+          "emoji": "🧩"
+        }
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 492,
+      "character": "爷",
+      "selectedMeaning": "grandfather",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "father, grandfather",
+      "dictionarySource": "v2/爷.json",
+      "emojiExpression": {
+        "kind": "atom",
+        "emoji": "👴"
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 496,
+      "character": "肋",
+      "selectedMeaning": "ribs",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "ribs",
+      "dictionarySource": "v2/肋.json",
+      "emojiExpression": {
+        "kind": "atom",
+        "emoji": "🦴"
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 499,
+      "character": "危",
+      "selectedMeaning": "dangerous",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "dangerous, precarious",
+      "dictionarySource": "v2/危.json",
+      "emojiExpression": {
+        "kind": "atom",
+        "emoji": "⚠️"
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 500,
+      "character": "旬",
+      "selectedMeaning": "ten-day",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "ten-day period",
+      "dictionarySource": "v2/旬.json",
+      "emojiExpression": {
+        "kind": "atom",
+        "emoji": "📅"
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 503,
+      "character": "负",
+      "selectedMeaning": "burden",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "load, burden",
+      "dictionarySource": "v2/负.json",
+      "emojiExpression": {
+        "kind": "atom",
+        "emoji": "🎒"
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 504,
+      "character": "匈",
+      "selectedMeaning": "chest",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "breast, chest, thorax",
+      "dictionarySource": "v2/匈.json",
+      "emojiExpression": {
+        "kind": "atom",
+        "emoji": "🫁"
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 508,
+      "character": "争",
+      "selectedMeaning": "fight",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "dispute, fight, contend, strive",
+      "dictionarySource": "v2/争.json",
+      "emojiExpression": {
+        "kind": "event",
+        "predicate": {
+          "kind": "atom",
+          "emoji": "⚔️"
+        }
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 511,
+      "character": "冲",
+      "selectedMeaning": "soar",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "soar",
+      "dictionarySource": "v2/冲.json",
+      "emojiExpression": {
+        "kind": "event",
+        "predicate": {
+          "kind": "atom",
+          "emoji": "🦅"
+        }
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 512,
+      "character": "妆",
+      "selectedMeaning": "make-up",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "to adorn oneself, dress up, use make-up",
+      "dictionarySource": "v2/妆.json",
+      "emojiExpression": {
+        "kind": "atom",
+        "emoji": "💄"
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 517,
+      "character": "刘",
+      "selectedMeaning": "kill",
+      "selectedSourceGlossIndex": 1,
+      "referenceDefinition": "kill, destroy",
+      "dictionarySource": "v2/刘.json",
+      "emojiExpression": {
+        "kind": "event",
+        "predicate": {
+          "kind": "atom",
+          "emoji": "💀"
+        }
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 518,
+      "character": "齐",
+      "selectedMeaning": "equal",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "even, uniform, of equal length",
+      "dictionarySource": "v2/齐.json",
+      "emojiExpression": {
+        "kind": "atom",
+        "emoji": "🟰"
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 519,
+      "character": "交",
+      "selectedMeaning": "exchange",
+      "selectedSourceGlossIndex": 2,
+      "referenceDefinition": "exchange, communicate",
+      "dictionarySource": "v2/交.json",
+      "emojiExpression": {
+        "kind": "event",
+        "predicate": {
+          "kind": "atom",
+          "emoji": "🔄"
+        }
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 526,
+      "character": "妄",
+      "selectedMeaning": "foolish",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "absurd, foolish, reckless",
+      "dictionarySource": "v2/妄.json",
+      "emojiExpression": {
+        "kind": "atom",
+        "emoji": "🤡"
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 529,
+      "character": "闯",
+      "selectedMeaning": "rush in",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "rush in, burst in, charge in",
+      "dictionarySource": "v2/闯.json",
+      "emojiExpression": {
+        "kind": "event",
+        "predicate": {
+          "kind": "atom",
+          "emoji": "🏃"
+        }
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 541,
+      "character": "汝",
+      "selectedMeaning": "you",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "you",
+      "dictionarySource": "v2/汝.json",
+      "emojiExpression": {
+        "kind": "atom",
+        "emoji": "🫵"
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 545,
+      "character": "宇",
+      "selectedMeaning": "house",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "house",
+      "dictionarySource": "v2/宇.json",
+      "emojiExpression": {
+        "kind": "atom",
+        "emoji": "🏠"
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 546,
+      "character": "守",
+      "selectedMeaning": "protect",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "defend, protect, guard, conserve",
+      "dictionarySource": "v2/守.json",
+      "emojiExpression": {
+        "kind": "event",
+        "predicate": {
+          "kind": "atom",
+          "emoji": "🛡️"
+        }
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 549,
+      "character": "安",
+      "selectedMeaning": "peaceful",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "peaceful, tranquil, quiet",
+      "dictionarySource": "v2/安.json",
+      "emojiExpression": {
+        "kind": "atom",
+        "emoji": "🕊️"
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 551,
+      "character": "讳",
+      "selectedMeaning": "conceal",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "conceal",
+      "dictionarySource": "v2/讳.json",
+      "emojiExpression": {
+        "kind": "event",
+        "predicate": {
+          "kind": "atom",
+          "emoji": "🙈"
+        }
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 553,
+      "character": "讶",
+      "selectedMeaning": "surprised",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "express surprise, be surprised",
+      "dictionarySource": "v2/讶.json",
+      "emojiExpression": {
+        "kind": "atom",
+        "emoji": "😮"
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 555,
+      "character": "讹",
+      "selectedMeaning": "cheat",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "swindle, cheat",
+      "dictionarySource": "v2/讹.json",
+      "emojiExpression": {
+        "kind": "event",
+        "predicate": {
+          "kind": "atom",
+          "emoji": "🎭"
+        }
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 557,
+      "character": "讼",
+      "selectedMeaning": "litigate",
+      "selectedSourceGlossIndex": 2,
+      "referenceDefinition": "litigate",
+      "dictionarySource": "v2/讼.json",
+      "emojiExpression": {
+        "kind": "event",
+        "predicate": {
+          "kind": "atom",
+          "emoji": "⚖️"
+        }
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 558,
+      "character": "农",
+      "selectedMeaning": "farming",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "agriculture, farming",
+      "dictionarySource": "v2/农.json",
+      "emojiExpression": {
+        "kind": "atom",
+        "emoji": "🚜"
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 560,
+      "character": "设",
+      "selectedMeaning": "build",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "build",
+      "dictionarySource": "v2/设.json",
+      "emojiExpression": {
+        "kind": "event",
+        "predicate": {
+          "kind": "atom",
+          "emoji": "🏗️"
+        }
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 562,
+      "character": "诀",
+      "selectedMeaning": "bid farewell",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "take leave of, bid farewell",
+      "dictionarySource": "v2/诀.json",
+      "emojiExpression": {
+        "kind": "event",
+        "predicate": {
+          "kind": "atom",
+          "emoji": "👋"
+        }
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 566,
+      "character": "尽",
+      "selectedMeaning": "deplete",
+      "selectedSourceGlossIndex": 1,
+      "referenceDefinition": "deplete",
+      "dictionarySource": "v2/尽.json",
+      "emojiExpression": {
+        "kind": "event",
+        "predicate": {
+          "kind": "atom",
+          "emoji": "🔋"
+        }
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 570,
+      "character": "孙",
+      "selectedMeaning": "grandchild",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "grandchild, descendent",
+      "dictionarySource": "v2/孙.json",
+      "emojiExpression": {
+        "kind": "atom",
+        "emoji": "👶"
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 575,
+      "character": "阴",
+      "selectedMeaning": "dark",
+      "selectedSourceGlossIndex": 1,
+      "referenceDefinition": "dark",
+      "dictionarySource": "v2/阴.json",
+      "emojiExpression": {
+        "kind": "atom",
+        "emoji": "🌑"
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 577,
+      "character": "奸",
+      "selectedMeaning": "false",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "crafty, villainous, false",
+      "dictionarySource": "v2/奸.json",
+      "emojiExpression": {
+        "kind": "atom",
+        "emoji": "🎭"
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 578,
+      "character": "如",
+      "selectedMeaning": "like",
+      "selectedSourceGlossIndex": 2,
+      "referenceDefinition": "like, as",
+      "dictionarySource": "v2/如.json",
+      "emojiExpression": {
+        "kind": "atom",
+        "emoji": "🪞"
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 580,
+      "character": "妃",
+      "selectedMeaning": "wife",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "wife, spouse",
+      "dictionarySource": "v2/妃.json",
+      "emojiExpression": {
+        "kind": "atom",
+        "emoji": "👰"
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 593,
+      "character": "约",
+      "selectedMeaning": "agreement",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "treaty, agreement, covenant",
+      "dictionarySource": "v2/约.json",
+      "emojiExpression": {
+        "kind": "atom",
+        "emoji": "🤝"
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 595,
+      "character": "纪",
+      "selectedMeaning": "historical",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "record, annal, historical account",
+      "dictionarySource": "v2/纪.json",
+      "emojiExpression": {
+        "kind": "atom",
+        "emoji": "📜"
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 596,
+      "character": "驰",
+      "selectedMeaning": "hurry",
+      "selectedSourceGlossIndex": 1,
+      "referenceDefinition": "hurry",
+      "dictionarySource": "v2/驰.json",
+      "emojiExpression": {
+        "kind": "event",
+        "predicate": {
+          "kind": "atom",
+          "emoji": "🏃"
+        }
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 597,
+      "character": "纫",
+      "selectedMeaning": "sew",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "thread needle, sew stitch, string",
+      "dictionarySource": "v2/纫.json",
+      "emojiExpression": {
+        "kind": "event",
+        "predicate": {
+          "kind": "atom",
+          "emoji": "🪡"
+        }
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 610,
+      "character": "韧",
+      "selectedMeaning": "resilient",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "strong and pliable, resilient",
+      "dictionarySource": "v2/韧.json",
+      "emojiExpression": {
+        "kind": "atom",
+        "emoji": "💪"
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 617,
+      "character": "抠",
+      "selectedMeaning": "lift up",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "raise, lift up",
+      "dictionarySource": "v2/抠.json",
+      "emojiExpression": {
+        "kind": "event",
+        "predicate": {
+          "kind": "atom",
+          "emoji": "🏋️"
+        }
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 619,
+      "character": "扼",
+      "selectedMeaning": "grasp",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "grasp, clutch",
+      "dictionarySource": "v2/扼.json",
+      "emojiExpression": {
+        "kind": "event",
+        "predicate": {
+          "kind": "atom",
+          "emoji": "✊"
+        }
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 620,
+      "character": "拒",
+      "selectedMeaning": "defend",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "ward off with hand, defend",
+      "dictionarySource": "v2/拒.json",
+      "emojiExpression": {
+        "kind": "event",
+        "predicate": {
+          "kind": "atom",
+          "emoji": "🛡️"
+        }
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 621,
+      "character": "找",
+      "selectedMeaning": "search",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "search, seek, look for",
+      "dictionarySource": "v2/找.json",
+      "emojiExpression": {
+        "kind": "event",
+        "predicate": {
+          "kind": "atom",
+          "emoji": "🔍"
+        }
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 624,
+      "character": "扯",
+      "selectedMeaning": "tear down",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "rip up, tear down",
+      "dictionarySource": "v2/扯.json",
+      "emojiExpression": {
+        "kind": "event",
+        "predicate": {
+          "kind": "atom",
+          "emoji": "💥"
+        }
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 632,
+      "character": "折",
+      "selectedMeaning": "break off",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "break off, snap",
+      "dictionarySource": "v2/折.json",
+      "emojiExpression": {
+        "kind": "event",
+        "predicate": {
+          "kind": "atom",
+          "emoji": "💔"
+        }
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 641,
+      "character": "抑",
+      "selectedMeaning": "repress",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "press down, repress",
+      "dictionarySource": "v2/抑.json",
+      "emojiExpression": {
+        "kind": "event",
+        "predicate": {
+          "kind": "atom",
+          "emoji": "🔒"
+        }
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 647,
+      "character": "坊",
+      "selectedMeaning": "neighborhood",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "neighborhood, urban subdivision",
+      "dictionarySource": "v2/坊.json",
+      "emojiExpression": {
+        "kind": "atom",
+        "emoji": "🏘️"
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 651,
+      "character": "志",
+      "selectedMeaning": "determination",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "purpose, will, determination",
+      "dictionarySource": "v2/志.json",
+      "emojiExpression": {
+        "kind": "atom",
+        "emoji": "💪"
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 660,
+      "character": "劫",
+      "selectedMeaning": "disaster",
+      "selectedSourceGlossIndex": 1,
+      "referenceDefinition": "disaster",
+      "dictionarySource": "v2/劫.json",
+      "emojiExpression": {
+        "kind": "atom",
+        "emoji": "🌪️"
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 661,
+      "character": "芙",
+      "selectedMeaning": "hibiscus",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "hibiscus",
+      "dictionarySource": "v2/芙.json",
+      "emojiExpression": {
+        "kind": "atom",
+        "emoji": "🌺"
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 672,
+      "character": "芦",
+      "selectedMeaning": "reeds",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "rushes, reeds",
+      "dictionarySource": "v2/芦.json",
+      "emojiExpression": {
+        "kind": "atom",
+        "emoji": "🌾"
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 679,
+      "character": "杠",
+      "selectedMeaning": "crowbar",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "lever, pole, crowbar",
+      "dictionarySource": "v2/杠.json",
+      "emojiExpression": {
+        "kind": "atom",
+        "emoji": "🔧"
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 685,
+      "character": "杉",
+      "selectedMeaning": "pine",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "various species of pine and fir",
+      "dictionarySource": "v2/杉.json",
+      "emojiExpression": {
+        "kind": "atom",
+        "emoji": "🌲"
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 689,
+      "character": "杨",
+      "selectedMeaning": "willow",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "willow, poplar, aspen",
+      "dictionarySource": "v2/杨.json",
+      "emojiExpression": {
+        "kind": "atom",
+        "emoji": "🌳"
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 691,
+      "character": "甫",
+      "selectedMeaning": "begin",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "begin",
+      "dictionarySource": "v2/甫.json",
+      "emojiExpression": {
+        "kind": "event",
+        "predicate": {
+          "kind": "atom",
+          "emoji": "▶️"
+        }
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 696,
+      "character": "豆",
+      "selectedMeaning": "beans",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "beans, peas",
+      "dictionarySource": "v2/豆.json",
+      "emojiExpression": {
+        "kind": "atom",
+        "emoji": "🫘"
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 698,
+      "character": "酉",
+      "selectedMeaning": "wine vessel",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "a wine vessel",
+      "dictionarySource": "v2/酉.json",
+      "emojiExpression": {
+        "kind": "atom",
+        "emoji": "🏺"
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 701,
+      "character": "辰",
+      "selectedMeaning": "early morning",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "early morning",
+      "dictionarySource": "v2/辰.json",
+      "emojiExpression": {
+        "kind": "atom",
+        "emoji": "🌅"
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 705,
+      "character": "尬",
+      "selectedMeaning": "embarrass",
+      "selectedSourceGlossIndex": 1,
+      "referenceDefinition": "embarrass",
+      "dictionarySource": "v2/尬.json",
+      "emojiExpression": {
+        "kind": "atom",
+        "emoji": "😳"
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 715,
+      "character": "盯",
+      "selectedMeaning": "keep eyes on",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "rivet gaze upon, keep eyes on",
+      "dictionarySource": "v2/盯.json",
+      "emojiExpression": {
+        "kind": "event",
+        "predicate": {
+          "kind": "atom",
+          "emoji": "👀"
+        }
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 716,
+      "character": "呈",
+      "selectedMeaning": "show",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "submit, show",
+      "dictionarySource": "v2/呈.json",
+      "emojiExpression": {
+        "kind": "event",
+        "predicate": {
+          "kind": "atom",
+          "emoji": "👁️"
+        }
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 721,
+      "character": "里",
+      "selectedMeaning": "village",
+      "selectedSourceGlossIndex": 1,
+      "referenceDefinition": "village",
+      "dictionarySource": "v2/里.json",
+      "emojiExpression": {
+        "kind": "atom",
+        "emoji": "🏘️"
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 722,
+      "character": "呆",
+      "selectedMeaning": "dull",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "dull",
+      "dictionarySource": "v2/呆.json",
+      "emojiExpression": {
+        "kind": "atom",
+        "emoji": "😐"
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 723,
+      "character": "吱",
+      "selectedMeaning": "chirping",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "chirping, squeaking, hissing",
+      "dictionarySource": "v2/吱.json",
+      "emojiExpression": {
+        "kind": "atom",
+        "emoji": "🐦"
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 726,
+      "character": "园",
+      "selectedMeaning": "garden",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "garden",
+      "dictionarySource": "v2/园.json",
+      "emojiExpression": {
+        "kind": "atom",
+        "emoji": "🌻"
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 727,
+      "character": "旷",
+      "selectedMeaning": "wide",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "extensive, wide, broad",
+      "dictionarySource": "v2/旷.json",
+      "emojiExpression": {
+        "kind": "atom",
+        "emoji": "↔️"
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 733,
+      "character": "男",
+      "selectedMeaning": "man",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "male, man",
+      "dictionarySource": "v2/男.json",
+      "emojiExpression": {
+        "kind": "atom",
+        "emoji": "👨"
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 734,
+      "character": "困",
+      "selectedMeaning": "difficult",
+      "selectedSourceGlossIndex": 2,
+      "referenceDefinition": "difficult",
+      "dictionarySource": "v2/困.json",
+      "emojiExpression": {
+        "kind": "atom",
+        "emoji": "😣"
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 735,
+      "character": "吵",
+      "selectedMeaning": "argue",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "argue, dispute",
+      "dictionarySource": "v2/吵.json",
+      "emojiExpression": {
+        "kind": "event",
+        "predicate": {
+          "kind": "atom",
+          "emoji": "🗣️"
+        }
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 738,
+      "character": "呐",
+      "selectedMeaning": "shout",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "raise voice, yell out loud, shout",
+      "dictionarySource": "v2/呐.json",
+      "emojiExpression": {
+        "kind": "event",
+        "predicate": {
+          "kind": "atom",
+          "emoji": "📣"
+        }
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 740,
+      "character": "吟",
+      "selectedMeaning": "sing",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "sing, hum",
+      "dictionarySource": "v2/吟.json",
+      "emojiExpression": {
+        "kind": "event",
+        "predicate": {
+          "kind": "atom",
+          "emoji": "🎵"
+        }
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 741,
+      "character": "吩",
+      "selectedMeaning": "command",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "order, command, instruct",
+      "dictionarySource": "v2/吩.json",
+      "emojiExpression": {
+        "kind": "event",
+        "predicate": {
+          "kind": "atom",
+          "emoji": "📣"
+        }
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 745,
+      "character": "呜",
+      "selectedMeaning": "sobbing",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "sound of crying, sobbing",
+      "dictionarySource": "v2/呜.json",
+      "emojiExpression": {
+        "kind": "atom",
+        "emoji": "😭"
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 750,
+      "character": "囤",
+      "selectedMeaning": "grain basket",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "grain basket, bin for grain",
+      "dictionarySource": "v2/囤.json",
+      "emojiExpression": {
+        "kind": "atom",
+        "emoji": "🧺"
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 751,
+      "character": "别",
+      "selectedMeaning": "do not",
+      "selectedSourceGlossIndex": 1,
+      "referenceDefinition": "do not",
+      "dictionarySource": "v2/别.json",
+      "emojiExpression": {
+        "kind": "atom",
+        "emoji": "🚫"
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 752,
+      "character": "吮",
+      "selectedMeaning": "sip",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "suck with mouth, sip, lick",
+      "dictionarySource": "v2/吮.json",
+      "emojiExpression": {
+        "kind": "event",
+        "predicate": {
+          "kind": "atom",
+          "emoji": "🥤"
+        }
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 754,
+      "character": "岗",
+      "selectedMeaning": "post",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "post",
+      "dictionarySource": "v2/岗.json",
+      "emojiExpression": {
+        "kind": "atom",
+        "emoji": "📍"
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 761,
+      "character": "我",
+      "selectedMeaning": "i, me",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "our, us, i, me, my, we",
+      "dictionarySource": "v2/我.json",
+      "emojiExpression": {
+        "kind": "atom",
+        "emoji": "👤"
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 762,
+      "character": "乱",
+      "selectedMeaning": "chaos",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "confusion, state of chaos, revolt",
+      "dictionarySource": "v2/乱.json",
+      "emojiExpression": {
+        "kind": "atom",
+        "emoji": "🌪️"
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 765,
+      "character": "秀",
+      "selectedMeaning": "flowering",
+      "selectedSourceGlossIndex": 1,
+      "referenceDefinition": "flowering, luxuriant",
+      "dictionarySource": "v2/秀.json",
+      "emojiExpression": {
+        "kind": "atom",
+        "emoji": "🌸"
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 776,
+      "character": "佃",
+      "selectedMeaning": "tenant farmer",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "tenant farmer",
+      "dictionarySource": "v2/佃.json",
+      "emojiExpression": {
+        "kind": "atom",
+        "emoji": "👨‍🌾"
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 777,
+      "character": "作",
+      "selectedMeaning": "make",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "make",
+      "dictionarySource": "v2/作.json",
+      "emojiExpression": {
+        "kind": "event",
+        "predicate": {
+          "kind": "atom",
+          "emoji": "🛠️"
+        }
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 778,
+      "character": "伯",
+      "selectedMeaning": "older brother",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "older brother",
+      "dictionarySource": "v2/伯.json",
+      "emojiExpression": {
+        "kind": "atom",
+        "emoji": "👨"
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 780,
+      "character": "佣",
+      "selectedMeaning": "commission fee",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "commission fee",
+      "dictionarySource": "v2/佣.json",
+      "emojiExpression": {
+        "kind": "atom",
+        "emoji": "💵"
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 788,
+      "character": "伺",
+      "selectedMeaning": "serve",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "serve, wait upon, attend",
+      "dictionarySource": "v2/伺.json",
+      "emojiExpression": {
+        "kind": "event",
+        "predicate": {
+          "kind": "atom",
+          "emoji": "🤲"
+        }
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 792,
+      "character": "彻",
+      "selectedMeaning": "penetrate",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "penetrate, pervade",
+      "dictionarySource": "v2/彻.json",
+      "emojiExpression": {
+        "kind": "event",
+        "predicate": {
+          "kind": "atom",
+          "emoji": "➡️"
+        }
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 799,
+      "character": "妥",
+      "selectedMeaning": "appropriate",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "satisfactory, appropriate",
+      "dictionarySource": "v2/妥.json",
+      "emojiExpression": {
+        "kind": "atom",
+        "emoji": "✅"
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 809,
+      "character": "甸",
+      "selectedMeaning": "crops",
+      "selectedSourceGlossIndex": 2,
+      "referenceDefinition": "crops",
+      "independentReadings": [
+        "Dian4",
+        "dian4"
+      ],
+      "dictionarySource": "v2/甸.json",
+      "emojiExpression": {
+        "kind": "atom",
+        "emoji": "🌾"
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 810,
+      "character": "免",
+      "selectedMeaning": "evade",
+      "selectedSourceGlossIndex": 2,
+      "referenceDefinition": "evade",
+      "independentReadings": [
+        "mian3",
+        "wen4"
+      ],
+      "dictionarySource": "v2/免.json",
+      "emojiExpression": {
+        "kind": "event",
+        "predicate": {
+          "kind": "atom",
+          "emoji": "🏃"
+        }
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 812,
+      "character": "犹",
+      "selectedMeaning": "similar",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "like, similar to, just like, as",
+      "independentReadings": [
+        "you2"
+      ],
+      "dictionarySource": "v2/犹.json",
+      "emojiExpression": {
+        "kind": "atom",
+        "emoji": "🪞"
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 816,
+      "character": "条",
+      "selectedMeaning": "string",
+      "selectedSourceGlossIndex": 1,
+      "referenceDefinition": "string, stripe",
+      "independentReadings": [
+        "tiao2"
+      ],
+      "dictionarySource": "v2/条.json",
+      "emojiExpression": {
+        "kind": "atom",
+        "emoji": "🧵"
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 825,
+      "character": "系",
+      "selectedMeaning": "connection",
+      "selectedSourceGlossIndex": 1,
+      "referenceDefinition": "line, link, connection",
+      "independentReadings": [
+        "xi4",
+        "ji4"
+      ],
+      "dictionarySource": "v2/系.json",
+      "emojiExpression": {
+        "kind": "atom",
+        "emoji": "🔗"
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 830,
+      "character": "况",
+      "selectedMeaning": "condition",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "condition, situation",
+      "independentReadings": [
+        "kuang4"
+      ],
+      "dictionarySource": "v2/况.json",
+      "emojiExpression": {
+        "kind": "atom",
+        "emoji": "📋"
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 834,
+      "character": "疗",
+      "selectedMeaning": "heal",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "be healed, cured, recover",
+      "independentReadings": [
+        "liao2"
+      ],
+      "dictionarySource": "v2/疗.json",
+      "emojiExpression": {
+        "kind": "event",
+        "predicate": {
+          "kind": "atom",
+          "emoji": "🩹"
+        }
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 841,
+      "character": "辛",
+      "selectedMeaning": "bitter",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "bitter",
+      "independentReadings": [
+        "Xin1",
+        "xin1"
+      ],
+      "dictionarySource": "v2/辛.json",
+      "emojiExpression": {
+        "kind": "atom",
+        "emoji": "🍋"
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 846,
+      "character": "闲",
+      "selectedMeaning": "idle time",
+      "selectedSourceGlossIndex": 2,
+      "referenceDefinition": "idle time",
+      "independentReadings": [
+        "xian2"
+      ],
+      "dictionarySource": "v2/闲.json",
+      "emojiExpression": {
+        "kind": "atom",
+        "emoji": "🛋️"
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 848,
+      "character": "闷",
+      "selectedMeaning": "gloomy",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "gloomy, depressed, melancholy",
+      "independentReadings": [
+        "men1",
+        "men4"
+      ],
+      "dictionarySource": "v2/闷.json",
+      "emojiExpression": {
+        "kind": "atom",
+        "emoji": "😔"
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 854,
+      "character": "弟",
+      "selectedMeaning": "young brother",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "young brother",
+      "independentReadings": [
+        "di4",
+        "ti4"
+      ],
+      "dictionarySource": "v2/弟.json",
+      "emojiExpression": {
+        "kind": "atom",
+        "emoji": "👦"
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 855,
+      "character": "汪",
+      "selectedMeaning": "vast",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "vast, extensive, deep",
+      "independentReadings": [
+        "Wang1",
+        "wang1"
+      ],
+      "dictionarySource": "v2/汪.json",
+      "emojiExpression": {
+        "kind": "atom",
+        "emoji": "🌊"
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 858,
+      "character": "汰",
+      "selectedMeaning": "excessive",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "excessive",
+      "independentReadings": [
+        "tai4"
+      ],
+      "dictionarySource": "v2/汰.json",
+      "emojiExpression": {
+        "kind": "atom",
+        "emoji": "📈"
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 864,
+      "character": "汹",
+      "selectedMeaning": "turbulent",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "turbulent",
+      "independentReadings": [
+        "xiong1"
+      ],
+      "dictionarySource": "v2/汹.json",
+      "emojiExpression": {
+        "kind": "atom",
+        "emoji": "🌊"
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 870,
+      "character": "沈",
+      "selectedMeaning": "sink",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "sink, submerge",
+      "independentReadings": [
+        "Shen3",
+        "chen2",
+        "shen3"
+      ],
+      "dictionarySource": "v2/沈.json",
+      "emojiExpression": {
+        "kind": "event",
+        "predicate": {
+          "kind": "atom",
+          "emoji": "🌊"
+        }
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 872,
+      "character": "沁",
+      "selectedMeaning": "seep in",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "soak into, seep in, percolate",
+      "independentReadings": [
+        "qin4"
+      ],
+      "dictionarySource": "v2/沁.json",
+      "emojiExpression": {
+        "kind": "event",
+        "predicate": {
+          "kind": "atom",
+          "emoji": "💧"
+        }
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 874,
+      "character": "忧",
+      "selectedMeaning": "sad",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "sad, grieved",
+      "independentReadings": [
+        "you1"
+      ],
+      "dictionarySource": "v2/忧.json",
+      "emojiExpression": {
+        "kind": "atom",
+        "emoji": "😔"
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 876,
+      "character": "快",
+      "selectedMeaning": "fast",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "rapid, quick, speedy, fast",
+      "independentReadings": [
+        "kuai4"
+      ],
+      "dictionarySource": "v2/快.json",
+      "emojiExpression": {
+        "kind": "atom",
+        "emoji": "⚡"
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 879,
+      "character": "宏",
+      "selectedMeaning": "wide",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "wide, spacious, great, vast",
+      "independentReadings": [
+        "hong2"
+      ],
+      "dictionarySource": "v2/宏.json",
+      "emojiExpression": {
+        "kind": "atom",
+        "emoji": "↔️"
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 887,
+      "character": "评",
+      "selectedMeaning": "evaluate",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "appraise, criticize, evaluate",
+      "independentReadings": [
+        "ping2"
+      ],
+      "dictionarySource": "v2/评.json",
+      "emojiExpression": {
+        "kind": "event",
+        "predicate": {
+          "kind": "atom",
+          "emoji": "📊"
+        }
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 891,
+      "character": "祀",
+      "selectedMeaning": "worship",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "to sacrifice, worship",
+      "independentReadings": [
+        "si4"
+      ],
+      "dictionarySource": "v2/祀.json",
+      "emojiExpression": {
+        "kind": "event",
+        "predicate": {
+          "kind": "atom",
+          "emoji": "🙏"
+        }
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 892,
+      "character": "识",
+      "selectedMeaning": "recognize",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "recognize, understand, know",
+      "independentReadings": [
+        "shi2",
+        "zhi4"
+      ],
+      "dictionarySource": "v2/识.json",
+      "emojiExpression": {
+        "kind": "event",
+        "predicate": {
+          "kind": "atom",
+          "emoji": "👀"
+        }
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 896,
+      "character": "诊",
+      "selectedMeaning": "diagnose",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "examine patient, diagnose",
+      "independentReadings": [
+        "zhen3"
+      ],
+      "dictionarySource": "v2/诊.json",
+      "emojiExpression": {
+        "kind": "event",
+        "predicate": {
+          "kind": "atom",
+          "emoji": "🩺"
+        }
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 897,
+      "character": "词",
+      "selectedMeaning": "words",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "words",
+      "independentReadings": [
+        "ci2"
+      ],
+      "dictionarySource": "v2/词.json",
+      "emojiExpression": {
+        "kind": "atom",
+        "emoji": "🔤"
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 901,
+      "character": "即",
+      "selectedMeaning": "immediately",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "promptly, quickly, immediately",
+      "independentReadings": [
+        "ji2"
+      ],
+      "dictionarySource": "v2/即.json",
+      "emojiExpression": {
+        "kind": "atom",
+        "emoji": "⚡"
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 903,
+      "character": "屁",
+      "selectedMeaning": "buttocks",
+      "selectedSourceGlossIndex": 2,
+      "referenceDefinition": "buttocks",
+      "independentReadings": [
+        "pi4"
+      ],
+      "dictionarySource": "v2/屁.json",
+      "emojiExpression": {
+        "kind": "atom",
+        "emoji": "🍑"
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 909,
+      "character": "张",
+      "selectedMeaning": "expand",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "stretch, extend, expand",
+      "independentReadings": [
+        "Zhang1",
+        "zhang1"
+      ],
+      "dictionarySource": "v2/张.json",
+      "emojiExpression": {
+        "kind": "event",
+        "predicate": {
+          "kind": "atom",
+          "emoji": "↔️"
+        }
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 916,
+      "character": "附",
+      "selectedMeaning": "append",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "adhere to, append",
+      "independentReadings": [
+        "fu4"
+      ],
+      "dictionarySource": "v2/附.json",
+      "emojiExpression": {
+        "kind": "event",
+        "predicate": {
+          "kind": "atom",
+          "emoji": "📎"
+        }
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 917,
+      "character": "坠",
+      "selectedMeaning": "fall down",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "fall down, drop, sink, go to ruin",
+      "independentReadings": [
+        "zhui4"
+      ],
+      "dictionarySource": "v2/坠.json",
+      "emojiExpression": {
+        "kind": "event",
+        "predicate": {
+          "kind": "atom",
+          "emoji": "⬇️"
+        }
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 919,
+      "character": "妙",
+      "selectedMeaning": "mysterious",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "mysterious, subtle",
+      "independentReadings": [
+        "miao4"
+      ],
+      "dictionarySource": "v2/妙.json",
+      "emojiExpression": {
+        "kind": "atom",
+        "emoji": "✨"
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 920,
+      "character": "妖",
+      "selectedMeaning": "supernatural",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "strange, weird, supernatural",
+      "independentReadings": [
+        "yao1"
+      ],
+      "dictionarySource": "v2/妖.json",
+      "emojiExpression": {
+        "kind": "atom",
+        "emoji": "👻"
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 922,
+      "character": "妨",
+      "selectedMeaning": "obstruct",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "interfere with, impede, obstruct",
+      "independentReadings": [
+        "fang2"
+      ],
+      "dictionarySource": "v2/妨.json",
+      "emojiExpression": {
+        "kind": "event",
+        "predicate": {
+          "kind": "atom",
+          "emoji": "🛑"
+        }
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 930,
+      "character": "驱",
+      "selectedMeaning": "drive away",
+      "selectedSourceGlossIndex": 1,
+      "referenceDefinition": "expel, drive away",
+      "independentReadings": [
+        "qu1"
+      ],
+      "dictionarySource": "v2/驱.json",
+      "emojiExpression": {
+        "kind": "event",
+        "predicate": {
+          "kind": "atom",
+          "emoji": "🏃"
+        }
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 932,
+      "character": "纱",
+      "selectedMeaning": "gauze",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "gauze, thin silk",
+      "independentReadings": [
+        "sha1"
+      ],
+      "dictionarySource": "v2/纱.json",
+      "emojiExpression": {
+        "kind": "atom",
+        "emoji": "🧵"
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 935,
+      "character": "驳",
+      "selectedMeaning": "mixed",
+      "selectedSourceGlossIndex": 1,
+      "referenceDefinition": "mixed",
+      "independentReadings": [
+        "bo2"
+      ],
+      "dictionarySource": "v2/驳.json",
+      "emojiExpression": {
+        "kind": "atom",
+        "emoji": "🎨"
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 937,
+      "character": "纷",
+      "selectedMeaning": "tangled",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "in disorder, scattered, tangled",
+      "independentReadings": [
+        "fen1"
+      ],
+      "dictionarySource": "v2/纷.json",
+      "emojiExpression": {
+        "kind": "atom",
+        "emoji": "🪢"
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 939,
+      "character": "纹",
+      "selectedMeaning": "stripe",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "line, streak, stripe",
+      "independentReadings": [
+        "wen2"
+      ],
+      "dictionarySource": "v2/纹.json",
+      "emojiExpression": {
+        "kind": "atom",
+        "emoji": "🦓"
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 940,
+      "character": "纺",
+      "selectedMeaning": "weave",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "spin, reel, weave",
+      "independentReadings": [
+        "fang3"
+      ],
+      "dictionarySource": "v2/纺.json",
+      "emojiExpression": {
+        "kind": "event",
+        "predicate": {
+          "kind": "atom",
+          "emoji": "🧵"
+        }
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 942,
+      "character": "纽",
+      "selectedMeaning": "knot",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "knot",
+      "independentReadings": [
+        "niu3"
+      ],
+      "dictionarySource": "v2/纽.json",
+      "emojiExpression": {
+        "kind": "atom",
+        "emoji": "🪢"
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 950,
+      "character": "玫",
+      "selectedMeaning": "rose",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "rose",
+      "independentReadings": [
+        "mei2"
+      ],
+      "dictionarySource": "v2/玫.json",
+      "emojiExpression": {
+        "kind": "atom",
+        "emoji": "🌹"
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 952,
+      "character": "规",
+      "selectedMeaning": "rules",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "rules, regulations, customs, law",
+      "independentReadings": [
+        "gui1"
+      ],
+      "dictionarySource": "v2/规.json",
+      "emojiExpression": {
+        "kind": "atom",
+        "emoji": "📜"
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 953,
+      "character": "抹",
+      "selectedMeaning": "wipe off",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "smear, apply, wipe off, erase",
+      "independentReadings": [
+        "ma1",
+        "mo3",
+        "mo4"
+      ],
+      "dictionarySource": "v2/抹.json",
+      "emojiExpression": {
+        "kind": "event",
+        "predicate": {
+          "kind": "atom",
+          "emoji": "🧽"
+        }
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 954,
+      "character": "卦",
+      "selectedMeaning": "fortune telling",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "fortune telling",
+      "independentReadings": [
+        "gua4"
+      ],
+      "dictionarySource": "v2/卦.json",
+      "emojiExpression": {
+        "kind": "atom",
+        "emoji": "🔮"
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 955,
+      "character": "坷",
+      "selectedMeaning": "clod of earth",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "clod of earth, lump of soil",
+      "independentReadings": [
+        "ke3"
+      ],
+      "dictionarySource": "v2/坷.json",
+      "emojiExpression": {
+        "kind": "atom",
+        "emoji": "🪨"
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 956,
+      "character": "坯",
+      "selectedMeaning": "dam",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "dam, embankment",
+      "independentReadings": [
+        "pi1"
+      ],
+      "dictionarySource": "v2/坯.json",
+      "emojiExpression": {
+        "kind": "associate",
+        "items": [
+          {
+            "kind": "atom",
+            "emoji": "🌊"
+          },
+          {
+            "kind": "atom",
+            "emoji": "🧱"
+          }
+        ]
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 959,
+      "character": "拔",
+      "selectedMeaning": "uproot",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "uproot, pull out",
+      "independentReadings": [
+        "ba2"
+      ],
+      "dictionarySource": "v2/拔.json",
+      "emojiExpression": {
+        "kind": "event",
+        "predicate": {
+          "kind": "atom",
+          "emoji": "🌱"
+        }
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 960,
+      "character": "坪",
+      "selectedMeaning": "level ground",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "level ground",
+      "independentReadings": [
+        "ping2"
+      ],
+      "dictionarySource": "v2/坪.json",
+      "emojiExpression": {
+        "kind": "atom",
+        "emoji": "🟩"
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 965,
+      "character": "押",
+      "selectedMeaning": "pledge",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "mortgage, pledge",
+      "independentReadings": [
+        "ya1"
+      ],
+      "dictionarySource": "v2/押.json",
+      "emojiExpression": {
+        "kind": "event",
+        "predicate": {
+          "kind": "atom",
+          "emoji": "📝"
+        }
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 969,
+      "character": "者",
+      "selectedMeaning": "those who",
+      "selectedSourceGlossIndex": 2,
+      "referenceDefinition": "those who",
+      "independentReadings": [
+        "zhe3"
+      ],
+      "dictionarySource": "v2/者.json",
+      "emojiExpression": {
+        "kind": "atom",
+        "emoji": "👥"
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 972,
+      "character": "拆",
+      "selectedMeaning": "split apart",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "to break up, split apart, rip open",
+      "independentReadings": [
+        "chai1"
+      ],
+      "dictionarySource": "v2/拆.json",
+      "emojiExpression": {
+        "kind": "event",
+        "predicate": {
+          "kind": "atom",
+          "emoji": "💔"
+        }
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 974,
+      "character": "拥",
+      "selectedMeaning": "hug",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "embrace, hug, squeeze",
+      "independentReadings": [
+        "yong1"
+      ],
+      "dictionarySource": "v2/拥.json",
+      "emojiExpression": {
+        "kind": "event",
+        "predicate": {
+          "kind": "atom",
+          "emoji": "🫂"
+        }
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 976,
+      "character": "拘",
+      "selectedMeaning": "detain",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "restrain, seize, detain",
+      "independentReadings": [
+        "ju1"
+      ],
+      "dictionarySource": "v2/拘.json",
+      "emojiExpression": {
+        "kind": "event",
+        "predicate": {
+          "kind": "atom",
+          "emoji": "🔒"
+        }
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 980,
+      "character": "垃",
+      "selectedMeaning": "garbage",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "garbage, refuse, waste",
+      "independentReadings": [
+        "la1"
+      ],
+      "dictionarySource": "v2/垃.json",
+      "emojiExpression": {
+        "kind": "atom",
+        "emoji": "🗑️"
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 990,
+      "character": "披",
+      "selectedMeaning": "wear",
+      "selectedSourceGlossIndex": 0,
+      "referenceDefinition": "wear",
+      "independentReadings": [
+        "pi1"
+      ],
+      "dictionarySource": "v2/披.json",
+      "emojiExpression": {
+        "kind": "event",
+        "predicate": {
+          "kind": "atom",
+          "emoji": "👕"
+        }
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 991,
+      "character": "拨",
+      "selectedMeaning": "distribute",
+      "selectedSourceGlossIndex": 2,
+      "referenceDefinition": "distribute",
+      "independentReadings": [
+        "bo1"
+      ],
+      "dictionarySource": "v2/拨.json",
+      "emojiExpression": {
+        "kind": "event",
+        "predicate": {
+          "kind": "atom",
+          "emoji": "📤"
+        }
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 995,
+      "character": "拗",
+      "selectedMeaning": "bent",
+      "selectedSourceGlossIndex": 1,
+      "referenceDefinition": "bent, warped",
+      "independentReadings": [
+        "ao4",
+        "niu4"
+      ],
+      "dictionarySource": "v2/拗.json",
+      "emojiExpression": {
+        "kind": "atom",
+        "emoji": "➰"
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 1000,
+      "character": "昔",
+      "selectedMeaning": "ancient",
+      "selectedSourceGlossIndex": 1,
+      "referenceDefinition": "ancient",
+      "independentReadings": [
+        "Xi1",
+        "xi1"
+      ],
+      "dictionarySource": "v2/昔.json",
+      "emojiExpression": {
+        "kind": "atom",
+        "emoji": "🏺"
+      },
+      "priority": "unclassified",
+      "reviewOrigin": "automated_whole_term_discrepancy",
+      "reviewReason": "no_whole_term_match",
+      "earlierResearchNote": null,
+      "lexicalDecision": "pending",
+      "visualComprehensionDecision": "pending",
+      "productionVerified": false
+    }
+  ]
+}
