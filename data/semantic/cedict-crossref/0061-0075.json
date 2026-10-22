@@ -1,0 +1,455 @@
+{
+  "schema": "chromalect.mandarin.lexical-crossref-batch.v0.1",
+  "source": {
+    "title": "CC-CEDICT per-headword v2 mirror",
+    "repository": "krmanik/cedict-json",
+    "commit": "63c2569948629323b515833930fdd10f285401b6",
+    "dataLicense": "CC BY-SA 4.0",
+    "upstream": "https://cc-cedict.org/",
+    "mirror": "https://github.com/krmanik/cedict-json",
+    "transform": "Selected single-simplified-character dictionary records, retaining readings and definitions; literal English gloss matching is automated triage only"
+  },
+  "rankStart": 61,
+  "rankEnd": 75,
+  "summary": {
+    "total": 15,
+    "headwordFound": 15,
+    "withCandidate": 13,
+    "withLiteralSupport": 11
+  },
+  "records": [
+    {
+      "rank": 61,
+      "character": "已",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/已.json",
+      "sourceBlobSha": "f2a4ccdb3deef188f6bc2b610d1aeb9b3e6241d3",
+      "traditional": "已",
+      "dictionaryReadings": [
+        "yi3"
+      ],
+      "dictionaryDefinitions": {
+        "yi3": "already; to stop; then; afterwards; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "finished",
+          "sourceGlossGroupIndex": 1,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 62,
+      "character": "巳",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/巳.json",
+      "sourceBlobSha": "9e726c02915e400de09aa84efca9f62daae7be2d",
+      "traditional": "巳",
+      "dictionaryReadings": [
+        "si4"
+      ],
+      "dictionaryDefinitions": {
+        "si4": "6th earthly branch: 9-11 a.m., 4th solar month (5th May-5th June), year of the Snake; ancient Chinese compass point: 150°; "
+      },
+      "selectedSenseChecks": [],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 63,
+      "character": "弓",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/弓.json",
+      "sourceBlobSha": "742093b0a7890e3eb469fe0c9274bfa95fdf766c",
+      "traditional": "弓",
+      "dictionaryReadings": [
+        "Gong1",
+        "gong1"
+      ],
+      "dictionaryDefinitions": {
+        "Gong1": "surname Gong; ",
+        "gong1": "a bow (weapon); CL:張|张[zhang1]; to bend; to arch (one's back etc); "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "bow",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "gong1"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 64,
+      "character": "子",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/子.json",
+      "sourceBlobSha": "ffbf702ba461ccd02859e0bf97787b8932dc645a",
+      "traditional": "子",
+      "dictionaryReadings": [
+        "zi3",
+        "zi5"
+      ],
+      "dictionaryDefinitions": {
+        "zi3": "son; child; seed; egg; small thing; 1st earthly branch: 11 p.m.-1 a.m., midnight, 11th solar month (7th December to 5th January), year of the Rat; Viscount, fourth of five orders of nobility 五等爵位[wu3 deng3 jue2 wei4]; ancient Chinese compass point: 0° (north); ",
+        "zi5": "(noun suffix); "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "child",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "zi3"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 65,
+      "character": "卫",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/卫.json",
+      "sourceBlobSha": "f0a54d53466a59fa6a8a6677af84c3ce39a744c3",
+      "traditional": "衛",
+      "dictionaryReadings": [
+        "Wei4",
+        "wei4"
+      ],
+      "dictionaryDefinitions": {
+        "Wei4": "surname Wei; vassal state during the Zhou Dynasty (1066-221 BC), located in present day Henan and Hebei Provinces; ",
+        "wei4": "to guard; to protect; to defend; abbr. for 衛生|卫生, hygiene; health; abbr. for 衛生間|卫生间, toilet; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "protect",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "wei4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 66,
+      "character": "也",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/也.json",
+      "sourceBlobSha": "16e64e3cfde1b934ff334b62c984bad34eee1eaa",
+      "traditional": "也",
+      "dictionaryReadings": [
+        "Ye3",
+        "ye3"
+      ],
+      "dictionaryDefinitions": {
+        "Ye3": "surname Ye; ",
+        "ye3": "also; too; (in Classical Chinese) final particle implying affirmation; "
+      },
+      "selectedSenseChecks": [],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 67,
+      "character": "女",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/女.json",
+      "sourceBlobSha": "187dd0fdcecf9a658cee0f1bd4cee37daa5bbaeb",
+      "traditional": "女",
+      "dictionaryReadings": [
+        "nu:3",
+        "ru3"
+      ],
+      "dictionaryDefinitions": {
+        "nu:3": "female; woman; daughter; ",
+        "ru3": "archaic variant of 汝[ru3]; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "woman",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "nu:3"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 68,
+      "character": "刃",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/刃.json",
+      "sourceBlobSha": "5d2ea05710b4985208ed476b2b416ae3d07e36bf",
+      "traditional": "刃",
+      "dictionaryReadings": [
+        "ren4"
+      ],
+      "dictionaryDefinitions": {
+        "ren4": "edge of blade; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "knife edge",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 69,
+      "character": "飞",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/飞.json",
+      "sourceBlobSha": "d921682575978889a12a6cf00b184f689579e333",
+      "traditional": "飛",
+      "dictionaryReadings": [
+        "fei1"
+      ],
+      "dictionaryDefinitions": {
+        "fei1": "to fly; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "fly",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "fei1"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 70,
+      "character": "习",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/习.json",
+      "sourceBlobSha": "cc8b900545638e2fb53a27835d97ad18e8503843",
+      "traditional": "習",
+      "dictionaryReadings": [
+        "Xi2",
+        "xi2"
+      ],
+      "dictionaryDefinitions": {
+        "Xi2": "surname Xi; ",
+        "xi2": "to practice; to study; habit; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "practice",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "xi2"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 71,
+      "character": "叉",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/叉.json",
+      "sourceBlobSha": "e84ce6b88446d37a260ea4821075d531baa922af",
+      "traditional": "叉",
+      "dictionaryReadings": [
+        "cha1",
+        "cha2",
+        "cha3"
+      ],
+      "dictionaryDefinitions": {
+        "cha1": "fork; pitchfork; prong; pick; cross; intersect; 'X'; ",
+        "cha2": "to cross; be stuck; ",
+        "cha3": "to diverge; to open (as legs); "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "fork",
+          "sourceGlossGroupIndex": 1,
+          "matchingDictionaryReadings": [
+            "cha1"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 72,
+      "character": "马",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/马.json",
+      "sourceBlobSha": "bd133eac93ec55e826525413274b4244a68ce90e",
+      "traditional": "馬",
+      "dictionaryReadings": [
+        "Ma3",
+        "ma3"
+      ],
+      "dictionaryDefinitions": {
+        "Ma3": "surname Ma; abbr. for Malaysia 馬來西亞|马来西亚[Ma3 lai2 xi1 ya4]; ",
+        "ma3": "horse; CL:匹[pi3]; horse or cavalry piece in Chinese chess; knight in Western chess; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "horse",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "ma3"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 73,
+      "character": "乡",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/乡.json",
+      "sourceBlobSha": "10fe3a86ade31096fa4677153474311a4b78b618",
+      "traditional": "鄉",
+      "dictionaryReadings": [
+        "xiang1"
+      ],
+      "dictionaryDefinitions": {
+        "xiang1": "country or countryside; native place; home village or town; township (PRC administrative unit); "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "village",
+          "sourceGlossGroupIndex": 2,
+          "matchingDictionaryReadings": [
+            "xiang1"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 74,
+      "character": "丰",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/丰.json",
+      "sourceBlobSha": "ebf3b9e4bb16516b0a0b2a33be323c63c78d14d2",
+      "traditional": "豐",
+      "dictionaryReadings": [
+        "feng1",
+        "Feng1"
+      ],
+      "dictionaryDefinitions": {
+        "feng1": "luxuriant; buxom; variant of 豐|丰[feng1]; variant of 風|风[feng1]; appearance; charm; abundant; plentiful; fertile; plump; great; ",
+        "Feng1": "surname Feng; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "abundant",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "feng1"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 75,
+      "character": "王",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/王.json",
+      "sourceBlobSha": "e6844f775ef8565401447d38188b57cafcd50aa3",
+      "traditional": "王",
+      "dictionaryReadings": [
+        "Wang2",
+        "wang2",
+        "wang4"
+      ],
+      "dictionaryDefinitions": {
+        "Wang2": "surname Wang; ",
+        "wang2": "king or monarch; best or strongest of its type; grand; great; ",
+        "wang4": "to rule; to reign over; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "king",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "wang2"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    }
+  ]
+}
