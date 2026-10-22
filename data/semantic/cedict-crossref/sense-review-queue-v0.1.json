@@ -54,7 +54,10 @@
         "kind": "sense_scope_conflict",
         "provisionalNextAction": "reassess_or_defer",
         "observation": "The independent headword emphasizes gas, air and qi; steam is too narrow as a general cue for 气.",
-        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review",
+        "sourceExcerpt": "qi4: gas; air; smell; weather; to make angry; to annoy; to get angry; vital energy; qi;",
+        "sourceBasis": "pinned_CC-CEDICT_headword_plus_Unihan_candidate",
+        "reviewerIndependent": false
       }
     },
     {
@@ -79,7 +82,10 @@
         "kind": "meaning_shift",
         "provisionalNextAction": "reassess_or_defer",
         "observation": "Still, yet and remain imply continuation rather than repetition; the again/🔁 cue may teach the wrong contrast.",
-        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review",
+        "sourceExcerpt": "reng2: still; yet; to remain;",
+        "sourceBasis": "pinned_CC-CEDICT_headword_plus_Unihan_candidate",
+        "reviewerIndependent": false
       }
     },
     {
@@ -104,7 +110,10 @@
         "kind": "modern_versus_historical",
         "provisionalNextAction": "reassess_or_defer",
         "observation": "The independent dictionary presents the contemporary mass unit; axe may reflect historical character analysis, not the primary modern usage.",
-        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review",
+        "sourceExcerpt": "jin1: catty; weight equal to 0.5 kg; (Tw) weight equal to 0.6 kg;",
+        "sourceBasis": "pinned_CC-CEDICT_headword_plus_Unihan_candidate",
+        "reviewerIndependent": false
       }
     },
     {
@@ -129,7 +138,10 @@
         "kind": "semantic_conflict",
         "provisionalNextAction": "reassess_or_defer",
         "observation": "Terrible, fierce and ominous are not equivalent to sad; the unhappy-face pictogram risks misinformation.",
-        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review",
+        "sourceExcerpt": "xiong1: terrible; fearful; vicious; fierce; ominous; inauspicious; famine; variant of 兇|凶[xiong1];",
+        "sourceBasis": "pinned_CC-CEDICT_headword_plus_Unihan_candidate",
+        "reviewerIndependent": false
       }
     },
     {
@@ -157,7 +169,10 @@
         "kind": "part_of_speech",
         "provisionalNextAction": "inspect_existing_alternative",
         "observation": "The source emphasizes the noun fire; evaluate the separate fire candidate before treating burn as a verb-level meaning.",
-        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review",
+        "sourceExcerpt": "Huo3: surname Huo; | huo3: fire; urgent; ammunition; fiery or flaming; internal heat (Chinese medicine); hot (popular); classifier for military units (old);",
+        "sourceBasis": "pinned_CC-CEDICT_headword_plus_Unihan_candidate",
+        "reviewerIndependent": false
       }
     },
     {
@@ -191,7 +206,10 @@
         "kind": "part_of_speech",
         "provisionalNextAction": "redesign_verb_cue",
         "observation": "The cited meanings are predominantly verbal agree, draw up and order; agreement-as-noun pictograms lose action structure.",
-        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review",
+        "sourceExcerpt": "ding4: to agree; to conclude; to draw up; to subscribe to (a newspaper etc); to order;",
+        "sourceBasis": "pinned_CC-CEDICT_headword_plus_Unihan_candidate",
+        "reviewerIndependent": false
       }
     },
     {
@@ -216,7 +234,10 @@
         "kind": "specificity_mismatch",
         "provisionalNextAction": "redesign_pictogram",
         "observation": "Jade is more specific than precious stone; 💎 could suggest a diamond rather than the mineral/cultural referent.",
-        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review",
+        "sourceExcerpt": "yu4: jade;",
+        "sourceBasis": "pinned_CC-CEDICT_headword_plus_Unihan_candidate",
+        "reviewerIndependent": false
       }
     },
     {
@@ -241,7 +262,10 @@
         "kind": "action_specificity",
         "provisionalNextAction": "redesign_verb_cue",
         "observation": "Pounce, pat, flap and dab are distinct from generic attack; the ⚔️ pictogram is too broad.",
-        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review",
+        "sourceExcerpt": "pu1: to throw oneself at; to pounce on; to devote one's energies; to flap; to flutter; to dab; to pat; to bend over;",
+        "sourceBasis": "pinned_CC-CEDICT_headword_plus_Unihan_candidate",
+        "reviewerIndependent": false
       }
     },
     {
@@ -266,7 +290,10 @@
         "kind": "near_synonym",
         "provisionalNextAction": "inspect_context",
         "observation": "Hill versus hillock/mound is a plausible difference in lexical granularity. The original substring match was not whole-term evidence.",
-        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review",
+        "sourceExcerpt": "Qiu1: surname Qiu; | qiu1: mound; hillock; grave; classifier for fields; variant of 丘[qiu1]; hillock;",
+        "sourceBasis": "pinned_CC-CEDICT_headword_plus_Unihan_candidate",
+        "reviewerIndependent": false
       }
     },
     {
@@ -291,7 +318,10 @@
         "kind": "lexical_context_conflict",
         "provisionalNextAction": "reassess_or_defer",
         "observation": "Palace courtyard can be translated court in a historical context but ⚖️ suggests a legal courtroom, which may mislead.",
-        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review",
+        "sourceExcerpt": "ting2: palace courtyard;",
+        "sourceBasis": "pinned_CC-CEDICT_headword_plus_Unihan_candidate",
+        "reviewerIndependent": false
       }
     },
     {
@@ -316,7 +346,10 @@
         "kind": "morphology_difference",
         "provisionalNextAction": "inspect_context",
         "observation": "Extremely as adverb and utmost/top as nouns or adjectives overlap with extreme, but grammar and scope differ.",
-        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review",
+        "sourceExcerpt": "ji2: extremely; pole (geography, physics); utmost; top;",
+        "sourceBasis": "pinned_CC-CEDICT_headword_plus_Unihan_candidate",
+        "reviewerIndependent": false
       }
     },
     {
@@ -341,7 +374,10 @@
         "kind": "number_inflection",
         "provisionalNextAction": "inspect_context",
         "observation": "The dictionary gives plural soldiers; singular soldier may be a valid member-of-class cue. This is a boundary-only mismatch.",
-        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review",
+        "sourceExcerpt": "bing1: soldiers; a force; an army; weapons; arms; military; warlike; CL:個|个[ge4];",
+        "sourceBasis": "pinned_CC-CEDICT_headword_plus_Unihan_candidate",
+        "reviewerIndependent": false
       }
     },
     {
@@ -369,7 +405,10 @@
         "kind": "derivational_morphology",
         "provisionalNextAction": "inspect_context",
         "observation": "The dictionary lists -shaped as a suffix along with state and condition, so standalone shape needs lexical-category evidence.",
-        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review",
+        "sourceExcerpt": "zhuang4: accusation; suit; state; condition; strong; great; -shaped;",
+        "sourceBasis": "pinned_CC-CEDICT_headword_plus_Unihan_candidate",
+        "reviewerIndependent": false
       }
     },
     {
@@ -401,7 +440,10 @@
         "kind": "aspect_or_participle",
         "provisionalNextAction": "redesign_verb_cue",
         "observation": "Drowned is in the source under mo4, but the 🌊 pictogram depicts water rather than the act or result of drowning.",
-        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review",
+        "sourceExcerpt": "mei2: (negative prefix for verbs); have not; not; | mo4: drowned; to end; to die; to inundate;",
+        "sourceBasis": "pinned_CC-CEDICT_headword_plus_Unihan_candidate",
+        "reviewerIndependent": false
       }
     },
     {
@@ -430,7 +472,10 @@
         "kind": "adjective_noun_shift",
         "provisionalNextAction": "inspect_context",
         "observation": "Lucky/fortunate and luck are related but differ in grammatical type; 🍀 is a conventional luck cue needing comprehension review.",
-        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review",
+        "sourceExcerpt": "xing4: trusted; intimate; (of the emperor) to visit; variant of 幸[xing4]; fortunate; lucky; | Xing4: surname Xing;",
+        "sourceBasis": "pinned_CC-CEDICT_headword_plus_Unihan_candidate",
+        "reviewerIndependent": false
       }
     },
     {
