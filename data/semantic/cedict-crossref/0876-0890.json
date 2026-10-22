@@ -1,0 +1,431 @@
+{
+  "schema": "chromalect.mandarin.lexical-crossref-batch.v0.1",
+  "source": {
+    "title": "CC-CEDICT per-headword v2 mirror",
+    "repository": "krmanik/cedict-json",
+    "commit": "63c2569948629323b515833930fdd10f285401b6",
+    "dataLicense": "CC BY-SA 4.0",
+    "upstream": "https://cc-cedict.org/",
+    "mirror": "https://github.com/krmanik/cedict-json",
+    "transform": "Selected single-simplified-character dictionary records, retaining readings and definitions; literal English gloss matching is automated triage only"
+  },
+  "rankStart": 876,
+  "rankEnd": 890,
+  "summary": {
+    "total": 15,
+    "headwordFound": 15,
+    "withCandidate": 13,
+    "withLiteralSupport": 10
+  },
+  "records": [
+    {
+      "rank": 876,
+      "character": "快",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/快.json",
+      "sourceBlobSha": "6e289bbcda737d3ac64c7715565143da8a2e98a3",
+      "traditional": "快",
+      "dictionaryReadings": [
+        "kuai4"
+      ],
+      "dictionaryDefinitions": {
+        "kuai4": "rapid; quick; speed; rate; soon; almost; to make haste; clever; sharp (of knives or wits); forthright; plainspoken; gratified; pleased; pleasant; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "fast",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 877,
+      "character": "完",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/完.json",
+      "sourceBlobSha": "c1c89d0d26fd8b7871d60e80c652c66213f2dff1",
+      "traditional": "完",
+      "dictionaryReadings": [
+        "wan2"
+      ],
+      "dictionaryDefinitions": {
+        "wan2": "to finish; to be over; whole; complete; entire; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "complete",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "wan2"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 878,
+      "character": "宋",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/宋.json",
+      "sourceBlobSha": "fb34df5e74cf3d80aa5bb6c6a16e1a057ea90ac0",
+      "traditional": "宋",
+      "dictionaryReadings": [
+        "Song4"
+      ],
+      "dictionaryDefinitions": {
+        "Song4": "surname Song; the Song dynasty (960-1279); also Song of the Southern dynasties 南朝宋 (420-479); "
+      },
+      "selectedSenseChecks": [],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 879,
+      "character": "宏",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/宏.json",
+      "sourceBlobSha": "313f244993c7d1a1271c4a5b8d9eb86c88b0e0c4",
+      "traditional": "宏",
+      "dictionaryReadings": [
+        "hong2"
+      ],
+      "dictionaryDefinitions": {
+        "hong2": "great; magnificent; macro (computing); macro-; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "wide",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 880,
+      "character": "牢",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/牢.json",
+      "sourceBlobSha": "68debeb6390ad8b517b08da399faa341ece6b04e",
+      "traditional": "牢",
+      "dictionaryReadings": [
+        "lao2"
+      ],
+      "dictionaryDefinitions": {
+        "lao2": "firm; sturdy; fold (for animals); sacrifice; prison; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "prison",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "lao2"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 881,
+      "character": "究",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/究.json",
+      "sourceBlobSha": "55e43a721f025c7dc49ef575266ce61829494da0",
+      "traditional": "究",
+      "dictionaryReadings": [
+        "jiu1"
+      ],
+      "dictionaryDefinitions": {
+        "jiu1": "after all; to investigate; to study carefully; Taiwan pr. [jiu4]; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "investigate",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "jiu1"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 882,
+      "character": "穷",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/穷.json",
+      "sourceBlobSha": "67b7bf2136c31c0eb317fbf4ef962c1d6581391d",
+      "traditional": "窮",
+      "dictionaryReadings": [
+        "qiong2"
+      ],
+      "dictionaryDefinitions": {
+        "qiong2": "poor; destitute; to use up; to exhaust; thoroughly; extremely; (coll.) persistently and pointlessly; "
+      },
+      "selectedSenseChecks": [],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 883,
+      "character": "灾",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/灾.json",
+      "sourceBlobSha": "bcf46bfb1adc90c193dd23ce8fdf8e711fb9bf67",
+      "traditional": "菑",
+      "dictionaryReadings": [
+        "zai1"
+      ],
+      "dictionaryDefinitions": {
+        "zai1": "disaster; calamity; variant of 災|灾[zai1]; old variant of 災|灾[zai1]; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "disaster",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "zai1"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 884,
+      "character": "良",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/良.json",
+      "sourceBlobSha": "31ccd3f230d51c4713a1032384e5089b28c85d14",
+      "traditional": "良",
+      "dictionaryReadings": [
+        "liang2"
+      ],
+      "dictionaryDefinitions": {
+        "liang2": "good; very; very much; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "good",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "liang2"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 885,
+      "character": "证",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/证.json",
+      "sourceBlobSha": "336977bf498e60bc8d5fb8cbd88afac221e2102a",
+      "traditional": "證",
+      "dictionaryReadings": [
+        "zheng4"
+      ],
+      "dictionaryDefinitions": {
+        "zheng4": "to admonish; variant of 證|证[zheng4]; certificate; proof; to prove; to demonstrate; to confirm; variant of 症[zheng4]; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "prove",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "zheng4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 886,
+      "character": "启",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/启.json",
+      "sourceBlobSha": "0a7553f1f1e242b648fae0f08f3fb357bc69cff3",
+      "traditional": "啟",
+      "dictionaryReadings": [
+        "Qi3",
+        "qi3"
+      ],
+      "dictionaryDefinitions": {
+        "Qi3": "Qi son of Yu the Great 禹[Yu3], reported founder of the Xia Dynasty 夏朝[Xia4 Chao2] (c. 2070-c. 1600 BC); ",
+        "qi3": "to open; to start; to initiate; to enlighten or awaken; to state; to inform; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "open",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "qi3"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 887,
+      "character": "评",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/评.json",
+      "sourceBlobSha": "60b5a60f48d8f098557643ec37aa02042eafde64",
+      "traditional": "評",
+      "dictionaryReadings": [
+        "ping2"
+      ],
+      "dictionaryDefinitions": {
+        "ping2": "to discuss; to comment; to criticize; to judge; to choose (by public appraisal); "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "evaluate",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 888,
+      "character": "补",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/补.json",
+      "sourceBlobSha": "12e71636ded472031161c70a929cace26802f0cd",
+      "traditional": "補",
+      "dictionaryReadings": [
+        "bu3"
+      ],
+      "dictionaryDefinitions": {
+        "bu3": "to repair; to patch; to mend; to make up for; to fill (a vacancy); to supplement; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "repair",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "bu3"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 889,
+      "character": "初",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/初.json",
+      "sourceBlobSha": "c5501de7f163c5102ce500c7a0b89d4b26dbbbf6",
+      "traditional": "初",
+      "dictionaryReadings": [
+        "chu1"
+      ],
+      "dictionaryDefinitions": {
+        "chu1": "at first; (at the) beginning; first; junior; basic; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "beginning",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "chu1"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 890,
+      "character": "社",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/社.json",
+      "sourceBlobSha": "2981dd6079254090ddd2e7e1364998693a9385b0",
+      "traditional": "社",
+      "dictionaryReadings": [
+        "she4"
+      ],
+      "dictionaryDefinitions": {
+        "she4": "society; group; club; agency; (old) god of the land; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "society",
+          "sourceGlossGroupIndex": 2,
+          "matchingDictionaryReadings": [
+            "she4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    }
+  ]
+}
