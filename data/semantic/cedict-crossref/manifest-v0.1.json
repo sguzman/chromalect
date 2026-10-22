@@ -267,18 +267,58 @@
       "path": "0691-0700.json",
       "start": 691,
       "end": 700
+    },
+    {
+      "path": "0701-0710.json",
+      "start": 701,
+      "end": 710
+    },
+    {
+      "path": "0711-0720.json",
+      "start": 711,
+      "end": 720
+    },
+    {
+      "path": "0721-0730.json",
+      "start": 721,
+      "end": 730
+    },
+    {
+      "path": "0731-0740.json",
+      "start": 731,
+      "end": 740
+    },
+    {
+      "path": "0741-0755.json",
+      "start": 741,
+      "end": 755
+    },
+    {
+      "path": "0756-0770.json",
+      "start": 756,
+      "end": 770
+    },
+    {
+      "path": "0771-0785.json",
+      "start": 771,
+      "end": 785
+    },
+    {
+      "path": "0786-0800.json",
+      "start": 786,
+      "end": 800
     }
   ],
   "metrics": {
     "totalCharacters": 1000,
     "initiallyScreened": 1000,
-    "crossReferenced": 700,
-    "headwordsFound": 700,
-    "charactersWithCandidate": 600,
-    "candidateExpressions": 611,
-    "charactersWithLiteralCandidateMatch": 449,
-    "expressionLiteralMatches": 457,
-    "expressionGlossMismatchOrSynonym": 154,
+    "crossReferenced": 800,
+    "headwordsFound": 800,
+    "charactersWithCandidate": 696,
+    "candidateExpressions": 709,
+    "charactersWithLiteralCandidateMatch": 516,
+    "expressionLiteralMatches": 525,
+    "expressionGlossMismatchOrSynonym": 184,
     "manualSenseReviewed": 0,
     "emojiComprehensionReviewed": 0,
     "productionVerified": 0
@@ -6885,9 +6925,6 @@
       "rank": 501,
       "character": "旨",
       "sourceStatus": "headword_found",
-      "readings": [
-        "zhi3"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "purpose",
@@ -6897,16 +6934,12 @@
           ]
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/旨.json"
+      "manualReview": "pending"
     },
     {
       "rank": 502,
       "character": "旭",
       "sourceStatus": "headword_found",
-      "readings": [
-        "xu4"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "rising sun",
@@ -6916,16 +6949,12 @@
           ]
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/旭.json"
+      "manualReview": "pending"
     },
     {
       "rank": 503,
       "character": "负",
       "sourceStatus": "headword_found",
-      "readings": [
-        "fu4"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "burden",
@@ -6933,17 +6962,12 @@
           "matchingDictionaryReadings": []
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/负.json"
+      "manualReview": "pending"
     },
     {
       "rank": 504,
       "character": "匈",
       "sourceStatus": "headword_found",
-      "readings": [
-        "Xiong1",
-        "xiong1"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "chest",
@@ -6951,16 +6975,12 @@
           "matchingDictionaryReadings": []
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/匈.json"
+      "manualReview": "pending"
     },
     {
       "rank": 505,
       "character": "名",
       "sourceStatus": "headword_found",
-      "readings": [
-        "ming2"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "name",
@@ -6970,16 +6990,12 @@
           ]
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/名.json"
+      "manualReview": "pending"
     },
     {
       "rank": 506,
       "character": "各",
       "sourceStatus": "headword_found",
-      "readings": [
-        "ge4"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "each",
@@ -6989,16 +7005,12 @@
           ]
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/各.json"
+      "manualReview": "pending"
     },
     {
       "rank": 507,
       "character": "多",
       "sourceStatus": "headword_found",
-      "readings": [
-        "duo1"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "many",
@@ -7008,16 +7020,12 @@
           ]
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/多.json"
+      "manualReview": "pending"
     },
     {
       "rank": 508,
       "character": "争",
       "sourceStatus": "headword_found",
-      "readings": [
-        "zheng1"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "fight",
@@ -7025,17 +7033,12 @@
           "matchingDictionaryReadings": []
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/争.json"
+      "manualReview": "pending"
     },
     {
       "rank": 509,
       "character": "色",
       "sourceStatus": "headword_found",
-      "readings": [
-        "se4",
-        "shai3"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "color",
@@ -7046,17 +7049,12 @@
           ]
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/色.json"
+      "manualReview": "pending"
     },
     {
       "rank": 510,
       "character": "壮",
       "sourceStatus": "headword_found",
-      "readings": [
-        "Zhuang4",
-        "zhuang4"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "robust",
@@ -7066,17 +7064,12 @@
           ]
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/壮.json"
+      "manualReview": "pending"
     },
     {
       "rank": 511,
       "character": "冲",
       "sourceStatus": "headword_found",
-      "readings": [
-        "chong1",
-        "chong4"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "soar",
@@ -7084,16 +7077,12 @@
           "matchingDictionaryReadings": []
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/冲.json"
+      "manualReview": "pending"
     },
     {
       "rank": 512,
       "character": "妆",
       "sourceStatus": "headword_found",
-      "readings": [
-        "zhuang1"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "make-up",
@@ -7101,16 +7090,12 @@
           "matchingDictionaryReadings": []
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/妆.json"
+      "manualReview": "pending"
     },
     {
       "rank": 513,
       "character": "冰",
       "sourceStatus": "headword_found",
-      "readings": [
-        "bing1"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "ice",
@@ -7120,17 +7105,12 @@
           ]
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/冰.json"
+      "manualReview": "pending"
     },
     {
       "rank": 514,
       "character": "庄",
       "sourceStatus": "headword_found",
-      "readings": [
-        "zhuang1",
-        "Zhuang1"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "village",
@@ -7140,16 +7120,12 @@
           ]
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/庄.json"
+      "manualReview": "pending"
     },
     {
       "rank": 515,
       "character": "庆",
       "sourceStatus": "headword_found",
-      "readings": [
-        "qing4"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "celebrate",
@@ -7159,16 +7135,12 @@
           ]
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/庆.json"
+      "manualReview": "pending"
     },
     {
       "rank": 516,
       "character": "亦",
       "sourceStatus": "headword_found",
-      "readings": [
-        "yi4"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "also",
@@ -7178,16 +7150,12 @@
           ]
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/亦.json"
+      "manualReview": "pending"
     },
     {
       "rank": 517,
       "character": "刘",
       "sourceStatus": "headword_found",
-      "readings": [
-        "Liu2"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "kill",
@@ -7195,17 +7163,12 @@
           "matchingDictionaryReadings": []
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/刘.json"
+      "manualReview": "pending"
     },
     {
       "rank": 518,
       "character": "齐",
       "sourceStatus": "headword_found",
-      "readings": [
-        "Qi2",
-        "qi2"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "equal",
@@ -7213,16 +7176,12 @@
           "matchingDictionaryReadings": []
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/齐.json"
+      "manualReview": "pending"
     },
     {
       "rank": 519,
       "character": "交",
       "sourceStatus": "headword_found",
-      "readings": [
-        "jiao1"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "exchange",
@@ -7230,17 +7189,12 @@
           "matchingDictionaryReadings": []
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/交.json"
+      "manualReview": "pending"
     },
     {
       "rank": 520,
       "character": "衣",
       "sourceStatus": "headword_found",
-      "readings": [
-        "yi1",
-        "yi4"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "clothes",
@@ -7251,16 +7205,12 @@
           ]
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/衣.json"
+      "manualReview": "pending"
     },
     {
       "rank": 521,
       "character": "次",
       "sourceStatus": "headword_found",
-      "readings": [
-        "ci4"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "next",
@@ -7270,16 +7220,12 @@
           ]
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/次.json"
+      "manualReview": "pending"
     },
     {
       "rank": 522,
       "character": "产",
       "sourceStatus": "headword_found",
-      "readings": [
-        "chan3"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "give birth",
@@ -7289,16 +7235,12 @@
           ]
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/产.json"
+      "manualReview": "pending"
     },
     {
       "rank": 523,
       "character": "决",
       "sourceStatus": "headword_found",
-      "readings": [
-        "jue2"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "decide",
@@ -7308,27 +7250,19 @@
           ]
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/决.json"
+      "manualReview": "pending"
     },
     {
       "rank": 524,
       "character": "亥",
       "sourceStatus": "headword_found",
-      "readings": [
-        "hai4"
-      ],
       "selectedSenseChecks": [],
-      "manualReview": "pending",
-      "sourceFile": "v2/亥.json"
+      "manualReview": "pending"
     },
     {
       "rank": 525,
       "character": "充",
       "sourceStatus": "headword_found",
-      "readings": [
-        "chong1"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "fill",
@@ -7338,16 +7272,12 @@
           ]
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/充.json"
+      "manualReview": "pending"
     },
     {
       "rank": 526,
       "character": "妄",
       "sourceStatus": "headword_found",
-      "readings": [
-        "wang4"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "foolish",
@@ -7355,16 +7285,12 @@
           "matchingDictionaryReadings": []
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/妄.json"
+      "manualReview": "pending"
     },
     {
       "rank": 527,
       "character": "闭",
       "sourceStatus": "headword_found",
-      "readings": [
-        "bi4"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "close",
@@ -7374,16 +7300,12 @@
           ]
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/闭.json"
+      "manualReview": "pending"
     },
     {
       "rank": 528,
       "character": "问",
       "sourceStatus": "headword_found",
-      "readings": [
-        "wen4"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "ask",
@@ -7393,16 +7315,12 @@
           ]
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/问.json"
+      "manualReview": "pending"
     },
     {
       "rank": 529,
       "character": "闯",
       "sourceStatus": "headword_found",
-      "readings": [
-        "chuang3"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "rush in",
@@ -7410,17 +7328,12 @@
           "matchingDictionaryReadings": []
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/闯.json"
+      "manualReview": "pending"
     },
     {
       "rank": 530,
       "character": "羊",
       "sourceStatus": "headword_found",
-      "readings": [
-        "Yang2",
-        "yang2"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "sheep",
@@ -7430,16 +7343,12 @@
           ]
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/羊.json"
+      "manualReview": "pending"
     },
     {
       "rank": 531,
       "character": "并",
       "sourceStatus": "headword_found",
-      "readings": [
-        "bing4"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "combine",
@@ -7449,17 +7358,12 @@
           ]
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/并.json"
+      "manualReview": "pending"
     },
     {
       "rank": 532,
       "character": "关",
       "sourceStatus": "headword_found",
-      "readings": [
-        "Guan1",
-        "guan1"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "close",
@@ -7469,28 +7373,19 @@
           ]
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/关.json"
+      "manualReview": "pending"
     },
     {
       "rank": 533,
       "character": "米",
       "sourceStatus": "headword_found",
-      "readings": [
-        "Mi3",
-        "mi3"
-      ],
       "selectedSenseChecks": [],
-      "manualReview": "pending",
-      "sourceFile": "v2/米.json"
+      "manualReview": "pending"
     },
     {
       "rank": 534,
       "character": "灯",
       "sourceStatus": "headword_found",
-      "readings": [
-        "deng1"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "lamp",
@@ -7500,16 +7395,12 @@
           ]
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/灯.json"
+      "manualReview": "pending"
     },
     {
       "rank": 535,
       "character": "州",
       "sourceStatus": "headword_found",
-      "readings": [
-        "zhou1"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "state",
@@ -7519,17 +7410,12 @@
           ]
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/州.json"
+      "manualReview": "pending"
     },
     {
       "rank": 536,
       "character": "汗",
       "sourceStatus": "headword_found",
-      "readings": [
-        "han2",
-        "han4"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "sweat",
@@ -7539,16 +7425,12 @@
           ]
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/汗.json"
+      "manualReview": "pending"
     },
     {
       "rank": 537,
       "character": "污",
       "sourceStatus": "headword_found",
-      "readings": [
-        "wu1"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "dirty",
@@ -7558,17 +7440,12 @@
           ]
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/污.json"
+      "manualReview": "pending"
     },
     {
       "rank": 538,
       "character": "江",
       "sourceStatus": "headword_found",
-      "readings": [
-        "Jiang1",
-        "jiang1"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "river",
@@ -7578,16 +7455,12 @@
           ]
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/江.json"
+      "manualReview": "pending"
     },
     {
       "rank": 539,
       "character": "汛",
       "sourceStatus": "headword_found",
-      "readings": [
-        "xun4"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "flood",
@@ -7597,17 +7470,12 @@
           ]
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/汛.json"
+      "manualReview": "pending"
     },
     {
       "rank": 540,
       "character": "池",
       "sourceStatus": "headword_found",
-      "readings": [
-        "Chi2",
-        "chi2"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "pond",
@@ -7617,16 +7485,12 @@
           ]
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/池.json"
+      "manualReview": "pending"
     },
     {
       "rank": 541,
       "character": "汝",
       "sourceStatus": "headword_found",
-      "readings": [
-        "ru3"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "you",
@@ -7634,18 +7498,12 @@
           "matchingDictionaryReadings": []
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/汝.json"
+      "manualReview": "pending"
     },
     {
       "rank": 542,
       "character": "汤",
       "sourceStatus": "headword_found",
-      "readings": [
-        "Tang1",
-        "shang1",
-        "tang1"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "soup",
@@ -7655,16 +7513,12 @@
           ]
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/汤.json"
+      "manualReview": "pending"
     },
     {
       "rank": 543,
       "character": "忙",
       "sourceStatus": "headword_found",
-      "readings": [
-        "mang2"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "busy",
@@ -7674,18 +7528,12 @@
           ]
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/忙.json"
+      "manualReview": "pending"
     },
     {
       "rank": 544,
       "character": "兴",
       "sourceStatus": "headword_found",
-      "readings": [
-        "Xing1",
-        "xing1",
-        "xing4"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "flourish",
@@ -7695,16 +7543,12 @@
           ]
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/兴.json"
+      "manualReview": "pending"
     },
     {
       "rank": 545,
       "character": "宇",
       "sourceStatus": "headword_found",
-      "readings": [
-        "yu3"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "house",
@@ -7712,16 +7556,12 @@
           "matchingDictionaryReadings": []
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/宇.json"
+      "manualReview": "pending"
     },
     {
       "rank": 546,
       "character": "守",
       "sourceStatus": "headword_found",
-      "readings": [
-        "shou3"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "protect",
@@ -7729,16 +7569,12 @@
           "matchingDictionaryReadings": []
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/守.json"
+      "manualReview": "pending"
     },
     {
       "rank": 547,
       "character": "宅",
       "sourceStatus": "headword_found",
-      "readings": [
-        "zhai2"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "home",
@@ -7748,16 +7584,12 @@
           ]
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/宅.json"
+      "manualReview": "pending"
     },
     {
       "rank": 548,
       "character": "字",
       "sourceStatus": "headword_found",
-      "readings": [
-        "zi4"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "character",
@@ -7767,17 +7599,12 @@
           ]
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/字.json"
+      "manualReview": "pending"
     },
     {
       "rank": 549,
       "character": "安",
       "sourceStatus": "headword_found",
-      "readings": [
-        "An1",
-        "an1"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "peaceful",
@@ -7785,16 +7612,12 @@
           "matchingDictionaryReadings": []
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/安.json"
+      "manualReview": "pending"
     },
     {
       "rank": 550,
       "character": "讲",
       "sourceStatus": "headword_found",
-      "readings": [
-        "jiang3"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "explain",
@@ -7804,16 +7627,12 @@
           ]
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/讲.json"
+      "manualReview": "pending"
     },
     {
       "rank": 551,
       "character": "讳",
       "sourceStatus": "headword_found",
-      "readings": [
-        "hui4"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "conceal",
@@ -7821,16 +7640,12 @@
           "matchingDictionaryReadings": []
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/讳.json"
+      "manualReview": "pending"
     },
     {
       "rank": 552,
       "character": "军",
       "sourceStatus": "headword_found",
-      "readings": [
-        "jun1"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "army",
@@ -7840,16 +7655,12 @@
           ]
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/军.json"
+      "manualReview": "pending"
     },
     {
       "rank": 553,
       "character": "讶",
       "sourceStatus": "headword_found",
-      "readings": [
-        "ya4"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "surprised",
@@ -7857,17 +7668,12 @@
           "matchingDictionaryReadings": []
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/讶.json"
+      "manualReview": "pending"
     },
     {
       "rank": 554,
       "character": "许",
       "sourceStatus": "headword_found",
-      "readings": [
-        "Xu3",
-        "xu3"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "allow",
@@ -7877,16 +7683,12 @@
           ]
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/许.json"
+      "manualReview": "pending"
     },
     {
       "rank": 555,
       "character": "讹",
       "sourceStatus": "headword_found",
-      "readings": [
-        "e2"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "cheat",
@@ -7894,17 +7696,12 @@
           "matchingDictionaryReadings": []
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/讹.json"
+      "manualReview": "pending"
     },
     {
       "rank": 556,
       "character": "论",
       "sourceStatus": "headword_found",
-      "readings": [
-        "Lun2",
-        "lun4"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "discuss",
@@ -7914,16 +7711,12 @@
           ]
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/论.json"
+      "manualReview": "pending"
     },
     {
       "rank": 557,
       "character": "讼",
       "sourceStatus": "headword_found",
-      "readings": [
-        "song4"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "litigate",
@@ -7931,17 +7724,12 @@
           "matchingDictionaryReadings": []
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/讼.json"
+      "manualReview": "pending"
     },
     {
       "rank": 558,
       "character": "农",
       "sourceStatus": "headword_found",
-      "readings": [
-        "Nong2",
-        "nong2"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "farming",
@@ -7949,16 +7737,12 @@
           "matchingDictionaryReadings": []
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/农.json"
+      "manualReview": "pending"
     },
     {
       "rank": 559,
       "character": "讽",
       "sourceStatus": "headword_found",
-      "readings": [
-        "feng3"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "satirize",
@@ -7968,16 +7752,12 @@
           ]
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/讽.json"
+      "manualReview": "pending"
     },
     {
       "rank": 560,
       "character": "设",
       "sourceStatus": "headword_found",
-      "readings": [
-        "she4"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "build",
@@ -7985,16 +7765,12 @@
           "matchingDictionaryReadings": []
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/设.json"
+      "manualReview": "pending"
     },
     {
       "rank": 561,
       "character": "访",
       "sourceStatus": "headword_found",
-      "readings": [
-        "fang3"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "visit",
@@ -8004,16 +7780,12 @@
           ]
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/访.json"
+      "manualReview": "pending"
     },
     {
       "rank": 562,
       "character": "诀",
       "sourceStatus": "headword_found",
-      "readings": [
-        "jue2"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "bid farewell",
@@ -8021,16 +7793,12 @@
           "matchingDictionaryReadings": []
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/诀.json"
+      "manualReview": "pending"
     },
     {
       "rank": 563,
       "character": "寻",
       "sourceStatus": "headword_found",
-      "readings": [
-        "xun2"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "search",
@@ -8040,20 +7808,12 @@
           ]
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/寻.json"
+      "manualReview": "pending"
     },
     {
       "rank": 564,
       "character": "那",
       "sourceStatus": "headword_found",
-      "readings": [
-        "Na1",
-        "Nuo2",
-        "na3",
-        "na4",
-        "nuo2"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "that",
@@ -8063,16 +7823,12 @@
           ]
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/那.json"
+      "manualReview": "pending"
     },
     {
       "rank": 565,
       "character": "迅",
       "sourceStatus": "headword_found",
-      "readings": [
-        "xun4"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "rapid",
@@ -8082,17 +7838,12 @@
           ]
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/迅.json"
+      "manualReview": "pending"
     },
     {
       "rank": 566,
       "character": "尽",
       "sourceStatus": "headword_found",
-      "readings": [
-        "jin3",
-        "jin4"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "deplete",
@@ -8100,16 +7851,12 @@
           "matchingDictionaryReadings": []
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/尽.json"
+      "manualReview": "pending"
     },
     {
       "rank": 567,
       "character": "导",
       "sourceStatus": "headword_found",
-      "readings": [
-        "dao3"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "guide",
@@ -8119,16 +7866,12 @@
           ]
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/导.json"
+      "manualReview": "pending"
     },
     {
       "rank": 568,
       "character": "异",
       "sourceStatus": "headword_found",
-      "readings": [
-        "yi4"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "different",
@@ -8138,16 +7881,12 @@
           ]
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/异.json"
+      "manualReview": "pending"
     },
     {
       "rank": 569,
       "character": "弛",
       "sourceStatus": "headword_found",
-      "readings": [
-        "chi2"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "relax",
@@ -8157,17 +7896,12 @@
           ]
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/弛.json"
+      "manualReview": "pending"
     },
     {
       "rank": 570,
       "character": "孙",
       "sourceStatus": "headword_found",
-      "readings": [
-        "Sun1",
-        "sun1"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "grandchild",
@@ -8175,16 +7909,12 @@
           "matchingDictionaryReadings": []
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/孙.json"
+      "manualReview": "pending"
     },
     {
       "rank": 571,
       "character": "阵",
       "sourceStatus": "headword_found",
-      "readings": [
-        "zhen4"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "troops",
@@ -8194,16 +7924,12 @@
           ]
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/阵.json"
+      "manualReview": "pending"
     },
     {
       "rank": 572,
       "character": "阳",
       "sourceStatus": "headword_found",
-      "readings": [
-        "yang2"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "sun",
@@ -8213,16 +7939,12 @@
           ]
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/阳.json"
+      "manualReview": "pending"
     },
     {
       "rank": 573,
       "character": "收",
       "sourceStatus": "headword_found",
-      "readings": [
-        "shou1"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "collect",
@@ -8232,16 +7954,12 @@
           ]
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/收.json"
+      "manualReview": "pending"
     },
     {
       "rank": 574,
       "character": "阶",
       "sourceStatus": "headword_found",
-      "readings": [
-        "jie1"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "stairs",
@@ -8251,17 +7969,12 @@
           ]
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/阶.json"
+      "manualReview": "pending"
     },
     {
       "rank": 575,
       "character": "阴",
       "sourceStatus": "headword_found",
-      "readings": [
-        "Yin1",
-        "yin1"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "dark",
@@ -8269,16 +7982,12 @@
           "matchingDictionaryReadings": []
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/阴.json"
+      "manualReview": "pending"
     },
     {
       "rank": 576,
       "character": "防",
       "sourceStatus": "headword_found",
-      "readings": [
-        "fang2"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "prevent",
@@ -8288,16 +7997,12 @@
           ]
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/防.json"
+      "manualReview": "pending"
     },
     {
       "rank": 577,
       "character": "奸",
       "sourceStatus": "headword_found",
-      "readings": [
-        "jian1"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "false",
@@ -8305,16 +8010,12 @@
           "matchingDictionaryReadings": []
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/奸.json"
+      "manualReview": "pending"
     },
     {
       "rank": 578,
       "character": "如",
       "sourceStatus": "headword_found",
-      "readings": [
-        "ru2"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "like",
@@ -8322,16 +8023,12 @@
           "matchingDictionaryReadings": []
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/如.json"
+      "manualReview": "pending"
     },
     {
       "rank": 579,
       "character": "妇",
       "sourceStatus": "headword_found",
-      "readings": [
-        "fu4"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "woman",
@@ -8341,16 +8038,12 @@
           ]
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/妇.json"
+      "manualReview": "pending"
     },
     {
       "rank": 580,
       "character": "妃",
       "sourceStatus": "headword_found",
-      "readings": [
-        "fei1"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "wife",
@@ -8358,17 +8051,12 @@
           "matchingDictionaryReadings": []
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/妃.json"
+      "manualReview": "pending"
     },
     {
       "rank": 581,
       "character": "好",
       "sourceStatus": "headword_found",
-      "readings": [
-        "hao3",
-        "hao4"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "good",
@@ -8378,16 +8066,12 @@
           ]
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/好.json"
+      "manualReview": "pending"
     },
     {
       "rank": 582,
       "character": "她",
       "sourceStatus": "headword_found",
-      "readings": [
-        "ta1"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "she",
@@ -8397,16 +8081,12 @@
           ]
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/她.json"
+      "manualReview": "pending"
     },
     {
       "rank": 583,
       "character": "妈",
       "sourceStatus": "headword_found",
-      "readings": [
-        "ma1"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "mother",
@@ -8416,16 +8096,12 @@
           ]
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/妈.json"
+      "manualReview": "pending"
     },
     {
       "rank": 584,
       "character": "戏",
       "sourceStatus": "headword_found",
-      "readings": [
-        "xi4"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "play",
@@ -8435,16 +8111,12 @@
           ]
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/戏.json"
+      "manualReview": "pending"
     },
     {
       "rank": 585,
       "character": "羽",
       "sourceStatus": "headword_found",
-      "readings": [
-        "yu3"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "feather",
@@ -8454,18 +8126,12 @@
           ]
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/羽.json"
+      "manualReview": "pending"
     },
     {
       "rank": 586,
       "character": "观",
       "sourceStatus": "headword_found",
-      "readings": [
-        "Guan4",
-        "guan1",
-        "guan4"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "observe",
@@ -8475,16 +8141,12 @@
           ]
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/观.json"
+      "manualReview": "pending"
     },
     {
       "rank": 587,
       "character": "欢",
       "sourceStatus": "headword_found",
-      "readings": [
-        "huan1"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "happy",
@@ -8494,16 +8156,12 @@
           ]
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/欢.json"
+      "manualReview": "pending"
     },
     {
       "rank": 588,
       "character": "买",
       "sourceStatus": "headword_found",
-      "readings": [
-        "mai3"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "buy",
@@ -8513,17 +8171,12 @@
           ]
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/买.json"
+      "manualReview": "pending"
     },
     {
       "rank": 589,
       "character": "红",
       "sourceStatus": "headword_found",
-      "readings": [
-        "Hong2",
-        "hong2"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "red",
@@ -8533,17 +8186,12 @@
           ]
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/红.json"
+      "manualReview": "pending"
     },
     {
       "rank": 590,
       "character": "驮",
       "sourceStatus": "headword_found",
-      "readings": [
-        "tuo2",
-        "duo4"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "carry",
@@ -8553,17 +8201,12 @@
           ]
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/驮.json"
+      "manualReview": "pending"
     },
     {
       "rank": 591,
       "character": "纤",
       "sourceStatus": "headword_found",
-      "readings": [
-        "qian4",
-        "xian1"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "delicate",
@@ -8573,16 +8216,12 @@
           ]
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/纤.json"
+      "manualReview": "pending"
     },
     {
       "rank": 592,
       "character": "驯",
       "sourceStatus": "headword_found",
-      "readings": [
-        "xun4"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "tame",
@@ -8592,17 +8231,12 @@
           ]
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/驯.json"
+      "manualReview": "pending"
     },
     {
       "rank": 593,
       "character": "约",
       "sourceStatus": "headword_found",
-      "readings": [
-        "yao1",
-        "yue1"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "agreement",
@@ -8610,16 +8244,12 @@
           "matchingDictionaryReadings": []
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/约.json"
+      "manualReview": "pending"
     },
     {
       "rank": 594,
       "character": "级",
       "sourceStatus": "headword_found",
-      "readings": [
-        "ji2"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "level",
@@ -8629,17 +8259,12 @@
           ]
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/级.json"
+      "manualReview": "pending"
     },
     {
       "rank": 595,
       "character": "纪",
       "sourceStatus": "headword_found",
-      "readings": [
-        "Ji3",
-        "ji4"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "historical",
@@ -8647,16 +8272,12 @@
           "matchingDictionaryReadings": []
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/纪.json"
+      "manualReview": "pending"
     },
     {
       "rank": 596,
       "character": "驰",
       "sourceStatus": "headword_found",
-      "readings": [
-        "chi2"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "hurry",
@@ -8664,16 +8285,12 @@
           "matchingDictionaryReadings": []
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/驰.json"
+      "manualReview": "pending"
     },
     {
       "rank": 597,
       "character": "纫",
       "sourceStatus": "headword_found",
-      "readings": [
-        "ren4"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "sew",
@@ -8681,16 +8298,12 @@
           "matchingDictionaryReadings": []
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/纫.json"
+      "manualReview": "pending"
     },
     {
       "rank": 598,
       "character": "巡",
       "sourceStatus": "headword_found",
-      "readings": [
-        "xun2"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "patrol",
@@ -8700,17 +8313,12 @@
           ]
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/巡.json"
+      "manualReview": "pending"
     },
     {
       "rank": 599,
       "character": "寿",
       "sourceStatus": "headword_found",
-      "readings": [
-        "Shou4",
-        "shou4"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "long life",
@@ -8720,17 +8328,12 @@
           ]
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/寿.json"
+      "manualReview": "pending"
     },
     {
       "rank": 600,
       "character": "弄",
       "sourceStatus": "headword_found",
-      "readings": [
-        "long4",
-        "nong4"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "alley",
@@ -8740,17 +8343,12 @@
           ]
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/弄.json"
+      "manualReview": "pending"
     },
     {
       "rank": 601,
       "character": "麦",
       "sourceStatus": "headword_found",
-      "readings": [
-        "Mai4",
-        "mai4"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "wheat",
@@ -8760,16 +8358,12 @@
           ]
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/麦.json"
+      "manualReview": "pending"
     },
     {
       "rank": 602,
       "character": "玖",
       "sourceStatus": "headword_found",
-      "readings": [
-        "jiu3"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "jade",
@@ -8779,16 +8373,12 @@
           ]
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/玖.json"
+      "manualReview": "pending"
     },
     {
       "rank": 603,
       "character": "玛",
       "sourceStatus": "headword_found",
-      "readings": [
-        "ma3"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "agate",
@@ -8798,16 +8388,12 @@
           ]
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/玛.json"
+      "manualReview": "pending"
     },
     {
       "rank": 604,
       "character": "形",
       "sourceStatus": "headword_found",
-      "readings": [
-        "xing2"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "shape",
@@ -8817,16 +8403,12 @@
           ]
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/形.json"
+      "manualReview": "pending"
     },
     {
       "rank": 605,
       "character": "进",
       "sourceStatus": "headword_found",
-      "readings": [
-        "jin4"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "advance",
@@ -8836,16 +8418,12 @@
           ]
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/进.json"
+      "manualReview": "pending"
     },
     {
       "rank": 606,
       "character": "戒",
       "sourceStatus": "headword_found",
-      "readings": [
-        "jie4"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "warn",
@@ -8855,16 +8433,12 @@
           ]
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/戒.json"
+      "manualReview": "pending"
     },
     {
       "rank": 607,
       "character": "吞",
       "sourceStatus": "headword_found",
-      "readings": [
-        "tun1"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "swallow",
@@ -8874,17 +8448,12 @@
           ]
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/吞.json"
+      "manualReview": "pending"
     },
     {
       "rank": 608,
       "character": "远",
       "sourceStatus": "headword_found",
-      "readings": [
-        "yuan3",
-        "yuan4"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "distant",
@@ -8894,16 +8463,12 @@
           ]
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/远.json"
+      "manualReview": "pending"
     },
     {
       "rank": 609,
       "character": "违",
       "sourceStatus": "headword_found",
-      "readings": [
-        "wei2"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "disobey",
@@ -8913,16 +8478,12 @@
           ]
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/违.json"
+      "manualReview": "pending"
     },
     {
       "rank": 610,
       "character": "韧",
       "sourceStatus": "headword_found",
-      "readings": [
-        "ren4"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "resilient",
@@ -8930,16 +8491,12 @@
           "matchingDictionaryReadings": []
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/韧.json"
+      "manualReview": "pending"
     },
     {
       "rank": 611,
       "character": "运",
       "sourceStatus": "headword_found",
-      "readings": [
-        "yun4"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "transport",
@@ -8949,16 +8506,12 @@
           ]
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/运.json"
+      "manualReview": "pending"
     },
     {
       "rank": 612,
       "character": "扶",
       "sourceStatus": "headword_found",
-      "readings": [
-        "fu2"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "help",
@@ -8968,16 +8521,12 @@
           ]
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/扶.json"
+      "manualReview": "pending"
     },
     {
       "rank": 613,
       "character": "抚",
       "sourceStatus": "headword_found",
-      "readings": [
-        "fu3"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "comfort",
@@ -8987,16 +8536,12 @@
           ]
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/抚.json"
+      "manualReview": "pending"
     },
     {
       "rank": 614,
       "character": "坛",
       "sourceStatus": "headword_found",
-      "readings": [
-        "tan2"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "altar",
@@ -9006,16 +8551,12 @@
           ]
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/坛.json"
+      "manualReview": "pending"
     },
     {
       "rank": 615,
       "character": "技",
       "sourceStatus": "headword_found",
-      "readings": [
-        "ji4"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "skill",
@@ -9025,16 +8566,12 @@
           ]
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/技.json"
+      "manualReview": "pending"
     },
     {
       "rank": 616,
       "character": "坏",
       "sourceStatus": "headword_found",
-      "readings": [
-        "huai4"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "broken",
@@ -9044,16 +8581,12 @@
           ]
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/坏.json"
+      "manualReview": "pending"
     },
     {
       "rank": 617,
       "character": "抠",
       "sourceStatus": "headword_found",
-      "readings": [
-        "kou1"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "lift up",
@@ -9061,16 +8594,12 @@
           "matchingDictionaryReadings": []
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/抠.json"
+      "manualReview": "pending"
     },
     {
       "rank": 618,
       "character": "扰",
       "sourceStatus": "headword_found",
-      "readings": [
-        "rao3"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "disturb",
@@ -9080,16 +8609,12 @@
           ]
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/扰.json"
+      "manualReview": "pending"
     },
     {
       "rank": 619,
       "character": "扼",
       "sourceStatus": "headword_found",
-      "readings": [
-        "e4"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "grasp",
@@ -9097,16 +8622,12 @@
           "matchingDictionaryReadings": []
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/扼.json"
+      "manualReview": "pending"
     },
     {
       "rank": 620,
       "character": "拒",
       "sourceStatus": "headword_found",
-      "readings": [
-        "ju4"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "defend",
@@ -9114,16 +8635,12 @@
           "matchingDictionaryReadings": []
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/拒.json"
+      "manualReview": "pending"
     },
     {
       "rank": 621,
       "character": "找",
       "sourceStatus": "headword_found",
-      "readings": [
-        "zhao3"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "search",
@@ -9131,16 +8648,12 @@
           "matchingDictionaryReadings": []
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/找.json"
+      "manualReview": "pending"
     },
     {
       "rank": 622,
       "character": "批",
       "sourceStatus": "headword_found",
-      "readings": [
-        "pi1"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "criticize",
@@ -9150,16 +8663,12 @@
           ]
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/批.json"
+      "manualReview": "pending"
     },
     {
       "rank": 623,
       "character": "址",
       "sourceStatus": "headword_found",
-      "readings": [
-        "zhi3"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "location",
@@ -9169,16 +8678,12 @@
           ]
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/址.json"
+      "manualReview": "pending"
     },
     {
       "rank": 624,
       "character": "扯",
       "sourceStatus": "headword_found",
-      "readings": [
-        "che3"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "tear down",
@@ -9186,16 +8691,12 @@
           "matchingDictionaryReadings": []
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/扯.json"
+      "manualReview": "pending"
     },
     {
       "rank": 625,
       "character": "走",
       "sourceStatus": "headword_found",
-      "readings": [
-        "zou3"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "walk",
@@ -9205,16 +8706,12 @@
           ]
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/走.json"
+      "manualReview": "pending"
     },
     {
       "rank": 626,
       "character": "抄",
       "sourceStatus": "headword_found",
-      "readings": [
-        "chao1"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "copy",
@@ -9224,17 +8721,12 @@
           ]
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/抄.json"
+      "manualReview": "pending"
     },
     {
       "rank": 627,
       "character": "贡",
       "sourceStatus": "headword_found",
-      "readings": [
-        "Gong4",
-        "gong4"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "gifts",
@@ -9244,28 +8736,19 @@
           ]
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/贡.json"
+      "manualReview": "pending"
     },
     {
       "rank": 628,
       "character": "汞",
       "sourceStatus": "headword_found",
-      "readings": [
-        "gong3",
-        "hong4"
-      ],
       "selectedSenseChecks": [],
-      "manualReview": "pending",
-      "sourceFile": "v2/汞.json"
+      "manualReview": "pending"
     },
     {
       "rank": 629,
       "character": "坝",
       "sourceStatus": "headword_found",
-      "readings": [
-        "ba4"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "dam",
@@ -9275,16 +8758,12 @@
           ]
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/坝.json"
+      "manualReview": "pending"
     },
     {
       "rank": 630,
       "character": "攻",
       "sourceStatus": "headword_found",
-      "readings": [
-        "gong1"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "attack",
@@ -9294,16 +8773,12 @@
           ]
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/攻.json"
+      "manualReview": "pending"
     },
     {
       "rank": 631,
       "character": "赤",
       "sourceStatus": "headword_found",
-      "readings": [
-        "chi4"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "red",
@@ -9313,18 +8788,12 @@
           ]
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/赤.json"
+      "manualReview": "pending"
     },
     {
       "rank": 632,
       "character": "折",
       "sourceStatus": "headword_found",
-      "readings": [
-        "she2",
-        "zhe1",
-        "zhe2"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "break off",
@@ -9332,16 +8801,12 @@
           "matchingDictionaryReadings": []
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/折.json"
+      "manualReview": "pending"
     },
     {
       "rank": 633,
       "character": "抓",
       "sourceStatus": "headword_found",
-      "readings": [
-        "zhua1"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "grab",
@@ -9351,17 +8816,12 @@
           ]
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/抓.json"
+      "manualReview": "pending"
     },
     {
       "rank": 634,
       "character": "扳",
       "sourceStatus": "headword_found",
-      "readings": [
-        "ban1",
-        "pan1"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "pull",
@@ -9371,17 +8831,12 @@
           ]
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/扳.json"
+      "manualReview": "pending"
     },
     {
       "rank": 635,
       "character": "抡",
       "sourceStatus": "headword_found",
-      "readings": [
-        "lun1",
-        "lun2"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "swing",
@@ -9391,16 +8846,12 @@
           ]
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/抡.json"
+      "manualReview": "pending"
     },
     {
       "rank": 636,
       "character": "扮",
       "sourceStatus": "headword_found",
-      "readings": [
-        "ban4"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "dress up",
@@ -9410,17 +8861,12 @@
           ]
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/扮.json"
+      "manualReview": "pending"
     },
     {
       "rank": 637,
       "character": "抢",
       "sourceStatus": "headword_found",
-      "readings": [
-        "qiang1",
-        "qiang3"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "rob",
@@ -9430,16 +8876,12 @@
           ]
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/抢.json"
+      "manualReview": "pending"
     },
     {
       "rank": 638,
       "character": "孝",
       "sourceStatus": "headword_found",
-      "readings": [
-        "xiao4"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "mourning",
@@ -9449,16 +8891,12 @@
           ]
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/孝.json"
+      "manualReview": "pending"
     },
     {
       "rank": 639,
       "character": "坎",
       "sourceStatus": "headword_found",
-      "readings": [
-        "kan3"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "hole",
@@ -9468,16 +8906,12 @@
           ]
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/坎.json"
+      "manualReview": "pending"
     },
     {
       "rank": 640,
       "character": "均",
       "sourceStatus": "headword_found",
-      "readings": [
-        "jun1"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "equal",
@@ -9487,16 +8921,12 @@
           ]
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/均.json"
+      "manualReview": "pending"
     },
     {
       "rank": 641,
       "character": "抑",
       "sourceStatus": "headword_found",
-      "readings": [
-        "yi4"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "repress",
@@ -9504,16 +8934,12 @@
           "matchingDictionaryReadings": []
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/抑.json"
+      "manualReview": "pending"
     },
     {
       "rank": 642,
       "character": "抛",
       "sourceStatus": "headword_found",
-      "readings": [
-        "pao1"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "throw",
@@ -9523,16 +8949,12 @@
           ]
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/抛.json"
+      "manualReview": "pending"
     },
     {
       "rank": 643,
       "character": "投",
       "sourceStatus": "headword_found",
-      "readings": [
-        "tou2"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "throw",
@@ -9542,16 +8964,12 @@
           ]
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/投.json"
+      "manualReview": "pending"
     },
     {
       "rank": 644,
       "character": "坟",
       "sourceStatus": "headword_found",
-      "readings": [
-        "fen2"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "grave",
@@ -9561,16 +8979,12 @@
           ]
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/坟.json"
+      "manualReview": "pending"
     },
     {
       "rank": 645,
       "character": "坑",
       "sourceStatus": "headword_found",
-      "readings": [
-        "keng1"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "pit",
@@ -9580,16 +8994,12 @@
           ]
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/坑.json"
+      "manualReview": "pending"
     },
     {
       "rank": 646,
       "character": "抗",
       "sourceStatus": "headword_found",
-      "readings": [
-        "kang4"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "resist",
@@ -9599,18 +9009,12 @@
           ]
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/抗.json"
+      "manualReview": "pending"
     },
     {
       "rank": 647,
       "character": "坊",
       "sourceStatus": "headword_found",
-      "readings": [
-        "Fang1",
-        "fang1",
-        "fang2"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "neighborhood",
@@ -9618,16 +9022,12 @@
           "matchingDictionaryReadings": []
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/坊.json"
+      "manualReview": "pending"
     },
     {
       "rank": 648,
       "character": "抖",
       "sourceStatus": "headword_found",
-      "readings": [
-        "dou3"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "shake",
@@ -9637,16 +9037,12 @@
           ]
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/抖.json"
+      "manualReview": "pending"
     },
     {
       "rank": 649,
       "character": "护",
       "sourceStatus": "headword_found",
-      "readings": [
-        "hu4"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "protect",
@@ -9656,16 +9052,12 @@
           ]
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/护.json"
+      "manualReview": "pending"
     },
     {
       "rank": 650,
       "character": "壳",
       "sourceStatus": "headword_found",
-      "readings": [
-        "qiao4"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "shell",
@@ -9675,16 +9067,12 @@
           ]
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/壳.json"
+      "manualReview": "pending"
     },
     {
       "rank": 651,
       "character": "志",
       "sourceStatus": "headword_found",
-      "readings": [
-        "zhi4"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "determination",
@@ -9692,16 +9080,12 @@
           "matchingDictionaryReadings": []
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/志.json"
+      "manualReview": "pending"
     },
     {
       "rank": 652,
       "character": "块",
       "sourceStatus": "headword_found",
-      "readings": [
-        "kuai4"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "piece",
@@ -9711,16 +9095,12 @@
           ]
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/块.json"
+      "manualReview": "pending"
     },
     {
       "rank": 653,
       "character": "扭",
       "sourceStatus": "headword_found",
-      "readings": [
-        "niu3"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "twist",
@@ -9730,16 +9110,12 @@
           ]
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/扭.json"
+      "manualReview": "pending"
     },
     {
       "rank": 654,
       "character": "声",
       "sourceStatus": "headword_found",
-      "readings": [
-        "sheng1"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "sound",
@@ -9749,17 +9125,12 @@
           ]
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/声.json"
+      "manualReview": "pending"
     },
     {
       "rank": 655,
       "character": "把",
       "sourceStatus": "headword_found",
-      "readings": [
-        "ba3",
-        "ba4"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "hold",
@@ -9769,16 +9140,12 @@
           ]
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/把.json"
+      "manualReview": "pending"
     },
     {
       "rank": 656,
       "character": "报",
       "sourceStatus": "headword_found",
-      "readings": [
-        "bao4"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "report",
@@ -9788,16 +9155,12 @@
           ]
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/报.json"
+      "manualReview": "pending"
     },
     {
       "rank": 657,
       "character": "拟",
       "sourceStatus": "headword_found",
-      "readings": [
-        "ni3"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "draft",
@@ -9807,16 +9170,12 @@
           ]
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/拟.json"
+      "manualReview": "pending"
     },
     {
       "rank": 658,
       "character": "却",
       "sourceStatus": "headword_found",
-      "readings": [
-        "que4"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "retreat",
@@ -9826,16 +9185,12 @@
           ]
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/却.json"
+      "manualReview": "pending"
     },
     {
       "rank": 659,
       "character": "抒",
       "sourceStatus": "headword_found",
-      "readings": [
-        "shu1"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "express",
@@ -9845,16 +9200,12 @@
           ]
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/抒.json"
+      "manualReview": "pending"
     },
     {
       "rank": 660,
       "character": "劫",
       "sourceStatus": "headword_found",
-      "readings": [
-        "jie2"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "disaster",
@@ -9862,16 +9213,12 @@
           "matchingDictionaryReadings": []
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/劫.json"
+      "manualReview": "pending"
     },
     {
       "rank": 661,
       "character": "芙",
       "sourceStatus": "headword_found",
-      "readings": [
-        "fu2"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "hibiscus",
@@ -9879,16 +9226,12 @@
           "matchingDictionaryReadings": []
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/芙.json"
+      "manualReview": "pending"
     },
     {
       "rank": 662,
       "character": "芜",
       "sourceStatus": "headword_found",
-      "readings": [
-        "wu2"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "weeds",
@@ -9898,16 +9241,12 @@
           ]
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/芜.json"
+      "manualReview": "pending"
     },
     {
       "rank": 663,
       "character": "苇",
       "sourceStatus": "headword_found",
-      "readings": [
-        "wei3"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "reed",
@@ -9917,16 +9256,12 @@
           ]
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/苇.json"
+      "manualReview": "pending"
     },
     {
       "rank": 664,
       "character": "芽",
       "sourceStatus": "headword_found",
-      "readings": [
-        "ya2"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "sprout",
@@ -9936,17 +9271,12 @@
           ]
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/芽.json"
+      "manualReview": "pending"
     },
     {
       "rank": 665,
       "character": "花",
       "sourceStatus": "headword_found",
-      "readings": [
-        "Hua1",
-        "hua1"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "flower",
@@ -9956,16 +9286,12 @@
           ]
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/花.json"
+      "manualReview": "pending"
     },
     {
       "rank": 666,
       "character": "芹",
       "sourceStatus": "headword_found",
-      "readings": [
-        "qin2"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "celery",
@@ -9975,17 +9301,12 @@
           ]
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/芹.json"
+      "manualReview": "pending"
     },
     {
       "rank": 667,
       "character": "芥",
       "sourceStatus": "headword_found",
-      "readings": [
-        "gai4",
-        "jie4"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "mustard",
@@ -9995,16 +9316,12 @@
           ]
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/芥.json"
+      "manualReview": "pending"
     },
     {
       "rank": 668,
       "character": "芬",
       "sourceStatus": "headword_found",
-      "readings": [
-        "fen1"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "fragrance",
@@ -10014,17 +9331,12 @@
           ]
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/芬.json"
+      "manualReview": "pending"
     },
     {
       "rank": 669,
       "character": "苍",
       "sourceStatus": "headword_found",
-      "readings": [
-        "Cang1",
-        "cang1"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "green",
@@ -10034,16 +9346,12 @@
           ]
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/苍.json"
+      "manualReview": "pending"
     },
     {
       "rank": 670,
       "character": "芳",
       "sourceStatus": "headword_found",
-      "readings": [
-        "fang1"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "fragrant",
@@ -10053,17 +9361,12 @@
           ]
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/芳.json"
+      "manualReview": "pending"
     },
     {
       "rank": 671,
       "character": "严",
       "sourceStatus": "headword_found",
-      "readings": [
-        "Yan2",
-        "yan2"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "strict",
@@ -10073,16 +9376,12 @@
           ]
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/严.json"
+      "manualReview": "pending"
     },
     {
       "rank": 672,
       "character": "芦",
       "sourceStatus": "headword_found",
-      "readings": [
-        "lu2"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "reeds",
@@ -10090,17 +9389,12 @@
           "matchingDictionaryReadings": []
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/芦.json"
+      "manualReview": "pending"
     },
     {
       "rank": 673,
       "character": "芯",
       "sourceStatus": "headword_found",
-      "readings": [
-        "xin1",
-        "xin4"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "pith",
@@ -10110,17 +9404,12 @@
           ]
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/芯.json"
+      "manualReview": "pending"
     },
     {
       "rank": 674,
       "character": "劳",
       "sourceStatus": "headword_found",
-      "readings": [
-        "lao2",
-        "lao4"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "labor",
@@ -10130,18 +9419,12 @@
           ]
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/劳.json"
+      "manualReview": "pending"
     },
     {
       "rank": 675,
       "character": "克",
       "sourceStatus": "headword_found",
-      "readings": [
-        "ke4",
-        "Ke4",
-        "kei1"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "gram",
@@ -10151,16 +9434,12 @@
           ]
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/克.json"
+      "manualReview": "pending"
     },
     {
       "rank": 676,
       "character": "芭",
       "sourceStatus": "headword_found",
-      "readings": [
-        "ba1"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "banana",
@@ -10170,17 +9449,12 @@
           ]
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/芭.json"
+      "manualReview": "pending"
     },
     {
       "rank": 677,
       "character": "苏",
       "sourceStatus": "headword_found",
-      "readings": [
-        "su1",
-        "Su1"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "revive",
@@ -10190,17 +9464,12 @@
           ]
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/苏.json"
+      "manualReview": "pending"
     },
     {
       "rank": 678,
       "character": "杆",
       "sourceStatus": "headword_found",
-      "readings": [
-        "gan1",
-        "gan3"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "pole",
@@ -10211,17 +9480,12 @@
           ]
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/杆.json"
+      "manualReview": "pending"
     },
     {
       "rank": 679,
       "character": "杠",
       "sourceStatus": "headword_found",
-      "readings": [
-        "gang1",
-        "gang4"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "crowbar",
@@ -10229,17 +9493,12 @@
           "matchingDictionaryReadings": []
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/杠.json"
+      "manualReview": "pending"
     },
     {
       "rank": 680,
       "character": "杜",
       "sourceStatus": "headword_found",
-      "readings": [
-        "Du4",
-        "du4"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "prevent",
@@ -10249,16 +9508,12 @@
           ]
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/杜.json"
+      "manualReview": "pending"
     },
     {
       "rank": 681,
       "character": "材",
       "sourceStatus": "headword_found",
-      "readings": [
-        "cai2"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "timber",
@@ -10268,16 +9523,12 @@
           ]
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/材.json"
+      "manualReview": "pending"
     },
     {
       "rank": 682,
       "character": "村",
       "sourceStatus": "headword_found",
-      "readings": [
-        "cun1"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "village",
@@ -10287,16 +9538,12 @@
           ]
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/村.json"
+      "manualReview": "pending"
     },
     {
       "rank": 683,
       "character": "杖",
       "sourceStatus": "headword_found",
-      "readings": [
-        "zhang4"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "walking stick",
@@ -10306,16 +9553,12 @@
           ]
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/杖.json"
+      "manualReview": "pending"
     },
     {
       "rank": 684,
       "character": "杏",
       "sourceStatus": "headword_found",
-      "readings": [
-        "xing4"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "apricot",
@@ -10325,16 +9568,12 @@
           ]
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/杏.json"
+      "manualReview": "pending"
     },
     {
       "rank": 685,
       "character": "杉",
       "sourceStatus": "headword_found",
-      "readings": [
-        "shan1"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "pine",
@@ -10342,17 +9581,12 @@
           "matchingDictionaryReadings": []
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/杉.json"
+      "manualReview": "pending"
     },
     {
       "rank": 686,
       "character": "巫",
       "sourceStatus": "headword_found",
-      "readings": [
-        "Wu1",
-        "wu1"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "witch",
@@ -10362,16 +9596,12 @@
           ]
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/巫.json"
+      "manualReview": "pending"
     },
     {
       "rank": 687,
       "character": "极",
       "sourceStatus": "headword_found",
-      "readings": [
-        "ji2"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "extreme",
@@ -10381,17 +9611,12 @@
           ]
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/极.json"
+      "manualReview": "pending"
     },
     {
       "rank": 688,
       "character": "李",
       "sourceStatus": "headword_found",
-      "readings": [
-        "Li3",
-        "li3"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "plum",
@@ -10401,17 +9626,12 @@
           ]
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/李.json"
+      "manualReview": "pending"
     },
     {
       "rank": 689,
       "character": "杨",
       "sourceStatus": "headword_found",
-      "readings": [
-        "Yang2",
-        "yang2"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "willow",
@@ -10419,16 +9639,12 @@
           "matchingDictionaryReadings": []
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/杨.json"
+      "manualReview": "pending"
     },
     {
       "rank": 690,
       "character": "求",
       "sourceStatus": "headword_found",
-      "readings": [
-        "qiu2"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "seek",
@@ -10438,16 +9654,12 @@
           ]
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/求.json"
+      "manualReview": "pending"
     },
     {
       "rank": 691,
       "character": "甫",
       "sourceStatus": "headword_found",
-      "readings": [
-        "fu3"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "begin",
@@ -10455,16 +9667,12 @@
           "matchingDictionaryReadings": []
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/甫.json"
+      "manualReview": "pending"
     },
     {
       "rank": 692,
       "character": "匣",
       "sourceStatus": "headword_found",
-      "readings": [
-        "xia2"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "box",
@@ -10474,17 +9682,12 @@
           ]
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/匣.json"
+      "manualReview": "pending"
     },
     {
       "rank": 693,
       "character": "更",
       "sourceStatus": "headword_found",
-      "readings": [
-        "geng1",
-        "geng4"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "change",
@@ -10494,17 +9697,12 @@
           ]
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/更.json"
+      "manualReview": "pending"
     },
     {
       "rank": 694,
       "character": "束",
       "sourceStatus": "headword_found",
-      "readings": [
-        "Shu4",
-        "shu4"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "bind",
@@ -10514,17 +9712,12 @@
           ]
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/束.json"
+      "manualReview": "pending"
     },
     {
       "rank": 695,
       "character": "吾",
       "sourceStatus": "headword_found",
-      "readings": [
-        "Wu2",
-        "wu2"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "my",
@@ -10534,16 +9727,12 @@
           ]
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/吾.json"
+      "manualReview": "pending"
     },
     {
       "rank": 696,
       "character": "豆",
       "sourceStatus": "headword_found",
-      "readings": [
-        "dou4"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "beans",
@@ -10551,16 +9740,12 @@
           "matchingDictionaryReadings": []
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/豆.json"
+      "manualReview": "pending"
     },
     {
       "rank": 697,
       "character": "两",
       "sourceStatus": "headword_found",
-      "readings": [
-        "liang3"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "two",
@@ -10570,16 +9755,12 @@
           ]
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/两.json"
+      "manualReview": "pending"
     },
     {
       "rank": 698,
       "character": "酉",
       "sourceStatus": "headword_found",
-      "readings": [
-        "you3"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "wine vessel",
@@ -10587,17 +9768,12 @@
           "matchingDictionaryReadings": []
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/酉.json"
+      "manualReview": "pending"
     },
     {
       "rank": 699,
       "character": "丽",
       "sourceStatus": "headword_found",
-      "readings": [
-        "Li2",
-        "li4"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "beautiful",
@@ -10607,16 +9783,12 @@
           ]
         }
       ],
-      "manualReview": "pending",
-      "sourceFile": "v2/丽.json"
+      "manualReview": "pending"
     },
     {
       "rank": 700,
       "character": "医",
       "sourceStatus": "headword_found",
-      "readings": [
-        "yi1"
-      ],
       "selectedSenseChecks": [
         {
           "selectedMeaning": "doctor",
@@ -10626,8 +9798,1869 @@
           ]
         }
       ],
+      "manualReview": "pending"
+    },
+    {
+      "rank": 701,
+      "character": "辰",
+      "sourceStatus": "headword_found",
+      "readings": [
+        "chen2"
+      ],
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "early morning",
+          "lexicalEvidence": "requires_sense_review",
+          "matchingDictionaryReadings": []
+        }
+      ],
       "manualReview": "pending",
-      "sourceFile": "v2/医.json"
+      "sourceFile": "v2/辰.json"
+    },
+    {
+      "rank": 702,
+      "character": "励",
+      "sourceStatus": "headword_found",
+      "readings": [
+        "Li4",
+        "li4"
+      ],
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "encourage",
+          "lexicalEvidence": "literal_gloss_match",
+          "matchingDictionaryReadings": [
+            "li4"
+          ]
+        }
+      ],
+      "manualReview": "pending",
+      "sourceFile": "v2/励.json"
+    },
+    {
+      "rank": 703,
+      "character": "否",
+      "sourceStatus": "headword_found",
+      "readings": [
+        "fou3",
+        "pi3"
+      ],
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "not",
+          "lexicalEvidence": "literal_gloss_match",
+          "matchingDictionaryReadings": [
+            "fou3"
+          ]
+        }
+      ],
+      "manualReview": "pending",
+      "sourceFile": "v2/否.json"
+    },
+    {
+      "rank": 704,
+      "character": "还",
+      "sourceStatus": "headword_found",
+      "readings": [
+        "Huan2",
+        "hai2",
+        "huan2"
+      ],
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "still",
+          "lexicalEvidence": "literal_gloss_match",
+          "matchingDictionaryReadings": [
+            "hai2"
+          ]
+        }
+      ],
+      "manualReview": "pending",
+      "sourceFile": "v2/还.json"
+    },
+    {
+      "rank": 705,
+      "character": "尬",
+      "sourceStatus": "headword_found",
+      "readings": [
+        "ga4"
+      ],
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "embarrass",
+          "lexicalEvidence": "requires_sense_review",
+          "matchingDictionaryReadings": []
+        }
+      ],
+      "manualReview": "pending",
+      "sourceFile": "v2/尬.json"
+    },
+    {
+      "rank": 706,
+      "character": "歼",
+      "sourceStatus": "headword_found",
+      "readings": [
+        "jian1"
+      ],
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "annihilate",
+          "lexicalEvidence": "literal_gloss_match",
+          "matchingDictionaryReadings": [
+            "jian1"
+          ]
+        }
+      ],
+      "manualReview": "pending",
+      "sourceFile": "v2/歼.json"
+    },
+    {
+      "rank": 707,
+      "character": "来",
+      "sourceStatus": "headword_found",
+      "readings": [
+        "lai2"
+      ],
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "come",
+          "lexicalEvidence": "literal_gloss_match",
+          "matchingDictionaryReadings": [
+            "lai2"
+          ]
+        }
+      ],
+      "manualReview": "pending",
+      "sourceFile": "v2/来.json"
+    },
+    {
+      "rank": 708,
+      "character": "连",
+      "sourceStatus": "headword_found",
+      "readings": [
+        "Lian2",
+        "lian2"
+      ],
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "connect",
+          "lexicalEvidence": "literal_gloss_match",
+          "matchingDictionaryReadings": [
+            "lian2"
+          ]
+        }
+      ],
+      "manualReview": "pending",
+      "sourceFile": "v2/连.json"
+    },
+    {
+      "rank": 709,
+      "character": "轩",
+      "sourceStatus": "headword_found",
+      "readings": [
+        "Xuan1",
+        "xuan1"
+      ],
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "carriage",
+          "lexicalEvidence": "literal_gloss_match",
+          "matchingDictionaryReadings": [
+            "xuan1"
+          ]
+        }
+      ],
+      "manualReview": "pending",
+      "sourceFile": "v2/轩.json"
+    },
+    {
+      "rank": 710,
+      "character": "步",
+      "sourceStatus": "headword_found",
+      "readings": [
+        "Bu4",
+        "bu4"
+      ],
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "step",
+          "lexicalEvidence": "literal_gloss_match",
+          "matchingDictionaryReadings": [
+            "bu4"
+          ]
+        },
+        {
+          "selectedMeaning": "walk",
+          "lexicalEvidence": "literal_gloss_match",
+          "matchingDictionaryReadings": [
+            "bu4"
+          ]
+        }
+      ],
+      "manualReview": "pending",
+      "sourceFile": "v2/步.json"
+    },
+    {
+      "rank": 711,
+      "character": "卤",
+      "sourceStatus": "headword_found",
+      "readings": [
+        "lu3"
+      ],
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "salt",
+          "lexicalEvidence": "literal_gloss_match",
+          "matchingDictionaryReadings": [
+            "lu3"
+          ]
+        }
+      ],
+      "manualReview": "pending",
+      "sourceFile": "v2/卤.json"
+    },
+    {
+      "rank": 712,
+      "character": "坚",
+      "sourceStatus": "headword_found",
+      "readings": [
+        "jian1"
+      ],
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "strong",
+          "lexicalEvidence": "literal_gloss_match",
+          "matchingDictionaryReadings": [
+            "jian1"
+          ]
+        }
+      ],
+      "manualReview": "pending",
+      "sourceFile": "v2/坚.json"
+    },
+    {
+      "rank": 713,
+      "character": "肖",
+      "sourceStatus": "headword_found",
+      "readings": [
+        "Xiao1",
+        "xiao4"
+      ],
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "resemble",
+          "lexicalEvidence": "literal_gloss_match",
+          "matchingDictionaryReadings": [
+            "xiao4"
+          ]
+        }
+      ],
+      "manualReview": "pending",
+      "sourceFile": "v2/肖.json"
+    },
+    {
+      "rank": 714,
+      "character": "旱",
+      "sourceStatus": "headword_found",
+      "readings": [
+        "han4"
+      ],
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "drought",
+          "lexicalEvidence": "literal_gloss_match",
+          "matchingDictionaryReadings": [
+            "han4"
+          ]
+        }
+      ],
+      "manualReview": "pending",
+      "sourceFile": "v2/旱.json"
+    },
+    {
+      "rank": 715,
+      "character": "盯",
+      "sourceStatus": "headword_found",
+      "readings": [
+        "ding1"
+      ],
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "keep eyes on",
+          "lexicalEvidence": "requires_sense_review",
+          "matchingDictionaryReadings": []
+        }
+      ],
+      "manualReview": "pending",
+      "sourceFile": "v2/盯.json"
+    },
+    {
+      "rank": 716,
+      "character": "呈",
+      "sourceStatus": "headword_found",
+      "readings": [
+        "cheng2"
+      ],
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "show",
+          "lexicalEvidence": "requires_sense_review",
+          "matchingDictionaryReadings": []
+        }
+      ],
+      "manualReview": "pending",
+      "sourceFile": "v2/呈.json"
+    },
+    {
+      "rank": 717,
+      "character": "时",
+      "sourceStatus": "headword_found",
+      "readings": [
+        "shi2",
+        "Shi2"
+      ],
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "time",
+          "lexicalEvidence": "literal_gloss_match",
+          "matchingDictionaryReadings": [
+            "shi2"
+          ]
+        }
+      ],
+      "manualReview": "pending",
+      "sourceFile": "v2/时.json"
+    },
+    {
+      "rank": 718,
+      "character": "吴",
+      "sourceStatus": "headword_found",
+      "readings": [
+        "Wu2"
+      ],
+      "selectedSenseChecks": [],
+      "manualReview": "pending",
+      "sourceFile": "v2/吴.json"
+    },
+    {
+      "rank": 719,
+      "character": "助",
+      "sourceStatus": "headword_found",
+      "readings": [
+        "zhu4"
+      ],
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "help",
+          "lexicalEvidence": "literal_gloss_match",
+          "matchingDictionaryReadings": [
+            "zhu4"
+          ]
+        }
+      ],
+      "manualReview": "pending",
+      "sourceFile": "v2/助.json"
+    },
+    {
+      "rank": 720,
+      "character": "县",
+      "sourceStatus": "headword_found",
+      "readings": [
+        "xian4"
+      ],
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "county",
+          "lexicalEvidence": "literal_gloss_match",
+          "matchingDictionaryReadings": [
+            "xian4"
+          ]
+        }
+      ],
+      "manualReview": "pending",
+      "sourceFile": "v2/县.json"
+    },
+    {
+      "rank": 721,
+      "character": "里",
+      "sourceStatus": "headword_found",
+      "readings": [
+        "li3",
+        "Li3"
+      ],
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "village",
+          "lexicalEvidence": "requires_sense_review",
+          "matchingDictionaryReadings": []
+        }
+      ],
+      "manualReview": "pending",
+      "sourceFile": "v2/里.json"
+    },
+    {
+      "rank": 722,
+      "character": "呆",
+      "sourceStatus": "headword_found",
+      "readings": [
+        "dai1"
+      ],
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "dull",
+          "lexicalEvidence": "requires_sense_review",
+          "matchingDictionaryReadings": []
+        }
+      ],
+      "manualReview": "pending",
+      "sourceFile": "v2/呆.json"
+    },
+    {
+      "rank": 723,
+      "character": "吱",
+      "sourceStatus": "headword_found",
+      "readings": [
+        "zhi1",
+        "zi1"
+      ],
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "chirping",
+          "lexicalEvidence": "requires_sense_review",
+          "matchingDictionaryReadings": []
+        }
+      ],
+      "manualReview": "pending",
+      "sourceFile": "v2/吱.json"
+    },
+    {
+      "rank": 724,
+      "character": "吠",
+      "sourceStatus": "headword_found",
+      "readings": [
+        "fei4"
+      ],
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "bark",
+          "lexicalEvidence": "literal_gloss_match",
+          "matchingDictionaryReadings": [
+            "fei4"
+          ]
+        }
+      ],
+      "manualReview": "pending",
+      "sourceFile": "v2/吠.json"
+    },
+    {
+      "rank": 725,
+      "character": "呕",
+      "sourceStatus": "headword_found",
+      "readings": [
+        "ou3"
+      ],
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "vomit",
+          "lexicalEvidence": "literal_gloss_match",
+          "matchingDictionaryReadings": [
+            "ou3"
+          ]
+        }
+      ],
+      "manualReview": "pending",
+      "sourceFile": "v2/呕.json"
+    },
+    {
+      "rank": 726,
+      "character": "园",
+      "sourceStatus": "headword_found",
+      "readings": [
+        "Yuan2",
+        "yuan2"
+      ],
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "garden",
+          "lexicalEvidence": "requires_sense_review",
+          "matchingDictionaryReadings": []
+        }
+      ],
+      "manualReview": "pending",
+      "sourceFile": "v2/园.json"
+    },
+    {
+      "rank": 727,
+      "character": "旷",
+      "sourceStatus": "headword_found",
+      "readings": [
+        "kuang4"
+      ],
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "wide",
+          "lexicalEvidence": "requires_sense_review",
+          "matchingDictionaryReadings": []
+        }
+      ],
+      "manualReview": "pending",
+      "sourceFile": "v2/旷.json"
+    },
+    {
+      "rank": 728,
+      "character": "围",
+      "sourceStatus": "headword_found",
+      "readings": [
+        "Wei2",
+        "wei2"
+      ],
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "surround",
+          "lexicalEvidence": "literal_gloss_match",
+          "matchingDictionaryReadings": [
+            "wei2"
+          ]
+        }
+      ],
+      "manualReview": "pending",
+      "sourceFile": "v2/围.json"
+    },
+    {
+      "rank": 729,
+      "character": "呀",
+      "sourceStatus": "headword_found",
+      "readings": [
+        "ya5"
+      ],
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "surprise",
+          "lexicalEvidence": "literal_gloss_match",
+          "matchingDictionaryReadings": [
+            "ya5"
+          ]
+        }
+      ],
+      "manualReview": "pending",
+      "sourceFile": "v2/呀.json"
+    },
+    {
+      "rank": 730,
+      "character": "吨",
+      "sourceStatus": "headword_found",
+      "readings": [
+        "dun1"
+      ],
+      "selectedSenseChecks": [],
+      "manualReview": "pending",
+      "sourceFile": "v2/吨.json"
+    },
+    {
+      "rank": 731,
+      "character": "足",
+      "sourceStatus": "headword_found",
+      "readings": [
+        "ju4",
+        "zu2"
+      ],
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "foot",
+          "lexicalEvidence": "literal_gloss_match",
+          "matchingDictionaryReadings": [
+            "zu2"
+          ]
+        }
+      ],
+      "manualReview": "pending",
+      "sourceFile": "v2/足.json"
+    },
+    {
+      "rank": 732,
+      "character": "邮",
+      "sourceStatus": "headword_found",
+      "readings": [
+        "you2"
+      ],
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "mail",
+          "lexicalEvidence": "literal_gloss_match",
+          "matchingDictionaryReadings": [
+            "you2"
+          ]
+        }
+      ],
+      "manualReview": "pending",
+      "sourceFile": "v2/邮.json"
+    },
+    {
+      "rank": 733,
+      "character": "男",
+      "sourceStatus": "headword_found",
+      "readings": [
+        "nan2"
+      ],
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "man",
+          "lexicalEvidence": "requires_sense_review",
+          "matchingDictionaryReadings": []
+        }
+      ],
+      "manualReview": "pending",
+      "sourceFile": "v2/男.json"
+    },
+    {
+      "rank": 734,
+      "character": "困",
+      "sourceStatus": "headword_found",
+      "readings": [
+        "kun4"
+      ],
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "difficult",
+          "lexicalEvidence": "requires_sense_review",
+          "matchingDictionaryReadings": []
+        }
+      ],
+      "manualReview": "pending",
+      "sourceFile": "v2/困.json"
+    },
+    {
+      "rank": 735,
+      "character": "吵",
+      "sourceStatus": "headword_found",
+      "readings": [
+        "chao3"
+      ],
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "argue",
+          "lexicalEvidence": "requires_sense_review",
+          "matchingDictionaryReadings": []
+        }
+      ],
+      "manualReview": "pending",
+      "sourceFile": "v2/吵.json"
+    },
+    {
+      "rank": 736,
+      "character": "串",
+      "sourceStatus": "headword_found",
+      "readings": [
+        "chuan4"
+      ],
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "string",
+          "lexicalEvidence": "literal_gloss_match",
+          "matchingDictionaryReadings": [
+            "chuan4"
+          ]
+        }
+      ],
+      "manualReview": "pending",
+      "sourceFile": "v2/串.json"
+    },
+    {
+      "rank": 737,
+      "character": "员",
+      "sourceStatus": "headword_found",
+      "readings": [
+        "yuan2"
+      ],
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "member",
+          "lexicalEvidence": "literal_gloss_match",
+          "matchingDictionaryReadings": [
+            "yuan2"
+          ]
+        }
+      ],
+      "manualReview": "pending",
+      "sourceFile": "v2/员.json"
+    },
+    {
+      "rank": 738,
+      "character": "呐",
+      "sourceStatus": "headword_found",
+      "readings": [
+        "na4",
+        "na5"
+      ],
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "shout",
+          "lexicalEvidence": "requires_sense_review",
+          "matchingDictionaryReadings": []
+        }
+      ],
+      "manualReview": "pending",
+      "sourceFile": "v2/呐.json"
+    },
+    {
+      "rank": 739,
+      "character": "听",
+      "sourceStatus": "headword_found",
+      "readings": [
+        "yin3",
+        "ting1",
+        "ting4"
+      ],
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "hear",
+          "lexicalEvidence": "literal_gloss_match",
+          "matchingDictionaryReadings": [
+            "ting1"
+          ]
+        }
+      ],
+      "manualReview": "pending",
+      "sourceFile": "v2/听.json"
+    },
+    {
+      "rank": 740,
+      "character": "吟",
+      "sourceStatus": "headword_found",
+      "readings": [
+        "yin2"
+      ],
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "sing",
+          "lexicalEvidence": "requires_sense_review",
+          "matchingDictionaryReadings": []
+        }
+      ],
+      "manualReview": "pending",
+      "sourceFile": "v2/吟.json"
+    },
+    {
+      "rank": 741,
+      "character": "吩",
+      "sourceStatus": "headword_found",
+      "readings": [
+        "fen1"
+      ],
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "command",
+          "lexicalEvidence": "requires_sense_review",
+          "matchingDictionaryReadings": []
+        }
+      ],
+      "manualReview": "pending",
+      "sourceFile": "v2/吩.json"
+    },
+    {
+      "rank": 742,
+      "character": "呛",
+      "sourceStatus": "headword_found",
+      "readings": [
+        "qiang1",
+        "qiang4"
+      ],
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "choke",
+          "lexicalEvidence": "literal_gloss_match",
+          "matchingDictionaryReadings": [
+            "qiang1",
+            "qiang4"
+          ]
+        }
+      ],
+      "manualReview": "pending",
+      "sourceFile": "v2/呛.json"
+    },
+    {
+      "rank": 743,
+      "character": "吻",
+      "sourceStatus": "headword_found",
+      "readings": [
+        "wen3"
+      ],
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "kiss",
+          "lexicalEvidence": "literal_gloss_match",
+          "matchingDictionaryReadings": [
+            "wen3"
+          ]
+        }
+      ],
+      "manualReview": "pending",
+      "sourceFile": "v2/吻.json"
+    },
+    {
+      "rank": 744,
+      "character": "吹",
+      "sourceStatus": "headword_found",
+      "readings": [
+        "chui1"
+      ],
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "blow",
+          "lexicalEvidence": "literal_gloss_match",
+          "matchingDictionaryReadings": [
+            "chui1"
+          ]
+        }
+      ],
+      "manualReview": "pending",
+      "sourceFile": "v2/吹.json"
+    },
+    {
+      "rank": 745,
+      "character": "呜",
+      "sourceStatus": "headword_found",
+      "readings": [
+        "wu1"
+      ],
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "sobbing",
+          "lexicalEvidence": "requires_sense_review",
+          "matchingDictionaryReadings": []
+        }
+      ],
+      "manualReview": "pending",
+      "sourceFile": "v2/呜.json"
+    },
+    {
+      "rank": 746,
+      "character": "吭",
+      "sourceStatus": "headword_found",
+      "readings": [
+        "hang2",
+        "keng1"
+      ],
+      "selectedSenseChecks": [],
+      "manualReview": "pending",
+      "sourceFile": "v2/吭.json"
+    },
+    {
+      "rank": 747,
+      "character": "吧",
+      "sourceStatus": "headword_found",
+      "readings": [
+        "ba1",
+        "ba5"
+      ],
+      "selectedSenseChecks": [],
+      "manualReview": "pending",
+      "sourceFile": "v2/吧.json"
+    },
+    {
+      "rank": 748,
+      "character": "邑",
+      "sourceStatus": "headword_found",
+      "readings": [
+        "yi4"
+      ],
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "city",
+          "lexicalEvidence": "literal_gloss_match",
+          "matchingDictionaryReadings": [
+            "yi4"
+          ]
+        }
+      ],
+      "manualReview": "pending",
+      "sourceFile": "v2/邑.json"
+    },
+    {
+      "rank": 749,
+      "character": "吼",
+      "sourceStatus": "headword_found",
+      "readings": [
+        "hou3"
+      ],
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "roar",
+          "lexicalEvidence": "literal_gloss_match",
+          "matchingDictionaryReadings": [
+            "hou3"
+          ]
+        }
+      ],
+      "manualReview": "pending",
+      "sourceFile": "v2/吼.json"
+    },
+    {
+      "rank": 750,
+      "character": "囤",
+      "sourceStatus": "headword_found",
+      "readings": [
+        "dun4",
+        "tun2"
+      ],
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "grain basket",
+          "lexicalEvidence": "requires_sense_review",
+          "matchingDictionaryReadings": []
+        }
+      ],
+      "manualReview": "pending",
+      "sourceFile": "v2/囤.json"
+    },
+    {
+      "rank": 751,
+      "character": "别",
+      "sourceStatus": "headword_found",
+      "readings": [
+        "Bie2",
+        "bie2",
+        "bie4"
+      ],
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "separate",
+          "lexicalEvidence": "literal_gloss_match",
+          "matchingDictionaryReadings": [
+            "bie2"
+          ]
+        },
+        {
+          "selectedMeaning": "do not",
+          "lexicalEvidence": "requires_sense_review",
+          "matchingDictionaryReadings": []
+        }
+      ],
+      "manualReview": "pending",
+      "sourceFile": "v2/别.json"
+    },
+    {
+      "rank": 752,
+      "character": "吮",
+      "sourceStatus": "headword_found",
+      "readings": [
+        "shun3"
+      ],
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "sip",
+          "lexicalEvidence": "requires_sense_review",
+          "matchingDictionaryReadings": []
+        }
+      ],
+      "manualReview": "pending",
+      "sourceFile": "v2/吮.json"
+    },
+    {
+      "rank": 753,
+      "character": "岖",
+      "sourceStatus": "headword_found",
+      "readings": [
+        "qu1"
+      ],
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "rugged",
+          "lexicalEvidence": "literal_gloss_match",
+          "matchingDictionaryReadings": [
+            "qu1"
+          ]
+        }
+      ],
+      "manualReview": "pending",
+      "sourceFile": "v2/岖.json"
+    },
+    {
+      "rank": 754,
+      "character": "岗",
+      "sourceStatus": "headword_found",
+      "readings": [
+        "gang3"
+      ],
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "post",
+          "lexicalEvidence": "requires_sense_review",
+          "matchingDictionaryReadings": []
+        }
+      ],
+      "manualReview": "pending",
+      "sourceFile": "v2/岗.json"
+    },
+    {
+      "rank": 755,
+      "character": "帐",
+      "sourceStatus": "headword_found",
+      "readings": [
+        "zhang4"
+      ],
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "tent",
+          "lexicalEvidence": "literal_gloss_match",
+          "matchingDictionaryReadings": [
+            "zhang4"
+          ]
+        }
+      ],
+      "manualReview": "pending",
+      "sourceFile": "v2/帐.json"
+    },
+    {
+      "rank": 756,
+      "character": "财",
+      "sourceStatus": "headword_found",
+      "readings": [
+        "cai2"
+      ],
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "wealth",
+          "lexicalEvidence": "literal_gloss_match",
+          "matchingDictionaryReadings": [
+            "cai2"
+          ]
+        }
+      ],
+      "manualReview": "pending",
+      "sourceFile": "v2/财.json"
+    },
+    {
+      "rank": 757,
+      "character": "针",
+      "sourceStatus": "headword_found",
+      "readings": [
+        "zhen1"
+      ],
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "needle",
+          "lexicalEvidence": "literal_gloss_match",
+          "matchingDictionaryReadings": [
+            "zhen1"
+          ]
+        }
+      ],
+      "manualReview": "pending",
+      "sourceFile": "v2/针.json"
+    },
+    {
+      "rank": 758,
+      "character": "钉",
+      "sourceStatus": "headword_found",
+      "readings": [
+        "ding1",
+        "ding4"
+      ],
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "nail",
+          "lexicalEvidence": "literal_gloss_match",
+          "matchingDictionaryReadings": [
+            "ding1",
+            "ding4"
+          ]
+        }
+      ],
+      "manualReview": "pending",
+      "sourceFile": "v2/钉.json"
+    },
+    {
+      "rank": 759,
+      "character": "牡",
+      "sourceStatus": "headword_found",
+      "readings": [
+        "mu3"
+      ],
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "male",
+          "lexicalEvidence": "literal_gloss_match",
+          "matchingDictionaryReadings": [
+            "mu3"
+          ]
+        }
+      ],
+      "manualReview": "pending",
+      "sourceFile": "v2/牡.json"
+    },
+    {
+      "rank": 760,
+      "character": "告",
+      "sourceStatus": "headword_found",
+      "readings": [
+        "gao4"
+      ],
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "announce",
+          "lexicalEvidence": "literal_gloss_match",
+          "matchingDictionaryReadings": [
+            "gao4"
+          ]
+        }
+      ],
+      "manualReview": "pending",
+      "sourceFile": "v2/告.json"
+    },
+    {
+      "rank": 761,
+      "character": "我",
+      "sourceStatus": "headword_found",
+      "readings": [
+        "wo3"
+      ],
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "i, me",
+          "lexicalEvidence": "requires_sense_review",
+          "matchingDictionaryReadings": []
+        }
+      ],
+      "manualReview": "pending",
+      "sourceFile": "v2/我.json"
+    },
+    {
+      "rank": 762,
+      "character": "乱",
+      "sourceStatus": "headword_found",
+      "readings": [
+        "luan4"
+      ],
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "chaos",
+          "lexicalEvidence": "requires_sense_review",
+          "matchingDictionaryReadings": []
+        }
+      ],
+      "manualReview": "pending",
+      "sourceFile": "v2/乱.json"
+    },
+    {
+      "rank": 763,
+      "character": "利",
+      "sourceStatus": "headword_found",
+      "readings": [
+        "Li4",
+        "li4"
+      ],
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "profit",
+          "lexicalEvidence": "literal_gloss_match",
+          "matchingDictionaryReadings": [
+            "li4"
+          ]
+        }
+      ],
+      "manualReview": "pending",
+      "sourceFile": "v2/利.json"
+    },
+    {
+      "rank": 764,
+      "character": "秃",
+      "sourceStatus": "headword_found",
+      "readings": [
+        "tu1"
+      ],
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "bald",
+          "lexicalEvidence": "literal_gloss_match",
+          "matchingDictionaryReadings": [
+            "tu1"
+          ]
+        }
+      ],
+      "manualReview": "pending",
+      "sourceFile": "v2/秃.json"
+    },
+    {
+      "rank": 765,
+      "character": "秀",
+      "sourceStatus": "headword_found",
+      "readings": [
+        "xiu4"
+      ],
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "flowering",
+          "lexicalEvidence": "requires_sense_review",
+          "matchingDictionaryReadings": []
+        }
+      ],
+      "manualReview": "pending",
+      "sourceFile": "v2/秀.json"
+    },
+    {
+      "rank": 766,
+      "character": "私",
+      "sourceStatus": "headword_found",
+      "readings": [
+        "si1"
+      ],
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "private",
+          "lexicalEvidence": "literal_gloss_match",
+          "matchingDictionaryReadings": [
+            "si1"
+          ]
+        }
+      ],
+      "manualReview": "pending",
+      "sourceFile": "v2/私.json"
+    },
+    {
+      "rank": 767,
+      "character": "每",
+      "sourceStatus": "headword_found",
+      "readings": [
+        "mei3"
+      ],
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "every",
+          "lexicalEvidence": "literal_gloss_match",
+          "matchingDictionaryReadings": [
+            "mei3"
+          ]
+        }
+      ],
+      "manualReview": "pending",
+      "sourceFile": "v2/每.json"
+    },
+    {
+      "rank": 768,
+      "character": "兵",
+      "sourceStatus": "headword_found",
+      "readings": [
+        "bing1"
+      ],
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "soldier",
+          "lexicalEvidence": "literal_gloss_match",
+          "matchingDictionaryReadings": [
+            "bing1"
+          ]
+        }
+      ],
+      "manualReview": "pending",
+      "sourceFile": "v2/兵.json"
+    },
+    {
+      "rank": 769,
+      "character": "估",
+      "sourceStatus": "headword_found",
+      "readings": [
+        "gu1",
+        "gu4"
+      ],
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "estimate",
+          "lexicalEvidence": "literal_gloss_match",
+          "matchingDictionaryReadings": [
+            "gu1"
+          ]
+        }
+      ],
+      "manualReview": "pending",
+      "sourceFile": "v2/估.json"
+    },
+    {
+      "rank": 770,
+      "character": "体",
+      "sourceStatus": "headword_found",
+      "readings": [
+        "ti3"
+      ],
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "body",
+          "lexicalEvidence": "literal_gloss_match",
+          "matchingDictionaryReadings": [
+            "ti3"
+          ]
+        }
+      ],
+      "manualReview": "pending",
+      "sourceFile": "v2/体.json"
+    },
+    {
+      "rank": 771,
+      "character": "何",
+      "sourceStatus": "headword_found",
+      "readings": [
+        "He2",
+        "he2"
+      ],
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "what",
+          "lexicalEvidence": "literal_gloss_match",
+          "matchingDictionaryReadings": [
+            "he2"
+          ]
+        }
+      ],
+      "manualReview": "pending",
+      "sourceFile": "v2/何.json"
+    },
+    {
+      "rank": 772,
+      "character": "佐",
+      "sourceStatus": "headword_found",
+      "readings": [
+        "zuo3"
+      ],
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "assist",
+          "lexicalEvidence": "literal_gloss_match",
+          "matchingDictionaryReadings": [
+            "zuo3"
+          ]
+        }
+      ],
+      "manualReview": "pending",
+      "sourceFile": "v2/佐.json"
+    },
+    {
+      "rank": 773,
+      "character": "佑",
+      "sourceStatus": "headword_found",
+      "readings": [
+        "you4"
+      ],
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "protect",
+          "lexicalEvidence": "literal_gloss_match",
+          "matchingDictionaryReadings": [
+            "you4"
+          ]
+        }
+      ],
+      "manualReview": "pending",
+      "sourceFile": "v2/佑.json"
+    },
+    {
+      "rank": 774,
+      "character": "但",
+      "sourceStatus": "headword_found",
+      "readings": [
+        "dan4"
+      ],
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "but",
+          "lexicalEvidence": "literal_gloss_match",
+          "matchingDictionaryReadings": [
+            "dan4"
+          ]
+        }
+      ],
+      "manualReview": "pending",
+      "sourceFile": "v2/但.json"
+    },
+    {
+      "rank": 775,
+      "character": "伸",
+      "sourceStatus": "headword_found",
+      "readings": [
+        "shen1"
+      ],
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "stretch",
+          "lexicalEvidence": "literal_gloss_match",
+          "matchingDictionaryReadings": [
+            "shen1"
+          ]
+        }
+      ],
+      "manualReview": "pending",
+      "sourceFile": "v2/伸.json"
+    },
+    {
+      "rank": 776,
+      "character": "佃",
+      "sourceStatus": "headword_found",
+      "readings": [
+        "dian4",
+        "tian2"
+      ],
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "tenant farmer",
+          "lexicalEvidence": "requires_sense_review",
+          "matchingDictionaryReadings": []
+        }
+      ],
+      "manualReview": "pending",
+      "sourceFile": "v2/佃.json"
+    },
+    {
+      "rank": 777,
+      "character": "作",
+      "sourceStatus": "headword_found",
+      "readings": [
+        "zuo1",
+        "zuo4"
+      ],
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "make",
+          "lexicalEvidence": "requires_sense_review",
+          "matchingDictionaryReadings": []
+        }
+      ],
+      "manualReview": "pending",
+      "sourceFile": "v2/作.json"
+    },
+    {
+      "rank": 778,
+      "character": "伯",
+      "sourceStatus": "headword_found",
+      "readings": [
+        "ba4",
+        "bai3",
+        "bo2"
+      ],
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "older brother",
+          "lexicalEvidence": "requires_sense_review",
+          "matchingDictionaryReadings": []
+        }
+      ],
+      "manualReview": "pending",
+      "sourceFile": "v2/伯.json"
+    },
+    {
+      "rank": 779,
+      "character": "伶",
+      "sourceStatus": "headword_found",
+      "readings": [
+        "ling2"
+      ],
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "actor",
+          "lexicalEvidence": "literal_gloss_match",
+          "matchingDictionaryReadings": [
+            "ling2"
+          ]
+        }
+      ],
+      "manualReview": "pending",
+      "sourceFile": "v2/伶.json"
+    },
+    {
+      "rank": 780,
+      "character": "佣",
+      "sourceStatus": "headword_found",
+      "readings": [
+        "yong4",
+        "yong1"
+      ],
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "commission fee",
+          "lexicalEvidence": "requires_sense_review",
+          "matchingDictionaryReadings": []
+        }
+      ],
+      "manualReview": "pending",
+      "sourceFile": "v2/佣.json"
+    },
+    {
+      "rank": 781,
+      "character": "低",
+      "sourceStatus": "headword_found",
+      "readings": [
+        "di1"
+      ],
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "low",
+          "lexicalEvidence": "literal_gloss_match",
+          "matchingDictionaryReadings": [
+            "di1"
+          ]
+        }
+      ],
+      "manualReview": "pending",
+      "sourceFile": "v2/低.json"
+    },
+    {
+      "rank": 782,
+      "character": "你",
+      "sourceStatus": "headword_found",
+      "readings": [
+        "ni3"
+      ],
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "you",
+          "lexicalEvidence": "literal_gloss_match",
+          "matchingDictionaryReadings": [
+            "ni3"
+          ]
+        }
+      ],
+      "manualReview": "pending",
+      "sourceFile": "v2/你.json"
+    },
+    {
+      "rank": 783,
+      "character": "住",
+      "sourceStatus": "headword_found",
+      "readings": [
+        "zhu4"
+      ],
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "dwell",
+          "lexicalEvidence": "literal_gloss_match",
+          "matchingDictionaryReadings": [
+            "zhu4"
+          ]
+        }
+      ],
+      "manualReview": "pending",
+      "sourceFile": "v2/住.json"
+    },
+    {
+      "rank": 784,
+      "character": "位",
+      "sourceStatus": "headword_found",
+      "readings": [
+        "wei4"
+      ],
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "position",
+          "lexicalEvidence": "literal_gloss_match",
+          "matchingDictionaryReadings": [
+            "wei4"
+          ]
+        }
+      ],
+      "manualReview": "pending",
+      "sourceFile": "v2/位.json"
+    },
+    {
+      "rank": 785,
+      "character": "伴",
+      "sourceStatus": "headword_found",
+      "readings": [
+        "ban4"
+      ],
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "companion",
+          "lexicalEvidence": "literal_gloss_match",
+          "matchingDictionaryReadings": [
+            "ban4"
+          ]
+        }
+      ],
+      "manualReview": "pending",
+      "sourceFile": "v2/伴.json"
+    },
+    {
+      "rank": 786,
+      "character": "身",
+      "sourceStatus": "headword_found",
+      "readings": [
+        "shen1"
+      ],
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "body",
+          "lexicalEvidence": "literal_gloss_match",
+          "matchingDictionaryReadings": [
+            "shen1"
+          ]
+        }
+      ],
+      "manualReview": "pending",
+      "sourceFile": "v2/身.json"
+    },
+    {
+      "rank": 787,
+      "character": "皂",
+      "sourceStatus": "headword_found",
+      "readings": [
+        "zao4"
+      ],
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "soap",
+          "lexicalEvidence": "literal_gloss_match",
+          "matchingDictionaryReadings": [
+            "zao4"
+          ]
+        }
+      ],
+      "manualReview": "pending",
+      "sourceFile": "v2/皂.json"
+    },
+    {
+      "rank": 788,
+      "character": "伺",
+      "sourceStatus": "headword_found",
+      "readings": [
+        "ci4",
+        "si4"
+      ],
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "serve",
+          "lexicalEvidence": "requires_sense_review",
+          "matchingDictionaryReadings": []
+        }
+      ],
+      "manualReview": "pending",
+      "sourceFile": "v2/伺.json"
+    },
+    {
+      "rank": 789,
+      "character": "佛",
+      "sourceStatus": "headword_found",
+      "readings": [
+        "Fo2",
+        "fu2"
+      ],
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "Buddha",
+          "lexicalEvidence": "literal_gloss_match",
+          "matchingDictionaryReadings": [
+            "Fo2"
+          ]
+        }
+      ],
+      "manualReview": "pending",
+      "sourceFile": "v2/佛.json"
+    },
+    {
+      "rank": 790,
+      "character": "囱",
+      "sourceStatus": "headword_found",
+      "readings": [
+        "chuang1",
+        "cong1"
+      ],
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "chimney",
+          "lexicalEvidence": "literal_gloss_match",
+          "matchingDictionaryReadings": [
+            "cong1"
+          ]
+        }
+      ],
+      "manualReview": "pending",
+      "sourceFile": "v2/囱.json"
+    },
+    {
+      "rank": 791,
+      "character": "近",
+      "sourceStatus": "headword_found",
+      "readings": [
+        "jin4"
+      ],
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "near",
+          "lexicalEvidence": "literal_gloss_match",
+          "matchingDictionaryReadings": [
+            "jin4"
+          ]
+        }
+      ],
+      "manualReview": "pending",
+      "sourceFile": "v2/近.json"
+    },
+    {
+      "rank": 792,
+      "character": "彻",
+      "sourceStatus": "headword_found",
+      "readings": [
+        "che4"
+      ],
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "penetrate",
+          "lexicalEvidence": "requires_sense_review",
+          "matchingDictionaryReadings": []
+        }
+      ],
+      "manualReview": "pending",
+      "sourceFile": "v2/彻.json"
+    },
+    {
+      "rank": 793,
+      "character": "役",
+      "sourceStatus": "headword_found",
+      "readings": [
+        "yi4"
+      ],
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "service",
+          "lexicalEvidence": "literal_gloss_match",
+          "matchingDictionaryReadings": [
+            "yi4"
+          ]
+        }
+      ],
+      "manualReview": "pending",
+      "sourceFile": "v2/役.json"
+    },
+    {
+      "rank": 794,
+      "character": "返",
+      "sourceStatus": "headword_found",
+      "readings": [
+        "fan3"
+      ],
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "return",
+          "lexicalEvidence": "literal_gloss_match",
+          "matchingDictionaryReadings": [
+            "fan3"
+          ]
+        }
+      ],
+      "manualReview": "pending",
+      "sourceFile": "v2/返.json"
+    },
+    {
+      "rank": 795,
+      "character": "余",
+      "sourceStatus": "headword_found",
+      "readings": [
+        "Yu2",
+        "yu2"
+      ],
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "surplus",
+          "lexicalEvidence": "literal_gloss_match",
+          "matchingDictionaryReadings": [
+            "yu2"
+          ]
+        }
+      ],
+      "manualReview": "pending",
+      "sourceFile": "v2/余.json"
+    },
+    {
+      "rank": 796,
+      "character": "希",
+      "sourceStatus": "headword_found",
+      "readings": [
+        "xi1"
+      ],
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "hope",
+          "lexicalEvidence": "literal_gloss_match",
+          "matchingDictionaryReadings": [
+            "xi1"
+          ]
+        }
+      ],
+      "manualReview": "pending",
+      "sourceFile": "v2/希.json"
+    },
+    {
+      "rank": 797,
+      "character": "坐",
+      "sourceStatus": "headword_found",
+      "readings": [
+        "Zuo4",
+        "zuo4"
+      ],
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "sit",
+          "lexicalEvidence": "literal_gloss_match",
+          "matchingDictionaryReadings": [
+            "zuo4"
+          ]
+        }
+      ],
+      "manualReview": "pending",
+      "sourceFile": "v2/坐.json"
+    },
+    {
+      "rank": 798,
+      "character": "谷",
+      "sourceStatus": "headword_found",
+      "readings": [
+        "gu3",
+        "Gu3"
+      ],
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "valley",
+          "lexicalEvidence": "literal_gloss_match",
+          "matchingDictionaryReadings": [
+            "gu3"
+          ]
+        }
+      ],
+      "manualReview": "pending",
+      "sourceFile": "v2/谷.json"
+    },
+    {
+      "rank": 799,
+      "character": "妥",
+      "sourceStatus": "headword_found",
+      "readings": [
+        "tuo3"
+      ],
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "appropriate",
+          "lexicalEvidence": "requires_sense_review",
+          "matchingDictionaryReadings": []
+        }
+      ],
+      "manualReview": "pending",
+      "sourceFile": "v2/妥.json"
+    },
+    {
+      "rank": 800,
+      "character": "含",
+      "sourceStatus": "headword_found",
+      "readings": [
+        "han2"
+      ],
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "contain",
+          "lexicalEvidence": "literal_gloss_match",
+          "matchingDictionaryReadings": [
+            "han2"
+          ]
+        }
+      ],
+      "manualReview": "pending",
+      "sourceFile": "v2/含.json"
     }
   ]
 }
