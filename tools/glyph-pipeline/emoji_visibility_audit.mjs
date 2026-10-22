@@ -82,8 +82,9 @@ assert.deepEqual(
  [summary.singleEmojiExpressions,summary.multipleEmojiExpressions,summary.eventExpressions,
   summary.singleEmojiEventExpressions,summary.expressionsWithAssociation,summary.missingWholeTermDictionaryMatch,
   summary.sameCharacterSenseCollisionExpressions,summary.sameCharacterSenseCollisionCharacters],
- [875,22,280,266,8,248,2,1]);
+ [875,22,280,266,21,248,2,1]);
 assert.equal(summary.singleEmojiExpressions+summary.multipleEmojiExpressions,897);
+assert.equal(summary.maximumEmojiCount,3);
 const audit={
  schema:"chromalect.semantic.emoji-visibility-audit.v0.1",
  status:"automated_visual_projection_review_only_not_linguistic_or_comprehension_approval",
