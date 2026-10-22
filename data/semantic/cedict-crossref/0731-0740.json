@@ -1,0 +1,310 @@
+{
+  "schema": "chromalect.mandarin.lexical-crossref-batch.v0.1",
+  "source": {
+    "title": "CC-CEDICT per-headword v2 mirror",
+    "repository": "krmanik/cedict-json",
+    "commit": "63c2569948629323b515833930fdd10f285401b6",
+    "dataLicense": "CC BY-SA 4.0",
+    "upstream": "https://cc-cedict.org/",
+    "mirror": "https://github.com/krmanik/cedict-json",
+    "transform": "Selected single-simplified-character dictionary records, retaining readings and definitions; literal English gloss matching is automated triage only"
+  },
+  "rankStart": 731,
+  "rankEnd": 740,
+  "summary": {
+    "total": 10,
+    "headwordFound": 10,
+    "withCandidate": 10,
+    "withLiteralSupport": 5
+  },
+  "records": [
+    {
+      "rank": 731,
+      "character": "足",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/足.json",
+      "sourceBlobSha": "d094e954742e19333a8304e9216f0d4b72cdc998",
+      "traditional": "足",
+      "dictionaryReadings": [
+        "ju4",
+        "zu2"
+      ],
+      "dictionaryDefinitions": {
+        "ju4": "excessive; ",
+        "zu2": "foot; to be sufficient; ample; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "foot",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "zu2"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 732,
+      "character": "邮",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/邮.json",
+      "sourceBlobSha": "aa9ee52c1a3d98b6526cea8855fe708eb9614992",
+      "traditional": "郵",
+      "dictionaryReadings": [
+        "you2"
+      ],
+      "dictionaryDefinitions": {
+        "you2": "post (office); mail; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "mail",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "you2"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 733,
+      "character": "男",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/男.json",
+      "sourceBlobSha": "b42c039d38801d19b98114facd1ee669cf865b2d",
+      "traditional": "男",
+      "dictionaryReadings": [
+        "nan2"
+      ],
+      "dictionaryDefinitions": {
+        "nan2": "male; Baron, lowest of five orders of nobility 五等爵位[wu3 deng3 jue2 wei4]; CL:個|个[ge4]; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "man",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 734,
+      "character": "困",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/困.json",
+      "sourceBlobSha": "e1d5123cd46a530ade060c1eb760cd4b1365bf5d",
+      "traditional": "睏",
+      "dictionaryReadings": [
+        "kun4"
+      ],
+      "dictionaryDefinitions": {
+        "kun4": "to trap; to surround; hard-pressed; stranded; destitute; sleepy; tired; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "difficult",
+          "sourceGlossGroupIndex": 2,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 735,
+      "character": "吵",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/吵.json",
+      "sourceBlobSha": "3e733e5ac08e8320a51c481aa148c9753a432cc8",
+      "traditional": "吵",
+      "dictionaryReadings": [
+        "chao3"
+      ],
+      "dictionaryDefinitions": {
+        "chao3": "to quarrel; to make a noise; noisy; to disturb by making a noise; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "argue",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 736,
+      "character": "串",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/串.json",
+      "sourceBlobSha": "18de42620ae20fe6291971d5399266a2c11a437f",
+      "traditional": "串",
+      "dictionaryReadings": [
+        "chuan4"
+      ],
+      "dictionaryDefinitions": {
+        "chuan4": "to string together; to skewer; to connect wrongly; to gang up; to rove; string; bunch; skewer; classifier for things that are strung together, or in a bunch, or in a row: string of, bunch of, series of; to make a swift or abrupt linear movement (like a bead on an abacus); to move across; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "string",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "chuan4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 737,
+      "character": "员",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/员.json",
+      "sourceBlobSha": "f0e1f333ef89a6c9a8e3dbd7af61e0ba96bed792",
+      "traditional": "員",
+      "dictionaryReadings": [
+        "yuan2"
+      ],
+      "dictionaryDefinitions": {
+        "yuan2": "person; employee; member; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "member",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "yuan2"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 738,
+      "character": "呐",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/呐.json",
+      "sourceBlobSha": "01f4359bafcb3a023fe1b797390aff982ceff9ca",
+      "traditional": "吶",
+      "dictionaryReadings": [
+        "na4",
+        "na5"
+      ],
+      "dictionaryDefinitions": {
+        "na4": "battle cry; ",
+        "na5": "sentence-final particle (abbr. for 呢啊[ne5 a5] or variant of 哪[na5]); "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "shout",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 739,
+      "character": "听",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/听.json",
+      "sourceBlobSha": "bc19ef3aafdebc03671b8048c069d24187ccdf8f",
+      "traditional": "聽",
+      "dictionaryReadings": [
+        "yin3",
+        "ting1",
+        "ting4"
+      ],
+      "dictionaryDefinitions": {
+        "yin3": "smile (archaic); ",
+        "ting1": "to listen; to hear; to obey; a can (loanword from English 'tin'); classifier for canned beverages; ",
+        "ting4": "(literary pronunciation, still advocated in Taiwan) to rule; to sentence; to allow; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "hear",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "ting1"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 740,
+      "character": "吟",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/吟.json",
+      "sourceBlobSha": "0d591266590373892f149b19973c5d6149289862",
+      "traditional": "唫",
+      "dictionaryReadings": [
+        "yin2"
+      ],
+      "dictionaryDefinitions": {
+        "yin2": "to chant; to recite; to moan; to groan; cry (of certain animals and insects); song (ancient poem); old variant of 吟[yin2]; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "sing",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    }
+  ]
+}
