@@ -61,34 +61,41 @@ assert.deepEqual(counter,{
 assert.equal(queue.counts.deskAnalyzedHighPriority,15);
 assert.equal(queue.counts.independentlyLexicallyApproved,0);
 assert.equal(queue.counts.emojiComprehensionApproved,0);
-let deskAnalyzed=0, analyzedUnclassified=0;
+let deskAnalyzed=0;
+const analyzedByPriority={high:0,medium:0,unclassified:0};
+const allowedActions=new Set([
+  "reassess_or_defer","redesign_pictogram","redesign_verb_cue",
+  "inspect_existing_alternative","inspect_context"
+]);
 for(const record of queue.records){
- if(record.priority==="high"){
-  assert.equal(record.deskAnalysis?.status,
+ const analysis=record.deskAnalysis;
+ assert.ok(analysis,"All 248 flagged senses must have a preliminary desk assessment");
+ assert.equal(analysis.status,
    "assistant_preliminary_analysis_not_independent_lexical_review");
-  assert.ok(record.deskAnalysis.observation.length>45);
-  assert.ok(["reassess_or_defer","redesign_pictogram","redesign_verb_cue",
-    "inspect_existing_alternative","inspect_context"].includes(record.deskAnalysis.provisionalNextAction));
-  deskAnalyzed++;
- }else if(record.deskAnalysis){
-  assert.equal(record.priority,"unclassified");
-  assert.equal(record.deskAnalysis.status,
-   "assistant_preliminary_analysis_not_independent_lexical_review");
-  assert.equal(record.deskAnalysis.reviewerIndependent,false);
-  assert.equal(record.deskAnalysis.sourceBasis,"pinned_CC-CEDICT_headword_plus_Unihan_candidate");
-  assert.ok(record.deskAnalysis.sourceExcerpt?.length>5);
-  assert.ok(record.deskAnalysis.observation.length>40);
-  analyzedUnclassified++;
-  deskAnalyzed++;
+ assert.ok(allowedActions.has(analysis.provisionalNextAction),
+   "Every assessment must specify a recognizable next step");
+ assert.ok(typeof analysis.observation==="string"&&analysis.observation.length>40);
+ if(record.priority!=="high"){
+   assert.equal(analysis.reviewerIndependent,false);
+   assert.equal(analysis.sourceBasis,"pinned_CC-CEDICT_headword_plus_Unihan_candidate");
+   assert.ok(analysis.sourceExcerpt?.length>5);
  }
+ assert.equal(record.lexicalDecision,"pending",
+   "Preliminary assistant analysis must not produce lexical approval");
+ assert.equal(record.visualComprehensionDecision,"pending",
+   "Preliminary assistant analysis must not produce emoji approval");
+ assert.equal(record.productionVerified,false);
+ analyzedByPriority[record.priority]++;
+ deskAnalyzed++;
 }
-assert.equal(analyzedUnclassified,queue.counts.deskAnalyzedUnclassified);
-assert.equal(queue.counts.deskAnalyzedUnclassified,85);
-assert.equal(queue.counts.deskAnalyzedTotal,
- queue.counts.deskAnalyzedHighPriority+queue.counts.deskAnalyzedUnclassified);
-assert.equal(queue.counts.deskAnalyzedTotal,100);
+assert.equal(analyzedByPriority.high,queue.counts.deskAnalyzedHighPriority);
+assert.equal(analyzedByPriority.medium,queue.counts.deskAnalyzedMediumPriority);
+assert.equal(analyzedByPriority.unclassified,queue.counts.deskAnalyzedUnclassified);
 assert.equal(deskAnalyzed,queue.counts.deskAnalyzedTotal);
-assert.equal(deskAnalyzed,queue.counts.deskAnalyzedTotal);
+assert.equal(queue.counts.deskAnalysisPending,queue.records.length-deskAnalyzed);
+assert.equal(deskAnalyzed,248);
+assert.equal(queue.counts.independentlyLexicallyApproved,0);
+assert.equal(queue.counts.emojiComprehensionApproved,0);
 assert.equal(seen.size,needs.length);
 assert.equal(counter.substringOnly,7);
 assert.equal(counter.high,15);
@@ -98,4 +105,4 @@ assert.equal(counter.previouslyTriaged,19);
 assert.equal(strict.scope.independentHumanApproved,0);
 assert.equal(strict.scope.emojiComprehensionApproved,0);
 assert.equal(manifest.metrics.productionVerified,0);
-console.log("Sense-review queue: 248 pending, 100 desk-analyzed (40.3%), 148 still need desk analysis. Zero independently approved.");
+console.log("Sense-review queue: 248 flagged, 248 preliminary desk assessments (100%), 0 pending desk notes, 0 independently approved.");
