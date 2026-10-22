@@ -11,6 +11,7 @@
   const lookup = $("semantic-lookup");
   const filter = $("semantic-filter");
   const lexicalFilter = $("semantic-lexical-filter");
+  const actionFilter = $("semantic-action-filter");
   const enabled = $("semantic-layer-character");
   const prev = $("semantic-prev");
   const next = $("semantic-next");
@@ -184,10 +185,13 @@
     const q=lookup.value.trim().toLocaleLowerCase();
     const selected=filter.value;
     const dictionary=lexicalFilter.value;
+    const action=actionFilter.value;
     return ledger.characters.filter(x=>{
       const crossref=lexicalRows.get(x.rank);
       const aligned=strictRows.get(x.rank)||[];
       return (selected==="all" || selected===state(x)) &&
+        (action==="all" || (reviewRows.get(x.rank)||[]).some(y=>
+          y.deskAnalysis?.provisionalNextAction===action)) &&
         (dictionary==="all" ||
           (dictionary==="crossref" && !!crossref) ||
           (dictionary==="not-crossref" && !crossref) ||
@@ -224,6 +228,7 @@
   lookup.addEventListener("input",reset);
   filter.addEventListener("change",reset);
   lexicalFilter.addEventListener("change",reset);
+  actionFilter.addEventListener("change",reset);
   enabled.addEventListener("change",render);
   prev.addEventListener("click",()=>{page--;render();});
   next.addEventListener("click",()=>{page++;render();});

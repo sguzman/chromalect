@@ -35,7 +35,7 @@ class Element {
 const ids={};
 for(const id of [
   "semantic-coverage-rows","semantic-coverage-status",
-  "semantic-lookup","semantic-filter","semantic-lexical-filter","semantic-layer-character",
+  "semantic-lookup","semantic-filter","semantic-lexical-filter","semantic-action-filter","semantic-layer-character",
   "semantic-prev","semantic-next","semantic-page-label",
   "semantic-source-count","semantic-source-percent",
   "semantic-screened-count","semantic-screened-percent",
@@ -51,6 +51,7 @@ for(const id of [
 ]) ids[id]=new Element();
 ids["semantic-filter"].value="all";
 ids["semantic-lexical-filter"].value="all";
+ids["semantic-action-filter"].value="all";
 ids["semantic-layer-character"].checked=true;
 const document={
   getElementById:id=>ids[id],
@@ -163,6 +164,18 @@ ids["semantic-lexical-filter"].events.change();
 assert.match(ids["semantic-coverage-status"].textContent,new RegExp((1000-lexical.metrics.crossReferenced)+" characters match"));
 ids["semantic-lexical-filter"].value="all";
 ids["semantic-lexical-filter"].events.change();
+for(const [action,expected] of [
+  ["inspect_context",161],["reassess_or_defer",69],
+  ["redesign_verb_cue",9],["redesign_pictogram",8],
+  ["inspect_existing_alternative",1]
+]){
+  ids["semantic-action-filter"].value=action;
+  ids["semantic-action-filter"].events.change();
+  assert.match(ids["semantic-coverage-status"].textContent,
+    new RegExp(expected+" characters match"),"Action filter "+action);
+}
+ids["semantic-action-filter"].value="all";
+ids["semantic-action-filter"].events.change();
 ids["semantic-lookup"].value="生";
 ids["semantic-lookup"].events.input();
 assert.equal(ids["semantic-coverage-rows"].children.length,1);
@@ -182,6 +195,7 @@ assert.equal(data.initialScreeningReview.experimentalExpressionCount,897);
 assert.match(html,/data-character-layer-controls/);
 assert.match(html,/src="layers.js"/);
 assert.match(html,/id="semantic-lexical-filter"/);
+assert.match(html,/id="semantic-action-filter"/);
 assert.match(html,/id="semantic-desk-progress"/);
 assert.match(html,/id="semantic-boundary-progress"/);
 assert.match(html,/value="substring-only"/);
