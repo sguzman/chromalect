@@ -1,0 +1,113 @@
+{
+  "schema": "chromalect.semantic.gloss-boundary-audit-manifest.v0.1",
+  "status": "complete_automated_lexical_triage_not_independent_human_review",
+  "version": "0.1.0",
+  "source": {
+    "dictionary": "CC-CEDICT per-character headword mirror",
+    "repository": "krmanik/cedict-json",
+    "pinnedCommit": "63c2569948629323b515833930fdd10f285401b6",
+    "license": "CC BY-SA 4.0",
+    "provenanceManifest": "manifest-v0.1.json"
+  },
+  "method": "Unicode-aware, case-insensitive whole-term boundary matching in English dictionary definitions. It is evidence triage, NOT a claim of translation or pictogram understanding. A match can be irrelevant in context; a non-match may be an English synonym.",
+  "files": [
+    {
+      "path": "boundary-audit-0001-0200.json",
+      "start": 1,
+      "end": 200,
+      "count": 200,
+      "expressionCount": 145,
+      "legacyLiteral": 117,
+      "strictWholeTerm": 117,
+      "legacySubstringOnly": 0
+    },
+    {
+      "path": "boundary-audit-0201-0400.json",
+      "start": 201,
+      "end": 400,
+      "count": 200,
+      "expressionCount": 171,
+      "legacyLiteral": 122,
+      "strictWholeTerm": 121,
+      "legacySubstringOnly": 1
+    },
+    {
+      "path": "boundary-audit-0401-0600.json",
+      "start": 401,
+      "end": 600,
+      "count": 200,
+      "expressionCount": 196,
+      "legacyLiteral": 138,
+      "strictWholeTerm": 137,
+      "legacySubstringOnly": 1
+    },
+    {
+      "path": "boundary-audit-0601-0800.json",
+      "start": 601,
+      "end": 800,
+      "count": 200,
+      "expressionCount": 197,
+      "legacyLiteral": 148,
+      "strictWholeTerm": 146,
+      "legacySubstringOnly": 2
+    },
+    {
+      "path": "boundary-audit-0801-1000.json",
+      "start": 801,
+      "end": 1000,
+      "count": 200,
+      "expressionCount": 188,
+      "legacyLiteral": 131,
+      "strictWholeTerm": 128,
+      "legacySubstringOnly": 3
+    }
+  ],
+  "summary": {
+    "charactersAudited": 1000,
+    "expressionCount": 897,
+    "legacySubstringMatches": 656,
+    "strictWholeTermMatches": 649,
+    "substringOnlyFalsePositives": 7,
+    "requiresContextualReview": 248,
+    "humanLexicalApproved": 0,
+    "emojiComprehensionApproved": 0,
+    "productionVerified": 0
+  },
+  "substringOnlyCases": [
+    {
+      "rank": 268,
+      "character": "丘",
+      "selectedMeaning": "hill"
+    },
+    {
+      "rank": 448,
+      "character": "廷",
+      "selectedMeaning": "court"
+    },
+    {
+      "rank": 687,
+      "character": "极",
+      "selectedMeaning": "extreme"
+    },
+    {
+      "rank": 768,
+      "character": "兵",
+      "selectedMeaning": "soldier"
+    },
+    {
+      "rank": 828,
+      "character": "状",
+      "selectedMeaning": "shape"
+    },
+    {
+      "rank": 867,
+      "character": "没",
+      "selectedMeaning": "drown"
+    },
+    {
+      "rank": 983,
+      "character": "幸",
+      "selectedMeaning": "luck"
+    }
+  ]
+}
