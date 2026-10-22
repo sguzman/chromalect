@@ -1,0 +1,438 @@
+{
+  "schema": "chromalect.mandarin.lexical-crossref-batch.v0.1",
+  "source": {
+    "title": "CC-CEDICT per-headword v2 mirror",
+    "repository": "krmanik/cedict-json",
+    "commit": "63c2569948629323b515833930fdd10f285401b6",
+    "dataLicense": "CC BY-SA 4.0",
+    "upstream": "https://cc-cedict.org/",
+    "mirror": "https://github.com/krmanik/cedict-json",
+    "transform": "Selected single-simplified-character dictionary records, retaining readings and definitions; literal English gloss matching is automated triage only"
+  },
+  "rankStart": 816,
+  "rankEnd": 830,
+  "summary": {
+    "total": 15,
+    "headwordFound": 15,
+    "withCandidate": 13,
+    "withLiteralSupport": 10
+  },
+  "records": [
+    {
+      "rank": 816,
+      "character": "条",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/条.json",
+      "sourceBlobSha": "e540cc2da3384e6e5ae625ed1928ee0ec0d4d909",
+      "traditional": "條",
+      "dictionaryReadings": [
+        "tiao2"
+      ],
+      "dictionaryDefinitions": {
+        "tiao2": "strip; item; article; clause (of law or treaty); classifier for long thin things (ribbon, river, road, trousers etc); "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "string",
+          "sourceGlossGroupIndex": 1,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 817,
+      "character": "彤",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/彤.json",
+      "sourceBlobSha": "8461273390b0f2b2857d5842d3a2774d94f855cc",
+      "traditional": "彤",
+      "dictionaryReadings": [
+        "Tong2",
+        "tong2"
+      ],
+      "dictionaryDefinitions": {
+        "Tong2": "surname Tong; ",
+        "tong2": "red; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "red",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "tong2"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 818,
+      "character": "卵",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/卵.json",
+      "sourceBlobSha": "c22e361a88671dd2d89fd4442427274c762d7fb4",
+      "traditional": "卵",
+      "dictionaryReadings": [
+        "luan3"
+      ],
+      "dictionaryDefinitions": {
+        "luan3": "egg; ovum; spawn; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "egg",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "luan3"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 819,
+      "character": "灸",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/灸.json",
+      "sourceBlobSha": "1efe92d06e38d0eca5bc43d0e419c9db101a9eee",
+      "traditional": "灸",
+      "dictionaryReadings": [
+        "jiu3"
+      ],
+      "dictionaryDefinitions": {
+        "jiu3": "moxibustion (TCM); "
+      },
+      "selectedSenseChecks": [],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 820,
+      "character": "岛",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/岛.json",
+      "sourceBlobSha": "e9dd0496c6f8de9656406098f9e09eea23f39433",
+      "traditional": "島",
+      "dictionaryReadings": [
+        "dao3"
+      ],
+      "dictionaryDefinitions": {
+        "dao3": "variant of 島|岛[dao3]; island; CL:個|个[ge4],座[zuo4]; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "island",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "dao3"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 821,
+      "character": "刨",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/刨.json",
+      "sourceBlobSha": "fc69025852b2706e458543e3338cb29c4ebdde58",
+      "traditional": "鑤",
+      "dictionaryReadings": [
+        "bao4",
+        "pao2"
+      ],
+      "dictionaryDefinitions": {
+        "bao4": "carpenter's plane; to plane (woodwork); to shave off; to peel (with a potato peeler etc); variant of 刨[bao4]; ",
+        "pao2": "to dig; to excavate; (coll.) to exclude; not to count; to deduct; to subtract; "
+      },
+      "selectedSenseChecks": [],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 822,
+      "character": "迎",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/迎.json",
+      "sourceBlobSha": "125e137b4d1e0307ff30f77acc4b5dd3af15e3d6",
+      "traditional": "迎",
+      "dictionaryReadings": [
+        "ying2"
+      ],
+      "dictionaryDefinitions": {
+        "ying2": "to welcome; to meet; to face; to forge ahead (esp. in the face of difficulties); "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "welcome",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "ying2"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 823,
+      "character": "饭",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/饭.json",
+      "sourceBlobSha": "ebe700b44f8d66ce2a95907009892ecec9a77b2b",
+      "traditional": "飯",
+      "dictionaryReadings": [
+        "fan4"
+      ],
+      "dictionaryDefinitions": {
+        "fan4": "food; cuisine; cooked rice; meal; CL:碗[wan3],頓|顿[dun4]; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "meal",
+          "sourceGlossGroupIndex": 1,
+          "matchingDictionaryReadings": [
+            "fan4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 824,
+      "character": "饮",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/饮.json",
+      "sourceBlobSha": "ffd70f9e3726dab6a507a3558be225096eb32808",
+      "traditional": "飲",
+      "dictionaryReadings": [
+        "yin3",
+        "yin4"
+      ],
+      "dictionaryDefinitions": {
+        "yin3": "old variant of 飲|饮[yin3]; to drink; ",
+        "yin4": "to give (animals) water to drink; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "drink",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "yin3",
+            "yin4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 825,
+      "character": "系",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/系.json",
+      "sourceBlobSha": "c44c3706ae08f5a9604b5d6d5f24aaa401c173a1",
+      "traditional": "繫",
+      "dictionaryReadings": [
+        "xi4",
+        "ji4"
+      ],
+      "dictionaryDefinitions": {
+        "xi4": "to connect; to relate to; to tie up; to bind; to be (literary); system; department; faculty; to connect; to arrest; to worry; ",
+        "ji4": "to tie; to fasten; to button up; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "connection",
+          "sourceGlossGroupIndex": 1,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 826,
+      "character": "言",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/言.json",
+      "sourceBlobSha": "d9b52776a629cd5ef3014eba2d40c3c4f1be90fe",
+      "traditional": "言",
+      "dictionaryReadings": [
+        "yan2"
+      ],
+      "dictionaryDefinitions": {
+        "yan2": "words; speech; to say; to talk; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "speech",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "yan2"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 827,
+      "character": "冻",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/冻.json",
+      "sourceBlobSha": "2aac0583aa5bd0e1426258db7d2464230e800e06",
+      "traditional": "凍",
+      "dictionaryReadings": [
+        "dong4"
+      ],
+      "dictionaryDefinitions": {
+        "dong4": "to freeze; to feel very cold; aspic or jelly; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "freeze",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "dong4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 828,
+      "character": "状",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/状.json",
+      "sourceBlobSha": "950f0845ae3c53b56e6983609bc65f6c54d8c2d3",
+      "traditional": "狀",
+      "dictionaryReadings": [
+        "zhuang4"
+      ],
+      "dictionaryDefinitions": {
+        "zhuang4": "accusation; suit; state; condition; strong; great; -shaped; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "shape",
+          "sourceGlossGroupIndex": 2,
+          "matchingDictionaryReadings": [
+            "zhuang4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 829,
+      "character": "亩",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/亩.json",
+      "sourceBlobSha": "28581af216b21c7c51247345710502e768ca3b7e",
+      "traditional": "畮",
+      "dictionaryReadings": [
+        "mu3"
+      ],
+      "dictionaryDefinitions": {
+        "mu3": "old variant of 畝|亩[mu3]; old variant of 畝|亩[mu3]; classifier for fields; unit of area equal to one fifteenth of a hectare; old variant of 畝|亩[mu3]; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "fields",
+          "sourceGlossGroupIndex": 1,
+          "matchingDictionaryReadings": [
+            "mu3"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 830,
+      "character": "况",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/况.json",
+      "sourceBlobSha": "349cf050297fd810d2bd62330588573f7c00fa4d",
+      "traditional": "況",
+      "dictionaryReadings": [
+        "kuang4"
+      ],
+      "dictionaryDefinitions": {
+        "kuang4": "moreover; situation; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "condition",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    }
+  ]
+}
