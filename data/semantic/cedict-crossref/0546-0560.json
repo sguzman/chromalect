@@ -1,0 +1,449 @@
+{
+  "schema": "chromalect.mandarin.lexical-crossref-batch.v0.1",
+  "source": {
+    "title": "CC-CEDICT per-headword v2 mirror",
+    "repository": "krmanik/cedict-json",
+    "commit": "63c2569948629323b515833930fdd10f285401b6",
+    "dataLicense": "CC BY-SA 4.0",
+    "upstream": "https://cc-cedict.org/",
+    "mirror": "https://github.com/krmanik/cedict-json",
+    "transform": "Selected single-simplified-character dictionary records, retaining readings and definitions; literal English gloss matching is automated triage only"
+  },
+  "rankStart": 546,
+  "rankEnd": 560,
+  "summary": {
+    "total": 15,
+    "headwordFound": 15,
+    "withCandidate": 15,
+    "withLiteralSupport": 7
+  },
+  "records": [
+    {
+      "rank": 546,
+      "character": "守",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/守.json",
+      "sourceBlobSha": "c53d087abada008c34b6529cdef3ea0d354062fa",
+      "traditional": "守",
+      "dictionaryReadings": [
+        "shou3"
+      ],
+      "dictionaryDefinitions": {
+        "shou3": "to guard; to defend; to keep watch; to abide by the law; to observe (rules or ritual); nearby; adjoining; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "protect",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 547,
+      "character": "宅",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/宅.json",
+      "sourceBlobSha": "0aa80bdd1abe8e8bbd2c94ba9150c5726b7e6aef",
+      "traditional": "宅",
+      "dictionaryReadings": [
+        "zhai2"
+      ],
+      "dictionaryDefinitions": {
+        "zhai2": "residence; (coll.) to stay in at home; to hang around at home; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "home",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "zhai2"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 548,
+      "character": "字",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/字.json",
+      "sourceBlobSha": "fdc39a94a0f7f2bea0e2cb50ea3e9ac61f154134",
+      "traditional": "字",
+      "dictionaryReadings": [
+        "zi4"
+      ],
+      "dictionaryDefinitions": {
+        "zi4": "letter; symbol; character; word; CL:個|个[ge4]; courtesy or style name traditionally given to males aged 20 in dynastic China; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "character",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "zi4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 549,
+      "character": "安",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/安.json",
+      "sourceBlobSha": "ceff2feb5f3b0de1ba84ee420d5695d21427677d",
+      "traditional": "安",
+      "dictionaryReadings": [
+        "An1",
+        "an1"
+      ],
+      "dictionaryDefinitions": {
+        "An1": "surname An; ",
+        "an1": "content; calm; still; quiet; safe; secure; in good health; to find a place for; to install; to fix; to fit; to bring (a charge against sb); to pacify; to harbor (good intentions); security; safety; peace; ampere; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "peaceful",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 550,
+      "character": "讲",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/讲.json",
+      "sourceBlobSha": "48783dd73d1bd806750004b4c85fc95cdf1e9d6b",
+      "traditional": "講",
+      "dictionaryReadings": [
+        "jiang3"
+      ],
+      "dictionaryDefinitions": {
+        "jiang3": "to speak; to explain; to negotiate; to emphasise; to be particular about; as far as sth is concerned; speech; lecture; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "explain",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "jiang3"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 551,
+      "character": "讳",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/讳.json",
+      "sourceBlobSha": "edb0da9eab4a2860d2eb5fae7f1b612b2bd81d8a",
+      "traditional": "諱",
+      "dictionaryReadings": [
+        "hui4"
+      ],
+      "dictionaryDefinitions": {
+        "hui4": "to avoid mentioning; taboo word; name of deceased emperor or superior; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "conceal",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 552,
+      "character": "军",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/军.json",
+      "sourceBlobSha": "7f6203a2422713cbf423691b88d9ee4df09e4836",
+      "traditional": "軍",
+      "dictionaryReadings": [
+        "jun1"
+      ],
+      "dictionaryDefinitions": {
+        "jun1": "army; military; arms; CL:個|个[ge4]; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "army",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "jun1"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 553,
+      "character": "讶",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/讶.json",
+      "sourceBlobSha": "c71f2cc054639af5a9d2e0dec625dfcac176e921",
+      "traditional": "訝",
+      "dictionaryReadings": [
+        "ya4"
+      ],
+      "dictionaryDefinitions": {
+        "ya4": "astounded; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "surprised",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 554,
+      "character": "许",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/许.json",
+      "sourceBlobSha": "260716e8f22b7480675de59c8b070b46233eb4f6",
+      "traditional": "許",
+      "dictionaryReadings": [
+        "Xu3",
+        "xu3"
+      ],
+      "dictionaryDefinitions": {
+        "Xu3": "surname Xu; ",
+        "xu3": "to allow; to permit; to promise; to praise; somewhat; perhaps; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "allow",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "xu3"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 555,
+      "character": "讹",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/讹.json",
+      "sourceBlobSha": "4e8c315c843a2dc87f3d7a3fd776c570f98181d5",
+      "traditional": "譌",
+      "dictionaryReadings": [
+        "e2"
+      ],
+      "dictionaryDefinitions": {
+        "e2": "error; false; to extort; variant of 訛|讹[e2]; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "cheat",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 556,
+      "character": "论",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/论.json",
+      "sourceBlobSha": "21285f781ecdbc8b9ff6bbe8e68e91d54e6d3b62",
+      "traditional": "論",
+      "dictionaryReadings": [
+        "Lun2",
+        "lun4"
+      ],
+      "dictionaryDefinitions": {
+        "Lun2": "abbr. for 論語|论语[Lun2 yu3], The Analects (of Confucius); ",
+        "lun4": "opinion; view; theory; doctrine; to discuss; to talk about; to regard; to consider; per; by the (kilometer, hour etc); "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "discuss",
+          "sourceGlossGroupIndex": 1,
+          "matchingDictionaryReadings": [
+            "lun4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 557,
+      "character": "讼",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/讼.json",
+      "sourceBlobSha": "d21144c1a1990b07848d6584572ae39f6f32f305",
+      "traditional": "訟",
+      "dictionaryReadings": [
+        "song4"
+      ],
+      "dictionaryDefinitions": {
+        "song4": "litigation; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "litigate",
+          "sourceGlossGroupIndex": 2,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 558,
+      "character": "农",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/农.json",
+      "sourceBlobSha": "f62d96f23adfd02dd43512ff9975acb8639bfd92",
+      "traditional": "辳",
+      "dictionaryReadings": [
+        "Nong2",
+        "nong2"
+      ],
+      "dictionaryDefinitions": {
+        "Nong2": "surname Nong; ",
+        "nong2": "peasant; to farm; agriculture; diligent (old); government field official (old); variant of 農|农[nong2]; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "farming",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 559,
+      "character": "讽",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/讽.json",
+      "sourceBlobSha": "b4d5695513f2d58d1e244d577f097b1d3d88b58a",
+      "traditional": "諷",
+      "dictionaryReadings": [
+        "feng3"
+      ],
+      "dictionaryDefinitions": {
+        "feng3": "to satirize; to mock; to recite; Taiwan pr. [feng4]; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "satirize",
+          "sourceGlossGroupIndex": 1,
+          "matchingDictionaryReadings": [
+            "feng3"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 560,
+      "character": "设",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/设.json",
+      "sourceBlobSha": "a04eb9085ce496991cd37a8b75785a14a5047393",
+      "traditional": "設",
+      "dictionaryReadings": [
+        "she4"
+      ],
+      "dictionaryDefinitions": {
+        "she4": "to set up; to arrange; to establish; to found; to display; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "build",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    }
+  ]
+}
