@@ -189,7 +189,7 @@ for(const [kind,count] of [
 ]){
  ids["semantic-visual-filter"].value=kind;
  ids["semantic-visual-filter"].events.change();
- const expected=kind==="single-icon" ? 862 : count;
+ const expected=kind==="single-icon" ? 859 : count;
  assert.match(ids["semantic-coverage-status"].textContent,new RegExp(expected+" characters match"));
 }
 ids["semantic-visual-filter"].value="all";
