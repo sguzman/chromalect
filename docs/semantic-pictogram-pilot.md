@@ -4,7 +4,7 @@
 
 ## Design
 
-The formal notation and experimental expression structure are specified in [Semantic expression grammar v0.1](semantic-expression-grammar-v0.1.md). The grammar encodes operators and typed event participants; valid syntax alone does not verify any lexical meaning.
+The formal notation and experimental expression structure are specified in [Semantic expression grammar v0.1](semantic-expression-grammar-v0.1.md). The machine-readable grammar records relations and event participants; the default visible expression remains emoji-only. Optional technical signs are for inspecting underlying data, not a separate visual alphabet. Valid syntax alone does not verify any lexical meaning.
 
 Semantic annotations form **one optional emoji-expression layer**. A selected meaning can be expressed by a single emoji, a sequence of multiple reusable emojis, or no pictogram where none is clear. Single- and multiple-emoji expressions **coexist in the same view**. There is **no fixed maximum number of symbols**, no requirement for an expression to be unique to a character, and no requirement that every meaning receive an emoji expression. Extra symbols should clarify rather than lengthen the display.
 
@@ -43,7 +43,7 @@ These examples test a display model; they are **not** verified linguistic annota
 
 ## Test protocol and implementation
 
-The [semantic lab](../site/semantic-lab.html) displays all available expressions in one view, regardless of symbol count. A plain-character mode provides a baseline; a separate control reveals written meanings. The interface renders recursively typed emoji expressions of any length with declared operators and optional verb roles; it does not infer meaning from untyped emoji adjacency.
+The [semantic lab](../site/semantic-lab.html) displays all available expressions in one view, regardless of symbol count. A plain-character mode provides a baseline; a separate control reveals written meanings. The interface renders emoji-only projections of recursively typed expressions of any length. Relations and verb roles remain explicit in machine-readable records, not in compulsory onscreen punctuation; emoji adjacency alone cannot fully reconstruct those records.
 
 A future sourced pilot should sample 20–30 varied **senses**, including polysemous characters, concrete actions, abstract concepts, function words, and opaque compounds. Evaluate meaning recognition without initially revealing written meanings, ambiguity, time to comprehension, accessibility, and legibility at different sizes. Compare candidate expressions *within* each sense as needed, without forcing all senses into the same symbol count.
 
