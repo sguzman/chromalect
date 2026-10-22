@@ -1,0 +1,285 @@
+{
+  "schema": "chromalect.mandarin.lexical-crossref-batch.v0.1",
+  "source": {
+    "title": "CC-CEDICT per-headword v2 mirror",
+    "repository": "krmanik/cedict-json",
+    "commit": "63c2569948629323b515833930fdd10f285401b6",
+    "dataLicense": "CC BY-SA 4.0",
+    "upstream": "https://cc-cedict.org/",
+    "mirror": "https://github.com/krmanik/cedict-json",
+    "transform": "Selected single-simplified-character dictionary records, retaining readings and definitions; literal English gloss matching is automated triage only"
+  },
+  "rankStart": 291,
+  "rankEnd": 300,
+  "summary": {
+    "total": 10,
+    "headwordFound": 10,
+    "withCandidate": 7,
+    "withLiteralSupport": 6
+  },
+  "records": [
+    {
+      "rank": 291,
+      "character": "卯",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/卯.json",
+      "sourceBlobSha": "441c4dfde7b93ae4bfa4cedd563bb321c6f4036e",
+      "traditional": "戼",
+      "dictionaryReadings": [
+        "mao3"
+      ],
+      "dictionaryDefinitions": {
+        "mao3": "mortise (slot cut into wood to receive a tenon); 4th earthly branch: 5-7 a.m., 2nd solar month (6th March-4th April), year of the Rabbit; ancient Chinese compass point: 90° (east); variant of 鉚|铆[mao3]; to exert one's strength; variant of 卯[mao3]; old variant of 卯[mao3]; "
+      },
+      "selectedSenseChecks": [],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 292,
+      "character": "犯",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/犯.json",
+      "sourceBlobSha": "dcb6d875e7c03c8fa1ece210bebb7b6aba8be483",
+      "traditional": "犯",
+      "dictionaryReadings": [
+        "fan4"
+      ],
+      "dictionaryDefinitions": {
+        "fan4": "to violate; to offend; to assault; criminal; crime; to make a mistake; recurrence (of mistake or sth bad); "
+      },
+      "selectedSenseChecks": [],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 293,
+      "character": "外",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/外.json",
+      "sourceBlobSha": "cfd11678ad9fddd9e404cb662d137edf9a889cb7",
+      "traditional": "外",
+      "dictionaryReadings": [
+        "wai4"
+      ],
+      "dictionaryDefinitions": {
+        "wai4": "outside; in addition; foreign; external; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "outside",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "wai4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 294,
+      "character": "处",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/处.json",
+      "sourceBlobSha": "f87ebcb47dd3391a29ea48b3846a5b40d5244cbd",
+      "traditional": "處",
+      "dictionaryReadings": [
+        "chu3",
+        "chu4"
+      ],
+      "dictionaryDefinitions": {
+        "chu3": "to reside; to live; to dwell; to be in; to be situated at; to stay; to get along with; to be in a position of; to deal with; to discipline; to punish; ",
+        "chu4": "place; location; spot; point; office; department; bureau; respect; classifier for locations or items of damage: spot, point; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "place",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "chu4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 295,
+      "character": "冬",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/冬.json",
+      "sourceBlobSha": "4e5d1b739b6205919053b741a1cde2ec0eeecdfa",
+      "traditional": "鼕",
+      "dictionaryReadings": [
+        "dong1",
+        "Dong1"
+      ],
+      "dictionaryDefinitions": {
+        "dong1": "winter; (onom.) beating a drum; rat-a-tat; ",
+        "Dong1": "surname Dong; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "winter",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "dong1"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 296,
+      "character": "鸟",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/鸟.json",
+      "sourceBlobSha": "d776c369fe80011ac517db18dc0e09c84b906e09",
+      "traditional": "鳥",
+      "dictionaryReadings": [
+        "diao3",
+        "niao3"
+      ],
+      "dictionaryDefinitions": {
+        "diao3": "variant of 屌[diao3]; penis; ",
+        "niao3": "bird; CL:隻|只[zhi1],群[qun2]; (dialect) to pay attention to; (intensifier) damned; goddam; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "bird",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "niao3"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 297,
+      "character": "务",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/务.json",
+      "sourceBlobSha": "f5b41ebd7b6f05d3bebe868253723542c3fd5690",
+      "traditional": "務",
+      "dictionaryReadings": [
+        "wu4"
+      ],
+      "dictionaryDefinitions": {
+        "wu4": "affair; business; matter; to be engaged in; to attend to; by all means; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "business",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "wu4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 298,
+      "character": "包",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/包.json",
+      "sourceBlobSha": "8abefd45d31fb8ca79bc4f6b2774d03512625fc3",
+      "traditional": "包",
+      "dictionaryReadings": [
+        "Bao1",
+        "bao1"
+      ],
+      "dictionaryDefinitions": {
+        "Bao1": "surname Bao; ",
+        "bao1": "to cover; to wrap; to hold; to include; to take charge of; to contract (to or for); package; wrapper; container; bag; to hold or embrace; bundle; packet; CL:個|个[ge4],隻|只[zhi1]; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "package",
+          "sourceGlossGroupIndex": 1,
+          "matchingDictionaryReadings": [
+            "bao1"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 299,
+      "character": "饥",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/饥.json",
+      "sourceBlobSha": "3ca50cbc27b2d1d49da48276fbd27d47d0b63661",
+      "traditional": "饑",
+      "dictionaryReadings": [
+        "ji1"
+      ],
+      "dictionaryDefinitions": {
+        "ji1": "hungry; variant of 飢|饥[ji1]; "
+      },
+      "selectedSenseChecks": [],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 300,
+      "character": "主",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/主.json",
+      "sourceBlobSha": "1829f333090b21aa273f5d10b330727daf5ad912",
+      "traditional": "主",
+      "dictionaryReadings": [
+        "zhu3"
+      ],
+      "dictionaryDefinitions": {
+        "zhu3": "owner; master; host; individual or party concerned; God; Lord; main; to indicate or signify; trump card (in card games); "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "chief",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    }
+  ]
+}
