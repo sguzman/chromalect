@@ -20,6 +20,7 @@
   let profileRows = new Map();
   let lexicalRows = new Map();
   let strictRows = new Map();
+  let reviewRows = new Map();
   let strictSummary = null;
   let page = 0;
 
@@ -122,6 +123,13 @@
         "no emoji candidate to compare")+
         " · no human lexical approval"));
     }
+    const flagged=reviewRows.get(entry.rank)||[];
+    if (flagged.length) {
+      const priorities=[...new Set(flagged.map(x=>x.priority))];
+      card.appendChild(elem("p","semantic-review-note",
+        priorities.join(" / ")+" priority · "+flagged.length+
+        " experimental sense"+(flagged.length===1?"":"s")+" needs independent lexical review"));
+    }
     const details=elem("details");
     const summary=elem("summary",null,"Source meaning evidence");
     details.appendChild(summary);
@@ -129,6 +137,12 @@
     details.appendChild(elem("p","semantic-source",
       "Provisional Unihan kDefinition • "+entry.source.codepoint+
       " • "+entry.source.groupCandidates.length+" candidate definition group(s)"));
+    for(const item of flagged){
+      const msg=item.selectedMeaning+" — "+item.reviewReason.replaceAll("_"," ")+
+        " · "+item.priority+" priority · no independent approval";
+      details.appendChild(elem("p","semantic-review-detail",msg));
+      if(item.earlierResearchNote)details.appendChild(elem("p","semantic-review-detail",item.earlierResearchNote));
+    }
     if (crossref) {
       const link=elem("a",null,"CC-CEDICT second-source headword and readings");
       link.href="https://github.com/krmanik/cedict-json/blob/63c2569948629323b515833930fdd10f285401b6/v2/"+
@@ -163,6 +177,9 @@
           (dictionary==="crossref" && !!crossref) ||
           (dictionary==="not-crossref" && !crossref) ||
           (dictionary==="needs-review" && aligned.some(s=>!s.wholeTermMatch)) ||
+          (dictionary==="high-priority" && (reviewRows.get(x.rank)||[]).some(y=>y.priority==="high")) ||
+          (dictionary==="medium-priority" && (reviewRows.get(x.rank)||[]).some(y=>y.priority==="medium")) ||
+          (dictionary==="unclassified-priority" && (reviewRows.get(x.rank)||[]).some(y=>y.priority==="unclassified")) ||
           (dictionary==="substring-only" && aligned.some(s=>s.legacySubstringMatch&&!s.wholeTermMatch)) ||
           (dictionary==="whole-match" && aligned.some(s=>s.wholeTermMatch))) &&
       (!q || x.character.includes(q) || String(x.rank)===q ||
@@ -196,17 +213,33 @@
 
   async function load() {
     try {
-      const [response,profileResponse,lexicalResponse,auditResponse]=await Promise.all([
+      const [response,profileResponse,lexicalResponse,auditResponse,reviewResponse]=await Promise.all([
         fetch("semantic/mandarin-1000-v0.1.json"),
         fetch("profiles/mandarin-1000-v1.json"),
         fetch("semantic/lexical-crossref-v0.1.json"),
-        fetch("semantic/strict-gloss-index-v0.1.json")
+        fetch("semantic/strict-gloss-index-v0.1.json"),
+        fetch("semantic/sense-review-queue-v0.1.json")
       ]);
-      if(!response.ok || !profileResponse.ok || !lexicalResponse.ok || !auditResponse.ok)
+      if(!response.ok || !profileResponse.ok || !lexicalResponse.ok || !auditResponse.ok || !reviewResponse.ok)
         throw new Error("Character, dictionary or audit data unavailable");
-      const [data,profile,lexical,audit]=await Promise.all([
-        response.json(),profileResponse.json(),lexicalResponse.json(),auditResponse.json()
+      const [data,profile,lexical,audit,review]=await Promise.all([
+        response.json(),profileResponse.json(),lexicalResponse.json(),auditResponse.json(),reviewResponse.json()
       ]);
+      if(review.schema!=="chromalect.semantic.lexical-sense-review-queue.v0.1" ||
+         review.status!=="unreviewed_prioritization_only" ||
+         !Array.isArray(review.records) ||
+         review.records.length!==audit.summary.requiresSenseReview ||
+         review.records.some(x=>data.characters[x.rank-1]?.character!==x.character ||
+           x.lexicalDecision!=="pending" ||
+           x.visualComprehensionDecision!=="pending" ||
+           x.productionVerified!==false))
+        throw new Error("Unverified sense review data malformed or promoted without approval");
+      const reviews=new Map();
+      for(const item of review.records){
+        if(!reviews.has(item.rank))reviews.set(item.rank,[]);
+        reviews.get(item.rank).push(item);
+      }
+      reviewRows=reviews;
       if(audit.schema!=="chromalect.semantic.strict-gloss-index.v0.1" ||
          audit.status!=="automated_boundary_check_only_no_linguistic_approval" ||
          audit.scope.charactersAudited!==1000 ||
