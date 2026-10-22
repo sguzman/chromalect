@@ -1,0 +1,278 @@
+{
+  "schema": "chromalect.semantic.manual-triage.v0.1",
+  "date": "2026-10-22",
+  "sourceManifest": "manifest-v0.1.json",
+  "sourceLicenseNotice": "CC-CEDICT and cedict-json source records are CC BY-SA 4.0; this analysis retains their provenance and does not approve any emoji mapping",
+  "rankStart": 101,
+  "rankEnd": 200,
+  "lexicalApprovalCount": 0,
+  "emojiApprovalCount": 0,
+  "entries": [
+    {
+      "rank": 106,
+      "character": "互",
+      "candidateMeanings": [
+        "mutually"
+      ],
+      "category": "grammar_paraphrase",
+      "priority": "medium",
+      "note": "Mutual versus mutually; verify the relevant grammatical usage without promoting the pictogram.",
+      "status": "research_triage_not_lexically_approved",
+      "requiresHumanReview": true,
+      "emojiComprehensionReviewed": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 114,
+      "character": "贝",
+      "candidateMeanings": [
+        "sea shell"
+      ],
+      "category": "lexical_paraphrase",
+      "priority": "medium",
+      "note": "Cowrie and shellfish versus sea shell; the proposed shell picture may be too generic.",
+      "status": "research_triage_not_lexically_approved",
+      "requiresHumanReview": true,
+      "emojiComprehensionReviewed": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 115,
+      "character": "冈",
+      "candidateMeanings": [
+        "hill"
+      ],
+      "category": "lexical_paraphrase",
+      "priority": "medium",
+      "note": "Ridge or mound versus hill; terrain cues need comparison.",
+      "status": "research_triage_not_lexically_approved",
+      "requiresHumanReview": true,
+      "emojiComprehensionReviewed": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 122,
+      "character": "气",
+      "candidateMeanings": [
+        "steam"
+      ],
+      "category": "sense_scope_mismatch",
+      "priority": "high",
+      "note": "Steam is narrower than the dictionary's prominent gas, air, and qi readings; do not accept steam as an undifferentiated meaning.",
+      "status": "research_triage_not_lexically_approved",
+      "requiresHumanReview": true,
+      "emojiComprehensionReviewed": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 125,
+      "character": "升",
+      "candidateMeanings": [
+        "go up"
+      ],
+      "category": "grammar_paraphrase",
+      "priority": "medium",
+      "note": "Ascend or rise in rank versus go up; establish action sense and context.",
+      "status": "research_triage_not_lexically_approved",
+      "requiresHumanReview": true,
+      "emojiComprehensionReviewed": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 128,
+      "character": "仁",
+      "candidateMeanings": [
+        "benevolence"
+      ],
+      "category": "lexical_paraphrase",
+      "priority": "medium",
+      "note": "Humane versus benevolence; ethical meaning may not reduce to a heart symbol.",
+      "status": "research_triage_not_lexically_approved",
+      "requiresHumanReview": true,
+      "emojiComprehensionReviewed": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 135,
+      "character": "仍",
+      "candidateMeanings": [
+        "again"
+      ],
+      "category": "sense_scope_mismatch",
+      "priority": "high",
+      "note": "Still or yet versus again; temporal persistence is not necessarily repetition.",
+      "status": "research_triage_not_lexically_approved",
+      "requiresHumanReview": true,
+      "emojiComprehensionReviewed": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 137,
+      "character": "斤",
+      "candidateMeanings": [
+        "axe"
+      ],
+      "category": "modern_usage_conflict",
+      "priority": "high",
+      "note": "Current CC-CEDICT weight measure differs from the selected axe reading; check historic versus modern sense and pictogram.",
+      "status": "research_triage_not_lexically_approved",
+      "requiresHumanReview": true,
+      "emojiComprehensionReviewed": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 145,
+      "character": "凶",
+      "candidateMeanings": [
+        "sad"
+      ],
+      "category": "sense_scope_mismatch",
+      "priority": "high",
+      "note": "Terrible, fierce, ominous versus sad; candidate emotion appears semantically off-target.",
+      "status": "research_triage_not_lexically_approved",
+      "requiresHumanReview": true,
+      "emojiComprehensionReviewed": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 151,
+      "character": "氏",
+      "candidateMeanings": [
+        "family"
+      ],
+      "category": "sense_scope_mismatch",
+      "priority": "medium",
+      "note": "Clan or maiden name is more specific than general family.",
+      "status": "research_triage_not_lexically_approved",
+      "requiresHumanReview": true,
+      "emojiComprehensionReviewed": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 152,
+      "character": "勿",
+      "candidateMeanings": [
+        "must not"
+      ],
+      "category": "grammar_paraphrase",
+      "priority": "medium",
+      "note": "Do not versus must not; check negation and modality distinctions.",
+      "status": "research_triage_not_lexically_approved",
+      "requiresHumanReview": true,
+      "emojiComprehensionReviewed": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 156,
+      "character": "匀",
+      "candidateMeanings": [
+        "equal"
+      ],
+      "category": "lexical_paraphrase",
+      "priority": "medium",
+      "note": "Even or uniform versus equal; distinguish distribution from equality.",
+      "status": "research_triage_not_lexically_approved",
+      "requiresHumanReview": true,
+      "emojiComprehensionReviewed": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 162,
+      "character": "亢",
+      "candidateMeanings": [
+        "proud"
+      ],
+      "category": "sense_scope_mismatch",
+      "priority": "medium",
+      "note": "High or overbearing versus proud; verify which reading and emotional valence apply.",
+      "status": "research_triage_not_lexically_approved",
+      "requiresHumanReview": true,
+      "emojiComprehensionReviewed": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 164,
+      "character": "火",
+      "candidateMeanings": [
+        "burn"
+      ],
+      "category": "part_of_speech_mismatch",
+      "priority": "high",
+      "note": "Selected burn is an action; independent headword emphasizes the noun fire and related uses.",
+      "status": "research_triage_not_lexically_approved",
+      "requiresHumanReview": true,
+      "emojiComprehensionReviewed": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 169,
+      "character": "订",
+      "candidateMeanings": [
+        "agreement"
+      ],
+      "category": "part_of_speech_mismatch",
+      "priority": "high",
+      "note": "To agree, draw up or order are verbs; selected agreement is a noun and may require a different event cue.",
+      "status": "research_triage_not_lexically_approved",
+      "requiresHumanReview": true,
+      "emojiComprehensionReviewed": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 175,
+      "character": "尺",
+      "candidateMeanings": [
+        "Chinese measure"
+      ],
+      "category": "sense_scope_mismatch",
+      "priority": "medium",
+      "note": "Chinese foot or ruler is more specific than Chinese measure; distinguish object from unit.",
+      "status": "research_triage_not_lexically_approved",
+      "requiresHumanReview": true,
+      "emojiComprehensionReviewed": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 189,
+      "character": "幻",
+      "candidateMeanings": [
+        "illusion"
+      ],
+      "category": "lexical_paraphrase",
+      "priority": "medium",
+      "note": "Fantasy versus illusion; overlap is plausible but not guaranteed.",
+      "status": "research_triage_not_lexically_approved",
+      "requiresHumanReview": true,
+      "emojiComprehensionReviewed": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 190,
+      "character": "玉",
+      "candidateMeanings": [
+        "precious stone"
+      ],
+      "category": "sense_scope_mismatch",
+      "priority": "high",
+      "note": "Jade is more specific than generic precious stone; evaluate whether the icon conveys jade.",
+      "status": "research_triage_not_lexically_approved",
+      "requiresHumanReview": true,
+      "emojiComprehensionReviewed": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 199,
+      "character": "扑",
+      "candidateMeanings": [
+        "attack"
+      ],
+      "category": "sense_scope_mismatch",
+      "priority": "high",
+      "note": "Pounce or pat differs from generic attack; verify selected motor action.",
+      "status": "research_triage_not_lexically_approved",
+      "requiresHumanReview": true,
+      "emojiComprehensionReviewed": false,
+      "productionVerified": false
+    }
+  ]
+}
