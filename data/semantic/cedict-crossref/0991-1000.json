@@ -1,0 +1,310 @@
+{
+  "schema": "chromalect.mandarin.lexical-crossref-batch.v0.1",
+  "source": {
+    "title": "CC-CEDICT per-headword v2 mirror",
+    "repository": "krmanik/cedict-json",
+    "commit": "63c2569948629323b515833930fdd10f285401b6",
+    "dataLicense": "CC BY-SA 4.0",
+    "upstream": "https://cc-cedict.org/",
+    "mirror": "https://github.com/krmanik/cedict-json",
+    "transform": "Selected single-simplified-character dictionary records, retaining readings and definitions; literal English gloss matching is automated triage only"
+  },
+  "rankStart": 991,
+  "rankEnd": 1000,
+  "summary": {
+    "total": 10,
+    "headwordFound": 10,
+    "withCandidate": 10,
+    "withLiteralSupport": 7
+  },
+  "records": [
+    {
+      "rank": 991,
+      "character": "拨",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/拨.json",
+      "sourceBlobSha": "493f2ef0eef02dcf7a136201f05b6b2fb53b19f4",
+      "traditional": "撥",
+      "dictionaryReadings": [
+        "bo1"
+      ],
+      "dictionaryDefinitions": {
+        "bo1": "to push aside with the hand, foot, a stick etc; to dial; to allocate; to set aside (money); to poke (the fire); to pluck (a string instrument); to turn round; classifier: group, batch; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "distribute",
+          "sourceGlossGroupIndex": 2,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 992,
+      "character": "择",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/择.json",
+      "sourceBlobSha": "ff7229495496a5abb4d63798b05cee5e8a5b3125",
+      "traditional": "擇",
+      "dictionaryReadings": [
+        "ze2"
+      ],
+      "dictionaryDefinitions": {
+        "ze2": "to select; to choose; to pick over; to pick out; to differentiate; to eliminate; also pr. [zhai2]; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "choose",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "ze2"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 993,
+      "character": "抬",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/抬.json",
+      "sourceBlobSha": "c80982580d55cf19513af837a58ed8a051002444",
+      "traditional": "抬",
+      "dictionaryReadings": [
+        "tai2"
+      ],
+      "dictionaryDefinitions": {
+        "tai2": "to lift; to raise; (of two or more persons) to carry; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "lift",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "tai2"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 994,
+      "character": "拇",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/拇.json",
+      "sourceBlobSha": "e7ba7dc793724f1411c2810eb117f6bb0a5dc6c5",
+      "traditional": "拇",
+      "dictionaryReadings": [
+        "mu3"
+      ],
+      "dictionaryDefinitions": {
+        "mu3": "thumb; big toe; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "thumb",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "mu3"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 995,
+      "character": "拗",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/拗.json",
+      "sourceBlobSha": "cf629e21dcfe99537fad8738618c30aa2c516cb5",
+      "traditional": "拗",
+      "dictionaryReadings": [
+        "ao4",
+        "niu4"
+      ],
+      "dictionaryDefinitions": {
+        "ao4": "variant of 拗[ao4]; to bend in two so as to break; to defy; to disobey; also pr. [ao3]; ",
+        "niu4": "stubborn; obstinate; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "bent",
+          "sourceGlossGroupIndex": 1,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 996,
+      "character": "其",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/其.json",
+      "sourceBlobSha": "0a6f08a989ae92dbbb0df8a062c95ffb33f9d05b",
+      "traditional": "其",
+      "dictionaryReadings": [
+        "qi2"
+      ],
+      "dictionaryDefinitions": {
+        "qi2": "his; her; its; their; that; such; it (refers to sth preceding it); "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "their",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "qi2"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 997,
+      "character": "取",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/取.json",
+      "sourceBlobSha": "3e236458f7985835f3cf630a4182086be2a2a9d2",
+      "traditional": "取",
+      "dictionaryReadings": [
+        "qu3"
+      ],
+      "dictionaryDefinitions": {
+        "qu3": "to take; to get; to choose; to fetch; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "take",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "qu3"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 998,
+      "character": "茉",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/茉.json",
+      "sourceBlobSha": "88488643de61dc0189c384310832b1f48a13ed91",
+      "traditional": "茉",
+      "dictionaryReadings": [
+        "mo4"
+      ],
+      "dictionaryDefinitions": {
+        "mo4": "jasmine; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "jasmine",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "mo4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 999,
+      "character": "苦",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/苦.json",
+      "sourceBlobSha": "48e0b85826c6a0ac0ee04f5e4d56afb4171d3164",
+      "traditional": "苦",
+      "dictionaryReadings": [
+        "ku3"
+      ],
+      "dictionaryDefinitions": {
+        "ku3": "bitter; hardship; pain; to suffer; to bring suffering to; painstakingly; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "bitter",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "ku3"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 1000,
+      "character": "昔",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/昔.json",
+      "sourceBlobSha": "2973c76a42f79725386d4c1618815818bebb6c8e",
+      "traditional": "昔",
+      "dictionaryReadings": [
+        "Xi1",
+        "xi1"
+      ],
+      "dictionaryDefinitions": {
+        "Xi1": "surname Xi; ",
+        "xi1": "former times; the past; Taiwan pr. [xi2]; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "ancient",
+          "sourceGlossGroupIndex": 1,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    }
+  ]
+}
