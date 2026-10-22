@@ -1,0 +1,459 @@
+{
+  "schema": "chromalect.mandarin.lexical-crossref-batch.v0.1",
+  "source": {
+    "title": "CC-CEDICT per-headword v2 mirror",
+    "repository": "krmanik/cedict-json",
+    "commit": "63c2569948629323b515833930fdd10f285401b6",
+    "dataLicense": "CC BY-SA 4.0",
+    "upstream": "https://cc-cedict.org/",
+    "mirror": "https://github.com/krmanik/cedict-json",
+    "transform": "Selected single-simplified-character dictionary records, retaining readings and definitions; literal English gloss matching is automated triage only"
+  },
+  "rankStart": 416,
+  "rankEnd": 430,
+  "summary": {
+    "total": 15,
+    "headwordFound": 15,
+    "withCandidate": 14,
+    "withLiteralSupport": 12
+  },
+  "records": [
+    {
+      "rank": 416,
+      "character": "劣",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/劣.json",
+      "sourceBlobSha": "de9bf788c3fbabe376aafe0ed20b8173a5813c47",
+      "traditional": "劣",
+      "dictionaryReadings": [
+        "lie4"
+      ],
+      "dictionaryDefinitions": {
+        "lie4": "inferior; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "inferior",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "lie4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 417,
+      "character": "光",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/光.json",
+      "sourceBlobSha": "1bcd7d3bb667f9b16c77cba57078e7066641cc4d",
+      "traditional": "光",
+      "dictionaryReadings": [
+        "guang1"
+      ],
+      "dictionaryDefinitions": {
+        "guang1": "light; ray; CL:道[dao4]; bright; only; merely; to use up; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "light",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "guang1"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 418,
+      "character": "当",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/当.json",
+      "sourceBlobSha": "296d688aa42dca07b66080cfb88e03760c22c25f",
+      "traditional": "當",
+      "dictionaryReadings": [
+        "dang1",
+        "dang4"
+      ],
+      "dictionaryDefinitions": {
+        "dang1": "(onom.) dong; ding dong (bell); to be; to act as; manage; withstand; when; during; ought; should; match equally; equal; same; obstruct; just at (a time or place); on the spot; right; just at; ",
+        "dang4": "at or in the very same...; suitable; adequate; fitting; proper; to replace; to regard as; to think; to pawn; (coll.) to fail (a student); "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "undertake",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 419,
+      "character": "早",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/早.json",
+      "sourceBlobSha": "545f2742338b7cffa55267d9934faa1c6db30363",
+      "traditional": "早",
+      "dictionaryReadings": [
+        "zao3"
+      ],
+      "dictionaryDefinitions": {
+        "zao3": "early; morning; Good morning!; long ago; prematurely; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "morning",
+          "sourceGlossGroupIndex": 2,
+          "matchingDictionaryReadings": [
+            "zao3"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 420,
+      "character": "吁",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/吁.json",
+      "sourceBlobSha": "74362c46f5b2b75ad2507e69311791197f33ff8c",
+      "traditional": "籲",
+      "dictionaryReadings": [
+        "xu1",
+        "yu4"
+      ],
+      "dictionaryDefinitions": {
+        "xu1": "sh; hush; ",
+        "yu4": "variant of 籲|吁[yu4]; to implore; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "sigh",
+          "sourceGlossGroupIndex": 1,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 421,
+      "character": "吐",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/吐.json",
+      "sourceBlobSha": "d54e5f7f6d780a3dede4b0ed32d42f8a28e13187",
+      "traditional": "吐",
+      "dictionaryReadings": [
+        "tu3",
+        "tu4"
+      ],
+      "dictionaryDefinitions": {
+        "tu3": "to spit; to put; to say; ",
+        "tu4": "to vomit; to throw up; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "vomit",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "tu4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 422,
+      "character": "吓",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/吓.json",
+      "sourceBlobSha": "ecba03a39f72a14587ea9e8a74a7f486e4262990",
+      "traditional": "嚇",
+      "dictionaryReadings": [
+        "he4",
+        "xia4"
+      ],
+      "dictionaryDefinitions": {
+        "he4": "to scare; to intimidate; to threaten; (interjection showing disapproval) tut-tut; (interjection showing astonishment); ",
+        "xia4": "to frighten; to scare; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "scare",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "he4",
+            "xia4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 423,
+      "character": "虫",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/虫.json",
+      "sourceBlobSha": "e42ad6938be18bbfe687b06ec5bbb2b610050d4e",
+      "traditional": "蟲",
+      "dictionaryReadings": [
+        "chong2"
+      ],
+      "dictionaryDefinitions": {
+        "chong2": "lower form of animal life, including insects, insect larvae, worms and similar creatures; CL:條|条[tiao2],隻|只[zhi1]; person with a particular undesirable characteristic; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "insects",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "chong2"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 424,
+      "character": "曲",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/曲.json",
+      "sourceBlobSha": "4bf255ba9a95301623538af6fe2579337fc56195",
+      "traditional": "麴",
+      "dictionaryReadings": [
+        "Qu1",
+        "qu1",
+        "qu3"
+      ],
+      "dictionaryDefinitions": {
+        "Qu1": "surname Qu; ",
+        "qu1": "bent; crooked; wrong; variant of 麴|曲[qu1]; yeast; Aspergillus (includes many common molds); Taiwan pr. [qu2]; ",
+        "qu3": "tune; song; CL:支[zhi1]; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "bent",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "qu1"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 425,
+      "character": "团",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/团.json",
+      "sourceBlobSha": "ba833a0ebe4c0f242d45463f6a7b4bbbbc5735ad",
+      "traditional": "糰",
+      "dictionaryReadings": [
+        "tuan2"
+      ],
+      "dictionaryDefinitions": {
+        "tuan2": "round; lump; ball; to roll into a ball; to gather; regiment; group; society; classifier for a lump or a soft mass: wad (of paper), ball (of wool), cloud (of smoke); dumpling; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "ball",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "tuan2"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 426,
+      "character": "吕",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/吕.json",
+      "sourceBlobSha": "b547a5ef3d5db74853734c2a41307148231c714d",
+      "traditional": "呂",
+      "dictionaryReadings": [
+        "Lu:3",
+        "lu:3"
+      ],
+      "dictionaryDefinitions": {
+        "Lu:3": "surname Lü; ",
+        "lu:3": "pitchpipe, pitch standard, one of the twelve semitones in the traditional tone system; "
+      },
+      "selectedSenseChecks": [],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 427,
+      "character": "同",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/同.json",
+      "sourceBlobSha": "f39ceb3ac736679927cf9e3adce15e88002528c0",
+      "traditional": "衕",
+      "dictionaryReadings": [
+        "tong2",
+        "tong4"
+      ],
+      "dictionaryDefinitions": {
+        "tong2": "(used in given names); variant of 同[tong2]; like; same; similar; together; alike; with; ",
+        "tong4": "see 衚衕|胡同[hu2 tong4]; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "same",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "tong2"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 428,
+      "character": "吊",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/吊.json",
+      "sourceBlobSha": "37f566d43e8bb53c9b035d5b4d1f6ac7c445f995",
+      "traditional": "弔",
+      "dictionaryReadings": [
+        "diao4"
+      ],
+      "dictionaryDefinitions": {
+        "diao4": "to suspend; to hang up; to hang a person; a string of 100 cash (arch.); to lament; to condole with; variant of 吊[diao4]; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "hang",
+          "sourceGlossGroupIndex": 1,
+          "matchingDictionaryReadings": [
+            "diao4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 429,
+      "character": "吃",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/吃.json",
+      "sourceBlobSha": "9a4092af9a70d8a1b4df7ea0b1b60371dda03f24",
+      "traditional": "喫",
+      "dictionaryReadings": [
+        "chi1"
+      ],
+      "dictionaryDefinitions": {
+        "chi1": "to eat; to consume; to eat at (a cafeteria etc); to eradicate; to destroy; to absorb; to suffer; to stammer (Taiwan pr. for this sense is [ji2]); variant of 吃[chi1]; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "eat",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "chi1"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 430,
+      "character": "因",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/因.json",
+      "sourceBlobSha": "ff1bb1849b1d54dbdf7e4f7587a5d5272f442a0d",
+      "traditional": "因",
+      "dictionaryReadings": [
+        "yin1"
+      ],
+      "dictionaryDefinitions": {
+        "yin1": "old variant of 因[yin1]; cause; reason; because; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "cause",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "yin1"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    }
+  ]
+}
