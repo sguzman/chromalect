@@ -1,0 +1,412 @@
+{
+  "schema": "chromalect.mandarin.lexical-crossref-batch.v0.1",
+  "source": {
+    "title": "CC-CEDICT per-headword v2 mirror",
+    "repository": "krmanik/cedict-json",
+    "commit": "63c2569948629323b515833930fdd10f285401b6",
+    "dataLicense": "CC BY-SA 4.0",
+    "upstream": "https://cc-cedict.org/",
+    "mirror": "https://github.com/krmanik/cedict-json",
+    "transform": "Selected single-simplified-character dictionary records, retaining readings and definitions; literal English gloss matching is automated triage only"
+  },
+  "rankStart": 176,
+  "rankEnd": 190,
+  "summary": {
+    "total": 15,
+    "headwordFound": 15,
+    "withCandidate": 10,
+    "withLiteralSupport": 8
+  },
+  "records": [
+    {
+      "rank": 176,
+      "character": "引",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/引.json",
+      "sourceBlobSha": "63cb464b2897b37520ae81f5d45b6b7f033aa840",
+      "traditional": "引",
+      "dictionaryReadings": [
+        "yin3"
+      ],
+      "dictionaryDefinitions": {
+        "yin3": "to draw (e.g. a bow); to pull; to stretch sth; to extend; to lengthen; to involve or implicate in; to attract; to lead; to guide; to leave; to provide evidence or justification for; old unit of distance equal to 10 丈[zhang4], one-thirtieth of a km or 33.33 meters; "
+      },
+      "selectedSenseChecks": [],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 177,
+      "character": "丑",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/丑.json",
+      "sourceBlobSha": "31b908fad5fc8d4cf9e78895595021e9f8fab1f0",
+      "traditional": "醜",
+      "dictionaryReadings": [
+        "Chou3",
+        "chou3"
+      ],
+      "dictionaryDefinitions": {
+        "Chou3": "surname Chou; ",
+        "chou3": "clown; 2nd earthly branch: 1-3 a.m., 12th solar month (6th January to 3rd February), year of the Ox; ancient Chinese compass point: 30°; shameful; ugly; disgraceful; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "clown",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "chou3"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 178,
+      "character": "巴",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/巴.json",
+      "sourceBlobSha": "84f9c604d3e66af85442341b7ddbb98921f18366",
+      "traditional": "巴",
+      "dictionaryReadings": [
+        "Ba1",
+        "ba1"
+      ],
+      "dictionaryDefinitions": {
+        "Ba1": "Ba state during Zhou dynasty (in east of modern Sichuan); abbr. for east Sichuan or Chongqing; surname Ba; abbr. for Palestine or Palestinian; abbr. for Pakistan; ",
+        "ba1": "to long for; to wish; to cling to; to stick to; sth that sticks; close to; next to; spread open; informal abbr. for bus 巴士[ba1 shi4]; bar (unit of pressure); nominalizing suffix on certain nouns, such as 尾巴[wei3 ba5], tail; "
+      },
+      "selectedSenseChecks": [],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 179,
+      "character": "孔",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/孔.json",
+      "sourceBlobSha": "d6a2a9680ad8e112e913feacb37526d12e2abf6b",
+      "traditional": "孔",
+      "dictionaryReadings": [
+        "Kong3",
+        "kong3"
+      ],
+      "dictionaryDefinitions": {
+        "Kong3": "surname Kong; ",
+        "kong3": "hole; CL:個|个[ge4]; classifier for cave dwellings; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "hole",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "kong3"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 180,
+      "character": "队",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/队.json",
+      "sourceBlobSha": "9803e7d07d614fc1ef4cfe75d59fa6525dbba6a9",
+      "traditional": "隊",
+      "dictionaryReadings": [
+        "dui4"
+      ],
+      "dictionaryDefinitions": {
+        "dui4": "squadron; team; group; CL:個|个[ge4]; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "team",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "dui4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 181,
+      "character": "办",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/办.json",
+      "sourceBlobSha": "07d680962ae40cb4688fed55d05dff514c09702a",
+      "traditional": "辦",
+      "dictionaryReadings": [
+        "ban4"
+      ],
+      "dictionaryDefinitions": {
+        "ban4": "to do; to manage; to handle; to go about; to run; to set up; to deal with; "
+      },
+      "selectedSenseChecks": [],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 182,
+      "character": "以",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/以.json",
+      "sourceBlobSha": "522a31d01f0ace497080b7c2be7341769c40e06a",
+      "traditional": "以",
+      "dictionaryReadings": [
+        "yi3",
+        "Yi3"
+      ],
+      "dictionaryDefinitions": {
+        "yi3": "old variant of 以[yi3]; old variant of 以[yi3]; to use; by means of; according to; in order to; because of; at (a certain date or place); ",
+        "Yi3": "abbr. for Israel 以色列[Yi3 se4 lie4]; "
+      },
+      "selectedSenseChecks": [],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 183,
+      "character": "允",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/允.json",
+      "sourceBlobSha": "5691f99170880d431c2e708c1f462948cf1d6fcc",
+      "traditional": "允",
+      "dictionaryReadings": [
+        "yun3"
+      ],
+      "dictionaryDefinitions": {
+        "yun3": "just; fair; to permit; to allow; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "allow",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "yun3"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 184,
+      "character": "予",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/予.json",
+      "sourceBlobSha": "0d7f6cbfc945e2cce4bfa06f78b095e442da2ed2",
+      "traditional": "予",
+      "dictionaryReadings": [
+        "yu2",
+        "yu3"
+      ],
+      "dictionaryDefinitions": {
+        "yu2": "(archaic) I; me; ",
+        "yu3": "to give; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "give",
+          "sourceGlossGroupIndex": 1,
+          "matchingDictionaryReadings": [
+            "yu3"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 185,
+      "character": "邓",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/邓.json",
+      "sourceBlobSha": "a3dc945b4062c589429c47f79626b411b7d236a8",
+      "traditional": "鄧",
+      "dictionaryReadings": [
+        "Deng4"
+      ],
+      "dictionaryDefinitions": {
+        "Deng4": "surname Deng; "
+      },
+      "selectedSenseChecks": [],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 186,
+      "character": "劝",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/劝.json",
+      "sourceBlobSha": "d0191978cdc2a0f7e9ac93d3036f4a4c3140d3c9",
+      "traditional": "勸",
+      "dictionaryReadings": [
+        "quan4"
+      ],
+      "dictionaryDefinitions": {
+        "quan4": "to advise; to urge; to try to persuade; to exhort; to console; to soothe; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "advise",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "quan4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 187,
+      "character": "双",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/双.json",
+      "sourceBlobSha": "91078f8a29b21eb3081b156d6795c1b02102c115",
+      "traditional": "雙",
+      "dictionaryReadings": [
+        "Shuang1",
+        "shuang1"
+      ],
+      "dictionaryDefinitions": {
+        "Shuang1": "surname Shuang; ",
+        "shuang1": "two; double; pair; both; even (number); "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "pair",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "shuang1"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 188,
+      "character": "书",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/书.json",
+      "sourceBlobSha": "bd374f4c8285a3dcf5994f6de157e964d204f7a1",
+      "traditional": "書",
+      "dictionaryReadings": [
+        "Shu1",
+        "shu1"
+      ],
+      "dictionaryDefinitions": {
+        "Shu1": "abbr. for 書經|书经[Shu1 jing1]; ",
+        "shu1": "book; letter; document; CL:本[ben3],冊|册[ce4],部[bu4]; to write; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "book",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "shu1"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 189,
+      "character": "幻",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/幻.json",
+      "sourceBlobSha": "ea077670721dcf0f6dae219374f7e3231259f362",
+      "traditional": "幻",
+      "dictionaryReadings": [
+        "huan4"
+      ],
+      "dictionaryDefinitions": {
+        "huan4": "fantasy; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "illusion",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 190,
+      "character": "玉",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/玉.json",
+      "sourceBlobSha": "a0f8b57b47ab41d63f8a15340df5d848215587c7",
+      "traditional": "玉",
+      "dictionaryReadings": [
+        "yu4"
+      ],
+      "dictionaryDefinitions": {
+        "yu4": "jade; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "precious stone",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    }
+  ]
+}
