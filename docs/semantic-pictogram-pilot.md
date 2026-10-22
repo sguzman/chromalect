@@ -1,64 +1,50 @@
-# Semantic pictogram composition: first-tranche pilot
+# Semantic emoji composition: Mandarin pilot
 
-**Status:** experimental design, not a finished semantic layer or a sourced Mandarin sense inventory. Scope: the existing first 1,000 Mandarin characters and short lexical examples using those characters. Pronunciation and tone are out of scope.
+**Status:** experimental presentation design, not a sourced Mandarin sense inventory or a completed production semantic layer. Scope is the first 1,000 Mandarin characters and short word examples drawn from them. Sound and tone encoding are outside this experiment.
 
-## Decision
+## Design
 
-Test **small pictographic annotations** to convey selected source-supported meanings. An annotation may contain **one emoji, a structured combination of two or three, or no emoji at all**. A concise written gloss is always available and takes precedence when a pictogram would be ambiguous.
+Semantic annotations form **one optional emoji-expression layer**. A selected meaning can be expressed by a single emoji, a sequence of multiple reusable emojis, or no pictogram where none is clear. Single- and multiple-emoji expressions **coexist in the same view**. There is **no fixed maximum number of symbols**, no requirement for an expression to be unique to a character, and no requirement that every meaning receive an emoji expression. Extra symbols should clarify rather than lengthen the display.
 
-**Do not encode meaning by recoloring Chinese strokes, inserting pictures into radicals, or asserting that character components add up to modern word meanings.** Component color identity is a separate, stable channel. Historical semantic components may motivate a separately evidenced *role* annotation, not an automatic sense assignment.
+An emoji symbol is a reusable visual unit, not an exclusive character ID. Different selected meanings can share symbols, and a meaning occurring across multiple units may reuse an entire expression where justified. A character may have several distinct meanings requiring different expressions. A word's meaning must be established independently rather than inferred by concatenating its characters' meanings.
 
-The semantic layer begins **Marker-only**. `off` restores ordinary text. `direct` remains **unavailable** until an independently motivated, accessible direct-cell encoding is tested; a floating emoji pasted inside a Hanzi is not a meaningful direct-encoding system. Do not steal the existing component-color stripe, pronunciation edges, or tone anchors.
+Written meanings remain accessible for checking and interpreting pictograms. They are not a rival emoji scheme. Original Chinese remains unchanged, and the entire semantic layer can be turned off.
 
-## Why not one emoji per character?
+A symbol sequence can be interpreted in several ways; adjacency does not define a semantic grammar by itself. If a semantic relation is asserted for a sequence, record it as separately reviewable metadata, not as an assumed property of symbol order.
 
-- A Chinese character is not necessarily one word, one morpheme, or one meaning. One character can have several readings, senses, and uses, including grammatical ones with no clear picture.
-- A modern two-character word can have a meaning not compositionally recoverable from its individual characters.
-- Emoji conventions vary by operating system, culture, and font. Emoji names are not proof of lexical meaning.
-- Emoji sequences have no intrinsic grammar. Two pictures juxtaposed do not uniquely say which is the action, which is the object, or what their relation means.
-- Abstract concepts, grammatical markers, nuanced emotions, negation, and specialized senses often need a gloss, not a forced pictogram.
+## Data model for future production work
 
-## Semantic design model
+1. Record source-backed lexemes, character usages, and **distinct senses**, with definitions, context, evidence, source revision, license, and review status.
+2. Attach optional emoji-expression assignments to **reviewed senses**, not permanently to character glyphs. Store an ordered, **variable-length** list of reusable symbols; do not cap length or impose uniqueness constraints.
+3. Preserve distinct character-level and word-level senses. Keep alternative meanings separately available. Do not collapse polysemy into one pictogram.
+4. Preserve written meaning, uncertainty, emoji/Unicode version, accessibility labels, presentation review status, and evidence for any claimed semantic relations.
+5. Count a sense as production-complete only after its lexical evidence and pictogram assignment have passed the relevant review. A source-backed sense without a satisfactory pictogram can be recorded as **no pictogram** rather than fabricated coverage.
+6. Never publish illustrative lab examples as verified dictionary data.
 
-1. **Evidence-first sense inventory.** Collect separately sourced, reviewable `Lexeme` and `Sense` records; distinguish standalone character uses from words, their actual lexical senses, grammatical function, and reading constraints. Preserve alternative senses. Do not silently select the first dictionary gloss as the unique meaning.
-2. **Presentation assignment.** Assign each *sense*, not each glyph, an optional symbol recipe. The same sense may appear in several words; different senses of one character must not silently share a misleading symbol.
-3. **Compositional recipe.** `simple` (one icon), `sequence` (up to three icons with an explicit relation), or `gloss_only`. A combination must declare what its symbols jointly mean: for example, `associated`, `agent_action`, `action_patient`, or `property_of`. Do not treat untyped emoji adjacency as formal compositional semantics.
-4. **Human-legible rendering.** A small external badge contains one to three emojis where appropriate, with an accessible Chinese/English gloss and a source/sense inspector. Make it optional, selectable, and separately toggleable from phonetics and component identity. Never replace the original Hanzi.
-5. **Evidence & review.** Store a stable sense ID, headword and granularity (`character_usage` vs. `lexeme`), sourced Chinese explanation and/or bilingual gloss, source/license/revision, applicable contexts, emoji text and Unicode/CLDR version, relation, confidence, and review status. `illustrative` examples cannot be admitted into production.
-6. **Abstention.** If meaning is disputed, senses cannot be disambiguated from context, or a recipe is misleading, show a short labeled gloss or an explicit `sense unresolved` indicator. Coverage must not be inflated by guesses.
+Component identity colors, decomposition and glyph geometry, existing pronunciation and tone layers, and the original writing remain independent. Semantic **Marker** is the initial candidate presentation. Semantic Direct requires its own accessible design and separate evidence; it does not permit arbitrary recoloring or replacing Hanzi strokes with pictures.
 
-## Examples for a **visual** pilot (NOT vetted dictionary entries)
+## Unverified visual specimens
 
-| Unit | Possible meaning | Trial symbol | Reason for the trial |
+| Written unit | Selected illustrative meaning | Candidate expression | Observation |
 | --- | --- | --- | --- |
-| 山 | mountain | ⛰️ | one picture may be enough |
-| 水 | water | 💧 | one picture may be enough |
-| 火 | fire | 🔥 | simple concrete sense |
-| 学 | study/learn | 📖🧠 | two-picture association; intentionally ambiguous |
-| 火山 | volcano | 🌋 vs. 🔥⛰️ | compare one familiar symbol with a compositional pair |
-| 火车 | train | 🚆, **not** literal 🔥🚆 | modern word sense overrides literal character combination |
-| 生 | birth/life/raw (different usages) | 👶 / 🌱 / 🥩 | *alternatives*, not one three-emoji combined meaning |
-| 行 | multiple uses and readings | gloss-only until sense selected | suppress ambiguity instead of guessing |
+| 山 | mountain | ⛰️ | One symbol may suffice |
+| 水 | water | 💧 | One symbol may suffice |
+| 火 | fire | 🔥 | One symbol may suffice |
+| 学 | learn / study | 📖🧠 | Test a composed expression |
+| 读 | read | 👀📖 | Reuse 📖 without reserving it for 学 |
+| 火山 | volcano | 🌋 | A dedicated icon may be clearer than composing character meanings |
+| 火车 | train | 🚆 | Use the word sense rather than 火 plus 车 |
+| 生 | being born | 🤰👶 | One usage among several |
+| 生 | raw / uncooked | none proposed | Written meaning retained until a clear expression is found |
 
-These are interface design specimens, not imported data, source claims, or automated 1,000-character assignments. Source work follows design selection.
+These examples test a display model; they are **not** verified linguistic annotations or production mappings.
 
-## Pilot protocol
+## Test protocol and implementation
 
-Use 20–30 varied, correctly sourced *senses*, not merely 20–30 glyphs: simple objects/actions, multi-sense characters, abstract qualities, function words, and non-literal compound words. Compare in randomized order:
+The [semantic lab](../site/semantic-lab.html) displays all available expressions in one view, regardless of symbol count. A plain-character mode provides a baseline; a separate control reveals written meanings. The interface renders an ordered emoji array of any length and reuses vocabulary symbols.
 
-- A. Written sense gloss alone.
-- B. One pictogram plus an optional gloss.
-- C. Two/three pictograms with a declared relation plus an optional gloss.
-- D. No semantic overlay (for baseline readability).
+A future sourced pilot should sample 20–30 varied **senses**, including polysemous characters, concrete actions, abstract concepts, function words, and opaque compounds. Evaluate meaning recognition without initially revealing written meanings, ambiguity, time to comprehension, accessibility, and legibility at different sizes. Compare candidate expressions *within* each sense as needed, without forcing all senses into the same symbol count.
 
-For each specimen, test **meaning recognition without revealing the gloss**, user-rated ambiguity, reading speed, space occupied at phone/desktop sizes, and ability to distinguish competing senses. If an emoji composition is worse than a short gloss, the system should select the gloss. Emoji encodings are aids, not a universal dictionary substitute.
+Production semantic count at this design stage: **0 verified character mappings**. UI specimens do not contribute to coverage. Source selection, sense inventory, and independently reviewed emoji assignments remain the next steps.
 
-## Implementation sequence
-
-1. Keep current semantic mode unavailable in production while the lab is illustrative.
-2. Build the independent [visual semantic lab](../site/semantic-lab.html), with one, two/three, and gloss-only variants and plain-language warnings.
-3. Select a license-compatible Chinese source for character uses and word senses, build a separate machine-readable, review-status-bearing sense inventory, and bind sound reading **only if** needed to distinguish which sense is meant. Sound-channel expansion is out of scope.
-4. Turn on **Marker** only where the sense evidence and pictogram review both pass; preserve an immediate Off state and expose alternative meanings.
-5. Treat semantic **Direct** as a separate experiment: do not force icon pictures or meaning color assignments into radical shapes. Evaluate semantic component **roles** separately from modern senses.
-
-**Invariant:** the source character string, its glyph path identities, all v0.4/v0.5/v0.6 component colors, pronunciation and tone layers, and existing Mandarin 1,000 coverage must be unchanged by this experiment.
+**Invariant:** the first 1,000 Mandarin component-colored glyphs, versioned identity palettes, stroke-owner data, pronunciation, and tone mappings are unchanged by this experiment.

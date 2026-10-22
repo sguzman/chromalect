@@ -211,6 +211,7 @@ jobs:
           node --check site/navigation.js
           node --check site/semantic-lab.js
           node tools/glyph-pipeline/navigation_smoke.mjs
+          node tools/glyph-pipeline/semantic_smoke.mjs
           python3 - <<'PY'
           from pathlib import Path
           import re
