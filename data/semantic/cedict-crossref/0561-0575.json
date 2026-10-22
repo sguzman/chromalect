@@ -1,0 +1,463 @@
+{
+  "schema": "chromalect.mandarin.lexical-crossref-batch.v0.1",
+  "source": {
+    "title": "CC-CEDICT per-headword v2 mirror",
+    "repository": "krmanik/cedict-json",
+    "commit": "63c2569948629323b515833930fdd10f285401b6",
+    "dataLicense": "CC BY-SA 4.0",
+    "upstream": "https://cc-cedict.org/",
+    "mirror": "https://github.com/krmanik/cedict-json",
+    "transform": "Selected single-simplified-character dictionary records, retaining readings and definitions; literal English gloss matching is automated triage only"
+  },
+  "rankStart": 561,
+  "rankEnd": 575,
+  "summary": {
+    "total": 15,
+    "headwordFound": 15,
+    "withCandidate": 15,
+    "withLiteralSupport": 11
+  },
+  "records": [
+    {
+      "rank": 561,
+      "character": "访",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/访.json",
+      "sourceBlobSha": "1e0861cbd125607e80cd4889eb68711ea3669175",
+      "traditional": "訪",
+      "dictionaryReadings": [
+        "fang3"
+      ],
+      "dictionaryDefinitions": {
+        "fang3": "to visit; to call on; to seek; to inquire; to investigate; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "visit",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "fang3"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 562,
+      "character": "诀",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/诀.json",
+      "sourceBlobSha": "96e577492748d200c1be5e1b2d3d9d1e98126a96",
+      "traditional": "訣",
+      "dictionaryReadings": [
+        "jue2"
+      ],
+      "dictionaryDefinitions": {
+        "jue2": "farewell; secrets (of an art); "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "bid farewell",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 563,
+      "character": "寻",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/寻.json",
+      "sourceBlobSha": "0fd0a0fc9b1610e4abab6e0add9b217ece336441",
+      "traditional": "尋",
+      "dictionaryReadings": [
+        "xun2"
+      ],
+      "dictionaryDefinitions": {
+        "xun2": "to search; to look for; to seek; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "search",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "xun2"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 564,
+      "character": "那",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/那.json",
+      "sourceBlobSha": "0cf7c906409333f99deb91549814a57a2e65e4f3",
+      "traditional": "那",
+      "dictionaryReadings": [
+        "Na1",
+        "Nuo2",
+        "na3",
+        "na4",
+        "nuo2"
+      ],
+      "dictionaryDefinitions": {
+        "Na1": "surname Na; ",
+        "Nuo2": "surname Nuo; ",
+        "na3": "variant of 哪[na3]; ",
+        "na4": "that; those; then (in that case); commonly pr. [nei4] before a classifier, esp. in Beijing; ",
+        "nuo2": "(archaic) many; beautiful; how; old variant of 挪[nuo2]; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "that",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "na4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 565,
+      "character": "迅",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/迅.json",
+      "sourceBlobSha": "2075045e8d2f0cb634aae45a246d60d0c54d434f",
+      "traditional": "迅",
+      "dictionaryReadings": [
+        "xun4"
+      ],
+      "dictionaryDefinitions": {
+        "xun4": "rapid; fast; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "rapid",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "xun4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 566,
+      "character": "尽",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/尽.json",
+      "sourceBlobSha": "6609360ae5e852267f038a670149fe9e5716b420",
+      "traditional": "盡",
+      "dictionaryReadings": [
+        "jin3",
+        "jin4"
+      ],
+      "dictionaryDefinitions": {
+        "jin3": "to the greatest extent; (when used before a noun of location) furthest or extreme; to be within the limits of; to give priority to; ",
+        "jin4": "to use up; to exhaust; to end; to finish; to the utmost; exhausted; finished; to the limit (of sth); all; entirely; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "deplete",
+          "sourceGlossGroupIndex": 1,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 567,
+      "character": "导",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/导.json",
+      "sourceBlobSha": "ad793dc0fa73e5d9da0adb87fdd1074815e4b47b",
+      "traditional": "導",
+      "dictionaryReadings": [
+        "dao3"
+      ],
+      "dictionaryDefinitions": {
+        "dao3": "to transmit; to lead; to guide; to conduct; to direct; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "guide",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "dao3"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 568,
+      "character": "异",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/异.json",
+      "sourceBlobSha": "c25acaf1489248770cdb3870f8f0f7a9ea5f8b75",
+      "traditional": "異",
+      "dictionaryReadings": [
+        "yi4"
+      ],
+      "dictionaryDefinitions": {
+        "yi4": "different; other; hetero-; unusual; strange; surprising; to distinguish; to separate; to discriminate; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "different",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "yi4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 569,
+      "character": "弛",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/弛.json",
+      "sourceBlobSha": "e0519cbe05aea1ec13218cc4bb4b1f0413784106",
+      "traditional": "弛",
+      "dictionaryReadings": [
+        "chi2"
+      ],
+      "dictionaryDefinitions": {
+        "chi2": "to unstring a bow; to slacken; to relax; to loosen; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "relax",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "chi2"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 570,
+      "character": "孙",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/孙.json",
+      "sourceBlobSha": "d5deeb13b71200fb93a8083aea953c1e1ff22461",
+      "traditional": "孫",
+      "dictionaryReadings": [
+        "Sun1",
+        "sun1"
+      ],
+      "dictionaryDefinitions": {
+        "Sun1": "surname Sun; ",
+        "sun1": "grandson; descendant; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "grandchild",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 571,
+      "character": "阵",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/阵.json",
+      "sourceBlobSha": "2794908aaa7869afa78874c064486415042c3984",
+      "traditional": "陣",
+      "dictionaryReadings": [
+        "zhen4"
+      ],
+      "dictionaryDefinitions": {
+        "zhen4": "disposition of troops; wave; spate; burst; spell; short period of time; classifier for events or states of short duration; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "troops",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "zhen4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 572,
+      "character": "阳",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/阳.json",
+      "sourceBlobSha": "f8633718889d199938de58b20c2b9a93369f78e5",
+      "traditional": "陽",
+      "dictionaryReadings": [
+        "yang2"
+      ],
+      "dictionaryDefinitions": {
+        "yang2": "positive (electric.); sun; male principle (Taoism); Yang, opposite: 陰|阴[yin1] ☯; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "sun",
+          "sourceGlossGroupIndex": 2,
+          "matchingDictionaryReadings": [
+            "yang2"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 573,
+      "character": "收",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/收.json",
+      "sourceBlobSha": "f8f2ac25001cab19f187c09abafb956c6adbc7a9",
+      "traditional": "收",
+      "dictionaryReadings": [
+        "shou1"
+      ],
+      "dictionaryDefinitions": {
+        "shou1": "to receive; to accept; to collect; to put away; to restrain; to stop; in care of (used on address line after name); "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "collect",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "shou1"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 574,
+      "character": "阶",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/阶.json",
+      "sourceBlobSha": "c8690d206921ca08513b655f3e894b7c688961d0",
+      "traditional": "階",
+      "dictionaryReadings": [
+        "jie1"
+      ],
+      "dictionaryDefinitions": {
+        "jie1": "variant of 階|阶[jie1]; rank or step; stairs; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "stairs",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "jie1"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 575,
+      "character": "阴",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/阴.json",
+      "sourceBlobSha": "780612b4f4d0dc9cd85cb75554b3d82e0f7709c0",
+      "traditional": "隂",
+      "dictionaryReadings": [
+        "Yin1",
+        "yin1"
+      ],
+      "dictionaryDefinitions": {
+        "Yin1": "surname Yin; ",
+        "yin1": "overcast (weather); cloudy; shady; Yin (the negative principle of Yin and Yang); negative (electric.); feminine; moon; implicit; hidden; genitalia; variant of 陰|阴[yin1]; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "dark",
+          "sourceGlossGroupIndex": 1,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    }
+  ]
+}
