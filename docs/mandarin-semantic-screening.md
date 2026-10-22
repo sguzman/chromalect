@@ -38,7 +38,7 @@ The percentages have deliberately distinct denominators and meanings:
 | Pending | Character with source evidence but no initial emoji decision |
 | Production verified | Character whose relevant source senses and visual mappings completed independent linguistic and comprehension review; **none as of this draft** |
 
-The first pass currently covers **ranks 1–100**. Each screened character receives one first-pass decision. It **does not claim to resolve every sense of a polysemous character**. Candidate entries identify the selected source definition group, the specific cue meaning, typed emoji expression, and pending review status. Characters with no selected emoji retain a documented abstention and the original source evidence.
+The first pass currently covers **ranks 1–200**. Each screened character receives one first-pass decision. It **does not claim to resolve every sense of a polysemous character**. Candidate entries identify the selected source definition group, the specific cue meaning, typed emoji expression, and pending review status. Characters with no selected emoji retain a documented abstention and the original source evidence.
 
 The data's \`summary\` is regenerated from the records and checked by [semantic_inventory_smoke.mjs](../tools/glyph-pipeline/semantic_inventory_smoke.mjs), which also checks correspondence with the original ranked catalog and validates expressions against the [formal emoji grammar](../ontology/semantic-expression-v0.1.schema.json).
 
