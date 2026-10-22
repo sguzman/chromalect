@@ -1,0 +1,458 @@
+{
+  "schema": "chromalect.mandarin.lexical-crossref-batch.v0.1",
+  "source": {
+    "title": "CC-CEDICT per-headword v2 mirror",
+    "repository": "krmanik/cedict-json",
+    "commit": "63c2569948629323b515833930fdd10f285401b6",
+    "dataLicense": "CC BY-SA 4.0",
+    "upstream": "https://cc-cedict.org/",
+    "mirror": "https://github.com/krmanik/cedict-json",
+    "transform": "Selected single-simplified-character dictionary records, retaining readings and definitions; literal English gloss matching is automated triage only"
+  },
+  "rankStart": 501,
+  "rankEnd": 515,
+  "summary": {
+    "total": 15,
+    "headwordFound": 15,
+    "withCandidate": 15,
+    "withLiteralSupport": 10
+  },
+  "records": [
+    {
+      "rank": 501,
+      "character": "旨",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/旨.json",
+      "sourceBlobSha": "2ee4c79b22604c59a2f1e310dabbbebbf908b8b8",
+      "traditional": "旨",
+      "dictionaryReadings": [
+        "zhi3"
+      ],
+      "dictionaryDefinitions": {
+        "zhi3": "imperial decree; purport; aim; purpose; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "purpose",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "zhi3"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 502,
+      "character": "旭",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/旭.json",
+      "sourceBlobSha": "cb72c5a7cf621cd730ee11c7c74e839fcdc0f71f",
+      "traditional": "旭",
+      "dictionaryReadings": [
+        "xu4"
+      ],
+      "dictionaryDefinitions": {
+        "xu4": "dawn; rising sun; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "rising sun",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "xu4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 503,
+      "character": "负",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/负.json",
+      "sourceBlobSha": "2b9bf1e57c412d659dc0e0a9b281aea11f600f41",
+      "traditional": "負",
+      "dictionaryReadings": [
+        "fu4"
+      ],
+      "dictionaryDefinitions": {
+        "fu4": "to bear; to carry (on one's back); to turn one's back on; to be defeated; negative (math. etc); "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "burden",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 504,
+      "character": "匈",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/匈.json",
+      "sourceBlobSha": "632b64211372cf36c10db2872368939c304c233b",
+      "traditional": "匈",
+      "dictionaryReadings": [
+        "Xiong1",
+        "xiong1"
+      ],
+      "dictionaryDefinitions": {
+        "Xiong1": "Hungary; Hungarian; abbr. for 匈牙利[Xiong1 ya2 li4]; ",
+        "xiong1": "old variant of 胸[xiong1]; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "chest",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 505,
+      "character": "名",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/名.json",
+      "sourceBlobSha": "c0f5d54e2d721fdcb8c3fbeb24cec311c9498fcb",
+      "traditional": "名",
+      "dictionaryReadings": [
+        "ming2"
+      ],
+      "dictionaryDefinitions": {
+        "ming2": "name; noun (part of speech); place (e.g. among winners); famous; classifier for people; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "name",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "ming2"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 506,
+      "character": "各",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/各.json",
+      "sourceBlobSha": "77a7cba35ecccd09a0e4aff07733d54d26593592",
+      "traditional": "各",
+      "dictionaryReadings": [
+        "ge4"
+      ],
+      "dictionaryDefinitions": {
+        "ge4": "each; every; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "each",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "ge4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 507,
+      "character": "多",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/多.json",
+      "sourceBlobSha": "78325484d1a28db644f8ada2fdde18a1cd4f467e",
+      "traditional": "多",
+      "dictionaryReadings": [
+        "duo1"
+      ],
+      "dictionaryDefinitions": {
+        "duo1": "many; much; often; a lot of; numerous; more; in excess; how (to what extent); multi-; Taiwan pr. [duo2] when it means 'how'; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "many",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "duo1"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 508,
+      "character": "争",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/争.json",
+      "sourceBlobSha": "549a082b1a65ff4f4f4393b4e2fb8652c490a3a5",
+      "traditional": "爭",
+      "dictionaryReadings": [
+        "zheng1"
+      ],
+      "dictionaryDefinitions": {
+        "zheng1": "to strive for; to vie for; to argue or debate; deficient or lacking (dialect); how or what (literary); "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "fight",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 509,
+      "character": "色",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/色.json",
+      "sourceBlobSha": "6321f9f44aa502c5cbca7206a5644152db6d262c",
+      "traditional": "色",
+      "dictionaryReadings": [
+        "se4",
+        "shai3"
+      ],
+      "dictionaryDefinitions": {
+        "se4": "color; CL:種|种[zhong3]; look; appearance; sex; ",
+        "shai3": "color; dice; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "color",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "se4",
+            "shai3"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 510,
+      "character": "壮",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/壮.json",
+      "sourceBlobSha": "fa8107d7a9b1f66c9df33b6bfddbb415d37bfed8",
+      "traditional": "壯",
+      "dictionaryReadings": [
+        "Zhuang4",
+        "zhuang4"
+      ],
+      "dictionaryDefinitions": {
+        "Zhuang4": "Zhuang ethnic group of Guangxi, the PRC's second most numerous ethnic group; Zhuang: Bouxcuengh; ",
+        "zhuang4": "to strengthen; strong; robust; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "robust",
+          "sourceGlossGroupIndex": 1,
+          "matchingDictionaryReadings": [
+            "zhuang4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 511,
+      "character": "冲",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/冲.json",
+      "sourceBlobSha": "829b9b00344dd9b976c288f54b98ef27cf416ae2",
+      "traditional": "衝",
+      "dictionaryReadings": [
+        "chong1",
+        "chong4"
+      ],
+      "dictionaryDefinitions": {
+        "chong1": "(of water) to dash against; to mix with water; to infuse; to rinse; to flush; to develop (a film); to rise in the air; to clash; to collide with; thoroughfare; to go straight ahead; to rush; to clash; ",
+        "chong4": "powerful; vigorous; pungent; towards; in view of; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "soar",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 512,
+      "character": "妆",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/妆.json",
+      "sourceBlobSha": "070485013c0e34fc919019c2d5be92fba631d41f",
+      "traditional": "粧",
+      "dictionaryReadings": [
+        "zhuang1"
+      ],
+      "dictionaryDefinitions": {
+        "zhuang1": "(of a woman) to adorn oneself; makeup; adornment; trousseau; stage makeup and costume; variant of 妝|妆[zhuang1]; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "make-up",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 513,
+      "character": "冰",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/冰.json",
+      "sourceBlobSha": "0e6162cec14b8865bc65393cfb2505aceaa125d6",
+      "traditional": "氷",
+      "dictionaryReadings": [
+        "bing1"
+      ],
+      "dictionaryDefinitions": {
+        "bing1": "ice; CL:塊|块[kuai4]; methamphetamine (slang); variant of 冰[bing1]; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "ice",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "bing1"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 514,
+      "character": "庄",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/庄.json",
+      "sourceBlobSha": "e85a20ea9721cc69e2d5db3b7a6bd6310f3663f1",
+      "traditional": "莊",
+      "dictionaryReadings": [
+        "zhuang1",
+        "Zhuang1"
+      ],
+      "dictionaryDefinitions": {
+        "zhuang1": "variant of 莊|庄[zhuang1]; farmstead; village; manor; place of business; banker (in a gambling game); grave or solemn; holdings of a landlord (in imperial China); ",
+        "Zhuang1": "surname Zhuang; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "village",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "zhuang1"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 515,
+      "character": "庆",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/庆.json",
+      "sourceBlobSha": "7517f268a9fd3c19e855993467521f9d295cadb8",
+      "traditional": "慶",
+      "dictionaryReadings": [
+        "qing4"
+      ],
+      "dictionaryDefinitions": {
+        "qing4": "to celebrate; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "celebrate",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "qing4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    }
+  ]
+}
