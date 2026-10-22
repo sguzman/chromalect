@@ -20,6 +20,12 @@
 .semantic-metric span{font-size:12px;color:var(--sub)}
 .semantic-progress{width:100%;height:13px;background:var(--panel2);border:1px solid var(--border);border-radius:999px;overflow:hidden}
 .semantic-progress>div{height:100%;background:var(--accent);width:0}
+.semantic-stages{display:grid;gap:14px;margin:20px 0 24px}
+.semantic-stage-heading{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:10px;margin-bottom:7px;font-size:13px}
+.semantic-stage-heading strong{font-weight:650}
+.semantic-stage-heading span{font-variant-numeric:tabular-nums;color:var(--sub)}
+.semantic-research-caption{font-size:12px;color:var(--sub);margin:0}
+.semantic-dictionary-note{font-size:12px;color:var(--sub);margin:10px 0}
 .semantic-controls{display:flex;flex-wrap:wrap;gap:14px;align-items:flex-end;margin:24px 0}
 .semantic-controls label{display:flex;flex-direction:column;gap:5px;min-width:170px;font-size:13px;color:var(--sub)}
 .semantic-controls input,.semantic-controls select{border:1px solid var(--border);background:var(--panel);color:var(--ink);padding:10px 12px;border-radius:9px;font:inherit}
@@ -60,7 +66,25 @@
   <div class="semantic-metric"><span>Emoji candidates</span><strong id="semantic-candidate-count">—</strong><span id="semantic-candidate-percent"></span></div>
   <div class="semantic-metric"><span>Production verified</span><strong id="semantic-verified-count">—</strong><span>Requires independent review</span></div>
 </section>
-<div class="semantic-progress" role="progressbar" id="semantic-progress" aria-label="Characters screened" aria-valuemin="0" aria-valuemax="1000" aria-valuenow="0"><div id="semantic-progress-fill"></div></div>
+<section class="semantic-stages" aria-label="Semantic research stages">
+  <div class="semantic-stage">
+    <div class="semantic-stage-heading"><strong>Initial character screening</strong><span id="semantic-stage-screened">Loading</span></div>
+    <div class="semantic-progress" role="progressbar" id="semantic-progress" aria-label="Characters screened" aria-valuemin="0" aria-valuemax="1000" aria-valuenow="0"><div id="semantic-progress-fill"></div></div>
+  </div>
+  <div class="semantic-stage">
+    <div class="semantic-stage-heading"><strong>Independent dictionary cross-reference</strong><span id="semantic-stage-dictionary">Loading</span></div>
+    <div class="semantic-progress" role="progressbar" id="semantic-dictionary-progress" aria-label="Characters with independent dictionary cross-reference" aria-valuemin="0" aria-valuemax="1000" aria-valuenow="0"><div id="semantic-dictionary-fill"></div></div>
+  </div>
+  <div class="semantic-stage">
+    <div class="semantic-stage-heading"><strong>Independent lexical sense approval</strong><span id="semantic-stage-lexical">Loading</span></div>
+    <div class="semantic-progress" role="progressbar" id="semantic-lexical-progress" aria-label="Characters with independently reviewed Mandarin senses" aria-valuemin="0" aria-valuemax="1000" aria-valuenow="0"><div id="semantic-lexical-fill"></div></div>
+  </div>
+  <div class="semantic-stage">
+    <div class="semantic-stage-heading"><strong>Emoji comprehension approval</strong><span id="semantic-stage-emoji">Loading</span></div>
+    <div class="semantic-progress" role="progressbar" id="semantic-emoji-progress" aria-label="Characters with independently approved emoji comprehension" aria-valuemin="0" aria-valuemax="1000" aria-valuenow="0"><div id="semantic-emoji-fill"></div></div>
+  </div>
+  <p class="semantic-research-caption" id="semantic-crossref-note">Dictionary evidence is separate from human lexical or emoji review; no candidate has been promoted to production.</p>
+</section>
 <fieldset class="semantic-layers" aria-label="Semantic layer visibility">
   <legend>Semantic layers</legend>
   <label><input type="checkbox" id="semantic-layer-character" checked> Character meaning emoji</label>
@@ -77,6 +101,7 @@
   <span id="semantic-page-label"></span>
   <button type="button" id="semantic-next">Next</button>
 </nav>
+<p class="hint">Independent dictionary: <a href="https://github.com/krmanik/cedict-json/tree/63c2569948629323b515833930fdd10f285401b6/v2">CC-CEDICT pinned headword mirror</a> (CC BY-SA 4.0) · <a href="https://github.com/sguzman/chromalect/blob/main/docs/mandarin-lexical-review.md">Review method and discrepancies</a>.</p>
 <p class="hint">Data: <a href="https://github.com/unicode-org/unihan-database/blob/667c2d180a75ddd749b774dbb7588d4786b63222/kDefinition.txt">Unicode Unihan draft kDefinition, pinned revision</a>, licensed under <a href="https://github.com/sguzman/chromalect/blob/main/licenses/UNICODE-3.0.txt">Unicode License v3</a>. <a href="https://github.com/sguzman/chromalect/blob/main/docs/mandarin-semantic-screening.md">Method and coverage definitions</a>. <a href="semantic-lab.html">Semantic grammar lab</a>.</p>
 </main>
 <footer class="wrap"><a href="index.html">Chromalect overview</a> · <a href="search.html">Character search</a> · <a href="semantic-lab.html">Emoji grammar lab</a></footer>

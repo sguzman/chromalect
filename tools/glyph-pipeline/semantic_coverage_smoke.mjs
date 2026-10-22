@@ -6,6 +6,7 @@ const grammarSource=fs.readFileSync("site/semantic-grammar.js","utf8");
 const script=fs.readFileSync("site/semantic-coverage.js","utf8");
 const html=fs.readFileSync("site/semantic-coverage.html","utf8");
 const data=JSON.parse(fs.readFileSync("data/semantic/mandarin-1000-v0.1.json","utf8"));
+const lexical=JSON.parse(fs.readFileSync("data/semantic/cedict-crossref/manifest-v0.1.json","utf8"));
 const catalog=JSON.parse(fs.readFileSync("data/catalog/characters-0001-1000.json","utf8"));
 const profile={schema:"chromalect.mandarin-character-profile.v1",catalog_count:1000,
   characters:catalog.characters.map(x=>({rank:x.rank,character:x.character}))};
@@ -37,7 +38,12 @@ for(const id of [
   "semantic-source-count","semantic-source-percent",
   "semantic-screened-count","semantic-screened-percent",
   "semantic-candidate-count","semantic-candidate-percent",
-  "semantic-verified-count","semantic-progress","semantic-progress-fill"
+  "semantic-verified-count","semantic-progress","semantic-progress-fill",
+  "semantic-stage-screened","semantic-stage-dictionary",
+  "semantic-stage-lexical","semantic-stage-emoji",
+  "semantic-dictionary-progress","semantic-dictionary-fill",
+  "semantic-lexical-progress","semantic-lexical-fill",
+  "semantic-emoji-progress","semantic-emoji-fill","semantic-crossref-note"
 ]) ids[id]=new Element();
 ids["semantic-filter"].value="all";
 ids["semantic-layer-character"].checked=true;
@@ -57,6 +63,7 @@ const vmContext={
   fetch:async path=>{
     if(path==="semantic/mandarin-1000-v0.1.json")return {ok:true,json:async()=>data};
     if(path==="profiles/mandarin-1000-v1.json")return {ok:true,json:async()=>profile};
+    if(path==="semantic/lexical-crossref-v0.1.json")return {ok:true,json:async()=>lexical};
     throw new Error("Unexpected resource: "+path);
   }
 };
@@ -74,8 +81,20 @@ assert.equal(ids["semantic-candidate-count"].textContent,data.summary.pictogramC
 assert.equal(ids["semantic-verified-count"].textContent,"0.0%");
 assert.equal(ids["semantic-progress-fill"].style.width,"100.0%");
 assert.equal(ids["semantic-progress"].attrs["aria-valuenow"],"1000");
+assert.equal(ids["semantic-stage-screened"].textContent,"1000 / 1000 (100.0%)");
+assert.equal(ids["semantic-stage-dictionary"].textContent,"100 / 1000 (10.0%)");
+assert.equal(ids["semantic-stage-lexical"].textContent,"0 / 1000 (0.0%)");
+assert.equal(ids["semantic-stage-emoji"].textContent,"0 / 1000 (0.0%)");
+assert.equal(ids["semantic-dictionary-fill"].style.width,"10.0%");
+assert.equal(ids["semantic-lexical-fill"].style.width,"0.0%");
+assert.equal(ids["semantic-emoji-fill"].style.width,"0.0%");
+assert.match(ids["semantic-crossref-note"].textContent,/64 of 73/);
 const flatten=x=>[x,...x.children.flatMap(flatten)];
 assert.ok(flatten(cards[0]).some(x=>x.className==="semantic-emoji" && x.textContent==="1️⃣"));
+assert.ok(flatten(cards[0]).some(x=>x.className==="semantic-dictionary-note" &&
+  x.textContent.includes("headword located")));
+assert.ok(!flatten(cards[38]).some(x=>x.className==="semantic-source" &&
+  x.textContent.includes("Production verified")));
 assert.ok(flatten(cards[38]).some(x=>x.className==="semantic-emoji" && x.textContent==="⛰️"));
 assert.ok(!flatten(cards[38]).some(x=>x.className==="semantic-emoji" && /▶|∼|⟨/.test(x.textContent)));
 ids["semantic-layer-character"].checked=false;
