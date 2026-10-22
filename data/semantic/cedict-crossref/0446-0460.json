@@ -1,0 +1,455 @@
+{
+  "schema": "chromalect.mandarin.lexical-crossref-batch.v0.1",
+  "source": {
+    "title": "CC-CEDICT per-headword v2 mirror",
+    "repository": "krmanik/cedict-json",
+    "commit": "63c2569948629323b515833930fdd10f285401b6",
+    "dataLicense": "CC BY-SA 4.0",
+    "upstream": "https://cc-cedict.org/",
+    "mirror": "https://github.com/krmanik/cedict-json",
+    "transform": "Selected single-simplified-character dictionary records, retaining readings and definitions; literal English gloss matching is automated triage only"
+  },
+  "rankStart": 446,
+  "rankEnd": 460,
+  "summary": {
+    "total": 15,
+    "headwordFound": 15,
+    "withCandidate": 15,
+    "withLiteralSupport": 9
+  },
+  "records": [
+    {
+      "rank": 446,
+      "character": "先",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/先.json",
+      "sourceBlobSha": "8cfc1ced8073d38da513d2d283da3a042506d52c",
+      "traditional": "先",
+      "dictionaryReadings": [
+        "xian1"
+      ],
+      "dictionaryDefinitions": {
+        "xian1": "early; prior; former; in advance; first; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "first",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "xian1"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 447,
+      "character": "丢",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/丢.json",
+      "sourceBlobSha": "70169940daf76f84daa003e6be0584c082d31a1a",
+      "traditional": "丟",
+      "dictionaryReadings": [
+        "diu1"
+      ],
+      "dictionaryDefinitions": {
+        "diu1": "to lose; to put aside; to throw; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "discard",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 448,
+      "character": "廷",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/廷.json",
+      "sourceBlobSha": "9cbe34088a91358d6d650a08dc6f1f121d4e9cf8",
+      "traditional": "廷",
+      "dictionaryReadings": [
+        "ting2"
+      ],
+      "dictionaryDefinitions": {
+        "ting2": "palace courtyard; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "court",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "ting2"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 449,
+      "character": "舌",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/舌.json",
+      "sourceBlobSha": "a386ae3eeda6c7bbf8cb0a8e7b143ef3747ef049",
+      "traditional": "舌",
+      "dictionaryReadings": [
+        "she2"
+      ],
+      "dictionaryDefinitions": {
+        "she2": "tongue; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "tongue",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "she2"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 450,
+      "character": "竹",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/竹.json",
+      "sourceBlobSha": "f8e54670129fa0f4b908b36f56d1a3c4e002d007",
+      "traditional": "竹",
+      "dictionaryReadings": [
+        "zhu2"
+      ],
+      "dictionaryDefinitions": {
+        "zhu2": "bamboo; CL:棵[ke1],支[zhi1],根[gen1]; Kangxi radical 118; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "bamboo",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "zhu2"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 451,
+      "character": "迁",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/迁.json",
+      "sourceBlobSha": "92b4223e047380698f5f46f9ef92628efa1993e6",
+      "traditional": "遷",
+      "dictionaryReadings": [
+        "qian1"
+      ],
+      "dictionaryDefinitions": {
+        "qian1": "to move; to shift; to change (a position or location etc); to promote; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "relocate",
+          "sourceGlossGroupIndex": 2,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 452,
+      "character": "乔",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/乔.json",
+      "sourceBlobSha": "e161f4de9bebe817711c03150bfd350a4eecd76f",
+      "traditional": "喬",
+      "dictionaryReadings": [
+        "Qiao2",
+        "qiao2"
+      ],
+      "dictionaryDefinitions": {
+        "Qiao2": "surname Qiao; ",
+        "qiao2": "tall; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "tall",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "qiao2"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 453,
+      "character": "迄",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/迄.json",
+      "sourceBlobSha": "e363e396ad9c31d81960392721c775b3ffd53f03",
+      "traditional": "迄",
+      "dictionaryReadings": [
+        "qi4"
+      ],
+      "dictionaryDefinitions": {
+        "qi4": "as yet; until; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "until",
+          "sourceGlossGroupIndex": 1,
+          "matchingDictionaryReadings": [
+            "qi4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 454,
+      "character": "伟",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/伟.json",
+      "sourceBlobSha": "ca32953374b58907b8d2367a76a2779192919acc",
+      "traditional": "偉",
+      "dictionaryReadings": [
+        "wei3"
+      ],
+      "dictionaryDefinitions": {
+        "wei3": "big; large; great; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "great",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "wei3"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 455,
+      "character": "传",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/传.json",
+      "sourceBlobSha": "024e521bcc65d80b7e9c32530d0a588b9898d0d2",
+      "traditional": "傳",
+      "dictionaryReadings": [
+        "chuan2",
+        "zhuan4"
+      ],
+      "dictionaryDefinitions": {
+        "chuan2": "to pass on; to spread; to transmit; to infect; to transfer; to circulate; to conduct (electricity); ",
+        "zhuan4": "biography; historical narrative; commentaries; relay station; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "transmit",
+          "sourceGlossGroupIndex": 1,
+          "matchingDictionaryReadings": [
+            "chuan2"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 456,
+      "character": "乒",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/乒.json",
+      "sourceBlobSha": "4762fc1ed309807461060bc4baedb8449432b877",
+      "traditional": "乒",
+      "dictionaryReadings": [
+        "ping1"
+      ],
+      "dictionaryDefinitions": {
+        "ping1": "(onom.) ping; bing; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "ping pong",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 457,
+      "character": "乓",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/乓.json",
+      "sourceBlobSha": "68909d6f5ec6bf807b0522f9136d50cd2ca70773",
+      "traditional": "乓",
+      "dictionaryReadings": [
+        "pang1"
+      ],
+      "dictionaryDefinitions": {
+        "pang1": "(onom.) bang; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "ping pong",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 458,
+      "character": "休",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/休.json",
+      "sourceBlobSha": "24c45647ba85727d657c8081493d46151702be41",
+      "traditional": "休",
+      "dictionaryReadings": [
+        "Xiu1",
+        "xiu1"
+      ],
+      "dictionaryDefinitions": {
+        "Xiu1": "surname Xiu; ",
+        "xiu1": "to rest; to stop doing sth for a period of time; to cease; (imperative) don't; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "rest",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "xiu1"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 459,
+      "character": "伍",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/伍.json",
+      "sourceBlobSha": "ca8f41daadc7a885e7dda4f435f5471a3684ef57",
+      "traditional": "伍",
+      "dictionaryReadings": [
+        "Wu3",
+        "wu3"
+      ],
+      "dictionaryDefinitions": {
+        "Wu3": "surname Wu; ",
+        "wu3": "squad of five soldiers; to associate with; five (banker's anti-fraud numeral); "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "troops",
+          "sourceGlossGroupIndex": 1,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 460,
+      "character": "伏",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/伏.json",
+      "sourceBlobSha": "b9cb978c81e28ea259b7ca9bfde966e8704f0d22",
+      "traditional": "伏",
+      "dictionaryReadings": [
+        "Fu2",
+        "fu2"
+      ],
+      "dictionaryDefinitions": {
+        "Fu2": "surname Fu; ",
+        "fu2": "to lean over; to fall (go down); to hide (in ambush); to conceal oneself; to lie low; hottest days of summer; to submit; to concede defeat; to overcome; to subdue; volt; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "crouch",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    }
+  ]
+}
