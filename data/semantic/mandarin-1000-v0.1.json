@@ -28,10 +28,10 @@
   "summary": {
     "trancheCount": 1000,
     "meaningSourceFound": 1000,
-    "screenedCharacters": 200,
-    "pictogramCandidateCharacters": 140,
-    "deferredCharacters": 60,
-    "pendingScreening": 800,
+    "screenedCharacters": 300,
+    "pictogramCandidateCharacters": 216,
+    "deferredCharacters": 84,
+    "pendingScreening": 700,
     "productionVerifiedCharacters": 0
   },
   "characters": [
@@ -2331,6 +2331,19 @@
             },
             "state": "experimental_pictogram_candidate",
             "review": "human_linguistic_and_comprehension_review_pending"
+          },
+          {
+            "sourceGroupIndex": 0,
+            "selectedMeaning": "say",
+            "expression": {
+              "kind": "event",
+              "predicate": {
+                "kind": "atom",
+                "emoji": "🗣️"
+              }
+            },
+            "state": "experimental_pictogram_candidate",
+            "review": "human_linguistic_and_comprehension_review_pending"
           }
         ]
       }
@@ -2687,6 +2700,16 @@
             "expression": {
               "kind": "atom",
               "emoji": "📅"
+            },
+            "state": "experimental_pictogram_candidate",
+            "review": "human_linguistic_and_comprehension_review_pending"
+          },
+          {
+            "sourceGroupIndex": 0,
+            "selectedMeaning": "history",
+            "expression": {
+              "kind": "atom",
+              "emoji": "📜"
             },
             "state": "experimental_pictogram_candidate",
             "review": "human_linguistic_and_comprehension_review_pending"
@@ -4190,6 +4213,16 @@
             },
             "state": "experimental_pictogram_candidate",
             "review": "human_linguistic_and_comprehension_review_pending"
+          },
+          {
+            "sourceGroupIndex": 1,
+            "selectedMeaning": "month",
+            "expression": {
+              "kind": "atom",
+              "emoji": "📅"
+            },
+            "state": "experimental_pictogram_candidate",
+            "review": "human_linguistic_and_comprehension_review_pending"
           }
         ]
       }
@@ -4579,6 +4612,19 @@
             },
             "state": "experimental_pictogram_candidate",
             "review": "human_linguistic_and_comprehension_review_pending"
+          },
+          {
+            "sourceGroupIndex": 1,
+            "selectedMeaning": "burn",
+            "expression": {
+              "kind": "event",
+              "predicate": {
+                "kind": "atom",
+                "emoji": "🔥"
+              }
+            },
+            "state": "experimental_pictogram_candidate",
+            "review": "human_linguistic_and_comprehension_review_pending"
           }
         ]
       }
@@ -4872,6 +4918,16 @@
             "expression": {
               "kind": "atom",
               "emoji": "❤️"
+            },
+            "state": "experimental_pictogram_candidate",
+            "review": "human_linguistic_and_comprehension_review_pending"
+          },
+          {
+            "sourceGroupIndex": 1,
+            "selectedMeaning": "mind",
+            "expression": {
+              "kind": "atom",
+              "emoji": "🧠"
             },
             "state": "experimental_pictogram_candidate",
             "review": "human_linguistic_and_comprehension_review_pending"
@@ -5617,8 +5673,16 @@
         ]
       },
       "screening": {
-        "status": "pending",
-        "candidates": []
+        "status": "screened",
+        "candidates": [
+          {
+            "sourceGroupIndex": null,
+            "selectedMeaning": null,
+            "expression": null,
+            "state": "pictogram_deferred",
+            "reason": "No sufficiently clear emoji selected at initial screening; source senses remain for review."
+          }
+        ]
       }
     },
     {
@@ -5633,8 +5697,19 @@
         ]
       },
       "screening": {
-        "status": "pending",
-        "candidates": []
+        "status": "screened",
+        "candidates": [
+          {
+            "sourceGroupIndex": 0,
+            "selectedMeaning": "achievement",
+            "expression": {
+              "kind": "atom",
+              "emoji": "🏆"
+            },
+            "state": "experimental_pictogram_candidate",
+            "review": "human_linguistic_and_comprehension_review_pending"
+          }
+        ]
       }
     },
     {
@@ -5650,8 +5725,31 @@
         ]
       },
       "screening": {
-        "status": "pending",
-        "candidates": []
+        "status": "screened",
+        "candidates": [
+          {
+            "sourceGroupIndex": 1,
+            "selectedMeaning": "throw away",
+            "expression": {
+              "kind": "event",
+              "predicate": {
+                "kind": "associate",
+                "items": [
+                  {
+                    "kind": "atom",
+                    "emoji": "🫳"
+                  },
+                  {
+                    "kind": "atom",
+                    "emoji": "🗑️"
+                  }
+                ]
+              }
+            },
+            "state": "experimental_pictogram_candidate",
+            "review": "human_linguistic_and_comprehension_review_pending"
+          }
+        ]
       }
     },
     {
@@ -5666,8 +5764,31 @@
         ]
       },
       "screening": {
-        "status": "pending",
-        "candidates": []
+        "status": "screened",
+        "candidates": [
+          {
+            "sourceGroupIndex": 0,
+            "selectedMeaning": "go away",
+            "expression": {
+              "kind": "event",
+              "predicate": {
+                "kind": "associate",
+                "items": [
+                  {
+                    "kind": "atom",
+                    "emoji": "👋"
+                  },
+                  {
+                    "kind": "atom",
+                    "emoji": "🚶"
+                  }
+                ]
+              }
+            },
+            "state": "experimental_pictogram_candidate",
+            "review": "human_linguistic_and_comprehension_review_pending"
+          }
+        ]
       }
     },
     {
@@ -5683,8 +5804,19 @@
         ]
       },
       "screening": {
-        "status": "pending",
-        "candidates": []
+        "status": "screened",
+        "candidates": [
+          {
+            "sourceGroupIndex": 0,
+            "selectedMeaning": "sweet",
+            "expression": {
+              "kind": "atom",
+              "emoji": "🍯"
+            },
+            "state": "experimental_pictogram_candidate",
+            "review": "human_linguistic_and_comprehension_review_pending"
+          }
+        ]
       }
     },
     {
@@ -5701,8 +5833,19 @@
         ]
       },
       "screening": {
-        "status": "pending",
-        "candidates": []
+        "status": "screened",
+        "candidates": [
+          {
+            "sourceGroupIndex": 1,
+            "selectedMeaning": "world",
+            "expression": {
+              "kind": "atom",
+              "emoji": "🌍"
+            },
+            "state": "experimental_pictogram_candidate",
+            "review": "human_linguistic_and_comprehension_review_pending"
+          }
+        ]
       }
     },
     {
@@ -5717,8 +5860,16 @@
         ]
       },
       "screening": {
-        "status": "pending",
-        "candidates": []
+        "status": "screened",
+        "candidates": [
+          {
+            "sourceGroupIndex": null,
+            "selectedMeaning": null,
+            "expression": null,
+            "state": "pictogram_deferred",
+            "reason": "No sufficiently clear emoji selected at initial screening; source senses remain for review."
+          }
+        ]
       }
     },
     {
@@ -5733,8 +5884,19 @@
         ]
       },
       "screening": {
-        "status": "pending",
-        "candidates": []
+        "status": "screened",
+        "candidates": [
+          {
+            "sourceGroupIndex": 0,
+            "selectedMeaning": "ancient",
+            "expression": {
+              "kind": "atom",
+              "emoji": "🏺"
+            },
+            "state": "experimental_pictogram_candidate",
+            "review": "human_linguistic_and_comprehension_review_pending"
+          }
+        ]
       }
     },
     {
@@ -5750,8 +5912,19 @@
         ]
       },
       "screening": {
-        "status": "pending",
-        "candidates": []
+        "status": "screened",
+        "candidates": [
+          {
+            "sourceGroupIndex": 0,
+            "selectedMeaning": "knot",
+            "expression": {
+              "kind": "atom",
+              "emoji": "🪢"
+            },
+            "state": "experimental_pictogram_candidate",
+            "review": "human_linguistic_and_comprehension_review_pending"
+          }
+        ]
       }
     },
     {
@@ -5767,8 +5940,16 @@
         ]
       },
       "screening": {
-        "status": "pending",
-        "candidates": []
+        "status": "screened",
+        "candidates": [
+          {
+            "sourceGroupIndex": null,
+            "selectedMeaning": null,
+            "expression": null,
+            "state": "pictogram_deferred",
+            "reason": "No sufficiently clear emoji selected at initial screening; source senses remain for review."
+          }
+        ]
       }
     },
     {
@@ -5784,8 +5965,19 @@
         ]
       },
       "screening": {
-        "status": "pending",
-        "candidates": []
+        "status": "screened",
+        "candidates": [
+          {
+            "sourceGroupIndex": 0,
+            "selectedMeaning": "art",
+            "expression": {
+              "kind": "atom",
+              "emoji": "🎨"
+            },
+            "state": "experimental_pictogram_candidate",
+            "review": "human_linguistic_and_comprehension_review_pending"
+          }
+        ]
       }
     },
     {
@@ -5801,8 +5993,16 @@
         ]
       },
       "screening": {
-        "status": "pending",
-        "candidates": []
+        "status": "screened",
+        "candidates": [
+          {
+            "sourceGroupIndex": null,
+            "selectedMeaning": null,
+            "expression": null,
+            "state": "pictogram_deferred",
+            "reason": "No sufficiently clear emoji selected at initial screening; source senses remain for review."
+          }
+        ]
       }
     },
     {
@@ -5818,8 +6018,19 @@
         ]
       },
       "screening": {
-        "status": "pending",
-        "candidates": []
+        "status": "screened",
+        "candidates": [
+          {
+            "sourceGroupIndex": 0,
+            "selectedMeaning": "third",
+            "expression": {
+              "kind": "atom",
+              "emoji": "3️⃣"
+            },
+            "state": "experimental_pictogram_candidate",
+            "review": "human_linguistic_and_comprehension_review_pending"
+          }
+        ]
       }
     },
     {
@@ -5836,8 +6047,19 @@
         ]
       },
       "screening": {
-        "status": "pending",
-        "candidates": []
+        "status": "screened",
+        "candidates": [
+          {
+            "sourceGroupIndex": 0,
+            "selectedMeaning": "left",
+            "expression": {
+              "kind": "atom",
+              "emoji": "⬅️"
+            },
+            "state": "experimental_pictogram_candidate",
+            "review": "human_linguistic_and_comprehension_review_pending"
+          }
+        ]
       }
     },
     {
@@ -5854,8 +6076,16 @@
         ]
       },
       "screening": {
-        "status": "pending",
-        "candidates": []
+        "status": "screened",
+        "candidates": [
+          {
+            "sourceGroupIndex": null,
+            "selectedMeaning": null,
+            "expression": null,
+            "state": "pictogram_deferred",
+            "reason": "No sufficiently clear emoji selected at initial screening; source senses remain for review."
+          }
+        ]
       }
     },
     {
@@ -5871,8 +6101,19 @@
         ]
       },
       "screening": {
-        "status": "pending",
-        "candidates": []
+        "status": "screened",
+        "candidates": [
+          {
+            "sourceGroupIndex": 0,
+            "selectedMeaning": "stone",
+            "expression": {
+              "kind": "atom",
+              "emoji": "🪨"
+            },
+            "state": "experimental_pictogram_candidate",
+            "review": "human_linguistic_and_comprehension_review_pending"
+          }
+        ]
       }
     },
     {
@@ -5889,8 +6130,19 @@
         ]
       },
       "screening": {
-        "status": "pending",
-        "candidates": []
+        "status": "screened",
+        "candidates": [
+          {
+            "sourceGroupIndex": 0,
+            "selectedMeaning": "right",
+            "expression": {
+              "kind": "atom",
+              "emoji": "➡️"
+            },
+            "state": "experimental_pictogram_candidate",
+            "review": "human_linguistic_and_comprehension_review_pending"
+          }
+        ]
       }
     },
     {
@@ -5905,8 +6157,19 @@
         ]
       },
       "screening": {
-        "status": "pending",
-        "candidates": []
+        "status": "screened",
+        "candidates": [
+          {
+            "sourceGroupIndex": 0,
+            "selectedMeaning": "textiles",
+            "expression": {
+              "kind": "atom",
+              "emoji": "🧵"
+            },
+            "state": "experimental_pictogram_candidate",
+            "review": "human_linguistic_and_comprehension_review_pending"
+          }
+        ]
       }
     },
     {
@@ -5922,8 +6185,19 @@
         ]
       },
       "screening": {
-        "status": "pending",
-        "candidates": []
+        "status": "screened",
+        "candidates": [
+          {
+            "sourceGroupIndex": 0,
+            "selectedMeaning": "burden",
+            "expression": {
+              "kind": "atom",
+              "emoji": "🏋️"
+            },
+            "state": "experimental_pictogram_candidate",
+            "review": "human_linguistic_and_comprehension_review_pending"
+          }
+        ]
       }
     },
     {
@@ -5938,8 +6212,16 @@
         ]
       },
       "screening": {
-        "status": "pending",
-        "candidates": []
+        "status": "screened",
+        "candidates": [
+          {
+            "sourceGroupIndex": null,
+            "selectedMeaning": null,
+            "expression": null,
+            "state": "pictogram_deferred",
+            "reason": "No sufficiently clear emoji selected at initial screening; source senses remain for review."
+          }
+        ]
       }
     },
     {
@@ -5955,8 +6237,19 @@
         ]
       },
       "screening": {
-        "status": "pending",
-        "candidates": []
+        "status": "screened",
+        "candidates": [
+          {
+            "sourceGroupIndex": 0,
+            "selectedMeaning": "dragon",
+            "expression": {
+              "kind": "atom",
+              "emoji": "🐉"
+            },
+            "state": "experimental_pictogram_candidate",
+            "review": "human_linguistic_and_comprehension_review_pending"
+          }
+        ]
       }
     },
     {
@@ -5972,8 +6265,16 @@
         ]
       },
       "screening": {
-        "status": "pending",
-        "candidates": []
+        "status": "screened",
+        "candidates": [
+          {
+            "sourceGroupIndex": null,
+            "selectedMeaning": null,
+            "expression": null,
+            "state": "pictogram_deferred",
+            "reason": "No sufficiently clear emoji selected at initial screening; source senses remain for review."
+          }
+        ]
       }
     },
     {
@@ -5989,8 +6290,29 @@
         ]
       },
       "screening": {
-        "status": "pending",
-        "candidates": []
+        "status": "screened",
+        "candidates": [
+          {
+            "sourceGroupIndex": 0,
+            "selectedMeaning": "extinguish",
+            "expression": {
+              "kind": "event",
+              "predicate": {
+                "kind": "change",
+                "from": {
+                  "kind": "atom",
+                  "emoji": "🔥"
+                },
+                "to": {
+                  "kind": "atom",
+                  "emoji": "💨"
+                }
+              }
+            },
+            "state": "experimental_pictogram_candidate",
+            "review": "human_linguistic_and_comprehension_review_pending"
+          }
+        ]
       }
     },
     {
@@ -6006,8 +6328,16 @@
         ]
       },
       "screening": {
-        "status": "pending",
-        "candidates": []
+        "status": "screened",
+        "candidates": [
+          {
+            "sourceGroupIndex": null,
+            "selectedMeaning": null,
+            "expression": null,
+            "state": "pictogram_deferred",
+            "reason": "No sufficiently clear emoji selected at initial screening; source senses remain for review."
+          }
+        ]
       }
     },
     {
@@ -6022,8 +6352,19 @@
         ]
       },
       "screening": {
-        "status": "pending",
-        "candidates": []
+        "status": "screened",
+        "candidates": [
+          {
+            "sourceGroupIndex": 0,
+            "selectedMeaning": "east",
+            "expression": {
+              "kind": "atom",
+              "emoji": "🌅"
+            },
+            "state": "experimental_pictogram_candidate",
+            "review": "human_linguistic_and_comprehension_review_pending"
+          }
+        ]
       }
     },
     {
@@ -6039,8 +6380,19 @@
         ]
       },
       "screening": {
-        "status": "pending",
-        "candidates": []
+        "status": "screened",
+        "candidates": [
+          {
+            "sourceGroupIndex": 0,
+            "selectedMeaning": "card",
+            "expression": {
+              "kind": "atom",
+              "emoji": "💳"
+            },
+            "state": "experimental_pictogram_candidate",
+            "review": "human_linguistic_and_comprehension_review_pending"
+          }
+        ]
       }
     },
     {
@@ -6057,8 +6409,28 @@
         ]
       },
       "screening": {
-        "status": "pending",
-        "candidates": []
+        "status": "screened",
+        "candidates": [
+          {
+            "sourceGroupIndex": 0,
+            "selectedMeaning": "north",
+            "expression": {
+              "kind": "associate",
+              "items": [
+                {
+                  "kind": "atom",
+                  "emoji": "🧭"
+                },
+                {
+                  "kind": "atom",
+                  "emoji": "⬆️"
+                }
+              ]
+            },
+            "state": "experimental_pictogram_candidate",
+            "review": "human_linguistic_and_comprehension_review_pending"
+          }
+        ]
       }
     },
     {
@@ -6075,8 +6447,19 @@
         ]
       },
       "screening": {
-        "status": "pending",
-        "candidates": []
+        "status": "screened",
+        "candidates": [
+          {
+            "sourceGroupIndex": 0,
+            "selectedMeaning": "divine",
+            "expression": {
+              "kind": "atom",
+              "emoji": "🔮"
+            },
+            "state": "experimental_pictogram_candidate",
+            "review": "human_linguistic_and_comprehension_review_pending"
+          }
+        ]
       }
     },
     {
@@ -6091,8 +6474,16 @@
         ]
       },
       "screening": {
-        "status": "pending",
-        "candidates": []
+        "status": "screened",
+        "candidates": [
+          {
+            "sourceGroupIndex": null,
+            "selectedMeaning": null,
+            "expression": null,
+            "state": "pictogram_deferred",
+            "reason": "No sufficiently clear emoji selected at initial screening; source senses remain for review."
+          }
+        ]
       }
     },
     {
@@ -6109,8 +6500,19 @@
         ]
       },
       "screening": {
-        "status": "pending",
-        "candidates": []
+        "status": "screened",
+        "candidates": [
+          {
+            "sourceGroupIndex": 0,
+            "selectedMeaning": "hut",
+            "expression": {
+              "kind": "atom",
+              "emoji": "🛖"
+            },
+            "state": "experimental_pictogram_candidate",
+            "review": "human_linguistic_and_comprehension_review_pending"
+          }
+        ]
       }
     },
     {
@@ -6126,8 +6528,19 @@
         ]
       },
       "screening": {
-        "status": "pending",
-        "candidates": []
+        "status": "screened",
+        "candidates": [
+          {
+            "sourceGroupIndex": 0,
+            "selectedMeaning": "profession",
+            "expression": {
+              "kind": "atom",
+              "emoji": "👷"
+            },
+            "state": "experimental_pictogram_candidate",
+            "review": "human_linguistic_and_comprehension_review_pending"
+          }
+        ]
       }
     },
     {
@@ -6143,8 +6556,19 @@
         ]
       },
       "screening": {
-        "status": "pending",
-        "candidates": []
+        "status": "screened",
+        "candidates": [
+          {
+            "sourceGroupIndex": 0,
+            "selectedMeaning": "ancient",
+            "expression": {
+              "kind": "atom",
+              "emoji": "🏺"
+            },
+            "state": "experimental_pictogram_candidate",
+            "review": "human_linguistic_and_comprehension_review_pending"
+          }
+        ]
       }
     },
     {
@@ -6159,8 +6583,16 @@
         ]
       },
       "screening": {
-        "status": "pending",
-        "candidates": []
+        "status": "screened",
+        "candidates": [
+          {
+            "sourceGroupIndex": null,
+            "selectedMeaning": null,
+            "expression": null,
+            "state": "pictogram_deferred",
+            "reason": "No sufficiently clear emoji selected at initial screening; source senses remain for review."
+          }
+        ]
       }
     },
     {
@@ -6176,8 +6608,19 @@
         ]
       },
       "screening": {
-        "status": "pending",
-        "candidates": []
+        "status": "screened",
+        "candidates": [
+          {
+            "sourceGroupIndex": 0,
+            "selectedMeaning": "return",
+            "expression": {
+              "kind": "atom",
+              "emoji": "🔙"
+            },
+            "state": "experimental_pictogram_candidate",
+            "review": "human_linguistic_and_comprehension_review_pending"
+          }
+        ]
       }
     },
     {
@@ -6194,8 +6637,19 @@
         ]
       },
       "screening": {
-        "status": "pending",
-        "candidates": []
+        "status": "screened",
+        "candidates": [
+          {
+            "sourceGroupIndex": 0,
+            "selectedMeaning": "dawn",
+            "expression": {
+              "kind": "atom",
+              "emoji": "🌅"
+            },
+            "state": "experimental_pictogram_candidate",
+            "review": "human_linguistic_and_comprehension_review_pending"
+          }
+        ]
       }
     },
     {
@@ -6213,8 +6667,19 @@
         ]
       },
       "screening": {
-        "status": "pending",
-        "candidates": []
+        "status": "screened",
+        "candidates": [
+          {
+            "sourceGroupIndex": 0,
+            "selectedMeaning": "eye",
+            "expression": {
+              "kind": "atom",
+              "emoji": "👁️"
+            },
+            "state": "experimental_pictogram_candidate",
+            "review": "human_linguistic_and_comprehension_review_pending"
+          }
+        ]
       }
     },
     {
@@ -6230,8 +6695,16 @@
         ]
       },
       "screening": {
-        "status": "pending",
-        "candidates": []
+        "status": "screened",
+        "candidates": [
+          {
+            "sourceGroupIndex": null,
+            "selectedMeaning": null,
+            "expression": null,
+            "state": "pictogram_deferred",
+            "reason": "No sufficiently clear emoji selected at initial screening; source senses remain for review."
+          }
+        ]
       }
     },
     {
@@ -6248,8 +6721,19 @@
         ]
       },
       "screening": {
-        "status": "pending",
-        "candidates": []
+        "status": "screened",
+        "candidates": [
+          {
+            "sourceGroupIndex": 2,
+            "selectedMeaning": "leaf",
+            "expression": {
+              "kind": "atom",
+              "emoji": "🍃"
+            },
+            "state": "experimental_pictogram_candidate",
+            "review": "human_linguistic_and_comprehension_review_pending"
+          }
+        ]
       }
     },
     {
@@ -6266,8 +6750,19 @@
         ]
       },
       "screening": {
-        "status": "pending",
-        "candidates": []
+        "status": "screened",
+        "candidates": [
+          {
+            "sourceGroupIndex": 0,
+            "selectedMeaning": "shell",
+            "expression": {
+              "kind": "atom",
+              "emoji": "🐚"
+            },
+            "state": "experimental_pictogram_candidate",
+            "review": "human_linguistic_and_comprehension_review_pending"
+          }
+        ]
       }
     },
     {
@@ -6284,8 +6779,22 @@
         ]
       },
       "screening": {
-        "status": "pending",
-        "candidates": []
+        "status": "screened",
+        "candidates": [
+          {
+            "sourceGroupIndex": 0,
+            "selectedMeaning": "report",
+            "expression": {
+              "kind": "event",
+              "predicate": {
+                "kind": "atom",
+                "emoji": "📝"
+              }
+            },
+            "state": "experimental_pictogram_candidate",
+            "review": "human_linguistic_and_comprehension_review_pending"
+          }
+        ]
       }
     },
     {
@@ -6300,8 +6809,31 @@
         ]
       },
       "screening": {
-        "status": "pending",
-        "candidates": []
+        "status": "screened",
+        "candidates": [
+          {
+            "sourceGroupIndex": 0,
+            "selectedMeaning": "repeatedly",
+            "expression": {
+              "kind": "event",
+              "predicate": {
+                "kind": "associate",
+                "items": [
+                  {
+                    "kind": "atom",
+                    "emoji": "🗣️"
+                  },
+                  {
+                    "kind": "atom",
+                    "emoji": "🔁"
+                  }
+                ]
+              }
+            },
+            "state": "experimental_pictogram_candidate",
+            "review": "human_linguistic_and_comprehension_review_pending"
+          }
+        ]
       }
     },
     {
@@ -6318,8 +6850,19 @@
         ]
       },
       "screening": {
-        "status": "pending",
-        "candidates": []
+        "status": "screened",
+        "candidates": [
+          {
+            "sourceGroupIndex": 0,
+            "selectedMeaning": "electricity",
+            "expression": {
+              "kind": "atom",
+              "emoji": "⚡"
+            },
+            "state": "experimental_pictogram_candidate",
+            "review": "human_linguistic_and_comprehension_review_pending"
+          }
+        ]
       }
     },
     {
@@ -6336,8 +6879,19 @@
         ]
       },
       "screening": {
-        "status": "pending",
-        "candidates": []
+        "status": "screened",
+        "candidates": [
+          {
+            "sourceGroupIndex": 2,
+            "selectedMeaning": "number",
+            "expression": {
+              "kind": "atom",
+              "emoji": "🔢"
+            },
+            "state": "experimental_pictogram_candidate",
+            "review": "human_linguistic_and_comprehension_review_pending"
+          }
+        ]
       }
     },
     {
@@ -6352,8 +6906,19 @@
         ]
       },
       "screening": {
-        "status": "pending",
-        "candidates": []
+        "status": "screened",
+        "candidates": [
+          {
+            "sourceGroupIndex": 0,
+            "selectedMeaning": "field",
+            "expression": {
+              "kind": "atom",
+              "emoji": "🌾"
+            },
+            "state": "experimental_pictogram_candidate",
+            "review": "human_linguistic_and_comprehension_review_pending"
+          }
+        ]
       }
     },
     {
@@ -6369,8 +6934,16 @@
         ]
       },
       "screening": {
-        "status": "pending",
-        "candidates": []
+        "status": "screened",
+        "candidates": [
+          {
+            "sourceGroupIndex": null,
+            "selectedMeaning": null,
+            "expression": null,
+            "state": "pictogram_deferred",
+            "reason": "No sufficiently clear emoji selected at initial screening; source senses remain for review."
+          }
+        ]
       }
     },
     {
@@ -6385,8 +6958,19 @@
         ]
       },
       "screening": {
-        "status": "pending",
-        "candidates": []
+        "status": "screened",
+        "candidates": [
+          {
+            "sourceGroupIndex": 0,
+            "selectedMeaning": "only",
+            "expression": {
+              "kind": "atom",
+              "emoji": "1️⃣"
+            },
+            "state": "experimental_pictogram_candidate",
+            "review": "human_linguistic_and_comprehension_review_pending"
+          }
+        ]
       }
     },
     {
@@ -6401,8 +6985,19 @@
         ]
       },
       "screening": {
-        "status": "pending",
-        "candidates": []
+        "status": "screened",
+        "candidates": [
+          {
+            "sourceGroupIndex": 0,
+            "selectedMeaning": "trumpet",
+            "expression": {
+              "kind": "atom",
+              "emoji": "🎺"
+            },
+            "state": "experimental_pictogram_candidate",
+            "review": "human_linguistic_and_comprehension_review_pending"
+          }
+        ]
       }
     },
     {
@@ -6417,8 +7012,19 @@
         ]
       },
       "screening": {
-        "status": "pending",
-        "candidates": []
+        "status": "screened",
+        "candidates": [
+          {
+            "sourceGroupIndex": 0,
+            "selectedMeaning": "history",
+            "expression": {
+              "kind": "atom",
+              "emoji": "📜"
+            },
+            "state": "experimental_pictogram_candidate",
+            "review": "human_linguistic_and_comprehension_review_pending"
+          }
+        ]
       }
     },
     {
@@ -6434,8 +7040,19 @@
         ]
       },
       "screening": {
-        "status": "pending",
-        "candidates": []
+        "status": "screened",
+        "candidates": [
+          {
+            "sourceGroupIndex": 0,
+            "selectedMeaning": "center",
+            "expression": {
+              "kind": "atom",
+              "emoji": "🎯"
+            },
+            "state": "experimental_pictogram_candidate",
+            "review": "human_linguistic_and_comprehension_review_pending"
+          }
+        ]
       }
     },
     {
@@ -6450,8 +7067,16 @@
         ]
       },
       "screening": {
-        "status": "pending",
-        "candidates": []
+        "status": "screened",
+        "candidates": [
+          {
+            "sourceGroupIndex": null,
+            "selectedMeaning": null,
+            "expression": null,
+            "state": "pictogram_deferred",
+            "reason": "No sufficiently clear emoji selected at initial screening; source senses remain for review."
+          }
+        ]
       }
     },
     {
@@ -6467,8 +7092,16 @@
         ]
       },
       "screening": {
-        "status": "pending",
-        "candidates": []
+        "status": "screened",
+        "candidates": [
+          {
+            "sourceGroupIndex": null,
+            "selectedMeaning": null,
+            "expression": null,
+            "state": "pictogram_deferred",
+            "reason": "No sufficiently clear emoji selected at initial screening; source senses remain for review."
+          }
+        ]
       }
     },
     {
@@ -6483,8 +7116,16 @@
         ]
       },
       "screening": {
-        "status": "pending",
-        "candidates": []
+        "status": "screened",
+        "candidates": [
+          {
+            "sourceGroupIndex": null,
+            "selectedMeaning": null,
+            "expression": null,
+            "state": "pictogram_deferred",
+            "reason": "No sufficiently clear emoji selected at initial screening; source senses remain for review."
+          }
+        ]
       }
     },
     {
@@ -6500,8 +7141,19 @@
         ]
       },
       "screening": {
-        "status": "pending",
-        "candidates": []
+        "status": "screened",
+        "candidates": [
+          {
+            "sourceGroupIndex": 0,
+            "selectedMeaning": "shout",
+            "expression": {
+              "kind": "atom",
+              "emoji": "📣"
+            },
+            "state": "experimental_pictogram_candidate",
+            "review": "human_linguistic_and_comprehension_review_pending"
+          }
+        ]
       }
     },
     {
@@ -6517,8 +7169,31 @@
         ]
       },
       "screening": {
-        "status": "pending",
-        "candidates": []
+        "status": "screened",
+        "candidates": [
+          {
+            "sourceGroupIndex": 0,
+            "selectedMeaning": "knock",
+            "expression": {
+              "kind": "event",
+              "predicate": {
+                "kind": "associate",
+                "items": [
+                  {
+                    "kind": "atom",
+                    "emoji": "✊"
+                  },
+                  {
+                    "kind": "atom",
+                    "emoji": "🚪"
+                  }
+                ]
+              }
+            },
+            "state": "experimental_pictogram_candidate",
+            "review": "human_linguistic_and_comprehension_review_pending"
+          }
+        ]
       }
     },
     {
@@ -6534,8 +7209,31 @@
         ]
       },
       "screening": {
-        "status": "pending",
-        "candidates": []
+        "status": "screened",
+        "candidates": [
+          {
+            "sourceGroupIndex": 0,
+            "selectedMeaning": "talkative",
+            "expression": {
+              "kind": "event",
+              "predicate": {
+                "kind": "associate",
+                "items": [
+                  {
+                    "kind": "atom",
+                    "emoji": "🗣️"
+                  },
+                  {
+                    "kind": "atom",
+                    "emoji": "🔁"
+                  }
+                ]
+              }
+            },
+            "state": "experimental_pictogram_candidate",
+            "review": "human_linguistic_and_comprehension_review_pending"
+          }
+        ]
       }
     },
     {
@@ -6550,8 +7248,16 @@
         ]
       },
       "screening": {
-        "status": "pending",
-        "candidates": []
+        "status": "screened",
+        "candidates": [
+          {
+            "sourceGroupIndex": null,
+            "selectedMeaning": null,
+            "expression": null,
+            "state": "pictogram_deferred",
+            "reason": "No sufficiently clear emoji selected at initial screening; source senses remain for review."
+          }
+        ]
       }
     },
     {
@@ -6566,8 +7272,19 @@
         ]
       },
       "screening": {
-        "status": "pending",
-        "candidates": []
+        "status": "screened",
+        "candidates": [
+          {
+            "sourceGroupIndex": 0,
+            "selectedMeaning": "sigh",
+            "expression": {
+              "kind": "atom",
+              "emoji": "😮‍💨"
+            },
+            "state": "experimental_pictogram_candidate",
+            "review": "human_linguistic_and_comprehension_review_pending"
+          }
+        ]
       }
     },
     {
@@ -6584,8 +7301,19 @@
         ]
       },
       "screening": {
-        "status": "pending",
-        "candidates": []
+        "status": "screened",
+        "candidates": [
+          {
+            "sourceGroupIndex": 0,
+            "selectedMeaning": "tender",
+            "expression": {
+              "kind": "atom",
+              "emoji": "🌱"
+            },
+            "state": "experimental_pictogram_candidate",
+            "review": "human_linguistic_and_comprehension_review_pending"
+          }
+        ]
       }
     },
     {
@@ -6601,8 +7329,19 @@
         ]
       },
       "screening": {
-        "status": "pending",
-        "candidates": []
+        "status": "screened",
+        "candidates": [
+          {
+            "sourceGroupIndex": 0,
+            "selectedMeaning": "shallow container",
+            "expression": {
+              "kind": "atom",
+              "emoji": "🥣"
+            },
+            "state": "experimental_pictogram_candidate",
+            "review": "human_linguistic_and_comprehension_review_pending"
+          }
+        ]
       }
     },
     {
@@ -6618,8 +7357,19 @@
         ]
       },
       "screening": {
-        "status": "pending",
-        "candidates": []
+        "status": "screened",
+        "candidates": [
+          {
+            "sourceGroupIndex": 0,
+            "selectedMeaning": "hollow",
+            "expression": {
+              "kind": "atom",
+              "emoji": "🕳️"
+            },
+            "state": "experimental_pictogram_candidate",
+            "review": "human_linguistic_and_comprehension_review_pending"
+          }
+        ]
       }
     },
     {
@@ -6635,8 +7385,28 @@
         ]
       },
       "screening": {
-        "status": "pending",
-        "candidates": []
+        "status": "screened",
+        "candidates": [
+          {
+            "sourceGroupIndex": 0,
+            "selectedMeaning": "prisoner",
+            "expression": {
+              "kind": "associate",
+              "items": [
+                {
+                  "kind": "atom",
+                  "emoji": "👤"
+                },
+                {
+                  "kind": "atom",
+                  "emoji": "⛓️"
+                }
+              ]
+            },
+            "state": "experimental_pictogram_candidate",
+            "review": "human_linguistic_and_comprehension_review_pending"
+          }
+        ]
       }
     },
     {
@@ -6651,8 +7421,19 @@
         ]
       },
       "screening": {
-        "status": "pending",
-        "candidates": []
+        "status": "screened",
+        "candidates": [
+          {
+            "sourceGroupIndex": 0,
+            "selectedMeaning": "four",
+            "expression": {
+              "kind": "atom",
+              "emoji": "4️⃣"
+            },
+            "state": "experimental_pictogram_candidate",
+            "review": "human_linguistic_and_comprehension_review_pending"
+          }
+        ]
       }
     },
     {
@@ -6668,8 +7449,29 @@
         ]
       },
       "screening": {
-        "status": "pending",
-        "candidates": []
+        "status": "screened",
+        "candidates": [
+          {
+            "sourceGroupIndex": 0,
+            "selectedMeaning": "life",
+            "expression": {
+              "kind": "atom",
+              "emoji": "🌱"
+            },
+            "state": "experimental_pictogram_candidate",
+            "review": "human_linguistic_and_comprehension_review_pending"
+          },
+          {
+            "sourceGroupIndex": 1,
+            "selectedMeaning": "birth",
+            "expression": {
+              "kind": "atom",
+              "emoji": "👶"
+            },
+            "state": "experimental_pictogram_candidate",
+            "review": "human_linguistic_and_comprehension_review_pending"
+          }
+        ]
       }
     },
     {
@@ -6685,8 +7487,19 @@
         ]
       },
       "screening": {
-        "status": "pending",
-        "candidates": []
+        "status": "screened",
+        "candidates": [
+          {
+            "sourceGroupIndex": 0,
+            "selectedMeaning": "arrow",
+            "expression": {
+              "kind": "atom",
+              "emoji": "🏹"
+            },
+            "state": "experimental_pictogram_candidate",
+            "review": "human_linguistic_and_comprehension_review_pending"
+          }
+        ]
       }
     },
     {
@@ -6702,8 +7515,19 @@
         ]
       },
       "screening": {
-        "status": "pending",
-        "candidates": []
+        "status": "screened",
+        "candidates": [
+          {
+            "sourceGroupIndex": 0,
+            "selectedMeaning": "lose",
+            "expression": {
+              "kind": "atom",
+              "emoji": "📉"
+            },
+            "state": "experimental_pictogram_candidate",
+            "review": "human_linguistic_and_comprehension_review_pending"
+          }
+        ]
       }
     },
     {
@@ -6718,8 +7542,16 @@
         ]
       },
       "screening": {
-        "status": "pending",
-        "candidates": []
+        "status": "screened",
+        "candidates": [
+          {
+            "sourceGroupIndex": null,
+            "selectedMeaning": null,
+            "expression": null,
+            "state": "pictogram_deferred",
+            "reason": "No sufficiently clear emoji selected at initial screening; source senses remain for review."
+          }
+        ]
       }
     },
     {
@@ -6735,8 +7567,19 @@
         ]
       },
       "screening": {
-        "status": "pending",
-        "candidates": []
+        "status": "screened",
+        "candidates": [
+          {
+            "sourceGroupIndex": 0,
+            "selectedMeaning": "grain",
+            "expression": {
+              "kind": "atom",
+              "emoji": "🌾"
+            },
+            "state": "experimental_pictogram_candidate",
+            "review": "human_linguistic_and_comprehension_review_pending"
+          }
+        ]
       }
     },
     {
@@ -6754,8 +7597,19 @@
         ]
       },
       "screening": {
-        "status": "pending",
-        "candidates": []
+        "status": "screened",
+        "candidates": [
+          {
+            "sourceGroupIndex": 0,
+            "selectedMeaning": "hill",
+            "expression": {
+              "kind": "atom",
+              "emoji": "⛰️"
+            },
+            "state": "experimental_pictogram_candidate",
+            "review": "human_linguistic_and_comprehension_review_pending"
+          }
+        ]
       }
     },
     {
@@ -6771,8 +7625,22 @@
         ]
       },
       "screening": {
-        "status": "pending",
-        "candidates": []
+        "status": "screened",
+        "candidates": [
+          {
+            "sourceGroupIndex": 0,
+            "selectedMeaning": "give",
+            "expression": {
+              "kind": "event",
+              "predicate": {
+                "kind": "atom",
+                "emoji": "🎁"
+              }
+            },
+            "state": "experimental_pictogram_candidate",
+            "review": "human_linguistic_and_comprehension_review_pending"
+          }
+        ]
       }
     },
     {
@@ -6790,8 +7658,19 @@
         ]
       },
       "screening": {
-        "status": "pending",
-        "candidates": []
+        "status": "screened",
+        "candidates": [
+          {
+            "sourceGroupIndex": 2,
+            "selectedMeaning": "fight",
+            "expression": {
+              "kind": "atom",
+              "emoji": "⚔️"
+            },
+            "state": "experimental_pictogram_candidate",
+            "review": "human_linguistic_and_comprehension_review_pending"
+          }
+        ]
       }
     },
     {
@@ -6807,8 +7686,19 @@
         ]
       },
       "screening": {
-        "status": "pending",
-        "candidates": []
+        "status": "screened",
+        "candidates": [
+          {
+            "sourceGroupIndex": 0,
+            "selectedMeaning": "replace",
+            "expression": {
+              "kind": "atom",
+              "emoji": "🔁"
+            },
+            "state": "experimental_pictogram_candidate",
+            "review": "human_linguistic_and_comprehension_review_pending"
+          }
+        ]
       }
     },
     {
@@ -6824,8 +7714,16 @@
         ]
       },
       "screening": {
-        "status": "pending",
-        "candidates": []
+        "status": "screened",
+        "candidates": [
+          {
+            "sourceGroupIndex": null,
+            "selectedMeaning": null,
+            "expression": null,
+            "state": "pictogram_deferred",
+            "reason": "No sufficiently clear emoji selected at initial screening; source senses remain for review."
+          }
+        ]
       }
     },
     {
@@ -6840,8 +7738,19 @@
         ]
       },
       "screening": {
-        "status": "pending",
-        "candidates": []
+        "status": "screened",
+        "candidates": [
+          {
+            "sourceGroupIndex": 0,
+            "selectedMeaning": "plural",
+            "expression": {
+              "kind": "atom",
+              "emoji": "👥"
+            },
+            "state": "experimental_pictogram_candidate",
+            "review": "human_linguistic_and_comprehension_review_pending"
+          }
+        ]
       }
     },
     {
@@ -6857,8 +7766,16 @@
         ]
       },
       "screening": {
-        "status": "pending",
-        "candidates": []
+        "status": "screened",
+        "candidates": [
+          {
+            "sourceGroupIndex": null,
+            "selectedMeaning": null,
+            "expression": null,
+            "state": "pictogram_deferred",
+            "reason": "No sufficiently clear emoji selected at initial screening; source senses remain for review."
+          }
+        ]
       }
     },
     {
@@ -6875,8 +7792,19 @@
         ]
       },
       "screening": {
-        "status": "pending",
-        "candidates": []
+        "status": "screened",
+        "candidates": [
+          {
+            "sourceGroupIndex": 0,
+            "selectedMeaning": "white",
+            "expression": {
+              "kind": "atom",
+              "emoji": "⚪"
+            },
+            "state": "experimental_pictogram_candidate",
+            "review": "human_linguistic_and_comprehension_review_pending"
+          }
+        ]
       }
     },
     {
@@ -6892,8 +7820,19 @@
         ]
       },
       "screening": {
-        "status": "pending",
-        "candidates": []
+        "status": "screened",
+        "candidates": [
+          {
+            "sourceGroupIndex": 0,
+            "selectedMeaning": "child",
+            "expression": {
+              "kind": "atom",
+              "emoji": "👶"
+            },
+            "state": "experimental_pictogram_candidate",
+            "review": "human_linguistic_and_comprehension_review_pending"
+          }
+        ]
       }
     },
     {
@@ -6909,8 +7848,19 @@
         ]
       },
       "screening": {
-        "status": "pending",
-        "candidates": []
+        "status": "screened",
+        "candidates": [
+          {
+            "sourceGroupIndex": 0,
+            "selectedMeaning": "he",
+            "expression": {
+              "kind": "atom",
+              "emoji": "👨"
+            },
+            "state": "experimental_pictogram_candidate",
+            "review": "human_linguistic_and_comprehension_review_pending"
+          }
+        ]
       }
     },
     {
@@ -6925,8 +7875,31 @@
         ]
       },
       "screening": {
-        "status": "pending",
-        "candidates": []
+        "status": "screened",
+        "candidates": [
+          {
+            "sourceGroupIndex": 0,
+            "selectedMeaning": "scold",
+            "expression": {
+              "kind": "event",
+              "predicate": {
+                "kind": "associate",
+                "items": [
+                  {
+                    "kind": "atom",
+                    "emoji": "😠"
+                  },
+                  {
+                    "kind": "atom",
+                    "emoji": "🗣️"
+                  }
+                ]
+              }
+            },
+            "state": "experimental_pictogram_candidate",
+            "review": "human_linguistic_and_comprehension_review_pending"
+          }
+        ]
       }
     },
     {
@@ -6942,8 +7915,19 @@
         ]
       },
       "screening": {
-        "status": "pending",
-        "candidates": []
+        "status": "screened",
+        "candidates": [
+          {
+            "sourceGroupIndex": 0,
+            "selectedMeaning": "melon",
+            "expression": {
+              "kind": "atom",
+              "emoji": "🍈"
+            },
+            "state": "experimental_pictogram_candidate",
+            "review": "human_linguistic_and_comprehension_review_pending"
+          }
+        ]
       }
     },
     {
@@ -6958,8 +7942,16 @@
         ]
       },
       "screening": {
-        "status": "pending",
-        "candidates": []
+        "status": "screened",
+        "candidates": [
+          {
+            "sourceGroupIndex": null,
+            "selectedMeaning": null,
+            "expression": null,
+            "state": "pictogram_deferred",
+            "reason": "No sufficiently clear emoji selected at initial screening; source senses remain for review."
+          }
+        ]
       }
     },
     {
@@ -6976,8 +7968,19 @@
         ]
       },
       "screening": {
-        "status": "pending",
-        "candidates": []
+        "status": "screened",
+        "candidates": [
+          {
+            "sourceGroupIndex": 0,
+            "selectedMeaning": "bush",
+            "expression": {
+              "kind": "atom",
+              "emoji": "🌿"
+            },
+            "state": "experimental_pictogram_candidate",
+            "review": "human_linguistic_and_comprehension_review_pending"
+          }
+        ]
       }
     },
     {
@@ -6994,8 +7997,31 @@
         ]
       },
       "screening": {
-        "status": "pending",
-        "candidates": []
+        "status": "screened",
+        "candidates": [
+          {
+            "sourceGroupIndex": 0,
+            "selectedMeaning": "command",
+            "expression": {
+              "kind": "event",
+              "predicate": {
+                "kind": "associate",
+                "items": [
+                  {
+                    "kind": "atom",
+                    "emoji": "🗣️"
+                  },
+                  {
+                    "kind": "atom",
+                    "emoji": "📜"
+                  }
+                ]
+              }
+            },
+            "state": "experimental_pictogram_candidate",
+            "review": "human_linguistic_and_comprehension_review_pending"
+          }
+        ]
       }
     },
     {
@@ -7011,8 +8037,22 @@
         ]
       },
       "screening": {
-        "status": "pending",
-        "candidates": []
+        "status": "screened",
+        "candidates": [
+          {
+            "sourceGroupIndex": 0,
+            "selectedMeaning": "use",
+            "expression": {
+              "kind": "event",
+              "predicate": {
+                "kind": "atom",
+                "emoji": "🛠️"
+              }
+            },
+            "state": "experimental_pictogram_candidate",
+            "review": "human_linguistic_and_comprehension_review_pending"
+          }
+        ]
       }
     },
     {
@@ -7027,8 +8067,31 @@
         ]
       },
       "screening": {
-        "status": "pending",
-        "candidates": []
+        "status": "screened",
+        "candidates": [
+          {
+            "sourceGroupIndex": 0,
+            "selectedMeaning": "throw away",
+            "expression": {
+              "kind": "event",
+              "predicate": {
+                "kind": "associate",
+                "items": [
+                  {
+                    "kind": "atom",
+                    "emoji": "🫳"
+                  },
+                  {
+                    "kind": "atom",
+                    "emoji": "🗑️"
+                  }
+                ]
+              }
+            },
+            "state": "experimental_pictogram_candidate",
+            "review": "human_linguistic_and_comprehension_review_pending"
+          }
+        ]
       }
     },
     {
@@ -7043,8 +8106,22 @@
         ]
       },
       "screening": {
-        "status": "pending",
-        "candidates": []
+        "status": "screened",
+        "candidates": [
+          {
+            "sourceGroupIndex": 0,
+            "selectedMeaning": "print",
+            "expression": {
+              "kind": "event",
+              "predicate": {
+                "kind": "atom",
+                "emoji": "🖨️"
+              }
+            },
+            "state": "experimental_pictogram_candidate",
+            "review": "human_linguistic_and_comprehension_review_pending"
+          }
+        ]
       }
     },
     {
@@ -7061,8 +8138,19 @@
         ]
       },
       "screening": {
-        "status": "pending",
-        "candidates": []
+        "status": "screened",
+        "candidates": [
+          {
+            "sourceGroupIndex": 0,
+            "selectedMeaning": "you",
+            "expression": {
+              "kind": "atom",
+              "emoji": "🫵"
+            },
+            "state": "experimental_pictogram_candidate",
+            "review": "human_linguistic_and_comprehension_review_pending"
+          }
+        ]
       }
     },
     {
@@ -7079,8 +8167,29 @@
         ]
       },
       "screening": {
-        "status": "pending",
-        "candidates": []
+        "status": "screened",
+        "candidates": [
+          {
+            "sourceGroupIndex": 0,
+            "selectedMeaning": "happy",
+            "expression": {
+              "kind": "atom",
+              "emoji": "😀"
+            },
+            "state": "experimental_pictogram_candidate",
+            "review": "human_linguistic_and_comprehension_review_pending"
+          },
+          {
+            "sourceGroupIndex": 2,
+            "selectedMeaning": "music",
+            "expression": {
+              "kind": "atom",
+              "emoji": "🎵"
+            },
+            "state": "experimental_pictogram_candidate",
+            "review": "human_linguistic_and_comprehension_review_pending"
+          }
+        ]
       }
     },
     {
@@ -7095,8 +8204,16 @@
         ]
       },
       "screening": {
-        "status": "pending",
-        "candidates": []
+        "status": "screened",
+        "candidates": [
+          {
+            "sourceGroupIndex": null,
+            "selectedMeaning": null,
+            "expression": null,
+            "state": "pictogram_deferred",
+            "reason": "No sufficiently clear emoji selected at initial screening; source senses remain for review."
+          }
+        ]
       }
     },
     {
@@ -7111,8 +8228,31 @@
         ]
       },
       "screening": {
-        "status": "pending",
-        "candidates": []
+        "status": "screened",
+        "candidates": [
+          {
+            "sourceGroupIndex": 0,
+            "selectedMeaning": "hurriedly",
+            "expression": {
+              "kind": "event",
+              "predicate": {
+                "kind": "associate",
+                "items": [
+                  {
+                    "kind": "atom",
+                    "emoji": "🏃"
+                  },
+                  {
+                    "kind": "atom",
+                    "emoji": "💨"
+                  }
+                ]
+              }
+            },
+            "state": "experimental_pictogram_candidate",
+            "review": "human_linguistic_and_comprehension_review_pending"
+          }
+        ]
       }
     },
     {
@@ -7127,8 +8267,19 @@
         ]
       },
       "screening": {
-        "status": "pending",
-        "candidates": []
+        "status": "screened",
+        "candidates": [
+          {
+            "sourceGroupIndex": 0,
+            "selectedMeaning": "book",
+            "expression": {
+              "kind": "atom",
+              "emoji": "📖"
+            },
+            "state": "experimental_pictogram_candidate",
+            "review": "human_linguistic_and_comprehension_review_pending"
+          }
+        ]
       }
     },
     {
@@ -7143,8 +8294,16 @@
         ]
       },
       "screening": {
-        "status": "pending",
-        "candidates": []
+        "status": "screened",
+        "candidates": [
+          {
+            "sourceGroupIndex": null,
+            "selectedMeaning": null,
+            "expression": null,
+            "state": "pictogram_deferred",
+            "reason": "No sufficiently clear emoji selected at initial screening; source senses remain for review."
+          }
+        ]
       }
     },
     {
@@ -7160,8 +8319,16 @@
         ]
       },
       "screening": {
-        "status": "pending",
-        "candidates": []
+        "status": "screened",
+        "candidates": [
+          {
+            "sourceGroupIndex": null,
+            "selectedMeaning": null,
+            "expression": null,
+            "state": "pictogram_deferred",
+            "reason": "No sufficiently clear emoji selected at initial screening; source senses remain for review."
+          }
+        ]
       }
     },
     {
@@ -7177,8 +8344,28 @@
         ]
       },
       "screening": {
-        "status": "pending",
-        "candidates": []
+        "status": "screened",
+        "candidates": [
+          {
+            "sourceGroupIndex": 0,
+            "selectedMeaning": "outside",
+            "expression": {
+              "kind": "associate",
+              "items": [
+                {
+                  "kind": "atom",
+                  "emoji": "🚪"
+                },
+                {
+                  "kind": "atom",
+                  "emoji": "➡️"
+                }
+              ]
+            },
+            "state": "experimental_pictogram_candidate",
+            "review": "human_linguistic_and_comprehension_review_pending"
+          }
+        ]
       }
     },
     {
@@ -7194,8 +8381,19 @@
         ]
       },
       "screening": {
-        "status": "pending",
-        "candidates": []
+        "status": "screened",
+        "candidates": [
+          {
+            "sourceGroupIndex": 0,
+            "selectedMeaning": "place",
+            "expression": {
+              "kind": "atom",
+              "emoji": "📍"
+            },
+            "state": "experimental_pictogram_candidate",
+            "review": "human_linguistic_and_comprehension_review_pending"
+          }
+        ]
       }
     },
     {
@@ -7210,8 +8408,19 @@
         ]
       },
       "screening": {
-        "status": "pending",
-        "candidates": []
+        "status": "screened",
+        "candidates": [
+          {
+            "sourceGroupIndex": 0,
+            "selectedMeaning": "winter",
+            "expression": {
+              "kind": "atom",
+              "emoji": "❄️"
+            },
+            "state": "experimental_pictogram_candidate",
+            "review": "human_linguistic_and_comprehension_review_pending"
+          }
+        ]
       }
     },
     {
@@ -7227,8 +8436,19 @@
         ]
       },
       "screening": {
-        "status": "pending",
-        "candidates": []
+        "status": "screened",
+        "candidates": [
+          {
+            "sourceGroupIndex": 0,
+            "selectedMeaning": "bird",
+            "expression": {
+              "kind": "atom",
+              "emoji": "🐦"
+            },
+            "state": "experimental_pictogram_candidate",
+            "review": "human_linguistic_and_comprehension_review_pending"
+          }
+        ]
       }
     },
     {
@@ -7244,8 +8464,19 @@
         ]
       },
       "screening": {
-        "status": "pending",
-        "candidates": []
+        "status": "screened",
+        "candidates": [
+          {
+            "sourceGroupIndex": 0,
+            "selectedMeaning": "business",
+            "expression": {
+              "kind": "atom",
+              "emoji": "💼"
+            },
+            "state": "experimental_pictogram_candidate",
+            "review": "human_linguistic_and_comprehension_review_pending"
+          }
+        ]
       }
     },
     {
@@ -7261,8 +8492,19 @@
         ]
       },
       "screening": {
-        "status": "pending",
-        "candidates": []
+        "status": "screened",
+        "candidates": [
+          {
+            "sourceGroupIndex": 1,
+            "selectedMeaning": "package",
+            "expression": {
+              "kind": "atom",
+              "emoji": "📦"
+            },
+            "state": "experimental_pictogram_candidate",
+            "review": "human_linguistic_and_comprehension_review_pending"
+          }
+        ]
       }
     },
     {
@@ -7279,8 +8521,16 @@
         ]
       },
       "screening": {
-        "status": "pending",
-        "candidates": []
+        "status": "screened",
+        "candidates": [
+          {
+            "sourceGroupIndex": null,
+            "selectedMeaning": null,
+            "expression": null,
+            "state": "pictogram_deferred",
+            "reason": "No sufficiently clear emoji selected at initial screening; source senses remain for review."
+          }
+        ]
       }
     },
     {
@@ -7297,8 +8547,19 @@
         ]
       },
       "screening": {
-        "status": "pending",
-        "candidates": []
+        "status": "screened",
+        "candidates": [
+          {
+            "sourceGroupIndex": 0,
+            "selectedMeaning": "chief",
+            "expression": {
+              "kind": "atom",
+              "emoji": "👑"
+            },
+            "state": "experimental_pictogram_candidate",
+            "review": "human_linguistic_and_comprehension_review_pending"
+          }
+        ]
       }
     },
     {
