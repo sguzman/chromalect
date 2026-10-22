@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Blind emoji comprehension · Chromalect</title>
+<meta name="description" content="Blinded, local-only testing of experimental Mandarin semantic pictograms. No answers are submitted or automatically approved.">
+<script src="theme.js"></script>
+<script src="emoji-comprehension.js" defer></script>
+<link rel="stylesheet" href="style.css">
+<style>
+.emoji-study{max-width:940px}
+.emoji-study-intro{max-width:780px}
+.emoji-study-setup{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px;margin:24px 0}
+.emoji-study-setup label,.emoji-study-answer label{display:flex;flex-direction:column;gap:8px;color:var(--sub);font-size:13px;font-weight:600}
+.emoji-study select,.emoji-study textarea{font:inherit;color:var(--ink);background:var(--panel);border:1px solid var(--border);border-radius:10px;padding:12px;min-width:0}
+.emoji-study textarea{width:100%;min-height:116px;resize:vertical;box-sizing:border-box}
+.emoji-study button{border:1px solid var(--border);border-radius:9px;background:var(--panel);color:var(--ink);padding:10px 15px;font:inherit;cursor:pointer}
+.emoji-study button:disabled{opacity:.4;cursor:not-allowed}
+.emoji-study button.primary{background:var(--active-bg);border-color:var(--active-border);font-weight:700}
+.emoji-study-panel{border:1px solid var(--border);background:var(--tile-bg);border-radius:16px;padding:24px;margin:20px 0}
+.emoji-study-stimulus{display:flex;align-items:center;justify-content:center;min-height:180px;margin:15px 0;background:var(--panel2);border-radius:14px;overflow-wrap:anywhere}
+.emoji-study-pictogram{font-family:"Noto Color Emoji","Apple Color Emoji","Segoe UI Emoji",system-ui,sans-serif;font-size:clamp(52px,8vw,84px);line-height:1.3;text-align:center}
+.emoji-study-hint{color:var(--sub);font-size:13px}
+.emoji-study-progress{width:100%;height:12px;border-radius:100px;background:var(--panel2);border:1px solid var(--border);overflow:hidden}
+.emoji-study-progress>div{height:100%;background:var(--accent);width:0}
+.emoji-study-actions{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-top:16px}
+.emoji-study-reveal{padding:15px 18px;background:var(--panel2);border:1px solid var(--border);border-radius:12px;margin:16px 0}
+.emoji-study-reveal strong{font-size:20px;color:var(--ink)}
+.emoji-study-ratings{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0 0}
+.emoji-study-ratings button[aria-pressed="true"]{border-color:var(--active-border);background:var(--active-bg);font-weight:750}
+.emoji-study-fineprint{border-left:3px solid var(--active-border);padding:12px 16px;background:var(--panel2);border-radius:0 10px 10px 0;margin:22px 0;color:var(--sub);font-size:13px}
+.emoji-study [hidden]{display:none!important}
+</style>
+</head>
+<body>
+<header class="wrap"><div class="brand"><div><b>CHROMALECT</b><small>Language, made visible</small></div></div></header>
+<main class="wrap emoji-study">
+<div class="eyebrow">Research methodology · Mandarin semantics</div>
+<h1>Blind emoji comprehension worksheet</h1>
+<p class="intro emoji-study-intro">Can a reader recognize a proposed meaning <strong>from the emoji alone</strong>? This local research worksheet hides the character and English meaning until an answer is committed. It uses Chromalect's 897 experimental expressions, not production-verified senses.</p>
+<div class="emoji-study-fineprint"><strong>Research boundary:</strong> Results stay in this browser session until you explicitly export JSON. Nothing is sent to Chromalect or GitHub. A self-rating is an exploratory observation, <strong>not</strong> independent comprehension certification or lexical approval. A separate protocol and independent participants are required before approving any mapping. Starting a new session discards unexported answers.</div>
+<div class="emoji-study-setup">
+<label>Sampling scope
+<select id="emoji-study-scope">
+<option value="all">All proposed expressions</option>
+<option value="flagged">Expressions with automated risk flags</option>
+<option value="events">Actions and processes</option>
+<option value="compositions">Two or more emoji</option>
+</select></label>
+<label>Trials in this session
+<select id="emoji-study-count">
+<option value="20">20 randomly selected</option>
+<option value="50">50 randomly selected</option>
+<option value="100">100 randomly selected</option>
+<option value="all">All eligible expressions</option>
+</select></label>
+</div>
+<div class="emoji-study-actions">
+<button type="button" id="emoji-study-start" class="primary" disabled>Start blind trials</button>
+<button type="button" id="emoji-study-export" disabled>Export local JSON results</button>
+</div>
+<p id="emoji-study-status" role="status" aria-live="polite" class="emoji-study-hint">Loading the source-linked emoji audit.</p>
+<div id="emoji-study-session" hidden>
+<p id="emoji-study-counter" class="emoji-study-hint"></p>
+<div id="emoji-study-progress" class="emoji-study-progress" role="progressbar" aria-label="Trials rated in this browser session" aria-valuemin="0" aria-valuenow="0" aria-valuemax="20"><div id="emoji-study-fill"></div></div>
+<section class="emoji-study-panel" aria-label="Blinded emoji interpretation">
+<h2>What does this expression mean?</h2>
+<div class="emoji-study-stimulus"><div id="emoji-study-symbol" class="emoji-study-pictogram" role="img" aria-label="Experimental emoji expression"></div></div>
+<div id="emoji-study-blind">
+<div class="emoji-study-answer">
+<label for="emoji-study-interpretation">Your interpretation before seeing the intended meaning (leave empty if unsure)</label>
+<textarea id="emoji-study-interpretation" autocomplete="off" spellcheck="true" placeholder="What concept or action do these emoji convey?"></textarea>
+</div>
+<label for="emoji-study-confidence" class="emoji-study-hint">Confidence</label>
+<select id="emoji-study-confidence">
+<option value="unsure">Unsure</option>
+<option value="low">Low</option>
+<option value="medium">Medium</option>
+<option value="high">High</option>
+</select>
+<div class="emoji-study-actions"><button id="emoji-study-reveal" type="button" class="primary">Lock answer and reveal intended meaning</button></div>
+</div>
+<div id="emoji-study-post" hidden>
+<div class="emoji-study-reveal">
+<p class="emoji-study-hint">Proposed meaning — not verified</p>
+<strong id="emoji-study-target"></strong>
+<p id="emoji-study-source" class="emoji-study-hint"></p>
+</div>
+<p>Now that the meaning is visible, how clearly does the pictogram convey it?</p>
+<div class="emoji-study-ratings" role="group" aria-label="Clarity rating">
+<button type="button" data-clarity="clear" aria-pressed="false">Clear</button>
+<button type="button" data-clarity="partial" aria-pressed="false">Partial</button>
+<button type="button" data-clarity="misleading" aria-pressed="false">Misleading</button>
+<button type="button" data-clarity="uncertain" aria-pressed="false">Can't judge</button>
+</div>
+<div class="emoji-study-actions"><button id="emoji-study-next" type="button" class="primary" disabled>Record rating and next</button></div>
+</div>
+</section>
+</div>
+<p class="emoji-study-hint">Data: <a href="semantic/emoji-visibility-audit-v0.1.json">machine-readable emoji audit</a> · <a href="semantic-coverage.html">1,000-character semantic browser</a> · <a href="https://github.com/sguzman/chromalect/blob/main/docs/mandarin-emoji-comprehension-protocol.md">Testing and acceptance protocol</a>. The underlying English meaning is a preliminary Unihan-selected candidate, not necessarily a dictionary-confirmed modern Mandarin sense.</p>
+</main>
+<footer class="wrap"><a href="index.html">Chromalect overview</a> · <a href="semantic-coverage.html">Semantic research</a></footer>
+</body>
+</html>
