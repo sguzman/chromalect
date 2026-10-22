@@ -187,6 +187,8 @@ jobs:
       - name: Validate and publish sourced Mandarin semantic screening
         run: |
           node --check site/semantic-coverage.js
+          node --check site/emoji-comprehension.js
+          node tools/glyph-pipeline/emoji_comprehension_smoke.mjs
           node tools/glyph-pipeline/semantic_inventory_smoke.mjs
           node tools/glyph-pipeline/lexical_crossref_smoke.mjs
           node tools/glyph-pipeline/strict_gloss_index_smoke.mjs
@@ -205,6 +207,7 @@ jobs:
           test -s site/semantic/mandarin-1000-v0.1.json
           test -s site/semantic/lexical-crossref-v0.1.json
           test -s site/semantic-coverage.html
+          test -s site/emoji-comprehension.html && test -s site/emoji-comprehension.js
       - name: Check neutral unknown-component comparisons
         run: test -s site/glyphs/unknown-components/index.html && test -s site/glyphs/unknown-components/records.json
       - name: Check hierarchical source review

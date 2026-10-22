@@ -89,7 +89,7 @@ function buildPage(route, authored, rootPath = "/chromalect/") {
     "Theme control lost while replacing navigation");
   assert.equal(body.children[0], header, "Navigation must be above the page content");
   const anchors = collect(nav, e => e.tagName === "a");
-  assert.equal(anchors.length, 24, "Expected stable primary and grouped navigation links");
+  assert.equal(anchors.length, 25, "Expected stable primary and grouped navigation links");
   for (const link of anchors) {
     if (!link.href.startsWith("https://github.com")) {
       assert.ok(link.href.startsWith("https://example.test" + rootPath),
@@ -110,12 +110,15 @@ const deep = buildPage("glyphs/by-component/cmp-0001.html", false);
 const root = buildPage("search.html", true, "/");
 const semantics = buildPage("semantic-lab.html", true);
 const semanticBrowser = buildPage("semantic-coverage.html", true);
+const comprehension = buildPage("emoji-comprehension.html", true);
 
 const destinations = list => list.map(a => a.href).sort();
 assert.deepEqual(destinations(home.anchors), destinations(atlas.anchors));
 assert.deepEqual(destinations(home.anchors), destinations(report.anchors));
 assert.deepEqual(destinations(home.anchors), destinations(deep.anchors));
 assert.deepEqual(destinations(home.anchors), destinations(semantics.anchors));
+assert.deepEqual(destinations(home.anchors), destinations(comprehension.anchors));
+assert.equal(collect(comprehension.nav,e=>e.tagName==="summary"&&e.className.includes("is-active")).length,1);
 assert.equal(collect(semantics.nav, e => e.tagName === "summary" &&
   e.className.includes("is-active")).length, 1,
   "Semantic experiment must highlight Research & evidence menu");
@@ -126,4 +129,4 @@ assert.equal(collect(deep.nav, e => e.tagName === "a" &&
   e.className.includes("is-active")).length, 1, "Nested by-component route must highlight Components");
 assert.equal(root.anchors[0].href, "https://example.test/index.html");
 
-console.log("Navigation smoke: same 23 destinations across home, atlas and nested generated pages; search and active state correct.");
+console.log("Navigation smoke: same 25 destinations across home, atlas and nested generated pages; search and active state correct.");
