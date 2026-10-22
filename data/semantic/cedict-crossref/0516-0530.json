@@ -1,0 +1,443 @@
+{
+  "schema": "chromalect.mandarin.lexical-crossref-batch.v0.1",
+  "source": {
+    "title": "CC-CEDICT per-headword v2 mirror",
+    "repository": "krmanik/cedict-json",
+    "commit": "63c2569948629323b515833930fdd10f285401b6",
+    "dataLicense": "CC BY-SA 4.0",
+    "upstream": "https://cc-cedict.org/",
+    "mirror": "https://github.com/krmanik/cedict-json",
+    "transform": "Selected single-simplified-character dictionary records, retaining readings and definitions; literal English gloss matching is automated triage only"
+  },
+  "rankStart": 516,
+  "rankEnd": 530,
+  "summary": {
+    "total": 15,
+    "headwordFound": 15,
+    "withCandidate": 14,
+    "withLiteralSupport": 9
+  },
+  "records": [
+    {
+      "rank": 516,
+      "character": "亦",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/亦.json",
+      "sourceBlobSha": "9da887c90534c7e6b8f9cf11c0cc2b17692e3cba",
+      "traditional": "亦",
+      "dictionaryReadings": [
+        "yi4"
+      ],
+      "dictionaryDefinitions": {
+        "yi4": "also; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "also",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "yi4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 517,
+      "character": "刘",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/刘.json",
+      "sourceBlobSha": "8c93955416628fbabbcd61b97b2199509a0e3767",
+      "traditional": "劉",
+      "dictionaryReadings": [
+        "Liu2"
+      ],
+      "dictionaryDefinitions": {
+        "Liu2": "surname Liu; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "kill",
+          "sourceGlossGroupIndex": 1,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 518,
+      "character": "齐",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/齐.json",
+      "sourceBlobSha": "cc563a7f901720d48ace586d1b18b4cb7a1910de",
+      "traditional": "齊",
+      "dictionaryReadings": [
+        "Qi2",
+        "qi2"
+      ],
+      "dictionaryDefinitions": {
+        "Qi2": "(name of states and dynasties at several different periods); surname Qi; ",
+        "qi2": "neat; even; level with; identical; simultaneous; all together; to even sth out; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "equal",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 519,
+      "character": "交",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/交.json",
+      "sourceBlobSha": "e7a173483f6ca8270278b93be3b7ab0533efb13f",
+      "traditional": "交",
+      "dictionaryReadings": [
+        "jiao1"
+      ],
+      "dictionaryDefinitions": {
+        "jiao1": "to hand over; to deliver; to pay (money); to turn over; to make friends; to intersect (lines); "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "exchange",
+          "sourceGlossGroupIndex": 2,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 520,
+      "character": "衣",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/衣.json",
+      "sourceBlobSha": "4d35c587dad3ba8bf10c425f772535a0cdba373b",
+      "traditional": "衣",
+      "dictionaryReadings": [
+        "yi1",
+        "yi4"
+      ],
+      "dictionaryDefinitions": {
+        "yi1": "clothes; CL:件[jian4]; ",
+        "yi4": "to dress; to wear; to put on (clothes); "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "clothes",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "yi1",
+            "yi4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 521,
+      "character": "次",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/次.json",
+      "sourceBlobSha": "72b833019efb6526ef99a285159410e67026818b",
+      "traditional": "次",
+      "dictionaryReadings": [
+        "ci4"
+      ],
+      "dictionaryDefinitions": {
+        "ci4": "next in sequence; second; the second (day, time etc); secondary; vice-; sub-; infra-; inferior quality; substandard; order; sequence; hypo- (chemistry); classifier for enumerated events: time; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "next",
+          "sourceGlossGroupIndex": 1,
+          "matchingDictionaryReadings": [
+            "ci4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 522,
+      "character": "产",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/产.json",
+      "sourceBlobSha": "5f7f6cf09e1b2eb3e3e982ecf7538d9db4ad4dc2",
+      "traditional": "產",
+      "dictionaryReadings": [
+        "chan3"
+      ],
+      "dictionaryDefinitions": {
+        "chan3": "to give birth; to reproduce; to produce; product; resource; estate; property; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "give birth",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "chan3"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 523,
+      "character": "决",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/决.json",
+      "sourceBlobSha": "7faa480770cfe06e3b24d5ec7f09ba6d9935f0e2",
+      "traditional": "決",
+      "dictionaryReadings": [
+        "jue2"
+      ],
+      "dictionaryDefinitions": {
+        "jue2": "to decide; to determine; to execute (sb); (of a dam etc) to breach or burst; definitely; certainly; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "decide",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "jue2"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 524,
+      "character": "亥",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/亥.json",
+      "sourceBlobSha": "5de9b50318905ecb355d2071a5de219f2d9e75e4",
+      "traditional": "亥",
+      "dictionaryReadings": [
+        "hai4"
+      ],
+      "dictionaryDefinitions": {
+        "hai4": "12th earthly branch: 9-11 p.m., 10th solar month (7th November-6th December), year of the Boar; ancient Chinese compass point: 330°; "
+      },
+      "selectedSenseChecks": [],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 525,
+      "character": "充",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/充.json",
+      "sourceBlobSha": "04b8b05a87b7052c4492dda1f5e7f38326b5f078",
+      "traditional": "充",
+      "dictionaryReadings": [
+        "chong1"
+      ],
+      "dictionaryDefinitions": {
+        "chong1": "to fill; to satisfy; to fulfill; to act in place of; substitute; sufficient; full; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "fill",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "chong1"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 526,
+      "character": "妄",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/妄.json",
+      "sourceBlobSha": "3cf63b7c94b08b5b02ba7f19b4a86bd942492495",
+      "traditional": "妄",
+      "dictionaryReadings": [
+        "wang4"
+      ],
+      "dictionaryDefinitions": {
+        "wang4": "absurd; fantastic; presumptuous; rash; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "foolish",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 527,
+      "character": "闭",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/闭.json",
+      "sourceBlobSha": "2a3d15ee2283b9192ff731259aca0e8cd29693c2",
+      "traditional": "閉",
+      "dictionaryReadings": [
+        "bi4"
+      ],
+      "dictionaryDefinitions": {
+        "bi4": "to close; to stop up; to shut; to obstruct; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "close",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "bi4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 528,
+      "character": "问",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/问.json",
+      "sourceBlobSha": "5332749eb86cb76961fcb3a7f81fae0d796fd9f3",
+      "traditional": "問",
+      "dictionaryReadings": [
+        "wen4"
+      ],
+      "dictionaryDefinitions": {
+        "wen4": "to ask; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "ask",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "wen4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 529,
+      "character": "闯",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/闯.json",
+      "sourceBlobSha": "17200ee015eae0be23b9e6d6bba9753c575a543d",
+      "traditional": "闖",
+      "dictionaryReadings": [
+        "chuang3"
+      ],
+      "dictionaryDefinitions": {
+        "chuang3": "to rush; to charge; to dash; to break through; to temper oneself (through battling hardships); "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "rush in",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 530,
+      "character": "羊",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/羊.json",
+      "sourceBlobSha": "52f5c6eae2fa2e8f92f7532ffea5d68bd45527f0",
+      "traditional": "羊",
+      "dictionaryReadings": [
+        "Yang2",
+        "yang2"
+      ],
+      "dictionaryDefinitions": {
+        "Yang2": "surname Yang; ",
+        "yang2": "sheep; goat; CL:頭|头[tou2],隻|只[zhi1]; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "sheep",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "yang2"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    }
+  ]
+}
