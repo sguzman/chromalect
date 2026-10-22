@@ -71,7 +71,7 @@
       if (inputs.length!==3) continue;
       const selected=chosen(channel);
       const match=inputs.find(input=>input.value===selected && !input.disabled);
-      if (match) match.checked=true;
+      if (match) for (const input of inputs) input.checked=(input===match);
       for (const input of inputs) {
         input.addEventListener("change",()=>{
           if (input.checked && !input.disabled) save(channel,input.value);
