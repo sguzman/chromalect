@@ -1,0 +1,463 @@
+{
+  "schema": "chromalect.mandarin.lexical-crossref-batch.v0.1",
+  "source": {
+    "title": "CC-CEDICT per-headword v2 mirror",
+    "repository": "krmanik/cedict-json",
+    "commit": "63c2569948629323b515833930fdd10f285401b6",
+    "dataLicense": "CC BY-SA 4.0",
+    "upstream": "https://cc-cedict.org/",
+    "mirror": "https://github.com/krmanik/cedict-json",
+    "transform": "Selected single-simplified-character dictionary records, retaining readings and definitions; literal English gloss matching is automated triage only"
+  },
+  "rankStart": 786,
+  "rankEnd": 800,
+  "summary": {
+    "total": 15,
+    "headwordFound": 15,
+    "withCandidate": 15,
+    "withLiteralSupport": 12
+  },
+  "records": [
+    {
+      "rank": 786,
+      "character": "身",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/身.json",
+      "sourceBlobSha": "ea97c7bae7c325a83355db3fe43fbb5db186b7e0",
+      "traditional": "身",
+      "dictionaryReadings": [
+        "shen1"
+      ],
+      "dictionaryDefinitions": {
+        "shen1": "body; life; oneself; personally; one's morality and conduct; the main part of a structure or body; pregnant; classifier for sets of clothes: suit, twinset; Kangxi radical 158; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "body",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "shen1"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 787,
+      "character": "皂",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/皂.json",
+      "sourceBlobSha": "d7dd711a70f00038b58f034d8e327934c2f9de3c",
+      "traditional": "皂",
+      "dictionaryReadings": [
+        "zao4"
+      ],
+      "dictionaryDefinitions": {
+        "zao4": "soap; black; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "soap",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "zao4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 788,
+      "character": "伺",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/伺.json",
+      "sourceBlobSha": "deae78f5b1fd8c4ed147ab6d0247059df8bf02fe",
+      "traditional": "伺",
+      "dictionaryReadings": [
+        "ci4",
+        "si4"
+      ],
+      "dictionaryDefinitions": {
+        "ci4": "to wait on; ",
+        "si4": "to watch; to wait; to examine; to spy; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "serve",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 789,
+      "character": "佛",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/佛.json",
+      "sourceBlobSha": "1bd4ee63bd80a2f7038604ae91453ff28b290923",
+      "traditional": "髴",
+      "dictionaryReadings": [
+        "Fo2",
+        "fu2"
+      ],
+      "dictionaryDefinitions": {
+        "Fo2": "Buddha; Buddhism; ",
+        "fu2": "seemingly; (female) head ornament; variant of 彿|佛[fu2]; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "Buddha",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "Fo2"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 790,
+      "character": "囱",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/囱.json",
+      "sourceBlobSha": "65cda9c63f277b2247f0be702e2bf5cbde91bf8f",
+      "traditional": "囪",
+      "dictionaryReadings": [
+        "chuang1",
+        "cong1"
+      ],
+      "dictionaryDefinitions": {
+        "chuang1": "variant of 窗[chuang1]; ",
+        "cong1": "chimney; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "chimney",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "cong1"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 791,
+      "character": "近",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/近.json",
+      "sourceBlobSha": "32c1d5052268a236609e8fc71382e721c14bc0e6",
+      "traditional": "近",
+      "dictionaryReadings": [
+        "jin4"
+      ],
+      "dictionaryDefinitions": {
+        "jin4": "near; close to; approximately; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "near",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "jin4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 792,
+      "character": "彻",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/彻.json",
+      "sourceBlobSha": "efe2776612a2aee86735bf05710dacc403f82cbc",
+      "traditional": "徹",
+      "dictionaryReadings": [
+        "che4"
+      ],
+      "dictionaryDefinitions": {
+        "che4": "thorough; penetrating; to pervade; to pass through; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "penetrate",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 793,
+      "character": "役",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/役.json",
+      "sourceBlobSha": "aa0419a392a23c7f591cda57f483ec215da1c95d",
+      "traditional": "役",
+      "dictionaryReadings": [
+        "yi4"
+      ],
+      "dictionaryDefinitions": {
+        "yi4": "forced labor; corvée; obligatory task; military service; to use as servant; to enserf; servant (old); war; campaign; battle; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "service",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "yi4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 794,
+      "character": "返",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/返.json",
+      "sourceBlobSha": "f36d7bb5755c66db6e563f6469badeb7c2e596be",
+      "traditional": "返",
+      "dictionaryReadings": [
+        "fan3"
+      ],
+      "dictionaryDefinitions": {
+        "fan3": "to return (to); "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "return",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "fan3"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 795,
+      "character": "余",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/余.json",
+      "sourceBlobSha": "848a81bb6bb0333f40df617021e42253c1590f13",
+      "traditional": "餘",
+      "dictionaryReadings": [
+        "Yu2",
+        "yu2"
+      ],
+      "dictionaryDefinitions": {
+        "Yu2": "surname Yu; ",
+        "yu2": "(archaic) I; me; variant of 餘|余[yu2], surplus; extra; surplus; remaining; remainder after division; (following numerical value) or more; in excess of (some number); residue (math.); after; I; me; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "surplus",
+          "sourceGlossGroupIndex": 2,
+          "matchingDictionaryReadings": [
+            "yu2"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 796,
+      "character": "希",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/希.json",
+      "sourceBlobSha": "acd9f1a987dc76a7b5e38352abddef82a23e82f7",
+      "traditional": "希",
+      "dictionaryReadings": [
+        "xi1"
+      ],
+      "dictionaryDefinitions": {
+        "xi1": "to hope; to admire; variant of 稀[xi1]; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "hope",
+          "sourceGlossGroupIndex": 1,
+          "matchingDictionaryReadings": [
+            "xi1"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 797,
+      "character": "坐",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/坐.json",
+      "sourceBlobSha": "b8d6dabce8e69a95554a1dc02a34ea57d6f3ebef",
+      "traditional": "坐",
+      "dictionaryReadings": [
+        "Zuo4",
+        "zuo4"
+      ],
+      "dictionaryDefinitions": {
+        "Zuo4": "surname Zuo; ",
+        "zuo4": "to sit; to take a seat; to take (a bus, airplane etc); to bear fruit; variant of 座[zuo4]; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "sit",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "zuo4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 798,
+      "character": "谷",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/谷.json",
+      "sourceBlobSha": "f15269d2aee8048c27c2de3981d3ffb46164bf73",
+      "traditional": "谷",
+      "dictionaryReadings": [
+        "gu3",
+        "Gu3"
+      ],
+      "dictionaryDefinitions": {
+        "gu3": "grain; corn; valley; ",
+        "Gu3": "surname Gu; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "valley",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "gu3"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 799,
+      "character": "妥",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/妥.json",
+      "sourceBlobSha": "a41071bc40012cfc3ba9d8e32d65dfbfde2f8ea2",
+      "traditional": "妥",
+      "dictionaryReadings": [
+        "tuo3"
+      ],
+      "dictionaryDefinitions": {
+        "tuo3": "suitable; adequate; ready; settled; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "appropriate",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 800,
+      "character": "含",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/含.json",
+      "sourceBlobSha": "e533b86b9679ff91318fd7f061be48ebdcdef11c",
+      "traditional": "含",
+      "dictionaryReadings": [
+        "han2"
+      ],
+      "dictionaryDefinitions": {
+        "han2": "to keep; to contain; to suck (keep in your mouth without chewing); "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "contain",
+          "sourceGlossGroupIndex": 2,
+          "matchingDictionaryReadings": [
+            "han2"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    }
+  ]
+}
