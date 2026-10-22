@@ -1,0 +1,439 @@
+{
+  "schema": "chromalect.mandarin.lexical-crossref-batch.v0.1",
+  "source": {
+    "title": "CC-CEDICT per-headword v2 mirror",
+    "repository": "krmanik/cedict-json",
+    "commit": "63c2569948629323b515833930fdd10f285401b6",
+    "dataLicense": "CC BY-SA 4.0",
+    "upstream": "https://cc-cedict.org/",
+    "mirror": "https://github.com/krmanik/cedict-json",
+    "transform": "Selected single-simplified-character dictionary records, retaining readings and definitions; literal English gloss matching is automated triage only"
+  },
+  "rankStart": 906,
+  "rankEnd": 920,
+  "summary": {
+    "total": 15,
+    "headwordFound": 15,
+    "withCandidate": 13,
+    "withLiteralSupport": 8
+  },
+  "records": [
+    {
+      "rank": 906,
+      "character": "迟",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/迟.json",
+      "sourceBlobSha": "c139289784469385c13b64aa75d8ec7da10b1255",
+      "traditional": "遲",
+      "dictionaryReadings": [
+        "Chi2",
+        "chi2"
+      ],
+      "dictionaryDefinitions": {
+        "Chi2": "surname Chi; ",
+        "chi2": "late; delayed; slow; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "late",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "chi2"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 907,
+      "character": "局",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/局.json",
+      "sourceBlobSha": "2f6752b165d4d47eba7a4c8749bd8a83a013c6b6",
+      "traditional": "局",
+      "dictionaryReadings": [
+        "ju2"
+      ],
+      "dictionaryDefinitions": {
+        "ju2": "narrow; office; situation; classifier for games: match, set, round etc; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "office",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "ju2"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 908,
+      "character": "改",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/改.json",
+      "sourceBlobSha": "288489714f87fc8606d5d059eed375aadf3d9861",
+      "traditional": "改",
+      "dictionaryReadings": [
+        "gai3"
+      ],
+      "dictionaryDefinitions": {
+        "gai3": "to change; to alter; to transform; to correct; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "change",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "gai3"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 909,
+      "character": "张",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/张.json",
+      "sourceBlobSha": "b450698667ba067836787106f967ef3e3aead315",
+      "traditional": "張",
+      "dictionaryReadings": [
+        "Zhang1",
+        "zhang1"
+      ],
+      "dictionaryDefinitions": {
+        "Zhang1": "surname Zhang; ",
+        "zhang1": "to open up; to spread; sheet of paper; classifier for flat objects, sheet; classifier for votes; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "expand",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 910,
+      "character": "忌",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/忌.json",
+      "sourceBlobSha": "89f6180bed7fc68220508c6ffec72f2f2051577f",
+      "traditional": "忌",
+      "dictionaryReadings": [
+        "ji4"
+      ],
+      "dictionaryDefinitions": {
+        "ji4": "to be jealous of; fear; dread; scruple; to avoid or abstain from; to quit; to give up sth; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "jealous",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "ji4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 911,
+      "character": "际",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/际.json",
+      "sourceBlobSha": "c2f4ef3a9dc48e8af79d029fa48ed42eda7528aa",
+      "traditional": "際",
+      "dictionaryReadings": [
+        "ji4"
+      ],
+      "dictionaryDefinitions": {
+        "ji4": "border; edge; boundary; interval; between; inter-; to meet; time; occasion; to meet with (circumstances); "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "border",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "ji4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 912,
+      "character": "陆",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/陆.json",
+      "sourceBlobSha": "78931e8d28e70e044f0fa68f5db6e86b2c3387e4",
+      "traditional": "陸",
+      "dictionaryReadings": [
+        "Lu4",
+        "liu4",
+        "lu4"
+      ],
+      "dictionaryDefinitions": {
+        "Lu4": "surname Lu; ",
+        "liu4": "six (banker's anti-fraud numeral); ",
+        "lu4": "shore; land; continent; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "land",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "lu4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 913,
+      "character": "阿",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/阿.json",
+      "sourceBlobSha": "2371892506f478916437375027fe9b5e58ba1758",
+      "traditional": "阿",
+      "dictionaryReadings": [
+        "A1",
+        "a1",
+        "e1"
+      ],
+      "dictionaryDefinitions": {
+        "A1": "abbr. for Afghanistan 阿富汗[A1 fu4 han4]; ",
+        "a1": "prefix used before monosyllabic names, kinship terms etc to indicate familiarity; used in transliteration; also pr. [a4]; ",
+        "e1": "flatter; "
+      },
+      "selectedSenseChecks": [],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 914,
+      "character": "陈",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/陈.json",
+      "sourceBlobSha": "f9cddce756689319463739d72f852c910cc1ea9d",
+      "traditional": "陳",
+      "dictionaryReadings": [
+        "Chen2",
+        "chen2"
+      ],
+      "dictionaryDefinitions": {
+        "Chen2": "surname Chen; vassal state during the Spring and Autumn Period 770-475 BC; Chen of the Southern dynasties (557-589); ",
+        "chen2": "to lay out; to exhibit; to display; to narrate; to state; to explain; to tell; old; stale; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "display",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "chen2"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 915,
+      "character": "阻",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/阻.json",
+      "sourceBlobSha": "c7cf17f863dd84c25b24deff20c890d84e39e5a5",
+      "traditional": "阻",
+      "dictionaryReadings": [
+        "zu3"
+      ],
+      "dictionaryDefinitions": {
+        "zu3": "to hinder; to block; to obstruct; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "hinder",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "zu3"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 916,
+      "character": "附",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/附.json",
+      "sourceBlobSha": "c6b8a95daf2a1b4f23f4c515e5b00d2d919076fb",
+      "traditional": "附",
+      "dictionaryReadings": [
+        "fu4"
+      ],
+      "dictionaryDefinitions": {
+        "fu4": "variant of 附[fu4]; to add; to attach; to be close to; to be attached; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "append",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 917,
+      "character": "坠",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/坠.json",
+      "sourceBlobSha": "418400ef6a3f4bc8885119e3873e78780f9467d7",
+      "traditional": "墜",
+      "dictionaryReadings": [
+        "zhui4"
+      ],
+      "dictionaryDefinitions": {
+        "zhui4": "to fall; to drop; to weigh down; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "fall down",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 918,
+      "character": "妓",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/妓.json",
+      "sourceBlobSha": "93a082caf792585fa19227e04c8a0b4afee1dded",
+      "traditional": "妓",
+      "dictionaryReadings": [
+        "ji4"
+      ],
+      "dictionaryDefinitions": {
+        "ji4": "prostitute; "
+      },
+      "selectedSenseChecks": [],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 919,
+      "character": "妙",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/妙.json",
+      "sourceBlobSha": "57577eb59874ac1473d71ef72871004a5cb6af58",
+      "traditional": "玅",
+      "dictionaryReadings": [
+        "miao4"
+      ],
+      "dictionaryDefinitions": {
+        "miao4": "clever; wonderful; variant of 妙[miao4]; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "mysterious",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 920,
+      "character": "妖",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/妖.json",
+      "sourceBlobSha": "84efa2dc0623939ca823cbcc8dea3f23d12e97ff",
+      "traditional": "妖",
+      "dictionaryReadings": [
+        "yao1"
+      ],
+      "dictionaryDefinitions": {
+        "yao1": "goblin; witch; devil; bewitching; enchanting; monster; phantom; demon; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "supernatural",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    }
+  ]
+}
