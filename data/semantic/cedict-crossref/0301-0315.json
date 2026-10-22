@@ -1,0 +1,457 @@
+{
+  "schema": "chromalect.mandarin.lexical-crossref-batch.v0.1",
+  "source": {
+    "title": "CC-CEDICT per-headword v2 mirror",
+    "repository": "krmanik/cedict-json",
+    "commit": "63c2569948629323b515833930fdd10f285401b6",
+    "dataLicense": "CC BY-SA 4.0",
+    "upstream": "https://cc-cedict.org/",
+    "mirror": "https://github.com/krmanik/cedict-json",
+    "transform": "Selected single-simplified-character dictionary records, retaining readings and definitions; literal English gloss matching is automated triage only"
+  },
+  "rankStart": 301,
+  "rankEnd": 315,
+  "summary": {
+    "total": 15,
+    "headwordFound": 15,
+    "withCandidate": 13,
+    "withLiteralSupport": 11
+  },
+  "records": [
+    {
+      "rank": 301,
+      "character": "市",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/市.json",
+      "sourceBlobSha": "3eeb1ab859834523cc1c2c0e0641dd701d8734e2",
+      "traditional": "市",
+      "dictionaryReadings": [
+        "shi4"
+      ],
+      "dictionaryDefinitions": {
+        "shi4": "market; city; CL:個|个[ge4]; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "market",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "shi4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        },
+        {
+          "selectedMeaning": "city",
+          "sourceGlossGroupIndex": 1,
+          "matchingDictionaryReadings": [
+            "shi4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 302,
+      "character": "立",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/立.json",
+      "sourceBlobSha": "9a4068b9a231db45c07ae5e587e014129221a842",
+      "traditional": "立",
+      "dictionaryReadings": [
+        "Li4",
+        "li4"
+      ],
+      "dictionaryDefinitions": {
+        "Li4": "surname Li; ",
+        "li4": "to stand; to set up; to establish; to lay down; to draw up; at once; immediately; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "stand",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "li4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 303,
+      "character": "冯",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/冯.json",
+      "sourceBlobSha": "ed80ac6bc9ee6e884fb7e21b8bd8814672d521fd",
+      "traditional": "馮",
+      "dictionaryReadings": [
+        "Feng2",
+        "ping2"
+      ],
+      "dictionaryDefinitions": {
+        "Feng2": "surname Feng; ",
+        "ping2": "to gallop; to assist; to attack; to wade; great; old variant of 憑|凭[ping2]; "
+      },
+      "selectedSenseChecks": [],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 304,
+      "character": "玄",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/玄.json",
+      "sourceBlobSha": "361f690a2b2206690e9df874b0dad37a9e4def10",
+      "traditional": "玄",
+      "dictionaryReadings": [
+        "xuan2"
+      ],
+      "dictionaryDefinitions": {
+        "xuan2": "black; mysterious; "
+      },
+      "selectedSenseChecks": [],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 305,
+      "character": "闪",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/闪.json",
+      "sourceBlobSha": "7214fed62bcc0fdee5e379b874ae3a7b245e88b1",
+      "traditional": "閃",
+      "dictionaryReadings": [
+        "Shan3",
+        "shan3"
+      ],
+      "dictionaryDefinitions": {
+        "Shan3": "surname Shan; ",
+        "shan3": "to dodge; to duck out of the way; to beat it; shaken (by a fall); to sprain; to pull a muscle; lightning; spark; a flash; to flash (across one's mind); to leave behind; (Internet slang) (of a display of affection) 'dazzlingly' saccharine; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "flash",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "shan3"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 306,
+      "character": "兰",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/兰.json",
+      "sourceBlobSha": "ce84486ca1cc0c8317559349e7ae269e6580fd0f",
+      "traditional": "蘭",
+      "dictionaryReadings": [
+        "Lan2",
+        "lan2"
+      ],
+      "dictionaryDefinitions": {
+        "Lan2": "surname Lan; abbr. for Lanzhou 蘭州|兰州[Lan2 zhou1], Gansu; ",
+        "lan2": "orchid (蘭花|兰花 Cymbidium goeringii); fragrant thoroughwort (蘭草|兰草 Eupatorium fortunei); lily magnolia (木蘭|木兰); "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "orchid",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "lan2"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 307,
+      "character": "半",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/半.json",
+      "sourceBlobSha": "273c49ad49f41e9294ef467299a5f51097aed9cf",
+      "traditional": "半",
+      "dictionaryReadings": [
+        "ban4"
+      ],
+      "dictionaryDefinitions": {
+        "ban4": "half; semi-; incomplete; (after a number) and a half; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "half",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "ban4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 308,
+      "character": "汁",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/汁.json",
+      "sourceBlobSha": "8a58f5ca08a9df5dc670059bf8a3fcbaf98cb4e0",
+      "traditional": "汁",
+      "dictionaryReadings": [
+        "zhi1"
+      ],
+      "dictionaryDefinitions": {
+        "zhi1": "juice; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "juice",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "zhi1"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 309,
+      "character": "汇",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/汇.json",
+      "sourceBlobSha": "47ebc4f41e01d79c2e4ac24fb59a26b6b883bf28",
+      "traditional": "滙",
+      "dictionaryReadings": [
+        "hui4"
+      ],
+      "dictionaryDefinitions": {
+        "hui4": "to remit; to converge (of rivers); to exchange; class; collection; variant of 匯|汇[hui4]; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "gather",
+          "sourceGlossGroupIndex": 1,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 310,
+      "character": "头",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/头.json",
+      "sourceBlobSha": "9aaf094d4119f5e6d1cbc671ce7f84f2ae3ab285",
+      "traditional": "頭",
+      "dictionaryReadings": [
+        "tou2",
+        "tou5"
+      ],
+      "dictionaryDefinitions": {
+        "tou2": "head; hair style; the top; end; beginning or end; a stub; remnant; chief; boss; side; aspect; first; leading; classifier for pigs or livestock; CL:個|个[ge4]; ",
+        "tou5": "suffix for nouns; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "head",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "tou2"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 311,
+      "character": "汉",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/汉.json",
+      "sourceBlobSha": "81633a482abbe4ed3033b9142dbbce0884f7645e",
+      "traditional": "漢",
+      "dictionaryReadings": [
+        "Han4",
+        "han4"
+      ],
+      "dictionaryDefinitions": {
+        "Han4": "Han ethnic group; Chinese (language); the Han dynasty (206 BC-220 AD); ",
+        "han4": "man; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "Chinese language",
+          "sourceGlossGroupIndex": 1,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 312,
+      "character": "宁",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/宁.json",
+      "sourceBlobSha": "fe40f4e22d28d204d576ab51feb24a11d4f2ecea",
+      "traditional": "甯",
+      "dictionaryReadings": [
+        "ning4",
+        "Ning2",
+        "ning2"
+      ],
+      "dictionaryDefinitions": {
+        "ning4": "old variant of 寧|宁[ning4]; would rather; to prefer; how (emphatic); Taiwan pr. [ning2]; ",
+        "Ning2": "abbr. for Ningxia Hui Autonomous Region 寧夏回族自治區|宁夏回族自治区[Ning2 xia4 Hui2 zu2 Zi4 zhi4 qu1]; abbr. for Nanjing 南京[Nan2 jing1]; surname Ning; ",
+        "ning2": "peaceful; to pacify; to visit (one's parents etc); variant of 寧|宁[ning2]; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "peaceful",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "ning2"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 313,
+      "character": "穴",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/穴.json",
+      "sourceBlobSha": "4a206839f95368039230b5d8e318ab14f9803c22",
+      "traditional": "穴",
+      "dictionaryReadings": [
+        "xue2"
+      ],
+      "dictionaryDefinitions": {
+        "xue2": "cave; cavity; hole; acupuncture point; Taiwan pr. [xue4]; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "cave",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "xue2"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 314,
+      "character": "它",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/它.json",
+      "sourceBlobSha": "704c665c002f5c7d1c5421d2ece749e8ea986335",
+      "traditional": "它",
+      "dictionaryReadings": [
+        "ta1"
+      ],
+      "dictionaryDefinitions": {
+        "ta1": "it; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "it",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "ta1"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 315,
+      "character": "讨",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/讨.json",
+      "sourceBlobSha": "b38c0bc137c36c253be0252c9a40e6b70c480534",
+      "traditional": "討",
+      "dictionaryReadings": [
+        "tao3"
+      ],
+      "dictionaryDefinitions": {
+        "tao3": "to invite; to provoke; to demand or ask for; to send armed forces to suppress; to denounce or condemn; to marry (a woman); to discuss or study; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "discuss",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "tao3"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    }
+  ]
+}
