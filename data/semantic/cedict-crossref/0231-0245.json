@@ -1,0 +1,434 @@
+{
+  "schema": "chromalect.mandarin.lexical-crossref-batch.v0.1",
+  "source": {
+    "title": "CC-CEDICT per-headword v2 mirror",
+    "repository": "krmanik/cedict-json",
+    "commit": "63c2569948629323b515833930fdd10f285401b6",
+    "dataLicense": "CC BY-SA 4.0",
+    "upstream": "https://cc-cedict.org/",
+    "mirror": "https://github.com/krmanik/cedict-json",
+    "transform": "Selected single-simplified-character dictionary records, retaining readings and definitions; literal English gloss matching is automated triage only"
+  },
+  "rankStart": 231,
+  "rankEnd": 245,
+  "summary": {
+    "total": 15,
+    "headwordFound": 15,
+    "withCandidate": 12,
+    "withLiteralSupport": 9
+  },
+  "records": [
+    {
+      "rank": 231,
+      "character": "业",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/业.json",
+      "sourceBlobSha": "c49fbb1a428ff21500b04f2558386bcbc616486f",
+      "traditional": "業",
+      "dictionaryReadings": [
+        "Ye4",
+        "ye4"
+      ],
+      "dictionaryDefinitions": {
+        "Ye4": "surname Ye; ",
+        "ye4": "line of business; industry; occupation; job; employment; school studies; enterprise; property; (Buddhism) karma; deed; to engage in; already; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "profession",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 232,
+      "character": "旧",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/旧.json",
+      "sourceBlobSha": "12b0181707bd7f124692b6fef32f77a5036c5dbb",
+      "traditional": "舊",
+      "dictionaryReadings": [
+        "jiu4"
+      ],
+      "dictionaryDefinitions": {
+        "jiu4": "old; opposite: new 新; former; worn (with age); "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "ancient",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 233,
+      "character": "帅",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/帅.json",
+      "sourceBlobSha": "5d349425009518edf5ff4d9ee1b90c8a5688db6a",
+      "traditional": "帥",
+      "dictionaryReadings": [
+        "Shuai4",
+        "shuai4"
+      ],
+      "dictionaryDefinitions": {
+        "Shuai4": "surname Shuai; ",
+        "shuai4": "handsome; graceful; smart; commander in chief; (coll.) cool!; sweet!; "
+      },
+      "selectedSenseChecks": [],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 234,
+      "character": "归",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/归.json",
+      "sourceBlobSha": "d356f226a1952401a922e5768f9d662620971e3d",
+      "traditional": "歸",
+      "dictionaryReadings": [
+        "Gui1",
+        "gui1"
+      ],
+      "dictionaryDefinitions": {
+        "Gui1": "surname Gui; ",
+        "gui1": "to return; to go back to; to give back to; (of a responsibility) to be taken care of by; to belong to; to gather together; (used between two identical verbs) despite; to marry (of a woman) (old); division on the abacus with a one-digit divisor; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "return",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "gui1"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 235,
+      "character": "旦",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/旦.json",
+      "sourceBlobSha": "e365e131aa268fbb1fdb3c0029c7ad1c3851ac47",
+      "traditional": "旦",
+      "dictionaryReadings": [
+        "dan4"
+      ],
+      "dictionaryDefinitions": {
+        "dan4": "dawn; morning; daybreak; day; dan, female roles in Chinese opera (traditionally played by specialized male actors); "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "dawn",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "dan4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 236,
+      "character": "目",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/目.json",
+      "sourceBlobSha": "9c1cfa0f543e7a87e6d633d20878797d62a8fadd",
+      "traditional": "目",
+      "dictionaryReadings": [
+        "mu4"
+      ],
+      "dictionaryDefinitions": {
+        "mu4": "eye; item; section; list; catalogue; table of contents; order (taxonomy); goal; name; title; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "eye",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "mu4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 237,
+      "character": "且",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/且.json",
+      "sourceBlobSha": "149d9b2330e2c1c4eb9e2b589042f214bccfae2f",
+      "traditional": "且",
+      "dictionaryReadings": [
+        "qie3"
+      ],
+      "dictionaryDefinitions": {
+        "qie3": "and; moreover; yet; for the time being; to be about to; both (... and...); "
+      },
+      "selectedSenseChecks": [],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 238,
+      "character": "叶",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/叶.json",
+      "sourceBlobSha": "b7ff094a6b87f6c0eb815d072ae402e1a0ce28c2",
+      "traditional": "葉",
+      "dictionaryReadings": [
+        "xie2",
+        "Ye4",
+        "ye4"
+      ],
+      "dictionaryDefinitions": {
+        "xie2": "to be in harmony; ",
+        "Ye4": "surname Ye; ",
+        "ye4": "leaf; page; lobe; (historical) period; classifier for small boats; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "leaf",
+          "sourceGlossGroupIndex": 2,
+          "matchingDictionaryReadings": [
+            "ye4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 239,
+      "character": "甲",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/甲.json",
+      "sourceBlobSha": "a3985bc4f9039c7309d4ca13f252bd8e2e11255f",
+      "traditional": "甲",
+      "dictionaryReadings": [
+        "jia3"
+      ],
+      "dictionaryDefinitions": {
+        "jia3": "first of the ten Heavenly Stems 十天干[shi2 tian1 gan1]; (used for an unspecified person or thing); first (in a list, as a party to a contract etc); letter 'A' or roman 'I' in list 'A, B, C', or 'I, II, III' etc; armor plating; shell or carapace; (of the fingers or toes) nail; bladed leather or metal armor (old); ranking system used in the Imperial examinations (old); civil administration unit (old); ancient Chinese compass point: 75°; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "shell",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "jia3"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 240,
+      "character": "申",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/申.json",
+      "sourceBlobSha": "f7c44bab65b819165aab582151583615019a9b0a",
+      "traditional": "申",
+      "dictionaryReadings": [
+        "Shen1",
+        "shen1"
+      ],
+      "dictionaryDefinitions": {
+        "Shen1": "old name for Shanghai 上海[Shang4 hai3]; surname Shen; ",
+        "shen1": "to extend; to state; to explain; 9th earthly branch: 3-5 p.m., 7th solar month (7th August-7th September), year of the Monkey; ancient Chinese compass point: 240°; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "report",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 241,
+      "character": "叮",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/叮.json",
+      "sourceBlobSha": "a9c877df19988bff825dba7a4a34bef435b140f8",
+      "traditional": "叮",
+      "dictionaryReadings": [
+        "ding1"
+      ],
+      "dictionaryDefinitions": {
+        "ding1": "to sting or bite (of mosquito, bee etc); to say repeatedly; to urge insistently; to ask repeatedly; to stick to a point; (onom.) tinkling or jingling sound; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "repeatedly",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "ding1"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 242,
+      "character": "电",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/电.json",
+      "sourceBlobSha": "b19ea3b8ba5aa9d05f10d58ea8d1139a39d66a3d",
+      "traditional": "電",
+      "dictionaryReadings": [
+        "dian4"
+      ],
+      "dictionaryDefinitions": {
+        "dian4": "electric; electricity; electrical; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "electricity",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "dian4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 243,
+      "character": "号",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/号.json",
+      "sourceBlobSha": "d0f9671eff75035009bf0b979b9980d4a94f3091",
+      "traditional": "號",
+      "dictionaryReadings": [
+        "hao2",
+        "hao4"
+      ],
+      "dictionaryDefinitions": {
+        "hao2": "roar; cry; CL:個|个[ge4]; ",
+        "hao4": "ordinal number; day of a month; mark; sign; business establishment; size; ship suffix; horn (wind instrument); bugle call; assumed name; to take a pulse; classifier used to indicate number of people; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "number",
+          "sourceGlossGroupIndex": 2,
+          "matchingDictionaryReadings": [
+            "hao4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 244,
+      "character": "田",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/田.json",
+      "sourceBlobSha": "1e33a233ed9d1a0bcc847f264e4471f298950329",
+      "traditional": "田",
+      "dictionaryReadings": [
+        "Tian2",
+        "tian2"
+      ],
+      "dictionaryDefinitions": {
+        "Tian2": "surname Tian; ",
+        "tian2": "field; farm; CL:片[pian4]; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "field",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "tian2"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 245,
+      "character": "由",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/由.json",
+      "sourceBlobSha": "f92b9feabaf780c1189efeae6aae27e9c0c09d53",
+      "traditional": "由",
+      "dictionaryReadings": [
+        "you2"
+      ],
+      "dictionaryDefinitions": {
+        "you2": "to follow; from; it is for...to; reason; cause; because of; due to; to; to leave it (to sb); by (introduces passive verb); "
+      },
+      "selectedSenseChecks": [],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    }
+  ]
+}
