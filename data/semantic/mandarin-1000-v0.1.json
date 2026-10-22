@@ -8759,7 +8759,7 @@
             "selectedMeaning": "half",
             "expression": {
               "kind": "atom",
-              "emoji": "½"
+              "emoji": "🌓"
             },
             "state": "experimental_pictogram_candidate",
             "review": "human_linguistic_and_comprehension_review_pending"
