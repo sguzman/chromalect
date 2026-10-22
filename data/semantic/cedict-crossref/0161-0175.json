@@ -1,0 +1,455 @@
+{
+  "schema": "chromalect.mandarin.lexical-crossref-batch.v0.1",
+  "source": {
+    "title": "CC-CEDICT per-headword v2 mirror",
+    "repository": "krmanik/cedict-json",
+    "commit": "63c2569948629323b515833930fdd10f285401b6",
+    "dataLicense": "CC BY-SA 4.0",
+    "upstream": "https://cc-cedict.org/",
+    "mirror": "https://github.com/krmanik/cedict-json",
+    "transform": "Selected single-simplified-character dictionary records, retaining readings and definitions; literal English gloss matching is automated triage only"
+  },
+  "rankStart": 161,
+  "rankEnd": 175,
+  "summary": {
+    "total": 15,
+    "headwordFound": 15,
+    "withCandidate": 12,
+    "withLiteralSupport": 9
+  },
+  "records": [
+    {
+      "rank": 161,
+      "character": "文",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/文.json",
+      "sourceBlobSha": "55b45e39a37b26fd284fdf05d9407c672b6c0a90",
+      "traditional": "文",
+      "dictionaryReadings": [
+        "Wen2",
+        "wen2"
+      ],
+      "dictionaryDefinitions": {
+        "Wen2": "surname Wen; ",
+        "wen2": "language; culture; writing; formal; literary; gentle; (old) classifier for coins; Kangxi radical 67; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "writing",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "wen2"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 162,
+      "character": "亢",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/亢.json",
+      "sourceBlobSha": "225c85e632dbd5e3077220543c4c1ddfed1e6c45",
+      "traditional": "亢",
+      "dictionaryReadings": [
+        "Kang4",
+        "kang4"
+      ],
+      "dictionaryDefinitions": {
+        "Kang4": "surname Kang; Kang, one of the 28 constellations; ",
+        "kang4": "high; overbearing; excessive; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "proud",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 163,
+      "character": "方",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/方.json",
+      "sourceBlobSha": "85b2084fcbf752eac159f80c6cf4d8efb1cbb482",
+      "traditional": "方",
+      "dictionaryReadings": [
+        "Fang1",
+        "fang1"
+      ],
+      "dictionaryDefinitions": {
+        "Fang1": "surname Fang; ",
+        "fang1": "square; power or involution (mathematics); upright; honest; fair and square; direction; side; party (to a contract, dispute etc); place; method; prescription (medicine); just when; only or just; classifier for square things; abbr. for square or cubic meter; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "square",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "fang1"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 164,
+      "character": "火",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/火.json",
+      "sourceBlobSha": "e57148e48c0bd2ce202138f4ec05e614200d6d71",
+      "traditional": "火",
+      "dictionaryReadings": [
+        "Huo3",
+        "huo3"
+      ],
+      "dictionaryDefinitions": {
+        "Huo3": "surname Huo; ",
+        "huo3": "fire; urgent; ammunition; fiery or flaming; internal heat (Chinese medicine); hot (popular); classifier for military units (old); "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "fire",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "huo3"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        },
+        {
+          "selectedMeaning": "burn",
+          "sourceGlossGroupIndex": 1,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 165,
+      "character": "为",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/为.json",
+      "sourceBlobSha": "0920ff9d06dcfe9a4d17e5282e75864080d81215",
+      "traditional": "爲",
+      "dictionaryReadings": [
+        "wei2",
+        "wei4"
+      ],
+      "dictionaryDefinitions": {
+        "wei2": "as (in the capacity of); to take sth as; to act as; to serve as; to behave as; to become; to be; to do; by (in the passive voice); variant of 為|为[wei2]; as (i.e. in the capacity of); to take sth as; to act as; to serve as; to behave as; to become; to be; to do; ",
+        "wei4": "because of; for; to; variant of 為|为[wei4], because of; for; to; "
+      },
+      "selectedSenseChecks": [],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 166,
+      "character": "斗",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/斗.json",
+      "sourceBlobSha": "0ff881dd8da57161d4b3d306e616585d4633de49",
+      "traditional": "鬭",
+      "dictionaryReadings": [
+        "Dou3",
+        "dou3",
+        "dou4"
+      ],
+      "dictionaryDefinitions": {
+        "Dou3": "abbr. for the Big Dipper constellation 北斗星[Bei3 dou3 xing1]; ",
+        "dou3": "dry measure for grain equal to ten 升[sheng1] or one-tenth of a 石[dan4]; decaliter; peck; cup or dipper shaped object; old variant of 陡[dou3]; ",
+        "dou4": "to fight; to struggle; to condemn; to censure; to contend; to put together; coming together; variant of 鬭|斗[dou4]; variant of 鬥|斗[dou4]; variant of 鬥|斗[dou4]; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "dipper",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "Dou3",
+            "dou3"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 167,
+      "character": "忆",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/忆.json",
+      "sourceBlobSha": "973934e95e2f698d65b9475b205c07e441589604",
+      "traditional": "憶",
+      "dictionaryReadings": [
+        "yi4"
+      ],
+      "dictionaryDefinitions": {
+        "yi4": "to recollect; to remember; memory; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "remember",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "yi4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 168,
+      "character": "计",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/计.json",
+      "sourceBlobSha": "3c45bad3c85fba05fe50005625a21c3a0011d843",
+      "traditional": "計",
+      "dictionaryReadings": [
+        "Ji4",
+        "ji4"
+      ],
+      "dictionaryDefinitions": {
+        "Ji4": "surname Ji; ",
+        "ji4": "to calculate; to compute; to count; to regard as important; to plan; ruse; meter; gauge; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "plan",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "ji4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 169,
+      "character": "订",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/订.json",
+      "sourceBlobSha": "5d9fafcf5a1f1f6927ca4266bcc17dbc04d8ef49",
+      "traditional": "訂",
+      "dictionaryReadings": [
+        "ding4"
+      ],
+      "dictionaryDefinitions": {
+        "ding4": "to agree; to conclude; to draw up; to subscribe to (a newspaper etc); to order; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "agreement",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 170,
+      "character": "户",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/户.json",
+      "sourceBlobSha": "d397789631e24a8dbbb36e1f1b7570ef09d36369",
+      "traditional": "戶",
+      "dictionaryReadings": [
+        "hu4"
+      ],
+      "dictionaryDefinitions": {
+        "hu4": "a household; door; family; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "door",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "hu4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 171,
+      "character": "认",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/认.json",
+      "sourceBlobSha": "4d61223b882cecd22c7b2c70178f598e62c380ef",
+      "traditional": "認",
+      "dictionaryReadings": [
+        "ren4"
+      ],
+      "dictionaryDefinitions": {
+        "ren4": "to recognize; to know; to admit; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "recognize",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "ren4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 172,
+      "character": "冗",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/冗.json",
+      "sourceBlobSha": "df78340344245f447fda8cceb2bf838c26854c46",
+      "traditional": "宂",
+      "dictionaryReadings": [
+        "rong3"
+      ],
+      "dictionaryDefinitions": {
+        "rong3": "extraneous; redundant; superfluous; busy schedule; variant of 冗[rong3]; "
+      },
+      "selectedSenseChecks": [],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 173,
+      "character": "讥",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/讥.json",
+      "sourceBlobSha": "8c7d2d6a075f4907bdaa4c784fd988a893d24b16",
+      "traditional": "譏",
+      "dictionaryReadings": [
+        "ji1"
+      ],
+      "dictionaryDefinitions": {
+        "ji1": "to ridicule; "
+      },
+      "selectedSenseChecks": [],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 174,
+      "character": "心",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/心.json",
+      "sourceBlobSha": "53b5120cccb9066695cadfb4c0301723c0b064a8",
+      "traditional": "心",
+      "dictionaryReadings": [
+        "xin1"
+      ],
+      "dictionaryDefinitions": {
+        "xin1": "heart; mind; intention; center; core; CL:顆|颗[ke1],個|个[ge4]; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "heart",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "xin1"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        },
+        {
+          "selectedMeaning": "mind",
+          "sourceGlossGroupIndex": 1,
+          "matchingDictionaryReadings": [
+            "xin1"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 175,
+      "character": "尺",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/尺.json",
+      "sourceBlobSha": "f04eca39f67150e89d5abb5709cddfdf46050f03",
+      "traditional": "尺",
+      "dictionaryReadings": [
+        "che3",
+        "chi3"
+      ],
+      "dictionaryDefinitions": {
+        "che3": "one of the characters used to represent a musical note in gongche notation, 工尺譜|工尺谱[gong1 che3 pu3]; ",
+        "chi3": "a Chinese foot; one-third of a meter; a ruler; a tape-measure; one of the three acupoints for measuring pulse in Chinese medicine; CL:支[zhi1],把[ba3]; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "Chinese measure",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    }
+  ]
+}
