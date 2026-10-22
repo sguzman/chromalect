@@ -89,7 +89,7 @@ function buildPage(route, authored, rootPath = "/chromalect/") {
     "Theme control lost while replacing navigation");
   assert.equal(body.children[0], header, "Navigation must be above the page content");
   const anchors = collect(nav, e => e.tagName === "a");
-  assert.equal(anchors.length, 23, "Expected stable primary and grouped navigation links");
+  assert.equal(anchors.length, 24, "Expected stable primary and grouped navigation links");
   for (const link of anchors) {
     if (!link.href.startsWith("https://github.com")) {
       assert.ok(link.href.startsWith("https://example.test" + rootPath),
@@ -109,6 +109,7 @@ const report = buildPage("glyphs/review/index.html", false);
 const deep = buildPage("glyphs/by-component/cmp-0001.html", false);
 const root = buildPage("search.html", true, "/");
 const semantics = buildPage("semantic-lab.html", true);
+const semanticBrowser = buildPage("semantic-coverage.html", true);
 
 const destinations = list => list.map(a => a.href).sort();
 assert.deepEqual(destinations(home.anchors), destinations(atlas.anchors));
