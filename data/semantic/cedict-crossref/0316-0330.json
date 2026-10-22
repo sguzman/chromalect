@@ -1,0 +1,453 @@
+{
+  "schema": "chromalect.mandarin.lexical-crossref-batch.v0.1",
+  "source": {
+    "title": "CC-CEDICT per-headword v2 mirror",
+    "repository": "krmanik/cedict-json",
+    "commit": "63c2569948629323b515833930fdd10f285401b6",
+    "dataLicense": "CC BY-SA 4.0",
+    "upstream": "https://cc-cedict.org/",
+    "mirror": "https://github.com/krmanik/cedict-json",
+    "transform": "Selected single-simplified-character dictionary records, retaining readings and definitions; literal English gloss matching is automated triage only"
+  },
+  "rankStart": 316,
+  "rankEnd": 330,
+  "summary": {
+    "total": 15,
+    "headwordFound": 15,
+    "withCandidate": 15,
+    "withLiteralSupport": 10
+  },
+  "records": [
+    {
+      "rank": 316,
+      "character": "写",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/写.json",
+      "sourceBlobSha": "a2925f216810b683cd7432f5dc4374f9d21e1ddb",
+      "traditional": "寫",
+      "dictionaryReadings": [
+        "xie3"
+      ],
+      "dictionaryDefinitions": {
+        "xie3": "to write; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "write",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "xie3"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 317,
+      "character": "让",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/让.json",
+      "sourceBlobSha": "51c30f1f2d4700d077c2996b96644261dfda5324",
+      "traditional": "讓",
+      "dictionaryReadings": [
+        "rang4"
+      ],
+      "dictionaryDefinitions": {
+        "rang4": "to yield; to permit; to let sb do sth; to have sb do sth; to make sb (feel sad etc); by (indicates the agent in a passive clause, like 被[bei4]); "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "allow",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 318,
+      "character": "礼",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/礼.json",
+      "sourceBlobSha": "f25e0d5c1b2de7860fa2e1209ef2b67427fef698",
+      "traditional": "禮",
+      "dictionaryReadings": [
+        "Li3",
+        "li3"
+      ],
+      "dictionaryDefinitions": {
+        "Li3": "surname Li; abbr. for 禮記|礼记[Li3 ji4], Classic of Rites; ",
+        "li3": "gift; rite; ceremony; CL:份[fen4]; propriety; etiquette; courtesy; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "courtesy",
+          "sourceGlossGroupIndex": 2,
+          "matchingDictionaryReadings": [
+            "li3"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 319,
+      "character": "训",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/训.json",
+      "sourceBlobSha": "34e01018c043f0098a14d87cc9ebe24c77f392c1",
+      "traditional": "訓",
+      "dictionaryReadings": [
+        "xun4"
+      ],
+      "dictionaryDefinitions": {
+        "xun4": "to teach; to train; to admonish; instruction (from superiors); teachings; rule; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "teach",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "xun4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 320,
+      "character": "议",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/议.json",
+      "sourceBlobSha": "ca4bdaacc408af92799fc3dd33a7bb64e269e1a5",
+      "traditional": "議",
+      "dictionaryReadings": [
+        "yi4"
+      ],
+      "dictionaryDefinitions": {
+        "yi4": "to comment on; to discuss; to suggest; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "discuss",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "yi4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 321,
+      "character": "必",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/必.json",
+      "sourceBlobSha": "408babe712f731a19d58cc25a7195132f15e8cf5",
+      "traditional": "必",
+      "dictionaryReadings": [
+        "bi4"
+      ],
+      "dictionaryDefinitions": {
+        "bi4": "certainly; must; will; necessarily; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "must",
+          "sourceGlossGroupIndex": 1,
+          "matchingDictionaryReadings": [
+            "bi4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 322,
+      "character": "讯",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/讯.json",
+      "sourceBlobSha": "b2af8ca717a94f3f692c3fbe6464653bbf96d38c",
+      "traditional": "訊",
+      "dictionaryReadings": [
+        "xun4"
+      ],
+      "dictionaryDefinitions": {
+        "xun4": "to question; to ask; to interrogate; rapid; speedy; fast; news; information; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "inquire",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 323,
+      "character": "记",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/记.json",
+      "sourceBlobSha": "ddb0abf18f2d09c9a12b7c5c9061eb5339938200",
+      "traditional": "記",
+      "dictionaryReadings": [
+        "ji4"
+      ],
+      "dictionaryDefinitions": {
+        "ji4": "to record; to note; to memorize; to remember; mark; sign; classifier for blows, kicks, shots; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "record",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "ji4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 324,
+      "character": "永",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/永.json",
+      "sourceBlobSha": "603af1fd02989d6913fd998010bd4966723bf1e1",
+      "traditional": "永",
+      "dictionaryReadings": [
+        "yong3"
+      ],
+      "dictionaryDefinitions": {
+        "yong3": "forever; always; perpetual; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "forever",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "yong3"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 325,
+      "character": "司",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/司.json",
+      "sourceBlobSha": "e9c8afe824d28d475b75dd0df7ea2014b92fc329",
+      "traditional": "司",
+      "dictionaryReadings": [
+        "Si1",
+        "si1"
+      ],
+      "dictionaryDefinitions": {
+        "Si1": "surname Si; ",
+        "si1": "to take charge of; to manage; department (under a ministry); "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "control",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 326,
+      "character": "尼",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/尼.json",
+      "sourceBlobSha": "5c3066589de4db45565822fe957622eabc4914ae",
+      "traditional": "尼",
+      "dictionaryReadings": [
+        "ni2"
+      ],
+      "dictionaryDefinitions": {
+        "ni2": "Buddhist nun; (often used in phonetic spellings); "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "nun",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "ni2"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 327,
+      "character": "民",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/民.json",
+      "sourceBlobSha": "401d9ddc292c7c03415c8e73d8b8c1389aee8e0b",
+      "traditional": "民",
+      "dictionaryReadings": [
+        "Min2",
+        "min2"
+      ],
+      "dictionaryDefinitions": {
+        "Min2": "surname Min; ",
+        "min2": "the people; nationality; citizen; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "citizens",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 328,
+      "character": "弗",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/弗.json",
+      "sourceBlobSha": "344efbe6a9bd795c15867d8cc370c6d0814074e5",
+      "traditional": "弗",
+      "dictionaryReadings": [
+        "fu2"
+      ],
+      "dictionaryDefinitions": {
+        "fu2": "not; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "not",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "fu2"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 329,
+      "character": "弘",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/弘.json",
+      "sourceBlobSha": "92ac07a14bcdd736ff80ed6251056f8280573dc1",
+      "traditional": "弘",
+      "dictionaryReadings": [
+        "hong2"
+      ],
+      "dictionaryDefinitions": {
+        "hong2": "great; liberal; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "expand",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 330,
+      "character": "出",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/出.json",
+      "sourceBlobSha": "c0654ebd479b3dbbc4cbc9cdb53a8f4880827223",
+      "traditional": "齣",
+      "dictionaryReadings": [
+        "chu1"
+      ],
+      "dictionaryDefinitions": {
+        "chu1": "to go out; to come out; to occur; to produce; to go beyond; to rise; to put forth; to happen; classifier for dramas, plays, operas etc; variant of 出[chu1] (classifier for plays or chapters of classical novels); "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "go out",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "chu1"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    }
+  ]
+}
