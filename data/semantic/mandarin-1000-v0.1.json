@@ -2,7 +2,7 @@
   "schema": "chromalect.mandarin.character-semantic-tranche.v0.1",
   "version": "0.1.0",
   "scope": "ranked_2013_simplified_first_1000",
-  "status": "first_pass_experimental_not_production_verified",
+  "status": "initial_screening_complete_candidates_not_production_verified",
   "source": {
     "name": "Unicode Unihan provisional kDefinition review database",
     "property": "kDefinition",
@@ -29,8 +29,8 @@
     "trancheCount": 1000,
     "meaningSourceFound": 1000,
     "screenedCharacters": 1000,
-    "pictogramCandidateCharacters": 894,
-    "deferredCharacters": 106,
+    "pictogramCandidateCharacters": 881,
+    "deferredCharacters": 119,
     "pendingScreening": 0,
     "productionVerifiedCharacters": 0
   },
@@ -9802,14 +9802,11 @@
         "status": "screened",
         "candidates": [
           {
-            "sourceGroupIndex": 0,
-            "selectedMeaning": "spear",
-            "expression": {
-              "kind": "atom",
-              "emoji": "🗡️"
-            },
-            "state": "experimental_pictogram_candidate",
-            "review": "human_linguistic_and_comprehension_review_pending"
+            "sourceGroupIndex": null,
+            "selectedMeaning": null,
+            "expression": null,
+            "state": "pictogram_deferred",
+            "reason": "The previously proposed pictogram depicted a different object or did not distinguish the selected sense; await a better visual expression."
           }
         ]
       }
@@ -13219,14 +13216,11 @@
         "status": "screened",
         "candidates": [
           {
-            "sourceGroupIndex": 0,
-            "selectedMeaning": "mortar",
-            "expression": {
-              "kind": "atom",
-              "emoji": "🥣"
-            },
-            "state": "experimental_pictogram_candidate",
-            "review": "human_linguistic_and_comprehension_review_pending"
+            "sourceGroupIndex": null,
+            "selectedMeaning": null,
+            "expression": null,
+            "state": "pictogram_deferred",
+            "reason": "The previously proposed pictogram depicted a different object or did not distinguish the selected sense; await a better visual expression."
           }
         ]
       }
@@ -15294,14 +15288,11 @@
         "status": "screened",
         "candidates": [
           {
-            "sourceGroupIndex": 0,
-            "selectedMeaning": "rice",
-            "expression": {
-              "kind": "atom",
-              "emoji": "🍚"
-            },
-            "state": "experimental_pictogram_candidate",
-            "review": "human_linguistic_and_comprehension_review_pending"
+            "sourceGroupIndex": null,
+            "selectedMeaning": null,
+            "expression": null,
+            "state": "pictogram_deferred",
+            "reason": "The previously proposed pictogram depicted a different object or did not distinguish the selected sense; await a better visual expression."
           }
         ]
       }
@@ -18083,8 +18074,17 @@
             "sourceGroupIndex": 1,
             "selectedMeaning": "dam",
             "expression": {
-              "kind": "atom",
-              "emoji": "🌊"
+              "kind": "associate",
+              "items": [
+                {
+                  "kind": "atom",
+                  "emoji": "🌊"
+                },
+                {
+                  "kind": "atom",
+                  "emoji": "🧱"
+                }
+              ]
             },
             "state": "experimental_pictogram_candidate",
             "review": "human_linguistic_and_comprehension_review_pending"
@@ -21029,14 +21029,11 @@
         "status": "screened",
         "candidates": [
           {
-            "sourceGroupIndex": 0,
-            "selectedMeaning": "metric ton",
-            "expression": {
-              "kind": "atom",
-              "emoji": "⚖️"
-            },
-            "state": "experimental_pictogram_candidate",
-            "review": "human_linguistic_and_comprehension_review_pending"
+            "sourceGroupIndex": null,
+            "selectedMeaning": null,
+            "expression": null,
+            "state": "pictogram_deferred",
+            "reason": "The previously proposed pictogram depicted a different object or did not distinguish the selected sense; await a better visual expression."
           }
         ]
       }
@@ -21509,14 +21506,11 @@
         "status": "screened",
         "candidates": [
           {
-            "sourceGroupIndex": 0,
-            "selectedMeaning": "throat",
-            "expression": {
-              "kind": "atom",
-              "emoji": "🗣️"
-            },
-            "state": "experimental_pictogram_candidate",
-            "review": "human_linguistic_and_comprehension_review_pending"
+            "sourceGroupIndex": null,
+            "selectedMeaning": null,
+            "expression": null,
+            "state": "pictogram_deferred",
+            "reason": "The previously proposed pictogram depicted a different object or did not distinguish the selected sense; await a better visual expression."
           }
         ]
       }
@@ -23159,14 +23153,11 @@
         "status": "screened",
         "candidates": [
           {
-            "sourceGroupIndex": 0,
-            "selectedMeaning": "liver",
-            "expression": {
-              "kind": "atom",
-              "emoji": "🫀"
-            },
-            "state": "experimental_pictogram_candidate",
-            "review": "human_linguistic_and_comprehension_review_pending"
+            "sourceGroupIndex": null,
+            "selectedMeaning": null,
+            "expression": null,
+            "state": "pictogram_deferred",
+            "reason": "The previously proposed pictogram depicted a different object or did not distinguish the selected sense; await a better visual expression."
           }
         ]
       }
@@ -23212,14 +23203,11 @@
         "status": "screened",
         "candidates": [
           {
-            "sourceGroupIndex": 0,
-            "selectedMeaning": "belly",
-            "expression": {
-              "kind": "atom",
-              "emoji": "🤰"
-            },
-            "state": "experimental_pictogram_candidate",
-            "review": "human_linguistic_and_comprehension_review_pending"
+            "sourceGroupIndex": null,
+            "selectedMeaning": null,
+            "expression": null,
+            "state": "pictogram_deferred",
+            "reason": "The previously proposed pictogram depicted a different object or did not distinguish the selected sense; await a better visual expression."
           }
         ]
       }
@@ -23269,14 +23257,11 @@
         "status": "screened",
         "candidates": [
           {
-            "sourceGroupIndex": 0,
-            "selectedMeaning": "intestines",
-            "expression": {
-              "kind": "atom",
-              "emoji": "🩺"
-            },
-            "state": "experimental_pictogram_candidate",
-            "review": "human_linguistic_and_comprehension_review_pending"
+            "sourceGroupIndex": null,
+            "selectedMeaning": null,
+            "expression": null,
+            "state": "pictogram_deferred",
+            "reason": "The previously proposed pictogram depicted a different object or did not distinguish the selected sense; await a better visual expression."
           }
         ]
       }
@@ -23468,16 +23453,6 @@
       "screening": {
         "status": "screened",
         "candidates": [
-          {
-            "sourceGroupIndex": 0,
-            "selectedMeaning": "horn",
-            "expression": {
-              "kind": "atom",
-              "emoji": "📯"
-            },
-            "state": "experimental_pictogram_candidate",
-            "review": "human_linguistic_and_comprehension_review_pending"
-          },
           {
             "sourceGroupIndex": 1,
             "selectedMeaning": "angle",
@@ -23675,14 +23650,11 @@
         "status": "screened",
         "candidates": [
           {
-            "sourceGroupIndex": 0,
-            "selectedMeaning": "plane",
-            "expression": {
-              "kind": "atom",
-              "emoji": "🪚"
-            },
-            "state": "experimental_pictogram_candidate",
-            "review": "human_linguistic_and_comprehension_review_pending"
+            "sourceGroupIndex": null,
+            "selectedMeaning": null,
+            "expression": null,
+            "state": "pictogram_deferred",
+            "reason": "The previously proposed pictogram depicted a different object or did not distinguish the selected sense; await a better visual expression."
           }
         ]
       }
@@ -25201,14 +25173,11 @@
         "status": "screened",
         "candidates": [
           {
-            "sourceGroupIndex": 0,
-            "selectedMeaning": "breast",
-            "expression": {
-              "kind": "atom",
-              "emoji": "🫁"
-            },
-            "state": "experimental_pictogram_candidate",
-            "review": "human_linguistic_and_comprehension_review_pending"
+            "sourceGroupIndex": null,
+            "selectedMeaning": null,
+            "expression": null,
+            "state": "pictogram_deferred",
+            "reason": "The previously proposed pictogram depicted a different object or did not distinguish the selected sense; await a better visual expression."
           }
         ]
       }
@@ -25454,14 +25423,11 @@
         "status": "screened",
         "candidates": [
           {
-            "sourceGroupIndex": 0,
-            "selectedMeaning": "poor",
-            "expression": {
-              "kind": "atom",
-              "emoji": "🪙"
-            },
-            "state": "experimental_pictogram_candidate",
-            "review": "human_linguistic_and_comprehension_review_pending"
+            "sourceGroupIndex": null,
+            "selectedMeaning": null,
+            "expression": null,
+            "state": "pictogram_deferred",
+            "reason": "The previously proposed pictogram depicted a different object or did not distinguish the selected sense; await a better visual expression."
           }
         ]
       }
@@ -26124,14 +26090,11 @@
         "status": "screened",
         "candidates": [
           {
-            "sourceGroupIndex": 0,
-            "selectedMeaning": "tail",
-            "expression": {
-              "kind": "atom",
-              "emoji": "🐈"
-            },
-            "state": "experimental_pictogram_candidate",
-            "review": "human_linguistic_and_comprehension_review_pending"
+            "sourceGroupIndex": null,
+            "selectedMeaning": null,
+            "expression": null,
+            "state": "pictogram_deferred",
+            "reason": "The previously proposed pictogram depicted a different object or did not distinguish the selected sense; await a better visual expression."
           }
         ]
       }
@@ -26581,14 +26544,11 @@
         "status": "screened",
         "candidates": [
           {
-            "sourceGroupIndex": 0,
-            "selectedMeaning": "elder sister",
-            "expression": {
-              "kind": "atom",
-              "emoji": "👩"
-            },
-            "state": "experimental_pictogram_candidate",
-            "review": "human_linguistic_and_comprehension_review_pending"
+            "sourceGroupIndex": null,
+            "selectedMeaning": null,
+            "expression": null,
+            "state": "pictogram_deferred",
+            "reason": "The previously proposed pictogram depicted a different object or did not distinguish the selected sense; await a better visual expression."
           }
         ]
       }
@@ -27593,8 +27553,17 @@
             "sourceGroupIndex": 0,
             "selectedMeaning": "dam",
             "expression": {
-              "kind": "atom",
-              "emoji": "🌊"
+              "kind": "associate",
+              "items": [
+                {
+                  "kind": "atom",
+                  "emoji": "🌊"
+                },
+                {
+                  "kind": "atom",
+                  "emoji": "🧱"
+                }
+              ]
             },
             "state": "experimental_pictogram_candidate",
             "review": "human_linguistic_and_comprehension_review_pending"
@@ -28933,5 +28902,11 @@
         ]
       }
     }
-  ]
+  ],
+  "initialScreeningReview": {
+    "scope": "all_1000_character_records",
+    "status": "complete",
+    "productionVerifiedSenses": 0,
+    "experimentalExpressionCount": 897
+  }
 }
