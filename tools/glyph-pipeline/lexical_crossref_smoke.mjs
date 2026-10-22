@@ -70,4 +70,24 @@ assert.equal(withCandidate,140);
 assert.equal(expr,145);
 assert.equal(literal,117);
 assert.equal(needsReview,28);
+const triage=JSON.parse(fs.readFileSync(base+"triage-0101-0200.json","utf8"));
+assert.equal(triage.schema,"chromalect.semantic.manual-triage.v0.1");
+assert.equal(triage.lexicalApprovalCount,0);
+assert.equal(triage.emojiApprovalCount,0);
+assert.equal(triage.entries.length,19);
+assert.equal(triage.entries.filter(x=>x.priority==="high").length,8);
+const triageRanks=triage.entries.map(x=>x.rank).sort((a,b)=>a-b);
+const expectedTriageRanks=combined.slice(100,200)
+ .filter(x=>x.selectedSenseChecks.some(c=>c.lexicalEvidence==="requires_sense_review"))
+ .map(x=>x.rank).sort((a,b)=>a-b);
+assert.deepEqual(triageRanks,expectedTriageRanks);
+for(const item of triage.entries){
+ assert.equal(item.character,combined[item.rank-1].character);
+ assert.equal(item.status,"research_triage_not_lexically_approved");
+ assert.equal(item.requiresHumanReview,true);
+ assert.equal(item.emojiComprehensionReviewed,false);
+ assert.equal(item.productionVerified,false);
+ assert.ok(item.note.length>20);
+}
+
 console.log("Lexical cross-reference: 200/1000 imported; 200 headwords; 145 experimental expressions, 117 literal matches, 28 flagged. Human approval: 0.");
