@@ -1,0 +1,318 @@
+{
+  "schema": "chromalect.mandarin.lexical-crossref-batch.v0.1",
+  "source": {
+    "title": "CC-CEDICT per-headword v2 mirror",
+    "repository": "krmanik/cedict-json",
+    "commit": "63c2569948629323b515833930fdd10f285401b6",
+    "dataLicense": "CC BY-SA 4.0",
+    "upstream": "https://cc-cedict.org/",
+    "mirror": "https://github.com/krmanik/cedict-json",
+    "transform": "Selected single-simplified-character dictionary records, retaining readings and definitions; literal English gloss matching is automated triage only"
+  },
+  "rankStart": 981,
+  "rankEnd": 990,
+  "summary": {
+    "total": 10,
+    "headwordFound": 10,
+    "withCandidate": 10,
+    "withLiteralSupport": 9
+  },
+  "records": [
+    {
+      "rank": 981,
+      "character": "拉",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/拉.json",
+      "sourceBlobSha": "4985c4b97e5d58b7f9704722df49596ecaa0fa46",
+      "traditional": "拉",
+      "dictionaryReadings": [
+        "la1"
+      ],
+      "dictionaryDefinitions": {
+        "la1": "to pull; to play (a bowed instrument); to drag; to draw; to chat; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "pull",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "la1"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 982,
+      "character": "拦",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/拦.json",
+      "sourceBlobSha": "0da1afc22d3a53fdbf86b046f7821b35ef60865d",
+      "traditional": "攔",
+      "dictionaryReadings": [
+        "lan2"
+      ],
+      "dictionaryDefinitions": {
+        "lan2": "to block sb's path; to obstruct; to flag down (a taxi); "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "obstruct",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "lan2"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 983,
+      "character": "幸",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/幸.json",
+      "sourceBlobSha": "6b5e6a2cab5de189d93236f277f717dabd854b70",
+      "traditional": "幸",
+      "dictionaryReadings": [
+        "xing4",
+        "Xing4"
+      ],
+      "dictionaryDefinitions": {
+        "xing4": "trusted; intimate; (of the emperor) to visit; variant of 幸[xing4]; fortunate; lucky; ",
+        "Xing4": "surname Xing; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "luck",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "xing4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 984,
+      "character": "拌",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/拌.json",
+      "sourceBlobSha": "955df20a57d96849cf8002bb9a69cf602b541dfc",
+      "traditional": "拌",
+      "dictionaryReadings": [
+        "ban4"
+      ],
+      "dictionaryDefinitions": {
+        "ban4": "to mix; to mix in; to toss (a salad); "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "mix",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "ban4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 985,
+      "character": "拧",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/拧.json",
+      "sourceBlobSha": "cc20f9a9c86d35f0fbaaddde600bffcaeba9c6d1",
+      "traditional": "擰",
+      "dictionaryReadings": [
+        "ning2",
+        "ning3",
+        "ning4"
+      ],
+      "dictionaryDefinitions": {
+        "ning2": "to pinch; wring; ",
+        "ning3": "mistake; to twist; ",
+        "ning4": "stubborn; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "twist",
+          "sourceGlossGroupIndex": 1,
+          "matchingDictionaryReadings": [
+            "ning3"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 986,
+      "character": "拂",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/拂.json",
+      "sourceBlobSha": "7a44b61ed10382d68020dfdf2a6c9e0020c312cd",
+      "traditional": "拂",
+      "dictionaryReadings": [
+        "bi4",
+        "fu2"
+      ],
+      "dictionaryDefinitions": {
+        "bi4": "old variant of 弼[bi4]; ",
+        "fu2": "to brush away; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "brush away",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "fu2"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 987,
+      "character": "拙",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/拙.json",
+      "sourceBlobSha": "e6958eb6773b3e44500171f005d02417153221f3",
+      "traditional": "拙",
+      "dictionaryReadings": [
+        "zhuo1"
+      ],
+      "dictionaryDefinitions": {
+        "zhuo1": "awkward; clumsy; dull; inelegant; (polite) my; Taiwan pr. [zhuo2]; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "clumsy",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "zhuo1"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 988,
+      "character": "招",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/招.json",
+      "sourceBlobSha": "ff768b57232906e5f067bb1f0a42677fef843d4e",
+      "traditional": "招",
+      "dictionaryReadings": [
+        "zhao1"
+      ],
+      "dictionaryDefinitions": {
+        "zhao1": "to recruit; to provoke; to beckon; to incur; to infect; contagious; a move (chess); a maneuver; device; trick; to confess; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "beckon",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "zhao1"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 989,
+      "character": "坡",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/坡.json",
+      "sourceBlobSha": "59d01cb626f7bf77849451f7e9fc01478f006db5",
+      "traditional": "坡",
+      "dictionaryReadings": [
+        "po1"
+      ],
+      "dictionaryDefinitions": {
+        "po1": "slope; CL:個|个[ge4]; sloping; slanted; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "slope",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "po1"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 990,
+      "character": "披",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/披.json",
+      "sourceBlobSha": "dadccbc63949b158b287d2a1be9e07f110bd9cab",
+      "traditional": "披",
+      "dictionaryReadings": [
+        "pi1"
+      ],
+      "dictionaryDefinitions": {
+        "pi1": "to drape over one's shoulders; to open; to unroll; to split open; to spread out; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "wear",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    }
+  ]
+}
