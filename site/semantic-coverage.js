@@ -22,6 +22,7 @@
   let strictRows = new Map();
   let reviewRows = new Map();
   let strictSummary = null;
+  let deskCounts = {analyzed:0,total:248};
   let page = 0;
 
   function elem(tag, cls, value) {
@@ -68,6 +69,11 @@
       fill.style.width=percent(count,total);
       label.textContent=count+" / "+total+" ("+percent(count,total)+")";
     }
+    $("semantic-desk-progress").setAttribute("aria-valuemax",String(deskCounts.total));
+    $("semantic-desk-progress").setAttribute("aria-valuenow",String(deskCounts.analyzed));
+    $("semantic-desk-fill").style.width=percent(deskCounts.analyzed,deskCounts.total);
+    $("semantic-stage-desk").textContent=deskCounts.analyzed+" / "+deskCounts.total+
+      " ("+percent(deskCounts.analyzed,deskCounts.total)+") · not approval";
     const audited=audit.scope.charactersAudited;
     $("semantic-boundary-progress").setAttribute("aria-valuemax",String(total));
     $("semantic-boundary-progress").setAttribute("aria-valuenow",String(audited));
@@ -142,6 +148,15 @@
         " · "+item.priority+" priority · no independent approval";
       details.appendChild(elem("p","semantic-review-detail",msg));
       if(item.earlierResearchNote)details.appendChild(elem("p","semantic-review-detail",item.earlierResearchNote));
+      if(item.deskAnalysis) {
+        details.appendChild(elem("p","semantic-review-detail",
+          "Preliminary desk analysis — "+item.deskAnalysis.observation+
+          " Suggested next action: "+item.deskAnalysis.provisionalNextAction.replaceAll("_"," ")+
+          ". This is not independent lexical approval."));
+        if(item.deskAnalysis.sourceExcerpt)
+          details.appendChild(elem("p","semantic-review-detail",
+            "CC-CEDICT excerpt (CC BY-SA 4.0): "+item.deskAnalysis.sourceExcerpt));
+      }
     }
     if (crossref) {
       const link=elem("a",null,"CC-CEDICT second-source headword and readings");
@@ -177,6 +192,8 @@
           (dictionary==="crossref" && !!crossref) ||
           (dictionary==="not-crossref" && !crossref) ||
           (dictionary==="needs-review" && aligned.some(s=>!s.wholeTermMatch)) ||
+          (dictionary==="desk-analyzed" && (reviewRows.get(x.rank)||[]).some(y=>!!y.deskAnalysis)) ||
+          (dictionary==="desk-pending" && (reviewRows.get(x.rank)||[]).some(y=>!y.deskAnalysis)) ||
           (dictionary==="high-priority" && (reviewRows.get(x.rank)||[]).some(y=>y.priority==="high")) ||
           (dictionary==="medium-priority" && (reviewRows.get(x.rank)||[]).some(y=>y.priority==="medium")) ||
           (dictionary==="unclassified-priority" && (reviewRows.get(x.rank)||[]).some(y=>y.priority==="unclassified")) ||
@@ -234,6 +251,11 @@
            x.visualComprehensionDecision!=="pending" ||
            x.productionVerified!==false))
         throw new Error("Unverified sense review data malformed or promoted without approval");
+      if(review.counts.deskAnalyzedTotal!==60 ||
+         review.counts.pendingSenseAlignment!==248 ||
+         review.records.filter(x=>!!x.deskAnalysis).length!==review.counts.deskAnalyzedTotal)
+         throw new Error("Desk-analysis counts do not match provisional entries");
+      deskCounts={analyzed:review.counts.deskAnalyzedTotal,total:review.counts.pendingSenseAlignment};
       const reviews=new Map();
       for(const item of review.records){
         if(!reviews.has(item.rank))reviews.set(item.rank,[]);

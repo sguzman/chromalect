@@ -61,7 +61,7 @@ assert.deepEqual(counter,{
 assert.equal(queue.counts.deskAnalyzedHighPriority,15);
 assert.equal(queue.counts.independentlyLexicallyApproved,0);
 assert.equal(queue.counts.emojiComprehensionApproved,0);
-let deskAnalyzed=0;
+let deskAnalyzed=0, analyzedUnclassified=0;
 for(const record of queue.records){
  if(record.priority==="high"){
   assert.equal(record.deskAnalysis?.status,
@@ -70,8 +70,22 @@ for(const record of queue.records){
   assert.ok(["reassess_or_defer","redesign_pictogram","redesign_verb_cue",
     "inspect_existing_alternative","inspect_context"].includes(record.deskAnalysis.provisionalNextAction));
   deskAnalyzed++;
- }else assert.equal(record.deskAnalysis,undefined);
+ }else if(record.deskAnalysis){
+  assert.equal(record.priority,"unclassified");
+  assert.equal(record.deskAnalysis.status,
+   "assistant_preliminary_analysis_not_independent_lexical_review");
+  assert.equal(record.deskAnalysis.reviewerIndependent,false);
+  assert.equal(record.deskAnalysis.sourceBasis,"pinned_CC-CEDICT_headword_plus_Unihan_candidate");
+  assert.ok(record.deskAnalysis.sourceExcerpt?.length>5);
+  assert.ok(record.deskAnalysis.observation.length>40);
+  analyzedUnclassified++;
+  deskAnalyzed++;
+ }
 }
+assert.equal(analyzedUnclassified,45);
+assert.equal(queue.counts.deskAnalyzedUnclassified,45);
+assert.equal(queue.counts.deskAnalyzedTotal,60);
+assert.equal(deskAnalyzed,queue.counts.deskAnalyzedTotal);
 assert.equal(deskAnalyzed,queue.counts.deskAnalyzedHighPriority);
 assert.equal(seen.size,needs.length);
 assert.equal(counter.substringOnly,7);
@@ -82,4 +96,4 @@ assert.equal(counter.previouslyTriaged,19);
 assert.equal(strict.scope.independentHumanApproved,0);
 assert.equal(strict.scope.emojiComprehensionApproved,0);
 assert.equal(manifest.metrics.productionVerified,0);
-console.log("Sense-review queue: 248 pending; 15 high, 11 medium, 222 unclassified; 7 substring-only mismatches. Zero approved.");
+console.log("Sense-review queue: 248 pending, 60 desk-analyzed (24.2%), 188 still need desk analysis. Zero independently approved.");

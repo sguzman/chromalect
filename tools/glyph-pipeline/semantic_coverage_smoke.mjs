@@ -42,6 +42,7 @@ for(const id of [
   "semantic-candidate-count","semantic-candidate-percent",
   "semantic-verified-count","semantic-progress","semantic-progress-fill",
   "semantic-stage-screened","semantic-stage-dictionary","semantic-stage-boundary",
+  "semantic-stage-desk","semantic-desk-progress","semantic-desk-fill",
   "semantic-boundary-progress","semantic-boundary-fill",
   "semantic-stage-lexical","semantic-stage-emoji",
   "semantic-dictionary-progress","semantic-dictionary-fill",
@@ -90,6 +91,9 @@ assert.equal(ids["semantic-progress"].attrs["aria-valuenow"],"1000");
 assert.equal(ids["semantic-stage-screened"].textContent,"1000 / 1000 (100.0%)");
 assert.equal(ids["semantic-stage-dictionary"].textContent,lexical.metrics.crossReferenced+" / 1000 ("+(lexical.metrics.crossReferenced/10).toFixed(1)+"%)");
 assert.equal(ids["semantic-stage-lexical"].textContent,"0 / 1000 (0.0%)");
+assert.equal(ids["semantic-stage-desk"].textContent,"60 / 248 (24.2%) · not approval");
+assert.equal(ids["semantic-desk-fill"].style.width,"24.2%");
+assert.equal(ids["semantic-desk-progress"].attrs["aria-valuenow"],"60");
 assert.equal(ids["semantic-stage-emoji"].textContent,"0 / 1000 (0.0%)");
 assert.equal(ids["semantic-dictionary-fill"].style.width,(lexical.metrics.crossReferenced/10).toFixed(1)+"%");
 assert.equal(ids["semantic-stage-boundary"].textContent,"1000 / 1000 (100.0%)");
@@ -126,6 +130,15 @@ ids["semantic-filter"].events.change();
 ids["semantic-lexical-filter"].value="needs-review";
 ids["semantic-lexical-filter"].events.change();
 assert.match(ids["semantic-coverage-status"].textContent,/248 characters match/);
+ids["semantic-lexical-filter"].value="desk-analyzed";
+ids["semantic-lexical-filter"].events.change();
+assert.match(ids["semantic-coverage-status"].textContent,/60 characters match/);
+assert.ok(flatten(ids["semantic-coverage-rows"].children[0])
+  .some(x=>x.className==="semantic-review-detail" &&
+    x.textContent.includes("Preliminary desk analysis")));
+ids["semantic-lexical-filter"].value="desk-pending";
+ids["semantic-lexical-filter"].events.change();
+assert.match(ids["semantic-coverage-status"].textContent,/188 characters match/);
 ids["semantic-lexical-filter"].value="high-priority";
 ids["semantic-lexical-filter"].events.change();
 assert.match(ids["semantic-coverage-status"].textContent,/15 characters match/);
@@ -169,6 +182,7 @@ assert.equal(data.initialScreeningReview.experimentalExpressionCount,897);
 assert.match(html,/data-character-layer-controls/);
 assert.match(html,/src="layers.js"/);
 assert.match(html,/id="semantic-lexical-filter"/);
+assert.match(html,/id="semantic-desk-progress"/);
 assert.match(html,/id="semantic-boundary-progress"/);
 assert.match(html,/value="substring-only"/);
 assert.match(html,/value="high-priority"/);
