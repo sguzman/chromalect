@@ -1,0 +1,461 @@
+{
+  "schema": "chromalect.mandarin.lexical-crossref-batch.v0.1",
+  "source": {
+    "title": "CC-CEDICT per-headword v2 mirror",
+    "repository": "krmanik/cedict-json",
+    "commit": "63c2569948629323b515833930fdd10f285401b6",
+    "dataLicense": "CC BY-SA 4.0",
+    "upstream": "https://cc-cedict.org/",
+    "mirror": "https://github.com/krmanik/cedict-json",
+    "transform": "Selected single-simplified-character dictionary records, retaining readings and definitions; literal English gloss matching is automated triage only"
+  },
+  "rankStart": 831,
+  "rankEnd": 845,
+  "summary": {
+    "total": 15,
+    "headwordFound": 15,
+    "withCandidate": 15,
+    "withLiteralSupport": 13
+  },
+  "records": [
+    {
+      "rank": 831,
+      "character": "床",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/床.json",
+      "sourceBlobSha": "1ae4ecbcf10d68d9fe966a6838e485db44aa68fe",
+      "traditional": "牀",
+      "dictionaryReadings": [
+        "chuang2"
+      ],
+      "dictionaryDefinitions": {
+        "chuang2": "bed; couch; classifier for beds; CL:張|张[zhang1]; variant of 床[chuang2]; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "bed",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "chuang2"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 832,
+      "character": "库",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/库.json",
+      "sourceBlobSha": "3459ac204ca9491ccafb2228905eb855377f4a0b",
+      "traditional": "庫",
+      "dictionaryReadings": [
+        "ku4"
+      ],
+      "dictionaryDefinitions": {
+        "ku4": "warehouse; storehouse; (file) library; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "storehouse",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "ku4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 833,
+      "character": "庇",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/庇.json",
+      "sourceBlobSha": "acc42ce8b1bce0946ed48631cdee3378989ad7a7",
+      "traditional": "庇",
+      "dictionaryReadings": [
+        "bi4"
+      ],
+      "dictionaryDefinitions": {
+        "bi4": "to protect; cover; shelter; hide or harbor; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "shelter",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "bi4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 834,
+      "character": "疗",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/疗.json",
+      "sourceBlobSha": "f39f632138372d026717276a0f8c5df6240c650b",
+      "traditional": "療",
+      "dictionaryReadings": [
+        "liao2"
+      ],
+      "dictionaryDefinitions": {
+        "liao2": "to treat; to cure; therapy; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "heal",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 835,
+      "character": "吝",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/吝.json",
+      "sourceBlobSha": "726eb2b71e7343d9b0c8bc16ee447f90234b60c8",
+      "traditional": "恡",
+      "dictionaryReadings": [
+        "lin4"
+      ],
+      "dictionaryDefinitions": {
+        "lin4": "stingy; variant of 吝[lin4]; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "stingy",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "lin4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 836,
+      "character": "应",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/应.json",
+      "sourceBlobSha": "5b6466c5d54a67a15cf04bd10f41253f5bfa9a4a",
+      "traditional": "應",
+      "dictionaryReadings": [
+        "Ying4",
+        "ying1",
+        "ying4"
+      ],
+      "dictionaryDefinitions": {
+        "Ying4": "surname Ying; ",
+        "ying1": "to agree (to do sth); should; ought to; must; (legal) shall; ",
+        "ying4": "to answer; to respond; to comply with; to deal or cope with; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "must",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "ying1"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 837,
+      "character": "这",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/这.json",
+      "sourceBlobSha": "7962a6dff055ea0f372fde58e0dec95da7aa291b",
+      "traditional": "這",
+      "dictionaryReadings": [
+        "zhe4"
+      ],
+      "dictionaryDefinitions": {
+        "zhe4": "this; these; (commonly pr. [zhei4] before a classifier, esp. in Beijing); "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "this",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "zhe4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 838,
+      "character": "冷",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/冷.json",
+      "sourceBlobSha": "6a791465c31c29681c8e123fd9263396591d5f93",
+      "traditional": "冷",
+      "dictionaryReadings": [
+        "Leng3",
+        "leng3"
+      ],
+      "dictionaryDefinitions": {
+        "Leng3": "surname Leng; ",
+        "leng3": "cold; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "cold",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "leng3"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 839,
+      "character": "庐",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/庐.json",
+      "sourceBlobSha": "1cf73e6258a4a637592cf100061b3bebaf7316d8",
+      "traditional": "廬",
+      "dictionaryReadings": [
+        "lu2"
+      ],
+      "dictionaryDefinitions": {
+        "lu2": "hut; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "hut",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "lu2"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 840,
+      "character": "序",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/序.json",
+      "sourceBlobSha": "9bcbe3d46f405031ea38e5c2a046ddeeacea96f0",
+      "traditional": "序",
+      "dictionaryReadings": [
+        "xu4"
+      ],
+      "dictionaryDefinitions": {
+        "xu4": "order; sequence; preface; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "sequence",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "xu4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 841,
+      "character": "辛",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/辛.json",
+      "sourceBlobSha": "05dc8222f5a23927dd0cc27b2caebfa5a7fe5ed5",
+      "traditional": "辛",
+      "dictionaryReadings": [
+        "Xin1",
+        "xin1"
+      ],
+      "dictionaryDefinitions": {
+        "Xin1": "surname Xin; ",
+        "xin1": "(of taste) hot or pungent; hard; laborious; suffering; eighth in order; eighth of the ten Heavenly Stems 十天干[shi2 tian1 gan1]; letter 'H' or roman 'VIII' in list 'A, B, C', or 'I, II, III' etc; ancient Chinese compass point: 285°; octa; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "bitter",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 842,
+      "character": "弃",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/弃.json",
+      "sourceBlobSha": "6243c640e8fe23e4923ca018d3b7555664ccd880",
+      "traditional": "棄",
+      "dictionaryReadings": [
+        "qi4"
+      ],
+      "dictionaryDefinitions": {
+        "qi4": "to abandon; to relinquish; to discard; to throw away; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "discard",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "qi4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 843,
+      "character": "冶",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/冶.json",
+      "sourceBlobSha": "59efdc416c111d93d6916c626955e9549c2efa0a",
+      "traditional": "冶",
+      "dictionaryReadings": [
+        "ye3"
+      ],
+      "dictionaryDefinitions": {
+        "ye3": "to smelt; to cast; seductive in appearance; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "smelt",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "ye3"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 844,
+      "character": "忘",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/忘.json",
+      "sourceBlobSha": "9d8ce909c3c3653bfcaa75fc057187cc2a785a69",
+      "traditional": "忘",
+      "dictionaryReadings": [
+        "wang4"
+      ],
+      "dictionaryDefinitions": {
+        "wang4": "to forget; to overlook; to neglect; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "forget",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "wang4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 845,
+      "character": "闰",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/闰.json",
+      "sourceBlobSha": "9d5cdbe0abe07a1e6bf99ab71410f45bfa02506f",
+      "traditional": "閏",
+      "dictionaryReadings": [
+        "run4"
+      ],
+      "dictionaryDefinitions": {
+        "run4": "intercalary; an extra day or month inserted into the lunar or solar calendar (such as February 29); "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "extra",
+          "sourceGlossGroupIndex": 1,
+          "matchingDictionaryReadings": [
+            "run4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    }
+  ]
+}
