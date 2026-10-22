@@ -32,6 +32,15 @@ assert.equal(g.display(byId["red-apple"].expr), "🔴 · 🍎");
 assert.equal(g.display(byId["eat-apple"].expr), "▶🍽️⟨A:👤,P:🍎⟩");
 assert.equal(g.display(byId["walk-home"].expr), "▶🚶⟨A:👤,G:🏠⟩");
 assert.equal(g.display(byId["not-eat"].expr), "¬(▶🍽️)");
+assert.equal(g.emojiDisplay(byId.mountain.expr), "⛰️");
+assert.equal(g.emojiDisplay(byId.study.expr), "📖🧠");
+assert.equal(g.emojiDisplay(byId["eat-apple"].expr), "👤🍽️🍎");
+assert.equal(g.emojiDisplay(byId["walk-home"].expr), "👤🚶🏠");
+assert.equal(g.emojiDisplay(byId["not-eat"].expr), "🚫🍽️");
+assert.equal(g.emojiDisplay(byId.grow.expr), "🌱➡️🌳");
+assert.equal(g.emojiParts(byId["extended-mnemonic"].expr).length, 5);
+assert.ok(g.emojiParts(byId.study.expr).every(x => x.kind === "emoji"),
+  "Primary rendering must not emit technical notation");
 assert.equal(g.parts(byId["extended-mnemonic"].expr).filter(x=>x.kind==="emoji").length,5);
 assert.equal(byId.raw.expr, null);
 assert.equal(g.display(null), "");
