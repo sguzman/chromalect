@@ -1,0 +1,455 @@
+{
+  "schema": "chromalect.mandarin.lexical-crossref-batch.v0.1",
+  "source": {
+    "title": "CC-CEDICT per-headword v2 mirror",
+    "repository": "krmanik/cedict-json",
+    "commit": "63c2569948629323b515833930fdd10f285401b6",
+    "dataLicense": "CC BY-SA 4.0",
+    "upstream": "https://cc-cedict.org/",
+    "mirror": "https://github.com/krmanik/cedict-json",
+    "transform": "Selected single-simplified-character dictionary records, retaining readings and definitions; literal English gloss matching is automated triage only"
+  },
+  "rankStart": 276,
+  "rankEnd": 290,
+  "summary": {
+    "total": 15,
+    "headwordFound": 15,
+    "withCandidate": 13,
+    "withLiteralSupport": 8
+  },
+  "records": [
+    {
+      "rank": 276,
+      "character": "仔",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/仔.json",
+      "sourceBlobSha": "4c5ddc268959b76da3a913130d708ab22ca77821",
+      "traditional": "仔",
+      "dictionaryReadings": [
+        "zai3",
+        "zi1",
+        "zi3"
+      ],
+      "dictionaryDefinitions": {
+        "zai3": "variant of 崽[zai3]; ",
+        "zi1": "see 仔肩[zi1 jian1]; ",
+        "zi3": "meticulous; (of domestic animals or fowls) young; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "child",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 277,
+      "character": "他",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/他.json",
+      "sourceBlobSha": "0d8150e71185917321c12c3a18fa5f9021411963",
+      "traditional": "他",
+      "dictionaryReadings": [
+        "ta1"
+      ],
+      "dictionaryDefinitions": {
+        "ta1": "he or him; (used for either sex when the sex is unknown or unimportant); (used before sb's name for emphasis); (used as a meaningless mock object); other; another; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "he",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "ta1"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 278,
+      "character": "斥",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/斥.json",
+      "sourceBlobSha": "54c04adcb143136026eed807270ba3c94d433906",
+      "traditional": "斥",
+      "dictionaryReadings": [
+        "chi4"
+      ],
+      "dictionaryDefinitions": {
+        "chi4": "to blame; to reprove; to reprimand; to expel; to oust; to reconnoiter; (of territory) to expand; saline marsh; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "scold",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 279,
+      "character": "瓜",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/瓜.json",
+      "sourceBlobSha": "294efa8e3b29c05fc03fc8141db69f123959ea1c",
+      "traditional": "瓜",
+      "dictionaryReadings": [
+        "gua1"
+      ],
+      "dictionaryDefinitions": {
+        "gua1": "melon; gourd; squash; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "melon",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "gua1"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 280,
+      "character": "乎",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/乎.json",
+      "sourceBlobSha": "8413264ba7df106c7eaeb2dc54d4e604af8c9db0",
+      "traditional": "乎",
+      "dictionaryReadings": [
+        "hu1"
+      ],
+      "dictionaryDefinitions": {
+        "hu1": "(classical particle similar to 於|于[yu2]) in; at; from; because; than; (classical final particle similar to 嗎|吗[ma5], 吧[ba5], 呢[ne5], expressing question, doubt or astonishment); "
+      },
+      "selectedSenseChecks": [],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 281,
+      "character": "丛",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/丛.json",
+      "sourceBlobSha": "315dc0655b7e13280bb4de3f271b1b975443406d",
+      "traditional": "叢",
+      "dictionaryReadings": [
+        "cong2"
+      ],
+      "dictionaryDefinitions": {
+        "cong2": "cluster; collection; collection of books; thicket; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "bush",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 282,
+      "character": "令",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/令.json",
+      "sourceBlobSha": "f917774a73435bfc0750da21c3a305517a5bba9d",
+      "traditional": "令",
+      "dictionaryReadings": [
+        "Ling2",
+        "ling2",
+        "ling3",
+        "ling4"
+      ],
+      "dictionaryDefinitions": {
+        "Ling2": "see 令狐[Ling2 hu2]; ",
+        "ling2": "see 脊令[ji2 ling2]; ",
+        "ling3": "classifier for a ream of paper; ",
+        "ling4": "to order; to command; an order; warrant; writ; to cause; to make sth happen; virtuous; honorific title; season; government position (old); "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "command",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "ling4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 283,
+      "character": "用",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/用.json",
+      "sourceBlobSha": "66630efc6d1e9bbec36a4fccfe91c6a159a73308",
+      "traditional": "用",
+      "dictionaryReadings": [
+        "yong4"
+      ],
+      "dictionaryDefinitions": {
+        "yong4": "to use; to employ; to have to; to eat or drink; expense or outlay; usefulness; hence; therefore; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "use",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "yong4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 284,
+      "character": "甩",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/甩.json",
+      "sourceBlobSha": "7e2a1b9bec5695fea6c06acd0261cca9b9f3329e",
+      "traditional": "甩",
+      "dictionaryReadings": [
+        "shuai3"
+      ],
+      "dictionaryDefinitions": {
+        "shuai3": "to throw; to fling; to swing; to leave behind; to throw off; to dump (sb); "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "throw away",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 285,
+      "character": "印",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/印.json",
+      "sourceBlobSha": "30c11fdcae0502fcd2102cd10a5db498bbc628d5",
+      "traditional": "印",
+      "dictionaryReadings": [
+        "Yin4",
+        "yin4"
+      ],
+      "dictionaryDefinitions": {
+        "Yin4": "surname Yin; abbr. for 印度[Yin4 du4]; ",
+        "yin4": "to print; to mark; to engrave; a seal; a print; a stamp; a mark; a trace; image; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "print",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "yin4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 286,
+      "character": "尔",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/尔.json",
+      "sourceBlobSha": "32657cef1e0b000ba20766ed176be7b2e594e97b",
+      "traditional": "爾",
+      "dictionaryReadings": [
+        "er3"
+      ],
+      "dictionaryDefinitions": {
+        "er3": "variant of 爾|尔[er3]; thus; so; like that; you; thou; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "you",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "er3"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 287,
+      "character": "乐",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/乐.json",
+      "sourceBlobSha": "30987d7a6652f164ef841ef6123c793ad13c6261",
+      "traditional": "樂",
+      "dictionaryReadings": [
+        "Le4",
+        "Yue4",
+        "le4",
+        "yue4"
+      ],
+      "dictionaryDefinitions": {
+        "Le4": "surname Le; ",
+        "Yue4": "surname Yue; ",
+        "le4": "happy; cheerful; to laugh; ",
+        "yue4": "music; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "happy",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "le4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        },
+        {
+          "selectedMeaning": "music",
+          "sourceGlossGroupIndex": 2,
+          "matchingDictionaryReadings": [
+            "yue4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 288,
+      "character": "句",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/句.json",
+      "sourceBlobSha": "17bf5677f2513f9a5edeeada5410b119c877278c",
+      "traditional": "句",
+      "dictionaryReadings": [
+        "gou1",
+        "ju4"
+      ],
+      "dictionaryDefinitions": {
+        "gou1": "variant of 勾[gou1]; ",
+        "ju4": "sentence; clause; phrase; classifier for phrases or lines of verse; "
+      },
+      "selectedSenseChecks": [],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 289,
+      "character": "匆",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/匆.json",
+      "sourceBlobSha": "86f5e88e1799fb2a9bfdbe463b446343da383d94",
+      "traditional": "悤",
+      "dictionaryReadings": [
+        "cong1"
+      ],
+      "dictionaryDefinitions": {
+        "cong1": "hurried; hasty; variant of 匆[cong1]; variant of 匆[cong1]; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "hurriedly",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 290,
+      "character": "册",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/册.json",
+      "sourceBlobSha": "f9a8674e8796591187923035892ad03206e6e56a",
+      "traditional": "冊",
+      "dictionaryReadings": [
+        "ce4"
+      ],
+      "dictionaryDefinitions": {
+        "ce4": "book; booklet; classifier for books; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "book",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "ce4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    }
+  ]
+}
