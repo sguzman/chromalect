@@ -24,7 +24,7 @@ assert.equal(ledger.characters.length,1000);
 assert.equal(catalog.characters.length,1000);
 assert.equal(ledger.summary.productionVerifiedCharacters,0);
 
-let sourced=0,screened=0,pictograms=0,deferred=0,pending=0;
+let sourced=0,screened=0,pictograms=0,deferred=0,pending=0,expressionCount=0,multipleSenseCharacters=0;
 const distinct=new Set();
 for(let i=0;i<1000;i++){
   const entry=ledger.characters[i];
@@ -64,6 +64,8 @@ for(let i=0;i<1000;i++){
     continue;
   }
   const seen=new Set();
+  expressionCount+=expressed.length;
+  if(expressed.length>1)multipleSenseCharacters++;
   for(const c of expressed){
     assert.equal(c.state,"experimental_pictogram_candidate");
     assert.equal(c.review,"human_linguistic_and_comprehension_review_pending");
@@ -92,7 +94,15 @@ const actual={
 assert.deepEqual(actual,ledger.summary);
 assert.equal(pending+screened,1000);
 assert.equal(pictograms+deferred,screened);
-assert.ok(screened>=300,"Rank-300 screening progress must not regress");
+assert.equal(screened,1000,"Every character must have a recorded initial screening decision");
+assert.equal(pending,0,"The initial screening queue must be empty");
+assert.equal(ledger.status,"initial_screening_complete_candidates_not_production_verified");
+assert.equal(ledger.initialScreeningReview.status,"complete");
+assert.equal(ledger.initialScreeningReview.productionVerifiedSenses,0);
+assert.equal(ledger.summary.productionVerifiedCharacters,0);
+assert.equal(expressionCount,ledger.initialScreeningReview.experimentalExpressionCount);
+assert.equal(expressionCount,897,"All provisional sense expressions should be counted");
+assert.equal(multipleSenseCharacters,16);
 console.log("Mandarin semantic screening: "+
   sourced+"/1000 sourced definitions; "+screened+"/1000 screened ("+
   (100*screened/1000).toFixed(1)+"%); "+pictograms+" pictogram candidates; "+

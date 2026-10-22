@@ -1,6 +1,6 @@
 # Mandarin first-1,000 semantic screening
 
-**Status:** early source intake and first-pass emoji candidates, not a verified Mandarin lexicon or completed pictographic language. [Open the browsing view](../site/semantic-coverage.html).
+**Status:** source intake and the complete initial first-1,000-character screening are finished. Emoji candidates remain experimental, not a verified Mandarin lexicon or production-complete pictographic language. [Open the browsing view](../site/semantic-coverage.html).
 
 ## Scope and preservation
 
@@ -38,12 +38,12 @@ The percentages have deliberately distinct denominators and meanings:
 | Pending | Character with source evidence but no initial emoji decision |
 | Production verified | Character whose relevant source senses and visual mappings completed independent linguistic and comprehension review; **none as of this draft** |
 
-The first pass currently covers **ranks 1–300**. Each screened character receives one first-pass decision. It **does not claim to resolve every sense of a polysemous character**. Candidate entries identify the selected source definition group, the specific cue meaning, typed emoji expression, and pending review status. Characters with no selected emoji retain a documented abstention and the original source evidence.
+The initial pass now covers **ranks 1–1,000 (100%)**. Every character has at least one documented first-pass decision. It **does not claim to resolve every sense of a polysemous character**. After an initial internal pictogram-fidelity audit, **881 characters have experimental candidate expressions**, **119 are deferred**, and **no characters remain unscreened**. A total of **897 provisional expression assignments** are distributed across those 881 characters; **16 characters** have multiple separately recorded candidate meanings. Candidate entries identify the selected source definition group, the specific cue meaning, typed emoji expression, and pending review status. Characters with no selected emoji retain a documented abstention and the original source evidence.
 
 The data's \`summary\` is regenerated from the records and checked by [semantic_inventory_smoke.mjs](../tools/glyph-pipeline/semantic_inventory_smoke.mjs), which also checks correspondence with the original ranked catalog and validates expressions against the [formal emoji grammar](../ontology/semantic-expression-v0.1.schema.json).
 
-## Next screening and acceptance
+## Independent verification and acceptance
 
-Continue contiguous rank batches. For each character, inspect multiple candidate meanings and the lexical unit involved, select usable icon expressions only where credible, and keep explicit abstentions or unresolved senses. Reuse the same emojis and grammar rules across records. Do not require uniqueness or introduce an arbitrary emoji-count cap.
+The rank-by-rank initial screening queue is now closed. Continue with independent lexical verification, sense disambiguation, comprehension trials, and replacement or rejection of weak pictograms. Candidate expressions are *hypotheses* even when their associated source gloss contains the selected English meaning. For each character, inspect the complete set of meaningful current Mandarin uses; a first-pass candidate for one definition group is not full sense coverage. Reuse the same emojis and grammar rules across records. Do not require uniqueness or introduce an arbitrary emoji-count cap.
 
 Before an entry moves to production, evidence must distinguish the selected **Mandarin character usage** from other senses and from whole-word usage; visual recognition must be evaluated separately. No color, Pinyin, tone, glyph, or structural data may be rewritten by this process.
