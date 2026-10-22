@@ -1,0 +1,462 @@
+{
+  "schema": "chromalect.mandarin.lexical-crossref-batch.v0.1",
+  "source": {
+    "title": "CC-CEDICT per-headword v2 mirror",
+    "repository": "krmanik/cedict-json",
+    "commit": "63c2569948629323b515833930fdd10f285401b6",
+    "dataLicense": "CC BY-SA 4.0",
+    "upstream": "https://cc-cedict.org/",
+    "mirror": "https://github.com/krmanik/cedict-json",
+    "transform": "Selected single-simplified-character dictionary records, retaining readings and definitions; literal English gloss matching is automated triage only"
+  },
+  "rankStart": 461,
+  "rankEnd": 475,
+  "summary": {
+    "total": 15,
+    "headwordFound": 15,
+    "withCandidate": 14,
+    "withLiteralSupport": 10
+  },
+  "records": [
+    {
+      "rank": 461,
+      "character": "优",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/优.json",
+      "sourceBlobSha": "7bd1dbb206bc4d0810b5e15785d84fe4a9857e9c",
+      "traditional": "優",
+      "dictionaryReadings": [
+        "you1"
+      ],
+      "dictionaryDefinitions": {
+        "you1": "excellent; superior; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "excellent",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "you1"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 462,
+      "character": "臼",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/臼.json",
+      "sourceBlobSha": "a0d821334ddb1470ec224e2c7a4af05afb9c671d",
+      "traditional": "臼",
+      "dictionaryReadings": [
+        "jiu4"
+      ],
+      "dictionaryDefinitions": {
+        "jiu4": "mortar; "
+      },
+      "selectedSenseChecks": [],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 463,
+      "character": "伐",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/伐.json",
+      "sourceBlobSha": "d65a177942bd75928944e339d36eeb9d1d32b4dd",
+      "traditional": "伐",
+      "dictionaryReadings": [
+        "fa2"
+      ],
+      "dictionaryDefinitions": {
+        "fa2": "to cut down; to fell; to dispatch an expedition against; to attack; to boast; Taiwan pr. [fa1]; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "cut down",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "fa2"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 464,
+      "character": "延",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/延.json",
+      "sourceBlobSha": "c6c892f82f9e1b3e81db9d9db064a028c0c00f90",
+      "traditional": "延",
+      "dictionaryReadings": [
+        "Yan2",
+        "yan2"
+      ],
+      "dictionaryDefinitions": {
+        "Yan2": "surname Yan; ",
+        "yan2": "to prolong; to extend; to delay; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "delay",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "yan2"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 465,
+      "character": "仲",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/仲.json",
+      "sourceBlobSha": "2585152373f320211b7efec18d13a4117f18e392",
+      "traditional": "仲",
+      "dictionaryReadings": [
+        "Zhong4",
+        "zhong4"
+      ],
+      "dictionaryDefinitions": {
+        "Zhong4": "surname Zhong; ",
+        "zhong4": "second month of a season; middle; intermediate; second amongst brothers; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "mediator",
+          "sourceGlossGroupIndex": 1,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 466,
+      "character": "件",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/件.json",
+      "sourceBlobSha": "70b31e99f4e6fc537bdba174824a72fcf895b956",
+      "traditional": "件",
+      "dictionaryReadings": [
+        "jian4"
+      ],
+      "dictionaryDefinitions": {
+        "jian4": "item; component; classifier for events, things, clothes etc; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "article",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 467,
+      "character": "任",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/任.json",
+      "sourceBlobSha": "13e12ceedc4e01b425334a651b4c33ff74015349",
+      "traditional": "任",
+      "dictionaryReadings": [
+        "Ren4",
+        "ren4"
+      ],
+      "dictionaryDefinitions": {
+        "Ren4": "surname Ren; ",
+        "ren4": "to assign; to appoint; to take up a post; office; responsibility; to let; to allow; to give free rein to; no matter (how, what etc); classifier for the number of terms served in office, post, or rank; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "appoint",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "ren4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 468,
+      "character": "伤",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/伤.json",
+      "sourceBlobSha": "adc33d0b9ac80227130e277bad6d4e4f9f48b73e",
+      "traditional": "傷",
+      "dictionaryReadings": [
+        "shang1"
+      ],
+      "dictionaryDefinitions": {
+        "shang1": "to injure; injury; wound; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "injury",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "shang1"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 469,
+      "character": "价",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/价.json",
+      "sourceBlobSha": "4a4ff450e3e139d12690ece56fdc7d0a2e6481f4",
+      "traditional": "價",
+      "dictionaryReadings": [
+        "jia4",
+        "jie5"
+      ],
+      "dictionaryDefinitions": {
+        "jia4": "price; value; (chemistry) valence; ",
+        "jie5": "great; good; middleman; servant; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "price",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "jia4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 470,
+      "character": "伦",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/伦.json",
+      "sourceBlobSha": "d7e07ec5d7140343bed60c4c18a3f2aaa23cefeb",
+      "traditional": "倫",
+      "dictionaryReadings": [
+        "lun2"
+      ],
+      "dictionaryDefinitions": {
+        "lun2": "human relationship; order; coherence; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "relationships",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 471,
+      "character": "份",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/份.json",
+      "sourceBlobSha": "43ce0682e1751d71d21ef86f3ea7df8b1bbf65ce",
+      "traditional": "份",
+      "dictionaryReadings": [
+        "fen4"
+      ],
+      "dictionaryDefinitions": {
+        "fen4": "classifier for gifts, newspaper, magazine, papers, reports, contracts etc; variant of 分[fen4]; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "portion",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 472,
+      "character": "华",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/华.json",
+      "sourceBlobSha": "556fa2bff73965d9da32068168421bccc432fd37",
+      "traditional": "華",
+      "dictionaryReadings": [
+        "Hua2",
+        "Hua4",
+        "hua1",
+        "hua2"
+      ],
+      "dictionaryDefinitions": {
+        "Hua2": "abbr. for China; ",
+        "Hua4": "Mt Hua 華山|华山 in Shaanxi; surname Hua; ",
+        "hua1": "old variant of 花[hua1]; flower; ",
+        "hua2": "magnificent; splendid; flowery; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "flowery",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "hua2"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        },
+        {
+          "selectedMeaning": "Chinese",
+          "sourceGlossGroupIndex": 2,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 473,
+      "character": "仰",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/仰.json",
+      "sourceBlobSha": "022d39e59a8593a46af6b1f72837c35e36ea261a",
+      "traditional": "仰",
+      "dictionaryReadings": [
+        "Yang3",
+        "yang3"
+      ],
+      "dictionaryDefinitions": {
+        "Yang3": "surname Yang; ",
+        "yang3": "to face upward; to look up; to admire; to rely on; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "look up",
+          "sourceGlossGroupIndex": 1,
+          "matchingDictionaryReadings": [
+            "yang3"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 474,
+      "character": "仿",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/仿.json",
+      "sourceBlobSha": "f5971ee5f677cd5137808ecea3414af39f1b9e9f",
+      "traditional": "彷",
+      "dictionaryReadings": [
+        "fang3"
+      ],
+      "dictionaryDefinitions": {
+        "fang3": "to imitate; to copy; variant of 仿[fang3]; seemingly; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "imitate",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "fang3"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 475,
+      "character": "伙",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/伙.json",
+      "sourceBlobSha": "b2c15d3329f955dcb2a75455eceb4a60802ad520",
+      "traditional": "夥",
+      "dictionaryReadings": [
+        "huo3"
+      ],
+      "dictionaryDefinitions": {
+        "huo3": "meals (abbr. for 伙食[huo3 shi2]); variant of 夥|伙[huo3]; companion; partner; group; classifier for groups of people; to combine; together; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "companion",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "huo3"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    }
+  ]
+}
