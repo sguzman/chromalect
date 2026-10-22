@@ -51,15 +51,22 @@
     header.append(hanzi,elem("span","semantic-rank","Rank "+entry.rank));
     card.appendChild(header);
     const screened = state(entry);
-    const selection = entry.screening.candidates.find(x=>x.expression);
-    const label = selection ? "Candidate meaning: " + selection.selectedMeaning :
-      screened==="deferred" ? "Pictogram deferred" : "Awaiting first semantic screening";
-    card.appendChild(elem("p","semantic-meaning",label));
-    if (selection && enabled.checked) {
-      const visual=elem("div","semantic-emoji",grammar.emojiDisplay(selection.expression));
-      visual.setAttribute("role","img");
-      visual.setAttribute("aria-label","Experimental emoji for "+selection.selectedMeaning);
-      card.appendChild(visual);
+    const selections = entry.screening.candidates.filter(x=>x.expression);
+    if (selections.length) {
+      for(const selection of selections) {
+        const sense = elem("div","semantic-sense");
+        sense.appendChild(elem("p","semantic-meaning","Candidate meaning: "+selection.selectedMeaning));
+        if (enabled.checked) {
+          const visual=elem("div","semantic-emoji",grammar.emojiDisplay(selection.expression));
+          visual.setAttribute("role","img");
+          visual.setAttribute("aria-label","Experimental emoji for "+selection.selectedMeaning);
+          sense.appendChild(visual);
+        }
+        card.appendChild(sense);
+      }
+    } else {
+      card.appendChild(elem("p","semantic-meaning",
+        screened==="deferred" ? "Pictogram deferred" : "Awaiting first semantic screening"));
     }
     card.appendChild(elem("p","semantic-status",
       screened==="candidate" ? "Experimental emoji • independent review pending" :
@@ -68,16 +75,16 @@
     const details=elem("details");
     const summary=elem("summary",null,"Source meaning evidence");
     details.appendChild(summary);
-    const definition=elem("p","semantic-source",entry.source.definition);
-    details.appendChild(definition);
+    details.appendChild(elem("p","semantic-source",entry.source.definition));
     details.appendChild(elem("p","semantic-source",
       "Provisional Unihan kDefinition • "+entry.source.codepoint+
       " • "+entry.source.groupCandidates.length+" candidate definition group(s)"));
-    if (selection) {
+    for (const selection of selections) {
       details.appendChild(elem("p","semantic-source",
-        "Emoji targets source group "+(selection.sourceGroupIndex+1)+
-        " only; other potential senses have not been individually mapped."));
-    } else if (screened==="deferred") {
+        selection.selectedMeaning+" refers to candidate definition group "+
+        (selection.sourceGroupIndex+1)+"; other possible senses are not automatically mapped."));
+    }
+    if (screened==="deferred") {
       details.appendChild(elem("p","semantic-source",
         "No emoji was assigned; the sourced definition remains available."));
     }
