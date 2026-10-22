@@ -25,13 +25,11 @@
       area.appendChild(node("span", "semantic-abstain", "No clear emoji expression"));
       return area;
     }
-    const tokens = grammar.parts(example.expr);
+    const tokens = grammar.emojiParts(example.expr);
     area.setAttribute("role", "img");
-    area.setAttribute("aria-label", "Experimental semantic notation: " + grammar.display(example.expr));
+    area.setAttribute("aria-label", "Illustrative emoji expression: " + grammar.emojiDisplay(example.expr));
     for (const token of tokens) {
-      const symbol = node("span",
-        token.kind === "emoji" ? "semantic-symbol" : "semantic-operator",
-        token.text);
+      const symbol = node("span", "semantic-symbol", token.text);
       symbol.setAttribute("aria-hidden", "true");
       area.appendChild(symbol);
     }
@@ -59,7 +57,7 @@
       fragment.appendChild(card);
     }
     grid.replaceChildren(fragment);
-    status.textContent = (mode === "symbols" ? "Grammar-backed emoji expressions" : "Plain Chinese / concepts") +
+    status.textContent = (mode === "symbols" ? "Emoji expressions" : "Plain Chinese / concepts") +
       " · " + examples.length + " illustrative meanings" +
       (checkbox.checked ? " · written meanings shown" : " · written meanings hidden");
     for (const button of buttons) {
