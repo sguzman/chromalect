@@ -1,0 +1,321 @@
+{
+  "schema": "chromalect.mandarin.lexical-crossref-batch.v0.1",
+  "source": {
+    "title": "CC-CEDICT per-headword v2 mirror",
+    "repository": "krmanik/cedict-json",
+    "commit": "63c2569948629323b515833930fdd10f285401b6",
+    "dataLicense": "CC BY-SA 4.0",
+    "upstream": "https://cc-cedict.org/",
+    "mirror": "https://github.com/krmanik/cedict-json",
+    "transform": "Selected single-simplified-character dictionary records, retaining readings and definitions; literal English gloss matching is automated triage only"
+  },
+  "rankStart": 961,
+  "rankEnd": 970,
+  "summary": {
+    "total": 10,
+    "headwordFound": 10,
+    "withCandidate": 10,
+    "withLiteralSupport": 8
+  },
+  "records": [
+    {
+      "rank": 961,
+      "character": "拣",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/拣.json",
+      "sourceBlobSha": "f12d0601c3ddf95fbce9da4ac3e46ad538549640",
+      "traditional": "揀",
+      "dictionaryReadings": [
+        "jian3"
+      ],
+      "dictionaryDefinitions": {
+        "jian3": "to choose; to pick; to sort out; to pick up; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "choose",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "jian3"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 962,
+      "character": "坦",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/坦.json",
+      "sourceBlobSha": "43cb8e37a5605d7e0882fa4ab9824bf32955a8bc",
+      "traditional": "坦",
+      "dictionaryReadings": [
+        "tan3"
+      ],
+      "dictionaryDefinitions": {
+        "tan3": "flat; open-hearted; level; smooth; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "flat",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "tan3"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 963,
+      "character": "担",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/担.json",
+      "sourceBlobSha": "9aced8bc1be564b6b89aa5121386a7f4f343f83b",
+      "traditional": "擔",
+      "dictionaryReadings": [
+        "dan1",
+        "dan4"
+      ],
+      "dictionaryDefinitions": {
+        "dan1": "to undertake; to carry; to shoulder; to take responsibility; ",
+        "dan4": "picul (100 catties, 50 kg); two buckets full; carrying pole and its load; classifier for loads carried on a shoulder pole; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "carry",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "dan1",
+            "dan4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 964,
+      "character": "坤",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/坤.json",
+      "sourceBlobSha": "0de8d0275a75228b683c82df4142650c9ad4743c",
+      "traditional": "堃",
+      "dictionaryReadings": [
+        "kun1"
+      ],
+      "dictionaryDefinitions": {
+        "kun1": "one of the Eight Trigrams 八卦[ba1 gua4], symbolizing earth; female principle; ☷; ancient Chinese compass point: 225° (southwest); variant of 坤[kun1]; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "earth",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "kun1"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        },
+        {
+          "selectedMeaning": "female",
+          "sourceGlossGroupIndex": 1,
+          "matchingDictionaryReadings": [
+            "kun1"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 965,
+      "character": "押",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/押.json",
+      "sourceBlobSha": "02e99acaf9657cb85587c218b2dff3f939484c44",
+      "traditional": "押",
+      "dictionaryReadings": [
+        "ya1"
+      ],
+      "dictionaryDefinitions": {
+        "ya1": "to mortgage; to pawn; to detain in custody; to escort and protect; (literary) to sign; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "pledge",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 966,
+      "character": "抽",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/抽.json",
+      "sourceBlobSha": "a9d08839423af9843cc3612d1a5fba2af6c4ff27",
+      "traditional": "抽",
+      "dictionaryReadings": [
+        "chou1"
+      ],
+      "dictionaryDefinitions": {
+        "chou1": "to draw out; to pull out from in between; to remove part of the whole; (of certain plants) to sprout or bud; to whip or thrash; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "pull out",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "chou1"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 967,
+      "character": "拐",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/拐.json",
+      "sourceBlobSha": "5d4343012babe458272494af74bc9e94ed4fd0da",
+      "traditional": "拐",
+      "dictionaryReadings": [
+        "guai3"
+      ],
+      "dictionaryDefinitions": {
+        "guai3": "to turn (a corner etc); to kidnap; to swindle; to misappropriate; walking stick; crutch; seven (used as a substitute for 七[qi1]); "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "turn",
+          "sourceGlossGroupIndex": 1,
+          "matchingDictionaryReadings": [
+            "guai3"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 968,
+      "character": "拖",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/拖.json",
+      "sourceBlobSha": "f029ad7a96012aaf2da1592a97e9b980e17b0964",
+      "traditional": "拖",
+      "dictionaryReadings": [
+        "tuo1"
+      ],
+      "dictionaryDefinitions": {
+        "tuo1": "variant of 拖[tuo1]; to drag; to tow; to trail; to hang down; to mop (the floor); to delay; to drag on; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "drag",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "tuo1"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 969,
+      "character": "者",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/者.json",
+      "sourceBlobSha": "e6cdaebe0fd17b11e06cd92ee1fbfbc15a2cf893",
+      "traditional": "者",
+      "dictionaryReadings": [
+        "zhe3"
+      ],
+      "dictionaryDefinitions": {
+        "zhe3": "(after a verb or adjective) one who (is) ...; (after a noun) person involved in ...; -er; -ist; (used after a number or 後|后[hou4] or 前[qian2] to refer to sth mentioned previously); (used after a term, to mark a pause before defining the term); (old) (used at the end of a command); (old) this; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "those who",
+          "sourceGlossGroupIndex": 2,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 970,
+      "character": "拍",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/拍.json",
+      "sourceBlobSha": "0bbf3418506f4c09d3d3083413dcd367d95bccb1",
+      "traditional": "拍",
+      "dictionaryReadings": [
+        "pai1"
+      ],
+      "dictionaryDefinitions": {
+        "pai1": "to pat; to clap; to slap; to swat; to take (a photo); to shoot (a film); racket (sports); beat (music); "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "clap",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "pai1"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    }
+  ]
+}
