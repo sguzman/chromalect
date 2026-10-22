@@ -1,13 +1,13 @@
 # Mandarin lexical verification: independent dictionary intake
 
-**Status (2026-10-22):** first 300 character headwords cross-referenced; human linguistic verification and pictogram comprehension review not yet completed. The original 1,000-character screening is already complete.
+**Status (2026-10-22):** first 400 character headwords cross-referenced; human linguistic verification and pictogram comprehension review not yet completed. The original 1,000-character screening is already complete.
 
 ## Independent second source
 
-The original first-pass semantic evidence came from pinned Unicode Unihan draft \`kDefinition\` records. The [new cross-reference manifest](../data/semantic/cedict-crossref/manifest-v0.1.json) examines ranks **1–300** against a **separate CC-CEDICT** headword dictionary, using a pinned per-character [cedict-json](https://github.com/krmanik/cedict-json) mirror revision \`63c2569948629323b515833930fdd10f285401b6\`.
+The original first-pass semantic evidence came from pinned Unicode Unihan draft \`kDefinition\` records. The [new cross-reference manifest](../data/semantic/cedict-crossref/manifest-v0.1.json) examines ranks **1–400** against a **separate CC-CEDICT** headword dictionary, using a pinned per-character [cedict-json](https://github.com/krmanik/cedict-json) mirror revision \`63c2569948629323b515833930fdd10f285401b6\`.
 
 - Original compiler: CC-CEDICT community project. Mirror/JSON adaptation: Mani (Infinyte7), **CC BY-SA 4.0**; source licenses apply separately to the [batch records](../data/semantic/cedict-crossref/), and attribution is in [third-party notices](../THIRD_PARTY_NOTICES.md).
-- The 21 batch files preserve the selected headword, traditional form, pinyin readings, dictionary gloss text, mirror file SHA, and source provenance. They **do not relicense** CC-CEDICT under the repository's software license.
+- The 28 batch files preserve the selected headword, traditional form, pinyin readings, dictionary gloss text, mirror file SHA, and source provenance. They **do not relicense** CC-CEDICT under the repository's software license.
 - The manifest summarizes support flags without copying the full dictionary. The actual database snapshot is not a live dictionary and may contain old, infrequent, regional, proper-name, or character-only usages.
 - A **literal gloss match** is a case-insensitive English substring check only. It is not semantic inference, independent human lexical validation, and certainly not a comprehension test. The same meaning can be expressed with different English words, and a literal match can still be misleading.
 
@@ -17,12 +17,12 @@ The original first-pass semantic evidence came from pinned Unicode Unihan draft 
 | --- | ---: | ---: | --- |
 | Unihan initial source coverage | 1,000 / 1,000 | 100% | One provisional definition source available |
 | Initial pictogram screening | 1,000 / 1,000 | 100% | Candidate or explicit abstention |
-| Independent CC-CEDICT headword cross-reference | 300 / 1,000 | 30% | Separate dictionary retrieved and indexed |
+| Independent CC-CEDICT headword cross-reference | 400 / 1,000 | 40% | Separate dictionary retrieved and indexed |
 | Independent human lexical sense approval | 0 / 1,000 | 0% | No completed linguistic review |
 | Independent emoji comprehension approval | 0 / 1,000 | 0% | No completed human tests |
 | Production semantic verification | 0 / 1,000 | 0% | Requires both linguistic and pictographic acceptance |
 
-Among the first 300 characters, 216 have initial emoji candidates (223 expression assignments). **174 of 223** proposed sense glosses were found as literal English substrings in the corresponding CC-CEDICT headword; **49 of 223** require synonym, polysemy, or lexical-category inspection. All 300 characters have independent headword entries; 84 currently have no candidate emoji. The literal matches are a **triage signal, not 64 verified translations**.
+Among the first 400 characters, 308 have initial emoji candidates (316 expression assignments). **239 of 316** proposed sense glosses were found as literal English substrings in the corresponding CC-CEDICT headword; **77 of 316** require synonym, polysemy, or lexical-category inspection. All 400 characters have independent headword entries; 92 currently have no candidate emoji. The literal matches are a **triage signal, not 239 verified translations**.
 
 ## Candidate discrepancy queue (preliminary human-authored triage)
 
@@ -65,6 +65,19 @@ These flags need per-sense review, not automatic rejection. Particular issues in
 - **主**: "chief" can be related to master, owner, primary, or principal without representing every usage equally.
 
 Some apparent mismatches result solely from a different English grammatical form, and some may reflect a genuinely poor emoji candidate. Neither source lookup nor substring comparison resolves that ambiguity.
+
+### Fourth batch: ranks 301–400
+
+The fourth hundred adds 93 experimental sense expressions: 65 literal English-gloss matches and 28 candidates flagged for closer analysis. All 100 have independent headword evidence from the pinned CC-CEDICT source.
+
+The flags include 汇, 汉, 让, 讯, 司, 民, 弘, 巩, 执, 扩, 场, 扬, 过, 厌, 夸, and 死. The complete 77 mismatches across the four hundred characters remain traceable through their rank and selected sense in the manifest. The following need special scrutiny:
+
+- **汉**: a modern language or ethnic identification should not be inferred from a generic pictogram without evidence.
+- **让**: the selected "allow" sense is narrower than the character's broader constructions; validate its grammar and event context.
+- **民**: a collective people/citizens picture must be checked against the chosen lexical sense.
+- **死**: "death" versus "die" entails a noun/verb distinction; skull imagery alone cannot establish either.
+
+No mismatched expression, including a likely synonym, has been automatically accepted or rejected. Pictograms retain their experimental status.
 
 ## Approval gates
 
