@@ -1,0 +1,432 @@
+{
+  "schema": "chromalect.mandarin.lexical-crossref-batch.v0.1",
+  "source": {
+    "title": "CC-CEDICT per-headword v2 mirror",
+    "repository": "krmanik/cedict-json",
+    "commit": "63c2569948629323b515833930fdd10f285401b6",
+    "dataLicense": "CC BY-SA 4.0",
+    "upstream": "https://cc-cedict.org/",
+    "mirror": "https://github.com/krmanik/cedict-json",
+    "transform": "Selected single-simplified-character dictionary records, retaining readings and definitions; literal English gloss matching is automated triage only"
+  },
+  "rankStart": 331,
+  "rankEnd": 345,
+  "summary": {
+    "total": 15,
+    "headwordFound": 15,
+    "withCandidate": 12,
+    "withLiteralSupport": 10
+  },
+  "records": [
+    {
+      "rank": 331,
+      "character": "辽",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/辽.json",
+      "sourceBlobSha": "8c0098f1dd17ddb9490d093fc71ab8aec6fb4cd8",
+      "traditional": "遼",
+      "dictionaryReadings": [
+        "Liao2"
+      ],
+      "dictionaryDefinitions": {
+        "Liao2": "short name for Liaoning 遼寧|辽宁[Liao2 ning2] province; Liao or Khitan dynasty (907-1125); "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "distant",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 332,
+      "character": "奶",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/奶.json",
+      "sourceBlobSha": "493e840aba61b7ec738a2db2e5737fc64c5ec326",
+      "traditional": "嬭",
+      "dictionaryReadings": [
+        "nai3"
+      ],
+      "dictionaryDefinitions": {
+        "nai3": "breast; milk; to breastfeed; variant of 嬭|奶[nai3]; mother; variant of 奶[nai3]; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "milk",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "nai3"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 333,
+      "character": "奴",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/奴.json",
+      "sourceBlobSha": "c785ce94bfad3566aae019d7d00013e2add5db2a",
+      "traditional": "奴",
+      "dictionaryReadings": [
+        "nu2"
+      ],
+      "dictionaryDefinitions": {
+        "nu2": "slave; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "slave",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "nu2"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 334,
+      "character": "召",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/召.json",
+      "sourceBlobSha": "156a904faa8988f97cc215abe25b32c7e3afef6b",
+      "traditional": "召",
+      "dictionaryReadings": [
+        "Shao4",
+        "zhao4"
+      ],
+      "dictionaryDefinitions": {
+        "Shao4": "surname Shao; name of an ancient state that existed in what is now Shaanxi Province; ",
+        "zhao4": "to call together; to summon; to convene; temple or monastery (used in place names in Inner Mongolia); "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "summon",
+          "sourceGlossGroupIndex": 1,
+          "matchingDictionaryReadings": [
+            "zhao4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 335,
+      "character": "加",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/加.json",
+      "sourceBlobSha": "4fab4741456043667e7c057c2fc5063489402871",
+      "traditional": "加",
+      "dictionaryReadings": [
+        "Jia1",
+        "jia1"
+      ],
+      "dictionaryDefinitions": {
+        "Jia1": "abbr. for Canada 加拿大[Jia1 na2 da4]; surname Jia; ",
+        "jia1": "to add; plus; (used after an adverb such as 不, 大, 稍 etc, and before a disyllabic verb, to indicate that the action of the verb is applied to sth or sb previously mentioned); to apply (restrictions etc) to (sb); to give (support, consideration etc) to (sth); "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "increase",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 336,
+      "character": "皮",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/皮.json",
+      "sourceBlobSha": "b6df067be94dc74e0706e34e901a1d1ba268672e",
+      "traditional": "皮",
+      "dictionaryReadings": [
+        "Pi2",
+        "pi2"
+      ],
+      "dictionaryDefinitions": {
+        "Pi2": "surname Pi; ",
+        "pi2": "leather; skin; fur; CL:張|张[zhang1]; pico- (one trillionth); naughty; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "skin",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "pi2"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 337,
+      "character": "边",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/边.json",
+      "sourceBlobSha": "8b59dce9e956c16d9e2c7adcecc7406cc7e30ffd",
+      "traditional": "邊",
+      "dictionaryReadings": [
+        "bian1",
+        "bian5"
+      ],
+      "dictionaryDefinitions": {
+        "bian1": "side; edge; margin; border; boundary; CL:個|个[ge4]; simultaneously; ",
+        "bian5": "suffix of a noun of locality; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "border",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "bian1"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 338,
+      "character": "孕",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/孕.json",
+      "sourceBlobSha": "bf75c72619e84b7213ad9c942f267ba2dc5b280b",
+      "traditional": "孕",
+      "dictionaryReadings": [
+        "yun4"
+      ],
+      "dictionaryDefinitions": {
+        "yun4": "pregnant; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "pregnant",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "yun4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 339,
+      "character": "发",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/发.json",
+      "sourceBlobSha": "0bd2b5e4122c637278a57ac25be543a569c9eb7b",
+      "traditional": "髮",
+      "dictionaryReadings": [
+        "fa1",
+        "fa4"
+      ],
+      "dictionaryDefinitions": {
+        "fa1": "to send out; to show (one's feeling); to issue; to develop; to make a bundle of money; classifier for gunshots (rounds); ",
+        "fa4": "hair; Taiwan pr. [fa3]; "
+      },
+      "selectedSenseChecks": [],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 340,
+      "character": "圣",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/圣.json",
+      "sourceBlobSha": "da602f8be50e9c354454598663bad592724e62c1",
+      "traditional": "聖",
+      "dictionaryReadings": [
+        "sheng4"
+      ],
+      "dictionaryDefinitions": {
+        "sheng4": "holy; sacred; saint; sage; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "holy",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "sheng4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 341,
+      "character": "对",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/对.json",
+      "sourceBlobSha": "8f927dd74a30750b56df1ed1fed3694d3fdcecee",
+      "traditional": "對",
+      "dictionaryReadings": [
+        "dui4"
+      ],
+      "dictionaryDefinitions": {
+        "dui4": "right; correct; couple; pair; towards; at; for; to face; opposite; to treat (sb a certain way); to match together; to adjust; to fit; to suit; to answer; to reply; classifier: couple; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "correct",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "dui4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 342,
+      "character": "台",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/台.json",
+      "sourceBlobSha": "1df03d52fd1c7caf301462f18f77963e7edeb88f",
+      "traditional": "颱",
+      "dictionaryReadings": [
+        "Tai2",
+        "tai2"
+      ],
+      "dictionaryDefinitions": {
+        "Tai2": "Taiwan (abbr.); surname Tai; Taiwan (abbr.); ",
+        "tai2": "(classical) you (in letters); variant of 臺|台[tai2]; desk; table; counter; platform; stage; terrace; stand; support; station; broadcasting station; classifier for vehicles or machines; typhoon; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "platform",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "tai2"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 343,
+      "character": "矛",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/矛.json",
+      "sourceBlobSha": "2b5235372248898db60eaa5fdc9806232e5c1224",
+      "traditional": "矛",
+      "dictionaryReadings": [
+        "mao2"
+      ],
+      "dictionaryDefinitions": {
+        "mao2": "spear; lance; pike; "
+      },
+      "selectedSenseChecks": [],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 344,
+      "character": "纠",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/纠.json",
+      "sourceBlobSha": "892a6ed996ef5a33d29e8be1be42d8a9b5b38618",
+      "traditional": "糾",
+      "dictionaryReadings": [
+        "jiu1"
+      ],
+      "dictionaryDefinitions": {
+        "jiu1": "old variant of 糾|纠[jiu1]; to gather together; to investigate; to entangle; to correct; "
+      },
+      "selectedSenseChecks": [],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 345,
+      "character": "母",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/母.json",
+      "sourceBlobSha": "695c07c0fbfca868ccda22a17bf3c0a045f6ad4d",
+      "traditional": "母",
+      "dictionaryReadings": [
+        "mu3"
+      ],
+      "dictionaryDefinitions": {
+        "mu3": "mother; elderly female relative; origin; source; (of animals) female; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "mother",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "mu3"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    }
+  ]
+}
