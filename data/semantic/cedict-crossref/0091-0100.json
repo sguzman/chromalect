@@ -1,0 +1,288 @@
+{
+  "schema": "chromalect.mandarin.lexical-crossref-batch.v0.1",
+  "source": {
+    "title": "CC-CEDICT per-headword v2 mirror",
+    "repository": "krmanik/cedict-json",
+    "commit": "63c2569948629323b515833930fdd10f285401b6",
+    "dataLicense": "CC BY-SA 4.0",
+    "upstream": "https://cc-cedict.org/",
+    "mirror": "https://github.com/krmanik/cedict-json",
+    "transform": "Selected single-simplified-character dictionary records, retaining readings and definitions; literal English gloss matching is automated triage only"
+  },
+  "rankStart": 91,
+  "rankEnd": 100,
+  "summary": {
+    "total": 10,
+    "headwordFound": 10,
+    "withCandidate": 6,
+    "withLiteralSupport": 6
+  },
+  "records": [
+    {
+      "rank": 91,
+      "character": "不",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/不.json",
+      "sourceBlobSha": "6b299d8fdcbf66955f2e66dffa3d371aa32d61f2",
+      "traditional": "不",
+      "dictionaryReadings": [
+        "bu4"
+      ],
+      "dictionaryDefinitions": {
+        "bu4": "(negative prefix); not; no; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "not",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "bu4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 92,
+      "character": "犬",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/犬.json",
+      "sourceBlobSha": "2804f97e85ac30e039c536e41a8608dcb364d1c9",
+      "traditional": "犬",
+      "dictionaryReadings": [
+        "quan3"
+      ],
+      "dictionaryDefinitions": {
+        "quan3": "dog; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "dog",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "quan3"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 93,
+      "character": "太",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/太.json",
+      "sourceBlobSha": "384151413fd429a07a18b21f7fd3a3560beeec4c",
+      "traditional": "太",
+      "dictionaryReadings": [
+        "tai4"
+      ],
+      "dictionaryDefinitions": {
+        "tai4": "highest; greatest; too (much); very; extremely; "
+      },
+      "selectedSenseChecks": [],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 94,
+      "character": "区",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/区.json",
+      "sourceBlobSha": "426b1fb68a16d8783932662fa2780bec8a1258cd",
+      "traditional": "區",
+      "dictionaryReadings": [
+        "Ou1",
+        "qu1"
+      ],
+      "dictionaryDefinitions": {
+        "Ou1": "surname Ou; ",
+        "qu1": "area; region; district; small; distinguish; CL:個|个[ge4]; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "area",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "qu1"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 95,
+      "character": "历",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/历.json",
+      "sourceBlobSha": "d28ddef89a23921d67daa739edd01707a542181d",
+      "traditional": "歷",
+      "dictionaryReadings": [
+        "li4"
+      ],
+      "dictionaryDefinitions": {
+        "li4": "old variant of 曆|历[li4]; old variant of 歷|历[li4]; calendar; old variant of 歷|历[li4]; to experience; to undergo; to pass through; all; each; every; history; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "calendar",
+          "sourceGlossGroupIndex": 1,
+          "matchingDictionaryReadings": [
+            "li4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        },
+        {
+          "selectedMeaning": "history",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "li4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 96,
+      "character": "歹",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/歹.json",
+      "sourceBlobSha": "d52d672cd5a155114f0dc2d07321996ca0b1ea53",
+      "traditional": "歹",
+      "dictionaryReadings": [
+        "dai3"
+      ],
+      "dictionaryDefinitions": {
+        "dai3": "bad; wicked; evil; "
+      },
+      "selectedSenseChecks": [],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 97,
+      "character": "友",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/友.json",
+      "sourceBlobSha": "e2da099f2244092c7c5bdfe631a6ed837b8eb114",
+      "traditional": "友",
+      "dictionaryReadings": [
+        "you3"
+      ],
+      "dictionaryDefinitions": {
+        "you3": "friend; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "friend",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "you3"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 98,
+      "character": "尤",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/尤.json",
+      "sourceBlobSha": "dddfd34fe00bb2501475e4b616f80b5534d339cd",
+      "traditional": "尤",
+      "dictionaryReadings": [
+        "You2",
+        "you2"
+      ],
+      "dictionaryDefinitions": {
+        "You2": "surname You; ",
+        "you2": "outstanding; particularly, especially; a fault; to express discontentment against; "
+      },
+      "selectedSenseChecks": [],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 99,
+      "character": "匹",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/匹.json",
+      "sourceBlobSha": "7d88f83b58c7e4c3afbfb179b64eb71791227b2f",
+      "traditional": "疋",
+      "dictionaryReadings": [
+        "pi1",
+        "pi3"
+      ],
+      "dictionaryDefinitions": {
+        "pi1": "mate; one of a pair; ",
+        "pi3": "classifier for horses, mules etc; Taiwan pr. [pi1]; ordinary person; classifier for cloth: bolt; horsepower; variant of 匹[pi3]; classifier for cloth: bolt; "
+      },
+      "selectedSenseChecks": [],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 100,
+      "character": "车",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/车.json",
+      "sourceBlobSha": "8c2d3131ef80d05353a955322dfa18f636e92b21",
+      "traditional": "車",
+      "dictionaryReadings": [
+        "Che1",
+        "che1",
+        "ju1"
+      ],
+      "dictionaryDefinitions": {
+        "Che1": "surname Che; ",
+        "che1": "car; vehicle; CL:輛|辆[liang4]; machine; to shape with a lathe; ",
+        "ju1": "war chariot (archaic); rook (in Chinese chess); rook (in chess); "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "vehicle",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "che1"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    }
+  ]
+}
