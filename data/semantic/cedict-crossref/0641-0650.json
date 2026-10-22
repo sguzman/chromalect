@@ -1,0 +1,312 @@
+{
+  "schema": "chromalect.mandarin.lexical-crossref-batch.v0.1",
+  "source": {
+    "title": "CC-CEDICT per-headword v2 mirror",
+    "repository": "krmanik/cedict-json",
+    "commit": "63c2569948629323b515833930fdd10f285401b6",
+    "dataLicense": "CC BY-SA 4.0",
+    "upstream": "https://cc-cedict.org/",
+    "mirror": "https://github.com/krmanik/cedict-json",
+    "transform": "Selected single-simplified-character dictionary records, retaining readings and definitions; literal English gloss matching is automated triage only"
+  },
+  "rankStart": 641,
+  "rankEnd": 650,
+  "summary": {
+    "total": 10,
+    "headwordFound": 10,
+    "withCandidate": 10,
+    "withLiteralSupport": 8
+  },
+  "records": [
+    {
+      "rank": 641,
+      "character": "抑",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/抑.json",
+      "sourceBlobSha": "adba1e3e1792f2e35349695f02cef41501123eb6",
+      "traditional": "抑",
+      "dictionaryReadings": [
+        "yi4"
+      ],
+      "dictionaryDefinitions": {
+        "yi4": "to restrain; to restrict; to keep down; or; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "repress",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 642,
+      "character": "抛",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/抛.json",
+      "sourceBlobSha": "1bd6f42ce78d4e10fae96aa26c9e7048c9baf020",
+      "traditional": "拋",
+      "dictionaryReadings": [
+        "pao1"
+      ],
+      "dictionaryDefinitions": {
+        "pao1": "to throw; to toss; to fling; to cast; to abandon; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "throw",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "pao1"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 643,
+      "character": "投",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/投.json",
+      "sourceBlobSha": "cd05239bde787bbed20b3e370ce08234a5884ff8",
+      "traditional": "投",
+      "dictionaryReadings": [
+        "tou2"
+      ],
+      "dictionaryDefinitions": {
+        "tou2": "to cast; to send; to throw oneself (into the river etc); to seek refuge; to place oneself into the hands of; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "throw",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "tou2"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 644,
+      "character": "坟",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/坟.json",
+      "sourceBlobSha": "ccf01436286cf6592346b8ea0b923aac4c30b819",
+      "traditional": "墳",
+      "dictionaryReadings": [
+        "fen2"
+      ],
+      "dictionaryDefinitions": {
+        "fen2": "grave; tomb; CL:座[zuo4]; embankment; mound; ancient book; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "grave",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "fen2"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 645,
+      "character": "坑",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/坑.json",
+      "sourceBlobSha": "039ce53cfe3b9f2d8079198acb1fbd7ded8cf5a3",
+      "traditional": "阬",
+      "dictionaryReadings": [
+        "keng1"
+      ],
+      "dictionaryDefinitions": {
+        "keng1": "hole; pit; tunnel; to defraud; variant of 坑[keng1]; pit; hole; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "pit",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "keng1"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 646,
+      "character": "抗",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/抗.json",
+      "sourceBlobSha": "6b9f419efad774c4901d54664bde41dc1af31e14",
+      "traditional": "抗",
+      "dictionaryReadings": [
+        "kang4"
+      ],
+      "dictionaryDefinitions": {
+        "kang4": "to resist; to fight; to defy; anti-; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "resist",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "kang4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 647,
+      "character": "坊",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/坊.json",
+      "sourceBlobSha": "1fd336f3ffe393c8261217201921db9aef1e7524",
+      "traditional": "坊",
+      "dictionaryReadings": [
+        "Fang1",
+        "fang1",
+        "fang2"
+      ],
+      "dictionaryDefinitions": {
+        "Fang1": "surname Fang; ",
+        "fang1": "lane (usually as part of a street name); memorial archway; ",
+        "fang2": "workshop; mill; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "neighborhood",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 648,
+      "character": "抖",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/抖.json",
+      "sourceBlobSha": "e0c7ccf217f0ddd20a44ea446e41d367cf43703f",
+      "traditional": "抖",
+      "dictionaryReadings": [
+        "dou3"
+      ],
+      "dictionaryDefinitions": {
+        "dou3": "to tremble; to shake out; to reveal; to make it in the world; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "shake",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "dou3"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 649,
+      "character": "护",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/护.json",
+      "sourceBlobSha": "b831c6be9f444e036cda8591bf52146fbb95238d",
+      "traditional": "護",
+      "dictionaryReadings": [
+        "hu4"
+      ],
+      "dictionaryDefinitions": {
+        "hu4": "to protect; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "protect",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "hu4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 650,
+      "character": "壳",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/壳.json",
+      "sourceBlobSha": "f598860c44f40d724ce449c3409b729b3248e6fa",
+      "traditional": "殼",
+      "dictionaryReadings": [
+        "qiao4"
+      ],
+      "dictionaryDefinitions": {
+        "qiao4": "shell; carapace; crust (earth's crust etc); also pr. [ke2]; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "shell",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "qiao4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    }
+  ]
+}
