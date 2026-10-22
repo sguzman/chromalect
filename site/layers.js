@@ -125,8 +125,11 @@
     wrap.appendChild(glyph);
     const pronunciation=make("div","phonetics-marker");
     pronunciation.setAttribute("aria-label","Pinyin "+reading.display);
-    pronunciation.append(make("span","onset",reading.initial.token),
-      make("span","rime",reading.final.token));
+    const onsetToken=reading.initial.token==="∅" ? "" : reading.initial.token;
+    const markedFinal=reading.display.startsWith(onsetToken)
+      ? reading.display.slice(onsetToken.length) : reading.final.token;
+    if (onsetToken) pronunciation.appendChild(make("span","onset",onsetToken));
+    pronunciation.appendChild(make("span","rime",markedFinal));
     wrap.appendChild(pronunciation);
     const tone=make("span","tone-marker",reading.tone.symbol);
     tone.setAttribute("aria-label","Tone "+reading.tone.category);
