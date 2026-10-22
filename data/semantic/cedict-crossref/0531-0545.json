@@ -1,0 +1,460 @@
+{
+  "schema": "chromalect.mandarin.lexical-crossref-batch.v0.1",
+  "source": {
+    "title": "CC-CEDICT per-headword v2 mirror",
+    "repository": "krmanik/cedict-json",
+    "commit": "63c2569948629323b515833930fdd10f285401b6",
+    "dataLicense": "CC BY-SA 4.0",
+    "upstream": "https://cc-cedict.org/",
+    "mirror": "https://github.com/krmanik/cedict-json",
+    "transform": "Selected single-simplified-character dictionary records, retaining readings and definitions; literal English gloss matching is automated triage only"
+  },
+  "rankStart": 531,
+  "rankEnd": 545,
+  "summary": {
+    "total": 15,
+    "headwordFound": 15,
+    "withCandidate": 14,
+    "withLiteralSupport": 12
+  },
+  "records": [
+    {
+      "rank": 531,
+      "character": "并",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/并.json",
+      "sourceBlobSha": "ba554dd11493207e4741c6a8b3d482276f8e208f",
+      "traditional": "竝",
+      "dictionaryReadings": [
+        "bing4"
+      ],
+      "dictionaryDefinitions": {
+        "bing4": "and; furthermore; also; together with; (not) at all; simultaneously; to combine; to join; to merge; to combine; to amalgamate; variant of 並|并[bing4]; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "combine",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "bing4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 532,
+      "character": "关",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/关.json",
+      "sourceBlobSha": "1599662cb30a97d838acafcc8638cfc9261c71c6",
+      "traditional": "關",
+      "dictionaryReadings": [
+        "Guan1",
+        "guan1"
+      ],
+      "dictionaryDefinitions": {
+        "Guan1": "surname Guan; ",
+        "guan1": "mountain pass; to close; to shut; to turn off; to concern; to involve; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "close",
+          "sourceGlossGroupIndex": 1,
+          "matchingDictionaryReadings": [
+            "guan1"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 533,
+      "character": "米",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/米.json",
+      "sourceBlobSha": "56f32bcf4e8eb59ba853abaeb65f7cc4fd322543",
+      "traditional": "米",
+      "dictionaryReadings": [
+        "Mi3",
+        "mi3"
+      ],
+      "dictionaryDefinitions": {
+        "Mi3": "surname Mi; ",
+        "mi3": "rice; CL:粒[li4]; meter (classifier); "
+      },
+      "selectedSenseChecks": [],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 534,
+      "character": "灯",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/灯.json",
+      "sourceBlobSha": "11f9725fcd15b5f6576f3697f5b3d08d8bf8f6f1",
+      "traditional": "燈",
+      "dictionaryReadings": [
+        "deng1"
+      ],
+      "dictionaryDefinitions": {
+        "deng1": "lamp; light; lantern; CL:盞|盏[zhan3]; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "lamp",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "deng1"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 535,
+      "character": "州",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/州.json",
+      "sourceBlobSha": "fedf58a0e16b7ff8f0dacb3ab1f14c660a6d4de3",
+      "traditional": "州",
+      "dictionaryReadings": [
+        "zhou1"
+      ],
+      "dictionaryDefinitions": {
+        "zhou1": "prefecture; (old) province; (old) administrative division; state (e.g. of US); oblast (Russia); canton (Switzerland); "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "state",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "zhou1"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 536,
+      "character": "汗",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/汗.json",
+      "sourceBlobSha": "fc073db0cf1f9b6df150986d31bf7f87c6f36c34",
+      "traditional": "汗",
+      "dictionaryReadings": [
+        "han2",
+        "han4"
+      ],
+      "dictionaryDefinitions": {
+        "han2": "see 可汗[ke4 han2], 汗國|汗国[han2 guo2]; ",
+        "han4": "perspiration; sweat; CL:滴[di1],頭|头[tou2],身[shen1]; to be speechless (out of helplessness, embarrassment etc) (Internet slang used as an interjection); "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "sweat",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "han4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 537,
+      "character": "污",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/污.json",
+      "sourceBlobSha": "ddf35544e95d5afaa8b595aa47f3391bf1b419cf",
+      "traditional": "污",
+      "dictionaryReadings": [
+        "wu1"
+      ],
+      "dictionaryDefinitions": {
+        "wu1": "variant of 污[wu1]; dirty; filthy; foul; corrupt; to smear; to defile; dirt; filth; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "dirty",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "wu1"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 538,
+      "character": "江",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/江.json",
+      "sourceBlobSha": "c3e6f3d945dfe6898352218946000e10d46e2de4",
+      "traditional": "江",
+      "dictionaryReadings": [
+        "Jiang1",
+        "jiang1"
+      ],
+      "dictionaryDefinitions": {
+        "Jiang1": "surname Jiang; ",
+        "jiang1": "river; CL:條|条[tiao2],道[dao4]; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "river",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "jiang1"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 539,
+      "character": "汛",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/汛.json",
+      "sourceBlobSha": "b192cdcab0e6eda702f32a0e7d84bc48c74ecc4b",
+      "traditional": "汛",
+      "dictionaryReadings": [
+        "xun4"
+      ],
+      "dictionaryDefinitions": {
+        "xun4": "high water; flood; to sprinkle water; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "flood",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "xun4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 540,
+      "character": "池",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/池.json",
+      "sourceBlobSha": "f050cf89516a9d9663d3a7285a09a064c2fd0092",
+      "traditional": "池",
+      "dictionaryReadings": [
+        "Chi2",
+        "chi2"
+      ],
+      "dictionaryDefinitions": {
+        "Chi2": "surname Chi; ",
+        "chi2": "pond; reservoir; moat; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "pond",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "chi2"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 541,
+      "character": "汝",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/汝.json",
+      "sourceBlobSha": "fe555efd341306af51f0fca6402e41760051288c",
+      "traditional": "汝",
+      "dictionaryReadings": [
+        "ru3"
+      ],
+      "dictionaryDefinitions": {
+        "ru3": "thou; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "you",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 542,
+      "character": "汤",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/汤.json",
+      "sourceBlobSha": "f2b181b73e3e01baa0962e9cab54d8005d818cad",
+      "traditional": "湯",
+      "dictionaryReadings": [
+        "Tang1",
+        "shang1",
+        "tang1"
+      ],
+      "dictionaryDefinitions": {
+        "Tang1": "surname Tang; ",
+        "shang1": "rushing current; ",
+        "tang1": "soup; hot or boiling water; decoction of medicinal herbs; water in which sth has been boiled; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "soup",
+          "sourceGlossGroupIndex": 1,
+          "matchingDictionaryReadings": [
+            "tang1"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 543,
+      "character": "忙",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/忙.json",
+      "sourceBlobSha": "6aac661c21792a4397de6d816fc9e32f9c1c45f6",
+      "traditional": "忙",
+      "dictionaryReadings": [
+        "mang2"
+      ],
+      "dictionaryDefinitions": {
+        "mang2": "busy; hurriedly; to hurry; to rush; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "busy",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "mang2"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 544,
+      "character": "兴",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/兴.json",
+      "sourceBlobSha": "f6bfc20276ef514c091e4db5b42b66c2a4bc8616",
+      "traditional": "興",
+      "dictionaryReadings": [
+        "Xing1",
+        "xing1",
+        "xing4"
+      ],
+      "dictionaryDefinitions": {
+        "Xing1": "surname Xing; ",
+        "xing1": "to rise; to flourish; to become popular; to start; to encourage; to get up; (often used in the negative) to permit or allow (dialect); maybe (dialect); ",
+        "xing4": "feeling or desire to do sth; interest in sth; excitement; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "flourish",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "xing1"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 545,
+      "character": "宇",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/宇.json",
+      "sourceBlobSha": "b442ab377cbee78cb7debfaf257889b83a99e679",
+      "traditional": "宇",
+      "dictionaryReadings": [
+        "yu3"
+      ],
+      "dictionaryDefinitions": {
+        "yu3": "room; universe; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "house",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    }
+  ]
+}
