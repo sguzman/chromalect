@@ -1,0 +1,459 @@
+{
+  "schema": "chromalect.mandarin.lexical-crossref-batch.v0.1",
+  "source": {
+    "title": "CC-CEDICT per-headword v2 mirror",
+    "repository": "krmanik/cedict-json",
+    "commit": "63c2569948629323b515833930fdd10f285401b6",
+    "dataLicense": "CC BY-SA 4.0",
+    "upstream": "https://cc-cedict.org/",
+    "mirror": "https://github.com/krmanik/cedict-json",
+    "transform": "Selected single-simplified-character dictionary records, retaining readings and definitions; literal English gloss matching is automated triage only"
+  },
+  "rankStart": 846,
+  "rankEnd": 860,
+  "summary": {
+    "total": 15,
+    "headwordFound": 15,
+    "withCandidate": 15,
+    "withLiteralSupport": 10
+  },
+  "records": [
+    {
+      "rank": 846,
+      "character": "闲",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/闲.json",
+      "sourceBlobSha": "39134df3edaa579d863f29b70b084cbf938b8f91",
+      "traditional": "閒",
+      "dictionaryReadings": [
+        "xian2"
+      ],
+      "dictionaryDefinitions": {
+        "xian2": "to stay idle; to be unoccupied; not busy; leisure; enclosure; variant of 閑|闲, idle; unoccupied; leisure; free time; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "idle time",
+          "sourceGlossGroupIndex": 2,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 847,
+      "character": "间",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/间.json",
+      "sourceBlobSha": "aaf862ab5f4dd2d9fc7d7fdbe2c5b7f3a77b3ff7",
+      "traditional": "間",
+      "dictionaryReadings": [
+        "jian1",
+        "jian4"
+      ],
+      "dictionaryDefinitions": {
+        "jian1": "between; among; within a definite time or space; room; section of a room or lateral space between two pairs of pillars; classifier for rooms; ",
+        "jian4": "gap; to separate; to thin out (seedlings); to sow discontent; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "space",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "jian1"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 848,
+      "character": "闷",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/闷.json",
+      "sourceBlobSha": "ff168e33e4c467f91f6554ecd91b7026ca830efa",
+      "traditional": "悶",
+      "dictionaryReadings": [
+        "men1",
+        "men4"
+      ],
+      "dictionaryDefinitions": {
+        "men1": "stuffy; shut indoors; to smother; to cover tightly; ",
+        "men4": "bored; depressed; melancholy; sealed; airtight; tightly closed; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "gloomy",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 849,
+      "character": "判",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/判.json",
+      "sourceBlobSha": "8385e2b37c4c89ea09f56a45e39a644794fc4da7",
+      "traditional": "判",
+      "dictionaryReadings": [
+        "pan4"
+      ],
+      "dictionaryDefinitions": {
+        "pan4": "to judge; to sentence; to discriminate; to discern; obviously (different); "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "judge",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "pan4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 850,
+      "character": "兑",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/兑.json",
+      "sourceBlobSha": "fb0eaa308721f22e8828dad0f482cf7c5f4c97d0",
+      "traditional": "兌",
+      "dictionaryReadings": [
+        "Dui4",
+        "dui4"
+      ],
+      "dictionaryDefinitions": {
+        "Dui4": "surname Dui; ",
+        "dui4": "to cash; to exchange; to add (liquid); to blend; one of the Eight Trigrams 八卦[ba1 gua4], symbolizing swamp; ☱; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "exchange",
+          "sourceGlossGroupIndex": 1,
+          "matchingDictionaryReadings": [
+            "dui4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 851,
+      "character": "灶",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/灶.json",
+      "sourceBlobSha": "eddd670ff1acab2e1354ed58761bb41ea9d171d7",
+      "traditional": "竈",
+      "dictionaryReadings": [
+        "zao4"
+      ],
+      "dictionaryDefinitions": {
+        "zao4": "kitchen stove; kitchen; variant of 灶[zao4]; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "stove",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "zao4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 852,
+      "character": "灿",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/灿.json",
+      "sourceBlobSha": "7f35ac0139ef0fd2a4412f785214f324f75c850c",
+      "traditional": "燦",
+      "dictionaryReadings": [
+        "can4"
+      ],
+      "dictionaryDefinitions": {
+        "can4": "glorious; bright; brilliant; lustrous; resplendent; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "bright",
+          "sourceGlossGroupIndex": 1,
+          "matchingDictionaryReadings": [
+            "can4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 853,
+      "character": "灼",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/灼.json",
+      "sourceBlobSha": "3132d8faf6609885a701caef7f0b68c90087a11e",
+      "traditional": "灼",
+      "dictionaryReadings": [
+        "zhuo2"
+      ],
+      "dictionaryDefinitions": {
+        "zhuo2": "luminous; burning; to burn; to cauterize; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "burn",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "zhuo2"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 854,
+      "character": "弟",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/弟.json",
+      "sourceBlobSha": "461098b0bdffd51104d06aa5726964605667ca4f",
+      "traditional": "弟",
+      "dictionaryReadings": [
+        "di4",
+        "ti4"
+      ],
+      "dictionaryDefinitions": {
+        "di4": "younger brother; junior male; I (modest word in letter); ",
+        "ti4": "variant of 悌[ti4]; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "young brother",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 855,
+      "character": "汪",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/汪.json",
+      "sourceBlobSha": "c34a3cce58dbc7d49c73b72e4274e1d893a911c1",
+      "traditional": "汪",
+      "dictionaryReadings": [
+        "Wang1",
+        "wang1"
+      ],
+      "dictionaryDefinitions": {
+        "Wang1": "surname Wang; ",
+        "wang1": "expanse of water; ooze; (onom.) bark; classifier for liquids: pool, puddle; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "vast",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 856,
+      "character": "沐",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/沐.json",
+      "sourceBlobSha": "bad6774a05d78b9860ee0eae7148db63cbc7890a",
+      "traditional": "沐",
+      "dictionaryReadings": [
+        "mu4"
+      ],
+      "dictionaryDefinitions": {
+        "mu4": "to bathe; to cleanse; to receive; to be given; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "bathe",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "mu4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 857,
+      "character": "沛",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/沛.json",
+      "sourceBlobSha": "5d4b53a82a763577dd4587d061dbebb390a472d1",
+      "traditional": "沛",
+      "dictionaryReadings": [
+        "pei4"
+      ],
+      "dictionaryDefinitions": {
+        "pei4": "copious; abundant; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "abundant",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "pei4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 858,
+      "character": "汰",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/汰.json",
+      "sourceBlobSha": "23ed162459ddf0d4c55a7e4c8f52bd6c66f1e482",
+      "traditional": "汰",
+      "dictionaryReadings": [
+        "tai4"
+      ],
+      "dictionaryDefinitions": {
+        "tai4": "to discard; to eliminate; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "excessive",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 859,
+      "character": "沥",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/沥.json",
+      "sourceBlobSha": "391bc250a550e90cdeb709f7473f2265c692407a",
+      "traditional": "瀝",
+      "dictionaryReadings": [
+        "li4"
+      ],
+      "dictionaryDefinitions": {
+        "li4": "to drip; to strain or filter; a trickle; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "drip",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "li4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 860,
+      "character": "沙",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/沙.json",
+      "sourceBlobSha": "0b5e2da87c9955ed7c9b7cabb6b5d126df308f83",
+      "traditional": "沙",
+      "dictionaryReadings": [
+        "Sha1",
+        "sha1"
+      ],
+      "dictionaryDefinitions": {
+        "Sha1": "surname Sha; ",
+        "sha1": "granule; hoarse; raspy; sand; powder; CL:粒[li4]; abbr. for Tsar or Tsarist Russia; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "sand",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "sha1"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    }
+  ]
+}
