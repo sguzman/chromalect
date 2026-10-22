@@ -1,0 +1,306 @@
+{
+  "schema": "chromalect.mandarin.lexical-crossref-batch.v0.1",
+  "source": {
+    "title": "CC-CEDICT per-headword v2 mirror",
+    "repository": "krmanik/cedict-json",
+    "commit": "63c2569948629323b515833930fdd10f285401b6",
+    "dataLicense": "CC BY-SA 4.0",
+    "upstream": "https://cc-cedict.org/",
+    "mirror": "https://github.com/krmanik/cedict-json",
+    "transform": "Selected single-simplified-character dictionary records, retaining readings and definitions; literal English gloss matching is automated triage only"
+  },
+  "rankStart": 951,
+  "rankEnd": 960,
+  "summary": {
+    "total": 10,
+    "headwordFound": 10,
+    "withCandidate": 10,
+    "withLiteralSupport": 3
+  },
+  "records": [
+    {
+      "rank": 951,
+      "character": "表",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/表.json",
+      "sourceBlobSha": "a8cc370a8415eaf490489b2ba59f7f9f22f7aa67",
+      "traditional": "錶",
+      "dictionaryReadings": [
+        "biao3"
+      ],
+      "dictionaryDefinitions": {
+        "biao3": "exterior surface; family relationship via females; to show (one's opinion); a model; a table (listing information); a form; a meter (measuring sth); wrist or pocket watch; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "show",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "biao3"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 952,
+      "character": "规",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/规.json",
+      "sourceBlobSha": "68fecf5a62771ac101f9329251d0dd4bdb3d3d4e",
+      "traditional": "規",
+      "dictionaryReadings": [
+        "gui1"
+      ],
+      "dictionaryDefinitions": {
+        "gui1": "variant of 規|规[gui1]; compass; a rule; regulation; to admonish; to plan; to scheme; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "rules",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 953,
+      "character": "抹",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/抹.json",
+      "sourceBlobSha": "4e43ad04db495ad3e6adb51fc9693cea8653bfab",
+      "traditional": "抹",
+      "dictionaryReadings": [
+        "ma1",
+        "mo3",
+        "mo4"
+      ],
+      "dictionaryDefinitions": {
+        "ma1": "to wipe; ",
+        "mo3": "to smear; to wipe; to erase; classifier for wisps of cloud, light-beams etc; ",
+        "mo4": "to plaster; to go around; to skirt; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "wipe off",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 954,
+      "character": "卦",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/卦.json",
+      "sourceBlobSha": "5ae57b76908bfe243c1e00c62630d3b42afc6851",
+      "traditional": "卦",
+      "dictionaryReadings": [
+        "gua4"
+      ],
+      "dictionaryDefinitions": {
+        "gua4": "divinatory diagram; one of the eight divinatory trigrams of the Book of Changes 易經|易经[Yi4 jing1]; one of the sixty-four divinatory hexagrams of the Book of Changes 易經|易经[Yi4 jing1]; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "fortune telling",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 955,
+      "character": "坷",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/坷.json",
+      "sourceBlobSha": "638c60dd4241fa2a6c0d794d9c5e7f1386be513b",
+      "traditional": "坷",
+      "dictionaryReadings": [
+        "ke3"
+      ],
+      "dictionaryDefinitions": {
+        "ke3": "uneven (path); unfortunate (in life); "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "clod of earth",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 956,
+      "character": "坯",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/坯.json",
+      "sourceBlobSha": "d55bb1d1690e6c94738e431df01d05c1ffe8ff9d",
+      "traditional": "坯",
+      "dictionaryReadings": [
+        "pi1"
+      ],
+      "dictionaryDefinitions": {
+        "pi1": "blank (e.g. for a coin); unburnt earthenware; semifinished product; Taiwan pr. [pei1]; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "dam",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 957,
+      "character": "拓",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/拓.json",
+      "sourceBlobSha": "3b0733ee1af697005106b0e9f8f94f60cf0ba453",
+      "traditional": "拓",
+      "dictionaryReadings": [
+        "Tuo4",
+        "ta4",
+        "tuo4"
+      ],
+      "dictionaryDefinitions": {
+        "Tuo4": "surname Tuo; ",
+        "ta4": "to make a rubbing (e.g. of an inscription); ",
+        "tuo4": "to expand; to push sth with the hand; to develop; to open up; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "expand",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "tuo4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 958,
+      "character": "拢",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/拢.json",
+      "sourceBlobSha": "7f9ca2e19c123a145e4146db58c05eefc91a256b",
+      "traditional": "攏",
+      "dictionaryReadings": [
+        "long3"
+      ],
+      "dictionaryDefinitions": {
+        "long3": "to gather together; to collect; to approach; to draw near to; to add; to sum up; to comb (hair); "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "collect",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "long3"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 959,
+      "character": "拔",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/拔.json",
+      "sourceBlobSha": "88f60f7aa436195162d35e0e06c36d23d7fb63e0",
+      "traditional": "拔",
+      "dictionaryReadings": [
+        "ba2"
+      ],
+      "dictionaryDefinitions": {
+        "ba2": "to pull up; to pull out; to draw out by suction; to select; to pick; to stand out (above level); to surpass; to seize; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "uproot",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 960,
+      "character": "坪",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/坪.json",
+      "sourceBlobSha": "d27407d5a1f5bcb2aa6a0918a82f82f6093e9420",
+      "traditional": "坪",
+      "dictionaryReadings": [
+        "ping2"
+      ],
+      "dictionaryDefinitions": {
+        "ping2": "a plain; ping, unit of area equal to approx. 3.3058 square meters (used in Japan and Taiwan); "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "level ground",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    }
+  ]
+}
