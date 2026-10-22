@@ -1,0 +1,304 @@
+{
+  "schema": "chromalect.mandarin.lexical-crossref-batch.v0.1",
+  "source": {
+    "title": "CC-CEDICT per-headword v2 mirror",
+    "repository": "krmanik/cedict-json",
+    "commit": "63c2569948629323b515833930fdd10f285401b6",
+    "dataLicense": "CC BY-SA 4.0",
+    "upstream": "https://cc-cedict.org/",
+    "mirror": "https://github.com/krmanik/cedict-json",
+    "transform": "Selected single-simplified-character dictionary records, retaining readings and definitions; literal English gloss matching is automated triage only"
+  },
+  "rankStart": 971,
+  "rankEnd": 980,
+  "summary": {
+    "total": 10,
+    "headwordFound": 10,
+    "withCandidate": 10,
+    "withLiteralSupport": 6
+  },
+  "records": [
+    {
+      "rank": 971,
+      "character": "顶",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/顶.json",
+      "sourceBlobSha": "2213db4dfb16060c1615fe6d6c7525fef132af57",
+      "traditional": "頂",
+      "dictionaryReadings": [
+        "ding3"
+      ],
+      "dictionaryDefinitions": {
+        "ding3": "apex; crown of the head; top; roof; most; to carry on the head; to push to the top; to go against; to replace; to substitute; to be subjected to (an aerial bombing, hailstorm etc); (slang) to 'bump' a forum thread to raise its profile; classifier for headwear, hats, veils etc; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "top",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "ding3"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 972,
+      "character": "拆",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/拆.json",
+      "sourceBlobSha": "b8bc5944171ddb6fcdaa6260f57fb1f57215c560",
+      "traditional": "拆",
+      "dictionaryReadings": [
+        "chai1"
+      ],
+      "dictionaryDefinitions": {
+        "chai1": "to tear open; to tear down; to tear apart; to open; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "split apart",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 973,
+      "character": "拎",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/拎.json",
+      "sourceBlobSha": "815aeb6bef9808913c5a74b27786fb7dc1d705aa",
+      "traditional": "拎",
+      "dictionaryReadings": [
+        "lin1"
+      ],
+      "dictionaryDefinitions": {
+        "lin1": "to lift; to carry in one's hand; Taiwan pr. [ling1]; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "lift",
+          "sourceGlossGroupIndex": 1,
+          "matchingDictionaryReadings": [
+            "lin1"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 974,
+      "character": "拥",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/拥.json",
+      "sourceBlobSha": "36b3bf4c84734225e7f57416aca623a48e838b29",
+      "traditional": "擁",
+      "dictionaryReadings": [
+        "yong1"
+      ],
+      "dictionaryDefinitions": {
+        "yong1": "to hold; to embrace; to wrap around; to gather around (sb); to throng; to swarm; to support; Taiwan pr. [yong3]; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "hug",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 975,
+      "character": "抵",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/抵.json",
+      "sourceBlobSha": "f4e2862ceb51e3c7081ebd8840dd543897f6b418",
+      "traditional": "抵",
+      "dictionaryReadings": [
+        "di3"
+      ],
+      "dictionaryDefinitions": {
+        "di3": "to press against; to support; to prop up; to resist; to equal; to balance; to make up for; to mortgage; to arrive at; to clap (one's hands) lightly (expressing delight) (Taiwan pr. [zhi3] for this sense); "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "resist",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "di3"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 976,
+      "character": "拘",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/拘.json",
+      "sourceBlobSha": "d5b8565c97d60f1c35f15c57c49f092a9efb8be7",
+      "traditional": "拘",
+      "dictionaryReadings": [
+        "ju1"
+      ],
+      "dictionaryDefinitions": {
+        "ju1": "to capture; to restrain; to constrain; to adhere rigidly to; inflexible; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "detain",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 977,
+      "character": "势",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/势.json",
+      "sourceBlobSha": "19fb10ff563ba654f1e569c69ff78661399ec36e",
+      "traditional": "勢",
+      "dictionaryReadings": [
+        "shi4"
+      ],
+      "dictionaryDefinitions": {
+        "shi4": "power; influence; potential; momentum; tendency; trend; situation; conditions; outward appearance; sign; gesture; male genitals; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "power",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "shi4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 978,
+      "character": "抱",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/抱.json",
+      "sourceBlobSha": "6170ea1bf7e9acabe14b0d6384a1b8cedfe07241",
+      "traditional": "抱",
+      "dictionaryReadings": [
+        "bao4"
+      ],
+      "dictionaryDefinitions": {
+        "bao4": "to hold; to carry (in one's arms); to hug; to embrace; to surround; to cherish; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "embrace",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "bao4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 979,
+      "character": "拄",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/拄.json",
+      "sourceBlobSha": "352458cc80df2daf4c4a6102bc1498c82d11323d",
+      "traditional": "拄",
+      "dictionaryReadings": [
+        "zhu3"
+      ],
+      "dictionaryDefinitions": {
+        "zhu3": "to lean on; to prop on; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "lean on",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "zhu3"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 980,
+      "character": "垃",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/垃.json",
+      "sourceBlobSha": "25d7fd62c8f2aa09c3e38db6aa50d6bb5610b6e4",
+      "traditional": "垃",
+      "dictionaryReadings": [
+        "la1"
+      ],
+      "dictionaryDefinitions": {
+        "la1": "see 垃圾[la1 ji1]; Taiwan pr. [le4]; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "garbage",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    }
+  ]
+}
