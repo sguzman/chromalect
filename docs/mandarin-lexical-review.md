@@ -90,6 +90,10 @@ The [structured review queue](../data/semantic/cedict-crossref/sense-review-queu
 
 The earlier fifth-batch section and other per-100 observations are historical triage milestones, not the current coverage denominator. Source retrieval, boundary matching, sense verification, and emoji comprehension remain distinct gates.
 
+## High-priority remediation overlay
+
+For the 15 highest-priority flagged cases, a [machine-readable remediation overlay](../data/semantic/cedict-crossref/high-priority-remediation-v0.1.json) now proposes reversibly inspecting alternative senses or pictograms, retaining existing better-supported alternatives, or deferring misleading icons. The [research report](mandarin-high-priority-remediation.md) explains character-by-character limitations. No canonical source meaning or emoji is silently replaced by this overlay. The alternative proposals are not comprehension-approved.
+
 ## Approval gates
 
 1. An independent lexical reviewer must determine which **modern Mandarin character senses** exist, and attach context, reading and evidence. The English gloss-matching code cannot approve a meaning.

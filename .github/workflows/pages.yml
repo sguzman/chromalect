@@ -197,6 +197,7 @@ jobs:
           node tools/glyph-pipeline/strict_gloss_index_smoke.mjs
           node tools/glyph-pipeline/sense_review_queue_smoke.mjs
           node tools/glyph-pipeline/emoji_visibility_audit.mjs --check
+          node tools/glyph-pipeline/high_priority_remediation_smoke.mjs
           node tools/glyph-pipeline/semantic_coverage_smoke.mjs
           mkdir -p site/semantic
           cp data/semantic/mandarin-1000-v0.1.json site/semantic/mandarin-1000-v0.1.json
