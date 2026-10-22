@@ -69,6 +69,10 @@ assert.ok(glyph.children.some(x=>x.className==="glyph glyph-with-strokes"));
 const g=glyph.children.find(x=>x.className==="glyph glyph-with-strokes");
 assert.equal(g.children[0].src,"https://example.test/chromalect/glyphs/U+5C71.svg");
 assert.ok(glyph.children.some(x=>x.className==="phonetics-marker"));
+const readingMarker=glyph.children.find(x=>x.className==="phonetics-marker");
+assert.equal(readingMarker.children.find(x=>x.className==="onset")?.textContent,"sh");
+assert.equal(readingMarker.children.find(x=>x.className==="rime")?.textContent,"ān",
+  "Marker must retain the citation tone-marked final");
 assert.ok(glyph.children.some(x=>x.className==="tone-marker"));
 const control=radios.find(x=>x.name==="tone"&&x.value==="marker");
 control.checked=true;control.events.change();
