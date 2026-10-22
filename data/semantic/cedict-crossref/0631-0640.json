@@ -1,0 +1,320 @@
+{
+  "schema": "chromalect.mandarin.lexical-crossref-batch.v0.1",
+  "source": {
+    "title": "CC-CEDICT per-headword v2 mirror",
+    "repository": "krmanik/cedict-json",
+    "commit": "63c2569948629323b515833930fdd10f285401b6",
+    "dataLicense": "CC BY-SA 4.0",
+    "upstream": "https://cc-cedict.org/",
+    "mirror": "https://github.com/krmanik/cedict-json",
+    "transform": "Selected single-simplified-character dictionary records, retaining readings and definitions; literal English gloss matching is automated triage only"
+  },
+  "rankStart": 631,
+  "rankEnd": 640,
+  "summary": {
+    "total": 10,
+    "headwordFound": 10,
+    "withCandidate": 10,
+    "withLiteralSupport": 9
+  },
+  "records": [
+    {
+      "rank": 631,
+      "character": "赤",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/赤.json",
+      "sourceBlobSha": "fb4ffd5f8ade2cba6d3ca7d997ed647662b58265",
+      "traditional": "赤",
+      "dictionaryReadings": [
+        "chi4"
+      ],
+      "dictionaryDefinitions": {
+        "chi4": "red; scarlet; bare; naked; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "red",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "chi4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 632,
+      "character": "折",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/折.json",
+      "sourceBlobSha": "40dceedb7c7b087e22233ae462145827dd9bf48a",
+      "traditional": "摺",
+      "dictionaryReadings": [
+        "she2",
+        "zhe1",
+        "zhe2"
+      ],
+      "dictionaryDefinitions": {
+        "she2": "to break (e.g. stick or bone); a loss; ",
+        "zhe1": "to turn sth over; to turn upside down; to tip sth out (of a container); ",
+        "zhe2": "to break; to fracture; to snap; to suffer loss; to bend; to twist; to turn; to change direction; convinced; to convert into (currency); discount; rebate; tenth (in price); classifier for theatrical scenes; to fold; accounts book; variant of 折[zhe2]; to fold; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "break off",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 633,
+      "character": "抓",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/抓.json",
+      "sourceBlobSha": "d21bdd57699f2ea5707a7abb6c017e9b8e4bc84c",
+      "traditional": "抓",
+      "dictionaryReadings": [
+        "zhua1"
+      ],
+      "dictionaryDefinitions": {
+        "zhua1": "to grab; to catch; to arrest; to snatch; to scratch; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "grab",
+          "sourceGlossGroupIndex": 1,
+          "matchingDictionaryReadings": [
+            "zhua1"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 634,
+      "character": "扳",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/扳.json",
+      "sourceBlobSha": "0ee17ea7ce62eb0b68dced50bc079b79bd5d211c",
+      "traditional": "扳",
+      "dictionaryReadings": [
+        "ban1",
+        "pan1"
+      ],
+      "dictionaryDefinitions": {
+        "ban1": "to pull; to turn (sth) around; to turn around (a situation); to recoup; ",
+        "pan1": "variant of 攀[pan1]; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "pull",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "ban1"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 635,
+      "character": "抡",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/抡.json",
+      "sourceBlobSha": "215f6e36cdff6fd299065417179d4b74611cf039",
+      "traditional": "掄",
+      "dictionaryReadings": [
+        "lun1",
+        "lun2"
+      ],
+      "dictionaryDefinitions": {
+        "lun1": "to swing (one's arms, a heavy object); to wave (a sword, one's fists); to fling (money); ",
+        "lun2": "to select; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "swing",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "lun1"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 636,
+      "character": "扮",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/扮.json",
+      "sourceBlobSha": "881d75f13c9b22cb56b574f261fe8bbf22e5fdc6",
+      "traditional": "扮",
+      "dictionaryReadings": [
+        "ban4"
+      ],
+      "dictionaryDefinitions": {
+        "ban4": "to disguise oneself as; to dress up; to play (a role); to put on (an expression); "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "dress up",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "ban4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 637,
+      "character": "抢",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/抢.json",
+      "sourceBlobSha": "f7c9758e422a4035f109dec5c25307f737fb66a7",
+      "traditional": "搶",
+      "dictionaryReadings": [
+        "qiang1",
+        "qiang3"
+      ],
+      "dictionaryDefinitions": {
+        "qiang1": "see 搶風|抢风[qiang1 feng1]; ",
+        "qiang3": "to fight over; to rush; to scramble; to grab; to rob; to snatch; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "rob",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "qiang3"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 638,
+      "character": "孝",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/孝.json",
+      "sourceBlobSha": "5531c7671238246b985dbe794edd6715fd934535",
+      "traditional": "孝",
+      "dictionaryReadings": [
+        "xiao4"
+      ],
+      "dictionaryDefinitions": {
+        "xiao4": "filial piety or obedience; mourning apparel; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "mourning",
+          "sourceGlossGroupIndex": 1,
+          "matchingDictionaryReadings": [
+            "xiao4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 639,
+      "character": "坎",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/坎.json",
+      "sourceBlobSha": "9333a5146989bc8a81bebe5e05ebe2cbfdbc7175",
+      "traditional": "埳",
+      "dictionaryReadings": [
+        "kan3"
+      ],
+      "dictionaryDefinitions": {
+        "kan3": "pit; threshold; one of the Eight Trigrams 八卦[ba1 gua4], symbolizing water; ☵; old variant of 坎[kan3]; pit; hole; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "hole",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "kan3"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 640,
+      "character": "均",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/均.json",
+      "sourceBlobSha": "ab84f31488bfd9ff18eb70550d470a2b9004af48",
+      "traditional": "均",
+      "dictionaryReadings": [
+        "jun1"
+      ],
+      "dictionaryDefinitions": {
+        "jun1": "equal; even; all; uniform; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "equal",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "jun1"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    }
+  ]
+}
