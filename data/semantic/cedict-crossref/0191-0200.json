@@ -1,0 +1,292 @@
+{
+  "schema": "chromalect.mandarin.lexical-crossref-batch.v0.1",
+  "source": {
+    "title": "CC-CEDICT per-headword v2 mirror",
+    "repository": "krmanik/cedict-json",
+    "commit": "63c2569948629323b515833930fdd10f285401b6",
+    "dataLicense": "CC BY-SA 4.0",
+    "upstream": "https://cc-cedict.org/",
+    "mirror": "https://github.com/krmanik/cedict-json",
+    "transform": "Selected single-simplified-character dictionary records, retaining readings and definitions; literal English gloss matching is automated triage only"
+  },
+  "rankStart": 191,
+  "rankEnd": 200,
+  "summary": {
+    "total": 10,
+    "headwordFound": 10,
+    "withCandidate": 8,
+    "withLiteralSupport": 7
+  },
+  "records": [
+    {
+      "rank": 191,
+      "character": "刊",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/刊.json",
+      "sourceBlobSha": "abfcf4f98922367bf3cf50fd6f577ed8b9a60f4d",
+      "traditional": "栞",
+      "dictionaryReadings": [
+        "kan1"
+      ],
+      "dictionaryDefinitions": {
+        "kan1": "to print; to publish; publication; periodical; to peel with a knife; to carve; to amend; old variant of 刊[kan1]; to peel with a knife; to carve; to amend; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "publication",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "kan1"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 192,
+      "character": "未",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/未.json",
+      "sourceBlobSha": "87f03b36cd4b0a72653aa8a56443a8bb3f6de207",
+      "traditional": "未",
+      "dictionaryReadings": [
+        "wei4"
+      ],
+      "dictionaryDefinitions": {
+        "wei4": "not yet; did not; have not; not; 8th earthly branch: 1-3 p.m., 6th solar month (7th July-6th August), year of the Sheep; ancient Chinese compass point: 210°; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "not yet",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "wei4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 193,
+      "character": "末",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/末.json",
+      "sourceBlobSha": "b1f80844255f77e2396262dee2798c1ba217d8ea",
+      "traditional": "末",
+      "dictionaryReadings": [
+        "mo4"
+      ],
+      "dictionaryDefinitions": {
+        "mo4": "tip; end; final stage; latter part; inessential detail; powder; dust; opera role of old man; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "end",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "mo4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 194,
+      "character": "示",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/示.json",
+      "sourceBlobSha": "2a44922b554eb365850eeff9b84b4b83f4e698d5",
+      "traditional": "示",
+      "dictionaryReadings": [
+        "shi4"
+      ],
+      "dictionaryDefinitions": {
+        "shi4": "to show; to reveal; "
+      },
+      "selectedSenseChecks": [],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 195,
+      "character": "击",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/击.json",
+      "sourceBlobSha": "c600ed25f15acc7149e765778c410995ea6db0a8",
+      "traditional": "擊",
+      "dictionaryReadings": [
+        "ji1"
+      ],
+      "dictionaryDefinitions": {
+        "ji1": "to hit; to strike; to break; Taiwan pr. [ji2]; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "strike",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "ji1"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 196,
+      "character": "打",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/打.json",
+      "sourceBlobSha": "88f0ef287ee3ec144f4d88dffc4858f98cce3d01",
+      "traditional": "打",
+      "dictionaryReadings": [
+        "da2",
+        "da3"
+      ],
+      "dictionaryDefinitions": {
+        "da2": "dozen (loanword); ",
+        "da3": "to beat; to strike; to hit; to break; to type; to mix up; to build; to fight; to fetch; to make; to tie up; to issue; to shoot; to calculate; to play (a game); since; from; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "strike",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "da3"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 197,
+      "character": "巧",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/巧.json",
+      "sourceBlobSha": "3c3d723aebede0249a9b357a0c1a4f041dcf53be",
+      "traditional": "巧",
+      "dictionaryReadings": [
+        "qiao3"
+      ],
+      "dictionaryDefinitions": {
+        "qiao3": "opportunely; coincidentally; as it happens; skillful; timely; "
+      },
+      "selectedSenseChecks": [],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 198,
+      "character": "正",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/正.json",
+      "sourceBlobSha": "ccd88ae9c02944a23f0c93e6bc7650e05629df49",
+      "traditional": "正",
+      "dictionaryReadings": [
+        "zheng1",
+        "zheng4"
+      ],
+      "dictionaryDefinitions": {
+        "zheng1": "first month of the lunar year; ",
+        "zheng4": "straight; upright; proper; main; principal; to correct; to rectify; exactly; just (at that time); right (in that place); (math.) positive; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "correct",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "zheng4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 199,
+      "character": "扑",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/扑.json",
+      "sourceBlobSha": "61978c5e41066bbdd6219611ae303ae538072f92",
+      "traditional": "撲",
+      "dictionaryReadings": [
+        "pu1"
+      ],
+      "dictionaryDefinitions": {
+        "pu1": "to throw oneself at; to pounce on; to devote one's energies; to flap; to flutter; to dab; to pat; to bend over; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "attack",
+          "sourceGlossGroupIndex": 1,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 200,
+      "character": "卉",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/卉.json",
+      "sourceBlobSha": "7e6c430ada5e7e59b62156c28457a036184e1c20",
+      "traditional": "卉",
+      "dictionaryReadings": [
+        "hui4"
+      ],
+      "dictionaryDefinitions": {
+        "hui4": "plants; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "plants",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "hui4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    }
+  ]
+}
