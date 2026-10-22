@@ -1,0 +1,377 @@
+{
+  "schema": "chromalect.mandarin.lexical-crossref-batch.v0.1",
+  "source": {
+    "title": "CC-CEDICT per-headword v2 mirror",
+    "repository": "krmanik/cedict-json",
+    "commit": "63c2569948629323b515833930fdd10f285401b6",
+    "dataLicense": "CC BY-SA 4.0",
+    "upstream": "https://cc-cedict.org/",
+    "mirror": "https://github.com/krmanik/cedict-json",
+    "transform": "Selected single-simplified-character dictionary records, retaining readings and definitions; literal English gloss matching is automated triage only"
+  },
+  "rankStart": 116,
+  "rankEnd": 130,
+  "summary": {
+    "total": 15,
+    "headwordFound": 15,
+    "withCandidate": 7,
+    "withLiteralSupport": 4
+  },
+  "records": [
+    {
+      "rank": 116,
+      "character": "内",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/内.json",
+      "sourceBlobSha": "ada50f758be2a1e0febd952c8dcdb3a8aff98195",
+      "traditional": "內",
+      "dictionaryReadings": [
+        "nei4"
+      ],
+      "dictionaryDefinitions": {
+        "nei4": "inside; inner; internal; within; interior; "
+      },
+      "selectedSenseChecks": [],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 117,
+      "character": "水",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/水.json",
+      "sourceBlobSha": "d4b4566412c12d84c7f158a86ffb6605f3553b49",
+      "traditional": "水",
+      "dictionaryReadings": [
+        "Shui3",
+        "shui3"
+      ],
+      "dictionaryDefinitions": {
+        "Shui3": "surname Shui; ",
+        "shui3": "water; river; liquid; beverage; additional charges or income; (of clothes) classifier for number of washes; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "water",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "shui3"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 118,
+      "character": "见",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/见.json",
+      "sourceBlobSha": "39496644daebc6a6a28498bf85a63f6ed25a37d7",
+      "traditional": "見",
+      "dictionaryReadings": [
+        "jian4",
+        "xian4"
+      ],
+      "dictionaryDefinitions": {
+        "jian4": "to see; to meet; to appear (to be sth); to interview; ",
+        "xian4": "to appear; also written 現|现[xian4]; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "see",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "jian4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 119,
+      "character": "午",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/午.json",
+      "sourceBlobSha": "ec9dddd9d89ab5bb39e6eea49f754fd42255544b",
+      "traditional": "午",
+      "dictionaryReadings": [
+        "wu3"
+      ],
+      "dictionaryDefinitions": {
+        "wu3": "7th earthly branch: 11 a.m.-1 p.m., noon, 5th solar month (6th June-6th July), year of the Horse; ancient Chinese compass point: 180° (south); "
+      },
+      "selectedSenseChecks": [],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 120,
+      "character": "牛",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/牛.json",
+      "sourceBlobSha": "a4063d8e8ce3d3f0e2d58280f65764c01d1bf4f4",
+      "traditional": "牛",
+      "dictionaryReadings": [
+        "Niu2",
+        "niu2"
+      ],
+      "dictionaryDefinitions": {
+        "Niu2": "surname Niu; ",
+        "niu2": "ox; cow; bull; CL:條|条[tiao2],頭|头[tou2]; (slang) awesome; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "cow",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "niu2"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 121,
+      "character": "手",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/手.json",
+      "sourceBlobSha": "4782bc5de46aa7c0dd86d11a4f573c6f1659ddd0",
+      "traditional": "手",
+      "dictionaryReadings": [
+        "shou3"
+      ],
+      "dictionaryDefinitions": {
+        "shou3": "hand; (formal) to hold; person engaged in certain types of work; person skilled in certain types of work; personal(ly); convenient; classifier for skill; CL:雙|双[shuang1],隻|只[zhi1]; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "hand",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "shou3"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 122,
+      "character": "气",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/气.json",
+      "sourceBlobSha": "fb8669677cfe1600e98bbbf0d0a5172db4c65d6b",
+      "traditional": "氣",
+      "dictionaryReadings": [
+        "qi4"
+      ],
+      "dictionaryDefinitions": {
+        "qi4": "gas; air; smell; weather; to make angry; to annoy; to get angry; vital energy; qi; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "steam",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 123,
+      "character": "毛",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/毛.json",
+      "sourceBlobSha": "796d7759808321f0fc7c620b0b55709355a3fbc2",
+      "traditional": "毛",
+      "dictionaryReadings": [
+        "Mao2",
+        "mao2"
+      ],
+      "dictionaryDefinitions": {
+        "Mao2": "surname Mao; ",
+        "mao2": "hair; feather; down; wool; mildew; mold; coarse or semifinished; young; raw; careless; unthinking; nervous; scared; (of currency) to devalue or depreciate; classifier for Chinese fractional monetary unit ( = 角[jiao3] , = one-tenth of a yuan or 10 fen 分[fen1]); "
+      },
+      "selectedSenseChecks": [],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 124,
+      "character": "壬",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/壬.json",
+      "sourceBlobSha": "d223c460b1a471af4b3f1aca8edeb4417e11ae14",
+      "traditional": "壬",
+      "dictionaryReadings": [
+        "ren2"
+      ],
+      "dictionaryDefinitions": {
+        "ren2": "ninth of the ten Heavenly Stems 十天干[shi2 tian1 gan1]; ninth in order; letter 'I' or roman 'IX' in list 'A, B, C', or 'I, II, III' etc; ancient Chinese compass point: 345°; nona; "
+      },
+      "selectedSenseChecks": [],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 125,
+      "character": "升",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/升.json",
+      "sourceBlobSha": "479d2b29c88347f42ed2950f362d5a1f6cf42e59",
+      "traditional": "陞",
+      "dictionaryReadings": [
+        "sheng1"
+      ],
+      "dictionaryDefinitions": {
+        "sheng1": "to ascend; to rise to the rank of; to promote; to hoist; liter; measure for dry grain equal to one-tenth dou 斗[dou3]; variant of 升[sheng1]; to ascend; to rise in rank; variant of 升[sheng1]; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "go up",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 126,
+      "character": "夭",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/夭.json",
+      "sourceBlobSha": "2eec249b7a870eff6ed074eea2039f437d7e1aa2",
+      "traditional": "殀",
+      "dictionaryReadings": [
+        "yao1"
+      ],
+      "dictionaryDefinitions": {
+        "yao1": "tender; gentle; to die prematurely; variant of 夭[yao1]; to die young; to die prematurely; Taiwan pr. [yao3]; "
+      },
+      "selectedSenseChecks": [],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 127,
+      "character": "长",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/长.json",
+      "sourceBlobSha": "893a2508cb6b1bc52904fe7647732155cf351b92",
+      "traditional": "長",
+      "dictionaryReadings": [
+        "chang2",
+        "zhang3"
+      ],
+      "dictionaryDefinitions": {
+        "chang2": "length; long; forever; always; constantly; ",
+        "zhang3": "chief; head; elder; to grow; to develop; to increase; to enhance; "
+      },
+      "selectedSenseChecks": [],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 128,
+      "character": "仁",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/仁.json",
+      "sourceBlobSha": "86499a694a579ec28191e9357ede069ad632e95b",
+      "traditional": "仁",
+      "dictionaryReadings": [
+        "ren2"
+      ],
+      "dictionaryDefinitions": {
+        "ren2": "humane; kernel; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "benevolence",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 129,
+      "character": "什",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/什.json",
+      "sourceBlobSha": "5e7e5fca6edc474ecc3aede33c346fb11309a6ef",
+      "traditional": "什",
+      "dictionaryReadings": [
+        "shen2",
+        "shi2"
+      ],
+      "dictionaryDefinitions": {
+        "shen2": "what; ",
+        "shi2": "ten (used in fractions, writing checks etc); assorted; miscellaneous; "
+      },
+      "selectedSenseChecks": [],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 130,
+      "character": "片",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/片.json",
+      "sourceBlobSha": "7feb9e5a8307a9ed4b88622e38081424bce2d714",
+      "traditional": "片",
+      "dictionaryReadings": [
+        "pian1",
+        "pian4"
+      ],
+      "dictionaryDefinitions": {
+        "pian1": "disk; sheet; ",
+        "pian4": "thin piece; flake; a slice; film; TV play; to slice; to carve thin; partial; incomplete; one-sided; classifier for slices, tablets, tract of land, area of water; classifier for CDs, movies, DVDs etc; used with numeral 一[yi1]: classifier for scenario, scene, feeling, atmosphere, sound etc; "
+      },
+      "selectedSenseChecks": [],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    }
+  ]
+}
