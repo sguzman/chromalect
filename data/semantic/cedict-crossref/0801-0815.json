@@ -1,0 +1,406 @@
+{
+  "schema": "chromalect.mandarin.lexical-crossref-batch.v0.1",
+  "source": {
+    "title": "CC-CEDICT per-headword v2 mirror",
+    "repository": "krmanik/cedict-json",
+    "commit": "63c2569948629323b515833930fdd10f285401b6",
+    "dataLicense": "CC BY-SA 4.0",
+    "upstream": "https://cc-cedict.org/",
+    "mirror": "https://github.com/krmanik/cedict-json",
+    "transform": "Selected single-simplified-character dictionary records, retaining readings and definitions; literal English gloss matching is automated triage only"
+  },
+  "rankStart": 801,
+  "rankEnd": 815,
+  "summary": {
+    "total": 15,
+    "headwordFound": 15,
+    "withCandidate": 10,
+    "withLiteralSupport": 7
+  },
+  "records": [
+    {
+      "rank": 801,
+      "character": "邻",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/邻.json",
+      "sourceBlobSha": "a13f6569d4d1e3267d064128b407006160dbecc0",
+      "traditional": "隣",
+      "dictionaryReadings": [
+        "lin2"
+      ],
+      "dictionaryDefinitions": {
+        "lin2": "neighbor; adjacent; close to; variant of 鄰|邻[lin2]; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "neighbor",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "lin2"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 802,
+      "character": "岔",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/岔.json",
+      "sourceBlobSha": "90904a94453175f0f691ac5e9471d3b30052afa8",
+      "traditional": "岔",
+      "dictionaryReadings": [
+        "cha4"
+      ],
+      "dictionaryDefinitions": {
+        "cha4": "fork in road; bifurcation; branch in road, river, mountain range etc; to branch off; to turn off; to diverge; to stray (from the path); to change the subject; to interrupt; to stagger (times); "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "fork in road",
+          "sourceGlossGroupIndex": 1,
+          "matchingDictionaryReadings": [
+            "cha4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 803,
+      "character": "肝",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/肝.json",
+      "sourceBlobSha": "a760c4739db3ea85c7dc28b70a5f8761dd13960a",
+      "traditional": "肝",
+      "dictionaryReadings": [
+        "gan1"
+      ],
+      "dictionaryDefinitions": {
+        "gan1": "liver; CL:葉|叶[ye4],個|个[ge4]; "
+      },
+      "selectedSenseChecks": [],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 804,
+      "character": "肛",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/肛.json",
+      "sourceBlobSha": "78c28e663dfeb7f158aa1e9145977ce6a7fd0886",
+      "traditional": "肛",
+      "dictionaryReadings": [
+        "gang1"
+      ],
+      "dictionaryDefinitions": {
+        "gang1": "rectal prolapse; variant of 肛[gang1]; anus; "
+      },
+      "selectedSenseChecks": [],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 805,
+      "character": "肚",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/肚.json",
+      "sourceBlobSha": "a7ee19c29371aec569019689b566493289406803",
+      "traditional": "肚",
+      "dictionaryReadings": [
+        "du3",
+        "du4"
+      ],
+      "dictionaryDefinitions": {
+        "du3": "tripe; ",
+        "du4": "belly; "
+      },
+      "selectedSenseChecks": [],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 806,
+      "character": "肘",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/肘.json",
+      "sourceBlobSha": "bc2fa054809bc2f72edf5bf7a5112cc85bfd46dc",
+      "traditional": "肘",
+      "dictionaryReadings": [
+        "zhou3"
+      ],
+      "dictionaryDefinitions": {
+        "zhou3": "elbow; pork shoulder; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "elbow",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "zhou3"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 807,
+      "character": "肠",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/肠.json",
+      "sourceBlobSha": "4e17b0649c16d77c95ed7017c856bde3082b3268",
+      "traditional": "膓",
+      "dictionaryReadings": [
+        "chang2"
+      ],
+      "dictionaryDefinitions": {
+        "chang2": "intestines; old variant of 腸|肠[chang2]; "
+      },
+      "selectedSenseChecks": [],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 808,
+      "character": "龟",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/龟.json",
+      "sourceBlobSha": "01b7c627ad93a77c1fbb7eb8232c12b2bac39db2",
+      "traditional": "龜",
+      "dictionaryReadings": [
+        "gui1"
+      ],
+      "dictionaryDefinitions": {
+        "gui1": "tortoise; turtle; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "turtle",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "gui1"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 809,
+      "character": "甸",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/甸.json",
+      "sourceBlobSha": "d71379a6358df05c7a49e7361946c784eb1047ff",
+      "traditional": "甸",
+      "dictionaryReadings": [
+        "Dian4",
+        "dian4"
+      ],
+      "dictionaryDefinitions": {
+        "Dian4": "surname Dian; ",
+        "dian4": "suburbs or outskirts; one of the five degrees of official mourning attire in dynastic China; official in charge of fields (old); "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "crops",
+          "sourceGlossGroupIndex": 2,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 810,
+      "character": "免",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/免.json",
+      "sourceBlobSha": "4ace8829f8fe649069f961f55fe829135f4d9f2f",
+      "traditional": "免",
+      "dictionaryReadings": [
+        "mian3",
+        "wen4"
+      ],
+      "dictionaryDefinitions": {
+        "mian3": "to excuse sb; to exempt; to remove or dismiss from office; to avoid; to avert; to escape; to be prohibited; ",
+        "wen4": "old variant of 絻[wen4]; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "evade",
+          "sourceGlossGroupIndex": 2,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 811,
+      "character": "狂",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/狂.json",
+      "sourceBlobSha": "82536cf86c158d38ba5db844e474a30b9aba08d1",
+      "traditional": "狂",
+      "dictionaryReadings": [
+        "kuang2"
+      ],
+      "dictionaryDefinitions": {
+        "kuang2": "mad; wild; violent; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "wild",
+          "sourceGlossGroupIndex": 2,
+          "matchingDictionaryReadings": [
+            "kuang2"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 812,
+      "character": "犹",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/犹.json",
+      "sourceBlobSha": "131c3b7f6f811e56fcde388e2dd601a2941e8c30",
+      "traditional": "猶",
+      "dictionaryReadings": [
+        "you2"
+      ],
+      "dictionaryDefinitions": {
+        "you2": "as if; (just) like; just as; still; yet; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "similar",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 813,
+      "character": "狈",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/狈.json",
+      "sourceBlobSha": "7f517c64a1af1ffff1e408c02d9f04af7377e10b",
+      "traditional": "狽",
+      "dictionaryReadings": [
+        "bei4"
+      ],
+      "dictionaryDefinitions": {
+        "bei4": "a legendary wolf; distressed; wretched; "
+      },
+      "selectedSenseChecks": [],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 814,
+      "character": "角",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/角.json",
+      "sourceBlobSha": "d9fa7b86988cc9a5bf800a1e6023650a1aad79b7",
+      "traditional": "角",
+      "dictionaryReadings": [
+        "Jue2",
+        "jiao3",
+        "jue2"
+      ],
+      "dictionaryDefinitions": {
+        "Jue2": "surname Jue; ",
+        "jiao3": "angle; corner; horn; horn-shaped; unit of money equal to 0.1 yuan; CL:個|个[ge4]; ",
+        "jue2": "role (theater); to compete; ancient three legged wine vessel; third note of pentatonic scale; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "angle",
+          "sourceGlossGroupIndex": 1,
+          "matchingDictionaryReadings": [
+            "jiao3"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 815,
+      "character": "删",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/删.json",
+      "sourceBlobSha": "dcc1afc4b77529f255658c6fd708dd62de5543ce",
+      "traditional": "刪",
+      "dictionaryReadings": [
+        "shan1"
+      ],
+      "dictionaryDefinitions": {
+        "shan1": "to delete; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "delete",
+          "sourceGlossGroupIndex": 1,
+          "matchingDictionaryReadings": [
+            "shan1"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    }
+  ]
+}
