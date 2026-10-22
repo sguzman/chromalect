@@ -1,0 +1,327 @@
+{
+  "schema": "chromalect.mandarin.lexical-crossref-batch.v0.1",
+  "source": {
+    "title": "CC-CEDICT per-headword v2 mirror",
+    "repository": "krmanik/cedict-json",
+    "commit": "63c2569948629323b515833930fdd10f285401b6",
+    "dataLicense": "CC BY-SA 4.0",
+    "upstream": "https://cc-cedict.org/",
+    "mirror": "https://github.com/krmanik/cedict-json",
+    "transform": "Selected single-simplified-character dictionary records, retaining readings and definitions; literal English gloss matching is automated triage only"
+  },
+  "rankStart": 671,
+  "rankEnd": 680,
+  "summary": {
+    "total": 10,
+    "headwordFound": 10,
+    "withCandidate": 10,
+    "withLiteralSupport": 8
+  },
+  "records": [
+    {
+      "rank": 671,
+      "character": "严",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/严.json",
+      "sourceBlobSha": "e66d9fc9918105901b1374fc6264d58844859bed",
+      "traditional": "嚴",
+      "dictionaryReadings": [
+        "Yan2",
+        "yan2"
+      ],
+      "dictionaryDefinitions": {
+        "Yan2": "surname Yan; ",
+        "yan2": "tight (closely sealed); stern; strict; rigorous; severe; father; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "strict",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "yan2"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 672,
+      "character": "芦",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/芦.json",
+      "sourceBlobSha": "bebfe65334de8bb1c441bd007055490d3596bf77",
+      "traditional": "蘆",
+      "dictionaryReadings": [
+        "lu2"
+      ],
+      "dictionaryDefinitions": {
+        "lu2": "rush; reed; Phragmites communis; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "reeds",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 673,
+      "character": "芯",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/芯.json",
+      "sourceBlobSha": "5015fe83c13143638eccbc619c8a9076d5f7a332",
+      "traditional": "芯",
+      "dictionaryReadings": [
+        "xin1",
+        "xin4"
+      ],
+      "dictionaryDefinitions": {
+        "xin1": "lamp pith; wick; ",
+        "xin4": "core; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "pith",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "xin1"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 674,
+      "character": "劳",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/劳.json",
+      "sourceBlobSha": "80dc3e52e2c8684e9f0c9ab1662b5643c0f59d57",
+      "traditional": "勞",
+      "dictionaryReadings": [
+        "lao2",
+        "lao4"
+      ],
+      "dictionaryDefinitions": {
+        "lao2": "to toil; labor; laborer; to put sb to trouble (of doing sth); meritorious deed; ",
+        "lao4": "to console; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "labor",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "lao2"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 675,
+      "character": "克",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/克.json",
+      "sourceBlobSha": "3771dfff0daaebc2b3d80d866c834e88f92f4428",
+      "traditional": "尅",
+      "dictionaryReadings": [
+        "ke4",
+        "Ke4",
+        "kei1"
+      ],
+      "dictionaryDefinitions": {
+        "ke4": "to be able to; to subdue; to restrain; to overcome; gram; Tibetan unit of land area, about 6 ares; variant of 克[ke4]; to subdue; to overthrow; to restrain; variant of 剋|克[ke4]; ",
+        "Ke4": "Ke (c. 2000 BC), seventh of the legendary Flame Emperors, 炎帝[Yan2 di4] descended from Shennong 神農|神农[Shen2 nong2] Farmer God; ",
+        "kei1": "to scold; to beat; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "gram",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "ke4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 676,
+      "character": "芭",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/芭.json",
+      "sourceBlobSha": "36b98ff07e1c3203d6e982d8ed7d0596f5206a85",
+      "traditional": "芭",
+      "dictionaryReadings": [
+        "ba1"
+      ],
+      "dictionaryDefinitions": {
+        "ba1": "a herb; banana; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "banana",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "ba1"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 677,
+      "character": "苏",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/苏.json",
+      "sourceBlobSha": "ac7be47be015fd3d44acc1a2cf811545bae887b0",
+      "traditional": "蘓",
+      "dictionaryReadings": [
+        "su1",
+        "Su1"
+      ],
+      "dictionaryDefinitions": {
+        "su1": "see 囉囌|啰苏[luo1 su1]; variant of 蘇|苏[su1]; to revive; Perilla frutescens (Chinese basil or wild red basil); place name; to revive; used as phonetic in transliteration; old variant of 蘇|苏[su1]; ",
+        "Su1": "surname Su; abbr. for Soviet Union 蘇維埃|苏维埃 or 蘇聯|苏联; abbr. for Jiangsu province 江蘇|江苏; abbr. for Suzhou city 蘇州|苏州; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "revive",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "su1"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 678,
+      "character": "杆",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/杆.json",
+      "sourceBlobSha": "3b5f3c2e3d66bc9e434c2980583ed7cc57905850",
+      "traditional": "桿",
+      "dictionaryReadings": [
+        "gan1",
+        "gan3"
+      ],
+      "dictionaryDefinitions": {
+        "gan1": "pole; CL:條|条[tiao2],根[gen1]; ",
+        "gan3": "stick; pole; lever; classifier for long objects such as guns; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "pole",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "gan1",
+            "gan3"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 679,
+      "character": "杠",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/杠.json",
+      "sourceBlobSha": "05cd837f00a2a13f7eb95f450e985268af7b1cb1",
+      "traditional": "槓",
+      "dictionaryReadings": [
+        "gang1",
+        "gang4"
+      ],
+      "dictionaryDefinitions": {
+        "gang1": "flagpole; footbridge; ",
+        "gang4": "variant of 槓|杠[gang4]; thick pole; bar; rod; thick line; to mark with a thick line; to sharpen (knife); (old) coffin-bearing pole; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "crowbar",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 680,
+      "character": "杜",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/杜.json",
+      "sourceBlobSha": "135ad9a42fafe670b9403ca11d9b197089850ddd",
+      "traditional": "杜",
+      "dictionaryReadings": [
+        "Du4",
+        "du4"
+      ],
+      "dictionaryDefinitions": {
+        "Du4": "surname Du; ",
+        "du4": "birchleaf pear (tree); to stop; to prevent; to restrict; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "prevent",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "du4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    }
+  ]
+}
