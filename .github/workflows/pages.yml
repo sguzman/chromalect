@@ -187,6 +187,7 @@ jobs:
         run: |
           node --check site/semantic-coverage.js
           node tools/glyph-pipeline/semantic_inventory_smoke.mjs
+          node tools/glyph-pipeline/semantic_coverage_smoke.mjs
           mkdir -p site/semantic
           cp data/semantic/mandarin-1000-v0.1.json site/semantic/mandarin-1000-v0.1.json
           test -s site/semantic/mandarin-1000-v0.1.json
