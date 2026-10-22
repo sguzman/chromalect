@@ -125,7 +125,40 @@
     return parts(value).map(x => x.text).join("");
   }
 
+  // Primary display is emoji-only. Typed JSON is authoritative:
+  // the compact pictogram sequence cannot reconstruct every relation.
+  function emojiParts(value) {
+    if (value == null) return [];
+    validate(value);
+    function flatten(expr) {
+      switch (expr.kind) {
+        case "atom": return [emoji(expr.emoji)];
+        case "associate":
+        case "and": return expr.items.flatMap(flatten);
+        case "qualify": return [...flatten(expr.property), ...flatten(expr.head)];
+        case "change": return [...flatten(expr.from), emoji("➡️"), ...flatten(expr.to)];
+        case "event": {
+          const r = expr.roles || {};
+          // Ordered for legibility; roles remain explicit in the JSON.
+          return [
+            ...(r.agent ? flatten(r.agent) : []),
+            ...(r.source ? flatten(r.source) : []),
+            ...flatten(expr.predicate),
+            ...(r.patient ? flatten(r.patient) : []),
+            ...(r.goal ? flatten(r.goal) : []),
+            ...(r.instrument ? flatten(r.instrument) : [])
+          ];
+        }
+        case "not": return [emoji("🚫"), ...flatten(expr.value)];
+        default: throw new TypeError("Unknown semantic operator");
+      }
+    }
+    return flatten(value);
+  }
+  function emojiDisplay(value) {
+    return emojiParts(value).map(x => x.text).join("");
+  }
   globalThis.ChromalectSemanticGrammar = Object.freeze({
-    version: "0.1.0", validate, parts, display
+    version: "0.1.0", validate, parts, display, emojiParts, emojiDisplay
   });
 })();
