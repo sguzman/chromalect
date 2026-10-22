@@ -1,0 +1,302 @@
+{
+  "schema": "chromalect.mandarin.lexical-crossref-batch.v0.1",
+  "source": {
+    "title": "CC-CEDICT per-headword v2 mirror",
+    "repository": "krmanik/cedict-json",
+    "commit": "63c2569948629323b515833930fdd10f285401b6",
+    "dataLicense": "CC BY-SA 4.0",
+    "upstream": "https://cc-cedict.org/",
+    "mirror": "https://github.com/krmanik/cedict-json",
+    "transform": "Selected single-simplified-character dictionary records, retaining readings and definitions; literal English gloss matching is automated triage only"
+  },
+  "rankStart": 391,
+  "rankEnd": 400,
+  "summary": {
+    "total": 10,
+    "headwordFound": 10,
+    "withCandidate": 10,
+    "withLiteralSupport": 4
+  },
+  "records": [
+    {
+      "rank": 391,
+      "character": "存",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/存.json",
+      "sourceBlobSha": "fc8d830e0782fcc376860f531016a906880766b0",
+      "traditional": "存",
+      "dictionaryReadings": [
+        "cun2"
+      ],
+      "dictionaryDefinitions": {
+        "cun2": "to exist; to deposit; to store; to keep; to survive; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "exist",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "cun2"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 392,
+      "character": "而",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/而.json",
+      "sourceBlobSha": "a421fa580b4b398100c9cc8665bdf56fb7b84b8a",
+      "traditional": "而",
+      "dictionaryReadings": [
+        "er2"
+      ],
+      "dictionaryDefinitions": {
+        "er2": "and; as well as; and so; but (not); yet (not); (indicates causal relation); (indicates change of state); (indicates contrast); "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "but",
+          "sourceGlossGroupIndex": 3,
+          "matchingDictionaryReadings": [
+            "er2"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 393,
+      "character": "页",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/页.json",
+      "sourceBlobSha": "70a26ad2623e6c35f45b60115298514326be6058",
+      "traditional": "頁",
+      "dictionaryReadings": [
+        "ye4"
+      ],
+      "dictionaryDefinitions": {
+        "ye4": "page; leaf; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "page",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "ye4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 394,
+      "character": "匠",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/匠.json",
+      "sourceBlobSha": "6099d8218646025e0a2d52539c556eb808d5331a",
+      "traditional": "匠",
+      "dictionaryReadings": [
+        "jiang4"
+      ],
+      "dictionaryDefinitions": {
+        "jiang4": "craftsman; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "artisan",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 395,
+      "character": "夸",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/夸.json",
+      "sourceBlobSha": "7b2d7e514adf5c0b27eb63d432ae4a3ecb702c6a",
+      "traditional": "誇",
+      "dictionaryReadings": [
+        "kua1"
+      ],
+      "dictionaryDefinitions": {
+        "kua1": "see 夸克[kua1 ke4]; to boast; to exaggerate; to praise; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "handsome",
+          "sourceGlossGroupIndex": 1,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 396,
+      "character": "夺",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/夺.json",
+      "sourceBlobSha": "7974d09bd8b94b09e65c48447ec5b52cb87da0d0",
+      "traditional": "奪",
+      "dictionaryReadings": [
+        "duo2"
+      ],
+      "dictionaryDefinitions": {
+        "duo2": "to seize; to take away forcibly; to wrest control of; to compete or strive for; to force one's way through; to leave out; to lose; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "rob",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 397,
+      "character": "灰",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/灰.json",
+      "sourceBlobSha": "d71ba86e34a71099e2183b76e0a41422a47167f6",
+      "traditional": "灰",
+      "dictionaryReadings": [
+        "hui1"
+      ],
+      "dictionaryDefinitions": {
+        "hui1": "ash; dust; lime; gray; discouraged; dejected; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "ashes",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 398,
+      "character": "达",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/达.json",
+      "sourceBlobSha": "7dd74b1cca820debebc35d35562efed175907d8a",
+      "traditional": "達",
+      "dictionaryReadings": [
+        "Da2",
+        "da2"
+      ],
+      "dictionaryDefinitions": {
+        "Da2": "surname Da; ",
+        "da2": "to attain; to reach; to amount to; to communicate; eminent; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "arrive",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 399,
+      "character": "列",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/列.json",
+      "sourceBlobSha": "af1132423fe1f61c87f3e6258a34885bb0a7d16d",
+      "traditional": "列",
+      "dictionaryReadings": [
+        "lie4"
+      ],
+      "dictionaryDefinitions": {
+        "lie4": "to arrange; to line up; row; file; series; column; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "line",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "lie4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 400,
+      "character": "死",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/死.json",
+      "sourceBlobSha": "2b2d0e23ac76ab14d694afd8be80b09ac37b6503",
+      "traditional": "死",
+      "dictionaryReadings": [
+        "si3"
+      ],
+      "dictionaryDefinitions": {
+        "si3": "to die; impassable; uncrossable; inflexible; rigid; extremely; damned; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "death",
+          "sourceGlossGroupIndex": 2,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    }
+  ]
+}
