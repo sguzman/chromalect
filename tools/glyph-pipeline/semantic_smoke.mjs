@@ -33,6 +33,9 @@ const descendants = (root, css) => all(root).filter(x => x.className === css);
 async function execute() {
   const grid = new Element("div");
   const legend = new Element("div");
+  const words = new Element("div");
+  const outside = new Element("div");
+  const abstract = new Element("div");
   const checkbox = new Element("input");
   const status = new Element("p");
   const buttons = ["symbols", "plain"].map(mode => {
@@ -42,6 +45,9 @@ async function execute() {
   });
   const ids = {
     "semantic-specimens": grid,
+    "semantic-words": words,
+    "semantic-outside": outside,
+    "semantic-grammar-examples": abstract,
     "semantic-grammar-legend": legend,
     "semantic-reveal": checkbox,
     "semantic-lab-status": status
@@ -70,7 +76,7 @@ async function execute() {
   vm.runInNewContext(grammarSource, sandbox);
   vm.runInNewContext(labSource, sandbox);
   for (let i=0; i<16 && grid.children.length===0; i++) await Promise.resolve();
-  return { grid, legend, checkbox, status, buttons };
+  return { grid, words, outside, abstract, legend, checkbox, status, buttons };
 }
 
 assert.match(html, /semantic-grammar\.js/);
@@ -79,33 +85,43 @@ assert.match(html, /data-character-layer-controls/);
 assert.match(html, /src="layers.js"/);
 assert.match(html, /<details class="semantic-technical">/);
 assert.doesNotMatch(html, /data-semantic-mode="single"|data-semantic-mode="compound"/);
-const { grid, legend, checkbox, status, buttons } = await execute();
-assert.equal(grid.children.length, data.specimens.length);
-assert.ok(descendants(grid.children[0],"glyph-wrap").length===1);
-assert.ok(descendants(grid.children[data.specimens.findIndex(x=>x.id==="volcano")],"glyph-wrap").length===2);
+const { grid, words, outside, abstract, legend, checkbox, status, buttons } = await execute();
+assert.equal(grid.children.length, 7, "Mapped character samples only");
+assert.equal(words.children.length, 2, "Word-level examples remain separate");
+assert.equal(outside.children.length, 2, "Out-of-scope characters isolated");
+assert.equal(abstract.children.length, 8, "Grammar-only experiments isolated");
+assert.equal(grid.children.length + words.children.length + outside.children.length +
+  abstract.children.length, data.specimens.length);
 assert.equal(legend.children.length, data.operators.length);
-const index = id => data.specimens.findIndex(s=>s.id===id);
-const symbolCount = id => descendants(grid.children[index(id)], "semantic-symbol").length;
-assert.equal(symbolCount("mountain"), 1);
-assert.equal(symbolCount("study"), 2);
-assert.equal(symbolCount("read"), 2);
-assert.equal(symbolCount("raw"), 0);
-assert.equal(symbolCount("extended-mnemonic"), 5, "No arbitrary three-symbol truncation");
-assert.equal(descendants(grid.children[index("eat-apple")], "semantic-symbol")
-  .map(x=>x.textContent).join(""),"👤🍽️🍎");
-assert.equal(descendants(grid.children[index("not-eat")], "semantic-symbol")
-  .map(x=>x.textContent).join(""),"🚫🍽️");
-assert.ok(grid.children.every(card=>descendants(card,"semantic-operator").length===0),
-  "Public expressions must contain only emoji");
-assert.match(status.textContent,/Emoji expressions/);
+assert.ok(grid.children.every(card => descendants(card,"glyph-wrap").length === 1));
+assert.ok(words.children.every(card => descendants(card,"glyph-wrap").length === 2));
+assert.ok(outside.children.every(card => descendants(card,"semantic-unmapped-glyph").length === 1));
+assert.ok(outside.children.every(card => descendants(card,"glyph-wrap").length === 0));
+const charCount = cardIndex => descendants(grid.children[cardIndex],"semantic-symbol").length;
+assert.equal(charCount(0),1,"山 pictogram");
+assert.equal(charCount(1),1,"水 pictogram");
+assert.equal(charCount(2),1,"火 pictogram");
+assert.equal(descendants(grid.children[4],"semantic-symbol").length,0,
+  "Raw sense must abstain instead of inventing pictograms");
+assert.equal(descendants(outside.children[0],"semantic-symbol").length,2,"学 remains grammar test");
+assert.equal(descendants(abstract.children[7],"semantic-symbol").length,5);
+assert.equal(descendants(abstract.children[4],"semantic-symbol").map(x=>x.textContent).join(""),
+  "👤🍽️🍎");
+assert.ok([grid,words,outside,abstract].every(group =>
+  group.children.every(card => descendants(card,"semantic-operator").length === 0)));
+assert.match(status.textContent,/7 mapped character examples/);
+assert.match(html, /semantic-words/);
+assert.match(html, /semantic-outside/);
+assert.match(html, /semantic-grammar-examples/);
+assert.match(html, /data-character-layer-controls/);
 buttons[1].events.click();
-assert.ok(grid.children.every(card=>descendants(card,"semantic-symbol").length===0),
-  "Plain mode must remove pictographic annotations");
+assert.ok([grid,words,outside,abstract].every(group =>
+  group.children.every(card => descendants(card,"semantic-symbol").length === 0)),
+  "Hide emoji must work across all specimen groups");
 buttons[0].events.click();
-assert.equal(symbolCount("mountain"),1);
-assert.equal(symbolCount("extended-mnemonic"),5);
-checkbox.checked = true;
+assert.equal(charCount(0),1);
+checkbox.checked=true;
 checkbox.events.change();
-assert.ok(grid.children.every(card=>descendants(card,"semantic-answer")[0].hidden===false),
-  "Written meanings must reveal independently of grammar mode");
-console.log("Semantic lab: versioned grammar data, mixed 1–5 emoji expressions, action roles, Off toggle and written-meaning reveal.");
+assert.ok([grid,words,outside,abstract].every(group =>
+  group.children.every(card => descendants(card,"semantic-answer")[0].hidden === false)));
+console.log("Semantic lab: 7 mapped glyphs, 2 words, 2 out-of-scope glyphs, 8 isolated grammar examples, emoji and meaning toggles.");
