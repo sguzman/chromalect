@@ -1,0 +1,456 @@
+{
+  "schema": "chromalect.mandarin.lexical-crossref-batch.v0.1",
+  "source": {
+    "title": "CC-CEDICT per-headword v2 mirror",
+    "repository": "krmanik/cedict-json",
+    "commit": "63c2569948629323b515833930fdd10f285401b6",
+    "dataLicense": "CC BY-SA 4.0",
+    "upstream": "https://cc-cedict.org/",
+    "mirror": "https://github.com/krmanik/cedict-json",
+    "transform": "Selected single-simplified-character dictionary records, retaining readings and definitions; literal English gloss matching is automated triage only"
+  },
+  "rankStart": 431,
+  "rankEnd": 445,
+  "summary": {
+    "total": 15,
+    "headwordFound": 15,
+    "withCandidate": 14,
+    "withLiteralSupport": 10
+  },
+  "records": [
+    {
+      "rank": 431,
+      "character": "吸",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/吸.json",
+      "sourceBlobSha": "cf5fe0af283200c6ea40e1e0ebc9f166e5a78c37",
+      "traditional": "吸",
+      "dictionaryReadings": [
+        "xi1"
+      ],
+      "dictionaryDefinitions": {
+        "xi1": "to breathe; to suck in; to absorb; to inhale; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "inhale",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "xi1"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 432,
+      "character": "吗",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/吗.json",
+      "sourceBlobSha": "45359245849c87b8bca50dd14c8427c9b743adab",
+      "traditional": "嗎",
+      "dictionaryReadings": [
+        "ma3",
+        "ma5"
+      ],
+      "dictionaryDefinitions": {
+        "ma3": "see 嗎啡|吗啡, morphine; ",
+        "ma5": "(question particle for 'yes-no' questions); "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "interrogative",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 433,
+      "character": "吆",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/吆.json",
+      "sourceBlobSha": "04cb6b05c466dd110b5fcd3544cafef1be79ab1e",
+      "traditional": "吆",
+      "dictionaryReadings": [
+        "yao1"
+      ],
+      "dictionaryDefinitions": {
+        "yao1": "to shout; to bawl; to yell (to urge on an animal); to hawk (one's wares); "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "shout",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "yao1"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 434,
+      "character": "屿",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/屿.json",
+      "sourceBlobSha": "1a8a135e046502592bc44e0e7579bcd345bc9728",
+      "traditional": "嶼",
+      "dictionaryReadings": [
+        "yu3"
+      ],
+      "dictionaryDefinitions": {
+        "yu3": "islet; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "island",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 435,
+      "character": "屹",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/屹.json",
+      "sourceBlobSha": "da5573f0a56ea3216f2424d829944d5e0923deb8",
+      "traditional": "屹",
+      "dictionaryReadings": [
+        "yi4"
+      ],
+      "dictionaryDefinitions": {
+        "yi4": "high and steep; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "stand erect",
+          "sourceGlossGroupIndex": 1,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 436,
+      "character": "岁",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/岁.json",
+      "sourceBlobSha": "8d37191f91e0d22797d7938890986d5069a94882",
+      "traditional": "歲",
+      "dictionaryReadings": [
+        "sui4"
+      ],
+      "dictionaryDefinitions": {
+        "sui4": "variant of 歲|岁[sui4], year; years old; classifier for years (of age); year; year (of crop harvests); "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "year",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "sui4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 437,
+      "character": "帆",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/帆.json",
+      "sourceBlobSha": "9ab0f448c96876744686ceca048e5de087294d53",
+      "traditional": "颿",
+      "dictionaryReadings": [
+        "fan1"
+      ],
+      "dictionaryDefinitions": {
+        "fan1": "variant of 帆[fan1]; sail; Taiwan pr. [fan2], except 帆布[fan1 bu4] canvas; to gallop; Taiwan pr. [fan2]; variant of 帆[fan1]; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "sail",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "fan1"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 438,
+      "character": "回",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/回.json",
+      "sourceBlobSha": "0eddc3e6db5e68f93cc379648b3461b2057ff89f",
+      "traditional": "逥",
+      "dictionaryReadings": [
+        "hui2"
+      ],
+      "dictionaryDefinitions": {
+        "hui2": "to circle; to go back; to turn around; to answer; to return; to revolve; Hui ethnic group (Chinese Muslims); time; classifier for acts of a play; section or chapter (of a classic book); to curve; to return; to revolve; variant of 迴|回[hui2]; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "return",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "hui2"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 439,
+      "character": "岂",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/岂.json",
+      "sourceBlobSha": "9f3e29166a7020b9f328952f83737c4ddcc15469",
+      "traditional": "豈",
+      "dictionaryReadings": [
+        "kai3",
+        "qi3"
+      ],
+      "dictionaryDefinitions": {
+        "kai3": "old variant of 愷|恺[kai3]; old variant of 凱|凯[kai3]; ",
+        "qi3": "how? (emphatic question); "
+      },
+      "selectedSenseChecks": [],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 440,
+      "character": "则",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/则.json",
+      "sourceBlobSha": "c682f64ba4d5689d800d176f4d019912a76c7553",
+      "traditional": "則",
+      "dictionaryReadings": [
+        "ze2"
+      ],
+      "dictionaryDefinitions": {
+        "ze2": "(conjunction used to express contrast with a previous clause) but; then; standard; norm; principle; to imitate; to follow; classifier for written items; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "law",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 441,
+      "character": "刚",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/刚.json",
+      "sourceBlobSha": "dba0f366ea0a26a154e6cc772bf1598979289d40",
+      "traditional": "剛",
+      "dictionaryReadings": [
+        "gang1"
+      ],
+      "dictionaryDefinitions": {
+        "gang1": "hard; firm; strong; just; barely; exactly; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "strong",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "gang1"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 442,
+      "character": "网",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/网.json",
+      "sourceBlobSha": "599b9576d0aa97e35b9de207049a637061e93d4a",
+      "traditional": "網",
+      "dictionaryReadings": [
+        "wang3"
+      ],
+      "dictionaryDefinitions": {
+        "wang3": "net; network; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "net",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "wang3"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        },
+        {
+          "selectedMeaning": "network",
+          "sourceGlossGroupIndex": 1,
+          "matchingDictionaryReadings": [
+            "wang3"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 443,
+      "character": "肉",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/肉.json",
+      "sourceBlobSha": "cfa34be94706dd1c2e0d801c9c3b1e21ea5a67a8",
+      "traditional": "肉",
+      "dictionaryReadings": [
+        "rou4"
+      ],
+      "dictionaryDefinitions": {
+        "rou4": "meat; flesh; pulp (of a fruit); (coll.) (of a fruit) squashy; (of a person) flabby; irresolute; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "meat",
+          "sourceGlossGroupIndex": 1,
+          "matchingDictionaryReadings": [
+            "rou4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 444,
+      "character": "年",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/年.json",
+      "sourceBlobSha": "dc1ff9366deda08e06227696a89d1bf9340cc4b0",
+      "traditional": "秊",
+      "dictionaryReadings": [
+        "Nian2",
+        "nian2"
+      ],
+      "dictionaryDefinitions": {
+        "Nian2": "surname Nian; ",
+        "nian2": "year; CL:個|个[ge4]; grain; harvest (old); variant of 年[nian2]; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "year",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "nian2"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 445,
+      "character": "朱",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/朱.json",
+      "sourceBlobSha": "3bd6bb24a20f828b92c07105c3866dd8dd6e5715",
+      "traditional": "硃",
+      "dictionaryReadings": [
+        "Zhu1",
+        "zhu1"
+      ],
+      "dictionaryDefinitions": {
+        "Zhu1": "surname Zhu; ",
+        "zhu1": "vermilion; cinnabar; see 硃砂|朱砂[zhu1 sha1]; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "vermilion",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "zhu1"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    }
+  ]
+}
