@@ -37,7 +37,11 @@ for(let i=0;i<highs.length;i++){
    assert.ok(grammar.emojiDisplay(entry.alternativeExpression).length>0);
    assert.ok(entry.alternativeSelectedMeaning);
    trials++;
- }else assert.equal(entry.alternativeSelectedMeaning,null);
+ }else {
+   assert.ok(entry.alternativeSelectedMeaning===null||
+     entry.researchDisposition==="inspect_scope",
+     "A meaning-only scope proposal is valid without an emoji replacement");
+ }
  if(entry.researchDisposition==="defer_current_pictogram")abstentions++;
  if(entry.researchDisposition==="trial_typed_verb"){
    assert.equal(entry.alternativeExpression.kind,"event");
