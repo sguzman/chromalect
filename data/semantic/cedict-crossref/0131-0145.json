@@ -1,0 +1,386 @@
+{
+  "schema": "chromalect.mandarin.lexical-crossref-batch.v0.1",
+  "source": {
+    "title": "CC-CEDICT per-headword v2 mirror",
+    "repository": "krmanik/cedict-json",
+    "commit": "63c2569948629323b515833930fdd10f285401b6",
+    "dataLicense": "CC BY-SA 4.0",
+    "upstream": "https://cc-cedict.org/",
+    "mirror": "https://github.com/krmanik/cedict-json",
+    "transform": "Selected single-simplified-character dictionary records, retaining readings and definitions; literal English gloss matching is automated triage only"
+  },
+  "rankStart": 131,
+  "rankEnd": 145,
+  "summary": {
+    "total": 15,
+    "headwordFound": 15,
+    "withCandidate": 8,
+    "withLiteralSupport": 5
+  },
+  "records": [
+    {
+      "rank": 131,
+      "character": "仆",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/仆.json",
+      "sourceBlobSha": "774d2bf6137029e7f443693c815d0c4ae13d1554",
+      "traditional": "僕",
+      "dictionaryReadings": [
+        "pu1",
+        "pu2"
+      ],
+      "dictionaryDefinitions": {
+        "pu1": "to fall forward; to fall prostrate; ",
+        "pu2": "servant; "
+      },
+      "selectedSenseChecks": [],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 132,
+      "character": "化",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/化.json",
+      "sourceBlobSha": "3231aae28194117ebebbfe29905003e7ea89ab5b",
+      "traditional": "化",
+      "dictionaryReadings": [
+        "hua1",
+        "hua4"
+      ],
+      "dictionaryDefinitions": {
+        "hua1": "variant of 花[hua1]; ",
+        "hua4": "to make into; to change into; -ization; to ... -ize; to transform; abbr. for 化學|化学[hua4 xue2]; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "change",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "hua4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 133,
+      "character": "仇",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/仇.json",
+      "sourceBlobSha": "ee6979ac0ef75733aa23b3da765f05c779302b35",
+      "traditional": "仇",
+      "dictionaryReadings": [
+        "Qiu2",
+        "chou2",
+        "qiu2"
+      ],
+      "dictionaryDefinitions": {
+        "Qiu2": "surname Qiu; ",
+        "chou2": "hatred; animosity; enmity; foe; enemy; to feel animosity toward (the wealthy, foreigners etc); ",
+        "qiu2": "spouse; companion; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "enemy",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "chou2"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 134,
+      "character": "币",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/币.json",
+      "sourceBlobSha": "8845fec05e9c8e0e0e4e918c906887f1bfcd252b",
+      "traditional": "幣",
+      "dictionaryReadings": [
+        "bi4"
+      ],
+      "dictionaryDefinitions": {
+        "bi4": "money; coins; currency; silk; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "currency",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "bi4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 135,
+      "character": "仍",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/仍.json",
+      "sourceBlobSha": "727ac655031ac2ef29eac29fbe2cc59cd8ed2297",
+      "traditional": "仍",
+      "dictionaryReadings": [
+        "reng2"
+      ],
+      "dictionaryDefinitions": {
+        "reng2": "still; yet; to remain; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "again",
+          "sourceGlossGroupIndex": 1,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 136,
+      "character": "仅",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/仅.json",
+      "sourceBlobSha": "c13cae664e555ecff1845ebaf1b3e7ad835087ac",
+      "traditional": "僅",
+      "dictionaryReadings": [
+        "jin3"
+      ],
+      "dictionaryDefinitions": {
+        "jin3": "barely; only; merely; "
+      },
+      "selectedSenseChecks": [],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 137,
+      "character": "斤",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/斤.json",
+      "sourceBlobSha": "62dd4165b69346de7880c87bb04c154a6940d67a",
+      "traditional": "斤",
+      "dictionaryReadings": [
+        "jin1"
+      ],
+      "dictionaryDefinitions": {
+        "jin1": "catty; weight equal to 0.5 kg; (Tw) weight equal to 0.6 kg; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "axe",
+          "sourceGlossGroupIndex": 1,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 138,
+      "character": "爪",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/爪.json",
+      "sourceBlobSha": "d0d48b3acf5f59fc42e6ab90ca870e48ced89f1a",
+      "traditional": "爪",
+      "dictionaryReadings": [
+        "zhua3"
+      ],
+      "dictionaryDefinitions": {
+        "zhua3": "claw; "
+      },
+      "selectedSenseChecks": [],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 139,
+      "character": "反",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/反.json",
+      "sourceBlobSha": "18fab3ed33947f29abd03e8f1ca4c530133e8a54",
+      "traditional": "反",
+      "dictionaryReadings": [
+        "fan3"
+      ],
+      "dictionaryDefinitions": {
+        "fan3": "contrary; in reverse; inside out or upside down; to reverse; to return; to oppose; opposite; against; anti-; to rebel; to use analogy; instead; abbr. for 反切[fan3 qie4] phonetic system; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "reverse",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "fan3"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 140,
+      "character": "介",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/介.json",
+      "sourceBlobSha": "c69a1736a1ba4244312b5985a8c89d7760ea9010",
+      "traditional": "介",
+      "dictionaryReadings": [
+        "jie4"
+      ],
+      "dictionaryDefinitions": {
+        "jie4": "to introduce; to lie between; between; shell; armor; "
+      },
+      "selectedSenseChecks": [],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 141,
+      "character": "父",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/父.json",
+      "sourceBlobSha": "be8dc5ed118f33076d4d59040f43cc327fa667e9",
+      "traditional": "父",
+      "dictionaryReadings": [
+        "fu4"
+      ],
+      "dictionaryDefinitions": {
+        "fu4": "father; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "father",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "fu4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 142,
+      "character": "从",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/从.json",
+      "sourceBlobSha": "a5049c1aa8ec4e1a1d1297a76a00921e319ed434",
+      "traditional": "從",
+      "dictionaryReadings": [
+        "Cong2",
+        "cong2",
+        "zong4"
+      ],
+      "dictionaryDefinitions": {
+        "Cong2": "surname Cong; ",
+        "cong2": "from; through; via; to follow; to obey; to engage in (an activity); never (in negative sentence); (Taiwan pr. [zong4]) retainer; assistant; accomplice; related by common paternal grandfather or earlier ancestor; ",
+        "zong4": "second cousin; "
+      },
+      "selectedSenseChecks": [],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 143,
+      "character": "仑",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/仑.json",
+      "sourceBlobSha": "7da35b3335abbd1a6c5b9dcd348f829dfba3ec40",
+      "traditional": "崙",
+      "dictionaryReadings": [
+        "lun2"
+      ],
+      "dictionaryDefinitions": {
+        "lun2": "to arrange; variant of 崙|仑[lun2]; Kunlun (Karakorum) mountain range in Xinjiang; "
+      },
+      "selectedSenseChecks": [],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 144,
+      "character": "今",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/今.json",
+      "sourceBlobSha": "311900f860bc41c024b22b95a48ad2ab7f9901e5",
+      "traditional": "今",
+      "dictionaryReadings": [
+        "jin1"
+      ],
+      "dictionaryDefinitions": {
+        "jin1": "today; modern; present; current; this; now; "
+      },
+      "selectedSenseChecks": [],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 145,
+      "character": "凶",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/凶.json",
+      "sourceBlobSha": "1acd16f466d7b89dca5554577cf0c7ed914f822a",
+      "traditional": "凶",
+      "dictionaryReadings": [
+        "xiong1"
+      ],
+      "dictionaryDefinitions": {
+        "xiong1": "terrible; fearful; vicious; fierce; ominous; inauspicious; famine; variant of 兇|凶[xiong1]; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "sad",
+          "sourceGlossGroupIndex": 2,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    }
+  ]
+}
