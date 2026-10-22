@@ -1,0 +1,451 @@
+{
+  "schema": "chromalect.mandarin.lexical-crossref-batch.v0.1",
+  "source": {
+    "title": "CC-CEDICT per-headword v2 mirror",
+    "repository": "krmanik/cedict-json",
+    "commit": "63c2569948629323b515833930fdd10f285401b6",
+    "dataLicense": "CC BY-SA 4.0",
+    "upstream": "https://cc-cedict.org/",
+    "mirror": "https://github.com/krmanik/cedict-json",
+    "transform": "Selected single-simplified-character dictionary records, retaining readings and definitions; literal English gloss matching is automated triage only"
+  },
+  "rankStart": 606,
+  "rankEnd": 620,
+  "summary": {
+    "total": 15,
+    "headwordFound": 15,
+    "withCandidate": 15,
+    "withLiteralSupport": 11
+  },
+  "records": [
+    {
+      "rank": 606,
+      "character": "戒",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/戒.json",
+      "sourceBlobSha": "5d92487d8b9d0828711c9066c02f532bab68a593",
+      "traditional": "戒",
+      "dictionaryReadings": [
+        "jie4"
+      ],
+      "dictionaryDefinitions": {
+        "jie4": "to guard against; to exhort; to admonish or warn; to give up or stop doing sth; Buddhist monastic discipline; ring (for a finger); "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "warn",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "jie4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 607,
+      "character": "吞",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/吞.json",
+      "sourceBlobSha": "edf53852021da5fbac4cb958ae1593cae143f652",
+      "traditional": "吞",
+      "dictionaryReadings": [
+        "tun1"
+      ],
+      "dictionaryDefinitions": {
+        "tun1": "to swallow; to take; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "swallow",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "tun1"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 608,
+      "character": "远",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/远.json",
+      "sourceBlobSha": "0d1c1d7638b1862834043dd0ad9c560370788e66",
+      "traditional": "遠",
+      "dictionaryReadings": [
+        "yuan3",
+        "yuan4"
+      ],
+      "dictionaryDefinitions": {
+        "yuan3": "far; distant; remote; (intensifier in a comparison) by far; much (lower etc); ",
+        "yuan4": "to distance oneself from (classical); "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "distant",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "yuan3"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 609,
+      "character": "违",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/违.json",
+      "sourceBlobSha": "b557826ae3aadc06507c633cf153e1b772a69833",
+      "traditional": "違",
+      "dictionaryReadings": [
+        "wei2"
+      ],
+      "dictionaryDefinitions": {
+        "wei2": "to disobey; to violate; to separate; to go against; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "disobey",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "wei2"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 610,
+      "character": "韧",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/韧.json",
+      "sourceBlobSha": "a4756410c4cdb8d52bec3ff66cc855603c639b32",
+      "traditional": "韌",
+      "dictionaryReadings": [
+        "ren4"
+      ],
+      "dictionaryDefinitions": {
+        "ren4": "variant of 韌|韧[ren4]; old variant of 韌|韧[ren4]; annealed; pliable but strong; tough; tenacious; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "resilient",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 611,
+      "character": "运",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/运.json",
+      "sourceBlobSha": "40f3c7cae6f1ac50c6cdc62c801741992a903157",
+      "traditional": "運",
+      "dictionaryReadings": [
+        "yun4"
+      ],
+      "dictionaryDefinitions": {
+        "yun4": "to move; to transport; to use; to apply; fortune; luck; fate; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "transport",
+          "sourceGlossGroupIndex": 1,
+          "matchingDictionaryReadings": [
+            "yun4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 612,
+      "character": "扶",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/扶.json",
+      "sourceBlobSha": "96ef4aedf8d641d4c2c904158fd099f9e8e4a602",
+      "traditional": "扶",
+      "dictionaryReadings": [
+        "fu2"
+      ],
+      "dictionaryDefinitions": {
+        "fu2": "to support with the hand; to help sb up; to support oneself by holding onto something; to help; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "help",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "fu2"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 613,
+      "character": "抚",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/抚.json",
+      "sourceBlobSha": "b36405d60a4ccff6f0b1af48a25c4951a23583ef",
+      "traditional": "撫",
+      "dictionaryReadings": [
+        "fu3"
+      ],
+      "dictionaryDefinitions": {
+        "fu3": "to comfort; to console; to stroke; to caress; an old term for province or provincial governor; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "comfort",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "fu3"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 614,
+      "character": "坛",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/坛.json",
+      "sourceBlobSha": "ff4f82df79ef2ca9e163fb2e4c95b7d2e5ccdd81",
+      "traditional": "罈",
+      "dictionaryReadings": [
+        "tan2"
+      ],
+      "dictionaryDefinitions": {
+        "tan2": "altar; earthen jar; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "altar",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "tan2"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 615,
+      "character": "技",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/技.json",
+      "sourceBlobSha": "8e026b8c13aa7a7504897460f808058fa66d09de",
+      "traditional": "技",
+      "dictionaryReadings": [
+        "ji4"
+      ],
+      "dictionaryDefinitions": {
+        "ji4": "skill; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "skill",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "ji4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 616,
+      "character": "坏",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/坏.json",
+      "sourceBlobSha": "a52f3ccf8fd79a60ac5f2f542c2acc94a75144b7",
+      "traditional": "壞",
+      "dictionaryReadings": [
+        "huai4"
+      ],
+      "dictionaryDefinitions": {
+        "huai4": "bad; spoiled; broken; to break down; (suffix) to the utmost; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "broken",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "huai4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 617,
+      "character": "抠",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/抠.json",
+      "sourceBlobSha": "4182f88dde205d5962243fe7ad37b3266ce520cf",
+      "traditional": "摳",
+      "dictionaryReadings": [
+        "kou1"
+      ],
+      "dictionaryDefinitions": {
+        "kou1": "to dig out; to pick out (with one's fingers); to carve; to cut; to study meticulously; to lift one's clothes; stingy; miserly; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "lift up",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 618,
+      "character": "扰",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/扰.json",
+      "sourceBlobSha": "2f703d1bd2c0b09468e9220b3c412376e89fcc49",
+      "traditional": "擾",
+      "dictionaryReadings": [
+        "rao3"
+      ],
+      "dictionaryDefinitions": {
+        "rao3": "to disturb; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "disturb",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "rao3"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 619,
+      "character": "扼",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/扼.json",
+      "sourceBlobSha": "e109b3fb886448913a8797ad9e8316a4e938aaab",
+      "traditional": "搤",
+      "dictionaryReadings": [
+        "e4"
+      ],
+      "dictionaryDefinitions": {
+        "e4": "to grip forcefully; to clutch at; to guard; to control; to hold; variant of 扼[e4]; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "grasp",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 620,
+      "character": "拒",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/拒.json",
+      "sourceBlobSha": "81ae927f772ab64513af2c8d5edf809d5b7f1278",
+      "traditional": "拒",
+      "dictionaryReadings": [
+        "ju4"
+      ],
+      "dictionaryDefinitions": {
+        "ju4": "to resist; to repel; to refuse; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "defend",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    }
+  ]
+}
