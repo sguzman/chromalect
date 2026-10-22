@@ -1,0 +1,299 @@
+{
+  "schema": "chromalect.mandarin.lexical-crossref-batch.v0.1",
+  "source": {
+    "title": "CC-CEDICT per-headword v2 mirror",
+    "repository": "krmanik/cedict-json",
+    "commit": "63c2569948629323b515833930fdd10f285401b6",
+    "dataLicense": "CC BY-SA 4.0",
+    "upstream": "https://cc-cedict.org/",
+    "mirror": "https://github.com/krmanik/cedict-json",
+    "transform": "Selected single-simplified-character dictionary records, retaining readings and definitions; literal English gloss matching is automated triage only"
+  },
+  "rankStart": 721,
+  "rankEnd": 730,
+  "summary": {
+    "total": 10,
+    "headwordFound": 10,
+    "withCandidate": 9,
+    "withLiteralSupport": 4
+  },
+  "records": [
+    {
+      "rank": 721,
+      "character": "里",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/里.json",
+      "sourceBlobSha": "4f457d97d3fc52b3a0948161bc014fd7bbe84811",
+      "traditional": "里",
+      "dictionaryReadings": [
+        "li3",
+        "Li3"
+      ],
+      "dictionaryDefinitions": {
+        "li3": "variant of 裡|里[li3]; lining; interior; inside; internal; also written 裏|里[li3]; li, ancient measure of length, approx. 500 m; neighborhood; ancient administrative unit of 25 families; (Tw) borough, administrative unit between the township 鎮|镇[zhen4] and neighborhood 鄰|邻[lin2] levels; ",
+        "Li3": "Li (surname); "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "village",
+          "sourceGlossGroupIndex": 1,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 722,
+      "character": "呆",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/呆.json",
+      "sourceBlobSha": "93ec3e9af470da380b6d7e54f3f8618b29d744e6",
+      "traditional": "呆",
+      "dictionaryReadings": [
+        "dai1"
+      ],
+      "dictionaryDefinitions": {
+        "dai1": "foolish; stupid; expressionless; blank; to stay; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "dull",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 723,
+      "character": "吱",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/吱.json",
+      "sourceBlobSha": "720e7c260586fcdff3774ee5340ea483f27c8dc6",
+      "traditional": "吱",
+      "dictionaryReadings": [
+        "zhi1",
+        "zi1"
+      ],
+      "dictionaryDefinitions": {
+        "zhi1": "(onom.) creaking or groaning; ",
+        "zi1": "(onom.) to squeak (of mice); to chirp or peep (of small birds); "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "chirping",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 724,
+      "character": "吠",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/吠.json",
+      "sourceBlobSha": "f0bfc644ce83a4d7786cae2e67f6e7a1184e6a23",
+      "traditional": "吠",
+      "dictionaryReadings": [
+        "fei4"
+      ],
+      "dictionaryDefinitions": {
+        "fei4": "to bark; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "bark",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "fei4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 725,
+      "character": "呕",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/呕.json",
+      "sourceBlobSha": "ebf63b25ea4b1ccbb95e81ca385cbf39f33994ca",
+      "traditional": "嘔",
+      "dictionaryReadings": [
+        "ou3"
+      ],
+      "dictionaryDefinitions": {
+        "ou3": "vomit; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "vomit",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "ou3"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 726,
+      "character": "园",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/园.json",
+      "sourceBlobSha": "a6ff708629a2d23d37873f6ea65ae70893b0d7d2",
+      "traditional": "園",
+      "dictionaryReadings": [
+        "Yuan2",
+        "yuan2"
+      ],
+      "dictionaryDefinitions": {
+        "Yuan2": "surname Yuan; ",
+        "yuan2": "land used for growing plants; site used for public recreation; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "garden",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 727,
+      "character": "旷",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/旷.json",
+      "sourceBlobSha": "82fc44172f430d72a74f9204c72ece334f148e19",
+      "traditional": "曠",
+      "dictionaryReadings": [
+        "kuang4"
+      ],
+      "dictionaryDefinitions": {
+        "kuang4": "to neglect; to skip (class or work); to waste (time); vast; loose-fitting; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "wide",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 728,
+      "character": "围",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/围.json",
+      "sourceBlobSha": "52bdec4428cb8acd1fff5ed3fa176b6b7f1353c4",
+      "traditional": "圍",
+      "dictionaryReadings": [
+        "Wei2",
+        "wei2"
+      ],
+      "dictionaryDefinitions": {
+        "Wei2": "surname Wei; ",
+        "wei2": "to encircle; to surround; all around; to wear by wrapping around (scarf, shawl); "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "surround",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "wei2"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 729,
+      "character": "呀",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/呀.json",
+      "sourceBlobSha": "efa668059fa4eca9fb22be4fdd0aecf1d576f2c5",
+      "traditional": "呀",
+      "dictionaryReadings": [
+        "ya5"
+      ],
+      "dictionaryDefinitions": {
+        "ya5": "(particle equivalent to 啊 after a vowel, expressing surprise or doubt); "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "surprise",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "ya5"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 730,
+      "character": "吨",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/吨.json",
+      "sourceBlobSha": "c26e8a2fc3572a8f97e75d65f79685c40c47d5c7",
+      "traditional": "噸",
+      "dictionaryReadings": [
+        "dun1"
+      ],
+      "dictionaryDefinitions": {
+        "dun1": "ton (loanword); Taiwan pr. [dun4]; "
+      },
+      "selectedSenseChecks": [],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    }
+  ]
+}
