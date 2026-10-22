@@ -75,11 +75,11 @@ for(const record of queue.records){
  assert.ok(allowedActions.has(analysis.provisionalNextAction),
    "Every assessment must specify a recognizable next step");
  assert.ok(typeof analysis.observation==="string"&&analysis.observation.length>40);
- if(record.priority!=="high"){
-   assert.equal(analysis.reviewerIndependent,false);
-   assert.equal(analysis.sourceBasis,"pinned_CC-CEDICT_headword_plus_Unihan_candidate");
-   assert.ok(analysis.sourceExcerpt?.length>5);
- }
+ assert.equal(analysis.reviewerIndependent,false,
+   "All desk notes are assistant preliminary work, not independent review");
+ assert.equal(analysis.sourceBasis,"pinned_CC-CEDICT_headword_plus_Unihan_candidate");
+ assert.ok(analysis.sourceExcerpt?.length>5,
+   "Every note must preserve independent dictionary evidence");
  assert.equal(record.lexicalDecision,"pending",
    "Preliminary assistant analysis must not produce lexical approval");
  assert.equal(record.visualComprehensionDecision,"pending",
