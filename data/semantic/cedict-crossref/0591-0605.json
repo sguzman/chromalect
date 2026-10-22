@@ -1,0 +1,461 @@
+{
+  "schema": "chromalect.mandarin.lexical-crossref-batch.v0.1",
+  "source": {
+    "title": "CC-CEDICT per-headword v2 mirror",
+    "repository": "krmanik/cedict-json",
+    "commit": "63c2569948629323b515833930fdd10f285401b6",
+    "dataLicense": "CC BY-SA 4.0",
+    "upstream": "https://cc-cedict.org/",
+    "mirror": "https://github.com/krmanik/cedict-json",
+    "transform": "Selected single-simplified-character dictionary records, retaining readings and definitions; literal English gloss matching is automated triage only"
+  },
+  "rankStart": 591,
+  "rankEnd": 605,
+  "summary": {
+    "total": 15,
+    "headwordFound": 15,
+    "withCandidate": 15,
+    "withLiteralSupport": 11
+  },
+  "records": [
+    {
+      "rank": 591,
+      "character": "纤",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/纤.json",
+      "sourceBlobSha": "c9aabcb6a33e669a0e5f3c658ba7c7078ae1e78e",
+      "traditional": "纖",
+      "dictionaryReadings": [
+        "qian4",
+        "xian1"
+      ],
+      "dictionaryDefinitions": {
+        "qian4": "boatman's tow-rope; ",
+        "xian1": "fine; delicate; minute; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "delicate",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "xian1"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 592,
+      "character": "驯",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/驯.json",
+      "sourceBlobSha": "f4708791bea358626f14af6f4b75534c3250a5e9",
+      "traditional": "馴",
+      "dictionaryReadings": [
+        "xun4"
+      ],
+      "dictionaryDefinitions": {
+        "xun4": "to attain gradually; to tame; Taiwan pr. [xun2]; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "tame",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "xun4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 593,
+      "character": "约",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/约.json",
+      "sourceBlobSha": "ed4047a5752480e6e7950ac83553eec14cdb7dbe",
+      "traditional": "約",
+      "dictionaryReadings": [
+        "yao1",
+        "yue1"
+      ],
+      "dictionaryDefinitions": {
+        "yao1": "to weigh in a balance or on a scale; ",
+        "yue1": "to make an appointment; to invite; approximately; pact; treaty; to economize; to restrict; to reduce (a fraction); concise; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "agreement",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 594,
+      "character": "级",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/级.json",
+      "sourceBlobSha": "230f4efb8ade721627f23f6f1259530663f91a7d",
+      "traditional": "級",
+      "dictionaryReadings": [
+        "ji2"
+      ],
+      "dictionaryDefinitions": {
+        "ji2": "level; grade; rank; step (of stairs); CL:個|个[ge4]; classifier: step, level; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "level",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "ji2"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 595,
+      "character": "纪",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/纪.json",
+      "sourceBlobSha": "05ac759b9039ea335f371e8eb882cd41f93f25cf",
+      "traditional": "紀",
+      "dictionaryReadings": [
+        "Ji3",
+        "ji4"
+      ],
+      "dictionaryDefinitions": {
+        "Ji3": "surname Ji; also pr. [Ji4]; ",
+        "ji4": "order; discipline; age; era; period; to chronicle; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "historical",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 596,
+      "character": "驰",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/驰.json",
+      "sourceBlobSha": "99eda7cfd19443573815916b2730d5676608bc8c",
+      "traditional": "馳",
+      "dictionaryReadings": [
+        "chi2"
+      ],
+      "dictionaryDefinitions": {
+        "chi2": "to run fast; to speed; to gallop; to disseminate; to spread; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "hurry",
+          "sourceGlossGroupIndex": 1,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 597,
+      "character": "纫",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/纫.json",
+      "sourceBlobSha": "35a2bbcea0b299665c5e1bbfedf6fa90b0f3f41c",
+      "traditional": "紉",
+      "dictionaryReadings": [
+        "ren4"
+      ],
+      "dictionaryDefinitions": {
+        "ren4": "to string; to thread (needle); "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "sew",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 598,
+      "character": "巡",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/巡.json",
+      "sourceBlobSha": "b895a0da99f2e572b4f9e617e205455cb0aa4d09",
+      "traditional": "廵",
+      "dictionaryReadings": [
+        "xun2"
+      ],
+      "dictionaryDefinitions": {
+        "xun2": "to patrol; to make one's rounds; classifier for rounds of drinks; variant of 巡[xun2]; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "patrol",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "xun2"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 599,
+      "character": "寿",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/寿.json",
+      "sourceBlobSha": "ba261df293e546b6869df119d32c1440292a0cda",
+      "traditional": "壽",
+      "dictionaryReadings": [
+        "Shou4",
+        "shou4"
+      ],
+      "dictionaryDefinitions": {
+        "Shou4": "surname Shou; ",
+        "shou4": "long life; old age; age; life; birthday; funerary; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "long life",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "shou4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 600,
+      "character": "弄",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/弄.json",
+      "sourceBlobSha": "f07bb7ecf977f60305b84c57361116cda4328ccc",
+      "traditional": "衖",
+      "dictionaryReadings": [
+        "long4",
+        "nong4"
+      ],
+      "dictionaryDefinitions": {
+        "long4": "lane; alley; variant of 弄[long4]; ",
+        "nong4": "to do; to manage; to handle; to play with; to fool with; to mess with; to fix; to toy with; old variant of 弄[nong4]; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "alley",
+          "sourceGlossGroupIndex": 1,
+          "matchingDictionaryReadings": [
+            "long4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 601,
+      "character": "麦",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/麦.json",
+      "sourceBlobSha": "928721d83e03f5ee36382481e192de1c50f2a1e0",
+      "traditional": "麥",
+      "dictionaryReadings": [
+        "Mai4",
+        "mai4"
+      ],
+      "dictionaryDefinitions": {
+        "Mai4": "surname Mai; ",
+        "mai4": "wheat; barley; oats; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "wheat",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "mai4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 602,
+      "character": "玖",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/玖.json",
+      "sourceBlobSha": "88f3dd69f0339348f2584565f2357589c45840ac",
+      "traditional": "玖",
+      "dictionaryReadings": [
+        "jiu3"
+      ],
+      "dictionaryDefinitions": {
+        "jiu3": "black jade; nine (banker's anti-fraud numeral); "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "jade",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "jiu3"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 603,
+      "character": "玛",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/玛.json",
+      "sourceBlobSha": "e9cdb2b8368f136b062fb8669c40696ce172ffe7",
+      "traditional": "瑪",
+      "dictionaryReadings": [
+        "ma3"
+      ],
+      "dictionaryDefinitions": {
+        "ma3": "agate; cornelian; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "agate",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "ma3"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 604,
+      "character": "形",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/形.json",
+      "sourceBlobSha": "6dbbf805e3bc09ac6b867a5fa3fffd7e78981a68",
+      "traditional": "形",
+      "dictionaryReadings": [
+        "xing2"
+      ],
+      "dictionaryDefinitions": {
+        "xing2": "to appear; to look; form; shape; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "shape",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "xing2"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 605,
+      "character": "进",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/进.json",
+      "sourceBlobSha": "7b4e28c44feec05e08bfc365f8137655d462cba1",
+      "traditional": "進",
+      "dictionaryReadings": [
+        "jin4"
+      ],
+      "dictionaryDefinitions": {
+        "jin4": "to go forward; to advance; to go in; to enter; to put in; to submit; to take in; to admit; (math.) base of a number system; classifier for sections in a building or residential compound; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "advance",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "jin4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    }
+  ]
+}
