@@ -1,13 +1,13 @@
 # Mandarin lexical verification: independent dictionary intake
 
-**Status (2026-10-22):** first 100 character headwords cross-referenced; human linguistic verification and pictogram comprehension review not yet completed. The original 1,000-character screening is already complete.
+**Status (2026-10-22):** first 200 character headwords cross-referenced; human linguistic verification and pictogram comprehension review not yet completed. The original 1,000-character screening is already complete.
 
 ## Independent second source
 
-The original first-pass semantic evidence came from pinned Unicode Unihan draft \`kDefinition\` records. The [new cross-reference manifest](../data/semantic/cedict-crossref/manifest-v0.1.json) examines ranks **1–100** against a **separate CC-CEDICT** headword dictionary, using a pinned per-character [cedict-json](https://github.com/krmanik/cedict-json) mirror revision \`63c2569948629323b515833930fdd10f285401b6\`.
+The original first-pass semantic evidence came from pinned Unicode Unihan draft \`kDefinition\` records. The [new cross-reference manifest](../data/semantic/cedict-crossref/manifest-v0.1.json) examines ranks **1–200** against a **separate CC-CEDICT** headword dictionary, using a pinned per-character [cedict-json](https://github.com/krmanik/cedict-json) mirror revision \`63c2569948629323b515833930fdd10f285401b6\`.
 
 - Original compiler: CC-CEDICT community project. Mirror/JSON adaptation: Mani (Infinyte7), **CC BY-SA 4.0**; source licenses apply separately to the [batch records](../data/semantic/cedict-crossref/), and attribution is in [third-party notices](../THIRD_PARTY_NOTICES.md).
-- The 7 batch files preserve the selected headword, traditional form, pinyin readings, dictionary gloss text, mirror file SHA, and source provenance. They **do not relicense** CC-CEDICT under the repository's software license.
+- The 14 batch files preserve the selected headword, traditional form, pinyin readings, dictionary gloss text, mirror file SHA, and source provenance. They **do not relicense** CC-CEDICT under the repository's software license.
 - The manifest summarizes support flags without copying the full dictionary. The actual database snapshot is not a live dictionary and may contain old, infrequent, regional, proper-name, or character-only usages.
 - A **literal gloss match** is a case-insensitive English substring check only. It is not semantic inference, independent human lexical validation, and certainly not a comprehension test. The same meaning can be expressed with different English words, and a literal match can still be misleading.
 
@@ -17,16 +17,16 @@ The original first-pass semantic evidence came from pinned Unicode Unihan draft 
 | --- | ---: | ---: | --- |
 | Unihan initial source coverage | 1,000 / 1,000 | 100% | One provisional definition source available |
 | Initial pictogram screening | 1,000 / 1,000 | 100% | Candidate or explicit abstention |
-| Independent CC-CEDICT headword cross-reference | 100 / 1,000 | 10% | Separate dictionary retrieved and indexed |
+| Independent CC-CEDICT headword cross-reference | 200 / 1,000 | 20% | Separate dictionary retrieved and indexed |
 | Independent human lexical sense approval | 0 / 1,000 | 0% | No completed linguistic review |
 | Independent emoji comprehension approval | 0 / 1,000 | 0% | No completed human tests |
 | Production semantic verification | 0 / 1,000 | 0% | Requires both linguistic and pictographic acceptance |
 
-Among the first 100 characters, 71 have initial emoji candidates (73 expression assignments, including two senses of 云). **64 of 73** proposed sense glosses were found as literal English substrings in the corresponding CC-CEDICT headword; **9 of 73** require synonym, polysemy, or lexical-category inspection. All 100 characters have independent headword entries; 29 currently have no candidate emoji. The literal matches are a **triage signal, not 64 verified translations**.
+Among the first 200 characters, 140 have initial emoji candidates (145 expression assignments). **117 of 145** proposed sense glosses were found as literal English substrings in the corresponding CC-CEDICT headword; **28 of 145** require synonym, polysemy, or lexical-category inspection. All 200 characters have independent headword entries; 60 currently have no candidate emoji. The literal matches are a **triage signal, not 64 verified translations**.
 
 ## Candidate discrepancy queue (preliminary human-authored triage)
 
-These are observations on the 9 nonliteral expression alignments, not independent verification or promotions:
+These are observations on the first 9 nonliteral expression alignments (ranks 1–100), not independent verification or promotions. The complete 28-item discrepancy queue is indexed in the machine-readable [cross-reference manifest](../data/semantic/cedict-crossref/manifest-v0.1.json):
 
 | Character | Selected candidate | CC-CEDICT wording / issue | Action |
 | --- | --- | --- | --- |
@@ -39,6 +39,20 @@ These are observations on the 9 nonliteral expression alignments, not independen
 | 已 | finished | Dictionary gives *already / to stop* | Completion-aspect cue ✅ could be misleading; hold |
 | 刃 | knife edge | Dictionary gives *edge of blade* | Same referent but 🔪 depicts whole knife, not just blade edge; reevaluate pictogram |
 | 云 | clouds | Dictionary says *cloud*, also *classical: to say* | Singular/plural wording difference; preserve the separate "say" candidate |
+
+
+### Second batch: ranks 101–200
+
+The additional 19 nonliteral candidate matches occur on 互, 贝, 冈, 气, 升, 仁, 仍, 斤, 凶, 氏, 勿, 匀, 亢, 火, 订, 尺, 幻, 玉 and 扑. These have been **flagged, not rejected or confirmed**.
+
+Examples requiring particular care:
+
+- **气** can refer to air, gas or breath; the candidate "steam" must not be accepted as an undifferentiated modern sense based merely on visual similarity.
+- **仁** involves benevolence/humaneness; ❤️ is an intuitive hypothesis but the ethical concept is broader than the icon.
+- **斤** is a weight measure and may be confused with an axe-related character origin; pictograms should reflect a selected contemporary sense, not an inferred pictographic etymology.
+- **火** has a directly recognizable fire icon, but the chosen source term "fire" can still fail a literal match depending on a particular dictionary headword's selected gloss. Automated mismatch is not definitive evidence of an error.
+
+In all 28 cases, the next action is to inspect the Chinese-language context, reading, and individual candidate sense before changing or approving any pictogram. Literal matches elsewhere still require that review.
 
 ## Approval gates
 
