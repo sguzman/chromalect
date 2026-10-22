@@ -1,0 +1,448 @@
+{
+  "schema": "chromalect.mandarin.lexical-crossref-batch.v0.1",
+  "source": {
+    "title": "CC-CEDICT per-headword v2 mirror",
+    "repository": "krmanik/cedict-json",
+    "commit": "63c2569948629323b515833930fdd10f285401b6",
+    "dataLicense": "CC BY-SA 4.0",
+    "upstream": "https://cc-cedict.org/",
+    "mirror": "https://github.com/krmanik/cedict-json",
+    "transform": "Selected single-simplified-character dictionary records, retaining readings and definitions; literal English gloss matching is automated triage only"
+  },
+  "rankStart": 76,
+  "rankEnd": 90,
+  "summary": {
+    "total": 15,
+    "headwordFound": 15,
+    "withCandidate": 12,
+    "withLiteralSupport": 12
+  },
+  "records": [
+    {
+      "rank": 76,
+      "character": "开",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/开.json",
+      "sourceBlobSha": "0ab786624375671b7f5dcf4c7c8dbbcf6f0d8284",
+      "traditional": "開",
+      "dictionaryReadings": [
+        "kai1"
+      ],
+      "dictionaryDefinitions": {
+        "kai1": "to open; to start; to turn on; to boil; to write out (a prescription, check, invoice etc); to operate (a vehicle); carat (gold); abbr. for Kelvin, 開爾文|开尔文[Kai1 er3 wen2]; abbr. for 開本|开本[kai1 ben3], book format; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "open",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "kai1"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 77,
+      "character": "井",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/井.json",
+      "sourceBlobSha": "72b68ede5e50ebe9c08071d1b89de95764ff2c62",
+      "traditional": "井",
+      "dictionaryReadings": [
+        "Jing3",
+        "jing3"
+      ],
+      "dictionaryDefinitions": {
+        "Jing3": "Jing, one of the 28 constellations of Chinese astronomy; surname Jing; ",
+        "jing3": "a well; CL:口[kou3]; neat; orderly; "
+      },
+      "selectedSenseChecks": [],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 78,
+      "character": "天",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/天.json",
+      "sourceBlobSha": "bec045169ab18baee869556a4c1c1ab8d89c36af",
+      "traditional": "天",
+      "dictionaryReadings": [
+        "tian1"
+      ],
+      "dictionaryDefinitions": {
+        "tian1": "day; sky; heaven; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "sky",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "tian1"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 79,
+      "character": "夫",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/夫.json",
+      "sourceBlobSha": "6ed428d25113c66bc6588dbdb6517d176579fe04",
+      "traditional": "夫",
+      "dictionaryReadings": [
+        "fu1",
+        "fu2"
+      ],
+      "dictionaryDefinitions": {
+        "fu1": "husband; man; manual worker; conscripted laborer (old); ",
+        "fu2": "(classical) this, that; he, she, they; (exclamatory final particle); (initial particle, introduces an opinion); "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "husband",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "fu1"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 80,
+      "character": "元",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/元.json",
+      "sourceBlobSha": "38669ddecbc14a4124533ceda815043a0ab8c8e6",
+      "traditional": "元",
+      "dictionaryReadings": [
+        "Yuan2",
+        "yuan2"
+      ],
+      "dictionaryDefinitions": {
+        "Yuan2": "surname Yuan; the Yuan or Mongol dynasty (1279-1368); ",
+        "yuan2": "currency unit (esp. Chinese yuan); first; original; primary; fundamental; constituent; part; era (of a reign); (math.) argument; variable; (Tw) (geology) eon; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "first",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "yuan2"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 81,
+      "character": "无",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/无.json",
+      "sourceBlobSha": "e8a8769ae80a698bd167d1c17063f5fbc5a9def8",
+      "traditional": "無",
+      "dictionaryReadings": [
+        "wu2"
+      ],
+      "dictionaryDefinitions": {
+        "wu2": "not to have; no; none; not; to lack; un-; -less; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "no",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "wu2"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 82,
+      "character": "云",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/云.json",
+      "sourceBlobSha": "a79ed9de42386cea367493bfc2afd093c9fa71c4",
+      "traditional": "雲",
+      "dictionaryReadings": [
+        "yun2",
+        "Yun2"
+      ],
+      "dictionaryDefinitions": {
+        "yun2": "(classical) to say; cloud; CL:朵[duo3]; ",
+        "Yun2": "surname Yun; abbr. for Yunnan Province 雲南省|云南省[Yun2 nan2 Sheng3]; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "clouds",
+          "sourceGlossGroupIndex": 1,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        },
+        {
+          "selectedMeaning": "say",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "yun2"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 83,
+      "character": "专",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/专.json",
+      "sourceBlobSha": "8a3f2e5839dda305e7cd06c3835047f0fabd1b7f",
+      "traditional": "耑",
+      "dictionaryReadings": [
+        "zhuan1"
+      ],
+      "dictionaryDefinitions": {
+        "zhuan1": "for a particular person, occasion, purpose; focused on one thing; special; expert; particular (to sth); concentrated; specialized; variant of 專|专[zhuan1]; "
+      },
+      "selectedSenseChecks": [],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 84,
+      "character": "丐",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/丐.json",
+      "sourceBlobSha": "bce92195ff4b70c861216e5ce93b2bf822536411",
+      "traditional": "匄",
+      "dictionaryReadings": [
+        "gai4"
+      ],
+      "dictionaryDefinitions": {
+        "gai4": "to beg for alms; beggar; variant of 丐[gai4]; variant of 丐[gai4]; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "beggar",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "gai4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 85,
+      "character": "扎",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/扎.json",
+      "sourceBlobSha": "6d0a831b375c17ab5bc241f7e935220337bcff40",
+      "traditional": "紮",
+      "dictionaryReadings": [
+        "zha1",
+        "zha2",
+        "za1"
+      ],
+      "dictionaryDefinitions": {
+        "zha1": "to prick; to run or stick (a needle etc) into; jug (a classifier for liquids such as beer); variant of 紮|扎[zha1]; ",
+        "zha2": "penetrating (as of cold); struggle; ",
+        "za1": "variant of 紮|扎[za1]; to tie; to bind; classifier for flowers, banknotes etc: bundle; Taiwan pr. [zha2]; "
+      },
+      "selectedSenseChecks": [],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 86,
+      "character": "艺",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/艺.json",
+      "sourceBlobSha": "f413818993085915b194c5b36b0fba4565009756",
+      "traditional": "藝",
+      "dictionaryReadings": [
+        "yi4"
+      ],
+      "dictionaryDefinitions": {
+        "yi4": "skill; art; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "art",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "yi4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 87,
+      "character": "木",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/木.json",
+      "sourceBlobSha": "e77d138d3f25b23b9e51220151aae9367ffb7ad3",
+      "traditional": "木",
+      "dictionaryReadings": [
+        "Mu4",
+        "mu4"
+      ],
+      "dictionaryDefinitions": {
+        "Mu4": "surname Mu; ",
+        "mu4": "tree; wood; coffin; wooden; simple; numb; one of the eight ancient musical instruments 八音[ba1 yin1]; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "tree",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "mu4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 88,
+      "character": "五",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/五.json",
+      "sourceBlobSha": "4d6254d14732819393a76ae27a5bd3eb925b2cde",
+      "traditional": "五",
+      "dictionaryReadings": [
+        "wu3"
+      ],
+      "dictionaryDefinitions": {
+        "wu3": "five; 5; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "five",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "wu3"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 89,
+      "character": "支",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/支.json",
+      "sourceBlobSha": "097d633295f1867edb02da018577683dc41c69c1",
+      "traditional": "支",
+      "dictionaryReadings": [
+        "Zhi1",
+        "zhi1"
+      ],
+      "dictionaryDefinitions": {
+        "Zhi1": "surname Zhi; ",
+        "zhi1": "to support; to sustain; to erect; to raise; branch; division; to draw money; classifier for rods such as pens and guns, for army divisions and for songs or compositions; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "branch",
+          "sourceGlossGroupIndex": 2,
+          "matchingDictionaryReadings": [
+            "zhi1"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 90,
+      "character": "厅",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/厅.json",
+      "sourceBlobSha": "563c6629bbbda2ea053824a894bfe19968fa8fd6",
+      "traditional": "廳",
+      "dictionaryReadings": [
+        "ting1"
+      ],
+      "dictionaryDefinitions": {
+        "ting1": "(reception) hall; living room; office; provincial government department; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "hall",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "ting1"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    }
+  ]
+}
