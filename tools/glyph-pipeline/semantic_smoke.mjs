@@ -65,6 +65,7 @@ async function execute() {
 
 assert.match(html, /semantic-grammar\.js/);
 assert.match(html, /semantic-grammar-legend/);
+assert.match(html, /<details class="semantic-technical">/);
 assert.doesNotMatch(html, /data-semantic-mode="single"|data-semantic-mode="compound"/);
 const { grid, legend, checkbox, status, buttons } = await execute();
 assert.equal(grid.children.length, data.specimens.length);
@@ -76,11 +77,13 @@ assert.equal(symbolCount("study"), 2);
 assert.equal(symbolCount("read"), 2);
 assert.equal(symbolCount("raw"), 0);
 assert.equal(symbolCount("extended-mnemonic"), 5, "No arbitrary three-symbol truncation");
-assert.ok(descendants(grid.children[index("eat-apple")], "semantic-operator")
-  .some(x=>x.textContent==="A:"), "Agent label must be rendered");
-assert.ok(descendants(grid.children[index("eat-apple")], "semantic-operator")
-  .some(x=>x.textContent==="P:"), "Patient label must be rendered");
-assert.match(status.textContent,/Grammar-backed emoji expressions/);
+assert.equal(descendants(grid.children[index("eat-apple")], "semantic-symbol")
+  .map(x=>x.textContent).join(""),"👤🍽️🍎");
+assert.equal(descendants(grid.children[index("not-eat")], "semantic-symbol")
+  .map(x=>x.textContent).join(""),"🚫🍽️");
+assert.ok(grid.children.every(card=>descendants(card,"semantic-operator").length===0),
+  "Public expressions must contain only emoji");
+assert.match(status.textContent,/Emoji expressions/);
 buttons[1].events.click();
 assert.ok(grid.children.every(card=>descendants(card,"semantic-symbol").length===0),
   "Plain mode must remove pictographic annotations");
