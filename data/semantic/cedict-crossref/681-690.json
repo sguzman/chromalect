@@ -1,0 +1,314 @@
+{
+  "schema": "chromalect.mandarin.lexical-crossref-batch.v0.1",
+  "source": {
+    "title": "CC-CEDICT per-headword v2 mirror",
+    "repository": "krmanik/cedict-json",
+    "commit": "63c2569948629323b515833930fdd10f285401b6",
+    "dataLicense": "CC BY-SA 4.0",
+    "upstream": "https://cc-cedict.org/",
+    "mirror": "https://github.com/krmanik/cedict-json",
+    "transform": "Selected single-simplified-character dictionary records, retaining readings and definitions; literal English gloss matching is automated triage only"
+  },
+  "rankStart": 681,
+  "rankEnd": 690,
+  "summary": {
+    "total": 10,
+    "headwordFound": 10,
+    "withCandidate": 10,
+    "withLiteralSupport": 8
+  },
+  "records": [
+    {
+      "rank": 681,
+      "character": "材",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/材.json",
+      "sourceBlobSha": "319f91ac90c6f89b1ec9e03881e0ce359095b942",
+      "traditional": "材",
+      "dictionaryReadings": [
+        "cai2"
+      ],
+      "dictionaryDefinitions": {
+        "cai2": "material; timber; ability; aptitude; a capable individual; coffin (old); "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "timber",
+          "sourceGlossGroupIndex": 1,
+          "matchingDictionaryReadings": [
+            "cai2"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 682,
+      "character": "村",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/村.json",
+      "sourceBlobSha": "17757b2838146ff678fcb7d770d6ffc89641dd21",
+      "traditional": "邨",
+      "dictionaryReadings": [
+        "cun1"
+      ],
+      "dictionaryDefinitions": {
+        "cun1": "village; variant of 村[cun1]; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "village",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "cun1"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 683,
+      "character": "杖",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/杖.json",
+      "sourceBlobSha": "6c79af7ca735ac36eda8e2f6ff75026fd87cddfa",
+      "traditional": "杖",
+      "dictionaryReadings": [
+        "zhang4"
+      ],
+      "dictionaryDefinitions": {
+        "zhang4": "a staff; a rod; cane; walking stick; to flog with a stick (old); "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "walking stick",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "zhang4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 684,
+      "character": "杏",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/杏.json",
+      "sourceBlobSha": "621233bdcea550ebf55516c420a8f43149397864",
+      "traditional": "杏",
+      "dictionaryReadings": [
+        "xing4"
+      ],
+      "dictionaryDefinitions": {
+        "xing4": "apricot; almond; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "apricot",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "xing4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 685,
+      "character": "杉",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/杉.json",
+      "sourceBlobSha": "f09aa1c96197397c48eb150377c13216143f7258",
+      "traditional": "杉",
+      "dictionaryReadings": [
+        "shan1"
+      ],
+      "dictionaryDefinitions": {
+        "shan1": "China fir; Cunninghamia lanceolata; also pr. [sha1]; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "pine",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 686,
+      "character": "巫",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/巫.json",
+      "sourceBlobSha": "c46269f3007d3cd34b91e1c4dc7695685172c5f0",
+      "traditional": "巫",
+      "dictionaryReadings": [
+        "Wu1",
+        "wu1"
+      ],
+      "dictionaryDefinitions": {
+        "Wu1": "surname Wu; also pr. [Wu2]; ",
+        "wu1": "witch; wizard; shaman; also pr. [wu2]; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "witch",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "wu1"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 687,
+      "character": "极",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/极.json",
+      "sourceBlobSha": "3941e64067120fc5d54687f43ff16280d3864c6f",
+      "traditional": "極",
+      "dictionaryReadings": [
+        "ji2"
+      ],
+      "dictionaryDefinitions": {
+        "ji2": "extremely; pole (geography, physics); utmost; top; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "extreme",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "ji2"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 688,
+      "character": "李",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/李.json",
+      "sourceBlobSha": "48514b64eb33b85aaf55a17ae08151b45f45cc49",
+      "traditional": "李",
+      "dictionaryReadings": [
+        "Li3",
+        "li3"
+      ],
+      "dictionaryDefinitions": {
+        "Li3": "surname Li; ",
+        "li3": "plum; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "plum",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "li3"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 689,
+      "character": "杨",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/杨.json",
+      "sourceBlobSha": "eb5d2187eb999ade8ad4c270e3a847dfb549fc70",
+      "traditional": "楊",
+      "dictionaryReadings": [
+        "Yang2",
+        "yang2"
+      ],
+      "dictionaryDefinitions": {
+        "Yang2": "surname Yang; ",
+        "yang2": "poplar; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "willow",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 690,
+      "character": "求",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/求.json",
+      "sourceBlobSha": "38edf0218d56d8db8e8d7aead8db3fb8ef23f2b0",
+      "traditional": "求",
+      "dictionaryReadings": [
+        "qiu2"
+      ],
+      "dictionaryDefinitions": {
+        "qiu2": "to seek; to look for; to request; to demand; to beseech; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "seek",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "qiu2"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    }
+  ]
+}
