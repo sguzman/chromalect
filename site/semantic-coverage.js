@@ -10,6 +10,7 @@
   if (!grammar || !presenter || !root || !status) return;
   const lookup = $("semantic-lookup");
   const filter = $("semantic-filter");
+  const lexicalFilter = $("semantic-lexical-filter");
   const enabled = $("semantic-layer-character");
   const prev = $("semantic-prev");
   const next = $("semantic-next");
@@ -142,11 +143,20 @@
     if (!ledger) return [];
     const q=lookup.value.trim().toLocaleLowerCase();
     const selected=filter.value;
-    return ledger.characters.filter(x=>
-      (selected==="all" || selected===state(x)) &&
+    const dictionary=lexicalFilter.value;
+    return ledger.characters.filter(x=>{
+      const crossref=lexicalRows.get(x.rank);
+      return (selected==="all" || selected===state(x)) &&
+        (dictionary==="all" ||
+          (dictionary==="crossref" && !!crossref) ||
+          (dictionary==="not-crossref" && !crossref) ||
+          (dictionary==="needs-review" &&
+            !!crossref && crossref.selectedSenseChecks.some(s=>
+              s.lexicalEvidence==="requires_sense_review"))) &&
       (!q || x.character.includes(q) || String(x.rank)===q ||
        x.source.definition.toLocaleLowerCase().includes(q) ||
-       x.screening.candidates.some(c=>(c.selectedMeaning||"").toLocaleLowerCase().includes(q))));
+       x.screening.candidates.some(c=>(c.selectedMeaning||"").toLocaleLowerCase().includes(q)));
+    });
   }
   function render() {
     if (!ledger) return;
@@ -167,6 +177,7 @@
   function reset(){page=0;render();}
   lookup.addEventListener("input",reset);
   filter.addEventListener("change",reset);
+  lexicalFilter.addEventListener("change",reset);
   enabled.addEventListener("change",render);
   prev.addEventListener("click",()=>{page--;render();});
   next.addEventListener("click",()=>{page++;render();});

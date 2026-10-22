@@ -93,6 +93,12 @@
 <div class="semantic-controls">
   <label>Find character, meaning, or rank <input id="semantic-lookup" type="search" placeholder="e.g. 山, mountain, 39"></label>
   <label>Screening state <select id="semantic-filter"><option value="all">All 1,000</option><option value="candidate">Emoji candidates</option><option value="deferred">Deferred emoji</option><option value="pending">Awaiting screening</option></select></label>
+  <label>Dictionary evidence <select id="semantic-lexical-filter">
+    <option value="all">All dictionary states</option>
+    <option value="crossref">Second-source headword found</option>
+    <option value="needs-review">Candidate gloss needs alignment</option>
+    <option value="not-crossref">Not yet cross-referenced</option>
+  </select></label>
 </div>
 <p class="hint" id="semantic-coverage-status" role="status" aria-live="polite">Loading source-linked meaning inventory.</p>
 <div id="semantic-coverage-rows" class="semantic-rows" aria-label="Mandarin character meaning evidence"></div>

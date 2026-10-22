@@ -33,7 +33,7 @@ class Element {
 const ids={};
 for(const id of [
   "semantic-coverage-rows","semantic-coverage-status",
-  "semantic-lookup","semantic-filter","semantic-layer-character",
+  "semantic-lookup","semantic-filter","semantic-lexical-filter","semantic-layer-character",
   "semantic-prev","semantic-next","semantic-page-label",
   "semantic-source-count","semantic-source-percent",
   "semantic-screened-count","semantic-screened-percent",
@@ -46,6 +46,7 @@ for(const id of [
   "semantic-emoji-progress","semantic-emoji-fill","semantic-crossref-note"
 ]) ids[id]=new Element();
 ids["semantic-filter"].value="all";
+ids["semantic-lexical-filter"].value="all";
 ids["semantic-layer-character"].checked=true;
 const document={
   getElementById:id=>ids[id],
@@ -113,6 +114,17 @@ ids["semantic-next"].events.click();
 assert.match(ids["semantic-page-label"].textContent,new RegExp("Page 2 of "+Math.ceil(data.summary.pictogramCandidateCharacters/40)));
 ids["semantic-filter"].value="all";
 ids["semantic-filter"].events.change();
+ids["semantic-lexical-filter"].value="needs-review";
+ids["semantic-lexical-filter"].events.change();
+assert.match(ids["semantic-coverage-status"].textContent,/9 characters match/);
+ids["semantic-lexical-filter"].value="crossref";
+ids["semantic-lexical-filter"].events.change();
+assert.match(ids["semantic-coverage-status"].textContent,/100 characters match/);
+ids["semantic-lexical-filter"].value="not-crossref";
+ids["semantic-lexical-filter"].events.change();
+assert.match(ids["semantic-coverage-status"].textContent,/900 characters match/);
+ids["semantic-lexical-filter"].value="all";
+ids["semantic-lexical-filter"].events.change();
 ids["semantic-lookup"].value="生";
 ids["semantic-lookup"].events.input();
 assert.equal(ids["semantic-coverage-rows"].children.length,1);
@@ -131,6 +143,7 @@ assert.equal(data.summary.pendingScreening,0);
 assert.equal(data.initialScreeningReview.experimentalExpressionCount,897);
 assert.match(html,/data-character-layer-controls/);
 assert.match(html,/src="layers.js"/);
+assert.match(html,/id="semantic-lexical-filter"/);
 assert.match(html,/id="semantic-layer-character" checked/);
 assert.match(html,/semantic\/mandarin-1000-v0.1\.json|semantic-coverage\.js/);
 console.log("Semantic coverage UI: data loaded, progress percentages, 40-card pagination, emoji-only rendering, filters and visibility toggles.");
