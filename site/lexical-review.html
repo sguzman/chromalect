@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Lexical sense review worksheet · Chromalect</title>
+<meta name="description" content="Source-first Mandarin lexical discrepancy review, separate from emoji comprehension. All judgments export locally and do not alter production data.">
+<script src="theme.js"></script>
+<script src="lexical-review.js" defer></script>
+<link rel="stylesheet" href="style.css">
+<style>
+.lexical-study{max-width:980px}
+.lexical-study-intro{max-width:810px}
+.lexical-study-setup{display:flex;flex-wrap:wrap;gap:12px;align-items:flex-end;margin:22px 0}
+.lexical-study-setup label,.lexical-study textarea{color:var(--ink)}
+.lexical-study-setup label{display:flex;flex-direction:column;gap:6px;min-width:195px;font-size:13px;color:var(--sub)}
+.lexical-study select,.lexical-study textarea{font:inherit;background:var(--panel);color:var(--ink);border:1px solid var(--border);border-radius:10px;padding:11px}
+.lexical-study textarea{width:100%;min-height:118px;resize:vertical;box-sizing:border-box}
+.lexical-study button{font:inherit;color:var(--ink);background:var(--panel);border:1px solid var(--border);border-radius:9px;padding:10px 14px;cursor:pointer}
+.lexical-study button:disabled{opacity:.4;cursor:default}
+.lexical-study button.primary{background:var(--active-bg);border-color:var(--active-border);font-weight:700}
+.lexical-study-panel{border:1px solid var(--border);border-radius:15px;padding:22px;background:var(--tile-bg);margin:18px 0}
+.lexical-study-source{padding:14px 16px;border-radius:10px;background:var(--panel2);overflow-wrap:anywhere;margin:10px 0}
+.lexical-study-character{font-size:60px;line-height:1.2}
+.lexical-study-details{display:grid;grid-template-columns:minmax(0,1fr);gap:13px}
+.lexical-study-actions{display:flex;gap:9px;flex-wrap:wrap;margin:15px 0}
+.lexical-study-decision button[aria-pressed="true"]{border-color:var(--active-border);background:var(--active-bg);font-weight:700}
+.lexical-study-progress{height:12px;width:100%;border-radius:99px;overflow:hidden;background:var(--panel2);border:1px solid var(--border)}
+.lexical-study-progress>div{height:100%;width:0;background:var(--accent)}
+.lexical-study-note{font-size:13px;color:var(--sub)}
+.lexical-study-fineprint{background:var(--panel2);border-left:3px solid var(--active-border);border-radius:0 10px 10px 0;padding:14px 16px;margin:20px 0;font-size:13px;color:var(--sub)}
+.lexical-study [hidden]{display:none!important}
+</style>
+</head>
+<body>
+<header class="wrap"><div class="brand"><div><b>CHROMALECT</b><small>Language, made visible</small></div></div></header>
+<main class="wrap lexical-study">
+<div class="eyebrow">Research worksheet · character senses</div>
+<h1>Mandarin lexical sense alignment</h1>
+<p class="intro lexical-study-intro">Examine a character's proposed English meaning against the pinned independent dictionary excerpt, <strong>without first seeing the emoji or the assistant's previous analysis</strong>. This worksheet is for the 248 flagged meanings awaiting lexical review.</p>
+<div class="lexical-study-fineprint"><strong>Not production approval:</strong> Answers remain local until an explicit JSON export. This interface never changes the source ledger, review counts, or production status. A supported/unsupported choice is a preliminary reviewer observation; independently corroborated lexical evidence and documented adjudication are still needed. Starting a new session discards unexported responses.</div>
+<div class="lexical-study-setup">
+<label>Review queue
+<select id="lexical-study-scope">
+<option value="all">All 248 flagged senses</option>
+<option value="high">Higher-priority cases</option>
+<option value="medium">Medium-priority cases</option>
+<option value="unclassified">Unclassified cases</option>
+</select></label>
+<label>Review batch size
+<select id="lexical-study-count">
+<option value="20">20 cases</option>
+<option value="50">50 cases</option>
+<option value="all">All eligible cases</option>
+</select></label>
+</div>
+<div class="lexical-study-actions">
+<button type="button" class="primary" id="lexical-study-start" disabled>Start source review</button>
+<button type="button" id="lexical-study-export" disabled>Export local JSON observations</button>
+</div>
+<p id="lexical-study-status" class="lexical-study-note" role="status" aria-live="polite">Loading pinned source-review queue.</p>
+<div id="lexical-study-session" hidden>
+<p id="lexical-study-count-label" class="lexical-study-note"></p>
+<div id="lexical-study-progress" class="lexical-study-progress" role="progressbar" aria-label="Local lexical observations recorded" aria-valuemin="0" aria-valuenow="0" aria-valuemax="20"><div id="lexical-study-fill"></div></div>
+<section class="lexical-study-panel">
+<div class="lexical-study-details">
+<div><p class="lexical-study-note">Chinese character</p><strong id="lexical-study-character" class="lexical-study-character" lang="zh-Hans"></strong></div>
+<div><p class="lexical-study-note">Proposed character sense (Unverified)</p><strong id="lexical-study-meaning"></strong></div>
+<div><p class="lexical-study-note">Pinned Unihan definition segment</p><p id="lexical-study-unihan" class="lexical-study-source"></p></div>
+<div><p class="lexical-study-note">Independent CC-CEDICT dictionary excerpt</p><p id="lexical-study-dictionary" class="lexical-study-source"></p></div>
+</div>
+<div id="lexical-study-form">
+<h2>Is the proposed sense supported?</h2>
+<p class="lexical-study-note">Select an assessment and explain it using the dictionary evidence and any necessary usage/context distinctions. These labels are preliminary, not certified decisions.</p>
+<div id="lexical-study-decisions" class="lexical-study-actions lexical-study-decision" role="group" aria-label="Preliminary lexical judgment">
+<button type="button" data-lexical-judgment="supported" aria-pressed="false">Supported in context</button>
+<button type="button" data-lexical-judgment="unsupported" aria-pressed="false">Unsupported / misleading</button>
+<button type="button" data-lexical-judgment="uncertain" aria-pressed="false">Insufficient evidence</button>
+</div>
+<label for="lexical-study-rationale">Evidence-based explanation (at least 12 characters)</label>
+<textarea id="lexical-study-rationale" placeholder="Explain the relevant reading, sense, semantic scope, or unresolved question."></textarea>
+<div class="lexical-study-actions"><button id="lexical-study-commit" type="button" class="primary" disabled>Lock preliminary observation</button></div>
+</div>
+<div id="lexical-study-after" hidden>
+<p class="lexical-study-note">Earlier assistant desk analysis, shown only after locking your observation</p>
+<p id="lexical-study-prior" class="lexical-study-source"></p>
+<p class="lexical-study-note">Your judgment is stored only for local export. It is not a verified production translation.</p>
+<button type="button" id="lexical-study-next" class="primary">Next sense</button>
+</div>
+</section>
+</div>
+<p class="lexical-study-note">Source: <a href="semantic/sense-review-queue-v0.1.json">248-item machine-readable priority queue</a> · <a href="semantic-coverage.html">Mandarin semantic browser</a> · <a href="https://github.com/sguzman/chromalect/blob/main/docs/mandarin-lexical-review-protocol.md">Review methodology</a>. CC-CEDICT excerpt data is CC BY-SA 4.0; Unicode source definitions retain their original licensing. Do not confuse preliminary observations with independently accepted senses.</p>
+</main>
+<footer class="wrap"><a href="index.html">Chromalect overview</a> · <a href="semantic-coverage.html">Semantic research</a></footer>
+</body>
+</html>
