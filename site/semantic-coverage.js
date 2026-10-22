@@ -252,10 +252,14 @@
            x.productionVerified!==false))
         throw new Error("Unverified sense review data malformed or promoted without approval");
       if(review.counts.deskAnalyzedTotal!==
-           review.counts.deskAnalyzedHighPriority+review.counts.deskAnalyzedUnclassified ||
+           review.counts.deskAnalyzedHighPriority+
+           review.counts.deskAnalyzedMediumPriority+
+           review.counts.deskAnalyzedUnclassified ||
          review.counts.independentlyLexicallyApproved!==0 ||
          review.counts.emojiComprehensionApproved!==0 ||
          review.counts.pendingSenseAlignment!==248 ||
+         review.counts.deskAnalysisPending!==
+           review.counts.pendingSenseAlignment-review.counts.deskAnalyzedTotal ||
          review.records.filter(x=>!!x.deskAnalysis).length!==review.counts.deskAnalyzedTotal)
          throw new Error("Desk-analysis counts do not match provisional entries");
       deskCounts={analyzed:review.counts.deskAnalyzedTotal,total:review.counts.pendingSenseAlignment};
