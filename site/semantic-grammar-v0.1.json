@@ -1,0 +1,400 @@
+{
+  "schema": "chromalect.semantic.grammar.v0.1",
+  "version": "0.1.0",
+  "status": "experimental_not_production_semantics",
+  "verifiedProductionCharacterCount": 0,
+  "description": "Versioned, reusable typed emoji expression grammar. Examples illustrate possible readings; pictograms do not constitute dictionary evidence.",
+  "operators": [
+    {
+      "id": "atom",
+      "display": "emoji",
+      "interpretation": "Reusable pictogram denoting a chosen concept, according to a reviewed lexicon."
+    },
+    {
+      "id": "associate",
+      "display": "∼",
+      "interpretation": "Mnemonic conceptual association only. Does not imply equivalence, causation, action or definition."
+    },
+    {
+      "id": "and",
+      "display": "+",
+      "interpretation": "Both concepts / conjunction, not a new lexicalized object."
+    },
+    {
+      "id": "qualify",
+      "display": "·",
+      "interpretation": "A property or qualifier applied to a head concept; left modifies right."
+    },
+    {
+      "id": "change",
+      "display": "⇒",
+      "interpretation": "Transition from the left state to the right state, not necessarily causation."
+    },
+    {
+      "id": "event",
+      "display": "▶",
+      "interpretation": "Action or process marker. The predicate may be lexicalized, but its reading must be recorded separately."
+    },
+    {
+      "id": "not",
+      "display": "¬(...)",
+      "interpretation": "Negates exactly the enclosed expression, without implying a particular tense."
+    }
+  ],
+  "roles": [
+    {
+      "id": "agent",
+      "symbol": "A",
+      "meaning": "initiator or doer of an event"
+    },
+    {
+      "id": "patient",
+      "symbol": "P",
+      "meaning": "entity directly affected by an event"
+    },
+    {
+      "id": "goal",
+      "symbol": "G",
+      "meaning": "destination or endpoint"
+    },
+    {
+      "id": "source",
+      "symbol": "S",
+      "meaning": "starting point or origin"
+    },
+    {
+      "id": "instrument",
+      "symbol": "I",
+      "meaning": "means or tool used"
+    }
+  ],
+  "specimens": [
+    {
+      "id": "mountain",
+      "written": "山",
+      "meaning": "mountain",
+      "expr": {
+        "kind": "atom",
+        "emoji": "⛰️"
+      },
+      "notes": "A single conventional pictogram is sufficient.",
+      "verification": "illustrative"
+    },
+    {
+      "id": "water",
+      "written": "水",
+      "meaning": "water",
+      "expr": {
+        "kind": "atom",
+        "emoji": "💧"
+      },
+      "notes": "No composition is required.",
+      "verification": "illustrative"
+    },
+    {
+      "id": "fire",
+      "written": "火",
+      "meaning": "fire",
+      "expr": {
+        "kind": "atom",
+        "emoji": "🔥"
+      },
+      "notes": "A direct pictogram.",
+      "verification": "illustrative"
+    },
+    {
+      "id": "study",
+      "written": "学",
+      "meaning": "study / learn",
+      "expr": {
+        "kind": "event",
+        "predicate": {
+          "kind": "associate",
+          "items": [
+            {
+              "kind": "atom",
+              "emoji": "📖"
+            },
+            {
+              "kind": "atom",
+              "emoji": "🧠"
+            }
+          ]
+        }
+      },
+      "notes": "Verb marker scopes an associative mnemonic; the lexical interpretation needs independent review.",
+      "verification": "illustrative"
+    },
+    {
+      "id": "read",
+      "written": "读",
+      "meaning": "read",
+      "expr": {
+        "kind": "event",
+        "predicate": {
+          "kind": "associate",
+          "items": [
+            {
+              "kind": "atom",
+              "emoji": "👀"
+            },
+            {
+              "kind": "atom",
+              "emoji": "📖"
+            }
+          ]
+        }
+      },
+      "notes": "The book symbol is reused; this reading is a lexical hypothesis.",
+      "verification": "illustrative"
+    },
+    {
+      "id": "volcano",
+      "written": "火山",
+      "meaning": "volcano",
+      "expr": {
+        "kind": "atom",
+        "emoji": "🌋"
+      },
+      "notes": "The word is assigned its own sense, not composed automatically from its characters.",
+      "verification": "illustrative"
+    },
+    {
+      "id": "train",
+      "written": "火车",
+      "meaning": "train",
+      "expr": {
+        "kind": "atom",
+        "emoji": "🚆"
+      },
+      "notes": "A word-level meaning independent from component characters.",
+      "verification": "illustrative"
+    },
+    {
+      "id": "birth",
+      "written": "生",
+      "meaning": "being born",
+      "expr": {
+        "kind": "associate",
+        "items": [
+          {
+            "kind": "atom",
+            "emoji": "🤰"
+          },
+          {
+            "kind": "atom",
+            "emoji": "👶"
+          }
+        ]
+      },
+      "notes": "An association, not a formal before/after claim about the same entity.",
+      "verification": "illustrative"
+    },
+    {
+      "id": "raw",
+      "written": "生",
+      "meaning": "raw / uncooked",
+      "expr": null,
+      "notes": "No clear pictogram has been proposed.",
+      "verification": "illustrative"
+    },
+    {
+      "id": "walk",
+      "written": "行",
+      "meaning": "walk / go",
+      "expr": {
+        "kind": "event",
+        "predicate": {
+          "kind": "atom",
+          "emoji": "🚶"
+        }
+      },
+      "notes": "The pictogram suggests motion; this is one selected character use.",
+      "verification": "illustrative"
+    },
+    {
+      "id": "good",
+      "written": "好",
+      "meaning": "good",
+      "expr": {
+        "kind": "atom",
+        "emoji": "👍"
+      },
+      "notes": "Conventional gesture meaning is culturally variable.",
+      "verification": "illustrative"
+    },
+    {
+      "id": "red-apple",
+      "written": null,
+      "meaning": "red apple",
+      "expr": {
+        "kind": "qualify",
+        "property": {
+          "kind": "atom",
+          "emoji": "🔴"
+        },
+        "head": {
+          "kind": "atom",
+          "emoji": "🍎"
+        }
+      },
+      "notes": "The first expression contributes a property of the second.",
+      "verification": "illustrative"
+    },
+    {
+      "id": "fruit-pair",
+      "written": null,
+      "meaning": "apple and pear",
+      "expr": {
+        "kind": "and",
+        "items": [
+          {
+            "kind": "atom",
+            "emoji": "🍎"
+          },
+          {
+            "kind": "atom",
+            "emoji": "🍐"
+          }
+        ]
+      },
+      "notes": "Conjunction does not create a new named object.",
+      "verification": "illustrative"
+    },
+    {
+      "id": "grow",
+      "written": null,
+      "meaning": "grow (plant)",
+      "expr": {
+        "kind": "event",
+        "predicate": {
+          "kind": "change",
+          "from": {
+            "kind": "atom",
+            "emoji": "🌱"
+          },
+          "to": {
+            "kind": "atom",
+            "emoji": "🌳"
+          }
+        }
+      },
+      "notes": "A change of state is presented as a process, without specifying an agent.",
+      "verification": "illustrative"
+    },
+    {
+      "id": "eat",
+      "written": null,
+      "meaning": "eat",
+      "expr": {
+        "kind": "event",
+        "predicate": {
+          "kind": "atom",
+          "emoji": "🍽️"
+        }
+      },
+      "notes": "Verb marker distinguishes an action concept from an object symbol.",
+      "verification": "illustrative"
+    },
+    {
+      "id": "eat-apple",
+      "written": null,
+      "meaning": "a person eats an apple",
+      "expr": {
+        "kind": "event",
+        "predicate": {
+          "kind": "atom",
+          "emoji": "🍽️"
+        },
+        "roles": {
+          "agent": {
+            "kind": "atom",
+            "emoji": "👤"
+          },
+          "patient": {
+            "kind": "atom",
+            "emoji": "🍎"
+          }
+        }
+      },
+      "notes": "Agent and affected participant are explicit, not inferred from emoji order.",
+      "verification": "illustrative"
+    },
+    {
+      "id": "walk-home",
+      "written": null,
+      "meaning": "a person walks home",
+      "expr": {
+        "kind": "event",
+        "predicate": {
+          "kind": "atom",
+          "emoji": "🚶"
+        },
+        "roles": {
+          "agent": {
+            "kind": "atom",
+            "emoji": "👤"
+          },
+          "goal": {
+            "kind": "atom",
+            "emoji": "🏠"
+          }
+        }
+      },
+      "notes": "Goal and patient are different participant roles.",
+      "verification": "illustrative"
+    },
+    {
+      "id": "not-eat",
+      "written": null,
+      "meaning": "not eat",
+      "expr": {
+        "kind": "not",
+        "value": {
+          "kind": "event",
+          "predicate": {
+            "kind": "atom",
+            "emoji": "🍽️"
+          }
+        }
+      },
+      "notes": "Negation applies to the action as a whole.",
+      "verification": "illustrative"
+    },
+    {
+      "id": "extended-mnemonic",
+      "written": null,
+      "meaning": "learning-related activity (mnemonic only)",
+      "expr": {
+        "kind": "event",
+        "predicate": {
+          "kind": "associate",
+          "items": [
+            {
+              "kind": "atom",
+              "emoji": "📖"
+            },
+            {
+              "kind": "atom",
+              "emoji": "👀"
+            },
+            {
+              "kind": "atom",
+              "emoji": "🧠"
+            },
+            {
+              "kind": "atom",
+              "emoji": "✍️"
+            },
+            {
+              "kind": "atom",
+              "emoji": "💡"
+            }
+          ]
+        }
+      },
+      "notes": "Five reusable icons illustrate variable expression length; no extra meaning follows automatically.",
+      "verification": "illustrative"
+    }
+  ]
+}

@@ -1,0 +1,159 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://sguzman.github.io/chromalect/ontology/semantic-expression-v0.1.schema.json",
+  "title": "Chromalect semantic expression v0.1",
+  "description": "Typed, recursive, versioned expression tree; lexical senses and reviews are separate.",
+  "oneOf": [
+    {
+      "type": "object",
+      "required": [
+        "kind",
+        "emoji"
+      ],
+      "properties": {
+        "kind": {
+          "const": "atom"
+        },
+        "emoji": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "required": [
+        "kind",
+        "items"
+      ],
+      "properties": {
+        "kind": {
+          "const": "associate"
+        },
+        "items": {
+          "type": "array",
+          "minItems": 2,
+          "items": {
+            "$ref": "#"
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "required": [
+        "kind",
+        "items"
+      ],
+      "properties": {
+        "kind": {
+          "const": "and"
+        },
+        "items": {
+          "type": "array",
+          "minItems": 2,
+          "items": {
+            "$ref": "#"
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "required": [
+        "kind",
+        "property",
+        "head"
+      ],
+      "properties": {
+        "kind": {
+          "const": "qualify"
+        },
+        "property": {
+          "$ref": "#"
+        },
+        "head": {
+          "$ref": "#"
+        }
+      },
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "required": [
+        "kind",
+        "from",
+        "to"
+      ],
+      "properties": {
+        "kind": {
+          "const": "change"
+        },
+        "from": {
+          "$ref": "#"
+        },
+        "to": {
+          "$ref": "#"
+        }
+      },
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "required": [
+        "kind",
+        "predicate"
+      ],
+      "properties": {
+        "kind": {
+          "const": "event"
+        },
+        "predicate": {
+          "$ref": "#"
+        },
+        "roles": {
+          "type": "object",
+          "minProperties": 1,
+          "properties": {
+            "agent": {
+              "$ref": "#"
+            },
+            "patient": {
+              "$ref": "#"
+            },
+            "goal": {
+              "$ref": "#"
+            },
+            "source": {
+              "$ref": "#"
+            },
+            "instrument": {
+              "$ref": "#"
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "required": [
+        "kind",
+        "value"
+      ],
+      "properties": {
+        "kind": {
+          "const": "not"
+        },
+        "value": {
+          "$ref": "#"
+        }
+      },
+      "additionalProperties": false
+    }
+  ]
+}
