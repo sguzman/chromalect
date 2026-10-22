@@ -19,6 +19,8 @@
   let ledger = null;
   let profileRows = new Map();
   let lexicalRows = new Map();
+  let strictRows = new Map();
+  let strictSummary = null;
   let page = 0;
 
   function elem(tag, cls, value) {
@@ -49,7 +51,7 @@
     $("semantic-stage-screened").textContent =
       summary.screenedCharacters+" / "+total+" ("+percent(summary.screenedCharacters,total)+")";
   }
-  function bindResearchProgress(metrics) {
+  function bindResearchProgress(metrics, audit) {
     const total=metrics.totalCharacters;
     for (const [name,count] of [
       ["dictionary",metrics.crossReferenced],
@@ -65,12 +67,18 @@
       fill.style.width=percent(count,total);
       label.textContent=count+" / "+total+" ("+percent(count,total)+")";
     }
+    const audited=audit.scope.charactersAudited;
+    $("semantic-boundary-progress").setAttribute("aria-valuemax",String(total));
+    $("semantic-boundary-progress").setAttribute("aria-valuenow",String(audited));
+    $("semantic-boundary-fill").style.width=percent(audited,total);
+    $("semantic-stage-boundary").textContent=audited+" / "+total+" ("+percent(audited,total)+")";
     $("semantic-crossref-note").textContent=
-      metrics.headwordsFound+" independent dictionary headwords obtained; "+
-      metrics.expressionLiteralMatches+" of "+metrics.candidateExpressions+
-      " tentative expression glosses matched English wording literally, "+
-      metrics.expressionGlossMismatchOrSynonym+
-      " require closer sense alignment. These checks do not count as linguistic or emoji verification.";
+      metrics.headwordsFound+" independent headwords; "+
+      audit.summary.wholeTermMatched+" of "+audit.scope.proposedExpressionCount+
+      " experimental glosses matched whole terms, "+
+      audit.summary.requiresSenseReview+" need sense alignment (including "+
+      audit.summary.substringOnlyFalsePositives+
+      " substring-only false matches). All remain unapproved.";
   }
 
   function card(entry) {
@@ -104,12 +112,15 @@
       "No pictogram reviewed yet"));
     const crossref=lexicalRows.get(entry.rank);
     if (crossref) {
-      const literal=crossref.selectedSenseChecks.filter(s=>s.lexicalEvidence==="literal_gloss_match").length;
+      const comparisons=strictRows.get(entry.rank)||[];
+      const matched=comparisons.filter(s=>s.wholeTermMatch).length;
+      const needs=comparisons.filter(s=>!s.wholeTermMatch).length;
       card.appendChild(elem("p","semantic-dictionary-note",
         "CC-CEDICT headword located · "+
-        (selections.length ? literal+" / "+selections.length+" candidate glosses matched literally" :
+        (selections.length ? matched+" / "+selections.length+" candidate glosses matched whole terms"+
+          (needs ? " · "+needs+" need closer alignment" : "") :
         "no emoji candidate to compare")+
-        " · lexical review pending"));
+        " · no human lexical approval"));
     }
     const details=elem("details");
     const summary=elem("summary",null,"Source meaning evidence");
@@ -146,13 +157,14 @@
     const dictionary=lexicalFilter.value;
     return ledger.characters.filter(x=>{
       const crossref=lexicalRows.get(x.rank);
+      const aligned=strictRows.get(x.rank)||[];
       return (selected==="all" || selected===state(x)) &&
         (dictionary==="all" ||
           (dictionary==="crossref" && !!crossref) ||
           (dictionary==="not-crossref" && !crossref) ||
-          (dictionary==="needs-review" &&
-            !!crossref && crossref.selectedSenseChecks.some(s=>
-              s.lexicalEvidence==="requires_sense_review"))) &&
+          (dictionary==="needs-review" && aligned.some(s=>!s.wholeTermMatch)) ||
+          (dictionary==="substring-only" && aligned.some(s=>s.legacySubstringMatch&&!s.wholeTermMatch)) ||
+          (dictionary==="whole-match" && aligned.some(s=>s.wholeTermMatch))) &&
       (!q || x.character.includes(q) || String(x.rank)===q ||
        x.source.definition.toLocaleLowerCase().includes(q) ||
        x.screening.candidates.some(c=>(c.selectedMeaning||"").toLocaleLowerCase().includes(q)));
@@ -184,16 +196,37 @@
 
   async function load() {
     try {
-      const [response,profileResponse,lexicalResponse]=await Promise.all([
+      const [response,profileResponse,lexicalResponse,auditResponse]=await Promise.all([
         fetch("semantic/mandarin-1000-v0.1.json"),
         fetch("profiles/mandarin-1000-v1.json"),
-        fetch("semantic/lexical-crossref-v0.1.json")
+        fetch("semantic/lexical-crossref-v0.1.json"),
+        fetch("semantic/strict-gloss-index-v0.1.json")
       ]);
-      if(!response.ok || !profileResponse.ok || !lexicalResponse.ok)
-        throw new Error("Character or dictionary data unavailable");
-      const [data,profile,lexical]=await Promise.all([
-        response.json(),profileResponse.json(),lexicalResponse.json()
+      if(!response.ok || !profileResponse.ok || !lexicalResponse.ok || !auditResponse.ok)
+        throw new Error("Character, dictionary or audit data unavailable");
+      const [data,profile,lexical,audit]=await Promise.all([
+        response.json(),profileResponse.json(),lexicalResponse.json(),auditResponse.json()
       ]);
+      if(audit.schema!=="chromalect.semantic.strict-gloss-index.v0.1" ||
+         audit.status!=="automated_boundary_check_only_no_linguistic_approval" ||
+         audit.scope.charactersAudited!==1000 ||
+         audit.scope.independentHumanApproved!==0 ||
+         audit.scope.emojiComprehensionApproved!==0 ||
+         audit.scope.proposedExpressionCount!==897 ||
+         audit.records.length!==audit.scope.proposedExpressionCount ||
+         audit.records.some(x=>data.characters[x.rank-1]?.character!==x.character))
+        throw new Error("Inconsistent strict-term audit provenance");
+      const grouped=new Map();
+      for(const row of audit.records){
+        if(!grouped.has(row.rank))grouped.set(row.rank,[]);
+        grouped.get(row.rank).push(row);
+      }
+      if(audit.summary.wholeTermMatched!==audit.records.filter(x=>x.wholeTermMatch).length ||
+         audit.summary.requiresSenseReview!==audit.records.filter(x=>!x.wholeTermMatch).length ||
+         audit.summary.substringOnlyFalsePositives!==audit.records.filter(x=>x.legacySubstringMatch&&!x.wholeTermMatch).length)
+        throw new Error("Strict-term audit totals disagree with records");
+      strictRows=grouped;
+      strictSummary=audit.summary;
       if(lexical.schema!=="chromalect.semantic.lexical-crossref-summary.v0.1" ||
          lexical.status!=="independent_dictionary_ingestion_only_not_validated" ||
          lexical.metrics.totalCharacters!==1000 ||
@@ -221,7 +254,7 @@
       }
       ledger=data;
       bindMetrics(data.summary);
-      bindResearchProgress(lexical.metrics);
+      bindResearchProgress(lexical.metrics,audit);
       render();
     }catch(error) {
       status.textContent="Unable to load the semantic evidence. Check the published data or deployment.";

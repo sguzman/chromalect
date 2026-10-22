@@ -7,6 +7,7 @@ const script=fs.readFileSync("site/semantic-coverage.js","utf8");
 const html=fs.readFileSync("site/semantic-coverage.html","utf8");
 const data=JSON.parse(fs.readFileSync("data/semantic/mandarin-1000-v0.1.json","utf8"));
 const lexical=JSON.parse(fs.readFileSync("data/semantic/cedict-crossref/manifest-v0.1.json","utf8"));
+const audit=JSON.parse(fs.readFileSync("data/semantic/cedict-crossref/strict-gloss-index-v0.1.json","utf8"));
 const catalog=JSON.parse(fs.readFileSync("data/catalog/characters-0001-1000.json","utf8"));
 const profile={schema:"chromalect.mandarin-character-profile.v1",catalog_count:1000,
   characters:catalog.characters.map(x=>({rank:x.rank,character:x.character}))};
@@ -39,7 +40,8 @@ for(const id of [
   "semantic-screened-count","semantic-screened-percent",
   "semantic-candidate-count","semantic-candidate-percent",
   "semantic-verified-count","semantic-progress","semantic-progress-fill",
-  "semantic-stage-screened","semantic-stage-dictionary",
+  "semantic-stage-screened","semantic-stage-dictionary","semantic-stage-boundary",
+  "semantic-boundary-progress","semantic-boundary-fill",
   "semantic-stage-lexical","semantic-stage-emoji",
   "semantic-dictionary-progress","semantic-dictionary-fill",
   "semantic-lexical-progress","semantic-lexical-fill",
@@ -65,6 +67,7 @@ const vmContext={
     if(path==="semantic/mandarin-1000-v0.1.json")return {ok:true,json:async()=>data};
     if(path==="profiles/mandarin-1000-v1.json")return {ok:true,json:async()=>profile};
     if(path==="semantic/lexical-crossref-v0.1.json")return {ok:true,json:async()=>lexical};
+    if(path==="semantic/strict-gloss-index-v0.1.json")return {ok:true,json:async()=>audit};
     throw new Error("Unexpected resource: "+path);
   }
 };
@@ -87,9 +90,13 @@ assert.equal(ids["semantic-stage-dictionary"].textContent,lexical.metrics.crossR
 assert.equal(ids["semantic-stage-lexical"].textContent,"0 / 1000 (0.0%)");
 assert.equal(ids["semantic-stage-emoji"].textContent,"0 / 1000 (0.0%)");
 assert.equal(ids["semantic-dictionary-fill"].style.width,(lexical.metrics.crossReferenced/10).toFixed(1)+"%");
+assert.equal(ids["semantic-stage-boundary"].textContent,"1000 / 1000 (100.0%)");
+assert.equal(ids["semantic-boundary-fill"].style.width,"100.0%");
+assert.equal(ids["semantic-boundary-progress"].attrs["aria-valuenow"],"1000");
 assert.equal(ids["semantic-lexical-fill"].style.width,"0.0%");
 assert.equal(ids["semantic-emoji-fill"].style.width,"0.0%");
-assert.ok(ids["semantic-crossref-note"].textContent.includes(lexical.metrics.expressionLiteralMatches+" of "+lexical.metrics.candidateExpressions));
+assert.ok(ids["semantic-crossref-note"].textContent.includes("649 of 897"));
+assert.ok(ids["semantic-crossref-note"].textContent.includes("248 need sense alignment"));
 const flatten=x=>[x,...x.children.flatMap(flatten)];
 assert.ok(flatten(cards[0]).some(x=>x.className==="semantic-emoji" && x.textContent==="1️⃣"));
 assert.ok(flatten(cards[0]).some(x=>x.className==="semantic-dictionary-note" &&
@@ -116,7 +123,13 @@ ids["semantic-filter"].value="all";
 ids["semantic-filter"].events.change();
 ids["semantic-lexical-filter"].value="needs-review";
 ids["semantic-lexical-filter"].events.change();
-assert.match(ids["semantic-coverage-status"].textContent,new RegExp(lexical.metrics.expressionGlossMismatchOrSynonym+" characters match"));
+assert.match(ids["semantic-coverage-status"].textContent,/248 characters match/);
+ids["semantic-lexical-filter"].value="substring-only";
+ids["semantic-lexical-filter"].events.change();
+assert.match(ids["semantic-coverage-status"].textContent,/7 characters match/);
+ids["semantic-lexical-filter"].value="whole-match";
+ids["semantic-lexical-filter"].events.change();
+assert.match(ids["semantic-coverage-status"].textContent,/638 characters match/);
 ids["semantic-lexical-filter"].value="crossref";
 ids["semantic-lexical-filter"].events.change();
 assert.match(ids["semantic-coverage-status"].textContent,new RegExp(lexical.metrics.crossReferenced+" characters match"));
@@ -144,6 +157,8 @@ assert.equal(data.initialScreeningReview.experimentalExpressionCount,897);
 assert.match(html,/data-character-layer-controls/);
 assert.match(html,/src="layers.js"/);
 assert.match(html,/id="semantic-lexical-filter"/);
+assert.match(html,/id="semantic-boundary-progress"/);
+assert.match(html,/value="substring-only"/);
 assert.match(html,/id="semantic-layer-character" checked/);
 assert.match(html,/semantic\/mandarin-1000-v0.1\.json|semantic-coverage\.js/);
 console.log("Semantic coverage UI: data loaded, progress percentages, 40-card pagination, emoji-only rendering, filters and visibility toggles.");

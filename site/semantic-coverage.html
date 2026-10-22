@@ -76,6 +76,10 @@
     <div class="semantic-progress" role="progressbar" id="semantic-dictionary-progress" aria-label="Characters with independent dictionary cross-reference" aria-valuemin="0" aria-valuemax="1000" aria-valuenow="0"><div id="semantic-dictionary-fill"></div></div>
   </div>
   <div class="semantic-stage">
+    <div class="semantic-stage-heading"><strong>Automated gloss-boundary audit (not approval)</strong><span id="semantic-stage-boundary">Loading</span></div>
+    <div class="semantic-progress" role="progressbar" id="semantic-boundary-progress" aria-label="Characters audited by automated English term boundaries" aria-valuemin="0" aria-valuemax="1000" aria-valuenow="0"><div id="semantic-boundary-fill"></div></div>
+  </div>
+  <div class="semantic-stage">
     <div class="semantic-stage-heading"><strong>Independent lexical sense approval</strong><span id="semantic-stage-lexical">Loading</span></div>
     <div class="semantic-progress" role="progressbar" id="semantic-lexical-progress" aria-label="Characters with independently reviewed Mandarin senses" aria-valuemin="0" aria-valuemax="1000" aria-valuenow="0"><div id="semantic-lexical-fill"></div></div>
   </div>
@@ -83,7 +87,7 @@
     <div class="semantic-stage-heading"><strong>Emoji comprehension approval</strong><span id="semantic-stage-emoji">Loading</span></div>
     <div class="semantic-progress" role="progressbar" id="semantic-emoji-progress" aria-label="Characters with independently approved emoji comprehension" aria-valuemin="0" aria-valuemax="1000" aria-valuenow="0"><div id="semantic-emoji-fill"></div></div>
   </div>
-  <p class="semantic-research-caption" id="semantic-crossref-note">Dictionary evidence is separate from human lexical or emoji review; no candidate has been promoted to production.</p>
+  <p class="semantic-research-caption" id="semantic-crossref-note">Automated boundary matches are research triage only. No candidate has been promoted to production.</p>
 </section>
 <fieldset class="semantic-layers" aria-label="Semantic layer visibility">
   <legend>Semantic layers</legend>
@@ -96,7 +100,9 @@
   <label>Dictionary evidence <select id="semantic-lexical-filter">
     <option value="all">All dictionary states</option>
     <option value="crossref">Second-source headword found</option>
-    <option value="needs-review">Candidate gloss needs alignment</option>
+    <option value="needs-review">No whole-term gloss match (review queue)</option>
+    <option value="substring-only">Substring-only false matches (7)</option>
+    <option value="whole-match">At least one whole-term candidate match</option>
     <option value="not-crossref">Not yet cross-referenced</option>
   </select></label>
 </div>

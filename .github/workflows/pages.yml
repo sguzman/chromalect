@@ -189,10 +189,13 @@ jobs:
           node --check site/semantic-coverage.js
           node tools/glyph-pipeline/semantic_inventory_smoke.mjs
           node tools/glyph-pipeline/lexical_crossref_smoke.mjs
+          node tools/glyph-pipeline/strict_gloss_index_smoke.mjs
           node tools/glyph-pipeline/semantic_coverage_smoke.mjs
           mkdir -p site/semantic
           cp data/semantic/mandarin-1000-v0.1.json site/semantic/mandarin-1000-v0.1.json
           cp data/semantic/cedict-crossref/manifest-v0.1.json site/semantic/lexical-crossref-v0.1.json
+          cp data/semantic/cedict-crossref/strict-gloss-index-v0.1.json site/semantic/strict-gloss-index-v0.1.json
+          test -s site/semantic/strict-gloss-index-v0.1.json
           test -s site/semantic/mandarin-1000-v0.1.json
           test -s site/semantic/lexical-crossref-v0.1.json
           test -s site/semantic-coverage.html
