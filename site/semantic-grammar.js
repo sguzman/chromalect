@@ -28,8 +28,10 @@
     switch (value.kind) {
       case "atom":
         checkKeys(value, ["kind", "emoji"]);
+        // Unicode keycaps and flags are valid emoji sequences even though
+        // their individual code points are not Extended_Pictographic.
         if (typeof value.emoji !== "string" ||
-            !/\p{Extended_Pictographic}/u.test(value.emoji) ||
+            !(/\p{Extended_Pictographic}|[0-9#*]\uFE0F?\u20E3|\p{Regional_Indicator}{2}/u.test(value.emoji)) ||
             /[A-Za-z\s]/.test(value.emoji)) {
           throw new TypeError("An atom must be an emoji token");
         }
