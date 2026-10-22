@@ -1,0 +1,446 @@
+{
+  "schema": "chromalect.mandarin.lexical-crossref-batch.v0.1",
+  "source": {
+    "title": "CC-CEDICT per-headword v2 mirror",
+    "repository": "krmanik/cedict-json",
+    "commit": "63c2569948629323b515833930fdd10f285401b6",
+    "dataLicense": "CC BY-SA 4.0",
+    "upstream": "https://cc-cedict.org/",
+    "mirror": "https://github.com/krmanik/cedict-json",
+    "transform": "Selected single-simplified-character dictionary records, retaining readings and definitions; literal English gloss matching is automated triage only"
+  },
+  "rankStart": 741,
+  "rankEnd": 755,
+  "summary": {
+    "total": 15,
+    "headwordFound": 15,
+    "withCandidate": 13,
+    "withLiteralSupport": 8
+  },
+  "records": [
+    {
+      "rank": 741,
+      "character": "吩",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/吩.json",
+      "sourceBlobSha": "1d77405cf4a221a7c38ceb0e93ab94308d9a0894",
+      "traditional": "吩",
+      "dictionaryReadings": [
+        "fen1"
+      ],
+      "dictionaryDefinitions": {
+        "fen1": "leave instructions; to order; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "command",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 742,
+      "character": "呛",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/呛.json",
+      "sourceBlobSha": "51162a09fcd4ebd73edd9f4d60304726eaa0beb5",
+      "traditional": "嗆",
+      "dictionaryReadings": [
+        "qiang1",
+        "qiang4"
+      ],
+      "dictionaryDefinitions": {
+        "qiang1": "to choke (because of swallowing the wrong way); ",
+        "qiang4": "to irritate the nose; to choke (of smoke, smell etc); pungent; (coll.) (Tw) to shout at sb; to scold; to speak out against sb; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "choke",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "qiang1",
+            "qiang4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 743,
+      "character": "吻",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/吻.json",
+      "sourceBlobSha": "6c5cf43337c24b7835f61b587a31f3a07be5de1b",
+      "traditional": "脗",
+      "dictionaryReadings": [
+        "wen3"
+      ],
+      "dictionaryDefinitions": {
+        "wen3": "kiss; to kiss; mouth; variant of 吻[wen3]; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "kiss",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "wen3"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 744,
+      "character": "吹",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/吹.json",
+      "sourceBlobSha": "e4d129cbddbe393ea8140f4faa46743261e86621",
+      "traditional": "吹",
+      "dictionaryReadings": [
+        "chui1"
+      ],
+      "dictionaryDefinitions": {
+        "chui1": "to blow; to play a wind instrument; to blast; to puff; to boast; to brag; to end in failure; to fall through; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "blow",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "chui1"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 745,
+      "character": "呜",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/呜.json",
+      "sourceBlobSha": "72ac11fdca556700b4978888e8aa5dbbe9c31c95",
+      "traditional": "嗚",
+      "dictionaryReadings": [
+        "wu1"
+      ],
+      "dictionaryDefinitions": {
+        "wu1": "(onom.) for humming or whimpering; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "sobbing",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 746,
+      "character": "吭",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/吭.json",
+      "sourceBlobSha": "b9bec5b0d9eb8521f7fb59aa9d74850107590f07",
+      "traditional": "吭",
+      "dictionaryReadings": [
+        "hang2",
+        "keng1"
+      ],
+      "dictionaryDefinitions": {
+        "hang2": "throat; ",
+        "keng1": "to utter; "
+      },
+      "selectedSenseChecks": [],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 747,
+      "character": "吧",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/吧.json",
+      "sourceBlobSha": "2af708786f2ad6617efb7017c4fa8d1fe4f361d5",
+      "traditional": "吧",
+      "dictionaryReadings": [
+        "ba1",
+        "ba5"
+      ],
+      "dictionaryDefinitions": {
+        "ba1": "bar (loanword) (serving drinks, or providing Internet access etc); to puff (on a pipe etc); (onom.) bang; abbr. for 貼吧|贴吧[tie1 ba1]; ",
+        "ba5": "(modal particle indicating suggestion or surmise); ...right?; ...OK?; ...I presume.; "
+      },
+      "selectedSenseChecks": [],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 748,
+      "character": "邑",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/邑.json",
+      "sourceBlobSha": "e8c803b25a61469625c048edcddab1d1c4d711df",
+      "traditional": "邑",
+      "dictionaryReadings": [
+        "yi4"
+      ],
+      "dictionaryDefinitions": {
+        "yi4": "city; village; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "city",
+          "sourceGlossGroupIndex": 2,
+          "matchingDictionaryReadings": [
+            "yi4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 749,
+      "character": "吼",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/吼.json",
+      "sourceBlobSha": "1d8732994f2c32df08c390adcb7a3173cc760840",
+      "traditional": "吼",
+      "dictionaryReadings": [
+        "hou3"
+      ],
+      "dictionaryDefinitions": {
+        "hou3": "to roar; to howl; to shriek; roar or howl of an animal; bellow of rage; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "roar",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "hou3"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 750,
+      "character": "囤",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/囤.json",
+      "sourceBlobSha": "64faa5d312cfa9357fd0cf44282372e3db8aaf51",
+      "traditional": "囤",
+      "dictionaryReadings": [
+        "dun4",
+        "tun2"
+      ],
+      "dictionaryDefinitions": {
+        "dun4": "bin for grain; ",
+        "tun2": "to store; hoard; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "grain basket",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 751,
+      "character": "别",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/别.json",
+      "sourceBlobSha": "9c635bdc4b14a1e675c0f4badcb081e7e8f82e58",
+      "traditional": "彆",
+      "dictionaryReadings": [
+        "Bie2",
+        "bie2",
+        "bie4"
+      ],
+      "dictionaryDefinitions": {
+        "Bie2": "surname Bie; ",
+        "bie2": "to leave; to depart; to separate; to distinguish; to classify; other; another; don't ...!; to pin; to stick (sth) in; ",
+        "bie4": "to make sb change their ways, opinions etc; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "separate",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "bie2"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        },
+        {
+          "selectedMeaning": "do not",
+          "sourceGlossGroupIndex": 1,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 752,
+      "character": "吮",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/吮.json",
+      "sourceBlobSha": "50c08cdcd736a866b3697616a40ff8a58a31104b",
+      "traditional": "吮",
+      "dictionaryReadings": [
+        "shun3"
+      ],
+      "dictionaryDefinitions": {
+        "shun3": "to suck; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "sip",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 753,
+      "character": "岖",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/岖.json",
+      "sourceBlobSha": "f8f7de91ce23a83881974c464af7e01c3aeaea3e",
+      "traditional": "嶇",
+      "dictionaryReadings": [
+        "qu1"
+      ],
+      "dictionaryDefinitions": {
+        "qu1": "rugged; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "rugged",
+          "sourceGlossGroupIndex": 1,
+          "matchingDictionaryReadings": [
+            "qu1"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 754,
+      "character": "岗",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/岗.json",
+      "sourceBlobSha": "e494147ef193a1a968d4e0e662b8066c3abc3119",
+      "traditional": "崗",
+      "dictionaryReadings": [
+        "gang3"
+      ],
+      "dictionaryDefinitions": {
+        "gang3": "mound; policeman's beat; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "post",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 755,
+      "character": "帐",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/帐.json",
+      "sourceBlobSha": "2a0c1d86598c182239576935d166db7942ff1af1",
+      "traditional": "帳",
+      "dictionaryReadings": [
+        "zhang4"
+      ],
+      "dictionaryDefinitions": {
+        "zhang4": "covering veil; canopy; screen; tent; variant of 賬|账[zhang4]; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "tent",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "zhang4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    }
+  ]
+}
