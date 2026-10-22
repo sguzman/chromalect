@@ -1,0 +1,436 @@
+{
+  "schema": "chromalect.mandarin.lexical-crossref-batch.v0.1",
+  "source": {
+    "title": "CC-CEDICT per-headword v2 mirror",
+    "repository": "krmanik/cedict-json",
+    "commit": "63c2569948629323b515833930fdd10f285401b6",
+    "dataLicense": "CC BY-SA 4.0",
+    "upstream": "https://cc-cedict.org/",
+    "mirror": "https://github.com/krmanik/cedict-json",
+    "transform": "Selected single-simplified-character dictionary records, retaining readings and definitions; literal English gloss matching is automated triage only"
+  },
+  "rankStart": 261,
+  "rankEnd": 275,
+  "summary": {
+    "total": 15,
+    "headwordFound": 15,
+    "withCandidate": 12,
+    "withLiteralSupport": 10
+  },
+  "records": [
+    {
+      "rank": 261,
+      "character": "囚",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/囚.json",
+      "sourceBlobSha": "1d2429a597ea361859cffcc4b3bdcb841a70d30a",
+      "traditional": "囚",
+      "dictionaryReadings": [
+        "qiu2"
+      ],
+      "dictionaryDefinitions": {
+        "qiu2": "prisoner; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "prisoner",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "qiu2"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 262,
+      "character": "四",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/四.json",
+      "sourceBlobSha": "2d422d87118b26ebeb74f8c16966369f8f06ee19",
+      "traditional": "四",
+      "dictionaryReadings": [
+        "si4"
+      ],
+      "dictionaryDefinitions": {
+        "si4": "four; 4; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "four",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "si4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 263,
+      "character": "生",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/生.json",
+      "sourceBlobSha": "7e86a2c248a74ec3a73b36248c0febc87eb6a7b1",
+      "traditional": "生",
+      "dictionaryReadings": [
+        "sheng1"
+      ],
+      "dictionaryDefinitions": {
+        "sheng1": "to be born; to give birth; life; to grow; raw; uncooked; student; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "life",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "sheng1"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        },
+        {
+          "selectedMeaning": "birth",
+          "sourceGlossGroupIndex": 1,
+          "matchingDictionaryReadings": [
+            "sheng1"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 264,
+      "character": "矢",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/矢.json",
+      "sourceBlobSha": "354fd1efcf23b176f87e9d5c588c88076c99a055",
+      "traditional": "矢",
+      "dictionaryReadings": [
+        "shi3"
+      ],
+      "dictionaryDefinitions": {
+        "shi3": "arrow; dart; straight; to vow; to swear; old variant of 屎[shi3]; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "arrow",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "shi3"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 265,
+      "character": "失",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/失.json",
+      "sourceBlobSha": "f167ecae37e01892dc8c12c1632f2511fecaec3c",
+      "traditional": "失",
+      "dictionaryReadings": [
+        "shi1"
+      ],
+      "dictionaryDefinitions": {
+        "shi1": "to lose; to miss; to fail; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "lose",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "shi1"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 266,
+      "character": "乍",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/乍.json",
+      "sourceBlobSha": "b15ea3f31dc2634aae59513ca8873a5b6eeeed17",
+      "traditional": "乍",
+      "dictionaryReadings": [
+        "zha4"
+      ],
+      "dictionaryDefinitions": {
+        "zha4": "at first; suddenly; abruptly; to spread; (of hair) to stand on end; bristling; "
+      },
+      "selectedSenseChecks": [],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 267,
+      "character": "禾",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/禾.json",
+      "sourceBlobSha": "ddb02538633f01a51817c598111b962b48760386",
+      "traditional": "禾",
+      "dictionaryReadings": [
+        "he2"
+      ],
+      "dictionaryDefinitions": {
+        "he2": "cereal; grain; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "grain",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "he2"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 268,
+      "character": "丘",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/丘.json",
+      "sourceBlobSha": "7ac35e899326e47747c21c4b27445a09719b99ab",
+      "traditional": "坵",
+      "dictionaryReadings": [
+        "Qiu1",
+        "qiu1"
+      ],
+      "dictionaryDefinitions": {
+        "Qiu1": "surname Qiu; ",
+        "qiu1": "mound; hillock; grave; classifier for fields; variant of 丘[qiu1]; hillock; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "hill",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "qiu1"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 269,
+      "character": "付",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/付.json",
+      "sourceBlobSha": "a48d9ee3f16ed8181a839f5d3ddbe34ba05030eb",
+      "traditional": "付",
+      "dictionaryReadings": [
+        "Fu4",
+        "fu4"
+      ],
+      "dictionaryDefinitions": {
+        "Fu4": "surname Fu; ",
+        "fu4": "to pay; to hand over to; classifier for pairs or sets of things; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "give",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 270,
+      "character": "仗",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/仗.json",
+      "sourceBlobSha": "33b625ead8b03bcdd1416262954c16cfc2da146c",
+      "traditional": "仗",
+      "dictionaryReadings": [
+        "zhang4"
+      ],
+      "dictionaryDefinitions": {
+        "zhang4": "weaponry; to hold (a weapon); to wield; to rely on; to depend on; war; battle; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "fight",
+          "sourceGlossGroupIndex": 2,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 271,
+      "character": "代",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/代.json",
+      "sourceBlobSha": "eb1f7ade62fba6d5e30906774f1cf9df77aa2466",
+      "traditional": "代",
+      "dictionaryReadings": [
+        "dai4"
+      ],
+      "dictionaryDefinitions": {
+        "dai4": "to substitute; to act on behalf of others; to replace; generation; dynasty; age; period; (historical) era; (geological) eon; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "replace",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "dai4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 272,
+      "character": "仙",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/仙.json",
+      "sourceBlobSha": "c1fc6d58255f98ed5d2f0054c0743e53a3680603",
+      "traditional": "僊",
+      "dictionaryReadings": [
+        "xian1"
+      ],
+      "dictionaryDefinitions": {
+        "xian1": "immortal; variant of 仙[xian1]; "
+      },
+      "selectedSenseChecks": [],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 273,
+      "character": "们",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/们.json",
+      "sourceBlobSha": "a76c1fd996e1428290d049f38e3d1dd044c41707",
+      "traditional": "們",
+      "dictionaryReadings": [
+        "men5"
+      ],
+      "dictionaryDefinitions": {
+        "men5": "plural marker for pronouns, and nouns referring to individuals; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "plural",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "men5"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 274,
+      "character": "仪",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/仪.json",
+      "sourceBlobSha": "257d8db4aa636c5740114554b339a318155cfc92",
+      "traditional": "儀",
+      "dictionaryReadings": [
+        "yi2"
+      ],
+      "dictionaryDefinitions": {
+        "yi2": "apparatus; rites; appearance; present; ceremony; "
+      },
+      "selectedSenseChecks": [],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 275,
+      "character": "白",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/白.json",
+      "sourceBlobSha": "686bcda41b691e37c8122012e3b107174124dfe8",
+      "traditional": "白",
+      "dictionaryReadings": [
+        "Bai2",
+        "bai2"
+      ],
+      "dictionaryDefinitions": {
+        "Bai2": "surname Bai; ",
+        "bai2": "white; snowy; pure; bright; empty; blank; plain; clear; to make clear; in vain; gratuitous; free of charge; reactionary; anti-communist; funeral; to stare coldly; to write wrong character; to state; to explain; vernacular; spoken lines in opera; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "white",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "bai2"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    }
+  ]
+}
