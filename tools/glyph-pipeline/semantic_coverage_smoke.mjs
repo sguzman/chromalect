@@ -91,9 +91,9 @@ assert.equal(ids["semantic-progress"].attrs["aria-valuenow"],"1000");
 assert.equal(ids["semantic-stage-screened"].textContent,"1000 / 1000 (100.0%)");
 assert.equal(ids["semantic-stage-dictionary"].textContent,lexical.metrics.crossReferenced+" / 1000 ("+(lexical.metrics.crossReferenced/10).toFixed(1)+"%)");
 assert.equal(ids["semantic-stage-lexical"].textContent,"0 / 1000 (0.0%)");
-assert.equal(ids["semantic-stage-desk"].textContent,"60 / 248 (24.2%) · not approval");
-assert.equal(ids["semantic-desk-fill"].style.width,"24.2%");
-assert.equal(ids["semantic-desk-progress"].attrs["aria-valuenow"],"60");
+assert.equal(ids["semantic-stage-desk"].textContent,review.counts.deskAnalyzedTotal+" / 248 (40.3%) · not approval");
+assert.equal(ids["semantic-desk-fill"].style.width,"40.3%");
+assert.equal(ids["semantic-desk-progress"].attrs["aria-valuenow"],"100");
 assert.equal(ids["semantic-stage-emoji"].textContent,"0 / 1000 (0.0%)");
 assert.equal(ids["semantic-dictionary-fill"].style.width,(lexical.metrics.crossReferenced/10).toFixed(1)+"%");
 assert.equal(ids["semantic-stage-boundary"].textContent,"1000 / 1000 (100.0%)");
@@ -132,13 +132,13 @@ ids["semantic-lexical-filter"].events.change();
 assert.match(ids["semantic-coverage-status"].textContent,/248 characters match/);
 ids["semantic-lexical-filter"].value="desk-analyzed";
 ids["semantic-lexical-filter"].events.change();
-assert.match(ids["semantic-coverage-status"].textContent,/60 characters match/);
+assert.match(ids["semantic-coverage-status"].textContent,/100 characters match/);
 assert.ok(flatten(ids["semantic-coverage-rows"].children[0])
   .some(x=>x.className==="semantic-review-detail" &&
     x.textContent.includes("Preliminary desk analysis")));
 ids["semantic-lexical-filter"].value="desk-pending";
 ids["semantic-lexical-filter"].events.change();
-assert.match(ids["semantic-coverage-status"].textContent,/188 characters match/);
+assert.match(ids["semantic-coverage-status"].textContent,/148 characters match/);
 ids["semantic-lexical-filter"].value="high-priority";
 ids["semantic-lexical-filter"].events.change();
 assert.match(ids["semantic-coverage-status"].textContent,/15 characters match/);

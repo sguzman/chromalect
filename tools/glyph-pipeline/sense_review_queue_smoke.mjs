@@ -82,9 +82,11 @@ for(const record of queue.records){
   deskAnalyzed++;
  }
 }
-assert.equal(analyzedUnclassified,45);
-assert.equal(queue.counts.deskAnalyzedUnclassified,45);
-assert.equal(queue.counts.deskAnalyzedTotal,60);
+assert.equal(analyzedUnclassified,queue.counts.deskAnalyzedUnclassified);
+assert.equal(queue.counts.deskAnalyzedUnclassified,85);
+assert.equal(queue.counts.deskAnalyzedTotal,
+ queue.counts.deskAnalyzedHighPriority+queue.counts.deskAnalyzedUnclassified);
+assert.equal(queue.counts.deskAnalyzedTotal,100);
 assert.equal(deskAnalyzed,queue.counts.deskAnalyzedTotal);
 assert.equal(deskAnalyzed,queue.counts.deskAnalyzedTotal);
 assert.equal(seen.size,needs.length);
@@ -96,4 +98,4 @@ assert.equal(counter.previouslyTriaged,19);
 assert.equal(strict.scope.independentHumanApproved,0);
 assert.equal(strict.scope.emojiComprehensionApproved,0);
 assert.equal(manifest.metrics.productionVerified,0);
-console.log("Sense-review queue: 248 pending, 60 desk-analyzed (24.2%), 188 still need desk analysis. Zero independently approved.");
+console.log("Sense-review queue: 248 pending, 100 desk-analyzed (40.3%), 148 still need desk analysis. Zero independently approved.");

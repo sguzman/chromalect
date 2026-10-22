@@ -251,7 +251,10 @@
            x.visualComprehensionDecision!=="pending" ||
            x.productionVerified!==false))
         throw new Error("Unverified sense review data malformed or promoted without approval");
-      if(review.counts.deskAnalyzedTotal!==60 ||
+      if(review.counts.deskAnalyzedTotal!==
+           review.counts.deskAnalyzedHighPriority+review.counts.deskAnalyzedUnclassified ||
+         review.counts.independentlyLexicallyApproved!==0 ||
+         review.counts.emojiComprehensionApproved!==0 ||
          review.counts.pendingSenseAlignment!==248 ||
          review.records.filter(x=>!!x.deskAnalysis).length!==review.counts.deskAnalyzedTotal)
          throw new Error("Desk-analysis counts do not match provisional entries");
