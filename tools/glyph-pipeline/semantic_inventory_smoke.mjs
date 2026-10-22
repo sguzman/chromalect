@@ -81,7 +81,7 @@ const actual={
 assert.deepEqual(actual,ledger.summary);
 assert.equal(pending+screened,1000);
 assert.equal(pictograms+deferred,screened);
-assert.ok(screened>=100,"First-screening progress must not regress");
+assert.ok(screened>=200,"Rank-200 screening progress must not regress");
 console.log("Mandarin semantic screening: "+
   sourced+"/1000 sourced definitions; "+screened+"/1000 screened ("+
   (100*screened/1000).toFixed(1)+"%); "+pictograms+" pictogram candidates; "+
