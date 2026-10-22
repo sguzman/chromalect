@@ -1,0 +1,310 @@
+{
+  "schema": "chromalect.mandarin.lexical-crossref-batch.v0.1",
+  "source": {
+    "title": "CC-CEDICT per-headword v2 mirror",
+    "repository": "krmanik/cedict-json",
+    "commit": "63c2569948629323b515833930fdd10f285401b6",
+    "dataLicense": "CC BY-SA 4.0",
+    "upstream": "https://cc-cedict.org/",
+    "mirror": "https://github.com/krmanik/cedict-json",
+    "transform": "Selected single-simplified-character dictionary records, retaining readings and definitions; literal English gloss matching is automated triage only"
+  },
+  "rankStart": 651,
+  "rankEnd": 660,
+  "summary": {
+    "total": 10,
+    "headwordFound": 10,
+    "withCandidate": 10,
+    "withLiteralSupport": 8
+  },
+  "records": [
+    {
+      "rank": 651,
+      "character": "志",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/志.json",
+      "sourceBlobSha": "54bbbb9dfa6840c02b020b7373f13025b8b95b80",
+      "traditional": "誌",
+      "dictionaryReadings": [
+        "zhi4"
+      ],
+      "dictionaryDefinitions": {
+        "zhi4": "aspiration; ambition; the will; sign; mark; to record; to write a footnote; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "determination",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 652,
+      "character": "块",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/块.json",
+      "sourceBlobSha": "64e615f069f4648acecdb38550e1c0ebc1d20775",
+      "traditional": "塊",
+      "dictionaryReadings": [
+        "kuai4"
+      ],
+      "dictionaryDefinitions": {
+        "kuai4": "lump (of earth); chunk; piece; classifier for pieces of cloth, cake, soap etc; (coll.) classifier for money and currency units; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "piece",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "kuai4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 653,
+      "character": "扭",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/扭.json",
+      "sourceBlobSha": "a66c31fab4b3bb75423335378421f465f5cb0736",
+      "traditional": "扭",
+      "dictionaryReadings": [
+        "niu3"
+      ],
+      "dictionaryDefinitions": {
+        "niu3": "to turn; to twist; to wring; to sprain; to swing one's hips; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "twist",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "niu3"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 654,
+      "character": "声",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/声.json",
+      "sourceBlobSha": "9137109aacb56afc6b9010e70e97434f3d609cc3",
+      "traditional": "聲",
+      "dictionaryReadings": [
+        "sheng1"
+      ],
+      "dictionaryDefinitions": {
+        "sheng1": "sound; voice; tone; noise; classifier for sounds; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "sound",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "sheng1"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 655,
+      "character": "把",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/把.json",
+      "sourceBlobSha": "fc533a465dfd2a78803153c8f250791f86401a2c",
+      "traditional": "把",
+      "dictionaryReadings": [
+        "ba3",
+        "ba4"
+      ],
+      "dictionaryDefinitions": {
+        "ba3": "to hold; to contain; to grasp; to take hold of; handle; particle marking the following noun as a direct object; classifier for objects with handle; classifier for small objects: handful; ",
+        "ba4": "handle; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "hold",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "ba3"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 656,
+      "character": "报",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/报.json",
+      "sourceBlobSha": "7eef05a560b25a8960829c7a9ebf085e545ea439",
+      "traditional": "報",
+      "dictionaryReadings": [
+        "bao4"
+      ],
+      "dictionaryDefinitions": {
+        "bao4": "to announce; to inform; report; newspaper; recompense; revenge; CL:份[fen4],張|张[zhang1]; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "report",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "bao4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 657,
+      "character": "拟",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/拟.json",
+      "sourceBlobSha": "4d974c9656b587945a3f1502f3e0ca4441f22710",
+      "traditional": "擬",
+      "dictionaryReadings": [
+        "ni3"
+      ],
+      "dictionaryDefinitions": {
+        "ni3": "doubtful; suspicious; variant of 擬|拟[ni3]; to emulate; to imitate; to plan to; to draft (a plan); to imitate; to assess; to compare; pseudo-; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "draft",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "ni3"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 658,
+      "character": "却",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/却.json",
+      "sourceBlobSha": "fac4cd0358f404c308a72f56f64129e3dcbec5be",
+      "traditional": "卻",
+      "dictionaryReadings": [
+        "que4"
+      ],
+      "dictionaryDefinitions": {
+        "que4": "old variant of 卻|却[que4]; but; yet; however; while; to go back; to decline; to retreat; nevertheless; even though; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "retreat",
+          "sourceGlossGroupIndex": 2,
+          "matchingDictionaryReadings": [
+            "que4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 659,
+      "character": "抒",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/抒.json",
+      "sourceBlobSha": "4cdcb64af71def8bfff3623ae7f4918dab2cf29f",
+      "traditional": "抒",
+      "dictionaryReadings": [
+        "shu1"
+      ],
+      "dictionaryDefinitions": {
+        "shu1": "to express; to give expression to; variant of 紓|纾[shu1]; to relieve; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "express",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "shu1"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 660,
+      "character": "劫",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/劫.json",
+      "sourceBlobSha": "e02d21154f6e30d95c1f52b76faf52a4566f2503",
+      "traditional": "劫",
+      "dictionaryReadings": [
+        "jie2"
+      ],
+      "dictionaryDefinitions": {
+        "jie2": "variant of 劫[jie2]; variant of 劫[jie2]; variant of 劫[jie2]; to rob; to plunder; to seize by force; to coerce; calamity; abbr. for kalpa 劫波[jie2 bo1]; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "disaster",
+          "sourceGlossGroupIndex": 1,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    }
+  ]
+}
