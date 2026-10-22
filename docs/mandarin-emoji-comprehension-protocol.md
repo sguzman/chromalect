@@ -16,6 +16,12 @@ Chromalect already has 897 **unverified** pictogram expressions attached to sele
 
 The downloaded \`chromalect.emoji-comprehension-session.v0.1\` object contains the source-audit name, scope, total trial counts, local-only status, and per-trial identifiers, selected characters, visible emoji expression, **blind response**, prereveal confidence, automatic risk flags and **post-reveal clarity rating**. It never marks a record production verified. Avoid including reviewers' names, email addresses, identifying details or medical information in the free-text answers.
 
+## Validate local export integrity
+
+The [no-dependency review-session validator](../tools/glyph-pipeline/review_session_validate.mjs) can check an exported JSON against the pinned 897-expression audit, reject unknown or duplicate trial IDs, and prohibit invented canonical approvals. Its smoke test builds synthetic fixtures only; it does not introduce participant results into the repository.
+
+This validator checks **identity and format integrity**, not the truth of an interpretation, participant independence, or a pictogram's effectiveness.
+
 ## Limits and gates
 
 - English and Chinese target labels are **provisional hypotheses**, not confirmed exhaustive modern Mandarin sense inventories. Even a "clear" pictogram may encode an incorrect or overly broad target.

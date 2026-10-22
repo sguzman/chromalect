@@ -20,6 +20,10 @@ The exported \`chromalect.lexical-review-observation-session.v0.1\` object recor
 
 Derived CC-CEDICT content retains **CC BY-SA 4.0** attribution; the original Unihan material carries Unicode's licensing. The source pin, individual references, and notices in the repository govern redistribution.
 
+## Validate local export integrity
+
+The [review-session validator](../tools/glyph-pipeline/review_session_validate.mjs) checks lexical observation exports against the pinned 248-entry queue, verifies that each identity and definition segment matches the source, and rejects false approval fields or missing rationales. It does not certify the evidence or promote any dictionary sense. Automated smoke tests contain only synthetic responses.
+
 ## Acceptance and limitations
 
 Only a separately documented review procedure can decide what constitutes **independent lexical verification**. A self-selected source-only reviewer, assistant-generated notes, automated synonyms, or one-click form judgments are insufficient. Robust assessment should record the actual applicable reading, representative word/character usage, whether a meaning is modern or historical, independent dictionary/corpus provenance, and independent adjudication of disagreements. A verified sense cannot be promoted until independent emoji comprehension and accessible display quality are also evaluated.

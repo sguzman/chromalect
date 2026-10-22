@@ -191,6 +191,7 @@ jobs:
           node --check site/lexical-review.js
           node tools/glyph-pipeline/emoji_comprehension_smoke.mjs
           node tools/glyph-pipeline/lexical_review_workbench_smoke.mjs
+          node tools/glyph-pipeline/review_session_validate_smoke.mjs
           node tools/glyph-pipeline/semantic_inventory_smoke.mjs
           node tools/glyph-pipeline/lexical_crossref_smoke.mjs
           node tools/glyph-pipeline/strict_gloss_index_smoke.mjs
