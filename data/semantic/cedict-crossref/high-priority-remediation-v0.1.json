@@ -1,0 +1,391 @@
+{
+  "schema": "chromalect.semantic.high-priority-remediation.v0.1",
+  "status": "provisional_hypotheses_no_canonical_replacements",
+  "source": {
+    "queue": "sense-review-queue-v0.1.json",
+    "dataset": "CC-CEDICT via krmanik/cedict-json",
+    "revision": "63c2569948629323b515833930fdd10f285401b6",
+    "license": "CC BY-SA 4.0",
+    "note": "Retains pinned source evidence and does not amend the first-1000 character semantic ledger."
+  },
+  "summary": {
+    "total": 15,
+    "alternativeExpressionProposals": 9,
+    "provisionalDeferrals": 5,
+    "explicitTypedVerbTrials": 1,
+    "independentLexicalApproved": 0,
+    "independentEmojiApproved": 0,
+    "productionVerified": 0
+  },
+  "records": [
+    {
+      "rank": 122,
+      "character": "气",
+      "originalSelectedMeaning": "steam",
+      "originalExpression": {
+        "kind": "atom",
+        "emoji": "♨️"
+      },
+      "dictionarySource": "v2/气.json",
+      "independentHeadwordExcerpt": "qi4: gas; air; smell; weather; to make angry; to annoy; to get angry; vital energy; qi;",
+      "researchPriority": "high",
+      "researchDisposition": "trial_alternative_sense",
+      "alternativeSelectedMeaning": "air / gas",
+      "alternativeExpression": {
+        "kind": "atom",
+        "emoji": "🌬️"
+      },
+      "caution": "Gust imagery depicts moving air, not all gases or 气 as vital energy; this is a provisional alternative usage, not replacement approval.",
+      "comparisonSource": "pinned_Unihan_plus_CC-CEDICT",
+      "sourceStatus": "preliminary_assistant_hypothesis",
+      "independentLexicalApproval": "pending",
+      "independentEmojiComprehensionApproval": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 135,
+      "character": "仍",
+      "originalSelectedMeaning": "again",
+      "originalExpression": {
+        "kind": "atom",
+        "emoji": "🔁"
+      },
+      "dictionarySource": "v2/仍.json",
+      "independentHeadwordExcerpt": "reng2: still; yet; to remain;",
+      "researchPriority": "high",
+      "researchDisposition": "defer_current_pictogram",
+      "alternativeSelectedMeaning": null,
+      "alternativeExpression": null,
+      "caution": "Continuation (still/yet) is not necessarily repetition (again). No reliably specific ordinary emoji selected.",
+      "comparisonSource": "pinned_Unihan_plus_CC-CEDICT",
+      "sourceStatus": "preliminary_assistant_hypothesis",
+      "independentLexicalApproval": "pending",
+      "independentEmojiComprehensionApproval": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 137,
+      "character": "斤",
+      "originalSelectedMeaning": "axe",
+      "originalExpression": {
+        "kind": "atom",
+        "emoji": "🪓"
+      },
+      "dictionarySource": "v2/斤.json",
+      "independentHeadwordExcerpt": "jin1: catty; weight equal to 0.5 kg; (Tw) weight equal to 0.6 kg;",
+      "researchPriority": "high",
+      "researchDisposition": "trial_alternative_sense",
+      "alternativeSelectedMeaning": "unit of weight (jin / catty)",
+      "alternativeExpression": {
+        "kind": "atom",
+        "emoji": "⚖️"
+      },
+      "caution": "A balance evokes weight measurement but not the culturally specific unit 斤, which needs an accompanying written label.",
+      "comparisonSource": "pinned_Unihan_plus_CC-CEDICT",
+      "sourceStatus": "preliminary_assistant_hypothesis",
+      "independentLexicalApproval": "pending",
+      "independentEmojiComprehensionApproval": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 145,
+      "character": "凶",
+      "originalSelectedMeaning": "sad",
+      "originalExpression": {
+        "kind": "atom",
+        "emoji": "😞"
+      },
+      "dictionarySource": "v2/凶.json",
+      "independentHeadwordExcerpt": "xiong1: terrible; fearful; vicious; fierce; ominous; inauspicious; famine; variant of 兇|凶[xiong1];",
+      "researchPriority": "high",
+      "researchDisposition": "defer_current_pictogram",
+      "alternativeSelectedMeaning": null,
+      "alternativeExpression": null,
+      "caution": "Sad-face imagery likely encodes a different emotional state than ominous/fierce. No direct conventional symbol identified.",
+      "comparisonSource": "pinned_Unihan_plus_CC-CEDICT",
+      "sourceStatus": "preliminary_assistant_hypothesis",
+      "independentLexicalApproval": "pending",
+      "independentEmojiComprehensionApproval": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 164,
+      "character": "火",
+      "originalSelectedMeaning": "burn",
+      "originalExpression": {
+        "kind": "event",
+        "predicate": {
+          "kind": "atom",
+          "emoji": "🔥"
+        }
+      },
+      "dictionarySource": "v2/火.json",
+      "independentHeadwordExcerpt": "Huo3: surname Huo; | huo3: fire; urgent; ammunition; fiery or flaming; internal heat (Chinese medicine); hot (popular); classifier for military units (old);",
+      "researchPriority": "high",
+      "researchDisposition": "inspect_existing_alternative",
+      "alternativeSelectedMeaning": "fire",
+      "alternativeExpression": {
+        "kind": "atom",
+        "emoji": "🔥"
+      },
+      "caution": "Fire is the better-supported source meaning; it does not by itself prove a separate verbal burn sense or visibly express the event role.",
+      "comparisonSource": "pinned_Unihan_plus_CC-CEDICT",
+      "sourceStatus": "preliminary_assistant_hypothesis",
+      "independentLexicalApproval": "pending",
+      "independentEmojiComprehensionApproval": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 169,
+      "character": "订",
+      "originalSelectedMeaning": "agreement",
+      "originalExpression": {
+        "kind": "associate",
+        "items": [
+          {
+            "kind": "atom",
+            "emoji": "📝"
+          },
+          {
+            "kind": "atom",
+            "emoji": "🤝"
+          }
+        ]
+      },
+      "dictionarySource": "v2/订.json",
+      "independentHeadwordExcerpt": "ding4: to agree; to conclude; to draw up; to subscribe to (a newspaper etc); to order;",
+      "researchPriority": "high",
+      "researchDisposition": "trial_typed_verb",
+      "alternativeSelectedMeaning": "to agree / draw up",
+      "alternativeExpression": {
+        "kind": "event",
+        "predicate": {
+          "kind": "associate",
+          "items": [
+            {
+              "kind": "atom",
+              "emoji": "📝"
+            },
+            {
+              "kind": "atom",
+              "emoji": "🤝"
+            }
+          ]
+        }
+      },
+      "caution": "Typed event role survives in JSON but the emoji-only projection remains 📝🤝. Blind recognition must distinguish agreement-as-noun from agreeing-as-action.",
+      "comparisonSource": "pinned_Unihan_plus_CC-CEDICT",
+      "sourceStatus": "preliminary_assistant_hypothesis",
+      "independentLexicalApproval": "pending",
+      "independentEmojiComprehensionApproval": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 190,
+      "character": "玉",
+      "originalSelectedMeaning": "precious stone",
+      "originalExpression": {
+        "kind": "atom",
+        "emoji": "💎"
+      },
+      "dictionarySource": "v2/玉.json",
+      "independentHeadwordExcerpt": "yu4: jade;",
+      "researchPriority": "high",
+      "researchDisposition": "defer_current_pictogram",
+      "alternativeSelectedMeaning": null,
+      "alternativeExpression": null,
+      "caution": "💎 typically portrays a cut diamond, not culturally specific jade. Generic 'precious stone' loses the primary dictionary referent.",
+      "comparisonSource": "pinned_Unihan_plus_CC-CEDICT",
+      "sourceStatus": "preliminary_assistant_hypothesis",
+      "independentLexicalApproval": "pending",
+      "independentEmojiComprehensionApproval": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 199,
+      "character": "扑",
+      "originalSelectedMeaning": "attack",
+      "originalExpression": {
+        "kind": "atom",
+        "emoji": "⚔️"
+      },
+      "dictionarySource": "v2/扑.json",
+      "independentHeadwordExcerpt": "pu1: to throw oneself at; to pounce on; to devote one's energies; to flap; to flutter; to dab; to pat; to bend over;",
+      "researchPriority": "high",
+      "researchDisposition": "defer_current_pictogram",
+      "alternativeSelectedMeaning": null,
+      "alternativeExpression": null,
+      "caution": "⚔️ represents broad combat, not the headword's pounce/pat/flap action. No action-specific pictogram selected.",
+      "comparisonSource": "pinned_Unihan_plus_CC-CEDICT",
+      "sourceStatus": "preliminary_assistant_hypothesis",
+      "independentLexicalApproval": "pending",
+      "independentEmojiComprehensionApproval": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 268,
+      "character": "丘",
+      "originalSelectedMeaning": "hill",
+      "originalExpression": {
+        "kind": "atom",
+        "emoji": "⛰️"
+      },
+      "dictionarySource": "v2/丘.json",
+      "independentHeadwordExcerpt": "Qiu1: surname Qiu; | qiu1: mound; hillock; grave; classifier for fields; variant of 丘[qiu1]; hillock;",
+      "researchPriority": "high",
+      "researchDisposition": "inspect_scope",
+      "alternativeSelectedMeaning": "hillock / mound",
+      "alternativeExpression": null,
+      "caution": "⛰️ is taller, steeper mountain imagery; a hillock/mound needs narrower visual comprehension testing rather than an invented icon.",
+      "comparisonSource": "pinned_Unihan_plus_CC-CEDICT",
+      "sourceStatus": "preliminary_assistant_hypothesis",
+      "independentLexicalApproval": "pending",
+      "independentEmojiComprehensionApproval": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 448,
+      "character": "廷",
+      "originalSelectedMeaning": "court",
+      "originalExpression": {
+        "kind": "atom",
+        "emoji": "⚖️"
+      },
+      "dictionarySource": "v2/廷.json",
+      "independentHeadwordExcerpt": "ting2: palace courtyard;",
+      "researchPriority": "high",
+      "researchDisposition": "trial_alternative_sense",
+      "alternativeSelectedMeaning": "palace courtyard",
+      "alternativeExpression": {
+        "kind": "atom",
+        "emoji": "🏯"
+      },
+      "caution": "🏯 depicts an architectural complex, not necessarily a courtyard. It avoids the misleading courtroom scales but may still be too broad.",
+      "comparisonSource": "pinned_Unihan_plus_CC-CEDICT",
+      "sourceStatus": "preliminary_assistant_hypothesis",
+      "independentLexicalApproval": "pending",
+      "independentEmojiComprehensionApproval": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 687,
+      "character": "极",
+      "originalSelectedMeaning": "extreme",
+      "originalExpression": {
+        "kind": "atom",
+        "emoji": "🔝"
+      },
+      "dictionarySource": "v2/极.json",
+      "independentHeadwordExcerpt": "ji2: extremely; pole (geography, physics); utmost; top;",
+      "researchPriority": "high",
+      "researchDisposition": "inspect_context",
+      "alternativeSelectedMeaning": "utmost / top",
+      "alternativeExpression": {
+        "kind": "atom",
+        "emoji": "🔝"
+      },
+      "caution": "The icon plausibly expresses top/utmost but not all adverbial uses of 极. Review reading and grammatical context.",
+      "comparisonSource": "pinned_Unihan_plus_CC-CEDICT",
+      "sourceStatus": "preliminary_assistant_hypothesis",
+      "independentLexicalApproval": "pending",
+      "independentEmojiComprehensionApproval": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 768,
+      "character": "兵",
+      "originalSelectedMeaning": "soldier",
+      "originalExpression": {
+        "kind": "atom",
+        "emoji": "🪖"
+      },
+      "dictionarySource": "v2/兵.json",
+      "independentHeadwordExcerpt": "bing1: soldiers; a force; an army; weapons; arms; military; warlike; CL:個|个[ge4];",
+      "researchPriority": "high",
+      "researchDisposition": "inspect_context",
+      "alternativeSelectedMeaning": "soldier(s)",
+      "alternativeExpression": {
+        "kind": "atom",
+        "emoji": "🪖"
+      },
+      "caution": "Single helmet may serve as a category-level soldier cue; plural inflection alone does not imply wrong character meaning.",
+      "comparisonSource": "pinned_Unihan_plus_CC-CEDICT",
+      "sourceStatus": "preliminary_assistant_hypothesis",
+      "independentLexicalApproval": "pending",
+      "independentEmojiComprehensionApproval": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 828,
+      "character": "状",
+      "originalSelectedMeaning": "shape",
+      "originalExpression": {
+        "kind": "atom",
+        "emoji": "🔷"
+      },
+      "dictionarySource": "v2/状.json",
+      "independentHeadwordExcerpt": "zhuang4: accusation; suit; state; condition; strong; great; -shaped;",
+      "researchPriority": "high",
+      "researchDisposition": "defer_current_pictogram",
+      "alternativeSelectedMeaning": null,
+      "alternativeExpression": null,
+      "caution": "The dictionary's '-shaped' suffix and state/condition senses are not equivalent to an arbitrary geometric diamond.",
+      "comparisonSource": "pinned_Unihan_plus_CC-CEDICT",
+      "sourceStatus": "preliminary_assistant_hypothesis",
+      "independentLexicalApproval": "pending",
+      "independentEmojiComprehensionApproval": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 867,
+      "character": "没",
+      "originalSelectedMeaning": "drown",
+      "originalExpression": {
+        "kind": "event",
+        "predicate": {
+          "kind": "atom",
+          "emoji": "🌊"
+        }
+      },
+      "dictionarySource": "v2/没.json",
+      "independentHeadwordExcerpt": "mei2: (negative prefix for verbs); have not; not; | mo4: drowned; to end; to die; to inundate;",
+      "researchPriority": "high",
+      "researchDisposition": "inspect_existing_alternative",
+      "alternativeSelectedMeaning": "not / have not",
+      "alternativeExpression": {
+        "kind": "atom",
+        "emoji": "🚫"
+      },
+      "caution": "This is a different reading/usage (mei2) from mo4 drown. The negative-prefix cue cannot stand for the drowning sense.",
+      "comparisonSource": "pinned_Unihan_plus_CC-CEDICT",
+      "sourceStatus": "preliminary_assistant_hypothesis",
+      "independentLexicalApproval": "pending",
+      "independentEmojiComprehensionApproval": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 983,
+      "character": "幸",
+      "originalSelectedMeaning": "luck",
+      "originalExpression": {
+        "kind": "atom",
+        "emoji": "🍀"
+      },
+      "dictionarySource": "v2/幸.json",
+      "independentHeadwordExcerpt": "xing4: trusted; intimate; (of the emperor) to visit; variant of 幸[xing4]; fortunate; lucky; | Xing4: surname Xing;",
+      "researchPriority": "high",
+      "researchDisposition": "inspect_context",
+      "alternativeSelectedMeaning": "fortunate / lucky",
+      "alternativeExpression": {
+        "kind": "atom",
+        "emoji": "🍀"
+      },
+      "caution": "Conventional clover suggests luck, but noun luck and adjective fortunate have different grammatical roles and culture-specific interpretation.",
+      "comparisonSource": "pinned_Unihan_plus_CC-CEDICT",
+      "sourceStatus": "preliminary_assistant_hypothesis",
+      "independentLexicalApproval": "pending",
+      "independentEmojiComprehensionApproval": "pending",
+      "productionVerified": false
+    }
+  ]
+}
