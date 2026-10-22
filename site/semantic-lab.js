@@ -49,8 +49,15 @@
         const written = node("div", "semantic-word-glyphs");
         for (const char of Array.from(ex.written)) {
           const row = profileRows.get(char);
-          if (!row) throw new Error("Character missing from Mandarin profile");
-          written.appendChild(presenter.createGlyph(row));
+          if (row) {
+            written.appendChild(presenter.createGlyph(row));
+          } else {
+            // Lab-only examples outside the mapped 1,000 retain their native glyph.
+            const fallback=node("strong","semantic-hanzi",char);
+            fallback.lang="zh-Hans";
+            fallback.title="Outside the first-1,000 character palette; no source-aligned layer data";
+            written.appendChild(fallback);
+          }
         }
         main.appendChild(written);
       }
