@@ -7,6 +7,7 @@ on:
       - "ontology/**"
       - "ONTOLOGY.md"
       - "tools/glyph-pipeline/**"
+      - "data/semantic/**"
       - "data/catalog/colored-strokes-v0.1.json"
       - "palettes/mandarin-component-identity-v0.4.json"
       - "palettes/mandarin-component-identity-v0.5.json"
