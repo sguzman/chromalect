@@ -20,7 +20,7 @@ assert.equal(ledger.summary.productionVerifiedCharacters,0);
 const gathered=[];
 for(const file of audit.files){
  const batch=JSON.parse(fs.readFileSync(dir+file.path,"utf8"));
- assert.equal(batch.schema,"chromalect.semantic.gloss-boundary-audit-batch.v0.1");
+ assert.equal(batch.schema,"chromalect.semantic.gloss-boundary-audit.v0.1");
  assert.equal(batch.range.start,file.start);
  assert.equal(batch.range.end,file.end);
  assert.equal(batch.summary.count,file.count);
