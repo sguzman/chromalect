@@ -1,0 +1,408 @@
+{
+  "schema": "chromalect.mandarin.lexical-crossref-batch.v0.1",
+  "source": {
+    "title": "CC-CEDICT per-headword v2 mirror",
+    "repository": "krmanik/cedict-json",
+    "commit": "63c2569948629323b515833930fdd10f285401b6",
+    "dataLicense": "CC BY-SA 4.0",
+    "upstream": "https://cc-cedict.org/",
+    "mirror": "https://github.com/krmanik/cedict-json",
+    "transform": "Selected single-simplified-character dictionary records, retaining readings and definitions; literal English gloss matching is automated triage only"
+  },
+  "rankStart": 46,
+  "rankEnd": 60,
+  "summary": {
+    "total": 15,
+    "headwordFound": 15,
+    "withCandidate": 10,
+    "withLiteralSupport": 8
+  },
+  "records": [
+    {
+      "rank": 46,
+      "character": "夕",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/夕.json",
+      "sourceBlobSha": "5ae53e127fd37a3d759b173f2ccb7f612babeb3a",
+      "traditional": "夕",
+      "dictionaryReadings": [
+        "xi1"
+      ],
+      "dictionaryDefinitions": {
+        "xi1": "dusk; evening; Taiwan pr. [xi4]; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "evening",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "xi1"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 47,
+      "character": "久",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/久.json",
+      "sourceBlobSha": "53c7d9a947258ff4743835000d314377c112692b",
+      "traditional": "久",
+      "dictionaryReadings": [
+        "jiu3"
+      ],
+      "dictionaryDefinitions": {
+        "jiu3": "(long) time; (long) duration of time; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "long time",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 48,
+      "character": "么",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/么.json",
+      "sourceBlobSha": "d785c0d2c7010057ad8d5b214af5d816b1fe5c36",
+      "traditional": "麽",
+      "dictionaryReadings": [
+        "ma2",
+        "ma5",
+        "me5"
+      ],
+      "dictionaryDefinitions": {
+        "ma2": "exclamatory final particle; ",
+        "ma5": "interrogative final particle; ",
+        "me5": "suffix, used to form interrogative 甚麼|什么[shen2 me5], what?, indefinite 這麼|这么[zhe4 me5] thus, etc; variant of 麼|么[me5]; "
+      },
+      "selectedSenseChecks": [],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 49,
+      "character": "勺",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/勺.json",
+      "sourceBlobSha": "c8c2b5f4d3ed69269c36a7ea21eb266d26bc3213",
+      "traditional": "勺",
+      "dictionaryReadings": [
+        "shao2"
+      ],
+      "dictionaryDefinitions": {
+        "shao2": "spoon; ladle; CL:把[ba3]; abbr. for 公勺[gong1 shao2], centiliter (unit of volume); "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "spoon",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "shao2"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 50,
+      "character": "凡",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/凡.json",
+      "sourceBlobSha": "852e49ce27b47f01b9feb5e827b132e1aa2a2dfc",
+      "traditional": "凢",
+      "dictionaryReadings": [
+        "fan2"
+      ],
+      "dictionaryDefinitions": {
+        "fan2": "ordinary; commonplace; mundane; temporal; of the material world (as opposed to supernatural or immortal levels); every; all; whatever; altogether; gist; outline; note of Chinese musical scale; variant of 凡[fan2]; "
+      },
+      "selectedSenseChecks": [],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 51,
+      "character": "丸",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/丸.json",
+      "sourceBlobSha": "954bf53bcc0e98697deec3aee33eb912ca53c30a",
+      "traditional": "丸",
+      "dictionaryReadings": [
+        "wan2"
+      ],
+      "dictionaryDefinitions": {
+        "wan2": "ball; pellet; pill; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "pill",
+          "sourceGlossGroupIndex": 1,
+          "matchingDictionaryReadings": [
+            "wan2"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 52,
+      "character": "及",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/及.json",
+      "sourceBlobSha": "a9d1efce112b6b7efc48d21a36d7da11a0764e5b",
+      "traditional": "及",
+      "dictionaryReadings": [
+        "ji2"
+      ],
+      "dictionaryDefinitions": {
+        "ji2": "and; to reach; up to; in time for; "
+      },
+      "selectedSenseChecks": [],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 53,
+      "character": "广",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/广.json",
+      "sourceBlobSha": "5974de5e05e86ac8cf4d1aab9f034753d1edda4f",
+      "traditional": "廣",
+      "dictionaryReadings": [
+        "Guang3",
+        "guang3"
+      ],
+      "dictionaryDefinitions": {
+        "Guang3": "surname Guang; ",
+        "guang3": "wide; numerous; to spread; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "wide",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "guang3"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 54,
+      "character": "亡",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/亡.json",
+      "sourceBlobSha": "abd1f309ebbda2a37eef6518a5763f29da7e3d42",
+      "traditional": "亾",
+      "dictionaryReadings": [
+        "wang2"
+      ],
+      "dictionaryDefinitions": {
+        "wang2": "to die; to lose; to be gone; to flee; deceased; old variant of 亡[wang2]; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "death",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 55,
+      "character": "门",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/门.json",
+      "sourceBlobSha": "c2d796aa02bc76dd8f425e83b93c3988958e7058",
+      "traditional": "門",
+      "dictionaryReadings": [
+        "Men2",
+        "men2"
+      ],
+      "dictionaryDefinitions": {
+        "Men2": "surname Men; ",
+        "men2": "gate; door; CL:扇[shan4]; gateway; doorway; CL:個|个[ge4]; opening; valve; switch; way to do something; knack; family; house; (religious) sect; school (of thought); class; category; phylum or division (taxonomy); classifier for large guns; classifier for lessons, subjects, branches of technology; (suffix) -gate (i.e. scandal; derived from Watergate); "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "door",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "men2"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 56,
+      "character": "丫",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/丫.json",
+      "sourceBlobSha": "7ec5381ed67c863498d9a3f7da0068e0514f8e2d",
+      "traditional": "丫",
+      "dictionaryReadings": [
+        "ya1"
+      ],
+      "dictionaryDefinitions": {
+        "ya1": "fork; branch; bifurcation; girl; "
+      },
+      "selectedSenseChecks": [],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 57,
+      "character": "义",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/义.json",
+      "sourceBlobSha": "15707895547dc628d16a08595aa24a7415de1b59",
+      "traditional": "義",
+      "dictionaryReadings": [
+        "Yi4",
+        "yi4"
+      ],
+      "dictionaryDefinitions": {
+        "Yi4": "surname Yi; (Tw) abbr. for 義大利|义大利[Yi4 da4 li4], Italy; ",
+        "yi4": "justice; righteousness; meaning; foster (father etc); adopted; artificial (tooth, limb etc); relationship; friendship; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "righteousness",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "yi4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 58,
+      "character": "之",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/之.json",
+      "sourceBlobSha": "42638c7018bbb3dd43db9f8644088d6e2a50bdd6",
+      "traditional": "之",
+      "dictionaryReadings": [
+        "zhi1"
+      ],
+      "dictionaryDefinitions": {
+        "zhi1": "(possessive particle, literary equivalent of 的[de5]); him; her; it; "
+      },
+      "selectedSenseChecks": [],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 59,
+      "character": "尸",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/尸.json",
+      "sourceBlobSha": "5bbfbf3d657bfa37978f3a731541a9061222632a",
+      "traditional": "屍",
+      "dictionaryReadings": [
+        "shi1"
+      ],
+      "dictionaryDefinitions": {
+        "shi1": "person representing the dead (during burial ceremonies); to put a corpse on display (after execution); variant of 屍|尸[shi1]; corpse; corpse; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "corpse",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "shi1"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 60,
+      "character": "己",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/己.json",
+      "sourceBlobSha": "1b708416093db514833bcc7e3451ae4ad2a6b889",
+      "traditional": "己",
+      "dictionaryReadings": [
+        "ji3"
+      ],
+      "dictionaryDefinitions": {
+        "ji3": "self; oneself; sixth of the ten Heavenly Stems 十天干[shi2 tian1 gan1]; sixth in order; letter 'F' or roman 'VI' in list 'A, B, C', or 'I, II, III' etc; hexa; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "self",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "ji3"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    }
+  ]
+}
