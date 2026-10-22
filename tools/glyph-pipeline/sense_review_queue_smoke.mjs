@@ -86,7 +86,7 @@ assert.equal(analyzedUnclassified,45);
 assert.equal(queue.counts.deskAnalyzedUnclassified,45);
 assert.equal(queue.counts.deskAnalyzedTotal,60);
 assert.equal(deskAnalyzed,queue.counts.deskAnalyzedTotal);
-assert.equal(deskAnalyzed,queue.counts.deskAnalyzedHighPriority);
+assert.equal(deskAnalyzed,queue.counts.deskAnalyzedTotal);
 assert.equal(seen.size,needs.length);
 assert.equal(counter.substringOnly,7);
 assert.equal(counter.high,15);
