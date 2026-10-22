@@ -6,6 +6,9 @@ const grammarSource = fs.readFileSync("site/semantic-grammar.js", "utf8");
 const labSource = fs.readFileSync("site/semantic-lab.js", "utf8");
 const html = fs.readFileSync("site/semantic-lab.html", "utf8");
 const data = JSON.parse(fs.readFileSync("site/semantic-grammar-v0.1.json", "utf8"));
+const catalog = JSON.parse(fs.readFileSync("data/catalog/characters-0001-1000.json","utf8"));
+const profile = {schema:"chromalect.mandarin-character-profile.v1",catalog_count:1000,
+  characters:catalog.characters.map(x=>({rank:x.rank,character:x.character}))};
 
 class Element {
   constructor(tag = "div") {
@@ -51,24 +54,35 @@ async function execute() {
   };
   const sandbox = {
     document,
+    ChromalectLayers: {createGlyph: row => {
+      const glyph=new Element("div");
+      glyph.className="glyph-wrap";
+      glyph.textContent=row.character;
+      return glyph;
+    }},
     fetch: async path => {
-      assert.equal(path, "semantic-grammar-v0.1.json");
-      return {ok:true, json:async()=>data};
+      if (path==="semantic-grammar-v0.1.json") return {ok:true,json:async()=>data};
+      if (path==="profiles/mandarin-1000-v1.json") return {ok:true,json:async()=>profile};
+      throw new Error("Unexpected resource "+path);
     }
   };
   sandbox.globalThis = sandbox;
   vm.runInNewContext(grammarSource, sandbox);
   vm.runInNewContext(labSource, sandbox);
-  for (let i=0; i<8 && grid.children.length===0; i++) await Promise.resolve();
+  for (let i=0; i<16 && grid.children.length===0; i++) await Promise.resolve();
   return { grid, legend, checkbox, status, buttons };
 }
 
 assert.match(html, /semantic-grammar\.js/);
 assert.match(html, /semantic-grammar-legend/);
+assert.match(html, /data-character-layer-controls/);
+assert.match(html, /src="layers.js"/);
 assert.match(html, /<details class="semantic-technical">/);
 assert.doesNotMatch(html, /data-semantic-mode="single"|data-semantic-mode="compound"/);
 const { grid, legend, checkbox, status, buttons } = await execute();
 assert.equal(grid.children.length, data.specimens.length);
+assert.ok(descendants(grid.children[0],"glyph-wrap").length===1);
+assert.ok(descendants(grid.children[data.specimens.findIndex(x=>x.id==="volcano")],"glyph-wrap").length===2);
 assert.equal(legend.children.length, data.operators.length);
 const index = id => data.specimens.findIndex(s=>s.id===id);
 const symbolCount = id => descendants(grid.children[index(id)], "semantic-symbol").length;

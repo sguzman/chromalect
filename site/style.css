@@ -195,3 +195,19 @@ main.wrap>.appearance-controls{width:max-content;max-width:100%;margin:16px 0 8p
   .site-nav-panel{grid-template-columns:1fr;padding:12px;gap:12px;max-height:65vh}
   .site-location{padding-top:8px}
 }
+
+/* Shared component / citation / tone character presenter on research browsers.
+   Reuses atlas glyph-wrap, glyph, component markers, and direct/marker CSS rules. */
+[data-character-layer-controls] .controls{margin-top:18px}
+[data-character-layer-controls] .layers{grid-template-columns:repeat(3,minmax(0,1fr))}
+.search-character-link .glyph-wrap{flex:1;min-width:0;min-height:114px}
+.search-character-link .glyph{font-size:58px}
+.semantic-entry-top .glyph-wrap{min-height:116px;flex:1}
+.semantic-entry-top .glyph{font-size:60px}
+.semantic-main .glyph-wrap{min-width:96px;min-height:112px}
+.semantic-main .glyph{font-size:60px}
+.semantic-word-glyphs{display:flex;flex-wrap:wrap;gap:4px;align-items:flex-start}
+@media(max-width:700px){
+  [data-character-layer-controls] .layers{grid-template-columns:1fr}
+  .semantic-entry-top .glyph{font-size:53px}
+}

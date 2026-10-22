@@ -53,6 +53,10 @@ The displayed sound colors encode **Pinyin spelling** for the selected citation 
 
 **Stroke order is not a learning objective.** Stroke paths are indexed solely to associate source outlines with component ownership; the visual system does not teach handwriting sequence.
 
+## Shared character presentation
+
+The Mandarin atlas, homepage examples, [search](site/search.html), [semantic coverage viewer](site/semantic-coverage.html), and [semantic grammar lab](site/semantic-lab.html) use the **same visual character presentation channels**: component identity, Pinyin initial/final, and citation tone. Each starts in **Direct** unless the visitor has saved another mode; the controls switch independently among Off, Direct, and Marker and persist across these surfaces. Direct component mode uses source-aligned colored glyph SVGs wherever available (otherwise a component stripe), while direct Pinyin and tone appear as independently colored edges. The semantic research viewer retains its separate provisional-emoji toggle; no production semantic default or word-sense presentation is implied.
+
 ## Mandarin first-tranche browsing
 
 The [first-1,000 Mandarin search interface](site/search.html) uses a [generated ontology-backed Mandarin data profile](site/profiles/mandarin-1000-v1.json) to browse every cataloged character by orthography, source-backed Pinyin, component shapes/IDs, and source SVG coverage. A missing SVG is recorded as unresolved, not invented. This profile binds the existing data to the shared ontology; no other language implementation is introduced.

@@ -2,14 +2,16 @@
 (() => {
   "use strict";
   const grammar = globalThis.ChromalectSemanticGrammar;
+  const presenter = globalThis.ChromalectLayers;
   const grid = document.getElementById("semantic-specimens");
   const buttons = Array.from(document.querySelectorAll("[data-semantic-mode]"));
   const checkbox = document.getElementById("semantic-reveal");
   const status = document.getElementById("semantic-lab-status");
   const legend = document.getElementById("semantic-grammar-legend");
-  if (!grammar || !grid || !buttons.length || !checkbox || !status || !legend) return;
+  if (!grammar || !presenter || !grid || !buttons.length || !checkbox || !status || !legend) return;
   let mode = "symbols";
   let examples = [];
+  let profileRows = new Map();
 
   function node(tag, css, value) {
     const el = document.createElement(tag);
@@ -44,8 +46,12 @@
         ex.written ? "Illustrative Mandarin meaning" : "Illustrative grammar example"));
       const main = node("div", "semantic-main");
       if (ex.written) {
-        const written = node("strong", "semantic-hanzi", ex.written);
-        written.lang = "zh-Hans";
+        const written = node("div", "semantic-word-glyphs");
+        for (const char of Array.from(ex.written)) {
+          const row = profileRows.get(char);
+          if (!row) throw new Error("Character missing from Mandarin profile");
+          written.appendChild(presenter.createGlyph(row));
+        }
         main.appendChild(written);
       }
       main.appendChild(expression(ex));
@@ -57,7 +63,7 @@
       fragment.appendChild(card);
     }
     grid.replaceChildren(fragment);
-    status.textContent = (mode === "symbols" ? "Emoji expressions" : "Plain Chinese / concepts") +
+    status.textContent = (mode === "symbols" ? "Emoji expressions" : "Character presentation only") +
       " · " + examples.length + " illustrative meanings" +
       (checkbox.checked ? " · written meanings shown" : " · written meanings hidden");
     for (const button of buttons) {
@@ -75,9 +81,16 @@
 
   async function load() {
     try {
-      const response = await fetch("semantic-grammar-v0.1.json");
-      if (!response.ok) throw new Error("Unable to retrieve grammar data");
-      const data = await response.json();
+      const [response, profileResponse] = await Promise.all([
+        fetch("semantic-grammar-v0.1.json"),
+        fetch("profiles/mandarin-1000-v1.json")
+      ]);
+      if (!response.ok || !profileResponse.ok) throw new Error("Unable to retrieve data");
+      const [data,profile] = await Promise.all([response.json(),profileResponse.json()]);
+      if (profile.schema !== "chromalect.mandarin-character-profile.v1" ||
+          profile.catalog_count !== 1000 || !Array.isArray(profile.characters) ||
+          profile.characters.length !== 1000) throw new Error("Unexpected Mandarin profile");
+      profileRows = new Map(profile.characters.map(row=>[row.character,row]));
       if (data.schema !== "chromalect.semantic.grammar.v0.1" ||
           data.version !== grammar.version ||
           data.status !== "experimental_not_production_semantics" ||

@@ -6,6 +6,9 @@ const grammarSource=fs.readFileSync("site/semantic-grammar.js","utf8");
 const script=fs.readFileSync("site/semantic-coverage.js","utf8");
 const html=fs.readFileSync("site/semantic-coverage.html","utf8");
 const data=JSON.parse(fs.readFileSync("data/semantic/mandarin-1000-v0.1.json","utf8"));
+const catalog=JSON.parse(fs.readFileSync("data/catalog/characters-0001-1000.json","utf8"));
+const profile={schema:"chromalect.mandarin-character-profile.v1",catalog_count:1000,
+  characters:catalog.characters.map(x=>({rank:x.rank,character:x.character}))};
 
 class Element {
   constructor(tag="div"){
@@ -45,17 +48,26 @@ const document={
 };
 const vmContext={
   document,
+  ChromalectLayers:{createGlyph:row=>{
+    const glyph=new Element("div");
+    glyph.className="glyph-wrap";
+    glyph.textContent=row.character;
+    return glyph;
+  }},
   fetch:async path=>{
-    assert.equal(path,"semantic/mandarin-1000-v0.1.json");
-    return {ok:true,json:async()=>data};
+    if(path==="semantic/mandarin-1000-v0.1.json")return {ok:true,json:async()=>data};
+    if(path==="profiles/mandarin-1000-v1.json")return {ok:true,json:async()=>profile};
+    throw new Error("Unexpected resource: "+path);
   }
 };
 vmContext.globalThis=vmContext;
 vm.runInNewContext(grammarSource,vmContext);
 vm.runInNewContext(script,vmContext);
-for(let n=0;n<12&&ids["semantic-coverage-rows"].children.length===0;n++)await Promise.resolve();
+for(let n=0;n<18&&ids["semantic-coverage-rows"].children.length===0;n++)await Promise.resolve();
 const cards=ids["semantic-coverage-rows"].children;
 assert.equal(cards.length,40,"First page must limit DOM cards");
+assert.ok(cards.every(card=>card.children.some(x=>x.className==="semantic-entry-top" &&
+  x.children.some(child=>child.className==="glyph-wrap"))));
 assert.equal(ids["semantic-source-count"].textContent,"1000 / 1000");
 assert.equal(ids["semantic-screened-count"].textContent,"300 / 1000");
 assert.equal(ids["semantic-candidate-count"].textContent,"216 / 1000");
@@ -96,6 +108,8 @@ ids["semantic-lookup"].value="mountain";
 ids["semantic-lookup"].events.input();
 assert.match(ids["semantic-coverage-status"].textContent,/characters match/);
 assert.match(html,/id="semantic-layer-word" disabled/);
+assert.match(html,/data-character-layer-controls/);
+assert.match(html,/src="layers.js"/);
 assert.match(html,/id="semantic-layer-character" checked/);
 assert.match(html,/semantic\/mandarin-1000-v0.1\.json|semantic-coverage\.js/);
 console.log("Semantic coverage UI: data loaded, progress percentages, 40-card pagination, emoji-only rendering, filters and visibility toggles.");

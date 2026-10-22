@@ -6,7 +6,7 @@
   const filter = document.getElementById("geometry-filter");
   const results = document.getElementById("search-results");
   const status = document.getElementById("search-status");
-  if (!field || !filter || !results || !status) return;
+  if (!field || !filter || !results || !status || !globalThis.ChromalectLayers) return;
 
   function normalize(text) {
     return String(text || "")
@@ -49,13 +49,11 @@
     const title = document.createElement("a");
     title.href = row.atlas_url;
     title.className = "search-character-link";
-    const han = document.createElement("strong");
-    han.lang = "zh-Hans";
-    han.textContent = row.character;
+    const glyph = globalThis.ChromalectLayers.createGlyph(row);
     const rank = document.createElement("span");
     rank.className = "search-rank";
     rank.textContent = "#" + row.rank;
-    title.append(han, rank);
+    title.append(glyph, rank);
     article.append(title);
 
     const reading = document.createElement("p");

@@ -222,6 +222,7 @@ jobs:
           node --check site/semantic-grammar.js
           node --check site/semantic-lab.js
           node tools/glyph-pipeline/navigation_smoke.mjs
+          node tools/glyph-pipeline/shared_layers_smoke.mjs
           node tools/glyph-pipeline/semantic_grammar_smoke.mjs
           node tools/glyph-pipeline/semantic_smoke.mjs
           python3 - <<'PY'

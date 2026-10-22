@@ -3,10 +3,11 @@
 (() => {
   "use strict";
   const grammar = globalThis.ChromalectSemanticGrammar;
+  const presenter = globalThis.ChromalectLayers;
   const $ = id => document.getElementById(id);
   const root = $("semantic-coverage-rows");
   const status = $("semantic-coverage-status");
-  if (!grammar || !root || !status) return;
+  if (!grammar || !presenter || !root || !status) return;
   const lookup = $("semantic-lookup");
   const filter = $("semantic-filter");
   const enabled = $("semantic-layer-character");
@@ -15,6 +16,7 @@
   const pageLabel = $("semantic-page-label");
   const pageSize = 40;
   let ledger = null;
+  let profileRows = new Map();
   let page = 0;
 
   function elem(tag, cls, value) {
@@ -46,9 +48,9 @@
   function card(entry) {
     const card = elem("article","semantic-entry");
     const header = elem("div","semantic-entry-top");
-    const hanzi = elem("strong","semantic-character",entry.character);
-    hanzi.lang="zh-Hans";
-    header.append(hanzi,elem("span","semantic-rank","Rank "+entry.rank));
+    const glyph = profileRows.get(entry.rank);
+    if (!glyph || glyph.character !== entry.character) throw new Error("Character profile misalignment");
+    header.append(presenter.createGlyph(glyph),elem("span","semantic-rank","Rank "+entry.rank));
     card.appendChild(header);
     const screened = state(entry);
     const selections = entry.screening.candidates.filter(x=>x.expression);
@@ -126,9 +128,19 @@
 
   async function load() {
     try {
-      const response=await fetch("semantic/mandarin-1000-v0.1.json");
-      if(!response.ok)throw new Error("Semantic source file not published");
-      const data=await response.json();
+      const [response,profileResponse]=await Promise.all([
+        fetch("semantic/mandarin-1000-v0.1.json"),
+        fetch("profiles/mandarin-1000-v1.json")
+      ]);
+      if(!response.ok || !profileResponse.ok)throw new Error("Character data unavailable");
+      const [data,profile]=await Promise.all([response.json(),profileResponse.json()]);
+      if(profile.schema!=="chromalect.mandarin-character-profile.v1" ||
+         profile.catalog_count!==1000 || !Array.isArray(profile.characters) ||
+         profile.characters.length!==1000)throw new Error("Unsupported Mandarin profile");
+      const lookup=new Map(profile.characters.map(row=>[row.rank,row]));
+      if(data.characters.some(row=>lookup.get(row.rank)?.character!==row.character))
+        throw new Error("Semantic data and glyph catalog do not align");
+      profileRows=lookup;
       if(data.schema!=="chromalect.mandarin.character-semantic-tranche.v0.1" ||
          data.characters.length!==1000 ||
          data.source.provisional!==true ||

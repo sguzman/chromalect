@@ -1,9 +1,10 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark"><meta name="description" content="Search the first 1,000 Mandarin Chinese characters by writing, Pinyin, component, and source-mapping status."><title>Mandarin character search · Chromalect</title><script src="theme.js"></script><script src="search.js" defer></script><link rel="stylesheet" href="style.css"></head>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark"><meta name="description" content="Search the first 1,000 Mandarin Chinese characters by writing, Pinyin, component, and source-mapping status."><title>Mandarin character search · Chromalect</title><script src="theme.js"></script><script src="layers.js" defer></script><script src="search.js" defer></script><link rel="stylesheet" href="style.css"></head>
 <body><header class="wrap"><div class="brand"><div><b>CHROMALECT</b><small>Language, made visible</small></div><nav class="toplinks" aria-label="Primary"><a href="index.html">Overview</a><a href="search.html" class="current" aria-current="page">Search</a><a href="characters/0001-0100.html">Character atlas</a><a href="ontology.html">Ontology</a><a href="colors.html">Colors</a></nav></div></header>
 <main class="wrap">
 <div class="eyebrow">Mandarin-only research profile · first 1,000 characters</div><h1>Explore the character catalog</h1>
 <p class="intro">Search by character, catalog rank, written Pinyin, component shape or ID. Every entry links to its existing atlas card. The component and citation-reading data is source-backed; colored vector geometry is identified separately from unresolved mappings.</p>
+<div data-character-layer-controls></div>
 <div class="palette-explain"><div class="search-form">
 <label for="character-search">Character, Pinyin or component</label>
 <input id="character-search" type="search" inputmode="search" autocomplete="off" placeholder="好, hao, 女, cmp-0014, #581" aria-controls="search-results">
