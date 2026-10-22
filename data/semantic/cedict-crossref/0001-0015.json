@@ -1,0 +1,445 @@
+{
+  "schema": "chromalect.mandarin.lexical-crossref-batch.v0.1",
+  "source": {
+    "title": "CC-CEDICT per-headword v2 mirror",
+    "repository": "krmanik/cedict-json",
+    "commit": "63c2569948629323b515833930fdd10f285401b6",
+    "dataLicense": "CC BY-SA 4.0",
+    "upstream": "https://cc-cedict.org/",
+    "mirror": "https://github.com/krmanik/cedict-json",
+    "transform": "Selected single-simplified-character dictionary records, retaining readings and definitions; literal English gloss matching is an automated triage aid only"
+  },
+  "rankStart": 1,
+  "rankEnd": 15,
+  "summary": {
+    "total": 15,
+    "headwordFound": 15,
+    "withCandidate": 13,
+    "withLiteralSupport": 11
+  },
+  "records": [
+    {
+      "rank": 1,
+      "character": "一",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/一.json",
+      "sourceBlobSha": "6311428dcec26df9da5966b70e92be0d3c179a2b",
+      "traditional": "一",
+      "dictionaryReadings": [
+        "yi1"
+      ],
+      "dictionaryDefinitions": {
+        "yi1": "one; 1; single; a (article); as soon as; entire; whole; all; throughout; 'one' radical in Chinese characters (Kangxi radical 1); also pr. [yao1] for greater clarity when spelling out numbers digit by digit; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "one",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "yi1"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 2,
+      "character": "乙",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/乙.json",
+      "sourceBlobSha": "55912b449b7b459d553ce03e5d83cd722bdd5b4d",
+      "traditional": "乙",
+      "dictionaryReadings": [
+        "yi3",
+        "zhe2"
+      ],
+      "dictionaryDefinitions": {
+        "yi3": "second of the ten Heavenly Stems 十天干[shi2 tian1 gan1]; second in order; letter 'B' or roman 'II' in list 'A, B, C', or 'I, II, III' etc; second party (in legal contract, usually 乙方[yi3 fang1], as opposed to 甲方[jia3 fang1]); ethyl; bent; winding; radical in Chinese characters (Kangxi radical 5); ancient Chinese compass point: 105°; ",
+        "zhe2": "turning stroke (in Chinese characters); see also 折[zhe2]; "
+      },
+      "selectedSenseChecks": [],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 3,
+      "character": "二",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/二.json",
+      "sourceBlobSha": "fee010bed2dc730877df83ef87f1016e0fcad00a",
+      "traditional": "二",
+      "dictionaryReadings": [
+        "er4"
+      ],
+      "dictionaryDefinitions": {
+        "er4": "two; 2; (Beijing dialect) stupid; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "two",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "er4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 4,
+      "character": "十",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/十.json",
+      "sourceBlobSha": "d53b6568a7004a0153c273aebd241def577f1306",
+      "traditional": "十",
+      "dictionaryReadings": [
+        "shi2"
+      ],
+      "dictionaryDefinitions": {
+        "shi2": "ten; 10; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "ten",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "shi2"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 5,
+      "character": "丁",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/丁.json",
+      "sourceBlobSha": "c820202be8c5f3271a54d8a568101f28d769d38c",
+      "traditional": "丁",
+      "dictionaryReadings": [
+        "Ding1",
+        "ding1"
+      ],
+      "dictionaryDefinitions": {
+        "Ding1": "surname Ding; ",
+        "ding1": "fourth of the ten Heavenly Stems 十天干[shi2 tian1 gan1]; fourth in order; letter 'D' or roman 'IV' in list 'A, B, C', or 'I, II, III' etc; ancient Chinese compass point: 195°; butyl; cubes (of food); "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "male adult",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 6,
+      "character": "厂",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/厂.json",
+      "sourceBlobSha": "c79b988eff2c8d35e2f8f53205c07d6c751bb868",
+      "traditional": "廠",
+      "dictionaryReadings": [
+        "han3",
+        "chang3"
+      ],
+      "dictionaryDefinitions": {
+        "han3": "'cliff' radical in Chinese characters (Kangxi radical 27), occurring in 原, 历, 压 etc; ",
+        "chang3": "factory; yard; depot; workhouse; works; (industrial) plant; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "factory",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "chang3"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 7,
+      "character": "七",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/七.json",
+      "sourceBlobSha": "6eebbc61b2b33e4a4b6549a76e2422e7ff234842",
+      "traditional": "七",
+      "dictionaryReadings": [
+        "qi1"
+      ],
+      "dictionaryDefinitions": {
+        "qi1": "seven; 7; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "seven",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "qi1"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 8,
+      "character": "卜",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/卜.json",
+      "sourceBlobSha": "7f3f418d7e5a063b2e9f2d9359e2cf3bfc108d8c",
+      "traditional": "蔔",
+      "dictionaryReadings": [
+        "Bu3",
+        "bu3",
+        "bo5"
+      ],
+      "dictionaryDefinitions": {
+        "Bu3": "surname Bu; ",
+        "bu3": "to divine; to forecast or estimate; (of a place to live etc) to choose; ",
+        "bo5": "see 蘿蔔|萝卜[luo2 bo5]; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "fortune telling",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 9,
+      "character": "八",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/八.json",
+      "sourceBlobSha": "2d3bf87e2143be0cba69d755ed72b0af7ce57d2e",
+      "traditional": "八",
+      "dictionaryReadings": [
+        "ba1"
+      ],
+      "dictionaryDefinitions": {
+        "ba1": "eight; 8; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "eight",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "ba1"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 10,
+      "character": "人",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/人.json",
+      "sourceBlobSha": "bc8de685822c3a2609a20e7b23b9398b82032eb4",
+      "traditional": "人",
+      "dictionaryReadings": [
+        "ren2"
+      ],
+      "dictionaryDefinitions": {
+        "ren2": "man; person; people; CL:個|个[ge4],位[wei4]; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "people",
+          "sourceGlossGroupIndex": 1,
+          "matchingDictionaryReadings": [
+            "ren2"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 11,
+      "character": "入",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/入.json",
+      "sourceBlobSha": "f29f596f95d1765d972f663ad46b21ffddb26cf0",
+      "traditional": "入",
+      "dictionaryReadings": [
+        "ru4"
+      ],
+      "dictionaryDefinitions": {
+        "ru4": "to enter; to go into; to join; to become a member of; to confirm or agree with; abbr. for 入聲|入声[ru4 sheng1]; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "enter",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "ru4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 12,
+      "character": "儿",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/儿.json",
+      "sourceBlobSha": "20e399f14c1f0b0248224564dee3498ac08cd411",
+      "traditional": "兒",
+      "dictionaryReadings": [
+        "er2",
+        "r5"
+      ],
+      "dictionaryDefinitions": {
+        "er2": "child; son; ",
+        "r5": "non-syllabic diminutive suffix; retroflex final; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "child",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "er2"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 13,
+      "character": "匕",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/匕.json",
+      "sourceBlobSha": "8339fcc912b69357883014d17ecb3f84f004af04",
+      "traditional": "匕",
+      "dictionaryReadings": [
+        "bi3"
+      ],
+      "dictionaryDefinitions": {
+        "bi3": "dagger; ladle; ancient type of spoon; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "spoon",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "bi3"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 14,
+      "character": "几",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/几.json",
+      "sourceBlobSha": "9a46dfbbb57712d982c099267a1e47dc474ebabc",
+      "traditional": "幾",
+      "dictionaryReadings": [
+        "ji1",
+        "ji3"
+      ],
+      "dictionaryDefinitions": {
+        "ji1": "small table; almost; ",
+        "ji3": "how much; how many; several; a few; "
+      },
+      "selectedSenseChecks": [],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 15,
+      "character": "九",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/九.json",
+      "sourceBlobSha": "ba0753ed10984ba8219d24711aa9208d0a7a369c",
+      "traditional": "九",
+      "dictionaryReadings": [
+        "jiu3"
+      ],
+      "dictionaryDefinitions": {
+        "jiu3": "nine; 9; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "nine",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "jiu3"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    }
+  ]
+}
