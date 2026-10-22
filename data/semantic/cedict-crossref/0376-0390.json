@@ -1,0 +1,459 @@
+{
+  "schema": "chromalect.mandarin.lexical-crossref-batch.v0.1",
+  "source": {
+    "title": "CC-CEDICT per-headword v2 mirror",
+    "repository": "krmanik/cedict-json",
+    "commit": "63c2569948629323b515833930fdd10f285401b6",
+    "dataLicense": "CC BY-SA 4.0",
+    "upstream": "https://cc-cedict.org/",
+    "mirror": "https://github.com/krmanik/cedict-json",
+    "transform": "Selected single-simplified-character dictionary records, retaining readings and definitions; literal English gloss matching is automated triage only"
+  },
+  "rankStart": 376,
+  "rankEnd": 390,
+  "summary": {
+    "total": 15,
+    "headwordFound": 15,
+    "withCandidate": 14,
+    "withLiteralSupport": 10
+  },
+  "records": [
+    {
+      "rank": 376,
+      "character": "朴",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/朴.json",
+      "sourceBlobSha": "ac12d5181b244f60bdc654ddb483980294512c71",
+      "traditional": "樸",
+      "dictionaryReadings": [
+        "Piao2",
+        "po4",
+        "pu3"
+      ],
+      "dictionaryDefinitions": {
+        "Piao2": "surname Piao; Korean surname 박 (Park, Pak, or Bak); also pr. [Pu2]; ",
+        "po4": "Celtis sinensis var. japonica; ",
+        "pu3": "plain and simple; Taiwan pr. [pu2]; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "simple",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "pu3"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 377,
+      "character": "机",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/机.json",
+      "sourceBlobSha": "56ab563c2e2989c52ed33cd392437e01176cee26",
+      "traditional": "機",
+      "dictionaryReadings": [
+        "Ji1",
+        "ji1"
+      ],
+      "dictionaryDefinitions": {
+        "Ji1": "surname Ji; ",
+        "ji1": "machine; engine; opportunity; intention; aircraft; pivot; crucial point; flexible (quick-witted); organic; CL:臺|台[tai2]; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "machine",
+          "sourceGlossGroupIndex": 1,
+          "matchingDictionaryReadings": [
+            "ji1"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 378,
+      "character": "权",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/权.json",
+      "sourceBlobSha": "c3f8bf6b210156f7d1b9a796b1bec6f725e5c6c8",
+      "traditional": "權",
+      "dictionaryReadings": [
+        "Quan2",
+        "quan2"
+      ],
+      "dictionaryDefinitions": {
+        "Quan2": "surname Quan; ",
+        "quan2": "authority; power; right; (literary) to weigh; expedient; temporary; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "authority",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "quan2"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 379,
+      "character": "过",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/过.json",
+      "sourceBlobSha": "c6e7e9c13573ea831ec2b10462cb4722872c7734",
+      "traditional": "過",
+      "dictionaryReadings": [
+        "Guo4",
+        "guo4",
+        "guo5"
+      ],
+      "dictionaryDefinitions": {
+        "Guo4": "surname Guo; ",
+        "guo4": "to cross; to go over; to pass (time); to celebrate (a holiday); to live; to get along; excessively; too-; ",
+        "guo5": "(experienced action marker); "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "pass through",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 380,
+      "character": "臣",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/臣.json",
+      "sourceBlobSha": "ac9913cdaead19798d4a567db150defbef216c08",
+      "traditional": "臣",
+      "dictionaryReadings": [
+        "Chen2",
+        "chen2"
+      ],
+      "dictionaryDefinitions": {
+        "Chen2": "surname Chen; ",
+        "chen2": "state official or subject in dynastic China; I, your servant (used in addressing the sovereign); Kangxi radical 131; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "minister",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 381,
+      "character": "吏",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/吏.json",
+      "sourceBlobSha": "8f9face7674e7c41aa51863f8573e264a0805574",
+      "traditional": "吏",
+      "dictionaryReadings": [
+        "li4"
+      ],
+      "dictionaryDefinitions": {
+        "li4": "minor government official or functionary (old); "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "government official",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "li4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 382,
+      "character": "再",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/再.json",
+      "sourceBlobSha": "cdfb7085b8d8b6aa08d6722288e696b70a0ce9e9",
+      "traditional": "再",
+      "dictionaryReadings": [
+        "zai4"
+      ],
+      "dictionaryDefinitions": {
+        "zai4": "again; once more; re-; second; another; then (after sth, and not until then); "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "again",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "zai4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 383,
+      "character": "协",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/协.json",
+      "sourceBlobSha": "453aea9b7096bd14605ede576a847aa709450f26",
+      "traditional": "協",
+      "dictionaryReadings": [
+        "xie2"
+      ],
+      "dictionaryDefinitions": {
+        "xie2": "to cooperate; to harmonize; to help; to assist; to join; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "cooperate",
+          "sourceGlossGroupIndex": 1,
+          "matchingDictionaryReadings": [
+            "xie2"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 384,
+      "character": "西",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/西.json",
+      "sourceBlobSha": "de761f2e694a8f05390774d8eb00779f5618bbfc",
+      "traditional": "西",
+      "dictionaryReadings": [
+        "Xi1",
+        "xi1"
+      ],
+      "dictionaryDefinitions": {
+        "Xi1": "the West; abbr. for Spain 西班牙[Xi1 ban1 ya2]; Spanish; ",
+        "xi1": "west; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "west",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "Xi1",
+            "xi1"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 385,
+      "character": "压",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/压.json",
+      "sourceBlobSha": "aedfae796cab78e8348e3d1ea56e8f1d097748be",
+      "traditional": "壓",
+      "dictionaryReadings": [
+        "ya1",
+        "ya4"
+      ],
+      "dictionaryDefinitions": {
+        "ya1": "to press; to push down; to keep under (control); pressure; ",
+        "ya4": "see 壓根兒|压根儿[ya4 gen1 r5]; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "press",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "ya1"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 386,
+      "character": "厌",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/厌.json",
+      "sourceBlobSha": "912545ade0dfd0fa21ae0574be28d6c57b81a59e",
+      "traditional": "厭",
+      "dictionaryReadings": [
+        "yan4"
+      ],
+      "dictionaryDefinitions": {
+        "yan4": "to loathe; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "dislike",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 387,
+      "character": "戌",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/戌.json",
+      "sourceBlobSha": "4fa8884d4411b5e6bda9bf9e577f6bcc434101d1",
+      "traditional": "戌",
+      "dictionaryReadings": [
+        "xu1"
+      ],
+      "dictionaryDefinitions": {
+        "xu1": "11th earthly branch: 7-9 p.m., 9th solar month (8th October-6th November), year of the Dog; ancient Chinese compass point: 300°; "
+      },
+      "selectedSenseChecks": [],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 388,
+      "character": "在",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/在.json",
+      "sourceBlobSha": "c98d0d6f11cced278c817dceccea16a61b6733dc",
+      "traditional": "在",
+      "dictionaryReadings": [
+        "zai4"
+      ],
+      "dictionaryDefinitions": {
+        "zai4": "(located) at; (to be) in; to exist; in the middle of doing sth; (indicating an action in progress); "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "in",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "zai4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 389,
+      "character": "百",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/百.json",
+      "sourceBlobSha": "d8cbb524abce581ddcf935af23854ab0cad8f156",
+      "traditional": "百",
+      "dictionaryReadings": [
+        "Bai3",
+        "bai3"
+      ],
+      "dictionaryDefinitions": {
+        "Bai3": "surname Bai; ",
+        "bai3": "hundred; numerous; all kinds of; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "one hundred",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 390,
+      "character": "有",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/有.json",
+      "sourceBlobSha": "9bc9ab7be81606c8dc4473850aa25ae929b7cdaa",
+      "traditional": "有",
+      "dictionaryReadings": [
+        "you3"
+      ],
+      "dictionaryDefinitions": {
+        "you3": "to have; there is; there are; to exist; to be; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "have",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "you3"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    }
+  ]
+}
