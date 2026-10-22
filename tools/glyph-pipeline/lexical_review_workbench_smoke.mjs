@@ -4,6 +4,9 @@ import vm from "node:vm";
 const source=fs.readFileSync("site/lexical-review.js","utf8");
 const html=fs.readFileSync("site/lexical-review.html","utf8");
 const queue=JSON.parse(fs.readFileSync("data/semantic/cedict-crossref/sense-review-queue-v0.1.json","utf8"));
+const catalog=JSON.parse(fs.readFileSync("data/catalog/characters-0001-1000.json","utf8"));
+const profile={schema:"chromalect.mandarin-character-profile.v1",catalog_count:1000,
+ characters:catalog.characters.map(r=>({rank:r.rank,character:r.character}))};
 const ids=[
  "lexical-study-scope","lexical-study-count","lexical-study-start","lexical-study-export",
  "lexical-study-status","lexical-study-session","lexical-study-count-label",
@@ -22,6 +25,7 @@ class Element {
  appendChild(child){this.children.push(child);}
  click(){this.events.click?.();this.clicked=true;}
  remove(){this.removed=true;}
+ replaceChildren(...children){this.children=[...children];}
 }
 const elements=Object.fromEntries(ids.map(x=>[x,new Element()]));
 elements["lexical-study-scope"].value="all";
@@ -51,11 +55,15 @@ const document={
 };
 const sandbox={
  document,Blob,Date,Math,
+ ChromalectLayers:{createGlyph:row=>{
+   const glyph=new Element("div");glyph.className="glyph-wrap";glyph.textContent=row.character;return glyph;
+ }},
  URL:{createObjectURL:b=>{blob=b;return "blob:local-test";},
    revokeObjectURL:url=>{assert.equal(url,"blob:local-test");revoked=true;}},
  fetch:async path=>{
-  assert.equal(path,"semantic/sense-review-queue-v0.1.json");
-  return {ok:true,json:async()=>queue};
+  if(path==="semantic/sense-review-queue-v0.1.json")return {ok:true,json:async()=>queue};
+  if(path==="profiles/mandarin-1000-v1.json")return {ok:true,json:async()=>profile};
+  throw new Error("Unexpected resource "+path);
  }
 };
 sandbox.globalThis=sandbox;
@@ -67,7 +75,9 @@ elements["lexical-study-start"].click();
 assert.equal(elements["lexical-study-session"].hidden,false);
 assert.equal(elements["lexical-study-after"].hidden,true);
 assert.equal(elements["lexical-study-prior"].textContent,"","Prior desk analysis must be blind initially");
-assert.ok(elements["lexical-study-character"].textContent);
+assert.equal(elements["lexical-study-character"].children.length,1);
+assert.equal(elements["lexical-study-character"].children[0].className,"glyph-wrap");
+assert.ok(elements["lexical-study-character"].children[0].textContent);
 assert.ok(elements["lexical-study-dictionary"].textContent);
 assert.ok(!/emoji|🪓/.test(elements["lexical-study-dictionary"].textContent),
  "Dictionary excerpt should not expose a selected pictogram");
@@ -105,5 +115,7 @@ assert.equal(elements["lexical-study-form"].hidden,false);
 assert.equal(elements["lexical-study-after"].hidden,true);
 assert.equal(elements["lexical-study-prior"].textContent,"");
 assert.match(html,/without first seeing the emoji/);
+assert.match(html,/src="layers.js"/);
+assert.match(html,/data-character-layer-controls/);
 assert.match(html,/248 flagged meanings/);
 console.log("Lexical worksheet: all 248 pending, source first, hidden assistant notes, rationale gate, 5% session progress and local-only export.");

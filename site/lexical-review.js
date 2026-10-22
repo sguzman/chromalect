@@ -3,6 +3,7 @@
 (() => {
 "use strict";
 const $=id=>document.getElementById(id);
+const presenter=globalThis.ChromalectLayers;
 const required=[
  "lexical-study-scope","lexical-study-count","lexical-study-start","lexical-study-export",
  "lexical-study-status","lexical-study-session","lexical-study-count-label",
@@ -11,10 +12,11 @@ const required=[
  "lexical-study-form","lexical-study-decisions","lexical-study-rationale",
  "lexical-study-commit","lexical-study-after","lexical-study-prior","lexical-study-next"
 ];
-if(required.some(id=>!$(id)))return;
+if(!presenter||required.some(id=>!$(id)))return;
 const controls=Array.from(document.querySelectorAll("[data-lexical-judgment]"));
 const labels=new Set(["supported","unsupported","uncertain"]);
 let queue=null,trials=[],recorded=[],position=0,judgment=null,awaitingNext=false;
+let profileByRank=new Map();
 function put(id,value){$(id).textContent=value;}
 function status(msg){put("lexical-study-status",msg);}
 function shuffled(items){
@@ -52,7 +54,9 @@ function show(){
   return;
  }
  const r=trials[position];
- put("lexical-study-character",r.character);
+ const profile=profileByRank.get(r.rank);
+ if(!profile||profile.character!==r.character)throw new Error("Unaligned character profile");
+ $("lexical-study-character").replaceChildren(presenter.createGlyph(profile));
  put("lexical-study-meaning",r.selectedMeaning);
  put("lexical-study-unihan",r.referenceDefinition);
  put("lexical-study-dictionary",r.deskAnalysis.sourceExcerpt);
@@ -136,9 +140,19 @@ function exportJSON(){
 }
 async function load(){
  try{
-  const response=await fetch("semantic/sense-review-queue-v0.1.json");
-  if(!response.ok)throw new Error("Queue unavailable");
-  const data=await response.json();
+  const [response,profileResponse]=await Promise.all([
+   fetch("semantic/sense-review-queue-v0.1.json"),
+   fetch("profiles/mandarin-1000-v1.json")
+  ]);
+  if(!response.ok||!profileResponse.ok)throw new Error("Queue or character profiles unavailable");
+  const [data,profile]=await Promise.all([response.json(),profileResponse.json()]);
+  if(profile.schema!=="chromalect.mandarin-character-profile.v1"||
+     profile.catalog_count!==1000||!Array.isArray(profile.characters)||
+     profile.characters.length!==1000)
+    throw new Error("Invalid shared character profile");
+  profileByRank=new Map(profile.characters.map(r=>[r.rank,r]));
+  if(data.records.some(r=>profileByRank.get(r.rank)?.character!==r.character))
+    throw new Error("Unaligned Mandarin lexical and glyph records");
   if(data.schema!=="chromalect.semantic.lexical-sense-review-queue.v0.1"||
     data.status!=="unreviewed_prioritization_only"||
     data.counts?.pendingSenseAlignment!==248||

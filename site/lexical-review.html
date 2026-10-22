@@ -6,6 +6,7 @@
 <title>Lexical sense review worksheet · Chromalect</title>
 <meta name="description" content="Source-first Mandarin lexical discrepancy review, separate from emoji comprehension. All judgments export locally and do not alter production data.">
 <script src="theme.js"></script>
+<script src="layers.js" defer></script>
 <script src="lexical-review.js" defer></script>
 <link rel="stylesheet" href="style.css">
 <style>
@@ -21,7 +22,9 @@
 .lexical-study button.primary{background:var(--active-bg);border-color:var(--active-border);font-weight:700}
 .lexical-study-panel{border:1px solid var(--border);border-radius:15px;padding:22px;background:var(--tile-bg);margin:18px 0}
 .lexical-study-source{padding:14px 16px;border-radius:10px;background:var(--panel2);overflow-wrap:anywhere;margin:10px 0}
-.lexical-study-character{font-size:60px;line-height:1.2}
+.lexical-study-character{min-height:125px;display:flex;align-items:center}
+.lexical-study-character .glyph-wrap{min-height:122px;min-width:125px}
+.lexical-study-character .glyph{font-size:64px}
 .lexical-study-details{display:grid;grid-template-columns:minmax(0,1fr);gap:13px}
 .lexical-study-actions{display:flex;gap:9px;flex-wrap:wrap;margin:15px 0}
 .lexical-study-decision button[aria-pressed="true"]{border-color:var(--active-border);background:var(--active-bg);font-weight:700}
@@ -39,6 +42,7 @@
 <h1>Mandarin lexical sense alignment</h1>
 <p class="intro lexical-study-intro">Examine a character's proposed English meaning against the pinned independent dictionary excerpt, <strong>without first seeing the emoji or the assistant's previous analysis</strong>. This worksheet is for the 248 flagged meanings awaiting lexical review.</p>
 <div class="lexical-study-fineprint"><strong>Not production approval:</strong> Answers remain local until an explicit JSON export. This interface never changes the source ledger, review counts, or production status. A supported/unsupported choice is a preliminary reviewer observation; independently corroborated lexical evidence and documented adjudication are still needed. Starting a new session discards unexported responses.</div>
+<div data-character-layer-controls></div>
 <div class="lexical-study-setup">
 <label>Review queue
 <select id="lexical-study-scope">
@@ -64,7 +68,7 @@
 <div id="lexical-study-progress" class="lexical-study-progress" role="progressbar" aria-label="Local lexical observations recorded" aria-valuemin="0" aria-valuenow="0" aria-valuemax="20"><div id="lexical-study-fill"></div></div>
 <section class="lexical-study-panel">
 <div class="lexical-study-details">
-<div><p class="lexical-study-note">Chinese character</p><strong id="lexical-study-character" class="lexical-study-character" lang="zh-Hans"></strong></div>
+<div><p class="lexical-study-note">Chinese character</p><div id="lexical-study-character" class="lexical-study-character" aria-label="Mapped Mandarin character"></div></div>
 <div><p class="lexical-study-note">Proposed character sense (Unverified)</p><strong id="lexical-study-meaning"></strong></div>
 <div><p class="lexical-study-note">Pinned Unihan definition segment</p><p id="lexical-study-unihan" class="lexical-study-source"></p></div>
 <div><p class="lexical-study-note">Independent CC-CEDICT dictionary excerpt</p><p id="lexical-study-dictionary" class="lexical-study-source"></p></div>
