@@ -1,0 +1,301 @@
+{
+  "schema": "chromalect.mandarin.lexical-crossref-batch.v0.1",
+  "source": {
+    "title": "CC-CEDICT per-headword v2 mirror",
+    "repository": "krmanik/cedict-json",
+    "commit": "63c2569948629323b515833930fdd10f285401b6",
+    "dataLicense": "CC BY-SA 4.0",
+    "upstream": "https://cc-cedict.org/",
+    "mirror": "https://github.com/krmanik/cedict-json",
+    "transform": "Selected single-simplified-character dictionary records, retaining readings and definitions; literal English gloss matching is automated triage only"
+  },
+  "rankStart": 621,
+  "rankEnd": 630,
+  "summary": {
+    "total": 10,
+    "headwordFound": 10,
+    "withCandidate": 9,
+    "withLiteralSupport": 7
+  },
+  "records": [
+    {
+      "rank": 621,
+      "character": "找",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/找.json",
+      "sourceBlobSha": "96c3a658381cc7b5b8d723566e3c47ce032ac405",
+      "traditional": "找",
+      "dictionaryReadings": [
+        "zhao3"
+      ],
+      "dictionaryDefinitions": {
+        "zhao3": "to try to find; to look for; to call on sb; to find; to seek; to return; to give change; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "search",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 622,
+      "character": "批",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/批.json",
+      "sourceBlobSha": "aa0d4698d116ca2185d1826351f51b80327e74af",
+      "traditional": "批",
+      "dictionaryReadings": [
+        "pi1"
+      ],
+      "dictionaryDefinitions": {
+        "pi1": "to ascertain; to act on; to criticize; to pass on; classifier for batches, lots, military flights; tier (for the ranking of universities and colleges); "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "criticize",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "pi1"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 623,
+      "character": "址",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/址.json",
+      "sourceBlobSha": "ba7f4b75da6666062dacfe30b852ce885440b190",
+      "traditional": "址",
+      "dictionaryReadings": [
+        "zhi3"
+      ],
+      "dictionaryDefinitions": {
+        "zhi3": "location; site; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "location",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "zhi3"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 624,
+      "character": "扯",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/扯.json",
+      "sourceBlobSha": "2cb0479046952e397c121290a14cdf917d67f753",
+      "traditional": "撦",
+      "dictionaryReadings": [
+        "che3"
+      ],
+      "dictionaryDefinitions": {
+        "che3": "to pull; to tear; (of cloth, thread etc) to buy; to chat; to gossip; (coll.) (Tw) ridiculous; hokey; variant of 扯[che3]; to pull; to tear; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "tear down",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 625,
+      "character": "走",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/走.json",
+      "sourceBlobSha": "9226dc21be0754598d3db6c90fa6da01c565cbff",
+      "traditional": "走",
+      "dictionaryReadings": [
+        "zou3"
+      ],
+      "dictionaryDefinitions": {
+        "zou3": "to walk; to go; to run; to move (of vehicle); to visit; to leave; to go away; to die (euph.); from; through; away (in compound verbs, such as 撤走[che4 zou3]); to change (shape, form, meaning); "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "walk",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "zou3"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 626,
+      "character": "抄",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/抄.json",
+      "sourceBlobSha": "bf1901d4ac3ac7ceca303f6bd09e62a5d4992c43",
+      "traditional": "抄",
+      "dictionaryReadings": [
+        "chao1"
+      ],
+      "dictionaryDefinitions": {
+        "chao1": "to make a copy; to plagiarize; to search and seize; to raid; to grab; to go off with; to take a shortcut; to make a turning move; to fold one's arms; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "copy",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "chao1"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 627,
+      "character": "贡",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/贡.json",
+      "sourceBlobSha": "76bec79c27b0fa89f19a18988739fd8f307ce0c3",
+      "traditional": "貢",
+      "dictionaryReadings": [
+        "Gong4",
+        "gong4"
+      ],
+      "dictionaryDefinitions": {
+        "Gong4": "surname Gong; ",
+        "gong4": "to offer tribute; tribute; gifts; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "gifts",
+          "sourceGlossGroupIndex": 1,
+          "matchingDictionaryReadings": [
+            "gong4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 628,
+      "character": "汞",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/汞.json",
+      "sourceBlobSha": "0bf3f878e443ce914193f2ed6da64da6b6613527",
+      "traditional": "銾",
+      "dictionaryReadings": [
+        "gong3",
+        "hong4"
+      ],
+      "dictionaryDefinitions": {
+        "gong3": "mercury (chemistry); variant of 汞[gong3]; ",
+        "hong4": "sound of a bell; "
+      },
+      "selectedSenseChecks": [],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 629,
+      "character": "坝",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/坝.json",
+      "sourceBlobSha": "6f203ef6faacde389f6391e058ad2e8d42700d5d",
+      "traditional": "壩",
+      "dictionaryReadings": [
+        "ba4"
+      ],
+      "dictionaryDefinitions": {
+        "ba4": "dam; dike; embankment; CL:條|条[tiao2]; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "dam",
+          "sourceGlossGroupIndex": 1,
+          "matchingDictionaryReadings": [
+            "ba4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 630,
+      "character": "攻",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/攻.json",
+      "sourceBlobSha": "206eca5694803dbe4d143ce7a315406ea4290bf7",
+      "traditional": "攻",
+      "dictionaryReadings": [
+        "gong1"
+      ],
+      "dictionaryDefinitions": {
+        "gong1": "to attack; to accuse; to study; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "attack",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "gong1"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    }
+  ]
+}
