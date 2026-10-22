@@ -43,7 +43,7 @@ These are observations on the first 9 nonliteral expression alignments (ranks 1�
 
 ### Second batch: ranks 101–200
 
-The additional 19 nonliteral candidate matches occur on 互, 贝, 冈, 气, 升, 仁, 仍, 斤, 凶, 氏, 勿, 匀, 亢, 火, 订, 尺, 幻, 玉 and 扑. These have been **flagged, not rejected or confirmed**.
+A [machine-readable triage register](../data/semantic/cedict-crossref/triage-0101-0200.json) now classifies these 19 cases into 8 higher-priority and 11 medium-priority follow-ups, retaining zero lexical and emoji approvals. The additional 19 nonliteral candidate matches occur on 互, 贝, 冈, 气, 升, 仁, 仍, 斤, 凶, 氏, 勿, 匀, 亢, 火, 订, 尺, 幻, 玉 and 扑. These have been **flagged, not rejected or confirmed**.
 
 Examples requiring particular care:
 
