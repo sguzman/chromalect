@@ -36,7 +36,7 @@ assert.equal(g.parts(byId["extended-mnemonic"].expr).filter(x=>x.kind==="emoji")
 assert.equal(byId.raw.expr, null);
 assert.equal(g.display(null), "");
 const atom = emoji => ({kind:"atom",emoji});
-const mustFail = input => assert.throws(() => g.validate(input), TypeError);
+const mustFail = input => assert.throws(() => g.validate(input), error => error?.name === "TypeError");
 mustFail({kind:"unknown"});
 mustFail({kind:"atom",emoji:"English word"});
 mustFail({kind:"and",items:[atom("🍎")]});
