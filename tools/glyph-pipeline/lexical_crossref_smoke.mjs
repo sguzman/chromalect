@@ -8,7 +8,7 @@ assert.equal(manifest.status,"independent_dictionary_ingestion_only_not_validate
 assert.equal(manifest.source.snapshotCommit,"63c2569948629323b515833930fdd10f285401b6");
 assert.equal(manifest.source.dataLicense,"CC BY-SA 4.0");
 assert.equal(manifest.records.length,manifest.metrics.crossReferenced);
-assert.ok(manifest.batches.length>=28,"Dictionary batches must not regress below rank 400");
+assert.ok(manifest.batches.length>=35,"Dictionary batches must not regress below rank 500");
 assert.equal(manifest.metrics.manualSenseReviewed,0);
 assert.equal(manifest.metrics.emojiComprehensionReviewed,0);
 assert.equal(manifest.metrics.productionVerified,0);
@@ -65,16 +65,16 @@ assert.deepEqual(manifest.metrics,{
  expressionLiteralMatches:literal,expressionGlossMismatchOrSynonym:needsReview,
  manualSenseReviewed:0,emojiComprehensionReviewed:0,productionVerified:0
 });
-assert.ok(found>=400,"Independent dictionary intake must not regress below 400 characters");
+assert.ok(found>=500,"Independent dictionary intake must not regress below 500 characters");
 assert.equal(withCandidate,manifest.metrics.charactersWithCandidate);
 assert.equal(expr,manifest.metrics.candidateExpressions);
 assert.equal(literal,manifest.metrics.expressionLiteralMatches);
 assert.equal(needsReview,manifest.metrics.expressionGlossMismatchOrSynonym);
-assert.equal(manifest.metrics.crossReferenced,400);
-assert.equal(manifest.metrics.headwordsFound,400);
-assert.equal(expr,316);
-assert.equal(literal,239);
-assert.equal(needsReview,77);
+assert.equal(manifest.metrics.crossReferenced,500);
+assert.equal(manifest.metrics.headwordsFound,500);
+assert.equal(expr,414);
+assert.equal(literal,310);
+assert.equal(needsReview,104);
 const triage=JSON.parse(fs.readFileSync(base+"triage-0101-0200.json","utf8"));
 assert.equal(triage.schema,"chromalect.semantic.manual-triage.v0.1");
 assert.equal(triage.lexicalApprovalCount,0);
