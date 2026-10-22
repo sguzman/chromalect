@@ -1,0 +1,461 @@
+{
+  "schema": "chromalect.mandarin.lexical-crossref-batch.v0.1",
+  "source": {
+    "title": "CC-CEDICT per-headword v2 mirror",
+    "repository": "krmanik/cedict-json",
+    "commit": "63c2569948629323b515833930fdd10f285401b6",
+    "dataLicense": "CC BY-SA 4.0",
+    "upstream": "https://cc-cedict.org/",
+    "mirror": "https://github.com/krmanik/cedict-json",
+    "transform": "Selected single-simplified-character dictionary records, retaining readings and definitions; literal English gloss matching is automated triage only"
+  },
+  "rankStart": 576,
+  "rankEnd": 590,
+  "summary": {
+    "total": 15,
+    "headwordFound": 15,
+    "withCandidate": 15,
+    "withLiteralSupport": 12
+  },
+  "records": [
+    {
+      "rank": 576,
+      "character": "防",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/防.json",
+      "sourceBlobSha": "3601d02460631604fb7056676f42f2e1a627e796",
+      "traditional": "防",
+      "dictionaryReadings": [
+        "fang2"
+      ],
+      "dictionaryDefinitions": {
+        "fang2": "to protect; to defend; to guard against; to prevent; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "prevent",
+          "sourceGlossGroupIndex": 1,
+          "matchingDictionaryReadings": [
+            "fang2"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 577,
+      "character": "奸",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/奸.json",
+      "sourceBlobSha": "3acd4359a6d124a7b856f64c70e1582ad197efb3",
+      "traditional": "姦",
+      "dictionaryReadings": [
+        "jian1"
+      ],
+      "dictionaryDefinitions": {
+        "jian1": "wicked; crafty; traitor; variant of 姦|奸[jian1]; to fornicate; to defile; adultery; rape; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "false",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 578,
+      "character": "如",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/如.json",
+      "sourceBlobSha": "ba6f62a5d2754a9919f3c03a8624b2325b846e62",
+      "traditional": "如",
+      "dictionaryReadings": [
+        "ru2"
+      ],
+      "dictionaryDefinitions": {
+        "ru2": "as; as if; such as; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "like",
+          "sourceGlossGroupIndex": 2,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 579,
+      "character": "妇",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/妇.json",
+      "sourceBlobSha": "11935ebeae9a99326109cd0f187c2779d5f5ea3a",
+      "traditional": "媍",
+      "dictionaryReadings": [
+        "fu4"
+      ],
+      "dictionaryDefinitions": {
+        "fu4": "woman; old variant of 婦|妇[fu4]; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "woman",
+          "sourceGlossGroupIndex": 1,
+          "matchingDictionaryReadings": [
+            "fu4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 580,
+      "character": "妃",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/妃.json",
+      "sourceBlobSha": "3c2824c5834490e6b1cb644975699b5d0c673663",
+      "traditional": "妃",
+      "dictionaryReadings": [
+        "fei1"
+      ],
+      "dictionaryDefinitions": {
+        "fei1": "imperial concubine; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "wife",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 581,
+      "character": "好",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/好.json",
+      "sourceBlobSha": "ef892e11f2ba543cb139e7b5e7b3b3ea3264cc47",
+      "traditional": "好",
+      "dictionaryReadings": [
+        "hao3",
+        "hao4"
+      ],
+      "dictionaryDefinitions": {
+        "hao3": "good; well; proper; good to; easy to; very; so; (suffix indicating completion or readiness); (of two people) close; on intimate terms; ",
+        "hao4": "to be fond of; to have a tendency to; to be prone to; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "good",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "hao3"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 582,
+      "character": "她",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/她.json",
+      "sourceBlobSha": "44e892392ab26f49eab91e1a7f16fec09311cab0",
+      "traditional": "她",
+      "dictionaryReadings": [
+        "ta1"
+      ],
+      "dictionaryDefinitions": {
+        "ta1": "she; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "she",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "ta1"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 583,
+      "character": "妈",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/妈.json",
+      "sourceBlobSha": "078fea2b378f619eb262ef1c3c1be82995696271",
+      "traditional": "媽",
+      "dictionaryReadings": [
+        "ma1"
+      ],
+      "dictionaryDefinitions": {
+        "ma1": "ma; mom; mother; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "mother",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "ma1"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 584,
+      "character": "戏",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/戏.json",
+      "sourceBlobSha": "f3c2cb4eb0cd43fd4815c34af67a760e96ad4afb",
+      "traditional": "戲",
+      "dictionaryReadings": [
+        "xi4"
+      ],
+      "dictionaryDefinitions": {
+        "xi4": "variant of 戲|戏[xi4]; trick; drama; play; show; CL:出[chu1],場|场[chang3],臺|台[tai2]; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "play",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "xi4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 585,
+      "character": "羽",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/羽.json",
+      "sourceBlobSha": "6cb9647f1dd66c255e3ec8d1cd1e10f46a8864f6",
+      "traditional": "羽",
+      "dictionaryReadings": [
+        "yu3"
+      ],
+      "dictionaryDefinitions": {
+        "yu3": "feather; 5th note in pentatonic scale; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "feather",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "yu3"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 586,
+      "character": "观",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/观.json",
+      "sourceBlobSha": "738d5eec7d2e61db63cde29f2d120b3f4eb1b222",
+      "traditional": "觀",
+      "dictionaryReadings": [
+        "Guan4",
+        "guan1",
+        "guan4"
+      ],
+      "dictionaryDefinitions": {
+        "Guan4": "surname Guan; ",
+        "guan1": "to look at; to watch; to observe; to behold; to advise; concept; point of view; outlook; ",
+        "guan4": "Taoist monastery; palace gate watchtower; platform; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "observe",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "guan1"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 587,
+      "character": "欢",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/欢.json",
+      "sourceBlobSha": "f666c0b014d11b3bbe15c579ebf91d5cd6c892c7",
+      "traditional": "驩",
+      "dictionaryReadings": [
+        "huan1"
+      ],
+      "dictionaryDefinitions": {
+        "huan1": "variant of 歡|欢[huan1]; joyous; happy; pleased; hubbub; clamor; variant of 歡|欢[huan1]; a breed of horse; variant of 歡|欢[huan1]; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "happy",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "huan1"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 588,
+      "character": "买",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/买.json",
+      "sourceBlobSha": "3c9a233c5b52efb888ba85a8b3e8b6ba4664a29f",
+      "traditional": "買",
+      "dictionaryReadings": [
+        "mai3"
+      ],
+      "dictionaryDefinitions": {
+        "mai3": "to buy; to purchase; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "buy",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "mai3"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 589,
+      "character": "红",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/红.json",
+      "sourceBlobSha": "1b7f57806f4dfc6bbf6908c57748fd7e6cc5cacf",
+      "traditional": "紅",
+      "dictionaryReadings": [
+        "Hong2",
+        "hong2"
+      ],
+      "dictionaryDefinitions": {
+        "Hong2": "surname Hong; ",
+        "hong2": "red; popular; revolutionary; bonus; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "red",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "hong2"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 590,
+      "character": "驮",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/驮.json",
+      "sourceBlobSha": "4ecf23f420cc0174b111ee906304d7b6f3e5ca0e",
+      "traditional": "馱",
+      "dictionaryReadings": [
+        "tuo2",
+        "duo4"
+      ],
+      "dictionaryDefinitions": {
+        "tuo2": "variant of 馱|驮[tuo2]; to carry on one's back; ",
+        "duo4": "load carried by a pack animal; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "carry",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "tuo2"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    }
+  ]
+}
