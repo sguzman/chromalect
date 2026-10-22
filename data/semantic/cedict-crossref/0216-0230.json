@@ -1,0 +1,431 @@
+{
+  "schema": "chromalect.mandarin.lexical-crossref-batch.v0.1",
+  "source": {
+    "title": "CC-CEDICT per-headword v2 mirror",
+    "repository": "krmanik/cedict-json",
+    "commit": "63c2569948629323b515833930fdd10f285401b6",
+    "dataLicense": "CC BY-SA 4.0",
+    "upstream": "https://cc-cedict.org/",
+    "mirror": "https://github.com/krmanik/cedict-json",
+    "transform": "Selected single-simplified-character dictionary records, retaining readings and definitions; literal English gloss matching is automated triage only"
+  },
+  "rankStart": 216,
+  "rankEnd": 230,
+  "summary": {
+    "total": 15,
+    "headwordFound": 15,
+    "withCandidate": 11,
+    "withLiteralSupport": 8
+  },
+  "records": [
+    {
+      "rank": 216,
+      "character": "石",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/石.json",
+      "sourceBlobSha": "d256656be7245f3718efd9138a75bd50242534fa",
+      "traditional": "石",
+      "dictionaryReadings": [
+        "Shi2",
+        "dan4",
+        "shi2"
+      ],
+      "dictionaryDefinitions": {
+        "Shi2": "surname Shi; ",
+        "dan4": "dry measure for grain equal to ten dou 斗; ten pecks; one hundred liters; ",
+        "shi2": "rock; stone; stone inscription; one of the eight ancient musical instruments 八音[ba1 yin1]; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "stone",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "shi2"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 217,
+      "character": "右",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/右.json",
+      "sourceBlobSha": "5d650c61c9c8fcb8ddfa04ea440d3a337aef3335",
+      "traditional": "右",
+      "dictionaryReadings": [
+        "you4"
+      ],
+      "dictionaryDefinitions": {
+        "you4": "right (-hand); the Right (politics); west (old); "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "right",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "you4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 218,
+      "character": "布",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/布.json",
+      "sourceBlobSha": "bffcec42f2e08629a03d2c91857e385902b0a8e6",
+      "traditional": "布",
+      "dictionaryReadings": [
+        "bu4"
+      ],
+      "dictionaryDefinitions": {
+        "bu4": "variant of 布[bu4]; to announce; to spread; cloth; to declare; to announce; to spread; to make known; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "textiles",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 219,
+      "character": "夯",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/夯.json",
+      "sourceBlobSha": "78db5a3932de81ed8d0937e93218740499927bcd",
+      "traditional": "夯",
+      "dictionaryReadings": [
+        "ben4",
+        "hang1"
+      ],
+      "dictionaryDefinitions": {
+        "ben4": "variant of 笨[ben4]; ",
+        "hang1": "to tamp; (slang) popular; hot; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "burden",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 220,
+      "character": "戊",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/戊.json",
+      "sourceBlobSha": "2aca4001b2bf3ccb0e934d30dbdb4c9ba58abe51",
+      "traditional": "戊",
+      "dictionaryReadings": [
+        "wu4"
+      ],
+      "dictionaryDefinitions": {
+        "wu4": "fifth of the ten Heavenly Stems 十天干[shi2 tian1 gan1]; fifth in order; letter 'E' or roman 'V' in list 'A, B, C', or 'I, II, III' etc; penta; "
+      },
+      "selectedSenseChecks": [],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 221,
+      "character": "龙",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/龙.json",
+      "sourceBlobSha": "8e72392b51864e834ff3d0401410fe32a76b5d8d",
+      "traditional": "龍",
+      "dictionaryReadings": [
+        "Long2",
+        "long2"
+      ],
+      "dictionaryDefinitions": {
+        "Long2": "surname Long; ",
+        "long2": "dragon; CL:條|条[tiao2]; imperial; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "dragon",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "long2"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 222,
+      "character": "平",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/平.json",
+      "sourceBlobSha": "2126e57f3b3642e786ed717c406df2818e4ab1bc",
+      "traditional": "平",
+      "dictionaryReadings": [
+        "Ping2",
+        "ping2"
+      ],
+      "dictionaryDefinitions": {
+        "Ping2": "surname Ping; ",
+        "ping2": "flat; level; equal; to tie (make the same score); to draw (score); calm; peaceful; see also 平聲|平声[ping2 sheng1]; "
+      },
+      "selectedSenseChecks": [],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 223,
+      "character": "灭",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/灭.json",
+      "sourceBlobSha": "b36d364b103b0f1fe017df69f4c2c3d373aaed51",
+      "traditional": "滅",
+      "dictionaryReadings": [
+        "mie4"
+      ],
+      "dictionaryDefinitions": {
+        "mie4": "to extinguish or put out; to go out (of a fire etc); to exterminate or wipe out; to drown; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "extinguish",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "mie4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 224,
+      "character": "轧",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/轧.json",
+      "sourceBlobSha": "a5c5c9b806010d15f8c0e5e4269ff6949c8b08e5",
+      "traditional": "軋",
+      "dictionaryReadings": [
+        "Ya4",
+        "ga2",
+        "ya4",
+        "zha2"
+      ],
+      "dictionaryDefinitions": {
+        "Ya4": "surname Ya; ",
+        "ga2": "to crush together (in a crowd); to make friends; to check (accounts); ",
+        "ya4": "to crush; to knock sb down with a vehicle; ",
+        "zha2": "to roll (steel); "
+      },
+      "selectedSenseChecks": [],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 225,
+      "character": "东",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/东.json",
+      "sourceBlobSha": "f5005667473a299faedf4575196875829e367f38",
+      "traditional": "東",
+      "dictionaryReadings": [
+        "Dong1",
+        "dong1"
+      ],
+      "dictionaryDefinitions": {
+        "Dong1": "surname Dong; ",
+        "dong1": "east; host (i.e. sitting on east side of guest); landlord; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "east",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "dong1"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 226,
+      "character": "卡",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/卡.json",
+      "sourceBlobSha": "96a6e0188f7c48c17bc671c13ade9e1874087e94",
+      "traditional": "卡",
+      "dictionaryReadings": [
+        "ka3",
+        "qia3"
+      ],
+      "dictionaryDefinitions": {
+        "ka3": "to stop; to block; card; CL:張|张[zhang1],片[pian4]; calorie; cassette; (computing) (coll.) slow; ",
+        "qia3": "to block; to be stuck; to be wedged; customs station; a clip; a fastener; a checkpost; Taiwan pr. [ka3]; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "card",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "ka3"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 227,
+      "character": "北",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/北.json",
+      "sourceBlobSha": "6e664f3601b8a04794257b5d9fa286c1c5fc4cb3",
+      "traditional": "北",
+      "dictionaryReadings": [
+        "bei3"
+      ],
+      "dictionaryDefinitions": {
+        "bei3": "north; to be defeated (classical); "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "north",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "bei3"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 228,
+      "character": "占",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/占.json",
+      "sourceBlobSha": "aefa31e3a357582a263f8ca1d3348595745fe56b",
+      "traditional": "占",
+      "dictionaryReadings": [
+        "zhan4",
+        "zhan1"
+      ],
+      "dictionaryDefinitions": {
+        "zhan4": "variant of 占[zhan4]; to take possession of; to occupy; to take up; ",
+        "zhan1": "to observe; to divine; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "divine",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "zhan1"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 229,
+      "character": "凸",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/凸.json",
+      "sourceBlobSha": "a7618a4f4509d8975ad6bbf75f63f2eb8449e2ec",
+      "traditional": "凸",
+      "dictionaryReadings": [
+        "tu1"
+      ],
+      "dictionaryDefinitions": {
+        "tu1": "to stick out; protruding; convex; male (connector etc); Taiwan pr. [tu2]; "
+      },
+      "selectedSenseChecks": [],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 230,
+      "character": "卢",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/卢.json",
+      "sourceBlobSha": "1225e32282ab4ad563d25bcb3e022b7421629e11",
+      "traditional": "盧",
+      "dictionaryReadings": [
+        "Lu2",
+        "lu2"
+      ],
+      "dictionaryDefinitions": {
+        "Lu2": "surname Lu; abbr. for Luxembourg 盧森堡|卢森堡[Lu2 sen1 bao3]; ",
+        "lu2": "(old) rice vessel; black; old variant of 廬|庐[lu2]; (slang) (Tw) troublesome; fussy; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "hut",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    }
+  ]
+}
