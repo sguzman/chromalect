@@ -26,8 +26,9 @@
     "deskAnalyzedHighPriority": 15,
     "independentlyLexicallyApproved": 0,
     "emojiComprehensionApproved": 0,
-    "deskAnalyzedUnclassified": 85,
-    "deskAnalyzedTotal": 100
+    "deskAnalyzedUnclassified": 125,
+    "deskAnalyzedTotal": 151,
+    "deskAnalyzedMediumPriority": 11
   },
   "records": [
     {
@@ -448,7 +449,16 @@
       "earlierResearchNote": "Mutual versus mutually; verify the relevant grammatical usage without promoting the pictogram.",
       "lexicalDecision": "pending",
       "visualComprehensionDecision": "pending",
-      "productionVerified": false
+      "productionVerified": false,
+      "deskAnalysis": {
+        "kind": "grammatical_paraphrase",
+        "provisionalNextAction": "inspect_context",
+        "observation": "Mutual and mutually share the core reciprocal relation, but the adjective/adverb distinction and syntactic environment still need review.",
+        "sourceExcerpt": "hu4: mutual;",
+        "sourceBasis": "pinned_CC-CEDICT_headword_plus_Unihan_candidate",
+        "reviewerIndependent": false,
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+      }
     },
     {
       "rank": 114,
@@ -467,7 +477,16 @@
       "earlierResearchNote": "Cowrie and shellfish versus sea shell; the proposed shell picture may be too generic.",
       "lexicalDecision": "pending",
       "visualComprehensionDecision": "pending",
-      "productionVerified": false
+      "productionVerified": false,
+      "deskAnalysis": {
+        "kind": "referent_scope",
+        "provisionalNextAction": "inspect_context",
+        "observation": "The headword names cowrie or shellfish, not an unrestricted sea shell; the shell pictogram may overgeneralize.",
+        "sourceExcerpt": "bei4: cowrie;  shellfish;  currency (archaic);",
+        "sourceBasis": "pinned_CC-CEDICT_headword_plus_Unihan_candidate",
+        "reviewerIndependent": false,
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+      }
     },
     {
       "rank": 115,
@@ -486,7 +505,16 @@
       "earlierResearchNote": "Ridge or mound versus hill; terrain cues need comparison.",
       "lexicalDecision": "pending",
       "visualComprehensionDecision": "pending",
-      "productionVerified": false
+      "productionVerified": false,
+      "deskAnalysis": {
+        "kind": "terrain_paraphrase",
+        "provisionalNextAction": "inspect_context",
+        "observation": "Ridge and mound may evoke a hill, but ⛰️ also suggests a tall mountain; check the scale and modern usage.",
+        "sourceExcerpt": "gang1: ridge;  mound;",
+        "sourceBasis": "pinned_CC-CEDICT_headword_plus_Unihan_candidate",
+        "reviewerIndependent": false,
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+      }
     },
     {
       "rank": 125,
@@ -505,7 +533,16 @@
       "earlierResearchNote": "Ascend or rise in rank versus go up; establish action sense and context.",
       "lexicalDecision": "pending",
       "visualComprehensionDecision": "pending",
-      "productionVerified": false
+      "productionVerified": false,
+      "deskAnalysis": {
+        "kind": "verb_sense_paraphrase",
+        "provisionalNextAction": "inspect_context",
+        "observation": "Ascend or rise in rank relates to moving upward, but ⬆️ omits the promotion versus physical ascent distinction.",
+        "sourceExcerpt": "sheng1: to ascend;  to rise to the rank of;  to promote;  to hoist",
+        "sourceBasis": "pinned_CC-CEDICT_headword_plus_Unihan_candidate",
+        "reviewerIndependent": false,
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+      }
     },
     {
       "rank": 128,
@@ -524,7 +561,16 @@
       "earlierResearchNote": "Humane versus benevolence; ethical meaning may not reduce to a heart symbol.",
       "lexicalDecision": "pending",
       "visualComprehensionDecision": "pending",
-      "productionVerified": false
+      "productionVerified": false,
+      "deskAnalysis": {
+        "kind": "ethical_concept",
+        "provisionalNextAction": "reassess_or_defer",
+        "observation": "Humane and benevolence overlap, but a heart symbol is only a broad kindness mnemonic and may not teach 仁 precisely.",
+        "sourceExcerpt": "ren2: humane;  kernel;",
+        "sourceBasis": "pinned_CC-CEDICT_headword_plus_Unihan_candidate",
+        "reviewerIndependent": false,
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+      }
     },
     {
       "rank": 151,
@@ -543,7 +589,16 @@
       "earlierResearchNote": "Clan or maiden name is more specific than general family.",
       "lexicalDecision": "pending",
       "visualComprehensionDecision": "pending",
-      "productionVerified": false
+      "productionVerified": false,
+      "deskAnalysis": {
+        "kind": "kinship_scope",
+        "provisionalNextAction": "reassess_or_defer",
+        "observation": "Clan name or maiden name is a naming relation, not just any family group; 👪 may be too general.",
+        "sourceExcerpt": "shi4: clan name;  maiden name; | zhi1: see 月氏[Yue4 zhi1] and 閼氏|阏氏[yan1 zhi1];",
+        "sourceBasis": "pinned_CC-CEDICT_headword_plus_Unihan_candidate",
+        "reviewerIndependent": false,
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+      }
     },
     {
       "rank": 152,
@@ -562,7 +617,16 @@
       "earlierResearchNote": "Do not versus must not; check negation and modality distinctions.",
       "lexicalDecision": "pending",
       "visualComprehensionDecision": "pending",
-      "productionVerified": false
+      "productionVerified": false,
+      "deskAnalysis": {
+        "kind": "negation_modality",
+        "provisionalNextAction": "inspect_context",
+        "observation": "Do not is a prohibition or negative imperative; must not introduces obligation, so 🚫 needs scope testing.",
+        "sourceExcerpt": "wu4: do not;",
+        "sourceBasis": "pinned_CC-CEDICT_headword_plus_Unihan_candidate",
+        "reviewerIndependent": false,
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+      }
     },
     {
       "rank": 156,
@@ -581,7 +645,16 @@
       "earlierResearchNote": "Even or uniform versus equal; distinguish distribution from equality.",
       "lexicalDecision": "pending",
       "visualComprehensionDecision": "pending",
-      "productionVerified": false
+      "productionVerified": false,
+      "deskAnalysis": {
+        "kind": "distribution_vs_equality",
+        "provisionalNextAction": "inspect_context",
+        "observation": "Even or well-distributed does not always mean numerical equality; ⚖️ may imply balancing rather than uniformity.",
+        "sourceExcerpt": "yun2: even;  well-distributed;  uniform;  to distribute evenly",
+        "sourceBasis": "pinned_CC-CEDICT_headword_plus_Unihan_candidate",
+        "reviewerIndependent": false,
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+      }
     },
     {
       "rank": 162,
@@ -600,7 +673,16 @@
       "earlierResearchNote": "High or overbearing versus proud; verify which reading and emotional valence apply.",
       "lexicalDecision": "pending",
       "visualComprehensionDecision": "pending",
-      "productionVerified": false
+      "productionVerified": false,
+      "deskAnalysis": {
+        "kind": "attitude_valence",
+        "provisionalNextAction": "reassess_or_defer",
+        "observation": "Overbearing or excessive may convey arrogant pride but not ordinary self-esteem; check which sense 😤 communicates.",
+        "sourceExcerpt": "kang4: high;  overbearing;  excessive;",
+        "sourceBasis": "pinned_CC-CEDICT_headword_plus_Unihan_candidate",
+        "reviewerIndependent": false,
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+      }
     },
     {
       "rank": 175,
@@ -619,7 +701,16 @@
       "earlierResearchNote": "Chinese foot or ruler is more specific than Chinese measure; distinguish object from unit.",
       "lexicalDecision": "pending",
       "visualComprehensionDecision": "pending",
-      "productionVerified": false
+      "productionVerified": false,
+      "deskAnalysis": {
+        "kind": "measure_unit_vs_tool",
+        "provisionalNextAction": "inspect_context",
+        "observation": "Chinese foot is a length unit, while 📏 shows a ruler; a tool-versus-measure distinction remains.",
+        "sourceExcerpt": "che3: one of the characters used to represent a musical note in gongche notation, 工尺譜|工尺谱[gong1 che3 pu3]; | chi3: a Chinese foot;  one-third of a meter;  a ruler;  a tape-measure",
+        "sourceBasis": "pinned_CC-CEDICT_headword_plus_Unihan_candidate",
+        "reviewerIndependent": false,
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+      }
     },
     {
       "rank": 189,
@@ -638,7 +729,16 @@
       "earlierResearchNote": "Fantasy versus illusion; overlap is plausible but not guaranteed.",
       "lexicalDecision": "pending",
       "visualComprehensionDecision": "pending",
-      "productionVerified": false
+      "productionVerified": false,
+      "deskAnalysis": {
+        "kind": "imagined_vs_deceptive",
+        "provisionalNextAction": "inspect_context",
+        "observation": "Fantasy can involve imagined scenes, not necessarily a deceptive illusion; 🪄 may imply magic.",
+        "sourceExcerpt": "huan4: fantasy;",
+        "sourceBasis": "pinned_CC-CEDICT_headword_plus_Unihan_candidate",
+        "reviewerIndependent": false,
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+      }
     },
     {
       "rank": 5,
@@ -3163,7 +3263,16 @@
       "earlierResearchNote": null,
       "lexicalDecision": "pending",
       "visualComprehensionDecision": "pending",
-      "productionVerified": false
+      "productionVerified": false,
+      "deskAnalysis": {
+        "kind": "verb_vs_noun",
+        "provisionalNextAction": "inspect_context",
+        "observation": "To bear or carry a load is verbal; 🎒 depicts one possible carried object rather than burden as a general state.",
+        "sourceExcerpt": "fu4: to bear;  to carry (on one's back);  to turn one's back on;  to be defeated",
+        "sourceBasis": "pinned_CC-CEDICT_headword_plus_Unihan_candidate",
+        "reviewerIndependent": false,
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+      }
     },
     {
       "rank": 504,
@@ -3182,7 +3291,16 @@
       "earlierResearchNote": null,
       "lexicalDecision": "pending",
       "visualComprehensionDecision": "pending",
-      "productionVerified": false
+      "productionVerified": false,
+      "deskAnalysis": {
+        "kind": "historical_variant",
+        "provisionalNextAction": "inspect_context",
+        "observation": "The headword records an old variant of 胸; modern use also names Hungary, while 🫁 depicts organs rather than chest.",
+        "sourceExcerpt": "xiong1: old variant of 胸[xiong1];",
+        "sourceBasis": "pinned_CC-CEDICT_headword_plus_Unihan_candidate",
+        "reviewerIndependent": false,
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+      }
     },
     {
       "rank": 508,
@@ -3204,7 +3322,16 @@
       "earlierResearchNote": null,
       "lexicalDecision": "pending",
       "visualComprehensionDecision": "pending",
-      "productionVerified": false
+      "productionVerified": false,
+      "deskAnalysis": {
+        "kind": "competitive_vs_combat",
+        "provisionalNextAction": "reassess_or_defer",
+        "observation": "Striving, vying and arguing are broader than armed fighting; ⚔️ overstates the violence of a common sense.",
+        "sourceExcerpt": "zheng1: to strive for;  to vie for;  to argue or debate;  deficient or lacking (dialect)",
+        "sourceBasis": "pinned_CC-CEDICT_headword_plus_Unihan_candidate",
+        "reviewerIndependent": false,
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+      }
     },
     {
       "rank": 511,
@@ -3226,7 +3353,16 @@
       "earlierResearchNote": null,
       "lexicalDecision": "pending",
       "visualComprehensionDecision": "pending",
-      "productionVerified": false
+      "productionVerified": false,
+      "deskAnalysis": {
+        "kind": "metaphorical_motion",
+        "provisionalNextAction": "inspect_context",
+        "observation": "Rising in air can overlap soaring, but the dictionary's flushing and colliding uses are distinct; 🦅 assigns a bird agent.",
+        "sourceExcerpt": "chong1: (of water) to dash against;  to mix with water;  to infuse;  to rinse | chong4: powerful;  vigorous;  pungent;  towards",
+        "sourceBasis": "pinned_CC-CEDICT_headword_plus_Unihan_candidate",
+        "reviewerIndependent": false,
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+      }
     },
     {
       "rank": 512,
@@ -3245,7 +3381,16 @@
       "earlierResearchNote": null,
       "lexicalDecision": "pending",
       "visualComprehensionDecision": "pending",
-      "productionVerified": false
+      "productionVerified": false,
+      "deskAnalysis": {
+        "kind": "noun_verb_overlap",
+        "provisionalNextAction": "inspect_context",
+        "observation": "Makeup is present as a noun alongside adorn oneself; 💄 captures cosmetics but not the full adornment verb.",
+        "sourceExcerpt": "zhuang1: (of a woman) to adorn oneself;  makeup;  adornment;  trousseau",
+        "sourceBasis": "pinned_CC-CEDICT_headword_plus_Unihan_candidate",
+        "reviewerIndependent": false,
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+      }
     },
     {
       "rank": 517,
@@ -3267,7 +3412,16 @@
       "earlierResearchNote": null,
       "lexicalDecision": "pending",
       "visualComprehensionDecision": "pending",
-      "productionVerified": false
+      "productionVerified": false,
+      "deskAnalysis": {
+        "kind": "proper_name_only",
+        "provisionalNextAction": "reassess_or_defer",
+        "observation": "The independent headword only gives the Liu surname; kill is an attested historical source gloss needing separate historical evidence.",
+        "sourceExcerpt": "Liu2: surname Liu;",
+        "sourceBasis": "pinned_CC-CEDICT_headword_plus_Unihan_candidate",
+        "reviewerIndependent": false,
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+      }
     },
     {
       "rank": 518,
@@ -3286,7 +3440,16 @@
       "earlierResearchNote": null,
       "lexicalDecision": "pending",
       "visualComprehensionDecision": "pending",
-      "productionVerified": false
+      "productionVerified": false,
+      "deskAnalysis": {
+        "kind": "distribution_vs_identity",
+        "provisionalNextAction": "inspect_context",
+        "observation": "Even, level, neat or simultaneous are related to some uses of equal, but 🟰 may overemphasize mathematical identity.",
+        "sourceExcerpt": "qi2: neat;  even;  level with;  identical",
+        "sourceBasis": "pinned_CC-CEDICT_headword_plus_Unihan_candidate",
+        "reviewerIndependent": false,
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+      }
     },
     {
       "rank": 519,
@@ -3308,7 +3471,16 @@
       "earlierResearchNote": null,
       "lexicalDecision": "pending",
       "visualComprehensionDecision": "pending",
-      "productionVerified": false
+      "productionVerified": false,
+      "deskAnalysis": {
+        "kind": "exchange_vs_transfer",
+        "provisionalNextAction": "inspect_context",
+        "observation": "Hand over or deliver is not necessarily reciprocal exchange; 🔄 suggests two-way swapping.",
+        "sourceExcerpt": "jiao1: to hand over;  to deliver;  to pay (money);  to turn over",
+        "sourceBasis": "pinned_CC-CEDICT_headword_plus_Unihan_candidate",
+        "reviewerIndependent": false,
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+      }
     },
     {
       "rank": 526,
@@ -3327,7 +3499,16 @@
       "earlierResearchNote": null,
       "lexicalDecision": "pending",
       "visualComprehensionDecision": "pending",
-      "productionVerified": false
+      "productionVerified": false,
+      "deskAnalysis": {
+        "kind": "evaluative_language",
+        "provisionalNextAction": "reassess_or_defer",
+        "observation": "Absurd and rash are not necessarily foolish as a clown; 🤡 introduces disparagement beyond the lexical meaning.",
+        "sourceExcerpt": "wang4: absurd;  fantastic;  presumptuous;  rash",
+        "sourceBasis": "pinned_CC-CEDICT_headword_plus_Unihan_candidate",
+        "reviewerIndependent": false,
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+      }
     },
     {
       "rank": 529,
@@ -3349,7 +3530,16 @@
       "earlierResearchNote": null,
       "lexicalDecision": "pending",
       "visualComprehensionDecision": "pending",
-      "productionVerified": false
+      "productionVerified": false,
+      "deskAnalysis": {
+        "kind": "entry_motion",
+        "provisionalNextAction": "inspect_context",
+        "observation": "Rush, charge and break through overlap rush in, but 🏃 depicts running without entry into an enclosure.",
+        "sourceExcerpt": "chuang3: to rush;  to charge;  to dash;  to break through",
+        "sourceBasis": "pinned_CC-CEDICT_headword_plus_Unihan_candidate",
+        "reviewerIndependent": false,
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+      }
     },
     {
       "rank": 541,
@@ -3368,7 +3558,16 @@
       "earlierResearchNote": null,
       "lexicalDecision": "pending",
       "visualComprehensionDecision": "pending",
-      "productionVerified": false
+      "productionVerified": false,
+      "deskAnalysis": {
+        "kind": "archaic_register",
+        "provisionalNextAction": "inspect_context",
+        "observation": "Thou marks archaic second-person address; 🫵 indicates the addressee without encoding literary register.",
+        "sourceExcerpt": "ru3: thou;",
+        "sourceBasis": "pinned_CC-CEDICT_headword_plus_Unihan_candidate",
+        "reviewerIndependent": false,
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+      }
     },
     {
       "rank": 545,
@@ -3387,7 +3586,16 @@
       "earlierResearchNote": null,
       "lexicalDecision": "pending",
       "visualComprehensionDecision": "pending",
-      "productionVerified": false
+      "productionVerified": false,
+      "deskAnalysis": {
+        "kind": "room_vs_universe",
+        "provisionalNextAction": "reassess_or_defer",
+        "observation": "Room and universe are the main independent headword glosses; 🏠 may suggest a whole house instead of either sense.",
+        "sourceExcerpt": "yu3: room;  universe;",
+        "sourceBasis": "pinned_CC-CEDICT_headword_plus_Unihan_candidate",
+        "reviewerIndependent": false,
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+      }
     },
     {
       "rank": 546,
@@ -3409,7 +3617,16 @@
       "earlierResearchNote": null,
       "lexicalDecision": "pending",
       "visualComprehensionDecision": "pending",
-      "productionVerified": false
+      "productionVerified": false,
+      "deskAnalysis": {
+        "kind": "guard_vs_protect",
+        "provisionalNextAction": "inspect_context",
+        "observation": "Guard or defend overlaps protect, but 🛡️ does not capture keeping watch or rule observance.",
+        "sourceExcerpt": "shou3: to guard;  to defend;  to keep watch;  to abide by the law",
+        "sourceBasis": "pinned_CC-CEDICT_headword_plus_Unihan_candidate",
+        "reviewerIndependent": false,
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+      }
     },
     {
       "rank": 549,
@@ -3428,7 +3645,16 @@
       "earlierResearchNote": null,
       "lexicalDecision": "pending",
       "visualComprehensionDecision": "pending",
-      "productionVerified": false
+      "productionVerified": false,
+      "deskAnalysis": {
+        "kind": "affect_vs_condition",
+        "provisionalNextAction": "inspect_context",
+        "observation": "Calm, quiet and safe overlap peaceful; 🕊️ invokes political peace rather than all readings.",
+        "sourceExcerpt": "an1: content;  calm;  still;  quiet",
+        "sourceBasis": "pinned_CC-CEDICT_headword_plus_Unihan_candidate",
+        "reviewerIndependent": false,
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+      }
     },
     {
       "rank": 551,
@@ -3450,7 +3676,16 @@
       "earlierResearchNote": null,
       "lexicalDecision": "pending",
       "visualComprehensionDecision": "pending",
-      "productionVerified": false
+      "productionVerified": false,
+      "deskAnalysis": {
+        "kind": "avoidance_vs_concealment",
+        "provisionalNextAction": "reassess_or_defer",
+        "observation": "Avoid mentioning taboo names differs from general concealment; 🙈 could imply hiding oneself or refusal to look.",
+        "sourceExcerpt": "hui4: to avoid mentioning;  taboo word;  name of deceased emperor or superior;",
+        "sourceBasis": "pinned_CC-CEDICT_headword_plus_Unihan_candidate",
+        "reviewerIndependent": false,
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+      }
     },
     {
       "rank": 553,
@@ -3469,7 +3704,16 @@
       "earlierResearchNote": null,
       "lexicalDecision": "pending",
       "visualComprehensionDecision": "pending",
-      "productionVerified": false
+      "productionVerified": false,
+      "deskAnalysis": {
+        "kind": "emotional_paraphrase",
+        "provisionalNextAction": "inspect_context",
+        "observation": "Astounded is close to surprised; 😮 may depict the reaction but needs recognition testing.",
+        "sourceExcerpt": "ya4: astounded;",
+        "sourceBasis": "pinned_CC-CEDICT_headword_plus_Unihan_candidate",
+        "reviewerIndependent": false,
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+      }
     },
     {
       "rank": 555,
@@ -3491,7 +3735,16 @@
       "earlierResearchNote": null,
       "lexicalDecision": "pending",
       "visualComprehensionDecision": "pending",
-      "productionVerified": false
+      "productionVerified": false,
+      "deskAnalysis": {
+        "kind": "extortion_vs_cheating",
+        "provisionalNextAction": "reassess_or_defer",
+        "observation": "Extort and erroneous text are distinct from generic cheat; 🎭 points toward disguise rather than extortion.",
+        "sourceExcerpt": "e2: error;  false;  to extort;  variant of 訛|讹[e2]",
+        "sourceBasis": "pinned_CC-CEDICT_headword_plus_Unihan_candidate",
+        "reviewerIndependent": false,
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+      }
     },
     {
       "rank": 557,
@@ -3513,7 +3766,16 @@
       "earlierResearchNote": null,
       "lexicalDecision": "pending",
       "visualComprehensionDecision": "pending",
-      "productionVerified": false
+      "productionVerified": false,
+      "deskAnalysis": {
+        "kind": "legal_noun_vs_verb",
+        "provisionalNextAction": "inspect_context",
+        "observation": "Litigation names a legal process; the candidate litigate is verbal, and ⚖️ is a broad law cue.",
+        "sourceExcerpt": "song4: litigation;",
+        "sourceBasis": "pinned_CC-CEDICT_headword_plus_Unihan_candidate",
+        "reviewerIndependent": false,
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+      }
     },
     {
       "rank": 558,
@@ -3532,7 +3794,16 @@
       "earlierResearchNote": null,
       "lexicalDecision": "pending",
       "visualComprehensionDecision": "pending",
-      "productionVerified": false
+      "productionVerified": false,
+      "deskAnalysis": {
+        "kind": "agricultural_activity",
+        "provisionalNextAction": "inspect_context",
+        "observation": "Peasant, farm and agriculture overlap farming, while 🚜 depicts modern mechanized practice.",
+        "sourceExcerpt": "nong2: peasant;  to farm;  agriculture;  diligent (old)",
+        "sourceBasis": "pinned_CC-CEDICT_headword_plus_Unihan_candidate",
+        "reviewerIndependent": false,
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+      }
     },
     {
       "rank": 560,
@@ -3554,7 +3825,16 @@
       "earlierResearchNote": null,
       "lexicalDecision": "pending",
       "visualComprehensionDecision": "pending",
-      "productionVerified": false
+      "productionVerified": false,
+      "deskAnalysis": {
+        "kind": "establishment_vs_construction",
+        "provisionalNextAction": "reassess_or_defer",
+        "observation": "Set up, establish or arrange is not always physical construction; 🏗️ can mislead for abstract institutions.",
+        "sourceExcerpt": "she4: to set up;  to arrange;  to establish;  to found",
+        "sourceBasis": "pinned_CC-CEDICT_headword_plus_Unihan_candidate",
+        "reviewerIndependent": false,
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+      }
     },
     {
       "rank": 562,
@@ -3576,7 +3856,16 @@
       "earlierResearchNote": null,
       "lexicalDecision": "pending",
       "visualComprehensionDecision": "pending",
-      "productionVerified": false
+      "productionVerified": false,
+      "deskAnalysis": {
+        "kind": "noun_verb_overlap",
+        "provisionalNextAction": "inspect_context",
+        "observation": "Farewell is nominal while bid farewell is a social act; 👋 is plausible but underspecified.",
+        "sourceExcerpt": "jue2: farewell;  secrets (of an art);",
+        "sourceBasis": "pinned_CC-CEDICT_headword_plus_Unihan_candidate",
+        "reviewerIndependent": false,
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+      }
     },
     {
       "rank": 566,
@@ -3598,7 +3887,16 @@
       "earlierResearchNote": null,
       "lexicalDecision": "pending",
       "visualComprehensionDecision": "pending",
-      "productionVerified": false
+      "productionVerified": false,
+      "deskAnalysis": {
+        "kind": "depletion_vs_empty_battery",
+        "provisionalNextAction": "inspect_context",
+        "observation": "Use up or exhaust overlaps deplete; 🔋 may indicate stored power rather than the action of using it up.",
+        "sourceExcerpt": "jin3: to the greatest extent;  (when used before a noun of location) furthest or extreme;  to be within the limits of;  to give priority to | jin4: to use up;  to exhaust;  to end;  to finish",
+        "sourceBasis": "pinned_CC-CEDICT_headword_plus_Unihan_candidate",
+        "reviewerIndependent": false,
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+      }
     },
     {
       "rank": 570,
@@ -3617,7 +3915,16 @@
       "earlierResearchNote": null,
       "lexicalDecision": "pending",
       "visualComprehensionDecision": "pending",
-      "productionVerified": false
+      "productionVerified": false,
+      "deskAnalysis": {
+        "kind": "kinship_specificity",
+        "provisionalNextAction": "reassess_or_defer",
+        "observation": "Grandson or descendant is not equivalent to any baby; 👶 lacks generational relationship and may imply an infant.",
+        "sourceExcerpt": "sun1: grandson;  descendant;",
+        "sourceBasis": "pinned_CC-CEDICT_headword_plus_Unihan_candidate",
+        "reviewerIndependent": false,
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+      }
     },
     {
       "rank": 575,
@@ -3636,7 +3943,16 @@
       "earlierResearchNote": null,
       "lexicalDecision": "pending",
       "visualComprehensionDecision": "pending",
-      "productionVerified": false
+      "productionVerified": false,
+      "deskAnalysis": {
+        "kind": "weather_vs_darkness",
+        "provisionalNextAction": "inspect_context",
+        "observation": "Overcast, shady and hidden can feel dark, but the black-moon symbol 🌑 is night rather than cloud shade.",
+        "sourceExcerpt": "yin1: overcast (weather);  cloudy;  shady;  Yin (the negative principle of Yin and Yang)",
+        "sourceBasis": "pinned_CC-CEDICT_headword_plus_Unihan_candidate",
+        "reviewerIndependent": false,
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+      }
     },
     {
       "rank": 577,
@@ -3655,7 +3971,16 @@
       "earlierResearchNote": null,
       "lexicalDecision": "pending",
       "visualComprehensionDecision": "pending",
-      "productionVerified": false
+      "productionVerified": false,
+      "deskAnalysis": {
+        "kind": "moral_vs_factual",
+        "provisionalNextAction": "reassess_or_defer",
+        "observation": "Wicked or crafty describes intention or character; false is a separate truth-value concept and 🎭 depicts performance.",
+        "sourceExcerpt": "jian1: wicked;  crafty;  traitor;  variant of 姦|奸[jian1]",
+        "sourceBasis": "pinned_CC-CEDICT_headword_plus_Unihan_candidate",
+        "reviewerIndependent": false,
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+      }
     },
     {
       "rank": 578,
@@ -3674,7 +3999,16 @@
       "earlierResearchNote": null,
       "lexicalDecision": "pending",
       "visualComprehensionDecision": "pending",
-      "productionVerified": false
+      "productionVerified": false,
+      "deskAnalysis": {
+        "kind": "comparison_relation",
+        "provisionalNextAction": "inspect_context",
+        "observation": "As, as if and such as express similarity or grammatical comparison; 🪞 is only a metaphor for likeness.",
+        "sourceExcerpt": "ru2: as;  as if;  such as;",
+        "sourceBasis": "pinned_CC-CEDICT_headword_plus_Unihan_candidate",
+        "reviewerIndependent": false,
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+      }
     },
     {
       "rank": 580,
@@ -3693,7 +4027,16 @@
       "earlierResearchNote": null,
       "lexicalDecision": "pending",
       "visualComprehensionDecision": "pending",
-      "productionVerified": false
+      "productionVerified": false,
+      "deskAnalysis": {
+        "kind": "court_title_conflict",
+        "provisionalNextAction": "reassess_or_defer",
+        "observation": "Imperial concubine is a specific court title, not a generic wife or bride; 👰 is misleading without further evidence.",
+        "sourceExcerpt": "fei1: imperial concubine;",
+        "sourceBasis": "pinned_CC-CEDICT_headword_plus_Unihan_candidate",
+        "reviewerIndependent": false,
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+      }
     },
     {
       "rank": 593,
@@ -3712,7 +4055,16 @@
       "earlierResearchNote": null,
       "lexicalDecision": "pending",
       "visualComprehensionDecision": "pending",
-      "productionVerified": false
+      "productionVerified": false,
+      "deskAnalysis": {
+        "kind": "agreement_kind",
+        "provisionalNextAction": "inspect_context",
+        "observation": "Pact or treaty can match agreement; 🤝 omits restrictions and other readings, so cue should stay sense-specific.",
+        "sourceExcerpt": "yao1: to weigh in a balance or on a scale; | yue1: to make an appointment;  to invite;  approximately;  pact",
+        "sourceBasis": "pinned_CC-CEDICT_headword_plus_Unihan_candidate",
+        "reviewerIndependent": false,
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+      }
     },
     {
       "rank": 595,
@@ -3731,7 +4083,16 @@
       "earlierResearchNote": null,
       "lexicalDecision": "pending",
       "visualComprehensionDecision": "pending",
-      "productionVerified": false
+      "productionVerified": false,
+      "deskAnalysis": {
+        "kind": "record_vs_adjective",
+        "provisionalNextAction": "inspect_context",
+        "observation": "To chronicle or an era differs from the adjective historical; 📜 evokes historical accounts rather than chronology alone.",
+        "sourceExcerpt": "ji4: order;  discipline;  age;  era",
+        "sourceBasis": "pinned_CC-CEDICT_headword_plus_Unihan_candidate",
+        "reviewerIndependent": false,
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+      }
     },
     {
       "rank": 596,
@@ -3753,7 +4114,16 @@
       "earlierResearchNote": null,
       "lexicalDecision": "pending",
       "visualComprehensionDecision": "pending",
-      "productionVerified": false
+      "productionVerified": false,
+      "deskAnalysis": {
+        "kind": "speed_vs_urgency",
+        "provisionalNextAction": "inspect_context",
+        "observation": "Run fast, speed or gallop means fast motion; hurry adds urgency, and 🏃 depicts a human instead of horse movement.",
+        "sourceExcerpt": "chi2: to run fast;  to speed;  to gallop;  to disseminate",
+        "sourceBasis": "pinned_CC-CEDICT_headword_plus_Unihan_candidate",
+        "reviewerIndependent": false,
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+      }
     },
     {
       "rank": 597,
@@ -3775,7 +4145,16 @@
       "earlierResearchNote": null,
       "lexicalDecision": "pending",
       "visualComprehensionDecision": "pending",
-      "productionVerified": false
+      "productionVerified": false,
+      "deskAnalysis": {
+        "kind": "threading_vs_sewing",
+        "provisionalNextAction": "inspect_context",
+        "observation": "To thread a needle can precede sewing but is not always stitching; 🪡 is the implement and the action remains separate.",
+        "sourceExcerpt": "ren4: to string;  to thread (needle);",
+        "sourceBasis": "pinned_CC-CEDICT_headword_plus_Unihan_candidate",
+        "reviewerIndependent": false,
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+      }
     },
     {
       "rank": 610,
@@ -3794,7 +4173,16 @@
       "earlierResearchNote": null,
       "lexicalDecision": "pending",
       "visualComprehensionDecision": "pending",
-      "productionVerified": false
+      "productionVerified": false,
+      "deskAnalysis": {
+        "kind": "material_property",
+        "provisionalNextAction": "inspect_context",
+        "observation": "Tough or pliable but strong is a material property, not necessarily muscular strength; 💪 shifts the referent.",
+        "sourceExcerpt": "ren4: variant of 韌|韧[ren4];  old variant of 韌|韧[ren4];  annealed;  pliable but strong",
+        "sourceBasis": "pinned_CC-CEDICT_headword_plus_Unihan_candidate",
+        "reviewerIndependent": false,
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+      }
     },
     {
       "rank": 617,
@@ -3816,7 +4204,16 @@
       "earlierResearchNote": null,
       "lexicalDecision": "pending",
       "visualComprehensionDecision": "pending",
-      "productionVerified": false
+      "productionVerified": false,
+      "deskAnalysis": {
+        "kind": "sense_selection_error",
+        "provisionalNextAction": "reassess_or_defer",
+        "observation": "Picking or digging out is prominent; lifting clothes is a restricted sense. 🏋️ implies weightlifting instead.",
+        "sourceExcerpt": "kou1: to dig out;  to pick out (with one's fingers);  to carve;  to cut",
+        "sourceBasis": "pinned_CC-CEDICT_headword_plus_Unihan_candidate",
+        "reviewerIndependent": false,
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+      }
     },
     {
       "rank": 619,
@@ -3838,7 +4235,16 @@
       "earlierResearchNote": null,
       "lexicalDecision": "pending",
       "visualComprehensionDecision": "pending",
-      "productionVerified": false
+      "productionVerified": false,
+      "deskAnalysis": {
+        "kind": "action_intensity",
+        "provisionalNextAction": "inspect_context",
+        "observation": "Grip or clutch forcefully overlaps grasp; ✊ captures a fist but not necessarily taking hold of something.",
+        "sourceExcerpt": "e4: to grip forcefully;  to clutch at;  to guard;  to control",
+        "sourceBasis": "pinned_CC-CEDICT_headword_plus_Unihan_candidate",
+        "reviewerIndependent": false,
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+      }
     },
     {
       "rank": 620,
@@ -3860,7 +4266,16 @@
       "earlierResearchNote": null,
       "lexicalDecision": "pending",
       "visualComprehensionDecision": "pending",
-      "productionVerified": false
+      "productionVerified": false,
+      "deskAnalysis": {
+        "kind": "resistance_vs_defense",
+        "provisionalNextAction": "inspect_context",
+        "observation": "Repel or refuse describes resistance, and 🛡️ conveys defense only in some contexts.",
+        "sourceExcerpt": "ju4: to resist;  to repel;  to refuse;",
+        "sourceBasis": "pinned_CC-CEDICT_headword_plus_Unihan_candidate",
+        "reviewerIndependent": false,
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+      }
     },
     {
       "rank": 621,
@@ -3882,7 +4297,16 @@
       "earlierResearchNote": null,
       "lexicalDecision": "pending",
       "visualComprehensionDecision": "pending",
-      "productionVerified": false
+      "productionVerified": false,
+      "deskAnalysis": {
+        "kind": "search_paraphrase",
+        "provisionalNextAction": "inspect_context",
+        "observation": "Try to find, look for and seek match search closely; 🔍 is a conventional visual cue for looking.",
+        "sourceExcerpt": "zhao3: to try to find;  to look for;  to call on sb;  to find",
+        "sourceBasis": "pinned_CC-CEDICT_headword_plus_Unihan_candidate",
+        "reviewerIndependent": false,
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+      }
     },
     {
       "rank": 624,
@@ -3904,7 +4328,16 @@
       "earlierResearchNote": null,
       "lexicalDecision": "pending",
       "visualComprehensionDecision": "pending",
-      "productionVerified": false
+      "productionVerified": false,
+      "deskAnalysis": {
+        "kind": "tear_vs_explosion",
+        "provisionalNextAction": "reassess_or_defer",
+        "observation": "Pull or tear cloth differs from an explosion; 💥 suggests a blast rather than tearing something down.",
+        "sourceExcerpt": "che3: to pull;  to tear;  (of cloth, thread etc) to buy;  to chat",
+        "sourceBasis": "pinned_CC-CEDICT_headword_plus_Unihan_candidate",
+        "reviewerIndependent": false,
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+      }
     },
     {
       "rank": 632,
@@ -3926,7 +4359,16 @@
       "earlierResearchNote": null,
       "lexicalDecision": "pending",
       "visualComprehensionDecision": "pending",
-      "productionVerified": false
+      "productionVerified": false,
+      "deskAnalysis": {
+        "kind": "break_vs_heartbreak",
+        "provisionalNextAction": "reassess_or_defer",
+        "observation": "Fracture, snap and fold are physical actions; 💔 is conventionally emotional heartbreak.",
+        "sourceExcerpt": "she2: to break (e.g. stick or bone);  a loss; | zhe1: to turn sth over;  to turn upside down;  to tip sth out (of a container);",
+        "sourceBasis": "pinned_CC-CEDICT_headword_plus_Unihan_candidate",
+        "reviewerIndependent": false,
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+      }
     },
     {
       "rank": 641,
@@ -3948,7 +4390,16 @@
       "earlierResearchNote": null,
       "lexicalDecision": "pending",
       "visualComprehensionDecision": "pending",
-      "productionVerified": false
+      "productionVerified": false,
+      "deskAnalysis": {
+        "kind": "restraint_vs_locking",
+        "provisionalNextAction": "inspect_context",
+        "observation": "Restrict or keep down may imply restraint, but 🔒 specifically signals a lock.",
+        "sourceExcerpt": "yi4: to restrain;  to restrict;  to keep down;  or",
+        "sourceBasis": "pinned_CC-CEDICT_headword_plus_Unihan_candidate",
+        "reviewerIndependent": false,
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+      }
     },
     {
       "rank": 647,
@@ -3967,7 +4418,16 @@
       "earlierResearchNote": null,
       "lexicalDecision": "pending",
       "visualComprehensionDecision": "pending",
-      "productionVerified": false
+      "productionVerified": false,
+      "deskAnalysis": {
+        "kind": "place_kind_specificity",
+        "provisionalNextAction": "inspect_context",
+        "observation": "Lane or workshop differ from neighborhood as an administrative area; 🏘️ depicts residences rather than the source reading.",
+        "sourceExcerpt": "fang1: lane (usually as part of a street name);  memorial archway; | fang2: workshop;  mill;",
+        "sourceBasis": "pinned_CC-CEDICT_headword_plus_Unihan_candidate",
+        "reviewerIndependent": false,
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+      }
     },
     {
       "rank": 651,
