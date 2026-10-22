@@ -1,0 +1,314 @@
+{
+  "schema": "chromalect.mandarin.lexical-crossref-batch.v0.1",
+  "source": {
+    "title": "CC-CEDICT per-headword v2 mirror",
+    "repository": "krmanik/cedict-json",
+    "commit": "63c2569948629323b515833930fdd10f285401b6",
+    "dataLicense": "CC BY-SA 4.0",
+    "upstream": "https://cc-cedict.org/",
+    "mirror": "https://github.com/krmanik/cedict-json",
+    "transform": "Selected single-simplified-character dictionary records, retaining readings and definitions; literal English gloss matching is automated triage only"
+  },
+  "rankStart": 691,
+  "rankEnd": 700,
+  "summary": {
+    "total": 10,
+    "headwordFound": 10,
+    "withCandidate": 10,
+    "withLiteralSupport": 7
+  },
+  "records": [
+    {
+      "rank": 691,
+      "character": "甫",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/甫.json",
+      "sourceBlobSha": "e6551d30819edb8bf3eed1929ab7fb1b32004339",
+      "traditional": "甫",
+      "dictionaryReadings": [
+        "fu3"
+      ],
+      "dictionaryDefinitions": {
+        "fu3": "(classical) barely; just; just now; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "begin",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 692,
+      "character": "匣",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/匣.json",
+      "sourceBlobSha": "22ee151f9304e1d43ec2525c553b5a7793944d26",
+      "traditional": "匣",
+      "dictionaryReadings": [
+        "xia2"
+      ],
+      "dictionaryDefinitions": {
+        "xia2": "box; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "box",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "xia2"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 693,
+      "character": "更",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/更.json",
+      "sourceBlobSha": "1052721a5f9a2ee2996e1485ea32a1abc6b90745",
+      "traditional": "更",
+      "dictionaryReadings": [
+        "geng1",
+        "geng4"
+      ],
+      "dictionaryDefinitions": {
+        "geng1": "to change or replace; to experience; one of the five two hour periods into which the night was formerly divided; watch (e.g. of a sentry or guard); ",
+        "geng4": "more; even more; further; still; still more; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "change",
+          "sourceGlossGroupIndex": 1,
+          "matchingDictionaryReadings": [
+            "geng1"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 694,
+      "character": "束",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/束.json",
+      "sourceBlobSha": "bea39d46a1d5dc03a9699182180e9ac8ea5dbab9",
+      "traditional": "束",
+      "dictionaryReadings": [
+        "Shu4",
+        "shu4"
+      ],
+      "dictionaryDefinitions": {
+        "Shu4": "surname Shu; ",
+        "shu4": "to bind; bunch; bundle; classifier for bunches, bundles, beams of light etc; to control; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "bind",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "shu4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 695,
+      "character": "吾",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/吾.json",
+      "sourceBlobSha": "abf14f023f2b56344f32afb3936f8ec03932dd86",
+      "traditional": "吾",
+      "dictionaryReadings": [
+        "Wu2",
+        "wu2"
+      ],
+      "dictionaryDefinitions": {
+        "Wu2": "surname Wu; ",
+        "wu2": "I; my (old); "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "my",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "wu2"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 696,
+      "character": "豆",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/豆.json",
+      "sourceBlobSha": "5bd38540c084dc5b7b8435e17d6be9af273db0dd",
+      "traditional": "豆",
+      "dictionaryReadings": [
+        "dou4"
+      ],
+      "dictionaryDefinitions": {
+        "dou4": "variant of 豆[dou4]; bean; pea; CL:棵[ke1],粒[li4]; sacrificial vessel; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "beans",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 697,
+      "character": "两",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/两.json",
+      "sourceBlobSha": "b165172918874a068e9022889a49b3c0324deeab",
+      "traditional": "兩",
+      "dictionaryReadings": [
+        "liang3"
+      ],
+      "dictionaryDefinitions": {
+        "liang3": "two; both; some; a few; tael, unit of weight equal to 50 grams (modern) or 1⁄16 of a catty 斤[jin1] (old); "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "two",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "liang3"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 698,
+      "character": "酉",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/酉.json",
+      "sourceBlobSha": "e873d03470555af1d4816326383f4d0d6e482137",
+      "traditional": "酉",
+      "dictionaryReadings": [
+        "you3"
+      ],
+      "dictionaryDefinitions": {
+        "you3": "10th earthly branch: 5-7 p.m., 8th solar month (8th September-7th October), year of the Rooster; ancient Chinese compass point: 270° (west); "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "wine vessel",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 699,
+      "character": "丽",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/丽.json",
+      "sourceBlobSha": "a639aee42b12ebe61741d628c51d25bc52cca5ee",
+      "traditional": "麗",
+      "dictionaryReadings": [
+        "Li2",
+        "li4"
+      ],
+      "dictionaryDefinitions": {
+        "Li2": "Korea; ",
+        "li4": "beautiful; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "beautiful",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "li4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 700,
+      "character": "医",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/医.json",
+      "sourceBlobSha": "bc106cf0e0d0578c26be9226c06d1a5080bffb35",
+      "traditional": "醫",
+      "dictionaryReadings": [
+        "yi1"
+      ],
+      "dictionaryDefinitions": {
+        "yi1": "medical; medicine; doctor; to cure; to treat; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "doctor",
+          "sourceGlossGroupIndex": 1,
+          "matchingDictionaryReadings": [
+            "yi1"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    }
+  ]
+}
