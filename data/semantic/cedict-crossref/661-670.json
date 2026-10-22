@@ -1,0 +1,316 @@
+{
+  "schema": "chromalect.mandarin.lexical-crossref-batch.v0.1",
+  "source": {
+    "title": "CC-CEDICT per-headword v2 mirror",
+    "repository": "krmanik/cedict-json",
+    "commit": "63c2569948629323b515833930fdd10f285401b6",
+    "dataLicense": "CC BY-SA 4.0",
+    "upstream": "https://cc-cedict.org/",
+    "mirror": "https://github.com/krmanik/cedict-json",
+    "transform": "Selected single-simplified-character dictionary records, retaining readings and definitions; literal English gloss matching is automated triage only"
+  },
+  "rankStart": 661,
+  "rankEnd": 670,
+  "summary": {
+    "total": 10,
+    "headwordFound": 10,
+    "withCandidate": 10,
+    "withLiteralSupport": 9
+  },
+  "records": [
+    {
+      "rank": 661,
+      "character": "芙",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/芙.json",
+      "sourceBlobSha": "d4aa7a28a6ec73573d3d27c0a01095a28fbda85d",
+      "traditional": "芙",
+      "dictionaryReadings": [
+        "fu2"
+      ],
+      "dictionaryDefinitions": {
+        "fu2": "see 芙蓉[fu2 rong2], lotus; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "hibiscus",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 662,
+      "character": "芜",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/芜.json",
+      "sourceBlobSha": "a7d62431e395737b132b5a15027a7cdea542996a",
+      "traditional": "蕪",
+      "dictionaryReadings": [
+        "wu2"
+      ],
+      "dictionaryDefinitions": {
+        "wu2": "overgrown with weeds; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "weeds",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "wu2"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 663,
+      "character": "苇",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/苇.json",
+      "sourceBlobSha": "af6a60dece2cc8dcba7c02271ab83f53f04e8e65",
+      "traditional": "葦",
+      "dictionaryReadings": [
+        "wei3"
+      ],
+      "dictionaryDefinitions": {
+        "wei3": "reed; rush; Phragmites communis; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "reed",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "wei3"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 664,
+      "character": "芽",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/芽.json",
+      "sourceBlobSha": "67d6587caf889cfd3e9e4ddcae3020bcd9b045e5",
+      "traditional": "芽",
+      "dictionaryReadings": [
+        "ya2"
+      ],
+      "dictionaryDefinitions": {
+        "ya2": "bud; sprout; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "sprout",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "ya2"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 665,
+      "character": "花",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/花.json",
+      "sourceBlobSha": "e4e815c9d1d93fce59520b164027b7865a667958",
+      "traditional": "蘤",
+      "dictionaryReadings": [
+        "Hua1",
+        "hua1"
+      ],
+      "dictionaryDefinitions": {
+        "Hua1": "surname Hua; ",
+        "hua1": "flower; blossom; CL:朵[duo3],支[zhi1],束[shu4],把[ba3],盆[pen2],簇[cu4]; fancy pattern; florid; to spend (money, time); old variant of 花[hua1]; variant of 花[hua1]; flower; blossom; also pr. [wei3]; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "flower",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "hua1"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 666,
+      "character": "芹",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/芹.json",
+      "sourceBlobSha": "fdbaf31db1147c2abe3d39dda9a9b1998cd546cc",
+      "traditional": "芹",
+      "dictionaryReadings": [
+        "qin2"
+      ],
+      "dictionaryDefinitions": {
+        "qin2": "Chinese celery; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "celery",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "qin2"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 667,
+      "character": "芥",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/芥.json",
+      "sourceBlobSha": "13b5770da0a743f032ecf14f0c776966899b9259",
+      "traditional": "芥",
+      "dictionaryReadings": [
+        "gai4",
+        "jie4"
+      ],
+      "dictionaryDefinitions": {
+        "gai4": "see 芥藍|芥蓝[gai4 lan2]; ",
+        "jie4": "mustard; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "mustard",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "jie4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 668,
+      "character": "芬",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/芬.json",
+      "sourceBlobSha": "22af7047193127b0dcdafdb0644e0b3648adb9e3",
+      "traditional": "芬",
+      "dictionaryReadings": [
+        "fen1"
+      ],
+      "dictionaryDefinitions": {
+        "fen1": "perfume; fragrance; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "fragrance",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "fen1"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 669,
+      "character": "苍",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/苍.json",
+      "sourceBlobSha": "2a9e91597d4d6ac237b8d58c3198f88c59b950d0",
+      "traditional": "蒼",
+      "dictionaryReadings": [
+        "Cang1",
+        "cang1"
+      ],
+      "dictionaryDefinitions": {
+        "Cang1": "surname Cang; ",
+        "cang1": "dark blue; deep green; ash-gray; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "green",
+          "sourceGlossGroupIndex": 1,
+          "matchingDictionaryReadings": [
+            "cang1"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 670,
+      "character": "芳",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/芳.json",
+      "sourceBlobSha": "7d90e5c2fb8b1a7a542de11e23e3724231268a24",
+      "traditional": "芳",
+      "dictionaryReadings": [
+        "fang1"
+      ],
+      "dictionaryDefinitions": {
+        "fang1": "fragrant; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "fragrant",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "fang1"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    }
+  ]
+}
