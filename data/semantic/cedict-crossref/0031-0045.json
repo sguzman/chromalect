@@ -1,0 +1,396 @@
+{
+  "schema": "chromalect.mandarin.lexical-crossref-batch.v0.1",
+  "source": {
+    "title": "CC-CEDICT per-headword v2 mirror",
+    "repository": "krmanik/cedict-json",
+    "commit": "63c2569948629323b515833930fdd10f285401b6",
+    "dataLicense": "CC BY-SA 4.0",
+    "upstream": "https://cc-cedict.org/",
+    "mirror": "https://github.com/krmanik/cedict-json",
+    "transform": "Selected single-simplified-character dictionary records, retaining readings and definitions; literal English gloss matching is automated triage only"
+  },
+  "rankStart": 31,
+  "rankEnd": 45,
+  "summary": {
+    "total": 15,
+    "headwordFound": 15,
+    "withCandidate": 8,
+    "withLiteralSupport": 8
+  },
+  "records": [
+    {
+      "rank": 31,
+      "character": "寸",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/寸.json",
+      "sourceBlobSha": "db2951980ca4758b7ad05553a1ae3fccd7e4c600",
+      "traditional": "寸",
+      "dictionaryReadings": [
+        "cun4"
+      ],
+      "dictionaryDefinitions": {
+        "cun4": "a unit of length; inch; thumb; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "inch",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "cun4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 32,
+      "character": "大",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/大.json",
+      "sourceBlobSha": "a3e6d18f36ccf3953ad673aa1b138ef23cd9a1f4",
+      "traditional": "大",
+      "dictionaryReadings": [
+        "da4",
+        "dai4"
+      ],
+      "dictionaryDefinitions": {
+        "da4": "big; huge; large; major; great; wide; deep; older (than); oldest; eldest; greatly; very much; (dialect) father; father's elder or younger brother; ",
+        "dai4": "see 大夫[dai4 fu5]; "
+      },
+      "selectedSenseChecks": [],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 33,
+      "character": "丈",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/丈.json",
+      "sourceBlobSha": "aa750af93627140897653cc291a99099fab1a683",
+      "traditional": "丈",
+      "dictionaryReadings": [
+        "zhang4"
+      ],
+      "dictionaryDefinitions": {
+        "zhang4": "measure of length, ten Chinese feet (3.3 m); to measure; husband; polite appellation for an older male; "
+      },
+      "selectedSenseChecks": [],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 34,
+      "character": "与",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/与.json",
+      "sourceBlobSha": "a7d72c0edad4af1390edf04f681e6ef3abd0a3cd",
+      "traditional": "與",
+      "dictionaryReadings": [
+        "yu2",
+        "yu3",
+        "yu4"
+      ],
+      "dictionaryDefinitions": {
+        "yu2": "variant of 歟|欤[yu2]; ",
+        "yu3": "and; to give; together with; ",
+        "yu4": "to take part in; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "give",
+          "sourceGlossGroupIndex": 4,
+          "matchingDictionaryReadings": [
+            "yu3"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 35,
+      "character": "万",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/万.json",
+      "sourceBlobSha": "369a4d778549b9d56797d8005846419a14596f18",
+      "traditional": "萬",
+      "dictionaryReadings": [
+        "Mo4",
+        "Wan4",
+        "wan4"
+      ],
+      "dictionaryDefinitions": {
+        "Mo4": "see 万俟[Mo4 qi2]; ",
+        "Wan4": "surname Wan; ",
+        "wan4": "ten thousand; a great number; "
+      },
+      "selectedSenseChecks": [],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 36,
+      "character": "上",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/上.json",
+      "sourceBlobSha": "691c382b97410be3462913ec507c4475ff4caa4e",
+      "traditional": "上",
+      "dictionaryReadings": [
+        "shang3",
+        "shang4"
+      ],
+      "dictionaryDefinitions": {
+        "shang3": "see 上聲|上声[shang3 sheng1]; ",
+        "shang4": "on top; upon; above; upper; previous; first (of multiple parts); to climb; to get onto; to go up; to attend (class or university); "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "go up",
+          "sourceGlossGroupIndex": 2,
+          "matchingDictionaryReadings": [
+            "shang4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 37,
+      "character": "小",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/小.json",
+      "sourceBlobSha": "43dcebdf56c4d8f77d9600cbfbcfb5db06ff6d19",
+      "traditional": "小",
+      "dictionaryReadings": [
+        "xiao3"
+      ],
+      "dictionaryDefinitions": {
+        "xiao3": "small; tiny; few; young; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "small",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "xiao3"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 38,
+      "character": "口",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/口.json",
+      "sourceBlobSha": "b7af00eb1960fd7e0ab510f7d04c91ae8d24fcd2",
+      "traditional": "口",
+      "dictionaryReadings": [
+        "kou3"
+      ],
+      "dictionaryDefinitions": {
+        "kou3": "mouth; classifier for things with mouths (people, domestic animals, cannons, wells etc); classifier for bites or mouthfuls; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "mouth",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "kou3"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 39,
+      "character": "山",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/山.json",
+      "sourceBlobSha": "5c4b7ac04b3452b7bfd7c0054f5b9e23034cd66d",
+      "traditional": "山",
+      "dictionaryReadings": [
+        "Shan1",
+        "shan1"
+      ],
+      "dictionaryDefinitions": {
+        "Shan1": "surname Shan; ",
+        "shan1": "mountain; hill; anything that resembles a mountain; CL:座[zuo4]; bundled straw in which silkworms spin cocoons; gable; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "mountain",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "shan1"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 40,
+      "character": "巾",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/巾.json",
+      "sourceBlobSha": "d39d8703f3476e7b81a1a5a267b5c7a521b039ce",
+      "traditional": "巾",
+      "dictionaryReadings": [
+        "jin1"
+      ],
+      "dictionaryDefinitions": {
+        "jin1": "towel; general purpose cloth; women's headcovering (old); Kangxi radical 50; "
+      },
+      "selectedSenseChecks": [],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 41,
+      "character": "千",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/千.json",
+      "sourceBlobSha": "b4409e94d77fd96e138325308a260782cf7cb840",
+      "traditional": "韆",
+      "dictionaryReadings": [
+        "qian1"
+      ],
+      "dictionaryDefinitions": {
+        "qian1": "thousand; a swing; "
+      },
+      "selectedSenseChecks": [],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 42,
+      "character": "乞",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/乞.json",
+      "sourceBlobSha": "67f644f4762e13f8fd58cfc7ccf09dcbd8e060e4",
+      "traditional": "乞",
+      "dictionaryReadings": [
+        "qi3"
+      ],
+      "dictionaryDefinitions": {
+        "qi3": "to beg; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "beg",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "qi3"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 43,
+      "character": "川",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/川.json",
+      "sourceBlobSha": "b7a080690cdcdb94808c03c7b7237c7707028e49",
+      "traditional": "川",
+      "dictionaryReadings": [
+        "Chuan1",
+        "chuan1"
+      ],
+      "dictionaryDefinitions": {
+        "Chuan1": "abbr. for Sichuan Province 四川[Si4 chuan1] in southwest China; ",
+        "chuan1": "river; creek; plain; an area of level country; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "river",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "chuan1"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 44,
+      "character": "亿",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/亿.json",
+      "sourceBlobSha": "fc1182dbe254cd2afb556af7ca8fcd8b4973804b",
+      "traditional": "億",
+      "dictionaryReadings": [
+        "yi4"
+      ],
+      "dictionaryDefinitions": {
+        "yi4": "100 million; "
+      },
+      "selectedSenseChecks": [],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 45,
+      "character": "个",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/个.json",
+      "sourceBlobSha": "26ca0c5ee90509fcdbea114469f2b2b8c0e2b1a0",
+      "traditional": "箇",
+      "dictionaryReadings": [
+        "ge4"
+      ],
+      "dictionaryDefinitions": {
+        "ge4": "individual; this; that; size; classifier for people or objects in general; variant of 個|个[ge4]; "
+      },
+      "selectedSenseChecks": [],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    }
+  ]
+}
