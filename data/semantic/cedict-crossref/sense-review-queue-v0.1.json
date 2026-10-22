@@ -21,7 +21,10 @@
     "medium": 11,
     "unclassified": 222,
     "substringOnly": 7,
-    "previouslyTriaged": 19
+    "previouslyTriaged": 19,
+    "deskAnalyzedHighPriority": 15,
+    "independentlyLexicallyApproved": 0,
+    "emojiComprehensionApproved": 0
   },
   "records": [
     {
@@ -41,7 +44,13 @@
       "earlierResearchNote": "Steam is narrower than the dictionary's prominent gas, air, and qi readings; do not accept steam as an undifferentiated meaning.",
       "lexicalDecision": "pending",
       "visualComprehensionDecision": "pending",
-      "productionVerified": false
+      "productionVerified": false,
+      "deskAnalysis": {
+        "kind": "sense_scope_conflict",
+        "provisionalNextAction": "reassess_or_defer",
+        "observation": "The independent headword emphasizes gas, air and qi; steam is too narrow as a general cue for 气.",
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+      }
     },
     {
       "rank": 135,
@@ -60,7 +69,13 @@
       "earlierResearchNote": "Still or yet versus again; temporal persistence is not necessarily repetition.",
       "lexicalDecision": "pending",
       "visualComprehensionDecision": "pending",
-      "productionVerified": false
+      "productionVerified": false,
+      "deskAnalysis": {
+        "kind": "meaning_shift",
+        "provisionalNextAction": "reassess_or_defer",
+        "observation": "Still, yet and remain imply continuation rather than repetition; the again/🔁 cue may teach the wrong contrast.",
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+      }
     },
     {
       "rank": 137,
@@ -79,7 +94,13 @@
       "earlierResearchNote": "Current CC-CEDICT weight measure differs from the selected axe reading; check historic versus modern sense and pictogram.",
       "lexicalDecision": "pending",
       "visualComprehensionDecision": "pending",
-      "productionVerified": false
+      "productionVerified": false,
+      "deskAnalysis": {
+        "kind": "modern_versus_historical",
+        "provisionalNextAction": "reassess_or_defer",
+        "observation": "The independent dictionary presents the contemporary mass unit; axe may reflect historical character analysis, not the primary modern usage.",
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+      }
     },
     {
       "rank": 145,
@@ -98,7 +119,13 @@
       "earlierResearchNote": "Terrible, fierce, ominous versus sad; candidate emotion appears semantically off-target.",
       "lexicalDecision": "pending",
       "visualComprehensionDecision": "pending",
-      "productionVerified": false
+      "productionVerified": false,
+      "deskAnalysis": {
+        "kind": "semantic_conflict",
+        "provisionalNextAction": "reassess_or_defer",
+        "observation": "Terrible, fierce and ominous are not equivalent to sad; the unhappy-face pictogram risks misinformation.",
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+      }
     },
     {
       "rank": 164,
@@ -120,7 +147,13 @@
       "earlierResearchNote": "Selected burn is an action; independent headword emphasizes the noun fire and related uses.",
       "lexicalDecision": "pending",
       "visualComprehensionDecision": "pending",
-      "productionVerified": false
+      "productionVerified": false,
+      "deskAnalysis": {
+        "kind": "part_of_speech",
+        "provisionalNextAction": "inspect_existing_alternative",
+        "observation": "The source emphasizes the noun fire; evaluate the separate fire candidate before treating burn as a verb-level meaning.",
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+      }
     },
     {
       "rank": 169,
@@ -148,7 +181,13 @@
       "earlierResearchNote": "To agree, draw up or order are verbs; selected agreement is a noun and may require a different event cue.",
       "lexicalDecision": "pending",
       "visualComprehensionDecision": "pending",
-      "productionVerified": false
+      "productionVerified": false,
+      "deskAnalysis": {
+        "kind": "part_of_speech",
+        "provisionalNextAction": "redesign_verb_cue",
+        "observation": "The cited meanings are predominantly verbal agree, draw up and order; agreement-as-noun pictograms lose action structure.",
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+      }
     },
     {
       "rank": 190,
@@ -167,7 +206,13 @@
       "earlierResearchNote": "Jade is more specific than generic precious stone; evaluate whether the icon conveys jade.",
       "lexicalDecision": "pending",
       "visualComprehensionDecision": "pending",
-      "productionVerified": false
+      "productionVerified": false,
+      "deskAnalysis": {
+        "kind": "specificity_mismatch",
+        "provisionalNextAction": "redesign_pictogram",
+        "observation": "Jade is more specific than precious stone; 💎 could suggest a diamond rather than the mineral/cultural referent.",
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+      }
     },
     {
       "rank": 199,
@@ -186,7 +231,13 @@
       "earlierResearchNote": "Pounce or pat differs from generic attack; verify selected motor action.",
       "lexicalDecision": "pending",
       "visualComprehensionDecision": "pending",
-      "productionVerified": false
+      "productionVerified": false,
+      "deskAnalysis": {
+        "kind": "action_specificity",
+        "provisionalNextAction": "redesign_verb_cue",
+        "observation": "Pounce, pat, flap and dab are distinct from generic attack; the ⚔️ pictogram is too broad.",
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+      }
     },
     {
       "rank": 268,
@@ -205,7 +256,13 @@
       "earlierResearchNote": null,
       "lexicalDecision": "pending",
       "visualComprehensionDecision": "pending",
-      "productionVerified": false
+      "productionVerified": false,
+      "deskAnalysis": {
+        "kind": "near_synonym",
+        "provisionalNextAction": "inspect_context",
+        "observation": "Hill versus hillock/mound is a plausible difference in lexical granularity. The original substring match was not whole-term evidence.",
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+      }
     },
     {
       "rank": 448,
@@ -224,7 +281,13 @@
       "earlierResearchNote": null,
       "lexicalDecision": "pending",
       "visualComprehensionDecision": "pending",
-      "productionVerified": false
+      "productionVerified": false,
+      "deskAnalysis": {
+        "kind": "lexical_context_conflict",
+        "provisionalNextAction": "reassess_or_defer",
+        "observation": "Palace courtyard can be translated court in a historical context but ⚖️ suggests a legal courtroom, which may mislead.",
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+      }
     },
     {
       "rank": 687,
@@ -243,7 +306,13 @@
       "earlierResearchNote": null,
       "lexicalDecision": "pending",
       "visualComprehensionDecision": "pending",
-      "productionVerified": false
+      "productionVerified": false,
+      "deskAnalysis": {
+        "kind": "morphology_difference",
+        "provisionalNextAction": "inspect_context",
+        "observation": "Extremely as adverb and utmost/top as nouns or adjectives overlap with extreme, but grammar and scope differ.",
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+      }
     },
     {
       "rank": 768,
@@ -262,7 +331,13 @@
       "earlierResearchNote": null,
       "lexicalDecision": "pending",
       "visualComprehensionDecision": "pending",
-      "productionVerified": false
+      "productionVerified": false,
+      "deskAnalysis": {
+        "kind": "number_inflection",
+        "provisionalNextAction": "inspect_context",
+        "observation": "The dictionary gives plural soldiers; singular soldier may be a valid member-of-class cue. This is a boundary-only mismatch.",
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+      }
     },
     {
       "rank": 828,
@@ -284,7 +359,13 @@
       "earlierResearchNote": null,
       "lexicalDecision": "pending",
       "visualComprehensionDecision": "pending",
-      "productionVerified": false
+      "productionVerified": false,
+      "deskAnalysis": {
+        "kind": "derivational_morphology",
+        "provisionalNextAction": "inspect_context",
+        "observation": "The dictionary lists -shaped as a suffix along with state and condition, so standalone shape needs lexical-category evidence.",
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+      }
     },
     {
       "rank": 867,
@@ -310,7 +391,13 @@
       "earlierResearchNote": null,
       "lexicalDecision": "pending",
       "visualComprehensionDecision": "pending",
-      "productionVerified": false
+      "productionVerified": false,
+      "deskAnalysis": {
+        "kind": "aspect_or_participle",
+        "provisionalNextAction": "redesign_verb_cue",
+        "observation": "Drowned is in the source under mo4, but the 🌊 pictogram depicts water rather than the act or result of drowning.",
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+      }
     },
     {
       "rank": 983,
@@ -333,7 +420,13 @@
       "earlierResearchNote": null,
       "lexicalDecision": "pending",
       "visualComprehensionDecision": "pending",
-      "productionVerified": false
+      "productionVerified": false,
+      "deskAnalysis": {
+        "kind": "adjective_noun_shift",
+        "provisionalNextAction": "inspect_context",
+        "observation": "Lucky/fortunate and luck are related but differ in grammatical type; 🍀 is a conventional luck cue needing comprehension review.",
+        "status": "assistant_preliminary_analysis_not_independent_lexical_review"
+      }
     },
     {
       "rank": 106,
