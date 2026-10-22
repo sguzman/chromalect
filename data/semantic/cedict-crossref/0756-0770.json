@@ -1,0 +1,458 @@
+{
+  "schema": "chromalect.mandarin.lexical-crossref-batch.v0.1",
+  "source": {
+    "title": "CC-CEDICT per-headword v2 mirror",
+    "repository": "krmanik/cedict-json",
+    "commit": "63c2569948629323b515833930fdd10f285401b6",
+    "dataLicense": "CC BY-SA 4.0",
+    "upstream": "https://cc-cedict.org/",
+    "mirror": "https://github.com/krmanik/cedict-json",
+    "transform": "Selected single-simplified-character dictionary records, retaining readings and definitions; literal English gloss matching is automated triage only"
+  },
+  "rankStart": 756,
+  "rankEnd": 770,
+  "summary": {
+    "total": 15,
+    "headwordFound": 15,
+    "withCandidate": 15,
+    "withLiteralSupport": 12
+  },
+  "records": [
+    {
+      "rank": 756,
+      "character": "财",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/财.json",
+      "sourceBlobSha": "fe138e9b162ed3e497ed7ed55e086c24d349714b",
+      "traditional": "財",
+      "dictionaryReadings": [
+        "cai2"
+      ],
+      "dictionaryDefinitions": {
+        "cai2": "money; wealth; riches; property; valuables; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "wealth",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "cai2"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 757,
+      "character": "针",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/针.json",
+      "sourceBlobSha": "d9d7f5624981f811aac5006332dcb180614dfb7c",
+      "traditional": "鍼",
+      "dictionaryReadings": [
+        "zhen1"
+      ],
+      "dictionaryDefinitions": {
+        "zhen1": "needle; pin; injection; stitch; CL:根[gen1],支[zhi1]; variant of 針|针[zhen1], needle; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "needle",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "zhen1"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 758,
+      "character": "钉",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/钉.json",
+      "sourceBlobSha": "13728ec74d807967d10c911b0ae1317bc42f4de8",
+      "traditional": "釘",
+      "dictionaryReadings": [
+        "ding1",
+        "ding4"
+      ],
+      "dictionaryDefinitions": {
+        "ding1": "nail; to follow closely; to keep at sb (to do sth); variant of 盯[ding1]; ",
+        "ding4": "to join things together by fixing them in place at one or more points; to nail; to pin; to staple; to sew on; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "nail",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "ding1",
+            "ding4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 759,
+      "character": "牡",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/牡.json",
+      "sourceBlobSha": "58c9dc8778dea9a384bf89082703f56057ce32ae",
+      "traditional": "牡",
+      "dictionaryReadings": [
+        "mu3"
+      ],
+      "dictionaryDefinitions": {
+        "mu3": "(of a bird, animal or plant) male; key; hills; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "male",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "mu3"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 760,
+      "character": "告",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/告.json",
+      "sourceBlobSha": "1c850bbfb4126bdc15347eb93efdebf6372623ab",
+      "traditional": "告",
+      "dictionaryReadings": [
+        "gao4"
+      ],
+      "dictionaryDefinitions": {
+        "gao4": "to say; to tell; to announce; to report; to denounce; to file a lawsuit; to sue; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "announce",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "gao4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 761,
+      "character": "我",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/我.json",
+      "sourceBlobSha": "553f1deb08219efb6384f4fde5146df14fa44cd1",
+      "traditional": "我",
+      "dictionaryReadings": [
+        "wo3"
+      ],
+      "dictionaryDefinitions": {
+        "wo3": "I; me; my; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "i, me",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 762,
+      "character": "乱",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/乱.json",
+      "sourceBlobSha": "700dd43fa87180b2587ace2d1ad0768892a85901",
+      "traditional": "亂",
+      "dictionaryReadings": [
+        "luan4"
+      ],
+      "dictionaryDefinitions": {
+        "luan4": "in confusion or disorder; in a confused state of mind; disorder; upheaval; riot; illicit sexual relations; to throw into disorder; to mix up; indiscriminate; random; arbitrary; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "chaos",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 763,
+      "character": "利",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/利.json",
+      "sourceBlobSha": "73e5774d2a6df28cf92f78009f25e46eec2ed7f3",
+      "traditional": "利",
+      "dictionaryReadings": [
+        "Li4",
+        "li4"
+      ],
+      "dictionaryDefinitions": {
+        "Li4": "surname Li; ",
+        "li4": "sharp; favorable; advantage; benefit; profit; interest; to do good to; to benefit; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "profit",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "li4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 764,
+      "character": "秃",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/秃.json",
+      "sourceBlobSha": "4ebd72ce2f0b11bccc4db507d78ea14ba69881c8",
+      "traditional": "禿",
+      "dictionaryReadings": [
+        "tu1"
+      ],
+      "dictionaryDefinitions": {
+        "tu1": "bald; blunt; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "bald",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "tu1"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 765,
+      "character": "秀",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/秀.json",
+      "sourceBlobSha": "08ff72b17def6fc52410d6615c8c8ac3d6111759",
+      "traditional": "秀",
+      "dictionaryReadings": [
+        "xiu4"
+      ],
+      "dictionaryDefinitions": {
+        "xiu4": "handsome; refined; elegant; graceful; superior; show (loanword); CL:場|场[chang2]; (literary) to grow; to bloom; (of crops) to produce ears; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "flowering",
+          "sourceGlossGroupIndex": 1,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 766,
+      "character": "私",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/私.json",
+      "sourceBlobSha": "d8a7621741e0120be6e465308358b145b79436a7",
+      "traditional": "私",
+      "dictionaryReadings": [
+        "si1"
+      ],
+      "dictionaryDefinitions": {
+        "si1": "personal; private; selfish; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "private",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "si1"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 767,
+      "character": "每",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/每.json",
+      "sourceBlobSha": "cccc543b8c6e1da679509286ca29f6b53aeae132",
+      "traditional": "每",
+      "dictionaryReadings": [
+        "mei3"
+      ],
+      "dictionaryDefinitions": {
+        "mei3": "each; every; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "every",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "mei3"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 768,
+      "character": "兵",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/兵.json",
+      "sourceBlobSha": "559e0bbf8229510a6ed6d49f38eac5f7734fbfa5",
+      "traditional": "兵",
+      "dictionaryReadings": [
+        "bing1"
+      ],
+      "dictionaryDefinitions": {
+        "bing1": "soldiers; a force; an army; weapons; arms; military; warlike; CL:個|个[ge4]; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "soldier",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "bing1"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 769,
+      "character": "估",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/估.json",
+      "sourceBlobSha": "a493e11a574142620b11aec3d902a46c00c4d668",
+      "traditional": "估",
+      "dictionaryReadings": [
+        "gu1",
+        "gu4"
+      ],
+      "dictionaryDefinitions": {
+        "gu1": "estimate; ",
+        "gu4": "old; second-hand (clothes); "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "estimate",
+          "sourceGlossGroupIndex": 1,
+          "matchingDictionaryReadings": [
+            "gu1"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 770,
+      "character": "体",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/体.json",
+      "sourceBlobSha": "279db7422644e967fa007e3016817f3d8c379ee1",
+      "traditional": "體",
+      "dictionaryReadings": [
+        "ti3"
+      ],
+      "dictionaryDefinitions": {
+        "ti3": "body; form; style; system; substance; to experience; aspect (linguistics); "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "body",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "ti3"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    }
+  ]
+}
