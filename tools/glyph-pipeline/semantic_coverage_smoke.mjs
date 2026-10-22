@@ -9,6 +9,7 @@ const data=JSON.parse(fs.readFileSync("data/semantic/mandarin-1000-v0.1.json","u
 const lexical=JSON.parse(fs.readFileSync("data/semantic/cedict-crossref/manifest-v0.1.json","utf8"));
 const audit=JSON.parse(fs.readFileSync("data/semantic/cedict-crossref/strict-gloss-index-v0.1.json","utf8"));
 const review=JSON.parse(fs.readFileSync("data/semantic/cedict-crossref/sense-review-queue-v0.1.json","utf8"));
+const visibility=JSON.parse(fs.readFileSync("data/semantic/cedict-crossref/emoji-visibility-audit-v0.1.json","utf8"));
 const catalog=JSON.parse(fs.readFileSync("data/catalog/characters-0001-1000.json","utf8"));
 const profile={schema:"chromalect.mandarin-character-profile.v1",catalog_count:1000,
   characters:catalog.characters.map(x=>({rank:x.rank,character:x.character}))};
@@ -35,7 +36,7 @@ class Element {
 const ids={};
 for(const id of [
   "semantic-coverage-rows","semantic-coverage-status",
-  "semantic-lookup","semantic-filter","semantic-lexical-filter","semantic-action-filter","semantic-layer-character",
+  "semantic-lookup","semantic-filter","semantic-lexical-filter","semantic-action-filter","semantic-visual-filter","semantic-layer-character",
   "semantic-prev","semantic-next","semantic-page-label",
   "semantic-source-count","semantic-source-percent",
   "semantic-screened-count","semantic-screened-percent",
@@ -45,6 +46,7 @@ for(const id of [
   "semantic-stage-desk","semantic-desk-progress","semantic-desk-fill",
   "semantic-boundary-progress","semantic-boundary-fill",
   "semantic-stage-lexical","semantic-stage-emoji",
+  "semantic-stage-visibility","semantic-visibility-progress","semantic-visibility-fill","semantic-visibility-note",
   "semantic-dictionary-progress","semantic-dictionary-fill",
   "semantic-lexical-progress","semantic-lexical-fill",
   "semantic-emoji-progress","semantic-emoji-fill","semantic-crossref-note"
@@ -52,6 +54,7 @@ for(const id of [
 ids["semantic-filter"].value="all";
 ids["semantic-lexical-filter"].value="all";
 ids["semantic-action-filter"].value="all";
+ids["semantic-visual-filter"].value="all";
 ids["semantic-layer-character"].checked=true;
 const document={
   getElementById:id=>ids[id],
@@ -72,6 +75,7 @@ const vmContext={
     if(path==="semantic/lexical-crossref-v0.1.json")return {ok:true,json:async()=>lexical};
     if(path==="semantic/strict-gloss-index-v0.1.json")return {ok:true,json:async()=>audit};
     if(path==="semantic/sense-review-queue-v0.1.json")return {ok:true,json:async()=>review};
+    if(path==="semantic/emoji-visibility-audit-v0.1.json")return {ok:true,json:async()=>visibility};
     throw new Error("Unexpected resource: "+path);
   }
 };
@@ -96,6 +100,9 @@ assert.equal(ids["semantic-stage-desk"].textContent,review.counts.deskAnalyzedTo
 assert.equal(ids["semantic-desk-fill"].style.width,"100.0%");
 assert.equal(ids["semantic-desk-progress"].attrs["aria-valuenow"],"248");
 assert.equal(ids["semantic-stage-emoji"].textContent,"0 / 1000 (0.0%)");
+assert.equal(ids["semantic-stage-visibility"].textContent,"897 / 897 (100.0%) · research only");
+assert.equal(ids["semantic-visibility-fill"].style.width,"100.0%");
+assert.match(ids["semantic-visibility-note"].textContent,/266 action cues/);
 assert.equal(ids["semantic-dictionary-fill"].style.width,(lexical.metrics.crossReferenced/10).toFixed(1)+"%");
 assert.equal(ids["semantic-stage-boundary"].textContent,"1000 / 1000 (100.0%)");
 assert.equal(ids["semantic-boundary-fill"].style.width,"100.0%");
@@ -176,6 +183,17 @@ for(const [action,expected] of [
 }
 ids["semantic-action-filter"].value="all";
 ids["semantic-action-filter"].events.change();
+for(const [kind,count] of [
+  ["single-icon",875],["multiple-icons",22],["event-role",280],
+  ["single-event",266],["association",21],["same-character-collision",1]
+]){
+ ids["semantic-visual-filter"].value=kind;
+ ids["semantic-visual-filter"].events.change();
+ const expected=kind==="single-icon" ? 862 : count;
+ assert.match(ids["semantic-coverage-status"].textContent,new RegExp(expected+" characters match"));
+}
+ids["semantic-visual-filter"].value="all";
+ids["semantic-visual-filter"].events.change();
 ids["semantic-lookup"].value="生";
 ids["semantic-lookup"].events.input();
 assert.equal(ids["semantic-coverage-rows"].children.length,1);
@@ -196,6 +214,8 @@ assert.match(html,/data-character-layer-controls/);
 assert.match(html,/src="layers.js"/);
 assert.match(html,/id="semantic-lexical-filter"/);
 assert.match(html,/id="semantic-action-filter"/);
+assert.match(html,/id="semantic-visual-filter"/);
+assert.match(html,/id="semantic-visibility-progress"/);
 assert.match(html,/id="semantic-desk-progress"/);
 assert.match(html,/id="semantic-boundary-progress"/);
 assert.match(html,/value="substring-only"/);

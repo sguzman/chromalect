@@ -12,6 +12,7 @@
   const filter = $("semantic-filter");
   const lexicalFilter = $("semantic-lexical-filter");
   const actionFilter = $("semantic-action-filter");
+  const visualFilter = $("semantic-visual-filter");
   const enabled = $("semantic-layer-character");
   const prev = $("semantic-prev");
   const next = $("semantic-next");
@@ -22,6 +23,7 @@
   let lexicalRows = new Map();
   let strictRows = new Map();
   let reviewRows = new Map();
+  let visibilityRows = new Map();
   let strictSummary = null;
   let deskCounts = {analyzed:0,total:248};
   let page = 0;
@@ -89,6 +91,19 @@
       " substring-only false matches). All remain unapproved.";
   }
 
+  function bindVisibilityProgress(metrics) {
+    const count=metrics.auditedExpressions,total=metrics.proposedExpressions;
+    $("semantic-visibility-progress").setAttribute("aria-valuemax",String(total));
+    $("semantic-visibility-progress").setAttribute("aria-valuenow",String(count));
+    $("semantic-visibility-fill").style.width=percent(count,total);
+    $("semantic-stage-visibility").textContent=count+" / "+total+" ("+percent(count,total)+") · research only";
+    $("semantic-visibility-note").textContent=
+      metrics.singleEmojiExpressions+" expressions use one emoji, including "+
+      metrics.singleEmojiEventExpressions+" action cues whose verb role is invisible. "+
+      metrics.sameCharacterSenseCollisionCharacters+" character has two different senses with identical emoji. "+
+      "These are review flags, not automatic mapping failures.";
+  }
+
   function card(entry) {
     const card = elem("article","semantic-entry");
     const header = elem("div","semantic-entry-top");
@@ -130,6 +145,16 @@
         "no emoji candidate to compare")+
         " · no human lexical approval"));
     }
+    const visibleCues=visibilityRows.get(entry.rank)||[];
+    if(visibleCues.length) {
+      const events=visibleCues.filter(x=>x.operators.includes("event"));
+      const ambiguous=visibleCues.filter(x=>x.riskFlags.includes("same_character_senses_identical_display"));
+      if(events.length||ambiguous.length)card.appendChild(elem("p","semantic-review-note",
+        (events.length?events.length+" emoji action cue(s) omit explicit event roles":"")+
+        (events.length&&ambiguous.length?" · ":"")+
+        (ambiguous.length?"Different meanings share one visible emoji":"")+
+        " · research flag only"));
+    }
     const flagged=reviewRows.get(entry.rank)||[];
     if (flagged.length) {
       const priorities=[...new Set(flagged.map(x=>x.priority))];
@@ -144,6 +169,12 @@
     details.appendChild(elem("p","semantic-source",
       "Provisional Unihan kDefinition • "+entry.source.codepoint+
       " • "+entry.source.groupCandidates.length+" candidate definition group(s)"));
+    for(const cue of visibleCues)if(cue.riskFlags.length) {
+      details.appendChild(elem("p","semantic-review-detail",
+        "Emoji display for "+cue.selectedMeaning+": "+cue.emojiDisplay+
+        " · automatic visibility flags: "+cue.riskFlags.join(", ").replaceAll("_"," ")+
+        ". These are not comprehension judgments."));
+    }
     for(const item of flagged){
       const msg=item.selectedMeaning+" — "+item.reviewReason.replaceAll("_"," ")+
         " · "+item.priority+" priority · no independent approval";
@@ -186,10 +217,20 @@
     const selected=filter.value;
     const dictionary=lexicalFilter.value;
     const action=actionFilter.value;
+    const visual=visualFilter.value;
     return ledger.characters.filter(x=>{
       const crossref=lexicalRows.get(x.rank);
       const aligned=strictRows.get(x.rank)||[];
+      const cues=visibilityRows.get(x.rank)||[];
       return (selected==="all" || selected===state(x)) &&
+        (visual==="all" ||
+          (visual==="single-icon" && cues.some(y=>y.emojiCount===1)) ||
+          (visual==="multiple-icons" && cues.some(y=>y.emojiCount>1)) ||
+          (visual==="event-role" && cues.some(y=>y.operators.includes("event"))) ||
+          (visual==="single-event" && cues.some(y=>y.operators.includes("event")&&y.emojiCount===1)) ||
+          (visual==="association" && cues.some(y=>y.operators.includes("associate"))) ||
+          (visual==="same-character-collision" && cues.some(y=>
+            y.riskFlags.includes("same_character_senses_identical_display")))) &&
         (action==="all" || (reviewRows.get(x.rank)||[]).some(y=>
           y.deskAnalysis?.provisionalNextAction===action)) &&
         (dictionary==="all" ||
@@ -229,24 +270,41 @@
   filter.addEventListener("change",reset);
   lexicalFilter.addEventListener("change",reset);
   actionFilter.addEventListener("change",reset);
+  visualFilter.addEventListener("change",reset);
   enabled.addEventListener("change",render);
   prev.addEventListener("click",()=>{page--;render();});
   next.addEventListener("click",()=>{page++;render();});
 
   async function load() {
     try {
-      const [response,profileResponse,lexicalResponse,auditResponse,reviewResponse]=await Promise.all([
+      const [response,profileResponse,lexicalResponse,auditResponse,reviewResponse,visibilityResponse]=await Promise.all([
         fetch("semantic/mandarin-1000-v0.1.json"),
         fetch("profiles/mandarin-1000-v1.json"),
         fetch("semantic/lexical-crossref-v0.1.json"),
         fetch("semantic/strict-gloss-index-v0.1.json"),
-        fetch("semantic/sense-review-queue-v0.1.json")
+        fetch("semantic/sense-review-queue-v0.1.json"),
+        fetch("semantic/emoji-visibility-audit-v0.1.json")
       ]);
-      if(!response.ok || !profileResponse.ok || !lexicalResponse.ok || !auditResponse.ok || !reviewResponse.ok)
+      if(!response.ok || !profileResponse.ok || !lexicalResponse.ok || !auditResponse.ok || !reviewResponse.ok || !visibilityResponse.ok)
         throw new Error("Character, dictionary or audit data unavailable");
-      const [data,profile,lexical,audit,review]=await Promise.all([
-        response.json(),profileResponse.json(),lexicalResponse.json(),auditResponse.json(),reviewResponse.json()
+      const [data,profile,lexical,audit,review,visibility]=await Promise.all([
+        response.json(),profileResponse.json(),lexicalResponse.json(),auditResponse.json(),reviewResponse.json(),visibilityResponse.json()
       ]);
+      if(visibility.schema!=="chromalect.semantic.emoji-visibility-audit.v0.1" ||
+         visibility.status!=="automated_visual_projection_review_only_not_linguistic_or_comprehension_approval" ||
+         visibility.summary.proposedExpressions!==897 ||
+         visibility.summary.auditedExpressions!==visibility.records.length ||
+         visibility.summary.humanLexicalApproved!==0 ||
+         visibility.summary.humanEmojiComprehensionApproved!==0 ||
+         visibility.summary.productionVerified!==0 ||
+         visibility.records.some(x=>data.characters[x.rank-1]?.character!==x.character ||
+           x.productionVerified!==false || x.independentLexicalReview!=="pending" ||
+           x.independentEmojiComprehensionReview!=="pending"))
+        throw new Error("Invalid automated semantic visibility audit");
+      for(const entry of visibility.records){
+        if(!visibilityRows.has(entry.rank))visibilityRows.set(entry.rank,[]);
+        visibilityRows.get(entry.rank).push(entry);
+      }
       if(review.schema!=="chromalect.semantic.lexical-sense-review-queue.v0.1" ||
          review.status!=="unreviewed_prioritization_only" ||
          !Array.isArray(review.records) ||
@@ -322,6 +380,7 @@
       ledger=data;
       bindMetrics(data.summary);
       bindResearchProgress(lexical.metrics,audit);
+      bindVisibilityProgress(visibility.summary);
       render();
     }catch(error) {
       status.textContent="Unable to load the semantic evidence. Check the published data or deployment.";

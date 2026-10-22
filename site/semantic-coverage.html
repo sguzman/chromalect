@@ -93,7 +93,12 @@
     <div class="semantic-stage-heading"><strong>Emoji comprehension approval</strong><span id="semantic-stage-emoji">Loading</span></div>
     <div class="semantic-progress" role="progressbar" id="semantic-emoji-progress" aria-label="Characters with independently approved emoji comprehension" aria-valuemin="0" aria-valuemax="1000" aria-valuenow="0"><div id="semantic-emoji-fill"></div></div>
   </div>
+  <div class="semantic-stage">
+    <div class="semantic-stage-heading"><strong>Automated emoji visibility audit (not approval)</strong><span id="semantic-stage-visibility">Loading</span></div>
+    <div class="semantic-progress" role="progressbar" id="semantic-visibility-progress" aria-label="Automated structural presentation audit of experimental emoji expressions" aria-valuemin="0" aria-valuemax="897" aria-valuenow="0"><div id="semantic-visibility-fill"></div></div>
+  </div>
   <p class="semantic-research-caption" id="semantic-crossref-note">Automated boundary matches are research triage only. No candidate has been promoted to production.</p>
+  <p class="semantic-research-caption" id="semantic-visibility-note">Checking whether the emoji-only presentation hides important semantic relationships.</p>
 </section>
 <fieldset class="semantic-layers" aria-label="Semantic layer visibility">
   <legend>Semantic layers</legend>
@@ -115,6 +120,15 @@
     <option value="substring-only">Substring-only false matches (7)</option>
     <option value="whole-match">At least one whole-term candidate match</option>
     <option value="not-crossref">Not yet cross-referenced</option>
+  </select></label>
+  <label>Emoji visual-review signal <select id="semantic-visual-filter">
+    <option value="all">All visual structures</option>
+    <option value="single-icon">Single-emoji expressions (875)</option>
+    <option value="multiple-icons">Multiple-emoji expressions (22)</option>
+    <option value="event-role">Action roles not explicit in emoji (280)</option>
+    <option value="single-event">Single-icon action cues (266)</option>
+    <option value="association">Invisible association operators (21)</option>
+    <option value="same-character-collision">Same glyph for different senses (1 character)</option>
   </select></label>
   <label>Provisional next review action <select id="semantic-action-filter">
     <option value="all">All actions</option>
