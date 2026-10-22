@@ -1,0 +1,461 @@
+{
+  "schema": "chromalect.mandarin.lexical-crossref-batch.v0.1",
+  "source": {
+    "title": "CC-CEDICT per-headword v2 mirror",
+    "repository": "krmanik/cedict-json",
+    "commit": "63c2569948629323b515833930fdd10f285401b6",
+    "dataLicense": "CC BY-SA 4.0",
+    "upstream": "https://cc-cedict.org/",
+    "mirror": "https://github.com/krmanik/cedict-json",
+    "transform": "Selected single-simplified-character dictionary records, retaining readings and definitions; literal English gloss matching is automated triage only"
+  },
+  "rankStart": 771,
+  "rankEnd": 785,
+  "summary": {
+    "total": 15,
+    "headwordFound": 15,
+    "withCandidate": 15,
+    "withLiteralSupport": 11
+  },
+  "records": [
+    {
+      "rank": 771,
+      "character": "何",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/何.json",
+      "sourceBlobSha": "418d77b2caf74a4174daa35c22506e02393b611c",
+      "traditional": "何",
+      "dictionaryReadings": [
+        "He2",
+        "he2"
+      ],
+      "dictionaryDefinitions": {
+        "He2": "surname He; ",
+        "he2": "what; how; why; which; carry; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "what",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "he2"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 772,
+      "character": "佐",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/佐.json",
+      "sourceBlobSha": "a6956c85d6f531d72996e8426751483278807e55",
+      "traditional": "佐",
+      "dictionaryReadings": [
+        "zuo3"
+      ],
+      "dictionaryDefinitions": {
+        "zuo3": "to assist; assistant; aide; to accompany; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "assist",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "zuo3"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 773,
+      "character": "佑",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/佑.json",
+      "sourceBlobSha": "f3aa3e5b1e3159c58c289b5f59c65b3f01437db5",
+      "traditional": "佑",
+      "dictionaryReadings": [
+        "you4"
+      ],
+      "dictionaryDefinitions": {
+        "you4": "to assist; to protect; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "protect",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "you4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 774,
+      "character": "但",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/但.json",
+      "sourceBlobSha": "31acc948d6d44f79d72f5672a9ac0f08c93a0ad5",
+      "traditional": "但",
+      "dictionaryReadings": [
+        "dan4"
+      ],
+      "dictionaryDefinitions": {
+        "dan4": "but; yet; however; only; merely; still; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "but",
+          "sourceGlossGroupIndex": 1,
+          "matchingDictionaryReadings": [
+            "dan4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 775,
+      "character": "伸",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/伸.json",
+      "sourceBlobSha": "5a0149569da8794e245e463b67e05b007bea1b75",
+      "traditional": "伸",
+      "dictionaryReadings": [
+        "shen1"
+      ],
+      "dictionaryDefinitions": {
+        "shen1": "to stretch; to extend; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "stretch",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "shen1"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 776,
+      "character": "佃",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/佃.json",
+      "sourceBlobSha": "3de5465a0a6d2fb4e2eda73c7206a53b1f29d782",
+      "traditional": "佃",
+      "dictionaryReadings": [
+        "dian4",
+        "tian2"
+      ],
+      "dictionaryDefinitions": {
+        "dian4": "farmer; ",
+        "tian2": "to cultivate; to hunt; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "tenant farmer",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 777,
+      "character": "作",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/作.json",
+      "sourceBlobSha": "47ae4ef98e8e0f52b5e1510b32a487d9474540ad",
+      "traditional": "作",
+      "dictionaryReadings": [
+        "zuo1",
+        "zuo4"
+      ],
+      "dictionaryDefinitions": {
+        "zuo1": "worker; workshop; (slang) troublesome; high-maintenance (person); ",
+        "zuo4": "to do; to grow; to write or compose; to pretend; to regard as; to feel; writings or works; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "make",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 778,
+      "character": "伯",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/伯.json",
+      "sourceBlobSha": "046915eac2828712bc0bbcae26a573e230aed984",
+      "traditional": "伯",
+      "dictionaryReadings": [
+        "ba4",
+        "bai3",
+        "bo2"
+      ],
+      "dictionaryDefinitions": {
+        "ba4": "variant of 霸[ba4]; ",
+        "bai3": "one hundred (old); ",
+        "bo2": "father's elder brother; senior; paternal elder uncle; eldest of brothers; respectful form of address; Count, third of five orders of nobility 五等爵位[wu3 deng3 jue2 wei4]; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "older brother",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 779,
+      "character": "伶",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/伶.json",
+      "sourceBlobSha": "0184961459f80c7fd54dffe61d541db3f176f986",
+      "traditional": "伶",
+      "dictionaryReadings": [
+        "ling2"
+      ],
+      "dictionaryDefinitions": {
+        "ling2": "clever; (old) actor; actress; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "actor",
+          "sourceGlossGroupIndex": 1,
+          "matchingDictionaryReadings": [
+            "ling2"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 780,
+      "character": "佣",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/佣.json",
+      "sourceBlobSha": "a46008cfa57bc3617a9b7655c2131344fb85d25e",
+      "traditional": "傭",
+      "dictionaryReadings": [
+        "yong4",
+        "yong1"
+      ],
+      "dictionaryDefinitions": {
+        "yong4": "commission (for middleman); brokerage fee; ",
+        "yong1": "to hire; to employ; servant; hired laborer; domestic help; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "commission fee",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 781,
+      "character": "低",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/低.json",
+      "sourceBlobSha": "2e170846663b56a4bbe0e50eedf9c2f019fc09b1",
+      "traditional": "低",
+      "dictionaryReadings": [
+        "di1"
+      ],
+      "dictionaryDefinitions": {
+        "di1": "low; beneath; to lower (one's head); to let droop; to hang down; to incline; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "low",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "di1"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 782,
+      "character": "你",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/你.json",
+      "sourceBlobSha": "7b123b47350ac814895263cdd4195cd51a14b15b",
+      "traditional": "你",
+      "dictionaryReadings": [
+        "ni3"
+      ],
+      "dictionaryDefinitions": {
+        "ni3": "you (informal, as opposed to courteous 您[nin2]); "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "you",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "ni3"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 783,
+      "character": "住",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/住.json",
+      "sourceBlobSha": "753f53524452061822ee9ab0dae60c429a0bdfb6",
+      "traditional": "住",
+      "dictionaryReadings": [
+        "zhu4"
+      ],
+      "dictionaryDefinitions": {
+        "zhu4": "to live; to dwell; to stay; to reside; to stop; (suffix indicating firmness, steadiness, or coming to a halt); "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "dwell",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "zhu4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 784,
+      "character": "位",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/位.json",
+      "sourceBlobSha": "5ab4bd8f4b82e098c6ee2cccfea806ac7ad05d02",
+      "traditional": "位",
+      "dictionaryReadings": [
+        "wei4"
+      ],
+      "dictionaryDefinitions": {
+        "wei4": "position; location; place; seat; classifier for people (honorific); classifier for binary bits (e.g. 十六位 16-bit or 2 bytes); "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "position",
+          "sourceGlossGroupIndex": 1,
+          "matchingDictionaryReadings": [
+            "wei4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 785,
+      "character": "伴",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/伴.json",
+      "sourceBlobSha": "eb430a10382c260a82fc23d09a81cfbf410ed09e",
+      "traditional": "伴",
+      "dictionaryReadings": [
+        "ban4"
+      ],
+      "dictionaryDefinitions": {
+        "ban4": "partner; companion; comrade; associate; to accompany; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "companion",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "ban4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    }
+  ]
+}
