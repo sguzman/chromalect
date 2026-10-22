@@ -1,0 +1,440 @@
+{
+  "schema": "chromalect.mandarin.lexical-crossref-batch.v0.1",
+  "source": {
+    "title": "CC-CEDICT per-headword v2 mirror",
+    "repository": "krmanik/cedict-json",
+    "commit": "63c2569948629323b515833930fdd10f285401b6",
+    "dataLicense": "CC BY-SA 4.0",
+    "upstream": "https://cc-cedict.org/",
+    "mirror": "https://github.com/krmanik/cedict-json",
+    "transform": "Selected single-simplified-character dictionary records, retaining readings and definitions; literal English gloss matching is automated triage only"
+  },
+  "rankStart": 891,
+  "rankEnd": 905,
+  "summary": {
+    "total": 15,
+    "headwordFound": 15,
+    "withCandidate": 14,
+    "withLiteralSupport": 8
+  },
+  "records": [
+    {
+      "rank": 891,
+      "character": "祀",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/祀.json",
+      "sourceBlobSha": "ff655452f462e9d8971e6bd40fafae7545b4bb07",
+      "traditional": "禩",
+      "dictionaryReadings": [
+        "si4"
+      ],
+      "dictionaryDefinitions": {
+        "si4": "to sacrifice; to offer libation to; variant of 祀[si4]; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "worship",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 892,
+      "character": "识",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/识.json",
+      "sourceBlobSha": "7dd92839415704fdb1cfde481a4b05b8583c4788",
+      "traditional": "識",
+      "dictionaryReadings": [
+        "shi2",
+        "zhi4"
+      ],
+      "dictionaryDefinitions": {
+        "shi2": "to know; knowledge; Taiwan pr. [shi4]; ",
+        "zhi4": "to record; to write a footnote; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "recognize",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 893,
+      "character": "诈",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/诈.json",
+      "sourceBlobSha": "365ff96f456ef29498a471ab88ad1df1c6d9bf97",
+      "traditional": "詐",
+      "dictionaryReadings": [
+        "zha4"
+      ],
+      "dictionaryDefinitions": {
+        "zha4": "to cheat; to swindle; to pretend; to feign; to draw sb out; to try to extract information by deceit or bluff; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "swindle",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "zha4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 894,
+      "character": "诉",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/诉.json",
+      "sourceBlobSha": "af504fd6fdb1fac25b46abc3234bbe1364448152",
+      "traditional": "訴",
+      "dictionaryReadings": [
+        "su4"
+      ],
+      "dictionaryDefinitions": {
+        "su4": "variant of 訴|诉[su4]; to complain; to sue; to tell; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "sue",
+          "sourceGlossGroupIndex": 1,
+          "matchingDictionaryReadings": [
+            "su4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 895,
+      "character": "罕",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/罕.json",
+      "sourceBlobSha": "4d9acd8163672e90b187934e5e477cdb79d3610b",
+      "traditional": "罕",
+      "dictionaryReadings": [
+        "han3"
+      ],
+      "dictionaryDefinitions": {
+        "han3": "rare; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "rare",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "han3"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 896,
+      "character": "诊",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/诊.json",
+      "sourceBlobSha": "03b74857a1830d0e4c8a07acff286c39c2a6a2af",
+      "traditional": "診",
+      "dictionaryReadings": [
+        "zhen3"
+      ],
+      "dictionaryDefinitions": {
+        "zhen3": "to examine or treat medically; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "diagnose",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 897,
+      "character": "词",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/词.json",
+      "sourceBlobSha": "fc684b3d91ee5d3fd09bcc0354572ab028a1be7f",
+      "traditional": "詞",
+      "dictionaryReadings": [
+        "ci2"
+      ],
+      "dictionaryDefinitions": {
+        "ci2": "old variant of 詞|词[ci2]; word; statement; speech; lyrics; CL:組|组[zu3],個|个[ge4]; classical Chinese poem; CL:首[shou3]; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "words",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 898,
+      "character": "译",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/译.json",
+      "sourceBlobSha": "29a9e47821f7270b2c66498aa212945323b31dbd",
+      "traditional": "譯",
+      "dictionaryReadings": [
+        "yi4"
+      ],
+      "dictionaryDefinitions": {
+        "yi4": "to translate; to interpret; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "translate",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "yi4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 899,
+      "character": "君",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/君.json",
+      "sourceBlobSha": "8dd40a3301ee28efdffcd8c45470a87c95965c6a",
+      "traditional": "君",
+      "dictionaryReadings": [
+        "jun1"
+      ],
+      "dictionaryDefinitions": {
+        "jun1": "monarch; lord; gentleman; ruler; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "ruler",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "jun1"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 900,
+      "character": "灵",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/灵.json",
+      "sourceBlobSha": "5f54d259261150917d27e6a06c6b54af3d31c262",
+      "traditional": "靈",
+      "dictionaryReadings": [
+        "ling2"
+      ],
+      "dictionaryDefinitions": {
+        "ling2": "quick; alert; efficacious; effective; to come true; spirit; departed soul; coffin; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "spirit",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "ling2"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 901,
+      "character": "即",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/即.json",
+      "sourceBlobSha": "999274436b59822024d7235b416c8d0d764e4856",
+      "traditional": "即",
+      "dictionaryReadings": [
+        "ji2"
+      ],
+      "dictionaryDefinitions": {
+        "ji2": "namely; that is; i.e.; prompt; at once; at present; even if; prompted (by the occasion); to approach; to come into contact; to assume (office); to draw near; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "immediately",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 902,
+      "character": "层",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/层.json",
+      "sourceBlobSha": "69d7c155541558a3098d7922be7580486ea86efa",
+      "traditional": "層",
+      "dictionaryReadings": [
+        "ceng2"
+      ],
+      "dictionaryDefinitions": {
+        "ceng2": "layer; stratum; laminated; floor (of a building); storey; classifier for layers; repeated; sheaf (math.); "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "layer",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "ceng2"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 903,
+      "character": "屁",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/屁.json",
+      "sourceBlobSha": "5d21fab1428fa0af0248853679281e3436e31638",
+      "traditional": "屁",
+      "dictionaryReadings": [
+        "pi4"
+      ],
+      "dictionaryDefinitions": {
+        "pi4": "fart; flatulence; nonsense; (usu. in the negative) what; (not) a damn thing; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "buttocks",
+          "sourceGlossGroupIndex": 2,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 904,
+      "character": "尿",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/尿.json",
+      "sourceBlobSha": "039a7de3ff2c4b848b0c8903dd75b7b31e494345",
+      "traditional": "尿",
+      "dictionaryReadings": [
+        "niao4",
+        "sui1"
+      ],
+      "dictionaryDefinitions": {
+        "niao4": "to urinate; urine; CL:泡[pao1]; ",
+        "sui1": "see 尿[niao4]; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "urine",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "niao4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 905,
+      "character": "尾",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/尾.json",
+      "sourceBlobSha": "f4685fd0b4224699652c438c22ec094b40156399",
+      "traditional": "尾",
+      "dictionaryReadings": [
+        "wei3",
+        "yi3"
+      ],
+      "dictionaryDefinitions": {
+        "wei3": "tail; remainder; remnant; extremity; sixth of the 28 constellations; classifier for fish; ",
+        "yi3": "horse's tail; pointed posterior section of a locust etc; "
+      },
+      "selectedSenseChecks": [],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    }
+  ]
+}
