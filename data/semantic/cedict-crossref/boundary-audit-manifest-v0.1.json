@@ -68,10 +68,11 @@
     "legacySubstringMatches": 656,
     "strictWholeTermMatches": 649,
     "substringOnlyFalsePositives": 7,
-    "requiresContextualReview": 248,
     "humanLexicalApproved": 0,
     "emojiComprehensionApproved": 0,
-    "productionVerified": 0
+    "productionVerified": 0,
+    "notWholeTermMatched": 248,
+    "humanReviewPending": 897
   },
   "substringOnlyCases": [
     {
