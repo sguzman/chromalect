@@ -8,7 +8,15 @@ Small expressions of reusable emoji tokens should make related concepts, actions
 
 A sequence of adjacent emoji with no operator has **no asserted compositional reading** in this grammar. The meaning of a conventional emoji and the meaning of a multi-icon mnemonic can be culturally and contextually variable. A source-backed sense assignment and a user comprehension test are required before a speculative expression can be treated as an effective meaning cue.
 
-## Basic operators
+## Emoji-first display and machine-readable structure
+
+The **primary visual language is emoji**, not the technical punctuation shown below. Examples include ⛰️, 📖🧠, 👤🍽️🍎, and 🌱➡️🌳. A renderer projects typed expression trees into ordered pictograms; single-emoji and longer sequences coexist. No symbol is reserved for a particular Chinese character.
+
+Machine-readable JSON records the underlying relation and, for events, participants such as agent, patient, or goal. The pictogram-only output is a **mnemonic projection**, not a reversible serialization. For instance, 👤🍽️🍎 alone does not prove its participants, and 🚫🍽️ could suggest prohibition rather than simple negation. The typed record preserves distinctions pictures may not make explicit.
+
+Experimental rendering conventions are property before head; agent/source before an event predicate; patient/goal/instrument afterward; ➡️ between states; 🚫 before a negated expression. These are visual hypotheses, not universal linguistic laws. A separately evidenced sense determines any intended lexical interpretation.
+
+## Optional technical operators
 
 | Syntax | Construct | Precise interpretation |
 | --- | --- | --- |
@@ -48,9 +56,9 @@ Examples:
 
 Participants are not assumed from icon position or depicted humans inside emoji. Role constraints such as whether a predicate can take an instrument must eventually be specified in the lexicon. Events do not encode tense, aspect, mood, grammatical person, or Mandarin syntax. These should not be silently inferred.
 
-## Concrete syntax
+## Optional technical syntax (not the default emoji display)
 
-The published representation is a recursive **typed JSON expression tree**, so there is no ambiguity about operator precedence or token boundaries. The human-facing notation below is a canonical rendering, not an independent free-form text parser.
+The authoritative representation is a recursive **typed JSON expression tree**, so there is no ambiguity about operator precedence or token boundaries. The following notation is an optional inspector view, not the default emoji display or an independent free-form text parser.
 
 \`\`\`ebnf
 expression  = atom | association | conjunction | qualification
@@ -69,7 +77,7 @@ In canonical display, a compound operand is parenthesized when nested inside ano
 
 ## Evidence and production boundary
 
-The [versioned schema](../ontology/semantic-expression-v0.1.schema.json) defines the typed tree. The [illustrative specimen data](../site/semantic-grammar-v0.1.json) records examples and their review status. The [semantic lab](../site/semantic-lab.html) displays them with reversible pictographic annotations and written meaning on demand.
+The [versioned schema](../ontology/semantic-expression-v0.1.schema.json) defines the typed tree. The [illustrative specimen data](../site/semantic-grammar-v0.1.json) records examples and their review status. The [semantic lab](../site/semantic-lab.html) defaults to emoji-only expressions, keeps technical notation behind an optional reference, and provides written meanings on demand.
 
 - **Grammar validity** establishes that an expression follows the syntax, not that it means the proposed word.
 - **Lexical validity** requires evidence for each character use or word sense, and must separately record polysemy, usage, and relevant provenance.
