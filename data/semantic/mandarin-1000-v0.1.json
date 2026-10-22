@@ -29,8 +29,8 @@
     "trancheCount": 1000,
     "meaningSourceFound": 1000,
     "screenedCharacters": 100,
-    "pictogramCandidateCharacters": 72,
-    "deferredCharacters": 28,
+    "pictogramCandidateCharacters": 71,
+    "deferredCharacters": 29,
     "pendingScreening": 900,
     "productionVerifiedCharacters": 0
   },
@@ -1163,31 +1163,11 @@
         "status": "screened",
         "candidates": [
           {
-            "sourceGroupIndex": 0,
-            "selectedMeaning": "thousand",
-            "expression": {
-              "kind": "associate",
-              "items": [
-                {
-                  "kind": "atom",
-                  "emoji": "1️⃣"
-                },
-                {
-                  "kind": "atom",
-                  "emoji": "0️⃣"
-                },
-                {
-                  "kind": "atom",
-                  "emoji": "0️⃣"
-                },
-                {
-                  "kind": "atom",
-                  "emoji": "0️⃣"
-                }
-              ]
-            },
-            "state": "experimental_pictogram_candidate",
-            "review": "human_linguistic_and_comprehension_review_pending"
+            "sourceGroupIndex": null,
+            "selectedMeaning": null,
+            "expression": null,
+            "state": "pictogram_deferred",
+            "reason": "Number composition needs a numeric construction rule; association of digit emoji would assert the wrong relation."
           }
         ]
       }
