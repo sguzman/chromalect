@@ -4,11 +4,14 @@
   const grammar = globalThis.ChromalectSemanticGrammar;
   const presenter = globalThis.ChromalectLayers;
   const grid = document.getElementById("semantic-specimens");
+  const words = document.getElementById("semantic-words");
+  const outside = document.getElementById("semantic-outside");
+  const abstract = document.getElementById("semantic-grammar-examples");
   const buttons = Array.from(document.querySelectorAll("[data-semantic-mode]"));
   const checkbox = document.getElementById("semantic-reveal");
   const status = document.getElementById("semantic-lab-status");
   const legend = document.getElementById("semantic-grammar-legend");
-  if (!grammar || !presenter || !grid || !buttons.length || !checkbox || !status || !legend) return;
+  if (!grammar || !presenter || !grid || !words || !outside || !abstract || !buttons.length || !checkbox || !status || !legend) return;
   let mode = "symbols";
   let examples = [];
   let profileRows = new Map();
@@ -38,40 +41,66 @@
     return area;
   }
 
+  function category(ex) {
+    if (!ex.written) return "grammar";
+    if (Array.from(ex.written).length > 1) return "word";
+    return profileRows.has(ex.written) ? "character" : "outside";
+  }
+
   function render() {
-    const fragment = document.createDocumentFragment();
-    for (const ex of examples) {
-      const card = node("article", "semantic-specimen");
-      card.appendChild(node("span", "semantic-kind",
-        ex.written ? "Illustrative Mandarin meaning" : "Illustrative grammar example"));
-      const main = node("div", "semantic-main");
-      if (ex.written) {
-        const written = node("div", "semantic-word-glyphs");
-        for (const char of Array.from(ex.written)) {
-          const row = profileRows.get(char);
-          if (row) {
-            written.appendChild(presenter.createGlyph(row));
-          } else {
-            // Lab-only examples outside the mapped 1,000 retain their native glyph.
-            const fallback=node("strong","semantic-hanzi",char);
-            fallback.lang="zh-Hans";
-            fallback.title="Outside the first-1,000 character palette; no source-aligned layer data";
-            written.appendChild(fallback);
+    const buckets = { character: [], word: [], outside: [], grammar: [] };
+    for (const ex of examples) buckets[category(ex)].push(ex);
+    const targets = [
+      ["character", grid], ["word", words],
+      ["outside", outside], ["grammar", abstract]
+    ];
+    const labels = {
+      character: "Character sense · illustrative",
+      word: "Compound word · illustrative",
+      outside: "Not in mapped tranche",
+      grammar: "Grammar-only example"
+    };
+    for (const [kind, target] of targets) {
+      const fragment = document.createDocumentFragment();
+      for (const ex of buckets[kind]) {
+        const card = node("article", "semantic-specimen");
+        card.appendChild(node("span", "semantic-kind", labels[kind]));
+        const main = node("div", kind === "grammar" ? "semantic-main semantic-main--grammar" : "semantic-main");
+        if (ex.written) {
+          const written = node("div", "semantic-word-glyphs");
+          for (const char of Array.from(ex.written)) {
+            const row = profileRows.get(char);
+            if (row) {
+              written.appendChild(presenter.createGlyph(row));
+            } else {
+              const fallback = node("div", "semantic-unmapped-glyph");
+              const plain = node("strong", "semantic-hanzi", char);
+              plain.lang = "zh-Hans";
+              fallback.appendChild(plain);
+              fallback.setAttribute("aria-label", char + ": outside the first-1000 glyph profile");
+              written.appendChild(fallback);
+            }
           }
+          main.appendChild(written);
         }
-        main.appendChild(written);
+        main.appendChild(expression(ex));
+        card.appendChild(main);
+        if (kind === "outside") card.appendChild(node("p", "semantic-scope",
+          "No mapped strokes, Pinyin or tone for this out-of-tranche character."));
+        if (kind === "word") card.appendChild(node("p", "semantic-scope",
+          "Whole-word meaning is independent of the constituent character meanings."));
+        const meaning = node("p", "semantic-answer", "Written meaning: " + ex.meaning);
+        meaning.hidden = !checkbox.checked;
+        card.appendChild(meaning);
+        card.appendChild(node("p", "semantic-annotation-note", ex.notes));
+        fragment.appendChild(card);
       }
-      main.appendChild(expression(ex));
-      card.appendChild(main);
-      const meaning = node("p", "semantic-answer", "Written meaning: " + ex.meaning);
-      meaning.hidden = !checkbox.checked;
-      card.appendChild(meaning);
-      card.appendChild(node("p", "semantic-annotation-note", ex.notes));
-      fragment.appendChild(card);
+      target.replaceChildren(fragment);
     }
-    grid.replaceChildren(fragment);
-    status.textContent = (mode === "symbols" ? "Emoji expressions" : "Character presentation only") +
-      " · " + examples.length + " illustrative meanings" +
+    status.textContent = buckets.character.length + " mapped character examples · " +
+      buckets.word.length + " word hypotheses · " +
+      buckets.outside.length + " out-of-tranche examples · " +
+      buckets.grammar.length + " grammar-only examples · all illustrative" +
       (checkbox.checked ? " · written meanings shown" : " · written meanings hidden");
     for (const button of buttons) {
       button.setAttribute("aria-pressed", String(button.dataset.semanticMode === mode));
