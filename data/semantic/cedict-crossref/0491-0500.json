@@ -1,0 +1,310 @@
+{
+  "schema": "chromalect.mandarin.lexical-crossref-batch.v0.1",
+  "source": {
+    "title": "CC-CEDICT per-headword v2 mirror",
+    "repository": "krmanik/cedict-json",
+    "commit": "63c2569948629323b515833930fdd10f285401b6",
+    "dataLicense": "CC BY-SA 4.0",
+    "upstream": "https://cc-cedict.org/",
+    "mirror": "https://github.com/krmanik/cedict-json",
+    "transform": "Selected single-simplified-character dictionary records, retaining readings and definitions; literal English gloss matching is automated triage only"
+  },
+  "rankStart": 491,
+  "rankEnd": 500,
+  "summary": {
+    "total": 10,
+    "headwordFound": 10,
+    "withCandidate": 10,
+    "withLiteralSupport": 6
+  },
+  "records": [
+    {
+      "rank": 491,
+      "character": "众",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/众.json",
+      "sourceBlobSha": "f7e85d57d249aa1a92103dda67c69dcbe430a936",
+      "traditional": "衆",
+      "dictionaryReadings": [
+        "Zhong4",
+        "zhong4"
+      ],
+      "dictionaryDefinitions": {
+        "Zhong4": "abbr. for 眾議院|众议院[Zhong4 yi4 yuan4], House of Representatives; ",
+        "zhong4": "many; numerous; crowd; multitude; variant of 眾|众[zhong4]; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "crowd",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "zhong4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 492,
+      "character": "爷",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/爷.json",
+      "sourceBlobSha": "284ca29f9393898e657a8e95642e5187d045d8b0",
+      "traditional": "爺",
+      "dictionaryReadings": [
+        "ye2"
+      ],
+      "dictionaryDefinitions": {
+        "ye2": "grandpa; old gentleman; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "grandfather",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 493,
+      "character": "伞",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/伞.json",
+      "sourceBlobSha": "536f438240f907df56119480c1d3c2b7e71b762c",
+      "traditional": "繖",
+      "dictionaryReadings": [
+        "san3"
+      ],
+      "dictionaryDefinitions": {
+        "san3": "umbrella; parasol; CL:把[ba3]; damask silk; variant of 傘|伞[san3]; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "umbrella",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "san3"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 494,
+      "character": "创",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/创.json",
+      "sourceBlobSha": "f195fde18e5ca3ddd55cbb587fc2e59e2a18654c",
+      "traditional": "創",
+      "dictionaryReadings": [
+        "chuang4",
+        "chuang1"
+      ],
+      "dictionaryDefinitions": {
+        "chuang4": "variant of 創|创[chuang4]; variant of 創|创[chuang4]; to begin; to initiate; to inaugurate; to start; to create; ",
+        "chuang1": "a wound; cut; injury; trauma; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "create",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "chuang4"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 495,
+      "character": "肌",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/肌.json",
+      "sourceBlobSha": "9d71e3a5ebea5a6480994e2588709f9e1bd44795",
+      "traditional": "肌",
+      "dictionaryReadings": [
+        "ji1"
+      ],
+      "dictionaryDefinitions": {
+        "ji1": "flesh; muscle; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "muscle",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "ji1"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 496,
+      "character": "肋",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/肋.json",
+      "sourceBlobSha": "c82d028ceb347fb080423629a00cdcf678294b59",
+      "traditional": "肋",
+      "dictionaryReadings": [
+        "lei4"
+      ],
+      "dictionaryDefinitions": {
+        "lei4": "rib; Taiwan pr. [le4]; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "ribs",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 497,
+      "character": "朵",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/朵.json",
+      "sourceBlobSha": "93a323aba9ba3f75c7a1774f20c1b67243d878fc",
+      "traditional": "朶",
+      "dictionaryReadings": [
+        "duo3"
+      ],
+      "dictionaryDefinitions": {
+        "duo3": "flower; earlobe; fig. item on both sides; classifier for flowers, clouds etc; variant of 朵[duo3]; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "flowers",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "duo3"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 498,
+      "character": "杂",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/杂.json",
+      "sourceBlobSha": "935d00d934769b5f6c90d854d32aa458bfb28d0b",
+      "traditional": "雜",
+      "dictionaryReadings": [
+        "za2"
+      ],
+      "dictionaryDefinitions": {
+        "za2": "variant of 雜|杂[za2]; mixed; miscellaneous; various; to mix; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "mixed",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [
+            "za2"
+          ],
+          "lexicalEvidence": "literal_gloss_match",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 499,
+      "character": "危",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/危.json",
+      "sourceBlobSha": "f0edc488decd3563722d232e2755a4f0ff2b26c1",
+      "traditional": "危",
+      "dictionaryReadings": [
+        "Wei1",
+        "wei1"
+      ],
+      "dictionaryDefinitions": {
+        "Wei1": "surname Wei; ",
+        "wei1": "danger; to endanger; Taiwan pr. [wei2]; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "dangerous",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 500,
+      "character": "旬",
+      "sourceStatus": "headword_found",
+      "sourcePath": "v2/旬.json",
+      "sourceBlobSha": "bcec3c5418853451e0621577a42f5041721c6349",
+      "traditional": "旬",
+      "dictionaryReadings": [
+        "xun2"
+      ],
+      "dictionaryDefinitions": {
+        "xun2": "ten days; ten years; full period; "
+      },
+      "selectedSenseChecks": [
+        {
+          "selectedMeaning": "ten-day",
+          "sourceGlossGroupIndex": 0,
+          "matchingDictionaryReadings": [],
+          "lexicalEvidence": "requires_sense_review",
+          "manualSenseReview": "pending",
+          "emojiComprehensionReview": "pending"
+        }
+      ],
+      "sourceError": null,
+      "manualCharacterReview": "pending",
+      "productionVerified": false
+    }
+  ]
+}
