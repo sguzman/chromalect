@@ -1,0 +1,1630 @@
+{
+  "schema": "chromalect.semantic.gloss-boundary-audit.v0.1",
+  "status": "automated_triage_not_semantic_approval",
+  "range": {
+    "start": 201,
+    "end": 400
+  },
+  "method": "English whole-term boundaries, compared with prior substring-only logic; punctuation, synonyms, translation variation still require review",
+  "summary": {
+    "count": 200,
+    "expressionCount": 171,
+    "legacyLiteral": 122,
+    "strictWholeTerm": 121,
+    "legacySubstringOnly": 1
+  },
+  "records": [
+    {
+      "rank": 202,
+      "character": "功",
+      "selectedMeaning": "achievement",
+      "legacyLiteral": true,
+      "strictWholeTerm": true,
+      "strictReadingMatches": [
+        "gong1"
+      ]
+    },
+    {
+      "rank": 203,
+      "character": "扔",
+      "selectedMeaning": "throw away",
+      "legacyLiteral": true,
+      "strictWholeTerm": true,
+      "strictReadingMatches": [
+        "reng1"
+      ]
+    },
+    {
+      "rank": 204,
+      "character": "去",
+      "selectedMeaning": "go away",
+      "legacyLiteral": false,
+      "strictWholeTerm": false,
+      "strictReadingMatches": []
+    },
+    {
+      "rank": 205,
+      "character": "甘",
+      "selectedMeaning": "sweet",
+      "legacyLiteral": true,
+      "strictWholeTerm": true,
+      "strictReadingMatches": [
+        "gan1"
+      ]
+    },
+    {
+      "rank": 206,
+      "character": "世",
+      "selectedMeaning": "world",
+      "legacyLiteral": true,
+      "strictWholeTerm": true,
+      "strictReadingMatches": [
+        "shi4"
+      ]
+    },
+    {
+      "rank": 208,
+      "character": "古",
+      "selectedMeaning": "ancient",
+      "legacyLiteral": true,
+      "strictWholeTerm": true,
+      "strictReadingMatches": [
+        "gu3"
+      ]
+    },
+    {
+      "rank": 209,
+      "character": "节",
+      "selectedMeaning": "knot",
+      "legacyLiteral": false,
+      "strictWholeTerm": false,
+      "strictReadingMatches": []
+    },
+    {
+      "rank": 211,
+      "character": "术",
+      "selectedMeaning": "art",
+      "legacyLiteral": false,
+      "strictWholeTerm": false,
+      "strictReadingMatches": []
+    },
+    {
+      "rank": 213,
+      "character": "丙",
+      "selectedMeaning": "third",
+      "legacyLiteral": true,
+      "strictWholeTerm": true,
+      "strictReadingMatches": [
+        "bing3"
+      ]
+    },
+    {
+      "rank": 214,
+      "character": "左",
+      "selectedMeaning": "left",
+      "legacyLiteral": true,
+      "strictWholeTerm": true,
+      "strictReadingMatches": [
+        "zuo3"
+      ]
+    },
+    {
+      "rank": 216,
+      "character": "石",
+      "selectedMeaning": "stone",
+      "legacyLiteral": true,
+      "strictWholeTerm": true,
+      "strictReadingMatches": [
+        "shi2"
+      ]
+    },
+    {
+      "rank": 217,
+      "character": "右",
+      "selectedMeaning": "right",
+      "legacyLiteral": true,
+      "strictWholeTerm": true,
+      "strictReadingMatches": [
+        "you4"
+      ]
+    },
+    {
+      "rank": 218,
+      "character": "布",
+      "selectedMeaning": "textiles",
+      "legacyLiteral": false,
+      "strictWholeTerm": false,
+      "strictReadingMatches": []
+    },
+    {
+      "rank": 219,
+      "character": "夯",
+      "selectedMeaning": "burden",
+      "legacyLiteral": false,
+      "strictWholeTerm": false,
+      "strictReadingMatches": []
+    },
+    {
+      "rank": 221,
+      "character": "龙",
+      "selectedMeaning": "dragon",
+      "legacyLiteral": true,
+      "strictWholeTerm": true,
+      "strictReadingMatches": [
+        "long2"
+      ]
+    },
+    {
+      "rank": 223,
+      "character": "灭",
+      "selectedMeaning": "extinguish",
+      "legacyLiteral": true,
+      "strictWholeTerm": true,
+      "strictReadingMatches": [
+        "mie4"
+      ]
+    },
+    {
+      "rank": 225,
+      "character": "东",
+      "selectedMeaning": "east",
+      "legacyLiteral": true,
+      "strictWholeTerm": true,
+      "strictReadingMatches": [
+        "dong1"
+      ]
+    },
+    {
+      "rank": 226,
+      "character": "卡",
+      "selectedMeaning": "card",
+      "legacyLiteral": true,
+      "strictWholeTerm": true,
+      "strictReadingMatches": [
+        "ka3"
+      ]
+    },
+    {
+      "rank": 227,
+      "character": "北",
+      "selectedMeaning": "north",
+      "legacyLiteral": true,
+      "strictWholeTerm": true,
+      "strictReadingMatches": [
+        "bei3"
+      ]
+    },
+    {
+      "rank": 228,
+      "character": "占",
+      "selectedMeaning": "divine",
+      "legacyLiteral": true,
+      "strictWholeTerm": true,
+      "strictReadingMatches": [
+        "zhan1"
+      ]
+    },
+    {
+      "rank": 230,
+      "character": "卢",
+      "selectedMeaning": "hut",
+      "legacyLiteral": false,
+      "strictWholeTerm": false,
+      "strictReadingMatches": []
+    },
+    {
+      "rank": 231,
+      "character": "业",
+      "selectedMeaning": "profession",
+      "legacyLiteral": false,
+      "strictWholeTerm": false,
+      "strictReadingMatches": []
+    },
+    {
+      "rank": 232,
+      "character": "旧",
+      "selectedMeaning": "ancient",
+      "legacyLiteral": false,
+      "strictWholeTerm": false,
+      "strictReadingMatches": []
+    },
+    {
+      "rank": 234,
+      "character": "归",
+      "selectedMeaning": "return",
+      "legacyLiteral": true,
+      "strictWholeTerm": true,
+      "strictReadingMatches": [
+        "gui1"
+      ]
+    },
+    {
+      "rank": 235,
+      "character": "旦",
+      "selectedMeaning": "dawn",
+      "legacyLiteral": true,
+      "strictWholeTerm": true,
+      "strictReadingMatches": [
+        "dan4"
+      ]
+    },
+    {
+      "rank": 236,
+      "character": "目",
+      "selectedMeaning": "eye",
+      "legacyLiteral": true,
+      "strictWholeTerm": true,
+      "strictReadingMatches": [
+        "mu4"
+      ]
+    },
+    {
+      "rank": 238,
+      "character": "叶",
+      "selectedMeaning": "leaf",
+      "legacyLiteral": true,
+      "strictWholeTerm": true,
+      "strictReadingMatches": [
+        "ye4"
+      ]
+    },
+    {
+      "rank": 239,
+      "character": "甲",
+      "selectedMeaning": "shell",
+      "legacyLiteral": true,
+      "strictWholeTerm": true,
+      "strictReadingMatches": [
+        "jia3"
+      ]
+    },
+    {
+      "rank": 240,
+      "character": "申",
+      "selectedMeaning": "report",
+      "legacyLiteral": false,
+      "strictWholeTerm": false,
+      "strictReadingMatches": []
+    },
+    {
+      "rank": 241,
+      "character": "叮",
+      "selectedMeaning": "repeatedly",
+      "legacyLiteral": true,
+      "strictWholeTerm": true,
+      "strictReadingMatches": [
+        "ding1"
+      ]
+    },
+    {
+      "rank": 242,
+      "character": "电",
+      "selectedMeaning": "electricity",
+      "legacyLiteral": true,
+      "strictWholeTerm": true,
+      "strictReadingMatches": [
+        "dian4"
+      ]
+    },
+    {
+      "rank": 243,
+      "character": "号",
+      "selectedMeaning": "number",
+      "legacyLiteral": true,
+      "strictWholeTerm": true,
+      "strictReadingMatches": [
+        "hao4"
+      ]
+    },
+    {
+      "rank": 244,
+      "character": "田",
+      "selectedMeaning": "field",
+      "legacyLiteral": true,
+      "strictWholeTerm": true,
+      "strictReadingMatches": [
+        "tian2"
+      ]
+    },
+    {
+      "rank": 246,
+      "character": "只",
+      "selectedMeaning": "only",
+      "legacyLiteral": true,
+      "strictWholeTerm": true,
+      "strictReadingMatches": [
+        "zhi3"
+      ]
+    },
+    {
+      "rank": 247,
+      "character": "叭",
+      "selectedMeaning": "trumpet",
+      "legacyLiteral": false,
+      "strictWholeTerm": false,
+      "strictReadingMatches": []
+    },
+    {
+      "rank": 248,
+      "character": "史",
+      "selectedMeaning": "history",
+      "legacyLiteral": true,
+      "strictWholeTerm": true,
+      "strictReadingMatches": [
+        "shi3"
+      ]
+    },
+    {
+      "rank": 249,
+      "character": "央",
+      "selectedMeaning": "center",
+      "legacyLiteral": true,
+      "strictWholeTerm": true,
+      "strictReadingMatches": [
+        "yang1"
+      ]
+    },
+    {
+      "rank": 253,
+      "character": "叫",
+      "selectedMeaning": "shout",
+      "legacyLiteral": true,
+      "strictWholeTerm": true,
+      "strictReadingMatches": [
+        "jiao4"
+      ]
+    },
+    {
+      "rank": 254,
+      "character": "叩",
+      "selectedMeaning": "knock",
+      "legacyLiteral": true,
+      "strictWholeTerm": true,
+      "strictReadingMatches": [
+        "kou4"
+      ]
+    },
+    {
+      "rank": 255,
+      "character": "叨",
+      "selectedMeaning": "talkative",
+      "legacyLiteral": false,
+      "strictWholeTerm": false,
+      "strictReadingMatches": []
+    },
+    {
+      "rank": 257,
+      "character": "叹",
+      "selectedMeaning": "sigh",
+      "legacyLiteral": true,
+      "strictWholeTerm": true,
+      "strictReadingMatches": [
+        "tan4"
+      ]
+    },
+    {
+      "rank": 258,
+      "character": "冉",
+      "selectedMeaning": "tender",
+      "legacyLiteral": false,
+      "strictWholeTerm": false,
+      "strictReadingMatches": []
+    },
+    {
+      "rank": 259,
+      "character": "皿",
+      "selectedMeaning": "shallow container",
+      "legacyLiteral": true,
+      "strictWholeTerm": true,
+      "strictReadingMatches": [
+        "min3"
+      ]
+    },
+    {
+      "rank": 260,
+      "character": "凹",
+      "selectedMeaning": "hollow",
+      "legacyLiteral": false,
+      "strictWholeTerm": false,
+      "strictReadingMatches": []
+    },
+    {
+      "rank": 261,
+      "character": "囚",
+      "selectedMeaning": "prisoner",
+      "legacyLiteral": true,
+      "strictWholeTerm": true,
+      "strictReadingMatches": [
+        "qiu2"
+      ]
+    },
+    {
+      "rank": 262,
+      "character": "四",
+      "selectedMeaning": "four",
+      "legacyLiteral": true,
+      "strictWholeTerm": true,
+      "strictReadingMatches": [
+        "si4"
+      ]
+    },
+    {
+      "rank": 263,
+      "character": "生",
+      "selectedMeaning": "life",
+      "legacyLiteral": true,
+      "strictWholeTerm": true,
+      "strictReadingMatches": [
+        "sheng1"
+      ]
+    },
+    {
+      "rank": 263,
+      "character": "生",
+      "selectedMeaning": "birth",
+      "legacyLiteral": true,
+      "strictWholeTerm": true,
+      "strictReadingMatches": [
+        "sheng1"
+      ]
+    },
+    {
+      "rank": 264,
+      "character": "矢",
+      "selectedMeaning": "arrow",
+      "legacyLiteral": true,
+      "strictWholeTerm": true,
+      "strictReadingMatches": [
+        "shi3"
+      ]
+    },
+    {
+      "rank": 265,
+      "character": "失",
+      "selectedMeaning": "lose",
+      "legacyLiteral": true,
+      "strictWholeTerm": true,
+      "strictReadingMatches": [
+        "shi1"
+      ]
+    },
+    {
+      "rank": 267,
+      "character": "禾",
+      "selectedMeaning": "grain",
+      "legacyLiteral": true,
+      "strictWholeTerm": true,
+      "strictReadingMatches": [
+        "he2"
+      ]
+    },
+    {
+      "rank": 268,
+      "character": "丘",
+      "selectedMeaning": "hill",
+      "legacyLiteral": true,
+      "strictWholeTerm": false,
+      "strictReadingMatches": []
+    },
+    {
+      "rank": 269,
+      "character": "付",
+      "selectedMeaning": "give",
+      "legacyLiteral": false,
+      "strictWholeTerm": false,
+      "strictReadingMatches": []
+    },
+    {
+      "rank": 270,
+      "character": "仗",
+      "selectedMeaning": "fight",
+      "legacyLiteral": false,
+      "strictWholeTerm": false,
+      "strictReadingMatches": []
+    },
+    {
+      "rank": 271,
+      "character": "代",
+      "selectedMeaning": "replace",
+      "legacyLiteral": true,
+      "strictWholeTerm": true,
+      "strictReadingMatches": [
+        "dai4"
+      ]
+    },
+    {
+      "rank": 273,
+      "character": "们",
+      "selectedMeaning": "plural",
+      "legacyLiteral": true,
+      "strictWholeTerm": true,
+      "strictReadingMatches": [
+        "men5"
+      ]
+    },
+    {
+      "rank": 275,
+      "character": "白",
+      "selectedMeaning": "white",
+      "legacyLiteral": true,
+      "strictWholeTerm": true,
+      "strictReadingMatches": [
+        "bai2"
+      ]
+    },
+    {
+      "rank": 276,
+      "character": "仔",
+      "selectedMeaning": "child",
+      "legacyLiteral": false,
+      "strictWholeTerm": false,
+      "strictReadingMatches": []
+    },
+    {
+      "rank": 277,
+      "character": "他",
+      "selectedMeaning": "he",
+      "legacyLiteral": true,
+      "strictWholeTerm": true,
+      "strictReadingMatches": [
+        "ta1"
+      ]
+    },
+    {
+      "rank": 278,
+      "character": "斥",
+      "selectedMeaning": "scold",
+      "legacyLiteral": false,
+      "strictWholeTerm": false,
+      "strictReadingMatches": []
+    },
+    {
+      "rank": 279,
+      "character": "瓜",
+      "selectedMeaning": "melon",
+      "legacyLiteral": true,
+      "strictWholeTerm": true,
+      "strictReadingMatches": [
+        "gua1"
+      ]
+    },
+    {
+      "rank": 281,
+      "character": "丛",
+      "selectedMeaning": "bush",
+      "legacyLiteral": false,
+      "strictWholeTerm": false,
+      "strictReadingMatches": []
+    },
+    {
+      "rank": 282,
+      "character": "令",
+      "selectedMeaning": "command",
+      "legacyLiteral": true,
+      "strictWholeTerm": true,
+      "strictReadingMatches": [
+        "ling4"
+      ]
+    },
+    {
+      "rank": 283,
+      "character": "用",
+      "selectedMeaning": "use",
+      "legacyLiteral": true,
+      "strictWholeTerm": true,
+      "strictReadingMatches": [
+        "yong4"
+      ]
+    },
+    {
+      "rank": 284,
+      "character": "甩",
+      "selectedMeaning": "throw away",
+      "legacyLiteral": false,
+      "strictWholeTerm": false,
+      "strictReadingMatches": []
+    },
+    {
+      "rank": 285,
+      "character": "印",
+      "selectedMeaning": "print",
+      "legacyLiteral": true,
+      "strictWholeTerm": true,
+      "strictReadingMatches": [
+        "yin4"
+      ]
+    },
+    {
+      "rank": 286,
+      "character": "尔",
+      "selectedMeaning": "you",
+      "legacyLiteral": true,
+      "strictWholeTerm": true,
+      "strictReadingMatches": [
+        "er3"
+      ]
+    },
+    {
+      "rank": 287,
+      "character": "乐",
+      "selectedMeaning": "happy",
+      "legacyLiteral": true,
+      "strictWholeTerm": true,
+      "strictReadingMatches": [
+        "le4"
+      ]
+    },
+    {
+      "rank": 287,
+      "character": "乐",
+      "selectedMeaning": "music",
+      "legacyLiteral": true,
+      "strictWholeTerm": true,
+      "strictReadingMatches": [
+        "yue4"
+      ]
+    },
+    {
+      "rank": 289,
+      "character": "匆",
+      "selectedMeaning": "hurriedly",
+      "legacyLiteral": false,
+      "strictWholeTerm": false,
+      "strictReadingMatches": []
+    },
+    {
+      "rank": 290,
+      "character": "册",
+      "selectedMeaning": "book",
+      "legacyLiteral": true,
+      "strictWholeTerm": true,
+      "strictReadingMatches": [
+        "ce4"
+      ]
+    },
+    {
+      "rank": 293,
+      "character": "外",
+      "selectedMeaning": "outside",
+      "legacyLiteral": true,
+      "strictWholeTerm": true,
+      "strictReadingMatches": [
+        "wai4"
+      ]
+    },
+    {
+      "rank": 294,
+      "character": "处",
+      "selectedMeaning": "place",
+      "legacyLiteral": true,
+      "strictWholeTerm": true,
+      "strictReadingMatches": [
+        "chu4"
+      ]
+    },
+    {
+      "rank": 295,
+      "character": "冬",
+      "selectedMeaning": "winter",
+      "legacyLiteral": true,
+      "strictWholeTerm": true,
+      "strictReadingMatches": [
+        "dong1"
+      ]
+    },
+    {
+      "rank": 296,
+      "character": "鸟",
+      "selectedMeaning": "bird",
+      "legacyLiteral": true,
+      "strictWholeTerm": true,
+      "strictReadingMatches": [
+        "niao3"
+      ]
+    },
+    {
+      "rank": 297,
+      "character": "务",
+      "selectedMeaning": "business",
+      "legacyLiteral": true,
+      "strictWholeTerm": true,
+      "strictReadingMatches": [
+        "wu4"
+      ]
+    },
+    {
+      "rank": 298,
+      "character": "包",
+      "selectedMeaning": "package",
+      "legacyLiteral": true,
+      "strictWholeTerm": true,
+      "strictReadingMatches": [
+        "bao1"
+      ]
+    },
+    {
+      "rank": 300,
+      "character": "主",
+      "selectedMeaning": "chief",
+      "legacyLiteral": false,
+      "strictWholeTerm": false,
+      "strictReadingMatches": []
+    },
+    {
+      "rank": 301,
+      "character": "市",
+      "selectedMeaning": "market",
+      "legacyLiteral": true,
+      "strictWholeTerm": true,
+      "strictReadingMatches": [
+        "shi4"
+      ]
+    },
+    {
+      "rank": 301,
+      "character": "市",
+      "selectedMeaning": "city",
+      "legacyLiteral": true,
+      "strictWholeTerm": true,
+      "strictReadingMatches": [
+        "shi4"
+      ]
+    },
+    {
+      "rank": 302,
+      "character": "立",
+      "selectedMeaning": "stand",
+      "legacyLiteral": true,
+      "strictWholeTerm": true,
+      "strictReadingMatches": [
+        "li4"
+      ]
+    },
+    {
+      "rank": 305,
+      "character": "闪",
+      "selectedMeaning": "flash",
+      "legacyLiteral": true,
+      "strictWholeTerm": true,
+      "strictReadingMatches": [
+        "shan3"
+      ]
+    },
+    {
+      "rank": 306,
+      "character": "兰",
+      "selectedMeaning": "orchid",
+      "legacyLiteral": true,
+      "strictWholeTerm": true,
+      "strictReadingMatches": [
+        "lan2"
+      ]
+    },
+    {
+      "rank": 307,
+      "character": "半",
+      "selectedMeaning": "half",
+      "legacyLiteral": true,
+      "strictWholeTerm": true,
+      "strictReadingMatches": [
+        "ban4"
+      ]
+    },
+    {
+      "rank": 308,
+      "character": "汁",
+      "selectedMeaning": "juice",
+      "legacyLiteral": true,
+      "strictWholeTerm": true,
+      "strictReadingMatches": [
+        "zhi1"
+      ]
+    },
+    {
+      "rank": 309,
+      "character": "汇",
+      "selectedMeaning": "gather",
+      "legacyLiteral": false,
+      "strictWholeTerm": false,
+      "strictReadingMatches": []
+    },
+    {
+      "rank": 310,
+      "character": "头",
+      "selectedMeaning": "head",
+      "legacyLiteral": true,
+      "strictWholeTerm": true,
+      "strictReadingMatches": [
+        "tou2"
+      ]
+    },
+    {
+      "rank": 311,
+      "character": "汉",
+      "selectedMeaning": "Chinese language",
+      "legacyLiteral": false,
+      "strictWholeTerm": false,
+      "strictReadingMatches": []
+    },
+    {
+      "rank": 312,
+      "character": "宁",
+      "selectedMeaning": "peaceful",
+      "legacyLiteral": true,
+      "strictWholeTerm": true,
+      "strictReadingMatches": [
+        "ning2"
+      ]
+    },
+    {
+      "rank": 313,
+      "character": "穴",
+      "selectedMeaning": "cave",
+      "legacyLiteral": true,
+      "strictWholeTerm": true,
+      "strictReadingMatches": [
+        "xue2"
+      ]
+    },
+    {
+      "rank": 314,
+      "character": "它",
+      "selectedMeaning": "it",
+      "legacyLiteral": true,
+      "strictWholeTerm": true,
+      "strictReadingMatches": [
+        "ta1"
+      ]
+    },
+    {
+      "rank": 315,
+      "character": "讨",
+      "selectedMeaning": "discuss",
+      "legacyLiteral": true,
+      "strictWholeTerm": true,
+      "strictReadingMatches": [
+        "tao3"
+      ]
+    },
+    {
+      "rank": 316,
+      "character": "写",
+      "selectedMeaning": "write",
+      "legacyLiteral": true,
+      "strictWholeTerm": true,
+      "strictReadingMatches": [
+        "xie3"
+      ]
+    },
+    {
+      "rank": 317,
+      "character": "让",
+      "selectedMeaning": "allow",
+      "legacyLiteral": false,
+      "strictWholeTerm": false,
+      "strictReadingMatches": []
+    },
+    {
+      "rank": 318,
+      "character": "礼",
+      "selectedMeaning": "courtesy",
+      "legacyLiteral": true,
+      "strictWholeTerm": true,
+      "strictReadingMatches": [
+        "li3"
+      ]
+    },
+    {
+      "rank": 319,
+      "character": "训",
+      "selectedMeaning": "teach",
+      "legacyLiteral": true,
+      "strictWholeTerm": true,
+      "strictReadingMatches": [
+        "xun4"
+      ]
+    },
+    {
+      "rank": 320,
+      "character": "议",
+      "selectedMeaning": "discuss",
+      "legacyLiteral": true,
+      "strictWholeTerm": true,
+      "strictReadingMatches": [
+        "yi4"
+      ]
+    },
+    {
+      "rank": 321,
+      "character": "必",
+      "selectedMeaning": "must",
+      "legacyLiteral": true,
+      "strictWholeTerm": true,
+      "strictReadingMatches": [
+        "bi4"
+      ]
+    },
+    {
+      "rank": 322,
+      "character": "讯",
+      "selectedMeaning": "inquire",
+      "legacyLiteral": false,
+      "strictWholeTerm": false,
+      "strictReadingMatches": []
+    },
+    {
+      "rank": 323,
+      "character": "记",
+      "selectedMeaning": "record",
+      "legacyLiteral": true,
+      "strictWholeTerm": true,
+      "strictReadingMatches": [
+        "ji4"
+      ]
+    },
+    {
+      "rank": 324,
+      "character": "永",
+      "selectedMeaning": "forever",
+      "legacyLiteral": true,
+      "strictWholeTerm": true,
+      "strictReadingMatches": [
+        "yong3"
+      ]
+    },
+    {
+      "rank": 325,
+      "character": "司",
+      "selectedMeaning": "control",
+      "legacyLiteral": false,
+      "strictWholeTerm": false,
+      "strictReadingMatches": []
+    },
+    {
+      "rank": 326,
+      "character": "尼",
+      "selectedMeaning": "nun",
+      "legacyLiteral": true,
+      "strictWholeTerm": true,
+      "strictReadingMatches": [
+        "ni2"
+      ]
+    },
+    {
+      "rank": 327,
+      "character": "民",
+      "selectedMeaning": "citizens",
+      "legacyLiteral": false,
+      "strictWholeTerm": false,
+      "strictReadingMatches": []
+    },
+    {
+      "rank": 328,
+      "character": "弗",
+      "selectedMeaning": "not",
+      "legacyLiteral": true,
+      "strictWholeTerm": true,
+      "strictReadingMatches": [
+        "fu2"
+      ]
+    },
+    {
+      "rank": 329,
+      "character": "弘",
+      "selectedMeaning": "expand",
+      "legacyLiteral": false,
+      "strictWholeTerm": false,
+      "strictReadingMatches": []
+    },
+    {
+      "rank": 330,
+      "character": "出",
+      "selectedMeaning": "go out",
+      "legacyLiteral": true,
+      "strictWholeTerm": true,
+      "strictReadingMatches": [
+        "chu1"
+      ]
+    },
+    {
+      "rank": 331,
+      "character": "辽",
+      "selectedMeaning": "distant",
+      "legacyLiteral": false,
+      "strictWholeTerm": false,
+      "strictReadingMatches": []
+    },
+    {
+      "rank": 332,
+      "character": "奶",
+      "selectedMeaning": "milk",
+      "legacyLiteral": true,
+      "strictWholeTerm": true,
+      "strictReadingMatches": [
+        "nai3"
+      ]
+    },
+    {
+      "rank": 333,
+      "character": "奴",
+      "selectedMeaning": "slave",
+      "legacyLiteral": true,
+      "strictWholeTerm": true,
+      "strictReadingMatches": [
+        "nu2"
+      ]
+    },
+    {
+      "rank": 334,
+      "character": "召",
+      "selectedMeaning": "summon",
+      "legacyLiteral": true,
+      "strictWholeTerm": true,
+      "strictReadingMatches": [
+        "zhao4"
+      ]
+    },
+    {
+      "rank": 335,
+      "character": "加",
+      "selectedMeaning": "increase",
+      "legacyLiteral": false,
+      "strictWholeTerm": false,
+      "strictReadingMatches": []
+    },
+    {
+      "rank": 336,
+      "character": "皮",
+      "selectedMeaning": "skin",
+      "legacyLiteral": true,
+      "strictWholeTerm": true,
+      "strictReadingMatches": [
+        "pi2"
+      ]
+    },
+    {
+      "rank": 337,
+      "character": "边",
+      "selectedMeaning": "border",
+      "legacyLiteral": true,
+      "strictWholeTerm": true,
+      "strictReadingMatches": [
+        "bian1"
+      ]
+    },
+    {
+      "rank": 338,
+      "character": "孕",
+      "selectedMeaning": "pregnant",
+      "legacyLiteral": true,
+      "strictWholeTerm": true,
+      "strictReadingMatches": [
+        "yun4"
+      ]
+    },
+    {
+      "rank": 340,
+      "character": "圣",
+      "selectedMeaning": "holy",
+      "legacyLiteral": true,
+      "strictWholeTerm": true,
+      "strictReadingMatches": [
+        "sheng4"
+      ]
+    },
+    {
+      "rank": 341,
+      "character": "对",
+      "selectedMeaning": "correct",
+      "legacyLiteral": true,
+      "strictWholeTerm": true,
+      "strictReadingMatches": [
+        "dui4"
+      ]
+    },
+    {
+      "rank": 342,
+      "character": "台",
+      "selectedMeaning": "platform",
+      "legacyLiteral": true,
+      "strictWholeTerm": true,
+      "strictReadingMatches": [
+        "tai2"
+      ]
+    },
+    {
+      "rank": 345,
+      "character": "母",
+      "selectedMeaning": "mother",
+      "legacyLiteral": true,
+      "strictWholeTerm": true,
+      "strictReadingMatches": [
+        "mu3"
+      ]
+    },
+    {
+      "rank": 346,
+      "character": "幼",
+      "selectedMeaning": "young child",
+      "legacyLiteral": false,
+      "strictWholeTerm": false,
+      "strictReadingMatches": []
+    },
+    {
+      "rank": 347,
+      "character": "丝",
+      "selectedMeaning": "silk",
+      "legacyLiteral": true,
+      "strictWholeTerm": true,
+      "strictReadingMatches": [
+        "si1"
+      ]
+    },
+    {
+      "rank": 348,
+      "character": "邦",
+      "selectedMeaning": "country",
+      "legacyLiteral": true,
+      "strictWholeTerm": true,
+      "strictReadingMatches": [
+        "bang1"
+      ]
+    },
+    {
+      "rank": 349,
+      "character": "式",
+      "selectedMeaning": "formula",
+      "legacyLiteral": false,
+      "strictWholeTerm": false,
+      "strictReadingMatches": []
+    },
+    {
+      "rank": 351,
+      "character": "刑",
+      "selectedMeaning": "punishment",
+      "legacyLiteral": true,
+      "strictWholeTerm": true,
+      "strictReadingMatches": [
+        "xing2"
+      ]
+    },
+    {
+      "rank": 352,
+      "character": "戎",
+      "selectedMeaning": "military",
+      "legacyLiteral": true,
+      "strictWholeTerm": true,
+      "strictReadingMatches": [
+        "rong2"
+      ]
+    },
+    {
+      "rank": 353,
+      "character": "动",
+      "selectedMeaning": "move",
+      "legacyLiteral": true,
+      "strictWholeTerm": true,
+      "strictReadingMatches": [
+        "dong4"
+      ]
+    },
+    {
+      "rank": 354,
+      "character": "扛",
+      "selectedMeaning": "carry",
+      "legacyLiteral": true,
+      "strictWholeTerm": true,
+      "strictReadingMatches": [
+        "gang1",
+        "kang2"
+      ]
+    },
+    {
+      "rank": 355,
+      "character": "寺",
+      "selectedMeaning": "temple",
+      "legacyLiteral": true,
+      "strictWholeTerm": true,
+      "strictReadingMatches": [
+        "si4"
+      ]
+    },
+    {
+      "rank": 356,
+      "character": "吉",
+      "selectedMeaning": "lucky",
+      "legacyLiteral": true,
+      "strictWholeTerm": true,
+      "strictReadingMatches": [
+        "ji2"
+      ]
+    },
+    {
+      "rank": 357,
+      "character": "扣",
+      "selectedMeaning": "knock",
+      "legacyLiteral": true,
+      "strictWholeTerm": true,
+      "strictReadingMatches": [
+        "kou4"
+      ]
+    },
+    {
+      "rank": 358,
+      "character": "考",
+      "selectedMeaning": "examine",
+      "legacyLiteral": true,
+      "strictWholeTerm": true,
+      "strictReadingMatches": [
+        "kao3"
+      ]
+    },
+    {
+      "rank": 359,
+      "character": "托",
+      "selectedMeaning": "support",
+      "legacyLiteral": true,
+      "strictWholeTerm": true,
+      "strictReadingMatches": [
+        "tuo1"
+      ]
+    },
+    {
+      "rank": 360,
+      "character": "老",
+      "selectedMeaning": "old",
+      "legacyLiteral": true,
+      "strictWholeTerm": true,
+      "strictReadingMatches": [
+        "lao3"
+      ]
+    },
+    {
+      "rank": 361,
+      "character": "巩",
+      "selectedMeaning": "strong",
+      "legacyLiteral": false,
+      "strictWholeTerm": false,
+      "strictReadingMatches": []
+    },
+    {
+      "rank": 362,
+      "character": "圾",
+      "selectedMeaning": "garbage",
+      "legacyLiteral": false,
+      "strictWholeTerm": false,
+      "strictReadingMatches": []
+    },
+    {
+      "rank": 363,
+      "character": "执",
+      "selectedMeaning": "carry out",
+      "legacyLiteral": false,
+      "strictWholeTerm": false,
+      "strictReadingMatches": []
+    },
+    {
+      "rank": 364,
+      "character": "扩",
+      "selectedMeaning": "expand",
+      "legacyLiteral": false,
+      "strictWholeTerm": false,
+      "strictReadingMatches": []
+    },
+    {
+      "rank": 365,
+      "character": "扫",
+      "selectedMeaning": "sweep",
+      "legacyLiteral": true,
+      "strictWholeTerm": true,
+      "strictReadingMatches": [
+        "sao3"
+      ]
+    },
+    {
+      "rank": 366,
+      "character": "地",
+      "selectedMeaning": "earth",
+      "legacyLiteral": true,
+      "strictWholeTerm": true,
+      "strictReadingMatches": [
+        "di4"
+      ]
+    },
+    {
+      "rank": 367,
+      "character": "场",
+      "selectedMeaning": "field",
+      "legacyLiteral": false,
+      "strictWholeTerm": false,
+      "strictReadingMatches": []
+    },
+    {
+      "rank": 368,
+      "character": "扬",
+      "selectedMeaning": "praise",
+      "legacyLiteral": false,
+      "strictWholeTerm": false,
+      "strictReadingMatches": []
+    },
+    {
+      "rank": 369,
+      "character": "耳",
+      "selectedMeaning": "ear",
+      "legacyLiteral": true,
+      "strictWholeTerm": true,
+      "strictReadingMatches": [
+        "er3"
+      ]
+    },
+    {
+      "rank": 370,
+      "character": "芋",
+      "selectedMeaning": "taro",
+      "legacyLiteral": true,
+      "strictWholeTerm": true,
+      "strictReadingMatches": [
+        "yu4"
+      ]
+    },
+    {
+      "rank": 371,
+      "character": "共",
+      "selectedMeaning": "together",
+      "legacyLiteral": true,
+      "strictWholeTerm": true,
+      "strictReadingMatches": [
+        "gong4"
+      ]
+    },
+    {
+      "rank": 373,
+      "character": "亚",
+      "selectedMeaning": "Asia",
+      "legacyLiteral": true,
+      "strictWholeTerm": true,
+      "strictReadingMatches": [
+        "ya4"
+      ]
+    },
+    {
+      "rank": 374,
+      "character": "芝",
+      "selectedMeaning": "mushroom",
+      "legacyLiteral": false,
+      "strictWholeTerm": false,
+      "strictReadingMatches": []
+    },
+    {
+      "rank": 375,
+      "character": "朽",
+      "selectedMeaning": "rotten",
+      "legacyLiteral": true,
+      "strictWholeTerm": true,
+      "strictReadingMatches": [
+        "xiu3"
+      ]
+    },
+    {
+      "rank": 376,
+      "character": "朴",
+      "selectedMeaning": "simple",
+      "legacyLiteral": true,
+      "strictWholeTerm": true,
+      "strictReadingMatches": [
+        "pu3"
+      ]
+    },
+    {
+      "rank": 377,
+      "character": "机",
+      "selectedMeaning": "machine",
+      "legacyLiteral": true,
+      "strictWholeTerm": true,
+      "strictReadingMatches": [
+        "ji1"
+      ]
+    },
+    {
+      "rank": 378,
+      "character": "权",
+      "selectedMeaning": "authority",
+      "legacyLiteral": true,
+      "strictWholeTerm": true,
+      "strictReadingMatches": [
+        "quan2"
+      ]
+    },
+    {
+      "rank": 379,
+      "character": "过",
+      "selectedMeaning": "pass through",
+      "legacyLiteral": false,
+      "strictWholeTerm": false,
+      "strictReadingMatches": []
+    },
+    {
+      "rank": 380,
+      "character": "臣",
+      "selectedMeaning": "minister",
+      "legacyLiteral": false,
+      "strictWholeTerm": false,
+      "strictReadingMatches": []
+    },
+    {
+      "rank": 381,
+      "character": "吏",
+      "selectedMeaning": "government official",
+      "legacyLiteral": true,
+      "strictWholeTerm": true,
+      "strictReadingMatches": [
+        "li4"
+      ]
+    },
+    {
+      "rank": 382,
+      "character": "再",
+      "selectedMeaning": "again",
+      "legacyLiteral": true,
+      "strictWholeTerm": true,
+      "strictReadingMatches": [
+        "zai4"
+      ]
+    },
+    {
+      "rank": 383,
+      "character": "协",
+      "selectedMeaning": "cooperate",
+      "legacyLiteral": true,
+      "strictWholeTerm": true,
+      "strictReadingMatches": [
+        "xie2"
+      ]
+    },
+    {
+      "rank": 384,
+      "character": "西",
+      "selectedMeaning": "west",
+      "legacyLiteral": true,
+      "strictWholeTerm": true,
+      "strictReadingMatches": [
+        "Xi1",
+        "xi1"
+      ]
+    },
+    {
+      "rank": 385,
+      "character": "压",
+      "selectedMeaning": "press",
+      "legacyLiteral": true,
+      "strictWholeTerm": true,
+      "strictReadingMatches": [
+        "ya1"
+      ]
+    },
+    {
+      "rank": 386,
+      "character": "厌",
+      "selectedMeaning": "dislike",
+      "legacyLiteral": false,
+      "strictWholeTerm": false,
+      "strictReadingMatches": []
+    },
+    {
+      "rank": 388,
+      "character": "在",
+      "selectedMeaning": "in",
+      "legacyLiteral": true,
+      "strictWholeTerm": true,
+      "strictReadingMatches": [
+        "zai4"
+      ]
+    },
+    {
+      "rank": 389,
+      "character": "百",
+      "selectedMeaning": "one hundred",
+      "legacyLiteral": false,
+      "strictWholeTerm": false,
+      "strictReadingMatches": []
+    },
+    {
+      "rank": 390,
+      "character": "有",
+      "selectedMeaning": "have",
+      "legacyLiteral": true,
+      "strictWholeTerm": true,
+      "strictReadingMatches": [
+        "you3"
+      ]
+    },
+    {
+      "rank": 391,
+      "character": "存",
+      "selectedMeaning": "exist",
+      "legacyLiteral": true,
+      "strictWholeTerm": true,
+      "strictReadingMatches": [
+        "cun2"
+      ]
+    },
+    {
+      "rank": 392,
+      "character": "而",
+      "selectedMeaning": "but",
+      "legacyLiteral": true,
+      "strictWholeTerm": true,
+      "strictReadingMatches": [
+        "er2"
+      ]
+    },
+    {
+      "rank": 393,
+      "character": "页",
+      "selectedMeaning": "page",
+      "legacyLiteral": true,
+      "strictWholeTerm": true,
+      "strictReadingMatches": [
+        "ye4"
+      ]
+    },
+    {
+      "rank": 394,
+      "character": "匠",
+      "selectedMeaning": "artisan",
+      "legacyLiteral": false,
+      "strictWholeTerm": false,
+      "strictReadingMatches": []
+    },
+    {
+      "rank": 395,
+      "character": "夸",
+      "selectedMeaning": "handsome",
+      "legacyLiteral": false,
+      "strictWholeTerm": false,
+      "strictReadingMatches": []
+    },
+    {
+      "rank": 396,
+      "character": "夺",
+      "selectedMeaning": "rob",
+      "legacyLiteral": false,
+      "strictWholeTerm": false,
+      "strictReadingMatches": []
+    },
+    {
+      "rank": 397,
+      "character": "灰",
+      "selectedMeaning": "ashes",
+      "legacyLiteral": false,
+      "strictWholeTerm": false,
+      "strictReadingMatches": []
+    },
+    {
+      "rank": 398,
+      "character": "达",
+      "selectedMeaning": "arrive",
+      "legacyLiteral": false,
+      "strictWholeTerm": false,
+      "strictReadingMatches": []
+    },
+    {
+      "rank": 399,
+      "character": "列",
+      "selectedMeaning": "line",
+      "legacyLiteral": true,
+      "strictWholeTerm": true,
+      "strictReadingMatches": [
+        "lie4"
+      ]
+    },
+    {
+      "rank": 400,
+      "character": "死",
+      "selectedMeaning": "death",
+      "legacyLiteral": false,
+      "strictWholeTerm": false,
+      "strictReadingMatches": []
+    }
+  ]
+}
