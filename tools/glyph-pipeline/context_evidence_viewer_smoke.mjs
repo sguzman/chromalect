@@ -5,6 +5,7 @@ const html=fs.readFileSync("site/context-evidence.html","utf8");
 const source=fs.readFileSync("site/context-evidence.js","utf8");
 const old=JSON.parse(fs.readFileSync("data/semantic/cedict-crossref/tatoeba-sentence-id-index-v0.1.json","utf8"));
 const hashed=JSON.parse(fs.readFileSync("data/semantic/cedict-crossref/tatoeba-hash-sample-source-id-index-v0.1.json","utf8"));
+const escalation=JSON.parse(fs.readFileSync("data/semantic/cedict-crossref/unmatched-corpus-character-source-escalation-v0.1.json","utf8"));
 const ids=["candidate-query","candidate-scope","candidate-cohort","candidate-status","candidate-stats","candidate-rows","candidate-prev","candidate-next"];
 class Element {
  constructor(){this.children=[];this.value="";this.textContent="";this.disabled=false;this.events={};}
@@ -13,11 +14,11 @@ class Element {
  appendChild(x){this.children.push(x);}
  click(){this.events.click?.();}
 }
-function setup(a=old,b=hashed){
+function setup(a=old,b=hashed,e=escalation){
  const nodes=Object.fromEntries(ids.map(id=>[id,new Element()]));
  nodes["candidate-scope"].value="all";
  nodes["candidate-cohort"].value="combined";
- const fetch=async path=>({ok:true,json:async()=>path.includes("hash-sample")?b:a});
+ const fetch=async path=>({ok:true,json:async()=>path.includes("unmatched-corpus-character")?e:path.includes("hash-sample")?b:a});
  const sandbox={document:{getElementById:id=>nodes[id],createElement:()=>new Element()},fetch};
  vm.runInNewContext(source,sandbox);
  return nodes;
@@ -36,6 +37,10 @@ assert.equal(nodes["candidate-next"].disabled,false);
 nodes["candidate-scope"].value="without";nodes["candidate-scope"].events.change();
 assert.equal(nodes["candidate-rows"].children.length,1);
 assert.equal(nodes["candidate-rows"].children[0].children[0].children[0].textContent,"刨");
+const missing=nodes["candidate-rows"].children[0];
+const dictionaryLinks=missing.children.find(x=>x.children.length===4);
+assert.ok(dictionaryLinks&&dictionaryLinks.children.every(li=>li.children[0].href.startsWith("https://")));
+assert.ok(missing.children.some(x=>x.textContent.includes("not corpus sentence attestations")));
 nodes["candidate-scope"].value="all";nodes["candidate-query"].value="127";
 nodes["candidate-query"].events.input();
 assert.equal(nodes["candidate-rows"].children.length,1);
@@ -52,6 +57,12 @@ assert.equal(nodes["candidate-rows"].children[0].children[2].children.length,5);
 assert.ok(nodes["candidate-status"].textContent.includes("701 character/sentence associations"));
 assert.match(html,/id="candidate-cohort"/);
 assert.ok(!source.includes("innerHTML"));
+const falsified=structuredClone(escalation);
+falsified.records[0].independentLexicalApproval=true;
+const invalidLead=setup(old,hashed,falsified);
+await settle(invalidLead);
+assert.ok(invalidLead["candidate-status"].textContent.includes("Unable to validate"));
+assert.equal(invalidLead["candidate-rows"].children.length,0);
 const malformed=structuredClone(hashed);
 malformed.records[0].independentReadingApproval=true;
 const invalid=setup(old,malformed);

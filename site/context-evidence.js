@@ -5,7 +5,7 @@ const $=id=>document.getElementById(id);
 const required=["candidate-query","candidate-scope","candidate-cohort","candidate-status","candidate-stats","candidate-rows","candidate-prev","candidate-next"];
 if(required.some(id=>!$(id)))return;
 const LIMIT=18;
-let cohorts=new Map(),rows=[],page=0;
+let cohorts=new Map(),escalation=null,page=0;
 const modes={
  early:{title:"First three source matches",associations:423,unique:363,max:3},
  hashed:{title:"Whole-corpus hash sample",associations:701,unique:690,max:5},
@@ -98,7 +98,22 @@ function show(){
   card.appendChild(note);list.className="context-links";
   if(!r.sentenceIds.length){
    const empty=document.createElement("p");empty.className="context-small";
-   empty.textContent="No candidate in either the relevant source sample. Not evidence of an unattested character or reading.";
+   empty.textContent="No corpus candidate ID in the selected sample. This does not imply an unattested character or reading.";
+   if(escalation?.rank===r.rank){
+    const lead=document.createElement("p");
+    lead.className="context-small";
+    lead.textContent="Publisher dictionary research leads (not corpus sentence attestations; no approved senses):";
+    card.appendChild(lead);
+    const sources=document.createElement("ul");sources.className="context-links";
+    for(const entry of escalation.sourcePages){
+     const li=document.createElement("li"),a=document.createElement("a");
+     a.href=entry.url;
+     a.target="_blank";a.rel="noopener noreferrer";
+     a.textContent=entry.publisher+" · "+entry.displayedPinyinLabels.join(", ");
+     li.appendChild(a);sources.appendChild(li);
+    }
+    card.appendChild(sources);
+   }
    card.appendChild(empty);
   }
   for(const id of r.sentenceIds){
@@ -127,12 +142,33 @@ async function load(){
  try{
   const inputs=[
    ["early","semantic/tatoeba-sentence-id-index-v0.1.json"],
-   ["hashed","semantic/tatoeba-hash-sample-source-id-index-v0.1.json"]
+   ["hashed","semantic/tatoeba-hash-sample-source-id-index-v0.1.json"],
+   ["escalation","semantic/unmatched-corpus-character-source-escalation-v0.1.json"]
   ];
   const responses=await Promise.all(inputs.map(x=>fetch(x[1])));
   if(responses.some(x=>!x.ok))fail("Required research cohort unavailable");
   const data=await Promise.all(responses.map(r=>r.json()));
   const early=checkRows(data[0],"early"),hashed=checkRows(data[1],"hashed");
+  const lead=data[2];
+  if(lead.schema!=="chromalect.semantic.unmatched-corpus-character-source-escalation.v0.1"||
+     lead.status!=="publisher_dictionary_source_leads_only_no_corpus_attestation"||
+     lead.summary.unmatchedHighAttentionCharacters!==1||
+     lead.summary.externalPublisherPagesInspected!==4||
+     lead.summary.independentlyVerifiedContextualPronunciations!==0||
+     lead.summary.independentlyApprovedLexicalSenses!==0||
+     lead.summary.independentlyApprovedPictograms!==0||
+     lead.summary.productionSemanticApprovals!==0||
+     lead.records.length!==1||
+     lead.records[0].rank!==821||lead.records[0].character!=="刨"||
+     lead.records[0].independentLexicalApproval!==false||
+     lead.records[0].approvedEmojiMapping!==false||
+     lead.records[0].productionVerified!==false||
+     lead.records[0].sourcePages.length!==4||
+     lead.records[0].sourcePages.some(x=>
+       !/^https:\/\/(?:zdic\.net\/hans\/|dict\.(?:concised|mini)\.moe\.edu\.tw\/)/.test(x.url)||
+       !Array.isArray(x.displayedPinyinLabels)||!x.displayedPinyinLabels.length))
+     fail("External dictionary escalation failed source and nonapproval checks");
+  escalation=lead.records[0];
   if(data[0].source.uncompressedTSVSha256!==data[1].source.uncompressedTSVSha256)
    fail("Incompatible pinned source snapshots");
   cohorts=new Map([["early",early],["hashed",hashed],["combined",combine(early,hashed)]]);

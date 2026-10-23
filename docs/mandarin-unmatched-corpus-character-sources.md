@@ -16,3 +16,5 @@ The dictionaries support preliminary **research distinctions**: `páo` in excava
 This research fills a **source discovery gap** for 刨. It does not change the earlier Tatoeba coverage statistics, source-reading assignments, the project's emphasis on Mainland Standard Mandarin, or its **zero independent approval** states. Taiwan dictionary usage must be independently checked for Mainland compatibility. A new corpus or a licensed publisher example with a record ID, contributor, source rights, and contextual reading verification is still needed before considering any attested use.
 
 The [escalation smoke test](../tools/glyph-pipeline/unmatched_corpus_source_escalation_smoke.mjs) guards these separate statuses.
+
+The [interactive candidate browser](../site/context-evidence.html) displays these four publisher links under the unmatched character, explicitly apart from corpus sentence IDs and independent lexical approvals.
