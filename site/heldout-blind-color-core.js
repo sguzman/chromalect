@@ -11,6 +11,24 @@ const sizes=new Set([24,32,48,64,96]);
 const surfaces=new Set(["white","black","theme"]);
 const hashRegex=/^[a-f0-9]{64}$/;
 const idOf=(rank,a,b)=>rank+"|"+[a,b].sort().join("|");
+function oklab(hex){
+ assert(/^#[0-9a-f]{6}$/i.test(hex),"Source sRGB hex required for OKLab comparison");
+ const [r,g,b]=[1,3,5].map(i=>parseInt(hex.slice(i,i+2),16)/255)
+  .map(c=>c<=.04045?c/12.92:((c+.055)/1.055)**2.4);
+ const l=Math.cbrt(.4122214708*r+.5363325363*g+.0514459929*b);
+ const m=Math.cbrt(.2119034982*r+.6806995451*g+.1073969566*b);
+ const x=Math.cbrt(.0883024619*r+.2817188376*g+.6299787005*b);
+ return [.2104542553*l+.7936177850*m-.0040720468*x,
+  1.9779984951*l-2.4285922050*m+.4505937099*x,
+  .0259040371*l+.7827717662*m-.8086757660*x];
+}
+function distance(hexA,hexB){
+ const a=oklab(hexA),b=oklab(hexB);
+ return Math.hypot(...a.map((v,i)=>v-b[i]));
+}
+function keysOnly(value,keys){
+ return value&&Object.keys(value).every(key=>keys.includes(key));
+}
 function assert(test,reason){if(!test)throw Error(reason);}
 function validateSource(manifest,folds,palette){
  assert(manifest.schema==="chromalect.glyph.heldout-color-warning-review.v0.1"&&
@@ -84,6 +102,7 @@ function validateSource(manifest,folds,palette){
   const fold=foldPalette.get(row.foldIndex);
   assert(Number.isInteger(row.rank)&&row.rank>lastRank&&row.rank<=1000&&
    row.character.length>0&&[...row.character].length===1&&
+   hashRegex.test(row.originalSHA256)&&hashRegex.test(row.heldoutSHA256)&&
    fold&&fold.ranks.has(row.rank)&&!ranks.has(row.rank)&&
    row.originalSVG==="glyphs/"+file&&
    row.heldoutSVG==="glyphs/research/heldout-warning-v0.1/"+file&&
@@ -108,9 +127,14 @@ function validateSource(manifest,folds,palette){
      c.foldOptimizedHex===(fold.colors.get(c.id)??source.color),
      "Fold-trained pair is not source-matched");
    }
-   const expected=pair.originalDeltaOk>=.07&&pair.foldOptimizedDeltaOk<.07?
-    "introduced":pair.originalDeltaOk<.07&&pair.foldOptimizedDeltaOk>=.07?
-    "resolved":"retained";
+   const oldDistance=distance(a.sourceHex,b.sourceHex),
+    foldDistance=distance(a.foldOptimizedHex,b.foldOptimizedHex);
+   assert(Math.abs(oldDistance-pair.originalDeltaOk)<=.000001&&
+    Math.abs(foldDistance-pair.foldOptimizedDeltaOk)<=.000001,
+    "Measured source/fold pair distances differ from colors");
+   const expected=oldDistance>=.07&&foldDistance<.07?
+    "introduced":oldDistance<.07&&foldDistance>=.07?
+    "resolved":oldDistance<.07&&foldDistance<.07?"retained":"invalid";
    assert(pair.reviewState===expected,"Numerical state does not match distance");
    const id=idOf(row.rank,a.id,b.id);
    assert(!seen.has(id),"Repeated pair within source glyph");seen.add(id);
@@ -187,6 +211,18 @@ function createSession(plan,answersById,settings,seed,exportedAt){
   observations:responses};
 }
 function validateSession(session,trials){
+ assert(keysOnly(session,["schema","status","source","session","observations"])&&
+  keysOnly(session.source,["manifest","palette","folds","machineFlaggedPairObservations","independentlyCertifiedGlyphs"])&&
+  keysOnly(session.session,["localOnly","automaticallyUploaded","persistedInBrowser",
+   "exportedAtUTC","randomSeed","randomizedPresentation","balancedOriginalLeft",
+   "balancedExperimentalLeft","planned","recorded","conditionRevealAfterSessionOnly",
+   "display","participantEligibilityVerified","ethicsProtocolApproved",
+   "independentlyAdjudicated"])&&
+  session.observations.every(x=>keysOnly(x,["trialId","rank","foldIndex",
+   "presentationIndex","leftCondition","response",
+   "sourceConditionRevealedBeforeResponse","sourceGlyphGeometryIdentical",
+   "visualCertificationGranted","semanticFamilyApproved"])),
+  "Unrecognized or private participant/session metadata in a local observation export");
  assert(session.schema===schema&&
   session.status==="local_visual_preference_rehearsal_not_independent_visual_certification"&&
   session.source.manifest==="glyphs/research/heldout-warning-v0.1/index-v0.1.json"&&
