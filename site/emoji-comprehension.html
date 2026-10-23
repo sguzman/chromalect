@@ -39,7 +39,7 @@
 <main class="wrap emoji-study">
 <div class="eyebrow">Research methodology · Mandarin semantics</div>
 <h1>Blind emoji comprehension worksheet</h1>
-<p class="intro emoji-study-intro">Can a reader recognize a proposed meaning <strong>from the emoji alone</strong>? This local research worksheet hides the character and English meaning until an answer is committed. It uses Chromalect's 897 experimental expressions, not production-verified senses.</p>
+<p class="intro emoji-study-intro">Can a reader recognize a proposed meaning <strong>from the emoji alone</strong>? This local research worksheet hides the character and English meaning until an answer is committed. It uses Chromalect's 897 experimental expressions, not production-verified senses. Since the same emoji may be reused for several meanings, the default sampling policy shows any visible expression at most once per session.</p>
 <div class="emoji-study-fineprint"><strong>Research boundary:</strong> Results stay in this browser session until you explicitly export JSON. Nothing is sent to Chromalect or GitHub. A self-rating is an exploratory observation, <strong>not</strong> independent comprehension certification or lexical approval. A separate protocol and independent participants are required before approving any mapping. Starting a new session discards unexported answers.</div>
 <div class="emoji-study-setup">
 <label>Sampling scope
@@ -49,12 +49,17 @@
 <option value="events">Actions and processes</option>
 <option value="compositions">Two or more emoji</option>
 </select></label>
+<label>Repeated visual forms
+<select id="emoji-study-repeat-policy">
+<option value="distinct">One trial per visible emoji expression (recommended)</option>
+<option value="allow">Allow repeated emoji for different senses</option>
+</select></label>
 <label>Trials in this session
 <select id="emoji-study-count">
 <option value="20">20 randomly selected</option>
 <option value="50">50 randomly selected</option>
 <option value="100">100 randomly selected</option>
-<option value="all">All eligible expressions</option>
+<option value="all">All eligible (subject to repeat policy)</option>
 </select></label>
 </div>
 <div class="emoji-study-actions">
