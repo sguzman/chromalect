@@ -22,20 +22,22 @@ const distance=(a,b)=>{
 };
 const r6=x=>Number(x.toFixed(6));
 const key=(a,b)=>[a,b].sort().join("|");
-export function deriveGlyphPairRisk(catalog,mappings,sourcePalette,experimentIndex,baselineReview){
+export function deriveGlyphPairRisk(catalog,mappings,sourcePalette,experimentIndex,baselineReview,
+ {expectedGlyphCount=1000,expectedSourceClosePairs=26}={}){
  const alt=derivePilotGroupCounterfactual(sourcePalette);
  assert.equal(catalog.schema,"chromalect.character-tranche.v1");
  assert.equal(catalog.tranche,"0001-1000");
- assert.equal(catalog.characters.length,1000);
+ assert.equal(catalog.characters.length,expectedGlyphCount);
  assert.equal(mappings.schema,"chromalect.component-stroke-mappings.v1");
  assert.equal(mappings.palette_ref,"mandarin-component-identity@0.6.0");
  assert.equal(mappings.glyph_count,mappings.glyphs.length);
- assert.ok(mappings.glyph_count>=1000&&mappings.glyph_count<=1032);
+ assert.ok(mappings.glyph_count>=expectedGlyphCount&&
+  mappings.glyph_count<=expectedGlyphCount+32);
  assert.equal(experimentIndex.schema,
   "chromalect.glyph.historical-hint-counterfactual-gallery.v0.1");
  assert.equal(experimentIndex.status,
   "build_generated_isolated_research_svg_recolor_only_no_semantic_or_visual_approval");
- assert.equal(experimentIndex.summary.catalogGlyphs,1000);
+ assert.equal(experimentIndex.summary.catalogGlyphs,expectedGlyphCount);
  assert.equal(experimentIndex.summary.hypotheticalComponentIds,40);
  assert.equal(experimentIndex.provenance.activeGlyphFilesOverwritten,false);
  assert.equal(experimentIndex.provenance.semanticFamilyApprovals,0);
@@ -43,13 +45,13 @@ export function deriveGlyphPairRisk(catalog,mappings,sourcePalette,experimentInd
   "chromalect.glyph-independent-review-worklist.v0.1");
  assert.equal(baselineReview.status,
   "build_derived_source_review_priority_not_independent_visual_certification");
- assert.equal(baselineReview.summary.catalogCharacters,1000);
+ assert.equal(baselineReview.summary.catalogCharacters,expectedGlyphCount);
  assert.equal(baselineReview.summary.independentlyVisuallyCertified,0);
- assert.equal(baselineReview.summary.colorContrastWarningPairs,26);
+ assert.equal(baselineReview.summary.colorContrastWarningPairs,expectedSourceClosePairs);
  const byGlyph=new Map(mappings.glyphs.map(g=>[g.character,g]));
  assert.equal(byGlyph.size,mappings.glyph_count);
  const reviewByRank=new Map(baselineReview.records.map(r=>[r.rank,r]));
- assert.equal(reviewByRank.size,1000);
+ assert.equal(reviewByRank.size,expectedGlyphCount);
  const trialByRank=new Map(experimentIndex.glyphs.map(r=>[r.rank,r]));
  assert.equal(trialByRank.size,experimentIndex.summary.affectedGlyphs);
  const sourceMap=new Map(sourcePalette.components.map(c=>[c.id,c]));
@@ -61,7 +63,7 @@ export function deriveGlyphPairRisk(catalog,mappings,sourcePalette,experimentInd
   worsenedPairDistances:0,improvedPairDistances:0,unchangedPairDistances:0,
   affectedGlyphs:0,affectedGlyphsWithNewClosePairs:0,
   originalFlaggedGlyphs:0,proposedFlaggedGlyphs:0};
- for(let i=0;i<1000;i++){
+ for(let i=0;i<expectedGlyphCount;i++){
   const ch=catalog.characters[i],mapping=byGlyph.get(ch.character),
    sourceReview=reviewByRank.get(i+1),trial=trialByRank.get(i+1);
   if(ch.rank!==i+1||!mapping||!sourceReview||
@@ -168,7 +170,7 @@ export function deriveGlyphPairRisk(catalog,mappings,sourcePalette,experimentInd
   }
  }
  if(totals.affectedGlyphs!==experimentIndex.summary.affectedGlyphs||
-    totals.originalClosePairs!==26||
+    totals.originalClosePairs!==expectedSourceClosePairs||
     totals.proposedClosePairs!==totals.newlyClosePairs+totals.retainedClosePairs||
     totals.originalClosePairs!==totals.resolvedClosePairs+totals.retainedClosePairs||
     totals.worsenedPairDistances+totals.improvedPairDistances+
@@ -185,7 +187,7 @@ export function deriveGlyphPairRisk(catalog,mappings,sourcePalette,experimentInd
    cutoffDeltaOk:threshold,originalPaletteMutated:false,
    simulatedVisionImpairment:false,humanReviewPerformed:false,
    semanticFamilyApproval:false},
-  summary:{catalogCharacters:1000,paletteIdentities:520,
+  summary:{catalogCharacters:expectedGlyphCount,paletteIdentities:520,
    hypotheticalComponentIds:40,independentlyAcceptedSemanticFamilies:0,
    humanLegibilityTrials:0,
    ...totals},glyphs:rows};
