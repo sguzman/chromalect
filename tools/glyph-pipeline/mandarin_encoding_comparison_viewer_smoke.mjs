@@ -19,7 +19,7 @@ class Element{
  addEventListener(type,fn){this.events[type]=fn;}
  setAttribute(key,v){this.attributes[key]=v;}
 }
-function setup(source=sources){
+function setup(source=sources,hash=""){
  const names=["comparison-rank","comparison-reading","comparison-prev","comparison-next",
   "comparison-color","comparison-ipa","comparison-status","comparison-count","comparison-source",
   "comparison-plain","comparison-letters","comparison-working"];
@@ -31,7 +31,7 @@ function setup(source=sources){
   "phonetics/mandarin-final-spelling-context-gates-v0.1.json",
   "phonetics/written-final-symbol-control-v0.1.json","layers-v0.1.json"];
  const doc={getElementById:id=>controls[id],createElement:()=>new Element(),createElementNS:()=>new Element()};
- vm.runInNewContext(script,{document:doc,fetch:async url=>({ok:true,json:async()=>source[namesByUrl.indexOf(url)]}),Map,Set,Number,String,Object,Math,Error});
+ vm.runInNewContext(script,{document:doc,fetch:async url=>({ok:true,json:async()=>source[namesByUrl.indexOf(url)]}),Map,Set,Number,String,Object,Math,Error,location:{hash}});
  return controls;
 }
 async function settle(v){for(let i=0;i<60&&!v["comparison-plain"].children.length&&
@@ -60,6 +60,10 @@ ui["comparison-ipa"].checked=true;ui["comparison-ipa"].events.change();
 assert.ok(ui["comparison-working"].children.some(x=>x.className==="comparison-ipa"&&x.textContent.includes("ʂ")));
 ui["comparison-rank"].value="1";ui["comparison-rank"].events.change();
 assert.ok(ui["comparison-working"].children.some(x=>x.className==="comparison-ipa"&&x.textContent.includes("No standalone consonant IPA")));
+const linked=setup(sources,"#c0008-r2");await settle(linked);
+assert.equal(linked["comparison-plain"].children[0].textContent,"卜");
+assert.equal(linked["comparison-plain"].children[1].textContent,"bǔ");
+assert.match(linked["comparison-source"].textContent,/Rank 8/);
 const tampered=structuredClone(sources);
 tampered[1].summary.humanSymbolDecodingTrials=1;
 const rejected=setup(tampered);await settle(rejected);

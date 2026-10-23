@@ -22,7 +22,7 @@ function setup(data=fixtures){
  const urls=["phonetics/unadjudicated-compound-final-review-queue-v0.1.json",
   "pronunciation-citations-0001-1000.json",
   "phonetics/mandarin-final-spelling-context-gates-v0.1.json"];
- const dom={getElementById:x=>nodes[x],createElement:()=>new Element()};
+ const dom={getElementById:x=>nodes[x],createElement:()=>new Element(),createTextNode:s=>({textContent:s})};
  vm.runInNewContext(js,{document:dom,fetch:async url=>({ok:true,json:async()=>data[urls.indexOf(url)]}),
   Map,Set,Object,Math,Error,JSON});
  return nodes;
@@ -33,6 +33,9 @@ const ui=setup();await settle(ui);
 assert.equal(ui["compound-list"].children.length,27);
 assert.match(ui["compound-summary"].textContent,/739 source uses/);
 assert.match(ui["compound-list"].children[0].children[0].textContent,/un/);
+const links=ui["compound-list"].children[0].children[2].children.filter(x=>x.href);
+assert.ok(links.length>=1);
+assert.match(links[0].href,/mandarin-encoding-comparison\.html#c\d{4}-r\d+/);
 ui["compound-filter"].value="caution";ui["compound-filter"].events.change();
 assert.equal(ui["compound-list"].children.length,5);
 assert.match(ui["compound-count"].textContent,/5 \/ 27/);

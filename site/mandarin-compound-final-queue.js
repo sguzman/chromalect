@@ -6,7 +6,7 @@ const $=id=>document.getElementById(id);
 const required=["compound-filter","compound-query","compound-count","compound-status",
  "compound-summary","compound-list"];
 if(required.some(id=>!$(id)))return;
-let records=[];
+let records=[],sourceCitation=[];
 function show(){
  const filter=$("compound-filter").value,q=$("compound-query").value.trim().toLowerCase();
  if(!["all","caution","unflagged"].includes(filter))throw Error("Unknown review filter");
@@ -27,8 +27,20 @@ function show(){
   evidence.textContent=r.sourceCitationUses+" first-tranche source readings · "+
    r.explicitContextCautionUses+" explicitly flagged spelling contexts";
   source.className="compound-samples";
-  source.textContent="Earliest source citations: "+r.firstSourceExamples.map(x=>
-   x.character+" "+x.pinyin+" (#"+x.rank+")").join(" · ");
+  source.appendChild(document.createTextNode("Earliest source citations: "));
+  for(let i=0;i<r.firstSourceExamples.length;i++){
+   const example=r.firstSourceExamples[i],c=sourceCitation[example.rank-1];
+   const index=c?.readings.findIndex(x=>x.display===example.pinyin&&
+    x.initial===example.initial&&x.final===example.final&&x.tone===example.tone);
+   if(!Number.isInteger(index)||index<0)
+    throw Error("No pinned source citation for research link");
+   const link=document.createElement("a");
+   link.href="mandarin-encoding-comparison.html#c"+String(example.rank).padStart(4,"0")+
+    "-r"+String(index+1);
+   link.textContent=example.character+" "+example.pinyin+" (#"+example.rank+")";
+   if(i)source.appendChild(document.createTextNode(" · "));
+   source.appendChild(link);
+  }
   status.className="compound-meta";
   status.textContent="No validated phonological segmentation, no IPA proposal, no human decoding evidence"+
    (r.observedWarningFamilies.length?
@@ -106,7 +118,7 @@ async function load(){
   }),{count:0,warn:0});
   if(unique.size!==27||totals.count!==739||totals.warn!==101||
      counts.size!==33)throw Error("Incomplete final source cohort");
-  records=data.records;
+  records=data.records;sourceCitation=source.characters;
   $("compound-summary").textContent="27 written final categories deferred · 739 source uses · "+
    "101 explicitly cautioned uses · 0 phonological approvals.";
   $("compound-status").textContent="All 27 source identities verified; review priority is not a phonetic ranking.";

@@ -146,7 +146,7 @@ function render(){
  $("comparison-count").textContent=state.sourceReadingCount+" / 1,171 source readings in this "+
   "visual-eligibility state. Zero independently verified speech decodings.";
 }
-function choose(rank){
+function choose(rank,readingIndex=0){
  if(!Number.isInteger(rank)||rank<1||rank>citation.length)
   throw Error("Unknown first-tranche character rank");
  selected=rank-1;
@@ -157,7 +157,10 @@ function choose(rank){
   opt.textContent=citation[selected].readings[i].display+" · citation "+(i+1);
   $("comparison-reading").appendChild(opt);
  }
- $("comparison-reading").value="0";render();
+ if(!Number.isInteger(readingIndex)||readingIndex<0||
+    readingIndex>=citation[selected].readings.length)
+  throw Error("Source reading index not found");
+ $("comparison-reading").value=String(readingIndex);render();
 }
 async function load(){
  try{
@@ -241,7 +244,14 @@ async function load(){
   citation=cit.characters;cohort=groups;
   $("comparison-status").textContent=
    "1,171/1,171 source citation spellings retained. Visual studies: 0; sound approvals: 0.";
-  choose(1);
+  const target=(typeof location!=="undefined"&&typeof location.hash==="string")?
+   location.hash.match(/^#c(\d{1,4})-r(\d{1,2})$/):null;
+  if(target){
+   const rank=Number(target[1]),reading=Number(target[2])-1;
+   if(rank>=1&&rank<=citation.length&&reading>=0&&
+      reading<citation[rank-1].readings.length)choose(rank,reading);
+   else choose(1);
+  }else choose(1);
  }catch(e){
   citation=[];for(const id of ["comparison-plain","comparison-letters","comparison-working"])
    $(id).replaceChildren();
@@ -258,6 +268,15 @@ $("comparison-rank").addEventListener("change",()=>{
 $("comparison-prev").addEventListener("click",()=>{if(citation.length)choose(Math.max(1,selected));});
 $("comparison-next").addEventListener("click",()=>{if(citation.length)choose(Math.min(citation.length,selected+2));});
 $("comparison-reading").addEventListener("change",render);
+if(typeof window!=="undefined"&&typeof window.addEventListener==="function")
+ window.addEventListener("hashchange",()=>{
+  const t=(typeof location!=="undefined"&&typeof location.hash==="string")?
+   location.hash.match(/^#c(\d{1,4})-r(\d{1,2})$/):null;
+  if(!t||!citation.length)return;
+  const rank=Number(t[1]),reading=Number(t[2])-1;
+  if(rank>=1&&rank<=citation.length&&reading>=0&&
+     reading<citation[rank-1].readings.length)choose(rank,reading);
+ });
 $("comparison-color").addEventListener("change",render);
 $("comparison-ipa").addEventListener("change",render);
 load();
