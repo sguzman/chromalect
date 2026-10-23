@@ -288,6 +288,8 @@ jobs:
           node tools/glyph-pipeline/unadjudicated_compound_final_queue_smoke.mjs
           node tools/glyph-pipeline/external_orthographic_spelling_rules.mjs --check
           node tools/glyph-pipeline/external_orthographic_spelling_rules_smoke.mjs
+          node tools/glyph-pipeline/external_umlaut_spelling_rules.mjs --check
+          node tools/glyph-pipeline/external_umlaut_spelling_rules_smoke.mjs
           node --check site/mandarin-compound-final-queue.js
           node tools/glyph-pipeline/mandarin_compound_final_queue_viewer_smoke.mjs
           test -s site/mandarin-compound-final-queue.html
@@ -332,6 +334,7 @@ jobs:
           cp data/phonetics/mandarin-encoding-comparison-cohorts-v0.1.json site/phonetics/mandarin-encoding-comparison-cohorts-v0.1.json
           cp data/phonetics/unadjudicated-compound-final-review-queue-v0.1.json site/phonetics/unadjudicated-compound-final-review-queue-v0.1.json
           cp data/phonetics/external-orthographic-spelling-rule-crosswalk-v0.1.json site/phonetics/external-orthographic-spelling-rule-crosswalk-v0.1.json
+          cp data/phonetics/external-umlaut-spelling-rule-crosswalk-v0.1.json site/phonetics/external-umlaut-spelling-rule-crosswalk-v0.1.json
           cp data/phonetics/written-final-symbol-control-v0.1.json site/phonetics/written-final-symbol-control-v0.1.json
           test -s site/phonetics/mandarin-citation-tone-contours-v0.1.json
           test -s site/phonetics/citation-tone-isolation-audit-v0.1.json
@@ -344,6 +347,7 @@ jobs:
           test -s site/phonetics/mandarin-encoding-comparison-cohorts-v0.1.json
           test -s site/phonetics/unadjudicated-compound-final-review-queue-v0.1.json
           test -s site/phonetics/external-orthographic-spelling-rule-crosswalk-v0.1.json
+          test -s site/phonetics/external-umlaut-spelling-rule-crosswalk-v0.1.json
           test -s site/phonetics/written-final-symbol-control-v0.1.json
           test -s site/pinyin-citations.html
           node tools/glyph-pipeline/roadmap_checkpoint_progress.mjs --check
