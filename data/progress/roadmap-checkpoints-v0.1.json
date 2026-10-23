@@ -133,10 +133,10 @@
       "key": "phonetic-notation",
       "label": "Phonetic notation experiment",
       "sourceHeadingPrefix": "Phase 2",
-      "complete": 4,
+      "complete": 5,
       "pending": 5,
-      "total": 9,
-      "checklistPercent": 44,
+      "total": 10,
+      "checklistPercent": 50,
       "checkpoints": [
         {
           "description": "Establish a reversible, source-pinned orthographic Pinyin citation baseline for all 1,171 first-tranche readings, without declaring phonemic or contextual verification.",
@@ -152,6 +152,10 @@
         },
         {
           "description": "Source-link a working 21-consonant Pinyin initial-feature codebook and publish a Pinyin / provisional IPA / featural-shape comparison with 3 nonconsonantal spelling conventions kept separate.",
+          "state": "complete"
+        },
+        {
+          "description": "Demonstrate an initial-only strict source-token feature codec over all 1,171 cited readings (997 consonantal, 174 orthographic onset conventions), without claiming full phonological or visual-symbol decoding.",
           "state": "complete"
         },
         {

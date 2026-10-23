@@ -40,6 +40,7 @@ This is a sequence of **evidence gates**, not a promise to build a large applica
 - [x] Decode 1,392/1,393 pinned CC-CEDICT numbered Pinyin labels into the same orthographic tokens, preserving the exceptional r5 record and source capitalization.
 - [x] Publish source-aligned citation-tone contour controls with five pinned example readings, leaving context-dependent neutral tone and all learning outcomes unresolved.
 - [x] Source-link a working 21-consonant Pinyin initial-feature codebook and publish a Pinyin / provisional IPA / featural-shape comparison with 3 nonconsonantal spelling conventions kept separate.
+- [x] Demonstrate an initial-only strict source-token feature codec over all 1,171 cited readings (997 consonantal, 174 orthographic onset conventions), without claiming full phonological or visual-symbol decoding.
 - [ ] Freeze the Mandarin phonological contrast inventory and a phonetic reference notation.
 - [ ] Compare Pinyin/IPA labels, initial-final symbols, and constructed featural glyphs.
 - [ ] Specify a decoding grammar and round-trip tests.
