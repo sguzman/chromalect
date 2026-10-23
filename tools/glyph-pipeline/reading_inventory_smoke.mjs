@@ -15,7 +15,7 @@ const source=fs.readFileSync("site/reading-inventory.js","utf8");
 const ids=["reading-scope","reading-count","reading-start","reading-export",
  "reading-status","reading-session","reading-count-label","reading-progress",
  "reading-progress-fill","reading-glyph","reading-rank","reading-current",
- "reading-gloss","reading-other","reading-full","reading-source-id",
+ "reading-gloss","reading-references","reading-other","reading-full","reading-source-id",
  "reading-form","reading-usage","reading-unit","reading-example","reading-reference",
  "reading-rationale","reading-commit","reading-after","reading-next"];
 class Element{
@@ -53,6 +53,7 @@ const sandbox={
 };
 sandbox.globalThis=sandbox;
 vm.runInNewContext(fs.readFileSync("site/dictionary-readings.js","utf8"),sandbox);
+vm.runInNewContext(fs.readFileSync("site/dictionary-reference-cues.js","utf8"),sandbox);
 vm.runInNewContext(source,sandbox);
 for(let i=0;i<20&&elements["reading-start"].disabled;i++)await Promise.resolve();
 assert.equal(elements["reading-start"].disabled,false);
@@ -63,6 +64,10 @@ assert.equal(elements["reading-progress"].attributes["aria-valuenow"],"0");
 assert.ok(elements["reading-current"].textContent);
 assert.ok(elements["reading-gloss"].textContent);
 assert.ok(elements["reading-full"].textContent);
+const sourceReferences=sandbox.ChromalectDictionaryReferences.scan(
+ "related to 十天干[shi2 tian1 gan1] and 乙方[yi3 fang1]");
+assert.equal(sourceReferences.length,2);
+assert.equal(sourceReferences[0].sourceToken,"十天干[shi2 tian1 gan1]");
 assert.ok(elements["reading-rank"].textContent.includes("higher"));
 assert.equal(elements["reading-commit"].disabled,true);
 elements["reading-usage"].value="undetermined";elements["reading-usage"].events.change();

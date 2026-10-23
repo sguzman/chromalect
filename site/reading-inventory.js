@@ -5,13 +5,14 @@
 const $=id=>document.getElementById(id);
 const layers=globalThis.ChromalectLayers;
 const dictionary=globalThis.ChromalectDictionaryReadings;
+const references=globalThis.ChromalectDictionaryReferences;
 const ids=["reading-scope","reading-count","reading-start","reading-export",
  "reading-status","reading-session","reading-count-label","reading-progress",
  "reading-progress-fill","reading-glyph","reading-rank","reading-current",
- "reading-gloss","reading-other","reading-full","reading-source-id",
+ "reading-gloss","reading-references","reading-other","reading-full","reading-source-id",
  "reading-form","reading-usage","reading-unit","reading-example","reading-reference",
  "reading-rationale","reading-commit","reading-after","reading-next"];
-if(!layers||!dictionary||ids.some(id=>!$(id)))return;
+if(!layers||!dictionary||!references||ids.some(id=>!$(id)))return;
 const blocks=["0001-0200","0201-0400","0401-0600","0601-0800","0801-1000"];
 const sourceRevision="63c2569948629323b515833930fdd10f285401b6";
 const categories=new Set(["ordinary","specialized","historical","proper_name","graphic","undetermined"]);
@@ -66,6 +67,19 @@ function show(){
   (r.experimentalMeaningCount===0?" · no proposed emoji":"");
  $("reading-current").textContent=r.reading;
  $("reading-gloss").textContent=r.gloss;
+ const holder=$("reading-references");
+ holder.replaceChildren();
+ const found=references.scan(r.gloss);
+ if(!found.length){
+  holder.textContent="No explicit written-form/Pinyin reference token is present in this reading excerpt.";
+ }else{
+  holder.textContent="";
+  for(const cue of found){
+   const row=document.createElement("p");
+   row.textContent=cue.sourceToken+" · source-internal cross-reference only";
+   holder.appendChild(row);
+  }
+ }
  $("reading-other").textContent=r.allReadings.join(" · ");
  $("reading-full").textContent=r.excerpt;
  $("reading-source-id").textContent="CC-CEDICT "+r.sourcePath+
