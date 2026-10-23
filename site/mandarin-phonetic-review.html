@@ -43,8 +43,14 @@ background:var(--tile-bg);color:var(--ink);padding:10px;cursor:pointer}
 <button id="pc-save" type="button">Keep local draft</button>
 <button id="pc-export" type="button">Generate local JSON</button>
 </div>
-<p id="pc-count" class="phonetic-meta">0 local draft notes · 0 independently approved</p>
+<p id="pc-count" class="phonetic-meta">0 locally saved notes · 0 unsaved edits · 0 independently approved</p>
 <p id="pc-status" role="status" aria-live="polite">Loading pinned evidence.</p>
+<label for="pc-import-data">Paste a previously exported local research JSON session to resume
+<textarea id="pc-import-data" spellcheck="false" aria-label="Local research JSON import" placeholder="Paste a complete previously exported session here."></textarea></label>
+<div class="phonetic-actions">
+<button id="pc-import" type="button">Import and replace local drafts</button>
+</div>
+<p class="phonetic-meta">Import validates source identifiers, note fields, provenance, and unapproved status. A rejected import leaves existing local notes untouched. Switching readings retains incomplete edits in page memory; exports require saving those edits first. No data is transmitted or stored between visits.</p>
 <label for="pc-output">Local JSON export (copy and validate separately)
 <textarea id="pc-output" readonly spellcheck="false"></textarea></label>
 </div>
