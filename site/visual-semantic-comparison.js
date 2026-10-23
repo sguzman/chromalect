@@ -90,6 +90,24 @@ function render(){
  $("vsc-size-label").textContent=$("vsc-size").value+" px";
  const shown=$("vsc-reveal").checked;
  const definition=record.source.definition;
+ const legend=make("div","vsc-component-legend");
+ const components=new Map();
+ for(const part of profile.component_instances){
+  const before=components.get(part.component_id);
+  if(before&&before.color.toLowerCase()!==part.color.toLowerCase())
+   throw Error("Component identity has inconsistent colors");
+  if(!before)components.set(part.component_id,part);
+ }
+ for(const part of components.values()){
+  const label=make("span","vsc-component");
+  const swatch=make("span","vsc-swatch");
+  swatch.style.setProperty("--swatch",part.color);
+  swatch.setAttribute("aria-hidden","true");
+  label.appendChild(swatch);
+  label.appendChild(make("span",null,part.component_id+" · "+part.form+
+   " · "+part.color.toUpperCase()));
+  legend.appendChild(label);
+ }
  $("vsc-source").replaceChildren(
   make("strong",null,"Source rank "+profile.rank+" · "+profile.character),
   make("p",null,shown?"Draft Unihan definition: "+definition:
@@ -100,7 +118,9 @@ function render(){
   make("p",null,profile.component_instances.length+
     " source component instances · identity colors are invariant across all three conditions."),
   make("p",null,"Source geometry: "+profile.geometry.svg+
-    " · original character and component identities are unchanged. No phonetic layers appear.")
+    " · original character and component identities are unchanged. No phonetic layers appear."),
+  make("h3",null,"Original component identities and exact colors"),
+  legend
  );
  $("vsc-count").textContent=(selected+1)+" / 1,000 · "+
   (candidate?"experimental pictogram":"pictogram deferred")+
