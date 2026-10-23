@@ -19,6 +19,22 @@ Every original source rank is held out **once and only once**; results are recom
 
 The canonical [fold report](../site/semantic-group-hue-fivefold-heldout-v0.1.json) publishes all five excluded rank lists, each fold's train and held-out pair counts, and the aggregate. The [browser](../site/semantic-group-hue-heldout.html) compares below-0.07 pair counts, with no automatic passing grade.
 
+## Source-verified held-out result
+
+The successful first build of the five-fold report found the following **held-out** counts across 1,020 distinct within-character source-owned component-pair observations:
+
+| Color treatment | Pair observations below ΔOK 0.07 |
+| --- | ---: |
+| Unmodified active v0.6 | **26** |
+| First historical-hue grouped pilot | 76 |
+| Five fold-trained optimized color assignments | **28** |
+
+There are 28 held-out glyphs with at least one warning under their corresponding fold-trained optimized colors, versus 71 glyphs with at least one warning under the first grouped-hue assignment. Each fold is fitted on the *other 800 glyphs*, so the above 28 is a sum across five independently derived candidate palettes, not the score of the full-sample v0.2 alternative.
+
+This is substantial reduction relative to the original historical group-hue hypothesis but **does not improve on the unchanged active identity palette on this held-out warning count**. The apparent full-sample improvement to six warnings should not be treated as independent generalization evidence.
+
+The five-fold randomization is a deterministic rank partition, not random allocation of human study participants or a pre-registered perceptual experiment. Source-specific and global palette effects remain potential confounders. These numeric results are sufficient to **withhold palette promotion**, not to pronounce a design perceptually superior or inferior.
+
 ## Research limitations
 
 This evaluation is more meaningful for source-cooccurrence generalization than reporting only the full-1,000-glyph optimization score, but it **does not** validate:
