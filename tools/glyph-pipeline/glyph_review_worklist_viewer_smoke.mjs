@@ -46,6 +46,8 @@ async function settle(s){for(let n=0;n<35&&!s["audit-results"].children.length&&
 const view=setup();await settle(view);
 assert.equal(view["audit-results"].children.length,48);
 assert.match(view["audit-summary"].textContent,/approvals: zero/);
+assert.equal(view["audit-results"].children[0].children.at(-1).children[0].href,
+ "visual-semantic-comparison.html#c0001");
 assert.match(view["audit-results"].children[0].children[2].textContent,/Source:/);
 assert.match(view["audit-results"].children[0].children[4].children[0].children[4].textContent,/ΔOK 0.0300/);
 assert.equal(view["audit-results"].children[0].children[1].children[1].children[0].src,
