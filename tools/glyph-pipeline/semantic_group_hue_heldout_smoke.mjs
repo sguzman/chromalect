@@ -28,6 +28,12 @@ assert.equal(report.summary.crossFoldHeldOutTotals.characters,1000);
 assert.equal(report.summary.crossFoldHeldOutTotals.distinctWithinGlyphPairs,1020);
 assert.equal(report.summary.crossFoldHeldOutTotals.activeClosePairs,26);
 assert.equal(report.summary.crossFoldHeldOutTotals.firstTrialClosePairs,76);
+assert.equal(report.summary.crossFoldHeldOutTotals.optimizedClosePairs,
+ report.summary.crossFoldHeldOutTotals.introducedOptimizedClosePairs+
+ report.summary.crossFoldHeldOutTotals.retainedOriginalClosePairs);
+assert.equal(report.summary.crossFoldHeldOutTotals.activeClosePairs,
+ report.summary.crossFoldHeldOutTotals.resolvedOriginalClosePairs+
+ report.summary.crossFoldHeldOutTotals.retainedOriginalClosePairs);
 assert.equal(report.summary.crossFoldTrainingTotals.characters,4000);
 assert.equal(report.summary.crossFoldTrainingTotals.distinctWithinGlyphPairs,4080);
 assert.equal(report.summary.crossFoldTrainingTotals.activeClosePairs,104);
@@ -55,6 +61,10 @@ for(let i=0;i<5;i++){
   assert.ok(sample.distinctWithinGlyphPairs>=sample.activeClosePairs);
   assert.ok(sample.distinctWithinGlyphPairs>=sample.firstTrialClosePairs);
   assert.ok(sample.distinctWithinGlyphPairs>=sample.optimizedClosePairs);
+  assert.equal(sample.optimizedClosePairs,
+   sample.introducedOptimizedClosePairs+sample.retainedOriginalClosePairs);
+  assert.equal(sample.activeClosePairs,
+   sample.resolvedOriginalClosePairs+sample.retainedOriginalClosePairs);
  }
 }
 assert.equal(heldOut.size,1000);
