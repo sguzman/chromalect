@@ -61,6 +61,47 @@ const research={
    originalSourceWarning:false,experimentalMeasurementOnly:true,perceptuallyVerified:false
   }]}
 ]};
+const optimizedVariant={
+ schema:"chromalect.palette.source-cooccurrence-hue-optimizer.v0.2",
+ status:"in_sample_40_component_optimization_research_only_no_semantic_or_visual_approval",
+ provenance:{activeSourcePaletteMutated:false,heldOutGlyphsEvaluated:0,
+  semanticMembershipsApproved:0},
+ summary:{alteredHypotheticalIDs:40,firstTrialAllGlyphWarningPairs:76,
+  approvedLexicalOrSemanticFamilies:0},
+ groups:counterfactual.groups.map(g=>({members:g.members.map(m=>({
+  componentId:m.componentId,sourceHex:m.sourceHex,form:m.form,
+  firstTrialHex:m.candidateHex,optimizedTrialHex:m.componentId===c1.id?
+   "#000000":m.candidateHex,
+  visuallyDiscriminable:"unverified",semanticFamilyVerified:false
+ }))}))
+};
+const optimizedIndex={
+ schema:"chromalect.glyph.historical-hint-optimized-gallery.v0.2",
+ status:"isolated_optimized_research_svg_no_visual_semantic_or_educational_approval",
+ provenance:{sourceSVGOverwritten:false,firstTrialSVGOverwritten:false,
+  sourceGeometryModified:false,sourceOwnershipModified:false,
+  palettePromoted:false,independentVisualCertifications:0,
+  independentSemanticApprovals:0},
+ summary:{firstTrialAffectedGlyphs:1,optimizedGalleryGlyphs:1,
+  candidateComponentIdentities:40,semanticFamiliesApproved:0},
+ glyphs:[{rank:1,character:"一",sourceSVG:"glyphs/U+4E00.svg",
+  firstTrialSVG:"glyphs/research/hint-counterfactual-v0.1/U+4E00.svg",
+  optimizedSVG:"glyphs/research/hint-optimized-v0.2/U+4E00.svg",
+  sourceSHA256:output.glyphs[0].sourceGeometrySHA256,
+  firstTrialSHA256:output.glyphs[0].candidateGeometrySHA256,
+  sourceGeometryExactlyPreserved:true,sourceOwnersExactlyPreserved:true,
+  activeProductionFilesUnchanged:true,visualReview:"pending",semanticReview:"unapproved"}]
+};
+const optimizedAudit={
+ schema:"chromalect.glyph.optimized-historical-hue-pair-audit.v0.2",
+ status:"complete_in_sample_source_pair_census_not_human_visual_or_semantic_approval",
+ provenance:{activePaletteModified:false,glyphPathsRecolored:false,heldOutTesting:false},
+ summary:{catalogCharacters:1000,originalClose:26,firstClose:76,optimizedClose:6,
+  affectedGlyphs:1,approvedSemanticFamilies:0,humanDiscriminationTrials:0},
+ glyphs:[{rank:1,character:"一",originalClosePairs:0,firstTrialClosePairs:1,
+  optimizedClosePairs:0,ownerPathsUnmodified:true,sourcePaletteUnchanged:true,
+  independentVisualReview:"pending",semanticInterpretation:"unapproved"}]
+};
 const script=fs.readFileSync("site/hint-hue-glyph-comparison.js","utf8"),
  html=fs.readFileSync("site/hint-hue-glyph-comparison.html","utf8");
 class Node{
@@ -72,11 +113,12 @@ class Node{
  addEventListener(k,f){this.events[k]=f;}
  setAttribute(k,v){this.attrs[k]=v;}
 }
-function start(g=output,a=counterfactual,p=source,hash="",m=semantic,r=research){
+function start(g=output,a=counterfactual,p=source,hash="",m=semantic,r=research,
+  o=optimizedVariant,h=optimizedIndex,t=optimizedAudit){
  const ids=["hg-query","hg-size","hg-size-label","hg-gray","hg-surface",
   "hg-select","hg-prev","hg-next","hg-show-meaning","hg-sense","hg-reveal",
   "hg-compare","hg-count","hg-status","hg-owner","hg-semantic",
-  "hg-risk-filter","hg-risk-order","hg-risk-summary","hg-risk-pairs"];
+  "hg-risk-filter","hg-risk-order","hg-risk-summary","hg-risk-pairs","hg-optimized"];
  const ui=Object.fromEntries(ids.map(id=>[id,new Node()]));
  ui["hg-size"].value="112";ui["hg-surface"].value="theme";ui["hg-risk-filter"].value="all";ui["hg-risk-order"].value="rank";
  const ctx={document:{getElementById:id=>ui[id],
@@ -84,7 +126,10 @@ function start(g=output,a=counterfactual,p=source,hash="",m=semantic,r=research)
   location:{hash},
   fetch:async path=>({ok:true,json:async()=>
    path.endsWith("/pair-risk-v0.1.json")?r:
+   path.endsWith("/optimized-pair-audit-v0.2.json")?t:
+   path.startsWith("glyphs/research/hint-optimized-v0.2/")?h:
    path.startsWith("glyphs/research/")?g:
+   path==="mnemonic-group-risk-optimized-v0.2.json"?o:
    path.startsWith("palettes/")?p:
    path.startsWith("semantic/")?m:a}),
   Map,Set,Array,Object,Number,Math,Error,JSON
@@ -104,7 +149,8 @@ assert.equal(ui["hg-select"].children.length,1);
 assert.match(ui["hg-count"].textContent,/1 \/ 1 research-eligible glyphs/);
 assert.match(ui["hg-status"].textContent,/Original SVGs and geometries verified/);
 assert.match(ui["hg-status"].textContent,/7 additional source-manifest records are excluded/);
-assert.match(ui["hg-risk-summary"].textContent,/27 in the hypothetical palette/);
+assert.match(ui["hg-risk-summary"].textContent,/27 first grouped-hue/);
+assert.match(ui["hg-risk-summary"].textContent,/6 co-occurrence-optimized/);
 assert.match(ui["hg-risk-pairs"].children[1].textContent,/1 newly close/);
 assert.match(ui["hg-risk-pairs"].children[2].children[0].textContent,/introduced/);
 for(const order of ["introduced","candidate_min","deterioration","rank"]){
@@ -123,6 +169,15 @@ assert.equal(ui["hg-compare"].children[0].children[1].children[0].src,
  "glyphs/U+4E00.svg");
 assert.equal(ui["hg-compare"].children[1].children[1].children[0].src,
  "glyphs/research/hint-counterfactual-v0.1/U+4E00.svg");
+ui["hg-optimized"].checked=true;
+ui["hg-optimized"].events.change();
+assert.equal(ui["hg-compare"].children.length,3);
+assert.equal(ui["hg-compare"].children[2].children[1].children[0].src,
+ "glyphs/research/hint-optimized-v0.2/U+4E00.svg");
+assert.equal(ui["hg-owner"].children[2].children[0].children.length,7);
+ui["hg-optimized"].checked=false;
+ui["hg-optimized"].events.change();
+assert.equal(ui["hg-compare"].children.length,2);
 assert.equal(ui["hg-owner"].children[2].children.length,1);
 assert.equal(ui["hg-owner"].children[2].children[0].children[1].style["--hg-swatch"],
  c1.color);
@@ -171,19 +226,25 @@ for(const modify of [
  (g,a,p,m,r)=>{r.provenance.humanReviewPerformed=true;},
  (g,a,p,m,r)=>{r.summary.newlyClosePairs=0;},
  (g,a,p,m,r)=>{r.glyphs[0].reviewPairs[0].componentA.candidateHex="#ffffff";},
- (g,a,p,m,r)=>{r.glyphs[0].visualJudgment="accepted";}
+ (g,a,p,m,r)=>{r.glyphs[0].visualJudgment="accepted";},
+ (g,a,p,m,r,o)=>{o.provenance.semanticMembershipsApproved=1;},
+ (g,a,p,m,r,o,h)=>{h.provenance.palettePromoted=true;},
+ (g,a,p,m,r,o,h,t)=>{t.summary.optimizedClose=90;},
+ (g,a,p,m,r,o,h)=>{h.glyphs[0].sourceGeometryExactlyPreserved=false;}
 ]){
  const g=structuredClone(output),a=structuredClone(counterfactual),p=structuredClone(source),
-  m=structuredClone(semantic),r=structuredClone(research);
- modify(g,a,p,m,r);
- const invalid=start(g,a,p,"",m,r);await settle(invalid);
+  m=structuredClone(semantic),r=structuredClone(research),
+  o=structuredClone(optimizedVariant),h=structuredClone(optimizedIndex),
+  t=structuredClone(optimizedAudit);
+ modify(g,a,p,m,r,o,h,t);
+ const invalid=start(g,a,p,"",m,r,o,h,t);await settle(invalid);
  assert.equal(invalid["hg-compare"].children.length,0);
  assert.match(invalid["hg-status"].textContent,/Unable to validate/);
 }
 for(const id of ["hg-query","hg-size","hg-size-label","hg-gray","hg-surface",
  "hg-select","hg-prev","hg-next","hg-show-meaning","hg-sense","hg-reveal",
  "hg-compare","hg-count","hg-status","hg-owner","hg-semantic",
- "hg-risk-filter","hg-risk-order","hg-risk-summary","hg-risk-pairs"])
+ "hg-risk-filter","hg-risk-order","hg-risk-summary","hg-risk-pairs","hg-optimized"])
  assert.match(html,new RegExp('id="'+id+'"'));
 assert.ok(!script.includes("innerHTML"));
-console.log("Exact original and counterfactual SVG URLs, shared display controls, and 19 fail-closed research guards.");
+console.log("Exact original and counterfactual SVG URLs, shared display controls, and 23 fail-closed research guards.");
