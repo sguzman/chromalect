@@ -1,0 +1,69 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="description" content="Non-collecting rehearsal of paired source-region Chinese glyph presentations; no independent review or certification.">
+<title>Masked region presentation rehearsal · Chromalect</title>
+<link rel="stylesheet" href="style.css"><script src="theme.js"></script>
+<script src="heldout-blind-color-core.js" defer></script>
+<script src="heldout-component-identification-core.js" defer></script>
+<script src="component-owner-adjudication-core.js" defer></script>
+<script src="source-owner-masked-preview.js" defer></script>
+<style>
+.om-notice,.om-panel{background:var(--panel);border:1px solid var(--border);border-radius:12px;padding:18px;margin:16px 0}
+.om-controls{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.om-controls label{display:grid;gap:7px}
+.om-controls select{box-sizing:border-box;width:100%;padding:10px;border:1px solid var(--border);
+ border-radius:8px;background:var(--tile-bg);color:var(--ink);font:inherit}
+.om-pairs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.om-card{border:1px solid var(--border);padding:16px;border-radius:12px;background:var(--panel);min-width:0}
+.om-figure{display:flex;justify-content:center;align-items:center;min-height:210px;padding:12px;
+ overflow:auto;background:#fff;border-radius:10px}
+.om-figure img{height:var(--om-glyph-size,96px);width:var(--om-glyph-size,96px);max-width:none;object-fit:contain}
+.om-native{font-size:var(--om-glyph-size,96px);line-height:1;color:#111;
+ font-family:"Noto Sans CJK SC","Noto Sans SC",system-ui,sans-serif}
+.om-hint{font-size:13px;color:var(--sub)}
+@media(max-width:780px){.om-pairs{grid-template-columns:1fr}.om-controls{grid-template-columns:1fr}}
+</style></head><body>
+<header class="wrap"><div class="brand"><b>CHROMALECT</b><small>Language, made visible</small></div></header>
+<main class="wrap">
+<div class="eyebrow">Mandarin · source-region review preparation</div>
+<h1>Masked region presentation rehearsal</h1>
+<p class="intro">Compare two complementary monochrome source-region locators at matched reading sizes without showing an owner-answer label or experimental component colors in the page.</p>
+<div class="om-notice"><strong>Presentation rehearsal only; not a blinded expert-review instrument.</strong>
+The underlying public source manifests and SVG asset paths remain inspectable and include machine-assigned ownership information. Region A/B order is an engineering display convention, not concealed allocation. This page records no judgments, participant responses or reviewer identities. Independent protocol acceptance, specialist review, preregistration and study eligibility remain at zero.</div>
+<p id="om-status" role="status" aria-live="polite">Checking source-pinned research data.</p>
+<section class="om-panel">
+<div class="om-controls">
+<label for="om-cohort">Warning cohort<select id="om-cohort" disabled>
+<option value="all">All 49 pairs</option>
+<option value="introduced">23 introduced</option>
+<option value="resolved">21 resolved</option>
+<option value="retained">5 retained</option>
+</select></label>
+<label for="om-pair">Source-region pair<select id="om-pair" disabled></select></label>
+<label for="om-size">Matched inspection size<select id="om-size">
+<option value="16">16 CSS px</option><option value="24">24 CSS px</option>
+<option value="32">32 CSS px</option><option value="48">48 CSS px</option>
+<option value="64">64 CSS px</option><option value="96" selected>96 CSS px</option>
+<option value="128">128 CSS px</option><option value="160">160 CSS px</option>
+</select></label>
+</div>
+<p id="om-count" class="om-hint">Awaiting source data.</p>
+<p id="om-meta" class="om-hint"></p>
+</section>
+<section id="om-grid" class="om-pairs" aria-label="Three matched-size glyph representations">
+<div class="om-card"><h2>Native-font context</h2>
+<div class="om-figure"><span id="om-native" class="om-native" lang="zh-Hans"></span></div>
+<p class="om-hint">Font-dependent, not an ownership reference.</p></div>
+<div class="om-card"><h2>Region A</h2>
+<div class="om-figure"><img id="om-a" alt="Neutral source-owned candidate region A; dark strokes indicate this region"></div>
+<p id="om-a-form" class="om-hint"></p></div>
+<div class="om-card"><h2>Region B</h2>
+<div class="om-figure"><img id="om-b" alt="Neutral source-owned candidate region B; dark strokes indicate this region"></div>
+<p id="om-b-form" class="om-hint"></p></div>
+</section>
+<p>For the explicitly machine-key-visible review, see the <a href="component-owner-adjudication.html">provisional ownership worksheet</a>.
+For limits on future independent acceptance, see the <a href="source-owner-independent-protocol.html">adjudication protocol</a>.
+This page is read-only and collects no evidence.</p>
+</main><footer class="wrap"><a href="glyph-review-worklist.html">1,000-glyph review worklist</a> · <a href="index.html">Overview</a></footer>
+</body></html>
