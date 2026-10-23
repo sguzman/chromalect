@@ -1,0 +1,128 @@
+{
+  "schema": "chromalect.semantic.dictionary-word-surface-leads.v0.1",
+  "status": "publisher_dictionary_word_leads_not_independent_usage_attestations",
+  "collectedUTCDate": "2026-10-23",
+  "sourceScope": "Four separately maintained 汉典 character entries, selecting source-displayed written word contexts for corpus surface matching.",
+  "caveats": [
+    "A dictionary word lead is not a source-identified sentence from an independent corpus.",
+    "Exact phrase occurrence in a sentence does not prove Chinese word segmentation, the target reading, semantic role, dialect, or modern usage.",
+    "The cited sources list reading categories for the head character, but this research queue does not assign a reading to any retrieved sentence.",
+    "Corpus matches and dictionary entries require source-specific permissions before text is redistributed."
+  ],
+  "sourcePages": [
+    {
+      "rank": 127,
+      "character": "长",
+      "publisher": "汉典",
+      "url": "https://zdic.net/hans/%E9%95%BF"
+    },
+    {
+      "rank": 407,
+      "character": "划",
+      "publisher": "汉典",
+      "url": "https://zdic.net/hans/%E5%88%92"
+    },
+    {
+      "rank": 379,
+      "character": "过",
+      "publisher": "汉典",
+      "url": "https://zdic.net/hans/%E8%BF%87"
+    },
+    {
+      "rank": 821,
+      "character": "刨",
+      "publisher": "汉典",
+      "url": "https://zdic.net/hans/%E5%88%A8"
+    }
+  ],
+  "leads": [
+    {
+      "id": "ch126-length",
+      "rank": 127,
+      "character": "长",
+      "surfaceWord": "长度",
+      "dictionaryHeadingReading": "cháng",
+      "publisherSourceURL": "https://zdic.net/hans/%E9%95%BF",
+      "contextHint": "length",
+      "sentenceReadingAssignment": null,
+      "independentlyAdjudicated": false
+    },
+    {
+      "id": "zhang-growth",
+      "rank": 127,
+      "character": "长",
+      "surfaceWord": "长大",
+      "dictionaryHeadingReading": "zhǎng",
+      "publisherSourceURL": "https://zdic.net/hans/%E9%95%BF",
+      "contextHint": "growth",
+      "sentenceReadingAssignment": null,
+      "independentlyAdjudicated": false
+    },
+    {
+      "id": "hua-row",
+      "rank": 407,
+      "character": "划",
+      "surfaceWord": "划船",
+      "dictionaryHeadingReading": "huá",
+      "publisherSourceURL": "https://zdic.net/hans/%E5%88%92",
+      "contextHint": "rowing",
+      "sentenceReadingAssignment": null,
+      "independentlyAdjudicated": false
+    },
+    {
+      "id": "hua-plan",
+      "rank": 407,
+      "character": "划",
+      "surfaceWord": "计划",
+      "dictionaryHeadingReading": "huà",
+      "publisherSourceURL": "https://zdic.net/hans/%E5%88%92",
+      "contextHint": "planning",
+      "sentenceReadingAssignment": null,
+      "independentlyAdjudicated": false
+    },
+    {
+      "id": "guo-cross",
+      "rank": 379,
+      "character": "过",
+      "surfaceWord": "经过",
+      "dictionaryHeadingReading": "guò",
+      "publisherSourceURL": "https://zdic.net/hans/%E8%BF%87",
+      "contextHint": "passing",
+      "sentenceReadingAssignment": null,
+      "independentlyAdjudicated": false
+    },
+    {
+      "id": "guo-aspect",
+      "rank": 379,
+      "character": "过",
+      "surfaceWord": "看过",
+      "dictionaryHeadingReading": "guo",
+      "publisherSourceURL": "https://zdic.net/hans/%E8%BF%87",
+      "contextHint": "postverbal experiential marker",
+      "sentenceReadingAssignment": null,
+      "independentlyAdjudicated": false
+    },
+    {
+      "id": "pao-dig",
+      "rank": 821,
+      "character": "刨",
+      "surfaceWord": "刨坑",
+      "dictionaryHeadingReading": "páo",
+      "publisherSourceURL": "https://zdic.net/hans/%E5%88%A8",
+      "contextHint": "excavation",
+      "sentenceReadingAssignment": null,
+      "independentlyAdjudicated": false
+    },
+    {
+      "id": "bao-plane",
+      "rank": 821,
+      "character": "刨",
+      "surfaceWord": "刨木头",
+      "dictionaryHeadingReading": "bào",
+      "publisherSourceURL": "https://zdic.net/hans/%E5%88%A8",
+      "contextHint": "wood planing",
+      "sentenceReadingAssignment": null,
+      "independentlyAdjudicated": false
+    }
+  ]
+}
