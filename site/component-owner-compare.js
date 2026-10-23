@@ -58,14 +58,17 @@ $("oc-compare").addEventListener("click",()=>{
    s.matchingProvisionalJudgments+" matching provisional judgments · "+
    s.conflictingProvisionalJudgments+" disagreements · "+
    s.firstOnly+" first-only · "+s.secondOnly+" second-only · "+
-   s.noObservation+" without either note · 0 certifications.";
+   s.noObservation+" without either note · "+
+   s.sharedEvidenceReferencePairs+" pairs with the same evidence URL · 0 certifications.";
   for(const row of report.rows){
    const tr=document.createElement("tr");
    const cells=[
     "#"+row.rank+" · "+row.character+" · "+row.trialId,
     row.firstJudgment||"No note",
     row.secondJudgment||"No note",
-    row.comparison];
+    row.comparison,
+    row.sameEvidenceReference===null?"Not comparable":
+     row.sameEvidenceReference?"Same reference":"Different references"];
    for(const value of cells){
     const td=document.createElement("td");
     td.textContent=value;

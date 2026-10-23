@@ -11,12 +11,14 @@ function compare(first,second,manifest,targets){
  const a=new Map(first.observations.map(x=>[x.trialId,x]));
  const b=new Map(second.observations.map(x=>[x.trialId,x]));
  const counts={matching:0,disagreeing:0,onlyFirst:0,onlySecond:0,unobserved:0};
- let shapeAmbiguities=0,compared=0;
+ let shapeAmbiguities=0,compared=0,matchingEvidenceReferences=0;
  const rows=targets.map(t=>{
   const x=a.get(t.id),y=b.get(t.id);
   let comparison="unobserved";
+  const sameEvidenceReference=x&&y?x.evidenceURL===y.evidenceURL:null;
   if(x&&y){
    compared++;
+   if(sameEvidenceReference)matchingEvidenceReferences++;
    comparison=x.judgment===y.judgment?"matching":"disagreeing";
    if(x.judgment==="shape_ambiguity"||y.judgment==="shape_ambiguity")
     shapeAmbiguities++;
@@ -27,7 +29,7 @@ function compare(first,second,manifest,targets){
    trialId:t.id,rank:t.rank,character:t.character,reviewState:t.reviewState,
    sourceSHA256:t.sourceSHA256,
    firstJudgment:x?x.judgment:null,secondJudgment:y?y.judgment:null,
-   comparison,independentlyReconciled:false,sourceOwnerCertified:false
+   comparison,sameEvidenceReference,independentlyReconciled:false,sourceOwnerCertified:false
   };
  });
  requireCondition(rows.length===49&&compared===counts.matching+counts.disagreeing&&
@@ -55,6 +57,8 @@ function compare(first,second,manifest,targets){
    firstOnly:counts.onlyFirst,secondOnly:counts.onlySecond,
    noObservation:counts.unobserved,
    jointShapeAmbiguityObservations:shapeAmbiguities,
+   sharedEvidenceReferencePairs:matchingEvidenceReferences,
+   differingEvidenceReferencePairs:compared-matchingEvidenceReferences,
    identicalObservationContent:identicalObservations,
    independentReviewerReportsVerified:0,
    sourceOwnerCertifications:0,independentlyReconciledPairs:0,
