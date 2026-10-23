@@ -1,0 +1,27 @@
+import assert from "node:assert/strict";
+import fs from "node:fs";
+import {deriveCitationToneIsolation} from "./citation_tone_isolation_audit.mjs";
+const get=p=>JSON.parse(fs.readFileSync(p,"utf8"));
+const src=get("site/pronunciation-citations-0001-1000.json");
+const contour=get("data/phonetics/mandarin-citation-tone-contours-v0.1.json");
+const palette=get("site/layers-v0.1.json");
+const expected=get("data/phonetics/citation-tone-isolation-audit-v0.1.json");
+assert.deepEqual(deriveCitationToneIsolation(src,contour,palette),expected);
+assert.deepEqual(expected.summary.sourceToneCounts,{"0":10,"1":304,"2":252,"3":223,"4":382});
+assert.equal(expected.summary.sourceCitationReadings,1171);
+assert.equal(expected.summary.machineDistinctContourShapes,4);
+assert.equal(expected.records[0].idealizedLevels,null);
+assert.deepEqual(expected.records.slice(1).map(x=>x.idealizedLevels),
+ [[5,5],[3,5],[2,1,4],[5,1]]);
+assert.equal(expected.summary.independentPhoneticToneCertifications,0);
+assert.equal(expected.summary.contextualToneApprovals,0);
+assert.equal(expected.summary.humanToneDiscriminationTrials,0);
+assert.equal(expected.summary.learningStudyEvidence,0);
+assert.equal(expected.separation.noInitialFeatureClassificationRequired,true);
+assert.equal(expected.separation.noFinalFeatureClassificationRequired,true);
+const falseReference=structuredClone(contour);
+falseReference.tones[2].levels=[5,5];
+assert.throws(()=>deriveCitationToneIsolation(src,falseReference,palette));
+const miss=structuredClone(contour);miss.tones[0].levels=[1,1];
+assert.throws(()=>deriveCitationToneIsolation(src,miss,palette));
+console.log("Independent tone label-channel audit: five source categories, four distinct idealized contours, no human trial.");

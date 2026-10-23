@@ -269,6 +269,8 @@ jobs:
           node --check site/pinyin-citations.js
           node tools/glyph-pipeline/pinyin_citations_viewer_smoke.mjs
           node tools/glyph-pipeline/tone_contour_reference_smoke.mjs
+          node tools/glyph-pipeline/citation_tone_isolation_audit.mjs --check
+          node tools/glyph-pipeline/citation_tone_isolation_audit_smoke.mjs
           node tools/glyph-pipeline/mandarin_initial_feature_candidates_smoke.mjs
           node tools/glyph-pipeline/mandarin_initial_feature_codec.mjs --check
           node tools/glyph-pipeline/mandarin_initial_feature_codec_smoke.mjs
@@ -318,6 +320,7 @@ jobs:
           test -s site/mandarin-tone-contours.html
           mkdir -p site/phonetics
           cp data/phonetics/mandarin-citation-tone-contours-v0.1.json site/phonetics/mandarin-citation-tone-contours-v0.1.json
+          cp data/phonetics/citation-tone-isolation-audit-v0.1.json site/phonetics/citation-tone-isolation-audit-v0.1.json
           cp data/phonetics/mandarin-initial-feature-candidates-v0.1.json site/phonetics/mandarin-initial-feature-candidates-v0.1.json
           cp data/phonetics/initial-feature-codec-audit-v0.1.json site/phonetics/initial-feature-codec-audit-v0.1.json
           cp data/phonetics/citation-syllable-orthographic-codec-audit-v0.1.json site/phonetics/citation-syllable-orthographic-codec-audit-v0.1.json
@@ -328,6 +331,7 @@ jobs:
           cp data/phonetics/unadjudicated-compound-final-review-queue-v0.1.json site/phonetics/unadjudicated-compound-final-review-queue-v0.1.json
           cp data/phonetics/written-final-symbol-control-v0.1.json site/phonetics/written-final-symbol-control-v0.1.json
           test -s site/phonetics/mandarin-citation-tone-contours-v0.1.json
+          test -s site/phonetics/citation-tone-isolation-audit-v0.1.json
           test -s site/phonetics/mandarin-initial-feature-candidates-v0.1.json
           test -s site/phonetics/initial-feature-codec-audit-v0.1.json
           test -s site/phonetics/citation-syllable-orthographic-codec-audit-v0.1.json

@@ -1,0 +1,130 @@
+{
+  "schema": "chromalect.phonetics.citation-tone-isolation-audit.v0.1",
+  "status": "source_citation_labels_and_distinct_idealized_pitches_not_automatic_perceptual_or_contextual_validation",
+  "sources": {
+    "citationTranche": "site/pronunciation-citations-0001-1000.json",
+    "sourceBlobSHA": "e38b5d3077f516054ecc5573c9251b3aa3628140",
+    "toneControl": "mandarin-citation-tone-contours-v0.1.json",
+    "referencePalette": "site/layers-v0.1.json",
+    "originalInitialsAndFinalsUnchanged": true,
+    "sourceColorsUnchanged": true
+  },
+  "separation": {
+    "tonalChannelUsesOnlySourceToneLabel": true,
+    "noInitialFeatureClassificationRequired": true,
+    "noFinalFeatureClassificationRequired": true,
+    "neutralToneHasNoFixedContextFreeContour": true,
+    "ChaoScaleIsRelativeNotHertz": true,
+    "pairwiseDistinctIdealizedFourNonNeutralContours": true,
+    "supportsHumanAcousticEquivalenceClaims": false
+  },
+  "summary": {
+    "sourceCitationCharacters": 1000,
+    "sourceCitationReadings": 1171,
+    "toneCategories": 5,
+    "relativeContourSequences": 4,
+    "undefinedNeutralContourCategories": 1,
+    "sourceToneCounts": {
+      "0": 10,
+      "1": 304,
+      "2": 252,
+      "3": 223,
+      "4": 382
+    },
+    "machineDistinctContourShapes": 4,
+    "independentPhoneticToneCertifications": 0,
+    "contextualToneApprovals": 0,
+    "humanToneDiscriminationTrials": 0,
+    "learningStudyEvidence": 0
+  },
+  "records": [
+    {
+      "token": "0",
+      "name": "Neutral",
+      "sourceCitationOccurrences": 10,
+      "idealizedLevels": null,
+      "citationToneSymbol": "·",
+      "firstSourceExample": {
+        "rank": 8,
+        "character": "卜",
+        "display": "bo"
+      },
+      "independentlyAcousticallyCalibrated": false,
+      "contextualSandhiApproved": false,
+      "humanPerceptionAccuracy": null
+    },
+    {
+      "token": "1",
+      "name": "High level",
+      "sourceCitationOccurrences": 304,
+      "idealizedLevels": [
+        5,
+        5
+      ],
+      "citationToneSymbol": "—",
+      "firstSourceExample": {
+        "rank": 1,
+        "character": "一",
+        "display": "yī"
+      },
+      "independentlyAcousticallyCalibrated": false,
+      "contextualSandhiApproved": false,
+      "humanPerceptionAccuracy": null
+    },
+    {
+      "token": "2",
+      "name": "Rising",
+      "sourceCitationOccurrences": 252,
+      "idealizedLevels": [
+        3,
+        5
+      ],
+      "citationToneSymbol": "↗",
+      "firstSourceExample": {
+        "rank": 4,
+        "character": "十",
+        "display": "shí"
+      },
+      "independentlyAcousticallyCalibrated": false,
+      "contextualSandhiApproved": false,
+      "humanPerceptionAccuracy": null
+    },
+    {
+      "token": "3",
+      "name": "Dipping",
+      "sourceCitationOccurrences": 223,
+      "idealizedLevels": [
+        2,
+        1,
+        4
+      ],
+      "citationToneSymbol": "⌄",
+      "firstSourceExample": {
+        "rank": 2,
+        "character": "乙",
+        "display": "yǐ"
+      },
+      "independentlyAcousticallyCalibrated": false,
+      "contextualSandhiApproved": false,
+      "humanPerceptionAccuracy": null
+    },
+    {
+      "token": "4",
+      "name": "Falling",
+      "sourceCitationOccurrences": 382,
+      "idealizedLevels": [
+        5,
+        1
+      ],
+      "citationToneSymbol": "↘",
+      "firstSourceExample": {
+        "rank": 3,
+        "character": "二",
+        "display": "èr"
+      },
+      "independentlyAcousticallyCalibrated": false,
+      "contextualSandhiApproved": false,
+      "humanPerceptionAccuracy": null
+    }
+  ]
+}
