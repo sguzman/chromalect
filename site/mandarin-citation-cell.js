@@ -4,10 +4,10 @@
 "use strict";
 const $=id=>document.getElementById(id);
 const ids=["cell-query","cell-reading","cell-color","cell-initial","cell-final","cell-tone",
- "cell-final-symbols","cell-initial-symbols","cell-status","cell-code","cell-risk","cell-native","cell-top","cell-side","cell-bottom","cell-source"];
+ "cell-final-symbols","cell-initial-symbols","cell-simple-feature","cell-status","cell-code","cell-risk","cell-native","cell-top","cell-side","cell-bottom","cell-source"];
 if(ids.some(id=>!$(id)))return;
 const NS="http://www.w3.org/2000/svg";
-let entries=[],onsets=new Map(),palette=null,tones=new Map(),finalGlyphs=new Map(),finalPrimitives=[],riskByTriple=new Map(),selectedIndex=0;
+let entries=[],onsets=new Map(),palette=null,tones=new Map(),finalGlyphs=new Map(),finalPrimitives=[],riskByTriple=new Map(),simpleFinals=new Map(),selectedIndex=0;
 const placePaths={
  bilabial:"M10 26 C10 8 90 8 90 26 C90 44 10 44 10 26 Z",
  labiodental:"M13 11 H87 V41 H13 Z",
@@ -81,6 +81,32 @@ function initialGeometricSymbol(feature){
  return svg;
 }
 
+
+function workingVowelMarker(record,color){
+ const x={front:18,central:64,back:110}[record.workingBackness];
+ const y={close:18,mid:44,open:70}[record.workingHeight];
+ if(!x||!y)throw Error("Unsupported hypothetical simple-vowel feature tuple");
+ const svg=document.createElementNS(NS,"svg");
+ svg.classList.add("cell-vowel-svg");
+ svg.setAttribute("viewBox","0 0 130 86");svg.setAttribute("role","img");
+ svg.setAttribute("aria-label",record.token+" unapproved working vowel "+
+  record.workingHeight+", "+record.workingBackness+", "+record.workingRounding);
+ const outer=document.createElementNS(NS,"circle");
+ outer.setAttribute("cx",String(x));outer.setAttribute("cy",String(y));
+ outer.setAttribute("r","11");outer.setAttribute("fill","none");
+ outer.setAttribute("stroke",color?palette.final.tokens[record.token]:"currentColor");
+ outer.setAttribute("stroke-width","4");
+ svg.appendChild(outer);
+ if(record.workingRounding==="rounded"){
+  const inner=document.createElementNS(NS,"circle");
+  inner.setAttribute("cx",String(x));inner.setAttribute("cy",String(y));
+  inner.setAttribute("r","4");
+  inner.setAttribute("fill",color?palette.final.tokens[record.token]:"currentColor");
+  svg.appendChild(inner);
+ }
+ return svg;
+}
+
 function finalGeometricSymbols(final){
  const record=finalGlyphs.get(final);
  if(!record)throw Error("Missing source written-final geometric control");
@@ -145,6 +171,16 @@ function render(){
   const label=document.createElement("div");label.className="cell-addon";
   decorate(label,colored?palette.final.tokens[r.final]:null);
   label.appendChild(makeText("Final: "+r.final,"cell-token"));
+  if($("cell-simple-feature").checked){
+   const vowel=simpleFinals.get(r.final);
+   if(vowel){
+    label.appendChild(workingVowelMarker(vowel,colored));
+    label.appendChild(makeText("Unapproved "+vowel.workingHeight+" · "+vowel.workingBackness+
+     " · "+vowel.workingRounding+" (source spelling only)","cell-caption"));
+    if(riskByTriple.has(JSON.stringify([r.initial,r.final,r.tone])))
+     label.appendChild(makeText("Context warning: not a phonetic value for this syllable","cell-caption"));
+   }else label.appendChild(makeText("No working simple-final feature for compound spelling","cell-caption"));
+  }
   if($("cell-final-symbols").checked)label.appendChild(finalGeometricSymbols(r.final));
   label.appendChild(makeText("written spelling remainder; not IPA","cell-caption"));
   $("cell-bottom").appendChild(label);
@@ -172,10 +208,11 @@ async function load(){
    "phonetics/mandarin-citation-tone-contours-v0.1.json",
    "phonetics/citation-syllable-orthographic-codec-audit-v0.1.json",
    "phonetics/written-final-symbol-control-v0.1.json",
-   "phonetics/mandarin-final-spelling-context-gates-v0.1.json"];
+   "phonetics/mandarin-final-spelling-context-gates-v0.1.json",
+   "phonetics/mandarin-simple-final-feature-candidates-v0.1.json"];
   const responses=await Promise.all(urls.map(url=>fetch(url)));
   if(responses.some(r=>!r.ok))throw Error("Source citation or reference data missing");
-  const [citations,layers,initials,contours,audit,writtenSymbols,riskIndex]=await Promise.all(responses.map(r=>r.json()));
+  const [citations,layers,initials,contours,audit,writtenSymbols,riskIndex,simpleReference]=await Promise.all(responses.map(r=>r.json()));
   if(citations.schema!=="chromalect.pronunciation-citations.v0"||
      citations.tranche!=="0001-1000"||citations.characters.length!==1000||
      layers.schema!=="chromalect.presentation-layers.v0"||
@@ -232,6 +269,28 @@ async function load(){
    }
   }
   if(riskByTriple.size!==108)throw Error("Incomplete spelling exception source");
+  if(simpleReference.schema!=="chromalect.phonetics.mandarin-simple-final-feature-candidates.v0.1"||
+     simpleReference.status!=="six_pedagogical_written_final_feature_hypotheses_not_ipa_or_context_approval"||
+     simpleReference.source.upstreamBlobSHA!==citations.source.blob_sha||
+     simpleReference.summary.distinctSimpleFinalLabels!==6||
+     simpleReference.summary.simpleFinalOccurrences!==432||
+     simpleReference.summary.flaggedSimpleFinalOccurrences!==112||
+     simpleReference.summary.independentIPAApprovalCount!==0||
+     simpleReference.summary.humanVowelFeatureDecodingTrials!==0||
+     simpleReference.summary.learningOutcomeEvidence!==0||
+     !Array.isArray(simpleReference.records)||simpleReference.records.length!==6)
+   throw Error("Working vowel-feature hypotheses are not source-aligned or unapproved");
+  simpleFinals=new Map();
+  for(const r of simpleReference.records){
+   if(simpleFinals.has(r.token)||r.acceptedAsIPAOrContextualPhone!==false||
+      r.articulatoryFeatureStatus!=="provisional_pedagogical_candidate_not_independently_adjudicated"||
+      !["front","central","back"].includes(r.workingBackness)||
+      !["close","mid","open"].includes(r.workingHeight)||
+      !["rounded","unrounded"].includes(r.workingRounding))
+    throw Error("Invalid working simple-vowel category");
+   simpleFinals.set(r.token,r);
+  }
+  if(simpleFinals.size!==6)throw Error("Missing simple-vowel hypothesis");
   finalPrimitives=writtenSymbols.primitives;
   finalGlyphs=new Map();
   for(const rec of writtenSymbols.records){
@@ -279,6 +338,19 @@ async function load(){
   const flagged=entries.reduce((n,c)=>n+c.readings.filter(r=>
    riskByTriple.has(JSON.stringify([r.initial,r.final,r.tone]))).length,0);
   if(flagged!==213)throw Error("Source spelling warning occurrence count disagrees with source");
+  const frequency=new Map(),flaggedSimple=new Map();
+  for(const c of entries)for(const r of c.readings){
+   if(!simpleFinals.has(r.final))continue;
+   frequency.set(r.final,1+(frequency.get(r.final)??0));
+   if(riskByTriple.has(JSON.stringify([r.initial,r.final,r.tone])))
+    flaggedSimple.set(r.final,1+(flaggedSimple.get(r.final)??0));
+  }
+  for(const r of simpleFinals.values())if(frequency.get(r.token)!==r.observedSourceCitationReadings||
+     (flaggedSimple.get(r.token)??0)!==r.sourceSpellingContextCautions)
+   throw Error("Working vowel source frequency or warning status diverged");
+  if([...frequency.values()].reduce((a,b)=>a+b,0)!==432||
+     [...flaggedSimple.values()].reduce((a,b)=>a+b,0)!==112)
+   throw Error("Incomplete source vowel cohort");
   choose(0);
   setMessage("1,000 characters · 1,171 source readings · independently toggled annotations · no study observations.");
  }catch(e){entries=[];$("cell-top").replaceChildren();$("cell-side").replaceChildren();
@@ -293,7 +365,7 @@ $("cell-query").addEventListener("change",()=>{
  setMessage("Source citation cell selected. Experimental annotations only.");
 });
 $("cell-reading").addEventListener("change",render);
-for(const id of ["cell-color","cell-initial","cell-initial-symbols","cell-final","cell-final-symbols","cell-tone"])
+for(const id of ["cell-color","cell-initial","cell-initial-symbols","cell-final","cell-final-symbols","cell-simple-feature","cell-tone"])
  $(id).addEventListener("change",render);
 load();
 })();
