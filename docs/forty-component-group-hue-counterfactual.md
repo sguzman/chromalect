@@ -10,6 +10,24 @@ The [deterministic generator](../tools/glyph-pipeline/pilot_group_counterfactual
 
 This creates 40 distinct *hypothetical* swatches with unchanged component IDs and source forms. It does not overwrite the original hex values, create a successor identity palette, update component-owned glyph SVGs, or represent itself as a verified semantic-family scheme. The report is generated separately at [`site/mnemonic-group-counterfactual-v0.1.json`](../site/mnemonic-group-counterfactual-v0.1.json), preserving both source and proposed hex values and their provenance.
 
+## Source-identical glyph research gallery
+
+The [research-only glyph comparison](../site/hint-hue-glyph-comparison.html) tests how those 40 hypothetical fills would appear *inside actual Chinese source strokes*, rather than judging isolated color squares. The [source-reconciled renderer](../tools/glyph-pipeline/source_glyph_counterfactual.mjs) reads the final 1,000-character catalog, the production SVG-to-component ownership manifest, the unchanged source SVGs, and this isolated candidate-color schema. It creates alternative files **only** for glyphs that contain at least one of the 40 candidate component IDs; all unaffected glyphs remain production-only.
+
+For every source path, the renderer checks the path owner's original palette identity and source fill. In the isolated research image, the only permitted change is the `fill` attribute of paths whose owner is in the 40-component counterfactual. It compares normalized original and research SVG documents, requiring **byte-for-byte equality everywhere outside the selected path fill attributes**. The generated [machine-readable manifest](../site/glyphs/research/hint-counterfactual-v0.1/index-v0.1.json) records affected glyph ranks, original and candidate SHA-256 hashes, changed path counts, unchanged path counts, owner IDs and explicit pending-review status. The original active SVG files and palette are neither overwritten nor automatically linked as accepted alternatives.
+
+This is a stronger *engineering* comparison, but does not prove that the historical hints correspond to appropriate semantic categories, that original individual components remain distinguishable under the alternative, or that a human can interpret the glyph more accurately.
+
+Run:
+
+    node tools/glyph-pipeline/source_glyph_counterfactual_smoke.mjs
+    node tools/glyph-pipeline/source_glyph_counterfactual.mjs --write
+    node tools/glyph-pipeline/source_glyph_counterfactual.mjs --check
+    node tools/glyph-pipeline/hint_hue_glyph_comparison_viewer_smoke.mjs
+
+The source glyph renderer requires the generated production atlas before it can be run; these checks execute in the GitHub Pages build after the existing Rust source generation and reconciliation stages.
+
+
 ## Measurement and design tradeoff
 
 The baseline [historical-group pilot](mandarin-mnemonic-hint-color-pilot.md) found almost no descriptive difference in mean OKLab distance between members of the same hint (0.216695) and members of different hints (0.220038). A separate [deterministic fixed-size random-partition benchmark](../site/mnemonic-partition-benchmark-v0.1.json) compares the observed within-group mean to 10,000 randomized label assignments. It retains the eight source group sizes, all 40 colors, and the original RGB→OKLab computation. This is a **descriptive reference distribution**, not a statistical hypothesis test or a source of linguistic validation.
