@@ -1,0 +1,84 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="description" content="Local-only source-keyed component-owner identification rehearsal with separate neutral locator images and non-certified scores.">
+<title>Component identification rehearsal · Chromalect</title>
+<link rel="stylesheet" href="style.css"><script src="theme.js"></script>
+<script src="heldout-blind-color-core.js" defer></script>
+<script src="heldout-component-identification-core.js" defer></script>
+<script src="heldout-component-identification.js" defer></script>
+<style>
+.ci-notice{background:var(--panel);border-left:3px solid var(--active-border);
+ padding:14px 18px;margin:16px 0}
+.ci-controls{display:flex;flex-wrap:wrap;align-items:end;gap:12px;margin:16px 0;
+ padding:18px;border-radius:12px;background:var(--panel);border:1px solid var(--border)}
+.ci-controls label{display:grid;gap:6px;min-width:150px}
+.ci-controls select,.ci-controls button,.ci-actions button{
+ font:inherit;color:var(--ink);background:var(--tile-bg);border:1px solid var(--border);
+ border-radius:8px;padding:10px;cursor:pointer}
+.ci-controls :disabled,.ci-actions :disabled{opacity:.45;cursor:default}
+.ci-panels{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));
+ gap:16px;margin:20px 0}
+.ci-panel{border:1px solid var(--border);border-radius:12px;padding:16px;
+ min-width:0;background:var(--panel)}
+.ci-panel h2{font-size:16px;margin:0 0 10px}
+.ci-canvas{display:flex;align-items:center;justify-content:center;
+ min-height:150px;overflow:auto;background:var(--ci-surface);
+ border:1px solid var(--border);border-radius:10px;padding:8px}
+.ci-glyph{max-width:100%;height:auto;object-fit:contain}
+.ci-choices{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
+ gap:12px;margin:15px 0}
+.ci-choice,.ci-actions button{font:inherit;color:var(--ink);cursor:pointer;
+ background:var(--tile-bg);padding:12px;border:1px solid var(--border);border-radius:9px}
+.ci-choice[aria-pressed="true"]{outline:2px solid var(--active-border);
+ outline-offset:2px;font-weight:700}
+.ci-actions{display:flex;gap:12px;align-items:center;margin:16px 0}
+.ci-text{font-size:13px;color:var(--sub)}
+.ci-output{width:100%;min-height:190px;box-sizing:border-box;padding:12px;
+ background:var(--tile-bg);border:1px solid var(--border);border-radius:8px;
+ color:var(--ink);font:12px ui-monospace,monospace}
+</style></head><body>
+<header class="wrap"><div class="brand"><b>CHROMALECT</b><small>Language, made visible</small></div></header>
+<main class="wrap">
+<div class="eyebrow">Mandarin component color · source-owned verification rehearsal</div>
+<h1>Identify the source-mapped component</h1>
+<p class="intro">This second technical rehearsal asks a scored question: which of two source-catalog components owns a region shown in a separate monochrome locator? It compares original identity colors against separately fold-trained experimental colors without modifying the two original colored SVGs.</p>
+<div class="ci-notice"><strong>Machine-keyed scores are not independently verified recognition.</strong> The source stroke-owner mapping is still awaiting external visual/linguistic certification. Original color assignments stay fixed. Neither an apparent correct answer nor a recorded score confers study eligibility, validates an encoding, or approves any semantic sense. The neutral locator and component shape choices may themselves make the answer easy without using color; this is an instrument rehearsal, not evidence of a color advantage.</div>
+<p id="ci-status" role="status" aria-live="polite">Verifying original stroke-owner sources.</p>
+<p id="ci-intro">Preparing 49 provisional component-owner questions.</p>
+<div class="ci-controls">
+<label for="ci-size">Fixed glyph size<select id="ci-size">
+<option value="24">24 px</option><option value="32">32 px</option>
+<option value="48" selected>48 px</option><option value="64">64 px</option>
+<option value="96">96 px</option></select></label>
+<label for="ci-surface">Color glyph background<select id="ci-surface">
+<option value="white" selected>White</option><option value="black">Black</option></select></label>
+<label for="ci-appearance">Appearance<select id="ci-appearance">
+<option value="color" selected>Color</option><option value="grayscale">Grayscale</option></select></label>
+<button id="ci-start" type="button" disabled>Start local identification rehearsal</button>
+</div>
+<p id="ci-progress" class="ci-text">No unverified mapping observations recorded.</p>
+<div id="ci-running" hidden>
+<div class="ci-panels">
+<div class="ci-panel"><h2>Color condition (masked)</h2>
+<div id="ci-image" class="ci-canvas" aria-label="Source-aligned Chinese glyph with masked color condition"></div></div>
+<div class="ci-panel"><h2>Neutral target-region locator</h2>
+<div id="ci-locator" class="ci-canvas" aria-label="Dark region names the location of the requested source component"></div></div>
+</div>
+<p id="ci-question"></p>
+<div id="ci-choices" class="ci-choices" aria-label="Unapproved source-component choices"></div>
+<div class="ci-actions"><button id="ci-next" type="button" disabled>Next</button></div>
+<p class="ci-text">Original and fold-trained conditions are counterbalanced across 49 one-condition prompts (25 original and 24 experimental). Machine source-key choices are balanced 25/24 by left/right position. One glyph has two flagged pairs. The original source-owner data are inspectable in public artifacts, so this is display masking only.</p>
+</div>
+<div id="ci-complete" hidden>
+<h2>Provisional mapping agreement only</h2>
+<p id="ci-summary"></p>
+<div class="ci-actions"><button id="ci-export" type="button">Prepare local JSON for manual copy</button></div>
+<label for="ci-output">Unuploaded instrument record</label>
+<textarea id="ci-output" class="ci-output" readonly rows="12"
+ placeholder="Optional unapproved local observation JSON appears here."></textarea>
+<p class="ci-text">The summary is machine-key concordance, not independent recognition accuracy. No automatic upload, browser storage, personal identifiers, or promotion of glyph/component/semantic verification.</p>
+</div>
+<p>For an unmasked side-by-side comparison, use the <a href="heldout-color-warning-review.html">48-glyph held-out audit</a>. For non-scored condition preference, use the <a href="heldout-blind-color-rehearsal.html">49-pair blinded preference rehearsal</a>. Both are research preparation, not replacement for independent expert source geometry review or participant-study controls.</p>
+</main><footer class="wrap"><a href="colors.html">Original component colors</a> ·
+<a href="semantic-group-hue-heldout.html">Held-out color audit</a></footer></body></html>
