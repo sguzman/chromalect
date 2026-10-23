@@ -7,7 +7,11 @@ const required=["vsc-pick","vsc-focus","vsc-warning","vsc-back","vsc-forward","v
  "vsc-size","vsc-size-label","vsc-gray","vsc-surface","vsc-panels","vsc-source","vsc-status","vsc-count"];
 if(required.some(id=>!$(id)))return;
 const grammar=globalThis.ChromalectSemanticGrammar;
-if(!grammar){$("vsc-status").textContent="Semantic grammar unavailable";return;}
+const contrast=globalThis.ChromalectReferenceContrast;
+if(!grammar||!contrast||contrast.version!=="wcag22-srgb-reference-v0.1"){
+ $("vsc-status").textContent="Semantic grammar or reference contrast calculation unavailable";
+ return;
+}
 const exactSvg=/^glyphs\/U\+[0-9A-F]{4,6}\.svg$/;
 const make=(tag,cls,content)=>{
  const e=document.createElement(tag);
@@ -147,8 +151,10 @@ function render(){
   if($("vsc-gray").checked)swatch.style.setProperty("filter","grayscale(1)");
   swatch.setAttribute("aria-hidden","true");
   label.appendChild(swatch);
+  const backgrounds=contrast.neutralRatios(part.color);
   label.appendChild(make("span",null,part.component_id+" · "+part.form+
-   " · "+part.color.toUpperCase()));
+   " · "+part.color.toUpperCase()+" · white "+backgrounds.white.toFixed(2)+
+   ":1 · black "+backgrounds.black.toFixed(2)+":1"));
   legend.appendChild(label);
  }
  const review=reviewRows.get(profile.rank);
@@ -172,7 +178,8 @@ function render(){
     row.appendChild(token);
    }
    row.appendChild(make("span","vsc-warning-distance",
-    "ΔOK "+pair.oklabDistance.toFixed(4)+" · machine flag, not discrimination evidence"));
+    "ΔOK "+pair.oklabDistance.toFixed(4)+" · pair luminance ratio "+
+     contrast.ratio(pair.componentA.hex,pair.componentB.hex).toFixed(2)+":1 · machine review only"));
    caution.appendChild(row);
   }
  }
