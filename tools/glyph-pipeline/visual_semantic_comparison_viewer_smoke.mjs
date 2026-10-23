@@ -91,6 +91,7 @@ for(const mutate of [
  (a,b)=>{a.characters[0].character="二";},
  (a,b)=>{a.characters[0].geometry.status="verified";},
  (a,b)=>{a.characters[0].geometry.svg="../unsafe.svg";},
+ (a,b)=>{a.characters[0].geometry.svg="glyphs/U+4E8C.svg";},
  (a,b)=>{b.summary.productionVerifiedCharacters=1;},
  (a,b)=>{b.characters[0].rank=123;},
  (a,b)=>{b.characters[0].screening.candidates[0].review="approved";},
@@ -105,4 +106,4 @@ for(const id of ["vsc-pick","vsc-back","vsc-forward","vsc-sense",
  "vsc-source","vsc-status","vsc-count"])
  assert.match(html,new RegExp('id="'+id+'"'));
 assert.ok(!script.includes("innerHTML"));
-console.log("1,000 source ranks, matched geometry in three visual conditions, provisional semantics and seven fail-closed cases checked.");
+console.log("1,000 source ranks, matched geometry in three visual conditions, provisional semantics and eight fail-closed cases checked.");
