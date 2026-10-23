@@ -36,6 +36,7 @@ This is a sequence of **evidence gates**, not a promise to build a large applica
 
 - [x] Establish a reversible, source-pinned orthographic Pinyin citation baseline for all 1,171 first-tranche readings, without declaring phonemic or contextual verification.
 - [x] Decode 1,392/1,393 pinned CC-CEDICT numbered Pinyin labels into the same orthographic tokens, preserving the exceptional r5 record and source capitalization.
+- [x] Publish source-aligned citation-tone contour controls with five pinned example readings, leaving context-dependent neutral tone and all learning outcomes unresolved.
 - [ ] Freeze the Mandarin phonological contrast inventory and a phonetic reference notation.
 - [ ] Compare Pinyin/IPA labels, initial-final symbols, and constructed featural glyphs.
 - [ ] Specify a decoding grammar and round-trip tests.
