@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Mandarin initial-feature comparison · Chromalect</title>
+<link rel="stylesheet" href="style.css"><script src="theme.js"></script><script src="mandarin-initial-features.js" defer></script>
+<style>
+.initial-controls{display:flex;flex-wrap:wrap;gap:16px;margin:20px 0}
+.initial-controls label{display:grid;gap:6px}
+.initial-controls input,.initial-controls select{font:inherit;background:var(--panel);color:var(--ink);padding:10px;border:1px solid var(--border);border-radius:8px}
+.initial-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(235px,1fr));gap:14px;margin:20px 0}
+.initial-card{border:1px solid var(--border);border-radius:12px;background:var(--panel);padding:18px;min-width:0}
+.initial-card h2{font-size:17px;margin:0}
+.initial-visual{display:flex;align-items:center;justify-content:center;min-height:116px}
+.initial-figure{height:88px;width:200px;max-width:100%}
+.initial-symbol{font-size:44px}
+.initial-note{color:var(--sub);font-size:13px;overflow-wrap:anywhere}
+</style></head><body>
+<header class="wrap"><div class="brand"><b>CHROMALECT</b><small>Language, made visible</small></div></header>
+<main class="wrap"><div class="eyebrow">Phonetic research · experimental contrast encoder</div>
+<h1>Mandarin initial categories</h1>
+<p class="intro">Compare 21 conventional Pinyin consonantal initial spellings with qualified broad IPA candidates and a reversible, monochrome feature-symbol prototype. The outer contour indicates a proposed place category; the central mark indicates manner; optional side marks distinguish aspiration. These shapes are experimental and have no independent human decoding, acoustic, or phonemic validation.</p>
+<div class="initial-controls">
+<label for="initial-mode">View
+<select id="initial-mode"><option value="featural">Experimental featural shapes</option><option value="pinyin">Pinyin spelling</option><option value="ipa">Broad IPA candidate</option></select></label>
+<label for="initial-filter">Filter spelling or features
+<input id="initial-filter" type="search" placeholder="e.g. alveolar, affricate, q"></label>
+</div>
+<p id="initial-status" role="status" aria-live="polite">Loading source-initial inventory.</p>
+<p id="initial-count"></p>
+<div class="initial-list" id="initial-list"></div>
+<p>The written onset labels y, w and ∅ are intentionally excluded from consonant-feature glyphs. The Pinyin initial categories must not be conflated with a certified phoneme inventory; some apparent consonant distinctions and IPA realizations depend on the phonological analysis. All codebook assignments remain provisional. See <a href="phonetics/mandarin-initial-feature-candidates-v0.1.json">the source-linked feature inventory</a> and <a href="https://github.com/sguzman/chromalect/blob/main/docs/mandarin-initial-feature-reference.md">the research conventions</a>.</p>
+</main>
+<footer class="wrap"><a href="pinyin-citations.html">Pinyin citations</a> · <a href="mandarin-tone-contours.html">Citation tones</a> · <a href="roadmap-status.html">Roadmap</a></footer>
+</body></html>

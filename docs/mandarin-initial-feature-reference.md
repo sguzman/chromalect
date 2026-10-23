@@ -14,3 +14,7 @@ For the 21 consonantal categories, the codebook supplies one broadly conventiona
 This is a reference for experimental contrast encoders only. It does not purport to freeze the full segmental phonemic inventory, to map all Mandarin finals, or to verify a single word-context pronunciation. Independent expert review and tests of decoding are separate gates.
 
 Machine-readable data: `data/phonetics/mandarin-initial-feature-candidates-v0.1.json`. Source-alignment test: `node tools/glyph-pipeline/mandarin_initial_feature_candidates_smoke.mjs`.
+
+## Experimental feature shapes
+
+A [static comparison page](../site/mandarin-initial-features.html) renders one independent, monochrome graphic per working initial using an outer geometric form for place, an inner form for manner, and optional side marks for aspiration. The 21 source conventional initial categories have pairwise distinct feature tuples, checked mechanically. The page can switch between those shapes, Pinyin and one broad IPA candidate without changing the underlying source. This is machine-level reversible **metadata coding**, not independently established legibility, phonological feature correctness or human decoding. The symbols and their place/manner assignments are proposals, never automatically approved.
