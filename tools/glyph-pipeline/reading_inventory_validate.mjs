@@ -116,9 +116,9 @@ export function validateReadingInventory(session,triage,dictionaryBlocks){
     assert.ok(["link_only","cc_by_2_0_fr","cc0_1_0","other_cleared"].includes(e.reuseDisposition));
     if(e.reuseDisposition==="link_only")assert.equal(o.usageExample,"");
     if(e.sourceKind==="tatoeba"){
-     assert.match(e.sourceRecordId,/^\\d+$/);
+     assert.match(e.sourceRecordId,/^\d+$/);
      assert.equal(parsed.hostname,"tatoeba.org");
-     assert.match(parsed.pathname,/^\\/(?:en|eng)\\/sentences\\/show\\/\\d+\\/?$/);
+     assert.match(parsed.pathname,/^\/(?:en|eng)\/sentences\/show\/\d+\/?$/);
      assert.equal(parsed.pathname.split("/")[4],e.sourceRecordId);
      assert.equal(parsed.search,"");assert.equal(parsed.hash,"");
      assert.notEqual(e.reuseDisposition,"other_cleared");
