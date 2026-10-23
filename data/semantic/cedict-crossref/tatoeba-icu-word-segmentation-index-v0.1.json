@@ -1,0 +1,310 @@
+{
+  "schema": "chromalect.semantic.tatoeba-icu-word-segmentation-index.v0.1",
+  "status": "machine_token_boundary_hints_only_no_independent_linguistic_approval",
+  "checkedUTCDate": "2026-10-23",
+  "source": {
+    "corpusSnapshotSHA256": "7685bc14cf769a63acf7643a5bcd2b19fc3dba6aaf6c12acabd7417752f12338",
+    "sourceLedger": "tatoeba-word-surface-id-index-v0.1.json",
+    "liveCheckLedger": "tatoeba-live-word-record-audit-summary-v0.1.json",
+    "contributorLedger": "tatoeba-word-candidate-attribution-v0.1.json",
+    "sentenceHashes": "tatoeba-word-sentence-text-fingerprints-v0.1.json",
+    "acquisitionRun": "https://github.com/sguzman/chromalect/actions/runs/39956350691",
+    "acquisitionArtifactId": 12501948737,
+    "acquisitionArtifactZipSha256": "ac63dcb6f43822da63af97437bf62899bb32a38839d08b47746aeb4e43fa1256",
+    "acquiredReportSHA256": "1e81cead67af267a5142a129a66ff81f5e94295d6a93e76c4777720226e1ae6f",
+    "sourceSentenceTextCopied": false
+  },
+  "engine": {
+    "runtime": "Node.js",
+    "node": "v24.21.0",
+    "icu": "78.3",
+    "locale": "zh",
+    "algorithm": "Intl.Segmenter",
+    "granularity": "word"
+  },
+  "caveat": "ICU token boundaries are version-sensitive machine suggestions, not independent evidence of Mandarin wordhood, lexical reading, sense, or license clearance.",
+  "summary": {
+    "sourceRecordsChecked": 27,
+    "sourceIntegrityMatches": 27,
+    "machineHints": 27,
+    "singleICUSegment": 17,
+    "multipleICUSegments": 4,
+    "cutsICUSegment": 6,
+    "independentlyVerifiedWordBoundaries": 0,
+    "independentlyVerifiedReadings": 0,
+    "approvedLexicalSenses": 0,
+    "quotationRightsCleared": 0
+  },
+  "records": [
+    {
+      "leadId": "ch126-length",
+      "sentenceId": "13970686",
+      "segmentationHint": "single_icu_segment",
+      "offsetUTF16": 9,
+      "lengthUTF16": 2,
+      "independentWordBoundaryVerified": false,
+      "contextualReadingVerified": false,
+      "lexicalSenseApproved": false
+    },
+    {
+      "leadId": "ch126-length",
+      "sentenceId": "336916",
+      "segmentationHint": "single_icu_segment",
+      "offsetUTF16": 4,
+      "lengthUTF16": 2,
+      "independentWordBoundaryVerified": false,
+      "contextualReadingVerified": false,
+      "lexicalSenseApproved": false
+    },
+    {
+      "leadId": "ch126-length",
+      "sentenceId": "9972430",
+      "segmentationHint": "single_icu_segment",
+      "offsetUTF16": 25,
+      "lengthUTF16": 2,
+      "independentWordBoundaryVerified": false,
+      "contextualReadingVerified": false,
+      "lexicalSenseApproved": false
+    },
+    {
+      "leadId": "ch126-length",
+      "sentenceId": "2317127",
+      "segmentationHint": "single_icu_segment",
+      "offsetUTF16": 9,
+      "lengthUTF16": 2,
+      "independentWordBoundaryVerified": false,
+      "contextualReadingVerified": false,
+      "lexicalSenseApproved": false
+    },
+    {
+      "leadId": "zhang-growth",
+      "sentenceId": "389974",
+      "segmentationHint": "single_icu_segment",
+      "offsetUTF16": 0,
+      "lengthUTF16": 2,
+      "independentWordBoundaryVerified": false,
+      "contextualReadingVerified": false,
+      "lexicalSenseApproved": false
+    },
+    {
+      "leadId": "zhang-growth",
+      "sentenceId": "8748562",
+      "segmentationHint": "single_icu_segment",
+      "offsetUTF16": 15,
+      "lengthUTF16": 2,
+      "independentWordBoundaryVerified": false,
+      "contextualReadingVerified": false,
+      "lexicalSenseApproved": false
+    },
+    {
+      "leadId": "zhang-growth",
+      "sentenceId": "332981",
+      "segmentationHint": "single_icu_segment",
+      "offsetUTF16": 6,
+      "lengthUTF16": 2,
+      "independentWordBoundaryVerified": false,
+      "contextualReadingVerified": false,
+      "lexicalSenseApproved": false
+    },
+    {
+      "leadId": "zhang-growth",
+      "sentenceId": "1839195",
+      "segmentationHint": "single_icu_segment",
+      "offsetUTF16": 1,
+      "lengthUTF16": 2,
+      "independentWordBoundaryVerified": false,
+      "contextualReadingVerified": false,
+      "lexicalSenseApproved": false
+    },
+    {
+      "leadId": "zhang-growth",
+      "sentenceId": "12687028",
+      "segmentationHint": "cuts_icu_segment",
+      "offsetUTF16": 6,
+      "lengthUTF16": 2,
+      "independentWordBoundaryVerified": false,
+      "contextualReadingVerified": false,
+      "lexicalSenseApproved": false
+    },
+    {
+      "leadId": "hua-row",
+      "sentenceId": "10305694",
+      "segmentationHint": "single_icu_segment",
+      "offsetUTF16": 4,
+      "lengthUTF16": 2,
+      "independentWordBoundaryVerified": false,
+      "contextualReadingVerified": false,
+      "lexicalSenseApproved": false
+    },
+    {
+      "leadId": "hua-row",
+      "sentenceId": "336671",
+      "segmentationHint": "single_icu_segment",
+      "offsetUTF16": 4,
+      "lengthUTF16": 2,
+      "independentWordBoundaryVerified": false,
+      "contextualReadingVerified": false,
+      "lexicalSenseApproved": false
+    },
+    {
+      "leadId": "hua-row",
+      "sentenceId": "850117",
+      "segmentationHint": "single_icu_segment",
+      "offsetUTF16": 5,
+      "lengthUTF16": 2,
+      "independentWordBoundaryVerified": false,
+      "contextualReadingVerified": false,
+      "lexicalSenseApproved": false
+    },
+    {
+      "leadId": "hua-plan",
+      "sentenceId": "733596",
+      "segmentationHint": "single_icu_segment",
+      "offsetUTF16": 26,
+      "lengthUTF16": 2,
+      "independentWordBoundaryVerified": false,
+      "contextualReadingVerified": false,
+      "lexicalSenseApproved": false
+    },
+    {
+      "leadId": "hua-plan",
+      "sentenceId": "10058523",
+      "segmentationHint": "single_icu_segment",
+      "offsetUTF16": 6,
+      "lengthUTF16": 2,
+      "independentWordBoundaryVerified": false,
+      "contextualReadingVerified": false,
+      "lexicalSenseApproved": false
+    },
+    {
+      "leadId": "hua-plan",
+      "sentenceId": "2915527",
+      "segmentationHint": "single_icu_segment",
+      "offsetUTF16": 2,
+      "lengthUTF16": 2,
+      "independentWordBoundaryVerified": false,
+      "contextualReadingVerified": false,
+      "lexicalSenseApproved": false
+    },
+    {
+      "leadId": "hua-plan",
+      "sentenceId": "9968962",
+      "segmentationHint": "single_icu_segment",
+      "offsetUTF16": 3,
+      "lengthUTF16": 2,
+      "independentWordBoundaryVerified": false,
+      "contextualReadingVerified": false,
+      "lexicalSenseApproved": false
+    },
+    {
+      "leadId": "hua-plan",
+      "sentenceId": "510659",
+      "segmentationHint": "single_icu_segment",
+      "offsetUTF16": 2,
+      "lengthUTF16": 2,
+      "independentWordBoundaryVerified": false,
+      "contextualReadingVerified": false,
+      "lexicalSenseApproved": false
+    },
+    {
+      "leadId": "guo-cross",
+      "sentenceId": "9842625",
+      "segmentationHint": "single_icu_segment",
+      "offsetUTF16": 0,
+      "lengthUTF16": 2,
+      "independentWordBoundaryVerified": false,
+      "contextualReadingVerified": false,
+      "lexicalSenseApproved": false
+    },
+    {
+      "leadId": "guo-cross",
+      "sentenceId": "347817",
+      "segmentationHint": "cuts_icu_segment",
+      "offsetUTF16": 1,
+      "lengthUTF16": 2,
+      "independentWordBoundaryVerified": false,
+      "contextualReadingVerified": false,
+      "lexicalSenseApproved": false
+    },
+    {
+      "leadId": "guo-cross",
+      "sentenceId": "501571",
+      "segmentationHint": "cuts_icu_segment",
+      "offsetUTF16": 17,
+      "lengthUTF16": 2,
+      "independentWordBoundaryVerified": false,
+      "contextualReadingVerified": false,
+      "lexicalSenseApproved": false
+    },
+    {
+      "leadId": "guo-cross",
+      "sentenceId": "8037882",
+      "segmentationHint": "cuts_icu_segment",
+      "offsetUTF16": 2,
+      "lengthUTF16": 2,
+      "independentWordBoundaryVerified": false,
+      "contextualReadingVerified": false,
+      "lexicalSenseApproved": false
+    },
+    {
+      "leadId": "guo-cross",
+      "sentenceId": "343595",
+      "segmentationHint": "cuts_icu_segment",
+      "offsetUTF16": 5,
+      "lengthUTF16": 2,
+      "independentWordBoundaryVerified": false,
+      "contextualReadingVerified": false,
+      "lexicalSenseApproved": false
+    },
+    {
+      "leadId": "guo-aspect",
+      "sentenceId": "10066357",
+      "segmentationHint": "multiple_icu_segments",
+      "offsetUTF16": 6,
+      "lengthUTF16": 2,
+      "independentWordBoundaryVerified": false,
+      "contextualReadingVerified": false,
+      "lexicalSenseApproved": false
+    },
+    {
+      "leadId": "guo-aspect",
+      "sentenceId": "13972768",
+      "segmentationHint": "cuts_icu_segment",
+      "offsetUTF16": 3,
+      "lengthUTF16": 2,
+      "independentWordBoundaryVerified": false,
+      "contextualReadingVerified": false,
+      "lexicalSenseApproved": false
+    },
+    {
+      "leadId": "guo-aspect",
+      "sentenceId": "2440828",
+      "segmentationHint": "multiple_icu_segments",
+      "offsetUTF16": 7,
+      "lengthUTF16": 2,
+      "independentWordBoundaryVerified": false,
+      "contextualReadingVerified": false,
+      "lexicalSenseApproved": false
+    },
+    {
+      "leadId": "guo-aspect",
+      "sentenceId": "13751971",
+      "segmentationHint": "multiple_icu_segments",
+      "offsetUTF16": 5,
+      "lengthUTF16": 2,
+      "independentWordBoundaryVerified": false,
+      "contextualReadingVerified": false,
+      "lexicalSenseApproved": false
+    },
+    {
+      "leadId": "guo-aspect",
+      "sentenceId": "9409447",
+      "segmentationHint": "multiple_icu_segments",
+      "offsetUTF16": 1,
+      "lengthUTF16": 2,
+      "independentWordBoundaryVerified": false,
+      "contextualReadingVerified": false,
+      "lexicalSenseApproved": false
+    }
+  ]
+}
