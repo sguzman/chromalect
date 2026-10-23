@@ -1,0 +1,1395 @@
+{
+  "schema": "chromalect.phonetics.unadjudicated-compound-final-review-queue.v0.1",
+  "status": "research_triage_only_no_proposed_ipa_segmentations_or_accepted_phonemes",
+  "sources": {
+    "firstThousandCitationReadings": "site/pronunciation-citations-0001-1000.json",
+    "sourceBlobSHA": "e38b5d3077f516054ecc5573c9251b3aa3628140",
+    "provisionalSixSimpleFinals": "mandarin-simple-final-feature-candidates-v0.1.json",
+    "cautionIndex": "mandarin-final-spelling-context-gates-v0.1.json",
+    "arbitraryLetterControls": "written-final-symbol-control-v0.1.json",
+    "sourcePaletteChanged": false,
+    "outputDoesNotContainSentenceText": true,
+    "noVerifiedContextualPronunciations": true
+  },
+  "method": "Prioritize spellings with a listed context caution, then order by descending observed source citation use, breaking ties by written token. This is review logistics, not phonetic importance.",
+  "limitations": [
+    "All final spellings are literal Pinyin remainder tokens, not proven spoken rhyme/phoneme units.",
+    "Source reading counts are usage within the pinned first 1,000 character citation tranche, not general Mandarin frequencies.",
+    "The nine caution categories do not exhaust all possible contextual variants.",
+    "No phonological features or IPA transcription are assigned by this queue."
+  ],
+  "summary": {
+    "sourceCharacters": 1000,
+    "totalSourceCitationReadings": 1171,
+    "compoundWrittenFinalCategories": 27,
+    "compoundFinalSourceUses": 739,
+    "contextCautionedCompoundUses": 101,
+    "nonCautionedCompoundUses": 638,
+    "independentFinalPhonologicalApprovals": 0,
+    "approvedContextualPronunciations": 0,
+    "humanDecodingTrials": 0
+  },
+  "records": [
+    {
+      "reviewRank": 1,
+      "token": "un",
+      "sourceCitationUses": 38,
+      "explicitContextCautionUses": 38,
+      "observedWarningFamilies": [
+        "contracted_un_nonpalatal",
+        "palatal_written_un"
+      ],
+      "firstSourceExamples": [
+        {
+          "rank": 31,
+          "character": "寸",
+          "pinyin": "cùn",
+          "initial": "c",
+          "final": "un",
+          "tone": 4,
+          "sourceWarning": "contracted_un_nonpalatal"
+        },
+        {
+          "rank": 82,
+          "character": "云",
+          "pinyin": "yún",
+          "initial": "y",
+          "final": "un",
+          "tone": 2,
+          "sourceWarning": "palatal_written_un"
+        },
+        {
+          "rank": 103,
+          "character": "屯",
+          "pinyin": "tún",
+          "initial": "t",
+          "final": "un",
+          "tone": 2,
+          "sourceWarning": "contracted_un_nonpalatal"
+        },
+        {
+          "rank": 143,
+          "character": "仑",
+          "pinyin": "lún",
+          "initial": "l",
+          "final": "un",
+          "tone": 2,
+          "sourceWarning": "contracted_un_nonpalatal"
+        }
+      ],
+      "phonologicalSegmentation": "not_adjudicated",
+      "proposedIPAForm": null,
+      "independenceOfContrast": "unreviewed",
+      "humanDecodingResults": 0,
+      "machineOnlyWrittenCodeAvailable": true
+    },
+    {
+      "reviewRank": 2,
+      "token": "uan",
+      "sourceCitationUses": 25,
+      "explicitContextCautionUses": 10,
+      "observedWarningFamilies": [
+        "palatal_written_uan"
+      ],
+      "firstSourceExamples": [
+        {
+          "rank": 43,
+          "character": "川",
+          "pinyin": "chuān",
+          "initial": "ch",
+          "final": "uan",
+          "tone": 1,
+          "sourceWarning": null
+        },
+        {
+          "rank": 80,
+          "character": "元",
+          "pinyin": "yuán",
+          "initial": "y",
+          "final": "uan",
+          "tone": 2,
+          "sourceWarning": "palatal_written_uan"
+        },
+        {
+          "rank": 83,
+          "character": "专",
+          "pinyin": "zhuān",
+          "initial": "zh",
+          "final": "uan",
+          "tone": 1,
+          "sourceWarning": null
+        },
+        {
+          "rank": 92,
+          "character": "犬",
+          "pinyin": "quǎn",
+          "initial": "q",
+          "final": "uan",
+          "tone": 3,
+          "sourceWarning": "palatal_written_uan"
+        }
+      ],
+      "phonologicalSegmentation": "not_adjudicated",
+      "proposedIPAForm": null,
+      "independenceOfContrast": "unreviewed",
+      "humanDecodingResults": 0,
+      "machineOnlyWrittenCodeAvailable": true
+    },
+    {
+      "reviewRank": 3,
+      "token": "iu",
+      "sourceCitationUses": 24,
+      "explicitContextCautionUses": 24,
+      "observedWarningFamilies": [
+        "contracted_iu"
+      ],
+      "firstSourceExamples": [
+        {
+          "rank": 15,
+          "character": "九",
+          "pinyin": "jiǔ",
+          "initial": "j",
+          "final": "iu",
+          "tone": 3,
+          "sourceWarning": "contracted_iu"
+        },
+        {
+          "rank": 47,
+          "character": "久",
+          "pinyin": "jiǔ",
+          "initial": "j",
+          "final": "iu",
+          "tone": 3,
+          "sourceWarning": "contracted_iu"
+        },
+        {
+          "rank": 120,
+          "character": "牛",
+          "pinyin": "niú",
+          "initial": "n",
+          "final": "iu",
+          "tone": 2,
+          "sourceWarning": "contracted_iu"
+        },
+        {
+          "rank": 133,
+          "character": "仇",
+          "pinyin": "qiú",
+          "initial": "q",
+          "final": "iu",
+          "tone": 2,
+          "sourceWarning": "contracted_iu"
+        }
+      ],
+      "phonologicalSegmentation": "not_adjudicated",
+      "proposedIPAForm": null,
+      "independenceOfContrast": "unreviewed",
+      "humanDecodingResults": 0,
+      "machineOnlyWrittenCodeAvailable": true
+    },
+    {
+      "reviewRank": 4,
+      "token": "ui",
+      "sourceCitationUses": 19,
+      "explicitContextCautionUses": 19,
+      "observedWarningFamilies": [
+        "contracted_ui"
+      ],
+      "firstSourceExamples": [
+        {
+          "rank": 25,
+          "character": "亏",
+          "pinyin": "kuī",
+          "initial": "k",
+          "final": "ui",
+          "tone": 1,
+          "sourceWarning": "contracted_ui"
+        },
+        {
+          "rank": 117,
+          "character": "水",
+          "pinyin": "shuǐ",
+          "initial": "sh",
+          "final": "ui",
+          "tone": 3,
+          "sourceWarning": "contracted_ui"
+        },
+        {
+          "rank": 180,
+          "character": "队",
+          "pinyin": "duì",
+          "initial": "d",
+          "final": "ui",
+          "tone": 4,
+          "sourceWarning": "contracted_ui"
+        },
+        {
+          "rank": 200,
+          "character": "卉",
+          "pinyin": "huì",
+          "initial": "h",
+          "final": "ui",
+          "tone": 4,
+          "sourceWarning": "contracted_ui"
+        }
+      ],
+      "phonologicalSegmentation": "not_adjudicated",
+      "proposedIPAForm": null,
+      "independenceOfContrast": "unreviewed",
+      "humanDecodingResults": 0,
+      "machineOnlyWrittenCodeAvailable": true
+    },
+    {
+      "reviewRank": 5,
+      "token": "ue",
+      "sourceCitationUses": 10,
+      "explicitContextCautionUses": 10,
+      "observedWarningFamilies": [
+        "palatal_written_ue"
+      ],
+      "firstSourceExamples": [
+        {
+          "rank": 111,
+          "character": "曰",
+          "pinyin": "yuē",
+          "initial": "y",
+          "final": "ue",
+          "tone": 1,
+          "sourceWarning": "palatal_written_ue"
+        },
+        {
+          "rank": 150,
+          "character": "月",
+          "pinyin": "yuè",
+          "initial": "y",
+          "final": "ue",
+          "tone": 4,
+          "sourceWarning": "palatal_written_ue"
+        },
+        {
+          "rank": 287,
+          "character": "乐",
+          "pinyin": "yuè",
+          "initial": "y",
+          "final": "ue",
+          "tone": 4,
+          "sourceWarning": "palatal_written_ue"
+        },
+        {
+          "rank": 313,
+          "character": "穴",
+          "pinyin": "xué",
+          "initial": "x",
+          "final": "ue",
+          "tone": 2,
+          "sourceWarning": "palatal_written_ue"
+        }
+      ],
+      "phonologicalSegmentation": "not_adjudicated",
+      "proposedIPAForm": null,
+      "independenceOfContrast": "unreviewed",
+      "humanDecodingResults": 0,
+      "machineOnlyWrittenCodeAvailable": true
+    },
+    {
+      "reviewRank": 6,
+      "token": "an",
+      "sourceCitationUses": 60,
+      "explicitContextCautionUses": 0,
+      "observedWarningFamilies": [],
+      "firstSourceExamples": [
+        {
+          "rank": 22,
+          "character": "三",
+          "pinyin": "sān",
+          "initial": "s",
+          "final": "an",
+          "tone": 1,
+          "sourceWarning": null
+        },
+        {
+          "rank": 23,
+          "character": "干",
+          "pinyin": "gān",
+          "initial": "g",
+          "final": "an",
+          "tone": 1,
+          "sourceWarning": null
+        },
+        {
+          "rank": 23,
+          "character": "干",
+          "pinyin": "gàn",
+          "initial": "g",
+          "final": "an",
+          "tone": 4,
+          "sourceWarning": null
+        },
+        {
+          "rank": 35,
+          "character": "万",
+          "pinyin": "wàn",
+          "initial": "w",
+          "final": "an",
+          "tone": 4,
+          "sourceWarning": null
+        }
+      ],
+      "phonologicalSegmentation": "not_adjudicated",
+      "proposedIPAForm": null,
+      "independenceOfContrast": "unreviewed",
+      "humanDecodingResults": 0,
+      "machineOnlyWrittenCodeAvailable": true
+    },
+    {
+      "reviewRank": 7,
+      "token": "ang",
+      "sourceCitationUses": 60,
+      "explicitContextCautionUses": 0,
+      "observedWarningFamilies": [],
+      "firstSourceExamples": [
+        {
+          "rank": 6,
+          "character": "厂",
+          "pinyin": "chǎng",
+          "initial": "ch",
+          "final": "ang",
+          "tone": 3,
+          "sourceWarning": null
+        },
+        {
+          "rank": 33,
+          "character": "丈",
+          "pinyin": "zhàng",
+          "initial": "zh",
+          "final": "ang",
+          "tone": 4,
+          "sourceWarning": null
+        },
+        {
+          "rank": 36,
+          "character": "上",
+          "pinyin": "shǎng",
+          "initial": "sh",
+          "final": "ang",
+          "tone": 3,
+          "sourceWarning": null
+        },
+        {
+          "rank": 36,
+          "character": "上",
+          "pinyin": "shàng",
+          "initial": "sh",
+          "final": "ang",
+          "tone": 4,
+          "sourceWarning": null
+        }
+      ],
+      "phonologicalSegmentation": "not_adjudicated",
+      "proposedIPAForm": null,
+      "independenceOfContrast": "unreviewed",
+      "humanDecodingResults": 0,
+      "machineOnlyWrittenCodeAvailable": true
+    },
+    {
+      "reviewRank": 8,
+      "token": "ao",
+      "sourceCitationUses": 50,
+      "explicitContextCautionUses": 0,
+      "observedWarningFamilies": [],
+      "firstSourceExamples": [
+        {
+          "rank": 18,
+          "character": "刀",
+          "pinyin": "dāo",
+          "initial": "d",
+          "final": "ao",
+          "tone": 1,
+          "sourceWarning": null
+        },
+        {
+          "rank": 49,
+          "character": "勺",
+          "pinyin": "sháo",
+          "initial": "sh",
+          "final": "ao",
+          "tone": 2,
+          "sourceWarning": null
+        },
+        {
+          "rank": 110,
+          "character": "少",
+          "pinyin": "shǎo",
+          "initial": "sh",
+          "final": "ao",
+          "tone": 3,
+          "sourceWarning": null
+        },
+        {
+          "rank": 110,
+          "character": "少",
+          "pinyin": "shào",
+          "initial": "sh",
+          "final": "ao",
+          "tone": 4,
+          "sourceWarning": null
+        }
+      ],
+      "phonologicalSegmentation": "not_adjudicated",
+      "proposedIPAForm": null,
+      "independenceOfContrast": "unreviewed",
+      "humanDecodingResults": 0,
+      "machineOnlyWrittenCodeAvailable": true
+    },
+    {
+      "reviewRank": 9,
+      "token": "ong",
+      "sourceCitationUses": 47,
+      "explicitContextCautionUses": 0,
+      "observedWarningFamilies": [],
+      "firstSourceExamples": [
+        {
+          "rank": 26,
+          "character": "工",
+          "pinyin": "gōng",
+          "initial": "g",
+          "final": "ong",
+          "tone": 1,
+          "sourceWarning": null
+        },
+        {
+          "rank": 63,
+          "character": "弓",
+          "pinyin": "gōng",
+          "initial": "g",
+          "final": "ong",
+          "tone": 1,
+          "sourceWarning": null
+        },
+        {
+          "rank": 113,
+          "character": "中",
+          "pinyin": "zhōng",
+          "initial": "zh",
+          "final": "ong",
+          "tone": 1,
+          "sourceWarning": null
+        },
+        {
+          "rank": 113,
+          "character": "中",
+          "pinyin": "zhòng",
+          "initial": "zh",
+          "final": "ong",
+          "tone": 4,
+          "sourceWarning": null
+        }
+      ],
+      "phonologicalSegmentation": "not_adjudicated",
+      "proposedIPAForm": null,
+      "independenceOfContrast": "unreviewed",
+      "humanDecodingResults": 0,
+      "machineOnlyWrittenCodeAvailable": true
+    },
+    {
+      "reviewRank": 10,
+      "token": "ing",
+      "sourceCitationUses": 45,
+      "explicitContextCautionUses": 0,
+      "observedWarningFamilies": [],
+      "firstSourceExamples": [
+        {
+          "rank": 5,
+          "character": "丁",
+          "pinyin": "dīng",
+          "initial": "d",
+          "final": "ing",
+          "tone": 1,
+          "sourceWarning": null
+        },
+        {
+          "rank": 77,
+          "character": "井",
+          "pinyin": "jǐng",
+          "initial": "j",
+          "final": "ing",
+          "tone": 3,
+          "sourceWarning": null
+        },
+        {
+          "rank": 90,
+          "character": "厅",
+          "pinyin": "tīng",
+          "initial": "t",
+          "final": "ing",
+          "tone": 1,
+          "sourceWarning": null
+        },
+        {
+          "rank": 169,
+          "character": "订",
+          "pinyin": "dìng",
+          "initial": "d",
+          "final": "ing",
+          "tone": 4,
+          "sourceWarning": null
+        }
+      ],
+      "phonologicalSegmentation": "not_adjudicated",
+      "proposedIPAForm": null,
+      "independenceOfContrast": "unreviewed",
+      "humanDecodingResults": 0,
+      "machineOnlyWrittenCodeAvailable": true
+    },
+    {
+      "reviewRank": 11,
+      "token": "ou",
+      "sourceCitationUses": 44,
+      "explicitContextCautionUses": 0,
+      "observedWarningFamilies": [],
+      "firstSourceExamples": [
+        {
+          "rank": 21,
+          "character": "又",
+          "pinyin": "yòu",
+          "initial": "y",
+          "final": "ou",
+          "tone": 4,
+          "sourceWarning": null
+        },
+        {
+          "rank": 38,
+          "character": "口",
+          "pinyin": "kǒu",
+          "initial": "k",
+          "final": "ou",
+          "tone": 3,
+          "sourceWarning": null
+        },
+        {
+          "rank": 94,
+          "character": "区",
+          "pinyin": "ōu",
+          "initial": "∅",
+          "final": "ou",
+          "tone": 1,
+          "sourceWarning": null
+        },
+        {
+          "rank": 97,
+          "character": "友",
+          "pinyin": "yǒu",
+          "initial": "y",
+          "final": "ou",
+          "tone": 3,
+          "sourceWarning": null
+        }
+      ],
+      "phonologicalSegmentation": "not_adjudicated",
+      "proposedIPAForm": null,
+      "independenceOfContrast": "unreviewed",
+      "humanDecodingResults": 0,
+      "machineOnlyWrittenCodeAvailable": true
+    },
+    {
+      "reviewRank": 12,
+      "token": "en",
+      "sourceCitationUses": 42,
+      "explicitContextCautionUses": 0,
+      "observedWarningFamilies": [],
+      "firstSourceExamples": [
+        {
+          "rank": 10,
+          "character": "人",
+          "pinyin": "rén",
+          "initial": "r",
+          "final": "en",
+          "tone": 2,
+          "sourceWarning": null
+        },
+        {
+          "rank": 55,
+          "character": "门",
+          "pinyin": "mén",
+          "initial": "m",
+          "final": "en",
+          "tone": 2,
+          "sourceWarning": null
+        },
+        {
+          "rank": 68,
+          "character": "刃",
+          "pinyin": "rèn",
+          "initial": "r",
+          "final": "en",
+          "tone": 4,
+          "sourceWarning": null
+        },
+        {
+          "rank": 124,
+          "character": "壬",
+          "pinyin": "rén",
+          "initial": "r",
+          "final": "en",
+          "tone": 2,
+          "sourceWarning": null
+        }
+      ],
+      "phonologicalSegmentation": "not_adjudicated",
+      "proposedIPAForm": null,
+      "independenceOfContrast": "unreviewed",
+      "humanDecodingResults": 0,
+      "machineOnlyWrittenCodeAvailable": true
+    },
+    {
+      "reviewRank": 13,
+      "token": "ai",
+      "sourceCitationUses": 38,
+      "explicitContextCautionUses": 0,
+      "observedWarningFamilies": [],
+      "firstSourceExamples": [
+        {
+          "rank": 20,
+          "character": "乃",
+          "pinyin": "nǎi",
+          "initial": "n",
+          "final": "ai",
+          "tone": 3,
+          "sourceWarning": null
+        },
+        {
+          "rank": 29,
+          "character": "才",
+          "pinyin": "cái",
+          "initial": "c",
+          "final": "ai",
+          "tone": 2,
+          "sourceWarning": null
+        },
+        {
+          "rank": 32,
+          "character": "大",
+          "pinyin": "dài",
+          "initial": "d",
+          "final": "ai",
+          "tone": 4,
+          "sourceWarning": null
+        },
+        {
+          "rank": 76,
+          "character": "开",
+          "pinyin": "kāi",
+          "initial": "k",
+          "final": "ai",
+          "tone": 1,
+          "sourceWarning": null
+        }
+      ],
+      "phonologicalSegmentation": "not_adjudicated",
+      "proposedIPAForm": null,
+      "independenceOfContrast": "unreviewed",
+      "humanDecodingResults": 0,
+      "machineOnlyWrittenCodeAvailable": true
+    },
+    {
+      "reviewRank": 14,
+      "token": "ian",
+      "sourceCitationUses": 31,
+      "explicitContextCautionUses": 0,
+      "observedWarningFamilies": [],
+      "firstSourceExamples": [
+        {
+          "rank": 41,
+          "character": "千",
+          "pinyin": "qiān",
+          "initial": "q",
+          "final": "ian",
+          "tone": 1,
+          "sourceWarning": null
+        },
+        {
+          "rank": 78,
+          "character": "天",
+          "pinyin": "tiān",
+          "initial": "t",
+          "final": "ian",
+          "tone": 1,
+          "sourceWarning": null
+        },
+        {
+          "rank": 118,
+          "character": "见",
+          "pinyin": "jiàn",
+          "initial": "j",
+          "final": "ian",
+          "tone": 4,
+          "sourceWarning": null
+        },
+        {
+          "rank": 118,
+          "character": "见",
+          "pinyin": "xiàn",
+          "initial": "x",
+          "final": "ian",
+          "tone": 4,
+          "sourceWarning": null
+        }
+      ],
+      "phonologicalSegmentation": "not_adjudicated",
+      "proposedIPAForm": null,
+      "independenceOfContrast": "unreviewed",
+      "humanDecodingResults": 0,
+      "machineOnlyWrittenCodeAvailable": true
+    },
+    {
+      "reviewRank": 15,
+      "token": "eng",
+      "sourceCitationUses": 27,
+      "explicitContextCautionUses": 0,
+      "observedWarningFamilies": [],
+      "firstSourceExamples": [
+        {
+          "rank": 74,
+          "character": "丰",
+          "pinyin": "fēng",
+          "initial": "f",
+          "final": "eng",
+          "tone": 1,
+          "sourceWarning": null
+        },
+        {
+          "rank": 125,
+          "character": "升",
+          "pinyin": "shēng",
+          "initial": "sh",
+          "final": "eng",
+          "tone": 1,
+          "sourceWarning": null
+        },
+        {
+          "rank": 135,
+          "character": "仍",
+          "pinyin": "réng",
+          "initial": "r",
+          "final": "eng",
+          "tone": 2,
+          "sourceWarning": null
+        },
+        {
+          "rank": 154,
+          "character": "风",
+          "pinyin": "fēng",
+          "initial": "f",
+          "final": "eng",
+          "tone": 1,
+          "sourceWarning": null
+        }
+      ],
+      "phonologicalSegmentation": "not_adjudicated",
+      "proposedIPAForm": null,
+      "independenceOfContrast": "unreviewed",
+      "humanDecodingResults": 0,
+      "machineOnlyWrittenCodeAvailable": true
+    },
+    {
+      "reviewRank": 16,
+      "token": "in",
+      "sourceCitationUses": 27,
+      "explicitContextCautionUses": 0,
+      "observedWarningFamilies": [],
+      "firstSourceExamples": [
+        {
+          "rank": 40,
+          "character": "巾",
+          "pinyin": "jīn",
+          "initial": "j",
+          "final": "in",
+          "tone": 1,
+          "sourceWarning": null
+        },
+        {
+          "rank": 136,
+          "character": "仅",
+          "pinyin": "jǐn",
+          "initial": "j",
+          "final": "in",
+          "tone": 3,
+          "sourceWarning": null
+        },
+        {
+          "rank": 137,
+          "character": "斤",
+          "pinyin": "jīn",
+          "initial": "j",
+          "final": "in",
+          "tone": 1,
+          "sourceWarning": null
+        },
+        {
+          "rank": 144,
+          "character": "今",
+          "pinyin": "jīn",
+          "initial": "j",
+          "final": "in",
+          "tone": 1,
+          "sourceWarning": null
+        }
+      ],
+      "phonologicalSegmentation": "not_adjudicated",
+      "proposedIPAForm": null,
+      "independenceOfContrast": "unreviewed",
+      "humanDecodingResults": 0,
+      "machineOnlyWrittenCodeAvailable": true
+    },
+    {
+      "reviewRank": 17,
+      "token": "ei",
+      "sourceCitationUses": 25,
+      "explicitContextCautionUses": 0,
+      "observedWarningFamilies": [],
+      "firstSourceExamples": [
+        {
+          "rank": 65,
+          "character": "卫",
+          "pinyin": "wèi",
+          "initial": "w",
+          "final": "ei",
+          "tone": 4,
+          "sourceWarning": null
+        },
+        {
+          "rank": 69,
+          "character": "飞",
+          "pinyin": "fēi",
+          "initial": "f",
+          "final": "ei",
+          "tone": 1,
+          "sourceWarning": null
+        },
+        {
+          "rank": 114,
+          "character": "贝",
+          "pinyin": "bèi",
+          "initial": "b",
+          "final": "ei",
+          "tone": 4,
+          "sourceWarning": null
+        },
+        {
+          "rank": 116,
+          "character": "内",
+          "pinyin": "nèi",
+          "initial": "n",
+          "final": "ei",
+          "tone": 4,
+          "sourceWarning": null
+        }
+      ],
+      "phonologicalSegmentation": "not_adjudicated",
+      "proposedIPAForm": null,
+      "independenceOfContrast": "unreviewed",
+      "humanDecodingResults": 0,
+      "machineOnlyWrittenCodeAvailable": true
+    },
+    {
+      "reviewRank": 18,
+      "token": "iao",
+      "sourceCitationUses": 22,
+      "explicitContextCautionUses": 0,
+      "observedWarningFamilies": [],
+      "firstSourceExamples": [
+        {
+          "rank": 16,
+          "character": "刁",
+          "pinyin": "diāo",
+          "initial": "d",
+          "final": "iao",
+          "tone": 1,
+          "sourceWarning": null
+        },
+        {
+          "rank": 17,
+          "character": "了",
+          "pinyin": "liǎo",
+          "initial": "l",
+          "final": "iao",
+          "tone": 3,
+          "sourceWarning": null
+        },
+        {
+          "rank": 37,
+          "character": "小",
+          "pinyin": "xiǎo",
+          "initial": "x",
+          "final": "iao",
+          "tone": 3,
+          "sourceWarning": null
+        },
+        {
+          "rank": 197,
+          "character": "巧",
+          "pinyin": "qiǎo",
+          "initial": "q",
+          "final": "iao",
+          "tone": 3,
+          "sourceWarning": null
+        }
+      ],
+      "phonologicalSegmentation": "not_adjudicated",
+      "proposedIPAForm": null,
+      "independenceOfContrast": "unreviewed",
+      "humanDecodingResults": 0,
+      "machineOnlyWrittenCodeAvailable": true
+    },
+    {
+      "reviewRank": 19,
+      "token": "ie",
+      "sourceCitationUses": 21,
+      "explicitContextCautionUses": 0,
+      "observedWarningFamilies": [],
+      "firstSourceExamples": [
+        {
+          "rank": 107,
+          "character": "切",
+          "pinyin": "qiē",
+          "initial": "q",
+          "final": "ie",
+          "tone": 1,
+          "sourceWarning": null
+        },
+        {
+          "rank": 107,
+          "character": "切",
+          "pinyin": "qiè",
+          "initial": "q",
+          "final": "ie",
+          "tone": 4,
+          "sourceWarning": null
+        },
+        {
+          "rank": 140,
+          "character": "介",
+          "pinyin": "jiè",
+          "initial": "j",
+          "final": "ie",
+          "tone": 4,
+          "sourceWarning": null
+        },
+        {
+          "rank": 209,
+          "character": "节",
+          "pinyin": "jiē",
+          "initial": "j",
+          "final": "ie",
+          "tone": 1,
+          "sourceWarning": null
+        }
+      ],
+      "phonologicalSegmentation": "not_adjudicated",
+      "proposedIPAForm": null,
+      "independenceOfContrast": "unreviewed",
+      "humanDecodingResults": 0,
+      "machineOnlyWrittenCodeAvailable": true
+    },
+    {
+      "reviewRank": 20,
+      "token": "uo",
+      "sourceCitationUses": 21,
+      "explicitContextCautionUses": 0,
+      "observedWarningFamilies": [],
+      "firstSourceExamples": [
+        {
+          "rank": 164,
+          "character": "火",
+          "pinyin": "huǒ",
+          "initial": "h",
+          "final": "uo",
+          "tone": 3,
+          "sourceWarning": null
+        },
+        {
+          "rank": 214,
+          "character": "左",
+          "pinyin": "zuǒ",
+          "initial": "z",
+          "final": "uo",
+          "tone": 3,
+          "sourceWarning": null
+        },
+        {
+          "rank": 359,
+          "character": "托",
+          "pinyin": "tuō",
+          "initial": "t",
+          "final": "uo",
+          "tone": 1,
+          "sourceWarning": null
+        },
+        {
+          "rank": 364,
+          "character": "扩",
+          "pinyin": "kuò",
+          "initial": "k",
+          "final": "uo",
+          "tone": 4,
+          "sourceWarning": null
+        }
+      ],
+      "phonologicalSegmentation": "not_adjudicated",
+      "proposedIPAForm": null,
+      "independenceOfContrast": "unreviewed",
+      "humanDecodingResults": 0,
+      "machineOnlyWrittenCodeAvailable": true
+    },
+    {
+      "reviewRank": 21,
+      "token": "uang",
+      "sourceCitationUses": 14,
+      "explicitContextCautionUses": 0,
+      "observedWarningFamilies": [],
+      "firstSourceExamples": [
+        {
+          "rank": 53,
+          "character": "广",
+          "pinyin": "guǎng",
+          "initial": "g",
+          "final": "uang",
+          "tone": 3,
+          "sourceWarning": null
+        },
+        {
+          "rank": 187,
+          "character": "双",
+          "pinyin": "shuāng",
+          "initial": "sh",
+          "final": "uang",
+          "tone": 1,
+          "sourceWarning": null
+        },
+        {
+          "rank": 417,
+          "character": "光",
+          "pinyin": "guāng",
+          "initial": "g",
+          "final": "uang",
+          "tone": 1,
+          "sourceWarning": null
+        },
+        {
+          "rank": 494,
+          "character": "创",
+          "pinyin": "chuāng",
+          "initial": "ch",
+          "final": "uang",
+          "tone": 1,
+          "sourceWarning": null
+        }
+      ],
+      "phonologicalSegmentation": "not_adjudicated",
+      "proposedIPAForm": null,
+      "independenceOfContrast": "unreviewed",
+      "humanDecodingResults": 0,
+      "machineOnlyWrittenCodeAvailable": true
+    },
+    {
+      "reviewRank": 22,
+      "token": "iang",
+      "sourceCitationUses": 11,
+      "explicitContextCautionUses": 0,
+      "observedWarningFamilies": [],
+      "firstSourceExamples": [
+        {
+          "rank": 73,
+          "character": "乡",
+          "pinyin": "xiāng",
+          "initial": "x",
+          "final": "iang",
+          "tone": 1,
+          "sourceWarning": null
+        },
+        {
+          "rank": 394,
+          "character": "匠",
+          "pinyin": "jiàng",
+          "initial": "j",
+          "final": "iang",
+          "tone": 4,
+          "sourceWarning": null
+        },
+        {
+          "rank": 480,
+          "character": "向",
+          "pinyin": "xiàng",
+          "initial": "x",
+          "final": "iang",
+          "tone": 4,
+          "sourceWarning": null
+        },
+        {
+          "rank": 538,
+          "character": "江",
+          "pinyin": "jiāng",
+          "initial": "j",
+          "final": "iang",
+          "tone": 1,
+          "sourceWarning": null
+        }
+      ],
+      "phonologicalSegmentation": "not_adjudicated",
+      "proposedIPAForm": null,
+      "independenceOfContrast": "unreviewed",
+      "humanDecodingResults": 0,
+      "machineOnlyWrittenCodeAvailable": true
+    },
+    {
+      "reviewRank": 23,
+      "token": "ua",
+      "sourceCitationUses": 11,
+      "explicitContextCautionUses": 0,
+      "observedWarningFamilies": [],
+      "firstSourceExamples": [
+        {
+          "rank": 132,
+          "character": "化",
+          "pinyin": "huà",
+          "initial": "h",
+          "final": "ua",
+          "tone": 4,
+          "sourceWarning": null
+        },
+        {
+          "rank": 138,
+          "character": "爪",
+          "pinyin": "zhuǎ",
+          "initial": "zh",
+          "final": "ua",
+          "tone": 3,
+          "sourceWarning": null
+        },
+        {
+          "rank": 279,
+          "character": "瓜",
+          "pinyin": "guā",
+          "initial": "g",
+          "final": "ua",
+          "tone": 1,
+          "sourceWarning": null
+        },
+        {
+          "rank": 395,
+          "character": "夸",
+          "pinyin": "kuā",
+          "initial": "k",
+          "final": "ua",
+          "tone": 1,
+          "sourceWarning": null
+        }
+      ],
+      "phonologicalSegmentation": "not_adjudicated",
+      "proposedIPAForm": null,
+      "independenceOfContrast": "unreviewed",
+      "humanDecodingResults": 0,
+      "machineOnlyWrittenCodeAvailable": true
+    },
+    {
+      "reviewRank": 24,
+      "token": "ia",
+      "sourceCitationUses": 9,
+      "explicitContextCautionUses": 0,
+      "observedWarningFamilies": [],
+      "firstSourceExamples": [
+        {
+          "rank": 30,
+          "character": "下",
+          "pinyin": "xià",
+          "initial": "x",
+          "final": "ia",
+          "tone": 4,
+          "sourceWarning": null
+        },
+        {
+          "rank": 226,
+          "character": "卡",
+          "pinyin": "qiǎ",
+          "initial": "q",
+          "final": "ia",
+          "tone": 3,
+          "sourceWarning": null
+        },
+        {
+          "rank": 239,
+          "character": "甲",
+          "pinyin": "jiǎ",
+          "initial": "j",
+          "final": "ia",
+          "tone": 3,
+          "sourceWarning": null
+        },
+        {
+          "rank": 335,
+          "character": "加",
+          "pinyin": "jiā",
+          "initial": "j",
+          "final": "ia",
+          "tone": 1,
+          "sourceWarning": null
+        }
+      ],
+      "phonologicalSegmentation": "not_adjudicated",
+      "proposedIPAForm": null,
+      "independenceOfContrast": "unreviewed",
+      "humanDecodingResults": 0,
+      "machineOnlyWrittenCodeAvailable": true
+    },
+    {
+      "reviewRank": 25,
+      "token": "uai",
+      "sourceCitationUses": 8,
+      "explicitContextCautionUses": 0,
+      "observedWarningFamilies": [],
+      "firstSourceExamples": [
+        {
+          "rank": 233,
+          "character": "帅",
+          "pinyin": "shuài",
+          "initial": "sh",
+          "final": "uai",
+          "tone": 4,
+          "sourceWarning": null
+        },
+        {
+          "rank": 284,
+          "character": "甩",
+          "pinyin": "shuǎi",
+          "initial": "sh",
+          "final": "uai",
+          "tone": 3,
+          "sourceWarning": null
+        },
+        {
+          "rank": 486,
+          "character": "会",
+          "pinyin": "kuài",
+          "initial": "k",
+          "final": "uai",
+          "tone": 4,
+          "sourceWarning": null
+        },
+        {
+          "rank": 616,
+          "character": "坏",
+          "pinyin": "huài",
+          "initial": "h",
+          "final": "uai",
+          "tone": 4,
+          "sourceWarning": null
+        }
+      ],
+      "phonologicalSegmentation": "not_adjudicated",
+      "proposedIPAForm": null,
+      "independenceOfContrast": "unreviewed",
+      "humanDecodingResults": 0,
+      "machineOnlyWrittenCodeAvailable": true
+    },
+    {
+      "reviewRank": 26,
+      "token": "er",
+      "sourceCitationUses": 5,
+      "explicitContextCautionUses": 0,
+      "observedWarningFamilies": [],
+      "firstSourceExamples": [
+        {
+          "rank": 3,
+          "character": "二",
+          "pinyin": "èr",
+          "initial": "∅",
+          "final": "er",
+          "tone": 4,
+          "sourceWarning": null
+        },
+        {
+          "rank": 12,
+          "character": "儿",
+          "pinyin": "ér",
+          "initial": "∅",
+          "final": "er",
+          "tone": 2,
+          "sourceWarning": null
+        },
+        {
+          "rank": 286,
+          "character": "尔",
+          "pinyin": "ěr",
+          "initial": "∅",
+          "final": "er",
+          "tone": 3,
+          "sourceWarning": null
+        },
+        {
+          "rank": 369,
+          "character": "耳",
+          "pinyin": "ěr",
+          "initial": "∅",
+          "final": "er",
+          "tone": 3,
+          "sourceWarning": null
+        }
+      ],
+      "phonologicalSegmentation": "not_adjudicated",
+      "proposedIPAForm": null,
+      "independenceOfContrast": "unreviewed",
+      "humanDecodingResults": 0,
+      "machineOnlyWrittenCodeAvailable": true
+    },
+    {
+      "reviewRank": 27,
+      "token": "iong",
+      "sourceCitationUses": 5,
+      "explicitContextCautionUses": 0,
+      "observedWarningFamilies": [],
+      "firstSourceExamples": [
+        {
+          "rank": 145,
+          "character": "凶",
+          "pinyin": "xiōng",
+          "initial": "x",
+          "final": "iong",
+          "tone": 1,
+          "sourceWarning": null
+        },
+        {
+          "rank": 250,
+          "character": "兄",
+          "pinyin": "xiōng",
+          "initial": "x",
+          "final": "iong",
+          "tone": 1,
+          "sourceWarning": null
+        },
+        {
+          "rank": 504,
+          "character": "匈",
+          "pinyin": "xiōng",
+          "initial": "x",
+          "final": "iong",
+          "tone": 1,
+          "sourceWarning": null
+        },
+        {
+          "rank": 864,
+          "character": "汹",
+          "pinyin": "xiōng",
+          "initial": "x",
+          "final": "iong",
+          "tone": 1,
+          "sourceWarning": null
+        }
+      ],
+      "phonologicalSegmentation": "not_adjudicated",
+      "proposedIPAForm": null,
+      "independenceOfContrast": "unreviewed",
+      "humanDecodingResults": 0,
+      "machineOnlyWrittenCodeAvailable": true
+    }
+  ]
+}
