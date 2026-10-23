@@ -1,0 +1,23 @@
+{
+  "schema": "chromalect.semantic.contextual-evidence-readiness-summary.v0.2",
+  "status": "source_sentence_ids_acquired_not_contextual_reading_verification",
+  "source": {
+    "readingEvidenceWorkqueue": "contextual-reading-evidence-workqueue-v0.1.json",
+    "normalizedSearchGroups": "contextual-pronunciation-search-groups-v0.1.json",
+    "tatoebaSentenceIds": "tatoeba-sentence-id-index-v0.1.json"
+  },
+  "highAttentionCharacters": 142,
+  "originalDictionaryReadingEntries": 319,
+  "caseNormalizedSearchGroups": 241,
+  "capitalizationDuplicatesNotMergedSemantically": 78,
+  "sourceTasksWithPublisherPageLinks": 50,
+  "candidateSentenceIdsCollected": 363,
+  "independentlyVerifiedReadings": 0,
+  "independentlyApprovedLexicalSenses": 0,
+  "independentlyApprovedPictograms": 0,
+  "productionVerified": 0,
+  "candidateCharacterAssociations": 423,
+  "charactersWithCandidateSentenceIds": 141,
+  "charactersWithoutCandidateSentenceIds": 1,
+  "sourceSentencesScanned": 89190
+}

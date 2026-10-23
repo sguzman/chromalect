@@ -23,7 +23,7 @@ for(const r of report.records){
  assert.ok(!seen.has(r.rank));
  seen.add(r.rank);
  assert.equal(r.character,map.get(r.rank)?.character);
- assert.ok(r.sentenceIds.length<=3&&r.sentenceIds.every(x=>/^\\d+$/.test(x)));
+ assert.ok(r.sentenceIds.length<=3&&r.sentenceIds.every(x=>/^\d+$/.test(x)));
  assert.equal(new Set(r.sentenceIds).size,r.sentenceIds.length);
  assert.equal(r.readingInContext,"unverified");
  assert.equal(r.lexicalStatus,"not_approved");

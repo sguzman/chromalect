@@ -32,3 +32,9 @@ Run `node tools/glyph-pipeline/contextual_reading_evidence_workqueue.mjs --check
 The [case-normalized search groups](../data/semantic/cedict-crossref/contextual-pronunciation-search-groups-v0.1.json) deduplicate case-equivalent spelling variants **only for gathering phonetic evidence**. The first 142 high-attention characters have **319 CC-CEDICT source reading entries**, which collapse to **241 distinct lowercased Pinyin labels**; **78** extra entries differ from an existing label only in capitalization. All 319 original source identities remain linked to their groups.
 
 This optimization does **not** merge semantic usages. For example, surname and ordinary-word entries sharing the same phonetic label must retain their distinct contexts, registers and word-sense adjudication. Source acquisition and independent approvals remain pending for every group.
+
+## Preserved first acquisition (2026-10-23)
+
+The first completed Tatoeba import scanned **89,190** Mandarin sentence records and found **423 source-only character/sentence associations** containing **363 distinct sentence IDs**. There are candidates for **141/142** high-attention characters, with no selected sentence ID for **刨** (rank 821). [Candidate IDs](../data/semantic/cedict-crossref/tatoeba-sentence-id-index-v0.1.json) are now stored without sentence text; the source checksum and original acquisition run are recorded for reproducibility.
+
+[Readiness summary v0.2](../data/semantic/cedict-crossref/contextual-evidence-readiness-summary-v0.2.json) distinguishes ID acquisition from contextual pronunciation verification. Version 0.1 remains the historical pre-acquisition baseline. No contextual reading or lexical sense has been independently adjudicated.
