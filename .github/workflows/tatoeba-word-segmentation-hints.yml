@@ -1,0 +1,36 @@
+name: Inspect Mandarin word-boundary hints
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/tatoeba-word-segmentation-hints.yml"
+      - "tools/glyph-pipeline/tatoeba_word_segmenter_hint.mjs"
+      - "tools/glyph-pipeline/tatoeba_word_segmenter_hint_smoke.mjs"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  provisional-icu-segmentation:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check deterministic source and tokenization boundaries
+        shell: bash
+        run: |
+          set -euo pipefail
+          node --check tools/glyph-pipeline/tatoeba_word_segmenter_hint.mjs
+          node tools/glyph-pipeline/tatoeba_word_segmenter_hint_smoke.mjs
+      - name: Inspect source-matching Mandarin sentences without reproducing text
+        shell: bash
+        run: |
+          set -euo pipefail
+          node tools/glyph-pipeline/tatoeba_word_segmenter_hint.mjs --output "$RUNNER_TEMP/tatoeba-word-icu-hints.json"
+      - name: Preserve reproducible non-certifying diagnostics
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: chromalect-tatoeba-icu-word-hints
+          path: ${{ runner.temp }}/tatoeba-word-icu-hints.json
+          if-no-files-found: warn
+          retention-days: 30

@@ -11,3 +11,10 @@ Validate an explicitly exported JSON session from the repository root:
 `node tools/glyph-pipeline/word_context_review_validate.mjs /path/to/local-export.json`
 
 The smoke test exercises rejection of mismatched lead/sentence identities, changed attribution, altered hashes, unsupported verification claims, unlicensed copied text, duplicates, malformed corroboration and fabricated approval fields. The test does not imply that any reviewed sentence has been adjudicated.
+
+
+## Provisional machine tokenization diagnostics
+
+The optional GitHub Actions workflow **Inspect Mandarin word-boundary hints** fetches the 27 pinned source records, checks their contributor, exact sentence-text SHA-256, Chinese language tag, observed license label and current source-approval flag, and only then applies Node's `Intl.Segmenter` with Chinese word granularity. A mismatch produces no segmentation hints. The output preserves sentence IDs, lead IDs, UTF-16 offsets, and one of three runtime labels: `single_icu_segment`, `multiple_icu_segments`, or `cuts_icu_segment`. It also records the Node and ICU versions because different ICU versions may tokenize the same Chinese string differently. Full sentence text never enters the JSON output.
+
+**These are segmentation-tool suggestions, not human-reviewed Chinese word boundaries.** A single ICU token does not establish the publisher's reading, target morpheme, usage sense, or independent corroboration. The artifact expires after 30 days; the pinned source fingerprint ledger remains the authoritative text identity. All independent approval counters remain zero.

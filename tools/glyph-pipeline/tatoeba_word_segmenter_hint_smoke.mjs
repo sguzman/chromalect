@@ -1,0 +1,41 @@
+import assert from "node:assert/strict";
+import fs from "node:fs";
+import {createHash} from "node:crypto";
+import {inspectResponse,inspectCohort,segmentSurface} from "./tatoeba_word_segmenter_hint.mjs";
+const read=n=>JSON.parse(fs.readFileSync("data/semantic/cedict-crossref/"+n+"-v0.1.json","utf8"));
+const credits=read("tatoeba-word-candidate-attribution"),leads=read("dictionary-word-surface-leads");
+const hashes=read("tatoeba-word-sentence-text-fingerprints");
+const c=credits.records[0],lead=leads.leads.find(x=>x.id===c.leadId);
+const text="这是长度。长度很重要。",digest=createHash("sha256").update(text).digest("hex");
+const api={data:{id:Number(c.sentenceId),text,owner:c.contributor,lang:"cmn",
+ license:"CC BY 2.0 FR",is_unapproved:false}};
+const results=segmentSurface(text,lead.surfaceWord);
+assert.equal(results.length,2);
+assert.ok(results.every(x=>["single_icu_segment","multiple_icu_segments","cuts_icu_segment"].includes(x.segmentationHint)));
+const good=inspectResponse(api,c,lead,digest);
+assert.equal(good.status,"source_integrity_matches_pinned");
+assert.equal(good.machineHints.length,2);
+assert.equal(good.independentWordBoundaryVerified,false);
+assert.equal(good.contextualReadingVerified,false);
+assert.equal(good.sourceTextCopied,false);
+assert.ok(!JSON.stringify(good).includes(text));
+assert.equal(inspectResponse(api,c,lead,"0".repeat(64)).status,"source_drift_or_policy_mismatch");
+assert.equal(inspectResponse({data:{...api.data,license:"CC0 1.0"}},c,lead,digest).status,"source_drift_or_policy_mismatch");
+assert.equal(inspectResponse({data:{...api.data,owner:"wrong"}},c,lead,digest).status,"source_drift_or_policy_mismatch");
+const requests=[];
+const fetcher=async url=>{
+ requests.push(url);
+ const id=url.split("/").at(-1),credit=credits.records.find(r=>r.sentenceId===id);
+ return {ok:true,json:async()=>({data:{id:Number(id),text:"合成"+leads.leads.find(r=>r.id===credit.leadId).surfaceWord,
+  owner:credit.contributor,lang:"cmn",license:"CC BY 2.0 FR",is_unapproved:false}})};
+};
+const report=await inspectCohort(credits,leads,hashes,fetcher,{pause:async()=>{},date:"2026-10-23"});
+assert.equal(requests.length,27);
+assert.equal(report.summary.sourceRecordsRequested,27);
+assert.equal(report.summary.sourceIntegrityMatches,0);
+assert.equal(report.summary.independentlyVerifiedWordBoundaries,0);
+assert.equal(report.summary.approvedLexicalSenses,0);
+assert.ok(report.records.every(r=>r.status==="source_drift_or_policy_mismatch"));
+assert.equal(report.source.outputContainsSentenceText,false);
+assert.ok(!JSON.stringify(report).includes("合成"));
+console.log("ICU segmentation pipeline: deterministic provenance checks; zero linguistic approvals.");
