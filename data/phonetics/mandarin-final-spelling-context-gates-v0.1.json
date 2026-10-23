@@ -1,0 +1,448 @@
+{
+  "schema": "chromalect.phonetics.mandarin-final-spelling-context-gates.v0.1",
+  "status": "contextual_spelling_review_flags_not_verified_ipa_or_phonemic_finals",
+  "source": {
+    "citationFile": "site/pronunciation-citations-0001-1000.json",
+    "upstreamRepository": "lqfeng/ChineseCharacters",
+    "upstreamBlobSHA": "e38b5d3077f516054ecc5573c9251b3aa3628140",
+    "originalLicense": "Apache-2.0",
+    "referenceNotes": [
+      {
+        "publisher": "Humanities LibreTexts, Mandarin sound system",
+        "url": "https://human.libretexts.org/Bookshelves/Languages/Chinese/CHN101_Elementary_Mandarin_I_Textbook/01:_Introduction/1.01:_The_Sound_System_of_Mandarin"
+      },
+      {
+        "publisher": "Chinese lexicon and phonological-orthography analysis, academic reference",
+        "url": "https://students.aiu.edu/submissions/profiles/resources/onlineBook/d5F8W2_A_Grammar_of_Mandarin.pdf"
+      }
+    ],
+    "noSourceSentenceText": true,
+    "noSourceDefinitionsCopied": true
+  },
+  "limitations": [
+    "Counts indicate only source written-initial/final spelling contexts; no measured speech token or authorized pronunciation.",
+    "Rules flag selected high-attention spelling contexts only; unflagged spellings are not independently phonemically certified.",
+    "These categories are research leads; phonological analyses and IPA transcription conventions may vary across sources.",
+    "Original orthographic tokens and palette identity assignments remain unchanged."
+  ],
+  "summary": {
+    "sourceCitationReadings": 1171,
+    "flaggedSourceReadings": 197,
+    "flaggedDistinctWrittenTriples": 97,
+    "flagCategories": 8,
+    "independentlyAdjudicatedFinalPhonemes": 0,
+    "approvedContextualPronunciations": 0,
+    "approvedAcousticTranscriptions": 0,
+    "learningStudyResults": 0
+  },
+  "records": [
+    {
+      "id": "post_sibilant_i",
+      "sourceFamily": "contextual_vowel_allophony",
+      "description": "The letter i after conventional sibilant and retroflex initial spellings cannot be assigned an unconditional plain-i IPA reading.",
+      "observedReadingCount": 63,
+      "uniqueCitationTriples": 22,
+      "firstSourceExamples": [
+        {
+          "rank": 4,
+          "character": "十",
+          "display": "shí",
+          "initial": "sh",
+          "final": "i",
+          "tone": 2
+        },
+        {
+          "rank": 28,
+          "character": "士",
+          "display": "shì",
+          "initial": "sh",
+          "final": "i",
+          "tone": 4
+        },
+        {
+          "rank": 58,
+          "character": "之",
+          "display": "zhī",
+          "initial": "zh",
+          "final": "i",
+          "tone": 1
+        },
+        {
+          "rank": 59,
+          "character": "尸",
+          "display": "shī",
+          "initial": "sh",
+          "final": "i",
+          "tone": 1
+        },
+        {
+          "rank": 62,
+          "character": "巳",
+          "display": "sì",
+          "initial": "s",
+          "final": "i",
+          "tone": 4
+        }
+      ],
+      "independentIPAAnalysisApproved": false,
+      "certifiedAcousticRealizations": 0
+    },
+    {
+      "id": "palatal_written_u",
+      "sourceFamily": "umlaut_suppression_context",
+      "description": "Written u after a palatal category or y may require umlaut-aware phonological comparison; retain the original u spelling.",
+      "observedReadingCount": 33,
+      "uniqueCitationTriples": 14,
+      "firstSourceExamples": [
+        {
+          "rank": 24,
+          "character": "于",
+          "display": "yú",
+          "initial": "y",
+          "final": "u",
+          "tone": 2
+        },
+        {
+          "rank": 34,
+          "character": "与",
+          "display": "yǔ",
+          "initial": "y",
+          "final": "u",
+          "tone": 3
+        },
+        {
+          "rank": 34,
+          "character": "与",
+          "display": "yù",
+          "initial": "y",
+          "final": "u",
+          "tone": 4
+        },
+        {
+          "rank": 94,
+          "character": "区",
+          "display": "qū",
+          "initial": "q",
+          "final": "u",
+          "tone": 1
+        },
+        {
+          "rank": 100,
+          "character": "车",
+          "display": "jū",
+          "initial": "j",
+          "final": "u",
+          "tone": 1
+        }
+      ],
+      "independentIPAAnalysisApproved": false,
+      "certifiedAcousticRealizations": 0
+    },
+    {
+      "id": "contracted_iu",
+      "sourceFamily": "written_final_contraction",
+      "description": "The spelling iu has a context-sensitive relation to the longer iou-type analysis, not literal letter-to-phoneme alignment.",
+      "observedReadingCount": 24,
+      "uniqueCitationTriples": 14,
+      "firstSourceExamples": [
+        {
+          "rank": 15,
+          "character": "九",
+          "display": "jiǔ",
+          "initial": "j",
+          "final": "iu",
+          "tone": 3
+        },
+        {
+          "rank": 47,
+          "character": "久",
+          "display": "jiǔ",
+          "initial": "j",
+          "final": "iu",
+          "tone": 3
+        },
+        {
+          "rank": 120,
+          "character": "牛",
+          "display": "niú",
+          "initial": "n",
+          "final": "iu",
+          "tone": 2
+        },
+        {
+          "rank": 133,
+          "character": "仇",
+          "display": "qiú",
+          "initial": "q",
+          "final": "iu",
+          "tone": 2
+        },
+        {
+          "rank": 160,
+          "character": "六",
+          "display": "liù",
+          "initial": "l",
+          "final": "iu",
+          "tone": 4
+        }
+      ],
+      "independentIPAAnalysisApproved": false,
+      "certifiedAcousticRealizations": 0
+    },
+    {
+      "id": "contracted_ui",
+      "sourceFamily": "written_final_contraction",
+      "description": "The spelling ui relates to a longer uei-type analysis, not literal letter-to-phoneme alignment.",
+      "observedReadingCount": 19,
+      "uniqueCitationTriples": 12,
+      "firstSourceExamples": [
+        {
+          "rank": 25,
+          "character": "亏",
+          "display": "kuī",
+          "initial": "k",
+          "final": "ui",
+          "tone": 1
+        },
+        {
+          "rank": 117,
+          "character": "水",
+          "display": "shuǐ",
+          "initial": "sh",
+          "final": "ui",
+          "tone": 3
+        },
+        {
+          "rank": 180,
+          "character": "队",
+          "display": "duì",
+          "initial": "d",
+          "final": "ui",
+          "tone": 4
+        },
+        {
+          "rank": 200,
+          "character": "卉",
+          "display": "huì",
+          "initial": "h",
+          "final": "ui",
+          "tone": 4
+        },
+        {
+          "rank": 234,
+          "character": "归",
+          "display": "guī",
+          "initial": "g",
+          "final": "ui",
+          "tone": 1
+        }
+      ],
+      "independentIPAAnalysisApproved": false,
+      "certifiedAcousticRealizations": 0
+    },
+    {
+      "id": "contracted_un_nonpalatal",
+      "sourceFamily": "written_final_contraction",
+      "description": "Written un outside the palatal set is a contracted uen-type spelling candidate, not an IPA transcription.",
+      "observedReadingCount": 20,
+      "uniqueCitationTriples": 16,
+      "firstSourceExamples": [
+        {
+          "rank": 31,
+          "character": "寸",
+          "display": "cùn",
+          "initial": "c",
+          "final": "un",
+          "tone": 4
+        },
+        {
+          "rank": 103,
+          "character": "屯",
+          "display": "tún",
+          "initial": "t",
+          "final": "un",
+          "tone": 2
+        },
+        {
+          "rank": 143,
+          "character": "仑",
+          "display": "lún",
+          "initial": "l",
+          "final": "un",
+          "tone": 2
+        },
+        {
+          "rank": 391,
+          "character": "存",
+          "display": "cún",
+          "initial": "c",
+          "final": "un",
+          "tone": 2
+        },
+        {
+          "rank": 470,
+          "character": "伦",
+          "display": "lún",
+          "initial": "l",
+          "final": "un",
+          "tone": 2
+        }
+      ],
+      "independentIPAAnalysisApproved": false,
+      "certifiedAcousticRealizations": 0
+    },
+    {
+      "id": "palatal_written_un",
+      "sourceFamily": "umlaut_suppression_context",
+      "description": "Written un after a palatal category or y requires a separate ü-based interpretation; do not merge with other un contexts.",
+      "observedReadingCount": 18,
+      "uniqueCitationTriples": 6,
+      "firstSourceExamples": [
+        {
+          "rank": 82,
+          "character": "云",
+          "display": "yún",
+          "initial": "y",
+          "final": "un",
+          "tone": 2
+        },
+        {
+          "rank": 156,
+          "character": "匀",
+          "display": "yún",
+          "initial": "y",
+          "final": "un",
+          "tone": 2
+        },
+        {
+          "rank": 183,
+          "character": "允",
+          "display": "yǔn",
+          "initial": "y",
+          "final": "un",
+          "tone": 3
+        },
+        {
+          "rank": 319,
+          "character": "训",
+          "display": "xùn",
+          "initial": "x",
+          "final": "un",
+          "tone": 4
+        },
+        {
+          "rank": 322,
+          "character": "讯",
+          "display": "xùn",
+          "initial": "x",
+          "final": "un",
+          "tone": 4
+        }
+      ],
+      "independentIPAAnalysisApproved": false,
+      "certifiedAcousticRealizations": 0
+    },
+    {
+      "id": "palatal_written_ue",
+      "sourceFamily": "umlaut_suppression_context",
+      "description": "Written ue following a palatal or y category requires source-aware üe comparison rather than unconditional u+e.",
+      "observedReadingCount": 10,
+      "uniqueCitationTriples": 6,
+      "firstSourceExamples": [
+        {
+          "rank": 111,
+          "character": "曰",
+          "display": "yuē",
+          "initial": "y",
+          "final": "ue",
+          "tone": 1
+        },
+        {
+          "rank": 150,
+          "character": "月",
+          "display": "yuè",
+          "initial": "y",
+          "final": "ue",
+          "tone": 4
+        },
+        {
+          "rank": 287,
+          "character": "乐",
+          "display": "yuè",
+          "initial": "y",
+          "final": "ue",
+          "tone": 4
+        },
+        {
+          "rank": 313,
+          "character": "穴",
+          "display": "xué",
+          "initial": "x",
+          "final": "ue",
+          "tone": 2
+        },
+        {
+          "rank": 479,
+          "character": "血",
+          "display": "xuè",
+          "initial": "x",
+          "final": "ue",
+          "tone": 4
+        }
+      ],
+      "independentIPAAnalysisApproved": false,
+      "certifiedAcousticRealizations": 0
+    },
+    {
+      "id": "palatal_written_uan",
+      "sourceFamily": "umlaut_suppression_context",
+      "description": "Written uan following a palatal or y category requires source-aware üan comparison rather than unconditional u+an.",
+      "observedReadingCount": 10,
+      "uniqueCitationTriples": 7,
+      "firstSourceExamples": [
+        {
+          "rank": 80,
+          "character": "元",
+          "display": "yuán",
+          "initial": "y",
+          "final": "uan",
+          "tone": 2
+        },
+        {
+          "rank": 92,
+          "character": "犬",
+          "display": "quǎn",
+          "initial": "q",
+          "final": "uan",
+          "tone": 3
+        },
+        {
+          "rank": 186,
+          "character": "劝",
+          "display": "quàn",
+          "initial": "q",
+          "final": "uan",
+          "tone": 4
+        },
+        {
+          "rank": 304,
+          "character": "玄",
+          "display": "xuán",
+          "initial": "x",
+          "final": "uan",
+          "tone": 2
+        },
+        {
+          "rank": 378,
+          "character": "权",
+          "display": "quán",
+          "initial": "q",
+          "final": "uan",
+          "tone": 2
+        }
+      ],
+      "independentIPAAnalysisApproved": false,
+      "certifiedAcousticRealizations": 0
+    }
+  ]
+}
