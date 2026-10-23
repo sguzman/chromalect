@@ -1,0 +1,97 @@
+{
+  "schema": "chromalect.phonetics.mandarin-citation-tone-contours.v0.1",
+  "status": "idealized_pedagogical_citation_pitch_contours_not_acoustic_or_contextual_measurements",
+  "scope": {
+    "variety": "Mainland Standard Mandarin (Putonghua)",
+    "reference": "citation_tone",
+    "pitchScale": {
+      "min": 1,
+      "max": 5,
+      "interpretation": "relative speaker pitch, not Hertz"
+    },
+    "sourceTranche": "site/pronunciation-citations-0001-1000.json",
+    "tokenPalette": "site/layers-v0.1.json",
+    "sourceAlignedCitationReadings": 1171
+  },
+  "sources": [
+    {
+      "description": "Hong Kong Polytechnic University BEPTH conventional citation contours",
+      "url": "https://www.polyu.edu.hk/bepth/introduction-to-phonetics/tones/basic-tones/?sc_lang=en"
+    },
+    {
+      "description": "Review of Chao pitch levels and contextual tone sandhi",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7077082/"
+    },
+    {
+      "description": "Study of contextual tone alternations",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8350328/"
+    }
+  ],
+  "tones": [
+    {
+      "token": "0",
+      "name": "Neutral",
+      "symbol": "·",
+      "levels": null,
+      "status": "no_fixed_context_free_contour",
+      "note": "Neutral-tone pitch depends on surrounding prosody."
+    },
+    {
+      "token": "1",
+      "name": "High level",
+      "symbol": "—",
+      "levels": [
+        5,
+        5
+      ],
+      "status": "idealized_citation_only",
+      "note": "Not an acoustic measurement."
+    },
+    {
+      "token": "2",
+      "name": "Rising",
+      "symbol": "↗",
+      "levels": [
+        3,
+        5
+      ],
+      "status": "idealized_citation_only",
+      "note": "Not an acoustic measurement."
+    },
+    {
+      "token": "3",
+      "name": "Dipping",
+      "symbol": "⌄",
+      "levels": [
+        2,
+        1,
+        4
+      ],
+      "status": "idealized_citation_only",
+      "note": "Citation dip may be altered or truncated in connected speech."
+    },
+    {
+      "token": "4",
+      "name": "Falling",
+      "symbol": "↘",
+      "levels": [
+        5,
+        1
+      ],
+      "status": "idealized_citation_only",
+      "note": "Not an acoustic measurement."
+    }
+  ],
+  "evidence": {
+    "acousticMeasurements": 0,
+    "contextualContourApprovals": 0,
+    "perceptionStudyObservations": 0,
+    "learningEffectivenessFindings": 0
+  },
+  "comparisonModes": [
+    "plain",
+    "contour",
+    "symbol",
+    "color"
+  ]
+}

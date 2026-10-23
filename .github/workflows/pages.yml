@@ -246,6 +246,10 @@ jobs:
           node tools/glyph-pipeline/cedict_numeric_pinyin_codec_smoke.mjs
           node --check site/pinyin-citations.js
           node tools/glyph-pipeline/pinyin_citations_viewer_smoke.mjs
+          node tools/glyph-pipeline/tone_contour_reference_smoke.mjs
+          mkdir -p site/phonetics
+          cp data/phonetics/mandarin-citation-tone-contours-v0.1.json site/phonetics/mandarin-citation-tone-contours-v0.1.json
+          test -s site/phonetics/mandarin-citation-tone-contours-v0.1.json
           test -s site/pinyin-citations.html
           node tools/glyph-pipeline/roadmap_checkpoint_progress.mjs --check
           node tools/glyph-pipeline/roadmap_checkpoint_progress_smoke.mjs
