@@ -160,11 +160,12 @@ async function load(){
   const responses=await Promise.all([
    fetch("semantic/polysemy-triage-v0.1.json"),
    fetch("semantic/external-dictionary-reconnaissance-v0.1.json"),
+   fetch("semantic/external-dictionary-discrepancy-v0.1.json"),
    ...blocks.map(b=>fetch("semantic/dictionary-excerpts-"+b+".json")),
    fetch("profiles/mandarin-1000-v1.json")
   ]);
   if(responses.some(r=>!r.ok))throw new Error("Missing published source files");
-  const [triage,pilot,...other]=await Promise.all(responses.map(r=>r.json()));
+  const [triage,pilot,discrepancy,...other]=await Promise.all(responses.map(r=>r.json()));
   const glyphs=other.pop();
   if(pilot.schema!=="chromalect.semantic.external-dictionary-reconnaissance.v0.1"||
      pilot.status!=="preliminary_external_dictionary_comparison_not_independent_approval"||
@@ -175,7 +176,25 @@ async function load(){
      pilot.records.some(r=>r.independentAdjudication!=="pending"||
       r.productionVerified!==false||r.sources.some(s=>!s.url.startsWith("https://"))))
     throw new Error("Invalid preliminary external dictionary research records");
-  externalSources=new Map(pilot.records.map(r=>[r.rank,r]));
+  if(discrepancy.schema!=="chromalect.semantic.external-dictionary-discrepancy.v0.1"||
+     discrepancy.status!=="external_dictionary_desk_comparison_not_independent_lexical_approval"||
+     discrepancy.summary.recordsPrepared!==5||
+     discrepancy.summary.readingSlots!==11||
+     discrepancy.summary.unresolvedPronunciationConflicts!==1||
+     discrepancy.summary.independentLexicalApproval!==0||
+     discrepancy.summary.independentEmojiApproval!==0||
+     discrepancy.summary.productionVerified!==0||
+     discrepancy.records.length!==5||
+     discrepancy.records.some(r=>r.independentLexicalApproval!==false||
+       r.productionVerified!==false||!r.externalSource?.url?.startsWith("https://")))
+   throw new Error("Invalid additional dictionary discrepancy source");
+  externalSources=new Map([
+   ...pilot.records.map(r=>[r.rank,r]),
+   ...discrepancy.records.map(r=>[r.rank,{
+     rank:r.rank,character:r.character,
+     sources:[{publisher:r.externalSource.publisher,url:r.externalSource.url}]
+   }])
+  ]);
   if(triage.schema!=="chromalect.semantic.polysemy-screening-triage.v0.1"||
     triage.summary.charactersAudited!==1000||
     triage.summary.independentLexicalApproved!==0||

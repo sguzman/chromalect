@@ -5,6 +5,7 @@ import vm from "node:vm";
 import {validateReadingInventory} from "./reading_inventory_validate.mjs";
 const triage=JSON.parse(fs.readFileSync("data/semantic/cedict-crossref/polysemy-triage-v0.1.json","utf8"));
 const pilot=JSON.parse(fs.readFileSync("data/semantic/cedict-crossref/external-dictionary-reconnaissance-v0.1.json","utf8"));
+const discrepancy=JSON.parse(fs.readFileSync("data/semantic/cedict-crossref/external-dictionary-discrepancy-v0.1.json","utf8"));
 const names=["0001-0200","0201-0400","0401-0600","0601-0800","0801-1000"];
 const blocks=names.map(n=>JSON.parse(fs.readFileSync(
  "data/semantic/cedict-crossref/dictionary-excerpts-"+n+".json","utf8")));
@@ -47,6 +48,7 @@ const sandbox={
  fetch:async path=>{
   if(path==="semantic/polysemy-triage-v0.1.json")return {ok:true,json:async()=>triage};
   if(path==="semantic/external-dictionary-reconnaissance-v0.1.json")return {ok:true,json:async()=>pilot};
+  if(path==="semantic/external-dictionary-discrepancy-v0.1.json")return {ok:true,json:async()=>discrepancy};
   for(let i=0;i<names.length;i++)if(path==="semantic/dictionary-excerpts-"+names[i]+".json")
    return {ok:true,json:async()=>blocks[i]};
   if(path==="profiles/mandarin-1000-v1.json")return {ok:true,json:async()=>profile};
