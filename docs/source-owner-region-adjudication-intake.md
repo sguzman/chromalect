@@ -16,6 +16,10 @@ The intake accepts a **previously exported source-owner JSON note set** through 
 
 The 49 machine-identified warning pairs may be inspected as all pairs, 23 new fold-trained proximity warnings, 21 original warnings resolved in the fold-trained candidate, or five retained warnings. Changing the cohort does not rewrite or delete a valid in-memory provisional observation; an incomplete current observation blocks cohort navigation until resolved. Filtering only prioritizes review and does not certify colors, source ownership or visual discrimination.
 
+## Deterministic source-path triage
+
+Within any warning cohort, the intake can retain the **canonical source rank** or display pairs ordered by (a) the fewest source-owned stroke paths in either highlighted component, or (b) the greatest number of total source stroke paths. Ties are resolved by the original manifest sequence. These counts come from both SHA-256-linked locator manifests, not subjective shape or language judgments. Sorting is a reversible presentation convenience; it neither changes the canonical export ordering nor estimates error probability, human recognizability or independent owner correctness.
+
 ## Matched reading-size inspection
 
 The review displays the production source glyph, machine-selected component locator, complementary component locator, and fold-trained color candidate at a common **16, 24, 32, 48, 64, 96, 128 or 160 CSS pixels**. The size applies to all four images without changing source path data or palette assignments. Sizes are visual inspection aids; CSS pixels do not calibrate physical viewing distance, visual acuity, color vision, or human recognition results.

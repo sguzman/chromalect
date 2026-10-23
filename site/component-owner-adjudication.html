@@ -40,6 +40,12 @@
 <option value="resolved">21 original warnings resolved</option>
 <option value="retained">5 warnings retained</option>
 </select></label>
+<label for="oa-order">Review order (workflow triage only)
+<select id="oa-order" disabled>
+<option value="source">Original source rank</option>
+<option value="smallest-region">Fewest paths in either owner region first</option>
+<option value="complexity">Most source stroke paths first</option>
+</select></label>
 <p id="oa-cohort-count" class="oa-meta">Source cohort not loaded.</p>
 <label for="oa-target">Source-region observation<select id="oa-target" disabled></select></label>
 <p id="oa-meta" class="oa-meta"></p>

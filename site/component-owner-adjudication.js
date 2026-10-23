@@ -5,7 +5,7 @@ const pairing=globalThis.ChromalectBlindColorRehearsal;
 const identification=globalThis.ChromalectComponentIdentificationRehearsal;
 const audit=globalThis.ChromalectOwnerAdjudication;
 const $=id=>document.getElementById(id);
-const names=["oa-status","oa-filter","oa-cohort-count","oa-target","oa-meta","oa-size","oa-grid","oa-source","oa-locator","oa-fold",
+const names=["oa-status","oa-filter","oa-order","oa-cohort-count","oa-target","oa-meta","oa-size","oa-grid","oa-source","oa-locator","oa-fold",
  "oa-owner","oa-complement","oa-complement-meta","oa-judgment","oa-evidence","oa-rationale","oa-save","oa-count","oa-export","oa-output","oa-import","oa-restore"];
 if(names.some(id=>!$(id)))return;
 const status=x=>{$("oa-status").textContent=x;};
@@ -16,12 +16,26 @@ function updateSize(){
  $("oa-grid").style.setProperty("--oa-glyph-size",n+"px");
 }
 const validCohorts=new Set(["all","introduced","resolved","retained"]);
-let activeCohort="all",manifest=null,targets=[],selected=null,
+const validOrders=new Set(["source","smallest-region","complexity"]);
+let activeCohort="all",activeOrder="source",manifest=null,targets=[],selected=null,
  notes=new Map(),complements=new Map();
-function showCohort(cohort){
+function showCohort(cohort,order=activeOrder,preferredId=null){
  if(!validCohorts.has(cohort))throw Error("Unrecognized source warning cohort");
+ if(!validOrders.has(order))throw Error("Unrecognized source-review order");
  const rows=targets.filter(t=>cohort==="all"||t.reviewState===cohort);
  if(!rows.length)throw Error("Empty source-owned warning cohort");
+ const positions=new Map(targets.map((t,i)=>[t.id,i]));
+ const sourceTie=(a,b)=>positions.get(a.id)-positions.get(b.id);
+ if(order==="smallest-region"){
+  const smallest=t=>{
+   const c=complements.get(t.id);
+   if(!c)throw Error("Unverified complementary stroke count");
+   return Math.min(t.targetRegionPaths,c.complementaryTargetPaths);
+  };
+  rows.sort((a,b)=>smallest(a)-smallest(b)||sourceTie(a,b));
+ }else if(order==="complexity"){
+  rows.sort((a,b)=>b.sourceStrokePaths-a.sourceStrokePaths||sourceTie(a,b));
+ }
  $("oa-target").replaceChildren();
  for(const t of rows){
   const option=document.createElement("option");
@@ -31,8 +45,8 @@ function showCohort(cohort){
   $("oa-target").appendChild(option);
  }
  $("oa-cohort-count").textContent=rows.length+" of 49 source-pair observations · 0 certifications";
- selection(rows[0].id);
- activeCohort=cohort;
+ selection(rows.find(t=>t.id===preferredId)?.id??rows[0].id);
+ activeCohort=cohort;activeOrder=order;
 }
 function selection(id){
  selected=targets.find(t=>t.id===id);
@@ -92,6 +106,7 @@ async function load(){
   complements=audit.validateComplementaryLocators(other,targets);
   manifest=m;
   $("oa-target").disabled=false;$("oa-filter").disabled=false;
+  $("oa-order").disabled=false;
   $("oa-save").disabled=false;$("oa-restore").disabled=false;
   updateSize();showCohort("all");
   status("49 source-pinned regions loaded; independent acceptance remains zero.");
@@ -107,6 +122,18 @@ $("oa-filter").addEventListener("change",()=>{
  }catch(e){
   $("oa-filter").value=activeCohort;
   status("Could not change source cohort: "+e.message);
+ }
+});
+$("oa-order").addEventListener("change",()=>{
+ try{
+  const next=$("oa-order").value;
+  if(!validOrders.has(next))throw Error("Unknown source-review ordering");
+  if(selected)save();
+  showCohort(activeCohort,next,selected?.id);
+  status("Source-path review ordering changed; no change to export order or approvals.");
+ }catch(e){
+  $("oa-order").value=activeOrder;
+  status("Cannot change source review order: "+e.message);
  }
 });
 $("oa-target").addEventListener("change",()=>{

@@ -18,7 +18,7 @@ const scripts=["site/heldout-blind-color-core.js",
  "site/heldout-component-identification-core.js",
  "site/component-owner-adjudication-core.js",
  "site/component-owner-adjudication.js"].map(p=>fs.readFileSync(p,"utf8"));
-const ids=["oa-status","oa-filter","oa-cohort-count","oa-target","oa-meta","oa-size","oa-grid","oa-source","oa-locator","oa-fold",
+const ids=["oa-status","oa-filter","oa-order","oa-cohort-count","oa-target","oa-meta","oa-size","oa-grid","oa-source","oa-locator","oa-fold",
  "oa-owner","oa-complement","oa-complement-meta","oa-judgment","oa-evidence","oa-rationale","oa-save","oa-count",
  "oa-export","oa-output","oa-import","oa-restore"];
 class Element{
@@ -29,8 +29,8 @@ class Element{
 }
 function setup(data=sources){
  const nodes=Object.fromEntries(ids.map(id=>[id,new Element()]));
- for(const id of ["oa-target","oa-filter","oa-save","oa-export","oa-restore"])nodes[id].disabled=true;
- nodes["oa-judgment"].value="unresolved";nodes["oa-size"].value="96";nodes["oa-filter"].value="all";
+ for(const id of ["oa-target","oa-filter","oa-order","oa-save","oa-export","oa-restore"])nodes[id].disabled=true;
+ nodes["oa-judgment"].value="unresolved";nodes["oa-size"].value="96";nodes["oa-filter"].value="all";nodes["oa-order"].value="source";
  const document={getElementById:id=>nodes[id],createElement:()=>new Element()};
  const fetch=async url=>{
   assert.ok(url in data,"Only the five pinned source JSON resources may be fetched");
@@ -49,6 +49,28 @@ const p=setup();await settle(p);
 assert.equal(p["oa-target"].children.length,49);
 assert.equal(p["oa-target"].disabled,false);
 assert.equal(p["oa-filter"].disabled,false);
+assert.equal(p["oa-order"].disabled,false);
+const manifestTargets=sources[
+ "glyphs/research/heldout-identification-target-v0.1/index-v0.1.json"].targets;
+const maskRecords=new Map(sources[
+ "glyphs/research/owner-complement-locators-v0.1/index-v0.1.json"].records
+ .map(x=>[x.trialId,x]));
+const targetById=new Map(manifestTargets.map(x=>[x.id,x]));
+const originalOrder=p["oa-target"].children.map(x=>x.value);
+p["oa-order"].value="smallest-region";p["oa-order"].events.change();
+const sparse=p["oa-target"].children.map(x=>x.value);
+const minority=id=>Math.min(targetById.get(id).targetRegionPaths,
+ maskRecords.get(id).complementaryTargetPaths);
+assert.ok(sparse.every((id,i)=>i===0||minority(sparse[i-1])<=minority(id)));
+p["oa-order"].value="complexity";p["oa-order"].events.change();
+const complex=p["oa-target"].children.map(x=>x.value);
+assert.ok(complex.every((id,i)=>i===0||
+ targetById.get(complex[i-1]).sourceStrokePaths>=targetById.get(id).sourceStrokePaths));
+p["oa-order"].value="bad-order";p["oa-order"].events.change();
+assert.equal(p["oa-order"].value,"complexity");
+assert.match(p["oa-status"].textContent,/Cannot change source review order/);
+p["oa-order"].value="source";p["oa-order"].events.change();
+assert.deepEqual(p["oa-target"].children.map(x=>x.value),originalOrder);
 assert.match(p["oa-cohort-count"].textContent,/49 of 49/);
 for(const [cohort,count] of [["introduced",23],["resolved",21],["retained",5],["all",49]]){
  p["oa-filter"].value=cohort;
@@ -140,6 +162,7 @@ assert.equal(invalid["oa-target"].children.length,0);
 assert.equal(invalid["oa-save"].disabled,true);
 assert.equal(invalid["oa-restore"].disabled,true);
 assert.equal(invalid["oa-filter"].disabled,true);
+assert.equal(invalid["oa-order"].disabled,true);
 const changedMask=structuredClone(sources);
 changedMask["glyphs/research/owner-complement-locators-v0.1/index-v0.1.json"]
  .records[0].complementarySHA256="invalid-digest";
