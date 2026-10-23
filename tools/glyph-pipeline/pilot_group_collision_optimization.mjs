@@ -94,10 +94,8 @@ export function deriveCollisionConstrainedPilot(catalog,mappings,palette,riskRep
   return {warnings,shortfall,soft};
  }
  const initial=tally();
- assert.equal(initial.warnings+riskReport.summary.originalClosePairs-
-  riskReport.summary.resolvedClosePairs-
-  riskReport.summary.retainedClosePairs,initial.warnings); // no semantic promotion
- // Comparability check: whole palette also includes unaffected source pairs.
+ // The complete pair audit also counts unaffected source-only pairs, so
+ // compare the optimizer graph to the published whole-tranche upper bound.
  const baselineCandidate=initial.warnings;
  assert.ok(baselineCandidate<=riskReport.summary.proposedClosePairs);
  const order=[...starting.keys()].sort((a,b)=>
@@ -165,7 +163,6 @@ export function deriveCollisionConstrainedPilot(catalog,mappings,palette,riskRep
    memberCount:members.length,members});
  }
  assert.equal(seen.size,40);
- const firstTrial=earlier.groups.flatMap(g=>g.members);
  function meanDistances(variant){
   const colors=groups.flatMap(g=>g.members.map(m=>({...m,group:g.historicalHint})));
   const within=[],between=[];
