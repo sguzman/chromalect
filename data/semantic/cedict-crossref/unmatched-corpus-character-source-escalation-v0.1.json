@@ -1,0 +1,100 @@
+{
+  "schema": "chromalect.semantic.unmatched-corpus-character-source-escalation.v0.1",
+  "status": "publisher_dictionary_source_leads_only_no_corpus_attestation",
+  "source": {
+    "originalCorpusIndex": "tatoeba-sentence-id-index-v0.1.json",
+    "hashSampleIndex": "tatoeba-hash-sample-source-id-index-v0.1.json",
+    "pinnedCCCEDICTSource": "high-attention-evidence-priority-v0.1.json",
+    "sourcePagesCheckedUTCDate": "2026-10-23"
+  },
+  "summary": {
+    "unmatchedHighAttentionCharacters": 1,
+    "originalCorpusCandidateIds": 0,
+    "hashSampleCandidateIds": 0,
+    "externalPublisherPagesInspected": 4,
+    "pinnedPronunciationLabels": 2,
+    "independentlyVerifiedContextualPronunciations": 0,
+    "independentlyApprovedLexicalSenses": 0,
+    "independentlyApprovedPictograms": 0,
+    "productionSemanticApprovals": 0
+  },
+  "records": [
+    {
+      "rank": 821,
+      "character": "刨",
+      "pinnedReadingLabels": [
+        "bao4",
+        "pao2"
+      ],
+      "originalCorpusCandidateIds": [],
+      "hashSampleCandidateIds": [],
+      "sourcePages": [
+        {
+          "publisher": "汉典",
+          "region": "Mainland-facing Chinese dictionary",
+          "url": "https://zdic.net/hans/%E5%88%A8",
+          "displayedPinyinLabels": [
+            "páo",
+            "bào"
+          ],
+          "sourceScope": "Character entry with lexical categories and older quotation references"
+        },
+        {
+          "publisher": "Taiwan Ministry of Education Concised Mandarin Dictionary",
+          "region": "Taiwan",
+          "url": "https://dict.concised.moe.edu.tw/dictView.jsp?ID=770&la=0&powerMode=0",
+          "displayedPinyinLabels": [
+            "bào"
+          ],
+          "sourceScope": "Basic bào entry with word leads"
+        },
+        {
+          "publisher": "Taiwan Ministry of Education Concised Mandarin Dictionary",
+          "region": "Taiwan",
+          "url": "https://dict.concised.moe.edu.tw/dictView.jsp?ID=2686&la=0&powerMode=0",
+          "displayedPinyinLabels": [
+            "páo"
+          ],
+          "sourceScope": "Basic páo entry with word leads"
+        },
+        {
+          "publisher": "Taiwan Ministry of Education Mandarin Mini Dictionary",
+          "region": "Taiwan",
+          "url": "https://dict.mini.moe.edu.tw/SearchIndex/word_detail?breadcrumbs=Search_%E5%88%A8_one&dictSearchField=%E5%88%A8&wordID=D0000832",
+          "displayedPinyinLabels": [
+            "bào",
+            "páo"
+          ],
+          "sourceScope": "Pedagogical pronunciation and word leads"
+        }
+      ],
+      "preliminarySenseContextLeads": [
+        {
+          "pinnedReading": "pao2",
+          "writtenPinyin": "páo",
+          "sourceRoleParaphrase": "Digging or excavating; separately, subtraction or exclusion; source dictionaries provide word leads, not corpus-confirmed sentences.",
+          "researchWords": [
+            "刨坑",
+            "刨除"
+          ],
+          "status": "dictionary_leads_only"
+        },
+        {
+          "pinnedReading": "bao4",
+          "writtenPinyin": "bào",
+          "sourceRoleParaphrase": "Planing or scraping a surface; references to wood-working or shaving; source dictionaries provide word leads, not corpus-confirmed sentences.",
+          "researchWords": [
+            "刨木头",
+            "刨冰"
+          ],
+          "status": "dictionary_leads_only"
+        }
+      ],
+      "caution": "Taiwan and Mainland conventions can differ; use source words as starting points for context verification, not as approved modern Mainland corpus attestations.",
+      "corpusSentenceAttestation": "not_observed_in_selected_Tatoeba_snapshot",
+      "independentLexicalApproval": false,
+      "approvedEmojiMapping": false,
+      "productionVerified": false
+    }
+  ]
+}
