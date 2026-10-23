@@ -466,6 +466,9 @@ jobs:
           test -s site/component-owner-compare.html
           node tools/glyph-pipeline/component_owner_adjudication_validate_smoke.mjs
           node tools/glyph-pipeline/component_owner_adjudication_viewer_smoke.mjs
+          node --check site/source-owner-masked-preview.js
+          node tools/glyph-pipeline/source_owner_masked_preview_viewer_smoke.mjs
+          test -s site/source-owner-masked-preview.html
           test -s site/component-owner-adjudication.html
           test -s site/heldout-component-identification.html
           test -s site/glyphs/research/heldout-identification-target-v0.1/index-v0.1.json

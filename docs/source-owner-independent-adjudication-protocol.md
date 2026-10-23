@@ -19,9 +19,13 @@ This document specifies a prospective, non-executed review procedure for Chromal
 5. If two independent reviews materially disagree, retain an unresolved state and require separately qualified adjudication of competing evidence. Never break ties by machine-key concordance, guessed commonness, color difference, or a target's numeric priority.
 6. Preserve the original mapping and palette until a separately versioned, provenance-reviewed update is approved and regression-tested across Direct/Marker representations and all affected source glyphs.
 
+The [presentation-masked rehearsal](source-owner-masked-presentation.md) prepares neutral side-by-side candidate comparisons with no collected responses. The public source manifests remain machine-key-visible and the rehearsal is neither an independently blinded review nor a participant assessment.
+
 A future external review collection interface must be separated from the existing unblinded local source-key worksheet and must pass privacy and reproducibility review before use.
 
-The [local provisional note comparison](source-owner-note-comparison.md) can flag agreement and conflict in two *unblinded, unauthenticated* exports; it must not supply accepted independent reviewer reports or certified decisions.\n\n## Hard acceptance boundaries
+The [local provisional note comparison](source-owner-note-comparison.md) can flag agreement and conflict in two *unblinded, unauthenticated* exports; it must not supply accepted independent reviewer reports or certified decisions.
+
+## Hard acceptance boundaries
 
 The machine-readable protocol records **0 reviewer reports, 0 independently reconciled pairs, 0 certified component owners, 0 visually certified glyphs, and 0 study-eligible items**. A component decision does not automatically validate semantics, color readability, lexical interpretation, or learning effects. A distinct controlled study would be needed for causal visual-discrimination or educational claims.
 
