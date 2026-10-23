@@ -116,9 +116,43 @@ function render(){
 }
 async function init(){
  try{
-  const response=await fetch("glyphs/research/heldout-warning-v0.1/index-v0.1.json");
-  if(!response.ok)throw Error("Source-exact held-out gallery not available");
-  const data=await response.json();
+  const paths=["glyphs/research/heldout-warning-v0.1/index-v0.1.json",
+   "palettes/mandarin-component-identity-v0.6.json",
+   "semantic-group-hue-fivefold-heldout-v0.1.json"];
+  const responses=await Promise.all(paths.map(path=>fetch(path)));
+  if(responses.some(r=>!r.ok))throw Error("Source-exact held-out research sources unavailable");
+  const [data,palette,study]=await Promise.all(responses.map(r=>r.json()));
+  if(palette.schema!=="chromalect.component-palette.v0"||
+     palette.id!=="mandarin-component-identity"||
+     palette.version!=="0.6.0"||
+     !Array.isArray(palette.components)||palette.components.length!==520||
+     study.schema!=="chromalect.palette.historical-hue-five-fold-heldout.v0.1"||
+     study.status!=="deterministic_800_train_200_heldout_numerical_source_glyph_diagnostic_only"||
+     study.provenance.originalPaletteRecolored!==false||
+     study.provenance.independentVisionTrialConducted!==false||
+     study.summary.crossFoldHeldOutTotals.introducedOptimizedClosePairs!==23||
+     study.summary.crossFoldHeldOutTotals.resolvedOriginalClosePairs!==21||
+     study.summary.crossFoldHeldOutTotals.retainedOriginalClosePairs!==5||
+     !Array.isArray(study.folds)||study.folds.length!==5)
+   throw Error("The original color source or held-out fold reference changed");
+  const sourceColors=new Map(palette.components.map(c=>[c.id,c]));
+  if(sourceColors.size!==520)throw Error("Source identity registry is incomplete");
+  const foldColors=study.folds.map((fold,i)=>{
+   if(fold.foldIndex!==i||fold.excludedFromOptimizer.length!==200||
+      fold.sourcePinnedCandidateColors.length!==40||
+      fold.independentlyReviewed!==false)throw Error("Fold reference misaligned");
+   const map=new Map();
+   for(const c of fold.sourcePinnedCandidateColors){
+    const origin=sourceColors.get(c.componentId);
+    if(!origin||origin.color!==c.sourceHex||
+       c.semanticApproval!==false||c.sourceIdentityPreserved!==true||
+       map.has(c.componentId))throw Error("Unexpected source or fold color identity");
+    map.set(c.componentId,c.optimizedHex);
+   }
+   if(map.size!==40)return null;
+   return map;
+  });
+  if(foldColors.some(x=>x===null))throw Error("Incomplete fold palette");
   if(data.schema!=="chromalect.glyph.heldout-color-warning-review.v0.1"||
      data.status!=="source_pinned_heldout_warning_review_not_visual_or_semantic_certification"||
      data.provenance.sourcePalette!=="mandarin-component-identity@0.6.0"||
@@ -165,6 +199,8 @@ async function init(){
     throw Error("Invalid glyph source rank, geometry or acceptance");
    lastRank=r.rank;seen.add(r.character);
    if(r.severity==="introduced")newCount++;
+   if(!study.folds[r.foldIndex].excludedFromOptimizer.includes(r.rank))
+    throw Error("Review glyph belongs to its training rather than held-out fold");
    for(const p of r.pairs){
     if(!["introduced","resolved","retained"].includes(p.reviewState)||
        p.visualReview!=="pending"||p.semanticsApproved!==false||
@@ -174,10 +210,11 @@ async function init(){
        p.componentA.id===p.componentB.id)
      throw Error("Unreviewed fold pair record was promoted or malformed");
     for(const c of [p.componentA,p.componentB]){
-     if(!/^cmp-\d{4}$/.test(c.id)||
-        !/^#[0-9A-F]{6}$/i.test(c.sourceHex)||
+     const owner=sourceColors.get(c.id);
+     if(!owner||owner.shape!==c.form||owner.color!==c.sourceHex||
+        c.foldOptimizedHex!==(foldColors[r.foldIndex].get(c.id)??owner.color)||
         !/^#[0-9A-F]{6}$/i.test(c.foldOptimizedHex))
-      throw Error("Missing source component ID or candidate color");
+      throw Error("Source component identity or fold-trained color does not match original data");
     }
     counts[p.reviewState]++;pairTotal++;
    }
