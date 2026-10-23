@@ -6,7 +6,7 @@ import {validateReadingInventory} from "./reading_inventory_validate.mjs";
 const triage=JSON.parse(fs.readFileSync("data/semantic/cedict-crossref/polysemy-triage-v0.1.json","utf8"));
 const pilot=JSON.parse(fs.readFileSync("data/semantic/cedict-crossref/external-dictionary-reconnaissance-v0.1.json","utf8"));
 const discrepancy=JSON.parse(fs.readFileSync("data/semantic/cedict-crossref/external-dictionary-discrepancy-v0.1.json","utf8"));
-const pageChecks=JSON.parse(fs.readFileSync("data/semantic/cedict-crossref/publisher-page-provenance-v0.1.json","utf8"));
+const pageChecks=JSON.parse(fs.readFileSync("data/semantic/cedict-crossref/publisher-page-provenance-v0.2.json","utf8"));
 const names=["0001-0200","0201-0400","0401-0600","0601-0800","0801-1000"];
 const blocks=names.map(n=>JSON.parse(fs.readFileSync(
  "data/semantic/cedict-crossref/dictionary-excerpts-"+n+".json","utf8")));
@@ -50,7 +50,7 @@ const sandbox={
   if(path==="semantic/polysemy-triage-v0.1.json")return {ok:true,json:async()=>triage};
   if(path==="semantic/external-dictionary-reconnaissance-v0.1.json")return {ok:true,json:async()=>pilot};
   if(path==="semantic/external-dictionary-discrepancy-v0.1.json")return {ok:true,json:async()=>discrepancy};
-  if(path==="semantic/publisher-page-provenance-v0.1.json")return {ok:true,json:async()=>pageChecks};
+  if(path==="semantic/publisher-page-provenance-v0.2.json")return {ok:true,json:async()=>pageChecks};
   for(let i=0;i<names.length;i++)if(path==="semantic/dictionary-excerpts-"+names[i]+".json")
    return {ok:true,json:async()=>blocks[i]};
   if(path==="profiles/mandarin-1000-v1.json")return {ok:true,json:async()=>profile};
@@ -120,8 +120,8 @@ assert.equal(elements["reading-progress"].attributes["aria-valuemax"],"140");
 assert.match(elements["reading-rank"].textContent,/higher/);
 assert.match(html,/data-character-layer-controls/);
 assert.match(html,/dictionary-readings.js/);
-assert.equal(pageChecks.entries.length,14);
-assert.equal(pageChecks.summary.highAttentionCharactersRepresented,10);
+assert.equal(pageChecks.entries.length,27);
+assert.equal(pageChecks.summary.highAttentionCharactersRepresented,23);
 assert.ok(source.includes("No lexical approval."));
 assert.ok(source.includes("page not checked in the current provenance registry"));
 console.log("Reading inventory: 1,393 source entries, 319 high-attention entries, 173 no-pictogram entries, local-only v0.1 exports and tamper guards.");

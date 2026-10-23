@@ -168,7 +168,7 @@ async function load(){
    fetch("semantic/polysemy-triage-v0.1.json"),
    fetch("semantic/external-dictionary-reconnaissance-v0.1.json"),
    fetch("semantic/external-dictionary-discrepancy-v0.1.json"),
-   fetch("semantic/publisher-page-provenance-v0.1.json"),
+   fetch("semantic/publisher-page-provenance-v0.2.json"),
    ...blocks.map(b=>fetch("semantic/dictionary-excerpts-"+b+".json")),
    fetch("profiles/mandarin-1000-v1.json")
   ]);
@@ -196,14 +196,14 @@ async function load(){
      discrepancy.records.some(r=>r.independentLexicalApproval!==false||
        r.productionVerified!==false||!r.externalSource?.url?.startsWith("https://")))
    throw new Error("Invalid additional dictionary discrepancy source");
-  if(pageChecks.schema!=="chromalect.semantic.publisher-page-provenance.v0.1"||
+  if(pageChecks.schema!=="chromalect.semantic.publisher-page-provenance.v0.2"||
      pageChecks.status!=="source_headword_reading_labels_checked_not_lexical_approval"||
-     pageChecks.summary.publisherPagesChecked!==14||
-     pageChecks.summary.highAttentionCharactersRepresented!==10||
+     pageChecks.summary.publisherPagesChecked!==27||
+     pageChecks.summary.highAttentionCharactersRepresented!==23||
      pageChecks.summary.independentlyAdjudicatedSenses!==0||
      pageChecks.summary.emojiApprovals!==0||
      pageChecks.summary.productionApprovals!==0||
-     !Array.isArray(pageChecks.entries)||pageChecks.entries.length!==14||
+     !Array.isArray(pageChecks.entries)||pageChecks.entries.length!==27||
      pageChecks.entries.some(x=>x.verification!=="page_text_opened_and_headword_checked"||
        !x.url.startsWith("https://")||!x.prominentReadings?.length))
     throw new Error("Publisher-page provenance is inconsistent");
@@ -213,7 +213,7 @@ async function load(){
     if(!checkedSources.has(r.rank))checkedSources.set(r.rank,[]);
     checkedSources.get(r.rank).push(r);
   }
-  if(checkedSources.size!==10)throw new Error("Expected ten separately sourced characters");
+  if(checkedSources.size!==23)throw new Error("Expected twenty-three separately sourced characters");
   externalSources=new Map([
    ...pilot.records.map(r=>[r.rank,r]),
    ...discrepancy.records.map(r=>[r.rank,{
