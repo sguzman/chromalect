@@ -133,10 +133,10 @@
       "key": "phonetic-notation",
       "label": "Phonetic notation experiment",
       "sourceHeadingPrefix": "Phase 2",
-      "complete": 9,
+      "complete": 10,
       "pending": 4,
-      "total": 13,
-      "checklistPercent": 69,
+      "total": 14,
+      "checklistPercent": 71,
       "checkpoints": [
         {
           "description": "Establish a reversible, source-pinned orthographic Pinyin citation baseline for all 1,171 first-tranche readings, without declaring phonemic or contextual verification.",
@@ -168,6 +168,10 @@
         },
         {
           "description": "Publish a 33-final reversible nine-primitive written-letter geometric control and integrate provisional initial shapes, with independent channel toggles and source-linked caution labels; human decoding remains untested.",
+          "state": "complete"
+        },
+        {
+          "description": "Source-link six provisional simple-final height/backness/rounding controls (432 citation readings, 112 context cautions) and test an independently switchable integrated-cell view without IPA approval.",
           "state": "complete"
         },
         {

@@ -44,6 +44,7 @@ This is a sequence of **evidence gates**, not a promise to build a large applica
 - [x] Round-trip all 1,171 pinned written initial/final/tone combinations through a source-attested orthographic grammar and publish 710 noncertifying written contrast candidates.
 - [x] Flag 213 source citation readings in nine context-dependent final-spelling categories, preserving original spellings and pending IPA adjudication.
 - [x] Publish a 33-final reversible nine-primitive written-letter geometric control and integrate provisional initial shapes, with independent channel toggles and source-linked caution labels; human decoding remains untested.
+- [x] Source-link six provisional simple-final height/backness/rounding controls (432 citation readings, 112 context cautions) and test an independently switchable integrated-cell view without IPA approval.
 - [ ] Freeze the Mandarin phonological contrast inventory and a phonetic reference notation.
 - [ ] Compare Pinyin/IPA labels, initial-final symbols, and constructed featural glyphs.
 - [ ] Specify a decoding grammar and round-trip tests.
