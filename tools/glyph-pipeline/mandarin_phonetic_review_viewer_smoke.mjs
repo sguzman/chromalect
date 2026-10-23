@@ -28,6 +28,12 @@ function setup(source=[gates,citations]){
 async function settle(ui){for(let i=0;i<55&&!ui["pc-candidate"].children.length&&
  !ui["pc-status"].textContent.includes("Unable");i++)await Promise.resolve();}
 const ui=setup();await settle(ui);
+const first=gates.records[0].firstSourceExamples[0];
+const firstKey=JSON.stringify([first.rank,first.display,first.initial,first.final,first.tone]);
+function selectFirst(){
+ ui["pc-candidate"].value=firstKey;
+ ui["pc-candidate"].events.change();
+}
 assert.equal(ui["pc-candidate"].children.length,213);
 assert.equal(ui["pc-family"].children.length,10);
 assert.match(ui["pc-source"].textContent,/source written initial/);
@@ -56,20 +62,20 @@ ui["pc-evidence"].value="https://www.polyu.edu.hk/bepth/introduction-to-phonetic
 ui["pc-rationale"].value="Changed but not yet explicitly saved; provenance still needs separate review.";
 ui["pc-family"].value="labial_written_o";ui["pc-family"].events.change();
 assert.match(ui["pc-count"].textContent,/1 unsaved edits/);
-ui["pc-family"].value="all";ui["pc-family"].events.change();
+ui["pc-family"].value="all";ui["pc-family"].events.change();selectFirst();
 assert.match(ui["pc-rationale"].value,/Changed but not yet explicitly saved/);
 // A second reading contains incomplete scratch edits. Export must not
 // silently omit it when the first reading is saved.
 ui["pc-family"].value="labial_written_o";ui["pc-family"].events.change();
 ui["pc-rationale"].value="Other incomplete local scratch note";
-ui["pc-family"].value="all";ui["pc-family"].events.change();
+ui["pc-family"].value="all";ui["pc-family"].events.change();selectFirst();
 ui["pc-export"].events.click();
 assert.match(ui["pc-status"].textContent,/Export blocked/);
 // Returning the incomplete note to defaults clears its scratch state.
 ui["pc-family"].value="labial_written_o";ui["pc-family"].events.change();
 assert.match(ui["pc-rationale"].value,/Other incomplete local scratch note/);
 ui["pc-rationale"].value="";
-ui["pc-family"].value="all";ui["pc-family"].events.change();
+ui["pc-family"].value="all";ui["pc-family"].events.change();selectFirst();
 ui["pc-save"].events.click();
 assert.match(ui["pc-count"].textContent,/0 unsaved edits/);
 ui["pc-export"].events.click();
