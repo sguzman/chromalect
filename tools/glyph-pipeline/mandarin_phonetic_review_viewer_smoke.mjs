@@ -50,6 +50,7 @@ assert.deepEqual(validatePhoneticCautionReview(session,gates,citations),
 ui["pc-evidence"].value="http://unverified.invalid";
 ui["pc-save"].events.click();
 assert.match(ui["pc-status"].textContent,/Draft not saved/);
+ui["pc-evidence"].value="https://www.polyu.edu.hk/bepth/introduction-to-phonetics/spelling-rules-in-pinyin/?sc_lang=en";
 // Unsubmitted changes stay in page memory on navigation, and cannot disappear
 // into a superficially valid export of only the earlier saved notes.
 ui["pc-rationale"].value="Changed but not yet explicitly saved; provenance still needs separate review.";
