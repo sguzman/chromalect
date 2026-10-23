@@ -1,0 +1,187 @@
+{
+  "schema": "chromalect.semantic.tatoeba-word-sentence-text-fingerprints.v0.1",
+  "status": "pinned_snapshot_hashes_only_not_live_sentence_verification",
+  "source": {
+    "contributorAttribution": "tatoeba-word-candidate-attribution-v0.1.json",
+    "corpusSnapshotSha256": "7685bc14cf769a63acf7643a5bcd2b19fc3dba6aaf6c12acabd7417752f12338",
+    "originalAcquisitionRun": "https://github.com/sguzman/chromalect/actions/runs/39950088781",
+    "hashMethod": "SHA-256 over literal UTF-8 sentence text bytes in the 2026-10-23 official Mandarin detailed TSV"
+  },
+  "summary": {
+    "individualSentenceFingerprints": 27,
+    "sourceSentenceTextPublished": 0,
+    "liveSentenceContentComparisons": 0,
+    "liveIndividualLicensesChecked": 0,
+    "independentlyVerifiedReadings": 0,
+    "independentlyApprovedLexicalSenses": 0
+  },
+  "records": [
+    {
+      "sentenceId": "13970686",
+      "textSha256": "b5639ac970fbdf239b397f5aef34196b513f3baf37c08308753ab5352a92f8be",
+      "hashEncoding": "SHA-256 UTF-8 text bytes",
+      "liveContentCompared": false
+    },
+    {
+      "sentenceId": "336916",
+      "textSha256": "1931309564f740a0387bdb8d531aa91d8252fd76d18319ef68b4e1ee35199133",
+      "hashEncoding": "SHA-256 UTF-8 text bytes",
+      "liveContentCompared": false
+    },
+    {
+      "sentenceId": "9972430",
+      "textSha256": "c792ccb60466bc0bcca489aaaf93f8876f27063fbaaa48348c1ff6b5fadb6fd7",
+      "hashEncoding": "SHA-256 UTF-8 text bytes",
+      "liveContentCompared": false
+    },
+    {
+      "sentenceId": "2317127",
+      "textSha256": "ebb9c13c894e414058e75affa7d8490aa4d283dede56fe1b63658a11565ec4be",
+      "hashEncoding": "SHA-256 UTF-8 text bytes",
+      "liveContentCompared": false
+    },
+    {
+      "sentenceId": "389974",
+      "textSha256": "67fd4fb6011be529ad83195652416b173a6b3bf5e480f8bc7e0c06d32bcbaa1f",
+      "hashEncoding": "SHA-256 UTF-8 text bytes",
+      "liveContentCompared": false
+    },
+    {
+      "sentenceId": "8748562",
+      "textSha256": "ce7442d3a565ad671ea9507f9264c513b655a75e89b2e1fdab9d4726d7e9514e",
+      "hashEncoding": "SHA-256 UTF-8 text bytes",
+      "liveContentCompared": false
+    },
+    {
+      "sentenceId": "332981",
+      "textSha256": "680f41f5c58114c3ec0fcb1e72323e29ce2eb5394b1c8f89e36555a506948ff5",
+      "hashEncoding": "SHA-256 UTF-8 text bytes",
+      "liveContentCompared": false
+    },
+    {
+      "sentenceId": "1839195",
+      "textSha256": "94bfd652b296c50c2c5d8b19b1839c58ab42dce6ad53acdf83b94a06d7a71767",
+      "hashEncoding": "SHA-256 UTF-8 text bytes",
+      "liveContentCompared": false
+    },
+    {
+      "sentenceId": "12687028",
+      "textSha256": "74ad633bd3418d3d3869ce0287cbf847cfb4e5b8d97c45ee1bbba84d6abb7115",
+      "hashEncoding": "SHA-256 UTF-8 text bytes",
+      "liveContentCompared": false
+    },
+    {
+      "sentenceId": "10305694",
+      "textSha256": "5dad550f1b7a6271c5f0610a76d0318e3b2410fe27273a325ad65f2816cfaf2b",
+      "hashEncoding": "SHA-256 UTF-8 text bytes",
+      "liveContentCompared": false
+    },
+    {
+      "sentenceId": "336671",
+      "textSha256": "79af9d8be96f6c325ba39cfdd5ee708ca4d86185e1601580510479faf726d6c6",
+      "hashEncoding": "SHA-256 UTF-8 text bytes",
+      "liveContentCompared": false
+    },
+    {
+      "sentenceId": "850117",
+      "textSha256": "7ce28bcb7516192ac319545259ff0da2039ed92bde004a8a3a453410e0553215",
+      "hashEncoding": "SHA-256 UTF-8 text bytes",
+      "liveContentCompared": false
+    },
+    {
+      "sentenceId": "733596",
+      "textSha256": "d650353ec7d72fc829184a888bd09a815cd42371cdaf9ce381513808294e07ea",
+      "hashEncoding": "SHA-256 UTF-8 text bytes",
+      "liveContentCompared": false
+    },
+    {
+      "sentenceId": "10058523",
+      "textSha256": "1b2dee495b16a2a77cfd0d51dd085103b102731a020ac8dbac031c8b8695ceb2",
+      "hashEncoding": "SHA-256 UTF-8 text bytes",
+      "liveContentCompared": false
+    },
+    {
+      "sentenceId": "2915527",
+      "textSha256": "b5ef4004fd81fad6b51a4548947d111f90afdf1301e927d6f0f0470c691414fd",
+      "hashEncoding": "SHA-256 UTF-8 text bytes",
+      "liveContentCompared": false
+    },
+    {
+      "sentenceId": "9968962",
+      "textSha256": "761ccfcee3f0ad13d86ee0c48087275aed96cc0d011a273049b4f3d723ce610e",
+      "hashEncoding": "SHA-256 UTF-8 text bytes",
+      "liveContentCompared": false
+    },
+    {
+      "sentenceId": "510659",
+      "textSha256": "63d73c8ae59dda105f9b228a90b2373c0045538cc862678a2a63f9ef011f7212",
+      "hashEncoding": "SHA-256 UTF-8 text bytes",
+      "liveContentCompared": false
+    },
+    {
+      "sentenceId": "9842625",
+      "textSha256": "ce4d1e4294e5659faf901527c193a74ec2849426c26edb19aa9759a622101a52",
+      "hashEncoding": "SHA-256 UTF-8 text bytes",
+      "liveContentCompared": false
+    },
+    {
+      "sentenceId": "347817",
+      "textSha256": "0610a1fa45f24bdae471a278ea4963b7fd1d6671b8bd040d0a2fee7cf0d99d70",
+      "hashEncoding": "SHA-256 UTF-8 text bytes",
+      "liveContentCompared": false
+    },
+    {
+      "sentenceId": "501571",
+      "textSha256": "ba781db01938079b0e40a50c82047a48b116313ed094c529038b8492e451594d",
+      "hashEncoding": "SHA-256 UTF-8 text bytes",
+      "liveContentCompared": false
+    },
+    {
+      "sentenceId": "8037882",
+      "textSha256": "414d103024ba6a6c8a63f63073ba10c472cb1f9ad9017480ead930b3fcd542ae",
+      "hashEncoding": "SHA-256 UTF-8 text bytes",
+      "liveContentCompared": false
+    },
+    {
+      "sentenceId": "343595",
+      "textSha256": "a5f4e6afaa68a22583074ea48720dcade7efad24a1ae2d3500f1b7dceb31665d",
+      "hashEncoding": "SHA-256 UTF-8 text bytes",
+      "liveContentCompared": false
+    },
+    {
+      "sentenceId": "10066357",
+      "textSha256": "843ad0970402697b4e9a8beba692a907dd385dd60ded570bed2f0aef6e83370c",
+      "hashEncoding": "SHA-256 UTF-8 text bytes",
+      "liveContentCompared": false
+    },
+    {
+      "sentenceId": "13972768",
+      "textSha256": "ed1dce0c3cda3163114def7b2b1c8b3560144e20b81580a1c66167f51b7a0d96",
+      "hashEncoding": "SHA-256 UTF-8 text bytes",
+      "liveContentCompared": false
+    },
+    {
+      "sentenceId": "2440828",
+      "textSha256": "525ae759d8836dac22255fc1d495eddd13eae57d9ae8c49a6b5fa410bdb7475b",
+      "hashEncoding": "SHA-256 UTF-8 text bytes",
+      "liveContentCompared": false
+    },
+    {
+      "sentenceId": "13751971",
+      "textSha256": "fa27c4b51066a7127a772c7dfd09601d8599161a0cae0e7b4dcd0e2756f1ad4b",
+      "hashEncoding": "SHA-256 UTF-8 text bytes",
+      "liveContentCompared": false
+    },
+    {
+      "sentenceId": "9409447",
+      "textSha256": "a25010f03a3f7fd4bfaa751517a9bb329408afad408a64e566261314e72ebb9c",
+      "hashEncoding": "SHA-256 UTF-8 text bytes",
+      "liveContentCompared": false
+    }
+  ],
+  "caveats": [
+    "A digest permits comparison with future retrieved source text but does not make an unreviewed sentence linguistically sound.",
+    "These hashes reflect the pinned export; sentences may be edited, removed, or re-licensed later.",
+    "No original Chinese sentence text is republished."
+  ]
+}
