@@ -156,10 +156,10 @@
       "key": "mandarin-semantics",
       "label": "Mandarin semantic verification",
       "sourceHeadingPrefix": "Active Mandarin semantic verification",
-      "complete": 17,
+      "complete": 18,
       "pending": 4,
-      "total": 21,
-      "checklistPercent": 81,
+      "total": 22,
+      "checklistPercent": 82,
       "checkpoints": [
         {
           "description": "Screen 1,000 characters, recording provisional emoji and explicit deferrals.",
@@ -244,6 +244,10 @@
         {
           "description": "Promote only after separately demonstrated lexical and pictogram acceptance. Currently approved: 0.",
           "state": "pending"
+        },
+        {
+          "description": "Acquire a hashed official 125,310-entry CC-CEDICT snapshot and reconcile five exact word headwords against separately published Wiktionary Pinyin, leaving three unresolved and every sentence-reading approval at zero.",
+          "state": "complete"
         }
       ]
     },

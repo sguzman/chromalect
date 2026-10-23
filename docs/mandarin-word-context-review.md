@@ -35,3 +35,10 @@ An exact dictionary headword is not the same thing as an independently establish
 
 
 The official 2026-10-23 download contained 125,310 parsed dictionary entries. Exactly five research leads have exact simplified-spelling headwords: 长度 (chang2 du4), 长大 (zhang3 da4), 划船 (hua2 chuan2), 计划 (ji4 hua4), and 经过 (jing1 guo4). The index preserves the source's compressed and decompressed SHA-256 checksums and the acquiring workflow/artifact IDs; it does **not** claim that the missing exact entries 看过, 刨坑, or 刨木头 cannot appear as grammatical Chinese expressions. The [compact source headword index](../data/semantic/cedict-crossref/cedict-word-headword-index-v0.1.json) contains no dictionary definitions and does not authorize sentence-level reading promotion.
+
+
+## Two published-word pronunciation comparison
+
+The [word-entry pronunciation agreement ledger](../data/semantic/cedict-crossref/word-entry-reading-agreement-v0.1.json) compares the five externally observed Wiktionary marked-Pinyin word readings against the current source-hashed official CC-CEDICT numbered-Pinyin headwords. The alignment algorithm checks exact romanized base letters and tone-mark/tone-number correspondence for each syllable. All five paired headwords agree; the remaining three have insufficient word-entry source records, not verified disagreements.
+
+The dictionary sources may share editorial upstream material; their independence has not been certified. Two agreeing word dictionaries still cannot assign a Mandarin reading to any particular Tatoeba sentence. No source definitions, sentence text, approvals, or automatic linguistic promotions are generated.

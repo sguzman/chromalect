@@ -1,0 +1,110 @@
+{
+  "schema": "chromalect.semantic.word-entry-reading-agreement.v0.1",
+  "status": "two_word_dictionary_transcriptions_not_sentence_pronunciation_verification",
+  "sources": {
+    "wiktionary": "external-word-reading-observations-v0.1.json",
+    "ccCedict": "cedict-word-headword-index-v0.1.json",
+    "ccCedictSnapshotSHA256": "c9f2181b21d71810a86a37190e2e69d6354878ca19b309fc6bcd39b340791919",
+    "sourceEditorialIndependenceCertified": false,
+    "sourceDefinitionsCopied": false
+  },
+  "summary": {
+    "wordLeadsCompared": 8,
+    "pairedPublishedWordReadings": 5,
+    "withoutPairedReadings": 3,
+    "independentlyVerifiedSentenceReadings": 0,
+    "independentWordBoundaries": 0,
+    "approvedLexicalSenses": 0,
+    "productionApprovals": 0
+  },
+  "records": [
+    {
+      "leadId": "ch126-length",
+      "writtenWordLead": "长度",
+      "status": "published_word_pinyin_agree_across_two_sources",
+      "wiktionaryPinyin": "chángdù",
+      "cedictNumberedPinyin": "chang2 du4",
+      "wordEntryPronunciationAgreement": true,
+      "independentContextualReadingVerified": false,
+      "independentWordBoundaryVerified": false,
+      "independentSenseApproved": false
+    },
+    {
+      "leadId": "zhang-growth",
+      "writtenWordLead": "长大",
+      "status": "published_word_pinyin_agree_across_two_sources",
+      "wiktionaryPinyin": "zhǎngdà",
+      "cedictNumberedPinyin": "zhang3 da4",
+      "wordEntryPronunciationAgreement": true,
+      "independentContextualReadingVerified": false,
+      "independentWordBoundaryVerified": false,
+      "independentSenseApproved": false
+    },
+    {
+      "leadId": "hua-row",
+      "writtenWordLead": "划船",
+      "status": "published_word_pinyin_agree_across_two_sources",
+      "wiktionaryPinyin": "huáchuán",
+      "cedictNumberedPinyin": "hua2 chuan2",
+      "wordEntryPronunciationAgreement": true,
+      "independentContextualReadingVerified": false,
+      "independentWordBoundaryVerified": false,
+      "independentSenseApproved": false
+    },
+    {
+      "leadId": "hua-plan",
+      "writtenWordLead": "计划",
+      "status": "published_word_pinyin_agree_across_two_sources",
+      "wiktionaryPinyin": "jìhuà",
+      "cedictNumberedPinyin": "ji4 hua4",
+      "wordEntryPronunciationAgreement": true,
+      "independentContextualReadingVerified": false,
+      "independentWordBoundaryVerified": false,
+      "independentSenseApproved": false
+    },
+    {
+      "leadId": "guo-cross",
+      "writtenWordLead": "经过",
+      "status": "published_word_pinyin_agree_across_two_sources",
+      "wiktionaryPinyin": "jīngguò",
+      "cedictNumberedPinyin": "jing1 guo4",
+      "wordEntryPronunciationAgreement": true,
+      "independentContextualReadingVerified": false,
+      "independentWordBoundaryVerified": false,
+      "independentSenseApproved": false
+    },
+    {
+      "leadId": "guo-aspect",
+      "writtenWordLead": "看过",
+      "status": "insufficient_published_word_entry_sources",
+      "wiktionaryPinyin": null,
+      "cedictNumberedPinyin": null,
+      "wordEntryPronunciationAgreement": null,
+      "independentContextualReadingVerified": false,
+      "independentWordBoundaryVerified": false,
+      "independentSenseApproved": false
+    },
+    {
+      "leadId": "pao-dig",
+      "writtenWordLead": "刨坑",
+      "status": "insufficient_published_word_entry_sources",
+      "wiktionaryPinyin": null,
+      "cedictNumberedPinyin": null,
+      "wordEntryPronunciationAgreement": null,
+      "independentContextualReadingVerified": false,
+      "independentWordBoundaryVerified": false,
+      "independentSenseApproved": false
+    },
+    {
+      "leadId": "bao-plane",
+      "writtenWordLead": "刨木头",
+      "status": "insufficient_published_word_entry_sources",
+      "wiktionaryPinyin": null,
+      "cedictNumberedPinyin": null,
+      "wordEntryPronunciationAgreement": null,
+      "independentContextualReadingVerified": false,
+      "independentWordBoundaryVerified": false,
+      "independentSenseApproved": false
+    }
+  ]
+}

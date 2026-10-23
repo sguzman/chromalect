@@ -61,6 +61,7 @@ This is a sequence of **evidence gates**, not a promise to build a large applica
 - [x] Check 27 of 27 selected Tatoeba word-sentence records against the live API: owner, content hash, written form and observed CC BY 2.0 FR license; preserve a dated audit without republishing sentence text.
 - [x] Build a local-only, source-pinned sentence-context review intake and validator for the 27 selected word matches, with explicit nonapproval export rules.
 - [x] Acquire and preserve dated ICU v78.3 tokenization triage for the 27 source-integrity-matching word examples (17 single-token, 4 multi-token, 6 crossing token boundaries), without calling tool output verified word segmentation.
+- [x] Acquire a hashed official 125,310-entry CC-CEDICT snapshot and reconcile five exact word headwords against separately published Wiktionary Pinyin, leaving three unresolved and every sentence-reading approval at zero.
 - [ ] Independently check sentence-level reuse permissions, and record URLs before any corpus quotation or lexical promotion.
 - [ ] Independently adjudicate attested readings and usage-specific lexical senses, including higher-attention cases.
 - [ ] Conduct independently controlled blind emoji comprehension and accessibility evaluations.
