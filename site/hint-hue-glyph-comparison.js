@@ -159,8 +159,13 @@ async function load(){
    fills+=r.modifiedSourcePathFills;untouched+=r.unchangedSourcePathFills;
   }
   if(fills!==index.summary.alteredSourcePathFills||
-     untouched!==index.summary.unchangedSourcePathFills)
-   throw Error("Research gallery summary differs from individual source glyphs");
+     untouched!==index.summary.unchangedSourcePathFillsInAffectedGlyphs||
+     !Number.isInteger(index.summary.unchangedSourcePathFillsInUnchangedGlyphs)||
+     index.summary.unchangedSourcePathFillsInUnchangedGlyphs<0||
+     index.summary.unchangedSourcePathFills!==
+      index.summary.unchangedSourcePathFillsInAffectedGlyphs+
+       index.summary.unchangedSourcePathFillsInUnchangedGlyphs)
+   throw Error("Research gallery source-path totals differ from the pinned active catalog");
   records=index.glyphs;candidates=proposed;originalPalette=active;
   const hash=typeof location!=="undefined"?/^#c(0[0-9]{3}|1000)$/.exec(location.hash):null;
   current=hash?Number(hash[1]):records[0].rank;
