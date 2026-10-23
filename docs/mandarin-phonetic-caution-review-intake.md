@@ -23,3 +23,7 @@ The output counts local notes and preliminary hypotheses while reporting zero ap
 The [negative tests](../tools/glyph-pipeline/phonetic_caution_review_validate_smoke.mjs) cover incorrect citation identities, fabricated approvals, invalid URLs, missing rationale and duplicate observations.
 
 Independent language-variety analysis, appropriate original acoustic material, speaker and register conventions, contextual realizations, and perception/decoding experiments remain prerequisites for scientific acceptance.
+
+## In-browser local intake
+
+The [citation-specific research form](../site/mandarin-phonetic-review.html) builds its selector from the 213 pinned warning-reading occurrences, rather than accepting arbitrary character spellings. It supports filtering by warning family, temporarily retaining local drafts, and producing a JSON export in a text field for separate validation. It does not transmit or persist observations, and an export does not count as expert review. The [browser regression suite](../tools/glyph-pipeline/mandarin_phonetic_review_viewer_smoke.mjs) revalidates a generated sample export using the independent Node validator and checks that changed source identity and invalid evidence URLs are rejected.
