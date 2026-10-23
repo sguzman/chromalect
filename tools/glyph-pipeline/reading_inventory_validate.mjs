@@ -8,7 +8,7 @@ const revision="63c2569948629323b515833930fdd10f285401b6";
 const names=["0001-0200","0201-0400","0401-0600","0601-0800","0801-1000"];
 const categories=new Set(["ordinary","specialized","historical","proper_name","graphic","undetermined"]);
 const units=new Set(["standalone","in_word","both","undetermined"]);
-const scopes=new Set(["higher","all","multiple","unmapped","targeted","deferred","baseline"]);
+const scopes=new Set(["higher","higher_no_links","all","multiple","unmapped","targeted","deferred","baseline"]);
 
 function sections(record){
  const markers=[],str=record.excerpt;let from=0;
@@ -67,7 +67,10 @@ export function validateReadingInventory(session,triage,dictionaryBlocks){
    const item={r,t,gloss};
    candidates.set(key,item);tierCounts[t.triageTier]++;
    const scope=session.session.scope;
+   const hasAnySourceReferences=sections(r).some(section=>
+    /([\\p{Script=Han}]+(?:\\|[\\p{Script=Han}]+)?)\\[[A-Za-z0-9 ]+\\]/u.test(section.gloss));
    if(scope==="all"||scope===t.triageTier||
+    (scope==="higher_no_links"&&t.triageTier==="higher"&&!hasAnySourceReferences)||
     (scope==="multiple"&&r.readings.length>1)||
     (scope==="unmapped"&&t.experimentalMeaningCount===0))
     eligible.add(key);

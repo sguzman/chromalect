@@ -16,7 +16,7 @@ The [reading-inventory worksheet](../site/reading-inventory.html), available fro
 | Characters with multiple readings (339 characters) | 732 |
 | Characters without emoji candidates (119 characters) | 173 |
 
-These cohorts overlap except for the four exclusive triage tiers. The tiers are defined in [polysemy triage](mandarin-polysemy-triage.md), not by verified senses.
+These cohorts overlap except for the four exclusive triage tiers. The tiers are defined in [polysemy triage](mandarin-polysemy-triage.md), not by verified senses. An additional source-evidence cohort includes 140 reading records belonging to 64 high-attention characters lacking explicit written-form/Pinyin cross-reference tokens; see the [evidence-acquisition queue](mandarin-high-attention-evidence-priority.md).
 
 ## Review and provenance
 

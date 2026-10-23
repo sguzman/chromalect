@@ -1,0 +1,3530 @@
+{
+  "schema": "chromalect.semantic.high-attention-reading-evidence-priority.v0.1",
+  "status": "source_readiness_ranking_without_independent_usage_attestation",
+  "source": {
+    "polysemyTriage": "polysemy-triage-v0.1.json",
+    "candidateQueue": "full-lexical-review-queue-v0.1.json",
+    "internalReferences": "dictionary-reference-cues-v0.1.json",
+    "dictionaryRevision": "63c2569948629323b515833930fdd10f285401b6",
+    "dictionaryLicense": "CC BY-SA 4.0"
+  },
+  "method": "Prioritize high-complexity records without a provisional emoji or explicit dictionary-internal written-form links; separately flag literal English-gloss discrepancies. All priority tiers still require independent usage evidence.",
+  "caveats": [
+    "An absence of dictionary cross-reference tokens is not evidence that usage examples or lexical senses do not exist.",
+    "A source-internal dictionary reference is not independently attested Mandarin usage.",
+    "Evidence-acquisition groups are planning heuristics, not sense accuracy rankings or production approval criteria."
+  ],
+  "summary": {
+    "highAttentionCharacters": 142,
+    "highAttentionDictionaryReadingEntries": 319,
+    "highAttentionWithInternalReferences": 78,
+    "highAttentionWithoutInternalReferences": 64,
+    "highAttentionReadingsWithoutInternalReferences": 140,
+    "highAttentionWithCandidateGlossMismatch": 31,
+    "highAttentionWithNoPictogramCandidate": 22,
+    "highAttentionWithNeitherPictogramNorInternalReferences": 5,
+    "sourcePriorityPacketsPrepared": 142,
+    "independentUsageContextsVerified": 0,
+    "independentLexicalApproved": 0,
+    "independentEmojiApproved": 0,
+    "productionVerified": 0
+  },
+  "records": [
+    {
+      "rank": 127,
+      "character": "长",
+      "recordedReadings": [
+        "chang2",
+        "zhang3"
+      ],
+      "readingCount": 2,
+      "definitionFragmentCount": 12,
+      "candidateCount": 0,
+      "pictogramDeferred": true,
+      "dictionaryReferenceTokenCount": 0,
+      "hasSourceInternalReferences": false,
+      "candidateLiteralMismatchCount": 0,
+      "evidenceAcquisitionClass": 0,
+      "priorityReasons": [
+        "adjudicate_reading_specific_lexical_uses",
+        "obtain_external_context_without_source_internal_crossreference",
+        "review_source_meaning_without_emoji_candidate"
+      ],
+      "independentContextVerification": "pending",
+      "independentLexicalApproval": false,
+      "independentEmojiApproval": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 142,
+      "character": "从",
+      "recordedReadings": [
+        "Cong2",
+        "cong2",
+        "zong4"
+      ],
+      "readingCount": 3,
+      "definitionFragmentCount": 13,
+      "candidateCount": 0,
+      "pictogramDeferred": true,
+      "dictionaryReferenceTokenCount": 0,
+      "hasSourceInternalReferences": false,
+      "candidateLiteralMismatchCount": 0,
+      "evidenceAcquisitionClass": 0,
+      "priorityReasons": [
+        "adjudicate_reading_specific_lexical_uses",
+        "obtain_external_context_without_source_internal_crossreference",
+        "review_source_meaning_without_emoji_candidate"
+      ],
+      "independentContextVerification": "pending",
+      "independentLexicalApproval": false,
+      "independentEmojiApproval": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 201,
+      "character": "扒",
+      "recordedReadings": [
+        "ba1",
+        "pa2"
+      ],
+      "readingCount": 2,
+      "definitionFragmentCount": 10,
+      "candidateCount": 0,
+      "pictogramDeferred": true,
+      "dictionaryReferenceTokenCount": 0,
+      "hasSourceInternalReferences": false,
+      "candidateLiteralMismatchCount": 0,
+      "evidenceAcquisitionClass": 0,
+      "priorityReasons": [
+        "adjudicate_reading_specific_lexical_uses",
+        "obtain_external_context_without_source_internal_crossreference",
+        "review_source_meaning_without_emoji_candidate"
+      ],
+      "independentContextVerification": "pending",
+      "independentLexicalApproval": false,
+      "independentEmojiApproval": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 339,
+      "character": "发",
+      "recordedReadings": [
+        "fa1",
+        "fa4"
+      ],
+      "readingCount": 2,
+      "definitionFragmentCount": 8,
+      "candidateCount": 0,
+      "pictogramDeferred": true,
+      "dictionaryReferenceTokenCount": 0,
+      "hasSourceInternalReferences": false,
+      "candidateLiteralMismatchCount": 0,
+      "evidenceAcquisitionClass": 0,
+      "priorityReasons": [
+        "adjudicate_reading_specific_lexical_uses",
+        "obtain_external_context_without_source_internal_crossreference",
+        "review_source_meaning_without_emoji_candidate"
+      ],
+      "independentContextVerification": "pending",
+      "independentLexicalApproval": false,
+      "independentEmojiApproval": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 905,
+      "character": "尾",
+      "recordedReadings": [
+        "wei3",
+        "yi3"
+      ],
+      "readingCount": 2,
+      "definitionFragmentCount": 8,
+      "candidateCount": 0,
+      "pictogramDeferred": true,
+      "dictionaryReferenceTokenCount": 0,
+      "hasSourceInternalReferences": false,
+      "candidateLiteralMismatchCount": 0,
+      "evidenceAcquisitionClass": 0,
+      "priorityReasons": [
+        "adjudicate_reading_specific_lexical_uses",
+        "obtain_external_context_without_source_internal_crossreference",
+        "review_source_meaning_without_emoji_candidate"
+      ],
+      "independentContextVerification": "pending",
+      "independentLexicalApproval": false,
+      "independentEmojiApproval": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 164,
+      "character": "火",
+      "recordedReadings": [
+        "Huo3",
+        "huo3"
+      ],
+      "readingCount": 2,
+      "definitionFragmentCount": 8,
+      "candidateCount": 2,
+      "pictogramDeferred": false,
+      "dictionaryReferenceTokenCount": 0,
+      "hasSourceInternalReferences": false,
+      "candidateLiteralMismatchCount": 1,
+      "evidenceAcquisitionClass": 1,
+      "priorityReasons": [
+        "adjudicate_reading_specific_lexical_uses",
+        "obtain_external_context_without_source_internal_crossreference",
+        "review_literal_gloss_discrepancy"
+      ],
+      "independentContextVerification": "pending",
+      "independentLexicalApproval": false,
+      "independentEmojiApproval": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 231,
+      "character": "业",
+      "recordedReadings": [
+        "Ye4",
+        "ye4"
+      ],
+      "readingCount": 2,
+      "definitionFragmentCount": 13,
+      "candidateCount": 1,
+      "pictogramDeferred": false,
+      "dictionaryReferenceTokenCount": 0,
+      "hasSourceInternalReferences": false,
+      "candidateLiteralMismatchCount": 1,
+      "evidenceAcquisitionClass": 1,
+      "priorityReasons": [
+        "adjudicate_reading_specific_lexical_uses",
+        "obtain_external_context_without_source_internal_crossreference",
+        "review_literal_gloss_discrepancy"
+      ],
+      "independentContextVerification": "pending",
+      "independentLexicalApproval": false,
+      "independentEmojiApproval": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 379,
+      "character": "过",
+      "recordedReadings": [
+        "Guo4",
+        "guo4",
+        "guo5"
+      ],
+      "readingCount": 3,
+      "definitionFragmentCount": 10,
+      "candidateCount": 1,
+      "pictogramDeferred": false,
+      "dictionaryReferenceTokenCount": 0,
+      "hasSourceInternalReferences": false,
+      "candidateLiteralMismatchCount": 1,
+      "evidenceAcquisitionClass": 1,
+      "priorityReasons": [
+        "adjudicate_reading_specific_lexical_uses",
+        "obtain_external_context_without_source_internal_crossreference",
+        "review_literal_gloss_discrepancy"
+      ],
+      "independentContextVerification": "pending",
+      "independentLexicalApproval": false,
+      "independentEmojiApproval": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 401,
+      "character": "成",
+      "recordedReadings": [
+        "Cheng2",
+        "cheng2"
+      ],
+      "readingCount": 2,
+      "definitionFragmentCount": 10,
+      "candidateCount": 1,
+      "pictogramDeferred": false,
+      "dictionaryReferenceTokenCount": 0,
+      "hasSourceInternalReferences": false,
+      "candidateLiteralMismatchCount": 1,
+      "evidenceAcquisitionClass": 1,
+      "priorityReasons": [
+        "adjudicate_reading_specific_lexical_uses",
+        "obtain_external_context_without_source_internal_crossreference",
+        "review_literal_gloss_discrepancy"
+      ],
+      "independentContextVerification": "pending",
+      "independentLexicalApproval": false,
+      "independentEmojiApproval": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 407,
+      "character": "划",
+      "recordedReadings": [
+        "hua2",
+        "hua4"
+      ],
+      "readingCount": 2,
+      "definitionFragmentCount": 15,
+      "candidateCount": 1,
+      "pictogramDeferred": false,
+      "dictionaryReferenceTokenCount": 0,
+      "hasSourceInternalReferences": false,
+      "candidateLiteralMismatchCount": 1,
+      "evidenceAcquisitionClass": 1,
+      "priorityReasons": [
+        "adjudicate_reading_specific_lexical_uses",
+        "obtain_external_context_without_source_internal_crossreference",
+        "review_literal_gloss_discrepancy"
+      ],
+      "independentContextVerification": "pending",
+      "independentLexicalApproval": false,
+      "independentEmojiApproval": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 418,
+      "character": "当",
+      "recordedReadings": [
+        "dang1",
+        "dang4"
+      ],
+      "readingCount": 2,
+      "definitionFragmentCount": 28,
+      "candidateCount": 1,
+      "pictogramDeferred": false,
+      "dictionaryReferenceTokenCount": 0,
+      "hasSourceInternalReferences": false,
+      "candidateLiteralMismatchCount": 1,
+      "evidenceAcquisitionClass": 1,
+      "priorityReasons": [
+        "adjudicate_reading_specific_lexical_uses",
+        "obtain_external_context_without_source_internal_crossreference",
+        "review_literal_gloss_discrepancy"
+      ],
+      "independentContextVerification": "pending",
+      "independentLexicalApproval": false,
+      "independentEmojiApproval": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 460,
+      "character": "伏",
+      "recordedReadings": [
+        "Fu2",
+        "fu2"
+      ],
+      "readingCount": 2,
+      "definitionFragmentCount": 12,
+      "candidateCount": 1,
+      "pictogramDeferred": false,
+      "dictionaryReferenceTokenCount": 0,
+      "hasSourceInternalReferences": false,
+      "candidateLiteralMismatchCount": 1,
+      "evidenceAcquisitionClass": 1,
+      "priorityReasons": [
+        "adjudicate_reading_specific_lexical_uses",
+        "obtain_external_context_without_source_internal_crossreference",
+        "review_literal_gloss_discrepancy"
+      ],
+      "independentContextVerification": "pending",
+      "independentLexicalApproval": false,
+      "independentEmojiApproval": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 511,
+      "character": "冲",
+      "recordedReadings": [
+        "chong1",
+        "chong4"
+      ],
+      "readingCount": 2,
+      "definitionFragmentCount": 18,
+      "candidateCount": 1,
+      "pictogramDeferred": false,
+      "dictionaryReferenceTokenCount": 0,
+      "hasSourceInternalReferences": false,
+      "candidateLiteralMismatchCount": 1,
+      "evidenceAcquisitionClass": 1,
+      "priorityReasons": [
+        "adjudicate_reading_specific_lexical_uses",
+        "obtain_external_context_without_source_internal_crossreference",
+        "review_literal_gloss_discrepancy"
+      ],
+      "independentContextVerification": "pending",
+      "independentLexicalApproval": false,
+      "independentEmojiApproval": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 518,
+      "character": "齐",
+      "recordedReadings": [
+        "Qi2",
+        "qi2"
+      ],
+      "readingCount": 2,
+      "definitionFragmentCount": 9,
+      "candidateCount": 1,
+      "pictogramDeferred": false,
+      "dictionaryReferenceTokenCount": 0,
+      "hasSourceInternalReferences": false,
+      "candidateLiteralMismatchCount": 1,
+      "evidenceAcquisitionClass": 1,
+      "priorityReasons": [
+        "adjudicate_reading_specific_lexical_uses",
+        "obtain_external_context_without_source_internal_crossreference",
+        "review_literal_gloss_discrepancy"
+      ],
+      "independentContextVerification": "pending",
+      "independentLexicalApproval": false,
+      "independentEmojiApproval": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 549,
+      "character": "安",
+      "recordedReadings": [
+        "An1",
+        "an1"
+      ],
+      "readingCount": 2,
+      "definitionFragmentCount": 19,
+      "candidateCount": 1,
+      "pictogramDeferred": false,
+      "dictionaryReferenceTokenCount": 0,
+      "hasSourceInternalReferences": false,
+      "candidateLiteralMismatchCount": 1,
+      "evidenceAcquisitionClass": 1,
+      "priorityReasons": [
+        "adjudicate_reading_specific_lexical_uses",
+        "obtain_external_context_without_source_internal_crossreference",
+        "review_literal_gloss_discrepancy"
+      ],
+      "independentContextVerification": "pending",
+      "independentLexicalApproval": false,
+      "independentEmojiApproval": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 566,
+      "character": "尽",
+      "recordedReadings": [
+        "jin3",
+        "jin4"
+      ],
+      "readingCount": 2,
+      "definitionFragmentCount": 14,
+      "candidateCount": 1,
+      "pictogramDeferred": false,
+      "dictionaryReferenceTokenCount": 0,
+      "hasSourceInternalReferences": false,
+      "candidateLiteralMismatchCount": 1,
+      "evidenceAcquisitionClass": 1,
+      "priorityReasons": [
+        "adjudicate_reading_specific_lexical_uses",
+        "obtain_external_context_without_source_internal_crossreference",
+        "review_literal_gloss_discrepancy"
+      ],
+      "independentContextVerification": "pending",
+      "independentLexicalApproval": false,
+      "independentEmojiApproval": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 593,
+      "character": "约",
+      "recordedReadings": [
+        "yao1",
+        "yue1"
+      ],
+      "readingCount": 2,
+      "definitionFragmentCount": 10,
+      "candidateCount": 1,
+      "pictogramDeferred": false,
+      "dictionaryReferenceTokenCount": 0,
+      "hasSourceInternalReferences": false,
+      "candidateLiteralMismatchCount": 1,
+      "evidenceAcquisitionClass": 1,
+      "priorityReasons": [
+        "adjudicate_reading_specific_lexical_uses",
+        "obtain_external_context_without_source_internal_crossreference",
+        "review_literal_gloss_discrepancy"
+      ],
+      "independentContextVerification": "pending",
+      "independentLexicalApproval": false,
+      "independentEmojiApproval": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 595,
+      "character": "纪",
+      "recordedReadings": [
+        "Ji3",
+        "ji4"
+      ],
+      "readingCount": 2,
+      "definitionFragmentCount": 8,
+      "candidateCount": 1,
+      "pictogramDeferred": false,
+      "dictionaryReferenceTokenCount": 0,
+      "hasSourceInternalReferences": false,
+      "candidateLiteralMismatchCount": 1,
+      "evidenceAcquisitionClass": 1,
+      "priorityReasons": [
+        "adjudicate_reading_specific_lexical_uses",
+        "obtain_external_context_without_source_internal_crossreference",
+        "review_literal_gloss_discrepancy"
+      ],
+      "independentContextVerification": "pending",
+      "independentLexicalApproval": false,
+      "independentEmojiApproval": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 751,
+      "character": "别",
+      "recordedReadings": [
+        "Bie2",
+        "bie2",
+        "bie4"
+      ],
+      "readingCount": 3,
+      "definitionFragmentCount": 12,
+      "candidateCount": 2,
+      "pictogramDeferred": false,
+      "dictionaryReferenceTokenCount": 0,
+      "hasSourceInternalReferences": false,
+      "candidateLiteralMismatchCount": 1,
+      "evidenceAcquisitionClass": 1,
+      "priorityReasons": [
+        "adjudicate_reading_specific_lexical_uses",
+        "obtain_external_context_without_source_internal_crossreference",
+        "review_literal_gloss_discrepancy"
+      ],
+      "independentContextVerification": "pending",
+      "independentLexicalApproval": false,
+      "independentEmojiApproval": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 777,
+      "character": "作",
+      "recordedReadings": [
+        "zuo1",
+        "zuo4"
+      ],
+      "readingCount": 2,
+      "definitionFragmentCount": 11,
+      "candidateCount": 1,
+      "pictogramDeferred": false,
+      "dictionaryReferenceTokenCount": 0,
+      "hasSourceInternalReferences": false,
+      "candidateLiteralMismatchCount": 1,
+      "evidenceAcquisitionClass": 1,
+      "priorityReasons": [
+        "adjudicate_reading_specific_lexical_uses",
+        "obtain_external_context_without_source_internal_crossreference",
+        "review_literal_gloss_discrepancy"
+      ],
+      "independentContextVerification": "pending",
+      "independentLexicalApproval": false,
+      "independentEmojiApproval": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 825,
+      "character": "系",
+      "recordedReadings": [
+        "xi4",
+        "ji4"
+      ],
+      "readingCount": 2,
+      "definitionFragmentCount": 14,
+      "candidateCount": 1,
+      "pictogramDeferred": false,
+      "dictionaryReferenceTokenCount": 0,
+      "hasSourceInternalReferences": false,
+      "candidateLiteralMismatchCount": 1,
+      "evidenceAcquisitionClass": 1,
+      "priorityReasons": [
+        "adjudicate_reading_specific_lexical_uses",
+        "obtain_external_context_without_source_internal_crossreference",
+        "review_literal_gloss_discrepancy"
+      ],
+      "independentContextVerification": "pending",
+      "independentLexicalApproval": false,
+      "independentEmojiApproval": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 848,
+      "character": "闷",
+      "recordedReadings": [
+        "men1",
+        "men4"
+      ],
+      "readingCount": 2,
+      "definitionFragmentCount": 10,
+      "candidateCount": 1,
+      "pictogramDeferred": false,
+      "dictionaryReferenceTokenCount": 0,
+      "hasSourceInternalReferences": false,
+      "candidateLiteralMismatchCount": 1,
+      "evidenceAcquisitionClass": 1,
+      "priorityReasons": [
+        "adjudicate_reading_specific_lexical_uses",
+        "obtain_external_context_without_source_internal_crossreference",
+        "review_literal_gloss_discrepancy"
+      ],
+      "independentContextVerification": "pending",
+      "independentLexicalApproval": false,
+      "independentEmojiApproval": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 953,
+      "character": "抹",
+      "recordedReadings": [
+        "ma1",
+        "mo3",
+        "mo4"
+      ],
+      "readingCount": 3,
+      "definitionFragmentCount": 8,
+      "candidateCount": 1,
+      "pictogramDeferred": false,
+      "dictionaryReferenceTokenCount": 0,
+      "hasSourceInternalReferences": false,
+      "candidateLiteralMismatchCount": 1,
+      "evidenceAcquisitionClass": 1,
+      "priorityReasons": [
+        "adjudicate_reading_specific_lexical_uses",
+        "obtain_external_context_without_source_internal_crossreference",
+        "review_literal_gloss_discrepancy"
+      ],
+      "independentContextVerification": "pending",
+      "independentLexicalApproval": false,
+      "independentEmojiApproval": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 28,
+      "character": "士",
+      "recordedReadings": [
+        "Shi4",
+        "shi4"
+      ],
+      "readingCount": 2,
+      "definitionFragmentCount": 8,
+      "candidateCount": 1,
+      "pictogramDeferred": false,
+      "dictionaryReferenceTokenCount": 0,
+      "hasSourceInternalReferences": false,
+      "candidateLiteralMismatchCount": 0,
+      "evidenceAcquisitionClass": 2,
+      "priorityReasons": [
+        "adjudicate_reading_specific_lexical_uses",
+        "obtain_external_context_without_source_internal_crossreference"
+      ],
+      "independentContextVerification": "pending",
+      "independentLexicalApproval": false,
+      "independentEmojiApproval": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 65,
+      "character": "卫",
+      "recordedReadings": [
+        "Wei4",
+        "wei4"
+      ],
+      "readingCount": 2,
+      "definitionFragmentCount": 8,
+      "candidateCount": 1,
+      "pictogramDeferred": false,
+      "dictionaryReferenceTokenCount": 0,
+      "hasSourceInternalReferences": false,
+      "candidateLiteralMismatchCount": 0,
+      "evidenceAcquisitionClass": 2,
+      "priorityReasons": [
+        "adjudicate_reading_specific_lexical_uses",
+        "obtain_external_context_without_source_internal_crossreference"
+      ],
+      "independentContextVerification": "pending",
+      "independentLexicalApproval": false,
+      "independentEmojiApproval": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 71,
+      "character": "叉",
+      "recordedReadings": [
+        "cha1",
+        "cha2",
+        "cha3"
+      ],
+      "readingCount": 3,
+      "definitionFragmentCount": 11,
+      "candidateCount": 1,
+      "pictogramDeferred": false,
+      "dictionaryReferenceTokenCount": 0,
+      "hasSourceInternalReferences": false,
+      "candidateLiteralMismatchCount": 0,
+      "evidenceAcquisitionClass": 2,
+      "priorityReasons": [
+        "adjudicate_reading_specific_lexical_uses",
+        "obtain_external_context_without_source_internal_crossreference"
+      ],
+      "independentContextVerification": "pending",
+      "independentLexicalApproval": false,
+      "independentEmojiApproval": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 79,
+      "character": "夫",
+      "recordedReadings": [
+        "fu1",
+        "fu2"
+      ],
+      "readingCount": 2,
+      "definitionFragmentCount": 8,
+      "candidateCount": 1,
+      "pictogramDeferred": false,
+      "dictionaryReferenceTokenCount": 0,
+      "hasSourceInternalReferences": false,
+      "candidateLiteralMismatchCount": 0,
+      "evidenceAcquisitionClass": 2,
+      "priorityReasons": [
+        "adjudicate_reading_specific_lexical_uses",
+        "obtain_external_context_without_source_internal_crossreference"
+      ],
+      "independentContextVerification": "pending",
+      "independentLexicalApproval": false,
+      "independentEmojiApproval": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 80,
+      "character": "元",
+      "recordedReadings": [
+        "Yuan2",
+        "yuan2"
+      ],
+      "readingCount": 2,
+      "definitionFragmentCount": 13,
+      "candidateCount": 1,
+      "pictogramDeferred": false,
+      "dictionaryReferenceTokenCount": 0,
+      "hasSourceInternalReferences": false,
+      "candidateLiteralMismatchCount": 0,
+      "evidenceAcquisitionClass": 2,
+      "priorityReasons": [
+        "adjudicate_reading_specific_lexical_uses",
+        "obtain_external_context_without_source_internal_crossreference"
+      ],
+      "independentContextVerification": "pending",
+      "independentLexicalApproval": false,
+      "independentEmojiApproval": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 89,
+      "character": "支",
+      "recordedReadings": [
+        "Zhi1",
+        "zhi1"
+      ],
+      "readingCount": 2,
+      "definitionFragmentCount": 9,
+      "candidateCount": 1,
+      "pictogramDeferred": false,
+      "dictionaryReferenceTokenCount": 0,
+      "hasSourceInternalReferences": false,
+      "candidateLiteralMismatchCount": 0,
+      "evidenceAcquisitionClass": 2,
+      "priorityReasons": [
+        "adjudicate_reading_specific_lexical_uses",
+        "obtain_external_context_without_source_internal_crossreference"
+      ],
+      "independentContextVerification": "pending",
+      "independentLexicalApproval": false,
+      "independentEmojiApproval": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 113,
+      "character": "中",
+      "recordedReadings": [
+        "Zhong1",
+        "zhong1",
+        "zhong4"
+      ],
+      "readingCount": 3,
+      "definitionFragmentCount": 16,
+      "candidateCount": 1,
+      "pictogramDeferred": false,
+      "dictionaryReferenceTokenCount": 0,
+      "hasSourceInternalReferences": false,
+      "candidateLiteralMismatchCount": 0,
+      "evidenceAcquisitionClass": 2,
+      "priorityReasons": [
+        "adjudicate_reading_specific_lexical_uses",
+        "obtain_external_context_without_source_internal_crossreference"
+      ],
+      "independentContextVerification": "pending",
+      "independentLexicalApproval": false,
+      "independentEmojiApproval": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 133,
+      "character": "仇",
+      "recordedReadings": [
+        "Qiu2",
+        "chou2",
+        "qiu2"
+      ],
+      "readingCount": 3,
+      "definitionFragmentCount": 9,
+      "candidateCount": 1,
+      "pictogramDeferred": false,
+      "dictionaryReferenceTokenCount": 0,
+      "hasSourceInternalReferences": false,
+      "candidateLiteralMismatchCount": 0,
+      "evidenceAcquisitionClass": 2,
+      "priorityReasons": [
+        "adjudicate_reading_specific_lexical_uses",
+        "obtain_external_context_without_source_internal_crossreference"
+      ],
+      "independentContextVerification": "pending",
+      "independentLexicalApproval": false,
+      "independentEmojiApproval": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 146,
+      "character": "分",
+      "recordedReadings": [
+        "fen1",
+        "fen4"
+      ],
+      "readingCount": 2,
+      "definitionFragmentCount": 16,
+      "candidateCount": 1,
+      "pictogramDeferred": false,
+      "dictionaryReferenceTokenCount": 0,
+      "hasSourceInternalReferences": false,
+      "candidateLiteralMismatchCount": 0,
+      "evidenceAcquisitionClass": 2,
+      "priorityReasons": [
+        "adjudicate_reading_specific_lexical_uses",
+        "obtain_external_context_without_source_internal_crossreference"
+      ],
+      "independentContextVerification": "pending",
+      "independentLexicalApproval": false,
+      "independentEmojiApproval": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 161,
+      "character": "文",
+      "recordedReadings": [
+        "Wen2",
+        "wen2"
+      ],
+      "readingCount": 2,
+      "definitionFragmentCount": 9,
+      "candidateCount": 1,
+      "pictogramDeferred": false,
+      "dictionaryReferenceTokenCount": 0,
+      "hasSourceInternalReferences": false,
+      "candidateLiteralMismatchCount": 0,
+      "evidenceAcquisitionClass": 2,
+      "priorityReasons": [
+        "adjudicate_reading_specific_lexical_uses",
+        "obtain_external_context_without_source_internal_crossreference"
+      ],
+      "independentContextVerification": "pending",
+      "independentLexicalApproval": false,
+      "independentEmojiApproval": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 163,
+      "character": "方",
+      "recordedReadings": [
+        "Fang1",
+        "fang1"
+      ],
+      "readingCount": 2,
+      "definitionFragmentCount": 16,
+      "candidateCount": 1,
+      "pictogramDeferred": false,
+      "dictionaryReferenceTokenCount": 0,
+      "hasSourceInternalReferences": false,
+      "candidateLiteralMismatchCount": 0,
+      "evidenceAcquisitionClass": 2,
+      "priorityReasons": [
+        "adjudicate_reading_specific_lexical_uses",
+        "obtain_external_context_without_source_internal_crossreference"
+      ],
+      "independentContextVerification": "pending",
+      "independentLexicalApproval": false,
+      "independentEmojiApproval": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 168,
+      "character": "计",
+      "recordedReadings": [
+        "Ji4",
+        "ji4"
+      ],
+      "readingCount": 2,
+      "definitionFragmentCount": 9,
+      "candidateCount": 1,
+      "pictogramDeferred": false,
+      "dictionaryReferenceTokenCount": 0,
+      "hasSourceInternalReferences": false,
+      "candidateLiteralMismatchCount": 0,
+      "evidenceAcquisitionClass": 2,
+      "priorityReasons": [
+        "adjudicate_reading_specific_lexical_uses",
+        "obtain_external_context_without_source_internal_crossreference"
+      ],
+      "independentContextVerification": "pending",
+      "independentLexicalApproval": false,
+      "independentEmojiApproval": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 196,
+      "character": "打",
+      "recordedReadings": [
+        "da2",
+        "da3"
+      ],
+      "readingCount": 2,
+      "definitionFragmentCount": 18,
+      "candidateCount": 1,
+      "pictogramDeferred": false,
+      "dictionaryReferenceTokenCount": 0,
+      "hasSourceInternalReferences": false,
+      "candidateLiteralMismatchCount": 0,
+      "evidenceAcquisitionClass": 2,
+      "priorityReasons": [
+        "adjudicate_reading_specific_lexical_uses",
+        "obtain_external_context_without_source_internal_crossreference"
+      ],
+      "independentContextVerification": "pending",
+      "independentLexicalApproval": false,
+      "independentEmojiApproval": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 198,
+      "character": "正",
+      "recordedReadings": [
+        "zheng1",
+        "zheng4"
+      ],
+      "readingCount": 2,
+      "definitionFragmentCount": 12,
+      "candidateCount": 1,
+      "pictogramDeferred": false,
+      "dictionaryReferenceTokenCount": 0,
+      "hasSourceInternalReferences": false,
+      "candidateLiteralMismatchCount": 0,
+      "evidenceAcquisitionClass": 2,
+      "priorityReasons": [
+        "adjudicate_reading_specific_lexical_uses",
+        "obtain_external_context_without_source_internal_crossreference"
+      ],
+      "independentContextVerification": "pending",
+      "independentLexicalApproval": false,
+      "independentEmojiApproval": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 206,
+      "character": "世",
+      "recordedReadings": [
+        "Shi4",
+        "shi4"
+      ],
+      "readingCount": 2,
+      "definitionFragmentCount": 10,
+      "candidateCount": 1,
+      "pictogramDeferred": false,
+      "dictionaryReferenceTokenCount": 0,
+      "hasSourceInternalReferences": false,
+      "candidateLiteralMismatchCount": 0,
+      "evidenceAcquisitionClass": 2,
+      "priorityReasons": [
+        "adjudicate_reading_specific_lexical_uses",
+        "obtain_external_context_without_source_internal_crossreference"
+      ],
+      "independentContextVerification": "pending",
+      "independentLexicalApproval": false,
+      "independentEmojiApproval": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 234,
+      "character": "归",
+      "recordedReadings": [
+        "Gui1",
+        "gui1"
+      ],
+      "readingCount": 2,
+      "definitionFragmentCount": 10,
+      "candidateCount": 1,
+      "pictogramDeferred": false,
+      "dictionaryReferenceTokenCount": 0,
+      "hasSourceInternalReferences": false,
+      "candidateLiteralMismatchCount": 0,
+      "evidenceAcquisitionClass": 2,
+      "priorityReasons": [
+        "adjudicate_reading_specific_lexical_uses",
+        "obtain_external_context_without_source_internal_crossreference"
+      ],
+      "independentContextVerification": "pending",
+      "independentLexicalApproval": false,
+      "independentEmojiApproval": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 275,
+      "character": "白",
+      "recordedReadings": [
+        "Bai2",
+        "bai2"
+      ],
+      "readingCount": 2,
+      "definitionFragmentCount": 22,
+      "candidateCount": 1,
+      "pictogramDeferred": false,
+      "dictionaryReferenceTokenCount": 0,
+      "hasSourceInternalReferences": false,
+      "candidateLiteralMismatchCount": 0,
+      "evidenceAcquisitionClass": 2,
+      "priorityReasons": [
+        "adjudicate_reading_specific_lexical_uses",
+        "obtain_external_context_without_source_internal_crossreference"
+      ],
+      "independentContextVerification": "pending",
+      "independentLexicalApproval": false,
+      "independentEmojiApproval": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 294,
+      "character": "处",
+      "recordedReadings": [
+        "chu3",
+        "chu4"
+      ],
+      "readingCount": 2,
+      "definitionFragmentCount": 20,
+      "candidateCount": 1,
+      "pictogramDeferred": false,
+      "dictionaryReferenceTokenCount": 0,
+      "hasSourceInternalReferences": false,
+      "candidateLiteralMismatchCount": 0,
+      "evidenceAcquisitionClass": 2,
+      "priorityReasons": [
+        "adjudicate_reading_specific_lexical_uses",
+        "obtain_external_context_without_source_internal_crossreference"
+      ],
+      "independentContextVerification": "pending",
+      "independentLexicalApproval": false,
+      "independentEmojiApproval": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 302,
+      "character": "立",
+      "recordedReadings": [
+        "Li4",
+        "li4"
+      ],
+      "readingCount": 2,
+      "definitionFragmentCount": 8,
+      "candidateCount": 1,
+      "pictogramDeferred": false,
+      "dictionaryReferenceTokenCount": 0,
+      "hasSourceInternalReferences": false,
+      "candidateLiteralMismatchCount": 0,
+      "evidenceAcquisitionClass": 2,
+      "priorityReasons": [
+        "adjudicate_reading_specific_lexical_uses",
+        "obtain_external_context_without_source_internal_crossreference"
+      ],
+      "independentContextVerification": "pending",
+      "independentLexicalApproval": false,
+      "independentEmojiApproval": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 305,
+      "character": "闪",
+      "recordedReadings": [
+        "Shan3",
+        "shan3"
+      ],
+      "readingCount": 2,
+      "definitionFragmentCount": 13,
+      "candidateCount": 1,
+      "pictogramDeferred": false,
+      "dictionaryReferenceTokenCount": 0,
+      "hasSourceInternalReferences": false,
+      "candidateLiteralMismatchCount": 0,
+      "evidenceAcquisitionClass": 2,
+      "priorityReasons": [
+        "adjudicate_reading_specific_lexical_uses",
+        "obtain_external_context_without_source_internal_crossreference"
+      ],
+      "independentContextVerification": "pending",
+      "independentLexicalApproval": false,
+      "independentEmojiApproval": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 413,
+      "character": "师",
+      "recordedReadings": [
+        "Shi1",
+        "shi1"
+      ],
+      "readingCount": 2,
+      "definitionFragmentCount": 8,
+      "candidateCount": 1,
+      "pictogramDeferred": false,
+      "dictionaryReferenceTokenCount": 0,
+      "hasSourceInternalReferences": false,
+      "candidateLiteralMismatchCount": 0,
+      "evidenceAcquisitionClass": 2,
+      "priorityReasons": [
+        "adjudicate_reading_specific_lexical_uses",
+        "obtain_external_context_without_source_internal_crossreference"
+      ],
+      "independentContextVerification": "pending",
+      "independentLexicalApproval": false,
+      "independentEmojiApproval": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 455,
+      "character": "传",
+      "recordedReadings": [
+        "chuan2",
+        "zhuan4"
+      ],
+      "readingCount": 2,
+      "definitionFragmentCount": 11,
+      "candidateCount": 1,
+      "pictogramDeferred": false,
+      "dictionaryReferenceTokenCount": 0,
+      "hasSourceInternalReferences": false,
+      "candidateLiteralMismatchCount": 0,
+      "evidenceAcquisitionClass": 2,
+      "priorityReasons": [
+        "adjudicate_reading_specific_lexical_uses",
+        "obtain_external_context_without_source_internal_crossreference"
+      ],
+      "independentContextVerification": "pending",
+      "independentLexicalApproval": false,
+      "independentEmojiApproval": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 467,
+      "character": "任",
+      "recordedReadings": [
+        "Ren4",
+        "ren4"
+      ],
+      "readingCount": 2,
+      "definitionFragmentCount": 11,
+      "candidateCount": 1,
+      "pictogramDeferred": false,
+      "dictionaryReferenceTokenCount": 0,
+      "hasSourceInternalReferences": false,
+      "candidateLiteralMismatchCount": 0,
+      "evidenceAcquisitionClass": 2,
+      "priorityReasons": [
+        "adjudicate_reading_specific_lexical_uses",
+        "obtain_external_context_without_source_internal_crossreference"
+      ],
+      "independentContextVerification": "pending",
+      "independentLexicalApproval": false,
+      "independentEmojiApproval": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 482,
+      "character": "后",
+      "recordedReadings": [
+        "Hou4",
+        "hou4"
+      ],
+      "readingCount": 2,
+      "definitionFragmentCount": 9,
+      "candidateCount": 2,
+      "pictogramDeferred": false,
+      "dictionaryReferenceTokenCount": 0,
+      "hasSourceInternalReferences": false,
+      "candidateLiteralMismatchCount": 0,
+      "evidenceAcquisitionClass": 2,
+      "priorityReasons": [
+        "adjudicate_reading_specific_lexical_uses",
+        "obtain_external_context_without_source_internal_crossreference"
+      ],
+      "independentContextVerification": "pending",
+      "independentLexicalApproval": false,
+      "independentEmojiApproval": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 483,
+      "character": "行",
+      "recordedReadings": [
+        "hang2",
+        "xing2"
+      ],
+      "readingCount": 2,
+      "definitionFragmentCount": 25,
+      "candidateCount": 1,
+      "pictogramDeferred": false,
+      "dictionaryReferenceTokenCount": 0,
+      "hasSourceInternalReferences": false,
+      "candidateLiteralMismatchCount": 0,
+      "evidenceAcquisitionClass": 2,
+      "priorityReasons": [
+        "adjudicate_reading_specific_lexical_uses",
+        "obtain_external_context_without_source_internal_crossreference"
+      ],
+      "independentContextVerification": "pending",
+      "independentLexicalApproval": false,
+      "independentEmojiApproval": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 489,
+      "character": "兆",
+      "recordedReadings": [
+        "Zhao4",
+        "zhao4"
+      ],
+      "readingCount": 2,
+      "definitionFragmentCount": 8,
+      "candidateCount": 1,
+      "pictogramDeferred": false,
+      "dictionaryReferenceTokenCount": 0,
+      "hasSourceInternalReferences": false,
+      "candidateLiteralMismatchCount": 0,
+      "evidenceAcquisitionClass": 2,
+      "priorityReasons": [
+        "adjudicate_reading_specific_lexical_uses",
+        "obtain_external_context_without_source_internal_crossreference"
+      ],
+      "independentContextVerification": "pending",
+      "independentLexicalApproval": false,
+      "independentEmojiApproval": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 544,
+      "character": "兴",
+      "recordedReadings": [
+        "Xing1",
+        "xing1",
+        "xing4"
+      ],
+      "readingCount": 3,
+      "definitionFragmentCount": 12,
+      "candidateCount": 1,
+      "pictogramDeferred": false,
+      "dictionaryReferenceTokenCount": 0,
+      "hasSourceInternalReferences": false,
+      "candidateLiteralMismatchCount": 0,
+      "evidenceAcquisitionClass": 2,
+      "priorityReasons": [
+        "adjudicate_reading_specific_lexical_uses",
+        "obtain_external_context_without_source_internal_crossreference"
+      ],
+      "independentContextVerification": "pending",
+      "independentLexicalApproval": false,
+      "independentEmojiApproval": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 581,
+      "character": "好",
+      "recordedReadings": [
+        "hao3",
+        "hao4"
+      ],
+      "readingCount": 2,
+      "definitionFragmentCount": 13,
+      "candidateCount": 1,
+      "pictogramDeferred": false,
+      "dictionaryReferenceTokenCount": 0,
+      "hasSourceInternalReferences": false,
+      "candidateLiteralMismatchCount": 0,
+      "evidenceAcquisitionClass": 2,
+      "priorityReasons": [
+        "adjudicate_reading_specific_lexical_uses",
+        "obtain_external_context_without_source_internal_crossreference"
+      ],
+      "independentContextVerification": "pending",
+      "independentLexicalApproval": false,
+      "independentEmojiApproval": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 586,
+      "character": "观",
+      "recordedReadings": [
+        "Guan4",
+        "guan1",
+        "guan4"
+      ],
+      "readingCount": 3,
+      "definitionFragmentCount": 12,
+      "candidateCount": 1,
+      "pictogramDeferred": false,
+      "dictionaryReferenceTokenCount": 0,
+      "hasSourceInternalReferences": false,
+      "candidateLiteralMismatchCount": 0,
+      "evidenceAcquisitionClass": 2,
+      "priorityReasons": [
+        "adjudicate_reading_specific_lexical_uses",
+        "obtain_external_context_without_source_internal_crossreference"
+      ],
+      "independentContextVerification": "pending",
+      "independentLexicalApproval": false,
+      "independentEmojiApproval": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 655,
+      "character": "把",
+      "recordedReadings": [
+        "ba3",
+        "ba4"
+      ],
+      "readingCount": 2,
+      "definitionFragmentCount": 9,
+      "candidateCount": 1,
+      "pictogramDeferred": false,
+      "dictionaryReferenceTokenCount": 0,
+      "hasSourceInternalReferences": false,
+      "candidateLiteralMismatchCount": 0,
+      "evidenceAcquisitionClass": 2,
+      "priorityReasons": [
+        "adjudicate_reading_specific_lexical_uses",
+        "obtain_external_context_without_source_internal_crossreference"
+      ],
+      "independentContextVerification": "pending",
+      "independentLexicalApproval": false,
+      "independentEmojiApproval": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 693,
+      "character": "更",
+      "recordedReadings": [
+        "geng1",
+        "geng4"
+      ],
+      "readingCount": 2,
+      "definitionFragmentCount": 9,
+      "candidateCount": 1,
+      "pictogramDeferred": false,
+      "dictionaryReferenceTokenCount": 0,
+      "hasSourceInternalReferences": false,
+      "candidateLiteralMismatchCount": 0,
+      "evidenceAcquisitionClass": 2,
+      "priorityReasons": [
+        "adjudicate_reading_specific_lexical_uses",
+        "obtain_external_context_without_source_internal_crossreference"
+      ],
+      "independentContextVerification": "pending",
+      "independentLexicalApproval": false,
+      "independentEmojiApproval": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 704,
+      "character": "还",
+      "recordedReadings": [
+        "Huan2",
+        "hai2",
+        "huan2"
+      ],
+      "readingCount": 3,
+      "definitionFragmentCount": 15,
+      "candidateCount": 1,
+      "pictogramDeferred": false,
+      "dictionaryReferenceTokenCount": 0,
+      "hasSourceInternalReferences": false,
+      "candidateLiteralMismatchCount": 0,
+      "evidenceAcquisitionClass": 2,
+      "priorityReasons": [
+        "adjudicate_reading_specific_lexical_uses",
+        "obtain_external_context_without_source_internal_crossreference"
+      ],
+      "independentContextVerification": "pending",
+      "independentLexicalApproval": false,
+      "independentEmojiApproval": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 708,
+      "character": "连",
+      "recordedReadings": [
+        "Lian2",
+        "lian2"
+      ],
+      "readingCount": 2,
+      "definitionFragmentCount": 9,
+      "candidateCount": 1,
+      "pictogramDeferred": false,
+      "dictionaryReferenceTokenCount": 0,
+      "hasSourceInternalReferences": false,
+      "candidateLiteralMismatchCount": 0,
+      "evidenceAcquisitionClass": 2,
+      "priorityReasons": [
+        "adjudicate_reading_specific_lexical_uses",
+        "obtain_external_context_without_source_internal_crossreference"
+      ],
+      "independentContextVerification": "pending",
+      "independentLexicalApproval": false,
+      "independentEmojiApproval": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 739,
+      "character": "听",
+      "recordedReadings": [
+        "yin3",
+        "ting1",
+        "ting4"
+      ],
+      "readingCount": 3,
+      "definitionFragmentCount": 9,
+      "candidateCount": 1,
+      "pictogramDeferred": false,
+      "dictionaryReferenceTokenCount": 0,
+      "hasSourceInternalReferences": false,
+      "candidateLiteralMismatchCount": 0,
+      "evidenceAcquisitionClass": 2,
+      "priorityReasons": [
+        "adjudicate_reading_specific_lexical_uses",
+        "obtain_external_context_without_source_internal_crossreference"
+      ],
+      "independentContextVerification": "pending",
+      "independentLexicalApproval": false,
+      "independentEmojiApproval": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 763,
+      "character": "利",
+      "recordedReadings": [
+        "Li4",
+        "li4"
+      ],
+      "readingCount": 2,
+      "definitionFragmentCount": 9,
+      "candidateCount": 1,
+      "pictogramDeferred": false,
+      "dictionaryReferenceTokenCount": 0,
+      "hasSourceInternalReferences": false,
+      "candidateLiteralMismatchCount": 0,
+      "evidenceAcquisitionClass": 2,
+      "priorityReasons": [
+        "adjudicate_reading_specific_lexical_uses",
+        "obtain_external_context_without_source_internal_crossreference"
+      ],
+      "independentContextVerification": "pending",
+      "independentLexicalApproval": false,
+      "independentEmojiApproval": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 836,
+      "character": "应",
+      "recordedReadings": [
+        "Ying4",
+        "ying1",
+        "ying4"
+      ],
+      "readingCount": 3,
+      "definitionFragmentCount": 10,
+      "candidateCount": 1,
+      "pictogramDeferred": false,
+      "dictionaryReferenceTokenCount": 0,
+      "hasSourceInternalReferences": false,
+      "candidateLiteralMismatchCount": 0,
+      "evidenceAcquisitionClass": 2,
+      "priorityReasons": [
+        "adjudicate_reading_specific_lexical_uses",
+        "obtain_external_context_without_source_internal_crossreference"
+      ],
+      "independentContextVerification": "pending",
+      "independentLexicalApproval": false,
+      "independentEmojiApproval": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 847,
+      "character": "间",
+      "recordedReadings": [
+        "jian1",
+        "jian4"
+      ],
+      "readingCount": 2,
+      "definitionFragmentCount": 10,
+      "candidateCount": 1,
+      "pictogramDeferred": false,
+      "dictionaryReferenceTokenCount": 0,
+      "hasSourceInternalReferences": false,
+      "candidateLiteralMismatchCount": 0,
+      "evidenceAcquisitionClass": 2,
+      "priorityReasons": [
+        "adjudicate_reading_specific_lexical_uses",
+        "obtain_external_context_without_source_internal_crossreference"
+      ],
+      "independentContextVerification": "pending",
+      "independentLexicalApproval": false,
+      "independentEmojiApproval": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 914,
+      "character": "陈",
+      "recordedReadings": [
+        "Chen2",
+        "chen2"
+      ],
+      "readingCount": 2,
+      "definitionFragmentCount": 12,
+      "candidateCount": 1,
+      "pictogramDeferred": false,
+      "dictionaryReferenceTokenCount": 0,
+      "hasSourceInternalReferences": false,
+      "candidateLiteralMismatchCount": 0,
+      "evidenceAcquisitionClass": 2,
+      "priorityReasons": [
+        "adjudicate_reading_specific_lexical_uses",
+        "obtain_external_context_without_source_internal_crossreference"
+      ],
+      "independentContextVerification": "pending",
+      "independentLexicalApproval": false,
+      "independentEmojiApproval": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 934,
+      "character": "纳",
+      "recordedReadings": [
+        "Na4",
+        "na4"
+      ],
+      "readingCount": 2,
+      "definitionFragmentCount": 8,
+      "candidateCount": 1,
+      "pictogramDeferred": false,
+      "dictionaryReferenceTokenCount": 0,
+      "hasSourceInternalReferences": false,
+      "candidateLiteralMismatchCount": 0,
+      "evidenceAcquisitionClass": 2,
+      "priorityReasons": [
+        "adjudicate_reading_specific_lexical_uses",
+        "obtain_external_context_without_source_internal_crossreference"
+      ],
+      "independentContextVerification": "pending",
+      "independentLexicalApproval": false,
+      "independentEmojiApproval": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 945,
+      "character": "环",
+      "recordedReadings": [
+        "Huan2",
+        "huan2"
+      ],
+      "readingCount": 2,
+      "definitionFragmentCount": 9,
+      "candidateCount": 1,
+      "pictogramDeferred": false,
+      "dictionaryReferenceTokenCount": 0,
+      "hasSourceInternalReferences": false,
+      "candidateLiteralMismatchCount": 0,
+      "evidenceAcquisitionClass": 2,
+      "priorityReasons": [
+        "adjudicate_reading_specific_lexical_uses",
+        "obtain_external_context_without_source_internal_crossreference"
+      ],
+      "independentContextVerification": "pending",
+      "independentLexicalApproval": false,
+      "independentEmojiApproval": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 963,
+      "character": "担",
+      "recordedReadings": [
+        "dan1",
+        "dan4"
+      ],
+      "readingCount": 2,
+      "definitionFragmentCount": 8,
+      "candidateCount": 1,
+      "pictogramDeferred": false,
+      "dictionaryReferenceTokenCount": 0,
+      "hasSourceInternalReferences": false,
+      "candidateLiteralMismatchCount": 0,
+      "evidenceAcquisitionClass": 2,
+      "priorityReasons": [
+        "adjudicate_reading_specific_lexical_uses",
+        "obtain_external_context_without_source_internal_crossreference"
+      ],
+      "independentContextVerification": "pending",
+      "independentLexicalApproval": false,
+      "independentEmojiApproval": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 209,
+      "character": "节",
+      "recordedReadings": [
+        "jie1",
+        "jie2"
+      ],
+      "readingCount": 2,
+      "definitionFragmentCount": 14,
+      "candidateCount": 1,
+      "pictogramDeferred": false,
+      "dictionaryReferenceTokenCount": 2,
+      "hasSourceInternalReferences": true,
+      "candidateLiteralMismatchCount": 1,
+      "evidenceAcquisitionClass": 3,
+      "priorityReasons": [
+        "adjudicate_reading_specific_lexical_uses",
+        "verify_dictionary_crossreferences_against_independent_usage",
+        "review_literal_gloss_discrepancy"
+      ],
+      "independentContextVerification": "pending",
+      "independentLexicalApproval": false,
+      "independentEmojiApproval": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 367,
+      "character": "场",
+      "recordedReadings": [
+        "chang2",
+        "chang3"
+      ],
+      "readingCount": 2,
+      "definitionFragmentCount": 9,
+      "candidateCount": 1,
+      "pictogramDeferred": false,
+      "dictionaryReferenceTokenCount": 2,
+      "hasSourceInternalReferences": true,
+      "candidateLiteralMismatchCount": 1,
+      "evidenceAcquisitionClass": 3,
+      "priorityReasons": [
+        "adjudicate_reading_specific_lexical_uses",
+        "verify_dictionary_crossreferences_against_independent_usage",
+        "review_literal_gloss_discrepancy"
+      ],
+      "independentContextVerification": "pending",
+      "independentLexicalApproval": false,
+      "independentEmojiApproval": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 368,
+      "character": "扬",
+      "recordedReadings": [
+        "Yang2",
+        "yang2"
+      ],
+      "readingCount": 2,
+      "definitionFragmentCount": 9,
+      "candidateCount": 1,
+      "pictogramDeferred": false,
+      "dictionaryReferenceTokenCount": 2,
+      "hasSourceInternalReferences": true,
+      "candidateLiteralMismatchCount": 1,
+      "evidenceAcquisitionClass": 3,
+      "priorityReasons": [
+        "adjudicate_reading_specific_lexical_uses",
+        "verify_dictionary_crossreferences_against_independent_usage",
+        "review_literal_gloss_discrepancy"
+      ],
+      "independentContextVerification": "pending",
+      "independentLexicalApproval": false,
+      "independentEmojiApproval": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 472,
+      "character": "华",
+      "recordedReadings": [
+        "Hua2",
+        "Hua4",
+        "hua1",
+        "hua2"
+      ],
+      "readingCount": 4,
+      "definitionFragmentCount": 8,
+      "candidateCount": 2,
+      "pictogramDeferred": false,
+      "dictionaryReferenceTokenCount": 1,
+      "hasSourceInternalReferences": true,
+      "candidateLiteralMismatchCount": 1,
+      "evidenceAcquisitionClass": 3,
+      "priorityReasons": [
+        "adjudicate_reading_specific_lexical_uses",
+        "verify_dictionary_crossreferences_against_independent_usage",
+        "review_literal_gloss_discrepancy"
+      ],
+      "independentContextVerification": "pending",
+      "independentLexicalApproval": false,
+      "independentEmojiApproval": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 486,
+      "character": "会",
+      "recordedReadings": [
+        "hui4",
+        "kuai4"
+      ],
+      "readingCount": 2,
+      "definitionFragmentCount": 18,
+      "candidateCount": 1,
+      "pictogramDeferred": false,
+      "dictionaryReferenceTokenCount": 1,
+      "hasSourceInternalReferences": true,
+      "candidateLiteralMismatchCount": 1,
+      "evidenceAcquisitionClass": 3,
+      "priorityReasons": [
+        "adjudicate_reading_specific_lexical_uses",
+        "verify_dictionary_crossreferences_against_independent_usage",
+        "review_literal_gloss_discrepancy"
+      ],
+      "independentContextVerification": "pending",
+      "independentLexicalApproval": false,
+      "independentEmojiApproval": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 488,
+      "character": "合",
+      "recordedReadings": [
+        "ge3",
+        "he2"
+      ],
+      "readingCount": 2,
+      "definitionFragmentCount": 14,
+      "candidateCount": 1,
+      "pictogramDeferred": false,
+      "dictionaryReferenceTokenCount": 2,
+      "hasSourceInternalReferences": true,
+      "candidateLiteralMismatchCount": 1,
+      "evidenceAcquisitionClass": 3,
+      "priorityReasons": [
+        "adjudicate_reading_specific_lexical_uses",
+        "verify_dictionary_crossreferences_against_independent_usage",
+        "review_literal_gloss_discrepancy"
+      ],
+      "independentContextVerification": "pending",
+      "independentLexicalApproval": false,
+      "independentEmojiApproval": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 575,
+      "character": "阴",
+      "recordedReadings": [
+        "Yin1",
+        "yin1"
+      ],
+      "readingCount": 2,
+      "definitionFragmentCount": 12,
+      "candidateCount": 1,
+      "pictogramDeferred": false,
+      "dictionaryReferenceTokenCount": 1,
+      "hasSourceInternalReferences": true,
+      "candidateLiteralMismatchCount": 1,
+      "evidenceAcquisitionClass": 3,
+      "priorityReasons": [
+        "adjudicate_reading_specific_lexical_uses",
+        "verify_dictionary_crossreferences_against_independent_usage",
+        "review_literal_gloss_discrepancy"
+      ],
+      "independentContextVerification": "pending",
+      "independentLexicalApproval": false,
+      "independentEmojiApproval": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 632,
+      "character": "折",
+      "recordedReadings": [
+        "she2",
+        "zhe1",
+        "zhe2"
+      ],
+      "readingCount": 3,
+      "definitionFragmentCount": 23,
+      "candidateCount": 1,
+      "pictogramDeferred": false,
+      "dictionaryReferenceTokenCount": 1,
+      "hasSourceInternalReferences": true,
+      "candidateLiteralMismatchCount": 1,
+      "evidenceAcquisitionClass": 3,
+      "priorityReasons": [
+        "adjudicate_reading_specific_lexical_uses",
+        "verify_dictionary_crossreferences_against_independent_usage",
+        "review_literal_gloss_discrepancy"
+      ],
+      "independentContextVerification": "pending",
+      "independentLexicalApproval": false,
+      "independentEmojiApproval": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 679,
+      "character": "杠",
+      "recordedReadings": [
+        "gang1",
+        "gang4"
+      ],
+      "readingCount": 2,
+      "definitionFragmentCount": 10,
+      "candidateCount": 1,
+      "pictogramDeferred": false,
+      "dictionaryReferenceTokenCount": 1,
+      "hasSourceInternalReferences": true,
+      "candidateLiteralMismatchCount": 1,
+      "evidenceAcquisitionClass": 3,
+      "priorityReasons": [
+        "adjudicate_reading_specific_lexical_uses",
+        "verify_dictionary_crossreferences_against_independent_usage",
+        "review_literal_gloss_discrepancy"
+      ],
+      "independentContextVerification": "pending",
+      "independentLexicalApproval": false,
+      "independentEmojiApproval": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 721,
+      "character": "里",
+      "recordedReadings": [
+        "li3",
+        "Li3"
+      ],
+      "readingCount": 2,
+      "definitionFragmentCount": 11,
+      "candidateCount": 1,
+      "pictogramDeferred": false,
+      "dictionaryReferenceTokenCount": 4,
+      "hasSourceInternalReferences": true,
+      "candidateLiteralMismatchCount": 1,
+      "evidenceAcquisitionClass": 3,
+      "priorityReasons": [
+        "adjudicate_reading_specific_lexical_uses",
+        "verify_dictionary_crossreferences_against_independent_usage",
+        "review_literal_gloss_discrepancy"
+      ],
+      "independentContextVerification": "pending",
+      "independentLexicalApproval": false,
+      "independentEmojiApproval": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 778,
+      "character": "伯",
+      "recordedReadings": [
+        "ba4",
+        "bai3",
+        "bo2"
+      ],
+      "readingCount": 3,
+      "definitionFragmentCount": 8,
+      "candidateCount": 1,
+      "pictogramDeferred": false,
+      "dictionaryReferenceTokenCount": 2,
+      "hasSourceInternalReferences": true,
+      "candidateLiteralMismatchCount": 1,
+      "evidenceAcquisitionClass": 3,
+      "priorityReasons": [
+        "adjudicate_reading_specific_lexical_uses",
+        "verify_dictionary_crossreferences_against_independent_usage",
+        "review_literal_gloss_discrepancy"
+      ],
+      "independentContextVerification": "pending",
+      "independentLexicalApproval": false,
+      "independentEmojiApproval": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 810,
+      "character": "免",
+      "recordedReadings": [
+        "mian3",
+        "wen4"
+      ],
+      "readingCount": 2,
+      "definitionFragmentCount": 8,
+      "candidateCount": 1,
+      "pictogramDeferred": false,
+      "dictionaryReferenceTokenCount": 1,
+      "hasSourceInternalReferences": true,
+      "candidateLiteralMismatchCount": 1,
+      "evidenceAcquisitionClass": 3,
+      "priorityReasons": [
+        "adjudicate_reading_specific_lexical_uses",
+        "verify_dictionary_crossreferences_against_independent_usage",
+        "review_literal_gloss_discrepancy"
+      ],
+      "independentContextVerification": "pending",
+      "independentLexicalApproval": false,
+      "independentEmojiApproval": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 841,
+      "character": "辛",
+      "recordedReadings": [
+        "Xin1",
+        "xin1"
+      ],
+      "readingCount": 2,
+      "definitionFragmentCount": 10,
+      "candidateCount": 1,
+      "pictogramDeferred": false,
+      "dictionaryReferenceTokenCount": 1,
+      "hasSourceInternalReferences": true,
+      "candidateLiteralMismatchCount": 1,
+      "evidenceAcquisitionClass": 3,
+      "priorityReasons": [
+        "adjudicate_reading_specific_lexical_uses",
+        "verify_dictionary_crossreferences_against_independent_usage",
+        "review_literal_gloss_discrepancy"
+      ],
+      "independentContextVerification": "pending",
+      "independentLexicalApproval": false,
+      "independentEmojiApproval": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 2,
+      "character": "乙",
+      "recordedReadings": [
+        "yi3",
+        "zhe2"
+      ],
+      "readingCount": 2,
+      "definitionFragmentCount": 11,
+      "candidateCount": 0,
+      "pictogramDeferred": true,
+      "dictionaryReferenceTokenCount": 4,
+      "hasSourceInternalReferences": true,
+      "candidateLiteralMismatchCount": 0,
+      "evidenceAcquisitionClass": 4,
+      "priorityReasons": [
+        "adjudicate_reading_specific_lexical_uses",
+        "verify_dictionary_crossreferences_against_independent_usage",
+        "review_source_meaning_without_emoji_candidate"
+      ],
+      "independentContextVerification": "pending",
+      "independentLexicalApproval": false,
+      "independentEmojiApproval": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 17,
+      "character": "了",
+      "recordedReadings": [
+        "le5",
+        "liao3",
+        "liao4"
+      ],
+      "readingCount": 3,
+      "definitionFragmentCount": 10,
+      "candidateCount": 1,
+      "pictogramDeferred": false,
+      "dictionaryReferenceTokenCount": 2,
+      "hasSourceInternalReferences": true,
+      "candidateLiteralMismatchCount": 0,
+      "evidenceAcquisitionClass": 4,
+      "priorityReasons": [
+        "adjudicate_reading_specific_lexical_uses",
+        "verify_dictionary_crossreferences_against_independent_usage"
+      ],
+      "independentContextVerification": "pending",
+      "independentLexicalApproval": false,
+      "independentEmojiApproval": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 18,
+      "character": "刀",
+      "recordedReadings": [
+        "Dao1",
+        "dao1"
+      ],
+      "readingCount": 2,
+      "definitionFragmentCount": 9,
+      "candidateCount": 1,
+      "pictogramDeferred": false,
+      "dictionaryReferenceTokenCount": 1,
+      "hasSourceInternalReferences": true,
+      "candidateLiteralMismatchCount": 0,
+      "evidenceAcquisitionClass": 4,
+      "priorityReasons": [
+        "adjudicate_reading_specific_lexical_uses",
+        "verify_dictionary_crossreferences_against_independent_usage"
+      ],
+      "independentContextVerification": "pending",
+      "independentLexicalApproval": false,
+      "independentEmojiApproval": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 23,
+      "character": "干",
+      "recordedReadings": [
+        "gan1",
+        "Gan1",
+        "gan4"
+      ],
+      "readingCount": 3,
+      "definitionFragmentCount": 23,
+      "candidateCount": 0,
+      "pictogramDeferred": true,
+      "dictionaryReferenceTokenCount": 2,
+      "hasSourceInternalReferences": true,
+      "candidateLiteralMismatchCount": 0,
+      "evidenceAcquisitionClass": 4,
+      "priorityReasons": [
+        "adjudicate_reading_specific_lexical_uses",
+        "verify_dictionary_crossreferences_against_independent_usage",
+        "review_source_meaning_without_emoji_candidate"
+      ],
+      "independentContextVerification": "pending",
+      "independentLexicalApproval": false,
+      "independentEmojiApproval": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 24,
+      "character": "于",
+      "recordedReadings": [
+        "Yu2",
+        "yu2"
+      ],
+      "readingCount": 2,
+      "definitionFragmentCount": 12,
+      "candidateCount": 0,
+      "pictogramDeferred": true,
+      "dictionaryReferenceTokenCount": 1,
+      "hasSourceInternalReferences": true,
+      "candidateLiteralMismatchCount": 0,
+      "evidenceAcquisitionClass": 4,
+      "priorityReasons": [
+        "adjudicate_reading_specific_lexical_uses",
+        "verify_dictionary_crossreferences_against_independent_usage",
+        "review_source_meaning_without_emoji_candidate"
+      ],
+      "independentContextVerification": "pending",
+      "independentLexicalApproval": false,
+      "independentEmojiApproval": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 27,
+      "character": "土",
+      "recordedReadings": [
+        "Tu3",
+        "tu3"
+      ],
+      "readingCount": 2,
+      "definitionFragmentCount": 10,
+      "candidateCount": 0,
+      "pictogramDeferred": true,
+      "dictionaryReferenceTokenCount": 1,
+      "hasSourceInternalReferences": true,
+      "candidateLiteralMismatchCount": 0,
+      "evidenceAcquisitionClass": 4,
+      "priorityReasons": [
+        "adjudicate_reading_specific_lexical_uses",
+        "verify_dictionary_crossreferences_against_independent_usage",
+        "review_source_meaning_without_emoji_candidate"
+      ],
+      "independentContextVerification": "pending",
+      "independentLexicalApproval": false,
+      "independentEmojiApproval": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 32,
+      "character": "大",
+      "recordedReadings": [
+        "da4",
+        "dai4"
+      ],
+      "readingCount": 2,
+      "definitionFragmentCount": 15,
+      "candidateCount": 0,
+      "pictogramDeferred": true,
+      "dictionaryReferenceTokenCount": 1,
+      "hasSourceInternalReferences": true,
+      "candidateLiteralMismatchCount": 0,
+      "evidenceAcquisitionClass": 4,
+      "priorityReasons": [
+        "adjudicate_reading_specific_lexical_uses",
+        "verify_dictionary_crossreferences_against_independent_usage",
+        "review_source_meaning_without_emoji_candidate"
+      ],
+      "independentContextVerification": "pending",
+      "independentLexicalApproval": false,
+      "independentEmojiApproval": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 36,
+      "character": "上",
+      "recordedReadings": [
+        "shang3",
+        "shang4"
+      ],
+      "readingCount": 2,
+      "definitionFragmentCount": 11,
+      "candidateCount": 1,
+      "pictogramDeferred": false,
+      "dictionaryReferenceTokenCount": 1,
+      "hasSourceInternalReferences": true,
+      "candidateLiteralMismatchCount": 0,
+      "evidenceAcquisitionClass": 4,
+      "priorityReasons": [
+        "adjudicate_reading_specific_lexical_uses",
+        "verify_dictionary_crossreferences_against_independent_usage"
+      ],
+      "independentContextVerification": "pending",
+      "independentLexicalApproval": false,
+      "independentEmojiApproval": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 55,
+      "character": "门",
+      "recordedReadings": [
+        "Men2",
+        "men2"
+      ],
+      "readingCount": 2,
+      "definitionFragmentCount": 23,
+      "candidateCount": 1,
+      "pictogramDeferred": false,
+      "dictionaryReferenceTokenCount": 2,
+      "hasSourceInternalReferences": true,
+      "candidateLiteralMismatchCount": 0,
+      "evidenceAcquisitionClass": 4,
+      "priorityReasons": [
+        "adjudicate_reading_specific_lexical_uses",
+        "verify_dictionary_crossreferences_against_independent_usage"
+      ],
+      "independentContextVerification": "pending",
+      "independentLexicalApproval": false,
+      "independentEmojiApproval": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 57,
+      "character": "义",
+      "recordedReadings": [
+        "Yi4",
+        "yi4"
+      ],
+      "readingCount": 2,
+      "definitionFragmentCount": 10,
+      "candidateCount": 1,
+      "pictogramDeferred": false,
+      "dictionaryReferenceTokenCount": 1,
+      "hasSourceInternalReferences": true,
+      "candidateLiteralMismatchCount": 0,
+      "evidenceAcquisitionClass": 4,
+      "priorityReasons": [
+        "adjudicate_reading_specific_lexical_uses",
+        "verify_dictionary_crossreferences_against_independent_usage"
+      ],
+      "independentContextVerification": "pending",
+      "independentLexicalApproval": false,
+      "independentEmojiApproval": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 64,
+      "character": "子",
+      "recordedReadings": [
+        "zi3",
+        "zi5"
+      ],
+      "readingCount": 2,
+      "definitionFragmentCount": 9,
+      "candidateCount": 1,
+      "pictogramDeferred": false,
+      "dictionaryReferenceTokenCount": 1,
+      "hasSourceInternalReferences": true,
+      "candidateLiteralMismatchCount": 0,
+      "evidenceAcquisitionClass": 4,
+      "priorityReasons": [
+        "adjudicate_reading_specific_lexical_uses",
+        "verify_dictionary_crossreferences_against_independent_usage"
+      ],
+      "independentContextVerification": "pending",
+      "independentLexicalApproval": false,
+      "independentEmojiApproval": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 74,
+      "character": "丰",
+      "recordedReadings": [
+        "feng1",
+        "Feng1"
+      ],
+      "readingCount": 2,
+      "definitionFragmentCount": 12,
+      "candidateCount": 1,
+      "pictogramDeferred": false,
+      "dictionaryReferenceTokenCount": 2,
+      "hasSourceInternalReferences": true,
+      "candidateLiteralMismatchCount": 0,
+      "evidenceAcquisitionClass": 4,
+      "priorityReasons": [
+        "adjudicate_reading_specific_lexical_uses",
+        "verify_dictionary_crossreferences_against_independent_usage"
+      ],
+      "independentContextVerification": "pending",
+      "independentLexicalApproval": false,
+      "independentEmojiApproval": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 85,
+      "character": "扎",
+      "recordedReadings": [
+        "zha1",
+        "zha2",
+        "za1"
+      ],
+      "readingCount": 3,
+      "definitionFragmentCount": 11,
+      "candidateCount": 0,
+      "pictogramDeferred": true,
+      "dictionaryReferenceTokenCount": 2,
+      "hasSourceInternalReferences": true,
+      "candidateLiteralMismatchCount": 0,
+      "evidenceAcquisitionClass": 4,
+      "priorityReasons": [
+        "adjudicate_reading_specific_lexical_uses",
+        "verify_dictionary_crossreferences_against_independent_usage",
+        "review_source_meaning_without_emoji_candidate"
+      ],
+      "independentContextVerification": "pending",
+      "independentLexicalApproval": false,
+      "independentEmojiApproval": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 87,
+      "character": "木",
+      "recordedReadings": [
+        "Mu4",
+        "mu4"
+      ],
+      "readingCount": 2,
+      "definitionFragmentCount": 8,
+      "candidateCount": 1,
+      "pictogramDeferred": false,
+      "dictionaryReferenceTokenCount": 1,
+      "hasSourceInternalReferences": true,
+      "candidateLiteralMismatchCount": 0,
+      "evidenceAcquisitionClass": 4,
+      "priorityReasons": [
+        "adjudicate_reading_specific_lexical_uses",
+        "verify_dictionary_crossreferences_against_independent_usage"
+      ],
+      "independentContextVerification": "pending",
+      "independentLexicalApproval": false,
+      "independentEmojiApproval": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 99,
+      "character": "匹",
+      "recordedReadings": [
+        "pi1",
+        "pi3"
+      ],
+      "readingCount": 2,
+      "definitionFragmentCount": 9,
+      "candidateCount": 0,
+      "pictogramDeferred": true,
+      "dictionaryReferenceTokenCount": 1,
+      "hasSourceInternalReferences": true,
+      "candidateLiteralMismatchCount": 0,
+      "evidenceAcquisitionClass": 4,
+      "priorityReasons": [
+        "adjudicate_reading_specific_lexical_uses",
+        "verify_dictionary_crossreferences_against_independent_usage",
+        "review_source_meaning_without_emoji_candidate"
+      ],
+      "independentContextVerification": "pending",
+      "independentLexicalApproval": false,
+      "independentEmojiApproval": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 100,
+      "character": "车",
+      "recordedReadings": [
+        "Che1",
+        "che1",
+        "ju1"
+      ],
+      "readingCount": 3,
+      "definitionFragmentCount": 9,
+      "candidateCount": 1,
+      "pictogramDeferred": false,
+      "dictionaryReferenceTokenCount": 1,
+      "hasSourceInternalReferences": true,
+      "candidateLiteralMismatchCount": 0,
+      "evidenceAcquisitionClass": 4,
+      "priorityReasons": [
+        "adjudicate_reading_specific_lexical_uses",
+        "verify_dictionary_crossreferences_against_independent_usage"
+      ],
+      "independentContextVerification": "pending",
+      "independentLexicalApproval": false,
+      "independentEmojiApproval": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 105,
+      "character": "比",
+      "recordedReadings": [
+        "Bi3",
+        "bi3",
+        "bi4"
+      ],
+      "readingCount": 3,
+      "definitionFragmentCount": 10,
+      "candidateCount": 1,
+      "pictogramDeferred": false,
+      "dictionaryReferenceTokenCount": 1,
+      "hasSourceInternalReferences": true,
+      "candidateLiteralMismatchCount": 0,
+      "evidenceAcquisitionClass": 4,
+      "priorityReasons": [
+        "adjudicate_reading_specific_lexical_uses",
+        "verify_dictionary_crossreferences_against_independent_usage"
+      ],
+      "independentContextVerification": "pending",
+      "independentLexicalApproval": false,
+      "independentEmojiApproval": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 107,
+      "character": "切",
+      "recordedReadings": [
+        "qie1",
+        "qie4"
+      ],
+      "readingCount": 2,
+      "definitionFragmentCount": 12,
+      "candidateCount": 1,
+      "pictogramDeferred": false,
+      "dictionaryReferenceTokenCount": 1,
+      "hasSourceInternalReferences": true,
+      "candidateLiteralMismatchCount": 0,
+      "evidenceAcquisitionClass": 4,
+      "priorityReasons": [
+        "adjudicate_reading_specific_lexical_uses",
+        "verify_dictionary_crossreferences_against_independent_usage"
+      ],
+      "independentContextVerification": "pending",
+      "independentLexicalApproval": false,
+      "independentEmojiApproval": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 123,
+      "character": "毛",
+      "recordedReadings": [
+        "Mao2",
+        "mao2"
+      ],
+      "readingCount": 2,
+      "definitionFragmentCount": 16,
+      "candidateCount": 0,
+      "pictogramDeferred": true,
+      "dictionaryReferenceTokenCount": 2,
+      "hasSourceInternalReferences": true,
+      "candidateLiteralMismatchCount": 0,
+      "evidenceAcquisitionClass": 4,
+      "priorityReasons": [
+        "adjudicate_reading_specific_lexical_uses",
+        "verify_dictionary_crossreferences_against_independent_usage",
+        "review_source_meaning_without_emoji_candidate"
+      ],
+      "independentContextVerification": "pending",
+      "independentLexicalApproval": false,
+      "independentEmojiApproval": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 130,
+      "character": "片",
+      "recordedReadings": [
+        "pian1",
+        "pian4"
+      ],
+      "readingCount": 2,
+      "definitionFragmentCount": 15,
+      "candidateCount": 0,
+      "pictogramDeferred": true,
+      "dictionaryReferenceTokenCount": 1,
+      "hasSourceInternalReferences": true,
+      "candidateLiteralMismatchCount": 0,
+      "evidenceAcquisitionClass": 4,
+      "priorityReasons": [
+        "adjudicate_reading_specific_lexical_uses",
+        "verify_dictionary_crossreferences_against_independent_usage",
+        "review_source_meaning_without_emoji_candidate"
+      ],
+      "independentContextVerification": "pending",
+      "independentLexicalApproval": false,
+      "independentEmojiApproval": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 158,
+      "character": "勾",
+      "recordedReadings": [
+        "Gou1",
+        "gou1",
+        "gou4"
+      ],
+      "readingCount": 3,
+      "definitionFragmentCount": 9,
+      "candidateCount": 1,
+      "pictogramDeferred": false,
+      "dictionaryReferenceTokenCount": 2,
+      "hasSourceInternalReferences": true,
+      "candidateLiteralMismatchCount": 0,
+      "evidenceAcquisitionClass": 4,
+      "priorityReasons": [
+        "adjudicate_reading_specific_lexical_uses",
+        "verify_dictionary_crossreferences_against_independent_usage"
+      ],
+      "independentContextVerification": "pending",
+      "independentLexicalApproval": false,
+      "independentEmojiApproval": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 165,
+      "character": "为",
+      "recordedReadings": [
+        "wei2",
+        "wei4"
+      ],
+      "readingCount": 2,
+      "definitionFragmentCount": 24,
+      "candidateCount": 0,
+      "pictogramDeferred": true,
+      "dictionaryReferenceTokenCount": 2,
+      "hasSourceInternalReferences": true,
+      "candidateLiteralMismatchCount": 0,
+      "evidenceAcquisitionClass": 4,
+      "priorityReasons": [
+        "adjudicate_reading_specific_lexical_uses",
+        "verify_dictionary_crossreferences_against_independent_usage",
+        "review_source_meaning_without_emoji_candidate"
+      ],
+      "independentContextVerification": "pending",
+      "independentLexicalApproval": false,
+      "independentEmojiApproval": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 166,
+      "character": "斗",
+      "recordedReadings": [
+        "Dou3",
+        "dou3",
+        "dou4"
+      ],
+      "readingCount": 3,
+      "definitionFragmentCount": 16,
+      "candidateCount": 1,
+      "pictogramDeferred": false,
+      "dictionaryReferenceTokenCount": 7,
+      "hasSourceInternalReferences": true,
+      "candidateLiteralMismatchCount": 0,
+      "evidenceAcquisitionClass": 4,
+      "priorityReasons": [
+        "adjudicate_reading_specific_lexical_uses",
+        "verify_dictionary_crossreferences_against_independent_usage"
+      ],
+      "independentContextVerification": "pending",
+      "independentLexicalApproval": false,
+      "independentEmojiApproval": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 178,
+      "character": "巴",
+      "recordedReadings": [
+        "Ba1",
+        "ba1"
+      ],
+      "readingCount": 2,
+      "definitionFragmentCount": 16,
+      "candidateCount": 0,
+      "pictogramDeferred": true,
+      "dictionaryReferenceTokenCount": 2,
+      "hasSourceInternalReferences": true,
+      "candidateLiteralMismatchCount": 0,
+      "evidenceAcquisitionClass": 4,
+      "priorityReasons": [
+        "adjudicate_reading_specific_lexical_uses",
+        "verify_dictionary_crossreferences_against_independent_usage",
+        "review_source_meaning_without_emoji_candidate"
+      ],
+      "independentContextVerification": "pending",
+      "independentLexicalApproval": false,
+      "independentEmojiApproval": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 182,
+      "character": "以",
+      "recordedReadings": [
+        "yi3",
+        "Yi3"
+      ],
+      "readingCount": 2,
+      "definitionFragmentCount": 9,
+      "candidateCount": 0,
+      "pictogramDeferred": true,
+      "dictionaryReferenceTokenCount": 3,
+      "hasSourceInternalReferences": true,
+      "candidateLiteralMismatchCount": 0,
+      "evidenceAcquisitionClass": 4,
+      "priorityReasons": [
+        "adjudicate_reading_specific_lexical_uses",
+        "verify_dictionary_crossreferences_against_independent_usage",
+        "review_source_meaning_without_emoji_candidate"
+      ],
+      "independentContextVerification": "pending",
+      "independentLexicalApproval": false,
+      "independentEmojiApproval": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 207,
+      "character": "艾",
+      "recordedReadings": [
+        "Ai4",
+        "ai4",
+        "yi4"
+      ],
+      "readingCount": 3,
+      "definitionFragmentCount": 10,
+      "candidateCount": 0,
+      "pictogramDeferred": true,
+      "dictionaryReferenceTokenCount": 1,
+      "hasSourceInternalReferences": true,
+      "candidateLiteralMismatchCount": 0,
+      "evidenceAcquisitionClass": 4,
+      "priorityReasons": [
+        "adjudicate_reading_specific_lexical_uses",
+        "verify_dictionary_crossreferences_against_independent_usage",
+        "review_source_meaning_without_emoji_candidate"
+      ],
+      "independentContextVerification": "pending",
+      "independentLexicalApproval": false,
+      "independentEmojiApproval": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 212,
+      "character": "可",
+      "recordedReadings": [
+        "ke3",
+        "ke4"
+      ],
+      "readingCount": 2,
+      "definitionFragmentCount": 9,
+      "candidateCount": 0,
+      "pictogramDeferred": true,
+      "dictionaryReferenceTokenCount": 1,
+      "hasSourceInternalReferences": true,
+      "candidateLiteralMismatchCount": 0,
+      "evidenceAcquisitionClass": 4,
+      "priorityReasons": [
+        "adjudicate_reading_specific_lexical_uses",
+        "verify_dictionary_crossreferences_against_independent_usage",
+        "review_source_meaning_without_emoji_candidate"
+      ],
+      "independentContextVerification": "pending",
+      "independentLexicalApproval": false,
+      "independentEmojiApproval": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 214,
+      "character": "左",
+      "recordedReadings": [
+        "Zuo3",
+        "zuo3"
+      ],
+      "readingCount": 2,
+      "definitionFragmentCount": 10,
+      "candidateCount": 1,
+      "pictogramDeferred": false,
+      "dictionaryReferenceTokenCount": 1,
+      "hasSourceInternalReferences": true,
+      "candidateLiteralMismatchCount": 0,
+      "evidenceAcquisitionClass": 4,
+      "priorityReasons": [
+        "adjudicate_reading_specific_lexical_uses",
+        "verify_dictionary_crossreferences_against_independent_usage"
+      ],
+      "independentContextVerification": "pending",
+      "independentLexicalApproval": false,
+      "independentEmojiApproval": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 216,
+      "character": "石",
+      "recordedReadings": [
+        "Shi2",
+        "dan4",
+        "shi2"
+      ],
+      "readingCount": 3,
+      "definitionFragmentCount": 8,
+      "candidateCount": 1,
+      "pictogramDeferred": false,
+      "dictionaryReferenceTokenCount": 1,
+      "hasSourceInternalReferences": true,
+      "candidateLiteralMismatchCount": 0,
+      "evidenceAcquisitionClass": 4,
+      "priorityReasons": [
+        "adjudicate_reading_specific_lexical_uses",
+        "verify_dictionary_crossreferences_against_independent_usage"
+      ],
+      "independentContextVerification": "pending",
+      "independentLexicalApproval": false,
+      "independentEmojiApproval": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 222,
+      "character": "平",
+      "recordedReadings": [
+        "Ping2",
+        "ping2"
+      ],
+      "readingCount": 2,
+      "definitionFragmentCount": 9,
+      "candidateCount": 0,
+      "pictogramDeferred": true,
+      "dictionaryReferenceTokenCount": 1,
+      "hasSourceInternalReferences": true,
+      "candidateLiteralMismatchCount": 0,
+      "evidenceAcquisitionClass": 4,
+      "priorityReasons": [
+        "adjudicate_reading_specific_lexical_uses",
+        "verify_dictionary_crossreferences_against_independent_usage",
+        "review_source_meaning_without_emoji_candidate"
+      ],
+      "independentContextVerification": "pending",
+      "independentLexicalApproval": false,
+      "independentEmojiApproval": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 226,
+      "character": "卡",
+      "recordedReadings": [
+        "ka3",
+        "qia3"
+      ],
+      "readingCount": 2,
+      "definitionFragmentCount": 15,
+      "candidateCount": 1,
+      "pictogramDeferred": false,
+      "dictionaryReferenceTokenCount": 2,
+      "hasSourceInternalReferences": true,
+      "candidateLiteralMismatchCount": 0,
+      "evidenceAcquisitionClass": 4,
+      "priorityReasons": [
+        "adjudicate_reading_specific_lexical_uses",
+        "verify_dictionary_crossreferences_against_independent_usage"
+      ],
+      "independentContextVerification": "pending",
+      "independentLexicalApproval": false,
+      "independentEmojiApproval": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 243,
+      "character": "号",
+      "recordedReadings": [
+        "hao2",
+        "hao4"
+      ],
+      "readingCount": 2,
+      "definitionFragmentCount": 15,
+      "candidateCount": 1,
+      "pictogramDeferred": false,
+      "dictionaryReferenceTokenCount": 1,
+      "hasSourceInternalReferences": true,
+      "candidateLiteralMismatchCount": 0,
+      "evidenceAcquisitionClass": 4,
+      "priorityReasons": [
+        "adjudicate_reading_specific_lexical_uses",
+        "verify_dictionary_crossreferences_against_independent_usage"
+      ],
+      "independentContextVerification": "pending",
+      "independentLexicalApproval": false,
+      "independentEmojiApproval": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 246,
+      "character": "只",
+      "recordedReadings": [
+        "zhi3",
+        "zhi1"
+      ],
+      "readingCount": 2,
+      "definitionFragmentCount": 9,
+      "candidateCount": 1,
+      "pictogramDeferred": false,
+      "dictionaryReferenceTokenCount": 3,
+      "hasSourceInternalReferences": true,
+      "candidateLiteralMismatchCount": 0,
+      "evidenceAcquisitionClass": 4,
+      "priorityReasons": [
+        "adjudicate_reading_specific_lexical_uses",
+        "verify_dictionary_crossreferences_against_independent_usage"
+      ],
+      "independentContextVerification": "pending",
+      "independentLexicalApproval": false,
+      "independentEmojiApproval": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 282,
+      "character": "令",
+      "recordedReadings": [
+        "Ling2",
+        "ling2",
+        "ling3",
+        "ling4"
+      ],
+      "readingCount": 4,
+      "definitionFragmentCount": 14,
+      "candidateCount": 1,
+      "pictogramDeferred": false,
+      "dictionaryReferenceTokenCount": 2,
+      "hasSourceInternalReferences": true,
+      "candidateLiteralMismatchCount": 0,
+      "evidenceAcquisitionClass": 4,
+      "priorityReasons": [
+        "adjudicate_reading_specific_lexical_uses",
+        "verify_dictionary_crossreferences_against_independent_usage"
+      ],
+      "independentContextVerification": "pending",
+      "independentLexicalApproval": false,
+      "independentEmojiApproval": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 285,
+      "character": "印",
+      "recordedReadings": [
+        "Yin4",
+        "yin4"
+      ],
+      "readingCount": 2,
+      "definitionFragmentCount": 11,
+      "candidateCount": 1,
+      "pictogramDeferred": false,
+      "dictionaryReferenceTokenCount": 1,
+      "hasSourceInternalReferences": true,
+      "candidateLiteralMismatchCount": 0,
+      "evidenceAcquisitionClass": 4,
+      "priorityReasons": [
+        "adjudicate_reading_specific_lexical_uses",
+        "verify_dictionary_crossreferences_against_independent_usage"
+      ],
+      "independentContextVerification": "pending",
+      "independentLexicalApproval": false,
+      "independentEmojiApproval": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 298,
+      "character": "包",
+      "recordedReadings": [
+        "Bao1",
+        "bao1"
+      ],
+      "readingCount": 2,
+      "definitionFragmentCount": 15,
+      "candidateCount": 1,
+      "pictogramDeferred": false,
+      "dictionaryReferenceTokenCount": 2,
+      "hasSourceInternalReferences": true,
+      "candidateLiteralMismatchCount": 0,
+      "evidenceAcquisitionClass": 4,
+      "priorityReasons": [
+        "adjudicate_reading_specific_lexical_uses",
+        "verify_dictionary_crossreferences_against_independent_usage"
+      ],
+      "independentContextVerification": "pending",
+      "independentLexicalApproval": false,
+      "independentEmojiApproval": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 310,
+      "character": "头",
+      "recordedReadings": [
+        "tou2",
+        "tou5"
+      ],
+      "readingCount": 2,
+      "definitionFragmentCount": 16,
+      "candidateCount": 1,
+      "pictogramDeferred": false,
+      "dictionaryReferenceTokenCount": 1,
+      "hasSourceInternalReferences": true,
+      "candidateLiteralMismatchCount": 0,
+      "evidenceAcquisitionClass": 4,
+      "priorityReasons": [
+        "adjudicate_reading_specific_lexical_uses",
+        "verify_dictionary_crossreferences_against_independent_usage"
+      ],
+      "independentContextVerification": "pending",
+      "independentLexicalApproval": false,
+      "independentEmojiApproval": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 312,
+      "character": "宁",
+      "recordedReadings": [
+        "ning4",
+        "Ning2",
+        "ning2"
+      ],
+      "readingCount": 3,
+      "definitionFragmentCount": 12,
+      "candidateCount": 1,
+      "pictogramDeferred": false,
+      "dictionaryReferenceTokenCount": 4,
+      "hasSourceInternalReferences": true,
+      "candidateLiteralMismatchCount": 0,
+      "evidenceAcquisitionClass": 4,
+      "priorityReasons": [
+        "adjudicate_reading_specific_lexical_uses",
+        "verify_dictionary_crossreferences_against_independent_usage"
+      ],
+      "independentContextVerification": "pending",
+      "independentLexicalApproval": false,
+      "independentEmojiApproval": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 318,
+      "character": "礼",
+      "recordedReadings": [
+        "Li3",
+        "li3"
+      ],
+      "readingCount": 2,
+      "definitionFragmentCount": 9,
+      "candidateCount": 1,
+      "pictogramDeferred": false,
+      "dictionaryReferenceTokenCount": 2,
+      "hasSourceInternalReferences": true,
+      "candidateLiteralMismatchCount": 0,
+      "evidenceAcquisitionClass": 4,
+      "priorityReasons": [
+        "adjudicate_reading_specific_lexical_uses",
+        "verify_dictionary_crossreferences_against_independent_usage"
+      ],
+      "independentContextVerification": "pending",
+      "independentLexicalApproval": false,
+      "independentEmojiApproval": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 337,
+      "character": "边",
+      "recordedReadings": [
+        "bian1",
+        "bian5"
+      ],
+      "readingCount": 2,
+      "definitionFragmentCount": 8,
+      "candidateCount": 1,
+      "pictogramDeferred": false,
+      "dictionaryReferenceTokenCount": 1,
+      "hasSourceInternalReferences": true,
+      "candidateLiteralMismatchCount": 0,
+      "evidenceAcquisitionClass": 4,
+      "priorityReasons": [
+        "adjudicate_reading_specific_lexical_uses",
+        "verify_dictionary_crossreferences_against_independent_usage"
+      ],
+      "independentContextVerification": "pending",
+      "independentLexicalApproval": false,
+      "independentEmojiApproval": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 342,
+      "character": "台",
+      "recordedReadings": [
+        "Tai2",
+        "tai2"
+      ],
+      "readingCount": 2,
+      "definitionFragmentCount": 17,
+      "candidateCount": 1,
+      "pictogramDeferred": false,
+      "dictionaryReferenceTokenCount": 1,
+      "hasSourceInternalReferences": true,
+      "candidateLiteralMismatchCount": 0,
+      "evidenceAcquisitionClass": 4,
+      "priorityReasons": [
+        "adjudicate_reading_specific_lexical_uses",
+        "verify_dictionary_crossreferences_against_independent_usage"
+      ],
+      "independentContextVerification": "pending",
+      "independentLexicalApproval": false,
+      "independentEmojiApproval": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 366,
+      "character": "地",
+      "recordedReadings": [
+        "de5",
+        "di4"
+      ],
+      "readingCount": 2,
+      "definitionFragmentCount": 8,
+      "candidateCount": 1,
+      "pictogramDeferred": false,
+      "dictionaryReferenceTokenCount": 1,
+      "hasSourceInternalReferences": true,
+      "candidateLiteralMismatchCount": 0,
+      "evidenceAcquisitionClass": 4,
+      "priorityReasons": [
+        "adjudicate_reading_specific_lexical_uses",
+        "verify_dictionary_crossreferences_against_independent_usage"
+      ],
+      "independentContextVerification": "pending",
+      "independentLexicalApproval": false,
+      "independentEmojiApproval": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 377,
+      "character": "机",
+      "recordedReadings": [
+        "Ji1",
+        "ji1"
+      ],
+      "readingCount": 2,
+      "definitionFragmentCount": 11,
+      "candidateCount": 1,
+      "pictogramDeferred": false,
+      "dictionaryReferenceTokenCount": 1,
+      "hasSourceInternalReferences": true,
+      "candidateLiteralMismatchCount": 0,
+      "evidenceAcquisitionClass": 4,
+      "priorityReasons": [
+        "adjudicate_reading_specific_lexical_uses",
+        "verify_dictionary_crossreferences_against_independent_usage"
+      ],
+      "independentContextVerification": "pending",
+      "independentLexicalApproval": false,
+      "independentEmojiApproval": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 402,
+      "character": "夹",
+      "recordedReadings": [
+        "jia1",
+        "jia2",
+        "jia4"
+      ],
+      "readingCount": 3,
+      "definitionFragmentCount": 16,
+      "candidateCount": 1,
+      "pictogramDeferred": false,
+      "dictionaryReferenceTokenCount": 3,
+      "hasSourceInternalReferences": true,
+      "candidateLiteralMismatchCount": 0,
+      "evidenceAcquisitionClass": 4,
+      "priorityReasons": [
+        "adjudicate_reading_specific_lexical_uses",
+        "verify_dictionary_crossreferences_against_independent_usage"
+      ],
+      "independentContextVerification": "pending",
+      "independentLexicalApproval": false,
+      "independentEmojiApproval": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 424,
+      "character": "曲",
+      "recordedReadings": [
+        "Qu1",
+        "qu1",
+        "qu3"
+      ],
+      "readingCount": 3,
+      "definitionFragmentCount": 11,
+      "candidateCount": 1,
+      "pictogramDeferred": false,
+      "dictionaryReferenceTokenCount": 2,
+      "hasSourceInternalReferences": true,
+      "candidateLiteralMismatchCount": 0,
+      "evidenceAcquisitionClass": 4,
+      "priorityReasons": [
+        "adjudicate_reading_specific_lexical_uses",
+        "verify_dictionary_crossreferences_against_independent_usage"
+      ],
+      "independentContextVerification": "pending",
+      "independentLexicalApproval": false,
+      "independentEmojiApproval": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 427,
+      "character": "同",
+      "recordedReadings": [
+        "tong2",
+        "tong4"
+      ],
+      "readingCount": 2,
+      "definitionFragmentCount": 9,
+      "candidateCount": 1,
+      "pictogramDeferred": false,
+      "dictionaryReferenceTokenCount": 2,
+      "hasSourceInternalReferences": true,
+      "candidateLiteralMismatchCount": 0,
+      "evidenceAcquisitionClass": 4,
+      "priorityReasons": [
+        "adjudicate_reading_specific_lexical_uses",
+        "verify_dictionary_crossreferences_against_independent_usage"
+      ],
+      "independentContextVerification": "pending",
+      "independentLexicalApproval": false,
+      "independentEmojiApproval": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 480,
+      "character": "向",
+      "recordedReadings": [
+        "Xiang4",
+        "xiang4"
+      ],
+      "readingCount": 2,
+      "definitionFragmentCount": 23,
+      "candidateCount": 1,
+      "pictogramDeferred": false,
+      "dictionaryReferenceTokenCount": 2,
+      "hasSourceInternalReferences": true,
+      "candidateLiteralMismatchCount": 0,
+      "evidenceAcquisitionClass": 4,
+      "priorityReasons": [
+        "adjudicate_reading_specific_lexical_uses",
+        "verify_dictionary_crossreferences_against_independent_usage"
+      ],
+      "independentContextVerification": "pending",
+      "independentLexicalApproval": false,
+      "independentEmojiApproval": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 481,
+      "character": "似",
+      "recordedReadings": [
+        "shi4",
+        "si4"
+      ],
+      "readingCount": 2,
+      "definitionFragmentCount": 9,
+      "candidateCount": 1,
+      "pictogramDeferred": false,
+      "dictionaryReferenceTokenCount": 2,
+      "hasSourceInternalReferences": true,
+      "candidateLiteralMismatchCount": 0,
+      "evidenceAcquisitionClass": 4,
+      "priorityReasons": [
+        "adjudicate_reading_specific_lexical_uses",
+        "verify_dictionary_crossreferences_against_independent_usage"
+      ],
+      "independentContextVerification": "pending",
+      "independentLexicalApproval": false,
+      "independentEmojiApproval": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 494,
+      "character": "创",
+      "recordedReadings": [
+        "chuang4",
+        "chuang1"
+      ],
+      "readingCount": 2,
+      "definitionFragmentCount": 11,
+      "candidateCount": 1,
+      "pictogramDeferred": false,
+      "dictionaryReferenceTokenCount": 2,
+      "hasSourceInternalReferences": true,
+      "candidateLiteralMismatchCount": 0,
+      "evidenceAcquisitionClass": 4,
+      "priorityReasons": [
+        "adjudicate_reading_specific_lexical_uses",
+        "verify_dictionary_crossreferences_against_independent_usage"
+      ],
+      "independentContextVerification": "pending",
+      "independentLexicalApproval": false,
+      "independentEmojiApproval": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 514,
+      "character": "庄",
+      "recordedReadings": [
+        "zhuang1",
+        "Zhuang1"
+      ],
+      "readingCount": 2,
+      "definitionFragmentCount": 9,
+      "candidateCount": 1,
+      "pictogramDeferred": false,
+      "dictionaryReferenceTokenCount": 1,
+      "hasSourceInternalReferences": true,
+      "candidateLiteralMismatchCount": 0,
+      "evidenceAcquisitionClass": 4,
+      "priorityReasons": [
+        "adjudicate_reading_specific_lexical_uses",
+        "verify_dictionary_crossreferences_against_independent_usage"
+      ],
+      "independentContextVerification": "pending",
+      "independentLexicalApproval": false,
+      "independentEmojiApproval": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 556,
+      "character": "论",
+      "recordedReadings": [
+        "Lun2",
+        "lun4"
+      ],
+      "readingCount": 2,
+      "definitionFragmentCount": 11,
+      "candidateCount": 1,
+      "pictogramDeferred": false,
+      "dictionaryReferenceTokenCount": 1,
+      "hasSourceInternalReferences": true,
+      "candidateLiteralMismatchCount": 0,
+      "evidenceAcquisitionClass": 4,
+      "priorityReasons": [
+        "adjudicate_reading_specific_lexical_uses",
+        "verify_dictionary_crossreferences_against_independent_usage"
+      ],
+      "independentContextVerification": "pending",
+      "independentLexicalApproval": false,
+      "independentEmojiApproval": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 564,
+      "character": "那",
+      "recordedReadings": [
+        "Na1",
+        "Nuo2",
+        "na3",
+        "na4",
+        "nuo2"
+      ],
+      "readingCount": 5,
+      "definitionFragmentCount": 11,
+      "candidateCount": 1,
+      "pictogramDeferred": false,
+      "dictionaryReferenceTokenCount": 2,
+      "hasSourceInternalReferences": true,
+      "candidateLiteralMismatchCount": 0,
+      "evidenceAcquisitionClass": 4,
+      "priorityReasons": [
+        "adjudicate_reading_specific_lexical_uses",
+        "verify_dictionary_crossreferences_against_independent_usage"
+      ],
+      "independentContextVerification": "pending",
+      "independentLexicalApproval": false,
+      "independentEmojiApproval": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 600,
+      "character": "弄",
+      "recordedReadings": [
+        "long4",
+        "nong4"
+      ],
+      "readingCount": 2,
+      "definitionFragmentCount": 12,
+      "candidateCount": 1,
+      "pictogramDeferred": false,
+      "dictionaryReferenceTokenCount": 2,
+      "hasSourceInternalReferences": true,
+      "candidateLiteralMismatchCount": 0,
+      "evidenceAcquisitionClass": 4,
+      "priorityReasons": [
+        "adjudicate_reading_specific_lexical_uses",
+        "verify_dictionary_crossreferences_against_independent_usage"
+      ],
+      "independentContextVerification": "pending",
+      "independentLexicalApproval": false,
+      "independentEmojiApproval": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 665,
+      "character": "花",
+      "recordedReadings": [
+        "Hua1",
+        "hua1"
+      ],
+      "readingCount": 2,
+      "definitionFragmentCount": 12,
+      "candidateCount": 1,
+      "pictogramDeferred": false,
+      "dictionaryReferenceTokenCount": 8,
+      "hasSourceInternalReferences": true,
+      "candidateLiteralMismatchCount": 0,
+      "evidenceAcquisitionClass": 4,
+      "priorityReasons": [
+        "adjudicate_reading_specific_lexical_uses",
+        "verify_dictionary_crossreferences_against_independent_usage"
+      ],
+      "independentContextVerification": "pending",
+      "independentLexicalApproval": false,
+      "independentEmojiApproval": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 675,
+      "character": "克",
+      "recordedReadings": [
+        "ke4",
+        "Ke4",
+        "kei1"
+      ],
+      "readingCount": 3,
+      "definitionFragmentCount": 14,
+      "candidateCount": 1,
+      "pictogramDeferred": false,
+      "dictionaryReferenceTokenCount": 4,
+      "hasSourceInternalReferences": true,
+      "candidateLiteralMismatchCount": 0,
+      "evidenceAcquisitionClass": 4,
+      "priorityReasons": [
+        "adjudicate_reading_specific_lexical_uses",
+        "verify_dictionary_crossreferences_against_independent_usage"
+      ],
+      "independentContextVerification": "pending",
+      "independentLexicalApproval": false,
+      "independentEmojiApproval": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 677,
+      "character": "苏",
+      "recordedReadings": [
+        "su1",
+        "Su1"
+      ],
+      "readingCount": 2,
+      "definitionFragmentCount": 12,
+      "candidateCount": 1,
+      "pictogramDeferred": false,
+      "dictionaryReferenceTokenCount": 3,
+      "hasSourceInternalReferences": true,
+      "candidateLiteralMismatchCount": 0,
+      "evidenceAcquisitionClass": 4,
+      "priorityReasons": [
+        "adjudicate_reading_specific_lexical_uses",
+        "verify_dictionary_crossreferences_against_independent_usage"
+      ],
+      "independentContextVerification": "pending",
+      "independentLexicalApproval": false,
+      "independentEmojiApproval": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 717,
+      "character": "时",
+      "recordedReadings": [
+        "shi2",
+        "Shi2"
+      ],
+      "readingCount": 2,
+      "definitionFragmentCount": 8,
+      "candidateCount": 1,
+      "pictogramDeferred": false,
+      "dictionaryReferenceTokenCount": 1,
+      "hasSourceInternalReferences": true,
+      "candidateLiteralMismatchCount": 0,
+      "evidenceAcquisitionClass": 4,
+      "priorityReasons": [
+        "adjudicate_reading_specific_lexical_uses",
+        "verify_dictionary_crossreferences_against_independent_usage"
+      ],
+      "independentContextVerification": "pending",
+      "independentLexicalApproval": false,
+      "independentEmojiApproval": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 747,
+      "character": "吧",
+      "recordedReadings": [
+        "ba1",
+        "ba5"
+      ],
+      "readingCount": 2,
+      "definitionFragmentCount": 8,
+      "candidateCount": 0,
+      "pictogramDeferred": true,
+      "dictionaryReferenceTokenCount": 1,
+      "hasSourceInternalReferences": true,
+      "candidateLiteralMismatchCount": 0,
+      "evidenceAcquisitionClass": 4,
+      "priorityReasons": [
+        "adjudicate_reading_specific_lexical_uses",
+        "verify_dictionary_crossreferences_against_independent_usage",
+        "review_source_meaning_without_emoji_candidate"
+      ],
+      "independentContextVerification": "pending",
+      "independentLexicalApproval": false,
+      "independentEmojiApproval": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 758,
+      "character": "钉",
+      "recordedReadings": [
+        "ding1",
+        "ding4"
+      ],
+      "readingCount": 2,
+      "definitionFragmentCount": 9,
+      "candidateCount": 1,
+      "pictogramDeferred": false,
+      "dictionaryReferenceTokenCount": 1,
+      "hasSourceInternalReferences": true,
+      "candidateLiteralMismatchCount": 0,
+      "evidenceAcquisitionClass": 4,
+      "priorityReasons": [
+        "adjudicate_reading_specific_lexical_uses",
+        "verify_dictionary_crossreferences_against_independent_usage"
+      ],
+      "independentContextVerification": "pending",
+      "independentLexicalApproval": false,
+      "independentEmojiApproval": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 795,
+      "character": "余",
+      "recordedReadings": [
+        "Yu2",
+        "yu2"
+      ],
+      "readingCount": 2,
+      "definitionFragmentCount": 14,
+      "candidateCount": 1,
+      "pictogramDeferred": false,
+      "dictionaryReferenceTokenCount": 1,
+      "hasSourceInternalReferences": true,
+      "candidateLiteralMismatchCount": 0,
+      "evidenceAcquisitionClass": 4,
+      "priorityReasons": [
+        "adjudicate_reading_specific_lexical_uses",
+        "verify_dictionary_crossreferences_against_independent_usage"
+      ],
+      "independentContextVerification": "pending",
+      "independentLexicalApproval": false,
+      "independentEmojiApproval": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 814,
+      "character": "角",
+      "recordedReadings": [
+        "Jue2",
+        "jiao3",
+        "jue2"
+      ],
+      "readingCount": 3,
+      "definitionFragmentCount": 11,
+      "candidateCount": 1,
+      "pictogramDeferred": false,
+      "dictionaryReferenceTokenCount": 1,
+      "hasSourceInternalReferences": true,
+      "candidateLiteralMismatchCount": 0,
+      "evidenceAcquisitionClass": 4,
+      "priorityReasons": [
+        "adjudicate_reading_specific_lexical_uses",
+        "verify_dictionary_crossreferences_against_independent_usage"
+      ],
+      "independentContextVerification": "pending",
+      "independentLexicalApproval": false,
+      "independentEmojiApproval": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 821,
+      "character": "刨",
+      "recordedReadings": [
+        "bao4",
+        "pao2"
+      ],
+      "readingCount": 2,
+      "definitionFragmentCount": 11,
+      "candidateCount": 0,
+      "pictogramDeferred": true,
+      "dictionaryReferenceTokenCount": 1,
+      "hasSourceInternalReferences": true,
+      "candidateLiteralMismatchCount": 0,
+      "evidenceAcquisitionClass": 4,
+      "priorityReasons": [
+        "adjudicate_reading_specific_lexical_uses",
+        "verify_dictionary_crossreferences_against_independent_usage",
+        "review_source_meaning_without_emoji_candidate"
+      ],
+      "independentContextVerification": "pending",
+      "independentLexicalApproval": false,
+      "independentEmojiApproval": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 860,
+      "character": "沙",
+      "recordedReadings": [
+        "Sha1",
+        "sha1"
+      ],
+      "readingCount": 2,
+      "definitionFragmentCount": 8,
+      "candidateCount": 1,
+      "pictogramDeferred": false,
+      "dictionaryReferenceTokenCount": 1,
+      "hasSourceInternalReferences": true,
+      "candidateLiteralMismatchCount": 0,
+      "evidenceAcquisitionClass": 4,
+      "priorityReasons": [
+        "adjudicate_reading_specific_lexical_uses",
+        "verify_dictionary_crossreferences_against_independent_usage"
+      ],
+      "independentContextVerification": "pending",
+      "independentLexicalApproval": false,
+      "independentEmojiApproval": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 871,
+      "character": "沉",
+      "recordedReadings": [
+        "chen1",
+        "chen2"
+      ],
+      "readingCount": 2,
+      "definitionFragmentCount": 10,
+      "candidateCount": 1,
+      "pictogramDeferred": false,
+      "dictionaryReferenceTokenCount": 1,
+      "hasSourceInternalReferences": true,
+      "candidateLiteralMismatchCount": 0,
+      "evidenceAcquisitionClass": 4,
+      "priorityReasons": [
+        "adjudicate_reading_specific_lexical_uses",
+        "verify_dictionary_crossreferences_against_independent_usage"
+      ],
+      "independentContextVerification": "pending",
+      "independentLexicalApproval": false,
+      "independentEmojiApproval": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 926,
+      "character": "劲",
+      "recordedReadings": [
+        "jin4",
+        "jing4"
+      ],
+      "readingCount": 2,
+      "definitionFragmentCount": 12,
+      "candidateCount": 1,
+      "pictogramDeferred": false,
+      "dictionaryReferenceTokenCount": 1,
+      "hasSourceInternalReferences": true,
+      "candidateLiteralMismatchCount": 0,
+      "evidenceAcquisitionClass": 4,
+      "priorityReasons": [
+        "adjudicate_reading_specific_lexical_uses",
+        "verify_dictionary_crossreferences_against_independent_usage"
+      ],
+      "independentContextVerification": "pending",
+      "independentLexicalApproval": false,
+      "independentEmojiApproval": false,
+      "productionVerified": false
+    }
+  ]
+}

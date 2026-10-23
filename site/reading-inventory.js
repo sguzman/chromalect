@@ -31,6 +31,7 @@ function shuffle(rows){
 function eligible(scope,r){
  return scope==="all"||
   (scope==="higher"&&r.tier==="higher")||
+  (scope==="higher_no_links"&&r.tier==="higher"&&!r.hasAnySourceReferences)||
   (scope==="targeted"&&r.tier==="targeted")||
   (scope==="baseline"&&r.tier==="baseline")||
   (scope==="deferred"&&r.tier==="deferred")||
@@ -177,16 +178,20 @@ async function load(){
      JSON.stringify(r.readings)!==JSON.stringify(t.dictionaryReadings)||
      t.independentLexicalApproval!==false||t.manualSenseReview!=="pending")
     throw new Error("Dictionary, glyph and triage identity conflict");
-   for(const {reading,gloss} of dictionary.split(r))rows.push({
+   const sections=dictionary.split(r);
+   const hasAnySourceReferences=sections.some(section=>references.scan(section.gloss).length>0);
+   for(const {reading,gloss} of sections)rows.push({
     rank:r.rank,character:r.character,reading,gloss,
     allReadings:r.readings,readingCount:r.readings.length,
     excerpt:r.excerpt,sourcePath:r.sourcePath,sourceBlobSha:r.sourceBlobSha,
-    tier:t.triageTier,experimentalMeaningCount:t.experimentalMeaningCount
+    tier:t.triageTier,experimentalMeaningCount:t.experimentalMeaningCount,
+    hasAnySourceReferences
    });
   }
   if(rows.length!==1393||rows.filter(r=>r.tier==="higher").length!==319||
      rows.filter(r=>r.readingCount>1).length!==732||
-     rows.filter(r=>r.experimentalMeaningCount===0).length!==173)
+     rows.filter(r=>r.experimentalMeaningCount===0).length!==173||
+     rows.filter(r=>r.tier==="higher"&&!r.hasAnySourceReferences).length!==140)
     throw new Error("Unexpected pinned reading-inventory counts");
   entries=rows;
   $("reading-start").disabled=false;

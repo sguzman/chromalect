@@ -1,0 +1,32 @@
+import assert from "node:assert/strict";
+import fs from "node:fs";
+const path="data/semantic/cedict-crossref/high-attention-evidence-priority-v0.1.json";
+const report=JSON.parse(fs.readFileSync(path,"utf8"));
+const {summary:s,records:rows}=report;
+assert.equal(report.schema,"chromalect.semantic.high-attention-reading-evidence-priority.v0.1");
+assert.equal(s.highAttentionCharacters,142);
+assert.equal(s.highAttentionDictionaryReadingEntries,319);
+assert.equal(s.highAttentionWithInternalReferences,78);
+assert.equal(s.highAttentionWithoutInternalReferences,64);
+assert.equal(s.highAttentionReadingsWithoutInternalReferences,140);
+assert.equal(s.highAttentionWithCandidateGlossMismatch,31);
+assert.equal(s.highAttentionWithNoPictogramCandidate,22);
+assert.equal(s.highAttentionWithNeitherPictogramNorInternalReferences,5);
+assert.equal(s.sourcePriorityPacketsPrepared,142);
+assert.equal(s.independentUsageContextsVerified,0);
+assert.equal(s.independentLexicalApproved,0);
+assert.equal(s.independentEmojiApproved,0);
+assert.equal(s.productionVerified,0);
+assert.equal(rows.length,142);
+const keys=new Set(rows.map(r=>r.rank));assert.equal(keys.size,142);
+for(const [i,r] of rows.entries()){
+ assert.equal(r.recordedReadings.length,r.readingCount);
+ assert.equal(r.hasSourceInternalReferences,r.dictionaryReferenceTokenCount>0);
+ assert.equal(r.independentContextVerification,"pending");
+ assert.equal(r.independentLexicalApproval,false);
+ assert.equal(r.independentEmojiApproval,false);
+ assert.equal(r.productionVerified,false);
+ assert.ok(r.priorityReasons.includes("adjudicate_reading_specific_lexical_uses"));
+ if(i)assert.ok(rows[i-1].evidenceAcquisitionClass<=r.evidenceAcquisitionClass);
+}
+console.log("Evidence acquisition queue: 142 high-attention Mandarin characters, 319 readings, no independent approvals.");
