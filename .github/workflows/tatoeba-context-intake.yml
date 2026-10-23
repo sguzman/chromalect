@@ -5,6 +5,7 @@ on:
     paths:
       - ".github/workflows/tatoeba-context-intake.yml"
       - "tools/glyph-pipeline/tatoeba_context_candidate_extract.mjs"
+      - "tools/glyph-pipeline/tatoeba_context_candidate_extract_smoke.mjs"
   workflow_dispatch:
 permissions:
   contents: read
