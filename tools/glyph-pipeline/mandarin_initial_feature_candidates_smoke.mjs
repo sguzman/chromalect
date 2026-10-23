@@ -32,8 +32,8 @@ for(const rec of d.tokens){
  assert.equal(rec.citationReadingOccurrences,observed.get(rec.token)??0);
  assert.ok(rec.citationReadingOccurrences>=0);
  summed+=rec.citationReadingOccurrences;
- assert.ok(rec.evidenceReview&&rec.evidenceReview.includes("not_independently")||
-    rec.evidenceReview==="literature_based_candidate_not_independently_adjudicated");
+ assert.ok(["literature_based_candidate_not_independently_adjudicated",
+    "not_an_independent_initial_phoneme_assignment"].includes(rec.evidenceReview));
  if(rec.category==="conventional_pinyin_initial"){
   consonants++;
   assert.ok(allowedPlace.has(rec.place));
