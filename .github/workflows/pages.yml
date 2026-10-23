@@ -446,6 +446,11 @@ jobs:
           node tools/glyph-pipeline/component_owner_complement_locators.mjs --write
           node tools/glyph-pipeline/component_owner_complement_locators.mjs --check
           node tools/glyph-pipeline/component_owner_complement_locators_smoke.mjs
+          node --check tools/glyph-pipeline/source_owner_masked_stimuli.mjs
+          node tools/glyph-pipeline/source_owner_masked_stimuli.mjs --write
+          node tools/glyph-pipeline/source_owner_masked_stimuli.mjs --check
+          node tools/glyph-pipeline/source_owner_masked_stimuli_smoke.mjs
+          test -s site/glyphs/research/owner-masked-stimuli-v0.1/index-v0.1.json
           node tools/glyph-pipeline/source_owner_independent_protocol_smoke.mjs
           mkdir -p site/research
           cp data/research/source-owner-independent-adjudication-protocol-v0.1.json site/research/
@@ -466,6 +471,7 @@ jobs:
           test -s site/component-owner-compare.html
           node tools/glyph-pipeline/component_owner_adjudication_validate_smoke.mjs
           node tools/glyph-pipeline/component_owner_adjudication_viewer_smoke.mjs
+          node --check site/source-owner-masked-preview-core.js
           node --check site/source-owner-masked-preview.js
           node tools/glyph-pipeline/source_owner_masked_preview_viewer_smoke.mjs
           test -s site/source-owner-masked-preview.html
