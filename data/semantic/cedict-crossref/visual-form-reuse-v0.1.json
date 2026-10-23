@@ -2,7 +2,7 @@
   "schema": "chromalect.semantic.visual-form-reuse.v0.1",
   "status": "research_catalog_not_semantic_uniqueness_policy",
   "source": "emoji-visibility-audit-v0.1.json",
-  "statement": "Emoji are reusable vocabulary. Sharing an emoji expression across Mandarin meanings is allowed. These groups support blind comprehension sampling and ambiguity analysis, not automatic rejection or a unique-code requirement.",
+  "statement": "Emoji are reusable vocabulary. Sharing an emoji expression across Mandarin meanings is allowed. These groups support blind comprehension sampling and ambiguity analysis, not automatic rejection or a unique-code requirement. In particular, emoji-only projections of typed events can coincide with non-event symbols; review the machine-readable event flag rather than inferring grammar from glyph appearance.",
   "summary": {
     "candidateSenseExpressions": 897,
     "distinctVisibleEmojiForms": 388,
@@ -12,7 +12,10 @@
     "maximumAssignmentsOneForm": 15,
     "independentLexicalApproved": 0,
     "independentEmojiApproved": 0,
-    "productionVerified": 0
+    "productionVerified": 0,
+    "formsMixingTypedEventsAndNonEvents": 73,
+    "assignmentsInEventNonEventMixedGroups": 341,
+    "formsWithMultipleSelectedMeanings": 165
   },
   "repeatedForms": [
     {
@@ -125,7 +128,9 @@
           "meaning": "choose",
           "typedEvent": true
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": true,
+      "distinctMeaningCount": 9
     },
     {
       "emoji": "💪",
@@ -223,7 +228,9 @@
           "meaning": "power",
           "typedEvent": false
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": true,
+      "distinctMeaningCount": 9
     },
     {
       "emoji": "↔️",
@@ -314,7 +321,9 @@
           "meaning": "expand",
           "typedEvent": true
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": true,
+      "distinctMeaningCount": 6
     },
     {
       "emoji": "⚖️",
@@ -398,7 +407,9 @@
           "meaning": "sue",
           "typedEvent": true
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": true,
+      "distinctMeaningCount": 11
     },
     {
       "emoji": "🤝",
@@ -482,7 +493,9 @@
           "meaning": "sincerity",
           "typedEvent": false
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": true,
+      "distinctMeaningCount": 10
     },
     {
       "emoji": "🗣️",
@@ -559,7 +572,9 @@
           "meaning": "speech",
           "typedEvent": false
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": true,
+      "distinctMeaningCount": 7
     },
     {
       "emoji": "🌾",
@@ -629,7 +644,9 @@
           "meaning": "abundant",
           "typedEvent": false
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": false,
+      "distinctMeaningCount": 8
     },
     {
       "emoji": "🎭",
@@ -692,7 +709,9 @@
           "meaning": "swindle",
           "typedEvent": true
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": true,
+      "distinctMeaningCount": 8
     },
     {
       "emoji": "👥",
@@ -755,7 +774,9 @@
           "meaning": "their",
           "typedEvent": false
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": false,
+      "distinctMeaningCount": 8
     },
     {
       "emoji": "👶",
@@ -818,7 +839,9 @@
           "meaning": "young",
           "typedEvent": false
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": true,
+      "distinctMeaningCount": 6
     },
     {
       "emoji": "🪢",
@@ -881,7 +904,9 @@
           "meaning": "pull",
           "typedEvent": true
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": true,
+      "distinctMeaningCount": 6
     },
     {
       "emoji": "🚫",
@@ -944,7 +969,9 @@
           "meaning": "not",
           "typedEvent": false
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": true,
+      "distinctMeaningCount": 5
     },
     {
       "emoji": "🌊",
@@ -1000,7 +1027,9 @@
           "meaning": "sink",
           "typedEvent": true
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": true,
+      "distinctMeaningCount": 5
     },
     {
       "emoji": "🌱",
@@ -1056,7 +1085,9 @@
           "meaning": "uproot",
           "typedEvent": true
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": true,
+      "distinctMeaningCount": 7
     },
     {
       "emoji": "🏘️",
@@ -1112,7 +1143,9 @@
           "meaning": "neighbor",
           "typedEvent": false
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": false,
+      "distinctMeaningCount": 3
     },
     {
       "emoji": "📣",
@@ -1168,7 +1201,9 @@
           "meaning": "announce",
           "typedEvent": true
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": true,
+      "distinctMeaningCount": 5
     },
     {
       "emoji": "🪞",
@@ -1224,7 +1259,9 @@
           "meaning": "similar",
           "typedEvent": false
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": true,
+      "distinctMeaningCount": 5
     },
     {
       "emoji": "🛠️",
@@ -1280,7 +1317,9 @@
           "meaning": "make",
           "typedEvent": true
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": true,
+      "distinctMeaningCount": 7
     },
     {
       "emoji": "🛡️",
@@ -1336,7 +1375,9 @@
           "meaning": "shelter",
           "typedEvent": true
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": true,
+      "distinctMeaningCount": 4
     },
     {
       "emoji": "✊",
@@ -1385,7 +1426,9 @@
           "meaning": "resist",
           "typedEvent": true
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": false,
+      "distinctMeaningCount": 5
     },
     {
       "emoji": "🌍",
@@ -1434,7 +1477,9 @@
           "meaning": "earth",
           "typedEvent": false
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": false,
+      "distinctMeaningCount": 5
     },
     {
       "emoji": "🌸",
@@ -1483,7 +1528,9 @@
           "meaning": "flowering",
           "typedEvent": false
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": false,
+      "distinctMeaningCount": 6
     },
     {
       "emoji": "🌿",
@@ -1532,7 +1579,9 @@
           "meaning": "pith",
           "typedEvent": false
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": false,
+      "distinctMeaningCount": 6
     },
     {
       "emoji": "🏃",
@@ -1581,7 +1630,9 @@
           "meaning": "drive away",
           "typedEvent": true
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": true,
+      "distinctMeaningCount": 6
     },
     {
       "emoji": "👀",
@@ -1630,7 +1681,9 @@
           "meaning": "appear",
           "typedEvent": true
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": false,
+      "distinctMeaningCount": 6
     },
     {
       "emoji": "📍",
@@ -1679,7 +1732,9 @@
           "meaning": "near",
           "typedEvent": false
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": false,
+      "distinctMeaningCount": 6
     },
     {
       "emoji": "🔄",
@@ -1728,7 +1783,9 @@
           "meaning": "twist",
           "typedEvent": true
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": true,
+      "distinctMeaningCount": 4
     },
     {
       "emoji": "🕳️",
@@ -1777,7 +1834,9 @@
           "meaning": "ditch",
           "typedEvent": false
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": false,
+      "distinctMeaningCount": 5
     },
     {
       "emoji": "🧵",
@@ -1826,7 +1885,9 @@
           "meaning": "weave",
           "typedEvent": true
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": true,
+      "distinctMeaningCount": 5
     },
     {
       "emoji": "🪖",
@@ -1875,7 +1936,9 @@
           "meaning": "military",
           "typedEvent": false
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": false,
+      "distinctMeaningCount": 4
     },
     {
       "emoji": "🚶",
@@ -1924,7 +1987,9 @@
           "meaning": "walk",
           "typedEvent": true
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": false,
+      "distinctMeaningCount": 4
     },
     {
       "emoji": "⏳",
@@ -1966,7 +2031,9 @@
           "meaning": "still",
           "typedEvent": false
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": true,
+      "distinctMeaningCount": 5
     },
     {
       "emoji": "⚔️",
@@ -2008,7 +2075,9 @@
           "meaning": "attack",
           "typedEvent": true
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": true,
+      "distinctMeaningCount": 3
     },
     {
       "emoji": "⚡",
@@ -2050,7 +2119,9 @@
           "meaning": "immediately",
           "typedEvent": false
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": false,
+      "distinctMeaningCount": 5
     },
     {
       "emoji": "⛰️",
@@ -2092,7 +2163,9 @@
           "meaning": "slope",
           "typedEvent": false
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": false,
+      "distinctMeaningCount": 4
     },
     {
       "emoji": "🌅",
@@ -2134,7 +2207,9 @@
           "meaning": "early morning",
           "typedEvent": false
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": false,
+      "distinctMeaningCount": 5
     },
     {
       "emoji": "🎁",
@@ -2176,7 +2251,9 @@
           "meaning": "offer",
           "typedEvent": true
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": true,
+      "distinctMeaningCount": 3
     },
     {
       "emoji": "🎨",
@@ -2218,7 +2295,9 @@
           "meaning": "mixed",
           "typedEvent": false
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": false,
+      "distinctMeaningCount": 3
     },
     {
       "emoji": "🏋️",
@@ -2260,7 +2339,9 @@
           "meaning": "lift",
           "typedEvent": true
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": true,
+      "distinctMeaningCount": 4
     },
     {
       "emoji": "👑",
@@ -2302,7 +2383,9 @@
           "meaning": "ruler",
           "typedEvent": false
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": false,
+      "distinctMeaningCount": 5
     },
     {
       "emoji": "👨",
@@ -2344,7 +2427,9 @@
           "meaning": "older brother",
           "typedEvent": false
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": false,
+      "distinctMeaningCount": 4
     },
     {
       "emoji": "👩",
@@ -2386,7 +2471,9 @@
           "meaning": "female",
           "typedEvent": false
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": false,
+      "distinctMeaningCount": 4
     },
     {
       "emoji": "📅",
@@ -2428,7 +2515,9 @@
           "meaning": "ten-day",
           "typedEvent": false
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": false,
+      "distinctMeaningCount": 4
     },
     {
       "emoji": "📏",
@@ -2470,7 +2559,9 @@
           "meaning": "strict",
           "typedEvent": false
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": false,
+      "distinctMeaningCount": 5
     },
     {
       "emoji": "📜",
@@ -2512,7 +2603,9 @@
           "meaning": "rules",
           "typedEvent": false
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": true,
+      "distinctMeaningCount": 4
     },
     {
       "emoji": "📝",
@@ -2554,7 +2647,9 @@
           "meaning": "pledge",
           "typedEvent": true
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": false,
+      "distinctMeaningCount": 5
     },
     {
       "emoji": "🔁",
@@ -2596,7 +2691,9 @@
           "meaning": "exchange",
           "typedEvent": true
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": true,
+      "distinctMeaningCount": 3
     },
     {
       "emoji": "🔙",
@@ -2638,7 +2735,9 @@
           "meaning": "return",
           "typedEvent": true
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": true,
+      "distinctMeaningCount": 3
     },
     {
       "emoji": "🔢",
@@ -2680,7 +2779,9 @@
           "meaning": "sequence",
           "typedEvent": false
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": false,
+      "distinctMeaningCount": 5
     },
     {
       "emoji": "🗑️",
@@ -2722,7 +2823,9 @@
           "meaning": "garbage",
           "typedEvent": false
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": true,
+      "distinctMeaningCount": 3
     },
     {
       "emoji": "🫂",
@@ -2764,7 +2867,9 @@
           "meaning": "embrace",
           "typedEvent": true
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": true,
+      "distinctMeaningCount": 5
     },
     {
       "emoji": "🙏",
@@ -2806,7 +2911,9 @@
           "meaning": "worship",
           "typedEvent": true
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": true,
+      "distinctMeaningCount": 5
     },
     {
       "emoji": "🚪",
@@ -2848,7 +2955,9 @@
           "meaning": "close",
           "typedEvent": true
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": true,
+      "distinctMeaningCount": 3
     },
     {
       "emoji": "🛑",
@@ -2890,7 +2999,9 @@
           "meaning": "obstruct",
           "typedEvent": true
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": true,
+      "distinctMeaningCount": 4
     },
     {
       "emoji": "❓",
@@ -2925,7 +3036,9 @@
           "meaning": "what",
           "typedEvent": false
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": true,
+      "distinctMeaningCount": 4
     },
     {
       "emoji": "➕",
@@ -2960,7 +3073,9 @@
           "meaning": "extra",
           "typedEvent": false
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": true,
+      "distinctMeaningCount": 4
     },
     {
       "emoji": "🏞️",
@@ -2995,7 +3110,9 @@
           "meaning": "valley",
           "typedEvent": false
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": false,
+      "distinctMeaningCount": 3
     },
     {
       "emoji": "🏺",
@@ -3030,7 +3147,9 @@
           "meaning": "ancient",
           "typedEvent": false
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": false,
+      "distinctMeaningCount": 2
     },
     {
       "emoji": "👉",
@@ -3065,7 +3184,9 @@
           "meaning": "this",
           "typedEvent": false
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": false,
+      "distinctMeaningCount": 3
     },
     {
       "emoji": "👋",
@@ -3100,7 +3221,9 @@
           "meaning": "beckon",
           "typedEvent": true
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": false,
+      "distinctMeaningCount": 4
     },
     {
       "emoji": "💀",
@@ -3135,7 +3258,9 @@
           "meaning": "kill",
           "typedEvent": true
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": true,
+      "distinctMeaningCount": 2
     },
     {
       "emoji": "💎",
@@ -3170,7 +3295,9 @@
           "meaning": "rare",
           "typedEvent": false
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": false,
+      "distinctMeaningCount": 4
     },
     {
       "emoji": "💧",
@@ -3205,7 +3332,9 @@
           "meaning": "pure",
           "typedEvent": false
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": true,
+      "distinctMeaningCount": 4
     },
     {
       "emoji": "📋",
@@ -3240,7 +3369,9 @@
           "meaning": "responsibility",
           "typedEvent": false
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": true,
+      "distinctMeaningCount": 4
     },
     {
       "emoji": "📦",
@@ -3275,7 +3406,9 @@
           "meaning": "contain",
           "typedEvent": true
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": true,
+      "distinctMeaningCount": 4
     },
     {
       "emoji": "🔍",
@@ -3310,7 +3443,9 @@
           "meaning": "investigate",
           "typedEvent": true
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": false,
+      "distinctMeaningCount": 3
     },
     {
       "emoji": "🔒",
@@ -3345,7 +3480,9 @@
           "meaning": "detain",
           "typedEvent": true
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": true,
+      "distinctMeaningCount": 4
     },
     {
       "emoji": "🔥",
@@ -3380,7 +3517,9 @@
           "meaning": "burn",
           "typedEvent": true
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": true,
+      "distinctMeaningCount": 3
     },
     {
       "emoji": "🔮",
@@ -3415,7 +3554,9 @@
           "meaning": "fortune telling",
           "typedEvent": false
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": false,
+      "distinctMeaningCount": 3
     },
     {
       "emoji": "🔴",
@@ -3450,7 +3591,9 @@
           "meaning": "red",
           "typedEvent": false
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": false,
+      "distinctMeaningCount": 2
     },
     {
       "emoji": "🧍",
@@ -3485,7 +3628,9 @@
           "meaning": "body",
           "typedEvent": false
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": true,
+      "distinctMeaningCount": 3
     },
     {
       "emoji": "🧩",
@@ -3520,7 +3665,9 @@
           "meaning": "piece",
           "typedEvent": false
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": true,
+      "distinctMeaningCount": 3
     },
     {
       "emoji": "♨️",
@@ -3548,7 +3695,9 @@
           "meaning": "steam",
           "typedEvent": false
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": false,
+      "distinctMeaningCount": 2
     },
     {
       "emoji": "✋",
@@ -3576,7 +3725,9 @@
           "meaning": "take",
           "typedEvent": true
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": true,
+      "distinctMeaningCount": 3
     },
     {
       "emoji": "✨",
@@ -3604,7 +3755,9 @@
           "meaning": "mysterious",
           "typedEvent": false
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": false,
+      "distinctMeaningCount": 3
     },
     {
       "emoji": "➡️",
@@ -3632,7 +3785,9 @@
           "meaning": "penetrate",
           "typedEvent": true
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": true,
+      "distinctMeaningCount": 3
     },
     {
       "emoji": "⬇️",
@@ -3660,7 +3815,9 @@
           "meaning": "fall down",
           "typedEvent": true
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": true,
+      "distinctMeaningCount": 3
     },
     {
       "emoji": "🌌",
@@ -3688,7 +3845,9 @@
           "meaning": "distant",
           "typedEvent": false
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": false,
+      "distinctMeaningCount": 2
     },
     {
       "emoji": "🌪️",
@@ -3716,7 +3875,9 @@
           "meaning": "disaster",
           "typedEvent": false
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": false,
+      "distinctMeaningCount": 2
     },
     {
       "emoji": "🌺",
@@ -3744,7 +3905,9 @@
           "meaning": "fragrant",
           "typedEvent": false
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": false,
+      "distinctMeaningCount": 3
     },
     {
       "emoji": "🍑",
@@ -3772,7 +3935,9 @@
           "meaning": "buttocks",
           "typedEvent": false
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": false,
+      "distinctMeaningCount": 3
     },
     {
       "emoji": "🎒",
@@ -3800,7 +3965,9 @@
           "meaning": "carry",
           "typedEvent": true
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": true,
+      "distinctMeaningCount": 2
     },
     {
       "emoji": "🎯",
@@ -3828,7 +3995,9 @@
           "meaning": "purpose",
           "typedEvent": false
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": false,
+      "distinctMeaningCount": 2
     },
     {
       "emoji": "🏙️",
@@ -3856,7 +4025,9 @@
           "meaning": "Shanghai",
           "typedEvent": false
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": false,
+      "distinctMeaningCount": 2
     },
     {
       "emoji": "🏠",
@@ -3884,7 +4055,9 @@
           "meaning": "dwell",
           "typedEvent": true
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": true,
+      "distinctMeaningCount": 3
     },
     {
       "emoji": "🐕",
@@ -3912,7 +4085,9 @@
           "meaning": "bark",
           "typedEvent": true
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": true,
+      "distinctMeaningCount": 3
     },
     {
       "emoji": "🐚",
@@ -3940,7 +4115,9 @@
           "meaning": "shell",
           "typedEvent": false
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": false,
+      "distinctMeaningCount": 2
     },
     {
       "emoji": "👁️",
@@ -3968,7 +4145,9 @@
           "meaning": "show",
           "typedEvent": true
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": true,
+      "distinctMeaningCount": 2
     },
     {
       "emoji": "👍",
@@ -3996,7 +4175,9 @@
           "meaning": "thumb",
           "typedEvent": false
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": false,
+      "distinctMeaningCount": 2
     },
     {
       "emoji": "👎",
@@ -4024,7 +4205,9 @@
           "meaning": "criticize",
           "typedEvent": true
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": true,
+      "distinctMeaningCount": 3
     },
     {
       "emoji": "👏",
@@ -4052,7 +4235,9 @@
           "meaning": "clap",
           "typedEvent": true
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": false,
+      "distinctMeaningCount": 3
     },
     {
       "emoji": "👤",
@@ -4080,7 +4265,9 @@
           "meaning": "i, me",
           "typedEvent": false
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": false,
+      "distinctMeaningCount": 3
     },
     {
       "emoji": "💔",
@@ -4108,7 +4295,9 @@
           "meaning": "split apart",
           "typedEvent": true
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": true,
+      "distinctMeaningCount": 3
     },
     {
       "emoji": "💰",
@@ -4136,7 +4325,9 @@
           "meaning": "profit",
           "typedEvent": false
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": false,
+      "distinctMeaningCount": 3
     },
     {
       "emoji": "📥",
@@ -4164,7 +4355,9 @@
           "meaning": "collect",
           "typedEvent": true
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": false,
+      "distinctMeaningCount": 2
     },
     {
       "emoji": "🔗",
@@ -4192,7 +4385,9 @@
           "meaning": "connection",
           "typedEvent": false
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": true,
+      "distinctMeaningCount": 3
     },
     {
       "emoji": "🗺️",
@@ -4220,7 +4415,9 @@
           "meaning": "county",
           "typedEvent": false
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": false,
+      "distinctMeaningCount": 3
     },
     {
       "emoji": "🥄",
@@ -4248,7 +4445,9 @@
           "meaning": "dipper",
           "typedEvent": false
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": false,
+      "distinctMeaningCount": 2
     },
     {
       "emoji": "🥣",
@@ -4276,7 +4475,9 @@
           "meaning": "mix",
           "typedEvent": true
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": true,
+      "distinctMeaningCount": 3
     },
     {
       "emoji": "🧑‍🤝‍🧑",
@@ -4304,7 +4505,9 @@
           "meaning": "companion",
           "typedEvent": false
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": false,
+      "distinctMeaningCount": 2
     },
     {
       "emoji": "🧠",
@@ -4332,7 +4535,9 @@
           "meaning": "forget",
           "typedEvent": true
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": true,
+      "distinctMeaningCount": 3
     },
     {
       "emoji": "🫵",
@@ -4360,7 +4565,9 @@
           "meaning": "you",
           "typedEvent": false
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": false,
+      "distinctMeaningCount": 1
     },
     {
       "emoji": "😮‍💨",
@@ -4388,7 +4595,9 @@
           "meaning": "choke",
           "typedEvent": true
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": true,
+      "distinctMeaningCount": 2
     },
     {
       "emoji": "🟰",
@@ -4416,7 +4625,9 @@
           "meaning": "equal",
           "typedEvent": false
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": false,
+      "distinctMeaningCount": 2
     },
     {
       "emoji": "2️⃣",
@@ -4444,7 +4655,9 @@
           "meaning": "two",
           "typedEvent": false
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": false,
+      "distinctMeaningCount": 2
     },
     {
       "emoji": "▶️",
@@ -4465,7 +4678,9 @@
           "meaning": "beginning",
           "typedEvent": false
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": true,
+      "distinctMeaningCount": 2
     },
     {
       "emoji": "☀️",
@@ -4486,7 +4701,9 @@
           "meaning": "sun",
           "typedEvent": false
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": false,
+      "distinctMeaningCount": 1
     },
     {
       "emoji": "⚠️",
@@ -4507,7 +4724,9 @@
           "meaning": "warn",
           "typedEvent": true
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": true,
+      "distinctMeaningCount": 2
     },
     {
       "emoji": "⛵",
@@ -4528,7 +4747,9 @@
           "meaning": "boat",
           "typedEvent": false
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": false,
+      "distinctMeaningCount": 2
     },
     {
       "emoji": "✂️",
@@ -4549,7 +4770,9 @@
           "meaning": "divide",
           "typedEvent": true
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": false,
+      "distinctMeaningCount": 2
     },
     {
       "emoji": "✍️",
@@ -4570,7 +4793,9 @@
           "meaning": "write",
           "typedEvent": true
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": true,
+      "distinctMeaningCount": 2
     },
     {
       "emoji": "❗",
@@ -4591,7 +4816,9 @@
           "meaning": "must",
           "typedEvent": false
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": false,
+      "distinctMeaningCount": 1
     },
     {
       "emoji": "❤️",
@@ -4612,7 +4839,9 @@
           "meaning": "heart",
           "typedEvent": false
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": false,
+      "distinctMeaningCount": 2
     },
     {
       "emoji": "➰",
@@ -4633,7 +4862,9 @@
           "meaning": "bent",
           "typedEvent": false
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": false,
+      "distinctMeaningCount": 1
     },
     {
       "emoji": "⬅️",
@@ -4654,7 +4885,9 @@
           "meaning": "west",
           "typedEvent": false
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": false,
+      "distinctMeaningCount": 2
     },
     {
       "emoji": "⬆️",
@@ -4675,7 +4908,9 @@
           "meaning": "go up",
           "typedEvent": false
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": false,
+      "distinctMeaningCount": 1
     },
     {
       "emoji": "⬜",
@@ -4696,7 +4931,9 @@
           "meaning": "flat",
           "typedEvent": false
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": false,
+      "distinctMeaningCount": 2
     },
     {
       "emoji": "🀄",
@@ -4717,7 +4954,9 @@
           "meaning": "Chinese",
           "typedEvent": false
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": false,
+      "distinctMeaningCount": 2
     },
     {
       "emoji": "🌊🧱",
@@ -4738,7 +4977,9 @@
           "meaning": "dam",
           "typedEvent": false
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": false,
+      "distinctMeaningCount": 1
     },
     {
       "emoji": "🌬️",
@@ -4759,7 +5000,9 @@
           "meaning": "blow",
           "typedEvent": true
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": true,
+      "distinctMeaningCount": 2
     },
     {
       "emoji": "🌳",
@@ -4780,7 +5023,9 @@
           "meaning": "willow",
           "typedEvent": false
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": false,
+      "distinctMeaningCount": 2
     },
     {
       "emoji": "🍀",
@@ -4801,7 +5046,9 @@
           "meaning": "luck",
           "typedEvent": false
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": false,
+      "distinctMeaningCount": 2
     },
     {
       "emoji": "🍋",
@@ -4822,7 +5069,9 @@
           "meaning": "bitter",
           "typedEvent": false
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": false,
+      "distinctMeaningCount": 1
     },
     {
       "emoji": "🎉",
@@ -4843,7 +5092,9 @@
           "meaning": "indulge",
           "typedEvent": true
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": false,
+      "distinctMeaningCount": 2
     },
     {
       "emoji": "🎵",
@@ -4864,7 +5115,9 @@
           "meaning": "sing",
           "typedEvent": true
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": true,
+      "distinctMeaningCount": 2
     },
     {
       "emoji": "🏁",
@@ -4885,7 +5138,9 @@
           "meaning": "arrive",
           "typedEvent": true
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": false,
+      "distinctMeaningCount": 1
     },
     {
       "emoji": "🏆",
@@ -4906,7 +5161,9 @@
           "meaning": "excellent",
           "typedEvent": false
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": false,
+      "distinctMeaningCount": 2
     },
     {
       "emoji": "🏓",
@@ -4927,7 +5184,9 @@
           "meaning": "ping pong",
           "typedEvent": false
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": false,
+      "distinctMeaningCount": 1
     },
     {
       "emoji": "🏝️",
@@ -4948,7 +5207,9 @@
           "meaning": "island",
           "typedEvent": false
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": false,
+      "distinctMeaningCount": 1
     },
     {
       "emoji": "🏬",
@@ -4969,7 +5230,9 @@
           "meaning": "storehouse",
           "typedEvent": false
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": false,
+      "distinctMeaningCount": 2
     },
     {
       "emoji": "🏭",
@@ -4990,7 +5253,9 @@
           "meaning": "chimney",
           "typedEvent": false
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": false,
+      "distinctMeaningCount": 2
     },
     {
       "emoji": "🏹",
@@ -5011,7 +5276,9 @@
           "meaning": "arrow",
           "typedEvent": false
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": false,
+      "distinctMeaningCount": 2
     },
     {
       "emoji": "🐦",
@@ -5032,7 +5299,9 @@
           "meaning": "chirping",
           "typedEvent": false
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": false,
+      "distinctMeaningCount": 2
     },
     {
       "emoji": "👂",
@@ -5053,7 +5322,9 @@
           "meaning": "hear",
           "typedEvent": true
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": true,
+      "distinctMeaningCount": 2
     },
     {
       "emoji": "👊",
@@ -5074,7 +5345,9 @@
           "meaning": "strike",
           "typedEvent": true
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": false,
+      "distinctMeaningCount": 1
     },
     {
       "emoji": "👕",
@@ -5095,7 +5368,9 @@
           "meaning": "wear",
           "typedEvent": true
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": true,
+      "distinctMeaningCount": 2
     },
     {
       "emoji": "👴",
@@ -5116,7 +5391,9 @@
           "meaning": "grandfather",
           "typedEvent": false
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": false,
+      "distinctMeaningCount": 2
     },
     {
       "emoji": "👻",
@@ -5137,7 +5414,9 @@
           "meaning": "supernatural",
           "typedEvent": false
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": false,
+      "distinctMeaningCount": 2
     },
     {
       "emoji": "💡",
@@ -5158,7 +5437,9 @@
           "meaning": "lamp",
           "typedEvent": false
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": false,
+      "distinctMeaningCount": 2
     },
     {
       "emoji": "💥",
@@ -5179,7 +5460,9 @@
           "meaning": "annihilate",
           "typedEvent": true
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": false,
+      "distinctMeaningCount": 2
     },
     {
       "emoji": "📄",
@@ -5200,7 +5483,9 @@
           "meaning": "paper",
           "typedEvent": false
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": false,
+      "distinctMeaningCount": 2
     },
     {
       "emoji": "📉",
@@ -5221,7 +5506,9 @@
           "meaning": "lose",
           "typedEvent": false
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": false,
+      "distinctMeaningCount": 1
     },
     {
       "emoji": "📊",
@@ -5242,7 +5529,9 @@
           "meaning": "evaluate",
           "typedEvent": true
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": true,
+      "distinctMeaningCount": 2
     },
     {
       "emoji": "📖",
@@ -5263,7 +5552,9 @@
           "meaning": "book",
           "typedEvent": false
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": false,
+      "distinctMeaningCount": 1
     },
     {
       "emoji": "📰",
@@ -5284,7 +5575,9 @@
           "meaning": "report",
           "typedEvent": true
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": true,
+      "distinctMeaningCount": 2
     },
     {
       "emoji": "🔀",
@@ -5305,7 +5598,9 @@
           "meaning": "twist",
           "typedEvent": true
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": true,
+      "distinctMeaningCount": 2
     },
     {
       "emoji": "🔓",
@@ -5326,7 +5621,9 @@
           "meaning": "open",
           "typedEvent": true
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": false,
+      "distinctMeaningCount": 1
     },
     {
       "emoji": "🔝",
@@ -5347,7 +5644,9 @@
           "meaning": "top",
           "typedEvent": false
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": false,
+      "distinctMeaningCount": 2
     },
     {
       "emoji": "🔤",
@@ -5368,7 +5667,9 @@
           "meaning": "words",
           "typedEvent": false
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": false,
+      "distinctMeaningCount": 2
     },
     {
       "emoji": "🔪",
@@ -5389,7 +5690,9 @@
           "meaning": "knife edge",
           "typedEvent": false
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": false,
+      "distinctMeaningCount": 2
     },
     {
       "emoji": "🔷",
@@ -5410,7 +5713,9 @@
           "meaning": "shape",
           "typedEvent": false
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": false,
+      "distinctMeaningCount": 1
     },
     {
       "emoji": "🕊️",
@@ -5431,7 +5736,9 @@
           "meaning": "peaceful",
           "typedEvent": false
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": false,
+      "distinctMeaningCount": 1
     },
     {
       "emoji": "🗣️🔁",
@@ -5452,7 +5759,9 @@
           "meaning": "talkative",
           "typedEvent": true
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": false,
+      "distinctMeaningCount": 2
     },
     {
       "emoji": "🤏",
@@ -5473,7 +5782,9 @@
           "meaning": "few",
           "typedEvent": false
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": false,
+      "distinctMeaningCount": 2
     },
     {
       "emoji": "🤕",
@@ -5494,7 +5805,9 @@
           "meaning": "clumsy",
           "typedEvent": false
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": false,
+      "distinctMeaningCount": 2
     },
     {
       "emoji": "🤡",
@@ -5515,7 +5828,9 @@
           "meaning": "foolish",
           "typedEvent": false
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": false,
+      "distinctMeaningCount": 2
     },
     {
       "emoji": "🤮",
@@ -5536,7 +5851,9 @@
           "meaning": "vomit",
           "typedEvent": true
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": false,
+      "distinctMeaningCount": 1
     },
     {
       "emoji": "🤲",
@@ -5557,7 +5874,9 @@
           "meaning": "serve",
           "typedEvent": true
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": false,
+      "distinctMeaningCount": 2
     },
     {
       "emoji": "🥇",
@@ -5578,7 +5897,9 @@
           "meaning": "first",
           "typedEvent": false
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": false,
+      "distinctMeaningCount": 1
     },
     {
       "emoji": "🥏",
@@ -5599,7 +5920,9 @@
           "meaning": "throw",
           "typedEvent": true
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": false,
+      "distinctMeaningCount": 1
     },
     {
       "emoji": "🥤",
@@ -5620,7 +5943,9 @@
           "meaning": "drink",
           "typedEvent": true
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": false,
+      "distinctMeaningCount": 2
     },
     {
       "emoji": "🥷",
@@ -5641,7 +5966,9 @@
           "meaning": "rob",
           "typedEvent": true
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": false,
+      "distinctMeaningCount": 1
     },
     {
       "emoji": "🦯",
@@ -5662,7 +5989,9 @@
           "meaning": "lean on",
           "typedEvent": true
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": true,
+      "distinctMeaningCount": 2
     },
     {
       "emoji": "🧊",
@@ -5683,7 +6012,9 @@
           "meaning": "freeze",
           "typedEvent": true
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": true,
+      "distinctMeaningCount": 2
     },
     {
       "emoji": "🧑‍💼",
@@ -5704,7 +6035,9 @@
           "meaning": "government official",
           "typedEvent": false
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": false,
+      "distinctMeaningCount": 2
     },
     {
       "emoji": "🧑‍🔧",
@@ -5725,7 +6058,9 @@
           "meaning": "service",
           "typedEvent": false
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": false,
+      "distinctMeaningCount": 2
     },
     {
       "emoji": "🧭",
@@ -5746,7 +6081,9 @@
           "meaning": "guide",
           "typedEvent": true
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": true,
+      "distinctMeaningCount": 2
     },
     {
       "emoji": "🧮",
@@ -5767,7 +6104,9 @@
           "meaning": "estimate",
           "typedEvent": true
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": true,
+      "distinctMeaningCount": 2
     },
     {
       "emoji": "🧹",
@@ -5788,7 +6127,9 @@
           "meaning": "brush away",
           "typedEvent": true
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": false,
+      "distinctMeaningCount": 2
     },
     {
       "emoji": "🧼",
@@ -5809,7 +6150,9 @@
           "meaning": "soap",
           "typedEvent": false
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": false,
+      "distinctMeaningCount": 2
     },
     {
       "emoji": "🩹",
@@ -5830,7 +6173,9 @@
           "meaning": "repair",
           "typedEvent": true
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": false,
+      "distinctMeaningCount": 2
     },
     {
       "emoji": "🪓",
@@ -5851,7 +6196,9 @@
           "meaning": "cut down",
           "typedEvent": true
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": true,
+      "distinctMeaningCount": 2
     },
     {
       "emoji": "🪙",
@@ -5872,7 +6219,9 @@
           "meaning": "stingy",
           "typedEvent": false
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": false,
+      "distinctMeaningCount": 2
     },
     {
       "emoji": "🪝",
@@ -5893,7 +6242,9 @@
           "meaning": "hang",
           "typedEvent": true
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": true,
+      "distinctMeaningCount": 2
     },
     {
       "emoji": "🪡",
@@ -5914,7 +6265,9 @@
           "meaning": "needle",
           "typedEvent": false
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": true,
+      "distinctMeaningCount": 2
     },
     {
       "emoji": "🪨",
@@ -5935,7 +6288,9 @@
           "meaning": "clod of earth",
           "typedEvent": false
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": false,
+      "distinctMeaningCount": 2
     },
     {
       "emoji": "🪵",
@@ -5956,7 +6311,9 @@
           "meaning": "timber",
           "typedEvent": false
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": false,
+      "distinctMeaningCount": 2
     },
     {
       "emoji": "🫁",
@@ -5977,7 +6334,9 @@
           "meaning": "chest",
           "typedEvent": false
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": true,
+      "distinctMeaningCount": 2
     },
     {
       "emoji": "🫳🗑️",
@@ -5998,7 +6357,9 @@
           "meaning": "throw away",
           "typedEvent": true
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": false,
+      "distinctMeaningCount": 1
     },
     {
       "emoji": "😀",
@@ -6019,7 +6380,9 @@
           "meaning": "happy",
           "typedEvent": false
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": false,
+      "distinctMeaningCount": 1
     },
     {
       "emoji": "😔",
@@ -6040,7 +6403,9 @@
           "meaning": "sad",
           "typedEvent": false
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": false,
+      "distinctMeaningCount": 2
     },
     {
       "emoji": "😠",
@@ -6061,7 +6426,9 @@
           "meaning": "jealous",
           "typedEvent": false
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": false,
+      "distinctMeaningCount": 1
     },
     {
       "emoji": "😮",
@@ -6082,7 +6449,9 @@
           "meaning": "swallow",
           "typedEvent": true
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": true,
+      "distinctMeaningCount": 2
     },
     {
       "emoji": "🚚",
@@ -6103,7 +6472,9 @@
           "meaning": "transport",
           "typedEvent": true
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": false,
+      "distinctMeaningCount": 2
     },
     {
       "emoji": "🚧",
@@ -6124,7 +6495,9 @@
           "meaning": "border",
           "typedEvent": false
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": false,
+      "distinctMeaningCount": 1
     },
     {
       "emoji": "🛖",
@@ -6145,7 +6518,9 @@
           "meaning": "hut",
           "typedEvent": false
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": false,
+      "distinctMeaningCount": 1
     },
     {
       "emoji": "🛣️",
@@ -6166,7 +6541,9 @@
           "meaning": "fork in road",
           "typedEvent": false
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": false,
+      "distinctMeaningCount": 2
     },
     {
       "emoji": "🛤️",
@@ -6187,7 +6564,9 @@
           "meaning": "track",
           "typedEvent": false
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": false,
+      "distinctMeaningCount": 2
     },
     {
       "emoji": "🟢",
@@ -6208,7 +6587,9 @@
           "meaning": "green",
           "typedEvent": false
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": false,
+      "distinctMeaningCount": 1
     },
     {
       "emoji": "1️⃣",
@@ -6229,7 +6610,9 @@
           "meaning": "only",
           "typedEvent": false
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": false,
+      "distinctMeaningCount": 2
     },
     {
       "emoji": "3️⃣",
@@ -6250,7 +6633,9 @@
           "meaning": "third",
           "typedEvent": false
         }
-      ]
+      ],
+      "mixesTypedEventAndNonEvent": false,
+      "distinctMeaningCount": 2
     }
   ]
 }
