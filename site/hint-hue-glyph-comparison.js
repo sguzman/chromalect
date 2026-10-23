@@ -27,18 +27,22 @@ const allowedSurface=new Set(["theme","white","black"]);
 function cohort(){
  const query=$("hg-query").value.trim().toLowerCase();
  const focus=$("hg-risk-filter").value;
- if(!["all","introduced","new_close","original_close","resolved"].includes(focus))
+ if(!["all","introduced","new_close","original_close","resolved",
+  "optimized_close","optimized_new","optimized_resolved"].includes(focus))
   throw Error("Unsupported color proximity research filter");
  const order=$("hg-risk-order").value;
- if(!["rank","introduced","candidate_min","deterioration"].includes(order))
+ if(!["rank","introduced","candidate_min","deterioration","optimized_min"].includes(order))
   throw Error("Unsupported source color-risk ordering");
  const selected=records.filter(r=>{
-  const risk=riskRows.get(r.rank);
+  const risk=riskRows.get(r.rank),updated=optimizedRows.get(r.rank);
   const matches=focus==="all"||
    (focus==="introduced"&&risk.introducedClosePairs>0)||
    (focus==="new_close"&&risk.candidateClosePairs>0)||
    (focus==="original_close"&&risk.originalClosePairs>0)||
-   (focus==="resolved"&&risk.resolvedClosePairs>0);
+   (focus==="resolved"&&risk.resolvedClosePairs>0)||
+   (focus==="optimized_close"&&updated.optimizedClosePairs>0)||
+   (focus==="optimized_new"&&updated.newOptimizedClosePairs>0)||
+   (focus==="optimized_resolved"&&updated.resolvedOriginalClosePairs>0);
   return matches&&(!query||String(r.rank)===query||
    r.character.toLowerCase().includes(query)||
    r.changedComponentIds.some(id=>id.toLowerCase().includes(query)));
@@ -51,6 +55,10 @@ function cohort(){
   const deltas=riskRows.get(r.rank).reviewPairs.map(p=>p.changeDeltaOk);
   return deltas.length?Math.min(...deltas):0;
  };
+ const optimizedMin=r=>{
+  const deltas=optimizedRows.get(r.rank).reviewPairs.map(p=>p.optimized.deltaOk);
+  return deltas.length?Math.min(...deltas):Infinity;
+ };
  selected.sort((a,b)=>
   order==="introduced"?
    riskRows.get(b.rank).introducedClosePairs-riskRows.get(a.rank).introducedClosePairs||a.rank-b.rank:
@@ -58,6 +66,8 @@ function cohort(){
    minimum(a)-minimum(b)||a.rank-b.rank:
   order==="deterioration"?
    decline(a)-decline(b)||a.rank-b.rank:
+  order==="optimized_min"?
+   optimizedMin(a)-optimizedMin(b)||a.rank-b.rank:
   a.rank-b.rank);
  return selected;
 }
