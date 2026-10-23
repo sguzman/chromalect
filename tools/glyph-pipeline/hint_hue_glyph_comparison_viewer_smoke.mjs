@@ -30,6 +30,8 @@ const demo=deriveSourceGlyphCounterfactual(catalog,manifest,source,
  file=>fixtures[file],{expectedGlyphCount:2});
 const output=structuredClone(demo.manifest);
 output.summary.catalogGlyphs=1000;output.summary.untouchedGlyphs=999;
+output.summary.generatedSourceManifestGlyphs=1007;
+output.summary.excludedOutsideActiveTranche=7;
 const script=fs.readFileSync("site/hint-hue-glyph-comparison.js","utf8"),
  html=fs.readFileSync("site/hint-hue-glyph-comparison.html","utf8");
 class Node{
@@ -66,6 +68,7 @@ assert.equal(ui["hg-compare"].children.length,2);
 assert.equal(ui["hg-select"].children.length,1);
 assert.match(ui["hg-count"].textContent,/1 \/ 1 research-eligible glyphs/);
 assert.match(ui["hg-status"].textContent,/Original SVGs and geometries verified/);
+assert.match(ui["hg-status"].textContent,/7 additional source-manifest records are excluded/);
 assert.equal(ui["hg-compare"].children[0].children[1].children[0].src,
  "glyphs/U+4E00.svg");
 assert.equal(ui["hg-compare"].children[1].children[1].children[0].src,
