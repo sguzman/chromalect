@@ -37,6 +37,7 @@ async function settle(v){for(let i=0;i<35&&!v["cell-native"].textContent&&
  !v["cell-status"].textContent.includes("Unable");i++)await Promise.resolve();}
 const view=setup();await settle(view);
 assert.equal(view["cell-native"].textContent,"一");
+assert.match(view["cell-status"].textContent,/1,171 source readings/);
 assert.equal(view["cell-side"].children.length,1);
 view["cell-initial-symbols"].checked=true;view["cell-initial-symbols"].events.change();
 assert.match(view["cell-side"].children[0].children[1].textContent,/No consonant shape/);
@@ -54,7 +55,7 @@ assert.equal(view["cell-bottom"].children[0].children[1].children.length,1);
 view["cell-final-symbols"].checked=false;view["cell-final-symbols"].events.change();
 assert.equal(view["cell-top"].children.length,1);
 assert.match(view["cell-code"].textContent,/yī/);
-assert.match(view["cell-status"].textContent,/1,171 source readings/);
+
 view["cell-initial"].checked=false;view["cell-initial"].events.change();
 assert.equal(view["cell-side"].children.length,0);
 view["cell-initial"].checked=true;
