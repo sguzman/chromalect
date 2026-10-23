@@ -49,6 +49,7 @@ This is a sequence of **evidence gates**, not a promise to build a large applica
 - [x] Build source-first lexical and blind emoji-comprehension worksheets with local-only exports.
 - [x] Add reading-specific provisional selections, unresolved statuses, and high-attention polysemy cohorts without promotion.
 - [x] Extend source-first review to all 1,393 pinned reading records, including deferred pictograms, with local-only observations and validation.
+- [x] Collect independent dictionary source locations and provisional contrasts for five first-priority characters (11 reading entries).
 - [ ] Independently adjudicate attested readings and usage-specific lexical senses, including higher-attention cases.
 - [ ] Conduct independently controlled blind emoji comprehension and accessibility evaluations.
 - [ ] Promote only after separately demonstrated lexical and pictogram acceptance. Currently approved: 0.

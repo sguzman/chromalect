@@ -9,7 +9,7 @@ const references=globalThis.ChromalectDictionaryReferences;
 const ids=["reading-scope","reading-count","reading-start","reading-export",
  "reading-status","reading-session","reading-count-label","reading-progress",
  "reading-progress-fill","reading-glyph","reading-rank","reading-current",
- "reading-gloss","reading-references","reading-other","reading-full","reading-source-id",
+ "reading-gloss","reading-references","reading-external-sources","reading-other","reading-full","reading-source-id",
  "reading-form","reading-usage","reading-unit","reading-example","reading-reference",
  "reading-rationale","reading-commit","reading-after","reading-next"];
 if(!layers||!dictionary||!references||ids.some(id=>!$(id)))return;
@@ -17,7 +17,7 @@ const blocks=["0001-0200","0201-0400","0401-0600","0601-0800","0801-1000"];
 const sourceRevision="63c2569948629323b515833930fdd10f285401b6";
 const categories=new Set(["ordinary","specialized","historical","proper_name","graphic","undetermined"]);
 const units=new Set(["standalone","in_word","both","undetermined"]);
-let entries=[],profile=new Map(),trials=[],records=[],index=0,locked=false;
+let entries=[],profile=new Map(),externalSources=new Map(),trials=[],records=[],index=0,locked=false;
 let sessionScope=null,sessionCount=null;
 function status(text){$("reading-status").textContent=text;}
 function shuffle(rows){
@@ -83,6 +83,19 @@ function show(){
  }
  $("reading-other").textContent=r.allReadings.join(" · ");
  $("reading-full").textContent=r.excerpt;
+ const external=$("reading-external-sources");
+ external.replaceChildren();
+ const packet=externalSources.get(r.rank);
+ if(!packet){
+  external.textContent="No additional dictionary pilot source available for this character.";
+ }else{
+  external.textContent="";
+  for(const item of packet.sources){
+   const p=document.createElement("p"),a=document.createElement("a");
+   a.href=item.url;a.rel="noopener noreferrer";a.textContent=item.publisher;
+   p.appendChild(a);external.appendChild(p);
+  }
+ }
  $("reading-source-id").textContent="CC-CEDICT "+r.sourcePath+
   " · pinned blob "+r.sourceBlobSha+" · CC BY-SA 4.0";
  for(const id of ["reading-usage","reading-unit","reading-example","reading-reference","reading-rationale"])$(id).value="";
@@ -146,12 +159,23 @@ async function load(){
  try{
   const responses=await Promise.all([
    fetch("semantic/polysemy-triage-v0.1.json"),
+   fetch("semantic/external-dictionary-reconnaissance-v0.1.json"),
    ...blocks.map(b=>fetch("semantic/dictionary-excerpts-"+b+".json")),
    fetch("profiles/mandarin-1000-v1.json")
   ]);
   if(responses.some(r=>!r.ok))throw new Error("Missing published source files");
-  const [triage,...other]=await Promise.all(responses.map(r=>r.json()));
+  const [triage,pilot,...other]=await Promise.all(responses.map(r=>r.json()));
   const glyphs=other.pop();
+  if(pilot.schema!=="chromalect.semantic.external-dictionary-reconnaissance.v0.1"||
+     pilot.status!=="preliminary_external_dictionary_comparison_not_independent_approval"||
+     pilot.summary.firstPriorityCharacters!==5||
+     pilot.summary.independentLexicalApproved!==0||
+     pilot.summary.productionVerified!==0||
+     pilot.records.length!==5||
+     pilot.records.some(r=>r.independentAdjudication!=="pending"||
+      r.productionVerified!==false||r.sources.some(s=>!s.url.startsWith("https://"))))
+    throw new Error("Invalid preliminary external dictionary research records");
+  externalSources=new Map(pilot.records.map(r=>[r.rank,r]));
   if(triage.schema!=="chromalect.semantic.polysemy-screening-triage.v0.1"||
     triage.summary.charactersAudited!==1000||
     triage.summary.independentLexicalApproved!==0||

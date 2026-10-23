@@ -1,0 +1,314 @@
+{
+  "schema": "chromalect.semantic.external-dictionary-reconnaissance.v0.1",
+  "status": "preliminary_external_dictionary_comparison_not_independent_approval",
+  "researchedUTCDate": "2026-10-23",
+  "source": {
+    "priorityQueue": "high-attention-evidence-priority-v0.1.json",
+    "ccCedictRevision": "63c2569948629323b515833930fdd10f285401b6",
+    "ccCedictLicense": "CC BY-SA 4.0"
+  },
+  "limitations": [
+    "External dictionary pages may change and have their own attribution and redistribution rules.",
+    "Preliminary paraphrases and word leads are not independently adjudicated contemporary Mandarin senses or corpus attestations.",
+    "Traditional and simplified graph organization, historical readings and Taiwan/Mainland conventions may differ.",
+    "No provisional notes authorize production semantics, character-level emoji approval or word-level semantic mappings."
+  ],
+  "summary": {
+    "firstPriorityCharacters": 5,
+    "highAttentionCharacters": 142,
+    "readingEntriesConsidered": 11,
+    "externalSourceUrls": 12,
+    "sourcePacketsPrepared": 5,
+    "independentlyAdjudicatedContexts": 0,
+    "independentLexicalApproved": 0,
+    "independentEmojiApproved": 0,
+    "productionVerified": 0
+  },
+  "records": [
+    {
+      "rank": 127,
+      "character": "长",
+      "dictionaryReadings": [
+        "chang2",
+        "zhang3"
+      ],
+      "sources": [
+        {
+          "id": "zdic",
+          "publisher": "汉典 Chinese character entry",
+          "url": "https://zdic.net/hans/%E9%95%BF",
+          "sourceReadings": [
+            "chang2",
+            "zhang3"
+          ]
+        },
+        {
+          "id": "wiktionary",
+          "publisher": "Wiktionary traditional-form entry",
+          "url": "https://en.wiktionary.org/wiki/%E9%95%B7",
+          "sourceReadings": [
+            "chang2",
+            "zhang3"
+          ]
+        }
+      ],
+      "preliminaryReadingNotes": [
+        {
+          "reading": "chang2",
+          "sourceIds": [
+            "zdic",
+            "wiktionary"
+          ],
+          "sourceBasedParaphrase": "The source separates length and duration uses from the other pronunciation.",
+          "unresolvedQuestion": "Distinguish adjectives, nouns and contextual uses; the word 长度 is a lead, not an independently verified example."
+        },
+        {
+          "reading": "zhang3",
+          "sourceIds": [
+            "zdic",
+            "wiktionary"
+          ],
+          "sourceBasedParaphrase": "Growth and elder/leadership usages are described under this reading.",
+          "unresolvedQuestion": "Separate growth events and titles; 长大 is a contextual lead."
+        }
+      ],
+      "independentAdjudication": "pending",
+      "lexicalReview": "pending",
+      "emojiComprehensionReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 142,
+      "character": "从",
+      "dictionaryReadings": [
+        "Cong2",
+        "cong2",
+        "zong4"
+      ],
+      "sources": [
+        {
+          "id": "zdic_s",
+          "publisher": "汉典 simplified-form entry",
+          "url": "https://zdic.net/hans/%E4%BB%8E",
+          "sourceReadings": [
+            "Cong2",
+            "cong2"
+          ]
+        },
+        {
+          "id": "zdic_t",
+          "publisher": "汉典 traditional-form entry",
+          "url": "https://zdic.net/hans/%E5%BE%9E",
+          "sourceReadings": [
+            "cong2",
+            "zong4"
+          ]
+        },
+        {
+          "id": "wiktionary",
+          "publisher": "Wiktionary traditional-form entry",
+          "url": "https://en.wiktionary.org/wiki/%E5%BE%9E",
+          "sourceReadings": [
+            "cong2",
+            "zong4"
+          ]
+        }
+      ],
+      "preliminaryReadingNotes": [
+        {
+          "reading": "Cong2",
+          "sourceIds": [
+            "zdic_s"
+          ],
+          "sourceBasedParaphrase": "The simplified-form dictionary recognizes a surname usage.",
+          "unresolvedQuestion": "Capitalization in CC-CEDICT does not establish a distinct spoken reading; context remains unadjudicated."
+        },
+        {
+          "reading": "cong2",
+          "sourceIds": [
+            "zdic_s",
+            "zdic_t"
+          ],
+          "sourceBasedParaphrase": "Following, compliance and source/preposition usages appear in independently maintained dictionary entries.",
+          "unresolvedQuestion": "Separate grammatical functions and bound-word contexts such as 从事."
+        },
+        {
+          "reading": "zong4",
+          "sourceIds": [
+            "zdic_t",
+            "wiktionary"
+          ],
+          "sourceBasedParaphrase": "Traditional-form sources include nonprimary reading categories, with divergent organization of historical and related uses.",
+          "unresolvedQuestion": "Confirm whether the reading is used for the simplified form in modern Mainland contexts."
+        }
+      ],
+      "independentAdjudication": "pending",
+      "lexicalReview": "pending",
+      "emojiComprehensionReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 201,
+      "character": "扒",
+      "dictionaryReadings": [
+        "ba1",
+        "pa2"
+      ],
+      "sources": [
+        {
+          "id": "moe_ba",
+          "publisher": "Taiwan MOE Concised Mandarin Dictionary bā",
+          "url": "https://dict.concised.moe.edu.tw/dictView.jsp?ID=23&la=0&powerMode=0",
+          "sourceReadings": [
+            "ba1"
+          ]
+        },
+        {
+          "id": "moe_pa",
+          "publisher": "Taiwan MOE Concised Mandarin Dictionary pá",
+          "url": "https://dict.concised.moe.edu.tw/dictView.jsp?ID=2401&la=0&powerMode=0",
+          "sourceReadings": [
+            "pa2"
+          ]
+        },
+        {
+          "id": "wiktionary",
+          "publisher": "Wiktionary character entry",
+          "url": "https://en.wiktionary.org/wiki/%E6%89%92",
+          "sourceReadings": [
+            "ba1",
+            "pa2"
+          ]
+        }
+      ],
+      "preliminaryReadingNotes": [
+        {
+          "reading": "ba1",
+          "sourceIds": [
+            "moe_ba",
+            "wiktionary"
+          ],
+          "sourceBasedParaphrase": "Peeling, pulling away and clinging actions are described under bā.",
+          "unresolvedQuestion": "Confirm current Mainland range; 扒衣裳 is an example-word lead."
+        },
+        {
+          "reading": "pa2",
+          "sourceIds": [
+            "moe_pa",
+            "wiktionary"
+          ],
+          "sourceBasedParaphrase": "Gathering/raking, scratching and theft contexts are described under pá.",
+          "unresolvedQuestion": "Check the register of culinary and specialized uses; 扒竊 is a source word lead."
+        }
+      ],
+      "independentAdjudication": "pending",
+      "lexicalReview": "pending",
+      "emojiComprehensionReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 339,
+      "character": "发",
+      "dictionaryReadings": [
+        "fa1",
+        "fa4"
+      ],
+      "sources": [
+        {
+          "id": "zdic",
+          "publisher": "汉典 simplified-form entry",
+          "url": "https://zdic.net/hans/%E5%8F%91",
+          "sourceReadings": [
+            "fa1",
+            "fa4"
+          ]
+        },
+        {
+          "id": "wiktionary",
+          "publisher": "Wiktionary simplified-form entry",
+          "url": "https://en.wiktionary.org/wiki/%E5%8F%91",
+          "sourceReadings": [
+            "fa1",
+            "fa4"
+          ]
+        }
+      ],
+      "preliminaryReadingNotes": [
+        {
+          "reading": "fa1",
+          "sourceIds": [
+            "zdic",
+            "wiktionary"
+          ],
+          "sourceBasedParaphrase": "Issuing, initiating and developing senses are associated with traditional 發.",
+          "unresolvedQuestion": "Separate multiple event senses, including 发展 as a word lead."
+        },
+        {
+          "reading": "fa4",
+          "sourceIds": [
+            "zdic",
+            "wiktionary"
+          ],
+          "sourceBasedParaphrase": "Hair sense corresponds to distinct traditional 髮.",
+          "unresolvedQuestion": "Retain source-graph distinction and the word context 头发."
+        }
+      ],
+      "independentAdjudication": "pending",
+      "lexicalReview": "pending",
+      "emojiComprehensionReview": "pending",
+      "productionVerified": false
+    },
+    {
+      "rank": 905,
+      "character": "尾",
+      "dictionaryReadings": [
+        "wei3",
+        "yi3"
+      ],
+      "sources": [
+        {
+          "id": "zdic",
+          "publisher": "汉典 character entry",
+          "url": "https://zdic.net/hans/%E5%B0%BE",
+          "sourceReadings": [
+            "wei3",
+            "yi3"
+          ]
+        },
+        {
+          "id": "moe",
+          "publisher": "Taiwan MOE Revised Mandarin Dictionary",
+          "url": "https://dict.revised.moe.edu.tw/dictView.jsp?ID=10587&word=%3D%E5%B0%BE",
+          "sourceReadings": [
+            "wei3",
+            "yi3"
+          ]
+        }
+      ],
+      "preliminaryReadingNotes": [
+        {
+          "reading": "wei3",
+          "sourceIds": [
+            "zdic",
+            "moe"
+          ],
+          "sourceBasedParaphrase": "The central reading covers tails, endings and classifier uses.",
+          "unresolvedQuestion": "Distinguish several grammatical senses, including 尾巴 as a word lead."
+        },
+        {
+          "reading": "yi3",
+          "sourceIds": [
+            "zdic",
+            "moe"
+          ],
+          "sourceBasedParaphrase": "One source describes narrower tail-related uses, while another treats yǐ as an alternate pronunciation.",
+          "unresolvedQuestion": "Resolve Mainland versus Taiwan conventions and usage restrictions."
+        }
+      ],
+      "independentAdjudication": "pending",
+      "lexicalReview": "pending",
+      "emojiComprehensionReview": "pending",
+      "productionVerified": false
+    }
+  ]
+}
