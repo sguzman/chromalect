@@ -1,0 +1,41 @@
+name: Acquire CC-CEDICT word headwords
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/cedict-word-headword-audit.yml"
+      - "tools/glyph-pipeline/cedict_word_headword_scan.mjs"
+      - "tools/glyph-pipeline/cedict_word_headword_scan_smoke.mjs"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  acquire-word-dictionary:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Test exact dictionary headword scanner
+        shell: bash
+        run: |
+          set -euo pipefail
+          node --check tools/glyph-pipeline/cedict_word_headword_scan.mjs
+          node tools/glyph-pipeline/cedict_word_headword_scan_smoke.mjs
+      - name: Acquire official current CC-CEDICT compressed release
+        shell: bash
+        run: |
+          set -euo pipefail
+          curl --fail --location --show-error --silent --retry 3 --max-time 300 \
+            "https://www.mdbg.net/chinese/export/cedict/cedict_1_0_ts_utf-8_mdbg.txt.gz" \
+            --output "$RUNNER_TEMP/cc-cedict-word-scan-source.gz"
+          node tools/glyph-pipeline/cedict_word_headword_scan.mjs \
+            --input "$RUNNER_TEMP/cc-cedict-word-scan-source.gz" \
+            --output "$RUNNER_TEMP/cc-cedict-word-headword-audit.json"
+      - name: Preserve compact source audit without dictionary definitions
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: chromalect-cedict-word-headwords
+          path: ${{ runner.temp }}/cc-cedict-word-headword-audit.json
+          if-no-files-found: warn
+          retention-days: 30

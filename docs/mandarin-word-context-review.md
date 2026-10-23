@@ -25,3 +25,10 @@ The optional GitHub Actions workflow **Inspect Mandarin word-boundary hints** fe
 The [source-linked word-reading observation ledger](../data/semantic/cedict-crossref/external-word-reading-observations-v0.1.json) records separate Wiktionary Mandarin entry pronunciations for five written dictionary leads: 长度 (chángdù), 长大 (zhǎngdà), 划船 (huáchuán), 计划 (jìhuà), and 经过 (jīngguò). Each observed target-character syllable agrees with the separate original dictionary heading reading. The three other leads remain **not yet confirmed in this external-word-entry cohort**; no negative dictionary-existence inference is warranted.
 
 The ledger references each community-maintained word entry rather than copying definitions or sentences. The underlying editorial independence of Wiktionary content is not certified; a distinct website alone is not proof of an independent lexical authority. A dictionary entry's reading does not determine the actual pronunciation or morpheme boundaries of a particular corpus occurrence. All sentence-specific adjudications and production approvals remain at zero.
+
+
+## Source-pinned CC-CEDICT exact word headword scan
+
+The **Acquire CC-CEDICT word headwords** workflow tests a bounded reader against synthetic dictionary records, obtains the official MDBG CC-CEDICT gzip export, and preserves a small source digest and headword/Pinyin index for the eight pinned research leads. The full dictionary and its definitions are not published in Chromalect. The source project requires attribution and ShareAlike compliance (CC BY-SA 4.0); see the canonical [MDBG download and license page](https://www.mdbg.net/chinese/dictionary?page=cc-cedict).
+
+An exact dictionary headword is not the same thing as an independently established Tatoeba word token, nor does it prove a sentence-specific reading or sense. An absent headword means only that no exact spelling appeared in the inspected dictionary snapshot; it must not become a judgment about grammatical acceptability or whether a multi-word expression exists. All independent verification gates stay separate.
