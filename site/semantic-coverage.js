@@ -24,6 +24,7 @@
   let strictRows = new Map();
   let reviewRows = new Map();
   let visibilityRows = new Map();
+  let mixedRoleForms = new Set();
   let strictSummary = null;
   let deskCounts = {analyzed:0,total:248};
   let page = 0;
@@ -159,11 +160,13 @@
     if(visibleCues.length) {
       const events=visibleCues.filter(x=>x.operators.includes("event"));
       const ambiguous=visibleCues.filter(x=>x.riskFlags.includes("same_character_senses_identical_display"));
-      if(events.length||ambiguous.length)card.appendChild(elem("p","semantic-review-note",
-        (events.length?events.length+" emoji action cue(s) omit explicit event roles":"")+
-        (events.length&&ambiguous.length?" · ":"")+
-        (ambiguous.length?"Different meanings share one visible emoji":"")+
-        " · research flag only"));
+      const sharedRole=visibleCues.filter(x=>mixedRoleForms.has(x.emojiDisplay));
+      if(events.length||ambiguous.length||sharedRole.length)card.appendChild(elem("p","semantic-review-note",
+        [
+          events.length?events.length+" emoji action cue(s) omit explicit event roles":"",
+          ambiguous.length?"Different meanings share one visible emoji":"",
+          sharedRole.length?"Emoji also used as both action and non-action in other senses":""
+        ].filter(Boolean).join(" · ")+" · research flag only"));
     }
     const flagged=reviewRows.get(entry.rank)||[];
     if (flagged.length) {
@@ -238,6 +241,7 @@
           (visual==="multiple-icons" && cues.some(y=>y.emojiCount>1)) ||
           (visual==="event-role" && cues.some(y=>y.operators.includes("event"))) ||
           (visual==="single-event" && cues.some(y=>y.operators.includes("event")&&y.emojiCount===1)) ||
+          (visual==="mixed-role" && cues.some(y=>mixedRoleForms.has(y.emojiDisplay))) ||
           (visual==="association" && cues.some(y=>y.operators.includes("associate"))) ||
           (visual==="same-character-collision" && cues.some(y=>
             y.riskFlags.includes("same_character_senses_identical_display")))) &&
@@ -323,10 +327,17 @@
            x.productionVerified!==false || x.independentLexicalReview!=="pending" ||
            x.independentEmojiComprehensionReview!=="pending"))
         throw new Error("Invalid automated semantic visibility audit");
+      const roleMap=new Map();
       for(const entry of visibility.records){
+        const roles=roleMap.get(entry.emojiDisplay)||{event:false,nonEvent:false};
+        if(entry.operators.includes("event"))roles.event=true;
+        else roles.nonEvent=true;
+        roleMap.set(entry.emojiDisplay,roles);
         if(!visibilityRows.has(entry.rank))visibilityRows.set(entry.rank,[]);
         visibilityRows.get(entry.rank).push(entry);
       }
+      mixedRoleForms=new Set([...roleMap].filter(([_,roles])=>roles.event&&roles.nonEvent).map(([emoji])=>emoji));
+      if(mixedRoleForms.size!==73)throw new Error("Expected 73 shared event/non-event emoji forms");
       if(review.schema!=="chromalect.semantic.lexical-sense-review-queue.v0.1" ||
          review.status!=="unreviewed_prioritization_only" ||
          !Array.isArray(review.records) ||

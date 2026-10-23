@@ -191,7 +191,7 @@ ids["semantic-action-filter"].value="all";
 ids["semantic-action-filter"].events.change();
 for(const [kind,count] of [
   ["single-icon",875],["multiple-icons",22],["event-role",280],
-  ["single-event",266],["association",21],["same-character-collision",1]
+  ["single-event",266],["mixed-role",337],["association",21],["same-character-collision",1]
 ]){
  ids["semantic-visual-filter"].value=kind;
  ids["semantic-visual-filter"].events.change();
@@ -222,6 +222,7 @@ assert.match(html,/src="layers.js"/);
 assert.match(html,/id="semantic-lexical-filter"/);
 assert.match(html,/id="semantic-action-filter"/);
 assert.match(html,/id="semantic-visual-filter"/);
+assert.match(html,/value="mixed-role"/);
 assert.match(html,/id="semantic-visibility-progress"/);
 assert.match(html,/id="semantic-desk-progress"/);
 assert.match(html,/id="semantic-boundary-progress"/);
