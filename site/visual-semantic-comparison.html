@@ -33,6 +33,7 @@
 .vsc-meaning-cue{font-family:"Noto Color Emoji","Apple Color Emoji","Segoe UI Emoji",system-ui,sans-serif;
  font-size:28px;line-height:1.4;text-align:center;min-height:44px;overflow-wrap:anywhere}
 .vsc-emoji{display:inline-block}
+.vsc-semantic-operator{font:700 22px system-ui,sans-serif;color:var(--ink);margin-right:5px}
 .vsc-source{margin:20px 0;padding:16px;border:1px solid var(--border);border-radius:10px;
  background:var(--panel);overflow-wrap:anywhere}
 .vsc-source p{margin:8px 0;color:var(--sub)}
@@ -58,7 +59,7 @@
 <div class="eyebrow">Mandarin · experimental color and meaning</div>
 <h1>Same glyph, three visual conditions</h1>
 <p class="intro">Directly compare an unmodified source-aligned Chinese stroke outline rendered in neutral ink, the same outline with its stable component identity colors, and the same colored outline with a provisional semantic pictogram. All conditions use one pinned character and geometry. Pronunciation and tone overlays are deliberately absent from this experiment. Filter to the 25 machine-flagged glyphs to inspect all 26 below-threshold component-color pairs, or focus on deferred and multiply proposed meanings.</p>
-<div class="vsc-note-block">This is a reproducible <strong>presentation comparison</strong>, not a human-subject experiment, semantic-family color scheme, or evidence of learning gains. Component identity colors are unchanged across conditions. The third condition is an <strong>unverified meaning proposal</strong> and correctly abstains when no pictogram was selected.</div>
+<div class="vsc-note-block">This is a reproducible <strong>presentation comparison</strong>, not a human-subject experiment, semantic-family color scheme, or evidence of learning gains. Component identity colors are unchanged across conditions. The third condition is an <strong>unverified meaning proposal</strong> and correctly abstains when no pictogram was selected. Event operators can be displayed separately because pictogram-only sequences may hide the distinction between actions and non-actions.</div>
 <div class="vsc-controls" aria-label="Visual comparison controls">
 <label for="vsc-focus">Research focus
 <select id="vsc-focus">
@@ -74,6 +75,7 @@
 <label for="vsc-size">Glyph size: <strong id="vsc-size-label">112 px</strong>
 <input id="vsc-size" type="range" min="40" max="144" value="112" step="8"></label>
 <label class="vsc-check" for="vsc-reveal"><input id="vsc-reveal" type="checkbox">Reveal source meaning</label>
+<label class="vsc-check" for="vsc-operators"><input id="vsc-operators" type="checkbox">Show technical event markers</label>
 </div>
 <p id="vsc-status" role="status" aria-live="polite">Loading source-aligned visual comparison.</p>
 <p id="vsc-count"></p>
