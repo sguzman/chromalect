@@ -35,6 +35,19 @@ This is substantial reduction relative to the original historical group-hue hypo
 
 The five-fold randomization is a deterministic rank partition, not random allocation of human study participants or a pre-registered perceptual experiment. Source-specific and global palette effects remain potential confounders. These numeric results are sufficient to **withhold palette promotion**, not to pronounce a design perceptually superior or inferior.
 
+## Source-exact color warning review gallery
+
+The [held-out warning viewer](../site/heldout-color-warning-review.html) provides a source-ranked inspection queue for pair observations **introduced**, **resolved**, or **retained** by each fold-trained color assignment. The [generator](../tools/glyph-pipeline/heldout_color_warning_gallery.mjs) requires the exact fold-specific 40-component color map and source component IDs from the reproducible holdout report. A candidate color for a glyph comes only from the model trained on the *other 800 source glyphs*, not the separately fitted full-1,000 candidate.
+
+Only glyphs containing a below-0.07 pair under either the original v0.6 or their fold-trained treatment receive review images. The generator:
+
+- Cross-checks the 23 introduced, 21 resolved and five retained pair observations against source component IDs, exact hex codes, measured OKLab distances, fold exclusion rank lists and final stroke-owner mappings.
+- Changes only the owned `fill` attribute of the original SVG path where a fold-specific hypothesis is available. The full SVG is checked for byte equality after normalizing the path fill attributes, preserving outlines, transforms, source component identifiers and other SVG markup.
+- Publishes independent source/candidate SHA-256 checksums and unapproved review status in a [gallery manifest](../site/glyphs/research/heldout-warning-v0.1/index-v0.1.json); all original SVG files remain intact.
+- Provides size, neutral background, grayscale, source rank, component ID and introduced/resolved/retained review controls. There is no automated claim that a human can actually distinguish any particular pair.
+
+The observed fold-trained warnings and source-linked glyph images are **review materials**, not independent visual testing results. This review preparation does not close the independent 1,000-glyph audit, semantic-grouping, or comprehension milestones.
+
 ## Research limitations
 
 This evaluation is more meaningful for source-cooccurrence generalization than reporting only the full-1,000-glyph optimization score, but it **does not** validate:
