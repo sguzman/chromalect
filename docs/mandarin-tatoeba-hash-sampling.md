@@ -11,3 +11,7 @@ The first chronological sample and its [stable source index](../data/semantic/ce
 The completed 2026-10-23 hash-sampled acquisition evaluated **108,126** qualifying character/sentence matches across **89,190** corpus sentence rows and selected **701 associations** containing **690 distinct sentence IDs**. Candidates were found for **141 of 142** characters; **刨** remained unmatched. Three other targets received fewer than five candidates: 乙 (3), 杠 (4), and 钉 (4), reflecting actual available matches in the bounded snapshot rather than an error.
 
 The [permanent source-ID index](../data/semantic/cedict-crossref/tatoeba-hash-sample-source-id-index-v0.1.json) retains all selected IDs without publishing sentence text. Only **37 character/sentence associations** overlap the older chronological sample; across both collections there are **1,015 distinct sentence IDs**. This demonstrates different source-selection behavior, not improved comprehension or independent lexical accuracy.
+
+## Combined source-ID browser
+
+The [context candidate viewer](../site/context-evidence.html) offers the original first-three source IDs, the alternative hash-selected cohort, and a deduplicated combined view. The two indexes share **37 character/sentence associations**, yielding **1,087 combined associations** containing **1,015 distinct source IDs**. Cohort labels are shown per source link in the combined view. This is source discovery rather than sense validation.

@@ -77,7 +77,7 @@ The [technical semantic research index](docs/mandarin-semantic-research-index.md
 
 The source-evidence [research queue](docs/mandarin-contextual-reading-evidence-queue.md) contains **319 high-attention pinned reading entries**, grouped into **241 case-normalized pronunciation search targets** without merging lexical senses. The [offline Tatoeba candidate extractor](docs/mandarin-tatoeba-offline-candidate-intake.md) can identify bounded, contributor-attributed Chinese sentence IDs from licensed snapshots. No corpus sentence is accepted as a reading or sense without contextual review. The [semantic browser](site/semantic-coverage.html) reports acquisition separately from lexical and pictogram approval.
 
-The [context evidence browser](site/context-evidence.html) provides direct source links to 423 surface-only corpus candidates without copying sentence text or approving meanings.
+The [context evidence browser](site/context-evidence.html) compares the original 423 surface-only candidate associations with 701 hash-sampled associations (1,087 unique character/sentence associations combined), without copying sentence text or approving meanings.
 
 ## Radical, component, and character catalogs
 
