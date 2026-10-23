@@ -18,15 +18,22 @@ export function deriveSourceGlyphCounterfactual(
  assert.equal(catalog.characters.length,expectedGlyphCount);
  assert.equal(manifest.schema,"chromalect.component-stroke-mappings.v1");
  assert.equal(manifest.palette_ref,"mandarin-component-identity@0.6.0");
- assert.equal(manifest.glyph_count,expectedGlyphCount);
- assert.equal(manifest.glyphs.length,expectedGlyphCount);
+ assert.ok(Number.isInteger(manifest.glyph_count)&&
+  manifest.glyph_count>=expectedGlyphCount&&
+  manifest.glyph_count<=expectedGlyphCount+32,
+  "Source-generated mapping may include bounded out-of-tranche records");
+ assert.equal(manifest.glyphs.length,manifest.glyph_count);
  const proposal=derivePilotGroupCounterfactual(palette);
  const hypothetical=new Map(proposal.groups.flatMap(g=>
   g.members.map(m=>[m.componentId,m])));
  assert.equal(hypothetical.size,40);
  const sourceColors=new Map(palette.components.map(x=>[x.id,x]));
  const glyphs=new Map(manifest.glyphs.map(g=>[g.character,g]));
- assert.equal(glyphs.size,expectedGlyphCount);
+ assert.equal(glyphs.size,manifest.glyph_count);
+ const catalogKeys=new Set(catalog.characters.map(x=>x.character));
+ assert.equal(catalogKeys.size,expectedGlyphCount);
+ const excludedManifestGlyphs=manifest.glyphs.filter(g=>!catalogKeys.has(g.character));
+ assert.equal(excludedManifestGlyphs.length,manifest.glyph_count-expectedGlyphCount);
  let affectedGlyphs=0,affectedStrokes=0,unchangedStrokes=0;
  const rows=[],outputFiles=new Map(),seen=new Set();
  for(let i=0;i<catalog.characters.length;i++){
@@ -111,7 +118,10 @@ export function deriveSourceGlyphCounterfactual(
    activeGlyphFilesOverwritten:false,strokePathsChanged:false,
    ownerMappingsChanged:false,other480ComponentsRecolored:false,
    independentlyApprovedVisuals:0,semanticFamilyApprovals:0},
-  summary:{catalogGlyphs:expectedGlyphCount,affectedGlyphs,
+  summary:{catalogGlyphs:expectedGlyphCount,
+   generatedSourceManifestGlyphs:manifest.glyph_count,
+   excludedOutsideActiveTranche:excludedManifestGlyphs.length,
+   affectedGlyphs,
    untouchedGlyphs:expectedGlyphCount-affectedGlyphs,
    alteredSourcePathFills:affectedStrokes,
    unchangedSourcePathFills:unchangedStrokes,
