@@ -6,7 +6,7 @@ const $=id=>document.getElementById(id);
 const ids=["hg-query","hg-size","hg-size-label","hg-gray","hg-surface",
  "hg-select","hg-prev","hg-next","hg-show-meaning","hg-sense","hg-reveal",
  "hg-compare","hg-count","hg-status","hg-owner","hg-semantic",
- "hg-risk-filter","hg-risk-order","hg-risk-summary","hg-risk-pairs"];
+ "hg-risk-filter","hg-risk-order","hg-risk-summary","hg-risk-pairs","hg-optimized"];
 if(ids.some(id=>!$(id)))return;
 const grammar=globalThis.ChromalectSemanticGrammar;
 if(!grammar||!grammar.validate){
@@ -20,7 +20,8 @@ const make=(tag,cls,label)=>{
  return node;
 };
 let records=[],current=0,candidates=new Map(),originalPalette=new Map(),semantic=[],
- riskRows=new Map(),riskTotals=null;
+ riskRows=new Map(),riskTotals=null,optimizedRows=new Map(),optimizedGlyphs=new Map(),
+ optimizedColors=new Map(),optimizedTotals=null;
 const baseName=r=>"U+"+r.character.codePointAt(0).toString(16).toUpperCase().padStart(4,"0")+".svg";
 const allowedSurface=new Set(["theme","white","black"]);
 function cohort(){
@@ -95,9 +96,16 @@ function choose(){
  const surface=$("hg-surface").value;
  if(!allowedSurface.has(surface))throw Error("Unknown research surface");
  const fragment=document.createDocumentFragment();
- for(const [label,url,kind] of [
+ const conditions=[
   ["Active original v0.6",r.originalSVG,"original"],
-  ["Isolated hue-group counterfactual",r.hypotheticalSVG,"proposed"]]){
+  ["First group-hue counterfactual",r.hypotheticalSVG,"proposed"]
+ ];
+ if($("hg-optimized").checked){
+  const updated=optimizedGlyphs.get(r.rank);
+  if(!updated)throw Error("Missing optimized source-identical SVG candidate");
+  conditions.push(["Source-cooccurrence-optimized v0.2",updated.optimizedSVG,"optimized"]);
+ }
+ for(const [label,url,kind] of conditions){
   const item=make("figure","hg-panel"),title=make("figcaption",null,label),
    stage=make("div","hg-stage"),svg=make("img","hg-svg");
   svg.src=url;
@@ -133,7 +141,9 @@ function choose(){
   const row=make("div","hg-identity");
   row.appendChild(make("strong",null,id+" · "+original.shape));
   for(const [label,hex] of [["Original",c.sourceHex],
-   ["Hypothetical",c.candidateHex]]){
+   ["First trial",c.candidateHex],
+   ...($("hg-optimized").checked?[["Optimized",optimizedColors.get(id)?.optimizedTrialHex]]:[])]){
+   if(typeof hex!=="string")throw Error("Optimized color owner missing");
    const mark=make("span","hg-swatch");
    mark.style.setProperty("--hg-swatch",hex);
    mark.setAttribute("aria-label",label+" "+hex);
@@ -142,14 +152,17 @@ function choose(){
   }
   owners.appendChild(row);
  }
- const risk=riskRows.get(r.rank),pairPanel=document.createDocumentFragment();
+ const risk=riskRows.get(r.rank),optimizedRisk=optimizedRows.get(r.rank);
+ const pairPanel=document.createDocumentFragment();
  pairPanel.appendChild(make("strong",null,"Source-owned component color proximity"));
  pairPanel.appendChild(make("p",null,risk.sourceUniqueComponentPairs+
   " distinct within-glyph component pairs · "+
   risk.originalClosePairs+" original below ΔOK 0.07 · "+
   risk.candidateClosePairs+" hypothetical below ΔOK 0.07 · "+
   risk.introducedClosePairs+" newly close · "+
-  risk.resolvedClosePairs+" resolved. All values are machine diagnostics."));
+  risk.resolvedClosePairs+" resolved · "+
+  optimizedRisk.optimizedClosePairs+
+  " source-cooccurrence-optimized close. All values are machine diagnostics."));
  if(risk.reviewPairs.length===0)
   pairPanel.appendChild(make("p",null,"No source pair falls within either below-0.07 group or the recorded near-threshold deterioration cohort."));
  for(const pair of risk.reviewPairs){
@@ -200,10 +213,14 @@ async function load(){
    "mnemonic-group-counterfactual-v0.1.json",
    "palettes/mandarin-component-identity-v0.6.json",
    "semantic/mandarin-1000-v0.1.json",
-   "glyphs/research/hint-counterfactual-v0.1/pair-risk-v0.1.json"];
+   "glyphs/research/hint-counterfactual-v0.1/pair-risk-v0.1.json",
+   "mnemonic-group-risk-optimized-v0.2.json",
+   "glyphs/research/hint-optimized-v0.2/index-v0.2.json",
+   "glyphs/research/hint-counterfactual-v0.1/optimized-pair-audit-v0.2.json"];
   const responses=await Promise.all(paths.map(x=>fetch(x)));
   if(responses.some(x=>!x.ok))throw Error("Required pinned research index unavailable");
-  const [index,alternative,palette,meaning,riskAudit]=await Promise.all(responses.map(x=>x.json()));
+  const [index,alternative,palette,meaning,riskAudit,revision,secondIndex,
+   secondRisk]=await Promise.all(responses.map(x=>x.json()));
   if(index.schema!=="chromalect.glyph.historical-hint-counterfactual-gallery.v0.1"||
      index.status!=="build_generated_isolated_research_svg_recolor_only_no_semantic_or_visual_approval"||
      index.provenance.palette!=="mandarin-component-identity@0.6.0"||
@@ -366,13 +383,96 @@ async function load(){
    throw Error("Research color pair totals are inconsistent with source cohort");
   riskRows=checked;riskTotals=riskAudit.summary;
   $("hg-risk-summary").textContent="Same-glyph component pairs below ΔOK 0.07: "+
-   riskTotals.originalClosePairs+" in the original palette versus "+
-   riskTotals.proposedClosePairs+" in the hypothetical palette · "+
+   riskTotals.originalClosePairs+" original · "+
+   riskTotals.proposedClosePairs+" first grouped-hue · "+
+   optimizedTotals.optimizedClose+" co-occurrence-optimized · "+
    riskTotals.newlyClosePairs+" newly close · "+
    riskTotals.resolvedClosePairs+" resolved · "+
    riskTotals.affectedGlyphsWithNewClosePairs+
    " affected glyphs with at least one newly close pair. "+
    "No human distinguishability or comprehension approvals.";
+  if(revision.schema!=="chromalect.palette.source-cooccurrence-hue-optimizer.v0.2"||
+     revision.status!=="in_sample_40_component_optimization_research_only_no_semantic_or_visual_approval"||
+     revision.provenance.activeSourcePaletteMutated!==false||
+     revision.provenance.heldOutGlyphsEvaluated!==0||
+     revision.provenance.semanticMembershipsApproved!==0||
+     revision.summary.alteredHypotheticalIDs!==40||
+     revision.summary.firstTrialAllGlyphWarningPairs!==76||
+     revision.summary.approvedLexicalOrSemanticFamilies!==0||
+     secondIndex.schema!=="chromalect.glyph.historical-hint-optimized-gallery.v0.2"||
+     secondIndex.status!=="isolated_optimized_research_svg_no_visual_semantic_or_educational_approval"||
+     secondIndex.provenance.sourceSVGOverwritten!==false||
+     secondIndex.provenance.firstTrialSVGOverwritten!==false||
+     secondIndex.provenance.sourceGeometryModified!==false||
+     secondIndex.provenance.sourceOwnershipModified!==false||
+     secondIndex.provenance.palettePromoted!==false||
+     secondIndex.provenance.independentVisualCertifications!==0||
+     secondIndex.provenance.independentSemanticApprovals!==0||
+     secondIndex.summary.firstTrialAffectedGlyphs!==index.glyphs.length||
+     secondIndex.summary.optimizedGalleryGlyphs!==index.glyphs.length||
+     secondIndex.summary.candidateComponentIdentities!==40||
+     secondIndex.summary.semanticFamiliesApproved!==0||
+     !Array.isArray(secondIndex.glyphs)||
+     secondIndex.glyphs.length!==index.glyphs.length||
+     secondRisk.schema!=="chromalect.glyph.optimized-historical-hue-pair-audit.v0.2"||
+     secondRisk.status!=="complete_in_sample_source_pair_census_not_human_visual_or_semantic_approval"||
+     secondRisk.provenance.activePaletteModified!==false||
+     secondRisk.provenance.glyphPathsRecolored!==false||
+     secondRisk.provenance.heldOutTesting!==false||
+     secondRisk.summary.catalogCharacters!==1000||
+     secondRisk.summary.originalClose!==26||
+     secondRisk.summary.firstClose!==76||
+     secondRisk.summary.optimizedClose!==6||
+     secondRisk.summary.affectedGlyphs!==index.glyphs.length||
+     secondRisk.summary.approvedSemanticFamilies!==0||
+     secondRisk.summary.humanDiscriminationTrials!==0||
+     !Array.isArray(secondRisk.glyphs)||
+     secondRisk.glyphs.length!==index.glyphs.length)
+   throw Error("Optimized experimental source glyphs or measured pair results inconsistent");
+  const optimizedById=new Map(revision.groups.flatMap(g=>g.members.map(m=>[m.componentId,m])));
+  const updatedByRank=new Map(),riskByRank=new Map();
+  if(optimizedById.size!==40)throw Error("Inconsistent 40 source candidate identities");
+  for(const [id,m] of optimizedById){
+   const previous=proposed.get(id),source=active.get(id);
+   if(!previous||!source||source.color!==m.sourceHex||
+      m.firstTrialHex!==previous.candidateHex||
+      m.visuallyDiscriminable!=="unverified"||
+      m.semanticFamilyVerified!==false)
+    throw Error("Optimized candidate changed source component or approval state");
+  }
+  let aggregateFirst=0,aggregateSecond=0;
+  for(let i=0;i<index.glyphs.length;i++){
+   const first=index.glyphs[i],second=secondIndex.glyphs[i],
+    risk=secondRisk.glyphs[i];
+   if(!second||!risk||second.rank!==first.rank||
+      second.character!==first.character||
+      second.sourceSVG!==first.originalSVG||
+      second.firstTrialSVG!==first.hypotheticalSVG||
+      second.optimizedSVG!==
+       "glyphs/research/hint-optimized-v0.2/"+baseName(first)||
+      second.sourceSHA256!==first.sourceGeometrySHA256||
+      second.firstTrialSHA256!==first.candidateGeometrySHA256||
+      second.sourceGeometryExactlyPreserved!==true||
+      second.sourceOwnersExactlyPreserved!==true||
+      second.activeProductionFilesUnchanged!==true||
+      second.visualReview!=="pending"||
+      second.semanticReview!=="unapproved"||
+      risk.rank!==first.rank||risk.character!==first.character||
+      risk.ownerPathsUnmodified!==true||
+      risk.sourcePaletteUnchanged!==true||
+      risk.independentVisualReview!=="pending"||
+      risk.semanticInterpretation!=="unapproved")
+    throw Error("Optimized glyph violates original source and pair audit identities");
+   updatedByRank.set(first.rank,second);
+   riskByRank.set(first.rank,risk);
+   aggregateFirst+=risk.firstTrialClosePairs;
+   aggregateSecond+=risk.optimizedClosePairs;
+  }
+  if(aggregateFirst>76||aggregateSecond>6||
+     updatedByRank.size!==index.glyphs.length)
+   throw Error("Optimized glyph risk totals do not reconcile");
+  optimizedGlyphs=updatedByRank;optimizedRows=riskByRank;
+  optimizedColors=optimizedById;optimizedTotals=secondRisk.summary;
   records=index.glyphs;candidates=proposed;originalPalette=active;
   semantic=meaning.characters;
   const hash=typeof location!=="undefined"?/^#c(0[0-9]{3}|1000)$/.exec(location.hash):null;
@@ -385,6 +485,8 @@ async function load(){
   choose();
  }catch(error){
   records=[];semantic=[];riskRows=new Map();riskTotals=null;
+  optimizedRows=new Map();optimizedGlyphs=new Map();optimizedColors=new Map();
+  optimizedTotals=null;
   $("hg-risk-summary").textContent="Unverified color pair comparison.";
   $("hg-risk-pairs").replaceChildren();
   $("hg-compare").replaceChildren();$("hg-owner").replaceChildren();
@@ -395,6 +497,7 @@ async function load(){
 $("hg-query").addEventListener("input",choose);
 $("hg-risk-filter").addEventListener("change",choose);
 $("hg-risk-order").addEventListener("change",choose);
+$("hg-optimized").addEventListener("change",choose);
 $("hg-select").addEventListener("change",()=>{
  const rank=Number($("hg-select").value);
  if(cohort().some(r=>r.rank===rank)){current=rank;choose();}
