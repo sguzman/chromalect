@@ -435,6 +435,10 @@ jobs:
           node tools/glyph-pipeline/pilot_group_collision_optimization.mjs --check
           node tools/glyph-pipeline/semantic_group_hue_heldout.mjs --write
           node tools/glyph-pipeline/semantic_group_hue_heldout.mjs --check
+          node --check tools/glyph-pipeline/heldout_color_warning_gallery.mjs
+          node tools/glyph-pipeline/heldout_color_warning_gallery.mjs --write
+          node tools/glyph-pipeline/heldout_color_warning_gallery.mjs --check
+          test -s site/glyphs/research/heldout-warning-v0.1/index-v0.1.json
           node tools/glyph-pipeline/semantic_group_hue_heldout_smoke.mjs
           node tools/glyph-pipeline/semantic_group_hue_heldout_viewer_smoke.mjs
           test -s site/semantic-group-hue-heldout.html && test -s site/semantic-group-hue-heldout.js
