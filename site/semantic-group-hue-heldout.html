@@ -20,7 +20,7 @@
 <main class="wrap">
 <div class="eyebrow">Color research · source-ranked held-out character evaluation</div>
 <h1>Do experimental hue groups transfer to unseen characters?</h1>
-<p class="intro">The previous collision-reduced v0.2 experiment used all 1,000 known Chinese glyphs both to optimize and measure component-color proximity. This stricter numerical experiment generates five independently fitted color candidates, each using only 800 original source glyphs; the other 200 are reserved for evaluation. Every Chinese character is held out exactly once.</p>
+<p class="intro">The previous collision-reduced v0.2 experiment used all 1,000 known Chinese glyphs both to optimize and measure component-color proximity. This stricter numerical experiment generates five independently fitted color candidates, each using only 800 original source glyphs; the other 200 are reserved for evaluation. Every Chinese character is held out exactly once. A <a href="heldout-color-warning-review.html">source-matched visual review queue</a> compares the active and fold-trained colors inside Chinese glyphs for every original, introduced or retained warning observation without claiming independent perception results.</p>
 <div class="ho-caution"><strong>Research-only controls.</strong> Colors are selected using the original historical mnemonic hints, which are not independently accepted linguistic semantic families. These measurements assess OKLab distances between component color pairs inside source glyphs, not human perception, retention, reading or accessibility compliance. The active v0.6 colors are not changed.</div>
 <p id="ho-status" role="status" aria-live="polite">Validating character rank disjointness and source color data.</p>
 <p id="ho-summary">Loading five-fold held-out source-pair measurements.</p>
@@ -31,6 +31,7 @@
 <tbody id="ho-table"></tbody></table></div>
 <div id="ho-folds" class="ho-details" aria-label="Holdout limitations and methodology"></div>
 <p>The fold rule is <code>(source rank − 1) modulo 5</code>. Each generator call excludes all 200 held-out source ranks from its optimization graph, while preserving identical source geometry and component ownership. The original active palette is compared unchanged in every fold. This is a character-level split; component identities can occur in both sets. Published evidence: <a href="semantic-group-hue-fivefold-heldout-v0.1.json">reproducible fold and per-rank evidence JSON</a> and <a href="glyphs/research/hint-counterfactual-v0.1/optimized-pair-audit-v0.2.json">separate all-1,000-glyph in-sample result</a>.</p>
-</main><footer class="wrap"><a href="mnemonic-group-optimized.html">Optimized color candidates</a> ·
+</main><footer class="wrap"><a href="heldout-color-warning-review.html">Held-out glyph warning viewer</a> ·
+<a href="mnemonic-group-optimized.html">Optimized color candidates</a> ·
 <a href="hint-hue-glyph-comparison.html">Original glyph comparison</a> ·
 <a href="colors.html">Active color registry</a></footer></body></html>
