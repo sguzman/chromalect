@@ -447,6 +447,7 @@ jobs:
           node --check site/heldout-component-identification.js
           node tools/glyph-pipeline/heldout_component_identification_core_smoke.mjs
           node tools/glyph-pipeline/heldout_component_identification_viewer_smoke.mjs
+          node tools/glyph-pipeline/heldout_component_identification_export_validate_smoke.mjs
           test -s site/heldout-component-identification.html
           test -s site/glyphs/research/heldout-identification-target-v0.1/index-v0.1.json
           node --check site/heldout-color-warning-review.js
