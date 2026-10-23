@@ -7,6 +7,9 @@ const palette=JSON.parse(fs.readFileSync(
  "palettes/mandarin-component-identity-v0.6.json","utf8"));
 const folds=JSON.parse(fs.readFileSync(
  "site/semantic-group-hue-fivefold-heldout-v0.1.json","utf8"));
+const semantics=JSON.parse(fs.readFileSync("site/semantic/mandarin-1000-v0.1.json","utf8"));
+const grammarSource=fs.readFileSync("site/semantic-grammar.js","utf8");
+const contrastSource=fs.readFileSync("site/reference-contrast.js","utf8");
 const script=fs.readFileSync("site/heldout-color-warning-review.js","utf8");
 const html=fs.readFileSync("site/heldout-color-warning-review.html","utf8");
 class Element {
@@ -19,10 +22,11 @@ class Element {
  addEventListener(event,handler){this.events[event]=handler;}
  setAttribute(k,v){this.attrs[k]=v;}
 }
-function boot(data=manifest,original=palette,study=folds){
+function boot(data=manifest,original=palette,study=folds,semantic=semantics){
  const ids=["hv-status","hv-summary","hv-filter","hv-order","hv-search",
   "hv-size","hv-size-label","hv-gray","hv-surface","hv-select",
-  "hv-prev","hv-next","hv-gallery","hv-pairs","hv-count"];
+  "hv-prev","hv-next","hv-gallery","hv-pairs","hv-count",
+  "hv-show-meaning","hv-sense","hv-reveal","hv-semantic"];
  const ui=Object.fromEntries(ids.map(id=>[id,new Element()]));
  ui["hv-filter"].value="all";ui["hv-order"].value="severity";
  ui["hv-size"].value="112";ui["hv-surface"].value="theme";
@@ -30,8 +34,12 @@ function boot(data=manifest,original=palette,study=folds){
   createElement:()=>new Element()},
   fetch:async path=>({ok:true,json:async()=>
    path.startsWith("glyphs/research/")?data:
-   path.startsWith("palettes/")?original:study}),
+   path.startsWith("palettes/")?original:
+   path.startsWith("semantic/")?semantic:study}),
   Set,Map,Math,Number,Object,Array,Error,JSON};
+ ctx.globalThis=ctx;
+ vm.runInNewContext(grammarSource,ctx);
+ vm.runInNewContext(contrastSource,ctx);
  vm.runInNewContext(script,ctx);return ui;
 }
 async function settled(ui){
@@ -50,6 +58,21 @@ assert.equal(ui["hv-gallery"].children[0].children[1].children[0].src,
 assert.equal(ui["hv-gallery"].children[1].children[1].children[0].src,
  manifest.glyphs.find(r=>r.severity==="introduced").heldoutSVG);
 assert.match(ui["hv-pairs"].children[1].textContent,/source stroke paths/);
+assert.match(ui["hv-pairs"].children[2].children[0].textContent,/source luminance [0-9.]+:1/);
+assert.match(ui["hv-pairs"].children[2].children[0].textContent,/fold luminance [0-9.]+:1/);
+assert.match(ui["hv-semantic"].children[0].textContent,/held constant across both/);
+ui["hv-show-meaning"].checked=true;ui["hv-show-meaning"].events.change();
+assert.equal(ui["hv-gallery"].children[0].children[1].children.length,2);
+assert.equal(ui["hv-gallery"].children[1].children[1].children.length,2);
+const originalMeaning=ui["hv-gallery"].children[0].children[1].children[1];
+const foldMeaning=ui["hv-gallery"].children[1].children[1].children[1];
+assert.equal(originalMeaning.children.length,foldMeaning.children.length);
+assert.equal(originalMeaning.textContent,foldMeaning.textContent);
+assert.equal(originalMeaning.attrs["aria-label"],foldMeaning.attrs["aria-label"]);
+ui["hv-reveal"].checked=true;ui["hv-reveal"].events.change();
+assert.match(ui["hv-semantic"].children[2].textContent,/0 approved/);
+ui["hv-show-meaning"].checked=false;ui["hv-show-meaning"].events.change();
+assert.equal(ui["hv-gallery"].children[0].children[1].children.length,1);
 ui["hv-filter"].value="introduced";ui["hv-filter"].events.change();
 assert.equal(ui["hv-gallery"].children.length,2);
 assert.equal(ui["hv-select"].children.length,23);
@@ -87,7 +110,8 @@ for(const edit of [
  d=>{d.glyphs[0].pairs[0].componentA.id="cmp-9999";},
  d=>{d.glyphs[0].rank=2000;},
  d=>{d.glyphs[0].pairs[0].componentA.sourceHex="#000000";},
- d=>{d.glyphs[0].foldIndex=(d.glyphs[0].foldIndex+1)%5;}
+ d=>{d.glyphs[0].foldIndex=(d.glyphs[0].foldIndex+1)%5;},
+ d=>{d.glyphs[0].pairs[0].componentA.foldOptimizedHex="#000000";}
 ]){
  const damaged=structuredClone(manifest);
  edit(damaged);const blocked=boot(damaged);await settled(blocked);
@@ -96,7 +120,8 @@ for(const edit of [
 }
 for(const id of ["hv-status","hv-summary","hv-filter","hv-order","hv-search",
  "hv-size","hv-size-label","hv-gray","hv-surface","hv-select","hv-prev","hv-next",
- "hv-gallery","hv-pairs","hv-count"])
+ "hv-gallery","hv-pairs","hv-count",
+ "hv-show-meaning","hv-sense","hv-reveal","hv-semantic"])
  assert.match(html,new RegExp('id="'+id+'"'));
 assert.ok(!script.includes("innerHTML"));
-console.log("Source-identical held-out review SVGs; 23 new-warning glyphs and 14 false-source/approval refusals.");
+console.log("Source-identical held-out review SVGs; 23 new-warning glyphs and 15 false-source/approval refusals.");
