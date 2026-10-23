@@ -107,11 +107,17 @@ export function validateReadingInventory(session,triage,dictionaryBlocks){
    }else{
     const e=o.contextEvidence;
     assert.ok(e&&typeof e==="object"&&!Array.isArray(e));
+    assert.deepEqual(Object.keys(e).sort(),
+     ["sourceKind","sourceRecordId","sourceUrl","contributorAttribution","reuseDisposition"].sort(),
+     "Context metadata must contain only the declared, nonapproval fields");
     assert.ok(["tatoeba","corpus","dictionary"].includes(e.sourceKind));
     assert.ok(typeof e.sourceRecordId==="string"&&e.sourceRecordId.length>0&&e.sourceRecordId.length<=120);
     assert.ok(typeof e.sourceUrl==="string"&&e.sourceUrl.length<=1000);
     const parsed=new URL(e.sourceUrl);
     assert.equal(parsed.protocol,"https:");
+    assert.equal(parsed.username,"");assert.equal(parsed.password,"");
+    assert.equal(parsed.hash,"");
+    assert.ok(parsed.hostname.length>0);
     assert.ok(typeof e.contributorAttribution==="string"&&e.contributorAttribution.trim().length>0&&e.contributorAttribution.length<=250);
     assert.ok(["link_only","cc_by_2_0_fr","cc0_1_0","other_cleared"].includes(e.reuseDisposition));
     if(e.reuseDisposition==="link_only")assert.equal(o.usageExample,"");
