@@ -196,6 +196,7 @@ jobs:
           node tools/glyph-pipeline/lexical_crossref_smoke.mjs
           node tools/glyph-pipeline/strict_gloss_index_smoke.mjs
           node tools/glyph-pipeline/sense_review_queue_smoke.mjs
+          node tools/glyph-pipeline/full_lexical_review_queue_smoke.mjs
           node tools/glyph-pipeline/emoji_visibility_audit.mjs --check
           node tools/glyph-pipeline/high_priority_remediation_smoke.mjs
           node tools/glyph-pipeline/semantic_coverage_smoke.mjs
@@ -204,9 +205,11 @@ jobs:
           cp data/semantic/cedict-crossref/manifest-v0.1.json site/semantic/lexical-crossref-v0.1.json
           cp data/semantic/cedict-crossref/strict-gloss-index-v0.1.json site/semantic/strict-gloss-index-v0.1.json
           cp data/semantic/cedict-crossref/sense-review-queue-v0.1.json site/semantic/sense-review-queue-v0.1.json
+          cp data/semantic/cedict-crossref/full-lexical-review-queue-v0.1.json site/semantic/full-lexical-review-queue-v0.1.json
           cp data/semantic/cedict-crossref/emoji-visibility-audit-v0.1.json site/semantic/emoji-visibility-audit-v0.1.json
           test -s site/semantic/emoji-visibility-audit-v0.1.json
           test -s site/semantic/sense-review-queue-v0.1.json
+          test -s site/semantic/full-lexical-review-queue-v0.1.json
           test -s site/semantic/strict-gloss-index-v0.1.json
           test -s site/semantic/mandarin-1000-v0.1.json
           test -s site/semantic/lexical-crossref-v0.1.json
