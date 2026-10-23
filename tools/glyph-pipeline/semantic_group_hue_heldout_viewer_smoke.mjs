@@ -30,6 +30,9 @@ assert.equal(ui["ho-table"].children.length,6,ui["ho-status"].textContent);
 assert.match(ui["ho-summary"].textContent,/five disjoint 200-character cohorts/);
 assert.match(ui["ho-summary"].textContent,/original v0\.6/);
 assert.match(ui["ho-summary"].textContent,/initial grouped hues/);
+assert.match(ui["ho-summary"].textContent,/introduced/);
+assert.match(ui["ho-summary"].textContent,/resolved/);
+assert.match(ui["ho-summary"].textContent,/retained close pairs/);
 assert.match(ui["ho-status"].textContent,/All five disjoint held-out cohorts/);
 assert.equal(ui["ho-table"].children[0].children.length,7);
 assert.equal(ui["ho-table"].children[0].children[0].textContent,"1");
@@ -52,7 +55,9 @@ for(const change of [
  d=>{d.folds[2].excludedFromOptimizer[0]=d.folds[1].excludedFromOptimizer[0];},
  d=>{d.folds[0].test.optimizedClosePairs=5000;},
  d=>{d.folds[0].independentlyReviewed=true;},
- d=>{d.summary.crossFoldTrainingTotals.optimizedClosePairs++;}
+ d=>{d.summary.crossFoldTrainingTotals.optimizedClosePairs++;},
+ d=>{d.folds[1].test.introducedOptimizedClosePairs++;},
+ d=>{d.summary.crossFoldHeldOutTotals.resolvedOriginalClosePairs++;}
 ]){
  const copy=structuredClone(report);change(copy);
  const refused=start(copy);await settle(refused);
@@ -62,4 +67,4 @@ for(const change of [
 for(const id of ["ho-status","ho-summary","ho-table","ho-folds"])
  assert.match(html,new RegExp('id="'+id+'"'));
 assert.ok(!script.includes("innerHTML"));
-console.log("Five-fold strict rank disjointness, all-1000 held-out glyph source-pair totals, 12 machine-evidence rejection cases.");
+console.log("Five-fold strict rank disjointness, all-1000 held-out glyph source-pair totals, 14 machine-evidence rejection cases.");
