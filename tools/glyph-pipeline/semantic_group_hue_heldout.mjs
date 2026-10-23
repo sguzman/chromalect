@@ -87,13 +87,14 @@ export function deriveHueHoldoutEvaluation(catalog,mappings,palette,sourceRisk){
   const optimized=new Map(model.groups.flatMap(g=>
    g.members.map(m=>[m.componentId,m.optimizedTrialHex])));
   assert.equal(optimized.size,40);
-  function evaluate(rows){
+  function evaluate(rows,{captureReview=false}={}){
    let distinctWithinGlyphPairs=0,activeClosePairs=0,
     firstTrialClosePairs=0,optimizedClosePairs=0,
     introducedOptimizedClosePairs=0,resolvedOriginalClosePairs=0,
     retainedOriginalClosePairs=0,
     charactersWithFirstClosePairs=0,charactersWithOptimizedClosePairs=0,
     charactersWithIntroducedClosePairs=0;
+   const reviewPairs=[];
    for(const row of rows){
     let firstWarnings=0,lastWarnings=0,introducedInGlyph=0;
     for(let i=0;i<row.components.length;i++)
@@ -104,13 +105,30 @@ export function deriveHueHoldoutEvaluation(catalog,mappings,palette,sourceRisk){
        firstB=firstHex.get(idB)??origB;
       const optA=optimized.get(idA)??origA,
        optB=optimized.get(idB)??origB;
-      const oldFlag=distance(origA,origB)<THRESHOLD,
-       optimizedFlag=distance(optA,optB)<THRESHOLD;
+      const originalDistance=distance(origA,origB),
+       firstDistance=distance(firstA,firstB),
+       optimizedDistance=distance(optA,optB);
+      const oldFlag=originalDistance<THRESHOLD,
+       optimizedFlag=optimizedDistance<THRESHOLD;
+      if(captureReview&&(oldFlag||optimizedFlag)){
+       reviewPairs.push({rank:row.rank,character:row.character,
+        componentA:{id:idA,form:sourceById.get(idA).shape,
+         sourceHex:origA,firstHex:firstA,foldOptimizedHex:optA},
+        componentB:{id:idB,form:sourceById.get(idB).shape,
+         sourceHex:origB,firstHex:firstB,foldOptimizedHex:optB},
+        originalDeltaOk:Number(originalDistance.toFixed(6)),
+        firstDeltaOk:Number(firstDistance.toFixed(6)),
+        foldOptimizedDeltaOk:Number(optimizedDistance.toFixed(6)),
+        reviewState:!oldFlag&&optimizedFlag?"introduced":
+         oldFlag&&!optimizedFlag?"resolved":"retained",
+        sourceGeometryChanged:false,visualReview:"pending",
+        semanticsApproved:false});
+      }
       if(oldFlag)activeClosePairs++;
       if(optimizedFlag&&!oldFlag){introducedOptimizedClosePairs++;introducedInGlyph++;}
       if(oldFlag&&!optimizedFlag)resolvedOriginalClosePairs++;
       if(oldFlag&&optimizedFlag)retainedOriginalClosePairs++;
-      if(distance(firstA,firstB)<THRESHOLD){
+      if(firstDistance<THRESHOLD){
        firstTrialClosePairs++;firstWarnings++;
       }
       if(optimizedFlag){
@@ -129,9 +147,13 @@ export function deriveHueHoldoutEvaluation(catalog,mappings,palette,sourceRisk){
     introducedOptimizedClosePairs,resolvedOriginalClosePairs,
     retainedOriginalClosePairs,
     charactersWithFirstClosePairs,charactersWithOptimizedClosePairs,
-    charactersWithIntroducedClosePairs};
+    charactersWithIntroducedClosePairs,...(captureReview?{reviewPairs}:{})};
   }
-  const train=evaluate(training),test=evaluate(heldOut);
+  const train=evaluate(training),test=evaluate(heldOut,{captureReview:true});
+  assert.equal(test.reviewPairs.length,
+   test.introducedOptimizedClosePairs+test.resolvedOriginalClosePairs+
+   test.retainedOriginalClosePairs);
+  assert.equal(model.groups.flatMap(g=>g.members).length,40);
   // Ensure the optimizer changed no source-only co-occurrences in training.
   assert.equal(train.firstTrialClosePairs-train.optimizedClosePairs,
    model.summary.firstTrialWarningsInAffectedEdges-
@@ -147,6 +169,12 @@ export function deriveHueHoldoutEvaluation(catalog,mappings,palette,sourceRisk){
    excludedFromOptimizer:heldOut.map(row=>row.rank),
    paletteCandidateColors:40,
    learnedCandidateSwatchesChanged:model.summary.changedCandidateSwatches,
+   sourcePinnedCandidateColors:model.groups.flatMap(g=>g.members.map(m=>({
+    componentId:m.componentId,sourceHex:m.sourceHex,
+    optimizedHex:m.optimizedTrialHex,
+    originalHistoricalHint:g.historicalHint,
+    sourceIdentityPreserved:true,semanticApproval:false
+   }))),
    train,test,
    disjointBySourceRank:true,
    independentlyReviewed:false,humanDiscriminationTrial:false});
