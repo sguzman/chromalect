@@ -1,0 +1,43 @@
+import assert from "node:assert/strict";
+import fs from "node:fs";
+import {checkAll,parseSentence} from "./tatoeba_live_word_record_audit.mjs";
+const dir="data/semantic/cedict-crossref/";
+const load=n=>JSON.parse(fs.readFileSync(dir+n,"utf8"));
+const credits=load("tatoeba-word-candidate-attribution-v0.1.json");
+const leads=load("dictionary-word-surface-leads-v0.1.json");
+const hashes=load("tatoeba-word-sentence-text-fingerprints-v0.1.json");
+const c=credits.records[0],w=leads.leads.find(r=>r.id===c.leadId);
+const original=hashes.records.find(r=>r.sentenceId===c.sentenceId).textSha256;
+const x=parseSentence({sentence:{id:Number(c.sentenceId),owner:c.contributor,lang:"cmn",
+ license:"CC BY 2.0 FR",text:"这是关于长度的合成测试。",is_unapproved:false}},c,w,original);
+assert.equal(x.status,"live_record_read");
+assert.equal(x.ownerMatchesSnapshot,true);
+assert.equal(x.individualLicenseLabelObserved,true);
+assert.equal(x.stillContainsWrittenWord,true);
+assert.equal(x.independentReadingVerified,false);
+assert.equal(x.quotationRightsAdjudicated,false);
+assert.ok(!("text" in x));
+assert.equal(parseSentence({id:999,text:"x"},c,w,original).status,"invalid_record_structure");
+let calls=0;
+const mock=async url=>{
+ calls++;
+ const id=url.split("/").at(-1),credit=credits.records.find(x=>x.sentenceId===id);
+ const word=leads.leads.find(x=>x.id===credit.leadId);
+ return {ok:true,status:200,json:async()=>({sentence:{id:Number(id),owner:credit.contributor,
+  lang:"cmn",license:"CC0 1.0",text:"合成测试"+word.surfaceWord+"结束。",is_unapproved:false}})};
+};
+const report=await checkAll(credits,leads,hashes,mock,{date:"2026-10-23",pause:async()=>{}});
+assert.equal(calls,27);
+assert.equal(report.summary.liveRecordsRead,27);
+assert.equal(report.summary.liveLicenseLabelsObserved,27);
+assert.equal(report.summary.ownerMatchesSnapshot,27);
+assert.equal(report.summary.containsTargetWordSurface,27);
+assert.equal(report.summary.quotationRightsCleared,0);
+assert.equal(report.summary.independentlyVerifiedReadings,0);
+assert.equal(report.summary.approvedLexicalSenses,0);
+assert.ok(!JSON.stringify(report).includes("合成测试"));
+const unavailable=await checkAll(credits,leads,hashes,async()=>({status:404,ok:false}),{date:"2026-10-23",pause:async()=>{}});
+assert.equal(unavailable.summary.liveRecordsRead,0);
+assert.equal(unavailable.records[0].status,"not_found");
+assert.equal(unavailable.summary.quotationRightsCleared,0);
+console.log("27 live-source API checks: explicit licenses, owner and text fingerprints; zero sense approvals.");

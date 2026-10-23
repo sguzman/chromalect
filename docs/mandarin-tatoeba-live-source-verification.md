@@ -1,0 +1,7 @@
+# Live sentence-source metadata checks
+
+The [one-time read-only workflow](../.github/workflows/tatoeba-live-word-record-audit.yml) queries the official <https://api.tatoeba.org/v1/sentences/{id}> endpoint for the 27 published Mandarin word-surface candidate IDs. The API currently exposes `owner`, `license`, `lang` and text fields. The checker compares the observed owner against the [pinned contributor attribution](../data/semantic/cedict-crossref/tatoeba-word-candidate-attribution-v0.1.json), and computes the current sentence SHA-256 to compare with the separately [preserved source snapshot fingerprints](../data/semantic/cedict-crossref/tatoeba-word-sentence-text-fingerprints-v0.1.json).
+
+Tatoeba's [corpus reuse guidance](https://en.wiki.tatoeba.org/articles/show/using-the-tatoeba-corpus) describes a default CC BY 2.0 FR license for text, with author attribution. Nevertheless, a **live observed sentence-license label** is treated separately from a legal reuse decision. A 404, owner difference, missing license, text change, or language mismatch remains explicit.
+
+The selected corpus text is never republished: output records store hashes, metadata, and stable source links. No contextual Chinese segmentation, pronunciation or lexical senses are approved. An archived GitHub Actions artifact is generated without altering the static site or canonical meaning data; the workflow does not run on a schedule.
