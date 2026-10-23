@@ -8,7 +8,7 @@ import {deriveSourceGlyphCounterfactual} from "./source_glyph_counterfactual.mjs
 const source=JSON.parse(fs.readFileSync(
  "palettes/mandarin-component-identity-v0.6.json","utf8"));
 const counterfactual=derivePilotGroupCounterfactual(source);
-const c1=source.components[0],c41=source.components[40];
+const c1=source.components[0],c41=source.components.find(c=>c.id==="cmp-0240");
 const catalog={schema:"chromalect.character-tranche.v1",characters:[
  {rank:1,character:"一"},{rank:2,character:"二"}]};
 const comp=c=>({form:c.shape,component_id:c.id,hex:c.color});
@@ -34,6 +34,33 @@ const output=structuredClone(demo.manifest);
 output.summary.catalogGlyphs=1000;output.summary.untouchedGlyphs=999;
 output.summary.generatedSourceManifestGlyphs=1007;
 output.summary.excludedOutsideActiveTranche=7;
+const research={
+ schema:"chromalect.glyph.hint-hue-source-pair-risk.v0.1",
+ status:"machine_computed_per_glyph_identity_proximity_not_human_discrimination",
+ provenance:{palette:"mandarin-component-identity@0.6.0",cutoffDeltaOk:0.07,
+  originalPaletteMutated:false,humanReviewPerformed:false,semanticFamilyApproval:false},
+ summary:{catalogCharacters:1000,paletteIdentities:520,hypotheticalComponentIds:40,
+  affectedGlyphs:1,originalClosePairs:26,proposedClosePairs:27,
+  newlyClosePairs:1,retainedClosePairs:26,resolvedClosePairs:0,
+  independentlyAcceptedSemanticFamilies:0,humanLegibilityTrials:0,
+  affectedGlyphsWithNewClosePairs:1},
+ glyphs:[{rank:1,character:"一",
+  svg:"glyphs/research/hint-counterfactual-v0.1/U+4E00.svg",
+  sourceSVG:"glyphs/U+4E00.svg",changedComponentIds:[c1.id],
+  originalClosePairs:0,candidateClosePairs:1,introducedClosePairs:1,
+  resolvedClosePairs:0,retainedClosePairs:0,
+  sourceUniqueComponentPairs:1,sourceGeometryUnchanged:true,
+  productionPaletteUnchanged:true,visualJudgment:"pending",
+  lexicalInterpretation:"unapproved",
+  reviewPairs:[{
+   componentA:{id:c1.id,form:c1.shape,sourceHex:c1.color,
+    candidateHex:counterfactual.groups.flatMap(g=>g.members).find(m=>m.componentId===c1.id).candidateHex},
+   componentB:{id:c41.id,form:c41.shape,sourceHex:c41.color,candidateHex:c41.color},
+   originalDeltaOk:0.215183,candidateDeltaOk:0.009194,
+   changeDeltaOk:-0.205989,state:"introduced",
+   originalSourceWarning:false,experimentalMeasurementOnly:true,perceptuallyVerified:false
+  }]}
+]};
 const script=fs.readFileSync("site/hint-hue-glyph-comparison.js","utf8"),
  html=fs.readFileSync("site/hint-hue-glyph-comparison.html","utf8");
 class Node{
@@ -45,16 +72,18 @@ class Node{
  addEventListener(k,f){this.events[k]=f;}
  setAttribute(k,v){this.attrs[k]=v;}
 }
-function start(g=output,a=counterfactual,p=source,hash="",m=semantic){
+function start(g=output,a=counterfactual,p=source,hash="",m=semantic,r=research){
  const ids=["hg-query","hg-size","hg-size-label","hg-gray","hg-surface",
   "hg-select","hg-prev","hg-next","hg-show-meaning","hg-sense","hg-reveal",
-  "hg-compare","hg-count","hg-status","hg-owner","hg-semantic"];
+  "hg-compare","hg-count","hg-status","hg-owner","hg-semantic",
+  "hg-risk-filter","hg-risk-summary","hg-risk-pairs"];
  const ui=Object.fromEntries(ids.map(id=>[id,new Node()]));
- ui["hg-size"].value="112";ui["hg-surface"].value="theme";
+ ui["hg-size"].value="112";ui["hg-surface"].value="theme";ui["hg-risk-filter"].value="all";
  const ctx={document:{getElementById:id=>ui[id],
   createElement:()=>new Node(),createDocumentFragment:()=>{const x=new Node();x.kind="fragment";return x;}},
   location:{hash},
   fetch:async path=>({ok:true,json:async()=>
+   path.endsWith("/pair-risk-v0.1.json")?r:
    path.startsWith("glyphs/research/")?g:
    path.startsWith("palettes/")?p:
    path.startsWith("semantic/")?m:a}),
@@ -75,6 +104,15 @@ assert.equal(ui["hg-select"].children.length,1);
 assert.match(ui["hg-count"].textContent,/1 \/ 1 research-eligible glyphs/);
 assert.match(ui["hg-status"].textContent,/Original SVGs and geometries verified/);
 assert.match(ui["hg-status"].textContent,/7 additional source-manifest records are excluded/);
+assert.match(ui["hg-risk-summary"].textContent,/27 in the hypothetical palette/);
+assert.match(ui["hg-risk-pairs"].children[1].textContent,/1 newly close/);
+assert.match(ui["hg-risk-pairs"].children[2].children[0].textContent,/introduced/);
+ui["hg-risk-filter"].value="introduced";ui["hg-risk-filter"].events.change();
+assert.equal(ui["hg-compare"].children.length,2);
+ui["hg-risk-filter"].value="original_close";ui["hg-risk-filter"].events.change();
+assert.equal(ui["hg-compare"].children.length,0);
+ui["hg-risk-filter"].value="all";ui["hg-risk-filter"].events.change();
+assert.equal(ui["hg-compare"].children.length,2);
 assert.equal(ui["hg-compare"].children[0].children[1].children[0].src,
  "glyphs/U+4E00.svg");
 assert.equal(ui["hg-compare"].children[1].children[1].children[0].src,
@@ -123,18 +161,23 @@ for(const modify of [
  (g,a,p)=>{p.components[0].color="#123456";},
  (g,a,p,m)=>{m.summary.productionVerifiedCharacters=1;},
  (g,a,p,m)=>{m.characters[0].rank=2;},
- (g,a,p,m)=>{m.characters[0].screening.candidates[0].review="approved";}
+ (g,a,p,m)=>{m.characters[0].screening.candidates[0].review="approved";},
+ (g,a,p,m,r)=>{r.provenance.humanReviewPerformed=true;},
+ (g,a,p,m,r)=>{r.summary.newlyClosePairs=0;},
+ (g,a,p,m,r)=>{r.glyphs[0].reviewPairs[0].componentA.candidateHex="#ffffff";},
+ (g,a,p,m,r)=>{r.glyphs[0].visualJudgment="accepted";}
 ]){
  const g=structuredClone(output),a=structuredClone(counterfactual),p=structuredClone(source),
-  m=structuredClone(semantic);
- modify(g,a,p,m);
- const invalid=start(g,a,p,"",m);await settle(invalid);
+  m=structuredClone(semantic),r=structuredClone(research);
+ modify(g,a,p,m,r);
+ const invalid=start(g,a,p,"",m,r);await settle(invalid);
  assert.equal(invalid["hg-compare"].children.length,0);
  assert.match(invalid["hg-status"].textContent,/Unable to validate/);
 }
 for(const id of ["hg-query","hg-size","hg-size-label","hg-gray","hg-surface",
  "hg-select","hg-prev","hg-next","hg-show-meaning","hg-sense","hg-reveal",
- "hg-compare","hg-count","hg-status","hg-owner","hg-semantic"])
+ "hg-compare","hg-count","hg-status","hg-owner","hg-semantic",
+ "hg-risk-filter","hg-risk-summary","hg-risk-pairs"])
  assert.match(html,new RegExp('id="'+id+'"'));
 assert.ok(!script.includes("innerHTML"));
-console.log("Exact original and counterfactual SVG URLs, shared display controls, and 15 fail-closed research guards.");
+console.log("Exact original and counterfactual SVG URLs, shared display controls, and 19 fail-closed research guards.");
