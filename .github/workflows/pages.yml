@@ -292,6 +292,7 @@ jobs:
           node tools/glyph-pipeline/external_umlaut_spelling_rules_smoke.mjs
           node tools/glyph-pipeline/unresolved_phonetic_reference_leads.mjs --check
           node tools/glyph-pipeline/unresolved_phonetic_reference_leads_smoke.mjs
+          node tools/glyph-pipeline/phonetic_caution_review_validate_smoke.mjs
           node --check site/mandarin-spelling-cautions.js
           node tools/glyph-pipeline/mandarin_spelling_cautions_viewer_smoke.mjs
           test -s site/mandarin-spelling-cautions.html
