@@ -17,3 +17,5 @@ This is an **observation of current source metadata**, not a license for indiscr
 The live check deliberately omitted Chinese sentence text and only compared hashes with the independent [source text-fingerprint ledger](../data/semantic/cedict-crossref/tatoeba-word-sentence-text-fingerprints-v0.1.json). It did not check word boundaries, native-speaker appropriateness, contextual pronunciation, semantic sense or pictogram comprehension. All those claims remain pending. The earlier failed probes resulted from an incorrect assumption about Tatoeba v1's `data` wrapper; the final run used the corrected parser.
 
 The frozen report provides continuity beyond the 30-day raw artifact retention. The upstream sentence records may subsequently be edited or deleted; this check is explicitly dated.
+
+The [word-context browser](../site/word-context-candidates.html) shows contributor credit beside each verified source record and directly links the observed [CC BY 2.0 FR license terms](https://creativecommons.org/licenses/by/2.0/fr/). This improves attribution traceability without including copyrighted sentence text or asserting legal clearance.

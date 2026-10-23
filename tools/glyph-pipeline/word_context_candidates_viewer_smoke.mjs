@@ -45,5 +45,6 @@ const falseData=structuredClone(data);falseData.records[0].independentLexicalSen
 const invalid=setup(leads,falseData);await settle(invalid);
 assert.match(invalid["word-status"].textContent,/Unable to validate/);
 assert.equal(invalid["word-results"].children.length,0);
-assert.match(html,/id="word-query"/);assert.ok(!js.includes("innerHTML"));
+assert.match(html,/id="word-query"/);
+assert.match(html,/https:\/\/creativecommons\.org\/licenses\/by\/2\.0\/fr\//);assert.ok(!js.includes("innerHTML"));
 console.log("Word surface candidate browser: eight publisher leads, 27 unapproved source IDs.");
