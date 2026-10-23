@@ -15,7 +15,7 @@ function compare(first,second,manifest,targets){
  const rows=targets.map(t=>{
   const x=a.get(t.id),y=b.get(t.id);
   let comparison="unobserved";
-  const sameEvidenceReference=x&&y?x.evidenceURL===y.evidenceURL:null;
+  const sameEvidenceReference=x&&y?new URL(x.evidenceURL).href===new URL(y.evidenceURL).href:null;
   if(x&&y){
    compared++;
    if(sameEvidenceReference)matchingEvidenceReferences++;

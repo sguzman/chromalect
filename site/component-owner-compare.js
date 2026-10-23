@@ -9,7 +9,7 @@ const $=id=>document.getElementById(id);
 const ids=["oc-status","oc-first","oc-second","oc-compare","oc-summary","oc-table",
  "oc-json","oc-filter","oc-order","oc-visible"];
 if(ids.some(id=>!$(id)))return;
-let manifest=null,targets=null,report=null;
+let manifest=null,targets=null,report=null,activeFilter="all",activeOrder="source";
 const filters=new Set(["all","disagreeing","matching","onlyFirst","onlySecond",
  "unobserved","shared-reference","shape-ambiguity"]);
 const orders=new Set(["source","conflict-first","shared-first"]);
@@ -54,6 +54,7 @@ const clear=()=>{
  $("oc-table").replaceChildren();
  $("oc-visible").textContent="No compared source pairs yet.";
  $("oc-filter").disabled=true;$("oc-order").disabled=true;
+ activeFilter="all";activeOrder="source";
 };
 const parse=id=>{
  const raw=$(id).value;
@@ -103,6 +104,7 @@ $("oc-compare").addEventListener("click",()=>{
   $("oc-filter").value="all";$("oc-order").value="source";
   $("oc-filter").disabled=false;$("oc-order").disabled=false;
   showRows();
+  activeFilter="all";activeOrder="source";
   $("oc-json").value=JSON.stringify(report,null,2)+"\n";
   status("Sanitized provisional comparison prepared locally; no reviewer independence verified.");
  }catch(e){
@@ -121,9 +123,10 @@ for(const id of ["oc-filter","oc-order"]){
   try{
    if(!report)throw Error("Validated comparison unavailable");
    showRows();
+   activeFilter=$("oc-filter").value;activeOrder=$("oc-order").value;
    status("Displayed subset updated; sanitized exported report remains complete.");
   }catch(e){
-   $(id).value=id==="oc-filter"?"all":"source";
+   $("oc-filter").value=activeFilter;$("oc-order").value=activeOrder;
    status("Comparison view rejected: "+e.message);
   }
  });
