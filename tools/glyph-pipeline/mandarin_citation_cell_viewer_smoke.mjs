@@ -40,7 +40,7 @@ assert.equal(view["cell-native"].textContent,"一");
 assert.equal(view["cell-side"].children.length,1);
 assert.equal(view["cell-bottom"].children.length,1);
 view["cell-final-symbols"].checked=true;view["cell-final-symbols"].events.change();
-assert.equal(view["cell-bottom"].children[0].children[1].attrs.role,"img");
+assert.equal(view["cell-bottom"].children[0].children[1].attributes.role,"img");
 assert.equal(view["cell-bottom"].children[0].children[1].children.length,1);
 view["cell-final-symbols"].checked=false;view["cell-final-symbols"].events.change();
 assert.equal(view["cell-top"].children.length,1);
