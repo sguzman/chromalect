@@ -452,6 +452,7 @@ jobs:
           node --check site/component-owner-adjudication.js
           node --check tools/glyph-pipeline/component_owner_adjudication_validate.mjs
           node tools/glyph-pipeline/component_owner_adjudication_validate_smoke.mjs
+          node tools/glyph-pipeline/component_owner_adjudication_viewer_smoke.mjs
           test -s site/component-owner-adjudication.html
           test -s site/heldout-component-identification.html
           test -s site/glyphs/research/heldout-identification-target-v0.1/index-v0.1.json

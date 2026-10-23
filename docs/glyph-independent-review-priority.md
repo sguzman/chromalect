@@ -21,6 +21,10 @@ The generated index should be checked with `--check` after production and preser
 
 The dated October 23, 2026 source-backed Pages generation reported 25 first-tranche glyphs with 26 distinct component-color proximity pairs below ΔOK 0.07, spanning 0.0224 through 0.0692 in OKLab distance. These are **machine thresholds, not perceptual thresholds established by human subjects**. All warnings in that build are for close colors, not geometry-order flags. The worklist retains each flagged pair's original, immutable v0.6 component IDs, source colors, and recorded distance. Flagged rows are sorted by the smallest observed distance, then by source rank. No palette colors are reassigned.
 
+## Source region evidence
+
+The [49-region source-owner evidence intake](../site/component-owner-adjudication.html) permits separately sourced provisional judgments on the 49 held-out color-warning locator regions, with SHA-256-linked source identity, original v0.6 colors and fold-trained comparison. It does not count as independent glyph certification, overwrite source owners, or establish participant-study eligibility. See the [region review protocol](source-owner-region-adjudication-intake.md).
+
 ## Local-only observational intake
 
 The [glyph review intake](../site/glyph-review-intake.html) reads the generated 1,000-glyph worklist and shows each original character alongside its source-colored SVG. It collects only local provisional assessments of geometry, source component ownership and visually close colors. A reasoned assessment requires a technical rationale and an independent HTTPS evidence reference. Export is source-linked JSON with absolute zero certification claims; nothing is automatically stored or uploaded.
