@@ -76,9 +76,9 @@ function start(g=output,a=counterfactual,p=source,hash="",m=semantic,r=research)
  const ids=["hg-query","hg-size","hg-size-label","hg-gray","hg-surface",
   "hg-select","hg-prev","hg-next","hg-show-meaning","hg-sense","hg-reveal",
   "hg-compare","hg-count","hg-status","hg-owner","hg-semantic",
-  "hg-risk-filter","hg-risk-summary","hg-risk-pairs"];
+  "hg-risk-filter","hg-risk-order","hg-risk-summary","hg-risk-pairs"];
  const ui=Object.fromEntries(ids.map(id=>[id,new Node()]));
- ui["hg-size"].value="112";ui["hg-surface"].value="theme";ui["hg-risk-filter"].value="all";
+ ui["hg-size"].value="112";ui["hg-surface"].value="theme";ui["hg-risk-filter"].value="all";ui["hg-risk-order"].value="rank";
  const ctx={document:{getElementById:id=>ui[id],
   createElement:()=>new Node(),createDocumentFragment:()=>{const x=new Node();x.kind="fragment";return x;}},
   location:{hash},
@@ -107,6 +107,12 @@ assert.match(ui["hg-status"].textContent,/7 additional source-manifest records a
 assert.match(ui["hg-risk-summary"].textContent,/27 in the hypothetical palette/);
 assert.match(ui["hg-risk-pairs"].children[1].textContent,/1 newly close/);
 assert.match(ui["hg-risk-pairs"].children[2].children[0].textContent,/introduced/);
+for(const order of ["introduced","candidate_min","deterioration","rank"]){
+ ui["hg-risk-order"].value=order;
+ ui["hg-risk-order"].events.change();
+ assert.equal(ui["hg-compare"].children.length,2);
+ assert.match(ui["hg-count"].textContent,/1 \/ 1 research-eligible/);
+}
 ui["hg-risk-filter"].value="introduced";ui["hg-risk-filter"].events.change();
 assert.equal(ui["hg-compare"].children.length,2);
 ui["hg-risk-filter"].value="original_close";ui["hg-risk-filter"].events.change();
@@ -177,7 +183,7 @@ for(const modify of [
 for(const id of ["hg-query","hg-size","hg-size-label","hg-gray","hg-surface",
  "hg-select","hg-prev","hg-next","hg-show-meaning","hg-sense","hg-reveal",
  "hg-compare","hg-count","hg-status","hg-owner","hg-semantic",
- "hg-risk-filter","hg-risk-summary","hg-risk-pairs"])
+ "hg-risk-filter","hg-risk-order","hg-risk-summary","hg-risk-pairs"])
  assert.match(html,new RegExp('id="'+id+'"'));
 assert.ok(!script.includes("innerHTML"));
 console.log("Exact original and counterfactual SVG URLs, shared display controls, and 19 fail-closed research guards.");
