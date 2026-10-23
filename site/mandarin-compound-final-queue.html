@@ -1,0 +1,37 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark">
+<title>Mandarin compound-final review queue · Chromalect</title>
+<link rel="stylesheet" href="style.css"><script src="theme.js"></script>
+<script src="mandarin-compound-final-queue.js" defer></script>
+<style>
+.compound-controls{display:flex;flex-wrap:wrap;gap:14px;margin:20px 0}
+.compound-controls label{display:grid;gap:6px}
+.compound-controls input,.compound-controls select{font:inherit;border:1px solid var(--border);
+border-radius:8px;background:var(--panel);color:var(--ink);padding:10px}
+.compound-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;margin:20px 0}
+.compound-card{background:var(--panel);border:1px solid var(--border);border-radius:12px;padding:16px}
+.compound-card h2{font-size:18px;margin:0 0 12px}
+.compound-meta{color:var(--sub);font-size:13px;overflow-wrap:anywhere}
+.compound-samples{font-size:14px;overflow-wrap:anywhere}
+</style></head><body>
+<header class="wrap"><div class="brand"><b>CHROMALECT</b><small>Language, made visible</small></div></header>
+<main class="wrap"><div class="eyebrow">Written-final research · independent adjudication pending</div>
+<h1>27 deferred Mandarin written finals</h1>
+<p class="intro">The six simple-final feature hypotheses are not a complete Mandarin vowel or syllable analysis. This queue preserves the other 27 Pinyin written remainder categories and their source examples without inventing vowels, codas, IPA pronunciations, or phonemic contrasts.</p>
+<div class="compound-controls">
+<label for="compound-filter">Priority tier<select id="compound-filter">
+<option value="all">All 27 written finals</option>
+<option value="caution">Explicit contextual spelling warnings</option>
+<option value="unflagged">No listed caution (still unreviewed)</option>
+</select></label>
+<label for="compound-query">Find spelling, citation or caution
+<input id="compound-query" type="search" placeholder="e.g. ian, un, 女"></label>
+</div>
+<p id="compound-summary">Loading source-first priorities.</p>
+<p id="compound-status" role="status" aria-live="polite">Validating original citation readings.</p>
+<p id="compound-count"></p>
+<div id="compound-list" class="compound-list"></div>
+<p>This is a frequency-aware *research review order for one bounded character tranche*, not a Mandarin-wide frequency estimate or claim of acoustic importance. The absence of a warning does not establish pronunciation correctness. See the <a href="phonetics/unadjudicated-compound-final-review-queue-v0.1.json">machine-readable workqueue</a> and <a href="https://github.com/sguzman/chromalect/blob/main/docs/unadjudicated-compound-final-review-queue.md">source and method</a>.</p>
+</main><footer class="wrap"><a href="mandarin-encoding-comparison.html">Encoding comparison</a> ·
+<a href="mandarin-final-symbols.html">Written-letter symbols</a> ·
+<a href="roadmap-status.html">Research roadmap</a></footer></body></html>
