@@ -86,7 +86,7 @@ assert.equal(invalid["oa-target"].children.length,0);
 assert.equal(invalid["oa-save"].disabled,true);
 const changedMask=structuredClone(sources);
 changedMask["glyphs/research/owner-complement-locators-v0.1/index-v0.1.json"]
- .records[0].complementarySHA256="0".repeat(64);
+ .records[0].complementarySHA256="invalid-digest";
 const invalidMask=setup(changedMask);await settle(invalidMask);
 assert.match(invalidMask["oa-status"].textContent,/Cannot load or validate/);
 assert.equal(invalidMask["oa-target"].children.length,0);
