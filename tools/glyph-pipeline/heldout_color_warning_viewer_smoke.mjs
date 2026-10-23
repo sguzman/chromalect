@@ -89,8 +89,12 @@ assert.equal(ui["hv-gallery"].children[1].children[1].children[0].style.filter,"
 ui["hv-surface"].value="black";ui["hv-surface"].events.change();
 assert.equal(ui["hv-gallery"].children[0].children[1].style["--hv-surface"],"#000");
 assert.equal(ui["hv-gallery"].children[1].children[1].style["--hv-surface"],"#000");
-ui["hv-size"].value="48";ui["hv-size"].events.input();
-assert.equal(ui["hv-gallery"].children[0].children[1].children[0].width,48);
+for(const size of [16,24,32,48,96,160]){
+ ui["hv-size"].value=String(size);ui["hv-size"].events.input();
+ assert.equal(ui["hv-gallery"].children[0].children[1].children[0].width,size);
+ assert.equal(ui["hv-gallery"].children[1].children[1].children[0].height,size);
+ assert.equal(ui["hv-size-label"].textContent,size+" px");
+}
 ui["hv-search"].value="cmp-9999";ui["hv-search"].events.input();
 assert.equal(ui["hv-gallery"].children.length,0);
 assert.match(ui["hv-count"].textContent,/0 source-review glyphs match/);
@@ -123,5 +127,6 @@ for(const id of ["hv-status","hv-summary","hv-filter","hv-order","hv-search",
  "hv-gallery","hv-pairs","hv-count",
  "hv-show-meaning","hv-sense","hv-reveal","hv-semantic"])
  assert.match(html,new RegExp('id="'+id+'"'));
+assert.match(html,/id="hv-size" type="range" min="16" max="160" step="8"/);
 assert.ok(!script.includes("innerHTML"));
 console.log("Source-identical held-out review SVGs; 23 new-warning glyphs and 15 false-source/approval refusals.");

@@ -82,7 +82,7 @@ function render(){
  if(!["theme","white","black"].includes(bg))
   throw Error("Unknown control background");
  const size=Number($("hv-size").value);
- if(!Number.isFinite(size)||size<40||size>160)
+ if(!Number.isFinite(size)||size<16||size>160)
   throw Error("Unknown source glyph display size");
  $("hv-size-label").textContent=size+" px";
  $("hv-gallery").replaceChildren();
