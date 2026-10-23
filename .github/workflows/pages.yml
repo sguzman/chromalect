@@ -247,6 +247,7 @@ jobs:
           node --check site/pinyin-citations.js
           node tools/glyph-pipeline/pinyin_citations_viewer_smoke.mjs
           node tools/glyph-pipeline/tone_contour_reference_smoke.mjs
+          node tools/glyph-pipeline/postmastery_color_retention_protocol_smoke.mjs
           node --check site/mandarin-tone-contours.js
           node tools/glyph-pipeline/mandarin_tone_contours_viewer_smoke.mjs
           test -s site/mandarin-tone-contours.html

@@ -1,0 +1,103 @@
+{
+  "schema": "chromalect.research.postmastery-visual-retention-protocol.v0.1",
+  "status": "planned_research_protocol_not_approved_for_participant_testing",
+  "project": "Chromalect",
+  "objective": "Compare post-mastery retention of independently reviewed component identities under stable component-color exposure and a plain control.",
+  "hypotheses": [
+    {
+      "id": "primary",
+      "kind": "prospective",
+      "statement": "Stable component-identity color introduced after learning criterion may alter delayed, unaided component-identity recognition relative to matched plain-text practice.",
+      "accepted": false
+    },
+    {
+      "id": "secondary",
+      "kind": "prospective",
+      "statement": "Stable color present during initial study may affect acquisition or later retention differently from color introduced only after mastery.",
+      "accepted": false
+    }
+  ],
+  "treatments": [
+    {
+      "id": "plain",
+      "initialStudy": "plain",
+      "consolidation": "plain",
+      "componentColorsEnabled": false
+    },
+    {
+      "id": "early_stable",
+      "initialStudy": "stable_identity_palette",
+      "consolidation": "stable_identity_palette",
+      "componentColorsEnabled": true
+    },
+    {
+      "id": "postmastery_stable",
+      "initialStudy": "plain",
+      "consolidation": "stable_identity_palette",
+      "componentColorsEnabled": true
+    }
+  ],
+  "invariants": {
+    "sameComponentIdentitySource": "palettes/mandarin-component-identity-v0.6.json",
+    "sameCharacterOutlinesAcrossArms": true,
+    "sameExplicitInstructionAcrossArms": true,
+    "sameConsolidationExposureTimeAcrossArms": true,
+    "equivalentLegibilityConditionsRequired": true,
+    "eachTargetAppearsInOneArmPerParticipant": true,
+    "assignmentsCounterbalancedAcrossParticipants": true,
+    "colorVisibilityDuringPrimaryDelayedTest": false,
+    "noAutomaticLinguisticOrVisualApproval": true
+  },
+  "prospectiveProcedure": [
+    "Construct matched item sets only from independently reviewed source-geometry ownership and unambiguous target component identities.",
+    "Randomize target-to-arm assignments within each participant and counterbalance assignment across participants before exposure.",
+    "Apply an identical explicit learning criterion to all conditions before the consolidation window.",
+    "Equalize post-criterion exposure time and task feedback; introduce stable color only in the assigned arms.",
+    "Measure unaided plain-format recognition at preregistered delayed intervals, without the identifying colors.",
+    "Score trial responses from fixed source identity keys with assessor-blind condition labels and document attrition."
+  ],
+  "endpoints": {
+    "primary": {
+      "measure": "correct component-identity selections",
+      "format": "color-free visual prompt",
+      "timepoints": [
+        "24h",
+        "7d"
+      ],
+      "statistic": "within-participant accuracy difference by assigned item set",
+      "powerAnalysisPending": true
+    },
+    "secondary": [
+      "trials to explicit mastery criterion",
+      "response latency on delayed color-free prompts",
+      "correct transfer to independently reviewed unfamiliar character arrangements"
+    ],
+    "nonclaims": [
+      "No measured causal effect",
+      "No participant performance or retention result",
+      "No general Mandarin semantic mastery claim"
+    ]
+  },
+  "prerequisites": {
+    "independentlyVisuallyApprovedGlyphOwnership": false,
+    "validatedComponentIdentityTargetLabels": false,
+    "completedAccessibilityReview": false,
+    "recruitmentAndConsentProtocol": false,
+    "preregisteredSamplingAndAnalysisPlan": false,
+    "eligibleTrialItemsSelected": 0
+  },
+  "privacy": {
+    "localOnlyCollectionByDefault": true,
+    "publicRawParticipantResponsesAllowed": false,
+    "identifiabilityMinimizationRequired": true,
+    "noPassiveAnalytics": true
+  },
+  "completedEvidence": {
+    "participantsEnrolled": 0,
+    "trialsRun": 0,
+    "measuredLearningEffects": 0,
+    "validatedLexicalSenses": 0,
+    "validatedPictogramComprehension": 0
+  },
+  "note": "A machine-readable design is not a conducted or statistically powered study. Do not infer evidence of educational benefit from implementation or control-arm assignment."
+}

@@ -62,10 +62,10 @@
       "key": "palette-experiment",
       "label": "Component palette experiment",
       "sourceHeadingPrefix": "Phase 1",
-      "complete": 9,
+      "complete": 10,
       "pending": 4,
-      "total": 13,
-      "checklistPercent": 69,
+      "total": 14,
+      "checklistPercent": 71,
       "checkpoints": [
         {
           "description": "Assign 40 unique exact colors to stable component IDs; preserve them in a 513-identity expanded catalog.",
@@ -101,6 +101,10 @@
         },
         {
           "description": "Publish portable per-glyph source ownership records and isolated review images for 8 documented alternate decompositions and 27 partial unknown-source cases. Keep incomplete cases out of the active renderer.",
+          "state": "complete"
+        },
+        {
+          "description": "Define a preregistration-ready three-arm component-color retention protocol with untested outcomes and explicit independent visual, accessibility, and ethical prerequisites.",
           "state": "complete"
         },
         {
