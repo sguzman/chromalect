@@ -230,6 +230,10 @@
           "state": "complete"
         },
         {
+          "description": "Acquire a hashed official 125,310-entry CC-CEDICT snapshot and reconcile five exact word headwords against separately published Wiktionary Pinyin, leaving three unresolved and every sentence-reading approval at zero.",
+          "state": "complete"
+        },
+        {
           "description": "Independently check sentence-level reuse permissions, and record URLs before any corpus quotation or lexical promotion.",
           "state": "pending"
         },
@@ -244,10 +248,6 @@
         {
           "description": "Promote only after separately demonstrated lexical and pictogram acceptance. Currently approved: 0.",
           "state": "pending"
-        },
-        {
-          "description": "Acquire a hashed official 125,310-entry CC-CEDICT snapshot and reconcile five exact word headwords against separately published Wiktionary Pinyin, leaving three unresolved and every sentence-reading approval at zero.",
-          "state": "complete"
         }
       ]
     },
