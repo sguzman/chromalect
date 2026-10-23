@@ -1,0 +1,7 @@
+# Contributor attribution inventory for word-surface candidates
+
+The first official Tatoeba Mandarin word-surface acquisition yielded **27 selected source sentence IDs** with **20 distinct publicly recorded contributor usernames**. The [machine-readable attribution ledger](../data/semantic/cedict-crossref/tatoeba-word-candidate-attribution-v0.1.json) preserves the author name and canonical sentence URL associated with each candidate, as given by the pinned 2026-10-23 official Mandarin detailed TSV export.
+
+Tatoeba's [corpus terms](https://en.wiki.tatoeba.org/articles/show/using-the-tatoeba-corpus) describe the default text-use framework as **Creative Commons Attribution 2.0 France (CC BY 2.0 FR)**, with attribution to the author. The source acquisition retains contributor metadata, but the individual sentence pages, continued availability, exceptions, and licensing flags **have not been live-checked**. Public contributor names are retained strictly as attribution metadata, not as personal research participants.
+
+The ledger **does not reproduce any sentence text**. Its purpose is to make a future properly attributed excerpt technically possible after a live record check and language-review gate. Current counts remain: sentence-specific live rights checks **0**, independent contextual reading verifications **0**, approved lexical senses **0**, pictogram approvals **0**. It is not appropriate to mark these readings as attested or production-ready merely because a source ID and contributor exist.

@@ -1,0 +1,327 @@
+{
+  "schema": "chromalect.semantic.tatoeba-word-candidate-attribution.v0.1",
+  "status": "retrieved_corpus_contributor_metadata_not_individual_license_or_linguistic_approval",
+  "source": {
+    "candidateIDs": "tatoeba-word-surface-id-index-v0.1.json",
+    "sourceDownload": "https://downloads.tatoeba.org/exports/per_language/cmn/cmn_sentences_detailed.tsv.bz2",
+    "acquisitionRun": "https://github.com/sguzman/chromalect/actions/runs/39950088781",
+    "snapshotSHA256": "7685bc14cf769a63acf7643a5bcd2b19fc3dba6aaf6c12acabd7417752f12338",
+    "sourceTerms": "https://en.wiki.tatoeba.org/articles/show/using-the-tatoeba-corpus",
+    "textLicenseDefaultPolicy": "CC BY 2.0 FR",
+    "corpusContributorNamesOrigin": "Tatoeba official Mandarin detailed sentence TSV",
+    "checkedAgainstLiveSentencePages": false
+  },
+  "summary": {
+    "selectedCorpusSentenceIDs": 27,
+    "distinctPublicCorpusContributors": 20,
+    "sourceWordLeadsRepresented": 6,
+    "individuallyCheckedSentenceLicenses": 0,
+    "independentContextualPronunciationsVerified": 0,
+    "independentlyAdjudicatedLexicalSenses": 0,
+    "approvedPictograms": 0
+  },
+  "records": [
+    {
+      "leadId": "ch126-length",
+      "sentenceId": "13970686",
+      "sourceURL": "https://tatoeba.org/en/sentences/show/13970686",
+      "contributor": "jan_OkulaJu",
+      "sourceTextCopied": false,
+      "individualLicenseStatus": "pending_live_record_check",
+      "wordBoundaryVerified": false,
+      "readingVerified": false,
+      "lexicalSenseApproved": false
+    },
+    {
+      "leadId": "ch126-length",
+      "sentenceId": "336916",
+      "sourceURL": "https://tatoeba.org/en/sentences/show/336916",
+      "contributor": "fucongcong",
+      "sourceTextCopied": false,
+      "individualLicenseStatus": "pending_live_record_check",
+      "wordBoundaryVerified": false,
+      "readingVerified": false,
+      "lexicalSenseApproved": false
+    },
+    {
+      "leadId": "ch126-length",
+      "sentenceId": "9972430",
+      "sourceURL": "https://tatoeba.org/en/sentences/show/9972430",
+      "contributor": "GlossaMatik",
+      "sourceTextCopied": false,
+      "individualLicenseStatus": "pending_live_record_check",
+      "wordBoundaryVerified": false,
+      "readingVerified": false,
+      "lexicalSenseApproved": false
+    },
+    {
+      "leadId": "ch126-length",
+      "sentenceId": "2317127",
+      "sourceURL": "https://tatoeba.org/en/sentences/show/2317127",
+      "contributor": "User5120",
+      "sourceTextCopied": false,
+      "individualLicenseStatus": "pending_live_record_check",
+      "wordBoundaryVerified": false,
+      "readingVerified": false,
+      "lexicalSenseApproved": false
+    },
+    {
+      "leadId": "zhang-growth",
+      "sentenceId": "389974",
+      "sourceURL": "https://tatoeba.org/en/sentences/show/389974",
+      "contributor": "ver",
+      "sourceTextCopied": false,
+      "individualLicenseStatus": "pending_live_record_check",
+      "wordBoundaryVerified": false,
+      "readingVerified": false,
+      "lexicalSenseApproved": false
+    },
+    {
+      "leadId": "zhang-growth",
+      "sentenceId": "8748562",
+      "sourceURL": "https://tatoeba.org/en/sentences/show/8748562",
+      "contributor": "cxpadonis",
+      "sourceTextCopied": false,
+      "individualLicenseStatus": "pending_live_record_check",
+      "wordBoundaryVerified": false,
+      "readingVerified": false,
+      "lexicalSenseApproved": false
+    },
+    {
+      "leadId": "zhang-growth",
+      "sentenceId": "332981",
+      "sourceURL": "https://tatoeba.org/en/sentences/show/332981",
+      "contributor": "fucongcong",
+      "sourceTextCopied": false,
+      "individualLicenseStatus": "pending_live_record_check",
+      "wordBoundaryVerified": false,
+      "readingVerified": false,
+      "lexicalSenseApproved": false
+    },
+    {
+      "leadId": "zhang-growth",
+      "sentenceId": "1839195",
+      "sourceURL": "https://tatoeba.org/en/sentences/show/1839195",
+      "contributor": "sadhen",
+      "sourceTextCopied": false,
+      "individualLicenseStatus": "pending_live_record_check",
+      "wordBoundaryVerified": false,
+      "readingVerified": false,
+      "lexicalSenseApproved": false
+    },
+    {
+      "leadId": "zhang-growth",
+      "sentenceId": "12687028",
+      "sourceURL": "https://tatoeba.org/en/sentences/show/12687028",
+      "contributor": "soueihin",
+      "sourceTextCopied": false,
+      "individualLicenseStatus": "pending_live_record_check",
+      "wordBoundaryVerified": false,
+      "readingVerified": false,
+      "lexicalSenseApproved": false
+    },
+    {
+      "leadId": "hua-row",
+      "sentenceId": "10305694",
+      "sourceURL": "https://tatoeba.org/en/sentences/show/10305694",
+      "contributor": "DaoSeng",
+      "sourceTextCopied": false,
+      "individualLicenseStatus": "pending_live_record_check",
+      "wordBoundaryVerified": false,
+      "readingVerified": false,
+      "lexicalSenseApproved": false
+    },
+    {
+      "leadId": "hua-row",
+      "sentenceId": "336671",
+      "sourceURL": "https://tatoeba.org/en/sentences/show/336671",
+      "contributor": "fucongcong",
+      "sourceTextCopied": false,
+      "individualLicenseStatus": "pending_live_record_check",
+      "wordBoundaryVerified": false,
+      "readingVerified": false,
+      "lexicalSenseApproved": false
+    },
+    {
+      "leadId": "hua-row",
+      "sentenceId": "850117",
+      "sourceURL": "https://tatoeba.org/en/sentences/show/850117",
+      "contributor": "Martha",
+      "sourceTextCopied": false,
+      "individualLicenseStatus": "pending_live_record_check",
+      "wordBoundaryVerified": false,
+      "readingVerified": false,
+      "lexicalSenseApproved": false
+    },
+    {
+      "leadId": "hua-plan",
+      "sentenceId": "733596",
+      "sourceURL": "https://tatoeba.org/en/sentences/show/733596",
+      "contributor": "mcq",
+      "sourceTextCopied": false,
+      "individualLicenseStatus": "pending_live_record_check",
+      "wordBoundaryVerified": false,
+      "readingVerified": false,
+      "lexicalSenseApproved": false
+    },
+    {
+      "leadId": "hua-plan",
+      "sentenceId": "10058523",
+      "sourceURL": "https://tatoeba.org/en/sentences/show/10058523",
+      "contributor": "slo_oth",
+      "sourceTextCopied": false,
+      "individualLicenseStatus": "pending_live_record_check",
+      "wordBoundaryVerified": false,
+      "readingVerified": false,
+      "lexicalSenseApproved": false
+    },
+    {
+      "leadId": "hua-plan",
+      "sentenceId": "2915527",
+      "sourceURL": "https://tatoeba.org/en/sentences/show/2915527",
+      "contributor": "vicch",
+      "sourceTextCopied": false,
+      "individualLicenseStatus": "pending_live_record_check",
+      "wordBoundaryVerified": false,
+      "readingVerified": false,
+      "lexicalSenseApproved": false
+    },
+    {
+      "leadId": "hua-plan",
+      "sentenceId": "9968962",
+      "sourceURL": "https://tatoeba.org/en/sentences/show/9968962",
+      "contributor": "GlossaMatik",
+      "sourceTextCopied": false,
+      "individualLicenseStatus": "pending_live_record_check",
+      "wordBoundaryVerified": false,
+      "readingVerified": false,
+      "lexicalSenseApproved": false
+    },
+    {
+      "leadId": "hua-plan",
+      "sentenceId": "510659",
+      "sourceURL": "https://tatoeba.org/en/sentences/show/510659",
+      "contributor": "fucongcong",
+      "sourceTextCopied": false,
+      "individualLicenseStatus": "pending_live_record_check",
+      "wordBoundaryVerified": false,
+      "readingVerified": false,
+      "lexicalSenseApproved": false
+    },
+    {
+      "leadId": "guo-cross",
+      "sentenceId": "9842625",
+      "sourceURL": "https://tatoeba.org/en/sentences/show/9842625",
+      "contributor": "Ivanovb",
+      "sourceTextCopied": false,
+      "individualLicenseStatus": "pending_live_record_check",
+      "wordBoundaryVerified": false,
+      "readingVerified": false,
+      "lexicalSenseApproved": false
+    },
+    {
+      "leadId": "guo-cross",
+      "sentenceId": "347817",
+      "sourceURL": "https://tatoeba.org/en/sentences/show/347817",
+      "contributor": "zhouj1955",
+      "sourceTextCopied": false,
+      "individualLicenseStatus": "pending_live_record_check",
+      "wordBoundaryVerified": false,
+      "readingVerified": false,
+      "lexicalSenseApproved": false
+    },
+    {
+      "leadId": "guo-cross",
+      "sentenceId": "501571",
+      "sourceURL": "https://tatoeba.org/en/sentences/show/501571",
+      "contributor": "fucongcong",
+      "sourceTextCopied": false,
+      "individualLicenseStatus": "pending_live_record_check",
+      "wordBoundaryVerified": false,
+      "readingVerified": false,
+      "lexicalSenseApproved": false
+    },
+    {
+      "leadId": "guo-cross",
+      "sentenceId": "8037882",
+      "sourceURL": "https://tatoeba.org/en/sentences/show/8037882",
+      "contributor": "Ivanovb",
+      "sourceTextCopied": false,
+      "individualLicenseStatus": "pending_live_record_check",
+      "wordBoundaryVerified": false,
+      "readingVerified": false,
+      "lexicalSenseApproved": false
+    },
+    {
+      "leadId": "guo-cross",
+      "sentenceId": "343595",
+      "sourceURL": "https://tatoeba.org/en/sentences/show/343595",
+      "contributor": "fucongcong",
+      "sourceTextCopied": false,
+      "individualLicenseStatus": "pending_live_record_check",
+      "wordBoundaryVerified": false,
+      "readingVerified": false,
+      "lexicalSenseApproved": false
+    },
+    {
+      "leadId": "guo-aspect",
+      "sentenceId": "10066357",
+      "sourceURL": "https://tatoeba.org/en/sentences/show/10066357",
+      "contributor": "CreeperVLin",
+      "sourceTextCopied": false,
+      "individualLicenseStatus": "pending_live_record_check",
+      "wordBoundaryVerified": false,
+      "readingVerified": false,
+      "lexicalSenseApproved": false
+    },
+    {
+      "leadId": "guo-aspect",
+      "sentenceId": "13972768",
+      "sourceURL": "https://tatoeba.org/en/sentences/show/13972768",
+      "contributor": "Rinrin",
+      "sourceTextCopied": false,
+      "individualLicenseStatus": "pending_live_record_check",
+      "wordBoundaryVerified": false,
+      "readingVerified": false,
+      "lexicalSenseApproved": false
+    },
+    {
+      "leadId": "guo-aspect",
+      "sentenceId": "2440828",
+      "sourceURL": "https://tatoeba.org/en/sentences/show/2440828",
+      "contributor": "fenfang557",
+      "sourceTextCopied": false,
+      "individualLicenseStatus": "pending_live_record_check",
+      "wordBoundaryVerified": false,
+      "readingVerified": false,
+      "lexicalSenseApproved": false
+    },
+    {
+      "leadId": "guo-aspect",
+      "sentenceId": "13751971",
+      "sourceURL": "https://tatoeba.org/en/sentences/show/13751971",
+      "contributor": "_LoLa_",
+      "sourceTextCopied": false,
+      "individualLicenseStatus": "pending_live_record_check",
+      "wordBoundaryVerified": false,
+      "readingVerified": false,
+      "lexicalSenseApproved": false
+    },
+    {
+      "leadId": "guo-aspect",
+      "sentenceId": "9409447",
+      "sourceURL": "https://tatoeba.org/en/sentences/show/9409447",
+      "contributor": "BobbyLee",
+      "sourceTextCopied": false,
+      "individualLicenseStatus": "pending_live_record_check",
+      "wordBoundaryVerified": false,
+      "readingVerified": false,
+      "lexicalSenseApproved": false
+    }
+  ],
+  "limits": [
+    "Tatoeba textual contributions are described as CC BY 2.0 FR by its publisher, with attribution obligations.",
+    "This source-extracted attribution field is not a live sentence-page license or deletion check.",
+    "No Tatoeba text has been reproduced here and no phonetic or lexical usage has been independently validated."
+  ]
+}
