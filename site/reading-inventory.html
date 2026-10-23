@@ -98,8 +98,24 @@
 <option value="both">Both contexts indicated (unverified)</option>
 <option value="undetermined">Undetermined</option>
 </select></label>
-<label for="reading-example">Illustrative Chinese usage example (optional; provide provenance)
-<input type="text" id="reading-example" maxlength="500" placeholder="Only include an example supported by a source, not an invented one"></label>
+<div class="reading-source">
+<strong>Optional independent context source</strong>
+<p class="reading-note">A dictionary reading, search result or sentence containing this graph is not a confirmed reading-specific example. Include the exact source identifier and permissions, or leave this section empty.</p>
+<div class="reading-answer">
+<label for="reading-evidence-kind">Evidence source type
+<select id="reading-evidence-kind"><option value="none">No contextual source attached</option><option value="tatoeba">Tatoeba numbered Chinese sentence</option><option value="corpus">Other identified corpus record</option><option value="dictionary">Independent dictionary usage example</option></select></label>
+<label for="reading-evidence-id">Source record identifier
+<input type="text" id="reading-evidence-id" maxlength="120" placeholder="An actual corpus sentence ID or dictionary record key"></label>
+<label for="reading-evidence-url">Stable HTTPS source record URL
+<input type="text" id="reading-evidence-url" maxlength="1000" placeholder="https://..."></label>
+<label for="reading-evidence-credit">Contributor / publisher attribution
+<input type="text" id="reading-evidence-credit" maxlength="250" placeholder="Identify the source and contributor where required"></label>
+<label for="reading-evidence-rights">Documented reuse permission
+<select id="reading-evidence-rights"><option value="">Select rights status</option><option value="link_only">Link only; no sentence excerpt may be exported</option><option value="cc_by_2_0_fr">Source-specific CC BY 2.0 FR confirmed</option><option value="cc0_1_0">Source-specific CC0 1.0 confirmed</option><option value="other_cleared">Other redistribution permission separately confirmed</option></select></label>
+</div>
+</div>
+<label for="reading-example">Chinese contextual excerpt (optional; requires a recorded source and reuse permission)
+<input type="text" id="reading-example" maxlength="500" placeholder="Only quote a real identifiable source record when its reuse rights are confirmed"></label>
 <label for="reading-reference">Additional independent evidence reference (optional)
 <input type="text" id="reading-reference" maxlength="1000" placeholder="Corpus, dictionary entry, publication or stable locator"></label>
 <label for="reading-rationale">Evidence explanation / remaining uncertainty (required; 12+ characters)

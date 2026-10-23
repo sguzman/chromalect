@@ -10,7 +10,7 @@ const ids=["reading-scope","reading-count","reading-start","reading-export",
  "reading-status","reading-session","reading-count-label","reading-progress",
  "reading-progress-fill","reading-glyph","reading-rank","reading-current",
  "reading-gloss","reading-references","reading-external-sources","reading-other","reading-full","reading-source-id",
- "reading-form","reading-usage","reading-unit","reading-example","reading-reference",
+ "reading-form","reading-usage","reading-unit","reading-evidence-kind","reading-evidence-id","reading-evidence-url","reading-evidence-credit","reading-evidence-rights","reading-example","reading-reference",
  "reading-rationale","reading-commit","reading-after","reading-next"];
 if(!layers||!dictionary||!references||ids.some(id=>!$(id)))return;
 const blocks=["0001-0200","0201-0400","0401-0600","0601-0800","0801-1000"];
@@ -38,10 +38,31 @@ function eligible(scope,r){
   (scope==="unmapped"&&r.experimentalMeaningCount===0)||
   (scope==="multiple"&&r.readingCount>1);
 }
+function contextualSource(){
+ const kind=$("reading-evidence-kind").value;
+ const id=$("reading-evidence-id").value.trim();
+ const url=$("reading-evidence-url").value.trim();
+ const attribution=$("reading-evidence-credit").value.trim();
+ const rights=$("reading-evidence-rights").value;
+ const example=$("reading-example").value.trim();
+ if(kind==="none")
+  return !id&&!url&&!attribution&&!rights&&!example?null:false;
+ if(!["tatoeba","corpus","dictionary"].includes(kind)||
+    !id||id.length>120||!attribution||attribution.length>250||
+    !/^https:\/\/[^\s/]+\/\S+/i.test(url)||url.length>1000||
+    !["link_only","cc_by_2_0_fr","cc0_1_0","other_cleared"].includes(rights)||
+    (rights==="link_only"&&example))
+   return false;
+ if(kind==="tatoeba"&&(!/^\d+$/.test(id)||
+    !new RegExp("^https:\\/\\/tatoeba\\.org\\/(?:en|eng)\\/sentences\\/show\\/"+id+"\\/?$","i").test(url)||
+    rights==="other_cleared"))return false;
+ return {sourceKind:kind,sourceRecordId:id,sourceUrl:url,
+  contributorAttribution:attribution,reuseDisposition:rights};
+}
 function valid(){
  const item=trials[index];
  if(!item||locked)return false;
- return categories.has($("reading-usage").value)&&units.has($("reading-unit").value)&&
+ return contextualSource()!==false&&categories.has($("reading-usage").value)&&units.has($("reading-unit").value)&&
   $("reading-rationale").value.trim().length>=12&&
   $("reading-rationale").value.length<=15000&&
   $("reading-example").value.length<=500&&$("reading-reference").value.length<=1000;
@@ -105,7 +126,8 @@ function show(){
  }
  $("reading-source-id").textContent="CC-CEDICT "+r.sourcePath+
   " · pinned blob "+r.sourceBlobSha+" · CC BY-SA 4.0";
- for(const id of ["reading-usage","reading-unit","reading-example","reading-reference","reading-rationale"])$(id).value="";
+ for(const id of ["reading-usage","reading-unit","reading-evidence-id","reading-evidence-url","reading-evidence-credit","reading-evidence-rights","reading-example","reading-reference","reading-rationale"])$(id).value="";
+ $("reading-evidence-kind").value="none";
  locked=false;
  $("reading-commit").disabled=true;
  $("reading-form").hidden=false;$("reading-after").hidden=true;
@@ -131,6 +153,7 @@ function commit(){
   preliminaryUsageCategory:$("reading-usage").value,
   preliminaryContextualUnit:$("reading-unit").value,
   usageExample:$("reading-example").value.trim(),
+  contextEvidence:contextualSource(),
   independentEvidenceReference:$("reading-reference").value.trim(),
   evidenceRationale:$("reading-rationale").value.trim(),
   lexicalApproval:"not_granted",emojiComprehensionApproval:"not_granted",
@@ -148,7 +171,7 @@ function next(){if(!locked)return;index++;show();}
 function exportJSON(){
  if(!records.length)return;
  const output={
-  schema:"chromalect.reading-inventory-observation-session.v0.1",
+  schema:"chromalect.reading-inventory-observation-session.v0.2",
   status:"local_source_first_reading_hypotheses_not_independent_approval",
   source:{dictionaryRevision:sourceRevision,dictionaryLicense:"CC BY-SA 4.0",
    dictionaryBlocks:blocks.map(x=>"dictionary-excerpts-"+x+".json"),
@@ -273,8 +296,8 @@ $("reading-start").addEventListener("click",start);
 $("reading-commit").addEventListener("click",commit);
 $("reading-next").addEventListener("click",next);
 $("reading-export").addEventListener("click",exportJSON);
-for(const id of ["reading-usage","reading-unit","reading-example","reading-reference","reading-rationale"]){
- $(id).addEventListener(id==="reading-usage"||id==="reading-unit"?"change":"input",validate);
+for(const id of ["reading-usage","reading-unit","reading-evidence-kind","reading-evidence-id","reading-evidence-url","reading-evidence-credit","reading-evidence-rights","reading-example","reading-reference","reading-rationale"]){
+ $(id).addEventListener(["reading-usage","reading-unit","reading-evidence-kind","reading-evidence-rights"].includes(id)?"change":"input",validate);
 }
 load();
 })();

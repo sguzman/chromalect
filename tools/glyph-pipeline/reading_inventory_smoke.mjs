@@ -19,7 +19,7 @@ const ids=["reading-scope","reading-count","reading-start","reading-export",
  "reading-status","reading-session","reading-count-label","reading-progress",
  "reading-progress-fill","reading-glyph","reading-rank","reading-current",
  "reading-gloss","reading-references","reading-external-sources","reading-other","reading-full","reading-source-id",
- "reading-form","reading-usage","reading-unit","reading-example","reading-reference",
+ "reading-form","reading-usage","reading-unit","reading-evidence-kind","reading-evidence-id","reading-evidence-url","reading-evidence-credit","reading-evidence-rights","reading-example","reading-reference",
  "reading-rationale","reading-commit","reading-after","reading-next"];
 class Element{
  constructor(tag="div"){this.tagName=tag;this.events={};this.attributes={};this.style={};
@@ -37,6 +37,7 @@ elements["reading-count"].value="20";
 elements["reading-start"].disabled=true;
 elements["reading-export"].disabled=true;
 elements["reading-session"].hidden=true;
+elements["reading-evidence-kind"].value="none";
 const body=new Element("body");
 let payloadBlob;
 const sandbox={
@@ -93,10 +94,30 @@ const session=JSON.parse(await payloadBlob.text());
 assert.equal(session.session.scope,"higher");
 assert.equal(session.session.requestedCount,"20");
 assert.equal(session.observations.length,1);
+assert.equal(session.schema,"chromalect.reading-inventory-observation-session.v0.2");
+assert.equal(session.observations[0].contextEvidence,null);
 assert.deepEqual(validateReadingInventory(session,triage,blocks),{
  characterEntries:1000,dictionaryReadingEntries:1393,localObservations:1,independentApprovals:0
 });
 const copy=x=>JSON.parse(JSON.stringify(x));
+const sampled=copy(session);
+sampled.observations[0].usageExample="测试上下文";
+sampled.observations[0].contextEvidence={sourceKind:"tatoeba",
+ sourceRecordId:"123456789",sourceUrl:"https://tatoeba.org/en/sentences/show/123456789",
+ contributorAttribution:"Synthetic fixture author",reuseDisposition:"cc_by_2_0_fr"};
+assert.equal(validateReadingInventory(sampled,triage,blocks).localObservations,1);
+const noCitation=copy(sampled);noCitation.observations[0].contextEvidence=null;
+assert.throws(()=>validateReadingInventory(noCitation,triage,blocks));
+const rights=copy(sampled);rights.observations[0].contextEvidence.reuseDisposition="link_only";
+assert.throws(()=>validateReadingInventory(rights,triage,blocks));
+const spoof=copy(sampled);spoof.observations[0].contextEvidence.sourceUrl="https://example.org/en/sentences/show/123456789";
+assert.throws(()=>validateReadingInventory(spoof,triage,blocks));
+const wrongId=copy(sampled);wrongId.observations[0].contextEvidence.sourceRecordId="123456788";
+assert.throws(()=>validateReadingInventory(wrongId,triage,blocks));
+const v1=copy(session);v1.schema="chromalect.reading-inventory-observation-session.v0.1";
+delete v1.observations[0].contextEvidence;
+assert.equal(validateReadingInventory(v1,triage,blocks).localObservations,1);
+
 const wrong=copy(session);wrong.observations[0].reading="fictional1";
 assert.throws(()=>validateReadingInventory(wrong,triage,blocks));
 const swap=copy(session);swap.observations[0].dictionaryBlobSha="bad";

@@ -27,7 +27,9 @@ function sections(record){
  }));
 }
 export function validateReadingInventory(session,triage,dictionaryBlocks){
- assert.equal(session.schema,"chromalect.reading-inventory-observation-session.v0.1");
+ assert.ok(["chromalect.reading-inventory-observation-session.v0.1",
+ "chromalect.reading-inventory-observation-session.v0.2"].includes(session.schema));
+ const v2=session.schema.endsWith(".v0.2");
  assert.equal(session.status,"local_source_first_reading_hypotheses_not_independent_approval");
  assert.equal(session.source?.dictionaryRevision,revision);
  assert.equal(session.source?.dictionaryLicense,"CC BY-SA 4.0");
@@ -99,6 +101,30 @@ export function validateReadingInventory(session,triage,dictionaryBlocks){
   assert.ok(categories.has(o.preliminaryUsageCategory));
   assert.ok(units.has(o.preliminaryContextualUnit));
   assert.ok(typeof o.usageExample==="string"&&o.usageExample.length<=500);
+  if(v2){
+   if(o.contextEvidence===null){
+    assert.equal(o.usageExample,"","Unattributed context cannot be exported");
+   }else{
+    const e=o.contextEvidence;
+    assert.ok(e&&typeof e==="object"&&!Array.isArray(e));
+    assert.ok(["tatoeba","corpus","dictionary"].includes(e.sourceKind));
+    assert.ok(typeof e.sourceRecordId==="string"&&e.sourceRecordId.length>0&&e.sourceRecordId.length<=120);
+    assert.ok(typeof e.sourceUrl==="string"&&e.sourceUrl.length<=1000);
+    const parsed=new URL(e.sourceUrl);
+    assert.equal(parsed.protocol,"https:");
+    assert.ok(typeof e.contributorAttribution==="string"&&e.contributorAttribution.trim().length>0&&e.contributorAttribution.length<=250);
+    assert.ok(["link_only","cc_by_2_0_fr","cc0_1_0","other_cleared"].includes(e.reuseDisposition));
+    if(e.reuseDisposition==="link_only")assert.equal(o.usageExample,"");
+    if(e.sourceKind==="tatoeba"){
+     assert.match(e.sourceRecordId,/^\\d+$/);
+     assert.equal(parsed.hostname,"tatoeba.org");
+     assert.match(parsed.pathname,/^\\/(?:en|eng)\\/sentences\\/show\\/\\d+\\/?$/);
+     assert.equal(parsed.pathname.split("/")[4],e.sourceRecordId);
+     assert.equal(parsed.search,"");assert.equal(parsed.hash,"");
+     assert.notEqual(e.reuseDisposition,"other_cleared");
+    }
+   }
+  }
   assert.ok(typeof o.independentEvidenceReference==="string"&&o.independentEvidenceReference.length<=1000);
   assert.ok(typeof o.evidenceRationale==="string"&&o.evidenceRationale.trim().length>=12&&o.evidenceRationale.length<=15000);
   assert.equal(o.lexicalApproval,"not_granted");
