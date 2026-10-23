@@ -74,7 +74,7 @@ for(const change of [
  (a,b,c,d,e)=>{c.version="0.7.0";},
  (a,b,c,d,e)=>{b.glyphs[1].components.push(part(changed));},
  ]){
- const xs=[catalog,source,palette,experiment,review].map(structuredClone);
+ const xs=[catalog,source,palette,experiment,review].map(x=>structuredClone(x));
  change(...xs);assert.throws(()=>run(...xs));
 }
 console.log("Two source ranks, repeated owner identity, introduced same-glyph color collision and 13 rejections verified.");
