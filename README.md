@@ -73,6 +73,10 @@ The [semantic browser](site/semantic-coverage.html) shows candidate mappings, so
 
 The [technical semantic research index](docs/mandarin-semantic-research-index.md) contains the detailed hypotheses, visibility and reading audits, source intake, reproducible evidence, review protocols, and outstanding verification gates. No proposed sense has independent lexical approval or independently established pictogram-comprehension approval.
 
+## Contextual Mandarin evidence acquisition
+
+The source-evidence [research queue](docs/mandarin-contextual-reading-evidence-queue.md) contains **319 high-attention pinned reading entries**, grouped into **241 case-normalized pronunciation search targets** without merging lexical senses. The [offline Tatoeba candidate extractor](docs/mandarin-tatoeba-offline-candidate-intake.md) can identify bounded, contributor-attributed Chinese sentence IDs from licensed snapshots. No corpus sentence is accepted as a reading or sense without contextual review. The [semantic browser](site/semantic-coverage.html) reports acquisition separately from lexical and pictogram approval.
+
 ## Radical, component, and character catalogs
 
 The [human-readable catalog](CATALOG.md) distinguishes **modern radicals (201 principal + explicitly listed variants)**, **214 traditional Kangxi radicals**, **513 original v0.4 component color identities** (extended additively to **520** in v0.6), and **characters 0001–1000** in ten 100-character pages. Their [machine-readable JSON and inverse indexes](CATALOG.md) preserve the original analyses; a generated, source-aligned catalog now has complete first-tranche SVG coverage. Third-party data attribution is recorded in [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).

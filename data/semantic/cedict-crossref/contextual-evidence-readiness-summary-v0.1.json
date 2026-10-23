@@ -1,0 +1,18 @@
+{
+  "schema": "chromalect.semantic.contextual-evidence-readiness-summary.v0.1",
+  "status": "research_acquisition_planning_not_validated_contextual_evidence",
+  "source": {
+    "readingEvidenceWorkqueue": "contextual-reading-evidence-workqueue-v0.1.json",
+    "normalizedSearchGroups": "contextual-pronunciation-search-groups-v0.1.json"
+  },
+  "highAttentionCharacters": 142,
+  "originalDictionaryReadingEntries": 319,
+  "caseNormalizedSearchGroups": 241,
+  "capitalizationDuplicatesNotMergedSemantically": 78,
+  "sourceTasksWithPublisherPageLinks": 50,
+  "candidateSentenceIdsCollected": 0,
+  "independentlyVerifiedReadings": 0,
+  "independentlyApprovedLexicalSenses": 0,
+  "independentlyApprovedPictograms": 0,
+  "productionVerified": 0
+}

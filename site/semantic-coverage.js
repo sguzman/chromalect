@@ -390,7 +390,7 @@
   async function load() {
     try {
       const excerptBlocks=["0001-0200","0201-0400","0401-0600","0601-0800","0801-1000"];
-      const [response,profileResponse,lexicalResponse,auditResponse,reviewResponse,visibilityResponse,readinessResponse,polysemyResponse,readingAuditResponse,casefoldResponse,externalPilotResponse,externalDiscrepancyResponse,publisherSourceResponse,publisherReadingResponse,...dictionaryResponses]=await Promise.all([
+      const [response,profileResponse,lexicalResponse,auditResponse,reviewResponse,visibilityResponse,readinessResponse,polysemyResponse,readingAuditResponse,casefoldResponse,externalPilotResponse,externalDiscrepancyResponse,publisherSourceResponse,publisherReadingResponse,contextReadinessResponse,...dictionaryResponses]=await Promise.all([
         fetch("semantic/mandarin-1000-v0.1.json"),
         fetch("profiles/mandarin-1000-v1.json"),
         fetch("semantic/lexical-crossref-v0.1.json"),
@@ -405,12 +405,13 @@
         fetch("semantic/external-dictionary-discrepancy-v0.1.json"),
         fetch("semantic/publisher-page-provenance-v0.2.json"),
         fetch("semantic/publisher-reading-label-comparison-v0.1.json"),
+        fetch("semantic/contextual-evidence-readiness-summary-v0.1.json"),
         ...excerptBlocks.map(block=>fetch("semantic/dictionary-excerpts-"+block+".json"))
       ]);
-      if(!response.ok || !profileResponse.ok || !lexicalResponse.ok || !auditResponse.ok || !reviewResponse.ok || !visibilityResponse.ok || !readinessResponse.ok || !polysemyResponse.ok || !readingAuditResponse.ok || !casefoldResponse.ok || !externalPilotResponse.ok || !externalDiscrepancyResponse.ok || !publisherSourceResponse.ok || !publisherReadingResponse.ok || dictionaryResponses.some(r=>!r.ok))
+      if(!response.ok || !profileResponse.ok || !lexicalResponse.ok || !auditResponse.ok || !reviewResponse.ok || !visibilityResponse.ok || !readinessResponse.ok || !polysemyResponse.ok || !readingAuditResponse.ok || !casefoldResponse.ok || !externalPilotResponse.ok || !externalDiscrepancyResponse.ok || !publisherSourceResponse.ok || !publisherReadingResponse.ok || !contextReadinessResponse.ok || dictionaryResponses.some(r=>!r.ok))
         throw new Error("Character, dictionary or audit data unavailable");
-      const [data,profile,lexical,audit,review,visibility,readiness,polysemy,readingAudit,casefold,externalPilot,externalDiscrepancy,publisherSources,publisherReading]=await Promise.all([
-        response.json(),profileResponse.json(),lexicalResponse.json(),auditResponse.json(),reviewResponse.json(),visibilityResponse.json(),readinessResponse.json(),polysemyResponse.json(),readingAuditResponse.json(),casefoldResponse.json(),externalPilotResponse.json(),externalDiscrepancyResponse.json(),publisherSourceResponse.json(),publisherReadingResponse.json()
+      const [data,profile,lexical,audit,review,visibility,readiness,polysemy,readingAudit,casefold,externalPilot,externalDiscrepancy,publisherSources,publisherReading,contextReadiness]=await Promise.all([
+        response.json(),profileResponse.json(),lexicalResponse.json(),auditResponse.json(),reviewResponse.json(),visibilityResponse.json(),readinessResponse.json(),polysemyResponse.json(),readingAuditResponse.json(),casefoldResponse.json(),externalPilotResponse.json(),externalDiscrepancyResponse.json(),publisherSourceResponse.json(),publisherReadingResponse.json(),contextReadinessResponse.json()
       ]);
       const dictionaryBlocks=await Promise.all(dictionaryResponses.map(r=>r.json()));
       const dictionaryRecords=dictionaryBlocks.flatMap((block,i)=>{
@@ -516,6 +517,25 @@
       publisherReadingRows=new Map(publisherReading.records.map(r=>[r.rank,r]));
       if(publisherReadingRows.size!==23)
        throw new Error("Publisher reading-label inventory contains repeated character identities");
+      if(contextReadiness.schema!=="chromalect.semantic.contextual-evidence-readiness-summary.v0.1"||
+         contextReadiness.status!=="research_acquisition_planning_not_validated_contextual_evidence"||
+         contextReadiness.highAttentionCharacters!==142||
+         contextReadiness.originalDictionaryReadingEntries!==319||
+         contextReadiness.caseNormalizedSearchGroups!==241||
+         contextReadiness.capitalizationDuplicatesNotMergedSemantically!==78||
+         contextReadiness.candidateSentenceIdsCollected!==0||
+         contextReadiness.independentlyVerifiedReadings!==0||
+         contextReadiness.independentlyApprovedLexicalSenses!==0||
+         contextReadiness.independentlyApprovedPictograms!==0||
+         contextReadiness.productionVerified!==0)
+       throw new Error("Contextual evidence readiness source is inconsistent with pending approvals");
+      $("semantic-context-evidence-note").textContent=
+       "Context tasks: "+contextReadiness.originalDictionaryReadingEntries+
+       " pinned reading entries consolidated into "+contextReadiness.caseNormalizedSearchGroups+
+       " Pinyin search groups (case duplicates remain separate lexical entries); "+
+       contextReadiness.candidateSentenceIdsCollected+
+       " contextual sentence IDs collected, "+
+       contextReadiness.independentlyVerifiedReadings+" independently verified readings.";
       if(readingAudit.schema!=="chromalect.semantic.reading-sensitive-literal-gloss-audit.v0.1"||
          readingAudit.status!=="automated_english_gloss_reading_distribution_not_lexical_verification"||
          readingAudit.summary.charactersAudited!==1000||
