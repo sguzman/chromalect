@@ -58,6 +58,7 @@ This is a sequence of **evidence gates**, not a promise to build a large applica
 - [x] Scan eight publisher-documented multi-character word leads against the pinned Tatoeba snapshot, retain 27 source-only candidate associations for six leads, and record 24 new distinct IDs (1,039 across all three source cohorts).
 - [x] Publish searchable research-only character and word-candidate browser pages, while blocking unadjudicated pronunciations and senses from approval.
 - [x] Preserve the 27 selected corpus word-source IDs with 20 public contributor usernames and pinned sentence-text fingerprints, without reproducing source sentences.
+- [x] Check 27 of 27 selected Tatoeba word-sentence records against the live API: owner, content hash, written form and observed CC BY 2.0 FR license; preserve a dated audit without republishing sentence text.
 - [ ] Independently check sentence-level reuse permissions, and record URLs before any corpus quotation or lexical promotion.
 - [ ] Independently adjudicate attested readings and usage-specific lexical senses, including higher-attention cases.
 - [ ] Conduct independently controlled blind emoji comprehension and accessibility evaluations.
