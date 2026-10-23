@@ -133,10 +133,10 @@
       "key": "phonetic-notation",
       "label": "Phonetic notation experiment",
       "sourceHeadingPrefix": "Phase 2",
-      "complete": 5,
-      "pending": 5,
-      "total": 10,
-      "checklistPercent": 50,
+      "complete": 8,
+      "pending": 4,
+      "total": 12,
+      "checklistPercent": 67,
       "checkpoints": [
         {
           "description": "Establish a reversible, source-pinned orthographic Pinyin citation baseline for all 1,171 first-tranche readings, without declaring phonemic or contextual verification.",
@@ -159,6 +159,14 @@
           "state": "complete"
         },
         {
+          "description": "Round-trip all 1,171 pinned written initial/final/tone combinations through a source-attested orthographic grammar and publish 710 noncertifying written contrast candidates.",
+          "state": "complete"
+        },
+        {
+          "description": "Flag 197 source citation readings in eight context-dependent final-spelling categories, preserving original spellings and pending IPA adjudication.",
+          "state": "complete"
+        },
+        {
           "description": "Freeze the Mandarin phonological contrast inventory and a phonetic reference notation.",
           "state": "pending"
         },
@@ -175,8 +183,8 @@
           "state": "pending"
         },
         {
-          "description": "Try one integrated character-cell layout without changing the original strokes.",
-          "state": "pending"
+          "description": "Prototype one independently switchable citation-tone, initial and written-final layout around unmodified Chinese characters; human decoding validation remains pending.",
+          "state": "complete"
         }
       ]
     },

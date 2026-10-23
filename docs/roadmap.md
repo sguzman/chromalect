@@ -41,11 +41,13 @@ This is a sequence of **evidence gates**, not a promise to build a large applica
 - [x] Publish source-aligned citation-tone contour controls with five pinned example readings, leaving context-dependent neutral tone and all learning outcomes unresolved.
 - [x] Source-link a working 21-consonant Pinyin initial-feature codebook and publish a Pinyin / provisional IPA / featural-shape comparison with 3 nonconsonantal spelling conventions kept separate.
 - [x] Demonstrate an initial-only strict source-token feature codec over all 1,171 cited readings (997 consonantal, 174 orthographic onset conventions), without claiming full phonological or visual-symbol decoding.
+- [x] Round-trip all 1,171 pinned written initial/final/tone combinations through a source-attested orthographic grammar and publish 710 noncertifying written contrast candidates.
+- [x] Flag 197 source citation readings in eight context-dependent final-spelling categories, preserving original spellings and pending IPA adjudication.
 - [ ] Freeze the Mandarin phonological contrast inventory and a phonetic reference notation.
 - [ ] Compare Pinyin/IPA labels, initial-final symbols, and constructed featural glyphs.
 - [ ] Specify a decoding grammar and round-trip tests.
 - [ ] Test tone contours independently from segmental notation.
-- [ ] Try one integrated character-cell layout without changing the original strokes.
+- [x] Prototype one independently switchable citation-tone, initial and written-final layout around unmodified Chinese characters; human decoding validation remains pending.
 
 **Gate:** reliable decoding, not simply an attractive-looking sound diagram.
 
