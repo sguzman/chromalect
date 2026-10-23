@@ -42,11 +42,13 @@ function validateSource(targetManifest,sourcePairs){
  required(originalPairs.size===49,"Duplicate original source warning ID");
  const used=new Set(),counts={introduced:0,resolved:0,retained:0};
  let targetA=0;
- for(const t of targetManifest.targets){
+ for(const [index,t] of targetManifest.targets.entries()){
   const original=originalPairs.get(t.id);
   const fname=t.id+".svg";
-  required(original&&!used.has(t.id)&&t.id===t.rank+"-"+t.offeredComponents.map(x=>x.id).sort().join("-")&&
-   original.rank===t.rank&&original.foldIndex===t.foldIndex&&
+  required(original&&!used.has(t.id)&&
+   t.id===sourcePairs[index].id.replaceAll("|","-")&&
+   t.id===t.rank+"-"+t.offeredComponents.map(x=>x.id).sort().join("-")&&
+   original.rank===t.rank&&original.character===t.character&&original.foldIndex===t.foldIndex&&
    original.reviewState===t.reviewState&&
    original.originalSVG===t.sourceSVG&&original.heldoutSVG===t.foldSVG&&
    original.sourceSHA256===t.sourceSHA256&&original.heldoutSHA256===t.foldSHA256&&
@@ -73,6 +75,8 @@ function validateSource(targetManifest,sourcePairs){
    t.otherOwner!==t.machineAssignedOwner&&
    [t.machineAssignedOwner,t.otherOwner].sort().join("|")===
     offered.slice().sort().join("|"),"Target key is not derived from the original source component pair");
+  required(t.machineAssignedOwner===(index%2===0?offered[0].id:offered[1].id),
+   "Target owner must follow source-ranked, precommitted A/B sequence");
   if(t.machineAssignedOwner===offered[0].id)targetA++;
   used.add(t.id);counts[t.reviewState]++;
  }
