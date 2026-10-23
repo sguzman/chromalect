@@ -201,7 +201,7 @@ fn check_written_final_source_evidence() -> Result<(), String> {
         for (digit, glyph) in digits.iter().zip(original) {
             let i = digit.as_u64().ok_or("nonintegral geometric symbol index")? as usize;
             let letter = letters.get(i).ok_or("geometric primitive index out of bounds")?;
-            if glyph.as_str() != Some(letter) { return Err("geometric letter mismatch".into()); }
+            if glyph.as_str() != Some(letter.as_str()) { return Err("geometric letter mismatch".into()); }
             decoded.push_str(letter);
         }
         if decoded != token { return Err("geometric control failed literal final roundtrip".into()); }
