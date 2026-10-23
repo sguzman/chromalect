@@ -419,6 +419,10 @@ jobs:
           node tools/glyph-pipeline/mnemonic_group_color_pilot.mjs --write
           node tools/glyph-pipeline/mnemonic_group_color_pilot.mjs --check
           node tools/glyph-pipeline/mnemonic_group_color_pilot_smoke.mjs
+          node tools/glyph-pipeline/mnemonic_partition_benchmark.mjs --write
+          node tools/glyph-pipeline/mnemonic_partition_benchmark.mjs --check
+          node tools/glyph-pipeline/mnemonic_partition_benchmark_smoke.mjs
+          test -s site/mnemonic-partition-benchmark-v0.1.json
           node tools/glyph-pipeline/mnemonic_color_pilot_viewer_smoke.mjs
           test -s site/semantic-group-color-pilot-v0.1.json
           test -s site/mnemonic-color-pilot.html && test -s site/mnemonic-color-pilot.js
