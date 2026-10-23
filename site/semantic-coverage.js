@@ -405,7 +405,7 @@
         fetch("semantic/external-dictionary-discrepancy-v0.1.json"),
         fetch("semantic/publisher-page-provenance-v0.2.json"),
         fetch("semantic/publisher-reading-label-comparison-v0.1.json"),
-        fetch("semantic/contextual-evidence-readiness-summary-v0.1.json"),
+        fetch("semantic/contextual-evidence-readiness-summary-v0.2.json"),
         ...excerptBlocks.map(block=>fetch("semantic/dictionary-excerpts-"+block+".json"))
       ]);
       if(!response.ok || !profileResponse.ok || !lexicalResponse.ok || !auditResponse.ok || !reviewResponse.ok || !visibilityResponse.ok || !readinessResponse.ok || !polysemyResponse.ok || !readingAuditResponse.ok || !casefoldResponse.ok || !externalPilotResponse.ok || !externalDiscrepancyResponse.ok || !publisherSourceResponse.ok || !publisherReadingResponse.ok || !contextReadinessResponse.ok || dictionaryResponses.some(r=>!r.ok))
@@ -517,13 +517,17 @@
       publisherReadingRows=new Map(publisherReading.records.map(r=>[r.rank,r]));
       if(publisherReadingRows.size!==23)
        throw new Error("Publisher reading-label inventory contains repeated character identities");
-      if(contextReadiness.schema!=="chromalect.semantic.contextual-evidence-readiness-summary.v0.1"||
-         contextReadiness.status!=="research_acquisition_planning_not_validated_contextual_evidence"||
+      if(contextReadiness.schema!=="chromalect.semantic.contextual-evidence-readiness-summary.v0.2"||
+         contextReadiness.status!=="source_sentence_ids_acquired_not_contextual_reading_verification"||
          contextReadiness.highAttentionCharacters!==142||
          contextReadiness.originalDictionaryReadingEntries!==319||
          contextReadiness.caseNormalizedSearchGroups!==241||
          contextReadiness.capitalizationDuplicatesNotMergedSemantically!==78||
-         contextReadiness.candidateSentenceIdsCollected!==0||
+         contextReadiness.candidateSentenceIdsCollected!==363||
+         contextReadiness.candidateCharacterAssociations!==423||
+         contextReadiness.charactersWithCandidateSentenceIds!==141||
+         contextReadiness.charactersWithoutCandidateSentenceIds!==1||
+         contextReadiness.sourceSentencesScanned!==89190||
          contextReadiness.independentlyVerifiedReadings!==0||
          contextReadiness.independentlyApprovedLexicalSenses!==0||
          contextReadiness.independentlyApprovedPictograms!==0||
@@ -533,9 +537,12 @@
        "Context tasks: "+contextReadiness.originalDictionaryReadingEntries+
        " pinned reading entries consolidated into "+contextReadiness.caseNormalizedSearchGroups+
        " Pinyin search groups (case duplicates remain separate lexical entries); "+
-       contextReadiness.candidateSentenceIdsCollected+
-       " contextual sentence IDs collected, "+
-       contextReadiness.independentlyVerifiedReadings+" independently verified readings.";
+       contextReadiness.candidateCharacterAssociations+
+       " surface-only character/sentence candidate matches ("+
+       contextReadiness.candidateSentenceIdsCollected+" distinct sentence IDs) across "+
+       contextReadiness.charactersWithCandidateSentenceIds+"/"+contextReadiness.highAttentionCharacters+
+       " high-attention characters; "+contextReadiness.independentlyVerifiedReadings+
+       " independently verified contextual readings.";
       if(readingAudit.schema!=="chromalect.semantic.reading-sensitive-literal-gloss-audit.v0.1"||
          readingAudit.status!=="automated_english_gloss_reading_distribution_not_lexical_verification"||
          readingAudit.summary.charactersAudited!==1000||

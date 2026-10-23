@@ -19,7 +19,7 @@ const casefold=JSON.parse(fs.readFileSync("data/semantic/cedict-crossref/pinyin-
 const externalPilot=JSON.parse(fs.readFileSync("data/semantic/cedict-crossref/external-dictionary-reconnaissance-v0.1.json","utf8"));
 const externalDiscrepancy=JSON.parse(fs.readFileSync("data/semantic/cedict-crossref/external-dictionary-discrepancy-v0.1.json","utf8"));
 const publisherReading=JSON.parse(fs.readFileSync("data/semantic/cedict-crossref/publisher-reading-label-comparison-v0.1.json","utf8"));
-const contextReadiness=JSON.parse(fs.readFileSync("data/semantic/cedict-crossref/contextual-evidence-readiness-summary-v0.1.json","utf8"));
+const contextReadiness=JSON.parse(fs.readFileSync("data/semantic/cedict-crossref/contextual-evidence-readiness-summary-v0.2.json","utf8"));
 const publisherSources=JSON.parse(fs.readFileSync("data/semantic/cedict-crossref/publisher-page-provenance-v0.2.json","utf8"));
 const catalog=JSON.parse(fs.readFileSync("data/catalog/characters-0001-1000.json","utf8"));
 const profile={schema:"chromalect.mandarin-character-profile.v1",catalog_count:1000,
@@ -99,7 +99,7 @@ const vmContext={
     if(path==="semantic/external-dictionary-discrepancy-v0.1.json")return {ok:true,json:async()=>externalDiscrepancy};
     if(path==="semantic/publisher-page-provenance-v0.2.json")return {ok:true,json:async()=>publisherSources};
     if(path==="semantic/publisher-reading-label-comparison-v0.1.json")return {ok:true,json:async()=>publisherReading};
-    if(path==="semantic/contextual-evidence-readiness-summary-v0.1.json")return {ok:true,json:async()=>contextReadiness};
+    if(path==="semantic/contextual-evidence-readiness-summary-v0.2.json")return {ok:true,json:async()=>contextReadiness};
     for(const key of excerpts)if(path==="semantic/dictionary-excerpts-"+key+".json")return {ok:true,json:async()=>blocks[key]};
     throw new Error("Unexpected resource: "+path);
   }
@@ -137,7 +137,10 @@ assert.ok(ids["semantic-external-source-note"].textContent.includes("16.2%"));
 assert.ok(ids["semantic-external-source-note"].textContent.includes("13 further characters"));
 assert.ok(ids["semantic-context-evidence-note"].textContent.includes("319 pinned reading entries"));
 assert.ok(ids["semantic-context-evidence-note"].textContent.includes("241 Pinyin search groups"));
-assert.ok(ids["semantic-context-evidence-note"].textContent.includes("0 independently verified readings"));
+assert.ok(ids["semantic-context-evidence-note"].textContent.includes("423 surface-only character/sentence candidate matches"));
+assert.ok(ids["semantic-context-evidence-note"].textContent.includes("363 distinct sentence IDs"));
+assert.ok(ids["semantic-context-evidence-note"].textContent.includes("141/142 high-attention characters"));
+assert.ok(ids["semantic-context-evidence-note"].textContent.includes("0 independently verified contextual readings"));
 assert.equal(ids["semantic-reading-audit-fill"].style.width,"100.0%");
 assert.equal(ids["semantic-stage-dictionary"].textContent,lexical.metrics.crossReferenced+" / 1000 ("+(lexical.metrics.crossReferenced/10).toFixed(1)+"%)");
 assert.equal(ids["semantic-stage-lexical"].textContent,"0 / 1000 (0.0%)");
