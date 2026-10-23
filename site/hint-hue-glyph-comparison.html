@@ -56,12 +56,16 @@
 <option value="introduced">Newly close component pairs</option>
 <option value="new_close">All hypothetical close pairs</option>
 <option value="original_close">Original close-color warnings</option>
-<option value="resolved">Previously close, now separated</option></select></label>
+<option value="resolved">Previously close, now separated (first trial)</option>
+<option value="optimized_close">Optimized close pairs</option>
+<option value="optimized_new">Newly close versus original (optimized)</option>
+<option value="optimized_resolved">Original warnings resolved by optimization</option></select></label>
 <label for="hg-risk-order">Review order
 <select id="hg-risk-order"><option value="rank">Original source rank</option>
 <option value="introduced">Most newly close pairs</option>
 <option value="candidate_min">Smallest hypothetical pair distance</option>
-<option value="deterioration">Largest decrease in color separation</option></select></label>
+<option value="deterioration">Largest decrease in color separation</option>
+<option value="optimized_min">Smallest optimized within-glyph distance</option></select></label>
 <label for="hg-select">Source glyph
 <select id="hg-select"></select></label>
 <button id="hg-prev" type="button">Previous</button>
