@@ -4,7 +4,7 @@
 "use strict";
 const $=id=>document.getElementById(id);
 const required=["vsc-pick","vsc-focus","vsc-warning","vsc-back","vsc-forward","vsc-sense","vsc-reveal","vsc-operators",
- "vsc-size","vsc-size-label","vsc-panels","vsc-source","vsc-status","vsc-count"];
+ "vsc-size","vsc-size-label","vsc-gray","vsc-panels","vsc-source","vsc-status","vsc-count"];
 if(required.some(id=>!$(id)))return;
 const grammar=globalThis.ChromalectSemanticGrammar;
 if(!grammar){$("vsc-status").textContent="Semantic grammar unavailable";return;}
@@ -62,6 +62,7 @@ function buildArm(title,description,profile,candidate,style){
  }else{
   const img=make("img","vsc-source-svg");
   img.src=url;img.alt="";img.setAttribute("aria-hidden","true");
+  if($("vsc-gray").checked)img.style.setProperty("filter","grayscale(1)");
   shape.appendChild(img);
  }
  stage.appendChild(shape);
@@ -136,6 +137,7 @@ function render(){
   const label=make("span","vsc-component");
   const swatch=make("span","vsc-swatch");
   swatch.style.setProperty("--swatch",part.color);
+  if($("vsc-gray").checked)swatch.style.setProperty("filter","grayscale(1)");
   swatch.setAttribute("aria-hidden","true");
   label.appendChild(swatch);
   label.appendChild(make("span",null,part.component_id+" · "+part.form+
@@ -155,6 +157,7 @@ function render(){
     const token=make("span","vsc-component");
     const patch=make("span","vsc-swatch");
     patch.style.setProperty("--swatch",component.hex);
+    if($("vsc-gray").checked)patch.style.setProperty("filter","grayscale(1)");
     patch.setAttribute("aria-hidden","true");
     token.appendChild(patch);
     token.appendChild(make("span",null,component.id+" · "+component.form+
@@ -311,5 +314,6 @@ $("vsc-sense").addEventListener("change",render);
 $("vsc-reveal").addEventListener("change",render);
 $("vsc-operators").addEventListener("change",render);
 $("vsc-size").addEventListener("input",render);
+$("vsc-gray").addEventListener("change",render);
 load();
 })();
