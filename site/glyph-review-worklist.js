@@ -67,6 +67,11 @@ function draw(){
   }
   link.href="glyphs/"+r.svg;link.textContent="Inspect source SVG";
   card.appendChild(link);
+  const compare=document.createElement("a");
+  compare.href="visual-semantic-comparison.html#c"+String(r.rank).padStart(4,"0");
+  compare.textContent="Compare the same source glyph with component color and tentative meaning";
+  const nav=document.createElement("p");nav.className="audit-meta";
+  nav.appendChild(compare);card.appendChild(nav);
   $("audit-results").appendChild(card);
  }
  $("audit-count").textContent=shown.length+" matching of 1,000 pending reviews · showing "+
