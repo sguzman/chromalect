@@ -15,6 +15,7 @@ const polysemy=JSON.parse(fs.readFileSync("data/semantic/cedict-crossref/polysem
 const excerpts=["0001-0200","0201-0400","0401-0600","0601-0800","0801-1000"];
 const blocks=Object.fromEntries(excerpts.map(n=>[n,JSON.parse(fs.readFileSync("data/semantic/cedict-crossref/dictionary-excerpts-"+n+".json","utf8"))]));
 const readingAudit=JSON.parse(fs.readFileSync("data/semantic/cedict-crossref/reading-sensitive-gloss-audit-v0.1.json","utf8"));
+const casefold=JSON.parse(fs.readFileSync("data/semantic/cedict-crossref/pinyin-reading-label-normalization-v0.1.json","utf8"));
 const externalPilot=JSON.parse(fs.readFileSync("data/semantic/cedict-crossref/external-dictionary-reconnaissance-v0.1.json","utf8"));
 const externalDiscrepancy=JSON.parse(fs.readFileSync("data/semantic/cedict-crossref/external-dictionary-discrepancy-v0.1.json","utf8"));
 const catalog=JSON.parse(fs.readFileSync("data/catalog/characters-0001-1000.json","utf8"));
@@ -51,6 +52,7 @@ for(const id of [
   "semantic-verified-count","semantic-progress","semantic-progress-fill",
   "semantic-stage-screened","semantic-stage-dictionary","semantic-stage-polysemy","semantic-polysemy-progress","semantic-polysemy-fill","semantic-stage-boundary",
   "semantic-stage-reading-audit","semantic-reading-audit-progress","semantic-reading-audit-fill",
+  "semantic-stage-casefold","semantic-casefold-progress","semantic-casefold-fill",
   "semantic-stage-external","semantic-external-progress","semantic-external-fill",
   "semantic-stage-desk","semantic-desk-progress","semantic-desk-fill",
   "semantic-stage-readiness","semantic-readiness-progress","semantic-readiness-fill",
@@ -89,6 +91,7 @@ const vmContext={
     if(path==="semantic/lexical-review-readiness-v0.1.json")return {ok:true,json:async()=>readiness};
     if(path==="semantic/polysemy-review-index-v0.1.json")return {ok:true,json:async()=>polysemy};
     if(path==="semantic/reading-sensitive-gloss-audit-v0.1.json")return {ok:true,json:async()=>readingAudit};
+    if(path==="semantic/pinyin-reading-label-normalization-v0.1.json")return {ok:true,json:async()=>casefold};
     if(path==="semantic/external-dictionary-reconnaissance-v0.1.json")return {ok:true,json:async()=>externalPilot};
     if(path==="semantic/external-dictionary-discrepancy-v0.1.json")return {ok:true,json:async()=>externalDiscrepancy};
     for(const key of excerpts)if(path==="semantic/dictionary-excerpts-"+key+".json")return {ok:true,json:async()=>blocks[key]};
@@ -118,6 +121,8 @@ assert.equal(ids["semantic-stage-polysemy"].textContent,"1000 / 1000 (100.0%) ·
 assert.equal(ids["semantic-polysemy-fill"].style.width,"100.0%");
 assert.equal(ids["semantic-polysemy-progress"].attrs["aria-valuenow"],"1000");
 assert.equal(ids["semantic-stage-reading-audit"].textContent,"1000 / 1000 (100.0%) · literal wording only");
+assert.equal(ids["semantic-stage-casefold"].textContent,"1000 / 1000 (100.0%) · source spelling only");
+assert.equal(ids["semantic-casefold-fill"].style.width,"100.0%");
 assert.equal(ids["semantic-stage-external"].textContent,"10 / 142 (7.0%) · source locations and desk notes only");
 assert.equal(ids["semantic-external-fill"].style.width,"7.0%");
 assert.equal(ids["semantic-external-progress"].attrs["aria-valuenow"],"10");
@@ -206,7 +211,7 @@ assert.match(ids["semantic-coverage-status"].textContent,new RegExp((1000-lexica
 ids["semantic-lexical-filter"].value="all";
 ids["semantic-lexical-filter"].events.change();
 for(const [kind,expected] of [
- ["multiple-readings",339],["complex-higher",142],["reading-subset",208],["one-cue-complex",367]
+ ["multiple-readings",339],["case-only-entries",166],["normalized-readings",173],["complex-higher",142],["reading-subset",208],["one-cue-complex",367]
 ]){
  ids["semantic-lexical-filter"].value=kind;
  ids["semantic-lexical-filter"].events.change();

@@ -90,6 +90,10 @@
     <div class="semantic-progress" role="progressbar" id="semantic-external-progress" aria-label="High-attention Mandarin characters with additional dictionary source packets" aria-valuemin="0" aria-valuemax="142" aria-valuenow="0"><div id="semantic-external-fill"></div></div>
   </div>
   <div class="semantic-stage">
+    <div class="semantic-stage-heading"><strong>Automated Pinyin label capitalization audit (not pronunciation approval)</strong><span id="semantic-stage-casefold">Loading</span></div>
+    <div class="semantic-progress" role="progressbar" id="semantic-casefold-progress" aria-label="Characters audited for source reading-entry capitalization" aria-valuemin="0" aria-valuemax="1000" aria-valuenow="0"><div id="semantic-casefold-fill"></div></div>
+  </div>
+  <div class="semantic-stage">
     <div class="semantic-stage-heading"><strong>Automated reading-sensitive gloss audit (not lexical approval)</strong><span id="semantic-stage-reading-audit">Loading</span></div>
     <div class="semantic-progress" role="progressbar" id="semantic-reading-audit-progress" aria-label="Characters audited for distribution of literal English glosses across dictionary readings" aria-valuemin="0" aria-valuemax="1000" aria-valuenow="0"><div id="semantic-reading-audit-fill"></div></div>
   </div>
@@ -140,7 +144,9 @@
     <option value="substring-only">Substring-only false matches (7)</option>
     <option value="whole-match">At least one whole-term candidate match</option>
     <option value="not-crossref">Not yet cross-referenced</option>
-    <option value="multiple-readings">Multiple dictionary readings (339)</option>
+    <option value="multiple-readings">Multiple dictionary reading entries (339)</option>
+    <option value="case-only-entries">Multiple entries differing only in Pinyin case (166)</option>
+    <option value="normalized-readings">Multiple distinct lowercased Pinyin labels (173)</option>
     <option value="complex-higher">Many glosses + multiple readings (142)</option>
     <option value="reading-subset">Literal gloss matches only some readings (208)</option>
     <option value="one-cue-complex">One emoji candidate despite multiple lexical cues (367)</option>

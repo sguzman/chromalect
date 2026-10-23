@@ -27,6 +27,7 @@
   let visibilityRows = new Map();
   let mixedRoleForms = new Set();
   let polysemyRows = new Map();
+  let casefoldRows = new Map();
   let readingAuditRows = new Map();
   let dictionaryExcerptRows = new Map();
   let strictSummary = null;
@@ -77,6 +78,15 @@
     $("semantic-external-fill").style.width=percent(count,total);
     $("semantic-stage-external").textContent=count+" / "+total+" ("+
       percent(count,total)+") · source locations and desk notes only";
+  }
+
+  function bindCasefoldAudit(metrics) {
+    const total=1000,count=metrics.charactersAudited;
+    $("semantic-casefold-progress").setAttribute("aria-valuemax",String(total));
+    $("semantic-casefold-progress").setAttribute("aria-valuenow",String(count));
+    $("semantic-casefold-fill").style.width=percent(count,total);
+    $("semantic-stage-casefold").textContent=count+" / "+total+" ("+
+      percent(count,total)+") · source spelling only";
   }
 
   function bindReadingAudit(metrics) {
@@ -187,6 +197,11 @@
         "no emoji candidate to compare")+
         " · no human lexical approval"));
     }
+    const caseRecord=casefoldRows.get(entry.rank);
+    if(caseRecord?.caseOnlyMultiple)
+      card.appendChild(elem("p","semantic-dictionary-note",
+        "Multiple CC-CEDICT entries differ only in Pinyin capitalization ("+
+        caseRecord.recordedReadingLabels.join(" / ")+"); this does not establish multiple spoken readings."));
     const complexity=polysemyRows.get(entry.rank);
     if(complexity && complexity.triageTier!=="baseline"){
       card.appendChild(elem("p","semantic-dictionary-note",
@@ -313,6 +328,8 @@
         (dictionary==="all" ||
           (dictionary==="crossref" && !!crossref) ||
           (dictionary==="multiple-readings" && lexicalComplexity?.readingCount>1) ||
+          (dictionary==="case-only-entries" && casefoldRows.get(x.rank)?.caseOnlyMultiple) ||
+          (dictionary==="normalized-readings" && casefoldRows.get(x.rank)?.multipleNormalizedLabels) ||
           (dictionary==="complex-higher" && lexicalComplexity?.triageTier==="higher") ||
           (dictionary==="reading-subset" && readingAuditRows.get(x.rank)?.hasReadingSubsetLiteralMatch) ||
           (dictionary==="one-cue-complex" && lexicalComplexity?.selectedMeaningCount===1 &&
@@ -360,7 +377,7 @@
   async function load() {
     try {
       const excerptBlocks=["0001-0200","0201-0400","0401-0600","0601-0800","0801-1000"];
-      const [response,profileResponse,lexicalResponse,auditResponse,reviewResponse,visibilityResponse,readinessResponse,polysemyResponse,readingAuditResponse,externalPilotResponse,externalDiscrepancyResponse,...dictionaryResponses]=await Promise.all([
+      const [response,profileResponse,lexicalResponse,auditResponse,reviewResponse,visibilityResponse,readinessResponse,polysemyResponse,readingAuditResponse,casefoldResponse,externalPilotResponse,externalDiscrepancyResponse,...dictionaryResponses]=await Promise.all([
         fetch("semantic/mandarin-1000-v0.1.json"),
         fetch("profiles/mandarin-1000-v1.json"),
         fetch("semantic/lexical-crossref-v0.1.json"),
@@ -370,14 +387,15 @@
         fetch("semantic/lexical-review-readiness-v0.1.json"),
         fetch("semantic/polysemy-review-index-v0.1.json"),
         fetch("semantic/reading-sensitive-gloss-audit-v0.1.json"),
+        fetch("semantic/pinyin-reading-label-normalization-v0.1.json"),
         fetch("semantic/external-dictionary-reconnaissance-v0.1.json"),
         fetch("semantic/external-dictionary-discrepancy-v0.1.json"),
         ...excerptBlocks.map(block=>fetch("semantic/dictionary-excerpts-"+block+".json"))
       ]);
-      if(!response.ok || !profileResponse.ok || !lexicalResponse.ok || !auditResponse.ok || !reviewResponse.ok || !visibilityResponse.ok || !readinessResponse.ok || !polysemyResponse.ok || !readingAuditResponse.ok || !externalPilotResponse.ok || !externalDiscrepancyResponse.ok || dictionaryResponses.some(r=>!r.ok))
+      if(!response.ok || !profileResponse.ok || !lexicalResponse.ok || !auditResponse.ok || !reviewResponse.ok || !visibilityResponse.ok || !readinessResponse.ok || !polysemyResponse.ok || !readingAuditResponse.ok || !casefoldResponse.ok || !externalPilotResponse.ok || !externalDiscrepancyResponse.ok || dictionaryResponses.some(r=>!r.ok))
         throw new Error("Character, dictionary or audit data unavailable");
-      const [data,profile,lexical,audit,review,visibility,readiness,polysemy,readingAudit,externalPilot,externalDiscrepancy]=await Promise.all([
-        response.json(),profileResponse.json(),lexicalResponse.json(),auditResponse.json(),reviewResponse.json(),visibilityResponse.json(),readinessResponse.json(),polysemyResponse.json(),readingAuditResponse.json(),externalPilotResponse.json(),externalDiscrepancyResponse.json()
+      const [data,profile,lexical,audit,review,visibility,readiness,polysemy,readingAudit,casefold,externalPilot,externalDiscrepancy]=await Promise.all([
+        response.json(),profileResponse.json(),lexicalResponse.json(),auditResponse.json(),reviewResponse.json(),visibilityResponse.json(),readinessResponse.json(),polysemyResponse.json(),readingAuditResponse.json(),casefoldResponse.json(),externalPilotResponse.json(),externalDiscrepancyResponse.json()
       ]);
       const dictionaryBlocks=await Promise.all(dictionaryResponses.map(r=>r.json()));
       const dictionaryRecords=dictionaryBlocks.flatMap((block,i)=>{
@@ -405,6 +423,18 @@
          polysemy.records.some((r,i)=>r.rank!==i+1 || r.character!==data.characters[i]?.character))
         throw new Error("Dictionary complexity research index is incomplete or misaligned");
       polysemyRows=new Map(polysemy.records.map(x=>[x.rank,x]));
+      if(casefold.schema!=="chromalect.semantic.pinyin-reading-label-normalization.v0.1"||
+         casefold.status!=="mechanical_casefolding_of_dictionary_pinyin_not_verified_pronunciations"||
+         casefold.summary.charactersAudited!==1000||
+         casefold.summary.caseOnlyMultipleCharacters!==166||
+         casefold.summary.multipleNormalizedLabelCharacters!==173||
+         casefold.summary.independentLexicalApproved!==0||
+         casefold.summary.independentEmojiApproved!==0||
+         casefold.summary.productionVerified!==0||
+         casefold.records.length!==1000||
+         casefold.records.some((r,i)=>r.rank!==i+1||r.character!==data.characters[i]?.character))
+        throw new Error("Source Pinyin casefold audit misaligned or improperly approved");
+      casefoldRows=new Map(casefold.records.map(r=>[r.rank,r]));
       if(externalPilot.schema!=="chromalect.semantic.external-dictionary-reconnaissance.v0.1"||
          externalPilot.status!=="preliminary_external_dictionary_comparison_not_independent_approval"||
          externalPilot.records.length!==5||
@@ -552,6 +582,7 @@
       bindMetrics(data.summary);
       bindResearchProgress(lexical.metrics,audit);
       bindPolysemyProgress(polysemy.summary);
+      bindCasefoldAudit(casefold.summary);
       bindReadingAudit(readingAudit.summary);
       bindReviewReadiness(readiness);
       bindVisibilityProgress(visibility.summary);
