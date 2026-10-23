@@ -18,7 +18,8 @@ for(let i=0;i<records.length;i++){
  const r=records[i],p=triage.records[i];
  assert.equal(r.rank,i+1);assert.equal(p.rank,r.rank);assert.equal(p.character,r.character);
  for(const section of sandbox.ChromalectDictionaryReadings.split(r)){
-  const links=sandbox.ChromalectDictionaryReferences.scan(section.gloss);
+  // Normalize VM-owned arrays to ordinary JSON records for strict, reproducible comparison.
+  const links=JSON.parse(JSON.stringify(sandbox.ChromalectDictionaryReferences.scan(section.gloss)));
   if(!links.length)continue;
   instances+=links.length;sections++;characters.add(r.rank);
   for(const ref of links)targets.add(ref.written+"|"+ref.pinyin);
