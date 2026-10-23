@@ -1,0 +1,63 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark">
+<meta name="description" content="520 stable Mandarin component colors measured against neutral reference backgrounds.">
+<title>Component background contrast audit · Chromalect</title>
+<link rel="stylesheet" href="style.css"><script src="theme.js"></script>
+<script src="reference-contrast.js" defer></script>
+<script src="color-reference-audit.js" defer></script>
+<style>
+.rc-controls{display:flex;flex-wrap:wrap;gap:12px;align-items:flex-end;margin:18px 0;
+ padding:16px;border:1px solid var(--border);border-radius:12px;background:var(--panel)}
+.rc-controls label{display:grid;gap:5px;min-width:165px}
+.rc-controls input,.rc-controls select{font:inherit;color:var(--ink);background:var(--tile-bg);
+ border:1px solid var(--border);border-radius:8px;padding:10px}
+.rc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+ gap:12px;margin:18px 0}
+.rc-card{min-width:0;background:var(--tile-bg);border:1px solid var(--border);
+ border-radius:12px;padding:15px;overflow-wrap:anywhere}
+.rc-card h2{font-size:18px;margin:0 0 12px}
+.rc-samples{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.rc-sample{height:64px;display:flex;align-items:center;justify-content:center;
+ border:1px solid #808080;border-radius:7px}
+.rc-on-white{background:#fff}.rc-on-black{background:#000}
+.rc-mark{display:block;background:var(--rc-color);width:42px;height:42px;border-radius:6px}
+.rc-ratio{font:600 13px ui-monospace,monospace;overflow-wrap:anywhere}
+.rc-meta{font-size:12px;color:var(--sub)}
+.rc-pages{display:flex;gap:10px;align-items:center;justify-content:space-between}
+.rc-pages button{font:inherit;background:var(--panel);color:var(--ink);
+ border:1px solid var(--border);border-radius:8px;padding:9px 15px;cursor:pointer}
+.rc-pages button:disabled{opacity:.4;cursor:default}
+</style></head><body>
+<header class="wrap"><div class="brand"><b>CHROMALECT</b><small>Language, made visible</small></div></header>
+<main class="wrap">
+<div class="eyebrow">Color research · immutable component palette v0.6</div>
+<h1>White and black background contrast audit</h1>
+<p class="intro">All 520 original component colors are measured against uniform sRGB black and white using the W3C relative-luminance contrast formula. The color patches are the unchanged source hex values. These are diagnostic numbers for examining palette performance, not proof of glyph readability, accessibility compliance, or distinguishability between neighboring components.</p>
+<p id="rc-summary">Loading source-derived audit statistics.</p>
+<p id="rc-status" role="status" aria-live="polite">Checking the palette against the published numerical audit.</p>
+<div class="rc-controls">
+<label for="rc-filter">Reference cohort<select id="rc-filter">
+<option value="all">All 520 colors</option>
+<option value="white3">White ratio below 3:1</option>
+<option value="black3">Black ratio below 3:1</option>
+<option value="white45">White ratio below 4.5:1</option>
+<option value="black45">Black ratio below 4.5:1</option>
+</select></label>
+<label for="rc-sort">Sort by<select id="rc-sort">
+<option value="id">Stable component ID</option>
+<option value="white">Lowest white ratio</option>
+<option value="black">Lowest black ratio</option>
+</select></label>
+<label for="rc-query">Component ID, form, color or hint
+<input id="rc-query" type="search" placeholder="e.g. cmp-0001 or #AF56FD"></label>
+</div>
+<p id="rc-count"></p>
+<div id="rc-list" class="rc-grid" aria-label="Source color reference comparison cards"></div>
+<div class="rc-pages"><button id="rc-prev" type="button">Previous</button>
+<button id="rc-next" type="button">Next</button></div>
+<p>The 3:1 and 4.5:1 cutoffs are numerical research filters, not automatic pass/fail labels for complex Chinese stroke outlines. The calculations do not model stroke antialiasing, surrounding colors, color-vision differences, display calibration or actual reading. Source: <a href="https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html">W3C relative luminance and contrast</a>, <a href="palettes/mandarin-component-identity-v0.6.json">original v0.6 palette</a>, <a href="color-reference-contrast-v0.1.json">reproducible audit JSON</a>.</p>
+</main>
+<footer class="wrap"><a href="colors.html">Color registry</a> ·
+<a href="visual-semantic-comparison.html">Color and meaning comparison</a> ·
+<a href="glyph-review-worklist.html">Original glyph review</a> ·
+<a href="index.html">Chromalect overview</a></footer></body></html>
