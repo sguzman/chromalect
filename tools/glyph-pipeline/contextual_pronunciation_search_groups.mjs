@@ -5,7 +5,9 @@ const dir="data/semantic/cedict-crossref/";
 const raw=JSON.parse(fs.readFileSync(dir+"contextual-reading-evidence-workqueue-v0.1.json","utf8"));
 const normalized=JSON.parse(fs.readFileSync(dir+"pinyin-reading-label-normalization-v0.1.json","utf8"));
 const build=function build(raw,normalized){
- if(raw.summary.readingEntryTasks!==319||normalized.summary.highPriorityCharacters===0){} // compared by exact source data below
+ if(raw.summary.readingEntryTasks!==319||normalized.summary.higherPriorityCharacters!==142||
+    raw.summary.independentLexicalSenseApprovals!==0||normalized.summary.independentLexicalApproved!==0)
+  throw Error("Input scope or independent approval status changed");
  const tasks=new Map();
  for(const x of raw.records)tasks.set(x.readingKey,x);
  const groups=[];
@@ -31,7 +33,7 @@ const build=function build(raw,normalized){
    });
   }
  }
- groups.sort((a,b)=>a.evidenceAcquisitionPriority-b.evidenceAcquisitionPriority||a.rank-b.rank||a.casefoldedPinyinLabel.localeCompare(b.casefoldedPinyinLabel));
+ groups.sort((a,b)=>a.evidenceAcquisitionPriority-b.evidenceAcquisitionPriority||a.rank-b.rank||(a.casefoldedPinyinLabel<b.casefoldedPinyinLabel?-1:a.casefoldedPinyinLabel>b.casefoldedPinyinLabel?1:0));
  const summary={
   characters:142,rawDictionaryReadingEntries:319,
   caseNormalizedPronunciationLabelGroups:groups.length,
