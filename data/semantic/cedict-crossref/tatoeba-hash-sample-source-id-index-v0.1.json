@@ -1,0 +1,2016 @@
+{
+  "schema": "chromalect.semantic.tatoeba-hash-sample-source-id-index.v0.1",
+  "status": "hash_sampled_corpus_surface_form_candidates_unadjudicated",
+  "source": {
+    "download": "https://downloads.tatoeba.org/exports/per_language/cmn/cmn_sentences_detailed.tsv.bz2",
+    "retrievedUTC": "2026-10-23",
+    "uncompressedTSVSha256": "7685bc14cf769a63acf7643a5bcd2b19fc3dba6aaf6c12acabd7417752f12338",
+    "method": "sha256_hash_minimum_per_character_over_entire_snapshot",
+    "acquisitionRun": "https://github.com/sguzman/chromalect/actions/runs/39946795012",
+    "temporaryArtifactId": 12498462297,
+    "temporaryArtifactZipSha256": "8751927105749360c40a650a92682d16e9c8aeb507a9aaf4ae541247293f23d5",
+    "artifactExpiryUTC": "2026-11-22T11:32:40Z",
+    "thisIndexContainsContributorNames": false,
+    "thisIndexContainsSentenceText": false
+  },
+  "limitations": [
+    "Source ID hash selection reduces sensitivity to corpus ordering but does not establish contextual pronunciation or lexical sense.",
+    "Original contributor attribution and permissions must be checked before quoting any linked sentence.",
+    "The earlier chronological source-ID index is retained separately and unchanged."
+  ],
+  "summary": {
+    "targetCharacters": 142,
+    "sourceSentencesScanned": 89190,
+    "surfaceMatchesEvaluated": 108126,
+    "characterSentenceAssociations": 701,
+    "uniqueSentenceIds": 690,
+    "charactersWithCandidates": 141,
+    "charactersWithoutCandidates": 1,
+    "associationsSharedWithChronologicalIndex": 37,
+    "uniqueSentenceIdsAcrossBothIndexes": 1015,
+    "contextualReadingsVerified": 0,
+    "lexicalSenseApprovals": 0,
+    "pictogramApprovals": 0,
+    "productionVerified": 0
+  },
+  "records": [
+    {
+      "rank": 2,
+      "character": "乙",
+      "sentenceIds": [
+        "13799568",
+        "14028832",
+        "5092091"
+      ],
+      "sourceIdStatus": "unverified_surface_match",
+      "independentReadingApproval": false,
+      "lexicalSenseApproval": false
+    },
+    {
+      "rank": 17,
+      "character": "了",
+      "sentenceIds": [
+        "802119",
+        "6482312",
+        "343314",
+        "7771993",
+        "2637077"
+      ],
+      "sourceIdStatus": "unverified_surface_match",
+      "independentReadingApproval": false,
+      "lexicalSenseApproval": false
+    },
+    {
+      "rank": 18,
+      "character": "刀",
+      "sentenceIds": [
+        "1325001",
+        "13549536",
+        "8727912",
+        "13884027",
+        "14063171"
+      ],
+      "sourceIdStatus": "unverified_surface_match",
+      "independentReadingApproval": false,
+      "lexicalSenseApproval": false
+    },
+    {
+      "rank": 23,
+      "character": "干",
+      "sentenceIds": [
+        "1691834",
+        "349290",
+        "13970677",
+        "3526191",
+        "2680419"
+      ],
+      "sourceIdStatus": "unverified_surface_match",
+      "independentReadingApproval": false,
+      "lexicalSenseApproval": false
+    },
+    {
+      "rank": 24,
+      "character": "于",
+      "sentenceIds": [
+        "736845",
+        "747610",
+        "8746516",
+        "1438327",
+        "2690857"
+      ],
+      "sourceIdStatus": "unverified_surface_match",
+      "independentReadingApproval": false,
+      "lexicalSenseApproval": false
+    },
+    {
+      "rank": 27,
+      "character": "土",
+      "sentenceIds": [
+        "919942",
+        "1397372",
+        "13621041",
+        "1862596",
+        "781172"
+      ],
+      "sourceIdStatus": "unverified_surface_match",
+      "independentReadingApproval": false,
+      "lexicalSenseApproval": false
+    },
+    {
+      "rank": 28,
+      "character": "士",
+      "sentenceIds": [
+        "5967303",
+        "6535846",
+        "2040291",
+        "6877966",
+        "6146508"
+      ],
+      "sourceIdStatus": "unverified_surface_match",
+      "independentReadingApproval": false,
+      "lexicalSenseApproval": false
+    },
+    {
+      "rank": 32,
+      "character": "大",
+      "sentenceIds": [
+        "8589625",
+        "810071",
+        "707704",
+        "3682922",
+        "8588263"
+      ],
+      "sourceIdStatus": "unverified_surface_match",
+      "independentReadingApproval": false,
+      "lexicalSenseApproval": false
+    },
+    {
+      "rank": 36,
+      "character": "上",
+      "sentenceIds": [
+        "778704",
+        "4439896",
+        "420416",
+        "2490070",
+        "510764"
+      ],
+      "sourceIdStatus": "unverified_surface_match",
+      "independentReadingApproval": false,
+      "lexicalSenseApproval": false
+    },
+    {
+      "rank": 55,
+      "character": "门",
+      "sentenceIds": [
+        "411602",
+        "10540449",
+        "347241",
+        "457644",
+        "472976"
+      ],
+      "sourceIdStatus": "unverified_surface_match",
+      "independentReadingApproval": false,
+      "lexicalSenseApproval": false
+    },
+    {
+      "rank": 57,
+      "character": "义",
+      "sentenceIds": [
+        "2065020",
+        "1899741",
+        "5907524",
+        "503020",
+        "803441"
+      ],
+      "sourceIdStatus": "unverified_surface_match",
+      "independentReadingApproval": false,
+      "lexicalSenseApproval": false
+    },
+    {
+      "rank": 64,
+      "character": "子",
+      "sentenceIds": [
+        "13950440",
+        "389834",
+        "859442",
+        "13596091",
+        "900048"
+      ],
+      "sourceIdStatus": "unverified_surface_match",
+      "independentReadingApproval": false,
+      "lexicalSenseApproval": false
+    },
+    {
+      "rank": 65,
+      "character": "卫",
+      "sentenceIds": [
+        "2887848",
+        "9780067",
+        "421268",
+        "8854693",
+        "6857048"
+      ],
+      "sourceIdStatus": "unverified_surface_match",
+      "independentReadingApproval": false,
+      "lexicalSenseApproval": false
+    },
+    {
+      "rank": 71,
+      "character": "叉",
+      "sentenceIds": [
+        "13670883",
+        "2318397",
+        "13540026",
+        "13539392",
+        "407225"
+      ],
+      "sourceIdStatus": "unverified_surface_match",
+      "independentReadingApproval": false,
+      "lexicalSenseApproval": false
+    },
+    {
+      "rank": 74,
+      "character": "丰",
+      "sentenceIds": [
+        "487621",
+        "1779227",
+        "1735611",
+        "3554254",
+        "5576771"
+      ],
+      "sourceIdStatus": "unverified_surface_match",
+      "independentReadingApproval": false,
+      "lexicalSenseApproval": false
+    },
+    {
+      "rank": 79,
+      "character": "夫",
+      "sentenceIds": [
+        "1587895",
+        "5749540",
+        "851512",
+        "13513836",
+        "8184886"
+      ],
+      "sourceIdStatus": "unverified_surface_match",
+      "independentReadingApproval": false,
+      "lexicalSenseApproval": false
+    },
+    {
+      "rank": 80,
+      "character": "元",
+      "sentenceIds": [
+        "948082",
+        "13111445",
+        "904860",
+        "734890",
+        "1883460"
+      ],
+      "sourceIdStatus": "unverified_surface_match",
+      "independentReadingApproval": false,
+      "lexicalSenseApproval": false
+    },
+    {
+      "rank": 85,
+      "character": "扎",
+      "sentenceIds": [
+        "10530864",
+        "13545268",
+        "10301563",
+        "350057",
+        "2177507"
+      ],
+      "sourceIdStatus": "unverified_surface_match",
+      "independentReadingApproval": false,
+      "lexicalSenseApproval": false
+    },
+    {
+      "rank": 87,
+      "character": "木",
+      "sentenceIds": [
+        "430553",
+        "13533656",
+        "426329",
+        "3742505",
+        "420094"
+      ],
+      "sourceIdStatus": "unverified_surface_match",
+      "independentReadingApproval": false,
+      "lexicalSenseApproval": false
+    },
+    {
+      "rank": 89,
+      "character": "支",
+      "sentenceIds": [
+        "4267340",
+        "336671",
+        "6146345",
+        "1517474",
+        "358176"
+      ],
+      "sourceIdStatus": "unverified_surface_match",
+      "independentReadingApproval": false,
+      "lexicalSenseApproval": false
+    },
+    {
+      "rank": 99,
+      "character": "匹",
+      "sentenceIds": [
+        "781453",
+        "6150899",
+        "492204",
+        "3154187",
+        "2029371"
+      ],
+      "sourceIdStatus": "unverified_surface_match",
+      "independentReadingApproval": false,
+      "lexicalSenseApproval": false
+    },
+    {
+      "rank": 100,
+      "character": "车",
+      "sentenceIds": [
+        "503221",
+        "1946793",
+        "750140",
+        "5663392",
+        "2599865"
+      ],
+      "sourceIdStatus": "unverified_surface_match",
+      "independentReadingApproval": false,
+      "lexicalSenseApproval": false
+    },
+    {
+      "rank": 105,
+      "character": "比",
+      "sentenceIds": [
+        "833003",
+        "6146331",
+        "2393380",
+        "760548",
+        "5983579"
+      ],
+      "sourceIdStatus": "unverified_surface_match",
+      "independentReadingApproval": false,
+      "lexicalSenseApproval": false
+    },
+    {
+      "rank": 107,
+      "character": "切",
+      "sentenceIds": [
+        "13573830",
+        "3437289",
+        "1977877",
+        "13634377",
+        "832475"
+      ],
+      "sourceIdStatus": "unverified_surface_match",
+      "independentReadingApproval": false,
+      "lexicalSenseApproval": false
+    },
+    {
+      "rank": 113,
+      "character": "中",
+      "sentenceIds": [
+        "461489",
+        "13826482",
+        "1691840",
+        "337300",
+        "8903273"
+      ],
+      "sourceIdStatus": "unverified_surface_match",
+      "independentReadingApproval": false,
+      "lexicalSenseApproval": false
+    },
+    {
+      "rank": 123,
+      "character": "毛",
+      "sentenceIds": [
+        "13138912",
+        "13591489",
+        "12568849",
+        "13939323",
+        "14032786"
+      ],
+      "sourceIdStatus": "unverified_surface_match",
+      "independentReadingApproval": false,
+      "lexicalSenseApproval": false
+    },
+    {
+      "rank": 127,
+      "character": "长",
+      "sentenceIds": [
+        "13907687",
+        "1014135",
+        "5551189",
+        "3479877",
+        "420688"
+      ],
+      "sourceIdStatus": "unverified_surface_match",
+      "independentReadingApproval": false,
+      "lexicalSenseApproval": false
+    },
+    {
+      "rank": 130,
+      "character": "片",
+      "sentenceIds": [
+        "13249671",
+        "13544102",
+        "1426551",
+        "9401684",
+        "2431715"
+      ],
+      "sourceIdStatus": "unverified_surface_match",
+      "independentReadingApproval": false,
+      "lexicalSenseApproval": false
+    },
+    {
+      "rank": 133,
+      "character": "仇",
+      "sentenceIds": [
+        "790219",
+        "5883315",
+        "400480",
+        "13573938",
+        "874979"
+      ],
+      "sourceIdStatus": "unverified_surface_match",
+      "independentReadingApproval": false,
+      "lexicalSenseApproval": false
+    },
+    {
+      "rank": 142,
+      "character": "从",
+      "sentenceIds": [
+        "8742180",
+        "334202",
+        "2559016",
+        "686925",
+        "1878013"
+      ],
+      "sourceIdStatus": "unverified_surface_match",
+      "independentReadingApproval": false,
+      "lexicalSenseApproval": false
+    },
+    {
+      "rank": 146,
+      "character": "分",
+      "sentenceIds": [
+        "8574631",
+        "3469880",
+        "5985455",
+        "2321603",
+        "420758"
+      ],
+      "sourceIdStatus": "unverified_surface_match",
+      "independentReadingApproval": false,
+      "lexicalSenseApproval": false
+    },
+    {
+      "rank": 158,
+      "character": "勾",
+      "sentenceIds": [
+        "3579604",
+        "6404952",
+        "9518683",
+        "459967",
+        "13852521"
+      ],
+      "sourceIdStatus": "unverified_surface_match",
+      "independentReadingApproval": false,
+      "lexicalSenseApproval": false
+    },
+    {
+      "rank": 161,
+      "character": "文",
+      "sentenceIds": [
+        "13111772",
+        "3778215",
+        "1746110",
+        "420640",
+        "1182127"
+      ],
+      "sourceIdStatus": "unverified_surface_match",
+      "independentReadingApproval": false,
+      "lexicalSenseApproval": false
+    },
+    {
+      "rank": 163,
+      "character": "方",
+      "sentenceIds": [
+        "5100222",
+        "13839316",
+        "10335097",
+        "1780760",
+        "856845"
+      ],
+      "sourceIdStatus": "unverified_surface_match",
+      "independentReadingApproval": false,
+      "lexicalSenseApproval": false
+    },
+    {
+      "rank": 164,
+      "character": "火",
+      "sentenceIds": [
+        "512858",
+        "333091",
+        "9956914",
+        "345714",
+        "335841"
+      ],
+      "sourceIdStatus": "unverified_surface_match",
+      "independentReadingApproval": false,
+      "lexicalSenseApproval": false
+    },
+    {
+      "rank": 165,
+      "character": "为",
+      "sentenceIds": [
+        "3695416",
+        "512103",
+        "444639",
+        "1330044",
+        "335269"
+      ],
+      "sourceIdStatus": "unverified_surface_match",
+      "independentReadingApproval": false,
+      "lexicalSenseApproval": false
+    },
+    {
+      "rank": 166,
+      "character": "斗",
+      "sentenceIds": [
+        "3130872",
+        "5144745",
+        "799294",
+        "9842625",
+        "2710655"
+      ],
+      "sourceIdStatus": "unverified_surface_match",
+      "independentReadingApproval": false,
+      "lexicalSenseApproval": false
+    },
+    {
+      "rank": 168,
+      "character": "计",
+      "sentenceIds": [
+        "472385",
+        "13119149",
+        "332485",
+        "5767607",
+        "4436125"
+      ],
+      "sourceIdStatus": "unverified_surface_match",
+      "independentReadingApproval": false,
+      "lexicalSenseApproval": false
+    },
+    {
+      "rank": 178,
+      "character": "巴",
+      "sentenceIds": [
+        "343223",
+        "1423332",
+        "8750724",
+        "389919",
+        "863913"
+      ],
+      "sourceIdStatus": "unverified_surface_match",
+      "independentReadingApproval": false,
+      "lexicalSenseApproval": false
+    },
+    {
+      "rank": 182,
+      "character": "以",
+      "sentenceIds": [
+        "3142365",
+        "9409467",
+        "808630",
+        "862457",
+        "787292"
+      ],
+      "sourceIdStatus": "unverified_surface_match",
+      "independentReadingApproval": false,
+      "lexicalSenseApproval": false
+    },
+    {
+      "rank": 196,
+      "character": "打",
+      "sentenceIds": [
+        "1572675",
+        "10640478",
+        "335093",
+        "5687006",
+        "884183"
+      ],
+      "sourceIdStatus": "unverified_surface_match",
+      "independentReadingApproval": false,
+      "lexicalSenseApproval": false
+    },
+    {
+      "rank": 198,
+      "character": "正",
+      "sentenceIds": [
+        "13717742",
+        "333614",
+        "10538602",
+        "859009",
+        "501423"
+      ],
+      "sourceIdStatus": "unverified_surface_match",
+      "independentReadingApproval": false,
+      "lexicalSenseApproval": false
+    },
+    {
+      "rank": 201,
+      "character": "扒",
+      "sentenceIds": [
+        "690078",
+        "2348898",
+        "2143971",
+        "14028424",
+        "14028425"
+      ],
+      "sourceIdStatus": "unverified_surface_match",
+      "independentReadingApproval": false,
+      "lexicalSenseApproval": false
+    },
+    {
+      "rank": 206,
+      "character": "世",
+      "sentenceIds": [
+        "8826530",
+        "347181",
+        "14059753",
+        "4547051",
+        "68"
+      ],
+      "sourceIdStatus": "unverified_surface_match",
+      "independentReadingApproval": false,
+      "lexicalSenseApproval": false
+    },
+    {
+      "rank": 207,
+      "character": "艾",
+      "sentenceIds": [
+        "784967",
+        "13321260",
+        "798407",
+        "13953730",
+        "10574413"
+      ],
+      "sourceIdStatus": "unverified_surface_match",
+      "independentReadingApproval": false,
+      "lexicalSenseApproval": false
+    },
+    {
+      "rank": 209,
+      "character": "节",
+      "sentenceIds": [
+        "9423234",
+        "502959",
+        "4063182",
+        "3664641",
+        "2394575"
+      ],
+      "sourceIdStatus": "unverified_surface_match",
+      "independentReadingApproval": false,
+      "lexicalSenseApproval": false
+    },
+    {
+      "rank": 212,
+      "character": "可",
+      "sentenceIds": [
+        "361893",
+        "332724",
+        "10650613",
+        "12502495",
+        "13527683"
+      ],
+      "sourceIdStatus": "unverified_surface_match",
+      "independentReadingApproval": false,
+      "lexicalSenseApproval": false
+    },
+    {
+      "rank": 214,
+      "character": "左",
+      "sentenceIds": [
+        "13311072",
+        "836339",
+        "10484119",
+        "3630206",
+        "8646195"
+      ],
+      "sourceIdStatus": "unverified_surface_match",
+      "independentReadingApproval": false,
+      "lexicalSenseApproval": false
+    },
+    {
+      "rank": 216,
+      "character": "石",
+      "sentenceIds": [
+        "13884049",
+        "755837",
+        "6591448",
+        "13561233",
+        "13561234"
+      ],
+      "sourceIdStatus": "unverified_surface_match",
+      "independentReadingApproval": false,
+      "lexicalSenseApproval": false
+    },
+    {
+      "rank": 222,
+      "character": "平",
+      "sentenceIds": [
+        "1758141",
+        "461489",
+        "8709504",
+        "13910788",
+        "13545645"
+      ],
+      "sourceIdStatus": "unverified_surface_match",
+      "independentReadingApproval": false,
+      "lexicalSenseApproval": false
+    },
+    {
+      "rank": 226,
+      "character": "卡",
+      "sentenceIds": [
+        "894390",
+        "919643",
+        "350656",
+        "13779680",
+        "13109366"
+      ],
+      "sourceIdStatus": "unverified_surface_match",
+      "independentReadingApproval": false,
+      "lexicalSenseApproval": false
+    },
+    {
+      "rank": 231,
+      "character": "业",
+      "sentenceIds": [
+        "421242",
+        "1517493",
+        "353528",
+        "2690857",
+        "421048"
+      ],
+      "sourceIdStatus": "unverified_surface_match",
+      "independentReadingApproval": false,
+      "lexicalSenseApproval": false
+    },
+    {
+      "rank": 234,
+      "character": "归",
+      "sentenceIds": [
+        "1438327",
+        "1438323",
+        "334481",
+        "1501631",
+        "13118005"
+      ],
+      "sourceIdStatus": "unverified_surface_match",
+      "independentReadingApproval": false,
+      "lexicalSenseApproval": false
+    },
+    {
+      "rank": 243,
+      "character": "号",
+      "sentenceIds": [
+        "5780559",
+        "1589733",
+        "5555579",
+        "1186904",
+        "420624"
+      ],
+      "sourceIdStatus": "unverified_surface_match",
+      "independentReadingApproval": false,
+      "lexicalSenseApproval": false
+    },
+    {
+      "rank": 246,
+      "character": "只",
+      "sentenceIds": [
+        "1045529",
+        "830353",
+        "3526185",
+        "1300402",
+        "336673"
+      ],
+      "sourceIdStatus": "unverified_surface_match",
+      "independentReadingApproval": false,
+      "lexicalSenseApproval": false
+    },
+    {
+      "rank": 275,
+      "character": "白",
+      "sentenceIds": [
+        "2076291",
+        "9690024",
+        "12294676",
+        "3061867",
+        "1361982"
+      ],
+      "sourceIdStatus": "unverified_surface_match",
+      "independentReadingApproval": false,
+      "lexicalSenseApproval": false
+    },
+    {
+      "rank": 282,
+      "character": "令",
+      "sentenceIds": [
+        "13578074",
+        "1364689",
+        "13753045",
+        "711089",
+        "2145220"
+      ],
+      "sourceIdStatus": "unverified_surface_match",
+      "independentReadingApproval": false,
+      "lexicalSenseApproval": false
+    },
+    {
+      "rank": 285,
+      "character": "印",
+      "sentenceIds": [
+        "10484811",
+        "2200471",
+        "9423572",
+        "6014653",
+        "487621"
+      ],
+      "sourceIdStatus": "unverified_surface_match",
+      "independentReadingApproval": false,
+      "lexicalSenseApproval": false
+    },
+    {
+      "rank": 294,
+      "character": "处",
+      "sentenceIds": [
+        "2333771",
+        "2004703",
+        "5067344",
+        "9963181",
+        "1506958"
+      ],
+      "sourceIdStatus": "unverified_surface_match",
+      "independentReadingApproval": false,
+      "lexicalSenseApproval": false
+    },
+    {
+      "rank": 298,
+      "character": "包",
+      "sentenceIds": [
+        "835705",
+        "8631001",
+        "6183644",
+        "13863135",
+        "13911336"
+      ],
+      "sourceIdStatus": "unverified_surface_match",
+      "independentReadingApproval": false,
+      "lexicalSenseApproval": false
+    },
+    {
+      "rank": 302,
+      "character": "立",
+      "sentenceIds": [
+        "14051669",
+        "13512856",
+        "13634378",
+        "6799716",
+        "452419"
+      ],
+      "sourceIdStatus": "unverified_surface_match",
+      "independentReadingApproval": false,
+      "lexicalSenseApproval": false
+    },
+    {
+      "rank": 305,
+      "character": "闪",
+      "sentenceIds": [
+        "13892104",
+        "5767608",
+        "2349241",
+        "343925",
+        "9990090"
+      ],
+      "sourceIdStatus": "unverified_surface_match",
+      "independentReadingApproval": false,
+      "lexicalSenseApproval": false
+    },
+    {
+      "rank": 310,
+      "character": "头",
+      "sentenceIds": [
+        "1746058",
+        "420928",
+        "11662458",
+        "9012152",
+        "10099049"
+      ],
+      "sourceIdStatus": "unverified_surface_match",
+      "independentReadingApproval": false,
+      "lexicalSenseApproval": false
+    },
+    {
+      "rank": 312,
+      "character": "宁",
+      "sentenceIds": [
+        "10169230",
+        "1235428",
+        "794450",
+        "463889",
+        "794491"
+      ],
+      "sourceIdStatus": "unverified_surface_match",
+      "independentReadingApproval": false,
+      "lexicalSenseApproval": false
+    },
+    {
+      "rank": 318,
+      "character": "礼",
+      "sentenceIds": [
+        "1586924",
+        "704998",
+        "493515",
+        "2607376",
+        "348447"
+      ],
+      "sourceIdStatus": "unverified_surface_match",
+      "independentReadingApproval": false,
+      "lexicalSenseApproval": false
+    },
+    {
+      "rank": 337,
+      "character": "边",
+      "sentenceIds": [
+        "1946922",
+        "1323999",
+        "765340",
+        "1870109",
+        "4879013"
+      ],
+      "sourceIdStatus": "unverified_surface_match",
+      "independentReadingApproval": false,
+      "lexicalSenseApproval": false
+    },
+    {
+      "rank": 339,
+      "character": "发",
+      "sentenceIds": [
+        "13204783",
+        "1516208",
+        "10201149",
+        "10703962",
+        "842667"
+      ],
+      "sourceIdStatus": "unverified_surface_match",
+      "independentReadingApproval": false,
+      "lexicalSenseApproval": false
+    },
+    {
+      "rank": 342,
+      "character": "台",
+      "sentenceIds": [
+        "1924804",
+        "13527819",
+        "9968836",
+        "550939",
+        "385332"
+      ],
+      "sourceIdStatus": "unverified_surface_match",
+      "independentReadingApproval": false,
+      "lexicalSenseApproval": false
+    },
+    {
+      "rank": 366,
+      "character": "地",
+      "sentenceIds": [
+        "13879478",
+        "10350402",
+        "421132",
+        "13525770",
+        "1672242"
+      ],
+      "sourceIdStatus": "unverified_surface_match",
+      "independentReadingApproval": false,
+      "lexicalSenseApproval": false
+    },
+    {
+      "rank": 367,
+      "character": "场",
+      "sentenceIds": [
+        "745828",
+        "1992691",
+        "1873069",
+        "421252",
+        "805518"
+      ],
+      "sourceIdStatus": "unverified_surface_match",
+      "independentReadingApproval": false,
+      "lexicalSenseApproval": false
+    },
+    {
+      "rank": 368,
+      "character": "扬",
+      "sentenceIds": [
+        "421234",
+        "2442133",
+        "1397025",
+        "692231",
+        "461622"
+      ],
+      "sourceIdStatus": "unverified_surface_match",
+      "independentReadingApproval": false,
+      "lexicalSenseApproval": false
+    },
+    {
+      "rank": 377,
+      "character": "机",
+      "sentenceIds": [
+        "332724",
+        "776324",
+        "471088",
+        "828647",
+        "2500048"
+      ],
+      "sourceIdStatus": "unverified_surface_match",
+      "independentReadingApproval": false,
+      "lexicalSenseApproval": false
+    },
+    {
+      "rank": 379,
+      "character": "过",
+      "sentenceIds": [
+        "1409415",
+        "1409373",
+        "380559",
+        "7774755",
+        "13942552"
+      ],
+      "sourceIdStatus": "unverified_surface_match",
+      "independentReadingApproval": false,
+      "lexicalSenseApproval": false
+    },
+    {
+      "rank": 401,
+      "character": "成",
+      "sentenceIds": [
+        "13559091",
+        "347848",
+        "13552115",
+        "61",
+        "13539977"
+      ],
+      "sourceIdStatus": "unverified_surface_match",
+      "independentReadingApproval": false,
+      "lexicalSenseApproval": false
+    },
+    {
+      "rank": 402,
+      "character": "夹",
+      "sentenceIds": [
+        "8775844",
+        "334795",
+        "2144008",
+        "332943",
+        "4265203"
+      ],
+      "sourceIdStatus": "unverified_surface_match",
+      "independentReadingApproval": false,
+      "lexicalSenseApproval": false
+    },
+    {
+      "rank": 407,
+      "character": "划",
+      "sentenceIds": [
+        "2029327",
+        "2393061",
+        "476654",
+        "13914299",
+        "4265141"
+      ],
+      "sourceIdStatus": "unverified_surface_match",
+      "independentReadingApproval": false,
+      "lexicalSenseApproval": false
+    },
+    {
+      "rank": 413,
+      "character": "师",
+      "sentenceIds": [
+        "10696001",
+        "461291",
+        "1441787",
+        "348911",
+        "3672866"
+      ],
+      "sourceIdStatus": "unverified_surface_match",
+      "independentReadingApproval": false,
+      "lexicalSenseApproval": false
+    },
+    {
+      "rank": 418,
+      "character": "当",
+      "sentenceIds": [
+        "12615485",
+        "8690131",
+        "2077798",
+        "4182618",
+        "334865"
+      ],
+      "sourceIdStatus": "unverified_surface_match",
+      "independentReadingApproval": false,
+      "lexicalSenseApproval": false
+    },
+    {
+      "rank": 424,
+      "character": "曲",
+      "sentenceIds": [
+        "6154358",
+        "13517636",
+        "13971863",
+        "13544098",
+        "13119106"
+      ],
+      "sourceIdStatus": "unverified_surface_match",
+      "independentReadingApproval": false,
+      "lexicalSenseApproval": false
+    },
+    {
+      "rank": 427,
+      "character": "同",
+      "sentenceIds": [
+        "728064",
+        "847845",
+        "346891",
+        "926772",
+        "13246535"
+      ],
+      "sourceIdStatus": "unverified_surface_match",
+      "independentReadingApproval": false,
+      "lexicalSenseApproval": false
+    },
+    {
+      "rank": 455,
+      "character": "传",
+      "sentenceIds": [
+        "348186",
+        "1490523",
+        "3565127",
+        "9797516",
+        "347887"
+      ],
+      "sourceIdStatus": "unverified_surface_match",
+      "independentReadingApproval": false,
+      "lexicalSenseApproval": false
+    },
+    {
+      "rank": 460,
+      "character": "伏",
+      "sentenceIds": [
+        "13575534",
+        "798234",
+        "13138281",
+        "771994",
+        "1305871"
+      ],
+      "sourceIdStatus": "unverified_surface_match",
+      "independentReadingApproval": false,
+      "lexicalSenseApproval": false
+    },
+    {
+      "rank": 467,
+      "character": "任",
+      "sentenceIds": [
+        "765398",
+        "924598",
+        "9969118",
+        "420988",
+        "454257"
+      ],
+      "sourceIdStatus": "unverified_surface_match",
+      "independentReadingApproval": false,
+      "lexicalSenseApproval": false
+    },
+    {
+      "rank": 472,
+      "character": "华",
+      "sentenceIds": [
+        "1606074",
+        "795657",
+        "437404",
+        "1743567",
+        "347873"
+      ],
+      "sourceIdStatus": "unverified_surface_match",
+      "independentReadingApproval": false,
+      "lexicalSenseApproval": false
+    },
+    {
+      "rank": 480,
+      "character": "向",
+      "sentenceIds": [
+        "12337847",
+        "5767609",
+        "1494009",
+        "13889888",
+        "421176"
+      ],
+      "sourceIdStatus": "unverified_surface_match",
+      "independentReadingApproval": false,
+      "lexicalSenseApproval": false
+    },
+    {
+      "rank": 481,
+      "character": "似",
+      "sentenceIds": [
+        "12280741",
+        "1560676",
+        "6015342",
+        "13524035",
+        "1616562"
+      ],
+      "sourceIdStatus": "unverified_surface_match",
+      "independentReadingApproval": false,
+      "lexicalSenseApproval": false
+    },
+    {
+      "rank": 482,
+      "character": "后",
+      "sentenceIds": [
+        "4413871",
+        "336597",
+        "1873072",
+        "8645583",
+        "8839876"
+      ],
+      "sourceIdStatus": "unverified_surface_match",
+      "independentReadingApproval": false,
+      "lexicalSenseApproval": false
+    },
+    {
+      "rank": 483,
+      "character": "行",
+      "sentenceIds": [
+        "13504670",
+        "791503",
+        "6630026",
+        "907891",
+        "487652"
+      ],
+      "sourceIdStatus": "unverified_surface_match",
+      "independentReadingApproval": false,
+      "lexicalSenseApproval": false
+    },
+    {
+      "rank": 486,
+      "character": "会",
+      "sentenceIds": [
+        "2921269",
+        "2440946",
+        "7767635",
+        "3667676",
+        "7781512"
+      ],
+      "sourceIdStatus": "unverified_surface_match",
+      "independentReadingApproval": false,
+      "lexicalSenseApproval": false
+    },
+    {
+      "rank": 488,
+      "character": "合",
+      "sentenceIds": [
+        "5660085",
+        "747620",
+        "13539409",
+        "334855",
+        "332490"
+      ],
+      "sourceIdStatus": "unverified_surface_match",
+      "independentReadingApproval": false,
+      "lexicalSenseApproval": false
+    },
+    {
+      "rank": 489,
+      "character": "兆",
+      "sentenceIds": [
+        "4264906",
+        "812351",
+        "13551790",
+        "4515801",
+        "540604"
+      ],
+      "sourceIdStatus": "unverified_surface_match",
+      "independentReadingApproval": false,
+      "lexicalSenseApproval": false
+    },
+    {
+      "rank": 494,
+      "character": "创",
+      "sentenceIds": [
+        "818867",
+        "502701",
+        "347875",
+        "1185711",
+        "1185715"
+      ],
+      "sourceIdStatus": "unverified_surface_match",
+      "independentReadingApproval": false,
+      "lexicalSenseApproval": false
+    },
+    {
+      "rank": 511,
+      "character": "冲",
+      "sentenceIds": [
+        "1866943",
+        "5144753",
+        "9953256",
+        "5613720",
+        "761105"
+      ],
+      "sourceIdStatus": "unverified_surface_match",
+      "independentReadingApproval": false,
+      "lexicalSenseApproval": false
+    },
+    {
+      "rank": 514,
+      "character": "庄",
+      "sentenceIds": [
+        "332779",
+        "3554254",
+        "727518",
+        "461534",
+        "2746382"
+      ],
+      "sourceIdStatus": "unverified_surface_match",
+      "independentReadingApproval": false,
+      "lexicalSenseApproval": false
+    },
+    {
+      "rank": 518,
+      "character": "齐",
+      "sentenceIds": [
+        "5321370",
+        "13881254",
+        "345730",
+        "3964746",
+        "10019601"
+      ],
+      "sourceIdStatus": "unverified_surface_match",
+      "independentReadingApproval": false,
+      "lexicalSenseApproval": false
+    },
+    {
+      "rank": 544,
+      "character": "兴",
+      "sentenceIds": [
+        "12686313",
+        "13947144",
+        "3378044",
+        "3378133",
+        "481175"
+      ],
+      "sourceIdStatus": "unverified_surface_match",
+      "independentReadingApproval": false,
+      "lexicalSenseApproval": false
+    },
+    {
+      "rank": 549,
+      "character": "安",
+      "sentenceIds": [
+        "475383",
+        "6149262",
+        "9698599",
+        "825198",
+        "11075486"
+      ],
+      "sourceIdStatus": "unverified_surface_match",
+      "independentReadingApproval": false,
+      "lexicalSenseApproval": false
+    },
+    {
+      "rank": 556,
+      "character": "论",
+      "sentenceIds": [
+        "5568458",
+        "3770487",
+        "501397",
+        "2410910",
+        "5550276"
+      ],
+      "sourceIdStatus": "unverified_surface_match",
+      "independentReadingApproval": false,
+      "lexicalSenseApproval": false
+    },
+    {
+      "rank": 564,
+      "character": "那",
+      "sentenceIds": [
+        "13900993",
+        "4989874",
+        "13563495",
+        "5983686",
+        "3742580"
+      ],
+      "sourceIdStatus": "unverified_surface_match",
+      "independentReadingApproval": false,
+      "lexicalSenseApproval": false
+    },
+    {
+      "rank": 566,
+      "character": "尽",
+      "sentenceIds": [
+        "465000",
+        "473020",
+        "1565683",
+        "10011676",
+        "574926"
+      ],
+      "sourceIdStatus": "unverified_surface_match",
+      "independentReadingApproval": false,
+      "lexicalSenseApproval": false
+    },
+    {
+      "rank": 575,
+      "character": "阴",
+      "sentenceIds": [
+        "8932475",
+        "3130790",
+        "13570921",
+        "1328640",
+        "948109"
+      ],
+      "sourceIdStatus": "unverified_surface_match",
+      "independentReadingApproval": false,
+      "lexicalSenseApproval": false
+    },
+    {
+      "rank": 581,
+      "character": "好",
+      "sentenceIds": [
+        "1269939",
+        "5780602",
+        "894061",
+        "10184234",
+        "6092460"
+      ],
+      "sourceIdStatus": "unverified_surface_match",
+      "independentReadingApproval": false,
+      "lexicalSenseApproval": false
+    },
+    {
+      "rank": 586,
+      "character": "观",
+      "sentenceIds": [
+        "10484379",
+        "8850437",
+        "9804393",
+        "858959",
+        "3673298"
+      ],
+      "sourceIdStatus": "unverified_surface_match",
+      "independentReadingApproval": false,
+      "lexicalSenseApproval": false
+    },
+    {
+      "rank": 593,
+      "character": "约",
+      "sentenceIds": [
+        "8866913",
+        "10273839",
+        "13890631",
+        "1265259",
+        "8932489"
+      ],
+      "sourceIdStatus": "unverified_surface_match",
+      "independentReadingApproval": false,
+      "lexicalSenseApproval": false
+    },
+    {
+      "rank": 595,
+      "character": "纪",
+      "sentenceIds": [
+        "13938491",
+        "2500027",
+        "503015",
+        "792784",
+        "1587895"
+      ],
+      "sourceIdStatus": "unverified_surface_match",
+      "independentReadingApproval": false,
+      "lexicalSenseApproval": false
+    },
+    {
+      "rank": 600,
+      "character": "弄",
+      "sentenceIds": [
+        "970191",
+        "804540",
+        "8736999",
+        "826170",
+        "1263558"
+      ],
+      "sourceIdStatus": "unverified_surface_match",
+      "independentReadingApproval": false,
+      "lexicalSenseApproval": false
+    },
+    {
+      "rank": 632,
+      "character": "折",
+      "sentenceIds": [
+        "13840858",
+        "429363",
+        "13591539",
+        "13861352",
+        "772167"
+      ],
+      "sourceIdStatus": "unverified_surface_match",
+      "independentReadingApproval": false,
+      "lexicalSenseApproval": false
+    },
+    {
+      "rank": 655,
+      "character": "把",
+      "sentenceIds": [
+        "1397143",
+        "345357",
+        "879187",
+        "679835",
+        "11545843"
+      ],
+      "sourceIdStatus": "unverified_surface_match",
+      "independentReadingApproval": false,
+      "lexicalSenseApproval": false
+    },
+    {
+      "rank": 665,
+      "character": "花",
+      "sentenceIds": [
+        "502784",
+        "13561234",
+        "4761855",
+        "2437259",
+        "875331"
+      ],
+      "sourceIdStatus": "unverified_surface_match",
+      "independentReadingApproval": false,
+      "lexicalSenseApproval": false
+    },
+    {
+      "rank": 675,
+      "character": "克",
+      "sentenceIds": [
+        "2318417",
+        "13545714",
+        "9958900",
+        "909447",
+        "11833483"
+      ],
+      "sourceIdStatus": "unverified_surface_match",
+      "independentReadingApproval": false,
+      "lexicalSenseApproval": false
+    },
+    {
+      "rank": 677,
+      "character": "苏",
+      "sentenceIds": [
+        "737319",
+        "420360",
+        "804850",
+        "692231",
+        "9965612"
+      ],
+      "sourceIdStatus": "unverified_surface_match",
+      "independentReadingApproval": false,
+      "lexicalSenseApproval": false
+    },
+    {
+      "rank": 679,
+      "character": "杠",
+      "sentenceIds": [
+        "899081",
+        "6017398",
+        "8791847",
+        "9700729"
+      ],
+      "sourceIdStatus": "unverified_surface_match",
+      "independentReadingApproval": false,
+      "lexicalSenseApproval": false
+    },
+    {
+      "rank": 693,
+      "character": "更",
+      "sentenceIds": [
+        "13512894",
+        "894379",
+        "874225",
+        "13605586",
+        "1325095"
+      ],
+      "sourceIdStatus": "unverified_surface_match",
+      "independentReadingApproval": false,
+      "lexicalSenseApproval": false
+    },
+    {
+      "rank": 704,
+      "character": "还",
+      "sentenceIds": [
+        "2029439",
+        "466264",
+        "10365690",
+        "10042018",
+        "13878978"
+      ],
+      "sourceIdStatus": "unverified_surface_match",
+      "independentReadingApproval": false,
+      "lexicalSenseApproval": false
+    },
+    {
+      "rank": 708,
+      "character": "连",
+      "sentenceIds": [
+        "420784",
+        "368550",
+        "757346",
+        "3579555",
+        "9806203"
+      ],
+      "sourceIdStatus": "unverified_surface_match",
+      "independentReadingApproval": false,
+      "lexicalSenseApproval": false
+    },
+    {
+      "rank": 717,
+      "character": "时",
+      "sentenceIds": [
+        "8490497",
+        "786042",
+        "13950588",
+        "1470410",
+        "382980"
+      ],
+      "sourceIdStatus": "unverified_surface_match",
+      "independentReadingApproval": false,
+      "lexicalSenseApproval": false
+    },
+    {
+      "rank": 721,
+      "character": "里",
+      "sentenceIds": [
+        "5085425",
+        "363874",
+        "2029343",
+        "13911332",
+        "13983721"
+      ],
+      "sourceIdStatus": "unverified_surface_match",
+      "independentReadingApproval": false,
+      "lexicalSenseApproval": false
+    },
+    {
+      "rank": 739,
+      "character": "听",
+      "sentenceIds": [
+        "5595119",
+        "332867",
+        "8750750",
+        "502900",
+        "336452"
+      ],
+      "sourceIdStatus": "unverified_surface_match",
+      "independentReadingApproval": false,
+      "lexicalSenseApproval": false
+    },
+    {
+      "rank": 747,
+      "character": "吧",
+      "sentenceIds": [
+        "13109952",
+        "6075730",
+        "13999960",
+        "10629953",
+        "3526243"
+      ],
+      "sourceIdStatus": "unverified_surface_match",
+      "independentReadingApproval": false,
+      "lexicalSenseApproval": false
+    },
+    {
+      "rank": 751,
+      "character": "别",
+      "sentenceIds": [
+        "4262126",
+        "10083956",
+        "6799660",
+        "420212",
+        "397905"
+      ],
+      "sourceIdStatus": "unverified_surface_match",
+      "independentReadingApproval": false,
+      "lexicalSenseApproval": false
+    },
+    {
+      "rank": 758,
+      "character": "钉",
+      "sentenceIds": [
+        "3709301",
+        "414045",
+        "811119",
+        "3709299"
+      ],
+      "sourceIdStatus": "unverified_surface_match",
+      "independentReadingApproval": false,
+      "lexicalSenseApproval": false
+    },
+    {
+      "rank": 763,
+      "character": "利",
+      "sentenceIds": [
+        "6822758",
+        "5386888",
+        "13779679",
+        "7033616",
+        "10278307"
+      ],
+      "sourceIdStatus": "unverified_surface_match",
+      "independentReadingApproval": false,
+      "lexicalSenseApproval": false
+    },
+    {
+      "rank": 777,
+      "character": "作",
+      "sentenceIds": [
+        "435245",
+        "892339",
+        "13885268",
+        "2456040",
+        "433369"
+      ],
+      "sourceIdStatus": "unverified_surface_match",
+      "independentReadingApproval": false,
+      "lexicalSenseApproval": false
+    },
+    {
+      "rank": 778,
+      "character": "伯",
+      "sentenceIds": [
+        "13236120",
+        "465818",
+        "8756349",
+        "2635829",
+        "342710"
+      ],
+      "sourceIdStatus": "unverified_surface_match",
+      "independentReadingApproval": false,
+      "lexicalSenseApproval": false
+    },
+    {
+      "rank": 795,
+      "character": "余",
+      "sentenceIds": [
+        "2448756",
+        "8490479",
+        "1530408",
+        "9989887",
+        "993764"
+      ],
+      "sourceIdStatus": "unverified_surface_match",
+      "independentReadingApproval": false,
+      "lexicalSenseApproval": false
+    },
+    {
+      "rank": 810,
+      "character": "免",
+      "sentenceIds": [
+        "1551865",
+        "13570951",
+        "13511555",
+        "2757101",
+        "335257"
+      ],
+      "sourceIdStatus": "unverified_surface_match",
+      "independentReadingApproval": false,
+      "lexicalSenseApproval": false
+    },
+    {
+      "rank": 814,
+      "character": "角",
+      "sentenceIds": [
+        "13538270",
+        "13535119",
+        "13199867",
+        "1582763",
+        "10058493"
+      ],
+      "sourceIdStatus": "unverified_surface_match",
+      "independentReadingApproval": false,
+      "lexicalSenseApproval": false
+    },
+    {
+      "rank": 821,
+      "character": "刨",
+      "sentenceIds": [],
+      "sourceIdStatus": "unverified_surface_match",
+      "independentReadingApproval": false,
+      "lexicalSenseApproval": false
+    },
+    {
+      "rank": 825,
+      "character": "系",
+      "sentenceIds": [
+        "8655644",
+        "14012315",
+        "400204",
+        "13556521",
+        "335896"
+      ],
+      "sourceIdStatus": "unverified_surface_match",
+      "independentReadingApproval": false,
+      "lexicalSenseApproval": false
+    },
+    {
+      "rank": 836,
+      "character": "应",
+      "sentenceIds": [
+        "13748482",
+        "8791826",
+        "1516146",
+        "651202",
+        "5780589"
+      ],
+      "sourceIdStatus": "unverified_surface_match",
+      "independentReadingApproval": false,
+      "lexicalSenseApproval": false
+    },
+    {
+      "rank": 841,
+      "character": "辛",
+      "sentenceIds": [
+        "775773",
+        "1397150",
+        "1491604",
+        "13549383",
+        "797086"
+      ],
+      "sourceIdStatus": "unverified_surface_match",
+      "independentReadingApproval": false,
+      "lexicalSenseApproval": false
+    },
+    {
+      "rank": 847,
+      "character": "间",
+      "sentenceIds": [
+        "2431784",
+        "8293419",
+        "769747",
+        "332836",
+        "13938580"
+      ],
+      "sourceIdStatus": "unverified_surface_match",
+      "independentReadingApproval": false,
+      "lexicalSenseApproval": false
+    },
+    {
+      "rank": 848,
+      "character": "闷",
+      "sentenceIds": [
+        "9990070",
+        "3535537",
+        "10024462",
+        "8791840",
+        "3065603"
+      ],
+      "sourceIdStatus": "unverified_surface_match",
+      "independentReadingApproval": false,
+      "lexicalSenseApproval": false
+    },
+    {
+      "rank": 860,
+      "character": "沙",
+      "sentenceIds": [
+        "10559123",
+        "6159254",
+        "13944531",
+        "9401126",
+        "8591218"
+      ],
+      "sourceIdStatus": "unverified_surface_match",
+      "independentReadingApproval": false,
+      "lexicalSenseApproval": false
+    },
+    {
+      "rank": 871,
+      "character": "沉",
+      "sentenceIds": [
+        "2690857",
+        "461655",
+        "4182617",
+        "13754330",
+        "777068"
+      ],
+      "sourceIdStatus": "unverified_surface_match",
+      "independentReadingApproval": false,
+      "lexicalSenseApproval": false
+    },
+    {
+      "rank": 905,
+      "character": "尾",
+      "sentenceIds": [
+        "604479",
+        "1878074",
+        "13544406",
+        "13544403",
+        "13544405"
+      ],
+      "sourceIdStatus": "unverified_surface_match",
+      "independentReadingApproval": false,
+      "lexicalSenseApproval": false
+    },
+    {
+      "rank": 914,
+      "character": "陈",
+      "sentenceIds": [
+        "1766168",
+        "13947418",
+        "1216102",
+        "13947280",
+        "744696"
+      ],
+      "sourceIdStatus": "unverified_surface_match",
+      "independentReadingApproval": false,
+      "lexicalSenseApproval": false
+    },
+    {
+      "rank": 926,
+      "character": "劲",
+      "sentenceIds": [
+        "829623",
+        "421042",
+        "10081662",
+        "420714",
+        "336952"
+      ],
+      "sourceIdStatus": "unverified_surface_match",
+      "independentReadingApproval": false,
+      "lexicalSenseApproval": false
+    },
+    {
+      "rank": 934,
+      "character": "纳",
+      "sentenceIds": [
+        "476236",
+        "8588302",
+        "8750724",
+        "3579606",
+        "13050264"
+      ],
+      "sourceIdStatus": "unverified_surface_match",
+      "independentReadingApproval": false,
+      "lexicalSenseApproval": false
+    },
+    {
+      "rank": 945,
+      "character": "环",
+      "sentenceIds": [
+        "472805",
+        "395052",
+        "5555134",
+        "426018",
+        "348456"
+      ],
+      "sourceIdStatus": "unverified_surface_match",
+      "independentReadingApproval": false,
+      "lexicalSenseApproval": false
+    },
+    {
+      "rank": 953,
+      "character": "抹",
+      "sentenceIds": [
+        "3660661",
+        "13884923",
+        "13543700",
+        "834543",
+        "6102048"
+      ],
+      "sourceIdStatus": "unverified_surface_match",
+      "independentReadingApproval": false,
+      "lexicalSenseApproval": false
+    },
+    {
+      "rank": 963,
+      "character": "担",
+      "sentenceIds": [
+        "5863291",
+        "6940038",
+        "334999",
+        "6569992",
+        "2002943"
+      ],
+      "sourceIdStatus": "unverified_surface_match",
+      "independentReadingApproval": false,
+      "lexicalSenseApproval": false
+    }
+  ]
+}
