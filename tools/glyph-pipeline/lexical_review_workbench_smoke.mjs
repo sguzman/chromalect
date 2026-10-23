@@ -13,6 +13,7 @@ const ids=[
  "lexical-study-progress","lexical-study-fill","lexical-study-character",
  "lexical-study-meaning","lexical-study-unihan","lexical-study-dictionary",
  "lexical-study-readings","lexical-study-complexity","lexical-study-reading",
+ "lexical-study-reading-evidence",
  "lexical-study-form","lexical-study-decisions","lexical-study-rationale",
  "lexical-study-commit","lexical-study-after","lexical-study-prior","lexical-study-next"
 ];
@@ -68,6 +69,7 @@ const sandbox={
  }
 };
 sandbox.globalThis=sandbox;
+vm.runInNewContext(fs.readFileSync("site/dictionary-readings.js","utf8"),sandbox);
 vm.runInNewContext(source,sandbox);
 for(let i=0;i<12&&elements["lexical-study-start"].disabled;i++)await Promise.resolve();
 assert.equal(elements["lexical-study-start"].disabled,false,"Versioned queue must load");
@@ -82,6 +84,8 @@ assert.ok(elements["lexical-study-character"].children[0].textContent);
 assert.ok(elements["lexical-study-dictionary"].textContent);
 assert.ok(elements["lexical-study-readings"].textContent);
 assert.ok(elements["lexical-study-reading"].children.length>=3);
+assert.ok(elements["lexical-study-reading-evidence"].children.length>=1);
+assert.ok(elements["lexical-study-reading-evidence"].children[0].children[1].textContent);
 assert.ok(!/emoji|🪓/.test(elements["lexical-study-dictionary"].textContent),
  "Dictionary excerpt should not expose a selected pictogram");
 assert.equal(elements["lexical-study-progress"].attributes["aria-valuenow"],"0");

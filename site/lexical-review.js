@@ -4,16 +4,18 @@
 "use strict";
 const $=id=>document.getElementById(id);
 const presenter=globalThis.ChromalectLayers;
+const readingParser=globalThis.ChromalectDictionaryReadings;
 const required=[
  "lexical-study-scope","lexical-study-count","lexical-study-start","lexical-study-export",
  "lexical-study-status","lexical-study-session","lexical-study-count-label",
  "lexical-study-progress","lexical-study-fill","lexical-study-character",
  "lexical-study-meaning","lexical-study-unihan","lexical-study-dictionary",
  "lexical-study-readings","lexical-study-complexity","lexical-study-reading",
+ "lexical-study-reading-evidence",
  "lexical-study-form","lexical-study-decisions","lexical-study-rationale",
  "lexical-study-commit","lexical-study-after","lexical-study-prior","lexical-study-next"
 ];
-if(!presenter||required.some(id=>!$(id)))return;
+if(!presenter||!readingParser||required.some(id=>!$(id)))return;
 const controls=Array.from(document.querySelectorAll("[data-lexical-judgment]"));
 const labels=new Set(["supported","unsupported","uncertain"]);
 let queue=null,trials=[],recorded=[],position=0,judgment=null,awaitingNext=false;
@@ -69,6 +71,20 @@ function show(){
  put("lexical-study-meaning",r.selectedMeaning);
  put("lexical-study-unihan",r.referenceDefinition);
  put("lexical-study-dictionary",r.dictionaryExcerpt);
+ const evidence=$("lexical-study-reading-evidence");
+ evidence.replaceChildren();
+ const segments=readingParser.split(r);
+ for(const section of segments){
+  const wrapper=document.createElement("section");
+  wrapper.className="lexical-study-source";
+  const heading=document.createElement("strong");
+  heading.textContent=section.reading;
+  const gloss=document.createElement("p");
+  gloss.textContent=section.gloss;
+  wrapper.appendChild(heading);
+  wrapper.appendChild(gloss);
+  evidence.appendChild(wrapper);
+ }
  put("lexical-study-readings",r.dictionaryReadings.join(" · "));
  const fragments=r.dictionaryExcerpt.split(";").filter(x=>x.trim()).length;
  put("lexical-study-complexity",r.dictionaryReadings.length+
@@ -201,6 +217,7 @@ async function load(){
     !Array.isArray(data.records)||data.records.length!==897)
     throw new Error("Unexpected source or non-pending approval state");
   for(const r of data.records){
+   readingParser.split(r);
    if(!r.rank||!r.character||!r.selectedMeaning||!r.referenceDefinition||
      !r.dictionaryExcerpt||!Array.isArray(r.dictionaryReadings)||!r.dictionaryReadings.length||
     r.dictionaryReadings.some(x=>typeof x!=="string"||!x)||

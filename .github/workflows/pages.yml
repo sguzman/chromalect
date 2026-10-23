@@ -189,8 +189,10 @@ jobs:
           node --check site/semantic-coverage.js
           node --check site/emoji-comprehension.js
           node --check site/lexical-review.js
+          node --check site/dictionary-readings.js
           node tools/glyph-pipeline/emoji_comprehension_smoke.mjs
           node tools/glyph-pipeline/lexical_review_workbench_smoke.mjs
+          node tools/glyph-pipeline/dictionary_readings_smoke.mjs
           node tools/glyph-pipeline/review_session_validate_smoke.mjs
           node tools/glyph-pipeline/semantic_inventory_smoke.mjs
           node tools/glyph-pipeline/lexical_crossref_smoke.mjs
@@ -224,7 +226,7 @@ jobs:
           test -s site/semantic/lexical-crossref-v0.1.json
           test -s site/semantic-coverage.html
           test -s site/emoji-comprehension.html && test -s site/emoji-comprehension.js
-          test -s site/lexical-review.html && test -s site/lexical-review.js
+          test -s site/lexical-review.html && test -s site/lexical-review.js && test -s site/dictionary-readings.js
       - name: Check neutral unknown-component comparisons
         run: test -s site/glyphs/unknown-components/index.html && test -s site/glyphs/unknown-components/records.json
       - name: Check hierarchical source review
