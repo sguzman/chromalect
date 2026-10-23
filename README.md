@@ -81,6 +81,12 @@ The [high-priority remediation proposals](data/semantic/cedict-crossref/high-pri
 
 Both experimental worksheets export versioned JSON that can be checked by a [no-dependency session validator](tools/glyph-pipeline/review_session_validate.mjs). Review exports are deliberately classified as **unapproved local observations**, not canonical dictionary decisions or accepted semantic mappings. CI validates synthetic exports and rejects tampered identities, repeated trial IDs, and false production-approval claims. No participant data is committed by these tests.
 
+### Polysemy and reusable emoji-role research
+
+The [dictionary-complexity triage](docs/mandarin-polysemy-triage.md) now screens all **1,000 characters (100%)** for multi-reading and multi-gloss evidence without equating English gloss fragments with distinct Chinese senses. **339 characters** have multiple recorded dictionary readings, **142** have both multiple readings and many gloss fragments, and **367** have only one proposed emoji cue despite at least one lexical-complexity indicator. The [semantic browser](site/semantic-coverage.html) filters these research priorities; **0 lexical sense inventories are independently approved**.
+
+The [emoji event/non-event contrast audit](docs/mandarin-event-role-contrast.md) covers **73 reused visible emoji forms** spanning **341 candidate sense assignments**; 16 high-attention groups are selected for independent comprehension testing. Reuse of a pictogram across characters is entirely legitimate. An [optional blind-study scope](site/emoji-comprehension.html) tests the action-versus-entity distinction without special symbols in the visible emoji language, with no automatic approval.
+
 ### Source-first lexical review research
 
 A [local-only Mandarin sense review worksheet](site/lexical-review.html) uses the existing [248-entry discrepancy queue](data/semantic/cedict-crossref/sense-review-queue-v0.1.json). It presents the candidate character meaning and pinned Unihan / CC-CEDICT evidence, **without showing the emoji or the assistant's preliminary analysis before the reviewer commits an explanation**. The reviewer can export exploratory observations as JSON; the repository's independently approved lexical and emoji counts remain at **0**, since local single-reviewer observations are not certified results. The [protocol](docs/mandarin-lexical-review-protocol.md) defines the evidence and independence limitations.
