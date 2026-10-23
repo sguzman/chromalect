@@ -282,6 +282,10 @@ jobs:
           node tools/glyph-pipeline/mandarin_simple_final_features_smoke.mjs
           node tools/glyph-pipeline/mandarin_encoding_comparison_cohorts.mjs --check
           node tools/glyph-pipeline/mandarin_encoding_comparison_cohorts_smoke.mjs
+          node --check site/mandarin-encoding-comparison.js
+          node tools/glyph-pipeline/mandarin_encoding_comparison_viewer_smoke.mjs
+          node tools/glyph-pipeline/mandarin_comparison_initial_shape_consistency_smoke.mjs
+          test -s site/mandarin-encoding-comparison.html
           node --check site/mandarin-simple-final-features.js
           node tools/glyph-pipeline/mandarin_simple_final_features_viewer_smoke.mjs
           test -s site/mandarin-simple-final-features.html
