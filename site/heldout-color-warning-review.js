@@ -6,15 +6,23 @@
 const $=id=>document.getElementById(id);
 const ids=["hv-status","hv-summary","hv-filter","hv-order","hv-search",
  "hv-size","hv-size-label","hv-gray","hv-surface","hv-select",
- "hv-prev","hv-next","hv-gallery","hv-pairs","hv-count"];
+ "hv-prev","hv-next","hv-gallery","hv-pairs","hv-count",
+ "hv-show-meaning","hv-sense","hv-reveal","hv-semantic"];
 if(ids.some(id=>!$(id)))return;
+const grammar=globalThis.ChromalectSemanticGrammar;
+const contrast=globalThis.ChromalectReferenceContrast;
+if(!grammar||!grammar.validate||!contrast||
+   contrast.version!=="wcag22-srgb-reference-v0.1"){
+ $("hv-status").textContent="Reference semantic grammar or luminance calculator unavailable";
+ return;
+}
 const make=(tag,cls,label)=>{
  const e=document.createElement(tag);
  if(cls)e.className=cls;
  if(label!==undefined)e.textContent=label;
  return e;
 };
-let entries=[],current=0;
+let entries=[],current=0,meaning=[],lastRendered=0;
 const allowed=new Set(["all","introduced","resolved","retained"]);
 const orders=new Set(["severity","distance","rank"]);
 function filtered(){
@@ -39,7 +47,8 @@ function render(){
  const rows=filtered();
  if(!rows.length){
   $("hv-select").replaceChildren();$("hv-gallery").replaceChildren();
-  $("hv-pairs").replaceChildren();
+  $("hv-pairs").replaceChildren();$("hv-semantic").replaceChildren();
+  $("hv-sense").replaceChildren();
   $("hv-prev").disabled=true;$("hv-next").disabled=true;
   $("hv-count").textContent="0 source-review glyphs match";
   return;
@@ -56,6 +65,19 @@ function render(){
  sel.value=String(r.rank);
  $("hv-prev").disabled=i===0;
  $("hv-next").disabled=i===rows.length-1;
+ const sourceMeaning=meaning[r.rank-1];
+ const candidates=sourceMeaning.screening.candidates.filter(c=>c.expression!==null);
+ const sense=$("hv-sense"),previous=lastRendered===r.rank?Number(sense.value):0;
+ sense.replaceChildren();
+ for(let j=0;j<candidates.length;j++){
+  const opt=make("option",null,"Provisional candidate "+(j+1)+" · "+
+   candidates[j].selectedMeaning);
+  opt.value=String(j);sense.appendChild(opt);
+ }
+ sense.disabled=candidates.length===0;
+ sense.value=String(previous>=0&&previous<candidates.length?previous:0);
+ lastRendered=r.rank;
+ const candidate=candidates[Number(sense.value)]??null;
  const bg=$("hv-surface").value;
  if(!["theme","white","black"].includes(bg))
   throw Error("Unknown control background");
@@ -77,7 +99,21 @@ function render(){
   if($("hv-gray").checked)
    img.style.setProperty("filter","grayscale(1)");
   canvas.style.setProperty("--hv-surface",bg==="white"?"#fff":bg==="black"?"#000":"transparent");
-  canvas.appendChild(img);figure.appendChild(title);figure.appendChild(canvas);
+  canvas.appendChild(img);
+  if($("hv-show-meaning").checked){
+   const cue=make("div","hv-cue");
+   if(candidate){
+    for(const part of grammar.emojiParts(candidate.expression)){
+     const atom=make("span","hv-cue-atom",part.text);
+     atom.setAttribute("aria-hidden","true");cue.appendChild(atom);
+    }
+    cue.setAttribute("role","img");
+    cue.setAttribute("aria-label","Unverified meaning pictogram for "+
+     candidate.selectedMeaning+": "+grammar.emojiDisplay(candidate.expression));
+   }else cue.textContent="No proposed semantic pictogram (deferred)";
+   canvas.appendChild(cue);
+  }
+  figure.appendChild(title);figure.appendChild(canvas);
   $("hv-gallery").appendChild(figure);
  }
  const panel=$("hv-pairs");panel.replaceChildren();
@@ -91,7 +127,11 @@ function render(){
   const section=make("section","hv-pair");
   section.appendChild(make("strong",null,pair.reviewState+
    " · original ΔOK "+pair.originalDeltaOk.toFixed(4)+
-   " · fold-trained ΔOK "+pair.foldOptimizedDeltaOk.toFixed(4)));
+   " · fold-trained ΔOK "+pair.foldOptimizedDeltaOk.toFixed(4)+
+   " · source luminance "+contrast.ratio(
+    pair.componentA.sourceHex,pair.componentB.sourceHex).toFixed(2)+":1"+
+   " · fold luminance "+contrast.ratio(
+    pair.componentA.foldOptimizedHex,pair.componentB.foldOptimizedHex).toFixed(2)+":1"));
   for(const c of [pair.componentA,pair.componentB]){
    const owner=make("div","hv-owner");
    owner.appendChild(make("span",null,c.id+" · "+c.form));
@@ -109,7 +149,16 @@ function render(){
   panel.appendChild(section);
  }
  panel.appendChild(make("p","hv-metadata",
-  "Numerical proximity warning only. No independent visual discrimination result or semantic-family acceptance."));
+  "Numerical OKLab proximity and luminance-only ratios; neither measure certifies visible component distinction or semantic learning."));
+ $("hv-semantic").replaceChildren(
+  make("strong",null,"Provisional meaning is held constant across both glyph-color conditions"),
+  make("p",null,candidate?
+   "Candidate "+($("hv-reveal").checked?candidate.selectedMeaning:
+    "meaning label hidden until revealed")+
+   " · source definition "+($("hv-reveal").checked?
+    sourceMeaning.source.definition:"hidden"):
+   "No independently approved meaning or pictogram has been assigned for this character."),
+  make("p",null,"Semantic pictogram comprehension and lexical verification: 0 approved."));
  $("hv-count").textContent=(i+1)+" / "+rows.length+
   " source-ranked held-out warning glyphs · "+r.pairs.length+
   " pair observation(s) in selected glyph · 0 visual certifications";
@@ -118,10 +167,11 @@ async function init(){
  try{
   const paths=["glyphs/research/heldout-warning-v0.1/index-v0.1.json",
    "palettes/mandarin-component-identity-v0.6.json",
-   "semantic-group-hue-fivefold-heldout-v0.1.json"];
+   "semantic-group-hue-fivefold-heldout-v0.1.json",
+   "semantic/mandarin-1000-v0.1.json"];
   const responses=await Promise.all(paths.map(path=>fetch(path)));
   if(responses.some(r=>!r.ok))throw Error("Source-exact held-out research sources unavailable");
-  const [data,palette,study]=await Promise.all(responses.map(r=>r.json()));
+  const [data,palette,study,semantics]=await Promise.all(responses.map(r=>r.json()));
   if(palette.schema!=="chromalect.component-palette.v0"||
      palette.id!=="mandarin-component-identity"||
      palette.version!=="0.6.0"||
@@ -135,6 +185,34 @@ async function init(){
      study.summary.crossFoldHeldOutTotals.retainedOriginalClosePairs!==5||
      !Array.isArray(study.folds)||study.folds.length!==5)
    throw Error("The original color source or held-out fold reference changed");
+  if(semantics.schema!=="chromalect.mandarin.character-semantic-tranche.v0.1"||
+     semantics.status!=="initial_screening_complete_candidates_not_production_verified"||
+     semantics.summary.screenedCharacters!==1000||
+     semantics.summary.pictogramCandidateCharacters!==881||
+     semantics.summary.deferredCharacters!==119||
+     semantics.summary.productionVerifiedCharacters!==0||
+     semantics.initialScreeningReview.productionVerifiedSenses!==0||
+     semantics.source.provisional!==true||
+     !Array.isArray(semantics.characters)||semantics.characters.length!==1000)
+   throw Error("Provisional source semantics have changed approval state");
+  let emojiCount=0,pictogramCount=0;
+  for(let i=0;i<semantics.characters.length;i++){
+   const c=semantics.characters[i];
+   if(c.rank!==i+1||!Array.isArray(c.screening?.candidates)||
+      c.screening.status!=="screened")
+    throw Error("Semantic screening source-rank mismatch");
+   const candidates=c.screening.candidates.filter(x=>x.expression!==null);
+   if(candidates.length)pictogramCount++;
+   for(const proposal of candidates){
+    if(proposal.state!=="experimental_pictogram_candidate"||
+       proposal.review!=="human_linguistic_and_comprehension_review_pending"||
+       !proposal.selectedMeaning)
+     throw Error("Provisional semantic research claim promoted without evidence");
+    grammar.validate(proposal.expression);emojiCount++;
+   }
+  }
+  if(pictogramCount!==881||emojiCount!==897)
+   throw Error("Provisional semantic candidate coverage mismatch");
   const sourceColors=new Map(palette.components.map(c=>[c.id,c]));
   if(sourceColors.size!==520)throw Error("Source identity registry is incomplete");
   const foldColors=study.folds.map((fold,i)=>{
@@ -222,7 +300,9 @@ async function init(){
   if(newCount!==23||counts.introduced!==23||
      counts.resolved!==21||counts.retained!==5||pairTotal!==49)
    throw Error("Published held-out pair observations do not reconcile");
-  entries=data.glyphs;
+  if(data.glyphs.some(r=>semantics.characters[r.rank-1].character!==r.character))
+   throw Error("Held-out glyph is not aligned to the semantic character source");
+  entries=data.glyphs;meaning=semantics.characters;
   $("hv-summary").textContent=entries.length+
    " source-matched glyphs contain the original or fold-trained warning "+
    "pairs. 23 new warnings · 21 resolved · 5 retained; "+
@@ -232,7 +312,9 @@ async function init(){
   current=entries.find(r=>r.severity==="introduced")?.rank??entries[0].rank;
   render();
  }catch(err){
-  entries=[];$("hv-gallery").replaceChildren();$("hv-pairs").replaceChildren();
+  entries=[];meaning=[];lastRendered=0;
+  $("hv-gallery").replaceChildren();$("hv-pairs").replaceChildren();
+  $("hv-semantic").replaceChildren();
   $("hv-count").textContent="No source-verified visual review data";
   $("hv-status").textContent="Unable to verify held-out glyph review: "+err.message;
  }
@@ -254,5 +336,7 @@ for(const [id,step] of [["hv-prev",-1],["hv-next",1]]){
 }
 for(const id of ["hv-size","hv-gray","hv-surface"])
  $(id).addEventListener(id==="hv-size"?"input":"change",render);
+for(const id of ["hv-show-meaning","hv-reveal","hv-sense"])
+ $(id).addEventListener("change",render);
 init();
 })();
