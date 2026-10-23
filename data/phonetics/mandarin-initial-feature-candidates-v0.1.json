@@ -1,0 +1,348 @@
+{
+  "schema": "chromalect.phonetics.mandarin-initial-feature-candidates.v0.1",
+  "status": "working_articulatory_candidate_codebook_not_independently_certified_phoneme_inventory",
+  "scope": {
+    "profile": "Mainland Standard Mandarin (Putonghua)",
+    "orthography": "Hanyu Pinyin citation spelling",
+    "sourceTranche": "site/pronunciation-citations-0001-1000.json",
+    "tokenReference": "site/layers-v0.1.json",
+    "enumeratedSourceReadingCount": 1171,
+    "interpretation": "Contrasts between 21 conventional initial spellings, with y/w and zero treated as orthographic onset conventions; not a final IPA sound inventory."
+  },
+  "citations": [
+    {
+      "title": "Indiana University Pronunciation Guide for Pinyin Transcription",
+      "url": "https://scholarworks.iu.edu/bitstreams/248cccaa-1147-443e-845a-7c8a9b4e8ac8/download",
+      "supports": "twenty-one conventional Mandarin initial categories"
+    },
+    {
+      "title": "University of Minnesota Mandarin Pinyin and IPA initial-reference table",
+      "url": "https://conservancy.umn.edu/bitstreams/b7375f7e-667b-4879-a32b-ffe21217dc34/download",
+      "supports": "working initial-to-IPA correspondences and glide qualifications"
+    },
+    {
+      "title": "University of Georgia, Mandarin Loanword Phonology",
+      "url": "https://openscholar.uga.edu/record/18743/files/loggins_nathan_201005_ma.pdf",
+      "supports": "aspiration distinction, phonetic-series categories, variation caveats"
+    },
+    {
+      "title": "University of Texas at Austin, Pitch Perfect Pinyin: r",
+      "url": "https://www.laits.utexas.edu/ppp/learning.php?unit=8",
+      "supports": "r initial retroflex voiced production and divergence from English"
+    }
+  ],
+  "caveats": [
+    "A Mandarin consonant inventory depends on the declared phonological analysis; orthographic initials are not automatically 21 independent phonemes.",
+    "IPA candidates are conventional broad teaching transcriptions, not measured speech tokens.",
+    "The r initial varies between approximant and fricative realizations. The placeholder ɻ is a codebook choice, not a certified exclusive realization.",
+    "Velar fricative h may be transcribed [x] or [h] under different phonetic conventions or phonological contexts.",
+    "The zero initial and y/w spelling tokens are not assigned unconditional consonant IPA values.",
+    "Finals, vowel allophones, rhotic suffixes, and tone sandhi are outside this initial-only comparison.",
+    "No symbols, articulation assertions, or educational effectiveness findings receive independent approval here."
+  ],
+  "statistics": {
+    "conventionalInitialTokens": 21,
+    "orthographicConventions": 3,
+    "sourceReadingCount": 1171,
+    "sourceTokenTotal": 1171,
+    "independentlyVerifiedPhonemicContrasts": 0,
+    "validatedArticulatoryProduction": 0,
+    "educationalStudies": 0
+  },
+  "tokens": [
+    {
+      "token": "∅",
+      "category": "orthographic_onset_convention_not_independent_consonant",
+      "place": null,
+      "manner": null,
+      "aspiration": null,
+      "workingIPACandidate": null,
+      "ipaStatus": "context_dependent_or_no_consonantal_onset",
+      "alternatives": [],
+      "evidenceReview": "not_an_independent_initial_phoneme_assignment",
+      "citationReadingOccurrences": 15
+    },
+    {
+      "token": "b",
+      "category": "conventional_pinyin_initial",
+      "place": "bilabial",
+      "manner": "stop",
+      "aspiration": "unaspirated",
+      "workingIPACandidate": "p",
+      "ipaStatus": "one_common_broad_transcription",
+      "alternatives": [],
+      "evidenceReview": "literature_based_candidate_not_independently_adjudicated",
+      "citationReadingOccurrences": 54
+    },
+    {
+      "token": "c",
+      "category": "conventional_pinyin_initial",
+      "place": "alveolar",
+      "manner": "affricate",
+      "aspiration": "aspirated",
+      "workingIPACandidate": "tsʰ",
+      "ipaStatus": "one_common_broad_transcription",
+      "alternatives": [],
+      "evidenceReview": "literature_based_candidate_not_independently_adjudicated",
+      "citationReadingOccurrences": 20
+    },
+    {
+      "token": "ch",
+      "category": "conventional_pinyin_initial",
+      "place": "postalveolar",
+      "manner": "affricate",
+      "aspiration": "aspirated",
+      "workingIPACandidate": "ʈʂʰ",
+      "ipaStatus": "one_common_broad_transcription",
+      "alternatives": [],
+      "evidenceReview": "literature_based_candidate_not_independently_adjudicated",
+      "citationReadingOccurrences": 55
+    },
+    {
+      "token": "d",
+      "category": "conventional_pinyin_initial",
+      "place": "alveolar",
+      "manner": "stop",
+      "aspiration": "unaspirated",
+      "workingIPACandidate": "t",
+      "ipaStatus": "one_common_broad_transcription",
+      "alternatives": [],
+      "evidenceReview": "literature_based_candidate_not_independently_adjudicated",
+      "citationReadingOccurrences": 63
+    },
+    {
+      "token": "f",
+      "category": "conventional_pinyin_initial",
+      "place": "labiodental",
+      "manner": "fricative",
+      "aspiration": "none",
+      "workingIPACandidate": "f",
+      "ipaStatus": "one_common_broad_transcription",
+      "alternatives": [],
+      "evidenceReview": "literature_based_candidate_not_independently_adjudicated",
+      "citationReadingOccurrences": 52
+    },
+    {
+      "token": "g",
+      "category": "conventional_pinyin_initial",
+      "place": "velar",
+      "manner": "stop",
+      "aspiration": "unaspirated",
+      "workingIPACandidate": "k",
+      "ipaStatus": "one_common_broad_transcription",
+      "alternatives": [],
+      "evidenceReview": "literature_based_candidate_not_independently_adjudicated",
+      "citationReadingOccurrences": 58
+    },
+    {
+      "token": "h",
+      "category": "conventional_pinyin_initial",
+      "place": "velar",
+      "manner": "fricative",
+      "aspiration": "none",
+      "workingIPACandidate": "x",
+      "ipaStatus": "one_convention_variants_documented",
+      "alternatives": [
+        "h",
+        "x"
+      ],
+      "evidenceReview": "literature_based_candidate_not_independently_adjudicated",
+      "citationReadingOccurrences": 50
+    },
+    {
+      "token": "j",
+      "category": "conventional_pinyin_initial",
+      "place": "alveolopalatal",
+      "manner": "affricate",
+      "aspiration": "unaspirated",
+      "workingIPACandidate": "tɕ",
+      "ipaStatus": "one_common_broad_transcription",
+      "alternatives": [],
+      "evidenceReview": "literature_based_candidate_not_independently_adjudicated",
+      "citationReadingOccurrences": 85
+    },
+    {
+      "token": "k",
+      "category": "conventional_pinyin_initial",
+      "place": "velar",
+      "manner": "stop",
+      "aspiration": "aspirated",
+      "workingIPACandidate": "kʰ",
+      "ipaStatus": "one_common_broad_transcription",
+      "alternatives": [],
+      "evidenceReview": "literature_based_candidate_not_independently_adjudicated",
+      "citationReadingOccurrences": 34
+    },
+    {
+      "token": "l",
+      "category": "conventional_pinyin_initial",
+      "place": "alveolar",
+      "manner": "lateral",
+      "aspiration": "none",
+      "workingIPACandidate": "l",
+      "ipaStatus": "one_common_broad_transcription",
+      "alternatives": [],
+      "evidenceReview": "literature_based_candidate_not_independently_adjudicated",
+      "citationReadingOccurrences": 65
+    },
+    {
+      "token": "m",
+      "category": "conventional_pinyin_initial",
+      "place": "bilabial",
+      "manner": "nasal",
+      "aspiration": "none",
+      "workingIPACandidate": "m",
+      "ipaStatus": "one_common_broad_transcription",
+      "alternatives": [],
+      "evidenceReview": "literature_based_candidate_not_independently_adjudicated",
+      "citationReadingOccurrences": 45
+    },
+    {
+      "token": "n",
+      "category": "conventional_pinyin_initial",
+      "place": "alveolar",
+      "manner": "nasal",
+      "aspiration": "none",
+      "workingIPACandidate": "n",
+      "ipaStatus": "one_common_broad_transcription",
+      "alternatives": [],
+      "evidenceReview": "literature_based_candidate_not_independently_adjudicated",
+      "citationReadingOccurrences": 28
+    },
+    {
+      "token": "p",
+      "category": "conventional_pinyin_initial",
+      "place": "bilabial",
+      "manner": "stop",
+      "aspiration": "aspirated",
+      "workingIPACandidate": "pʰ",
+      "ipaStatus": "one_common_broad_transcription",
+      "alternatives": [],
+      "evidenceReview": "literature_based_candidate_not_independently_adjudicated",
+      "citationReadingOccurrences": 27
+    },
+    {
+      "token": "q",
+      "category": "conventional_pinyin_initial",
+      "place": "alveolopalatal",
+      "manner": "affricate",
+      "aspiration": "aspirated",
+      "workingIPACandidate": "tɕʰ",
+      "ipaStatus": "one_common_broad_transcription",
+      "alternatives": [],
+      "evidenceReview": "literature_based_candidate_not_independently_adjudicated",
+      "citationReadingOccurrences": 49
+    },
+    {
+      "token": "r",
+      "category": "conventional_pinyin_initial",
+      "place": "postalveolar",
+      "manner": "approximant",
+      "aspiration": "none",
+      "workingIPACandidate": "ɻ",
+      "ipaStatus": "one_convention_variants_documented",
+      "alternatives": [
+        "ʐ",
+        "ɻ"
+      ],
+      "evidenceReview": "literature_based_candidate_not_independently_adjudicated",
+      "citationReadingOccurrences": 23
+    },
+    {
+      "token": "s",
+      "category": "conventional_pinyin_initial",
+      "place": "alveolar",
+      "manner": "fricative",
+      "aspiration": "none",
+      "workingIPACandidate": "s",
+      "ipaStatus": "one_common_broad_transcription",
+      "alternatives": [],
+      "evidenceReview": "literature_based_candidate_not_independently_adjudicated",
+      "citationReadingOccurrences": 22
+    },
+    {
+      "token": "sh",
+      "category": "conventional_pinyin_initial",
+      "place": "postalveolar",
+      "manner": "fricative",
+      "aspiration": "none",
+      "workingIPACandidate": "ʂ",
+      "ipaStatus": "one_common_broad_transcription",
+      "alternatives": [],
+      "evidenceReview": "literature_based_candidate_not_independently_adjudicated",
+      "citationReadingOccurrences": 61
+    },
+    {
+      "token": "t",
+      "category": "conventional_pinyin_initial",
+      "place": "alveolar",
+      "manner": "stop",
+      "aspiration": "aspirated",
+      "workingIPACandidate": "tʰ",
+      "ipaStatus": "one_common_broad_transcription",
+      "alternatives": [],
+      "evidenceReview": "literature_based_candidate_not_independently_adjudicated",
+      "citationReadingOccurrences": 42
+    },
+    {
+      "token": "w",
+      "category": "orthographic_onset_convention_not_independent_consonant",
+      "place": null,
+      "manner": null,
+      "aspiration": null,
+      "workingIPACandidate": null,
+      "ipaStatus": "context_dependent_or_no_consonantal_onset",
+      "alternatives": [],
+      "evidenceReview": "not_an_independent_initial_phoneme_assignment",
+      "citationReadingOccurrences": 47
+    },
+    {
+      "token": "x",
+      "category": "conventional_pinyin_initial",
+      "place": "alveolopalatal",
+      "manner": "fricative",
+      "aspiration": "none",
+      "workingIPACandidate": "ɕ",
+      "ipaStatus": "one_common_broad_transcription",
+      "alternatives": [],
+      "evidenceReview": "literature_based_candidate_not_independently_adjudicated",
+      "citationReadingOccurrences": 64
+    },
+    {
+      "token": "y",
+      "category": "orthographic_onset_convention_not_independent_consonant",
+      "place": null,
+      "manner": null,
+      "aspiration": null,
+      "workingIPACandidate": null,
+      "ipaStatus": "context_dependent_or_no_consonantal_onset",
+      "alternatives": [],
+      "evidenceReview": "not_an_independent_initial_phoneme_assignment",
+      "citationReadingOccurrences": 112
+    },
+    {
+      "token": "z",
+      "category": "conventional_pinyin_initial",
+      "place": "alveolar",
+      "manner": "affricate",
+      "aspiration": "unaspirated",
+      "workingIPACandidate": "ts",
+      "ipaStatus": "one_common_broad_transcription",
+      "alternatives": [],
+      "evidenceReview": "literature_based_candidate_not_independently_adjudicated",
+      "citationReadingOccurrences": 27
+    },
+    {
+      "token": "zh",
+      "category": "conventional_pinyin_initial",
+      "place": "postalveolar",
+      "manner": "affricate",
+      "aspiration": "unaspirated",
+      "workingIPACandidate": "ʈʂ",
+      "ipaStatus": "one_common_broad_transcription",
+      "alternatives": [],
+      "evidenceReview": "literature_based_candidate_not_independently_adjudicated",
+      "citationReadingOccurrences": 73
+    }
+  ]
+}
