@@ -133,6 +133,13 @@ jobs:
           assert set(transfers["characters"]) == {row["character"] for row in accepted}
           print(f"Coverage gate: {count}/1000 Mandarin mappings, {coverage['unmapped_count']} unresolved")
           PY
+      - name: Publish non-certifying glyph visual-review worklist
+        run: |
+          node --check tools/glyph-pipeline/glyph_independent_review_worklist.mjs
+          node tools/glyph-pipeline/glyph_independent_review_worklist_smoke.mjs
+          node tools/glyph-pipeline/glyph_independent_review_worklist.mjs --write
+          node tools/glyph-pipeline/glyph_independent_review_worklist.mjs --check
+          test -s site/glyphs/review/independent-review-worklist-v0.1.json
       - name: Publish measured Mandarin glyph coverage as a commit status
         if: always()
         env:
