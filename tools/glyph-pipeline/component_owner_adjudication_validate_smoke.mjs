@@ -55,6 +55,9 @@ const rejected=mutate=>{
  assert.throws(()=>validateOwnerNotes(source,bad,scripts));
 };
 rejected(x=>{x.session.sourceOwnerCertifications=1;});
+rejected(x=>{x.session.exportedAtUTC="2026-10-22T17:00:00.000-07:00";});
+rejected(x=>{x.session.exportedAtUTC="2026-02-30T00:00:00.000Z";});
+rejected(x=>{x.session.exportedAtUTC="2026-10-23T00:00:00Z";});
 rejected(x=>{x.observations[0].sourceOwnerCertified=true;});
 rejected(x=>{x.observations[0].machineAssignedOwner="cmp-9999";});
 rejected(x=>{x.observations[0].sourceSHA256="0".repeat(64);});
@@ -65,6 +68,10 @@ rejected(x=>{x.observations[0].extraParticipantId="name";});
 rejected(x=>{x.observations.push(x.observations[0]);x.session.recorded=2;});
 rejected(x=>{x.session.includesPersonalIdentifiers=true;});
 rejected(x=>{x.observations[0].judgment="certified";});
+for(const when of ["2026-10-22T17:00:00.000-07:00",
+ "2026-02-30T00:00:00.000Z","2026-10-23T00:00:00Z"]){
+ assert.throws(()=>audit.exportNotes(targets,m,when));
+}
 assert.throws(()=>audit.exportNotes(targets,new Map([[t.id,
  {...note,technicalRationale:"too short"}]]),"2026-10-23T00:00:00Z"));
 const page=fs.readFileSync("site/component-owner-adjudication.html","utf8");

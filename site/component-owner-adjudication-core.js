@@ -6,6 +6,9 @@ const sourcePath="glyphs/research/heldout-identification-target-v0.1/index-v0.1.
 const status="provisional_source_ownership_notes_not_independent_certification";
 const values=new Set(["unresolved","provisional_support","provisional_conflict","shape_ambiguity"]);
 const hash=/^[a-f0-9]{64}$/;
+const canonicalUTC=value=>typeof value==="string"&&
+ /^\d{4}-\d\d-\d\dT\d\d:\d\d:\d\d\.\d{3}Z$/.test(value)&&
+ !Number.isNaN(Date.parse(value))&&new Date(value).toISOString()===value;
 const exact=(obj,names)=>!!obj&&typeof obj==="object"&&!Array.isArray(obj)&&
  Object.keys(obj).length===names.length&&names.every(k=>Object.prototype.hasOwnProperty.call(obj,k));
 function demand(ok,msg){if(!ok)throw Error(msg);}
@@ -116,8 +119,7 @@ function validateEntry(entry,target){
 function exportNotes(targets,notes,when){
  demand(Array.isArray(targets)&&targets.length===49&&notes instanceof Map&&
   [...notes.keys()].every(k=>targets.some(t=>t.id===k)),"Unknown source target");
- demand(typeof when==="string"&&/^\d{4}-\d\d-\d\dT/.test(when)&&
-  !Number.isNaN(Date.parse(when)),"UTC timestamp required");
+ demand(canonicalUTC(when),"Canonical UTC timestamp required");
  const entries=[];
  for(const t of targets){
   if(!notes.has(t.id))continue;
@@ -156,7 +158,7 @@ function validateExport(data,manifest,targets){
   "glyphVisualCertifications","participantStudyApprovals"])&&
   s.localOnly===true&&s.uploaded===false&&s.browserPersisted===false&&
   s.includesPersonalIdentifiers===false&&
-  typeof s.exportedAtUTC==="string"&&!Number.isNaN(Date.parse(s.exportedAtUTC))&&
+  canonicalUTC(s.exportedAtUTC)&&
   s.sourceOwnerCertifications===0&&s.glyphVisualCertifications===0&&
   s.participantStudyApprovals===0,"Unapproved session claims or personal fields");
  demand(Array.isArray(data.observations)&&data.observations.length>=1&&
