@@ -26,6 +26,6 @@ Optional sanitized JSON output (no rationales or evidence URLs):
 
     node tools/glyph-pipeline/source_owner_note_compare.mjs --compare /path/to/first-notes.json /path/to/second-notes.json --output /path/to/summary.json
 
-The regression test uses **synthetic** provisional observations, not human data:
+The CLI opens `--output` in **create-only** mode: it refuses to replace either input export, any existing report, or an existing symlink. A structurally invalid input cannot create a comparison result. The regression test exercises those cases with temporary **synthetic** observations, not human data:
 
     node tools/glyph-pipeline/source_owner_note_compare_smoke.mjs

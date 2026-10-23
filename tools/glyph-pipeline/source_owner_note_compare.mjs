@@ -43,7 +43,13 @@ if(process.argv[1]&&import.meta.url===pathToFileURL(process.argv[1]).href){
  const src=Object.fromEntries(Object.entries(sourcePaths).map(([k,p])=>[k,read(p)]));
  const text=scripts.map(p=>fs.readFileSync(p,"utf8"));
  const result=compareOwnerReports(src,local(args[1]),local(args[2]),text);
- if(args.length===5)fs.writeFileSync(path.resolve(args[4]),JSON.stringify(result,null,2)+"\n","utf8");
+ if(args.length===5){
+  const target=path.resolve(args[4]);
+  if(target===path.resolve(args[1])||target===path.resolve(args[2]))
+   throw Error("Comparison output must not replace either source-note export");
+  fs.writeFileSync(target,JSON.stringify(result,null,2)+"\n",
+   {encoding:"utf8",flag:"wx"});
+ }
  console.log(JSON.stringify(result.summary,null,2));
  console.log("Provisional comparison only. No reviewer independence, adjudication, source-owner certification, or study eligibility verified.");
 }

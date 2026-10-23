@@ -1,6 +1,9 @@
 import assert from "node:assert/strict";
 import fs from "node:fs";
 import vm from "node:vm";
+import os from "node:os";
+import path from "node:path";
+import {spawnSync} from "node:child_process";
 import {compareOwnerReports} from "./source_owner_note_compare.mjs";
 const read=p=>JSON.parse(fs.readFileSync(p,"utf8"));
 const src={
@@ -80,6 +83,48 @@ refuse(x=>{x.session.includesPersonalIdentifiers=true;});
 refuse(x=>{x.observations.reverse();});
 const tampered=structuredClone(src);tampered.targets.summary.independentlyVerifiedAnswerKeys=1;
 assert.throws(()=>compareOwnerReports(tampered,a,b,scripts));
+const tmp=fs.mkdtempSync(path.join(os.tmpdir(),"chromalect-source-owner-comparison-"));
+try{
+ const firstFile=path.join(tmp,"first.json");
+ const secondFile=path.join(tmp,"second.json");
+ const outputFile=path.join(tmp,"report.json");
+ const firstBytes=JSON.stringify(a,null,2)+"\n";
+ const secondBytes=JSON.stringify(b,null,2)+"\n";
+ fs.writeFileSync(firstFile,firstBytes);
+ fs.writeFileSync(secondFile,secondBytes);
+ const cliPath="tools/glyph-pipeline/source_owner_note_compare.mjs";
+ const run=(first,second,output)=>spawnSync(process.execPath,
+  [cliPath,"--compare",first,second,"--output",output],{encoding:"utf8"});
+ const good=run(firstFile,secondFile,outputFile);
+ assert.equal(good.status,0,good.stderr);
+ const produced=JSON.parse(fs.readFileSync(outputFile,"utf8"));
+ assert.equal(produced.summary.conflictingProvisionalJudgments,1);
+ assert.equal(produced.summary.sourceOwnerCertifications,0);
+ assert.ok(!fs.readFileSync(outputFile,"utf8").includes("component-reference"));
+ const originalOutput=fs.readFileSync(outputFile,"utf8");
+ const existing=run(firstFile,secondFile,outputFile);
+ assert.notEqual(existing.status,0,"Existing report must not be overwritten");
+ assert.equal(fs.readFileSync(outputFile,"utf8"),originalOutput);
+ const alias=path.join(tmp,"output-link.json");
+ fs.symlinkSync(firstFile,alias);
+ const linked=run(firstFile,secondFile,alias);
+ assert.notEqual(linked.status,0,"Existing symlink must not be followed");
+ assert.equal(fs.readFileSync(firstFile,"utf8"),firstBytes);
+ const overwriteInput=run(firstFile,secondFile,firstFile);
+ assert.notEqual(overwriteInput.status,0,"Source-note input must not be replaced");
+ assert.equal(fs.readFileSync(firstFile,"utf8"),firstBytes);
+ assert.equal(fs.readFileSync(secondFile,"utf8"),secondBytes);
+ const invalidFile=path.join(tmp,"invalid.json");
+ const invalid=structuredClone(a);
+ invalid.session.sourceOwnerCertifications=1;
+ fs.writeFileSync(invalidFile,JSON.stringify(invalid));
+ const rejectedOutput=path.join(tmp,"invalid-output.json");
+ const poisoned=run(invalidFile,secondFile,rejectedOutput);
+ assert.notEqual(poisoned.status,0,"Invalid source-note claims must fail");
+ assert.equal(fs.existsSync(rejectedOutput),false);
+}finally{
+ fs.rmSync(tmp,{recursive:true,force:true});
+}
 const html=fs.readFileSync("site/component-owner-compare.html","utf8");
 assert.ok(html.includes("component-owner-compare-core.js"));
 assert.ok(html.includes('id="oc-compare"'));
