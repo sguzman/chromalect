@@ -1,0 +1,2112 @@
+{
+  "schema": "chromalect.semantic.dictionary-excerpt-block.v0.1",
+  "license": "CC BY-SA 4.0",
+  "sourceCommit": "63c2569948629323b515833930fdd10f285401b6",
+  "start": 1,
+  "end": 200,
+  "records": [
+    {
+      "rank": 1,
+      "character": "一",
+      "sourcePath": "v2/一.json",
+      "sourceBlobSha": "6311428dcec26df9da5966b70e92be0d3c179a2b",
+      "readings": [
+        "yi1"
+      ],
+      "excerpt": "yi1: one; 1; single; a (article); as soon as; entire; whole; all; throughout; 'one' radical in Chinese characters (Kangxi radical 1); also pr. [yao1] for greater clarity when spelling out numbers digit by digit; "
+    },
+    {
+      "rank": 2,
+      "character": "乙",
+      "sourcePath": "v2/乙.json",
+      "sourceBlobSha": "55912b449b7b459d553ce03e5d83cd722bdd5b4d",
+      "readings": [
+        "yi3",
+        "zhe2"
+      ],
+      "excerpt": "yi3: second of the ten Heavenly Stems 十天干[shi2 tian1 gan1]; second in order; letter 'B' or roman 'II' in list 'A, B, C', or 'I, II, III' etc; second party (in legal contract, usually 乙方[yi3 fang1], as opposed to 甲方[jia3 fang1]); ethyl; bent; winding; radical in Chinese characters (Kangxi radical 5); ancient Chinese compass point: 105°;  zhe2: turning stroke (in Chinese characters); see also 折[zhe2]; "
+    },
+    {
+      "rank": 3,
+      "character": "二",
+      "sourcePath": "v2/二.json",
+      "sourceBlobSha": "fee010bed2dc730877df83ef87f1016e0fcad00a",
+      "readings": [
+        "er4"
+      ],
+      "excerpt": "er4: two; 2; (Beijing dialect) stupid; "
+    },
+    {
+      "rank": 4,
+      "character": "十",
+      "sourcePath": "v2/十.json",
+      "sourceBlobSha": "d53b6568a7004a0153c273aebd241def577f1306",
+      "readings": [
+        "shi2"
+      ],
+      "excerpt": "shi2: ten; 10; "
+    },
+    {
+      "rank": 5,
+      "character": "丁",
+      "sourcePath": "v2/丁.json",
+      "sourceBlobSha": "c820202be8c5f3271a54d8a568101f28d769d38c",
+      "readings": [
+        "Ding1",
+        "ding1"
+      ],
+      "excerpt": "Ding1: surname Ding;  ding1: fourth of the ten Heavenly Stems 十天干[shi2 tian1 gan1]; fourth in order; letter 'D' or roman 'IV' in list 'A, B, C', or 'I, II, III' etc; ancient Chinese compass point: 195°; butyl; cubes (of food); "
+    },
+    {
+      "rank": 6,
+      "character": "厂",
+      "sourcePath": "v2/厂.json",
+      "sourceBlobSha": "c79b988eff2c8d35e2f8f53205c07d6c751bb868",
+      "readings": [
+        "han3",
+        "chang3"
+      ],
+      "excerpt": "han3: 'cliff' radical in Chinese characters (Kangxi radical 27), occurring in 原, 历, 压 etc;  chang3: factory; yard; depot; workhouse; works; (industrial) plant; "
+    },
+    {
+      "rank": 7,
+      "character": "七",
+      "sourcePath": "v2/七.json",
+      "sourceBlobSha": "6eebbc61b2b33e4a4b6549a76e2422e7ff234842",
+      "readings": [
+        "qi1"
+      ],
+      "excerpt": "qi1: seven; 7; "
+    },
+    {
+      "rank": 8,
+      "character": "卜",
+      "sourcePath": "v2/卜.json",
+      "sourceBlobSha": "7f3f418d7e5a063b2e9f2d9359e2cf3bfc108d8c",
+      "readings": [
+        "Bu3",
+        "bu3",
+        "bo5"
+      ],
+      "excerpt": "Bu3: surname Bu;  bu3: to divine; to forecast or estimate; (of a place to live etc) to choose;  bo5: see 蘿蔔|萝卜[luo2 bo5]; "
+    },
+    {
+      "rank": 9,
+      "character": "八",
+      "sourcePath": "v2/八.json",
+      "sourceBlobSha": "2d3bf87e2143be0cba69d755ed72b0af7ce57d2e",
+      "readings": [
+        "ba1"
+      ],
+      "excerpt": "ba1: eight; 8; "
+    },
+    {
+      "rank": 10,
+      "character": "人",
+      "sourcePath": "v2/人.json",
+      "sourceBlobSha": "bc8de685822c3a2609a20e7b23b9398b82032eb4",
+      "readings": [
+        "ren2"
+      ],
+      "excerpt": "ren2: man; person; people; CL:個|个[ge4],位[wei4]; "
+    },
+    {
+      "rank": 11,
+      "character": "入",
+      "sourcePath": "v2/入.json",
+      "sourceBlobSha": "f29f596f95d1765d972f663ad46b21ffddb26cf0",
+      "readings": [
+        "ru4"
+      ],
+      "excerpt": "ru4: to enter; to go into; to join; to become a member of; to confirm or agree with; abbr. for 入聲|入声[ru4 sheng1]; "
+    },
+    {
+      "rank": 12,
+      "character": "儿",
+      "sourcePath": "v2/儿.json",
+      "sourceBlobSha": "20e399f14c1f0b0248224564dee3498ac08cd411",
+      "readings": [
+        "er2",
+        "r5"
+      ],
+      "excerpt": "er2: child; son;  r5: non-syllabic diminutive suffix; retroflex final; "
+    },
+    {
+      "rank": 13,
+      "character": "匕",
+      "sourcePath": "v2/匕.json",
+      "sourceBlobSha": "8339fcc912b69357883014d17ecb3f84f004af04",
+      "readings": [
+        "bi3"
+      ],
+      "excerpt": "bi3: dagger; ladle; ancient type of spoon; "
+    },
+    {
+      "rank": 14,
+      "character": "几",
+      "sourcePath": "v2/几.json",
+      "sourceBlobSha": "9a46dfbbb57712d982c099267a1e47dc474ebabc",
+      "readings": [
+        "ji1",
+        "ji3"
+      ],
+      "excerpt": "ji1: small table; almost;  ji3: how much; how many; several; a few; "
+    },
+    {
+      "rank": 15,
+      "character": "九",
+      "sourcePath": "v2/九.json",
+      "sourceBlobSha": "ba0753ed10984ba8219d24711aa9208d0a7a369c",
+      "readings": [
+        "jiu3"
+      ],
+      "excerpt": "jiu3: nine; 9; "
+    },
+    {
+      "rank": 16,
+      "character": "刁",
+      "sourcePath": "v2/刁.json",
+      "sourceBlobSha": "882249fdb0b71cc8337f181a81c9e3f1bd7ab849",
+      "readings": [
+        "Diao1",
+        "diao1"
+      ],
+      "excerpt": "Diao1: surname Diao;  diao1: artful; wicked; "
+    },
+    {
+      "rank": 17,
+      "character": "了",
+      "sourcePath": "v2/了.json",
+      "sourceBlobSha": "bb0b5492967df714aad529b7b5f37ebd424a33bc",
+      "readings": [
+        "le5",
+        "liao3",
+        "liao4"
+      ],
+      "excerpt": "le5: (modal particle intensifying preceding clause); (completed action marker);  liao3: to finish; to achieve; variant of 瞭|了[liao3]; to understand clearly; (of eyes) bright; clear-sighted; to understand clearly;  liao4: unofficial variant of 瞭[liao4]; "
+    },
+    {
+      "rank": 18,
+      "character": "刀",
+      "sourcePath": "v2/刀.json",
+      "sourceBlobSha": "40c8e4811f37d0f105ca1b45f561636e7263dd4c",
+      "readings": [
+        "Dao1",
+        "dao1"
+      ],
+      "excerpt": "Dao1: surname Dao;  dao1: knife; blade; single-edged sword; cutlass; CL:把[ba3]; (slang) dollar (loanword); classifier for sets of one hundred sheets (of paper); classifier for knife cuts or stabs; "
+    },
+    {
+      "rank": 19,
+      "character": "力",
+      "sourcePath": "v2/力.json",
+      "sourceBlobSha": "964e99027656cfc47a93a92533df9516fb01c856",
+      "readings": [
+        "Li4",
+        "li4"
+      ],
+      "excerpt": "Li4: surname Li;  li4: power; force; strength; ability; strenuously; "
+    },
+    {
+      "rank": 20,
+      "character": "乃",
+      "sourcePath": "v2/乃.json",
+      "sourceBlobSha": "7eb352ac8cfe775cf7f87ff871bc9f077362377a",
+      "readings": [
+        "nai3"
+      ],
+      "excerpt": "nai3: to be; thus; so; therefore; then; only; thereupon; variant of 乃[nai3]; variant of 乃[nai3]; "
+    },
+    {
+      "rank": 21,
+      "character": "又",
+      "sourcePath": "v2/又.json",
+      "sourceBlobSha": "c56514befd56c79598f877606b040ec1d803d493",
+      "readings": [
+        "you4"
+      ],
+      "excerpt": "you4: (once) again; also; both... and...; and yet; (used for emphasis) anyway; "
+    },
+    {
+      "rank": 22,
+      "character": "三",
+      "sourcePath": "v2/三.json",
+      "sourceBlobSha": "bd3434987c8333ff004fec893199d3413ef5931c",
+      "readings": [
+        "San1",
+        "san1"
+      ],
+      "excerpt": "San1: surname San;  san1: three; 3; "
+    },
+    {
+      "rank": 23,
+      "character": "干",
+      "sourcePath": "v2/干.json",
+      "sourceBlobSha": "e468aff2c60ddcc39e5a99fb14fec9c85c6de7f1",
+      "readings": [
+        "gan1",
+        "Gan1",
+        "gan4"
+      ],
+      "excerpt": "gan1: old variant of 乾|干[gan1]; dry; clean; in vain; dried food; foster; adoptive; to ignore; variant of 乾|干[gan1]; to concern; to interfere; shield; stem;  Gan1: surname Gan;  gan4: tree trunk; main part of sth; to manage; to work; to do; capable; cadre; to kill (slang); to fuck (vulgar); "
+    },
+    {
+      "rank": 24,
+      "character": "于",
+      "sourcePath": "v2/于.json",
+      "sourceBlobSha": "68a6eee84e97466375569d1cb1e7e36b5ad46948",
+      "readings": [
+        "Yu2",
+        "yu2"
+      ],
+      "excerpt": "Yu2: surname Yu;  yu2: to go; to take; sentence-final interrogative particle; variant of 於|于[yu2]; in; at; to; from; by; than; out of; "
+    },
+    {
+      "rank": 25,
+      "character": "亏",
+      "sourcePath": "v2/亏.json",
+      "sourceBlobSha": "0420b225a0e0ffa7a30475e71284f8435cf775c6",
+      "readings": [
+        "kui1"
+      ],
+      "excerpt": "kui1: deficiency; deficit; luckily; it's lucky that...; (often ironically) fancy that...; "
+    },
+    {
+      "rank": 26,
+      "character": "工",
+      "sourcePath": "v2/工.json",
+      "sourceBlobSha": "ede04beb7329e21a764c9b46d362f658b18fedb8",
+      "readings": [
+        "gong1"
+      ],
+      "excerpt": "gong1: work; worker; skill; profession; trade; craft; labor; "
+    },
+    {
+      "rank": 27,
+      "character": "土",
+      "sourcePath": "v2/土.json",
+      "sourceBlobSha": "62a04132b129037508f73b84f63b37b296a9db12",
+      "readings": [
+        "Tu3",
+        "tu3"
+      ],
+      "excerpt": "Tu3: Tu (ethnic group); surname Tu;  tu3: earth; dust; clay; local; indigenous; crude opium; unsophisticated; one of the eight ancient musical instruments 八音[ba1 yin1]; "
+    },
+    {
+      "rank": 28,
+      "character": "士",
+      "sourcePath": "v2/士.json",
+      "sourceBlobSha": "33547746c0fb6d36ea974576aefa16c0dbd7d321",
+      "readings": [
+        "Shi4",
+        "shi4"
+      ],
+      "excerpt": "Shi4: surname Shi;  shi4: member of the senior ministerial class (old); scholar (old); bachelor; honorific; soldier; noncommissioned officer; specialist worker; "
+    },
+    {
+      "rank": 29,
+      "character": "才",
+      "sourcePath": "v2/才.json",
+      "sourceBlobSha": "7b22f1c7ad8f4d8efde155e836fea0810f71566a",
+      "readings": [
+        "cai2"
+      ],
+      "excerpt": "cai2: ability; talent; sb of a certain type; a capable individual; only; only then; just now; a moment ago; just now; (indicating sth happening later than expected); (preceded by a clause of condition or reason) not until; (followed by a numerical clause) only; "
+    },
+    {
+      "rank": 30,
+      "character": "下",
+      "sourcePath": "v2/下.json",
+      "sourceBlobSha": "d3e0f05ecc017385ee99b42d47c5b454ec296808",
+      "readings": [
+        "xia4"
+      ],
+      "excerpt": "xia4: down; downwards; below; lower; later; next (week etc); second (of two parts); to decline; to go down; to arrive at (a decision, conclusion etc); measure word to show the frequency of an action; "
+    },
+    {
+      "rank": 31,
+      "character": "寸",
+      "sourcePath": "v2/寸.json",
+      "sourceBlobSha": "db2951980ca4758b7ad05553a1ae3fccd7e4c600",
+      "readings": [
+        "cun4"
+      ],
+      "excerpt": "cun4: a unit of length; inch; thumb; "
+    },
+    {
+      "rank": 32,
+      "character": "大",
+      "sourcePath": "v2/大.json",
+      "sourceBlobSha": "a3e6d18f36ccf3953ad673aa1b138ef23cd9a1f4",
+      "readings": [
+        "da4",
+        "dai4"
+      ],
+      "excerpt": "da4: big; huge; large; major; great; wide; deep; older (than); oldest; eldest; greatly; very much; (dialect) father; father's elder or younger brother;  dai4: see 大夫[dai4 fu5]; "
+    },
+    {
+      "rank": 33,
+      "character": "丈",
+      "sourcePath": "v2/丈.json",
+      "sourceBlobSha": "aa750af93627140897653cc291a99099fab1a683",
+      "readings": [
+        "zhang4"
+      ],
+      "excerpt": "zhang4: measure of length, ten Chinese feet (3.3 m); to measure; husband; polite appellation for an older male; "
+    },
+    {
+      "rank": 34,
+      "character": "与",
+      "sourcePath": "v2/与.json",
+      "sourceBlobSha": "a7d72c0edad4af1390edf04f681e6ef3abd0a3cd",
+      "readings": [
+        "yu2",
+        "yu3",
+        "yu4"
+      ],
+      "excerpt": "yu2: variant of 歟|欤[yu2];  yu3: and; to give; together with;  yu4: to take part in; "
+    },
+    {
+      "rank": 35,
+      "character": "万",
+      "sourcePath": "v2/万.json",
+      "sourceBlobSha": "369a4d778549b9d56797d8005846419a14596f18",
+      "readings": [
+        "Mo4",
+        "Wan4",
+        "wan4"
+      ],
+      "excerpt": "Mo4: see 万俟[Mo4 qi2];  Wan4: surname Wan;  wan4: ten thousand; a great number; "
+    },
+    {
+      "rank": 36,
+      "character": "上",
+      "sourcePath": "v2/上.json",
+      "sourceBlobSha": "691c382b97410be3462913ec507c4475ff4caa4e",
+      "readings": [
+        "shang3",
+        "shang4"
+      ],
+      "excerpt": "shang3: see 上聲|上声[shang3 sheng1];  shang4: on top; upon; above; upper; previous; first (of multiple parts); to climb; to get onto; to go up; to attend (class or university); "
+    },
+    {
+      "rank": 37,
+      "character": "小",
+      "sourcePath": "v2/小.json",
+      "sourceBlobSha": "43dcebdf56c4d8f77d9600cbfbcfb5db06ff6d19",
+      "readings": [
+        "xiao3"
+      ],
+      "excerpt": "xiao3: small; tiny; few; young; "
+    },
+    {
+      "rank": 38,
+      "character": "口",
+      "sourcePath": "v2/口.json",
+      "sourceBlobSha": "b7af00eb1960fd7e0ab510f7d04c91ae8d24fcd2",
+      "readings": [
+        "kou3"
+      ],
+      "excerpt": "kou3: mouth; classifier for things with mouths (people, domestic animals, cannons, wells etc); classifier for bites or mouthfuls; "
+    },
+    {
+      "rank": 39,
+      "character": "山",
+      "sourcePath": "v2/山.json",
+      "sourceBlobSha": "5c4b7ac04b3452b7bfd7c0054f5b9e23034cd66d",
+      "readings": [
+        "Shan1",
+        "shan1"
+      ],
+      "excerpt": "Shan1: surname Shan;  shan1: mountain; hill; anything that resembles a mountain; CL:座[zuo4]; bundled straw in which silkworms spin cocoons; gable; "
+    },
+    {
+      "rank": 40,
+      "character": "巾",
+      "sourcePath": "v2/巾.json",
+      "sourceBlobSha": "d39d8703f3476e7b81a1a5a267b5c7a521b039ce",
+      "readings": [
+        "jin1"
+      ],
+      "excerpt": "jin1: towel; general purpose cloth; women's headcovering (old); Kangxi radical 50; "
+    },
+    {
+      "rank": 41,
+      "character": "千",
+      "sourcePath": "v2/千.json",
+      "sourceBlobSha": "b4409e94d77fd96e138325308a260782cf7cb840",
+      "readings": [
+        "qian1"
+      ],
+      "excerpt": "qian1: thousand; a swing; "
+    },
+    {
+      "rank": 42,
+      "character": "乞",
+      "sourcePath": "v2/乞.json",
+      "sourceBlobSha": "67f644f4762e13f8fd58cfc7ccf09dcbd8e060e4",
+      "readings": [
+        "qi3"
+      ],
+      "excerpt": "qi3: to beg; "
+    },
+    {
+      "rank": 43,
+      "character": "川",
+      "sourcePath": "v2/川.json",
+      "sourceBlobSha": "b7a080690cdcdb94808c03c7b7237c7707028e49",
+      "readings": [
+        "Chuan1",
+        "chuan1"
+      ],
+      "excerpt": "Chuan1: abbr. for Sichuan Province 四川[Si4 chuan1] in southwest China;  chuan1: river; creek; plain; an area of level country; "
+    },
+    {
+      "rank": 44,
+      "character": "亿",
+      "sourcePath": "v2/亿.json",
+      "sourceBlobSha": "fc1182dbe254cd2afb556af7ca8fcd8b4973804b",
+      "readings": [
+        "yi4"
+      ],
+      "excerpt": "yi4: 100 million; "
+    },
+    {
+      "rank": 45,
+      "character": "个",
+      "sourcePath": "v2/个.json",
+      "sourceBlobSha": "26ca0c5ee90509fcdbea114469f2b2b8c0e2b1a0",
+      "readings": [
+        "ge4"
+      ],
+      "excerpt": "ge4: individual; this; that; size; classifier for people or objects in general; variant of 個|个[ge4]; "
+    },
+    {
+      "rank": 46,
+      "character": "夕",
+      "sourcePath": "v2/夕.json",
+      "sourceBlobSha": "5ae53e127fd37a3d759b173f2ccb7f612babeb3a",
+      "readings": [
+        "xi1"
+      ],
+      "excerpt": "xi1: dusk; evening; Taiwan pr. [xi4]; "
+    },
+    {
+      "rank": 47,
+      "character": "久",
+      "sourcePath": "v2/久.json",
+      "sourceBlobSha": "53c7d9a947258ff4743835000d314377c112692b",
+      "readings": [
+        "jiu3"
+      ],
+      "excerpt": "jiu3: (long) time; (long) duration of time; "
+    },
+    {
+      "rank": 48,
+      "character": "么",
+      "sourcePath": "v2/么.json",
+      "sourceBlobSha": "d785c0d2c7010057ad8d5b214af5d816b1fe5c36",
+      "readings": [
+        "ma2",
+        "ma5",
+        "me5"
+      ],
+      "excerpt": "ma2: exclamatory final particle;  ma5: interrogative final particle;  me5: suffix, used to form interrogative 甚麼|什么[shen2 me5], what?, indefinite 這麼|这么[zhe4 me5] thus, etc; variant of 麼|么[me5]; "
+    },
+    {
+      "rank": 49,
+      "character": "勺",
+      "sourcePath": "v2/勺.json",
+      "sourceBlobSha": "c8c2b5f4d3ed69269c36a7ea21eb266d26bc3213",
+      "readings": [
+        "shao2"
+      ],
+      "excerpt": "shao2: spoon; ladle; CL:把[ba3]; abbr. for 公勺[gong1 shao2], centiliter (unit of volume); "
+    },
+    {
+      "rank": 50,
+      "character": "凡",
+      "sourcePath": "v2/凡.json",
+      "sourceBlobSha": "852e49ce27b47f01b9feb5e827b132e1aa2a2dfc",
+      "readings": [
+        "fan2"
+      ],
+      "excerpt": "fan2: ordinary; commonplace; mundane; temporal; of the material world (as opposed to supernatural or immortal levels); every; all; whatever; altogether; gist; outline; note of Chinese musical scale; variant of 凡[fan2]; "
+    },
+    {
+      "rank": 51,
+      "character": "丸",
+      "sourcePath": "v2/丸.json",
+      "sourceBlobSha": "954bf53bcc0e98697deec3aee33eb912ca53c30a",
+      "readings": [
+        "wan2"
+      ],
+      "excerpt": "wan2: ball; pellet; pill; "
+    },
+    {
+      "rank": 52,
+      "character": "及",
+      "sourcePath": "v2/及.json",
+      "sourceBlobSha": "a9d1efce112b6b7efc48d21a36d7da11a0764e5b",
+      "readings": [
+        "ji2"
+      ],
+      "excerpt": "ji2: and; to reach; up to; in time for; "
+    },
+    {
+      "rank": 53,
+      "character": "广",
+      "sourcePath": "v2/广.json",
+      "sourceBlobSha": "5974de5e05e86ac8cf4d1aab9f034753d1edda4f",
+      "readings": [
+        "Guang3",
+        "guang3"
+      ],
+      "excerpt": "Guang3: surname Guang;  guang3: wide; numerous; to spread; "
+    },
+    {
+      "rank": 54,
+      "character": "亡",
+      "sourcePath": "v2/亡.json",
+      "sourceBlobSha": "abd1f309ebbda2a37eef6518a5763f29da7e3d42",
+      "readings": [
+        "wang2"
+      ],
+      "excerpt": "wang2: to die; to lose; to be gone; to flee; deceased; old variant of 亡[wang2]; "
+    },
+    {
+      "rank": 55,
+      "character": "门",
+      "sourcePath": "v2/门.json",
+      "sourceBlobSha": "c2d796aa02bc76dd8f425e83b93c3988958e7058",
+      "readings": [
+        "Men2",
+        "men2"
+      ],
+      "excerpt": "Men2: surname Men;  men2: gate; door; CL:扇[shan4]; gateway; doorway; CL:個|个[ge4]; opening; valve; switch; way to do something; knack; family; house; (religious) sect; school (of thought); class; category; phylum or division (taxonomy); classifier for large guns; classifier for lessons, subjects, branches of technology; (suffix) -gate (i.e. scandal; derived from Watergate); "
+    },
+    {
+      "rank": 56,
+      "character": "丫",
+      "sourcePath": "v2/丫.json",
+      "sourceBlobSha": "7ec5381ed67c863498d9a3f7da0068e0514f8e2d",
+      "readings": [
+        "ya1"
+      ],
+      "excerpt": "ya1: fork; branch; bifurcation; girl; "
+    },
+    {
+      "rank": 57,
+      "character": "义",
+      "sourcePath": "v2/义.json",
+      "sourceBlobSha": "15707895547dc628d16a08595aa24a7415de1b59",
+      "readings": [
+        "Yi4",
+        "yi4"
+      ],
+      "excerpt": "Yi4: surname Yi; (Tw) abbr. for 義大利|义大利[Yi4 da4 li4], Italy;  yi4: justice; righteousness; meaning; foster (father etc); adopted; artificial (tooth, limb etc); relationship; friendship; "
+    },
+    {
+      "rank": 58,
+      "character": "之",
+      "sourcePath": "v2/之.json",
+      "sourceBlobSha": "42638c7018bbb3dd43db9f8644088d6e2a50bdd6",
+      "readings": [
+        "zhi1"
+      ],
+      "excerpt": "zhi1: (possessive particle, literary equivalent of 的[de5]); him; her; it; "
+    },
+    {
+      "rank": 59,
+      "character": "尸",
+      "sourcePath": "v2/尸.json",
+      "sourceBlobSha": "5bbfbf3d657bfa37978f3a731541a9061222632a",
+      "readings": [
+        "shi1"
+      ],
+      "excerpt": "shi1: person representing the dead (during burial ceremonies); to put a corpse on display (after execution); variant of 屍|尸[shi1]; corpse; corpse; "
+    },
+    {
+      "rank": 60,
+      "character": "己",
+      "sourcePath": "v2/己.json",
+      "sourceBlobSha": "1b708416093db514833bcc7e3451ae4ad2a6b889",
+      "readings": [
+        "ji3"
+      ],
+      "excerpt": "ji3: self; oneself; sixth of the ten Heavenly Stems 十天干[shi2 tian1 gan1]; sixth in order; letter 'F' or roman 'VI' in list 'A, B, C', or 'I, II, III' etc; hexa; "
+    },
+    {
+      "rank": 61,
+      "character": "已",
+      "sourcePath": "v2/已.json",
+      "sourceBlobSha": "f2a4ccdb3deef188f6bc2b610d1aeb9b3e6241d3",
+      "readings": [
+        "yi3"
+      ],
+      "excerpt": "yi3: already; to stop; then; afterwards; "
+    },
+    {
+      "rank": 62,
+      "character": "巳",
+      "sourcePath": "v2/巳.json",
+      "sourceBlobSha": "9e726c02915e400de09aa84efca9f62daae7be2d",
+      "readings": [
+        "si4"
+      ],
+      "excerpt": "si4: 6th earthly branch: 9-11 a.m., 4th solar month (5th May-5th June), year of the Snake; ancient Chinese compass point: 150°; "
+    },
+    {
+      "rank": 63,
+      "character": "弓",
+      "sourcePath": "v2/弓.json",
+      "sourceBlobSha": "742093b0a7890e3eb469fe0c9274bfa95fdf766c",
+      "readings": [
+        "Gong1",
+        "gong1"
+      ],
+      "excerpt": "Gong1: surname Gong;  gong1: a bow (weapon); CL:張|张[zhang1]; to bend; to arch (one's back etc); "
+    },
+    {
+      "rank": 64,
+      "character": "子",
+      "sourcePath": "v2/子.json",
+      "sourceBlobSha": "ffbf702ba461ccd02859e0bf97787b8932dc645a",
+      "readings": [
+        "zi3",
+        "zi5"
+      ],
+      "excerpt": "zi3: son; child; seed; egg; small thing; 1st earthly branch: 11 p.m.-1 a.m., midnight, 11th solar month (7th December to 5th January), year of the Rat; Viscount, fourth of five orders of nobility 五等爵位[wu3 deng3 jue2 wei4]; ancient Chinese compass point: 0° (north);  zi5: (noun suffix); "
+    },
+    {
+      "rank": 65,
+      "character": "卫",
+      "sourcePath": "v2/卫.json",
+      "sourceBlobSha": "f0a54d53466a59fa6a8a6677af84c3ce39a744c3",
+      "readings": [
+        "Wei4",
+        "wei4"
+      ],
+      "excerpt": "Wei4: surname Wei; vassal state during the Zhou Dynasty (1066-221 BC), located in present day Henan and Hebei Provinces;  wei4: to guard; to protect; to defend; abbr. for 衛生|卫生, hygiene; health; abbr. for 衛生間|卫生间, toilet; "
+    },
+    {
+      "rank": 66,
+      "character": "也",
+      "sourcePath": "v2/也.json",
+      "sourceBlobSha": "16e64e3cfde1b934ff334b62c984bad34eee1eaa",
+      "readings": [
+        "Ye3",
+        "ye3"
+      ],
+      "excerpt": "Ye3: surname Ye;  ye3: also; too; (in Classical Chinese) final particle implying affirmation; "
+    },
+    {
+      "rank": 67,
+      "character": "女",
+      "sourcePath": "v2/女.json",
+      "sourceBlobSha": "187dd0fdcecf9a658cee0f1bd4cee37daa5bbaeb",
+      "readings": [
+        "nu:3",
+        "ru3"
+      ],
+      "excerpt": "nu:3: female; woman; daughter;  ru3: archaic variant of 汝[ru3]; "
+    },
+    {
+      "rank": 68,
+      "character": "刃",
+      "sourcePath": "v2/刃.json",
+      "sourceBlobSha": "5d2ea05710b4985208ed476b2b416ae3d07e36bf",
+      "readings": [
+        "ren4"
+      ],
+      "excerpt": "ren4: edge of blade; "
+    },
+    {
+      "rank": 69,
+      "character": "飞",
+      "sourcePath": "v2/飞.json",
+      "sourceBlobSha": "d921682575978889a12a6cf00b184f689579e333",
+      "readings": [
+        "fei1"
+      ],
+      "excerpt": "fei1: to fly; "
+    },
+    {
+      "rank": 70,
+      "character": "习",
+      "sourcePath": "v2/习.json",
+      "sourceBlobSha": "cc8b900545638e2fb53a27835d97ad18e8503843",
+      "readings": [
+        "Xi2",
+        "xi2"
+      ],
+      "excerpt": "Xi2: surname Xi;  xi2: to practice; to study; habit; "
+    },
+    {
+      "rank": 71,
+      "character": "叉",
+      "sourcePath": "v2/叉.json",
+      "sourceBlobSha": "e84ce6b88446d37a260ea4821075d531baa922af",
+      "readings": [
+        "cha1",
+        "cha2",
+        "cha3"
+      ],
+      "excerpt": "cha1: fork; pitchfork; prong; pick; cross; intersect; 'X';  cha2: to cross; be stuck;  cha3: to diverge; to open (as legs); "
+    },
+    {
+      "rank": 72,
+      "character": "马",
+      "sourcePath": "v2/马.json",
+      "sourceBlobSha": "bd133eac93ec55e826525413274b4244a68ce90e",
+      "readings": [
+        "Ma3",
+        "ma3"
+      ],
+      "excerpt": "Ma3: surname Ma; abbr. for Malaysia 馬來西亞|马来西亚[Ma3 lai2 xi1 ya4];  ma3: horse; CL:匹[pi3]; horse or cavalry piece in Chinese chess; knight in Western chess; "
+    },
+    {
+      "rank": 73,
+      "character": "乡",
+      "sourcePath": "v2/乡.json",
+      "sourceBlobSha": "10fe3a86ade31096fa4677153474311a4b78b618",
+      "readings": [
+        "xiang1"
+      ],
+      "excerpt": "xiang1: country or countryside; native place; home village or town; township (PRC administrative unit); "
+    },
+    {
+      "rank": 74,
+      "character": "丰",
+      "sourcePath": "v2/丰.json",
+      "sourceBlobSha": "ebf3b9e4bb16516b0a0b2a33be323c63c78d14d2",
+      "readings": [
+        "feng1",
+        "Feng1"
+      ],
+      "excerpt": "feng1: luxuriant; buxom; variant of 豐|丰[feng1]; variant of 風|风[feng1]; appearance; charm; abundant; plentiful; fertile; plump; great;  Feng1: surname Feng; "
+    },
+    {
+      "rank": 75,
+      "character": "王",
+      "sourcePath": "v2/王.json",
+      "sourceBlobSha": "e6844f775ef8565401447d38188b57cafcd50aa3",
+      "readings": [
+        "Wang2",
+        "wang2",
+        "wang4"
+      ],
+      "excerpt": "Wang2: surname Wang;  wang2: king or monarch; best or strongest of its type; grand; great;  wang4: to rule; to reign over; "
+    },
+    {
+      "rank": 76,
+      "character": "开",
+      "sourcePath": "v2/开.json",
+      "sourceBlobSha": "0ab786624375671b7f5dcf4c7c8dbbcf6f0d8284",
+      "readings": [
+        "kai1"
+      ],
+      "excerpt": "kai1: to open; to start; to turn on; to boil; to write out (a prescription, check, invoice etc); to operate (a vehicle); carat (gold); abbr. for Kelvin, 開爾文|开尔文[Kai1 er3 wen2]; abbr. for 開本|开本[kai1 ben3], book format; "
+    },
+    {
+      "rank": 77,
+      "character": "井",
+      "sourcePath": "v2/井.json",
+      "sourceBlobSha": "72b68ede5e50ebe9c08071d1b89de95764ff2c62",
+      "readings": [
+        "Jing3",
+        "jing3"
+      ],
+      "excerpt": "Jing3: Jing, one of the 28 constellations of Chinese astronomy; surname Jing;  jing3: a well; CL:口[kou3]; neat; orderly; "
+    },
+    {
+      "rank": 78,
+      "character": "天",
+      "sourcePath": "v2/天.json",
+      "sourceBlobSha": "bec045169ab18baee869556a4c1c1ab8d89c36af",
+      "readings": [
+        "tian1"
+      ],
+      "excerpt": "tian1: day; sky; heaven; "
+    },
+    {
+      "rank": 79,
+      "character": "夫",
+      "sourcePath": "v2/夫.json",
+      "sourceBlobSha": "6ed428d25113c66bc6588dbdb6517d176579fe04",
+      "readings": [
+        "fu1",
+        "fu2"
+      ],
+      "excerpt": "fu1: husband; man; manual worker; conscripted laborer (old);  fu2: (classical) this, that; he, she, they; (exclamatory final particle); (initial particle, introduces an opinion); "
+    },
+    {
+      "rank": 80,
+      "character": "元",
+      "sourcePath": "v2/元.json",
+      "sourceBlobSha": "38669ddecbc14a4124533ceda815043a0ab8c8e6",
+      "readings": [
+        "Yuan2",
+        "yuan2"
+      ],
+      "excerpt": "Yuan2: surname Yuan; the Yuan or Mongol dynasty (1279-1368);  yuan2: currency unit (esp. Chinese yuan); first; original; primary; fundamental; constituent; part; era (of a reign); (math.) argument; variable; (Tw) (geology) eon; "
+    },
+    {
+      "rank": 81,
+      "character": "无",
+      "sourcePath": "v2/无.json",
+      "sourceBlobSha": "e8a8769ae80a698bd167d1c17063f5fbc5a9def8",
+      "readings": [
+        "wu2"
+      ],
+      "excerpt": "wu2: not to have; no; none; not; to lack; un-; -less; "
+    },
+    {
+      "rank": 82,
+      "character": "云",
+      "sourcePath": "v2/云.json",
+      "sourceBlobSha": "a79ed9de42386cea367493bfc2afd093c9fa71c4",
+      "readings": [
+        "yun2",
+        "Yun2"
+      ],
+      "excerpt": "yun2: (classical) to say; cloud; CL:朵[duo3];  Yun2: surname Yun; abbr. for Yunnan Province 雲南省|云南省[Yun2 nan2 Sheng3]; "
+    },
+    {
+      "rank": 83,
+      "character": "专",
+      "sourcePath": "v2/专.json",
+      "sourceBlobSha": "8a3f2e5839dda305e7cd06c3835047f0fabd1b7f",
+      "readings": [
+        "zhuan1"
+      ],
+      "excerpt": "zhuan1: for a particular person, occasion, purpose; focused on one thing; special; expert; particular (to sth); concentrated; specialized; variant of 專|专[zhuan1]; "
+    },
+    {
+      "rank": 84,
+      "character": "丐",
+      "sourcePath": "v2/丐.json",
+      "sourceBlobSha": "bce92195ff4b70c861216e5ce93b2bf822536411",
+      "readings": [
+        "gai4"
+      ],
+      "excerpt": "gai4: to beg for alms; beggar; variant of 丐[gai4]; variant of 丐[gai4]; "
+    },
+    {
+      "rank": 85,
+      "character": "扎",
+      "sourcePath": "v2/扎.json",
+      "sourceBlobSha": "6d0a831b375c17ab5bc241f7e935220337bcff40",
+      "readings": [
+        "zha1",
+        "zha2",
+        "za1"
+      ],
+      "excerpt": "zha1: to prick; to run or stick (a needle etc) into; jug (a classifier for liquids such as beer); variant of 紮|扎[zha1];  zha2: penetrating (as of cold); struggle;  za1: variant of 紮|扎[za1]; to tie; to bind; classifier for flowers, banknotes etc: bundle; Taiwan pr. [zha2]; "
+    },
+    {
+      "rank": 86,
+      "character": "艺",
+      "sourcePath": "v2/艺.json",
+      "sourceBlobSha": "f413818993085915b194c5b36b0fba4565009756",
+      "readings": [
+        "yi4"
+      ],
+      "excerpt": "yi4: skill; art; "
+    },
+    {
+      "rank": 87,
+      "character": "木",
+      "sourcePath": "v2/木.json",
+      "sourceBlobSha": "e77d138d3f25b23b9e51220151aae9367ffb7ad3",
+      "readings": [
+        "Mu4",
+        "mu4"
+      ],
+      "excerpt": "Mu4: surname Mu;  mu4: tree; wood; coffin; wooden; simple; numb; one of the eight ancient musical instruments 八音[ba1 yin1]; "
+    },
+    {
+      "rank": 88,
+      "character": "五",
+      "sourcePath": "v2/五.json",
+      "sourceBlobSha": "4d6254d14732819393a76ae27a5bd3eb925b2cde",
+      "readings": [
+        "wu3"
+      ],
+      "excerpt": "wu3: five; 5; "
+    },
+    {
+      "rank": 89,
+      "character": "支",
+      "sourcePath": "v2/支.json",
+      "sourceBlobSha": "097d633295f1867edb02da018577683dc41c69c1",
+      "readings": [
+        "Zhi1",
+        "zhi1"
+      ],
+      "excerpt": "Zhi1: surname Zhi;  zhi1: to support; to sustain; to erect; to raise; branch; division; to draw money; classifier for rods such as pens and guns, for army divisions and for songs or compositions; "
+    },
+    {
+      "rank": 90,
+      "character": "厅",
+      "sourcePath": "v2/厅.json",
+      "sourceBlobSha": "563c6629bbbda2ea053824a894bfe19968fa8fd6",
+      "readings": [
+        "ting1"
+      ],
+      "excerpt": "ting1: (reception) hall; living room; office; provincial government department; "
+    },
+    {
+      "rank": 91,
+      "character": "不",
+      "sourcePath": "v2/不.json",
+      "sourceBlobSha": "6b299d8fdcbf66955f2e66dffa3d371aa32d61f2",
+      "readings": [
+        "bu4"
+      ],
+      "excerpt": "bu4: (negative prefix); not; no; "
+    },
+    {
+      "rank": 92,
+      "character": "犬",
+      "sourcePath": "v2/犬.json",
+      "sourceBlobSha": "2804f97e85ac30e039c536e41a8608dcb364d1c9",
+      "readings": [
+        "quan3"
+      ],
+      "excerpt": "quan3: dog; "
+    },
+    {
+      "rank": 93,
+      "character": "太",
+      "sourcePath": "v2/太.json",
+      "sourceBlobSha": "384151413fd429a07a18b21f7fd3a3560beeec4c",
+      "readings": [
+        "tai4"
+      ],
+      "excerpt": "tai4: highest; greatest; too (much); very; extremely; "
+    },
+    {
+      "rank": 94,
+      "character": "区",
+      "sourcePath": "v2/区.json",
+      "sourceBlobSha": "426b1fb68a16d8783932662fa2780bec8a1258cd",
+      "readings": [
+        "Ou1",
+        "qu1"
+      ],
+      "excerpt": "Ou1: surname Ou;  qu1: area; region; district; small; distinguish; CL:個|个[ge4]; "
+    },
+    {
+      "rank": 95,
+      "character": "历",
+      "sourcePath": "v2/历.json",
+      "sourceBlobSha": "d28ddef89a23921d67daa739edd01707a542181d",
+      "readings": [
+        "li4"
+      ],
+      "excerpt": "li4: old variant of 曆|历[li4]; old variant of 歷|历[li4]; calendar; old variant of 歷|历[li4]; to experience; to undergo; to pass through; all; each; every; history; "
+    },
+    {
+      "rank": 96,
+      "character": "歹",
+      "sourcePath": "v2/歹.json",
+      "sourceBlobSha": "d52d672cd5a155114f0dc2d07321996ca0b1ea53",
+      "readings": [
+        "dai3"
+      ],
+      "excerpt": "dai3: bad; wicked; evil; "
+    },
+    {
+      "rank": 97,
+      "character": "友",
+      "sourcePath": "v2/友.json",
+      "sourceBlobSha": "e2da099f2244092c7c5bdfe631a6ed837b8eb114",
+      "readings": [
+        "you3"
+      ],
+      "excerpt": "you3: friend; "
+    },
+    {
+      "rank": 98,
+      "character": "尤",
+      "sourcePath": "v2/尤.json",
+      "sourceBlobSha": "dddfd34fe00bb2501475e4b616f80b5534d339cd",
+      "readings": [
+        "You2",
+        "you2"
+      ],
+      "excerpt": "You2: surname You;  you2: outstanding; particularly, especially; a fault; to express discontentment against; "
+    },
+    {
+      "rank": 99,
+      "character": "匹",
+      "sourcePath": "v2/匹.json",
+      "sourceBlobSha": "7d88f83b58c7e4c3afbfb179b64eb71791227b2f",
+      "readings": [
+        "pi1",
+        "pi3"
+      ],
+      "excerpt": "pi1: mate; one of a pair;  pi3: classifier for horses, mules etc; Taiwan pr. [pi1]; ordinary person; classifier for cloth: bolt; horsepower; variant of 匹[pi3]; classifier for cloth: bolt; "
+    },
+    {
+      "rank": 100,
+      "character": "车",
+      "sourcePath": "v2/车.json",
+      "sourceBlobSha": "8c2d3131ef80d05353a955322dfa18f636e92b21",
+      "readings": [
+        "Che1",
+        "che1",
+        "ju1"
+      ],
+      "excerpt": "Che1: surname Che;  che1: car; vehicle; CL:輛|辆[liang4]; machine; to shape with a lathe;  ju1: war chariot (archaic); rook (in Chinese chess); rook (in chess); "
+    },
+    {
+      "rank": 101,
+      "character": "巨",
+      "sourcePath": "v2/巨.json",
+      "sourceBlobSha": "cfcfadbd84f9a65ef4c66d93c1bfb3f676bfaca2",
+      "readings": [
+        "ju4"
+      ],
+      "excerpt": "ju4: very large; huge; tremendous; gigantic; "
+    },
+    {
+      "rank": 102,
+      "character": "牙",
+      "sourcePath": "v2/牙.json",
+      "sourceBlobSha": "85400ae5b0143c3c0d9080e68b4901144c634c98",
+      "readings": [
+        "ya2"
+      ],
+      "excerpt": "ya2: tooth; ivory; CL:顆|颗[ke1]; "
+    },
+    {
+      "rank": 103,
+      "character": "屯",
+      "sourcePath": "v2/屯.json",
+      "sourceBlobSha": "9752b70d65adfcd415a059576f0c76eacafb0ec3",
+      "readings": [
+        "tun2",
+        "zhun1"
+      ],
+      "excerpt": "tun2: to station (soldiers); to store up; village;  zhun1: difficult; stingy; "
+    },
+    {
+      "rank": 104,
+      "character": "戈",
+      "sourcePath": "v2/戈.json",
+      "sourceBlobSha": "c9398e58ebc36853f4477bb78dfdc5644447e520",
+      "readings": [
+        "Ge1",
+        "ge1"
+      ],
+      "excerpt": "Ge1: surname Ge;  ge1: spear; "
+    },
+    {
+      "rank": 105,
+      "character": "比",
+      "sourcePath": "v2/比.json",
+      "sourceBlobSha": "8fa77f93c25e54b5ee40a9aff254bcb4a09d713c",
+      "readings": [
+        "Bi3",
+        "bi3",
+        "bi4"
+      ],
+      "excerpt": "Bi3: Belgium; Belgian; abbr. for 比利時|比利时[Bi3 li4 shi2];  bi3: (particle used for comparison and '-er than'); to compare; to contrast; to gesture (with hands); ratio;  bi4: to associate with; to be near; "
+    },
+    {
+      "rank": 106,
+      "character": "互",
+      "sourcePath": "v2/互.json",
+      "sourceBlobSha": "6d3891cdcfc8b04af940bef17afcd479884d85de",
+      "readings": [
+        "hu4"
+      ],
+      "excerpt": "hu4: mutual; "
+    },
+    {
+      "rank": 107,
+      "character": "切",
+      "sourcePath": "v2/切.json",
+      "sourceBlobSha": "c6b3c2eed685cf51a08fbf76ecbb466b250323dd",
+      "readings": [
+        "qie1",
+        "qie4"
+      ],
+      "excerpt": "qie1: to cut; to slice; tangent (math);  qie4: definitely; absolutely (not); (scoffing or dismissive interjection) Yeah, right.; Tut!; to grind; close to; eager; to correspond to; see also 反切[fan3 qie4]; "
+    },
+    {
+      "rank": 108,
+      "character": "瓦",
+      "sourcePath": "v2/瓦.json",
+      "sourceBlobSha": "d182fe620bcebbe27b8db1e61f59e2a4e27eb474",
+      "readings": [
+        "wa3"
+      ],
+      "excerpt": "wa3: roof tile; abbr. for 瓦特[wa3 te4], watt (loan); "
+    },
+    {
+      "rank": 109,
+      "character": "止",
+      "sourcePath": "v2/止.json",
+      "sourceBlobSha": "6c72016b21b45ffee0d7f6a14ed9641b60d27ddb",
+      "readings": [
+        "zhi3"
+      ],
+      "excerpt": "zhi3: to stop; to prohibit; until; only; "
+    },
+    {
+      "rank": 110,
+      "character": "少",
+      "sourcePath": "v2/少.json",
+      "sourceBlobSha": "59926b33e4d98d6b19660559119d4116dcb5cb0f",
+      "readings": [
+        "shao3",
+        "shao4"
+      ],
+      "excerpt": "shao3: few; less; to lack; to be missing; to stop (doing sth); seldom;  shao4: young; "
+    },
+    {
+      "rank": 111,
+      "character": "曰",
+      "sourcePath": "v2/曰.json",
+      "sourceBlobSha": "fe6cc81f9283da8f8b80f93aafc479c75ef0381a",
+      "readings": [
+        "yue1"
+      ],
+      "excerpt": "yue1: to speak; to say; "
+    },
+    {
+      "rank": 112,
+      "character": "日",
+      "sourcePath": "v2/日.json",
+      "sourceBlobSha": "9014d7bd66b17ca96c0f744ec3521148062865f1",
+      "readings": [
+        "Ri4",
+        "ri4"
+      ],
+      "excerpt": "Ri4: abbr. for 日本[Ri4 ben3], Japan;  ri4: sun; day; date, day of the month; "
+    },
+    {
+      "rank": 113,
+      "character": "中",
+      "sourcePath": "v2/中.json",
+      "sourceBlobSha": "29355a1dd6d2acb8a5e4d469c6aaf35bf78083ba",
+      "readings": [
+        "Zhong1",
+        "zhong1",
+        "zhong4"
+      ],
+      "excerpt": "Zhong1: China; Chinese; surname Zhong;  zhong1: within; among; in; middle; center; while (doing sth); during; (dialect) OK; all right;  zhong4: to hit (the mark); to be hit by; to suffer; to win (a prize, a lottery); "
+    },
+    {
+      "rank": 114,
+      "character": "贝",
+      "sourcePath": "v2/贝.json",
+      "sourceBlobSha": "a810268c15009893445854724a568e2b89452f99",
+      "readings": [
+        "Bei4",
+        "bei4"
+      ],
+      "excerpt": "Bei4: surname Bei;  bei4: cowrie; shellfish; currency (archaic); "
+    },
+    {
+      "rank": 115,
+      "character": "冈",
+      "sourcePath": "v2/冈.json",
+      "sourceBlobSha": "8b97605c1c767389a6127a69a4784c49dbf5df96",
+      "readings": [
+        "gang1"
+      ],
+      "excerpt": "gang1: ridge; mound; "
+    },
+    {
+      "rank": 116,
+      "character": "内",
+      "sourcePath": "v2/内.json",
+      "sourceBlobSha": "ada50f758be2a1e0febd952c8dcdb3a8aff98195",
+      "readings": [
+        "nei4"
+      ],
+      "excerpt": "nei4: inside; inner; internal; within; interior; "
+    },
+    {
+      "rank": 117,
+      "character": "水",
+      "sourcePath": "v2/水.json",
+      "sourceBlobSha": "d4b4566412c12d84c7f158a86ffb6605f3553b49",
+      "readings": [
+        "Shui3",
+        "shui3"
+      ],
+      "excerpt": "Shui3: surname Shui;  shui3: water; river; liquid; beverage; additional charges or income; (of clothes) classifier for number of washes; "
+    },
+    {
+      "rank": 118,
+      "character": "见",
+      "sourcePath": "v2/见.json",
+      "sourceBlobSha": "39496644daebc6a6a28498bf85a63f6ed25a37d7",
+      "readings": [
+        "jian4",
+        "xian4"
+      ],
+      "excerpt": "jian4: to see; to meet; to appear (to be sth); to interview;  xian4: to appear; also written 現|现[xian4]; "
+    },
+    {
+      "rank": 119,
+      "character": "午",
+      "sourcePath": "v2/午.json",
+      "sourceBlobSha": "ec9dddd9d89ab5bb39e6eea49f754fd42255544b",
+      "readings": [
+        "wu3"
+      ],
+      "excerpt": "wu3: 7th earthly branch: 11 a.m.-1 p.m., noon, 5th solar month (6th June-6th July), year of the Horse; ancient Chinese compass point: 180° (south); "
+    },
+    {
+      "rank": 120,
+      "character": "牛",
+      "sourcePath": "v2/牛.json",
+      "sourceBlobSha": "a4063d8e8ce3d3f0e2d58280f65764c01d1bf4f4",
+      "readings": [
+        "Niu2",
+        "niu2"
+      ],
+      "excerpt": "Niu2: surname Niu;  niu2: ox; cow; bull; CL:條|条[tiao2],頭|头[tou2]; (slang) awesome; "
+    },
+    {
+      "rank": 121,
+      "character": "手",
+      "sourcePath": "v2/手.json",
+      "sourceBlobSha": "4782bc5de46aa7c0dd86d11a4f573c6f1659ddd0",
+      "readings": [
+        "shou3"
+      ],
+      "excerpt": "shou3: hand; (formal) to hold; person engaged in certain types of work; person skilled in certain types of work; personal(ly); convenient; classifier for skill; CL:雙|双[shuang1],隻|只[zhi1]; "
+    },
+    {
+      "rank": 122,
+      "character": "气",
+      "sourcePath": "v2/气.json",
+      "sourceBlobSha": "fb8669677cfe1600e98bbbf0d0a5172db4c65d6b",
+      "readings": [
+        "qi4"
+      ],
+      "excerpt": "qi4: gas; air; smell; weather; to make angry; to annoy; to get angry; vital energy; qi; "
+    },
+    {
+      "rank": 123,
+      "character": "毛",
+      "sourcePath": "v2/毛.json",
+      "sourceBlobSha": "796d7759808321f0fc7c620b0b55709355a3fbc2",
+      "readings": [
+        "Mao2",
+        "mao2"
+      ],
+      "excerpt": "Mao2: surname Mao;  mao2: hair; feather; down; wool; mildew; mold; coarse or semifinished; young; raw; careless; unthinking; nervous; scared; (of currency) to devalue or depreciate; classifier for Chinese fractional monetary unit ( = 角[jiao3] , = one-tenth of a yuan or 10 fen 分[fen1]); "
+    },
+    {
+      "rank": 124,
+      "character": "壬",
+      "sourcePath": "v2/壬.json",
+      "sourceBlobSha": "d223c460b1a471af4b3f1aca8edeb4417e11ae14",
+      "readings": [
+        "ren2"
+      ],
+      "excerpt": "ren2: ninth of the ten Heavenly Stems 十天干[shi2 tian1 gan1]; ninth in order; letter 'I' or roman 'IX' in list 'A, B, C', or 'I, II, III' etc; ancient Chinese compass point: 345°; nona; "
+    },
+    {
+      "rank": 125,
+      "character": "升",
+      "sourcePath": "v2/升.json",
+      "sourceBlobSha": "479d2b29c88347f42ed2950f362d5a1f6cf42e59",
+      "readings": [
+        "sheng1"
+      ],
+      "excerpt": "sheng1: to ascend; to rise to the rank of; to promote; to hoist; liter; measure for dry grain equal to one-tenth dou 斗[dou3]; variant of 升[sheng1]; to ascend; to rise in rank; variant of 升[sheng1]; "
+    },
+    {
+      "rank": 126,
+      "character": "夭",
+      "sourcePath": "v2/夭.json",
+      "sourceBlobSha": "2eec249b7a870eff6ed074eea2039f437d7e1aa2",
+      "readings": [
+        "yao1"
+      ],
+      "excerpt": "yao1: tender; gentle; to die prematurely; variant of 夭[yao1]; to die young; to die prematurely; Taiwan pr. [yao3]; "
+    },
+    {
+      "rank": 127,
+      "character": "长",
+      "sourcePath": "v2/长.json",
+      "sourceBlobSha": "893a2508cb6b1bc52904fe7647732155cf351b92",
+      "readings": [
+        "chang2",
+        "zhang3"
+      ],
+      "excerpt": "chang2: length; long; forever; always; constantly;  zhang3: chief; head; elder; to grow; to develop; to increase; to enhance; "
+    },
+    {
+      "rank": 128,
+      "character": "仁",
+      "sourcePath": "v2/仁.json",
+      "sourceBlobSha": "86499a694a579ec28191e9357ede069ad632e95b",
+      "readings": [
+        "ren2"
+      ],
+      "excerpt": "ren2: humane; kernel; "
+    },
+    {
+      "rank": 129,
+      "character": "什",
+      "sourcePath": "v2/什.json",
+      "sourceBlobSha": "5e7e5fca6edc474ecc3aede33c346fb11309a6ef",
+      "readings": [
+        "shen2",
+        "shi2"
+      ],
+      "excerpt": "shen2: what;  shi2: ten (used in fractions, writing checks etc); assorted; miscellaneous; "
+    },
+    {
+      "rank": 130,
+      "character": "片",
+      "sourcePath": "v2/片.json",
+      "sourceBlobSha": "7feb9e5a8307a9ed4b88622e38081424bce2d714",
+      "readings": [
+        "pian1",
+        "pian4"
+      ],
+      "excerpt": "pian1: disk; sheet;  pian4: thin piece; flake; a slice; film; TV play; to slice; to carve thin; partial; incomplete; one-sided; classifier for slices, tablets, tract of land, area of water; classifier for CDs, movies, DVDs etc; used with numeral 一[yi1]: classifier for scenario, scene, feeling, atmosphere, sound etc; "
+    },
+    {
+      "rank": 131,
+      "character": "仆",
+      "sourcePath": "v2/仆.json",
+      "sourceBlobSha": "774d2bf6137029e7f443693c815d0c4ae13d1554",
+      "readings": [
+        "pu1",
+        "pu2"
+      ],
+      "excerpt": "pu1: to fall forward; to fall prostrate;  pu2: servant; "
+    },
+    {
+      "rank": 132,
+      "character": "化",
+      "sourcePath": "v2/化.json",
+      "sourceBlobSha": "3231aae28194117ebebbfe29905003e7ea89ab5b",
+      "readings": [
+        "hua1",
+        "hua4"
+      ],
+      "excerpt": "hua1: variant of 花[hua1];  hua4: to make into; to change into; -ization; to ... -ize; to transform; abbr. for 化學|化学[hua4 xue2]; "
+    },
+    {
+      "rank": 133,
+      "character": "仇",
+      "sourcePath": "v2/仇.json",
+      "sourceBlobSha": "ee6979ac0ef75733aa23b3da765f05c779302b35",
+      "readings": [
+        "Qiu2",
+        "chou2",
+        "qiu2"
+      ],
+      "excerpt": "Qiu2: surname Qiu;  chou2: hatred; animosity; enmity; foe; enemy; to feel animosity toward (the wealthy, foreigners etc);  qiu2: spouse; companion; "
+    },
+    {
+      "rank": 134,
+      "character": "币",
+      "sourcePath": "v2/币.json",
+      "sourceBlobSha": "8845fec05e9c8e0e0e4e918c906887f1bfcd252b",
+      "readings": [
+        "bi4"
+      ],
+      "excerpt": "bi4: money; coins; currency; silk; "
+    },
+    {
+      "rank": 135,
+      "character": "仍",
+      "sourcePath": "v2/仍.json",
+      "sourceBlobSha": "727ac655031ac2ef29eac29fbe2cc59cd8ed2297",
+      "readings": [
+        "reng2"
+      ],
+      "excerpt": "reng2: still; yet; to remain; "
+    },
+    {
+      "rank": 136,
+      "character": "仅",
+      "sourcePath": "v2/仅.json",
+      "sourceBlobSha": "c13cae664e555ecff1845ebaf1b3e7ad835087ac",
+      "readings": [
+        "jin3"
+      ],
+      "excerpt": "jin3: barely; only; merely; "
+    },
+    {
+      "rank": 137,
+      "character": "斤",
+      "sourcePath": "v2/斤.json",
+      "sourceBlobSha": "62dd4165b69346de7880c87bb04c154a6940d67a",
+      "readings": [
+        "jin1"
+      ],
+      "excerpt": "jin1: catty; weight equal to 0.5 kg; (Tw) weight equal to 0.6 kg; "
+    },
+    {
+      "rank": 138,
+      "character": "爪",
+      "sourcePath": "v2/爪.json",
+      "sourceBlobSha": "d0d48b3acf5f59fc42e6ab90ca870e48ced89f1a",
+      "readings": [
+        "zhua3"
+      ],
+      "excerpt": "zhua3: claw; "
+    },
+    {
+      "rank": 139,
+      "character": "反",
+      "sourcePath": "v2/反.json",
+      "sourceBlobSha": "18fab3ed33947f29abd03e8f1ca4c530133e8a54",
+      "readings": [
+        "fan3"
+      ],
+      "excerpt": "fan3: contrary; in reverse; inside out or upside down; to reverse; to return; to oppose; opposite; against; anti-; to rebel; to use analogy; instead; abbr. for 反切[fan3 qie4] phonetic system; "
+    },
+    {
+      "rank": 140,
+      "character": "介",
+      "sourcePath": "v2/介.json",
+      "sourceBlobSha": "c69a1736a1ba4244312b5985a8c89d7760ea9010",
+      "readings": [
+        "jie4"
+      ],
+      "excerpt": "jie4: to introduce; to lie between; between; shell; armor; "
+    },
+    {
+      "rank": 141,
+      "character": "父",
+      "sourcePath": "v2/父.json",
+      "sourceBlobSha": "be8dc5ed118f33076d4d59040f43cc327fa667e9",
+      "readings": [
+        "fu4"
+      ],
+      "excerpt": "fu4: father; "
+    },
+    {
+      "rank": 142,
+      "character": "从",
+      "sourcePath": "v2/从.json",
+      "sourceBlobSha": "a5049c1aa8ec4e1a1d1297a76a00921e319ed434",
+      "readings": [
+        "Cong2",
+        "cong2",
+        "zong4"
+      ],
+      "excerpt": "Cong2: surname Cong;  cong2: from; through; via; to follow; to obey; to engage in (an activity); never (in negative sentence); (Taiwan pr. [zong4]) retainer; assistant; accomplice; related by common paternal grandfather or earlier ancestor;  zong4: second cousin; "
+    },
+    {
+      "rank": 143,
+      "character": "仑",
+      "sourcePath": "v2/仑.json",
+      "sourceBlobSha": "7da35b3335abbd1a6c5b9dcd348f829dfba3ec40",
+      "readings": [
+        "lun2"
+      ],
+      "excerpt": "lun2: to arrange; variant of 崙|仑[lun2]; Kunlun (Karakorum) mountain range in Xinjiang; "
+    },
+    {
+      "rank": 144,
+      "character": "今",
+      "sourcePath": "v2/今.json",
+      "sourceBlobSha": "311900f860bc41c024b22b95a48ad2ab7f9901e5",
+      "readings": [
+        "jin1"
+      ],
+      "excerpt": "jin1: today; modern; present; current; this; now; "
+    },
+    {
+      "rank": 145,
+      "character": "凶",
+      "sourcePath": "v2/凶.json",
+      "sourceBlobSha": "1acd16f466d7b89dca5554577cf0c7ed914f822a",
+      "readings": [
+        "xiong1"
+      ],
+      "excerpt": "xiong1: terrible; fearful; vicious; fierce; ominous; inauspicious; famine; variant of 兇|凶[xiong1]; "
+    },
+    {
+      "rank": 146,
+      "character": "分",
+      "sourcePath": "v2/分.json",
+      "sourceBlobSha": "8afa7c06e68aa3a9ee446ba391660364be3073a1",
+      "readings": [
+        "fen1",
+        "fen4"
+      ],
+      "excerpt": "fen1: to divide; to separate; to distribute; to allocate; to distinguish (good and bad); part or subdivision; fraction; one tenth (of certain units); unit of length equivalent to 0.33 cm; minute; a point (in sports or games); 0.01 yuan (unit of money);  fen4: part; share; ingredient; component; "
+    },
+    {
+      "rank": 147,
+      "character": "乏",
+      "sourcePath": "v2/乏.json",
+      "sourceBlobSha": "26579aade91b71073cc998325c8dd4dc5bfc9a7f",
+      "readings": [
+        "fa2"
+      ],
+      "excerpt": "fa2: short of; tired; "
+    },
+    {
+      "rank": 148,
+      "character": "公",
+      "sourcePath": "v2/公.json",
+      "sourceBlobSha": "958ae9f65b9dbda1c0957b94009bcc66d2382335",
+      "readings": [
+        "gong1"
+      ],
+      "excerpt": "gong1: public; collectively owned; common; international (e.g. high seas, metric system, calendar); make public; fair; just; Duke, highest of five orders of nobility 五等爵位[wu3 deng3 jue2 wei4]; honorable (gentlemen); father-in-law; male (animal); "
+    },
+    {
+      "rank": 149,
+      "character": "仓",
+      "sourcePath": "v2/仓.json",
+      "sourceBlobSha": "33479d6b5c57ded72dd70cd85ddca4284582800a",
+      "readings": [
+        "cang1"
+      ],
+      "excerpt": "cang1: barn; granary; storehouse; cabin; hold (in ship); "
+    },
+    {
+      "rank": 150,
+      "character": "月",
+      "sourcePath": "v2/月.json",
+      "sourceBlobSha": "2161f0f4a390f85386136d100e0a5cd203da9299",
+      "readings": [
+        "yue4"
+      ],
+      "excerpt": "yue4: moon; month; monthly; CL:個|个[ge4],輪|轮[lun2]; "
+    },
+    {
+      "rank": 151,
+      "character": "氏",
+      "sourcePath": "v2/氏.json",
+      "sourceBlobSha": "144943d4f2eb82c8f3930f9f45ecb2080fac8250",
+      "readings": [
+        "shi4",
+        "zhi1"
+      ],
+      "excerpt": "shi4: clan name; maiden name;  zhi1: see 月氏[Yue4 zhi1] and 閼氏|阏氏[yan1 zhi1]; "
+    },
+    {
+      "rank": 152,
+      "character": "勿",
+      "sourcePath": "v2/勿.json",
+      "sourceBlobSha": "63de7d9a87ccb3209b284e69530168a4f36c70a2",
+      "readings": [
+        "wu4"
+      ],
+      "excerpt": "wu4: do not; "
+    },
+    {
+      "rank": 153,
+      "character": "欠",
+      "sourcePath": "v2/欠.json",
+      "sourceBlobSha": "aa161764b54a366f4493752e53bfd9f270973444",
+      "readings": [
+        "qian4"
+      ],
+      "excerpt": "qian4: deficient; to owe; to lack; yawn; "
+    },
+    {
+      "rank": 154,
+      "character": "风",
+      "sourcePath": "v2/风.json",
+      "sourceBlobSha": "a9ca243dfbab64a117eb15c1d48e15e0605ef08d",
+      "readings": [
+        "feng1"
+      ],
+      "excerpt": "feng1: wind; news; style; custom; manner; CL:陣|阵[zhen4],絲|丝[si1]; "
+    },
+    {
+      "rank": 155,
+      "character": "丹",
+      "sourcePath": "v2/丹.json",
+      "sourceBlobSha": "79bf66e4e6da809bc19b7c204ac636563ff0b2d6",
+      "readings": [
+        "dan1"
+      ],
+      "excerpt": "dan1: red; pellet; powder; cinnabar; "
+    },
+    {
+      "rank": 156,
+      "character": "匀",
+      "sourcePath": "v2/匀.json",
+      "sourceBlobSha": "925a53d401289ca0b159f3322d9a39906a2a1155",
+      "readings": [
+        "yun2"
+      ],
+      "excerpt": "yun2: even; well-distributed; uniform; to distribute evenly; to share; "
+    },
+    {
+      "rank": 157,
+      "character": "乌",
+      "sourcePath": "v2/乌.json",
+      "sourceBlobSha": "280f4aceba59b16853e333c96405bee3c45a0d0c",
+      "readings": [
+        "Wu1",
+        "wu1"
+      ],
+      "excerpt": "Wu1: abbr. for Ukraine 烏克蘭|乌克兰[Wu1 ke4 lan2]; surname Wu;  wu1: crow; black; "
+    },
+    {
+      "rank": 158,
+      "character": "勾",
+      "sourcePath": "v2/勾.json",
+      "sourceBlobSha": "c0c6469ae93ca323643f5b8ec5981afbb2088f65",
+      "readings": [
+        "Gou1",
+        "gou1",
+        "gou4"
+      ],
+      "excerpt": "Gou1: surname Gou;  gou1: to attract; to arouse; to tick; to strike out; to delineate; to collude; variant of 鉤|钩[gou1], hook;  gou4: see 勾當|勾当[gou4 dang4]; "
+    },
+    {
+      "rank": 159,
+      "character": "凤",
+      "sourcePath": "v2/凤.json",
+      "sourceBlobSha": "8a1783a1608c1ab27d8abd1863ac7e15c5c98dba",
+      "readings": [
+        "Feng4",
+        "feng4"
+      ],
+      "excerpt": "Feng4: surname Feng;  feng4: phoenix; "
+    },
+    {
+      "rank": 160,
+      "character": "六",
+      "sourcePath": "v2/六.json",
+      "sourceBlobSha": "ca879bdb69567d7d92132ff1bb9cd62bc528ec05",
+      "readings": [
+        "liu4"
+      ],
+      "excerpt": "liu4: six; 6; "
+    },
+    {
+      "rank": 161,
+      "character": "文",
+      "sourcePath": "v2/文.json",
+      "sourceBlobSha": "55b45e39a37b26fd284fdf05d9407c672b6c0a90",
+      "readings": [
+        "Wen2",
+        "wen2"
+      ],
+      "excerpt": "Wen2: surname Wen;  wen2: language; culture; writing; formal; literary; gentle; (old) classifier for coins; Kangxi radical 67; "
+    },
+    {
+      "rank": 162,
+      "character": "亢",
+      "sourcePath": "v2/亢.json",
+      "sourceBlobSha": "225c85e632dbd5e3077220543c4c1ddfed1e6c45",
+      "readings": [
+        "Kang4",
+        "kang4"
+      ],
+      "excerpt": "Kang4: surname Kang; Kang, one of the 28 constellations;  kang4: high; overbearing; excessive; "
+    },
+    {
+      "rank": 163,
+      "character": "方",
+      "sourcePath": "v2/方.json",
+      "sourceBlobSha": "85b2084fcbf752eac159f80c6cf4d8efb1cbb482",
+      "readings": [
+        "Fang1",
+        "fang1"
+      ],
+      "excerpt": "Fang1: surname Fang;  fang1: square; power or involution (mathematics); upright; honest; fair and square; direction; side; party (to a contract, dispute etc); place; method; prescription (medicine); just when; only or just; classifier for square things; abbr. for square or cubic meter; "
+    },
+    {
+      "rank": 164,
+      "character": "火",
+      "sourcePath": "v2/火.json",
+      "sourceBlobSha": "e57148e48c0bd2ce202138f4ec05e614200d6d71",
+      "readings": [
+        "Huo3",
+        "huo3"
+      ],
+      "excerpt": "Huo3: surname Huo;  huo3: fire; urgent; ammunition; fiery or flaming; internal heat (Chinese medicine); hot (popular); classifier for military units (old); "
+    },
+    {
+      "rank": 165,
+      "character": "为",
+      "sourcePath": "v2/为.json",
+      "sourceBlobSha": "0920ff9d06dcfe9a4d17e5282e75864080d81215",
+      "readings": [
+        "wei2",
+        "wei4"
+      ],
+      "excerpt": "wei2: as (in the capacity of); to take sth as; to act as; to serve as; to behave as; to become; to be; to do; by (in the passive voice); variant of 為|为[wei2]; as (i.e. in the capacity of); to take sth as; to act as; to serve as; to behave as; to become; to be; to do;  wei4: because of; for; to; variant of 為|为[wei4], because of; for; to; "
+    },
+    {
+      "rank": 166,
+      "character": "斗",
+      "sourcePath": "v2/斗.json",
+      "sourceBlobSha": "0ff881dd8da57161d4b3d306e616585d4633de49",
+      "readings": [
+        "Dou3",
+        "dou3",
+        "dou4"
+      ],
+      "excerpt": "Dou3: abbr. for the Big Dipper constellation 北斗星[Bei3 dou3 xing1];  dou3: dry measure for grain equal to ten 升[sheng1] or one-tenth of a 石[dan4]; decaliter; peck; cup or dipper shaped object; old variant of 陡[dou3];  dou4: to fight; to struggle; to condemn; to censure; to contend; to put together; coming together; variant of 鬭|斗[dou4]; variant of 鬥|斗[dou4]; variant of 鬥|斗[dou4]; "
+    },
+    {
+      "rank": 167,
+      "character": "忆",
+      "sourcePath": "v2/忆.json",
+      "sourceBlobSha": "973934e95e2f698d65b9475b205c07e441589604",
+      "readings": [
+        "yi4"
+      ],
+      "excerpt": "yi4: to recollect; to remember; memory; "
+    },
+    {
+      "rank": 168,
+      "character": "计",
+      "sourcePath": "v2/计.json",
+      "sourceBlobSha": "3c45bad3c85fba05fe50005625a21c3a0011d843",
+      "readings": [
+        "Ji4",
+        "ji4"
+      ],
+      "excerpt": "Ji4: surname Ji;  ji4: to calculate; to compute; to count; to regard as important; to plan; ruse; meter; gauge; "
+    },
+    {
+      "rank": 169,
+      "character": "订",
+      "sourcePath": "v2/订.json",
+      "sourceBlobSha": "5d9fafcf5a1f1f6927ca4266bcc17dbc04d8ef49",
+      "readings": [
+        "ding4"
+      ],
+      "excerpt": "ding4: to agree; to conclude; to draw up; to subscribe to (a newspaper etc); to order; "
+    },
+    {
+      "rank": 170,
+      "character": "户",
+      "sourcePath": "v2/户.json",
+      "sourceBlobSha": "d397789631e24a8dbbb36e1f1b7570ef09d36369",
+      "readings": [
+        "hu4"
+      ],
+      "excerpt": "hu4: a household; door; family; "
+    },
+    {
+      "rank": 171,
+      "character": "认",
+      "sourcePath": "v2/认.json",
+      "sourceBlobSha": "4d61223b882cecd22c7b2c70178f598e62c380ef",
+      "readings": [
+        "ren4"
+      ],
+      "excerpt": "ren4: to recognize; to know; to admit; "
+    },
+    {
+      "rank": 172,
+      "character": "冗",
+      "sourcePath": "v2/冗.json",
+      "sourceBlobSha": "df78340344245f447fda8cceb2bf838c26854c46",
+      "readings": [
+        "rong3"
+      ],
+      "excerpt": "rong3: extraneous; redundant; superfluous; busy schedule; variant of 冗[rong3]; "
+    },
+    {
+      "rank": 173,
+      "character": "讥",
+      "sourcePath": "v2/讥.json",
+      "sourceBlobSha": "8c7d2d6a075f4907bdaa4c784fd988a893d24b16",
+      "readings": [
+        "ji1"
+      ],
+      "excerpt": "ji1: to ridicule; "
+    },
+    {
+      "rank": 174,
+      "character": "心",
+      "sourcePath": "v2/心.json",
+      "sourceBlobSha": "53b5120cccb9066695cadfb4c0301723c0b064a8",
+      "readings": [
+        "xin1"
+      ],
+      "excerpt": "xin1: heart; mind; intention; center; core; CL:顆|颗[ke1],個|个[ge4]; "
+    },
+    {
+      "rank": 175,
+      "character": "尺",
+      "sourcePath": "v2/尺.json",
+      "sourceBlobSha": "f04eca39f67150e89d5abb5709cddfdf46050f03",
+      "readings": [
+        "che3",
+        "chi3"
+      ],
+      "excerpt": "che3: one of the characters used to represent a musical note in gongche notation, 工尺譜|工尺谱[gong1 che3 pu3];  chi3: a Chinese foot; one-third of a meter; a ruler; a tape-measure; one of the three acupoints for measuring pulse in Chinese medicine; CL:支[zhi1],把[ba3]; "
+    },
+    {
+      "rank": 176,
+      "character": "引",
+      "sourcePath": "v2/引.json",
+      "sourceBlobSha": "63cb464b2897b37520ae81f5d45b6b7f033aa840",
+      "readings": [
+        "yin3"
+      ],
+      "excerpt": "yin3: to draw (e.g. a bow); to pull; to stretch sth; to extend; to lengthen; to involve or implicate in; to attract; to lead; to guide; to leave; to provide evidence or justification for; old unit of distance equal to 10 丈[zhang4], one-thirtieth of a km or 33.33 meters; "
+    },
+    {
+      "rank": 177,
+      "character": "丑",
+      "sourcePath": "v2/丑.json",
+      "sourceBlobSha": "31b908fad5fc8d4cf9e78895595021e9f8fab1f0",
+      "readings": [
+        "Chou3",
+        "chou3"
+      ],
+      "excerpt": "Chou3: surname Chou;  chou3: clown; 2nd earthly branch: 1-3 a.m., 12th solar month (6th January to 3rd February), year of the Ox; ancient Chinese compass point: 30°; shameful; ugly; disgraceful; "
+    },
+    {
+      "rank": 178,
+      "character": "巴",
+      "sourcePath": "v2/巴.json",
+      "sourceBlobSha": "84f9c604d3e66af85442341b7ddbb98921f18366",
+      "readings": [
+        "Ba1",
+        "ba1"
+      ],
+      "excerpt": "Ba1: Ba state during Zhou dynasty (in east of modern Sichuan); abbr. for east Sichuan or Chongqing; surname Ba; abbr. for Palestine or Palestinian; abbr. for Pakistan;  ba1: to long for; to wish; to cling to; to stick to; sth that sticks; close to; next to; spread open; informal abbr. for bus 巴士[ba1 shi4]; bar (unit of pressure); nominalizing suffix on certain nouns, such as 尾巴[wei3 ba5], tail; "
+    },
+    {
+      "rank": 179,
+      "character": "孔",
+      "sourcePath": "v2/孔.json",
+      "sourceBlobSha": "d6a2a9680ad8e112e913feacb37526d12e2abf6b",
+      "readings": [
+        "Kong3",
+        "kong3"
+      ],
+      "excerpt": "Kong3: surname Kong;  kong3: hole; CL:個|个[ge4]; classifier for cave dwellings; "
+    },
+    {
+      "rank": 180,
+      "character": "队",
+      "sourcePath": "v2/队.json",
+      "sourceBlobSha": "9803e7d07d614fc1ef4cfe75d59fa6525dbba6a9",
+      "readings": [
+        "dui4"
+      ],
+      "excerpt": "dui4: squadron; team; group; CL:個|个[ge4]; "
+    },
+    {
+      "rank": 181,
+      "character": "办",
+      "sourcePath": "v2/办.json",
+      "sourceBlobSha": "07d680962ae40cb4688fed55d05dff514c09702a",
+      "readings": [
+        "ban4"
+      ],
+      "excerpt": "ban4: to do; to manage; to handle; to go about; to run; to set up; to deal with; "
+    },
+    {
+      "rank": 182,
+      "character": "以",
+      "sourcePath": "v2/以.json",
+      "sourceBlobSha": "522a31d01f0ace497080b7c2be7341769c40e06a",
+      "readings": [
+        "yi3",
+        "Yi3"
+      ],
+      "excerpt": "yi3: old variant of 以[yi3]; old variant of 以[yi3]; to use; by means of; according to; in order to; because of; at (a certain date or place);  Yi3: abbr. for Israel 以色列[Yi3 se4 lie4]; "
+    },
+    {
+      "rank": 183,
+      "character": "允",
+      "sourcePath": "v2/允.json",
+      "sourceBlobSha": "5691f99170880d431c2e708c1f462948cf1d6fcc",
+      "readings": [
+        "yun3"
+      ],
+      "excerpt": "yun3: just; fair; to permit; to allow; "
+    },
+    {
+      "rank": 184,
+      "character": "予",
+      "sourcePath": "v2/予.json",
+      "sourceBlobSha": "0d7f6cbfc945e2cce4bfa06f78b095e442da2ed2",
+      "readings": [
+        "yu2",
+        "yu3"
+      ],
+      "excerpt": "yu2: (archaic) I; me;  yu3: to give; "
+    },
+    {
+      "rank": 185,
+      "character": "邓",
+      "sourcePath": "v2/邓.json",
+      "sourceBlobSha": "a3dc945b4062c589429c47f79626b411b7d236a8",
+      "readings": [
+        "Deng4"
+      ],
+      "excerpt": "Deng4: surname Deng; "
+    },
+    {
+      "rank": 186,
+      "character": "劝",
+      "sourcePath": "v2/劝.json",
+      "sourceBlobSha": "d0191978cdc2a0f7e9ac93d3036f4a4c3140d3c9",
+      "readings": [
+        "quan4"
+      ],
+      "excerpt": "quan4: to advise; to urge; to try to persuade; to exhort; to console; to soothe; "
+    },
+    {
+      "rank": 187,
+      "character": "双",
+      "sourcePath": "v2/双.json",
+      "sourceBlobSha": "91078f8a29b21eb3081b156d6795c1b02102c115",
+      "readings": [
+        "Shuang1",
+        "shuang1"
+      ],
+      "excerpt": "Shuang1: surname Shuang;  shuang1: two; double; pair; both; even (number); "
+    },
+    {
+      "rank": 188,
+      "character": "书",
+      "sourcePath": "v2/书.json",
+      "sourceBlobSha": "bd374f4c8285a3dcf5994f6de157e964d204f7a1",
+      "readings": [
+        "Shu1",
+        "shu1"
+      ],
+      "excerpt": "Shu1: abbr. for 書經|书经[Shu1 jing1];  shu1: book; letter; document; CL:本[ben3],冊|册[ce4],部[bu4]; to write; "
+    },
+    {
+      "rank": 189,
+      "character": "幻",
+      "sourcePath": "v2/幻.json",
+      "sourceBlobSha": "ea077670721dcf0f6dae219374f7e3231259f362",
+      "readings": [
+        "huan4"
+      ],
+      "excerpt": "huan4: fantasy; "
+    },
+    {
+      "rank": 190,
+      "character": "玉",
+      "sourcePath": "v2/玉.json",
+      "sourceBlobSha": "a0f8b57b47ab41d63f8a15340df5d848215587c7",
+      "readings": [
+        "yu4"
+      ],
+      "excerpt": "yu4: jade; "
+    },
+    {
+      "rank": 191,
+      "character": "刊",
+      "sourcePath": "v2/刊.json",
+      "sourceBlobSha": "abfcf4f98922367bf3cf50fd6f577ed8b9a60f4d",
+      "readings": [
+        "kan1"
+      ],
+      "excerpt": "kan1: to print; to publish; publication; periodical; to peel with a knife; to carve; to amend; old variant of 刊[kan1]; to peel with a knife; to carve; to amend; "
+    },
+    {
+      "rank": 192,
+      "character": "未",
+      "sourcePath": "v2/未.json",
+      "sourceBlobSha": "87f03b36cd4b0a72653aa8a56443a8bb3f6de207",
+      "readings": [
+        "wei4"
+      ],
+      "excerpt": "wei4: not yet; did not; have not; not; 8th earthly branch: 1-3 p.m., 6th solar month (7th July-6th August), year of the Sheep; ancient Chinese compass point: 210°; "
+    },
+    {
+      "rank": 193,
+      "character": "末",
+      "sourcePath": "v2/末.json",
+      "sourceBlobSha": "b1f80844255f77e2396262dee2798c1ba217d8ea",
+      "readings": [
+        "mo4"
+      ],
+      "excerpt": "mo4: tip; end; final stage; latter part; inessential detail; powder; dust; opera role of old man; "
+    },
+    {
+      "rank": 194,
+      "character": "示",
+      "sourcePath": "v2/示.json",
+      "sourceBlobSha": "2a44922b554eb365850eeff9b84b4b83f4e698d5",
+      "readings": [
+        "shi4"
+      ],
+      "excerpt": "shi4: to show; to reveal; "
+    },
+    {
+      "rank": 195,
+      "character": "击",
+      "sourcePath": "v2/击.json",
+      "sourceBlobSha": "c600ed25f15acc7149e765778c410995ea6db0a8",
+      "readings": [
+        "ji1"
+      ],
+      "excerpt": "ji1: to hit; to strike; to break; Taiwan pr. [ji2]; "
+    },
+    {
+      "rank": 196,
+      "character": "打",
+      "sourcePath": "v2/打.json",
+      "sourceBlobSha": "88f0ef287ee3ec144f4d88dffc4858f98cce3d01",
+      "readings": [
+        "da2",
+        "da3"
+      ],
+      "excerpt": "da2: dozen (loanword);  da3: to beat; to strike; to hit; to break; to type; to mix up; to build; to fight; to fetch; to make; to tie up; to issue; to shoot; to calculate; to play (a game); since; from; "
+    },
+    {
+      "rank": 197,
+      "character": "巧",
+      "sourcePath": "v2/巧.json",
+      "sourceBlobSha": "3c3d723aebede0249a9b357a0c1a4f041dcf53be",
+      "readings": [
+        "qiao3"
+      ],
+      "excerpt": "qiao3: opportunely; coincidentally; as it happens; skillful; timely; "
+    },
+    {
+      "rank": 198,
+      "character": "正",
+      "sourcePath": "v2/正.json",
+      "sourceBlobSha": "ccd88ae9c02944a23f0c93e6bc7650e05629df49",
+      "readings": [
+        "zheng1",
+        "zheng4"
+      ],
+      "excerpt": "zheng1: first month of the lunar year;  zheng4: straight; upright; proper; main; principal; to correct; to rectify; exactly; just (at that time); right (in that place); (math.) positive; "
+    },
+    {
+      "rank": 199,
+      "character": "扑",
+      "sourcePath": "v2/扑.json",
+      "sourceBlobSha": "61978c5e41066bbdd6219611ae303ae538072f92",
+      "readings": [
+        "pu1"
+      ],
+      "excerpt": "pu1: to throw oneself at; to pounce on; to devote one's energies; to flap; to flutter; to dab; to pat; to bend over; "
+    },
+    {
+      "rank": 200,
+      "character": "卉",
+      "sourcePath": "v2/卉.json",
+      "sourceBlobSha": "7e6c430ada5e7e59b62156c28457a036184e1c20",
+      "readings": [
+        "hui4"
+      ],
+      "excerpt": "hui4: plants; "
+    }
+  ]
+}
