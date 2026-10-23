@@ -9,7 +9,7 @@ const clarity=new Set(["clear","partial","misleading","uncertain"]);
 const kinds=new Set(["unsure","action","entity","property","relation","other"]);
 const lexical=new Set(["supported","unsupported","uncertain"]);
 
-export function validateReviewSession(session,audit,queue){
+export function validateReviewSession(session,audit,queue,fullQueue=null){
  assert.ok(session&&typeof session==="object"&&!Array.isArray(session));
  assert.equal(session.session?.localOnly,true,"Only explicitly local-only exports are supported");
  assert.ok(typeof session.session?.exportedAt==="string"&&!Number.isNaN(Date.parse(session.session.exportedAt)));
@@ -46,6 +46,51 @@ export function validateReviewSession(session,audit,queue){
     "Comprehension exports cannot assert canonical approval fields");
   }
   return {type:"emoji_comprehension",localObservations:session.answers.length,productionVerified:0};
+ }
+ if(session.schema==="chromalect.lexical-review-observation-session.v0.2"){
+  assert.ok(fullQueue&&fullQueue.schema==="chromalect.semantic.full-lexical-review-queue.v0.1",
+   "A pinned all-senses queue is required for v0.2 observations");
+  assert.equal(fullQueue.status,"unreviewed_source_first_all_candidate_senses");
+  assert.equal(fullQueue.counts.total,897);
+  assert.equal(fullQueue.counts.independentLexicalApproved,0);
+  assert.equal(fullQueue.counts.independentEmojiApproved,0);
+  assert.equal(fullQueue.counts.productionVerified,0);
+  assert.equal(session.status,"local_preliminary_observations_not_independent_lexical_approval");
+  assert.equal(session.source?.queue,"full-lexical-review-queue-v0.1.json");
+  assert.equal(session.source?.ccCedictLicense,"CC BY-SA 4.0");
+  assert.ok(Array.isArray(session.observations)&&session.observations.length>=1);
+  assert.equal(session.session.recorded,session.observations.length);
+  assert.ok(session.session.planned>=session.observations.length&&session.session.planned<=897);
+  assert.ok(["all","flagged","matched","high","medium","unclassified"].includes(session.session.scope));
+  const refs=new Map(fullQueue.records.map(r=>[r.rank+"|"+r.selectedMeaning,r]));
+  const seen=new Set();
+  for(const x of session.observations){
+   const key=x.rank+"|"+x.selectedMeaning,actual=refs.get(key);
+   assert.ok(actual,"Unknown source-first lexical candidate");
+   assert.ok(!seen.has(key),"Repeated lexical candidate");
+   seen.add(key);
+   assert.equal(x.character,actual.character);
+   assert.equal(x.originalSourceSegment,actual.referenceDefinition);
+   assert.equal(x.dictionarySource,actual.dictionarySource);
+   assert.equal(x.priorityAtIntake,actual.priority);
+   assert.equal(x.strictWholeTermMatchAtIntake,actual.strictWholeTermMatch);
+   assert.ok(lexical.has(x.preliminaryJudgment));
+   assert.ok(typeof x.evidenceRationale==="string"&&
+    x.evidenceRationale.trim().length>=12&&x.evidenceRationale.length<=15000);
+   assert.equal(x.lexicalApproval,"not_granted");
+   assert.equal(x.emojiComprehensionApproval,"not_granted");
+   assert.equal(x.productionVerified,false);
+   assert.ok(!("emojiExpression" in x)&&!("emoji" in x),
+    "Blind lexical observations must not embed the pictogram");
+   assert.equal(actual.lexicalDecision,"pending");
+   assert.equal(actual.visualComprehensionDecision,"pending");
+   assert.equal(actual.productionVerified,false);
+   if(session.session.scope==="flagged")assert.equal(actual.strictWholeTermMatch,false);
+   if(session.session.scope==="matched")assert.equal(actual.strictWholeTermMatch,true);
+   if(["high","medium","unclassified"].includes(session.session.scope))
+    assert.equal(actual.priority,session.session.scope);
+  }
+  return {type:"lexical_source_observation",localObservations:session.observations.length,productionVerified:0};
  }
  if(session.schema==="chromalect.lexical-review-observation-session.v0.1"){
   assert.equal(session.status,"local_preliminary_observations_not_independent_lexical_approval");
@@ -88,7 +133,9 @@ if(process.argv[1]&&import.meta.url===pathToFileURL(process.argv[1]).href){
  const session=JSON.parse(fs.readFileSync(file,"utf8"));
  const audit=JSON.parse(fs.readFileSync("data/semantic/cedict-crossref/emoji-visibility-audit-v0.1.json","utf8"));
  const queue=JSON.parse(fs.readFileSync("data/semantic/cedict-crossref/sense-review-queue-v0.1.json","utf8"));
- const result=validateReviewSession(session,audit,queue);
+ const fullQueue=JSON.parse(fs.readFileSync(
+  "data/semantic/cedict-crossref/full-lexical-review-queue-v0.1.json","utf8"));
+ const result=validateReviewSession(session,audit,queue,fullQueue);
  console.log("Valid local observation export ("+result.type+"): "+
   result.localObservations+" records. Production approvals: 0.");
 }
