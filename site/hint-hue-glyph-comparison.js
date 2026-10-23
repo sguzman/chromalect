@@ -4,15 +4,21 @@
 "use strict";
 const $=id=>document.getElementById(id);
 const ids=["hg-query","hg-size","hg-size-label","hg-gray","hg-surface",
- "hg-select","hg-prev","hg-next","hg-compare","hg-count","hg-status","hg-owner"];
+ "hg-select","hg-prev","hg-next","hg-show-meaning","hg-sense","hg-reveal",
+ "hg-compare","hg-count","hg-status","hg-owner","hg-semantic"];
 if(ids.some(id=>!$(id)))return;
+const grammar=globalThis.ChromalectSemanticGrammar;
+if(!grammar||!grammar.validate){
+ $("hg-status").textContent="Source-backed semantic grammar unavailable";
+ return;
+}
 const make=(tag,cls,label)=>{
  const node=document.createElement(tag);
  if(cls)node.className=cls;
  if(label!==undefined)node.textContent=label;
  return node;
 };
-let records=[],current=0,candidates=new Map(),originalPalette=new Map();
+let records=[],current=0,candidates=new Map(),originalPalette=new Map(),semantic=[];
 const baseName=r=>"U+"+r.character.codePointAt(0).toString(16).toUpperCase().padStart(4,"0")+".svg";
 const allowedSurface=new Set(["theme","white","black"]);
 function cohort(){
@@ -26,7 +32,8 @@ function choose(){
  if(!filtered.length){
   $("hg-select").replaceChildren();
   $("hg-compare").replaceChildren();
-  $("hg-owner").replaceChildren();
+  $("hg-owner").replaceChildren();$("hg-semantic").replaceChildren();
+  $("hg-sense").replaceChildren();
   $("hg-count").textContent="0 matching research glyphs";
   return;
  }
@@ -41,6 +48,17 @@ function choose(){
  select.value=String(r.rank);
  $("hg-prev").disabled=index===0;
  $("hg-next").disabled=index===filtered.length-1;
+ const sourceSemantic=semantic[r.rank-1];
+ const options=sourceSemantic.screening.candidates.filter(c=>c.expression!==null);
+ const sense=$("hg-sense"),old=Number(sense.value);
+ sense.replaceChildren();
+ for(let i=0;i<options.length;i++){
+  const option=make("option",null,"Candidate "+(i+1)+" · "+options[i].selectedMeaning);
+  option.value=String(i);sense.appendChild(option);
+ }
+ sense.disabled=!options.length;
+ sense.value=String(old>=0&&old<options.length?old:0);
+ const proposal=options[Number(sense.value)]||null;
  const surface=$("hg-surface").value;
  if(!allowedSurface.has(surface))throw Error("Unknown research surface");
  const fragment=document.createDocumentFragment();
@@ -59,6 +77,19 @@ function choose(){
   stage.style.setProperty("--hg-background",
    surface==="white"?"#ffffff":surface==="black"?"#000000":"transparent");
   stage.appendChild(svg);
+  if($("hg-show-meaning").checked){
+   const cue=make("div","hg-semantic-cue");
+   if(proposal){
+    for(const part of grammar.emojiParts(proposal.expression)){
+     const atom=make("span","hg-semantic-atom",part.text);
+     atom.setAttribute("aria-hidden","true");cue.appendChild(atom);
+    }
+    cue.setAttribute("role","img");
+    cue.setAttribute("aria-label","Unverified pictogram for "+
+     proposal.selectedMeaning+": "+grammar.emojiDisplay(proposal.expression));
+   }else cue.textContent="Semantic candidate deferred; no pictogram inserted";
+   stage.appendChild(cue);
+  }
   item.appendChild(title);item.appendChild(stage);
   fragment.appendChild(item);
  }
@@ -78,6 +109,16 @@ function choose(){
   }
   owners.appendChild(row);
  }
+ $("hg-semantic").replaceChildren(
+  make("strong",null,"Same experimental meaning cue on both conditions"),
+  make("p",null,proposal?
+   "Source-screened candidate "+($("hg-reveal").checked?
+    proposal.selectedMeaning:"label hidden until revealed")+
+   " · original source definition "+($("hg-reveal").checked?
+    sourceSemantic.source.definition:"hidden"):
+   "No provisional pictogram selected for this character; abstention remains."),
+  make("p",null,"Lexical senses, pictograms, visual decoding and learning outcomes independently approved: zero.")
+ );
  $("hg-owner").replaceChildren(
   make("p",null,"Source rank "+r.rank+" · "+r.character+
    " · "+r.modifiedSourcePathFills+" recolored source path fill(s); "+
@@ -94,10 +135,11 @@ async function load(){
  try{
   const paths=["glyphs/research/hint-counterfactual-v0.1/index-v0.1.json",
    "mnemonic-group-counterfactual-v0.1.json",
-   "palettes/mandarin-component-identity-v0.6.json"];
+   "palettes/mandarin-component-identity-v0.6.json",
+   "semantic/mandarin-1000-v0.1.json"];
   const responses=await Promise.all(paths.map(x=>fetch(x)));
   if(responses.some(x=>!x.ok))throw Error("Required pinned research index unavailable");
-  const [index,alternative,palette]=await Promise.all(responses.map(x=>x.json()));
+  const [index,alternative,palette,meaning]=await Promise.all(responses.map(x=>x.json()));
   if(index.schema!=="chromalect.glyph.historical-hint-counterfactual-gallery.v0.1"||
      index.status!=="build_generated_isolated_research_svg_recolor_only_no_semantic_or_visual_approval"||
      index.provenance.palette!=="mandarin-component-identity@0.6.0"||
@@ -126,7 +168,16 @@ async function load(){
      alternative.summary.hypotheticalColorAssignments!==40||
      alternative.summary.approvedSemanticFamilies!==0||
      palette.version!=="0.6.0"||
-     palette.components.length!==520)
+     palette.components.length!==520||
+     meaning.schema!=="chromalect.mandarin.character-semantic-tranche.v0.1"||
+     meaning.status!=="initial_screening_complete_candidates_not_production_verified"||
+     meaning.summary.screenedCharacters!==1000||
+     meaning.summary.pictogramCandidateCharacters!==881||
+     meaning.summary.deferredCharacters!==119||
+     meaning.summary.productionVerifiedCharacters!==0||
+     meaning.initialScreeningReview.productionVerifiedSenses!==0||
+     meaning.source.provisional!==true||
+     !Array.isArray(meaning.characters)||meaning.characters.length!==1000)
    throw Error("Original glyph or hypothetical research boundaries failed");
   const proposed=new Map(alternative.groups.flatMap(g=>
    g.members.map(c=>[c.componentId,c])));
@@ -166,7 +217,28 @@ async function load(){
       index.summary.unchangedSourcePathFillsInAffectedGlyphs+
        index.summary.unchangedSourcePathFillsInUnchangedGlyphs)
    throw Error("Research gallery source-path totals differ from the pinned active catalog");
+  let candidateCount=0,candidateCharacters=0;
+  for(let i=0;i<meaning.characters.length;i++){
+   const entry=meaning.characters[i],options=entry.screening?.candidates;
+   if(entry.rank!==i+1||!Array.isArray(options)||
+      entry.screening.status!=="screened")
+    throw Error("Source semantic rank or screening status changed");
+   const proposed=options.filter(c=>c.expression!==null);
+   if(proposed.length)candidateCharacters++;
+   candidateCount+=proposed.length;
+   for(const c of proposed){
+    if(c.state!=="experimental_pictogram_candidate"||
+       c.review!=="human_linguistic_and_comprehension_review_pending"||
+       !c.selectedMeaning)
+     throw Error("Candidate meaning improperly verified");
+    grammar.validate(c.expression);
+   }
+  }
+  if(candidateCharacters!==881||candidateCount!==897||
+     index.glyphs.some(r=>meaning.characters[r.rank-1].character!==r.character))
+   throw Error("Source-aligned semantics do not match the candidate glyphs");
   records=index.glyphs;candidates=proposed;originalPalette=active;
+  semantic=meaning.characters;
   const hash=typeof location!=="undefined"?/^#c(0[0-9]{3}|1000)$/.exec(location.hash):null;
   current=hash?Number(hash[1]):records[0].rank;
   $("hg-status").textContent=index.summary.affectedGlyphs+
@@ -176,7 +248,9 @@ async function load(){
    "Original SVGs and geometries verified by the publishing build; browser imagery has not been independently reviewed.";
   choose();
  }catch(error){
-  records=[];$("hg-compare").replaceChildren();$("hg-owner").replaceChildren();
+  records=[];semantic=[];
+  $("hg-compare").replaceChildren();$("hg-owner").replaceChildren();
+  $("hg-semantic").replaceChildren();
   $("hg-status").textContent="Unable to validate research SVG gallery: "+error.message;
  }
 }
@@ -195,5 +269,8 @@ $("hg-next").addEventListener("click",()=>{
 });
 for(const id of ["hg-size","hg-gray","hg-surface"])
  $(id).addEventListener(id==="hg-size"?"input":"change",choose);
+$("hg-sense").addEventListener("change",choose);
+$("hg-show-meaning").addEventListener("change",choose);
+$("hg-reveal").addEventListener("change",choose);
 load();
 })();
