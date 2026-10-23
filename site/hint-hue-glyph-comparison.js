@@ -5,7 +5,8 @@
 const $=id=>document.getElementById(id);
 const ids=["hg-query","hg-size","hg-size-label","hg-gray","hg-surface",
  "hg-select","hg-prev","hg-next","hg-show-meaning","hg-sense","hg-reveal",
- "hg-compare","hg-count","hg-status","hg-owner","hg-semantic"];
+ "hg-compare","hg-count","hg-status","hg-owner","hg-semantic",
+ "hg-risk-filter","hg-risk-summary","hg-risk-pairs"];
 if(ids.some(id=>!$(id)))return;
 const grammar=globalThis.ChromalectSemanticGrammar;
 if(!grammar||!grammar.validate){
@@ -18,14 +19,26 @@ const make=(tag,cls,label)=>{
  if(label!==undefined)node.textContent=label;
  return node;
 };
-let records=[],current=0,candidates=new Map(),originalPalette=new Map(),semantic=[];
+let records=[],current=0,candidates=new Map(),originalPalette=new Map(),semantic=[],
+ riskRows=new Map(),riskTotals=null;
 const baseName=r=>"U+"+r.character.codePointAt(0).toString(16).toUpperCase().padStart(4,"0")+".svg";
 const allowedSurface=new Set(["theme","white","black"]);
 function cohort(){
  const query=$("hg-query").value.trim().toLowerCase();
- return records.filter(r=>!query||String(r.rank)===query||
-  r.character.toLowerCase().includes(query)||
-  r.changedComponentIds.some(id=>id.toLowerCase().includes(query)));
+ const focus=$("hg-risk-filter").value;
+ if(!["all","introduced","new_close","original_close","resolved"].includes(focus))
+  throw Error("Unsupported color proximity research filter");
+ return records.filter(r=>{
+  const risk=riskRows.get(r.rank);
+  const selected=focus==="all"||
+   (focus==="introduced"&&risk.introducedClosePairs>0)||
+   (focus==="new_close"&&risk.candidateClosePairs>0)||
+   (focus==="original_close"&&risk.originalClosePairs>0)||
+   (focus==="resolved"&&risk.resolvedClosePairs>0);
+  return selected&&(!query||String(r.rank)===query||
+   r.character.toLowerCase().includes(query)||
+   r.changedComponentIds.some(id=>id.toLowerCase().includes(query)));
+ });
 }
 function choose(){
  const filtered=cohort();
@@ -33,7 +46,7 @@ function choose(){
   $("hg-select").replaceChildren();
   $("hg-compare").replaceChildren();
   $("hg-owner").replaceChildren();$("hg-semantic").replaceChildren();
-  $("hg-sense").replaceChildren();
+  $("hg-risk-pairs").replaceChildren();$("hg-sense").replaceChildren();
   $("hg-count").textContent="0 matching research glyphs";
   return;
  }
@@ -109,6 +122,36 @@ function choose(){
   }
   owners.appendChild(row);
  }
+ const risk=riskRows.get(r.rank),pairPanel=document.createDocumentFragment();
+ pairPanel.appendChild(make("strong",null,"Source-owned component color proximity"));
+ pairPanel.appendChild(make("p",null,risk.sourceUniqueComponentPairs+
+  " distinct within-glyph component pairs · "+
+  risk.originalClosePairs+" original below ΔOK 0.07 · "+
+  risk.candidateClosePairs+" hypothetical below ΔOK 0.07 · "+
+  risk.introducedClosePairs+" newly close · "+
+  risk.resolvedClosePairs+" resolved. All values are machine diagnostics."));
+ if(risk.reviewPairs.length===0)
+  pairPanel.appendChild(make("p",null,"No source pair falls within either below-0.07 group or the recorded near-threshold deterioration cohort."));
+ for(const pair of risk.reviewPairs){
+  const line=make("div","hg-risk-row");
+  const state=make("strong",null,pair.state.replaceAll("_"," ")+" · original ΔOK "+
+   pair.originalDeltaOk.toFixed(4)+" · hypothetical ΔOK "+
+   pair.candidateDeltaOk.toFixed(4));
+  line.appendChild(state);
+  for(const c of [pair.componentA,pair.componentB]){
+   const component=make("div","hg-risk-component");
+   component.appendChild(make("span",null,c.id+" · "+c.form));
+   for(const [label,color] of [["Source",c.sourceHex],["Alternative",c.candidateHex]]){
+    const chip=make("span","hg-swatch");
+    chip.style.setProperty("--hg-swatch",color);
+    chip.setAttribute("aria-label",label+" "+color);
+    component.appendChild(chip);
+   }
+   line.appendChild(component);
+  }
+  pairPanel.appendChild(line);
+ }
+ $("hg-risk-pairs").replaceChildren(pairPanel);
  $("hg-semantic").replaceChildren(
   make("strong",null,"Same experimental meaning cue on both conditions"),
   make("p",null,proposal?
@@ -136,10 +179,11 @@ async function load(){
   const paths=["glyphs/research/hint-counterfactual-v0.1/index-v0.1.json",
    "mnemonic-group-counterfactual-v0.1.json",
    "palettes/mandarin-component-identity-v0.6.json",
-   "semantic/mandarin-1000-v0.1.json"];
+   "semantic/mandarin-1000-v0.1.json",
+   "glyphs/research/hint-counterfactual-v0.1/pair-risk-v0.1.json"];
   const responses=await Promise.all(paths.map(x=>fetch(x)));
   if(responses.some(x=>!x.ok))throw Error("Required pinned research index unavailable");
-  const [index,alternative,palette,meaning]=await Promise.all(responses.map(x=>x.json()));
+  const [index,alternative,palette,meaning,riskAudit]=await Promise.all(responses.map(x=>x.json()));
   if(index.schema!=="chromalect.glyph.historical-hint-counterfactual-gallery.v0.1"||
      index.status!=="build_generated_isolated_research_svg_recolor_only_no_semantic_or_visual_approval"||
      index.provenance.palette!=="mandarin-component-identity@0.6.0"||
@@ -237,6 +281,78 @@ async function load(){
   if(candidateCharacters!==881||candidateCount!==897||
      index.glyphs.some(r=>meaning.characters[r.rank-1].character!==r.character))
    throw Error("Source-aligned semantics do not match the candidate glyphs");
+  if(riskAudit.schema!=="chromalect.glyph.hint-hue-source-pair-risk.v0.1"||
+     riskAudit.status!=="machine_computed_per_glyph_identity_proximity_not_human_discrimination"||
+     riskAudit.provenance.palette!=="mandarin-component-identity@0.6.0"||
+     riskAudit.provenance.cutoffDeltaOk!==0.07||
+     riskAudit.provenance.originalPaletteMutated!==false||
+     riskAudit.provenance.humanReviewPerformed!==false||
+     riskAudit.provenance.semanticFamilyApproval!==false||
+     riskAudit.summary.catalogCharacters!==1000||
+     riskAudit.summary.paletteIdentities!==520||
+     riskAudit.summary.hypotheticalComponentIds!==40||
+     riskAudit.summary.affectedGlyphs!==index.summary.affectedGlyphs||
+     riskAudit.summary.originalClosePairs!==26||
+     riskAudit.summary.independentlyAcceptedSemanticFamilies!==0||
+     riskAudit.summary.humanLegibilityTrials!==0||
+     riskAudit.summary.proposedClosePairs!==
+      riskAudit.summary.newlyClosePairs+riskAudit.summary.retainedClosePairs||
+     riskAudit.summary.originalClosePairs!==
+      riskAudit.summary.resolvedClosePairs+riskAudit.summary.retainedClosePairs||
+     !Array.isArray(riskAudit.glyphs)||
+     riskAudit.glyphs.length!==index.glyphs.length)
+   throw Error("Unverified or inconsistent source-pair risk assessment");
+  const checked=new Map();
+  let closeBefore=0,closeAfter=0,newClose=0,resolved=0;
+  for(let i=0;i<riskAudit.glyphs.length;i++){
+   const row=riskAudit.glyphs[i],candidate=index.glyphs[i];
+   if(row.rank!==candidate.rank||row.character!==candidate.character||
+      row.svg!==candidate.hypotheticalSVG||
+      row.sourceSVG!==candidate.originalSVG||
+      row.sourceGeometryUnchanged!==true||
+      row.productionPaletteUnchanged!==true||
+      row.visualJudgment!=="pending"||
+      row.lexicalInterpretation!=="unapproved"||
+      row.changedComponentIds.join("|")!==candidate.changedComponentIds.join("|")||
+      row.originalClosePairs!==row.resolvedClosePairs+row.retainedClosePairs||
+      row.candidateClosePairs!==row.introducedClosePairs+row.retainedClosePairs||
+      !Array.isArray(row.reviewPairs))
+    throw Error("Changed-glyph pair evidence does not match source manifests");
+   for(const pair of row.reviewPairs){
+    const first=pair.componentA,second=pair.componentB;
+    if(!first||!second||first.id===second.id||
+       !active.has(first.id)||!active.has(second.id)||
+       pair.perceptuallyVerified!==false||
+       pair.experimentalMeasurementOnly!==true||
+       first.sourceHex.toUpperCase()!==active.get(first.id).color.toUpperCase()||
+       second.sourceHex.toUpperCase()!==active.get(second.id).color.toUpperCase()||
+       first.candidateHex.toUpperCase()!==(proposed.get(first.id)?.candidateHex??
+        active.get(first.id).color).toUpperCase()||
+       second.candidateHex.toUpperCase()!==(proposed.get(second.id)?.candidateHex??
+        active.get(second.id).color).toUpperCase()||
+       !Number.isFinite(pair.originalDeltaOk)||!Number.isFinite(pair.candidateDeltaOk)||
+       !["introduced","resolved","retained","not_close"].includes(pair.state))
+     throw Error("Unmatched source component pair or fabricated visual review");
+   }
+   checked.set(row.rank,row);
+   closeBefore+=row.originalClosePairs;closeAfter+=row.candidateClosePairs;
+   newClose+=row.introducedClosePairs;resolved+=row.resolvedClosePairs;
+  }
+  if(closeBefore>riskAudit.summary.originalClosePairs||
+     closeAfter>riskAudit.summary.proposedClosePairs||
+     newClose!==riskAudit.summary.newlyClosePairs||
+     resolved!==riskAudit.summary.resolvedClosePairs||
+     checked.size!==index.summary.affectedGlyphs)
+   throw Error("Research color pair totals are inconsistent with source cohort");
+  riskRows=checked;riskTotals=riskAudit.summary;
+  $("hg-risk-summary").textContent="Same-glyph component pairs below ΔOK 0.07: "+
+   riskTotals.originalClosePairs+" in the original palette versus "+
+   riskTotals.proposedClosePairs+" in the hypothetical palette · "+
+   riskTotals.newlyClosePairs+" newly close · "+
+   riskTotals.resolvedClosePairs+" resolved · "+
+   riskTotals.affectedGlyphsWithNewClosePairs+
+   " affected glyphs with at least one newly close pair. "+
+   "No human distinguishability or comprehension approvals.";
   records=index.glyphs;candidates=proposed;originalPalette=active;
   semantic=meaning.characters;
   const hash=typeof location!=="undefined"?/^#c(0[0-9]{3}|1000)$/.exec(location.hash):null;
@@ -248,13 +364,16 @@ async function load(){
    "Original SVGs and geometries verified by the publishing build; browser imagery has not been independently reviewed.";
   choose();
  }catch(error){
-  records=[];semantic=[];
+  records=[];semantic=[];riskRows=new Map();riskTotals=null;
+  $("hg-risk-summary").textContent="Unverified color pair comparison.";
+  $("hg-risk-pairs").replaceChildren();
   $("hg-compare").replaceChildren();$("hg-owner").replaceChildren();
   $("hg-semantic").replaceChildren();
   $("hg-status").textContent="Unable to validate research SVG gallery: "+error.message;
  }
 }
 $("hg-query").addEventListener("input",choose);
+$("hg-risk-filter").addEventListener("change",choose);
 $("hg-select").addEventListener("change",()=>{
  const rank=Number($("hg-select").value);
  if(cohort().some(r=>r.rank===rank)){current=rank;choose();}
