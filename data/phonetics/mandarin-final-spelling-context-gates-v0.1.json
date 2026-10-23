@@ -42,6 +42,118 @@
       "description": "The letter i after conventional sibilant and retroflex initial spellings cannot be assigned an unconditional plain-i IPA reading.",
       "observedReadingCount": 63,
       "uniqueCitationTriples": 22,
+      "observedTokenTriples": [
+        {
+          "initial": "sh",
+          "final": "i",
+          "tone": 2
+        },
+        {
+          "initial": "sh",
+          "final": "i",
+          "tone": 4
+        },
+        {
+          "initial": "zh",
+          "final": "i",
+          "tone": 1
+        },
+        {
+          "initial": "sh",
+          "final": "i",
+          "tone": 1
+        },
+        {
+          "initial": "s",
+          "final": "i",
+          "tone": 4
+        },
+        {
+          "initial": "z",
+          "final": "i",
+          "tone": 3
+        },
+        {
+          "initial": "zh",
+          "final": "i",
+          "tone": 3
+        },
+        {
+          "initial": "r",
+          "final": "i",
+          "tone": 4
+        },
+        {
+          "initial": "ch",
+          "final": "i",
+          "tone": 3
+        },
+        {
+          "initial": "sh",
+          "final": "i",
+          "tone": 3
+        },
+        {
+          "initial": "ch",
+          "final": "i",
+          "tone": 4
+        },
+        {
+          "initial": "s",
+          "final": "i",
+          "tone": 1
+        },
+        {
+          "initial": "zh",
+          "final": "i",
+          "tone": 2
+        },
+        {
+          "initial": "s",
+          "final": "i",
+          "tone": 3
+        },
+        {
+          "initial": "zh",
+          "final": "i",
+          "tone": 4
+        },
+        {
+          "initial": "c",
+          "final": "i",
+          "tone": 3
+        },
+        {
+          "initial": "ch",
+          "final": "i",
+          "tone": 1
+        },
+        {
+          "initial": "z",
+          "final": "i",
+          "tone": 4
+        },
+        {
+          "initial": "c",
+          "final": "i",
+          "tone": 4
+        },
+        {
+          "initial": "ch",
+          "final": "i",
+          "tone": 2
+        },
+        {
+          "initial": "z",
+          "final": "i",
+          "tone": 1
+        },
+        {
+          "initial": "c",
+          "final": "i",
+          "tone": 2
+        }
+      ],
       "firstSourceExamples": [
         {
           "rank": 4,
@@ -93,6 +205,78 @@
       "description": "Written u after a palatal category or y may require umlaut-aware phonological comparison; retain the original u spelling.",
       "observedReadingCount": 33,
       "uniqueCitationTriples": 14,
+      "observedTokenTriples": [
+        {
+          "initial": "y",
+          "final": "u",
+          "tone": 2
+        },
+        {
+          "initial": "y",
+          "final": "u",
+          "tone": 3
+        },
+        {
+          "initial": "y",
+          "final": "u",
+          "tone": 4
+        },
+        {
+          "initial": "q",
+          "final": "u",
+          "tone": 1
+        },
+        {
+          "initial": "j",
+          "final": "u",
+          "tone": 1
+        },
+        {
+          "initial": "j",
+          "final": "u",
+          "tone": 4
+        },
+        {
+          "initial": "q",
+          "final": "u",
+          "tone": 4
+        },
+        {
+          "initial": "y",
+          "final": "u",
+          "tone": 1
+        },
+        {
+          "initial": "q",
+          "final": "u",
+          "tone": 0
+        },
+        {
+          "initial": "x",
+          "final": "u",
+          "tone": 1
+        },
+        {
+          "initial": "q",
+          "final": "u",
+          "tone": 3
+        },
+        {
+          "initial": "x",
+          "final": "u",
+          "tone": 4
+        },
+        {
+          "initial": "x",
+          "final": "u",
+          "tone": 3
+        },
+        {
+          "initial": "j",
+          "final": "u",
+          "tone": 2
+        }
+      ],
       "firstSourceExamples": [
         {
           "rank": 24,
@@ -144,6 +328,78 @@
       "description": "The spelling iu has a context-sensitive relation to the longer iou-type analysis, not literal letter-to-phoneme alignment.",
       "observedReadingCount": 24,
       "uniqueCitationTriples": 14,
+      "observedTokenTriples": [
+        {
+          "initial": "j",
+          "final": "iu",
+          "tone": 3
+        },
+        {
+          "initial": "n",
+          "final": "iu",
+          "tone": 2
+        },
+        {
+          "initial": "q",
+          "final": "iu",
+          "tone": 2
+        },
+        {
+          "initial": "l",
+          "final": "iu",
+          "tone": 4
+        },
+        {
+          "initial": "j",
+          "final": "iu",
+          "tone": 4
+        },
+        {
+          "initial": "q",
+          "final": "iu",
+          "tone": 1
+        },
+        {
+          "initial": "j",
+          "final": "iu",
+          "tone": 1
+        },
+        {
+          "initial": "x",
+          "final": "iu",
+          "tone": 3
+        },
+        {
+          "initial": "d",
+          "final": "iu",
+          "tone": 1
+        },
+        {
+          "initial": "x",
+          "final": "iu",
+          "tone": 1
+        },
+        {
+          "initial": "l",
+          "final": "iu",
+          "tone": 2
+        },
+        {
+          "initial": "n",
+          "final": "iu",
+          "tone": 3
+        },
+        {
+          "initial": "x",
+          "final": "iu",
+          "tone": 4
+        },
+        {
+          "initial": "n",
+          "final": "iu",
+          "tone": 4
+        }
+      ],
       "firstSourceExamples": [
         {
           "rank": 15,
@@ -195,6 +451,68 @@
       "description": "The spelling ui relates to a longer uei-type analysis, not literal letter-to-phoneme alignment.",
       "observedReadingCount": 19,
       "uniqueCitationTriples": 12,
+      "observedTokenTriples": [
+        {
+          "initial": "k",
+          "final": "ui",
+          "tone": 1
+        },
+        {
+          "initial": "sh",
+          "final": "ui",
+          "tone": 3
+        },
+        {
+          "initial": "d",
+          "final": "ui",
+          "tone": 4
+        },
+        {
+          "initial": "h",
+          "final": "ui",
+          "tone": 4
+        },
+        {
+          "initial": "g",
+          "final": "ui",
+          "tone": 1
+        },
+        {
+          "initial": "h",
+          "final": "ui",
+          "tone": 1
+        },
+        {
+          "initial": "g",
+          "final": "ui",
+          "tone": 3
+        },
+        {
+          "initial": "s",
+          "final": "ui",
+          "tone": 4
+        },
+        {
+          "initial": "h",
+          "final": "ui",
+          "tone": 2
+        },
+        {
+          "initial": "ch",
+          "final": "ui",
+          "tone": 1
+        },
+        {
+          "initial": "s",
+          "final": "ui",
+          "tone": 1
+        },
+        {
+          "initial": "zh",
+          "final": "ui",
+          "tone": 4
+        }
+      ],
       "firstSourceExamples": [
         {
           "rank": 25,
@@ -246,6 +564,88 @@
       "description": "Written un outside the palatal set is a contracted uen-type spelling candidate, not an IPA transcription.",
       "observedReadingCount": 20,
       "uniqueCitationTriples": 16,
+      "observedTokenTriples": [
+        {
+          "initial": "c",
+          "final": "un",
+          "tone": 4
+        },
+        {
+          "initial": "t",
+          "final": "un",
+          "tone": 2
+        },
+        {
+          "initial": "l",
+          "final": "un",
+          "tone": 2
+        },
+        {
+          "initial": "c",
+          "final": "un",
+          "tone": 2
+        },
+        {
+          "initial": "l",
+          "final": "un",
+          "tone": 4
+        },
+        {
+          "initial": "s",
+          "final": "un",
+          "tone": 1
+        },
+        {
+          "initial": "t",
+          "final": "un",
+          "tone": 1
+        },
+        {
+          "initial": "l",
+          "final": "un",
+          "tone": 1
+        },
+        {
+          "initial": "c",
+          "final": "un",
+          "tone": 1
+        },
+        {
+          "initial": "d",
+          "final": "un",
+          "tone": 1
+        },
+        {
+          "initial": "k",
+          "final": "un",
+          "tone": 4
+        },
+        {
+          "initial": "d",
+          "final": "un",
+          "tone": 4
+        },
+        {
+          "initial": "sh",
+          "final": "un",
+          "tone": 3
+        },
+        {
+          "initial": "r",
+          "final": "un",
+          "tone": 4
+        },
+        {
+          "initial": "ch",
+          "final": "un",
+          "tone": 2
+        },
+        {
+          "initial": "k",
+          "final": "un",
+          "tone": 1
+        }
+      ],
       "firstSourceExamples": [
         {
           "rank": 31,
@@ -297,6 +697,38 @@
       "description": "Written un after a palatal category or y requires a separate ü-based interpretation; do not merge with other un contexts.",
       "observedReadingCount": 18,
       "uniqueCitationTriples": 6,
+      "observedTokenTriples": [
+        {
+          "initial": "y",
+          "final": "un",
+          "tone": 2
+        },
+        {
+          "initial": "y",
+          "final": "un",
+          "tone": 3
+        },
+        {
+          "initial": "x",
+          "final": "un",
+          "tone": 4
+        },
+        {
+          "initial": "y",
+          "final": "un",
+          "tone": 4
+        },
+        {
+          "initial": "x",
+          "final": "un",
+          "tone": 2
+        },
+        {
+          "initial": "j",
+          "final": "un",
+          "tone": 1
+        }
+      ],
       "firstSourceExamples": [
         {
           "rank": 82,
@@ -348,6 +780,38 @@
       "description": "Written ue following a palatal or y category requires source-aware üe comparison rather than unconditional u+e.",
       "observedReadingCount": 10,
       "uniqueCitationTriples": 6,
+      "observedTokenTriples": [
+        {
+          "initial": "y",
+          "final": "ue",
+          "tone": 1
+        },
+        {
+          "initial": "y",
+          "final": "ue",
+          "tone": 4
+        },
+        {
+          "initial": "x",
+          "final": "ue",
+          "tone": 2
+        },
+        {
+          "initial": "x",
+          "final": "ue",
+          "tone": 4
+        },
+        {
+          "initial": "j",
+          "final": "ue",
+          "tone": 2
+        },
+        {
+          "initial": "q",
+          "final": "ue",
+          "tone": 4
+        }
+      ],
       "firstSourceExamples": [
         {
           "rank": 111,
@@ -399,6 +863,43 @@
       "description": "Written uan following a palatal or y category requires source-aware üan comparison rather than unconditional u+an.",
       "observedReadingCount": 10,
       "uniqueCitationTriples": 7,
+      "observedTokenTriples": [
+        {
+          "initial": "y",
+          "final": "uan",
+          "tone": 2
+        },
+        {
+          "initial": "q",
+          "final": "uan",
+          "tone": 3
+        },
+        {
+          "initial": "q",
+          "final": "uan",
+          "tone": 4
+        },
+        {
+          "initial": "x",
+          "final": "uan",
+          "tone": 2
+        },
+        {
+          "initial": "q",
+          "final": "uan",
+          "tone": 2
+        },
+        {
+          "initial": "y",
+          "final": "uan",
+          "tone": 3
+        },
+        {
+          "initial": "x",
+          "final": "uan",
+          "tone": 1
+        }
+      ],
       "firstSourceExamples": [
         {
           "rank": 80,

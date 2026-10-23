@@ -15,6 +15,12 @@ assert.deepEqual(expected.records.map(x=>[x.id,x.observedReadingCount]),[
  ["contracted_ui",19],["contracted_un_nonpalatal",20],
  ["palatal_written_un",18],["palatal_written_ue",10],["palatal_written_uan",10]]);
 assert.equal(expected.records.reduce((n,x)=>n+x.observedReadingCount,0),197);
+assert.equal(expected.records.reduce((n,x)=>n+x.observedTokenTriples.length,0),97);
+for(const r of expected.records){
+ assert.equal(r.observedTokenTriples.length,r.uniqueCitationTriples);
+ assert.equal(new Set(r.observedTokenTriples.map(x=>JSON.stringify([x.initial,x.final,x.tone]))).size,r.uniqueCitationTriples);
+}
+
 assert.equal(expected.summary.independentlyAdjudicatedFinalPhonemes,0);
 assert.equal(expected.summary.approvedContextualPronunciations,0);
 assert.equal(expected.summary.approvedAcousticTranscriptions,0);

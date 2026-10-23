@@ -42,6 +42,9 @@ export const deriveContextGates = function deriveContextGates(citations){
   id:x.id,sourceFamily:x.sourceFamily,description:x.description,
   observedReadingCount:occurrences[i].length,
   uniqueCitationTriples:new Set(occurrences[i].map(r=>JSON.stringify([r.initial,r.final,r.tone]))).size,
+  observedTokenTriples:[...new Map(occurrences[i].map(r=>[
+    JSON.stringify([r.initial,r.final,r.tone]),
+    {initial:r.initial,final:r.final,tone:r.tone}])).values()],
   firstSourceExamples:occurrences[i].slice(0,5),
   independentIPAAnalysisApproved:false,
   certifiedAcousticRealizations:0
