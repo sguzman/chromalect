@@ -144,7 +144,8 @@ function exportSession(schedule,responses,display,seed,when){
   t.leftChoice===replay[i].leftChoice&&
   t.rightChoice===replay[i].rightChoice),
   "Trial plan must match its source-derived random seed");
- required(responses instanceof Map&&
+ required(responses&&typeof responses.has==="function"&&
+  typeof responses.keys==="function"&&typeof responses.values==="function"&&
   [...responses.keys()].every(id=>schedule.some(t=>t.id===id))&&
   [...responses.values()].every(answer=>allowedAnswers.has(answer)),
   "Only predefined local trial responses are permitted");
