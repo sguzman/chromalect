@@ -1,0 +1,61 @@
+name: Acquire Mandarin Tatoeba context candidates
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/tatoeba-context-intake.yml"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  acquire:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout source and scripts
+        uses: actions/checkout@v4
+      - name: Download one official Mandarin detailed export
+        shell: bash
+        run: |
+          set -euo pipefail
+          curl --fail --show-error --silent --location --retry 4 --retry-delay 3 --retry-all-errors \
+            --max-time 180 \
+            "https://downloads.tatoeba.org/exports/per_language/cmn/cmn_sentences_detailed.tsv.bz2" \
+            -o "$RUNNER_TEMP/cmn_sentences_detailed.tsv.bz2"
+          test -s "$RUNNER_TEMP/cmn_sentences_detailed.tsv.bz2"
+          sha256sum "$RUNNER_TEMP/cmn_sentences_detailed.tsv.bz2"
+      - name: Extract bounded, unapproved source identifiers
+        shell: bash
+        run: |
+          set -euo pipefail
+          node tools/glyph-pipeline/tatoeba_context_candidate_extract_smoke.mjs
+          node tools/glyph-pipeline/tatoeba_context_candidate_extract.mjs \
+            --input "$RUNNER_TEMP/cmn_sentences_detailed.tsv.bz2" \
+            --snapshot-date "$(date -u +%F)" \
+            --max-per-character 3 \
+            --output "$RUNNER_TEMP/chromalect-tatoeba-context-candidates.json"
+          node --input-type=module - "$RUNNER_TEMP/chromalect-tatoeba-context-candidates.json" <<'NODE'
+          import assert from "node:assert/strict";
+          import fs from "node:fs";
+          const d=JSON.parse(fs.readFileSync(process.argv[2],"utf8"));
+          assert.equal(d.schema,"chromalect.semantic.tatoeba-surface-context-candidates.v0.1");
+          assert.equal(d.status,"unadjudicated_sentence_surface_matches_not_reading_or_sense_validation");
+          assert.equal(d.summary.targetCharacters,142);
+          assert.equal(d.limits.sourceTextIncluded,false);
+          assert.equal(d.summary.contextualReadingsVerified,0);
+          assert.equal(d.summary.lexicalSensesApproved,0);
+          assert.equal(d.summary.emojiComprehensionApproved,0);
+          assert.ok(d.summary.matchingCandidateReferences>0&&d.summary.matchingCandidateReferences<=426);
+          assert.ok(d.records.every(r=>r.candidates.length<=3&&r.candidates.every(x=>
+            x.readingInContext==="not_checked"&&x.lexicalSense==="not_checked"&&
+            x.corpusRecordLicense==="requires_individual_check"&&
+            x.redistributionStatus==="source_id_and_hash_only")));
+          console.log("Corpus intake completed:",d.summary);
+          NODE
+      - name: Upload isolated research artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: chromalect-tatoeba-candidate-ids
+          path: ${{ runner.temp }}/chromalect-tatoeba-context-candidates.json
+          if-no-files-found: error
+          retention-days: 30
