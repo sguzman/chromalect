@@ -52,6 +52,12 @@ This is a sequence of **evidence gates**, not a promise to build a large applica
 - [x] Collect independent dictionary source locations and provisional contrasts for five first-priority characters (11 reading entries).
 - [x] Compare five high-attention dictionary-gloss discrepancies against a third-source character dictionary, retaining an unresolved surname-tone conflict.
 - [x] Build a 319-entry context-evidence acquisition queue with distinct source access, attribution, word-boundary, reading, and adjudication gates; no synthetic attestations.
+- [x] Normalize the 319 high-attention source reading entries into 241 phonetic search groups without merging distinct lexical source records.
+- [x] Acquire, version, and cross-check two independently selected Tatoeba sentence-ID candidate cohorts: 1,087 deduplicated character/sentence associations, 1,015 distinct source IDs, across 141/142 characters.
+- [x] Record four additional dictionary research pages for the corpus-unmatched 刨 and preserve separate Mainland/Taiwan source qualifications.
+- [x] Scan eight publisher-documented multi-character word leads against the pinned Tatoeba snapshot, retain 27 source-only candidate associations for six leads, and record 24 new distinct IDs (1,039 across all three source cohorts).
+- [x] Publish searchable research-only character and word-candidate browser pages, while blocking unadjudicated pronunciations and senses from approval.
+- [ ] Independently check sentence-level reuse permissions, contributor attribution, and record URLs before any corpus quotation or lexical promotion.
 - [ ] Independently adjudicate attested readings and usage-specific lexical senses, including higher-attention cases.
 - [ ] Conduct independently controlled blind emoji comprehension and accessibility evaluations.
 - [ ] Promote only after separately demonstrated lexical and pictogram acceptance. Currently approved: 0.
