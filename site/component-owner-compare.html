@@ -16,11 +16,15 @@
 .oc-grid textarea,.oc-panel textarea{box-sizing:border-box;min-height:180px;width:100%;font:inherit;color:var(--ink);background:var(--tile-bg);border:1px solid var(--border);padding:12px;border-radius:8px}
 .oc-panel button{font:inherit;padding:11px 16px;border:1px solid var(--border);border-radius:8px;cursor:pointer;color:var(--ink);background:var(--tile-bg)}
 .oc-panel button:disabled{opacity:.5;cursor:default}
+.oc-triage{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.oc-triage label{display:grid;gap:6px}
+.oc-triage select{width:100%;font:inherit;background:var(--tile-bg);color:var(--ink);
+ border:1px solid var(--border);padding:10px;border-radius:8px}
 .oc-scroller{overflow-x:auto}
 .oc-results{border-collapse:collapse;width:100%;min-width:580px}
 .oc-results td,.oc-results th{padding:9px 12px;border-bottom:1px solid var(--border);text-align:left;overflow-wrap:anywhere}
 .oc-results th{font-weight:650}
-@media(max-width:700px){.oc-grid{grid-template-columns:1fr}}
+@media(max-width:700px){.oc-grid,.oc-triage{grid-template-columns:1fr}}
 </style></head><body>
 <header class="wrap"><div class="brand"><b>CHROMALECT</b><small>Language, made visible</small></div></header>
 <main class="wrap">
@@ -42,7 +46,27 @@
 </section>
 <section class="oc-panel">
 <h2>Source-ordered comparison</h2>
-<p>Each entry shows provisional categories, not raw evidence URLs or rationales. Unobserved pairs are retained to preserve the 49-item denominator.</p>
+<p>Each entry shows provisional categories, not raw evidence URLs or rationales. All 49 pairs remain in the exported report even when the table is filtered.</p>
+<div class="oc-triage">
+<label for="oc-filter">Inspect source pair subset
+<select id="oc-filter" disabled>
+<option value="all">All 49 pairs</option>
+<option value="disagreeing">Provisional disagreements</option>
+<option value="matching">Matching provisional judgments</option>
+<option value="onlyFirst">Only first note present</option>
+<option value="onlySecond">Only second note present</option>
+<option value="unobserved">Neither note present</option>
+<option value="shared-reference">Shared evidence reference</option>
+<option value="shape-ambiguity">Shape ambiguity in either note</option>
+</select></label>
+<label for="oc-order">Displayed row order
+<select id="oc-order" disabled>
+<option value="source">Original source order</option>
+<option value="conflict-first">Conflicts and incomplete pairs first</option>
+<option value="shared-first">Same evidence reference first</option>
+</select></label>
+</div>
+<p id="oc-visible" aria-live="polite">No compared source pairs yet.</p>
 <div class="oc-scroller"><table class="oc-results"><thead><tr><th>Source pair</th><th>First note</th><th>Second note</th><th>Comparison</th><th>Evidence reference overlap</th></tr></thead><tbody id="oc-table"></tbody></table></div>
 <label for="oc-json">Sanitized local-only JSON (no evidence links or rationale text)</label>
 <textarea id="oc-json" readonly rows="13"></textarea>

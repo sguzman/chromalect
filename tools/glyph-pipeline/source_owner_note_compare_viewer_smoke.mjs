@@ -44,7 +44,8 @@ class Element{
  replaceChildren(...items){this.children=items;}
 }
 function setup(data=sources){
- const ids=["oc-status","oc-first","oc-second","oc-compare","oc-summary","oc-table","oc-json"];
+ const ids=["oc-status","oc-first","oc-second","oc-compare","oc-summary","oc-table","oc-json",
+ "oc-filter","oc-order","oc-visible"];
  const nodes=Object.fromEntries(ids.map(id=>[id,new Element()]));
  nodes["oc-compare"].disabled=true;
  const document={getElementById:id=>nodes[id],createElement:()=>new Element()};
@@ -68,6 +69,26 @@ v["oc-first"].value=JSON.stringify(a);
 v["oc-second"].value=JSON.stringify(b);
 v["oc-compare"].events.click();
 assert.equal(v["oc-table"].children.length,49);
+assert.match(v["oc-visible"].textContent,/49 of 49/);
+assert.equal(v["oc-filter"].disabled,false);
+assert.equal(v["oc-order"].disabled,false);
+const untouchedExport=v["oc-json"].value;
+for(const [filter,expected] of [["disagreeing",1],["matching",0],
+ ["onlyFirst",0],["onlySecond",0],["unobserved",48],
+ ["shared-reference",1],["shape-ambiguity",0],["all",49]]){
+ v["oc-filter"].value=filter;v["oc-filter"].events.change();
+ assert.equal(v["oc-table"].children.length,expected,filter);
+ assert.equal(v["oc-json"].value,untouchedExport);
+}
+v["oc-order"].value="conflict-first";v["oc-order"].events.change();
+assert.equal(v["oc-table"].children[0].children[3].textContent,"disagreeing");
+v["oc-order"].value="shared-first";v["oc-order"].events.change();
+assert.equal(v["oc-table"].children[0].children[4].textContent,"Same reference");
+v["oc-filter"].value="invalid";v["oc-filter"].events.change();
+assert.match(v["oc-status"].textContent,/Comparison view rejected/);
+assert.equal(v["oc-filter"].value,"all");
+v["oc-order"].value="source";v["oc-order"].events.change();
+assert.equal(v["oc-json"].value,untouchedExport);
 assert.match(v["oc-status"].textContent,/Sanitized provisional/);
 assert.match(v["oc-summary"].textContent,/1 disagreements/);
 const report=JSON.parse(v["oc-json"].value);
@@ -78,6 +99,11 @@ assert.match(v["oc-summary"].textContent,/1 pairs with the same evidence URL/);
 assert.equal(v["oc-table"].children[0].children.length,5);
 assert.ok(!v["oc-json"].value.includes("https://example.org/independent-source"));
 assert.ok(!v["oc-json"].value.includes("External component source geometry"));
+v["oc-first"].events.input();
+assert.equal(v["oc-table"].children.length,0);
+assert.equal(v["oc-json"].value,"");
+assert.equal(v["oc-filter"].disabled,true);
+assert.match(v["oc-status"].textContent,/Local input changed/);
 v["oc-second"].value=JSON.stringify({...b,session:{...b.session,sourceOwnerCertifications:1}});
 v["oc-compare"].events.click();
 assert.match(v["oc-status"].textContent,/Comparison rejected/);
@@ -94,7 +120,8 @@ const bad=setup(poisoned);await settle(bad);
 assert.equal(bad["oc-compare"].disabled,true);
 assert.match(bad["oc-status"].textContent,/Cannot validate source manifests/);
 const html=fs.readFileSync("site/component-owner-compare.html","utf8");
-for(const id of ["oc-status","oc-first","oc-second","oc-compare","oc-summary","oc-table","oc-json"])
+for(const id of ["oc-status","oc-first","oc-second","oc-compare","oc-summary","oc-table","oc-json",
+ "oc-filter","oc-order","oc-visible"])
  assert.ok(html.includes('id="'+id+'"'));
 assert.ok(!viewer.includes("innerHTML"));
 assert.ok(!viewer.includes("localStorage"));

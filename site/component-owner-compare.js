@@ -6,14 +6,54 @@ const identification=globalThis.ChromalectComponentIdentificationRehearsal;
 const audit=globalThis.ChromalectOwnerAdjudication;
 const comparator=globalThis.ChromalectOwnerCompare;
 const $=id=>document.getElementById(id);
-const ids=["oc-status","oc-first","oc-second","oc-compare","oc-summary","oc-table","oc-json"];
+const ids=["oc-status","oc-first","oc-second","oc-compare","oc-summary","oc-table",
+ "oc-json","oc-filter","oc-order","oc-visible"];
 if(ids.some(id=>!$(id)))return;
-let manifest=null,targets=null;
+let manifest=null,targets=null,report=null;
+const filters=new Set(["all","disagreeing","matching","onlyFirst","onlySecond",
+ "unobserved","shared-reference","shape-ambiguity"]);
+const orders=new Set(["source","conflict-first","shared-first"]);
+const conflictPriority={disagreeing:0,onlyFirst:1,onlySecond:1,unobserved:2,matching:3};
+function showRows(){
+ if(!report)return;
+ const filter=$("oc-filter").value,order=$("oc-order").value;
+ if(!filters.has(filter)||!orders.has(order))throw Error("Unrecognized comparison view");
+ const visible=report.rows.filter(row=>filter==="all"||row.comparison===filter||
+  (filter==="shared-reference"&&row.sameEvidenceReference===true)||
+  (filter==="shape-ambiguity"&&(row.firstJudgment==="shape_ambiguity"||
+   row.secondJudgment==="shape_ambiguity")));
+ const bySource=(a,b)=>a.rank-b.rank||report.rows.indexOf(a)-report.rows.indexOf(b);
+ if(order==="conflict-first"){
+  visible.sort((a,b)=>conflictPriority[a.comparison]-conflictPriority[b.comparison]||
+   bySource(a,b));
+ }else if(order==="shared-first"){
+  visible.sort((a,b)=>Number(b.sameEvidenceReference===true)-
+   Number(a.sameEvidenceReference===true)||bySource(a,b));
+ }
+ $("oc-table").replaceChildren();
+ for(const row of visible){
+  const tr=document.createElement("tr");
+  const cells=[
+   "#"+row.rank+" · "+row.character+" · "+row.trialId,
+   row.firstJudgment||"No note",row.secondJudgment||"No note",
+   row.comparison,row.sameEvidenceReference===null?"Not comparable":
+   row.sameEvidenceReference?"Same reference":"Different references"];
+  for(const value of cells){
+   const td=document.createElement("td");td.textContent=value;tr.appendChild(td);
+  }
+  $("oc-table").appendChild(tr);
+ }
+ $("oc-visible").textContent=visible.length+" of 49 source pairs visible · "+
+  "0 independently reconciled.";
+}
 const status=x=>{$("oc-status").textContent=x;};
 const clear=()=>{
+ report=null;
  $("oc-json").value="";
  $("oc-summary").textContent="";
  $("oc-table").replaceChildren();
+ $("oc-visible").textContent="No compared source pairs yet.";
+ $("oc-filter").disabled=true;$("oc-order").disabled=true;
 };
 const parse=id=>{
  const raw=$(id).value;
@@ -51,7 +91,7 @@ $("oc-compare").addEventListener("click",()=>{
  try{
   if(!manifest||!targets)throw Error("Pinned source manifests unavailable");
   const first=parse("oc-first"),second=parse("oc-second");
-  const report=comparator.compare(first,second,manifest,targets);
+  report=comparator.compare(first,second,manifest,targets);
   const s=report.summary;
   $("oc-summary").textContent=
    s.jointlyObserved+" pairs in both exports · "+
@@ -60,22 +100,9 @@ $("oc-compare").addEventListener("click",()=>{
    s.firstOnly+" first-only · "+s.secondOnly+" second-only · "+
    s.noObservation+" without either note · "+
    s.sharedEvidenceReferencePairs+" pairs with the same evidence URL · 0 certifications.";
-  for(const row of report.rows){
-   const tr=document.createElement("tr");
-   const cells=[
-    "#"+row.rank+" · "+row.character+" · "+row.trialId,
-    row.firstJudgment||"No note",
-    row.secondJudgment||"No note",
-    row.comparison,
-    row.sameEvidenceReference===null?"Not comparable":
-     row.sameEvidenceReference?"Same reference":"Different references"];
-   for(const value of cells){
-    const td=document.createElement("td");
-    td.textContent=value;
-    tr.appendChild(td);
-   }
-   $("oc-table").appendChild(tr);
-  }
+  $("oc-filter").value="all";$("oc-order").value="source";
+  $("oc-filter").disabled=false;$("oc-order").disabled=false;
+  showRows();
   $("oc-json").value=JSON.stringify(report,null,2)+"\n";
   status("Sanitized provisional comparison prepared locally; no reviewer independence verified.");
  }catch(e){
@@ -83,5 +110,23 @@ $("oc-compare").addEventListener("click",()=>{
   status("Comparison rejected; no report retained: "+e.message);
  }
 });
+for(const id of ["oc-first","oc-second"]){
+ $(id).addEventListener("input",()=>{
+  clear();
+  status("Local input changed; run validation again before using comparison results.");
+ });
+}
+for(const id of ["oc-filter","oc-order"]){
+ $(id).addEventListener("change",()=>{
+  try{
+   if(!report)throw Error("Validated comparison unavailable");
+   showRows();
+   status("Displayed subset updated; sanitized exported report remains complete.");
+  }catch(e){
+   $(id).value=id==="oc-filter"?"all":"source";
+   status("Comparison view rejected: "+e.message);
+  }
+ });
+}
 load();
 })();
