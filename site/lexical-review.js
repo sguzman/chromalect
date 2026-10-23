@@ -17,6 +17,7 @@ if(!presenter||required.some(id=>!$(id)))return;
 const controls=Array.from(document.querySelectorAll("[data-lexical-judgment]"));
 const labels=new Set(["supported","unsupported","uncertain"]);
 let queue=null,trials=[],recorded=[],position=0,judgment=null,awaitingNext=false;
+let activeScope=null,activeRequestedCount=null;
 let profileByRank=new Map();
 function put(id,value){$(id).textContent=value;}
 function status(msg){put("lexical-study-status",msg);}
@@ -94,7 +95,9 @@ function start(){
  if(!queue)return;
  const eligible=candidates();
  if(!eligible.length){status("No candidates in the selected priority class.");return;}
- const count=$("lexical-study-count").value;
+ activeScope=$("lexical-study-scope").value;
+ activeRequestedCount=$("lexical-study-count").value;
+ const count=activeRequestedCount;
  trials=shuffled(eligible).slice(0,count==="all"?eligible.length:Math.min(eligible.length,Number(count)));
  recorded=[];position=0;
  $("lexical-study-session").hidden=false;
@@ -160,7 +163,7 @@ function exportJSON(){
   source:{queue:"full-lexical-review-queue-v0.1.json",
    ccCedictLicense:"CC BY-SA 4.0",unihanSource:"Unicode Unihan kDefinition",
    note:"Reviewers must preserve attribution when redistributing extracted dictionary evidence."},
-  session:{scope:$("lexical-study-scope").value,requestedCount:$("lexical-study-count").value,
+  session:{scope:activeScope,requestedCount:activeRequestedCount,
    recorded:recorded.length,planned:trials.length,localOnly:true,exportedAt:new Date().toISOString()},
   observations:recorded.map(r=>({...r}))
  };

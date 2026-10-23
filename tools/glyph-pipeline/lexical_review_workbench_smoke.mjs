@@ -101,6 +101,9 @@ assert.ok(elements["lexical-study-prior"].textContent.length>5);
 assert.equal(elements["lexical-study-progress"].attributes["aria-valuenow"],"1");
 assert.equal(elements["lexical-study-fill"].style.width,"5.0%");
 assert.equal(elements["lexical-study-export"].disabled,false);
+// Session metadata must remain tied to the selection at start, not later filter edits.
+elements["lexical-study-scope"].value="flagged";
+elements["lexical-study-count"].value="all";
 elements["lexical-study-export"].click();
 assert.ok(blob instanceof Blob);
 assert.equal(downloaded.download,"chromalect-lexical-source-review.json");
@@ -111,6 +114,8 @@ assert.equal(data.observations[0].readingSelection,"undetermined");
 assert.equal(data.status,"local_preliminary_observations_not_independent_lexical_approval");
 assert.equal(data.observations.length,1);
 assert.equal(data.session.planned,20);
+assert.equal(data.session.scope,"all");
+assert.equal(data.session.requestedCount,"20");
 assert.equal(data.observations[0].preliminaryJudgment,"uncertain");
 assert.equal(data.source.queue,"full-lexical-review-queue-v0.1.json");
 assert.equal(typeof data.observations[0].strictWholeTermMatchAtIntake,"boolean");

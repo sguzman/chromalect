@@ -12,7 +12,7 @@ The lexical worksheet displays the selected Chinese character, its unreviewed En
 2. Inspect the pinned dictionary readings and full excerpt. Select an applicable reading, unresolved multiple readings, or **undetermined** if context is insufficient. Reading and gloss counts are not independently verified senses. New cohorts select multi-reading records and high-attention records (multiple readings and eight or more gloss fragments).
 3. Provisionally mark the sense **supported in context**, **unsupported/misleading**, or **insufficient evidence**.
 4. Enter an evidence explanation of at least 12 characters. These are cursory form checks, not guarantees of quality.
-5. Lock the preliminary observation. Only then is any earlier assistant desk note displayed for comparison. Literal-matched cases may have no prior desk note. This reduces initial anchoring.
+5. Lock the preliminary observation. The session scope and requested batch size are fixed when the session begins; changing setup controls afterwards does not relabel the exported cohort. Only then is any earlier assistant desk note displayed for comparison. Literal-matched cases may have no prior desk note. This reduces initial anchoring.
 6. Continue, or explicitly export the local JSON file. The page does not send answers or alter any GitHub records.
 
 ## Export schema and data governance
