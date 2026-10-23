@@ -51,6 +51,8 @@ assert.equal(out.summary.affectedGlyphs,1);
 assert.equal(out.summary.untouchedGlyphs,1);
 assert.equal(out.summary.alteredSourcePathFills,1);
 assert.equal(out.summary.unchangedSourcePathFills,2);
+assert.equal(out.summary.unchangedSourcePathFillsInAffectedGlyphs,1);
+assert.equal(out.summary.unchangedSourcePathFillsInUnchangedGlyphs,1);
 assert.equal(out.provenance.activeGlyphFilesOverwritten,false);
 assert.equal(out.provenance.strokePathsChanged,false);
 assert.equal(out.provenance.ownerMappingsChanged,false);
@@ -80,6 +82,8 @@ duplicateAssets["U+4E00.svg"]=shape([first,first,unhinted]);
 const repeated=run(catalog,duplicates,palette,duplicateAssets);
 assert.equal(repeated.manifest.summary.alteredSourcePathFills,2);
 assert.equal(repeated.manifest.summary.unchangedSourcePathFills,2);
+assert.equal(repeated.manifest.summary.unchangedSourcePathFillsInAffectedGlyphs,1);
+assert.equal(repeated.manifest.summary.unchangedSourcePathFillsInUnchangedGlyphs,1);
 assert.equal(repeated.manifest.glyphs[0].changedComponentIds.length,1);
 
 for(const mutate of [
