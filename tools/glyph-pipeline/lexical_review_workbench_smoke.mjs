@@ -3,7 +3,7 @@ import fs from "node:fs";
 import vm from "node:vm";
 const source=fs.readFileSync("site/lexical-review.js","utf8");
 const html=fs.readFileSync("site/lexical-review.html","utf8");
-const queue=JSON.parse(fs.readFileSync("data/semantic/cedict-crossref/sense-review-queue-v0.1.json","utf8"));
+const queue=JSON.parse(fs.readFileSync("data/semantic/cedict-crossref/full-lexical-review-queue-v0.1.json","utf8"));
 const catalog=JSON.parse(fs.readFileSync("data/catalog/characters-0001-1000.json","utf8"));
 const profile={schema:"chromalect.mandarin-character-profile.v1",catalog_count:1000,
  characters:catalog.characters.map(r=>({rank:r.rank,character:r.character}))};
@@ -61,7 +61,7 @@ const sandbox={
  URL:{createObjectURL:b=>{blob=b;return "blob:local-test";},
    revokeObjectURL:url=>{assert.equal(url,"blob:local-test");revoked=true;}},
  fetch:async path=>{
-  if(path==="semantic/sense-review-queue-v0.1.json")return {ok:true,json:async()=>queue};
+  if(path==="semantic/full-lexical-review-queue-v0.1.json")return {ok:true,json:async()=>queue};
   if(path==="profiles/mandarin-1000-v1.json")return {ok:true,json:async()=>profile};
   throw new Error("Unexpected resource "+path);
  }
@@ -70,7 +70,7 @@ sandbox.globalThis=sandbox;
 vm.runInNewContext(source,sandbox);
 for(let i=0;i<12&&elements["lexical-study-start"].disabled;i++)await Promise.resolve();
 assert.equal(elements["lexical-study-start"].disabled,false,"Versioned queue must load");
-assert.match(elements["lexical-study-status"].textContent,/248 unapproved/);
+assert.match(elements["lexical-study-status"].textContent,/897 unapproved/);
 elements["lexical-study-start"].click();
 assert.equal(elements["lexical-study-session"].hidden,false);
 assert.equal(elements["lexical-study-after"].hidden,true);
@@ -99,11 +99,13 @@ assert.ok(blob instanceof Blob);
 assert.equal(downloaded.download,"chromalect-lexical-source-review.json");
 assert.equal(revoked,true);
 const data=JSON.parse(await blob.text());
-assert.equal(data.schema,"chromalect.lexical-review-observation-session.v0.1");
+assert.equal(data.schema,"chromalect.lexical-review-observation-session.v0.2");
 assert.equal(data.status,"local_preliminary_observations_not_independent_lexical_approval");
 assert.equal(data.observations.length,1);
 assert.equal(data.session.planned,20);
 assert.equal(data.observations[0].preliminaryJudgment,"uncertain");
+assert.equal(data.source.queue,"full-lexical-review-queue-v0.1.json");
+assert.equal(typeof data.observations[0].strictWholeTermMatchAtIntake,"boolean");
 assert.equal(data.observations[0].lexicalApproval,"not_granted");
 assert.equal(data.observations[0].emojiComprehensionApproval,"not_granted");
 assert.equal(data.observations[0].productionVerified,false);
@@ -114,8 +116,16 @@ elements["lexical-study-next"].click();
 assert.equal(elements["lexical-study-form"].hidden,false);
 assert.equal(elements["lexical-study-after"].hidden,true);
 assert.equal(elements["lexical-study-prior"].textContent,"");
+// Cohort filters must not exclude the apparently easy but unverified matches.
+elements["lexical-study-scope"].value="matched";
+elements["lexical-study-start"].click();
+assert.equal(elements["lexical-study-session"].hidden,false);
+assert.match(elements["lexical-study-status"].textContent,/Compare the lexical sources/);
+elements["lexical-study-scope"].value="flagged";
+elements["lexical-study-start"].click();
+assert.ok(elements["lexical-study-meaning"].textContent.length>0);
 assert.match(html,/without first seeing the emoji/);
 assert.match(html,/src="layers.js"/);
 assert.match(html,/data-character-layer-controls/);
-assert.match(html,/248 flagged meanings/);
-console.log("Lexical worksheet: all 248 pending, source first, hidden assistant notes, rationale gate, 5% session progress and local-only export.");
+assert.match(html,/897 provisional meaning candidates/);
+console.log("Lexical worksheet: all 897 pending, blind source-first judgment, matched and mismatched cohorts, rationale gate and local-only export.");
