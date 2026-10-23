@@ -268,6 +268,9 @@ jobs:
           node tools/glyph-pipeline/mandarin_final_spelling_context_gates_smoke.mjs
           node tools/glyph-pipeline/written_final_symbol_control.mjs --check
           node tools/glyph-pipeline/written_final_symbol_control_smoke.mjs
+          node --check site/mandarin-final-symbols.js
+          node tools/glyph-pipeline/mandarin_final_symbols_viewer_smoke.mjs
+          test -s site/mandarin-final-symbols.html
           node --check site/mandarin-contrast-controls.js
           node tools/glyph-pipeline/mandarin_contrast_controls_viewer_smoke.mjs
           node --check site/mandarin-citation-cell.js
