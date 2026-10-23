@@ -213,6 +213,8 @@ jobs:
           node tools/glyph-pipeline/contextual_pronunciation_search_groups_smoke.mjs
           node tools/glyph-pipeline/tatoeba_context_candidate_extract_smoke.mjs
           node tools/glyph-pipeline/tatoeba_sentence_id_index_smoke.mjs
+          node --check site/context-evidence.js
+          node tools/glyph-pipeline/context_evidence_viewer_smoke.mjs
           node tools/glyph-pipeline/contextual_evidence_readiness_summary.mjs --check
           node tools/glyph-pipeline/contextual_evidence_readiness_summary_v02.mjs --check
           node tools/glyph-pipeline/review_session_validate_smoke.mjs

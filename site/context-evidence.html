@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="description" content="Unadjudicated Mandarin Tatoeba source sentence IDs for contextual-reading research.">
+<title>Mandarin context source candidates · Chromalect</title>
+<link rel="stylesheet" href="style.css">
+<script src="theme.js"></script>
+<script src="context-evidence.js" defer></script>
+<style>
+.context-browser{max-width:1120px}
+.context-controls{display:flex;gap:14px;flex-wrap:wrap;align-items:end;margin:22px 0}
+.context-controls label{display:flex;flex-direction:column;gap:6px;font-size:13px;color:var(--sub);min-width:205px}
+.context-controls input,.context-controls select{font:inherit;color:var(--ink);background:var(--panel);padding:10px 12px;border-radius:9px;border:1px solid var(--border)}
+.context-results{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:13px;margin:18px 0 22px}
+.context-card{padding:18px;background:var(--tile-bg);border:1px solid var(--border);border-radius:13px;min-width:0}
+.context-top{display:flex;justify-content:space-between;align-items:center;gap:15px}
+.context-glyph{font-size:48px;line-height:1.2}
+.context-small{font-size:12px;color:var(--sub)}
+.context-links{list-style:none;padding:0;margin:13px 0 0;display:grid;gap:9px}
+.context-links a{overflow-wrap:anywhere}
+.context-notice{padding:16px;border-left:3px solid var(--active-border);background:var(--panel2);border-radius:0 10px 10px 0}
+.context-pages{display:flex;align-items:center;gap:10px;margin:16px 0 30px}
+.context-pages button{font:inherit;padding:10px 15px;border:1px solid var(--border);border-radius:9px;background:var(--panel);color:var(--ink);cursor:pointer}
+.context-pages button:disabled{opacity:.4;cursor:default}
+</style>
+</head>
+<body>
+<header class="wrap"><div class="brand"><div><b>CHROMALECT</b><small>Language, made visible</small></div></div></header>
+<main class="wrap context-browser">
+<div class="eyebrow">Mandarin source-evidence research</div>
+<h1>Context source candidates</h1>
+<p class="intro">Explore 423 candidate character/sentence associations from 363 distinct source IDs across 141 of 142 high-attention Mandarin characters. Every match is <strong>surface-form-only evidence</strong>, not a verified pronunciation or word meaning.</p>
+<p class="context-notice"><strong>Research only.</strong> The linked sentences require attribution, license checking, word-boundary analysis, and independent contextual reading and lexical adjudication. No source text is reproduced and no mapping is approved.</p>
+<div class="context-controls">
+<label for="candidate-query">Character or rank<input id="candidate-query" type="search" autocomplete="off" placeholder="长 or 127"></label>
+<label for="candidate-scope">Availability<select id="candidate-scope"><option value="all">All characters</option><option value="with">With candidate IDs</option><option value="without">Without candidate IDs</option></select></label>
+</div>
+<p id="candidate-status" role="status" aria-live="polite" class="context-small">Loading pinned corpus source identifiers.</p>
+<p id="candidate-stats" class="context-small"></p>
+<div id="candidate-rows" class="context-results"></div>
+<div class="context-pages"><button id="candidate-prev" type="button" disabled>Previous</button><button id="candidate-next" type="button" disabled>Next</button></div>
+<p class="context-small">Snapshot: 2026-10-23 UTC, SHA-256 recorded in the <a href="semantic/tatoeba-sentence-id-index-v0.1.json">machine-readable index</a>. The <a href="https://github.com/sguzman/chromalect/blob/main/docs/mandarin-tatoeba-corpus-acquisition.md">acquisition methodology</a> details licensing, limitations and provenance.</p>
+</main>
+<footer class="wrap"><a href="semantic-coverage.html">Semantic research</a> · <a href="reading-inventory.html">Reading worksheet</a> · <a href="index.html">Overview</a></footer>
+</body>
+</html>
