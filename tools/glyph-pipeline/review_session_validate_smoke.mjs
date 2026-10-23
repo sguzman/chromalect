@@ -94,5 +94,41 @@ assert.throws(()=>validateReviewSession(duplicated,audit,queue,full));
 const leaked=clone(v2("all",matched));
 leaked.observations[0].emoji="🍎";
 assert.throws(()=>validateReviewSession(leaked,audit,queue,full));
-console.log("Review export integrity: all 897 v0.2 lexical candidates, legacy v0.1 sessions, independent emoji studies, tampering and false promotion checked.");
+// v0.2 blind emoji trials: deduplicate visible emoji forms by default,
+// while preserving legitimate cross-character reuse in the source catalog.
+const casesByEmoji=new Map();
+for(const x of audit.records){
+ if(!casesByEmoji.has(x.emojiDisplay))casesByEmoji.set(x.emojiDisplay,[]);
+ casesByEmoji.get(x.emojiDisplay).push(x);
+}
+assert.equal(casesByEmoji.size,388);
+const twins=[...casesByEmoji.values()].find(group=>group.length>=2);
+assert.ok(twins);
+const v2Emoji=(repeatPolicy,examples)=>({
+ schema:"chromalect.emoji-comprehension-session.v0.2",
+ status:"unverified_exploratory_observations_not_production_review",
+ source:{audit:"emoji-visibility-audit-v0.1.json"},
+ session:{scope:"all",requestedCount:"all",rated:examples.length,planned:examples.length,
+  repeatPolicy,localOnly:true,exportedAt:exp},
+ answers:examples.map(x=>({
+  trialId:x.id,rank:x.rank,character:x.character,displayedEmoji:x.emojiDisplay,
+  proposedMeaning:x.selectedMeaning,blindResponse:"unfamiliar symbol",
+  confidence:"low",predictedKind:"unsure",
+  targetTypedAsEvent:x.operators.includes("event"),
+  automaticRiskFlags:x.riskFlags,clarityRatingAfterReveal:"uncertain"
+ }))
+});
+assert.deepEqual(validateReviewSession(v2Emoji("distinct",[twins[0]]),audit,queue,full),
+ {type:"emoji_comprehension",localObservations:1,productionVerified:0});
+const collision=v2Emoji("distinct",twins.slice(0,2));
+assert.throws(()=>validateReviewSession(collision,audit,queue,full));
+assert.deepEqual(validateReviewSession(v2Emoji("allow",twins.slice(0,2)),audit,queue,full),
+ {type:"emoji_comprehension",localObservations:2,productionVerified:0});
+const badPolicy=v2Emoji("all",[twins[0]]);
+assert.throws(()=>validateReviewSession(badPolicy,audit,queue,full));
+const forgedVisual=v2Emoji("distinct",[twins[0]]);
+forgedVisual.answers[0].displayedEmoji="🌋";
+assert.throws(()=>validateReviewSession(forgedVisual,audit,queue,full));
+console.log("Review exports: all-sense lexical v0.2, repeat-aware blind emoji v0.2, legacy v0.1, and zero-promotion guards pass.");
+
 
