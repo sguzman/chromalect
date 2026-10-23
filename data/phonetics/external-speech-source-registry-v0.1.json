@@ -1,0 +1,111 @@
+{
+  "schema": "chromalect.phonetics.external-speech-source-registry.v0.1",
+  "status": "source_reconnaissance_only_no_audio_acquisition_or_phonetic_approval",
+  "provenance": {
+    "reviewedDate": "2026-10-23",
+    "method": "Official publisher or publication source pages, recorded as leads only",
+    "sourceScope": "Mainland Standard Mandarin citation and contextual phonetic research",
+    "copiedSourceRecordings": false,
+    "copiedTranscriptText": false,
+    "sourcePaletteChanged": false
+  },
+  "acquisitionPolicy": {
+    "metadataFirst": true,
+    "noBulkDownloadAuthorized": true,
+    "noRecordingRedistribution": true,
+    "noSpeakerIdentityInference": true,
+    "selectiveLocalMatchingRequiresIndependentReview": true
+  },
+  "summary": {
+    "sourceCandidates": 4,
+    "recordingsDownloaded": 0,
+    "sourceUtterancesMatchedToCitationReadings": 0,
+    "independentlyAnalyzedSpeechTokens": 0,
+    "phonemicInventoryApprovals": 0,
+    "humanDecodingTrials": 0
+  },
+  "sources": [
+    {
+      "priority": 1,
+      "id": "aishell-3-slr93",
+      "name": "AISHELL-3",
+      "publisher": "Beijing Shell Shell Technology Co., Ltd.",
+      "publisherPage": "https://www.openslr.org/93/",
+      "declaredLicense": "Apache-2.0",
+      "declaredArchiveSize": "19 GB",
+      "speechDomain": "Mandarin read speech",
+      "annotatedUnits": "Chinese character and Pinyin transcripts alongside recordings",
+      "researchRole": "Potential utterance-aligned comparison for original citation spellings after independent source matching",
+      "constraints": [
+        "Full archive is large; start with source metadata rather than bulk ingestion",
+        "Pinyin and text labels do not independently certify individual phonetic realizations"
+      ],
+      "acquisitionStatus": "not_acquired",
+      "licensingReviewStatus": "requires_dataset_specific_confirmation_before_reuse",
+      "readingAlignmentStatus": "not_established",
+      "independentAcousticAnalysisStatus": "not_conducted"
+    },
+    {
+      "priority": 2,
+      "id": "aishell-1-slr33",
+      "name": "AISHELL-1",
+      "publisher": "Beijing Shell Shell Technology Co., Ltd.",
+      "publisherPage": "https://openslr.org/33/",
+      "declaredLicense": "Apache-2.0",
+      "declaredArchiveSize": "15 GB",
+      "speechDomain": "Mandarin read speech",
+      "annotatedUnits": "Speech recordings and written transcripts; supplemental lexicon and speaker metadata",
+      "researchRole": "Secondary corpus candidate for independent speech-source comparison",
+      "constraints": [
+        "General speech transcripts do not establish source-specific IPA or source character senses",
+        "Respect official release documentation and license prior to local extraction"
+      ],
+      "acquisitionStatus": "not_acquired",
+      "licensingReviewStatus": "requires_dataset_specific_confirmation_before_reuse",
+      "readingAlignmentStatus": "not_established",
+      "independentAcousticAnalysisStatus": "not_conducted"
+    },
+    {
+      "priority": 3,
+      "id": "common-voice-27-zh-cn",
+      "name": "Common Voice Scripted Speech 27.0 — Chinese (China)",
+      "publisher": "Mozilla Common Voice",
+      "publisherPage": "https://commonvoice.mozilla.org/rw/datasets",
+      "declaredLicense": "CC0-1.0",
+      "declaredArchiveSize": "21.40 GB",
+      "speechDomain": "Community-contributed read speech, zh-CN",
+      "annotatedUnits": "Recorded clips and corpus transcript metadata",
+      "researchRole": "Independent speaker-varied source candidate, subject to per-release access and terms checks",
+      "constraints": [
+        "Do not attempt speaker identification or re-identification",
+        "Do not rehost or redistribute the dataset under the Mozilla Data Collective published usage restrictions",
+        "The public catalog is not an acoustic phonetic annotation or individual reading approval"
+      ],
+      "acquisitionStatus": "not_acquired",
+      "licensingReviewStatus": "requires_dataset_specific_confirmation_before_reuse",
+      "readingAlignmentStatus": "not_established",
+      "independentAcousticAnalysisStatus": "not_conducted"
+    },
+    {
+      "priority": 4,
+      "id": "mandi-2022",
+      "name": "ManDi regional and Standard Mandarin spoken corpus",
+      "publisher": "Liang Zhao and Eleanor Chodroff; LREC 2022",
+      "publisherPage": "https://aclanthology.org/2022.lrec-1.213/",
+      "declaredLicense": "CC-BY-NC-3.0",
+      "declaredArchiveSize": "about 9.6 hours of recordings",
+      "speechDomain": "Standard Mandarin plus six regional Mandarin varieties",
+      "annotatedUnits": "Monosyllables, words, short passages and phone-level alignment candidates",
+      "researchRole": "Noncommercial comparison lead for dialect/register-sensitive acoustic research",
+      "constraints": [
+        "Noncommercial terms require a separate intended-use check",
+        "Standard and regional variety tokens must not be silently conflated",
+        "Published alignments do not themselves certify Chromalect citation-reading phonemes"
+      ],
+      "acquisitionStatus": "not_acquired",
+      "licensingReviewStatus": "requires_dataset_specific_confirmation_before_reuse",
+      "readingAlignmentStatus": "not_established",
+      "independentAcousticAnalysisStatus": "not_conducted"
+    }
+  ]
+}
