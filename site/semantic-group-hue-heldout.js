@@ -47,7 +47,8 @@ async function load(){
    throw Error("Held-out research source or approval boundary mismatch");
   const witnessed=new Set(),totals={
    source:0,first:0,optimized:0,pairs:0,
-   trainingSource:0,trainingFirst:0,trainingOptimized:0};
+   trainingSource:0,trainingFirst:0,trainingOptimized:0,
+   introduced:0,resolved:0,retained:0};
   for(let index=0;index<5;index++){
    const fold=study.folds[index];
    if(fold.foldIndex!==index||fold.trainingRanks!==800||
@@ -75,12 +76,25 @@ async function load(){
        sample.optimizedClosePairs<0||
        sample.activeClosePairs>sample.distinctWithinGlyphPairs||
        sample.firstTrialClosePairs>sample.distinctWithinGlyphPairs||
-       sample.optimizedClosePairs>sample.distinctWithinGlyphPairs)
+       sample.optimizedClosePairs>sample.distinctWithinGlyphPairs||
+       !Number.isInteger(sample.introducedOptimizedClosePairs)||
+       !Number.isInteger(sample.resolvedOriginalClosePairs)||
+       !Number.isInteger(sample.retainedOriginalClosePairs)||
+       sample.introducedOptimizedClosePairs<0||
+       sample.resolvedOriginalClosePairs<0||
+       sample.retainedOriginalClosePairs<0||
+       sample.activeClosePairs!==sample.resolvedOriginalClosePairs+
+        sample.retainedOriginalClosePairs||
+       sample.optimizedClosePairs!==sample.introducedOptimizedClosePairs+
+        sample.retainedOriginalClosePairs)
      throw Error("Invalid source-owned component pair numbers");
    }
    totals.source+=fold.test.activeClosePairs;
    totals.first+=fold.test.firstTrialClosePairs;
    totals.optimized+=fold.test.optimizedClosePairs;
+   totals.introduced+=fold.test.introducedOptimizedClosePairs;
+   totals.resolved+=fold.test.resolvedOriginalClosePairs;
+   totals.retained+=fold.test.retainedOriginalClosePairs;
    totals.pairs+=fold.test.distinctWithinGlyphPairs;
    totals.trainingSource+=fold.train.activeClosePairs;
    totals.trainingFirst+=fold.train.firstTrialClosePairs;
@@ -91,6 +105,9 @@ async function load(){
   if(witnessed.size!==1000||totals.source!==t.activeClosePairs||
      totals.first!==t.firstTrialClosePairs||
      totals.optimized!==t.optimizedClosePairs||
+     totals.introduced!==t.introducedOptimizedClosePairs||
+     totals.resolved!==t.resolvedOriginalClosePairs||
+     totals.retained!==t.retainedOriginalClosePairs||
      totals.pairs!==t.distinctWithinGlyphPairs||
      totals.trainingSource!==train.activeClosePairs||
      totals.trainingFirst!==train.firstTrialClosePairs||
@@ -119,7 +136,10 @@ async function load(){
    "Held-out pair warnings across five disjoint 200-character cohorts: "+
    totals.source+" in original v0.6, "+totals.first+" in initial grouped hues, "+
    totals.optimized+" after fitting each fold using only the other 800 characters. "+
-   "Total source-owned held-out component pairs: "+totals.pairs+".";
+   "Relative to the unchanged palette: "+totals.introduced+" introduced, "+
+   totals.resolved+" resolved, and "+totals.retained+
+   " retained close pairs. Total source-owned held-out component pairs: "+
+   totals.pairs+".";
   $("ho-folds").replaceChildren();
   section("Each row represents a DIFFERENT fold-trained experimental palette; "+
    "the optimized warning total is not the production result of one single 1,000-glyph-fitted palette.");
