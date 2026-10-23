@@ -15,8 +15,9 @@ const defaults=()=>({assessment:"undetermined",evidenceURL:"",evidenceRationale:
  declaredVariety:"",transcriptionConvention:"",workingTranscription:""});
 const allowedAssessments=new Set(["undetermined","tentative_lead","needs_correction"]);
 let candidates=[],selected=null,sourceSHA="",drafts=new Map(),scratch=new Map();
+let selectionRendered=false;
 function stageCurrent(){
- if(!selected)return;
+ if(!selected||!selectionRendered)return;
  const value=readForm();
  const comparison=drafts.get(selected.key)||defaults();
  if(fields.every(name=>value[name]===comparison[name]))scratch.delete(selected.key);
@@ -47,6 +48,7 @@ function filter(){
 }
 function showSelection(){
  if(!selected)return;
+ selectionRendered=true;
  const r=selected,values=scratch.get(r.key)||drafts.get(r.key)||defaults();
  formIds.forEach((id,i)=>{$(id).value=values[fields[i]];});
  $("pc-source").textContent="Pinned character #"+r.rank+" · "+r.character+" "+r.display+
@@ -62,7 +64,9 @@ function save(){
   throw Error("Unrecognized preliminary assessment");
  for(const [field,max] of [["evidenceURL",1000],["evidenceRationale",3000],
   ["declaredVariety",120],["transcriptionConvention",120],["workingTranscription",120]])
-  if(values[field].length>max)throw Error("Research field exceeds permitted size");
+  if(values[field].length>max||
+     /[\u0000-\u0008\u000b\u000c\u000e-\u001f]/u.test(values[field]))
+   throw Error("Research field contains an invalid value");
  if(/[\r\n]/u.test(values.workingTranscription))
   throw Error("Working transcription must be a single line");
  const hasHypothesis=values.assessment!=="undetermined"||
@@ -99,6 +103,81 @@ function exportJSON(){
   session:{localOnly:true,exportedAt:new Date().toISOString(),recorded:observations.length},
   observations};
 }
+
+function exactKeys(value,expected){
+ return value&&typeof value==="object"&&!Array.isArray(value)&&
+  Object.keys(value).sort().join("|")===expected.slice().sort().join("|");
+}
+function validateImport(raw){
+ if(typeof raw!=="string"||raw.length>1500000)throw Error("Local JSON size is invalid");
+ const parsed=JSON.parse(raw);
+ if(!exactKeys(parsed,["schema","status","source","session","observations"])||
+    parsed.schema!=="chromalect.phonetics.local-caution-review-session.v0.1"||
+    parsed.status!=="unverified_local_phonetic_research_notes_not_ipa_or_phoneme_approval")
+  throw Error("Local export schema or approval state is unsupported");
+ if(!exactKeys(parsed.source,["citationBlobSHA","cautionIndex","citationIndex"])||
+    parsed.source.citationBlobSHA!==sourceSHA||
+    parsed.source.cautionIndex!=="mandarin-final-spelling-context-gates-v0.1.json"||
+    parsed.source.citationIndex!=="pronunciation-citations-0001-1000.json")
+  throw Error("Imported source identity differs from this research tranche");
+ if(!exactKeys(parsed.session,["localOnly","exportedAt","recorded"])||
+    parsed.session.localOnly!==true||
+    typeof parsed.session.exportedAt!=="string"||
+    Number.isNaN(Date.parse(parsed.session.exportedAt)))
+  throw Error("Imported export metadata is invalid");
+ if(!Array.isArray(parsed.observations)||parsed.observations.length<1||
+    parsed.observations.length>213||
+    parsed.session.recorded!==parsed.observations.length)
+  throw Error("Imported observation count is invalid");
+ const sourceMap=new Map(candidates.map(c=>[c.key,c]));
+ const result=new Map();
+ const expected=["rank","character","display","initial","final","tone",
+  "cautionFamily",...fields];
+ for(const entry of parsed.observations){
+  if(!exactKeys(entry,expected))throw Error("Unexpected note field or approval claim");
+  const key=JSON.stringify([entry.rank,entry.display,entry.initial,entry.final,entry.tone]);
+  const original=sourceMap.get(key);
+  if(!original||original.character!==entry.character||
+     original.cautionFamily!==entry.cautionFamily||result.has(key))
+   throw Error("Unknown, mismatched or duplicate source citation reading");
+  if(!allowedAssessments.has(entry.assessment))
+   throw Error("Invalid preliminary assessment");
+  for(const [name,max] of [["evidenceURL",1000],["evidenceRationale",3000],
+   ["declaredVariety",120],["transcriptionConvention",120],["workingTranscription",120]]){
+   const value=entry[name];
+   if(typeof value!=="string"||value.length>max||
+      /[\u0000-\u0008\u000b\u000c\u000e-\u001f]/u.test(value))
+    throw Error("Invalid imported review text");
+  }
+  if(/[\r\n]/u.test(entry.workingTranscription))
+   throw Error("Imported transcription is not a single line");
+  const hypothesis=entry.assessment!=="undetermined"||
+   entry.workingTranscription.length>0;
+  if(hypothesis&&(!entry.evidenceURL||
+     entry.evidenceRationale.trim().length<30||
+     !entry.declaredVariety.trim()||!entry.transcriptionConvention.trim()))
+   throw Error("Imported hypothesis is missing its evidence requirements");
+  if(entry.evidenceURL){
+   const url=new URL(entry.evidenceURL);
+   if(url.protocol!=="https:"||url.username||url.password||
+      url.hash||!url.hostname)
+    throw Error("Imported evidence reference is not a safe HTTPS source");
+  }
+  result.set(key,Object.fromEntries(fields.map(name=>[name,entry[name]])));
+ }
+ return result;
+}
+function importJSON(){
+ if(!candidates.length)throw Error("Pinned source data unavailable");
+ // Transactional: preserve the previous drafts if any imported note fails.
+ const replacement=validateImport($("pc-import-data").value);
+ drafts=replacement;
+ scratch.clear();
+ $("pc-output").value="";
+ showSelection();
+ status(replacement.size+" locally saved notes restored from a source-checked export; no phonetic approvals.");
+}
+
 async function load(){
  try{
   const files=["phonetics/mandarin-final-spelling-context-gates-v0.1.json",
@@ -151,6 +230,7 @@ async function load(){
      gates.records.some(r=>counts.get(r.id)!==r.observedReadingCount))
    throw Error("Incomplete source-aligned phonetic intake candidates");
   sourceSHA=citations.source.blob_sha;candidates=matches;selected=matches[0];
+  selectionRendered=false;
   $("pc-family").value="all";
   filter();
   status("213 pinned caution-reading identities available; this page does not independently validate exported research notes.");
@@ -166,6 +246,10 @@ $("pc-candidate").addEventListener("change",()=>{
 $("pc-save").addEventListener("click",()=>{
  try{save();$("pc-output").value="";status("Local draft recorded in page memory only; no review approval.");}
  catch(e){status("Draft not saved: "+e.message);}
+});
+$("pc-import").addEventListener("click",()=>{
+ try{importJSON();}
+ catch(e){status("Import blocked; existing drafts preserved: "+e.message);}
 });
 $("pc-export").addEventListener("click",()=>{
  try{$("pc-output").value=JSON.stringify(exportJSON(),null,2);
