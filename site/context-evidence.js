@@ -5,7 +5,7 @@ const $=id=>document.getElementById(id);
 const required=["candidate-query","candidate-scope","candidate-cohort","candidate-status","candidate-stats","candidate-rows","candidate-prev","candidate-next"];
 if(required.some(id=>!$(id)))return;
 const LIMIT=18;
-let cohorts=new Map(),escalation=null,page=0;
+let cohorts=new Map(),escalation=null,readingRows=new Map(),page=0;
 const modes={
  early:{title:"First three source matches",associations:423,unique:363,max:3},
  hashed:{title:"Whole-corpus hash sample",associations:701,unique:690,max:5},
@@ -95,7 +95,16 @@ function show(){
   heading.appendChild(char);heading.appendChild(rank);card.appendChild(heading);
   note.className="context-small";
   note.textContent=r.sentenceIds.length+" surface match ID(s) · 0 verified readings · 0 approved senses";
-  card.appendChild(note);list.className="context-links";
+  card.appendChild(note);
+  const sourceReadings=readingRows.get(r.rank);
+  if(!sourceReadings)fail("Missing pinned Pinyin reading labels for character "+r.rank);
+  const pronunciation=document.createElement("p");
+  pronunciation.className="context-small";
+  pronunciation.textContent="Pinned Pinyin search labels: "+
+   sourceReadings.pinnedCasefoldedReadingLabels.join(", ")+
+   " · not assigned to any sentence";
+  card.appendChild(pronunciation);
+  list.className="context-links";
   if(!r.sentenceIds.length){
    const empty=document.createElement("p");empty.className="context-small";
    empty.textContent="No corpus candidate ID in the selected sample. This does not imply an unattested character or reading.";
@@ -143,7 +152,8 @@ async function load(){
   const inputs=[
    ["early","semantic/tatoeba-sentence-id-index-v0.1.json"],
    ["hashed","semantic/tatoeba-hash-sample-source-id-index-v0.1.json"],
-   ["escalation","semantic/unmatched-corpus-character-source-escalation-v0.1.json"]
+   ["escalation","semantic/unmatched-corpus-character-source-escalation-v0.1.json"],
+   ["pronunciations","semantic/combined-corpus-phonetic-count-upper-bound-v0.1.json"]
   ];
   const responses=await Promise.all(inputs.map(x=>fetch(x[1])));
   if(responses.some(x=>!x.ok))fail("Required research cohort unavailable");
@@ -169,6 +179,30 @@ async function load(){
        !Array.isArray(x.displayedPinyinLabels)||!x.displayedPinyinLabels.length))
      fail("External dictionary escalation failed source and nonapproval checks");
   escalation=lead.records[0];
+  const readingReport=data[3];
+  if(readingReport.schema!=="chromalect.semantic.combined-corpus-phonetic-count-upper-bound.v0.1"||
+     readingReport.status!=="numerical_source_id_parity_only_no_context_reading_assignments"||
+     readingReport.summary.characters!==142||
+     readingReport.summary.recordedPronunciationSearchGroups!==241||
+     readingReport.summary.combinedDistinctCharacterSentenceAssociations!==1087||
+     readingReport.summary.distinctCorpusSentenceIdsAcrossBoth!==1015||
+     readingReport.summary.charactersWithInsufficientCandidateCount!==1||
+     readingReport.summary.minimumAdditionalCharacterSentenceIdsToReachNumericalPerPronunciationParity!==2||
+     readingReport.summary.independentlyVerifiedContextualReadings!==0||
+     readingReport.summary.independentlyApprovedLexicalSenses!==0||
+     readingReport.summary.approvedEmojiMappings!==0||
+     readingReport.records.length!==142||
+     readingReport.records.some(r=>r.contextToPronunciationAssignments!==0||
+       r.independentlyVerifiedReadings!==0||r.approvedLexicalSenses!==0||
+       !Array.isArray(r.pinnedCasefoldedReadingLabels)||
+       r.pinnedCasefoldedReadingLabels.length!==r.recordedPronunciationSearchGroups))
+   fail("Pinned Pinyin label report contains unvalidated context assignments");
+  readingRows=new Map(readingReport.records.map(r=>[r.rank,r]));
+  if(readingRows.size!==142||readingReport.records.some(r=>
+      hashed.get(r.rank)?.character!==r.character||
+      r.combinedDistinctCharacterSentenceIds!==new Set([
+       ...early.get(r.rank).sentenceIds,...hashed.get(r.rank).sentenceIds]).size))
+   fail("Pinyin group report differs from source-only cohorts");
   if(data[0].source.uncompressedTSVSha256!==data[1].source.uncompressedTSVSha256)
    fail("Incompatible pinned source snapshots");
   cohorts=new Map([["early",early],["hashed",hashed],["combined",combine(early,hashed)]]);
