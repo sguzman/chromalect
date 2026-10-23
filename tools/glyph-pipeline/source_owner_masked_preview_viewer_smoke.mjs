@@ -23,6 +23,7 @@ function setup(source=manifest,hash=""){
  elements["om-size"].value="96";
  elements["om-cohort"].value="all";
  elements["om-cohort"].disabled=true;elements["om-pair"].disabled=true;
+ elements["om-prev"].disabled=true;elements["om-next"].disabled=true;
  const fetched=[];
  const fetch=async p=>{
   fetched.push(p);
@@ -78,6 +79,7 @@ for(const [cohort,count] of [["introduced",23],["resolved",21],["retained",5],["
  assert.match(el["om-count"].textContent,new RegExp(count+" of 49"));
  assert.match(el["om-position"].textContent,
   new RegExp("[0-9]+ of "+count));
+ for(let i=0;i<count;i++)el["om-prev"].events.click();
  assert.equal(el["om-pair"].value,el["om-pair"].children[0].value);
  assert.equal(el["om-prev"].disabled,true);
  for(let i=1;i<count;i++)el["om-next"].events.click();
