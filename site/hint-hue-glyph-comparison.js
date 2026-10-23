@@ -108,6 +108,11 @@ async function load(){
      index.provenance.independentlyApprovedVisuals!==0||
      index.provenance.semanticFamilyApprovals!==0||
      index.summary.catalogGlyphs!==1000||
+     !Number.isInteger(index.summary.generatedSourceManifestGlyphs)||
+     index.summary.generatedSourceManifestGlyphs<1000||
+     index.summary.generatedSourceManifestGlyphs>1032||
+     index.summary.excludedOutsideActiveTranche!==
+      index.summary.generatedSourceManifestGlyphs-1000||
      index.summary.hypotheticalComponentIds!==40||
      index.summary.humanComprehensionTrials!==0||
      index.summary.independentVisualAudits!==0||
@@ -160,7 +165,9 @@ async function load(){
   const hash=typeof location!=="undefined"?/^#c(0[0-9]{3}|1000)$/.exec(location.hash):null;
   current=hash?Number(hash[1]):records[0].rank;
   $("hg-status").textContent=index.summary.affectedGlyphs+
-   " glyphs contain at least one of the 40 proposed component hues. "+
+   " active-tranche glyphs contain at least one of the 40 proposed component hues; "+
+   index.summary.excludedOutsideActiveTranche+
+   " additional source-manifest records are excluded from this study. "+
    "Original SVGs and geometries verified by the publishing build; browser imagery has not been independently reviewed.";
   choose();
  }catch(error){
