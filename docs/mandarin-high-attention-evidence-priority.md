@@ -33,4 +33,6 @@ This is an allocation plan, **not** a judgment that any source entry is incorrec
 
 Reproduce with `node tools/glyph-pipeline/high_attention_evidence_priority.mjs --check`; [regression tests](../tools/glyph-pipeline/high_attention_evidence_priority_smoke.mjs) verify counts, source identities and zero-approval invariants. CC-CEDICT remains **CC BY-SA 4.0**, pinned to revision `63c2569948629323b515833930fdd10f285401b6`.
 
+External dictionary desk reconnaissance now covers 10/142 high-attention characters (7.0%) in two five-character cohorts: [deferred-pictogram cases](mandarin-external-dictionary-reconnaissance.md) and [source-wording/pronunciation discrepancies](mandarin-external-dictionary-discrepancy.md). These are source locations and provisional notes, not independent qualified reviews.
+
 **Independently verified reading contexts: 0. Independent lexical approvals: 0. Independent pictogram comprehension approvals: 0. Production semantics: 0.**

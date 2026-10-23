@@ -15,6 +15,8 @@ const polysemy=JSON.parse(fs.readFileSync("data/semantic/cedict-crossref/polysem
 const excerpts=["0001-0200","0201-0400","0401-0600","0601-0800","0801-1000"];
 const blocks=Object.fromEntries(excerpts.map(n=>[n,JSON.parse(fs.readFileSync("data/semantic/cedict-crossref/dictionary-excerpts-"+n+".json","utf8"))]));
 const readingAudit=JSON.parse(fs.readFileSync("data/semantic/cedict-crossref/reading-sensitive-gloss-audit-v0.1.json","utf8"));
+const externalPilot=JSON.parse(fs.readFileSync("data/semantic/cedict-crossref/external-dictionary-reconnaissance-v0.1.json","utf8"));
+const externalDiscrepancy=JSON.parse(fs.readFileSync("data/semantic/cedict-crossref/external-dictionary-discrepancy-v0.1.json","utf8"));
 const catalog=JSON.parse(fs.readFileSync("data/catalog/characters-0001-1000.json","utf8"));
 const profile={schema:"chromalect.mandarin-character-profile.v1",catalog_count:1000,
   characters:catalog.characters.map(x=>({rank:x.rank,character:x.character}))};
@@ -49,6 +51,7 @@ for(const id of [
   "semantic-verified-count","semantic-progress","semantic-progress-fill",
   "semantic-stage-screened","semantic-stage-dictionary","semantic-stage-polysemy","semantic-polysemy-progress","semantic-polysemy-fill","semantic-stage-boundary",
   "semantic-stage-reading-audit","semantic-reading-audit-progress","semantic-reading-audit-fill",
+  "semantic-stage-external","semantic-external-progress","semantic-external-fill",
   "semantic-stage-desk","semantic-desk-progress","semantic-desk-fill",
   "semantic-stage-readiness","semantic-readiness-progress","semantic-readiness-fill",
   "semantic-boundary-progress","semantic-boundary-fill",
@@ -86,6 +89,8 @@ const vmContext={
     if(path==="semantic/lexical-review-readiness-v0.1.json")return {ok:true,json:async()=>readiness};
     if(path==="semantic/polysemy-review-index-v0.1.json")return {ok:true,json:async()=>polysemy};
     if(path==="semantic/reading-sensitive-gloss-audit-v0.1.json")return {ok:true,json:async()=>readingAudit};
+    if(path==="semantic/external-dictionary-reconnaissance-v0.1.json")return {ok:true,json:async()=>externalPilot};
+    if(path==="semantic/external-dictionary-discrepancy-v0.1.json")return {ok:true,json:async()=>externalDiscrepancy};
     for(const key of excerpts)if(path==="semantic/dictionary-excerpts-"+key+".json")return {ok:true,json:async()=>blocks[key]};
     throw new Error("Unexpected resource: "+path);
   }
@@ -113,6 +118,9 @@ assert.equal(ids["semantic-stage-polysemy"].textContent,"1000 / 1000 (100.0%) ·
 assert.equal(ids["semantic-polysemy-fill"].style.width,"100.0%");
 assert.equal(ids["semantic-polysemy-progress"].attrs["aria-valuenow"],"1000");
 assert.equal(ids["semantic-stage-reading-audit"].textContent,"1000 / 1000 (100.0%) · literal wording only");
+assert.equal(ids["semantic-stage-external"].textContent,"10 / 142 (7.0%) · source locations and desk notes only");
+assert.equal(ids["semantic-external-fill"].style.width,"7.0%");
+assert.equal(ids["semantic-external-progress"].attrs["aria-valuenow"],"10");
 assert.equal(ids["semantic-reading-audit-fill"].style.width,"100.0%");
 assert.equal(ids["semantic-stage-dictionary"].textContent,lexical.metrics.crossReferenced+" / 1000 ("+(lexical.metrics.crossReferenced/10).toFixed(1)+"%)");
 assert.equal(ids["semantic-stage-lexical"].textContent,"0 / 1000 (0.0%)");
@@ -255,6 +263,7 @@ assert.match(html,/id="semantic-polysemy-progress"/);
 assert.match(html,/value="complex-higher"/);
 assert.match(html,/value="reading-subset"/);
 assert.match(html,/id="semantic-reading-audit-progress"/);
+assert.match(html,/id="semantic-external-progress"/);
 assert.match(html,/id="semantic-action-filter"/);
 assert.match(html,/id="semantic-visual-filter"/);
 assert.match(html,/value="mixed-role"/);

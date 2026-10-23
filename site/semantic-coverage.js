@@ -71,6 +71,14 @@
       audited+" / "+total+" ("+percent(audited,total)+") · source evidence only";
   }
 
+  function bindExternalResearch(count,total) {
+    $("semantic-external-progress").setAttribute("aria-valuemax",String(total));
+    $("semantic-external-progress").setAttribute("aria-valuenow",String(count));
+    $("semantic-external-fill").style.width=percent(count,total);
+    $("semantic-stage-external").textContent=count+" / "+total+" ("+
+      percent(count,total)+") · source locations and desk notes only";
+  }
+
   function bindReadingAudit(metrics) {
     const count=metrics.charactersAudited,total=1000;
     $("semantic-reading-audit-progress").setAttribute("aria-valuemax",String(total));
@@ -352,7 +360,7 @@
   async function load() {
     try {
       const excerptBlocks=["0001-0200","0201-0400","0401-0600","0601-0800","0801-1000"];
-      const [response,profileResponse,lexicalResponse,auditResponse,reviewResponse,visibilityResponse,readinessResponse,polysemyResponse,readingAuditResponse,...dictionaryResponses]=await Promise.all([
+      const [response,profileResponse,lexicalResponse,auditResponse,reviewResponse,visibilityResponse,readinessResponse,polysemyResponse,readingAuditResponse,externalPilotResponse,externalDiscrepancyResponse,...dictionaryResponses]=await Promise.all([
         fetch("semantic/mandarin-1000-v0.1.json"),
         fetch("profiles/mandarin-1000-v1.json"),
         fetch("semantic/lexical-crossref-v0.1.json"),
@@ -362,12 +370,14 @@
         fetch("semantic/lexical-review-readiness-v0.1.json"),
         fetch("semantic/polysemy-review-index-v0.1.json"),
         fetch("semantic/reading-sensitive-gloss-audit-v0.1.json"),
+        fetch("semantic/external-dictionary-reconnaissance-v0.1.json"),
+        fetch("semantic/external-dictionary-discrepancy-v0.1.json"),
         ...excerptBlocks.map(block=>fetch("semantic/dictionary-excerpts-"+block+".json"))
       ]);
-      if(!response.ok || !profileResponse.ok || !lexicalResponse.ok || !auditResponse.ok || !reviewResponse.ok || !visibilityResponse.ok || !readinessResponse.ok || !polysemyResponse.ok || !readingAuditResponse.ok || dictionaryResponses.some(r=>!r.ok))
+      if(!response.ok || !profileResponse.ok || !lexicalResponse.ok || !auditResponse.ok || !reviewResponse.ok || !visibilityResponse.ok || !readinessResponse.ok || !polysemyResponse.ok || !readingAuditResponse.ok || !externalPilotResponse.ok || !externalDiscrepancyResponse.ok || dictionaryResponses.some(r=>!r.ok))
         throw new Error("Character, dictionary or audit data unavailable");
-      const [data,profile,lexical,audit,review,visibility,readiness,polysemy,readingAudit]=await Promise.all([
-        response.json(),profileResponse.json(),lexicalResponse.json(),auditResponse.json(),reviewResponse.json(),visibilityResponse.json(),readinessResponse.json(),polysemyResponse.json(),readingAuditResponse.json()
+      const [data,profile,lexical,audit,review,visibility,readiness,polysemy,readingAudit,externalPilot,externalDiscrepancy]=await Promise.all([
+        response.json(),profileResponse.json(),lexicalResponse.json(),auditResponse.json(),reviewResponse.json(),visibilityResponse.json(),readinessResponse.json(),polysemyResponse.json(),readingAuditResponse.json(),externalPilotResponse.json(),externalDiscrepancyResponse.json()
       ]);
       const dictionaryBlocks=await Promise.all(dictionaryResponses.map(r=>r.json()));
       const dictionaryRecords=dictionaryBlocks.flatMap((block,i)=>{
@@ -395,6 +405,29 @@
          polysemy.records.some((r,i)=>r.rank!==i+1 || r.character!==data.characters[i]?.character))
         throw new Error("Dictionary complexity research index is incomplete or misaligned");
       polysemyRows=new Map(polysemy.records.map(x=>[x.rank,x]));
+      if(externalPilot.schema!=="chromalect.semantic.external-dictionary-reconnaissance.v0.1"||
+         externalPilot.status!=="preliminary_external_dictionary_comparison_not_independent_approval"||
+         externalPilot.records.length!==5||
+         externalPilot.summary.independentLexicalApproved!==0||
+         externalPilot.summary.productionVerified!==0||
+         externalDiscrepancy.schema!=="chromalect.semantic.external-dictionary-discrepancy.v0.1"||
+         externalDiscrepancy.status!=="external_dictionary_desk_comparison_not_independent_lexical_approval"||
+         externalDiscrepancy.records.length!==5||
+         externalDiscrepancy.summary.independentLexicalApproval!==0||
+         externalDiscrepancy.summary.independentEmojiApproval!==0||
+         externalDiscrepancy.summary.productionVerified!==0)
+        throw new Error("Third-source reconnaissance has unknown provenance or approval status");
+      const researched=[
+        ...externalPilot.records,
+        ...externalDiscrepancy.records
+      ];
+      const researchRanks=new Set(researched.map(r=>r.rank));
+      if(researchRanks.size!==10||researched.some(r=>
+        polysemy.records[r.rank-1]?.character!==r.character||
+        polysemy.records[r.rank-1]?.triageTier!=="higher"||
+        r.productionVerified!==false))
+        throw new Error("External dictionary desk packets are duplicated or do not match high-attention characters");
+      bindExternalResearch(researchRanks.size,polysemy.summary.higherPriority);
       if(readingAudit.schema!=="chromalect.semantic.reading-sensitive-literal-gloss-audit.v0.1"||
          readingAudit.status!=="automated_english_gloss_reading_distribution_not_lexical_verification"||
          readingAudit.summary.charactersAudited!==1000||
