@@ -29,6 +29,16 @@ The browser holds only ephemeral local responses and never submits, stores or up
 
 The validator refuses source-ID drift, changed masked condition or answer position, fabricated agreement counts, duplicate answers, unexpected private identifiers, unsupported display settings, and claimed independent approvals. No personal identifiers or literal private observations are included in public tests or fixtures.
 
+## Offline replay of local exports
+
+The [offline source-keyed export validator](../tools/glyph-pipeline/heldout_component_identification_export_validate.mjs) runs only after the normal glyph-source and held-out manifest generation. It uses the same source-pinned owner identities and 49-observation trial scheduler as the browser and accepts a locally copied JSON file using:
+
+    node tools/glyph-pipeline/heldout_component_identification_export_validate.mjs --validate /path/to/local-record.json
+
+The validator rederives every machine-keyed response from the session seed, its presented original/experimental condition, the source component-choice order and the chosen answer. It validates nonabstention, abstention and machine concordance counts while refusing participant-identifying fields, altered answer positions or new independent approvals.
+
+On successful validation it prints only a count of local observations and unscored nonabstentions; **it does not print the selected component IDs, machine-concordance counts or actual responses**. This protects local rehearsal notes from becoming public build logs. The companion [offline validator smoke test](../tools/glyph-pipeline/heldout_component_identification_export_validate_smoke.mjs) uses disposable local JSON fixtures and checks ten deliberately invalid records.
+
 ## Outstanding research gates
 
 Before human recognition or color-discrimination claims can be made, the project still requires independent examination of the 1,000 original stroke-owner mappings, reviewed source-form and shape ambiguities, accessibility/perceptual protocol, independent source-key adjudication, consent and ethics review as applicable, controlled calibrated displays and distances, balanced between/within-subject design, prospectively established measures and statistical analysis, and external replication. This technical artifact satisfies **none** of those research gates by itself.
@@ -44,5 +54,6 @@ After the existing Pages pipeline regenerates source SVGs and the five-fold held
     node tools/glyph-pipeline/heldout_component_identification_targets_smoke.mjs
     node tools/glyph-pipeline/heldout_component_identification_core_smoke.mjs
     node tools/glyph-pipeline/heldout_component_identification_viewer_smoke.mjs
+    node tools/glyph-pipeline/heldout_component_identification_export_validate_smoke.mjs
 
 The test suite enforces all 49 source-owned target-region SVGs, exact geometry and owner sequences, 25/24 target selection, 25/24 treatment and answer-position balance, unchanged production provenance, 49 local abstention responses, JSON replay, and explicit refusal of certification.
