@@ -153,6 +153,7 @@ async function load(){
       p.component_instances.some(c=>!/^#[0-9a-f]{6}$/i.test(c.color))||
       p.geometry?.status!=="source_aligned_visual_review_pending"||
       !exactSvg.test(p.geometry.svg)||
+      p.geometry.svg!=="glyphs/U+"+p.character.codePointAt(0).toString(16).toUpperCase().padStart(4,"0")+".svg"||
       r.screening.status!=="screened"||!Array.isArray(r.screening.candidates))
     throw Error("Source glyph geometry or semantic rank alignment changed");
    const opts=candidates(r);
