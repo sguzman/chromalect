@@ -6,7 +6,7 @@ const $=id=>document.getElementById(id);
 const ids=["hg-query","hg-size","hg-size-label","hg-gray","hg-surface",
  "hg-select","hg-prev","hg-next","hg-show-meaning","hg-sense","hg-reveal",
  "hg-compare","hg-count","hg-status","hg-owner","hg-semantic",
- "hg-risk-filter","hg-risk-summary","hg-risk-pairs"];
+ "hg-risk-filter","hg-risk-order","hg-risk-summary","hg-risk-pairs"];
 if(ids.some(id=>!$(id)))return;
 const grammar=globalThis.ChromalectSemanticGrammar;
 if(!grammar||!grammar.validate){
@@ -28,17 +28,37 @@ function cohort(){
  const focus=$("hg-risk-filter").value;
  if(!["all","introduced","new_close","original_close","resolved"].includes(focus))
   throw Error("Unsupported color proximity research filter");
- return records.filter(r=>{
+ const order=$("hg-risk-order").value;
+ if(!["rank","introduced","candidate_min","deterioration"].includes(order))
+  throw Error("Unsupported source color-risk ordering");
+ const selected=records.filter(r=>{
   const risk=riskRows.get(r.rank);
-  const selected=focus==="all"||
+  const matches=focus==="all"||
    (focus==="introduced"&&risk.introducedClosePairs>0)||
    (focus==="new_close"&&risk.candidateClosePairs>0)||
    (focus==="original_close"&&risk.originalClosePairs>0)||
    (focus==="resolved"&&risk.resolvedClosePairs>0);
-  return selected&&(!query||String(r.rank)===query||
+  return matches&&(!query||String(r.rank)===query||
    r.character.toLowerCase().includes(query)||
    r.changedComponentIds.some(id=>id.toLowerCase().includes(query)));
  });
+ const minimum=r=>{
+  const distances=riskRows.get(r.rank).reviewPairs.map(p=>p.candidateDeltaOk);
+  return distances.length?Math.min(...distances):Infinity;
+ };
+ const decline=r=>{
+  const deltas=riskRows.get(r.rank).reviewPairs.map(p=>p.changeDeltaOk);
+  return deltas.length?Math.min(...deltas):0;
+ };
+ selected.sort((a,b)=>
+  order==="introduced"?
+   riskRows.get(b.rank).introducedClosePairs-riskRows.get(a.rank).introducedClosePairs||a.rank-b.rank:
+  order==="candidate_min"?
+   minimum(a)-minimum(b)||a.rank-b.rank:
+  order==="deterioration"?
+   decline(a)-decline(b)||a.rank-b.rank:
+  a.rank-b.rank);
+ return selected;
 }
 function choose(){
  const filtered=cohort();
@@ -374,6 +394,7 @@ async function load(){
 }
 $("hg-query").addEventListener("input",choose);
 $("hg-risk-filter").addEventListener("change",choose);
+$("hg-risk-order").addEventListener("change",choose);
 $("hg-select").addEventListener("change",()=>{
  const rank=Number($("hg-select").value);
  if(cohort().some(r=>r.rank===rank)){current=rank;choose();}
