@@ -232,6 +232,7 @@ jobs:
           node tools/glyph-pipeline/word_context_review_validate_smoke.mjs
           node tools/glyph-pipeline/word_context_review_viewer_smoke.mjs
           node tools/glyph-pipeline/tatoeba_icu_word_segmentation_index_smoke.mjs
+          node tools/glyph-pipeline/external_word_reading_observations_smoke.mjs
           node tools/glyph-pipeline/roadmap_checkpoint_progress.mjs --check
           node tools/glyph-pipeline/roadmap_checkpoint_progress_smoke.mjs
           node --check site/roadmap-status.js
@@ -301,6 +302,7 @@ jobs:
           cp data/semantic/cedict-crossref/tatoeba-word-candidate-attribution-v0.1.json site/semantic/tatoeba-word-candidate-attribution-v0.1.json
           cp data/semantic/cedict-crossref/tatoeba-live-word-record-audit-summary-v0.1.json site/semantic/tatoeba-live-word-record-audit-summary-v0.1.json
           cp data/semantic/cedict-crossref/tatoeba-icu-word-segmentation-index-v0.1.json site/semantic/tatoeba-icu-word-segmentation-index-v0.1.json
+          cp data/semantic/cedict-crossref/external-word-reading-observations-v0.1.json site/semantic/external-word-reading-observations-v0.1.json
           cp data/semantic/cedict-crossref/tatoeba-word-sentence-text-fingerprints-v0.1.json site/semantic/tatoeba-word-sentence-text-fingerprints-v0.1.json
           cp data/semantic/cedict-crossref/dictionary-word-surface-leads-v0.1.json site/semantic/dictionary-word-surface-leads-v0.1.json
           for section in 0001-0200 0201-0400 0401-0600 0601-0800 0801-1000; do
@@ -331,6 +333,7 @@ jobs:
           test -s site/semantic/tatoeba-word-surface-id-index-v0.1.json
           test -s site/semantic/tatoeba-live-word-record-audit-summary-v0.1.json
           test -s site/semantic/tatoeba-icu-word-segmentation-index-v0.1.json
+          test -s site/semantic/external-word-reading-observations-v0.1.json
           test -s site/semantic/word-surface-corpus-overlap-audit-v0.1.json
           test -s site/semantic/tatoeba-word-candidate-attribution-v0.1.json
           test -s site/semantic/tatoeba-word-sentence-text-fingerprints-v0.1.json

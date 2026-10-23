@@ -3,7 +3,7 @@
 "use strict";
 const $=id=>document.getElementById(id);
 if(["word-query","word-scope","word-status","word-stats","word-results"].some(id=>!$(id)))return;
-let entries=[],contributorMap=new Map(),liveAuditMap=new Map(),machineHintMap=new Map();
+let entries=[],contributorMap=new Map(),liveAuditMap=new Map(),machineHintMap=new Map(),externalWordMap=new Map();
 function render(){
  const q=$("word-query").value.trim(),scope=$("word-scope").value;
  const shown=entries.filter(r=>(scope==="all"||(scope==="with"?r.sentenceIds.length>0:r.sentenceIds.length===0))&&
@@ -42,6 +42,12 @@ function render(){
    card.appendChild(note);
   }
   card.appendChild(title);card.appendChild(pronunciation);card.appendChild(counts);card.appendChild(source);card.appendChild(list);
+  const external=externalWordMap.get(r.leadId);
+  if(external?.externalSourceURL){const wordEntry=document.createElement("a");
+   wordEntry.href=external.externalSourceURL;wordEntry.rel="noopener noreferrer";wordEntry.target="_blank";
+   wordEntry.textContent="Wiktionary word-entry reading: "+external.externalPublishedWordPinyin+
+    " · not a sentence pronunciation verification";card.appendChild(wordEntry);
+  }
   $("word-results").appendChild(card);
  }
  $("word-stats").textContent=shown.length+" word leads · "+shown.reduce((n,r)=>n+r.sentenceIds.length,0)+" selected source IDs in view";
@@ -49,15 +55,16 @@ function render(){
 }
 async function load(){
  try{
-  const [leadResponse,matchResponse,creditResponse,auditResponse,hintResponse]=await Promise.all([
+  const [leadResponse,matchResponse,creditResponse,auditResponse,hintResponse,externalResponse]=await Promise.all([
    fetch("semantic/dictionary-word-surface-leads-v0.1.json"),
    fetch("semantic/tatoeba-word-surface-id-index-v0.1.json"),
    fetch("semantic/tatoeba-word-candidate-attribution-v0.1.json"),
    fetch("semantic/tatoeba-live-word-record-audit-summary-v0.1.json"),
-   fetch("semantic/tatoeba-icu-word-segmentation-index-v0.1.json")]);
-  if(!leadResponse.ok||!matchResponse.ok||!creditResponse.ok||!auditResponse.ok||!hintResponse.ok)throw Error("Missing source data");
-  const [source,match,credits,audit,hints]=await Promise.all([
-   leadResponse.json(),matchResponse.json(),creditResponse.json(),auditResponse.json(),hintResponse.json()]);
+   fetch("semantic/tatoeba-icu-word-segmentation-index-v0.1.json"),
+   fetch("semantic/external-word-reading-observations-v0.1.json")]);
+  if(!leadResponse.ok||!matchResponse.ok||!creditResponse.ok||!auditResponse.ok||!hintResponse.ok||!externalResponse.ok)throw Error("Missing source data");
+  const [source,match,credits,audit,hints,externalWords]=await Promise.all([
+   leadResponse.json(),matchResponse.json(),creditResponse.json(),auditResponse.json(),hintResponse.json(),externalResponse.json()]);
   if(source.schema!=="chromalect.semantic.dictionary-word-surface-leads.v0.1"||
      source.status!=="publisher_dictionary_word_leads_not_independent_usage_attestations"||
      source.leads.length!==8||
@@ -159,6 +166,40 @@ async function load(){
   }
   if(machineHintMap.size!==27)throw Error("Incomplete source machine segmentation diagnostics");
 
+
+  if(externalWords.schema!=="chromalect.semantic.external-word-reading-observations.v0.1"||
+     externalWords.status!=="separate_word_entry_pronunciation_sources_not_sentence_context_adjudication"||
+     externalWords.summary.dictionaryWordLeads!==8||
+     externalWords.summary.externallyLocatedPublishedWordReadings!==5||
+     externalWords.summary.leadsWithoutObservedExternalWordEntry!==3||
+     externalWords.summary.independentlyVerifiedSentenceReadings!==0||
+     externalWords.summary.independentlyAdjudicatedSentenceWordBoundaries!==0||
+     externalWords.summary.independentLexicalSenseApprovals!==0||
+     externalWords.summary.productionApprovals!==0||
+     externalWords.source.sourceSentenceTextCopied!==false||
+     externalWords.source.sourceDefinitionsCopied!==false)
+   throw Error("External word readings do not satisfy source and nonapproval gates");
+  externalWordMap=new Map();
+  for(const r of externalWords.records){
+   const lead=sources.get(r.leadId);
+   if(!lead||externalWordMap.has(r.leadId)||r.writtenWordLead!==lead.surfaceWord||
+      r.publisherHeadingReading!==lead.dictionaryHeadingReading||
+      r.independentSentenceReadingVerification!==false||
+      r.independentWordBoundaryVerification!==false||
+      r.independentLexicalSenseApproval!==false)
+    throw Error("External word source not aligned with pinned dictionary lead");
+   if(r.status==="word_entry_reading_observed"){
+    if(!r.externalSourceURL?.startsWith("https://en.wiktionary.org/wiki/")||
+       !r.externalPublishedWordPinyin||r.targetReadingMatchesPublisherHeading!==true||
+       r.observedTargetCharacterPinyin!==lead.dictionaryHeadingReading||
+       [...lead.surfaceWord][r.targetCharacterIndex]!==lead.character)
+     throw Error("Unsupported word-entry pronunciation comparison");
+   }else if(r.status!=="word_entry_not_yet_confirmed"||
+      r.externalSourceURL!==null||r.externalPublishedWordPinyin!==null)
+    throw Error("Unobserved word entry cannot be promoted");
+   externalWordMap.set(r.leadId,r);
+  }
+  if(externalWordMap.size!==8)throw Error("Incomplete external word-entry reference cohort");
   render();
  }catch(error){entries=[];$("word-status").textContent="Unable to validate word-source records: "+error.message;}
 }
