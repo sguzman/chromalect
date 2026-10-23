@@ -1,0 +1,59 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark">
+<title>Local glyph inspection intake · Chromalect</title>
+<link rel="stylesheet" href="style.css"><script src="theme.js"></script>
+<script src="glyph-review-intake.js" defer></script>
+<style>
+.inspection-form{display:grid;gap:14px;max-width:950px;margin:20px 0;padding:20px;background:var(--panel);border:1px solid var(--border);border-radius:12px}
+.inspection-form label{display:grid;gap:6px}
+.inspection-form select,.inspection-form input,.inspection-form textarea{font:inherit;color:var(--ink);
+background:var(--tile-bg);padding:10px;border:1px solid var(--border);border-radius:8px;width:100%;box-sizing:border-box}
+.inspection-form textarea{min-height:115px;resize:vertical}
+.inspection-compare{display:grid;grid-template-columns:1fr 1fr;gap:16px;justify-items:center;align-items:center}
+.inspection-compare>div{display:flex;flex-direction:column;align-items:center;gap:8px}
+.inspection-native{font-size:110px;line-height:120px}
+.inspection-compare img{max-width:135px}
+.inspection-meta{font-size:13px;color:var(--sub);overflow-wrap:anywhere}
+.inspection-actions{display:flex;flex-wrap:wrap;gap:12px}
+.inspection-actions button{font:inherit;padding:10px;border:1px solid var(--border);background:var(--tile-bg);color:var(--ink);border-radius:8px;cursor:pointer}
+</style></head><body>
+<header class="wrap"><div class="brand"><b>CHROMALECT</b><small>Language, made visible</small></div></header>
+<main class="wrap"><div class="eyebrow">Independent visual research preparation · local-only</div>
+<h1>Glyph geometry and component review intake</h1>
+<p class="intro">Inspect the native character alongside its generated, source-backed component-colored SVG. Record preliminary observations about visible shape, stroke-to-component ownership, and color separation. This form stores observations only in the current page; it does not certify glyphs, change the published mappings, or make them eligible for learning studies.</p>
+<div class="inspection-form">
+<label for="inspection-target">Source-pinned review candidate
+<select id="inspection-target"></select></label>
+<div class="inspection-compare">
+<div><span id="inspection-native" class="inspection-native" lang="zh-Hans"></span><small>Native font glyph</small></div>
+<div><img id="inspection-svg" width="125" height="125" alt="Source-aligned colored glyph"><small>Source-aligned SVG</small></div>
+</div>
+<p id="inspection-source" class="inspection-meta"></p>
+<p id="inspection-tier" class="inspection-meta"></p>
+<p id="inspection-flags" class="inspection-meta"></p>
+<label for="inspection-geometry">Preliminary visible geometry assessment
+<select id="inspection-geometry"><option value="undetermined">Undetermined</option>
+<option value="preliminary_support">Appears consistent; not certified</option>
+<option value="preliminary_concern">Potential mismatch; needs investigation</option></select></label>
+<label for="inspection-ownership">Preliminary component ownership assessment
+<select id="inspection-ownership"><option value="undetermined">Undetermined</option>
+<option value="preliminary_support">Appears consistent; not certified</option>
+<option value="preliminary_concern">Potential mismatch; needs investigation</option></select></label>
+<label for="inspection-contrast">Preliminary component color distinction
+<select id="inspection-contrast"><option value="undetermined">Undetermined</option>
+<option value="preliminary_support">Appears distinguishable; not certified</option>
+<option value="preliminary_concern">Colors appear too close; needs investigation</option></select></label>
+<label for="inspection-evidence">Independent source evidence (HTTPS URL)
+<input id="inspection-evidence" type="url" autocomplete="off" maxlength="1000" placeholder="https://..."></label>
+<label for="inspection-rationale">Technical rationale (no copied private notes or source text)
+<textarea id="inspection-rationale" maxlength="3000"></textarea></label>
+<div class="inspection-actions"><button type="button" id="inspection-save">Keep local draft</button>
+<button type="button" id="inspection-export">Generate source-linked JSON</button></div>
+<p id="inspection-count" class="inspection-meta">0 local drafts · 0 certified</p>
+<p id="inspection-status" role="status" aria-live="polite">Loading pinned glyph-review source.</p>
+<label for="inspection-output">Local JSON export — copy and validate separately
+<textarea id="inspection-output" readonly spellcheck="false"></textarea></label>
+</div>
+<p>Source: <a href="glyph-review-worklist.html">priority review browser</a> and
+<a href="glyphs/review/independent-review-worklist-v0.1.json">generated worklist</a>. This form publishes no input and stores no drafts across reloads. An observation is not independent certification, even when it appears consistent. Expert evidence standards, reviewer attribution and approval are separate gates.</p>
+</main><footer class="wrap"><a href="roadmap-status.html">Research roadmap</a> · <a href="index.html">Overview</a></footer></body></html>

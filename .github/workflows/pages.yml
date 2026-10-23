@@ -145,6 +145,9 @@ jobs:
           node tools/glyph-pipeline/glyph_independent_review_worklist.mjs --check
           node --check site/glyph-review-worklist.js
           node tools/glyph-pipeline/glyph_review_worklist_viewer_smoke.mjs
+          node --check site/glyph-review-intake.js
+          node tools/glyph-pipeline/glyph_review_intake_viewer_smoke.mjs
+          test -s site/glyph-review-intake.html
           test -s site/glyph-review-worklist.html
           test -s site/glyphs/review/independent-review-worklist-v0.1.json
       - name: Publish measured Mandarin glyph coverage as a commit status
