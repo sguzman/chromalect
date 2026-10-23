@@ -12,10 +12,12 @@ export function parseDetailedRow(line){
  const values=line.split("\t");
  if(values.length!==6)throw new Error("Expected six Tatoeba detailed TSV fields");
  const [id,language,text,contributor,created,modified]=values;
- if(!/^\d+$/.test(id)||language!=="cmn"||!text||!contributor||
-    !/^\d{4}-\d{2}-\d{2}/.test(created)||!/^\d{4}-\d{2}-\d{2}/.test(modified))
+ if(!/^\d+$/.test(id)||language!=="cmn"||!text)
   throw new Error("Invalid Tatoeba Mandarin detailed sentence row");
- return {id,language,text,contributor,created,modified};
+ // The real detailed export permits an unset creation timestamp; it is not proof of invalid text.
+ const dateOrNull=x=>/^\d{4}-\d{2}-\d{2}/.test(x)?x:null;
+ return {id,language,text,contributor:contributor==="\\N"||!contributor?null:contributor,
+  created:dateOrNull(created),modified:dateOrNull(modified)};
 }
 
 function sentenceCandidate(row){
@@ -44,12 +46,13 @@ export function newCollector(targets,maxPerCharacter){
    throw new Error("Ambiguous or duplicated single-character target");
   byChar.set(target.character,{rank:target.rank,character:target.character,candidates:[]});
  }
- let scanned=0,accepted=0,skippedTooLong=0;
+ let scanned=0,accepted=0,skippedTooLong=0,skippedMissingContributor=0;
  const seenIds=new Set();
  function add(row){
   scanned++;
   if(seenIds.has(row.id))throw new Error("Duplicate sentence ID in source export");
   seenIds.add(row.id);
+  if(!row.contributor){skippedMissingContributor++;return;}
   const codepoints=[...row.text].length;
   if(codepoints<5||codepoints>150){skippedTooLong++;return;}
   const chars=new Set([...row.text]);
@@ -70,6 +73,7 @@ export function newCollector(targets,maxPerCharacter){
    charactersWithCandidateReferences:records.filter(x=>x.candidates.length>0).length,
    charactersWithNoCandidateReferences:records.filter(x=>x.candidates.length===0).length,
    sentencesOutsideLengthWindow:skippedTooLong,
+   sentencesWithoutContributorCredit:skippedMissingContributor,
    contextualReadingsVerified:0,lexicalSensesApproved:0,emojiComprehensionApproved:0};
   return {schema:"chromalect.semantic.tatoeba-surface-context-candidates.v0.1",
    status:"unadjudicated_sentence_surface_matches_not_reading_or_sense_validation",
