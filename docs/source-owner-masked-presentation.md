@@ -4,7 +4,7 @@ The [rehearsal gallery](../site/source-owner-masked-preview.html) is a **read-on
 
 The viewer presents a font-dependent native character and two equally sized **charcoal-on-gray region masks**, labeled Region A and Region B. It does not display the machine owner-answer label or experimental source colors in its page text. Presentation sides follow the source candidate A/B order; the originally selected target locator appears on opposite sides in 25 versus 24 records. This is **not random assignment** or a scientifically blinded stimulus procedure; component forms and source path locators remain provisional.
 
-The page supports 16, 24, 32, 48, 64, 96, 128 and 160 CSS pixel comparisons; all 49 pairs or the exact 23 introduced, 21 resolved and five retained warning-cohort subsets; and link fragments selecting a known public pair ID. The neutral masks preserve the original source path geometry and component mapping attributes and are independently verified as source-derived *geometry*, not accepted owner interpretations.
+The page supports 16, 24, 32, 48, 64, 96, 128 and 160 CSS pixel comparisons; all 49 pairs or the exact 23 introduced, 21 resolved and five retained warning-cohort subsets; and link fragments selecting a known public pair ID. The neutral masks preserve original source SVG path geometry and fill colors **while intentionally stripping the `data-component` owner attributes**. Machine checks verify source derivation, source SHA-256 references, unchanged path coordinates, and disjoint highlighted regions; this establishes reproducible geometry, not independently correct owner interpretations.
 
 ## Blinding and eligibility boundary
 

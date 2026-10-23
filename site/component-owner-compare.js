@@ -48,10 +48,17 @@ function showRows(){
    const td=document.createElement("td");
    if(i===0){
     const anchor=document.createElement("a");
-    anchor.href="component-owner-adjudication.html#"+row.trialId;
+    anchor.href="source-owner-masked-preview.html#"+row.trialId;
     anchor.target="_blank";anchor.rel="noopener noreferrer";
     anchor.textContent=cells[i];
     td.appendChild(anchor);
+    const keyVisible=document.createElement("a");
+    keyVisible.href="component-owner-adjudication.html#"+row.trialId;
+    keyVisible.target="_blank";keyVisible.rel="noopener noreferrer";
+    keyVisible.textContent="Machine-key-visible worksheet";
+    const qualifier=document.createElement("span");
+    qualifier.textContent=" · ";
+    td.appendChild(qualifier);td.appendChild(keyVisible);
    }else td.textContent=cells[i];
    tr.appendChild(td);
   }
