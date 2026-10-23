@@ -1,0 +1,65 @@
+{
+  "schema": "chromalect.phonetics.unresolved-phonetic-reference-leads.v0.1",
+  "status": "two_remaining_caution_families_have_reference_leads_not_approved_analysis",
+  "source": {
+    "citationBlobSHA": "e38b5d3077f516054ecc5573c9251b3aa3628140",
+    "cautionIndex": "data/phonetics/mandarin-final-spelling-context-gates-v0.1.json",
+    "contractions": "data/phonetics/external-orthographic-spelling-rule-crosswalk-v0.1.json",
+    "umlaut": "data/phonetics/external-umlaut-spelling-rule-crosswalk-v0.1.json",
+    "noCopiedSourcePassages": true,
+    "componentPaletteChanged": false
+  },
+  "references": [
+    {
+      "id": "lmu-mandarin-vowels",
+      "publisher": "Ludwig Maximilian University of Munich, Phonetics and Speech Processing",
+      "pageTitle": "Mandarin Vowels",
+      "url": "https://www.phonetik.uni-muenchen.de/studium/skripten/languagedemos/Demos/mandarin.html",
+      "relevance": "Discusses restricted so-called apical-vowel or syllabic-consonant cases; any IPA interpretation still requires independent convention and context review.",
+      "accessCheckedDate": "2026-10-23"
+    },
+    {
+      "id": "polyu-simple-finals",
+      "publisher": "The Hong Kong Polytechnic University, BEPTH",
+      "pageTitle": "Simple Finals",
+      "url": "https://www.polyu.edu.hk/bepth/introduction-to-phonetics/simple-finals/?sc_lang=en",
+      "relevance": "Describes weak u-like onset in labial-written o examples; not a character-specific acoustic measurement.",
+      "accessCheckedDate": "2026-10-23"
+    }
+  ],
+  "summary": {
+    "remainingCautionFamilies": 2,
+    "remainingSourceReadingUses": 79,
+    "sourceReadingOccurrencesCheckedForAudio": 0,
+    "phonologicalRepresentationsApproved": 0,
+    "humanDecodingTrials": 0
+  },
+  "records": [
+    {
+      "cautionFamily": "post_sibilant_i",
+      "writtenFinal": "i",
+      "observedSourceReadingUses": 63,
+      "sourceLead": "lmu-mandarin-vowels",
+      "researchQuestion": "Compare restricted post-sibilant citation-i realizations under a declared speaker and transcription convention.",
+      "phoneticEvidenceStatus": "external_description_lead_only",
+      "proposedIPAForm": null,
+      "phonemeInventoryApproval": false,
+      "sourceSpecificAcousticVerification": false,
+      "contextualPronunciationApproval": false,
+      "humanDecodingTrials": 0
+    },
+    {
+      "cautionFamily": "labial_written_o",
+      "writtenFinal": "o",
+      "observedSourceReadingUses": 16,
+      "sourceLead": "polyu-simple-finals",
+      "researchQuestion": "Compare the labial-written o transition against direct speech evidence under declared phonetic and speaker conventions.",
+      "phoneticEvidenceStatus": "external_description_lead_only",
+      "proposedIPAForm": null,
+      "phonemeInventoryApproval": false,
+      "sourceSpecificAcousticVerification": false,
+      "contextualPronunciationApproval": false,
+      "humanDecodingTrials": 0
+    }
+  ]
+}
