@@ -73,7 +73,7 @@ export const deriveContextGates = function deriveContextGates(citations){
    "Original orthographic tokens and palette identity assignments remain unchanged."
   ],
   summary:{sourceCitationReadings:1171,flaggedSourceReadings:count,
-   flaggedDistinctWrittenTriples:unique.size,flagCategories:8,
+   flaggedDistinctWrittenTriples:unique.size,flagCategories:9,
    independentlyAdjudicatedFinalPhonemes:0,
    approvedContextualPronunciations:0,
    approvedAcousticTranscriptions:0,
