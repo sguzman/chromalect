@@ -50,9 +50,12 @@ export function deriveSourceGlyphCounterfactual(
   const parts=new Map();
   for(const component of glyph.components){
    const original=sourceColors.get(component.component_id);
+   const prior=parts.get(component.component_id);
    if(!original||component.hex.toUpperCase()!==original.color.toUpperCase()||
-      component.form!==original.shape||parts.has(component.component_id))
+      component.form!==original.shape||
+      (prior&&(prior.form!==component.form||prior.hex!==component.hex)))
     throw Error("Glyph component differs from original identity palette");
+   // A glyph can contain the same component identity more than once.
    parts.set(component.component_id,component);
   }
   const original=readSource(glyph.svg);
