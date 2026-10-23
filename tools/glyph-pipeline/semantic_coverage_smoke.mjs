@@ -44,7 +44,7 @@ for(const id of [
   "semantic-screened-count","semantic-screened-percent",
   "semantic-candidate-count","semantic-candidate-percent",
   "semantic-verified-count","semantic-progress","semantic-progress-fill",
-  "semantic-stage-screened","semantic-stage-dictionary","semantic-stage-boundary",
+  "semantic-stage-screened","semantic-stage-dictionary","semantic-stage-polysemy","semantic-polysemy-progress","semantic-polysemy-fill","semantic-stage-boundary",
   "semantic-stage-desk","semantic-desk-progress","semantic-desk-fill",
   "semantic-stage-readiness","semantic-readiness-progress","semantic-readiness-fill",
   "semantic-boundary-progress","semantic-boundary-fill",
@@ -99,6 +99,9 @@ assert.equal(ids["semantic-verified-count"].textContent,"0.0%");
 assert.equal(ids["semantic-progress-fill"].style.width,"100.0%");
 assert.equal(ids["semantic-progress"].attrs["aria-valuenow"],"1000");
 assert.equal(ids["semantic-stage-screened"].textContent,"1000 / 1000 (100.0%)");
+assert.equal(ids["semantic-stage-polysemy"].textContent,"1000 / 1000 (100.0%) · source evidence only");
+assert.equal(ids["semantic-polysemy-fill"].style.width,"100.0%");
+assert.equal(ids["semantic-polysemy-progress"].attrs["aria-valuenow"],"1000");
 assert.equal(ids["semantic-stage-dictionary"].textContent,lexical.metrics.crossReferenced+" / 1000 ("+(lexical.metrics.crossReferenced/10).toFixed(1)+"%)");
 assert.equal(ids["semantic-stage-lexical"].textContent,"0 / 1000 (0.0%)");
 assert.equal(ids["semantic-stage-desk"].textContent,review.counts.deskAnalyzedTotal+" / 248 (100.0%) · not approval");
@@ -232,6 +235,7 @@ assert.equal(data.initialScreeningReview.experimentalExpressionCount,897);
 assert.match(html,/data-character-layer-controls/);
 assert.match(html,/src="layers.js"/);
 assert.match(html,/id="semantic-lexical-filter"/);
+assert.match(html,/id="semantic-polysemy-progress"/);
 assert.match(html,/value="complex-higher"/);
 assert.match(html,/id="semantic-action-filter"/);
 assert.match(html,/id="semantic-visual-filter"/);

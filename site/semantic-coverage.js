@@ -58,6 +58,16 @@
     $("semantic-stage-screened").textContent =
       summary.screenedCharacters+" / "+total+" ("+percent(summary.screenedCharacters,total)+")";
   }
+  function bindPolysemyProgress(metrics) {
+    const total=1000;
+    const audited=metrics.charactersAudited;
+    $("semantic-polysemy-progress").setAttribute("aria-valuemax",String(total));
+    $("semantic-polysemy-progress").setAttribute("aria-valuenow",String(audited));
+    $("semantic-polysemy-fill").style.width=percent(audited,total);
+    $("semantic-stage-polysemy").textContent=
+      audited+" / "+total+" ("+percent(audited,total)+") · source evidence only";
+  }
+
   function bindResearchProgress(metrics, audit) {
     const total=metrics.totalCharacters;
     for (const [name,count] of [
@@ -156,6 +166,14 @@
           (needs ? " · "+needs+" need closer alignment" : "") :
         "no emoji candidate to compare")+
         " · no human lexical approval"));
+    }
+    const complexity=polysemyRows.get(entry.rank);
+    if(complexity && complexity.triageTier!=="baseline"){
+      card.appendChild(elem("p","semantic-dictionary-note",
+        "Dictionary reading/gloss triage: "+complexity.readingCount+
+        " reading(s), "+complexity.definitionFragmentCount+
+        " English definition fragments · "+complexity.triageTier+
+        " research priority, not a verified sense count"));
     }
     const visibleCues=visibilityRows.get(entry.rank)||[];
     if(visibleCues.length) {
@@ -430,6 +448,7 @@
       ledger=data;
       bindMetrics(data.summary);
       bindResearchProgress(lexical.metrics,audit);
+      bindPolysemyProgress(polysemy.summary);
       bindReviewReadiness(readiness);
       bindVisibilityProgress(visibility.summary);
       render();
