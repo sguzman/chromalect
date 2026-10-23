@@ -91,6 +91,16 @@
       " substring-only false matches). All remain unapproved.";
   }
 
+  function bindReviewReadiness(readiness) {
+    const total=readiness.totalCandidateSenses;
+    const count=readiness.sourcePacketsPrepared;
+    $("semantic-readiness-progress").setAttribute("aria-valuemax",String(total));
+    $("semantic-readiness-progress").setAttribute("aria-valuenow",String(count));
+    $("semantic-readiness-fill").style.width=percent(count,total);
+    $("semantic-stage-readiness").textContent=count+" / "+total+
+      " ("+percent(count,total)+") · awaiting independent approval";
+  }
+
   function bindVisibilityProgress(metrics) {
     const count=metrics.auditedExpressions,total=metrics.proposedExpressions;
     $("semantic-visibility-progress").setAttribute("aria-valuemax",String(total));
@@ -277,19 +287,31 @@
 
   async function load() {
     try {
-      const [response,profileResponse,lexicalResponse,auditResponse,reviewResponse,visibilityResponse]=await Promise.all([
+      const [response,profileResponse,lexicalResponse,auditResponse,reviewResponse,visibilityResponse,readinessResponse]=await Promise.all([
         fetch("semantic/mandarin-1000-v0.1.json"),
         fetch("profiles/mandarin-1000-v1.json"),
         fetch("semantic/lexical-crossref-v0.1.json"),
         fetch("semantic/strict-gloss-index-v0.1.json"),
         fetch("semantic/sense-review-queue-v0.1.json"),
-        fetch("semantic/emoji-visibility-audit-v0.1.json")
+        fetch("semantic/emoji-visibility-audit-v0.1.json"),
+        fetch("semantic/lexical-review-readiness-v0.1.json")
       ]);
-      if(!response.ok || !profileResponse.ok || !lexicalResponse.ok || !auditResponse.ok || !reviewResponse.ok || !visibilityResponse.ok)
+      if(!response.ok || !profileResponse.ok || !lexicalResponse.ok || !auditResponse.ok || !reviewResponse.ok || !visibilityResponse.ok || !readinessResponse.ok)
         throw new Error("Character, dictionary or audit data unavailable");
-      const [data,profile,lexical,audit,review,visibility]=await Promise.all([
-        response.json(),profileResponse.json(),lexicalResponse.json(),auditResponse.json(),reviewResponse.json(),visibilityResponse.json()
+      const [data,profile,lexical,audit,review,visibility,readiness]=await Promise.all([
+        response.json(),profileResponse.json(),lexicalResponse.json(),auditResponse.json(),reviewResponse.json(),visibilityResponse.json(),readinessResponse.json()
       ]);
+      if(readiness.schema!=="chromalect.semantic.lexical-review-readiness.v0.1" ||
+         readiness.status!=="source_packets_ready_not_approved" ||
+         readiness.sourceQueue!=="full-lexical-review-queue-v0.1.json" ||
+         readiness.totalCandidateSenses!==visibility.summary.proposedExpressions ||
+         readiness.sourcePacketsPrepared!==visibility.records.length ||
+         readiness.dictionaryWholeTermMatches!==audit.summary.wholeTermMatched ||
+         readiness.dictionaryDiscrepancies!==audit.summary.requiresSenseReview ||
+         readiness.independentLexicalApproved!==0 ||
+         readiness.independentEmojiApproved!==0 ||
+         readiness.productionVerified!==0)
+        throw new Error("Lexical review-readiness data mismatched or improperly approved");
       if(visibility.schema!=="chromalect.semantic.emoji-visibility-audit.v0.1" ||
          visibility.status!=="automated_visual_projection_review_only_not_linguistic_or_comprehension_approval" ||
          visibility.summary.proposedExpressions!==897 ||
@@ -380,6 +402,7 @@
       ledger=data;
       bindMetrics(data.summary);
       bindResearchProgress(lexical.metrics,audit);
+      bindReviewReadiness(readiness);
       bindVisibilityProgress(visibility.summary);
       render();
     }catch(error) {

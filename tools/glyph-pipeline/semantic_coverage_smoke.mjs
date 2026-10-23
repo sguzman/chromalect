@@ -7,6 +7,7 @@ const script=fs.readFileSync("site/semantic-coverage.js","utf8");
 const html=fs.readFileSync("site/semantic-coverage.html","utf8");
 const data=JSON.parse(fs.readFileSync("data/semantic/mandarin-1000-v0.1.json","utf8"));
 const lexical=JSON.parse(fs.readFileSync("data/semantic/cedict-crossref/manifest-v0.1.json","utf8"));
+const readiness=JSON.parse(fs.readFileSync("data/semantic/cedict-crossref/lexical-review-readiness-v0.1.json","utf8"));
 const audit=JSON.parse(fs.readFileSync("data/semantic/cedict-crossref/strict-gloss-index-v0.1.json","utf8"));
 const review=JSON.parse(fs.readFileSync("data/semantic/cedict-crossref/sense-review-queue-v0.1.json","utf8"));
 const visibility=JSON.parse(fs.readFileSync("data/semantic/cedict-crossref/emoji-visibility-audit-v0.1.json","utf8"));
@@ -44,6 +45,7 @@ for(const id of [
   "semantic-verified-count","semantic-progress","semantic-progress-fill",
   "semantic-stage-screened","semantic-stage-dictionary","semantic-stage-boundary",
   "semantic-stage-desk","semantic-desk-progress","semantic-desk-fill",
+  "semantic-stage-readiness","semantic-readiness-progress","semantic-readiness-fill",
   "semantic-boundary-progress","semantic-boundary-fill",
   "semantic-stage-lexical","semantic-stage-emoji",
   "semantic-stage-visibility","semantic-visibility-progress","semantic-visibility-fill","semantic-visibility-note",
@@ -76,6 +78,7 @@ const vmContext={
     if(path==="semantic/strict-gloss-index-v0.1.json")return {ok:true,json:async()=>audit};
     if(path==="semantic/sense-review-queue-v0.1.json")return {ok:true,json:async()=>review};
     if(path==="semantic/emoji-visibility-audit-v0.1.json")return {ok:true,json:async()=>visibility};
+    if(path==="semantic/lexical-review-readiness-v0.1.json")return {ok:true,json:async()=>readiness};
     throw new Error("Unexpected resource: "+path);
   }
 };
@@ -99,6 +102,9 @@ assert.equal(ids["semantic-stage-lexical"].textContent,"0 / 1000 (0.0%)");
 assert.equal(ids["semantic-stage-desk"].textContent,review.counts.deskAnalyzedTotal+" / 248 (100.0%) · not approval");
 assert.equal(ids["semantic-desk-fill"].style.width,"100.0%");
 assert.equal(ids["semantic-desk-progress"].attrs["aria-valuenow"],"248");
+assert.equal(ids["semantic-stage-readiness"].textContent,"897 / 897 (100.0%) · awaiting independent approval");
+assert.equal(ids["semantic-readiness-fill"].style.width,"100.0%");
+assert.equal(ids["semantic-readiness-progress"].attrs["aria-valuenow"],"897");
 assert.equal(ids["semantic-stage-emoji"].textContent,"0 / 1000 (0.0%)");
 assert.equal(ids["semantic-stage-visibility"].textContent,"897 / 897 (100.0%) · research only");
 assert.equal(ids["semantic-visibility-fill"].style.width,"100.0%");
@@ -208,6 +214,7 @@ ids["semantic-lookup"].value="mountain";
 ids["semantic-lookup"].events.input();
 assert.match(ids["semantic-coverage-status"].textContent,/characters match/);
 assert.match(html,/id="semantic-layer-word" disabled/);
+assert.match(html,/id="semantic-readiness-progress"/);
 assert.equal(data.summary.pendingScreening,0);
 assert.equal(data.initialScreeningReview.experimentalExpressionCount,897);
 assert.match(html,/data-character-layer-controls/);
