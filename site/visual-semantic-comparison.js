@@ -4,7 +4,7 @@
 "use strict";
 const $=id=>document.getElementById(id);
 const required=["vsc-pick","vsc-focus","vsc-warning","vsc-back","vsc-forward","vsc-sense","vsc-reveal","vsc-operators",
- "vsc-size","vsc-size-label","vsc-gray","vsc-panels","vsc-source","vsc-status","vsc-count"];
+ "vsc-size","vsc-size-label","vsc-gray","vsc-surface","vsc-panels","vsc-source","vsc-status","vsc-count"];
 if(required.some(id=>!$(id)))return;
 const grammar=globalThis.ChromalectSemanticGrammar;
 if(!grammar){$("vsc-status").textContent="Semantic grammar unavailable";return;}
@@ -48,8 +48,15 @@ function buildArm(title,description,profile,candidate,style){
  article.appendChild(make("h2",null,title));
  article.appendChild(make("p","vsc-note",description));
  const stage=make("div","vsc-stage");
+ const surface=$("vsc-surface").value;
+ if(!["theme","white","black"].includes(surface))
+  throw Error("Unexpected diagnostic surface");
+ stage.style.setProperty("--study-surface",
+  surface==="white"?"#ffffff":surface==="black"?"#000000":"transparent");
  const shape=make("div","vsc-shape");
  shape.style.setProperty("--study-size",String($("vsc-size").value)+"px");
+ shape.style.setProperty("--study-ink",
+  surface==="white"?"#000000":surface==="black"?"#ffffff":"var(--glyph-ink)");
  shape.setAttribute("role","img");
  shape.setAttribute("aria-label",profile.character+" — source-aligned glyph, "+
   (style==="plain"?"single neutral ink color":"stable component identity colors"));
@@ -315,5 +322,6 @@ $("vsc-reveal").addEventListener("change",render);
 $("vsc-operators").addEventListener("change",render);
 $("vsc-size").addEventListener("input",render);
 $("vsc-gray").addEventListener("change",render);
+$("vsc-surface").addEventListener("change",render);
 load();
 })();
