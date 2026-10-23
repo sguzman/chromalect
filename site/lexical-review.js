@@ -29,7 +29,10 @@ function shuffled(items){
 }
 function candidates(){
  const scope=$("lexical-study-scope").value;
- return queue.records.filter(r=>scope==="all"||r.priority===scope);
+ return queue.records.filter(r=>scope==="all"||
+   (scope==="flagged"&&!r.strictWholeTermMatch)||
+   (scope==="matched"&&r.strictWholeTermMatch)||
+   r.priority===scope);
 }
 function resetForm(){
  judgment=null;awaitingNext=false;
@@ -59,7 +62,7 @@ function show(){
  $("lexical-study-character").replaceChildren(presenter.createGlyph(profile));
  put("lexical-study-meaning",r.selectedMeaning);
  put("lexical-study-unihan",r.referenceDefinition);
- put("lexical-study-dictionary",r.deskAnalysis.sourceExcerpt);
+ put("lexical-study-dictionary",r.dictionaryExcerpt);
  // The previous assistant's interpretation is deliberately hidden initially.
  put("lexical-study-prior","");
  resetForm();
@@ -96,13 +99,13 @@ function commit(){
   dictionarySource:r.dictionarySource,
   preliminaryJudgment:judgment,
   evidenceRationale:note,
-  priorityAtIntake:r.priority,
+  priorityAtIntake:r.priority,strictWholeTermMatchAtIntake:r.strictWholeTermMatch,
   lexicalApproval:"not_granted",
   emojiComprehensionApproval:"not_granted",
   productionVerified:false
  });
  awaitingNext=true;
- put("lexical-study-prior",r.deskAnalysis.observation);
+ put("lexical-study-prior",r.previousDeskObservation || "No earlier assistant desk analysis: an English wording match is not independent lexical verification.");
  $("lexical-study-form").hidden=true;
  $("lexical-study-after").hidden=false;
  $("lexical-study-export").disabled=false;
@@ -120,9 +123,9 @@ function next(){
 function exportJSON(){
  if(!recorded.length)return;
  const payload={
-  schema:"chromalect.lexical-review-observation-session.v0.1",
+  schema:"chromalect.lexical-review-observation-session.v0.2",
   status:"local_preliminary_observations_not_independent_lexical_approval",
-  source:{queue:"sense-review-queue-v0.1.json",
+  source:{queue:"full-lexical-review-queue-v0.1.json",
    ccCedictLicense:"CC BY-SA 4.0",unihanSource:"Unicode Unihan kDefinition",
    note:"Reviewers must preserve attribution when redistributing extracted dictionary evidence."},
   session:{scope:$("lexical-study-scope").value,requestedCount:$("lexical-study-count").value,
@@ -141,7 +144,7 @@ function exportJSON(){
 async function load(){
  try{
   const [response,profileResponse]=await Promise.all([
-   fetch("semantic/sense-review-queue-v0.1.json"),
+   fetch("semantic/full-lexical-review-queue-v0.1.json"),
    fetch("profiles/mandarin-1000-v1.json")
   ]);
   if(!response.ok||!profileResponse.ok)throw new Error("Queue or character profiles unavailable");
@@ -153,23 +156,25 @@ async function load(){
   profileByRank=new Map(profile.characters.map(r=>[r.rank,r]));
   if(data.records.some(r=>profileByRank.get(r.rank)?.character!==r.character))
     throw new Error("Unaligned Mandarin lexical and glyph records");
-  if(data.schema!=="chromalect.semantic.lexical-sense-review-queue.v0.1"||
-    data.status!=="unreviewed_prioritization_only"||
-    data.counts?.pendingSenseAlignment!==248||
-    data.counts?.independentlyLexicallyApproved!==0||
-    data.counts?.emojiComprehensionApproved!==0||
-    !Array.isArray(data.records)||data.records.length!==248)
+  if(data.schema!=="chromalect.semantic.full-lexical-review-queue.v0.1"||
+    data.status!=="unreviewed_source_first_all_candidate_senses"||
+    data.counts?.total!==897||
+    data.counts?.strictWholeTermMatches!==649||
+    data.counts?.noWholeTermMatch!==248||
+    data.counts?.independentLexicalApproved!==0||
+    data.counts?.independentEmojiApproved!==0||
+    !Array.isArray(data.records)||data.records.length!==897)
     throw new Error("Unexpected source or non-pending approval state");
   for(const r of data.records){
    if(!r.rank||!r.character||!r.selectedMeaning||!r.referenceDefinition||
-     !r.deskAnalysis?.sourceExcerpt||!r.deskAnalysis?.observation||
-     r.deskAnalysis.reviewerIndependent!==false||r.lexicalDecision!=="pending"||
+     !r.dictionaryExcerpt||r.strictWholeTermMatch!==true&&r.strictWholeTermMatch!==false||
+     r.lexicalDecision!=="pending"||
      r.productionVerified!==false)
     throw new Error("Malformed or already accepted lexical source entry");
   }
   queue=data;
   $("lexical-study-start").disabled=false;
-  status("Loaded 248 unapproved source conflicts. No judgments will be uploaded.");
+  status("Loaded 897 unapproved sense candidates, including 248 discrepancies and 649 literal wording matches. No judgments will be uploaded.");
  }catch(err){
   status("Unable to load verified-format lexical review source. No study can begin.");
  }
