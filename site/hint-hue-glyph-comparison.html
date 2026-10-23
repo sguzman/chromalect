@@ -16,7 +16,7 @@
  padding:9px;border-radius:8px}
 .hg-controls .hg-check{display:flex;align-items:center;gap:7px}
 .hg-controls button{cursor:pointer}.hg-controls button:disabled{opacity:.4;cursor:default}
-.hg-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin:20px 0}
+.hg-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:14px;margin:20px 0}
 .hg-panel{margin:0;border:1px solid var(--border);border-radius:12px;
  background:var(--tile-bg);padding:16px}
 .hg-panel figcaption{font-weight:700;margin:0 0 12px}
@@ -46,7 +46,7 @@
 <main class="wrap">
 <div class="eyebrow">Source strokes × experimental historical mnemonic hints</div>
 <h1>Exactly matched glyph geometry, alternative colors</h1>
-<p class="intro">Compare the original source-aligned Chinese SVG against a separate, research-only SVG using the 40-component historical mnemonic-hue counterfactual. Both images share every stroke path, transformation and component owner. Only the fill color for some source-pinned component IDs differs; the production 520-color palette and gallery remain untouched. The source-owned pair audit measures where hypothetical grouping creates newly close co-occurring component colors within a character. An optional, identical provisional meaning cue can be added under both images, keeping the color comparison independently controlled. No candidate meaning is approved.</p>
+<p class="intro">Compare the original source-aligned Chinese SVG against a separate, research-only SVG using the 40-component historical mnemonic-hue counterfactual. Both images share every stroke path, transformation and component owner. Only the fill color for some source-pinned component IDs differs; the production 520-color palette and gallery remain untouched. The source-owned pair audit measures where hypothetical grouping creates newly close co-occurring component colors within a character. An optional third condition renders the separate co-occurrence-optimized v0.2 colors on the same source geometry. An optional, identical provisional meaning cue can be added under every displayed image, keeping the color comparison independently controlled. No candidate meaning is approved.</p>
 <div class="hg-caution">The eight historical mnemonic groups are not independently verified semantic families. Grouped-hue colors may reduce component identity discriminability. This visual comparison is not a production palette release, an adjudicated glyph atlas, or a human comprehension experiment.</div>
 <div class="hg-controls">
 <label for="hg-query">Search source rank, Hanzi or component ID
@@ -72,6 +72,7 @@
 <select id="hg-surface"><option value="theme">Current theme</option>
 <option value="white">Pure white</option><option value="black">Pure black</option></select></label>
 <label class="hg-check" for="hg-gray"><input id="hg-gray" type="checkbox">Grayscale</label>
+<label class="hg-check" for="hg-optimized"><input id="hg-optimized" type="checkbox">Also show optimized v0.2 glyph</label>
 <label class="hg-check" for="hg-show-meaning"><input id="hg-show-meaning" type="checkbox">Add same provisional meaning cue to both</label>
 <label for="hg-sense">Proposed sense<select id="hg-sense"></select></label>
 <label class="hg-check" for="hg-reveal"><input id="hg-reveal" type="checkbox">Reveal source meaning labels</label>
@@ -83,7 +84,7 @@
 <div id="hg-owner" class="hg-owner" aria-label="Changed component ownership and fill provenance"></div>
 <div id="hg-risk-pairs" class="hg-owner" aria-label="Source-owned original and proposed within-glyph component color distances"></div>
 <div id="hg-semantic" class="hg-owner" aria-label="Provisional semantic candidate and original source context"></div>
-<p>Source ownership and palette agreement are checked by the Rust glyph pipeline. A separate build-time comparison checks every cloned SVG path and XML character outside the intended fill attributes, records SHA-256 checksums, and rejects source drift. The <a href="glyphs/research/hint-counterfactual-v0.1/index-v0.1.json">generated research manifest</a> lists all affected glyphs and path counts. The <a href="mnemonic-group-counterfactual-v0.1.json">candidate 40-color manifest</a> and <a href="glyphs/research/hint-counterfactual-v0.1/pair-risk-v0.1.json">per-glyph component-pair audit</a> does not certify visual distinctiveness or semantic meaning.</p>
+<p>Source ownership and palette agreement are checked by the Rust glyph pipeline. A separate build-time comparison checks every cloned SVG path and XML character outside the intended fill attributes, records SHA-256 checksums, and rejects source drift. The <a href="glyphs/research/hint-optimized-v0.2/index-v0.2.json">optimized, geometry-identical SVG manifest</a> and <a href="glyphs/research/hint-counterfactual-v0.1/optimized-pair-audit-v0.2.json">complete three-palette pair census</a> are research-only. The <a href="glyphs/research/hint-counterfactual-v0.1/index-v0.1.json">generated research manifest</a> lists all affected glyphs and path counts. The <a href="mnemonic-group-counterfactual-v0.1.json">candidate 40-color manifest</a> and <a href="glyphs/research/hint-counterfactual-v0.1/pair-risk-v0.1.json">per-glyph component-pair audit</a> does not certify visual distinctiveness or semantic meaning.</p>
 </main>
 <footer class="wrap"><a href="mnemonic-group-counterfactual.html">40-component swatches</a> ·
 <a href="mnemonic-color-pilot.html">Original hint experiment</a> ·
