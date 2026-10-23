@@ -5,6 +5,7 @@
 <link rel="stylesheet" href="style.css"><script src="theme.js"></script>
 <script src="mnemonic-color-pilot.js" defer></script>
 <style>
+.mg-benchmark{border-left:3px solid var(--active-border);padding:10px 14px;background:var(--panel);font-size:14px;line-height:1.6}
 .mg-select{display:grid;max-width:360px;gap:7px;margin:18px 0}
 .mg-select select{font:inherit;padding:10px;border:1px solid var(--border);
  background:var(--tile-bg);color:var(--ink);border-radius:8px}
@@ -28,8 +29,9 @@
 <main class="wrap">
 <div class="eyebrow">Component colors × provisional mnemonic grouping</div>
 <h1>Original 40-component color-group pilot</h1>
-<p class="intro">The first 40 component identities have eight recorded mnemonic-group hints. The remaining 480 colors have no assigned hint. This page compares existing component-color distances within and between those provisional groups, without changing the palette, interpreting the hints as accepted Chinese semantics, or claiming recognizable visual families.</p>
+<p class="intro">The first 40 component identities have eight recorded mnemonic-group hints. The remaining 480 colors have no assigned hint. This page compares existing component-color distances within and between those provisional groups, without changing the palette, interpreting the hints as accepted Chinese semantics, or claiming recognizable visual families. It also compares the observed within-group distance to 10,000 seeded random partitions with the same group sizes, providing a descriptive control rather than a significance test.</p>
 <p id="mg-summary">Loading source-pinned color relationship measurements.</p>
+<p id="mg-benchmark" class="mg-benchmark">Comparing the original labels to fixed-size random partitions.</p>
 <p id="mg-status" role="status" aria-live="polite">Verifying historical mnemonic hints.</p>
 <label class="mg-select" for="mg-filter">Original mnemonic-hint group
 <select id="mg-filter"></select></label>
