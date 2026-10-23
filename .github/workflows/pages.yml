@@ -459,7 +459,7 @@ jobs:
           node --check site/component-owner-adjudication-core.js
           node --check site/component-owner-adjudication.js
           node --check tools/glyph-pipeline/component_owner_adjudication_validate.mjs
-          node tools/glyph-pipeline/component_owner_adjudication_validate_smoke.mjs
+          node --check site/component-owner-compare-core.js\n          node --check tools/glyph-pipeline/source_owner_note_compare.mjs\n          node tools/glyph-pipeline/source_owner_note_compare_smoke.mjs\n          node tools/glyph-pipeline/component_owner_adjudication_validate_smoke.mjs
           node tools/glyph-pipeline/component_owner_adjudication_viewer_smoke.mjs
           test -s site/component-owner-adjudication.html
           test -s site/heldout-component-identification.html

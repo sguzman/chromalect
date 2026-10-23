@@ -21,7 +21,7 @@ This document specifies a prospective, non-executed review procedure for Chromal
 
 A future external review collection interface must be separated from the existing unblinded local source-key worksheet and must pass privacy and reproducibility review before use.
 
-## Hard acceptance boundaries
+The [local provisional note comparison](source-owner-note-comparison.md) can flag agreement and conflict in two *unblinded, unauthenticated* exports; it must not supply accepted independent reviewer reports or certified decisions.\n\n## Hard acceptance boundaries
 
 The machine-readable protocol records **0 reviewer reports, 0 independently reconciled pairs, 0 certified component owners, 0 visually certified glyphs, and 0 study-eligible items**. A component decision does not automatically validate semantics, color readability, lexical interpretation, or learning effects. A distinct controlled study would be needed for causal visual-discrimination or educational claims.
 
