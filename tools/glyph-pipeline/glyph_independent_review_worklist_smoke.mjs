@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import {deriveReviewWorklist} from "./glyph_independent_review_worklist.mjs";
-const catalog={schema:"chromalect.mandarin-character-catalog.v1",tranche:"0001-1000",characters:[
+const catalog={schema:"chromalect.character-tranche.v1",tranche:"0001-1000",characters:[
  {rank:1,character:"一"},{rank:2,character:"好"}]};
 const color={form:"一",component_id:"cmp-0171",hex:"#AABBCC"};
 const map={

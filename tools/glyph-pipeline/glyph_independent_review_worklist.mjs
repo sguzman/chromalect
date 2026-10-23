@@ -28,7 +28,7 @@ function classify(mapping,review){
 }
 export function deriveReviewWorklist(catalog,mappings,report,coverage){
  assert.equal(catalog.tranche,"0001-1000");
- assert.equal(catalog.schema,"chromalect.mandarin-character-catalog.v1"); // see live source contract
+ assert.equal(catalog.schema,"chromalect.character-tranche.v1"); // see live source contract
  assert.equal(mappings.schema,"chromalect.component-stroke-mappings.v1");
  assert.equal(mappings.palette_ref,"mandarin-component-identity@0.6.0");
  assert.equal(report.schema,"chromalect.geometry-review.v1");
