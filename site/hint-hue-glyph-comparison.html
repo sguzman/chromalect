@@ -1,0 +1,65 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="description" content="Original source-aligned component SVG geometry compared to isolated experimental group hues.">
+<title>Source-identical group-hue glyphs · Chromalect</title>
+<link rel="stylesheet" href="style.css"><script src="theme.js"></script>
+<script src="hint-hue-glyph-comparison.js" defer></script>
+<style>
+.hg-controls{display:flex;flex-wrap:wrap;gap:12px;align-items:center;
+ background:var(--panel);border:1px solid var(--border);border-radius:12px;
+ padding:15px;margin:18px 0}
+.hg-controls label{display:grid;gap:5px}
+.hg-controls select,.hg-controls input,.hg-controls button{font:inherit;
+ background:var(--tile-bg);color:var(--ink);border:1px solid var(--border);
+ padding:9px;border-radius:8px}
+.hg-controls .hg-check{display:flex;align-items:center;gap:7px}
+.hg-controls button{cursor:pointer}.hg-controls button:disabled{opacity:.4;cursor:default}
+.hg-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin:20px 0}
+.hg-panel{margin:0;border:1px solid var(--border);border-radius:12px;
+ background:var(--tile-bg);padding:16px}
+.hg-panel figcaption{font-weight:700;margin:0 0 12px}
+.hg-stage{min-height:185px;display:flex;align-items:center;justify-content:center;
+ border-radius:8px;background:var(--hg-background,transparent)}
+.hg-svg{object-fit:contain;max-width:100%}
+.hg-owner{border:1px solid var(--border);background:var(--panel);
+ border-radius:12px;padding:16px}
+.hg-owners{display:grid;gap:10px}
+.hg-identity{display:flex;align-items:center;flex-wrap:wrap;gap:8px;
+ font:12px ui-monospace,monospace}
+.hg-swatch{display:inline-block;width:21px;height:21px;border:1px solid var(--subtle-outline);
+ border-radius:4px;background:var(--hg-swatch)}
+.hg-caution{border-left:3px solid var(--active-border);
+ background:var(--panel);padding:14px;margin:16px 0}
+@media(max-width:570px){.hg-grid{grid-template-columns:1fr}.hg-stage{min-height:155px}}
+</style></head><body>
+<header class="wrap"><div class="brand"><b>CHROMALECT</b><small>Language, made visible</small></div></header>
+<main class="wrap">
+<div class="eyebrow">Source strokes × experimental historical mnemonic hints</div>
+<h1>Exactly matched glyph geometry, alternative colors</h1>
+<p class="intro">Compare the original source-aligned Chinese SVG against a separate, research-only SVG using the 40-component historical mnemonic-hue counterfactual. Both images share every stroke path, transformation and component owner. Only the fill color for some source-pinned component IDs differs; the production 520-color palette and gallery remain untouched.</p>
+<div class="hg-caution">The eight historical mnemonic groups are not independently verified semantic families. Grouped-hue colors may reduce component identity discriminability. This visual comparison is not a production palette release, an adjudicated glyph atlas, or a human comprehension experiment.</div>
+<div class="hg-controls">
+<label for="hg-query">Search source rank, Hanzi or component ID
+<input id="hg-query" type="search" placeholder="e.g. 1 or cmp-0001"></label>
+<label for="hg-select">Source glyph
+<select id="hg-select"></select></label>
+<button id="hg-prev" type="button">Previous</button>
+<button id="hg-next" type="button">Next</button>
+<label for="hg-size">Size: <strong id="hg-size-label">112 px</strong>
+<input id="hg-size" type="range" min="40" max="160" value="112" step="8"></label>
+<label for="hg-surface">Background
+<select id="hg-surface"><option value="theme">Current theme</option>
+<option value="white">Pure white</option><option value="black">Pure black</option></select></label>
+<label class="hg-check" for="hg-gray"><input id="hg-gray" type="checkbox">Grayscale</label>
+</div>
+<p id="hg-status" role="status" aria-live="polite">Verifying source-geometry-matched glyph inventory.</p>
+<p id="hg-count"></p>
+<div id="hg-compare" class="hg-grid" aria-label="Production and hypothetical source-aligned glyph comparison"></div>
+<div id="hg-owner" class="hg-owner" aria-label="Changed component ownership and fill provenance"></div>
+<p>Source ownership and palette agreement are checked by the Rust glyph pipeline. A separate build-time comparison checks every cloned SVG path and XML character outside the intended fill attributes, records SHA-256 checksums, and rejects source drift. The <a href="glyphs/research/hint-counterfactual-v0.1/index-v0.1.json">generated research manifest</a> lists all affected glyphs and path counts. The <a href="mnemonic-group-counterfactual-v0.1.json">candidate 40-color manifest</a> does not certify visual distinctiveness or semantic meaning.</p>
+</main>
+<footer class="wrap"><a href="mnemonic-group-counterfactual.html">40-component swatches</a> ·
+<a href="mnemonic-color-pilot.html">Original hint experiment</a> ·
+<a href="visual-semantic-comparison.html">Original glyph + meaning comparison</a> ·
+<a href="glyph-review-worklist.html">Original glyph review</a></footer></body></html>
