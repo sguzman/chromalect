@@ -69,4 +69,16 @@ for(const [i,row] of full.records.entries()){
  }
 }
 assert.deepEqual(cohorts,{matched:649,flagged:248});
+const readiness=JSON.parse(fs.readFileSync(dir+"lexical-review-readiness-v0.1.json","utf8"));
+assert.equal(readiness.schema,"chromalect.semantic.lexical-review-readiness.v0.1");
+assert.equal(readiness.status,"source_packets_ready_not_approved");
+assert.equal(readiness.sourceQueue,"full-lexical-review-queue-v0.1.json");
+assert.match(readiness.sourceQueueBlobSha,/^[a-f0-9]{40}$/);
+assert.equal(readiness.totalCandidateSenses,full.counts.total);
+assert.equal(readiness.sourcePacketsPrepared,full.records.length);
+assert.equal(readiness.dictionaryWholeTermMatches,full.counts.strictWholeTermMatches);
+assert.equal(readiness.dictionaryDiscrepancies,full.counts.noWholeTermMatch);
+assert.equal(readiness.independentLexicalApproved,0);
+assert.equal(readiness.independentEmojiApproved,0);
+assert.equal(readiness.productionVerified,0);
 console.log("All-sense lexical readiness: 897/897 source-aligned, 649 literal-match and 248 discrepant candidates; independent approvals 0.");
