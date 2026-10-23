@@ -21,7 +21,7 @@ class Element{
 }
 function setup(source=sources){
  const names=["comparison-rank","comparison-reading","comparison-prev","comparison-next",
-  "comparison-color","comparison-status","comparison-count","comparison-source",
+  "comparison-color","comparison-ipa","comparison-status","comparison-count","comparison-source",
   "comparison-plain","comparison-letters","comparison-working"];
  const controls=Object.fromEntries(names.map(x=>[x,new Element()]));
  const namesByUrl=["pronunciation-citations-0001-1000.json",
@@ -55,13 +55,18 @@ assert.match(ui["comparison-count"].textContent,/739 \/ 1,171/);
 ui["comparison-rank"].value="1";ui["comparison-rank"].events.change();
 ui["comparison-color"].checked=true;ui["comparison-color"].events.change();
 assert.equal(ui["comparison-letters"].children[3].style.color,sources[6].palette_domains.final.tokens["i"]);
+ui["comparison-rank"].value="4";ui["comparison-rank"].events.change();
+ui["comparison-ipa"].checked=true;ui["comparison-ipa"].events.change();
+assert.ok(ui["comparison-working"].children.some(x=>x.className==="comparison-ipa"&&x.textContent.includes("ʂ")));
+ui["comparison-rank"].value="1";ui["comparison-rank"].events.change();
+assert.ok(ui["comparison-working"].children.some(x=>x.className==="comparison-ipa"&&x.textContent.includes("No standalone consonant IPA")));
 const tampered=structuredClone(sources);
 tampered[1].summary.humanSymbolDecodingTrials=1;
 const rejected=setup(tampered);await settle(rejected);
 assert.equal(rejected["comparison-plain"].children.length,0);
 assert.match(rejected["comparison-status"].textContent,/Unable to verify/);
 for(const id of ["comparison-rank","comparison-reading","comparison-prev","comparison-next",
- "comparison-color","comparison-status","comparison-count","comparison-source",
+ "comparison-color","comparison-ipa","comparison-status","comparison-count","comparison-source",
  "comparison-plain","comparison-letters","comparison-working"])
  assert.match(html,new RegExp('id="'+id+'"'));
 assert.ok(!script.includes("innerHTML"));

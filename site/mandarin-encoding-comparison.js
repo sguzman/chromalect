@@ -5,7 +5,7 @@
 const $=id=>document.getElementById(id);
 const ns="http://www.w3.org/2000/svg";
 const required=["comparison-rank","comparison-reading","comparison-prev","comparison-next",
- "comparison-color","comparison-status","comparison-count","comparison-source",
+ "comparison-color","comparison-ipa","comparison-status","comparison-count","comparison-source",
  "comparison-plain","comparison-letters","comparison-working"];
 if(required.some(id=>!$(id)))return;
 const placePaths={
@@ -110,10 +110,23 @@ function render(){
  if(init){
   if(color)init.style.color=palette.initial.tokens[r.initial];
   cards[2].appendChild(init);
+  if($("comparison-ipa").checked){
+   if(typeof feature.workingIPACandidate==="string"&&feature.workingIPACandidate.length){
+    cards[2].appendChild(get("p","Working IPA initial only: /"+
+     feature.workingIPACandidate+"/ · not an independently confirmed sound or whole syllable",
+      "comparison-ipa"));
+   }else cards[2].appendChild(get("p",
+    "No independent consonantal IPA initial for this spelling-only onset","comparison-ipa"));
+  }
   cards[2].appendChild(get("p","Working initial: "+feature.place+" / "+
    feature.manner+" / "+feature.aspiration,"comparison-note"));
- }else cards[2].appendChild(get("p","Orthographic onset "+r.initial+
-  " only; no consonantal figure","comparison-note"));
+ }else{
+  cards[2].appendChild(get("p","Orthographic onset "+r.initial+
+   " only; no consonantal figure","comparison-note"));
+  if($("comparison-ipa").checked)
+   cards[2].appendChild(get("p","No standalone consonant IPA for this source spelling convention",
+    "comparison-ipa"));
+ }
  if(status==="working_candidate_without_listed_context_flag"){
   const v=simple.get(r.final),fig=simpleFigure(v);
   if(color)fig.style.color=palette.final.tokens[r.final];
@@ -195,6 +208,9 @@ async function load(){
   symbols=new Map(letters.records.map(x=>[x.token,x]));
   primitive=letters.primitives;
   if(initials.size!==24||simple.size!==6||risk.size!==108||symbols.size!==33||primitive.length!==9||
+    !onset.tokens.every(x=>x.category==="conventional_pinyin_initial"?
+      typeof x.workingIPACandidate==="string"&&x.workingIPACandidate.length>0:
+      x.workingIPACandidate===null)||
     !onset.tokens.every(x=>x.category!=="conventional_pinyin_initial"||
      Object.hasOwn(placePaths,x.place)&&Object.hasOwn(mannerPaths,x.manner)&&
      (x.aspiration==="none"||Object.hasOwn(breathPaths,x.aspiration)))||
@@ -243,5 +259,6 @@ $("comparison-prev").addEventListener("click",()=>{if(citation.length)choose(Mat
 $("comparison-next").addEventListener("click",()=>{if(citation.length)choose(Math.min(citation.length,selected+2));});
 $("comparison-reading").addEventListener("change",render);
 $("comparison-color").addEventListener("change",render);
+$("comparison-ipa").addEventListener("change",render);
 load();
 })();

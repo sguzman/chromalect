@@ -15,3 +15,5 @@ The independent visual-comparison protocol must preserve the source Unicode char
 The source-independent status gate is defined by `data/phonetics/mandarin-encoding-comparison-cohorts-v0.1.json`. The recomputing builder is `tools/glyph-pipeline/mandarin_encoding_comparison_cohorts.mjs`. All counts are independently sourced from the citation tranche, six-simple-final candidate file, written-final letter control, and contextual spelling caution index. No new IPA values, lexical senses, corpus sentences, or changes to existing color identities are introduced.
 
 **Acceptance still outstanding:** expert review of the Mandarin inventory, full phonological rather than written spelling decoder, typography/accessibility comparison, human decoding and learning tests.
+
+The interactive comparison also offers an opt-in **working broad IPA label for the conventional consonantal initial only**. It reuses the original 21-category source candidate vocabulary and displays no consonantal IPA for orthographic y/w/zero-onset conventions. No rhyme, tone sandhi, complete syllable IPA, or phonemic approval is inferred from this label.

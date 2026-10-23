@@ -17,6 +17,7 @@ border-radius:12px;background:var(--panel);padding:18px;align-items:center;overf
 .comparison-spelling{font-size:20px}
 .comparison-note{font-size:13px;color:var(--sub);text-align:center;margin:4px 0}
 .comparison-withheld{font-size:13px;padding:10px;border:1px solid var(--border);border-radius:7px;text-align:center}
+.comparison-ipa{font-size:13px;text-align:center;border-bottom:1px dashed var(--border);padding:4px}
 .comparison-initial-svg{height:54px;max-width:100%}
 .comparison-vowel-svg{height:85px;max-width:100%}
 .comparison-letters-svg{height:52px;max-width:100%;overflow:visible}
@@ -25,13 +26,14 @@ border-radius:12px;background:var(--panel);padding:18px;align-items:center;overf
 </style></head><body><header class="wrap"><div class="brand"><b>CHROMALECT</b><small>Language, made visible</small></div></header>
 <main class="wrap"><div class="eyebrow">First-tranche research · source-anchored visual controls</div>
 <h1>Three ways to display the same Mandarin citation</h1>
-<p class="intro">Compare plain Pinyin with an arbitrary reversible written-letter code and provisional articulatory shapes. Each lane retains the original Chinese character and source Pinyin. A written final with a caution flag cannot receive a proposed vowel-feature picture here; unflagged features remain unapproved hypotheses, not measured speech.</p>
+<p class="intro">Compare plain Pinyin with an arbitrary reversible written-letter code and provisional articulatory shapes. Each lane retains the original Chinese character and source Pinyin. The optional IPA label, when available, describes the provisional consonantal initial only, never an entire syllable. A written final with a caution flag cannot receive a proposed vowel-feature picture here; unflagged features remain unapproved hypotheses, not measured speech.</p>
 <div class="comparison-controls">
 <label for="comparison-rank">Character or rank<input id="comparison-rank" type="text" value="1" placeholder="e.g. 十 or 4"></label>
 <label for="comparison-reading">Source reading<select id="comparison-reading"></select></label>
 <button id="comparison-prev" type="button">Previous character</button>
 <button id="comparison-next" type="button">Next character</button>
 <label class="comparison-check"><input type="checkbox" id="comparison-color"> Optional unchanged identity colors</label>
+<label class="comparison-check"><input type="checkbox" id="comparison-ipa"> Provisional IPA for the initial only</label>
 </div>
 <p id="comparison-status" role="status" aria-live="polite">Loading pinned source records.</p>
 <p id="comparison-source"></p>
