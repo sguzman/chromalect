@@ -438,6 +438,7 @@ jobs:
           node --check tools/glyph-pipeline/heldout_color_warning_gallery.mjs
           node tools/glyph-pipeline/heldout_color_warning_gallery.mjs --write
           node tools/glyph-pipeline/heldout_color_warning_gallery.mjs --check
+          node tools/glyph-pipeline/heldout_color_warning_gallery_smoke.mjs
           node --check site/heldout-color-warning-review.js
           node tools/glyph-pipeline/heldout_color_warning_viewer_smoke.mjs
           test -s site/heldout-color-warning-review.html
