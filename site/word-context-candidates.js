@@ -3,7 +3,7 @@
 "use strict";
 const $=id=>document.getElementById(id);
 if(["word-query","word-scope","word-status","word-stats","word-results"].some(id=>!$(id)))return;
-let entries=[],contributorMap=new Map(),liveAuditMap=new Map();
+let entries=[],contributorMap=new Map(),liveAuditMap=new Map(),machineHintMap=new Map();
 function render(){
  const q=$("word-query").value.trim(),scope=$("word-scope").value;
  const shown=entries.filter(r=>(scope==="all"||(scope==="with"?r.sentenceIds.length>0:r.sentenceIds.length===0))&&
@@ -32,7 +32,8 @@ function render(){
    if(!live)throw Error("Missing live license observation for source ID");
    by.textContent=" · contributor: "+attribution.contributor+
     " · "+live.observedLiveLicense+" observed 2026-10-23"+
-    " · source text unchanged · quotation clearance and pronunciation pending";
+    " · source text unchanged · ICU word segmentation: "+machineHintMap.get(id).segmentationHint+
+    " (machine hint only) · quotation clearance and pronunciation pending";
    li.appendChild(a);li.appendChild(by);list.appendChild(li);
   }
   if(!r.sentenceIds.length){
@@ -48,14 +49,15 @@ function render(){
 }
 async function load(){
  try{
-  const [leadResponse,matchResponse,creditResponse,auditResponse]=await Promise.all([
+  const [leadResponse,matchResponse,creditResponse,auditResponse,hintResponse]=await Promise.all([
    fetch("semantic/dictionary-word-surface-leads-v0.1.json"),
    fetch("semantic/tatoeba-word-surface-id-index-v0.1.json"),
    fetch("semantic/tatoeba-word-candidate-attribution-v0.1.json"),
-   fetch("semantic/tatoeba-live-word-record-audit-summary-v0.1.json")]);
-  if(!leadResponse.ok||!matchResponse.ok||!creditResponse.ok||!auditResponse.ok)throw Error("Missing source data");
-  const [source,match,credits,audit]=await Promise.all([
-   leadResponse.json(),matchResponse.json(),creditResponse.json(),auditResponse.json()]);
+   fetch("semantic/tatoeba-live-word-record-audit-summary-v0.1.json"),
+   fetch("semantic/tatoeba-icu-word-segmentation-index-v0.1.json")]);
+  if(!leadResponse.ok||!matchResponse.ok||!creditResponse.ok||!auditResponse.ok||!hintResponse.ok)throw Error("Missing source data");
+  const [source,match,credits,audit,hints]=await Promise.all([
+   leadResponse.json(),matchResponse.json(),creditResponse.json(),auditResponse.json(),hintResponse.json()]);
   if(source.schema!=="chromalect.semantic.dictionary-word-surface-leads.v0.1"||
      source.status!=="publisher_dictionary_word_leads_not_independent_usage_attestations"||
      source.leads.length!==8||
@@ -131,6 +133,32 @@ async function load(){
    liveAuditMap.set(record.sentenceId,record);
   }
   if(liveAuditMap.size!==27)throw Error("Incomplete per-sentence live source verification");
+
+  if(hints.schema!=="chromalect.semantic.tatoeba-icu-word-segmentation-index.v0.1"||
+     hints.status!=="machine_token_boundary_hints_only_no_independent_linguistic_approval"||
+     hints.source.corpusSnapshotSHA256!==match.source.uncompressedTSVSha256||
+     hints.source.sourceSentenceTextCopied!==false||
+     hints.summary.sourceRecordsChecked!==27||hints.summary.sourceIntegrityMatches!==27||
+     hints.summary.machineHints!==27||hints.summary.singleICUSegment!==17||
+     hints.summary.multipleICUSegments!==4||hints.summary.cutsICUSegment!==6||
+     hints.summary.independentlyVerifiedWordBoundaries!==0||
+     hints.summary.independentlyVerifiedReadings!==0||
+     hints.summary.approvedLexicalSenses!==0||hints.summary.quotationRightsCleared!==0)
+    throw Error("ICU machine research cannot be presented as verified word segmentation");
+  machineHintMap=new Map();
+  for(const r of hints.records){
+   if(!ids.has(r.sentenceId)||machineHintMap.has(r.sentenceId)||
+      r.leadId!==contributorMap.get(r.sentenceId)?.leadId||
+      !["single_icu_segment","multiple_icu_segments","cuts_icu_segment"].includes(r.segmentationHint)||
+      !Number.isInteger(r.offsetUTF16)||r.offsetUTF16<0||
+      !Number.isInteger(r.lengthUTF16)||r.lengthUTF16<2||
+      r.independentWordBoundaryVerified!==false||
+      r.contextualReadingVerified!==false||r.lexicalSenseApproved!==false)
+    throw Error("Machine segmentation hint is not source-aligned");
+   machineHintMap.set(r.sentenceId,r);
+  }
+  if(machineHintMap.size!==27)throw Error("Incomplete source machine segmentation diagnostics");
+
   render();
  }catch(error){entries=[];$("word-status").textContent="Unable to validate word-source records: "+error.message;}
 }
