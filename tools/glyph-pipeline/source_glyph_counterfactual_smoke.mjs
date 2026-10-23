@@ -73,6 +73,15 @@ assert.equal(out.glyphs[0].independentGlyphValidation,"pending");
 assert.equal(JSON.stringify(assets),original);
 assert.equal(JSON.stringify(palette),colors);
 assert.deepEqual(run(),{manifest:out,outputFiles});
+const duplicates=structuredClone(manifest),duplicateAssets=structuredClone(assets);
+duplicates.glyphs[0].components.splice(1,0,component(first));
+duplicates.glyphs[0].source_path_owner_ids.splice(1,0,first.id);
+duplicateAssets["U+4E00.svg"]=shape([first,first,unhinted]);
+const repeated=run(catalog,duplicates,palette,duplicateAssets);
+assert.equal(repeated.manifest.summary.alteredSourcePathFills,2);
+assert.equal(repeated.manifest.summary.unchangedSourcePathFills,2);
+assert.equal(repeated.manifest.glyphs[0].changedComponentIds.length,1);
+
 for(const mutate of [
  (a,b,c,d)=>{b.palette_ref="mandarin-component-identity@0.7.0";},
  (a,b,c,d)=>{b.glyphs[0].independently_visually_certified=true;},
