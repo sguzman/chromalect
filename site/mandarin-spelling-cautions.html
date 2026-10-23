@@ -1,0 +1,39 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark">
+<title>Mandarin spelling cautions · Chromalect</title>
+<link rel="stylesheet" href="style.css"><script src="theme.js"></script>
+<script src="mandarin-spelling-cautions.js" defer></script>
+<style>
+.caution-controls{display:flex;flex-wrap:wrap;gap:14px;margin:20px 0}
+.caution-controls label{display:grid;gap:6px}
+.caution-controls input,.caution-controls select{font:inherit;border:1px solid var(--border);
+border-radius:8px;background:var(--panel);color:var(--ink);padding:10px}
+.caution-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px;margin:20px 0}
+.caution-card{background:var(--panel);border:1px solid var(--border);border-radius:12px;padding:16px}
+.caution-card h2{font-size:18px;margin:0 0 12px;overflow-wrap:anywhere}
+.caution-meta{color:var(--sub);font-size:13px;overflow-wrap:anywhere}
+.caution-examples{font-size:14px;overflow-wrap:anywhere}
+</style></head><body>
+<header class="wrap"><div class="brand"><b>CHROMALECT</b><small>Language, made visible</small></div></header>
+<main class="wrap"><div class="eyebrow">Mandarin research · provisional external references</div>
+<h1>Source-specific Pinyin spelling cautions</h1>
+<p class="intro">Nine warning categories from a pinned first-tranche Mandarin citation corpus. Published orthographic conventions are distinguished from references that merely suggest further phonetic investigation. Neither kind independently certifies IPA, acoustic speech realizations, phonological contrasts, or word-context pronunciation.</p>
+<div class="caution-controls">
+<label for="caution-filter">Evidence category<select id="caution-filter">
+<option value="all">All nine caution families</option>
+<option value="spelling">Published spelling-rule comparisons</option>
+<option value="phonetic">Phonetic research leads only</option>
+</select></label>
+<label for="caution-query">Find source reading, spelling or family
+<input id="caution-query" type="search" placeholder="e.g. un, labial, 云"></label>
+</div>
+<p id="caution-summary">Loading pinned source evidence.</p>
+<p id="caution-status" role="status" aria-live="polite">Validating reference scope and reading identifiers.</p>
+<p id="caution-count"></p>
+<div id="caution-list" class="caution-list"></div>
+<p>Counts are limited to the first 1,000 source characters and may include repeated written initial/final/tone triples. Evidence links provide research starting points, not independently assessed transcriptions. See the <a href="https://github.com/sguzman/chromalect/blob/main/docs/unadjudicated-compound-final-review-queue.md">review protocol</a> and the <a href="phonetics/mandarin-final-spelling-context-gates-v0.1.json">original caution data</a>.</p>
+</main><footer class="wrap">
+<a href="mandarin-compound-final-queue.html">Deferred written finals</a> ·
+<a href="mandarin-encoding-comparison.html">Encoding comparison</a> ·
+<a href="roadmap-status.html">Research roadmap</a>
+</footer></body></html>
