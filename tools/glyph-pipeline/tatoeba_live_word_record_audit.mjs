@@ -5,7 +5,7 @@ import {createHash} from "node:crypto";
 import {pathToFileURL} from "node:url";
 const sha=text=>createHash("sha256").update(text,"utf8").digest("hex");
 export function parseSentence(json,credit,word,originalHash){
- const x=json?.sentence??json?.data?.sentence??json;
+ const x=json?.data?.sentence??json?.data??json?.sentence??json;
  if(!x||typeof x!=="object"||String(x.id)!==credit.sentenceId||
     typeof x.text!=="string"||!x.text||typeof x.lang!=="string"||
     typeof x.owner!=="string"||!x.owner||typeof x.license!=="string"||!x.license)

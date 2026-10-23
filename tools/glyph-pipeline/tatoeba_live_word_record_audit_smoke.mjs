@@ -11,6 +11,9 @@ const original=hashes.records.find(r=>r.sentenceId===c.sentenceId).textSha256;
 const x=parseSentence({sentence:{id:Number(c.sentenceId),owner:c.contributor,lang:"cmn",
  license:"CC BY 2.0 FR",text:"这是关于长度的合成测试。",is_unapproved:false}},c,w,original);
 assert.equal(x.status,"live_record_read");
+const wrapped=parseSentence({data:{id:Number(c.sentenceId),owner:c.contributor,
+ lang:"cmn",license:"CC BY 2.0 FR",text:"这是一句长度测试。",is_unapproved:false}},c,w,original);
+assert.equal(wrapped.status,"live_record_read");
 assert.equal(x.ownerMatchesSnapshot,true);
 assert.equal(x.individualLicenseLabelObserved,true);
 assert.equal(x.stillContainsWrittenWord,true);
