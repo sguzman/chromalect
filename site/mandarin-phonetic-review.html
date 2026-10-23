@@ -1,0 +1,55 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark">
+<title>Local Mandarin phonetic research intake · Chromalect</title>
+<link rel="stylesheet" href="style.css"><script src="theme.js"></script>
+<script src="mandarin-phonetic-review.js" defer></script>
+<style>
+.phonetic-form{display:grid;gap:14px;max-width:900px;padding:20px;border:1px solid var(--border);
+border-radius:12px;background:var(--panel);margin:20px 0}
+.phonetic-form label{display:grid;gap:6px}
+.phonetic-form select,.phonetic-form input,.phonetic-form textarea{
+font:inherit;color:var(--ink);background:var(--tile-bg);border:1px solid var(--border);
+border-radius:9px;padding:10px;width:100%;box-sizing:border-box}
+.phonetic-form textarea{min-height:100px;resize:vertical}
+.phonetic-actions{display:flex;flex-wrap:wrap;gap:12px}
+.phonetic-actions button{font:inherit;border-radius:8px;border:1px solid var(--border);
+background:var(--tile-bg);color:var(--ink);padding:10px;cursor:pointer}
+.phonetic-meta{color:var(--sub);overflow-wrap:anywhere}
+</style></head><body>
+<header class="wrap"><div class="brand"><b>CHROMALECT</b><small>Language, made visible</small></div></header>
+<main class="wrap"><div class="eyebrow">Mandarin phonetics · local research only</div>
+<h1>Citation-specific phonetic review intake</h1>
+<p class="intro">Record tentative evidence for a source-pinned character reading and its actual spelling-caution family. Working symbols are not approved IPA or verified speech sounds. This interface retains drafts only in page memory and generates a local JSON record; it does not upload, store, certify, or collect participant data.</p>
+<div class="phonetic-form">
+<label for="pc-family">Caution family<select id="pc-family"></select></label>
+<label for="pc-candidate">Pinned Chinese character and Pinyin reading<select id="pc-candidate"></select></label>
+<p id="pc-source" class="phonetic-meta"></p>
+<label for="pc-assessment">Preliminary assessment<select id="pc-assessment">
+<option value="undetermined">Undetermined</option>
+<option value="tentative_lead">Tentative source comparison</option>
+<option value="needs_correction">Source comparison needs correction</option>
+</select></label>
+<label for="pc-evidence">Published or independently checkable HTTPS evidence URL
+<input type="url" id="pc-evidence" maxlength="1000" autocomplete="off" placeholder="https://..."></label>
+<label for="pc-rationale">Technical rationale and unresolved questions
+<textarea id="pc-rationale" maxlength="3000" placeholder="Describe the source, its scope, and why the comparison remains provisional. Do not paste licensed texts."></textarea></label>
+<label for="pc-variety">Declared language variety / speaker context
+<input type="text" id="pc-variety" maxlength="120" placeholder="e.g. Mainland Standard Mandarin; proposed scope"></label>
+<label for="pc-convention">Transcription convention
+<input type="text" id="pc-convention" maxlength="120" placeholder="e.g. working broad IPA hypothesis; not approved"></label>
+<label for="pc-transcription">Optional provisional single-line transcription
+<input type="text" id="pc-transcription" maxlength="120" placeholder="Research hypothesis, not a verified phoneme"></label>
+<div class="phonetic-actions">
+<button id="pc-save" type="button">Keep local draft</button>
+<button id="pc-export" type="button">Generate local JSON</button>
+</div>
+<p id="pc-count" class="phonetic-meta">0 local draft notes · 0 independently approved</p>
+<p id="pc-status" role="status" aria-live="polite">Loading pinned evidence.</p>
+<label for="pc-output">Local JSON export (copy and validate separately)
+<textarea id="pc-output" readonly spellcheck="false"></textarea></label>
+</div>
+<p class="phonetic-meta">Exports require a separate validation pass under the <a href="../docs/mandarin-phonetic-caution-review-intake.md">source-pinned review protocol</a>. Evidence must be independently evaluated before any phonological, acoustic, IPA, or learning claim can be accepted.</p>
+</main>
+<footer class="wrap"><a href="mandarin-spelling-cautions.html">Nine source caution families</a> ·
+<a href="mandarin-encoding-comparison.html">Encoding comparison</a> ·
+<a href="roadmap-status.html">Research roadmap</a></footer></body></html>
