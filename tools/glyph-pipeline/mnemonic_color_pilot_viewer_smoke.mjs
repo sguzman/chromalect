@@ -2,9 +2,11 @@ import assert from "node:assert/strict";
 import fs from "node:fs";
 import vm from "node:vm";
 import {deriveMnemonicGroupPilot} from "./mnemonic_group_color_pilot.mjs";
+import {deriveMnemonicPartitionBenchmark} from "./mnemonic_partition_benchmark.mjs";
 const palette=JSON.parse(fs.readFileSync(
  "palettes/mandarin-component-identity-v0.6.json","utf8"));
 const study=deriveMnemonicGroupPilot(palette);
+const benchmark=deriveMnemonicPartitionBenchmark(palette);
 const script=fs.readFileSync("site/mnemonic-color-pilot.js","utf8");
 const html=fs.readFileSync("site/mnemonic-color-pilot.html","utf8");
 class Element{
@@ -16,12 +18,12 @@ class Element{
  addEventListener(event,fn){this.events[event]=fn;}
  setAttribute(k,v){this.attrs[k]=v;}
 }
-function setup(d=study,p=palette){
- const ids=["mg-filter","mg-status","mg-summary","mg-count","mg-list"];
+function setup(d=study,p=palette,b=benchmark){
+ const ids=["mg-filter","mg-status","mg-summary","mg-benchmark","mg-count","mg-list"];
  const nodes=Object.fromEntries(ids.map(id=>[id,new Element()]));
  const ctx={
   document:{getElementById:id=>nodes[id],createElement:()=>new Element()},
-  fetch:async url=>({ok:true,json:async()=>url.startsWith("palettes/")?p:d}),
+  fetch:async url=>({ok:true,json:async()=>url.startsWith("palettes/")?p:url.startsWith("mnemonic-partition-")?b:d}),
   Map,Set,Math,Number,Object,Array,Error,JSON
  };
  vm.runInNewContext(script,ctx);return nodes;
@@ -36,6 +38,8 @@ assert.equal(ui["mg-filter"].children.length,9);
 assert.match(ui["mg-summary"].textContent,/40 source-pinned/);
 assert.match(ui["mg-summary"].textContent,/88 same-hint pairs/);
 assert.match(ui["mg-summary"].textContent,/692 different-hint pairs/);
+assert.match(ui["mg-benchmark"].textContent,/10,000 seeded/);
+assert.match(ui["mg-benchmark"].textContent,/Original labels fall inside/);
 assert.match(ui["mg-summary"].textContent,/No proposed semantic grouping is verified/);
 assert.match(ui["mg-list"].children[0].children[0].textContent,/human body/);
 assert.equal(ui["mg-list"].children[0].children[2].children.length,8);
@@ -59,14 +63,17 @@ for(const edit of [
  (d,p)=>{d.groups[0].componentColors[0].hex="#000000";},
  (d,p)=>{d.groups[0].withinPairs[0].deltaOk=2;},
  (d,p)=>{p.components[0].mnemonic_group_hint="moved";},
- (d,p)=>{d.groups.pop();}
+ (d,p)=>{d.groups.pop();},
+ (d,p,b)=>{b.provenance.paletteRecolored=true;},
+ (d,p,b)=>{b.result.lexicalSemanticFamiliesApproved=1;},
+ (d,p,b)=>{b.result.observedWithinHintMeanDeltaOk=0.5;}
 ]){
- const d=structuredClone(study),p=structuredClone(palette);edit(d,p);
- const refused=setup(d,p);await settle(refused);
+ const d=structuredClone(study),p=structuredClone(palette),b=structuredClone(benchmark);edit(d,p,b);
+ const refused=setup(d,p,b);await settle(refused);
  assert.equal(refused["mg-list"].children.length,0);
  assert.match(refused["mg-status"].textContent,/Unable to validate/);
 }
-for(const id of ["mg-filter","mg-status","mg-summary","mg-count","mg-list"])
+for(const id of ["mg-filter","mg-status","mg-summary","mg-benchmark","mg-count","mg-list"])
  assert.match(html,new RegExp('id="'+id+'"'));
 assert.ok(!script.includes("innerHTML"));
-console.log("Eight source-only mnemonic groups, 40 immutable colors, 88 detailed pairs and nine nonapproval checks.");
+console.log("Eight source-only mnemonic groups, 40 immutable colors, 88 detailed pairs and twelve nonapproval checks.");
