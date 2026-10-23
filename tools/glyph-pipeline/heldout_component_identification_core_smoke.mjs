@@ -22,6 +22,8 @@ const seed=20261023,plan=core.plan(items,seed);
 assert.equal(plan.filter(t=>t.presentation==="original").length,25);
 assert.equal(plan.filter(t=>t.presentation==="experimental").length,24);
 assert.equal(plan.filter(t=>t.correctLeft).length,25);
+assert.deepEqual(plan.map(t=>t.sourceIndex).slice().sort((a,b)=>a-b),
+ Array.from({length:49},(_,i)=>i));
 assert.deepEqual(JSON.parse(JSON.stringify(plan)),
  JSON.parse(JSON.stringify(core.plan(items,seed))));
 assert.notEqual(plan.map(x=>x.id).join("|"),
@@ -44,6 +46,9 @@ assert.equal(exp.session.balancedOriginalTreatments,25);
 assert.equal(exp.session.balancedCorrectLeft,25);
 assert.equal(exp.observations.length,49);
 assert.equal(core.validateSession(exp,items).observations,49);
+const alteredPlan=plan.map(t=>({...t}));
+alteredPlan[0].sourceIndex=alteredPlan[1].sourceIndex;
+assert.throws(()=>core.exportSession(alteredPlan,all,display,seed,date));
 const partial=core.exportSession(plan,new Map([[plan[0].id,"cannot_judge"]]),
  display,seed,date);
 assert.equal(core.validateSession(partial,items).observations,1);
