@@ -241,6 +241,8 @@ jobs:
           node tools/glyph-pipeline/word_context_review_priority_smoke.mjs
           node tools/glyph-pipeline/pinyin_citation_roundtrip.mjs --check
           node tools/glyph-pipeline/pinyin_citation_roundtrip_smoke.mjs
+          node tools/glyph-pipeline/cedict_numeric_pinyin_codec.mjs --check
+          node tools/glyph-pipeline/cedict_numeric_pinyin_codec_smoke.mjs
           node --check site/pinyin-citations.js
           node tools/glyph-pipeline/pinyin_citations_viewer_smoke.mjs
           test -s site/pinyin-citations.html
@@ -281,6 +283,7 @@ jobs:
           node tools/glyph-pipeline/semantic_coverage_smoke.mjs
           mkdir -p site/phonetics
           cp data/phonetics/pinyin-citation-orthography-audit-v0.1.json site/phonetics/
+          cp data/phonetics/cedict-numeric-pinyin-orthography-v0.1.json site/phonetics/
           mkdir -p site/semantic
           cp data/semantic/mandarin-1000-v0.1.json site/semantic/mandarin-1000-v0.1.json
           cp data/semantic/cedict-crossref/manifest-v0.1.json site/semantic/lexical-crossref-v0.1.json

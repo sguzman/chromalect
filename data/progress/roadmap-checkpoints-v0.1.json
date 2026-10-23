@@ -125,13 +125,17 @@
       "key": "phonetic-notation",
       "label": "Phonetic notation experiment",
       "sourceHeadingPrefix": "Phase 2",
-      "complete": 1,
+      "complete": 2,
       "pending": 5,
-      "total": 6,
-      "checklistPercent": 17,
+      "total": 7,
+      "checklistPercent": 29,
       "checkpoints": [
         {
           "description": "Establish a reversible, source-pinned orthographic Pinyin citation baseline for all 1,171 first-tranche readings, without declaring phonemic or contextual verification.",
+          "state": "complete"
+        },
+        {
+          "description": "Decode 1,392/1,393 pinned CC-CEDICT numbered Pinyin labels into the same orthographic tokens, preserving the exceptional r5 record and source capitalization.",
           "state": "complete"
         },
         {
