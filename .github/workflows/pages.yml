@@ -439,6 +439,16 @@ jobs:
           node tools/glyph-pipeline/heldout_color_warning_gallery.mjs --write
           node tools/glyph-pipeline/heldout_color_warning_gallery.mjs --check
           node tools/glyph-pipeline/heldout_color_warning_gallery_smoke.mjs
+          node --check tools/glyph-pipeline/heldout_component_identification_targets.mjs
+          node tools/glyph-pipeline/heldout_component_identification_targets.mjs --write
+          node tools/glyph-pipeline/heldout_component_identification_targets.mjs --check
+          node tools/glyph-pipeline/heldout_component_identification_targets_smoke.mjs
+          node --check site/heldout-component-identification-core.js
+          node --check site/heldout-component-identification.js
+          node tools/glyph-pipeline/heldout_component_identification_core_smoke.mjs
+          node tools/glyph-pipeline/heldout_component_identification_viewer_smoke.mjs
+          test -s site/heldout-component-identification.html
+          test -s site/glyphs/research/heldout-identification-target-v0.1/index-v0.1.json
           node --check site/heldout-color-warning-review.js
           node tools/glyph-pipeline/heldout_color_warning_viewer_smoke.mjs
           node --check site/heldout-blind-color-core.js
