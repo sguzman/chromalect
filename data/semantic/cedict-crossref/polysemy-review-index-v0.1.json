@@ -1,0 +1,8021 @@
+{
+  "schema": "chromalect.semantic.polysemy-review-index.v0.1",
+  "status": "automated_dictionary_complexity_inventory_not_sense_validation",
+  "source": "polysemy-triage-v0.1.json",
+  "summary": {
+    "charactersAudited": 1000,
+    "charsWithMultipleDictionaryReadings": 339,
+    "charsWithEightOrMoreDefinitionFragments": 232,
+    "charsWithOneCandidateDespiteMultipleCues": 367,
+    "charsWithNoEmojiCandidate": 119,
+    "higherPriority": 142,
+    "targetedPriority": 287,
+    "deferredOnly": 67,
+    "baseline": 504,
+    "independentLexicalApproved": 0,
+    "independentEmojiApproved": 0,
+    "productionVerified": 0
+  },
+  "records": [
+    {
+      "rank": 1,
+      "character": "一",
+      "readingCount": 1,
+      "definitionFragmentCount": 11,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 2,
+      "character": "乙",
+      "readingCount": 2,
+      "definitionFragmentCount": 11,
+      "selectedMeaningCount": 0,
+      "triageTier": "higher"
+    },
+    {
+      "rank": 3,
+      "character": "二",
+      "readingCount": 1,
+      "definitionFragmentCount": 3,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 4,
+      "character": "十",
+      "readingCount": 1,
+      "definitionFragmentCount": 2,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 5,
+      "character": "丁",
+      "readingCount": 2,
+      "definitionFragmentCount": 7,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 6,
+      "character": "厂",
+      "readingCount": 2,
+      "definitionFragmentCount": 7,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 7,
+      "character": "七",
+      "readingCount": 1,
+      "definitionFragmentCount": 2,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 8,
+      "character": "卜",
+      "readingCount": 3,
+      "definitionFragmentCount": 5,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 9,
+      "character": "八",
+      "readingCount": 1,
+      "definitionFragmentCount": 2,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 10,
+      "character": "人",
+      "readingCount": 1,
+      "definitionFragmentCount": 4,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 11,
+      "character": "入",
+      "readingCount": 1,
+      "definitionFragmentCount": 6,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 12,
+      "character": "儿",
+      "readingCount": 2,
+      "definitionFragmentCount": 4,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 13,
+      "character": "匕",
+      "readingCount": 1,
+      "definitionFragmentCount": 3,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 14,
+      "character": "几",
+      "readingCount": 2,
+      "definitionFragmentCount": 6,
+      "selectedMeaningCount": 0,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 15,
+      "character": "九",
+      "readingCount": 1,
+      "definitionFragmentCount": 2,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 16,
+      "character": "刁",
+      "readingCount": 2,
+      "definitionFragmentCount": 3,
+      "selectedMeaningCount": 0,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 17,
+      "character": "了",
+      "readingCount": 3,
+      "definitionFragmentCount": 10,
+      "selectedMeaningCount": 1,
+      "triageTier": "higher"
+    },
+    {
+      "rank": 18,
+      "character": "刀",
+      "readingCount": 2,
+      "definitionFragmentCount": 9,
+      "selectedMeaningCount": 1,
+      "triageTier": "higher"
+    },
+    {
+      "rank": 19,
+      "character": "力",
+      "readingCount": 2,
+      "definitionFragmentCount": 6,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 20,
+      "character": "乃",
+      "readingCount": 1,
+      "definitionFragmentCount": 9,
+      "selectedMeaningCount": 0,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 21,
+      "character": "又",
+      "readingCount": 1,
+      "definitionFragmentCount": 5,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 22,
+      "character": "三",
+      "readingCount": 2,
+      "definitionFragmentCount": 3,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 23,
+      "character": "干",
+      "readingCount": 3,
+      "definitionFragmentCount": 23,
+      "selectedMeaningCount": 0,
+      "triageTier": "higher"
+    },
+    {
+      "rank": 24,
+      "character": "于",
+      "readingCount": 2,
+      "definitionFragmentCount": 12,
+      "selectedMeaningCount": 0,
+      "triageTier": "higher"
+    },
+    {
+      "rank": 25,
+      "character": "亏",
+      "readingCount": 1,
+      "definitionFragmentCount": 5,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 26,
+      "character": "工",
+      "readingCount": 1,
+      "definitionFragmentCount": 7,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 27,
+      "character": "土",
+      "readingCount": 2,
+      "definitionFragmentCount": 10,
+      "selectedMeaningCount": 0,
+      "triageTier": "higher"
+    },
+    {
+      "rank": 28,
+      "character": "士",
+      "readingCount": 2,
+      "definitionFragmentCount": 8,
+      "selectedMeaningCount": 1,
+      "triageTier": "higher"
+    },
+    {
+      "rank": 29,
+      "character": "才",
+      "readingCount": 1,
+      "definitionFragmentCount": 12,
+      "selectedMeaningCount": 0,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 30,
+      "character": "下",
+      "readingCount": 1,
+      "definitionFragmentCount": 11,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 31,
+      "character": "寸",
+      "readingCount": 1,
+      "definitionFragmentCount": 3,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 32,
+      "character": "大",
+      "readingCount": 2,
+      "definitionFragmentCount": 15,
+      "selectedMeaningCount": 0,
+      "triageTier": "higher"
+    },
+    {
+      "rank": 33,
+      "character": "丈",
+      "readingCount": 1,
+      "definitionFragmentCount": 4,
+      "selectedMeaningCount": 0,
+      "triageTier": "deferred"
+    },
+    {
+      "rank": 34,
+      "character": "与",
+      "readingCount": 3,
+      "definitionFragmentCount": 5,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 35,
+      "character": "万",
+      "readingCount": 3,
+      "definitionFragmentCount": 4,
+      "selectedMeaningCount": 0,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 36,
+      "character": "上",
+      "readingCount": 2,
+      "definitionFragmentCount": 11,
+      "selectedMeaningCount": 1,
+      "triageTier": "higher"
+    },
+    {
+      "rank": 37,
+      "character": "小",
+      "readingCount": 1,
+      "definitionFragmentCount": 4,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 38,
+      "character": "口",
+      "readingCount": 1,
+      "definitionFragmentCount": 3,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 39,
+      "character": "山",
+      "readingCount": 2,
+      "definitionFragmentCount": 7,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 40,
+      "character": "巾",
+      "readingCount": 1,
+      "definitionFragmentCount": 4,
+      "selectedMeaningCount": 0,
+      "triageTier": "deferred"
+    },
+    {
+      "rank": 41,
+      "character": "千",
+      "readingCount": 1,
+      "definitionFragmentCount": 2,
+      "selectedMeaningCount": 0,
+      "triageTier": "deferred"
+    },
+    {
+      "rank": 42,
+      "character": "乞",
+      "readingCount": 1,
+      "definitionFragmentCount": 1,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 43,
+      "character": "川",
+      "readingCount": 2,
+      "definitionFragmentCount": 5,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 44,
+      "character": "亿",
+      "readingCount": 1,
+      "definitionFragmentCount": 1,
+      "selectedMeaningCount": 0,
+      "triageTier": "deferred"
+    },
+    {
+      "rank": 45,
+      "character": "个",
+      "readingCount": 1,
+      "definitionFragmentCount": 6,
+      "selectedMeaningCount": 0,
+      "triageTier": "deferred"
+    },
+    {
+      "rank": 46,
+      "character": "夕",
+      "readingCount": 1,
+      "definitionFragmentCount": 3,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 47,
+      "character": "久",
+      "readingCount": 1,
+      "definitionFragmentCount": 2,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 48,
+      "character": "么",
+      "readingCount": 3,
+      "definitionFragmentCount": 4,
+      "selectedMeaningCount": 0,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 49,
+      "character": "勺",
+      "readingCount": 1,
+      "definitionFragmentCount": 4,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 50,
+      "character": "凡",
+      "readingCount": 1,
+      "definitionFragmentCount": 13,
+      "selectedMeaningCount": 0,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 51,
+      "character": "丸",
+      "readingCount": 1,
+      "definitionFragmentCount": 3,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 52,
+      "character": "及",
+      "readingCount": 1,
+      "definitionFragmentCount": 4,
+      "selectedMeaningCount": 0,
+      "triageTier": "deferred"
+    },
+    {
+      "rank": 53,
+      "character": "广",
+      "readingCount": 2,
+      "definitionFragmentCount": 4,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 54,
+      "character": "亡",
+      "readingCount": 1,
+      "definitionFragmentCount": 6,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 55,
+      "character": "门",
+      "readingCount": 2,
+      "definitionFragmentCount": 23,
+      "selectedMeaningCount": 1,
+      "triageTier": "higher"
+    },
+    {
+      "rank": 56,
+      "character": "丫",
+      "readingCount": 1,
+      "definitionFragmentCount": 4,
+      "selectedMeaningCount": 0,
+      "triageTier": "deferred"
+    },
+    {
+      "rank": 57,
+      "character": "义",
+      "readingCount": 2,
+      "definitionFragmentCount": 10,
+      "selectedMeaningCount": 1,
+      "triageTier": "higher"
+    },
+    {
+      "rank": 58,
+      "character": "之",
+      "readingCount": 1,
+      "definitionFragmentCount": 4,
+      "selectedMeaningCount": 0,
+      "triageTier": "deferred"
+    },
+    {
+      "rank": 59,
+      "character": "尸",
+      "readingCount": 1,
+      "definitionFragmentCount": 5,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 60,
+      "character": "己",
+      "readingCount": 1,
+      "definitionFragmentCount": 6,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 61,
+      "character": "已",
+      "readingCount": 1,
+      "definitionFragmentCount": 4,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 62,
+      "character": "巳",
+      "readingCount": 1,
+      "definitionFragmentCount": 2,
+      "selectedMeaningCount": 0,
+      "triageTier": "deferred"
+    },
+    {
+      "rank": 63,
+      "character": "弓",
+      "readingCount": 2,
+      "definitionFragmentCount": 5,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 64,
+      "character": "子",
+      "readingCount": 2,
+      "definitionFragmentCount": 9,
+      "selectedMeaningCount": 1,
+      "triageTier": "higher"
+    },
+    {
+      "rank": 65,
+      "character": "卫",
+      "readingCount": 2,
+      "definitionFragmentCount": 8,
+      "selectedMeaningCount": 1,
+      "triageTier": "higher"
+    },
+    {
+      "rank": 66,
+      "character": "也",
+      "readingCount": 2,
+      "definitionFragmentCount": 4,
+      "selectedMeaningCount": 0,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 67,
+      "character": "女",
+      "readingCount": 2,
+      "definitionFragmentCount": 4,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 68,
+      "character": "刃",
+      "readingCount": 1,
+      "definitionFragmentCount": 1,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 69,
+      "character": "飞",
+      "readingCount": 1,
+      "definitionFragmentCount": 1,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 70,
+      "character": "习",
+      "readingCount": 2,
+      "definitionFragmentCount": 4,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 71,
+      "character": "叉",
+      "readingCount": 3,
+      "definitionFragmentCount": 11,
+      "selectedMeaningCount": 1,
+      "triageTier": "higher"
+    },
+    {
+      "rank": 72,
+      "character": "马",
+      "readingCount": 2,
+      "definitionFragmentCount": 6,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 73,
+      "character": "乡",
+      "readingCount": 1,
+      "definitionFragmentCount": 4,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 74,
+      "character": "丰",
+      "readingCount": 2,
+      "definitionFragmentCount": 12,
+      "selectedMeaningCount": 1,
+      "triageTier": "higher"
+    },
+    {
+      "rank": 75,
+      "character": "王",
+      "readingCount": 3,
+      "definitionFragmentCount": 7,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 76,
+      "character": "开",
+      "readingCount": 1,
+      "definitionFragmentCount": 9,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 77,
+      "character": "井",
+      "readingCount": 2,
+      "definitionFragmentCount": 6,
+      "selectedMeaningCount": 0,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 78,
+      "character": "天",
+      "readingCount": 1,
+      "definitionFragmentCount": 3,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 79,
+      "character": "夫",
+      "readingCount": 2,
+      "definitionFragmentCount": 8,
+      "selectedMeaningCount": 1,
+      "triageTier": "higher"
+    },
+    {
+      "rank": 80,
+      "character": "元",
+      "readingCount": 2,
+      "definitionFragmentCount": 13,
+      "selectedMeaningCount": 1,
+      "triageTier": "higher"
+    },
+    {
+      "rank": 81,
+      "character": "无",
+      "readingCount": 1,
+      "definitionFragmentCount": 7,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 82,
+      "character": "云",
+      "readingCount": 2,
+      "definitionFragmentCount": 5,
+      "selectedMeaningCount": 2,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 83,
+      "character": "专",
+      "readingCount": 1,
+      "definitionFragmentCount": 8,
+      "selectedMeaningCount": 0,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 84,
+      "character": "丐",
+      "readingCount": 1,
+      "definitionFragmentCount": 4,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 85,
+      "character": "扎",
+      "readingCount": 3,
+      "definitionFragmentCount": 11,
+      "selectedMeaningCount": 0,
+      "triageTier": "higher"
+    },
+    {
+      "rank": 86,
+      "character": "艺",
+      "readingCount": 1,
+      "definitionFragmentCount": 2,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 87,
+      "character": "木",
+      "readingCount": 2,
+      "definitionFragmentCount": 8,
+      "selectedMeaningCount": 1,
+      "triageTier": "higher"
+    },
+    {
+      "rank": 88,
+      "character": "五",
+      "readingCount": 1,
+      "definitionFragmentCount": 2,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 89,
+      "character": "支",
+      "readingCount": 2,
+      "definitionFragmentCount": 9,
+      "selectedMeaningCount": 1,
+      "triageTier": "higher"
+    },
+    {
+      "rank": 90,
+      "character": "厅",
+      "readingCount": 1,
+      "definitionFragmentCount": 4,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 91,
+      "character": "不",
+      "readingCount": 1,
+      "definitionFragmentCount": 3,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 92,
+      "character": "犬",
+      "readingCount": 1,
+      "definitionFragmentCount": 1,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 93,
+      "character": "太",
+      "readingCount": 1,
+      "definitionFragmentCount": 5,
+      "selectedMeaningCount": 0,
+      "triageTier": "deferred"
+    },
+    {
+      "rank": 94,
+      "character": "区",
+      "readingCount": 2,
+      "definitionFragmentCount": 7,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 95,
+      "character": "历",
+      "readingCount": 1,
+      "definitionFragmentCount": 11,
+      "selectedMeaningCount": 2,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 96,
+      "character": "歹",
+      "readingCount": 1,
+      "definitionFragmentCount": 3,
+      "selectedMeaningCount": 0,
+      "triageTier": "deferred"
+    },
+    {
+      "rank": 97,
+      "character": "友",
+      "readingCount": 1,
+      "definitionFragmentCount": 1,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 98,
+      "character": "尤",
+      "readingCount": 2,
+      "definitionFragmentCount": 5,
+      "selectedMeaningCount": 0,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 99,
+      "character": "匹",
+      "readingCount": 2,
+      "definitionFragmentCount": 9,
+      "selectedMeaningCount": 0,
+      "triageTier": "higher"
+    },
+    {
+      "rank": 100,
+      "character": "车",
+      "readingCount": 3,
+      "definitionFragmentCount": 9,
+      "selectedMeaningCount": 1,
+      "triageTier": "higher"
+    },
+    {
+      "rank": 101,
+      "character": "巨",
+      "readingCount": 1,
+      "definitionFragmentCount": 4,
+      "selectedMeaningCount": 0,
+      "triageTier": "deferred"
+    },
+    {
+      "rank": 102,
+      "character": "牙",
+      "readingCount": 1,
+      "definitionFragmentCount": 3,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 103,
+      "character": "屯",
+      "readingCount": 2,
+      "definitionFragmentCount": 5,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 104,
+      "character": "戈",
+      "readingCount": 2,
+      "definitionFragmentCount": 2,
+      "selectedMeaningCount": 0,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 105,
+      "character": "比",
+      "readingCount": 3,
+      "definitionFragmentCount": 10,
+      "selectedMeaningCount": 1,
+      "triageTier": "higher"
+    },
+    {
+      "rank": 106,
+      "character": "互",
+      "readingCount": 1,
+      "definitionFragmentCount": 1,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 107,
+      "character": "切",
+      "readingCount": 2,
+      "definitionFragmentCount": 12,
+      "selectedMeaningCount": 1,
+      "triageTier": "higher"
+    },
+    {
+      "rank": 108,
+      "character": "瓦",
+      "readingCount": 1,
+      "definitionFragmentCount": 2,
+      "selectedMeaningCount": 0,
+      "triageTier": "deferred"
+    },
+    {
+      "rank": 109,
+      "character": "止",
+      "readingCount": 1,
+      "definitionFragmentCount": 4,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 110,
+      "character": "少",
+      "readingCount": 2,
+      "definitionFragmentCount": 7,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 111,
+      "character": "曰",
+      "readingCount": 1,
+      "definitionFragmentCount": 2,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 112,
+      "character": "日",
+      "readingCount": 2,
+      "definitionFragmentCount": 4,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 113,
+      "character": "中",
+      "readingCount": 3,
+      "definitionFragmentCount": 16,
+      "selectedMeaningCount": 1,
+      "triageTier": "higher"
+    },
+    {
+      "rank": 114,
+      "character": "贝",
+      "readingCount": 2,
+      "definitionFragmentCount": 4,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 115,
+      "character": "冈",
+      "readingCount": 1,
+      "definitionFragmentCount": 2,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 116,
+      "character": "内",
+      "readingCount": 1,
+      "definitionFragmentCount": 5,
+      "selectedMeaningCount": 0,
+      "triageTier": "deferred"
+    },
+    {
+      "rank": 117,
+      "character": "水",
+      "readingCount": 2,
+      "definitionFragmentCount": 7,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 118,
+      "character": "见",
+      "readingCount": 2,
+      "definitionFragmentCount": 6,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 119,
+      "character": "午",
+      "readingCount": 1,
+      "definitionFragmentCount": 2,
+      "selectedMeaningCount": 0,
+      "triageTier": "deferred"
+    },
+    {
+      "rank": 120,
+      "character": "牛",
+      "readingCount": 2,
+      "definitionFragmentCount": 6,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 121,
+      "character": "手",
+      "readingCount": 1,
+      "definitionFragmentCount": 8,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 122,
+      "character": "气",
+      "readingCount": 1,
+      "definitionFragmentCount": 9,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 123,
+      "character": "毛",
+      "readingCount": 2,
+      "definitionFragmentCount": 16,
+      "selectedMeaningCount": 0,
+      "triageTier": "higher"
+    },
+    {
+      "rank": 124,
+      "character": "壬",
+      "readingCount": 1,
+      "definitionFragmentCount": 5,
+      "selectedMeaningCount": 0,
+      "triageTier": "deferred"
+    },
+    {
+      "rank": 125,
+      "character": "升",
+      "readingCount": 1,
+      "definitionFragmentCount": 10,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 126,
+      "character": "夭",
+      "readingCount": 1,
+      "definitionFragmentCount": 7,
+      "selectedMeaningCount": 0,
+      "triageTier": "deferred"
+    },
+    {
+      "rank": 127,
+      "character": "长",
+      "readingCount": 2,
+      "definitionFragmentCount": 12,
+      "selectedMeaningCount": 0,
+      "triageTier": "higher"
+    },
+    {
+      "rank": 128,
+      "character": "仁",
+      "readingCount": 1,
+      "definitionFragmentCount": 2,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 129,
+      "character": "什",
+      "readingCount": 2,
+      "definitionFragmentCount": 4,
+      "selectedMeaningCount": 0,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 130,
+      "character": "片",
+      "readingCount": 2,
+      "definitionFragmentCount": 15,
+      "selectedMeaningCount": 0,
+      "triageTier": "higher"
+    },
+    {
+      "rank": 131,
+      "character": "仆",
+      "readingCount": 2,
+      "definitionFragmentCount": 3,
+      "selectedMeaningCount": 0,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 132,
+      "character": "化",
+      "readingCount": 2,
+      "definitionFragmentCount": 7,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 133,
+      "character": "仇",
+      "readingCount": 3,
+      "definitionFragmentCount": 9,
+      "selectedMeaningCount": 1,
+      "triageTier": "higher"
+    },
+    {
+      "rank": 134,
+      "character": "币",
+      "readingCount": 1,
+      "definitionFragmentCount": 4,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 135,
+      "character": "仍",
+      "readingCount": 1,
+      "definitionFragmentCount": 3,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 136,
+      "character": "仅",
+      "readingCount": 1,
+      "definitionFragmentCount": 3,
+      "selectedMeaningCount": 0,
+      "triageTier": "deferred"
+    },
+    {
+      "rank": 137,
+      "character": "斤",
+      "readingCount": 1,
+      "definitionFragmentCount": 3,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 138,
+      "character": "爪",
+      "readingCount": 1,
+      "definitionFragmentCount": 1,
+      "selectedMeaningCount": 0,
+      "triageTier": "deferred"
+    },
+    {
+      "rank": 139,
+      "character": "反",
+      "readingCount": 1,
+      "definitionFragmentCount": 13,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 140,
+      "character": "介",
+      "readingCount": 1,
+      "definitionFragmentCount": 5,
+      "selectedMeaningCount": 0,
+      "triageTier": "deferred"
+    },
+    {
+      "rank": 141,
+      "character": "父",
+      "readingCount": 1,
+      "definitionFragmentCount": 1,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 142,
+      "character": "从",
+      "readingCount": 3,
+      "definitionFragmentCount": 13,
+      "selectedMeaningCount": 0,
+      "triageTier": "higher"
+    },
+    {
+      "rank": 143,
+      "character": "仑",
+      "readingCount": 1,
+      "definitionFragmentCount": 3,
+      "selectedMeaningCount": 0,
+      "triageTier": "deferred"
+    },
+    {
+      "rank": 144,
+      "character": "今",
+      "readingCount": 1,
+      "definitionFragmentCount": 6,
+      "selectedMeaningCount": 0,
+      "triageTier": "deferred"
+    },
+    {
+      "rank": 145,
+      "character": "凶",
+      "readingCount": 1,
+      "definitionFragmentCount": 8,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 146,
+      "character": "分",
+      "readingCount": 2,
+      "definitionFragmentCount": 16,
+      "selectedMeaningCount": 1,
+      "triageTier": "higher"
+    },
+    {
+      "rank": 147,
+      "character": "乏",
+      "readingCount": 1,
+      "definitionFragmentCount": 2,
+      "selectedMeaningCount": 0,
+      "triageTier": "deferred"
+    },
+    {
+      "rank": 148,
+      "character": "公",
+      "readingCount": 1,
+      "definitionFragmentCount": 11,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 149,
+      "character": "仓",
+      "readingCount": 1,
+      "definitionFragmentCount": 5,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 150,
+      "character": "月",
+      "readingCount": 1,
+      "definitionFragmentCount": 4,
+      "selectedMeaningCount": 2,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 151,
+      "character": "氏",
+      "readingCount": 2,
+      "definitionFragmentCount": 3,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 152,
+      "character": "勿",
+      "readingCount": 1,
+      "definitionFragmentCount": 1,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 153,
+      "character": "欠",
+      "readingCount": 1,
+      "definitionFragmentCount": 4,
+      "selectedMeaningCount": 0,
+      "triageTier": "deferred"
+    },
+    {
+      "rank": 154,
+      "character": "风",
+      "readingCount": 1,
+      "definitionFragmentCount": 6,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 155,
+      "character": "丹",
+      "readingCount": 1,
+      "definitionFragmentCount": 4,
+      "selectedMeaningCount": 0,
+      "triageTier": "deferred"
+    },
+    {
+      "rank": 156,
+      "character": "匀",
+      "readingCount": 1,
+      "definitionFragmentCount": 5,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 157,
+      "character": "乌",
+      "readingCount": 2,
+      "definitionFragmentCount": 4,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 158,
+      "character": "勾",
+      "readingCount": 3,
+      "definitionFragmentCount": 9,
+      "selectedMeaningCount": 1,
+      "triageTier": "higher"
+    },
+    {
+      "rank": 159,
+      "character": "凤",
+      "readingCount": 2,
+      "definitionFragmentCount": 2,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 160,
+      "character": "六",
+      "readingCount": 1,
+      "definitionFragmentCount": 2,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 161,
+      "character": "文",
+      "readingCount": 2,
+      "definitionFragmentCount": 9,
+      "selectedMeaningCount": 1,
+      "triageTier": "higher"
+    },
+    {
+      "rank": 162,
+      "character": "亢",
+      "readingCount": 2,
+      "definitionFragmentCount": 5,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 163,
+      "character": "方",
+      "readingCount": 2,
+      "definitionFragmentCount": 16,
+      "selectedMeaningCount": 1,
+      "triageTier": "higher"
+    },
+    {
+      "rank": 164,
+      "character": "火",
+      "readingCount": 2,
+      "definitionFragmentCount": 8,
+      "selectedMeaningCount": 2,
+      "triageTier": "higher"
+    },
+    {
+      "rank": 165,
+      "character": "为",
+      "readingCount": 2,
+      "definitionFragmentCount": 24,
+      "selectedMeaningCount": 0,
+      "triageTier": "higher"
+    },
+    {
+      "rank": 166,
+      "character": "斗",
+      "readingCount": 3,
+      "definitionFragmentCount": 16,
+      "selectedMeaningCount": 1,
+      "triageTier": "higher"
+    },
+    {
+      "rank": 167,
+      "character": "忆",
+      "readingCount": 1,
+      "definitionFragmentCount": 3,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 168,
+      "character": "计",
+      "readingCount": 2,
+      "definitionFragmentCount": 9,
+      "selectedMeaningCount": 1,
+      "triageTier": "higher"
+    },
+    {
+      "rank": 169,
+      "character": "订",
+      "readingCount": 1,
+      "definitionFragmentCount": 5,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 170,
+      "character": "户",
+      "readingCount": 1,
+      "definitionFragmentCount": 3,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 171,
+      "character": "认",
+      "readingCount": 1,
+      "definitionFragmentCount": 3,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 172,
+      "character": "冗",
+      "readingCount": 1,
+      "definitionFragmentCount": 5,
+      "selectedMeaningCount": 0,
+      "triageTier": "deferred"
+    },
+    {
+      "rank": 173,
+      "character": "讥",
+      "readingCount": 1,
+      "definitionFragmentCount": 1,
+      "selectedMeaningCount": 0,
+      "triageTier": "deferred"
+    },
+    {
+      "rank": 174,
+      "character": "心",
+      "readingCount": 1,
+      "definitionFragmentCount": 6,
+      "selectedMeaningCount": 2,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 175,
+      "character": "尺",
+      "readingCount": 2,
+      "definitionFragmentCount": 7,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 176,
+      "character": "引",
+      "readingCount": 1,
+      "definitionFragmentCount": 12,
+      "selectedMeaningCount": 0,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 177,
+      "character": "丑",
+      "readingCount": 2,
+      "definitionFragmentCount": 7,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 178,
+      "character": "巴",
+      "readingCount": 2,
+      "definitionFragmentCount": 16,
+      "selectedMeaningCount": 0,
+      "triageTier": "higher"
+    },
+    {
+      "rank": 179,
+      "character": "孔",
+      "readingCount": 2,
+      "definitionFragmentCount": 4,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 180,
+      "character": "队",
+      "readingCount": 1,
+      "definitionFragmentCount": 4,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 181,
+      "character": "办",
+      "readingCount": 1,
+      "definitionFragmentCount": 7,
+      "selectedMeaningCount": 0,
+      "triageTier": "deferred"
+    },
+    {
+      "rank": 182,
+      "character": "以",
+      "readingCount": 2,
+      "definitionFragmentCount": 9,
+      "selectedMeaningCount": 0,
+      "triageTier": "higher"
+    },
+    {
+      "rank": 183,
+      "character": "允",
+      "readingCount": 1,
+      "definitionFragmentCount": 4,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 184,
+      "character": "予",
+      "readingCount": 2,
+      "definitionFragmentCount": 3,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 185,
+      "character": "邓",
+      "readingCount": 1,
+      "definitionFragmentCount": 1,
+      "selectedMeaningCount": 0,
+      "triageTier": "deferred"
+    },
+    {
+      "rank": 186,
+      "character": "劝",
+      "readingCount": 1,
+      "definitionFragmentCount": 6,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 187,
+      "character": "双",
+      "readingCount": 2,
+      "definitionFragmentCount": 6,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 188,
+      "character": "书",
+      "readingCount": 2,
+      "definitionFragmentCount": 6,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 189,
+      "character": "幻",
+      "readingCount": 1,
+      "definitionFragmentCount": 1,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 190,
+      "character": "玉",
+      "readingCount": 1,
+      "definitionFragmentCount": 1,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 191,
+      "character": "刊",
+      "readingCount": 1,
+      "definitionFragmentCount": 11,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 192,
+      "character": "未",
+      "readingCount": 1,
+      "definitionFragmentCount": 6,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 193,
+      "character": "末",
+      "readingCount": 1,
+      "definitionFragmentCount": 8,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 194,
+      "character": "示",
+      "readingCount": 1,
+      "definitionFragmentCount": 2,
+      "selectedMeaningCount": 0,
+      "triageTier": "deferred"
+    },
+    {
+      "rank": 195,
+      "character": "击",
+      "readingCount": 1,
+      "definitionFragmentCount": 4,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 196,
+      "character": "打",
+      "readingCount": 2,
+      "definitionFragmentCount": 18,
+      "selectedMeaningCount": 1,
+      "triageTier": "higher"
+    },
+    {
+      "rank": 197,
+      "character": "巧",
+      "readingCount": 1,
+      "definitionFragmentCount": 5,
+      "selectedMeaningCount": 0,
+      "triageTier": "deferred"
+    },
+    {
+      "rank": 198,
+      "character": "正",
+      "readingCount": 2,
+      "definitionFragmentCount": 12,
+      "selectedMeaningCount": 1,
+      "triageTier": "higher"
+    },
+    {
+      "rank": 199,
+      "character": "扑",
+      "readingCount": 1,
+      "definitionFragmentCount": 8,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 200,
+      "character": "卉",
+      "readingCount": 1,
+      "definitionFragmentCount": 1,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 201,
+      "character": "扒",
+      "readingCount": 2,
+      "definitionFragmentCount": 10,
+      "selectedMeaningCount": 0,
+      "triageTier": "higher"
+    },
+    {
+      "rank": 202,
+      "character": "功",
+      "readingCount": 1,
+      "definitionFragmentCount": 6,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 203,
+      "character": "扔",
+      "readingCount": 1,
+      "definitionFragmentCount": 2,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 204,
+      "character": "去",
+      "readingCount": 1,
+      "definitionFragmentCount": 14,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 205,
+      "character": "甘",
+      "readingCount": 2,
+      "definitionFragmentCount": 4,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 206,
+      "character": "世",
+      "readingCount": 2,
+      "definitionFragmentCount": 10,
+      "selectedMeaningCount": 1,
+      "triageTier": "higher"
+    },
+    {
+      "rank": 207,
+      "character": "艾",
+      "readingCount": 3,
+      "definitionFragmentCount": 10,
+      "selectedMeaningCount": 0,
+      "triageTier": "higher"
+    },
+    {
+      "rank": 208,
+      "character": "古",
+      "readingCount": 2,
+      "definitionFragmentCount": 4,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 209,
+      "character": "节",
+      "readingCount": 2,
+      "definitionFragmentCount": 14,
+      "selectedMeaningCount": 1,
+      "triageTier": "higher"
+    },
+    {
+      "rank": 210,
+      "character": "本",
+      "readingCount": 1,
+      "definitionFragmentCount": 10,
+      "selectedMeaningCount": 0,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 211,
+      "character": "术",
+      "readingCount": 2,
+      "definitionFragmentCount": 3,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 212,
+      "character": "可",
+      "readingCount": 2,
+      "definitionFragmentCount": 9,
+      "selectedMeaningCount": 0,
+      "triageTier": "higher"
+    },
+    {
+      "rank": 213,
+      "character": "丙",
+      "readingCount": 1,
+      "definitionFragmentCount": 5,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 214,
+      "character": "左",
+      "readingCount": 2,
+      "definitionFragmentCount": 10,
+      "selectedMeaningCount": 1,
+      "triageTier": "higher"
+    },
+    {
+      "rank": 215,
+      "character": "厉",
+      "readingCount": 2,
+      "definitionFragmentCount": 3,
+      "selectedMeaningCount": 0,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 216,
+      "character": "石",
+      "readingCount": 3,
+      "definitionFragmentCount": 8,
+      "selectedMeaningCount": 1,
+      "triageTier": "higher"
+    },
+    {
+      "rank": 217,
+      "character": "右",
+      "readingCount": 1,
+      "definitionFragmentCount": 3,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 218,
+      "character": "布",
+      "readingCount": 1,
+      "definitionFragmentCount": 8,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 219,
+      "character": "夯",
+      "readingCount": 2,
+      "definitionFragmentCount": 4,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 220,
+      "character": "戊",
+      "readingCount": 1,
+      "definitionFragmentCount": 4,
+      "selectedMeaningCount": 0,
+      "triageTier": "deferred"
+    },
+    {
+      "rank": 221,
+      "character": "龙",
+      "readingCount": 2,
+      "definitionFragmentCount": 4,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 222,
+      "character": "平",
+      "readingCount": 2,
+      "definitionFragmentCount": 9,
+      "selectedMeaningCount": 0,
+      "triageTier": "higher"
+    },
+    {
+      "rank": 223,
+      "character": "灭",
+      "readingCount": 1,
+      "definitionFragmentCount": 4,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 224,
+      "character": "轧",
+      "readingCount": 4,
+      "definitionFragmentCount": 7,
+      "selectedMeaningCount": 0,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 225,
+      "character": "东",
+      "readingCount": 2,
+      "definitionFragmentCount": 4,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 226,
+      "character": "卡",
+      "readingCount": 2,
+      "definitionFragmentCount": 15,
+      "selectedMeaningCount": 1,
+      "triageTier": "higher"
+    },
+    {
+      "rank": 227,
+      "character": "北",
+      "readingCount": 1,
+      "definitionFragmentCount": 2,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 228,
+      "character": "占",
+      "readingCount": 2,
+      "definitionFragmentCount": 6,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 229,
+      "character": "凸",
+      "readingCount": 1,
+      "definitionFragmentCount": 5,
+      "selectedMeaningCount": 0,
+      "triageTier": "deferred"
+    },
+    {
+      "rank": 230,
+      "character": "卢",
+      "readingCount": 2,
+      "definitionFragmentCount": 7,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 231,
+      "character": "业",
+      "readingCount": 2,
+      "definitionFragmentCount": 13,
+      "selectedMeaningCount": 1,
+      "triageTier": "higher"
+    },
+    {
+      "rank": 232,
+      "character": "旧",
+      "readingCount": 1,
+      "definitionFragmentCount": 4,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 233,
+      "character": "帅",
+      "readingCount": 2,
+      "definitionFragmentCount": 7,
+      "selectedMeaningCount": 0,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 234,
+      "character": "归",
+      "readingCount": 2,
+      "definitionFragmentCount": 10,
+      "selectedMeaningCount": 1,
+      "triageTier": "higher"
+    },
+    {
+      "rank": 235,
+      "character": "旦",
+      "readingCount": 1,
+      "definitionFragmentCount": 5,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 236,
+      "character": "目",
+      "readingCount": 1,
+      "definitionFragmentCount": 10,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 237,
+      "character": "且",
+      "readingCount": 1,
+      "definitionFragmentCount": 6,
+      "selectedMeaningCount": 0,
+      "triageTier": "deferred"
+    },
+    {
+      "rank": 238,
+      "character": "叶",
+      "readingCount": 3,
+      "definitionFragmentCount": 7,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 239,
+      "character": "甲",
+      "readingCount": 1,
+      "definitionFragmentCount": 11,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 240,
+      "character": "申",
+      "readingCount": 2,
+      "definitionFragmentCount": 7,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 241,
+      "character": "叮",
+      "readingCount": 1,
+      "definitionFragmentCount": 6,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 242,
+      "character": "电",
+      "readingCount": 1,
+      "definitionFragmentCount": 3,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 243,
+      "character": "号",
+      "readingCount": 2,
+      "definitionFragmentCount": 15,
+      "selectedMeaningCount": 1,
+      "triageTier": "higher"
+    },
+    {
+      "rank": 244,
+      "character": "田",
+      "readingCount": 2,
+      "definitionFragmentCount": 4,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 245,
+      "character": "由",
+      "readingCount": 1,
+      "definitionFragmentCount": 10,
+      "selectedMeaningCount": 0,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 246,
+      "character": "只",
+      "readingCount": 2,
+      "definitionFragmentCount": 9,
+      "selectedMeaningCount": 1,
+      "triageTier": "higher"
+    },
+    {
+      "rank": 247,
+      "character": "叭",
+      "readingCount": 1,
+      "definitionFragmentCount": 1,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 248,
+      "character": "史",
+      "readingCount": 2,
+      "definitionFragmentCount": 4,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 249,
+      "character": "央",
+      "readingCount": 1,
+      "definitionFragmentCount": 4,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 250,
+      "character": "兄",
+      "readingCount": 1,
+      "definitionFragmentCount": 1,
+      "selectedMeaningCount": 0,
+      "triageTier": "deferred"
+    },
+    {
+      "rank": 251,
+      "character": "叽",
+      "readingCount": 1,
+      "definitionFragmentCount": 1,
+      "selectedMeaningCount": 0,
+      "triageTier": "deferred"
+    },
+    {
+      "rank": 252,
+      "character": "叼",
+      "readingCount": 1,
+      "definitionFragmentCount": 1,
+      "selectedMeaningCount": 0,
+      "triageTier": "deferred"
+    },
+    {
+      "rank": 253,
+      "character": "叫",
+      "readingCount": 1,
+      "definitionFragmentCount": 7,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 254,
+      "character": "叩",
+      "readingCount": 1,
+      "definitionFragmentCount": 4,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 255,
+      "character": "叨",
+      "readingCount": 2,
+      "definitionFragmentCount": 2,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 256,
+      "character": "另",
+      "readingCount": 1,
+      "definitionFragmentCount": 4,
+      "selectedMeaningCount": 0,
+      "triageTier": "deferred"
+    },
+    {
+      "rank": 257,
+      "character": "叹",
+      "readingCount": 1,
+      "definitionFragmentCount": 3,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 258,
+      "character": "冉",
+      "readingCount": 2,
+      "definitionFragmentCount": 4,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 259,
+      "character": "皿",
+      "readingCount": 1,
+      "definitionFragmentCount": 4,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 260,
+      "character": "凹",
+      "readingCount": 2,
+      "definitionFragmentCount": 7,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 261,
+      "character": "囚",
+      "readingCount": 1,
+      "definitionFragmentCount": 1,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 262,
+      "character": "四",
+      "readingCount": 1,
+      "definitionFragmentCount": 2,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 263,
+      "character": "生",
+      "readingCount": 1,
+      "definitionFragmentCount": 7,
+      "selectedMeaningCount": 2,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 264,
+      "character": "矢",
+      "readingCount": 1,
+      "definitionFragmentCount": 6,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 265,
+      "character": "失",
+      "readingCount": 1,
+      "definitionFragmentCount": 3,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 266,
+      "character": "乍",
+      "readingCount": 1,
+      "definitionFragmentCount": 6,
+      "selectedMeaningCount": 0,
+      "triageTier": "deferred"
+    },
+    {
+      "rank": 267,
+      "character": "禾",
+      "readingCount": 1,
+      "definitionFragmentCount": 2,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 268,
+      "character": "丘",
+      "readingCount": 2,
+      "definitionFragmentCount": 7,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 269,
+      "character": "付",
+      "readingCount": 2,
+      "definitionFragmentCount": 4,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 270,
+      "character": "仗",
+      "readingCount": 1,
+      "definitionFragmentCount": 7,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 271,
+      "character": "代",
+      "readingCount": 1,
+      "definitionFragmentCount": 9,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 272,
+      "character": "仙",
+      "readingCount": 1,
+      "definitionFragmentCount": 2,
+      "selectedMeaningCount": 0,
+      "triageTier": "deferred"
+    },
+    {
+      "rank": 273,
+      "character": "们",
+      "readingCount": 1,
+      "definitionFragmentCount": 1,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 274,
+      "character": "仪",
+      "readingCount": 1,
+      "definitionFragmentCount": 5,
+      "selectedMeaningCount": 0,
+      "triageTier": "deferred"
+    },
+    {
+      "rank": 275,
+      "character": "白",
+      "readingCount": 2,
+      "definitionFragmentCount": 22,
+      "selectedMeaningCount": 1,
+      "triageTier": "higher"
+    },
+    {
+      "rank": 276,
+      "character": "仔",
+      "readingCount": 3,
+      "definitionFragmentCount": 4,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 277,
+      "character": "他",
+      "readingCount": 1,
+      "definitionFragmentCount": 6,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 278,
+      "character": "斥",
+      "readingCount": 1,
+      "definitionFragmentCount": 8,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 279,
+      "character": "瓜",
+      "readingCount": 1,
+      "definitionFragmentCount": 3,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 280,
+      "character": "乎",
+      "readingCount": 1,
+      "definitionFragmentCount": 6,
+      "selectedMeaningCount": 0,
+      "triageTier": "deferred"
+    },
+    {
+      "rank": 281,
+      "character": "丛",
+      "readingCount": 1,
+      "definitionFragmentCount": 4,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 282,
+      "character": "令",
+      "readingCount": 4,
+      "definitionFragmentCount": 14,
+      "selectedMeaningCount": 1,
+      "triageTier": "higher"
+    },
+    {
+      "rank": 283,
+      "character": "用",
+      "readingCount": 1,
+      "definitionFragmentCount": 8,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 284,
+      "character": "甩",
+      "readingCount": 1,
+      "definitionFragmentCount": 6,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 285,
+      "character": "印",
+      "readingCount": 2,
+      "definitionFragmentCount": 11,
+      "selectedMeaningCount": 1,
+      "triageTier": "higher"
+    },
+    {
+      "rank": 286,
+      "character": "尔",
+      "readingCount": 1,
+      "definitionFragmentCount": 6,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 287,
+      "character": "乐",
+      "readingCount": 4,
+      "definitionFragmentCount": 6,
+      "selectedMeaningCount": 2,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 288,
+      "character": "句",
+      "readingCount": 2,
+      "definitionFragmentCount": 5,
+      "selectedMeaningCount": 0,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 289,
+      "character": "匆",
+      "readingCount": 1,
+      "definitionFragmentCount": 4,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 290,
+      "character": "册",
+      "readingCount": 1,
+      "definitionFragmentCount": 3,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 291,
+      "character": "卯",
+      "readingCount": 1,
+      "definitionFragmentCount": 7,
+      "selectedMeaningCount": 0,
+      "triageTier": "deferred"
+    },
+    {
+      "rank": 292,
+      "character": "犯",
+      "readingCount": 1,
+      "definitionFragmentCount": 7,
+      "selectedMeaningCount": 0,
+      "triageTier": "deferred"
+    },
+    {
+      "rank": 293,
+      "character": "外",
+      "readingCount": 1,
+      "definitionFragmentCount": 4,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 294,
+      "character": "处",
+      "readingCount": 2,
+      "definitionFragmentCount": 20,
+      "selectedMeaningCount": 1,
+      "triageTier": "higher"
+    },
+    {
+      "rank": 295,
+      "character": "冬",
+      "readingCount": 2,
+      "definitionFragmentCount": 4,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 296,
+      "character": "鸟",
+      "readingCount": 2,
+      "definitionFragmentCount": 7,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 297,
+      "character": "务",
+      "readingCount": 1,
+      "definitionFragmentCount": 6,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 298,
+      "character": "包",
+      "readingCount": 2,
+      "definitionFragmentCount": 15,
+      "selectedMeaningCount": 1,
+      "triageTier": "higher"
+    },
+    {
+      "rank": 299,
+      "character": "饥",
+      "readingCount": 1,
+      "definitionFragmentCount": 2,
+      "selectedMeaningCount": 0,
+      "triageTier": "deferred"
+    },
+    {
+      "rank": 300,
+      "character": "主",
+      "readingCount": 1,
+      "definitionFragmentCount": 9,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 301,
+      "character": "市",
+      "readingCount": 1,
+      "definitionFragmentCount": 3,
+      "selectedMeaningCount": 2,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 302,
+      "character": "立",
+      "readingCount": 2,
+      "definitionFragmentCount": 8,
+      "selectedMeaningCount": 1,
+      "triageTier": "higher"
+    },
+    {
+      "rank": 303,
+      "character": "冯",
+      "readingCount": 2,
+      "definitionFragmentCount": 7,
+      "selectedMeaningCount": 0,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 304,
+      "character": "玄",
+      "readingCount": 1,
+      "definitionFragmentCount": 2,
+      "selectedMeaningCount": 0,
+      "triageTier": "deferred"
+    },
+    {
+      "rank": 305,
+      "character": "闪",
+      "readingCount": 2,
+      "definitionFragmentCount": 13,
+      "selectedMeaningCount": 1,
+      "triageTier": "higher"
+    },
+    {
+      "rank": 306,
+      "character": "兰",
+      "readingCount": 2,
+      "definitionFragmentCount": 5,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 307,
+      "character": "半",
+      "readingCount": 1,
+      "definitionFragmentCount": 4,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 308,
+      "character": "汁",
+      "readingCount": 1,
+      "definitionFragmentCount": 1,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 309,
+      "character": "汇",
+      "readingCount": 1,
+      "definitionFragmentCount": 6,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 310,
+      "character": "头",
+      "readingCount": 2,
+      "definitionFragmentCount": 16,
+      "selectedMeaningCount": 1,
+      "triageTier": "higher"
+    },
+    {
+      "rank": 311,
+      "character": "汉",
+      "readingCount": 2,
+      "definitionFragmentCount": 4,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 312,
+      "character": "宁",
+      "readingCount": 3,
+      "definitionFragmentCount": 12,
+      "selectedMeaningCount": 1,
+      "triageTier": "higher"
+    },
+    {
+      "rank": 313,
+      "character": "穴",
+      "readingCount": 1,
+      "definitionFragmentCount": 5,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 314,
+      "character": "它",
+      "readingCount": 1,
+      "definitionFragmentCount": 1,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 315,
+      "character": "讨",
+      "readingCount": 1,
+      "definitionFragmentCount": 7,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 316,
+      "character": "写",
+      "readingCount": 1,
+      "definitionFragmentCount": 1,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 317,
+      "character": "让",
+      "readingCount": 1,
+      "definitionFragmentCount": 6,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 318,
+      "character": "礼",
+      "readingCount": 2,
+      "definitionFragmentCount": 9,
+      "selectedMeaningCount": 1,
+      "triageTier": "higher"
+    },
+    {
+      "rank": 319,
+      "character": "训",
+      "readingCount": 1,
+      "definitionFragmentCount": 6,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 320,
+      "character": "议",
+      "readingCount": 1,
+      "definitionFragmentCount": 3,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 321,
+      "character": "必",
+      "readingCount": 1,
+      "definitionFragmentCount": 4,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 322,
+      "character": "讯",
+      "readingCount": 1,
+      "definitionFragmentCount": 8,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 323,
+      "character": "记",
+      "readingCount": 1,
+      "definitionFragmentCount": 7,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 324,
+      "character": "永",
+      "readingCount": 1,
+      "definitionFragmentCount": 3,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 325,
+      "character": "司",
+      "readingCount": 2,
+      "definitionFragmentCount": 4,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 326,
+      "character": "尼",
+      "readingCount": 1,
+      "definitionFragmentCount": 2,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 327,
+      "character": "民",
+      "readingCount": 2,
+      "definitionFragmentCount": 4,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 328,
+      "character": "弗",
+      "readingCount": 1,
+      "definitionFragmentCount": 1,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 329,
+      "character": "弘",
+      "readingCount": 1,
+      "definitionFragmentCount": 2,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 330,
+      "character": "出",
+      "readingCount": 1,
+      "definitionFragmentCount": 10,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 331,
+      "character": "辽",
+      "readingCount": 1,
+      "definitionFragmentCount": 2,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 332,
+      "character": "奶",
+      "readingCount": 1,
+      "definitionFragmentCount": 6,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 333,
+      "character": "奴",
+      "readingCount": 1,
+      "definitionFragmentCount": 1,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 334,
+      "character": "召",
+      "readingCount": 2,
+      "definitionFragmentCount": 6,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 335,
+      "character": "加",
+      "readingCount": 2,
+      "definitionFragmentCount": 7,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 336,
+      "character": "皮",
+      "readingCount": 2,
+      "definitionFragmentCount": 7,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 337,
+      "character": "边",
+      "readingCount": 2,
+      "definitionFragmentCount": 8,
+      "selectedMeaningCount": 1,
+      "triageTier": "higher"
+    },
+    {
+      "rank": 338,
+      "character": "孕",
+      "readingCount": 1,
+      "definitionFragmentCount": 1,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 339,
+      "character": "发",
+      "readingCount": 2,
+      "definitionFragmentCount": 8,
+      "selectedMeaningCount": 0,
+      "triageTier": "higher"
+    },
+    {
+      "rank": 340,
+      "character": "圣",
+      "readingCount": 1,
+      "definitionFragmentCount": 4,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 341,
+      "character": "对",
+      "readingCount": 1,
+      "definitionFragmentCount": 17,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 342,
+      "character": "台",
+      "readingCount": 2,
+      "definitionFragmentCount": 17,
+      "selectedMeaningCount": 1,
+      "triageTier": "higher"
+    },
+    {
+      "rank": 343,
+      "character": "矛",
+      "readingCount": 1,
+      "definitionFragmentCount": 3,
+      "selectedMeaningCount": 0,
+      "triageTier": "deferred"
+    },
+    {
+      "rank": 344,
+      "character": "纠",
+      "readingCount": 1,
+      "definitionFragmentCount": 5,
+      "selectedMeaningCount": 0,
+      "triageTier": "deferred"
+    },
+    {
+      "rank": 345,
+      "character": "母",
+      "readingCount": 1,
+      "definitionFragmentCount": 5,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 346,
+      "character": "幼",
+      "readingCount": 1,
+      "definitionFragmentCount": 1,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 347,
+      "character": "丝",
+      "readingCount": 1,
+      "definitionFragmentCount": 5,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 348,
+      "character": "邦",
+      "readingCount": 1,
+      "definitionFragmentCount": 3,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 349,
+      "character": "式",
+      "readingCount": 1,
+      "definitionFragmentCount": 4,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 350,
+      "character": "迂",
+      "readingCount": 1,
+      "definitionFragmentCount": 5,
+      "selectedMeaningCount": 0,
+      "triageTier": "deferred"
+    },
+    {
+      "rank": 351,
+      "character": "刑",
+      "readingCount": 2,
+      "definitionFragmentCount": 6,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 352,
+      "character": "戎",
+      "readingCount": 2,
+      "definitionFragmentCount": 4,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 353,
+      "character": "动",
+      "readingCount": 1,
+      "definitionFragmentCount": 8,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 354,
+      "character": "扛",
+      "readingCount": 2,
+      "definitionFragmentCount": 5,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 355,
+      "character": "寺",
+      "readingCount": 1,
+      "definitionFragmentCount": 3,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 356,
+      "character": "吉",
+      "readingCount": 2,
+      "definitionFragmentCount": 4,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 357,
+      "character": "扣",
+      "readingCount": 1,
+      "definitionFragmentCount": 14,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 358,
+      "character": "考",
+      "readingCount": 1,
+      "definitionFragmentCount": 13,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 359,
+      "character": "托",
+      "readingCount": 1,
+      "definitionFragmentCount": 15,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 360,
+      "character": "老",
+      "readingCount": 1,
+      "definitionFragmentCount": 11,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 361,
+      "character": "巩",
+      "readingCount": 1,
+      "definitionFragmentCount": 2,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 362,
+      "character": "圾",
+      "readingCount": 1,
+      "definitionFragmentCount": 2,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 363,
+      "character": "执",
+      "readingCount": 1,
+      "definitionFragmentCount": 2,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 364,
+      "character": "扩",
+      "readingCount": 1,
+      "definitionFragmentCount": 1,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 365,
+      "character": "扫",
+      "readingCount": 2,
+      "definitionFragmentCount": 2,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 366,
+      "character": "地",
+      "readingCount": 2,
+      "definitionFragmentCount": 8,
+      "selectedMeaningCount": 1,
+      "triageTier": "higher"
+    },
+    {
+      "rank": 367,
+      "character": "场",
+      "readingCount": 2,
+      "definitionFragmentCount": 9,
+      "selectedMeaningCount": 1,
+      "triageTier": "higher"
+    },
+    {
+      "rank": 368,
+      "character": "扬",
+      "readingCount": 2,
+      "definitionFragmentCount": 9,
+      "selectedMeaningCount": 1,
+      "triageTier": "higher"
+    },
+    {
+      "rank": 369,
+      "character": "耳",
+      "readingCount": 1,
+      "definitionFragmentCount": 3,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 370,
+      "character": "芋",
+      "readingCount": 1,
+      "definitionFragmentCount": 3,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 371,
+      "character": "共",
+      "readingCount": 1,
+      "definitionFragmentCount": 7,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 372,
+      "character": "芒",
+      "readingCount": 1,
+      "definitionFragmentCount": 5,
+      "selectedMeaningCount": 0,
+      "triageTier": "deferred"
+    },
+    {
+      "rank": 373,
+      "character": "亚",
+      "readingCount": 1,
+      "definitionFragmentCount": 7,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 374,
+      "character": "芝",
+      "readingCount": 1,
+      "definitionFragmentCount": 1,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 375,
+      "character": "朽",
+      "readingCount": 1,
+      "definitionFragmentCount": 1,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 376,
+      "character": "朴",
+      "readingCount": 3,
+      "definitionFragmentCount": 6,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 377,
+      "character": "机",
+      "readingCount": 2,
+      "definitionFragmentCount": 11,
+      "selectedMeaningCount": 1,
+      "triageTier": "higher"
+    },
+    {
+      "rank": 378,
+      "character": "权",
+      "readingCount": 2,
+      "definitionFragmentCount": 7,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 379,
+      "character": "过",
+      "readingCount": 3,
+      "definitionFragmentCount": 10,
+      "selectedMeaningCount": 1,
+      "triageTier": "higher"
+    },
+    {
+      "rank": 380,
+      "character": "臣",
+      "readingCount": 2,
+      "definitionFragmentCount": 4,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 381,
+      "character": "吏",
+      "readingCount": 1,
+      "definitionFragmentCount": 1,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 382,
+      "character": "再",
+      "readingCount": 1,
+      "definitionFragmentCount": 6,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 383,
+      "character": "协",
+      "readingCount": 1,
+      "definitionFragmentCount": 5,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 384,
+      "character": "西",
+      "readingCount": 2,
+      "definitionFragmentCount": 4,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 385,
+      "character": "压",
+      "readingCount": 2,
+      "definitionFragmentCount": 5,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 386,
+      "character": "厌",
+      "readingCount": 1,
+      "definitionFragmentCount": 1,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 387,
+      "character": "戌",
+      "readingCount": 1,
+      "definitionFragmentCount": 2,
+      "selectedMeaningCount": 0,
+      "triageTier": "deferred"
+    },
+    {
+      "rank": 388,
+      "character": "在",
+      "readingCount": 1,
+      "definitionFragmentCount": 5,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 389,
+      "character": "百",
+      "readingCount": 2,
+      "definitionFragmentCount": 4,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 390,
+      "character": "有",
+      "readingCount": 1,
+      "definitionFragmentCount": 5,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 391,
+      "character": "存",
+      "readingCount": 1,
+      "definitionFragmentCount": 5,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 392,
+      "character": "而",
+      "readingCount": 1,
+      "definitionFragmentCount": 8,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 393,
+      "character": "页",
+      "readingCount": 1,
+      "definitionFragmentCount": 2,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 394,
+      "character": "匠",
+      "readingCount": 1,
+      "definitionFragmentCount": 1,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 395,
+      "character": "夸",
+      "readingCount": 1,
+      "definitionFragmentCount": 4,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 396,
+      "character": "夺",
+      "readingCount": 1,
+      "definitionFragmentCount": 7,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 397,
+      "character": "灰",
+      "readingCount": 1,
+      "definitionFragmentCount": 6,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 398,
+      "character": "达",
+      "readingCount": 2,
+      "definitionFragmentCount": 6,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 399,
+      "character": "列",
+      "readingCount": 1,
+      "definitionFragmentCount": 6,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 400,
+      "character": "死",
+      "readingCount": 1,
+      "definitionFragmentCount": 7,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 401,
+      "character": "成",
+      "readingCount": 2,
+      "definitionFragmentCount": 10,
+      "selectedMeaningCount": 1,
+      "triageTier": "higher"
+    },
+    {
+      "rank": 402,
+      "character": "夹",
+      "readingCount": 3,
+      "definitionFragmentCount": 16,
+      "selectedMeaningCount": 1,
+      "triageTier": "higher"
+    },
+    {
+      "rank": 403,
+      "character": "夷",
+      "readingCount": 1,
+      "definitionFragmentCount": 6,
+      "selectedMeaningCount": 0,
+      "triageTier": "deferred"
+    },
+    {
+      "rank": 404,
+      "character": "轨",
+      "readingCount": 1,
+      "definitionFragmentCount": 4,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 405,
+      "character": "邪",
+      "readingCount": 1,
+      "definitionFragmentCount": 6,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 406,
+      "character": "尧",
+      "readingCount": 1,
+      "definitionFragmentCount": 2,
+      "selectedMeaningCount": 0,
+      "triageTier": "deferred"
+    },
+    {
+      "rank": 407,
+      "character": "划",
+      "readingCount": 2,
+      "definitionFragmentCount": 15,
+      "selectedMeaningCount": 1,
+      "triageTier": "higher"
+    },
+    {
+      "rank": 408,
+      "character": "迈",
+      "readingCount": 1,
+      "definitionFragmentCount": 2,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 409,
+      "character": "毕",
+      "readingCount": 2,
+      "definitionFragmentCount": 7,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 410,
+      "character": "至",
+      "readingCount": 1,
+      "definitionFragmentCount": 4,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 411,
+      "character": "此",
+      "readingCount": 1,
+      "definitionFragmentCount": 2,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 412,
+      "character": "贞",
+      "readingCount": 1,
+      "definitionFragmentCount": 1,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 413,
+      "character": "师",
+      "readingCount": 2,
+      "definitionFragmentCount": 8,
+      "selectedMeaningCount": 1,
+      "triageTier": "higher"
+    },
+    {
+      "rank": 414,
+      "character": "尘",
+      "readingCount": 1,
+      "definitionFragmentCount": 3,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 415,
+      "character": "尖",
+      "readingCount": 1,
+      "definitionFragmentCount": 4,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 416,
+      "character": "劣",
+      "readingCount": 1,
+      "definitionFragmentCount": 1,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 417,
+      "character": "光",
+      "readingCount": 1,
+      "definitionFragmentCount": 7,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 418,
+      "character": "当",
+      "readingCount": 2,
+      "definitionFragmentCount": 28,
+      "selectedMeaningCount": 1,
+      "triageTier": "higher"
+    },
+    {
+      "rank": 419,
+      "character": "早",
+      "readingCount": 1,
+      "definitionFragmentCount": 5,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 420,
+      "character": "吁",
+      "readingCount": 2,
+      "definitionFragmentCount": 4,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 421,
+      "character": "吐",
+      "readingCount": 2,
+      "definitionFragmentCount": 5,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 422,
+      "character": "吓",
+      "readingCount": 2,
+      "definitionFragmentCount": 7,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 423,
+      "character": "虫",
+      "readingCount": 1,
+      "definitionFragmentCount": 3,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 424,
+      "character": "曲",
+      "readingCount": 3,
+      "definitionFragmentCount": 11,
+      "selectedMeaningCount": 1,
+      "triageTier": "higher"
+    },
+    {
+      "rank": 425,
+      "character": "团",
+      "readingCount": 1,
+      "definitionFragmentCount": 10,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 426,
+      "character": "吕",
+      "readingCount": 2,
+      "definitionFragmentCount": 2,
+      "selectedMeaningCount": 0,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 427,
+      "character": "同",
+      "readingCount": 2,
+      "definitionFragmentCount": 9,
+      "selectedMeaningCount": 1,
+      "triageTier": "higher"
+    },
+    {
+      "rank": 428,
+      "character": "吊",
+      "readingCount": 1,
+      "definitionFragmentCount": 7,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 429,
+      "character": "吃",
+      "readingCount": 1,
+      "definitionFragmentCount": 9,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 430,
+      "character": "因",
+      "readingCount": 1,
+      "definitionFragmentCount": 4,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 431,
+      "character": "吸",
+      "readingCount": 1,
+      "definitionFragmentCount": 4,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 432,
+      "character": "吗",
+      "readingCount": 2,
+      "definitionFragmentCount": 2,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 433,
+      "character": "吆",
+      "readingCount": 1,
+      "definitionFragmentCount": 4,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 434,
+      "character": "屿",
+      "readingCount": 1,
+      "definitionFragmentCount": 1,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 435,
+      "character": "屹",
+      "readingCount": 1,
+      "definitionFragmentCount": 1,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 436,
+      "character": "岁",
+      "readingCount": 1,
+      "definitionFragmentCount": 5,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 437,
+      "character": "帆",
+      "readingCount": 1,
+      "definitionFragmentCount": 6,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 438,
+      "character": "回",
+      "readingCount": 1,
+      "definitionFragmentCount": 14,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 439,
+      "character": "岂",
+      "readingCount": 2,
+      "definitionFragmentCount": 3,
+      "selectedMeaningCount": 0,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 440,
+      "character": "则",
+      "readingCount": 1,
+      "definitionFragmentCount": 8,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 441,
+      "character": "刚",
+      "readingCount": 1,
+      "definitionFragmentCount": 6,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 442,
+      "character": "网",
+      "readingCount": 1,
+      "definitionFragmentCount": 2,
+      "selectedMeaningCount": 2,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 443,
+      "character": "肉",
+      "readingCount": 1,
+      "definitionFragmentCount": 6,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 444,
+      "character": "年",
+      "readingCount": 2,
+      "definitionFragmentCount": 6,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 445,
+      "character": "朱",
+      "readingCount": 2,
+      "definitionFragmentCount": 4,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 446,
+      "character": "先",
+      "readingCount": 1,
+      "definitionFragmentCount": 5,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 447,
+      "character": "丢",
+      "readingCount": 1,
+      "definitionFragmentCount": 3,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 448,
+      "character": "廷",
+      "readingCount": 1,
+      "definitionFragmentCount": 1,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 449,
+      "character": "舌",
+      "readingCount": 1,
+      "definitionFragmentCount": 1,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 450,
+      "character": "竹",
+      "readingCount": 1,
+      "definitionFragmentCount": 3,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 451,
+      "character": "迁",
+      "readingCount": 1,
+      "definitionFragmentCount": 4,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 452,
+      "character": "乔",
+      "readingCount": 2,
+      "definitionFragmentCount": 2,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 453,
+      "character": "迄",
+      "readingCount": 1,
+      "definitionFragmentCount": 2,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 454,
+      "character": "伟",
+      "readingCount": 1,
+      "definitionFragmentCount": 3,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 455,
+      "character": "传",
+      "readingCount": 2,
+      "definitionFragmentCount": 11,
+      "selectedMeaningCount": 1,
+      "triageTier": "higher"
+    },
+    {
+      "rank": 456,
+      "character": "乒",
+      "readingCount": 1,
+      "definitionFragmentCount": 2,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 457,
+      "character": "乓",
+      "readingCount": 1,
+      "definitionFragmentCount": 1,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 458,
+      "character": "休",
+      "readingCount": 2,
+      "definitionFragmentCount": 5,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 459,
+      "character": "伍",
+      "readingCount": 2,
+      "definitionFragmentCount": 4,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 460,
+      "character": "伏",
+      "readingCount": 2,
+      "definitionFragmentCount": 12,
+      "selectedMeaningCount": 1,
+      "triageTier": "higher"
+    },
+    {
+      "rank": 461,
+      "character": "优",
+      "readingCount": 1,
+      "definitionFragmentCount": 2,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 462,
+      "character": "臼",
+      "readingCount": 1,
+      "definitionFragmentCount": 1,
+      "selectedMeaningCount": 0,
+      "triageTier": "deferred"
+    },
+    {
+      "rank": 463,
+      "character": "伐",
+      "readingCount": 1,
+      "definitionFragmentCount": 6,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 464,
+      "character": "延",
+      "readingCount": 2,
+      "definitionFragmentCount": 4,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 465,
+      "character": "仲",
+      "readingCount": 2,
+      "definitionFragmentCount": 5,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 466,
+      "character": "件",
+      "readingCount": 1,
+      "definitionFragmentCount": 3,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 467,
+      "character": "任",
+      "readingCount": 2,
+      "definitionFragmentCount": 11,
+      "selectedMeaningCount": 1,
+      "triageTier": "higher"
+    },
+    {
+      "rank": 468,
+      "character": "伤",
+      "readingCount": 1,
+      "definitionFragmentCount": 3,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 469,
+      "character": "价",
+      "readingCount": 2,
+      "definitionFragmentCount": 7,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 470,
+      "character": "伦",
+      "readingCount": 1,
+      "definitionFragmentCount": 3,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 471,
+      "character": "份",
+      "readingCount": 1,
+      "definitionFragmentCount": 2,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 472,
+      "character": "华",
+      "readingCount": 4,
+      "definitionFragmentCount": 8,
+      "selectedMeaningCount": 2,
+      "triageTier": "higher"
+    },
+    {
+      "rank": 473,
+      "character": "仰",
+      "readingCount": 2,
+      "definitionFragmentCount": 5,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 474,
+      "character": "仿",
+      "readingCount": 1,
+      "definitionFragmentCount": 4,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 475,
+      "character": "伙",
+      "readingCount": 1,
+      "definitionFragmentCount": 8,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 476,
+      "character": "伪",
+      "readingCount": 1,
+      "definitionFragmentCount": 6,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 477,
+      "character": "自",
+      "readingCount": 1,
+      "definitionFragmentCount": 6,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 478,
+      "character": "伊",
+      "readingCount": 2,
+      "definitionFragmentCount": 5,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 479,
+      "character": "血",
+      "readingCount": 1,
+      "definitionFragmentCount": 3,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 480,
+      "character": "向",
+      "readingCount": 2,
+      "definitionFragmentCount": 23,
+      "selectedMeaningCount": 1,
+      "triageTier": "higher"
+    },
+    {
+      "rank": 481,
+      "character": "似",
+      "readingCount": 2,
+      "definitionFragmentCount": 9,
+      "selectedMeaningCount": 1,
+      "triageTier": "higher"
+    },
+    {
+      "rank": 482,
+      "character": "后",
+      "readingCount": 2,
+      "definitionFragmentCount": 9,
+      "selectedMeaningCount": 2,
+      "triageTier": "higher"
+    },
+    {
+      "rank": 483,
+      "character": "行",
+      "readingCount": 2,
+      "definitionFragmentCount": 25,
+      "selectedMeaningCount": 1,
+      "triageTier": "higher"
+    },
+    {
+      "rank": 484,
+      "character": "舟",
+      "readingCount": 1,
+      "definitionFragmentCount": 1,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 485,
+      "character": "全",
+      "readingCount": 2,
+      "definitionFragmentCount": 6,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 486,
+      "character": "会",
+      "readingCount": 2,
+      "definitionFragmentCount": 18,
+      "selectedMeaningCount": 1,
+      "triageTier": "higher"
+    },
+    {
+      "rank": 487,
+      "character": "杀",
+      "readingCount": 1,
+      "definitionFragmentCount": 6,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 488,
+      "character": "合",
+      "readingCount": 2,
+      "definitionFragmentCount": 14,
+      "selectedMeaningCount": 1,
+      "triageTier": "higher"
+    },
+    {
+      "rank": 489,
+      "character": "兆",
+      "readingCount": 2,
+      "definitionFragmentCount": 8,
+      "selectedMeaningCount": 1,
+      "triageTier": "higher"
+    },
+    {
+      "rank": 490,
+      "character": "企",
+      "readingCount": 1,
+      "definitionFragmentCount": 4,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 491,
+      "character": "众",
+      "readingCount": 2,
+      "definitionFragmentCount": 6,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 492,
+      "character": "爷",
+      "readingCount": 1,
+      "definitionFragmentCount": 2,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 493,
+      "character": "伞",
+      "readingCount": 1,
+      "definitionFragmentCount": 5,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 494,
+      "character": "创",
+      "readingCount": 2,
+      "definitionFragmentCount": 11,
+      "selectedMeaningCount": 1,
+      "triageTier": "higher"
+    },
+    {
+      "rank": 495,
+      "character": "肌",
+      "readingCount": 1,
+      "definitionFragmentCount": 2,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 496,
+      "character": "肋",
+      "readingCount": 1,
+      "definitionFragmentCount": 2,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 497,
+      "character": "朵",
+      "readingCount": 1,
+      "definitionFragmentCount": 5,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 498,
+      "character": "杂",
+      "readingCount": 1,
+      "definitionFragmentCount": 5,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 499,
+      "character": "危",
+      "readingCount": 2,
+      "definitionFragmentCount": 4,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 500,
+      "character": "旬",
+      "readingCount": 1,
+      "definitionFragmentCount": 3,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 501,
+      "character": "旨",
+      "readingCount": 1,
+      "definitionFragmentCount": 4,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 502,
+      "character": "旭",
+      "readingCount": 1,
+      "definitionFragmentCount": 2,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 503,
+      "character": "负",
+      "readingCount": 1,
+      "definitionFragmentCount": 5,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 504,
+      "character": "匈",
+      "readingCount": 2,
+      "definitionFragmentCount": 4,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 505,
+      "character": "名",
+      "readingCount": 1,
+      "definitionFragmentCount": 5,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 506,
+      "character": "各",
+      "readingCount": 1,
+      "definitionFragmentCount": 2,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 507,
+      "character": "多",
+      "readingCount": 1,
+      "definitionFragmentCount": 10,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 508,
+      "character": "争",
+      "readingCount": 1,
+      "definitionFragmentCount": 5,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 509,
+      "character": "色",
+      "readingCount": 2,
+      "definitionFragmentCount": 7,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 510,
+      "character": "壮",
+      "readingCount": 2,
+      "definitionFragmentCount": 5,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 511,
+      "character": "冲",
+      "readingCount": 2,
+      "definitionFragmentCount": 18,
+      "selectedMeaningCount": 1,
+      "triageTier": "higher"
+    },
+    {
+      "rank": 512,
+      "character": "妆",
+      "readingCount": 1,
+      "definitionFragmentCount": 6,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 513,
+      "character": "冰",
+      "readingCount": 1,
+      "definitionFragmentCount": 4,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 514,
+      "character": "庄",
+      "readingCount": 2,
+      "definitionFragmentCount": 9,
+      "selectedMeaningCount": 1,
+      "triageTier": "higher"
+    },
+    {
+      "rank": 515,
+      "character": "庆",
+      "readingCount": 1,
+      "definitionFragmentCount": 1,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 516,
+      "character": "亦",
+      "readingCount": 1,
+      "definitionFragmentCount": 1,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 517,
+      "character": "刘",
+      "readingCount": 1,
+      "definitionFragmentCount": 1,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 518,
+      "character": "齐",
+      "readingCount": 2,
+      "definitionFragmentCount": 9,
+      "selectedMeaningCount": 1,
+      "triageTier": "higher"
+    },
+    {
+      "rank": 519,
+      "character": "交",
+      "readingCount": 1,
+      "definitionFragmentCount": 6,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 520,
+      "character": "衣",
+      "readingCount": 2,
+      "definitionFragmentCount": 5,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 521,
+      "character": "次",
+      "readingCount": 1,
+      "definitionFragmentCount": 13,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 522,
+      "character": "产",
+      "readingCount": 1,
+      "definitionFragmentCount": 7,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 523,
+      "character": "决",
+      "readingCount": 1,
+      "definitionFragmentCount": 6,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 524,
+      "character": "亥",
+      "readingCount": 1,
+      "definitionFragmentCount": 2,
+      "selectedMeaningCount": 0,
+      "triageTier": "deferred"
+    },
+    {
+      "rank": 525,
+      "character": "充",
+      "readingCount": 1,
+      "definitionFragmentCount": 7,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 526,
+      "character": "妄",
+      "readingCount": 1,
+      "definitionFragmentCount": 4,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 527,
+      "character": "闭",
+      "readingCount": 1,
+      "definitionFragmentCount": 4,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 528,
+      "character": "问",
+      "readingCount": 1,
+      "definitionFragmentCount": 1,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 529,
+      "character": "闯",
+      "readingCount": 1,
+      "definitionFragmentCount": 5,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 530,
+      "character": "羊",
+      "readingCount": 2,
+      "definitionFragmentCount": 4,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 531,
+      "character": "并",
+      "readingCount": 1,
+      "definitionFragmentCount": 12,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 532,
+      "character": "关",
+      "readingCount": 2,
+      "definitionFragmentCount": 7,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 533,
+      "character": "米",
+      "readingCount": 2,
+      "definitionFragmentCount": 4,
+      "selectedMeaningCount": 0,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 534,
+      "character": "灯",
+      "readingCount": 1,
+      "definitionFragmentCount": 4,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 535,
+      "character": "州",
+      "readingCount": 1,
+      "definitionFragmentCount": 6,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 536,
+      "character": "汗",
+      "readingCount": 2,
+      "definitionFragmentCount": 5,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 537,
+      "character": "污",
+      "readingCount": 1,
+      "definitionFragmentCount": 9,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 538,
+      "character": "江",
+      "readingCount": 2,
+      "definitionFragmentCount": 3,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 539,
+      "character": "汛",
+      "readingCount": 1,
+      "definitionFragmentCount": 3,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 540,
+      "character": "池",
+      "readingCount": 2,
+      "definitionFragmentCount": 4,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 541,
+      "character": "汝",
+      "readingCount": 1,
+      "definitionFragmentCount": 1,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 542,
+      "character": "汤",
+      "readingCount": 3,
+      "definitionFragmentCount": 6,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 543,
+      "character": "忙",
+      "readingCount": 1,
+      "definitionFragmentCount": 4,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 544,
+      "character": "兴",
+      "readingCount": 3,
+      "definitionFragmentCount": 12,
+      "selectedMeaningCount": 1,
+      "triageTier": "higher"
+    },
+    {
+      "rank": 545,
+      "character": "宇",
+      "readingCount": 1,
+      "definitionFragmentCount": 2,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 546,
+      "character": "守",
+      "readingCount": 1,
+      "definitionFragmentCount": 7,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 547,
+      "character": "宅",
+      "readingCount": 1,
+      "definitionFragmentCount": 3,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 548,
+      "character": "字",
+      "readingCount": 1,
+      "definitionFragmentCount": 6,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 549,
+      "character": "安",
+      "readingCount": 2,
+      "definitionFragmentCount": 19,
+      "selectedMeaningCount": 1,
+      "triageTier": "higher"
+    },
+    {
+      "rank": 550,
+      "character": "讲",
+      "readingCount": 1,
+      "definitionFragmentCount": 8,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 551,
+      "character": "讳",
+      "readingCount": 1,
+      "definitionFragmentCount": 3,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 552,
+      "character": "军",
+      "readingCount": 1,
+      "definitionFragmentCount": 4,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 553,
+      "character": "讶",
+      "readingCount": 1,
+      "definitionFragmentCount": 1,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 554,
+      "character": "许",
+      "readingCount": 2,
+      "definitionFragmentCount": 7,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 555,
+      "character": "讹",
+      "readingCount": 1,
+      "definitionFragmentCount": 4,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 556,
+      "character": "论",
+      "readingCount": 2,
+      "definitionFragmentCount": 11,
+      "selectedMeaningCount": 1,
+      "triageTier": "higher"
+    },
+    {
+      "rank": 557,
+      "character": "讼",
+      "readingCount": 1,
+      "definitionFragmentCount": 1,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 558,
+      "character": "农",
+      "readingCount": 2,
+      "definitionFragmentCount": 7,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 559,
+      "character": "讽",
+      "readingCount": 1,
+      "definitionFragmentCount": 4,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 560,
+      "character": "设",
+      "readingCount": 1,
+      "definitionFragmentCount": 5,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 561,
+      "character": "访",
+      "readingCount": 1,
+      "definitionFragmentCount": 5,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 562,
+      "character": "诀",
+      "readingCount": 1,
+      "definitionFragmentCount": 2,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 563,
+      "character": "寻",
+      "readingCount": 1,
+      "definitionFragmentCount": 3,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 564,
+      "character": "那",
+      "readingCount": 5,
+      "definitionFragmentCount": 11,
+      "selectedMeaningCount": 1,
+      "triageTier": "higher"
+    },
+    {
+      "rank": 565,
+      "character": "迅",
+      "readingCount": 1,
+      "definitionFragmentCount": 2,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 566,
+      "character": "尽",
+      "readingCount": 2,
+      "definitionFragmentCount": 14,
+      "selectedMeaningCount": 1,
+      "triageTier": "higher"
+    },
+    {
+      "rank": 567,
+      "character": "导",
+      "readingCount": 1,
+      "definitionFragmentCount": 5,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 568,
+      "character": "异",
+      "readingCount": 1,
+      "definitionFragmentCount": 9,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 569,
+      "character": "弛",
+      "readingCount": 1,
+      "definitionFragmentCount": 4,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 570,
+      "character": "孙",
+      "readingCount": 2,
+      "definitionFragmentCount": 3,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 571,
+      "character": "阵",
+      "readingCount": 1,
+      "definitionFragmentCount": 7,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 572,
+      "character": "阳",
+      "readingCount": 1,
+      "definitionFragmentCount": 4,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 573,
+      "character": "收",
+      "readingCount": 1,
+      "definitionFragmentCount": 7,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 574,
+      "character": "阶",
+      "readingCount": 1,
+      "definitionFragmentCount": 3,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 575,
+      "character": "阴",
+      "readingCount": 2,
+      "definitionFragmentCount": 12,
+      "selectedMeaningCount": 1,
+      "triageTier": "higher"
+    },
+    {
+      "rank": 576,
+      "character": "防",
+      "readingCount": 1,
+      "definitionFragmentCount": 4,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 577,
+      "character": "奸",
+      "readingCount": 1,
+      "definitionFragmentCount": 8,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 578,
+      "character": "如",
+      "readingCount": 1,
+      "definitionFragmentCount": 3,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 579,
+      "character": "妇",
+      "readingCount": 1,
+      "definitionFragmentCount": 2,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 580,
+      "character": "妃",
+      "readingCount": 1,
+      "definitionFragmentCount": 1,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 581,
+      "character": "好",
+      "readingCount": 2,
+      "definitionFragmentCount": 13,
+      "selectedMeaningCount": 1,
+      "triageTier": "higher"
+    },
+    {
+      "rank": 582,
+      "character": "她",
+      "readingCount": 1,
+      "definitionFragmentCount": 1,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 583,
+      "character": "妈",
+      "readingCount": 1,
+      "definitionFragmentCount": 3,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 584,
+      "character": "戏",
+      "readingCount": 1,
+      "definitionFragmentCount": 6,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 585,
+      "character": "羽",
+      "readingCount": 1,
+      "definitionFragmentCount": 2,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 586,
+      "character": "观",
+      "readingCount": 3,
+      "definitionFragmentCount": 12,
+      "selectedMeaningCount": 1,
+      "triageTier": "higher"
+    },
+    {
+      "rank": 587,
+      "character": "欢",
+      "readingCount": 1,
+      "definitionFragmentCount": 9,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 588,
+      "character": "买",
+      "readingCount": 1,
+      "definitionFragmentCount": 2,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 589,
+      "character": "红",
+      "readingCount": 2,
+      "definitionFragmentCount": 5,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 590,
+      "character": "驮",
+      "readingCount": 2,
+      "definitionFragmentCount": 3,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 591,
+      "character": "纤",
+      "readingCount": 2,
+      "definitionFragmentCount": 4,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 592,
+      "character": "驯",
+      "readingCount": 1,
+      "definitionFragmentCount": 3,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 593,
+      "character": "约",
+      "readingCount": 2,
+      "definitionFragmentCount": 10,
+      "selectedMeaningCount": 1,
+      "triageTier": "higher"
+    },
+    {
+      "rank": 594,
+      "character": "级",
+      "readingCount": 1,
+      "definitionFragmentCount": 6,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 595,
+      "character": "纪",
+      "readingCount": 2,
+      "definitionFragmentCount": 8,
+      "selectedMeaningCount": 1,
+      "triageTier": "higher"
+    },
+    {
+      "rank": 596,
+      "character": "驰",
+      "readingCount": 1,
+      "definitionFragmentCount": 5,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 597,
+      "character": "纫",
+      "readingCount": 1,
+      "definitionFragmentCount": 2,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 598,
+      "character": "巡",
+      "readingCount": 1,
+      "definitionFragmentCount": 4,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 599,
+      "character": "寿",
+      "readingCount": 2,
+      "definitionFragmentCount": 7,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 600,
+      "character": "弄",
+      "readingCount": 2,
+      "definitionFragmentCount": 12,
+      "selectedMeaningCount": 1,
+      "triageTier": "higher"
+    },
+    {
+      "rank": 601,
+      "character": "麦",
+      "readingCount": 2,
+      "definitionFragmentCount": 4,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 602,
+      "character": "玖",
+      "readingCount": 1,
+      "definitionFragmentCount": 2,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 603,
+      "character": "玛",
+      "readingCount": 1,
+      "definitionFragmentCount": 2,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 604,
+      "character": "形",
+      "readingCount": 1,
+      "definitionFragmentCount": 4,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 605,
+      "character": "进",
+      "readingCount": 1,
+      "definitionFragmentCount": 10,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 606,
+      "character": "戒",
+      "readingCount": 1,
+      "definitionFragmentCount": 6,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 607,
+      "character": "吞",
+      "readingCount": 1,
+      "definitionFragmentCount": 2,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 608,
+      "character": "远",
+      "readingCount": 2,
+      "definitionFragmentCount": 6,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 609,
+      "character": "违",
+      "readingCount": 1,
+      "definitionFragmentCount": 4,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 610,
+      "character": "韧",
+      "readingCount": 1,
+      "definitionFragmentCount": 6,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 611,
+      "character": "运",
+      "readingCount": 1,
+      "definitionFragmentCount": 7,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 612,
+      "character": "扶",
+      "readingCount": 1,
+      "definitionFragmentCount": 4,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 613,
+      "character": "抚",
+      "readingCount": 1,
+      "definitionFragmentCount": 5,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 614,
+      "character": "坛",
+      "readingCount": 1,
+      "definitionFragmentCount": 2,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 615,
+      "character": "技",
+      "readingCount": 1,
+      "definitionFragmentCount": 1,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 616,
+      "character": "坏",
+      "readingCount": 1,
+      "definitionFragmentCount": 5,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 617,
+      "character": "抠",
+      "readingCount": 1,
+      "definitionFragmentCount": 8,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 618,
+      "character": "扰",
+      "readingCount": 1,
+      "definitionFragmentCount": 1,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 619,
+      "character": "扼",
+      "readingCount": 1,
+      "definitionFragmentCount": 6,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 620,
+      "character": "拒",
+      "readingCount": 1,
+      "definitionFragmentCount": 3,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 621,
+      "character": "找",
+      "readingCount": 1,
+      "definitionFragmentCount": 7,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 622,
+      "character": "批",
+      "readingCount": 1,
+      "definitionFragmentCount": 6,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 623,
+      "character": "址",
+      "readingCount": 1,
+      "definitionFragmentCount": 2,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 624,
+      "character": "扯",
+      "readingCount": 1,
+      "definitionFragmentCount": 10,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 625,
+      "character": "走",
+      "readingCount": 1,
+      "definitionFragmentCount": 12,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 626,
+      "character": "抄",
+      "readingCount": 1,
+      "definitionFragmentCount": 9,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 627,
+      "character": "贡",
+      "readingCount": 2,
+      "definitionFragmentCount": 4,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 628,
+      "character": "汞",
+      "readingCount": 2,
+      "definitionFragmentCount": 3,
+      "selectedMeaningCount": 0,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 629,
+      "character": "坝",
+      "readingCount": 1,
+      "definitionFragmentCount": 4,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 630,
+      "character": "攻",
+      "readingCount": 1,
+      "definitionFragmentCount": 3,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 631,
+      "character": "赤",
+      "readingCount": 1,
+      "definitionFragmentCount": 4,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 632,
+      "character": "折",
+      "readingCount": 3,
+      "definitionFragmentCount": 23,
+      "selectedMeaningCount": 1,
+      "triageTier": "higher"
+    },
+    {
+      "rank": 633,
+      "character": "抓",
+      "readingCount": 1,
+      "definitionFragmentCount": 5,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 634,
+      "character": "扳",
+      "readingCount": 2,
+      "definitionFragmentCount": 5,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 635,
+      "character": "抡",
+      "readingCount": 2,
+      "definitionFragmentCount": 4,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 636,
+      "character": "扮",
+      "readingCount": 1,
+      "definitionFragmentCount": 4,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 637,
+      "character": "抢",
+      "readingCount": 2,
+      "definitionFragmentCount": 7,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 638,
+      "character": "孝",
+      "readingCount": 1,
+      "definitionFragmentCount": 2,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 639,
+      "character": "坎",
+      "readingCount": 1,
+      "definitionFragmentCount": 7,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 640,
+      "character": "均",
+      "readingCount": 1,
+      "definitionFragmentCount": 4,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 641,
+      "character": "抑",
+      "readingCount": 1,
+      "definitionFragmentCount": 4,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 642,
+      "character": "抛",
+      "readingCount": 1,
+      "definitionFragmentCount": 5,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 643,
+      "character": "投",
+      "readingCount": 1,
+      "definitionFragmentCount": 5,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 644,
+      "character": "坟",
+      "readingCount": 1,
+      "definitionFragmentCount": 6,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 645,
+      "character": "坑",
+      "readingCount": 1,
+      "definitionFragmentCount": 7,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 646,
+      "character": "抗",
+      "readingCount": 1,
+      "definitionFragmentCount": 4,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 647,
+      "character": "坊",
+      "readingCount": 3,
+      "definitionFragmentCount": 5,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 648,
+      "character": "抖",
+      "readingCount": 1,
+      "definitionFragmentCount": 4,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 649,
+      "character": "护",
+      "readingCount": 1,
+      "definitionFragmentCount": 1,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 650,
+      "character": "壳",
+      "readingCount": 1,
+      "definitionFragmentCount": 4,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 651,
+      "character": "志",
+      "readingCount": 1,
+      "definitionFragmentCount": 7,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 652,
+      "character": "块",
+      "readingCount": 1,
+      "definitionFragmentCount": 5,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 653,
+      "character": "扭",
+      "readingCount": 1,
+      "definitionFragmentCount": 5,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 654,
+      "character": "声",
+      "readingCount": 1,
+      "definitionFragmentCount": 5,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 655,
+      "character": "把",
+      "readingCount": 2,
+      "definitionFragmentCount": 9,
+      "selectedMeaningCount": 1,
+      "triageTier": "higher"
+    },
+    {
+      "rank": 656,
+      "character": "报",
+      "readingCount": 1,
+      "definitionFragmentCount": 7,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 657,
+      "character": "拟",
+      "readingCount": 1,
+      "definitionFragmentCount": 11,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 658,
+      "character": "却",
+      "readingCount": 1,
+      "definitionFragmentCount": 10,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 659,
+      "character": "抒",
+      "readingCount": 1,
+      "definitionFragmentCount": 4,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 660,
+      "character": "劫",
+      "readingCount": 1,
+      "definitionFragmentCount": 9,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 661,
+      "character": "芙",
+      "readingCount": 1,
+      "definitionFragmentCount": 1,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 662,
+      "character": "芜",
+      "readingCount": 1,
+      "definitionFragmentCount": 1,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 663,
+      "character": "苇",
+      "readingCount": 1,
+      "definitionFragmentCount": 3,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 664,
+      "character": "芽",
+      "readingCount": 1,
+      "definitionFragmentCount": 2,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 665,
+      "character": "花",
+      "readingCount": 2,
+      "definitionFragmentCount": 12,
+      "selectedMeaningCount": 1,
+      "triageTier": "higher"
+    },
+    {
+      "rank": 666,
+      "character": "芹",
+      "readingCount": 1,
+      "definitionFragmentCount": 1,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 667,
+      "character": "芥",
+      "readingCount": 2,
+      "definitionFragmentCount": 2,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 668,
+      "character": "芬",
+      "readingCount": 1,
+      "definitionFragmentCount": 2,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 669,
+      "character": "苍",
+      "readingCount": 2,
+      "definitionFragmentCount": 4,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 670,
+      "character": "芳",
+      "readingCount": 1,
+      "definitionFragmentCount": 1,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 671,
+      "character": "严",
+      "readingCount": 2,
+      "definitionFragmentCount": 7,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 672,
+      "character": "芦",
+      "readingCount": 1,
+      "definitionFragmentCount": 3,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 673,
+      "character": "芯",
+      "readingCount": 2,
+      "definitionFragmentCount": 3,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 674,
+      "character": "劳",
+      "readingCount": 2,
+      "definitionFragmentCount": 6,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 675,
+      "character": "克",
+      "readingCount": 3,
+      "definitionFragmentCount": 14,
+      "selectedMeaningCount": 1,
+      "triageTier": "higher"
+    },
+    {
+      "rank": 676,
+      "character": "芭",
+      "readingCount": 1,
+      "definitionFragmentCount": 2,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 677,
+      "character": "苏",
+      "readingCount": 2,
+      "definitionFragmentCount": 12,
+      "selectedMeaningCount": 1,
+      "triageTier": "higher"
+    },
+    {
+      "rank": 678,
+      "character": "杆",
+      "readingCount": 2,
+      "definitionFragmentCount": 6,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 679,
+      "character": "杠",
+      "readingCount": 2,
+      "definitionFragmentCount": 10,
+      "selectedMeaningCount": 1,
+      "triageTier": "higher"
+    },
+    {
+      "rank": 680,
+      "character": "杜",
+      "readingCount": 2,
+      "definitionFragmentCount": 5,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 681,
+      "character": "材",
+      "readingCount": 1,
+      "definitionFragmentCount": 6,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 682,
+      "character": "村",
+      "readingCount": 1,
+      "definitionFragmentCount": 2,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 683,
+      "character": "杖",
+      "readingCount": 1,
+      "definitionFragmentCount": 5,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 684,
+      "character": "杏",
+      "readingCount": 1,
+      "definitionFragmentCount": 2,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 685,
+      "character": "杉",
+      "readingCount": 1,
+      "definitionFragmentCount": 3,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 686,
+      "character": "巫",
+      "readingCount": 2,
+      "definitionFragmentCount": 6,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 687,
+      "character": "极",
+      "readingCount": 1,
+      "definitionFragmentCount": 4,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 688,
+      "character": "李",
+      "readingCount": 2,
+      "definitionFragmentCount": 2,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 689,
+      "character": "杨",
+      "readingCount": 2,
+      "definitionFragmentCount": 2,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 690,
+      "character": "求",
+      "readingCount": 1,
+      "definitionFragmentCount": 5,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 691,
+      "character": "甫",
+      "readingCount": 1,
+      "definitionFragmentCount": 3,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 692,
+      "character": "匣",
+      "readingCount": 1,
+      "definitionFragmentCount": 1,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 693,
+      "character": "更",
+      "readingCount": 2,
+      "definitionFragmentCount": 9,
+      "selectedMeaningCount": 1,
+      "triageTier": "higher"
+    },
+    {
+      "rank": 694,
+      "character": "束",
+      "readingCount": 2,
+      "definitionFragmentCount": 6,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 695,
+      "character": "吾",
+      "readingCount": 2,
+      "definitionFragmentCount": 3,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 696,
+      "character": "豆",
+      "readingCount": 1,
+      "definitionFragmentCount": 5,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 697,
+      "character": "两",
+      "readingCount": 1,
+      "definitionFragmentCount": 5,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 698,
+      "character": "酉",
+      "readingCount": 1,
+      "definitionFragmentCount": 2,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 699,
+      "character": "丽",
+      "readingCount": 2,
+      "definitionFragmentCount": 2,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 700,
+      "character": "医",
+      "readingCount": 1,
+      "definitionFragmentCount": 5,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 701,
+      "character": "辰",
+      "readingCount": 1,
+      "definitionFragmentCount": 2,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 702,
+      "character": "励",
+      "readingCount": 2,
+      "definitionFragmentCount": 3,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 703,
+      "character": "否",
+      "readingCount": 2,
+      "definitionFragmentCount": 5,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 704,
+      "character": "还",
+      "readingCount": 3,
+      "definitionFragmentCount": 15,
+      "selectedMeaningCount": 1,
+      "triageTier": "higher"
+    },
+    {
+      "rank": 705,
+      "character": "尬",
+      "readingCount": 1,
+      "definitionFragmentCount": 1,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 706,
+      "character": "歼",
+      "readingCount": 1,
+      "definitionFragmentCount": 2,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 707,
+      "character": "来",
+      "readingCount": 1,
+      "definitionFragmentCount": 5,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 708,
+      "character": "连",
+      "readingCount": 2,
+      "definitionFragmentCount": 9,
+      "selectedMeaningCount": 1,
+      "triageTier": "higher"
+    },
+    {
+      "rank": 709,
+      "character": "轩",
+      "readingCount": 2,
+      "definitionFragmentCount": 5,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 710,
+      "character": "步",
+      "readingCount": 2,
+      "definitionFragmentCount": 7,
+      "selectedMeaningCount": 2,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 711,
+      "character": "卤",
+      "readingCount": 1,
+      "definitionFragmentCount": 7,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 712,
+      "character": "坚",
+      "readingCount": 1,
+      "definitionFragmentCount": 5,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 713,
+      "character": "肖",
+      "readingCount": 2,
+      "definitionFragmentCount": 6,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 714,
+      "character": "旱",
+      "readingCount": 1,
+      "definitionFragmentCount": 1,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 715,
+      "character": "盯",
+      "readingCount": 1,
+      "definitionFragmentCount": 4,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 716,
+      "character": "呈",
+      "readingCount": 1,
+      "definitionFragmentCount": 6,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 717,
+      "character": "时",
+      "readingCount": 2,
+      "definitionFragmentCount": 8,
+      "selectedMeaningCount": 1,
+      "triageTier": "higher"
+    },
+    {
+      "rank": 718,
+      "character": "吴",
+      "readingCount": 1,
+      "definitionFragmentCount": 3,
+      "selectedMeaningCount": 0,
+      "triageTier": "deferred"
+    },
+    {
+      "rank": 719,
+      "character": "助",
+      "readingCount": 1,
+      "definitionFragmentCount": 2,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 720,
+      "character": "县",
+      "readingCount": 1,
+      "definitionFragmentCount": 1,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 721,
+      "character": "里",
+      "readingCount": 2,
+      "definitionFragmentCount": 11,
+      "selectedMeaningCount": 1,
+      "triageTier": "higher"
+    },
+    {
+      "rank": 722,
+      "character": "呆",
+      "readingCount": 1,
+      "definitionFragmentCount": 5,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 723,
+      "character": "吱",
+      "readingCount": 2,
+      "definitionFragmentCount": 3,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 724,
+      "character": "吠",
+      "readingCount": 1,
+      "definitionFragmentCount": 1,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 725,
+      "character": "呕",
+      "readingCount": 1,
+      "definitionFragmentCount": 1,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 726,
+      "character": "园",
+      "readingCount": 2,
+      "definitionFragmentCount": 3,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 727,
+      "character": "旷",
+      "readingCount": 1,
+      "definitionFragmentCount": 5,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 728,
+      "character": "围",
+      "readingCount": 2,
+      "definitionFragmentCount": 5,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 729,
+      "character": "呀",
+      "readingCount": 1,
+      "definitionFragmentCount": 1,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 730,
+      "character": "吨",
+      "readingCount": 1,
+      "definitionFragmentCount": 2,
+      "selectedMeaningCount": 0,
+      "triageTier": "deferred"
+    },
+    {
+      "rank": 731,
+      "character": "足",
+      "readingCount": 2,
+      "definitionFragmentCount": 4,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 732,
+      "character": "邮",
+      "readingCount": 1,
+      "definitionFragmentCount": 2,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 733,
+      "character": "男",
+      "readingCount": 1,
+      "definitionFragmentCount": 3,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 734,
+      "character": "困",
+      "readingCount": 1,
+      "definitionFragmentCount": 7,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 735,
+      "character": "吵",
+      "readingCount": 1,
+      "definitionFragmentCount": 4,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 736,
+      "character": "串",
+      "readingCount": 1,
+      "definitionFragmentCount": 11,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 737,
+      "character": "员",
+      "readingCount": 1,
+      "definitionFragmentCount": 3,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 738,
+      "character": "呐",
+      "readingCount": 2,
+      "definitionFragmentCount": 2,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 739,
+      "character": "听",
+      "readingCount": 3,
+      "definitionFragmentCount": 9,
+      "selectedMeaningCount": 1,
+      "triageTier": "higher"
+    },
+    {
+      "rank": 740,
+      "character": "吟",
+      "readingCount": 1,
+      "definitionFragmentCount": 7,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 741,
+      "character": "吩",
+      "readingCount": 1,
+      "definitionFragmentCount": 2,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 742,
+      "character": "呛",
+      "readingCount": 2,
+      "definitionFragmentCount": 7,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 743,
+      "character": "吻",
+      "readingCount": 1,
+      "definitionFragmentCount": 4,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 744,
+      "character": "吹",
+      "readingCount": 1,
+      "definitionFragmentCount": 8,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 745,
+      "character": "呜",
+      "readingCount": 1,
+      "definitionFragmentCount": 1,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 746,
+      "character": "吭",
+      "readingCount": 2,
+      "definitionFragmentCount": 2,
+      "selectedMeaningCount": 0,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 747,
+      "character": "吧",
+      "readingCount": 2,
+      "definitionFragmentCount": 8,
+      "selectedMeaningCount": 0,
+      "triageTier": "higher"
+    },
+    {
+      "rank": 748,
+      "character": "邑",
+      "readingCount": 1,
+      "definitionFragmentCount": 2,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 749,
+      "character": "吼",
+      "readingCount": 1,
+      "definitionFragmentCount": 5,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 750,
+      "character": "囤",
+      "readingCount": 2,
+      "definitionFragmentCount": 3,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 751,
+      "character": "别",
+      "readingCount": 3,
+      "definitionFragmentCount": 12,
+      "selectedMeaningCount": 2,
+      "triageTier": "higher"
+    },
+    {
+      "rank": 752,
+      "character": "吮",
+      "readingCount": 1,
+      "definitionFragmentCount": 1,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 753,
+      "character": "岖",
+      "readingCount": 1,
+      "definitionFragmentCount": 1,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 754,
+      "character": "岗",
+      "readingCount": 1,
+      "definitionFragmentCount": 2,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 755,
+      "character": "帐",
+      "readingCount": 1,
+      "definitionFragmentCount": 5,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 756,
+      "character": "财",
+      "readingCount": 1,
+      "definitionFragmentCount": 5,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 757,
+      "character": "针",
+      "readingCount": 1,
+      "definitionFragmentCount": 6,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 758,
+      "character": "钉",
+      "readingCount": 2,
+      "definitionFragmentCount": 9,
+      "selectedMeaningCount": 1,
+      "triageTier": "higher"
+    },
+    {
+      "rank": 759,
+      "character": "牡",
+      "readingCount": 1,
+      "definitionFragmentCount": 3,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 760,
+      "character": "告",
+      "readingCount": 1,
+      "definitionFragmentCount": 7,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 761,
+      "character": "我",
+      "readingCount": 1,
+      "definitionFragmentCount": 3,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 762,
+      "character": "乱",
+      "readingCount": 1,
+      "definitionFragmentCount": 11,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 763,
+      "character": "利",
+      "readingCount": 2,
+      "definitionFragmentCount": 9,
+      "selectedMeaningCount": 1,
+      "triageTier": "higher"
+    },
+    {
+      "rank": 764,
+      "character": "秃",
+      "readingCount": 1,
+      "definitionFragmentCount": 2,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 765,
+      "character": "秀",
+      "readingCount": 1,
+      "definitionFragmentCount": 10,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 766,
+      "character": "私",
+      "readingCount": 1,
+      "definitionFragmentCount": 3,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 767,
+      "character": "每",
+      "readingCount": 1,
+      "definitionFragmentCount": 2,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 768,
+      "character": "兵",
+      "readingCount": 1,
+      "definitionFragmentCount": 8,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 769,
+      "character": "估",
+      "readingCount": 2,
+      "definitionFragmentCount": 3,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 770,
+      "character": "体",
+      "readingCount": 1,
+      "definitionFragmentCount": 7,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 771,
+      "character": "何",
+      "readingCount": 2,
+      "definitionFragmentCount": 6,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 772,
+      "character": "佐",
+      "readingCount": 1,
+      "definitionFragmentCount": 4,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 773,
+      "character": "佑",
+      "readingCount": 1,
+      "definitionFragmentCount": 2,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 774,
+      "character": "但",
+      "readingCount": 1,
+      "definitionFragmentCount": 6,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 775,
+      "character": "伸",
+      "readingCount": 1,
+      "definitionFragmentCount": 2,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 776,
+      "character": "佃",
+      "readingCount": 2,
+      "definitionFragmentCount": 3,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 777,
+      "character": "作",
+      "readingCount": 2,
+      "definitionFragmentCount": 11,
+      "selectedMeaningCount": 1,
+      "triageTier": "higher"
+    },
+    {
+      "rank": 778,
+      "character": "伯",
+      "readingCount": 3,
+      "definitionFragmentCount": 8,
+      "selectedMeaningCount": 1,
+      "triageTier": "higher"
+    },
+    {
+      "rank": 779,
+      "character": "伶",
+      "readingCount": 1,
+      "definitionFragmentCount": 3,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 780,
+      "character": "佣",
+      "readingCount": 2,
+      "definitionFragmentCount": 7,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 781,
+      "character": "低",
+      "readingCount": 1,
+      "definitionFragmentCount": 6,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 782,
+      "character": "你",
+      "readingCount": 1,
+      "definitionFragmentCount": 1,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 783,
+      "character": "住",
+      "readingCount": 1,
+      "definitionFragmentCount": 6,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 784,
+      "character": "位",
+      "readingCount": 1,
+      "definitionFragmentCount": 6,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 785,
+      "character": "伴",
+      "readingCount": 1,
+      "definitionFragmentCount": 5,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 786,
+      "character": "身",
+      "readingCount": 1,
+      "definitionFragmentCount": 9,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 787,
+      "character": "皂",
+      "readingCount": 1,
+      "definitionFragmentCount": 2,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 788,
+      "character": "伺",
+      "readingCount": 2,
+      "definitionFragmentCount": 5,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 789,
+      "character": "佛",
+      "readingCount": 2,
+      "definitionFragmentCount": 5,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 790,
+      "character": "囱",
+      "readingCount": 2,
+      "definitionFragmentCount": 2,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 791,
+      "character": "近",
+      "readingCount": 1,
+      "definitionFragmentCount": 3,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 792,
+      "character": "彻",
+      "readingCount": 1,
+      "definitionFragmentCount": 4,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 793,
+      "character": "役",
+      "readingCount": 1,
+      "definitionFragmentCount": 10,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 794,
+      "character": "返",
+      "readingCount": 1,
+      "definitionFragmentCount": 1,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 795,
+      "character": "余",
+      "readingCount": 2,
+      "definitionFragmentCount": 14,
+      "selectedMeaningCount": 1,
+      "triageTier": "higher"
+    },
+    {
+      "rank": 796,
+      "character": "希",
+      "readingCount": 1,
+      "definitionFragmentCount": 3,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 797,
+      "character": "坐",
+      "readingCount": 2,
+      "definitionFragmentCount": 6,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 798,
+      "character": "谷",
+      "readingCount": 2,
+      "definitionFragmentCount": 4,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 799,
+      "character": "妥",
+      "readingCount": 1,
+      "definitionFragmentCount": 4,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 800,
+      "character": "含",
+      "readingCount": 1,
+      "definitionFragmentCount": 3,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 801,
+      "character": "邻",
+      "readingCount": 1,
+      "definitionFragmentCount": 4,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 802,
+      "character": "岔",
+      "readingCount": 1,
+      "definitionFragmentCount": 10,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 803,
+      "character": "肝",
+      "readingCount": 1,
+      "definitionFragmentCount": 2,
+      "selectedMeaningCount": 0,
+      "triageTier": "deferred"
+    },
+    {
+      "rank": 804,
+      "character": "肛",
+      "readingCount": 1,
+      "definitionFragmentCount": 3,
+      "selectedMeaningCount": 0,
+      "triageTier": "deferred"
+    },
+    {
+      "rank": 805,
+      "character": "肚",
+      "readingCount": 2,
+      "definitionFragmentCount": 2,
+      "selectedMeaningCount": 0,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 806,
+      "character": "肘",
+      "readingCount": 1,
+      "definitionFragmentCount": 2,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 807,
+      "character": "肠",
+      "readingCount": 1,
+      "definitionFragmentCount": 2,
+      "selectedMeaningCount": 0,
+      "triageTier": "deferred"
+    },
+    {
+      "rank": 808,
+      "character": "龟",
+      "readingCount": 1,
+      "definitionFragmentCount": 2,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 809,
+      "character": "甸",
+      "readingCount": 2,
+      "definitionFragmentCount": 4,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 810,
+      "character": "免",
+      "readingCount": 2,
+      "definitionFragmentCount": 8,
+      "selectedMeaningCount": 1,
+      "triageTier": "higher"
+    },
+    {
+      "rank": 811,
+      "character": "狂",
+      "readingCount": 1,
+      "definitionFragmentCount": 3,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 812,
+      "character": "犹",
+      "readingCount": 1,
+      "definitionFragmentCount": 5,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 813,
+      "character": "狈",
+      "readingCount": 1,
+      "definitionFragmentCount": 3,
+      "selectedMeaningCount": 0,
+      "triageTier": "deferred"
+    },
+    {
+      "rank": 814,
+      "character": "角",
+      "readingCount": 3,
+      "definitionFragmentCount": 11,
+      "selectedMeaningCount": 1,
+      "triageTier": "higher"
+    },
+    {
+      "rank": 815,
+      "character": "删",
+      "readingCount": 1,
+      "definitionFragmentCount": 1,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 816,
+      "character": "条",
+      "readingCount": 1,
+      "definitionFragmentCount": 5,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 817,
+      "character": "彤",
+      "readingCount": 2,
+      "definitionFragmentCount": 2,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 818,
+      "character": "卵",
+      "readingCount": 1,
+      "definitionFragmentCount": 3,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 819,
+      "character": "灸",
+      "readingCount": 1,
+      "definitionFragmentCount": 1,
+      "selectedMeaningCount": 0,
+      "triageTier": "deferred"
+    },
+    {
+      "rank": 820,
+      "character": "岛",
+      "readingCount": 1,
+      "definitionFragmentCount": 3,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 821,
+      "character": "刨",
+      "readingCount": 2,
+      "definitionFragmentCount": 11,
+      "selectedMeaningCount": 0,
+      "triageTier": "higher"
+    },
+    {
+      "rank": 822,
+      "character": "迎",
+      "readingCount": 1,
+      "definitionFragmentCount": 4,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 823,
+      "character": "饭",
+      "readingCount": 1,
+      "definitionFragmentCount": 5,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 824,
+      "character": "饮",
+      "readingCount": 2,
+      "definitionFragmentCount": 3,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 825,
+      "character": "系",
+      "readingCount": 2,
+      "definitionFragmentCount": 14,
+      "selectedMeaningCount": 1,
+      "triageTier": "higher"
+    },
+    {
+      "rank": 826,
+      "character": "言",
+      "readingCount": 1,
+      "definitionFragmentCount": 4,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 827,
+      "character": "冻",
+      "readingCount": 1,
+      "definitionFragmentCount": 3,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 828,
+      "character": "状",
+      "readingCount": 1,
+      "definitionFragmentCount": 7,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 829,
+      "character": "亩",
+      "readingCount": 1,
+      "definitionFragmentCount": 5,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 830,
+      "character": "况",
+      "readingCount": 1,
+      "definitionFragmentCount": 2,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 831,
+      "character": "床",
+      "readingCount": 1,
+      "definitionFragmentCount": 5,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 832,
+      "character": "库",
+      "readingCount": 1,
+      "definitionFragmentCount": 3,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 833,
+      "character": "庇",
+      "readingCount": 1,
+      "definitionFragmentCount": 4,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 834,
+      "character": "疗",
+      "readingCount": 1,
+      "definitionFragmentCount": 3,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 835,
+      "character": "吝",
+      "readingCount": 1,
+      "definitionFragmentCount": 2,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 836,
+      "character": "应",
+      "readingCount": 3,
+      "definitionFragmentCount": 10,
+      "selectedMeaningCount": 1,
+      "triageTier": "higher"
+    },
+    {
+      "rank": 837,
+      "character": "这",
+      "readingCount": 1,
+      "definitionFragmentCount": 3,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 838,
+      "character": "冷",
+      "readingCount": 2,
+      "definitionFragmentCount": 2,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 839,
+      "character": "庐",
+      "readingCount": 1,
+      "definitionFragmentCount": 1,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 840,
+      "character": "序",
+      "readingCount": 1,
+      "definitionFragmentCount": 3,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 841,
+      "character": "辛",
+      "readingCount": 2,
+      "definitionFragmentCount": 10,
+      "selectedMeaningCount": 1,
+      "triageTier": "higher"
+    },
+    {
+      "rank": 842,
+      "character": "弃",
+      "readingCount": 1,
+      "definitionFragmentCount": 4,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 843,
+      "character": "冶",
+      "readingCount": 1,
+      "definitionFragmentCount": 3,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 844,
+      "character": "忘",
+      "readingCount": 1,
+      "definitionFragmentCount": 3,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 845,
+      "character": "闰",
+      "readingCount": 1,
+      "definitionFragmentCount": 2,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 846,
+      "character": "闲",
+      "readingCount": 1,
+      "definitionFragmentCount": 9,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 847,
+      "character": "间",
+      "readingCount": 2,
+      "definitionFragmentCount": 10,
+      "selectedMeaningCount": 1,
+      "triageTier": "higher"
+    },
+    {
+      "rank": 848,
+      "character": "闷",
+      "readingCount": 2,
+      "definitionFragmentCount": 10,
+      "selectedMeaningCount": 1,
+      "triageTier": "higher"
+    },
+    {
+      "rank": 849,
+      "character": "判",
+      "readingCount": 1,
+      "definitionFragmentCount": 5,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 850,
+      "character": "兑",
+      "readingCount": 2,
+      "definitionFragmentCount": 7,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 851,
+      "character": "灶",
+      "readingCount": 1,
+      "definitionFragmentCount": 3,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 852,
+      "character": "灿",
+      "readingCount": 1,
+      "definitionFragmentCount": 5,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 853,
+      "character": "灼",
+      "readingCount": 1,
+      "definitionFragmentCount": 4,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 854,
+      "character": "弟",
+      "readingCount": 2,
+      "definitionFragmentCount": 4,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 855,
+      "character": "汪",
+      "readingCount": 2,
+      "definitionFragmentCount": 5,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 856,
+      "character": "沐",
+      "readingCount": 1,
+      "definitionFragmentCount": 4,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 857,
+      "character": "沛",
+      "readingCount": 1,
+      "definitionFragmentCount": 2,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 858,
+      "character": "汰",
+      "readingCount": 1,
+      "definitionFragmentCount": 2,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 859,
+      "character": "沥",
+      "readingCount": 1,
+      "definitionFragmentCount": 3,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 860,
+      "character": "沙",
+      "readingCount": 2,
+      "definitionFragmentCount": 8,
+      "selectedMeaningCount": 1,
+      "triageTier": "higher"
+    },
+    {
+      "rank": 861,
+      "character": "汽",
+      "readingCount": 1,
+      "definitionFragmentCount": 2,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 862,
+      "character": "沃",
+      "readingCount": 1,
+      "definitionFragmentCount": 4,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 863,
+      "character": "沦",
+      "readingCount": 1,
+      "definitionFragmentCount": 2,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 864,
+      "character": "汹",
+      "readingCount": 1,
+      "definitionFragmentCount": 2,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 865,
+      "character": "泛",
+      "readingCount": 1,
+      "definitionFragmentCount": 9,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 866,
+      "character": "沧",
+      "readingCount": 1,
+      "definitionFragmentCount": 3,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 867,
+      "character": "没",
+      "readingCount": 2,
+      "definitionFragmentCount": 7,
+      "selectedMeaningCount": 2,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 868,
+      "character": "沟",
+      "readingCount": 1,
+      "definitionFragmentCount": 6,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 869,
+      "character": "沪",
+      "readingCount": 1,
+      "definitionFragmentCount": 1,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 870,
+      "character": "沈",
+      "readingCount": 3,
+      "definitionFragmentCount": 5,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 871,
+      "character": "沉",
+      "readingCount": 2,
+      "definitionFragmentCount": 10,
+      "selectedMeaningCount": 1,
+      "triageTier": "higher"
+    },
+    {
+      "rank": 872,
+      "character": "沁",
+      "readingCount": 1,
+      "definitionFragmentCount": 2,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 873,
+      "character": "怀",
+      "readingCount": 2,
+      "definitionFragmentCount": 7,
+      "selectedMeaningCount": 0,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 874,
+      "character": "忧",
+      "readingCount": 1,
+      "definitionFragmentCount": 6,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 875,
+      "character": "忱",
+      "readingCount": 1,
+      "definitionFragmentCount": 2,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 876,
+      "character": "快",
+      "readingCount": 1,
+      "definitionFragmentCount": 14,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 877,
+      "character": "完",
+      "readingCount": 1,
+      "definitionFragmentCount": 5,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 878,
+      "character": "宋",
+      "readingCount": 1,
+      "definitionFragmentCount": 3,
+      "selectedMeaningCount": 0,
+      "triageTier": "deferred"
+    },
+    {
+      "rank": 879,
+      "character": "宏",
+      "readingCount": 1,
+      "definitionFragmentCount": 4,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 880,
+      "character": "牢",
+      "readingCount": 1,
+      "definitionFragmentCount": 5,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 881,
+      "character": "究",
+      "readingCount": 1,
+      "definitionFragmentCount": 4,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 882,
+      "character": "穷",
+      "readingCount": 1,
+      "definitionFragmentCount": 7,
+      "selectedMeaningCount": 0,
+      "triageTier": "deferred"
+    },
+    {
+      "rank": 883,
+      "character": "灾",
+      "readingCount": 1,
+      "definitionFragmentCount": 4,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 884,
+      "character": "良",
+      "readingCount": 1,
+      "definitionFragmentCount": 3,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 885,
+      "character": "证",
+      "readingCount": 1,
+      "definitionFragmentCount": 8,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 886,
+      "character": "启",
+      "readingCount": 2,
+      "definitionFragmentCount": 7,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 887,
+      "character": "评",
+      "readingCount": 1,
+      "definitionFragmentCount": 5,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 888,
+      "character": "补",
+      "readingCount": 1,
+      "definitionFragmentCount": 6,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 889,
+      "character": "初",
+      "readingCount": 1,
+      "definitionFragmentCount": 5,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 890,
+      "character": "社",
+      "readingCount": 1,
+      "definitionFragmentCount": 5,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 891,
+      "character": "祀",
+      "readingCount": 1,
+      "definitionFragmentCount": 3,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 892,
+      "character": "识",
+      "readingCount": 2,
+      "definitionFragmentCount": 5,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 893,
+      "character": "诈",
+      "readingCount": 1,
+      "definitionFragmentCount": 6,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 894,
+      "character": "诉",
+      "readingCount": 1,
+      "definitionFragmentCount": 4,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 895,
+      "character": "罕",
+      "readingCount": 1,
+      "definitionFragmentCount": 1,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 896,
+      "character": "诊",
+      "readingCount": 1,
+      "definitionFragmentCount": 1,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 897,
+      "character": "词",
+      "readingCount": 1,
+      "definitionFragmentCount": 8,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 898,
+      "character": "译",
+      "readingCount": 1,
+      "definitionFragmentCount": 2,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 899,
+      "character": "君",
+      "readingCount": 1,
+      "definitionFragmentCount": 4,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 900,
+      "character": "灵",
+      "readingCount": 1,
+      "definitionFragmentCount": 8,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 901,
+      "character": "即",
+      "readingCount": 1,
+      "definitionFragmentCount": 12,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 902,
+      "character": "层",
+      "readingCount": 1,
+      "definitionFragmentCount": 8,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 903,
+      "character": "屁",
+      "readingCount": 1,
+      "definitionFragmentCount": 5,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 904,
+      "character": "尿",
+      "readingCount": 2,
+      "definitionFragmentCount": 4,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 905,
+      "character": "尾",
+      "readingCount": 2,
+      "definitionFragmentCount": 8,
+      "selectedMeaningCount": 0,
+      "triageTier": "higher"
+    },
+    {
+      "rank": 906,
+      "character": "迟",
+      "readingCount": 2,
+      "definitionFragmentCount": 4,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 907,
+      "character": "局",
+      "readingCount": 1,
+      "definitionFragmentCount": 4,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 908,
+      "character": "改",
+      "readingCount": 1,
+      "definitionFragmentCount": 4,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 909,
+      "character": "张",
+      "readingCount": 2,
+      "definitionFragmentCount": 6,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 910,
+      "character": "忌",
+      "readingCount": 1,
+      "definitionFragmentCount": 7,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 911,
+      "character": "际",
+      "readingCount": 1,
+      "definitionFragmentCount": 10,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 912,
+      "character": "陆",
+      "readingCount": 3,
+      "definitionFragmentCount": 5,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 913,
+      "character": "阿",
+      "readingCount": 3,
+      "definitionFragmentCount": 5,
+      "selectedMeaningCount": 0,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 914,
+      "character": "陈",
+      "readingCount": 2,
+      "definitionFragmentCount": 12,
+      "selectedMeaningCount": 1,
+      "triageTier": "higher"
+    },
+    {
+      "rank": 915,
+      "character": "阻",
+      "readingCount": 1,
+      "definitionFragmentCount": 3,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 916,
+      "character": "附",
+      "readingCount": 1,
+      "definitionFragmentCount": 5,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 917,
+      "character": "坠",
+      "readingCount": 1,
+      "definitionFragmentCount": 3,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 918,
+      "character": "妓",
+      "readingCount": 1,
+      "definitionFragmentCount": 1,
+      "selectedMeaningCount": 0,
+      "triageTier": "deferred"
+    },
+    {
+      "rank": 919,
+      "character": "妙",
+      "readingCount": 1,
+      "definitionFragmentCount": 3,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 920,
+      "character": "妖",
+      "readingCount": 1,
+      "definitionFragmentCount": 8,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 921,
+      "character": "姊",
+      "readingCount": 1,
+      "definitionFragmentCount": 3,
+      "selectedMeaningCount": 0,
+      "triageTier": "deferred"
+    },
+    {
+      "rank": 922,
+      "character": "妨",
+      "readingCount": 1,
+      "definitionFragmentCount": 3,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 923,
+      "character": "妒",
+      "readingCount": 1,
+      "definitionFragmentCount": 3,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 924,
+      "character": "努",
+      "readingCount": 1,
+      "definitionFragmentCount": 2,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 925,
+      "character": "忍",
+      "readingCount": 1,
+      "definitionFragmentCount": 4,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 926,
+      "character": "劲",
+      "readingCount": 2,
+      "definitionFragmentCount": 12,
+      "selectedMeaningCount": 1,
+      "triageTier": "higher"
+    },
+    {
+      "rank": 927,
+      "character": "矣",
+      "readingCount": 1,
+      "definitionFragmentCount": 1,
+      "selectedMeaningCount": 0,
+      "triageTier": "deferred"
+    },
+    {
+      "rank": 928,
+      "character": "鸡",
+      "readingCount": 1,
+      "definitionFragmentCount": 4,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 929,
+      "character": "纬",
+      "readingCount": 1,
+      "definitionFragmentCount": 3,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 930,
+      "character": "驱",
+      "readingCount": 1,
+      "definitionFragmentCount": 6,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 931,
+      "character": "纯",
+      "readingCount": 1,
+      "definitionFragmentCount": 4,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 932,
+      "character": "纱",
+      "readingCount": 1,
+      "definitionFragmentCount": 2,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 933,
+      "character": "纲",
+      "readingCount": 1,
+      "definitionFragmentCount": 6,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 934,
+      "character": "纳",
+      "readingCount": 2,
+      "definitionFragmentCount": 8,
+      "selectedMeaningCount": 1,
+      "triageTier": "higher"
+    },
+    {
+      "rank": 935,
+      "character": "驳",
+      "readingCount": 1,
+      "definitionFragmentCount": 8,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 936,
+      "character": "纵",
+      "readingCount": 1,
+      "definitionFragmentCount": 8,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 937,
+      "character": "纷",
+      "readingCount": 1,
+      "definitionFragmentCount": 3,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 938,
+      "character": "纸",
+      "readingCount": 1,
+      "definitionFragmentCount": 4,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 939,
+      "character": "纹",
+      "readingCount": 1,
+      "definitionFragmentCount": 5,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 940,
+      "character": "纺",
+      "readingCount": 1,
+      "definitionFragmentCount": 2,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 941,
+      "character": "驴",
+      "readingCount": 1,
+      "definitionFragmentCount": 3,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 942,
+      "character": "纽",
+      "readingCount": 1,
+      "definitionFragmentCount": 4,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 943,
+      "character": "奉",
+      "readingCount": 1,
+      "definitionFragmentCount": 7,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 944,
+      "character": "玩",
+      "readingCount": 1,
+      "definitionFragmentCount": 9,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 945,
+      "character": "环",
+      "readingCount": 2,
+      "definitionFragmentCount": 9,
+      "selectedMeaningCount": 1,
+      "triageTier": "higher"
+    },
+    {
+      "rank": 946,
+      "character": "武",
+      "readingCount": 2,
+      "definitionFragmentCount": 3,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 947,
+      "character": "青",
+      "readingCount": 2,
+      "definitionFragmentCount": 6,
+      "selectedMeaningCount": 2,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 948,
+      "character": "责",
+      "readingCount": 1,
+      "definitionFragmentCount": 4,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 949,
+      "character": "现",
+      "readingCount": 1,
+      "definitionFragmentCount": 5,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 950,
+      "character": "玫",
+      "readingCount": 1,
+      "definitionFragmentCount": 2,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 951,
+      "character": "表",
+      "readingCount": 1,
+      "definitionFragmentCount": 8,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 952,
+      "character": "规",
+      "readingCount": 1,
+      "definitionFragmentCount": 7,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 953,
+      "character": "抹",
+      "readingCount": 3,
+      "definitionFragmentCount": 8,
+      "selectedMeaningCount": 1,
+      "triageTier": "higher"
+    },
+    {
+      "rank": 954,
+      "character": "卦",
+      "readingCount": 1,
+      "definitionFragmentCount": 3,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 955,
+      "character": "坷",
+      "readingCount": 1,
+      "definitionFragmentCount": 2,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 956,
+      "character": "坯",
+      "readingCount": 1,
+      "definitionFragmentCount": 4,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 957,
+      "character": "拓",
+      "readingCount": 3,
+      "definitionFragmentCount": 6,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 958,
+      "character": "拢",
+      "readingCount": 1,
+      "definitionFragmentCount": 7,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 959,
+      "character": "拔",
+      "readingCount": 1,
+      "definitionFragmentCount": 8,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 960,
+      "character": "坪",
+      "readingCount": 1,
+      "definitionFragmentCount": 2,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 961,
+      "character": "拣",
+      "readingCount": 1,
+      "definitionFragmentCount": 4,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 962,
+      "character": "坦",
+      "readingCount": 1,
+      "definitionFragmentCount": 4,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 963,
+      "character": "担",
+      "readingCount": 2,
+      "definitionFragmentCount": 8,
+      "selectedMeaningCount": 1,
+      "triageTier": "higher"
+    },
+    {
+      "rank": 964,
+      "character": "坤",
+      "readingCount": 1,
+      "definitionFragmentCount": 5,
+      "selectedMeaningCount": 2,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 965,
+      "character": "押",
+      "readingCount": 1,
+      "definitionFragmentCount": 5,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 966,
+      "character": "抽",
+      "readingCount": 1,
+      "definitionFragmentCount": 5,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 967,
+      "character": "拐",
+      "readingCount": 1,
+      "definitionFragmentCount": 7,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 968,
+      "character": "拖",
+      "readingCount": 1,
+      "definitionFragmentCount": 8,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 969,
+      "character": "者",
+      "readingCount": 1,
+      "definitionFragmentCount": 8,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 970,
+      "character": "拍",
+      "readingCount": 1,
+      "definitionFragmentCount": 8,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 971,
+      "character": "顶",
+      "readingCount": 1,
+      "definitionFragmentCount": 13,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 972,
+      "character": "拆",
+      "readingCount": 1,
+      "definitionFragmentCount": 4,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 973,
+      "character": "拎",
+      "readingCount": 1,
+      "definitionFragmentCount": 3,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 974,
+      "character": "拥",
+      "readingCount": 1,
+      "definitionFragmentCount": 8,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 975,
+      "character": "抵",
+      "readingCount": 1,
+      "definitionFragmentCount": 10,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 976,
+      "character": "拘",
+      "readingCount": 1,
+      "definitionFragmentCount": 5,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 977,
+      "character": "势",
+      "readingCount": 1,
+      "definitionFragmentCount": 12,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 978,
+      "character": "抱",
+      "readingCount": 1,
+      "definitionFragmentCount": 6,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 979,
+      "character": "拄",
+      "readingCount": 1,
+      "definitionFragmentCount": 2,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 980,
+      "character": "垃",
+      "readingCount": 1,
+      "definitionFragmentCount": 2,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 981,
+      "character": "拉",
+      "readingCount": 1,
+      "definitionFragmentCount": 5,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 982,
+      "character": "拦",
+      "readingCount": 1,
+      "definitionFragmentCount": 3,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 983,
+      "character": "幸",
+      "readingCount": 2,
+      "definitionFragmentCount": 7,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 984,
+      "character": "拌",
+      "readingCount": 1,
+      "definitionFragmentCount": 3,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 985,
+      "character": "拧",
+      "readingCount": 3,
+      "definitionFragmentCount": 5,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 986,
+      "character": "拂",
+      "readingCount": 2,
+      "definitionFragmentCount": 2,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 987,
+      "character": "拙",
+      "readingCount": 1,
+      "definitionFragmentCount": 6,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 988,
+      "character": "招",
+      "readingCount": 1,
+      "definitionFragmentCount": 11,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 989,
+      "character": "坡",
+      "readingCount": 1,
+      "definitionFragmentCount": 4,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 990,
+      "character": "披",
+      "readingCount": 1,
+      "definitionFragmentCount": 5,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 991,
+      "character": "拨",
+      "readingCount": 1,
+      "definitionFragmentCount": 8,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 992,
+      "character": "择",
+      "readingCount": 1,
+      "definitionFragmentCount": 7,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 993,
+      "character": "抬",
+      "readingCount": 1,
+      "definitionFragmentCount": 3,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 994,
+      "character": "拇",
+      "readingCount": 1,
+      "definitionFragmentCount": 2,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 995,
+      "character": "拗",
+      "readingCount": 2,
+      "definitionFragmentCount": 7,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    },
+    {
+      "rank": 996,
+      "character": "其",
+      "readingCount": 1,
+      "definitionFragmentCount": 7,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 997,
+      "character": "取",
+      "readingCount": 1,
+      "definitionFragmentCount": 4,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 998,
+      "character": "茉",
+      "readingCount": 1,
+      "definitionFragmentCount": 1,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 999,
+      "character": "苦",
+      "readingCount": 1,
+      "definitionFragmentCount": 6,
+      "selectedMeaningCount": 1,
+      "triageTier": "baseline"
+    },
+    {
+      "rank": 1000,
+      "character": "昔",
+      "readingCount": 2,
+      "definitionFragmentCount": 4,
+      "selectedMeaningCount": 1,
+      "triageTier": "targeted"
+    }
+  ]
+}
