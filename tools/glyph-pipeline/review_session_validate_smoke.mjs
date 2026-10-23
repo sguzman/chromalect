@@ -22,6 +22,33 @@ const trial={
 assert.deepEqual(validateReviewSession(trial,audit,queue),
  {type:"emoji_comprehension",localObservations:1,productionVerified:0});
 const clone=x=>JSON.parse(JSON.stringify(x));
+const mixedSource=audit.records.filter(r=>r.emojiDisplay==="✅");
+assert.ok(mixedSource.some(r=>r.operators.includes("event")));
+assert.ok(mixedSource.some(r=>!r.operators.includes("event")));
+const sampleMixed=mixedSource.find(r=>r.operators.includes("event"));
+const mixedResponse={
+ trialId:sampleMixed.id,rank:sampleMixed.rank,character:sampleMixed.character,
+ displayedEmoji:sampleMixed.emojiDisplay,proposedMeaning:sampleMixed.selectedMeaning,
+ blindResponse:"approval or selection",confidence:"low",predictedKind:"action",
+ targetTypedAsEvent:true,automaticRiskFlags:sampleMixed.riskFlags,
+ clarityRatingAfterReveal:"uncertain"
+};
+const validMixed={
+ schema:"chromalect.emoji-comprehension-session.v0.2",
+ status:"unverified_exploratory_observations_not_production_review",
+ source:{audit:"emoji-visibility-audit-v0.1.json"},
+ session:{scope:"mixedRoles",requestedCount:"20",rated:1,planned:20,repeatPolicy:"distinct",localOnly:true,exportedAt:exp},
+ answers:[mixedResponse]
+};
+assert.deepEqual(validateReviewSession(validMixed,audit,queue),
+ {type:"emoji_comprehension",localObservations:1,productionVerified:0});
+const wrongMixed=clone(validMixed);
+wrongMixed.answers[0]={
+ ...response,
+};
+assert.throws(()=>validateReviewSession(wrongMixed,audit,queue),
+ "A mixed-role scope must reject a non-mixed form");
+
 const wrongEmoji=clone(trial);wrongEmoji.answers[0].displayedEmoji="💀";
 assert.throws(()=>validateReviewSession(wrongEmoji,audit,queue));
 const falseVerb=clone(trial);falseVerb.answers[0].targetTypedAsEvent=!first.operators.includes("event");

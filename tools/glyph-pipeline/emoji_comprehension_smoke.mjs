@@ -121,6 +121,14 @@ assert.equal(elements["emoji-study-progress"].attributes["aria-valuemax"],String
 elements["emoji-study-repeat-policy"].value="allow";
 elements["emoji-study-start"].click();
 assert.equal(elements["emoji-study-progress"].attributes["aria-valuemax"],"897");
+elements["emoji-study-scope"].value="mixedRoles";
+elements["emoji-study-repeat-policy"].value="distinct";
+elements["emoji-study-start"].click();
+assert.equal(elements["emoji-study-progress"].attributes["aria-valuemax"],"73");
+elements["emoji-study-repeat-policy"].value="allow";
+elements["emoji-study-start"].click();
+assert.equal(elements["emoji-study-progress"].attributes["aria-valuemax"],"341");
+assert.match(html,/value="mixedRoles"/);
 assert.match(html,/Nothing is sent to Chromalect or GitHub/);
 assert.match(html,/id="emoji-study-symbol"/);
 assert.match(html,/id="emoji-study-kind"/);

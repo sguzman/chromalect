@@ -6,7 +6,7 @@ Chromalect already has 897 **unverified** pictogram expressions attached to sele
 
 ## Procedure
 
-1. Select a scope: all candidates, automatically flagged expressions, actions/processes, or multiple-emoji compositions.
+1. Select a scope: all candidates, automatically flagged expressions, actions/processes, **shared action/non-action emoji**, or multiple-emoji compositions. The shared-role scope includes 73 visual forms used by 341 candidate sense assignments, and is separately documented in [the contrast audit](mandarin-event-role-contrast.md).
 2. Choose a **repeat policy** before the batch size. The default presents each distinct visible emoji form **at most once per session**, preventing within-session repetition of one pictogram under different selected meanings. The 897 candidate sense expressions contain **388 distinct visible emoji sequences**; 191 visual forms are reused, with 700 assignments belonging to repeated-form groups. This reuse is **valid** and not a uniqueness failure. The alternate **allow repeated** mode is explicitly available for cross-character reuse experiments.
 3. Choose a batch size (20, 50, 100, or all eligible forms under that repeat policy). Order is randomized within scope. Randomization and visual deduplication do not establish a statistically representative participant sample.
 4. Each initial trial displays **only the emoji expression**. Do not show the Chinese glyph, English candidate meaning, definition, automated source-match status, or alternative answers before the response. A free-text interpretation may be blank when the participant is unsure. Record confidence and a **blind grammatical-kind guess** (action/process, entity, property/state, relation, other, or unsure) before revealing anything.

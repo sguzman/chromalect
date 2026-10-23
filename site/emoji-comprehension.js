@@ -24,12 +24,25 @@ function randomize(items){
  }
  return result;
 }
+function mixedRoleForms(){
+ const roles=new Map();
+ for(const rec of audit.records){
+  const action=rec.operators.includes("event");
+  const state=roles.get(rec.emojiDisplay)||{event:false,nonEvent:false};
+  if(action)state.event=true;
+  else state.nonEvent=true;
+  roles.set(rec.emojiDisplay,state);
+ }
+ return new Set([...roles].filter(([_,r])=>r.event&&r.nonEvent).map(([emoji])=>emoji));
+}
 function selectable(){
  const scope=$("emoji-study-scope").value;
+ const mixed=scope==="mixedRoles"?mixedRoleForms():null;
  return audit.records.filter(rec=>
    scope==="all" ||
    (scope==="flagged"&&rec.riskFlags.length>0) ||
    (scope==="events"&&rec.operators.includes("event")) ||
+   (scope==="mixedRoles"&&mixed.has(rec.emojiDisplay)) ||
    (scope==="compositions"&&rec.emojiCount>1));
 }
 function resetRating(){

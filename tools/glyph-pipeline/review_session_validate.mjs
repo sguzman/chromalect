@@ -23,12 +23,21 @@ export function validateReviewSession(session,audit,queue,fullQueue=null){
   assert.equal(audit.summary.productionVerified,0);
   assert.ok(Array.isArray(session.answers)&&session.answers.length>=1);
   assert.equal(session.session.rated,session.answers.length);
-  assert.ok(["all","flagged","events","compositions"].includes(session.session.scope));
+  assert.ok(["all","flagged","events","compositions","mixedRoles"].includes(session.session.scope));
   assert.ok(["distinct","allow"].includes(session.session.repeatPolicy));
+  const roleMap=new Map();
+  for(const rec of audit.records){
+   const state=roleMap.get(rec.emojiDisplay)||{event:false,nonEvent:false};
+   if(rec.operators.includes("event"))state.event=true;
+   else state.nonEvent=true;
+   roleMap.set(rec.emojiDisplay,state);
+  }
+  const mixed=new Set([...roleMap].filter(([_,r])=>r.event&&r.nonEvent).map(([emoji])=>emoji));
   const pool=audit.records.filter(rec=>
    session.session.scope==="all"||
    (session.session.scope==="flagged"&&rec.riskFlags.length>0)||
    (session.session.scope==="events"&&rec.operators.includes("event"))||
+   (session.session.scope==="mixedRoles"&&mixed.has(rec.emojiDisplay))||
    (session.session.scope==="compositions"&&rec.emojiCount>1));
   const maximum=session.session.repeatPolicy==="distinct"
    ?new Set(pool.map(rec=>rec.emojiDisplay)).size:pool.length;
