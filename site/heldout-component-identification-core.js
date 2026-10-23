@@ -107,12 +107,12 @@ function plan(targets,seed){
   new Set(targets.map(x=>x.id)).size===49,
   "The complete source-owned target set is required");
  const rng=randomizer(seed);
- const order=shuffle(targets,rng);
+ const order=shuffle(targets.map((t,i)=>({...t,sourceIndex:i})),rng);
  const colors=shuffle(order.map((_,i)=>i<25?"original":"experimental"),rng);
  const firstAnswer=shuffle(order.map((_,i)=>i<25?"target":"other"),rng);
  return order.map((t,i)=>({
   id:t.id,rank:t.rank,character:t.character,foldIndex:t.foldIndex,
-  reviewState:t.reviewState,position:i+1,
+  reviewState:t.reviewState,position:i+1,sourceIndex:t.sourceIndex,
   presentation:colors[i],
   correctLeft:firstAnswer[i]==="target",
   leftChoice:firstAnswer[i]==="target"?t.machineAssignedOwner:t.otherOwner,
@@ -130,7 +130,10 @@ function displayCheck(display){
 }
 function exportSession(schedule,responses,display,seed,when){
  displayCheck(display);
- const replay=plan(schedule.map(t=>({id:t.id,rank:t.rank,
+ const sourceOrder=schedule.slice().sort((a,b)=>a.sourceIndex-b.sourceIndex);
+ required(sourceOrder.length===49&&sourceOrder.every((t,i)=>t.sourceIndex===i),
+  "Every source-owned trial must retain its canonical source index");
+ const replay=plan(sourceOrder.map(t=>({id:t.id,rank:t.rank,
   character:t.character,foldIndex:t.foldIndex,
   reviewState:t.reviewState,locatorSVG:t.locatorSVG,
   sourceSVG:t.sourceSVG,foldSVG:t.foldSVG,
@@ -140,6 +143,7 @@ function exportSession(schedule,responses,display,seed,when){
    t.offeredComponents[1].id:t.offeredComponents[0].id})),seed);
  required(schedule.length===49&&schedule.every((t,i)=>
   t.position===replay[i].position&&t.id===replay[i].id&&
+  t.sourceIndex===replay[i].sourceIndex&&
   t.presentation===replay[i].presentation&&
   t.leftChoice===replay[i].leftChoice&&
   t.rightChoice===replay[i].rightChoice),
