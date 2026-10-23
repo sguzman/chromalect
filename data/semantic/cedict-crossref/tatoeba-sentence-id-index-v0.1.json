@@ -1,0 +1,1739 @@
+{
+  "schema": "chromalect.semantic.tatoeba-sentence-id-index.v0.1",
+  "status": "real_corpus_surface_character_candidates_unadjudicated",
+  "source": {
+    "corpus": "Tatoeba Mandarin (cmn) detailed sentence export",
+    "snapshotRetrievedUTC": "2026-10-23",
+    "uncompressedTSVSha256": "7685bc14cf769a63acf7643a5bcd2b19fc3dba6aaf6c12acabd7417752f12338",
+    "sourceExport": "https://downloads.tatoeba.org/exports/per_language/cmn/cmn_sentences_detailed.tsv.bz2",
+    "acquisitionWorkflow": "https://github.com/sguzman/chromalect/actions/runs/39897433196",
+    "temporaryArtifactId": 12477356587,
+    "temporaryArtifactZipSha256": "ad3ea16329f58333904d5354693620b5fc467a7837c4ccb36f996e5af5886399",
+    "temporaryArtifactExpiresUTC": "2026-11-22T03:53:58Z",
+    "originalArtifactContainsContributorMetadata": true,
+    "thisIndexContainsContributorMetadata": false,
+    "originalArtifactContainsChineseSentenceText": false
+  },
+  "limitations": [
+    "Only Tatoeba sentence identifiers and character ranks are retained here; all quotations require independent contributor and license checks.",
+    "No sentence-level context or independently attributed pronunciation is asserted from graph occurrence alone.",
+    "Source IDs can be revisited at Tatoeba independently of the expiring CI artifact; an ID may subsequently change or disappear.",
+    "Selection is first three surface matches in an ordered corpus snapshot, not a controlled representative sample of readings."
+  ],
+  "summary": {
+    "characters": 142,
+    "charactersWithCandidates": 141,
+    "charactersWithoutCandidates": 1,
+    "sourceSentencesScanned": 89190,
+    "characterSentenceAssociations": 423,
+    "uniqueSentenceIds": 363,
+    "sourceRowsExcludedByLength": 2121,
+    "missingContributorRows": 0,
+    "contextualReadingsVerified": 0,
+    "independentlyApprovedLexicalSenses": 0,
+    "approvedEmojiMappings": 0,
+    "productionVerified": 0
+  },
+  "records": [
+    {
+      "rank": 2,
+      "character": "乙",
+      "sentenceIds": [
+        "5092091",
+        "13799568",
+        "14028832"
+      ],
+      "sourceIdStatus": "sentence_identifier_only",
+      "readingInContext": "unverified",
+      "lexicalStatus": "not_approved"
+    },
+    {
+      "rank": 17,
+      "character": "了",
+      "sentenceIds": [
+        "2",
+        "7",
+        "12"
+      ],
+      "sourceIdStatus": "sentence_identifier_only",
+      "readingInContext": "unverified",
+      "lexicalStatus": "not_approved"
+    },
+    {
+      "rank": 18,
+      "character": "刀",
+      "sentenceIds": [
+        "334800",
+        "335307",
+        "335308"
+      ],
+      "sourceIdStatus": "sentence_identifier_only",
+      "readingInContext": "unverified",
+      "lexicalStatus": "not_approved"
+    },
+    {
+      "rank": 23,
+      "character": "干",
+      "sentenceIds": [
+        "3",
+        "332702",
+        "332988"
+      ],
+      "sourceIdStatus": "sentence_identifier_only",
+      "readingInContext": "unverified",
+      "lexicalStatus": "not_approved"
+    },
+    {
+      "rank": 24,
+      "character": "于",
+      "sentenceIds": [
+        "72",
+        "332485",
+        "332538"
+      ],
+      "sourceIdStatus": "sentence_identifier_only",
+      "readingInContext": "unverified",
+      "lexicalStatus": "not_approved"
+    },
+    {
+      "rank": 27,
+      "character": "土",
+      "sentenceIds": [
+        "334737",
+        "350672",
+        "397128"
+      ],
+      "sourceIdStatus": "sentence_identifier_only",
+      "readingInContext": "unverified",
+      "lexicalStatus": "not_approved"
+    },
+    {
+      "rank": 28,
+      "character": "士",
+      "sentenceIds": [
+        "332590",
+        "332607",
+        "332730"
+      ],
+      "sourceIdStatus": "sentence_identifier_only",
+      "readingInContext": "unverified",
+      "lexicalStatus": "not_approved"
+    },
+    {
+      "rank": 32,
+      "character": "大",
+      "sentenceIds": [
+        "19",
+        "39",
+        "49"
+      ],
+      "sourceIdStatus": "sentence_identifier_only",
+      "readingInContext": "unverified",
+      "lexicalStatus": "not_approved"
+    },
+    {
+      "rank": 36,
+      "character": "上",
+      "sentenceIds": [
+        "20",
+        "25",
+        "55"
+      ],
+      "sourceIdStatus": "sentence_identifier_only",
+      "readingInContext": "unverified",
+      "lexicalStatus": "not_approved"
+    },
+    {
+      "rank": 55,
+      "character": "门",
+      "sentenceIds": [
+        "332912",
+        "333007",
+        "333023"
+      ],
+      "sourceIdStatus": "sentence_identifier_only",
+      "readingInContext": "unverified",
+      "lexicalStatus": "not_approved"
+    },
+    {
+      "rank": 57,
+      "character": "义",
+      "sentenceIds": [
+        "332745",
+        "332812",
+        "332856"
+      ],
+      "sourceIdStatus": "sentence_identifier_only",
+      "readingInContext": "unverified",
+      "lexicalStatus": "not_approved"
+    },
+    {
+      "rank": 64,
+      "character": "子",
+      "sentenceIds": [
+        "14",
+        "68",
+        "181028"
+      ],
+      "sourceIdStatus": "sentence_identifier_only",
+      "readingInContext": "unverified",
+      "lexicalStatus": "not_approved"
+    },
+    {
+      "rank": 65,
+      "character": "卫",
+      "sentenceIds": [
+        "332640",
+        "334380",
+        "335267"
+      ],
+      "sourceIdStatus": "sentence_identifier_only",
+      "readingInContext": "unverified",
+      "lexicalStatus": "not_approved"
+    },
+    {
+      "rank": 71,
+      "character": "叉",
+      "sentenceIds": [
+        "343958",
+        "348395",
+        "407225"
+      ],
+      "sourceIdStatus": "sentence_identifier_only",
+      "readingInContext": "unverified",
+      "lexicalStatus": "not_approved"
+    },
+    {
+      "rank": 74,
+      "character": "丰",
+      "sentenceIds": [
+        "332685",
+        "334791",
+        "348923"
+      ],
+      "sourceIdStatus": "sentence_identifier_only",
+      "readingInContext": "unverified",
+      "lexicalStatus": "not_approved"
+    },
+    {
+      "rank": 79,
+      "character": "夫",
+      "sentenceIds": [
+        "332942",
+        "333461",
+        "333788"
+      ],
+      "sourceIdStatus": "sentence_identifier_only",
+      "readingInContext": "unverified",
+      "lexicalStatus": "not_approved"
+    },
+    {
+      "rank": 80,
+      "character": "元",
+      "sentenceIds": [
+        "23",
+        "24",
+        "332526"
+      ],
+      "sourceIdStatus": "sentence_identifier_only",
+      "readingInContext": "unverified",
+      "lexicalStatus": "not_approved"
+    },
+    {
+      "rank": 85,
+      "character": "扎",
+      "sentenceIds": [
+        "350057",
+        "833171",
+        "2177504"
+      ],
+      "sourceIdStatus": "sentence_identifier_only",
+      "readingInContext": "unverified",
+      "lexicalStatus": "not_approved"
+    },
+    {
+      "rank": 87,
+      "character": "木",
+      "sentenceIds": [
+        "333146",
+        "333309",
+        "333974"
+      ],
+      "sourceIdStatus": "sentence_identifier_only",
+      "readingInContext": "unverified",
+      "lexicalStatus": "not_approved"
+    },
+    {
+      "rank": 89,
+      "character": "支",
+      "sentenceIds": [
+        "332454",
+        "332539",
+        "332898"
+      ],
+      "sourceIdStatus": "sentence_identifier_only",
+      "readingInContext": "unverified",
+      "lexicalStatus": "not_approved"
+    },
+    {
+      "rank": 99,
+      "character": "匹",
+      "sentenceIds": [
+        "334994",
+        "343889",
+        "349641"
+      ],
+      "sourceIdStatus": "sentence_identifier_only",
+      "readingInContext": "unverified",
+      "lexicalStatus": "not_approved"
+    },
+    {
+      "rank": 100,
+      "character": "车",
+      "sentenceIds": [
+        "136604",
+        "136613",
+        "332487"
+      ],
+      "sourceIdStatus": "sentence_identifier_only",
+      "readingInContext": "unverified",
+      "lexicalStatus": "not_approved"
+    },
+    {
+      "rank": 105,
+      "character": "比",
+      "sentenceIds": [
+        "31",
+        "332558",
+        "332575"
+      ],
+      "sourceIdStatus": "sentence_identifier_only",
+      "readingInContext": "unverified",
+      "lexicalStatus": "not_approved"
+    },
+    {
+      "rank": 107,
+      "character": "切",
+      "sentenceIds": [
+        "332435",
+        "332513",
+        "332555"
+      ],
+      "sourceIdStatus": "sentence_identifier_only",
+      "readingInContext": "unverified",
+      "lexicalStatus": "not_approved"
+    },
+    {
+      "rank": 113,
+      "character": "中",
+      "sentenceIds": [
+        "55",
+        "330589",
+        "332668"
+      ],
+      "sourceIdStatus": "sentence_identifier_only",
+      "readingInContext": "unverified",
+      "lexicalStatus": "not_approved"
+    },
+    {
+      "rank": 123,
+      "character": "毛",
+      "sentenceIds": [
+        "332809",
+        "332853",
+        "334657"
+      ],
+      "sourceIdStatus": "sentence_identifier_only",
+      "readingInContext": "unverified",
+      "lexicalStatus": "not_approved"
+    },
+    {
+      "rank": 127,
+      "character": "长",
+      "sentenceIds": [
+        "332523",
+        "332649",
+        "332684"
+      ],
+      "sourceIdStatus": "sentence_identifier_only",
+      "readingInContext": "unverified",
+      "lexicalStatus": "not_approved"
+    },
+    {
+      "rank": 130,
+      "character": "片",
+      "sentenceIds": [
+        "332691",
+        "332803",
+        "334072"
+      ],
+      "sourceIdStatus": "sentence_identifier_only",
+      "readingInContext": "unverified",
+      "lexicalStatus": "not_approved"
+    },
+    {
+      "rank": 133,
+      "character": "仇",
+      "sentenceIds": [
+        "397535",
+        "400480",
+        "729503"
+      ],
+      "sourceIdStatus": "sentence_identifier_only",
+      "readingInContext": "unverified",
+      "lexicalStatus": "not_approved"
+    },
+    {
+      "rank": 142,
+      "character": "从",
+      "sentenceIds": [
+        "58",
+        "70",
+        "75"
+      ],
+      "sourceIdStatus": "sentence_identifier_only",
+      "readingInContext": "unverified",
+      "lexicalStatus": "not_approved"
+    },
+    {
+      "rank": 146,
+      "character": "分",
+      "sentenceIds": [
+        "330585",
+        "332639",
+        "332802"
+      ],
+      "sourceIdStatus": "sentence_identifier_only",
+      "readingInContext": "unverified",
+      "lexicalStatus": "not_approved"
+    },
+    {
+      "rank": 158,
+      "character": "勾",
+      "sentenceIds": [
+        "339490",
+        "422006",
+        "459967"
+      ],
+      "sourceIdStatus": "sentence_identifier_only",
+      "readingInContext": "unverified",
+      "lexicalStatus": "not_approved"
+    },
+    {
+      "rank": 161,
+      "character": "文",
+      "sentenceIds": [
+        "332756",
+        "333199",
+        "333460"
+      ],
+      "sourceIdStatus": "sentence_identifier_only",
+      "readingInContext": "unverified",
+      "lexicalStatus": "not_approved"
+    },
+    {
+      "rank": 163,
+      "character": "方",
+      "sentenceIds": [
+        "332470",
+        "332549",
+        "332617"
+      ],
+      "sourceIdStatus": "sentence_identifier_only",
+      "readingInContext": "unverified",
+      "lexicalStatus": "not_approved"
+    },
+    {
+      "rank": 164,
+      "character": "火",
+      "sentenceIds": [
+        "136604",
+        "136613",
+        "332506"
+      ],
+      "sourceIdStatus": "sentence_identifier_only",
+      "readingInContext": "unverified",
+      "lexicalStatus": "not_approved"
+    },
+    {
+      "rank": 165,
+      "character": "为",
+      "sentenceIds": [
+        "332422",
+        "332550",
+        "332592"
+      ],
+      "sourceIdStatus": "sentence_identifier_only",
+      "readingInContext": "unverified",
+      "lexicalStatus": "not_approved"
+    },
+    {
+      "rank": 166,
+      "character": "斗",
+      "sentenceIds": [
+        "335493",
+        "335509",
+        "335835"
+      ],
+      "sourceIdStatus": "sentence_identifier_only",
+      "readingInContext": "unverified",
+      "lexicalStatus": "not_approved"
+    },
+    {
+      "rank": 168,
+      "character": "计",
+      "sentenceIds": [
+        "332485",
+        "332616",
+        "332643"
+      ],
+      "sourceIdStatus": "sentence_identifier_only",
+      "readingInContext": "unverified",
+      "lexicalStatus": "not_approved"
+    },
+    {
+      "rank": 178,
+      "character": "巴",
+      "sentenceIds": [
+        "333004",
+        "333651",
+        "337282"
+      ],
+      "sourceIdStatus": "sentence_identifier_only",
+      "readingInContext": "unverified",
+      "lexicalStatus": "not_approved"
+    },
+    {
+      "rank": 182,
+      "character": "以",
+      "sentenceIds": [
+        "15",
+        "47",
+        "55"
+      ],
+      "sourceIdStatus": "sentence_identifier_only",
+      "readingInContext": "unverified",
+      "lexicalStatus": "not_approved"
+    },
+    {
+      "rank": 196,
+      "character": "打",
+      "sentenceIds": [
+        "25",
+        "27",
+        "332461"
+      ],
+      "sourceIdStatus": "sentence_identifier_only",
+      "readingInContext": "unverified",
+      "lexicalStatus": "not_approved"
+    },
+    {
+      "rank": 198,
+      "character": "正",
+      "sentenceIds": [
+        "61",
+        "136646",
+        "332471"
+      ],
+      "sourceIdStatus": "sentence_identifier_only",
+      "readingInContext": "unverified",
+      "lexicalStatus": "not_approved"
+    },
+    {
+      "rank": 201,
+      "character": "扒",
+      "sentenceIds": [
+        "472597",
+        "690078",
+        "2143971"
+      ],
+      "sourceIdStatus": "sentence_identifier_only",
+      "readingInContext": "unverified",
+      "lexicalStatus": "not_approved"
+    },
+    {
+      "rank": 206,
+      "character": "世",
+      "sentenceIds": [
+        "20",
+        "68",
+        "332449"
+      ],
+      "sourceIdStatus": "sentence_identifier_only",
+      "readingInContext": "unverified",
+      "lexicalStatus": "not_approved"
+    },
+    {
+      "rank": 207,
+      "character": "艾",
+      "sentenceIds": [
+        "337281",
+        "345400",
+        "347825"
+      ],
+      "sourceIdStatus": "sentence_identifier_only",
+      "readingInContext": "unverified",
+      "lexicalStatus": "not_approved"
+    },
+    {
+      "rank": 209,
+      "character": "节",
+      "sentenceIds": [
+        "332634",
+        "333222",
+        "333834"
+      ],
+      "sourceIdStatus": "sentence_identifier_only",
+      "readingInContext": "unverified",
+      "lexicalStatus": "not_approved"
+    },
+    {
+      "rank": 212,
+      "character": "可",
+      "sentenceIds": [
+        "38",
+        "47",
+        "330584"
+      ],
+      "sourceIdStatus": "sentence_identifier_only",
+      "readingInContext": "unverified",
+      "lexicalStatus": "not_approved"
+    },
+    {
+      "rank": 214,
+      "character": "左",
+      "sentenceIds": [
+        "333185",
+        "333260",
+        "334800"
+      ],
+      "sourceIdStatus": "sentence_identifier_only",
+      "readingInContext": "unverified",
+      "lexicalStatus": "not_approved"
+    },
+    {
+      "rank": 216,
+      "character": "石",
+      "sentenceIds": [
+        "332567",
+        "332861",
+        "333498"
+      ],
+      "sourceIdStatus": "sentence_identifier_only",
+      "readingInContext": "unverified",
+      "lexicalStatus": "not_approved"
+    },
+    {
+      "rank": 222,
+      "character": "平",
+      "sentenceIds": [
+        "332441",
+        "333466",
+        "333912"
+      ],
+      "sourceIdStatus": "sentence_identifier_only",
+      "readingInContext": "unverified",
+      "lexicalStatus": "not_approved"
+    },
+    {
+      "rank": 226,
+      "character": "卡",
+      "sentenceIds": [
+        "333792",
+        "334338",
+        "334845"
+      ],
+      "sourceIdStatus": "sentence_identifier_only",
+      "readingInContext": "unverified",
+      "lexicalStatus": "not_approved"
+    },
+    {
+      "rank": 231,
+      "character": "业",
+      "sentenceIds": [
+        "332544",
+        "332869",
+        "333403"
+      ],
+      "sourceIdStatus": "sentence_identifier_only",
+      "readingInContext": "unverified",
+      "lexicalStatus": "not_approved"
+    },
+    {
+      "rank": 234,
+      "character": "归",
+      "sentenceIds": [
+        "334481",
+        "343638",
+        "345962"
+      ],
+      "sourceIdStatus": "sentence_identifier_only",
+      "readingInContext": "unverified",
+      "lexicalStatus": "not_approved"
+    },
+    {
+      "rank": 243,
+      "character": "号",
+      "sentenceIds": [
+        "5",
+        "332135",
+        "332600"
+      ],
+      "sourceIdStatus": "sentence_identifier_only",
+      "readingInContext": "unverified",
+      "lexicalStatus": "not_approved"
+    },
+    {
+      "rank": 246,
+      "character": "只",
+      "sentenceIds": [
+        "13",
+        "332634",
+        "332788"
+      ],
+      "sourceIdStatus": "sentence_identifier_only",
+      "readingInContext": "unverified",
+      "lexicalStatus": "not_approved"
+    },
+    {
+      "rank": 275,
+      "character": "白",
+      "sentenceIds": [
+        "63",
+        "332635",
+        "332655"
+      ],
+      "sourceIdStatus": "sentence_identifier_only",
+      "readingInContext": "unverified",
+      "lexicalStatus": "not_approved"
+    },
+    {
+      "rank": 282,
+      "character": "令",
+      "sentenceIds": [
+        "333530",
+        "335627",
+        "335885"
+      ],
+      "sourceIdStatus": "sentence_identifier_only",
+      "readingInContext": "unverified",
+      "lexicalStatus": "not_approved"
+    },
+    {
+      "rank": 285,
+      "character": "印",
+      "sentenceIds": [
+        "333462",
+        "335321",
+        "335322"
+      ],
+      "sourceIdStatus": "sentence_identifier_only",
+      "readingInContext": "unverified",
+      "lexicalStatus": "not_approved"
+    },
+    {
+      "rank": 294,
+      "character": "处",
+      "sentenceIds": [
+        "332878",
+        "333071",
+        "333086"
+      ],
+      "sourceIdStatus": "sentence_identifier_only",
+      "readingInContext": "unverified",
+      "lexicalStatus": "not_approved"
+    },
+    {
+      "rank": 298,
+      "character": "包",
+      "sentenceIds": [
+        "332582",
+        "332741",
+        "332943"
+      ],
+      "sourceIdStatus": "sentence_identifier_only",
+      "readingInContext": "unverified",
+      "lexicalStatus": "not_approved"
+    },
+    {
+      "rank": 302,
+      "character": "立",
+      "sentenceIds": [
+        "333206",
+        "335531",
+        "336206"
+      ],
+      "sourceIdStatus": "sentence_identifier_only",
+      "readingInContext": "unverified",
+      "lexicalStatus": "not_approved"
+    },
+    {
+      "rank": 305,
+      "character": "闪",
+      "sentenceIds": [
+        "343925",
+        "461993",
+        "813507"
+      ],
+      "sourceIdStatus": "sentence_identifier_only",
+      "readingInContext": "unverified",
+      "lexicalStatus": "not_approved"
+    },
+    {
+      "rank": 310,
+      "character": "头",
+      "sentenceIds": [
+        "332522",
+        "332523",
+        "332993"
+      ],
+      "sourceIdStatus": "sentence_identifier_only",
+      "readingInContext": "unverified",
+      "lexicalStatus": "not_approved"
+    },
+    {
+      "rank": 312,
+      "character": "宁",
+      "sentenceIds": [
+        "343838",
+        "346829",
+        "380683"
+      ],
+      "sourceIdStatus": "sentence_identifier_only",
+      "readingInContext": "unverified",
+      "lexicalStatus": "not_approved"
+    },
+    {
+      "rank": 318,
+      "character": "礼",
+      "sentenceIds": [
+        "334104",
+        "334635",
+        "334701"
+      ],
+      "sourceIdStatus": "sentence_identifier_only",
+      "readingInContext": "unverified",
+      "lexicalStatus": "not_approved"
+    },
+    {
+      "rank": 337,
+      "character": "边",
+      "sentenceIds": [
+        "333992",
+        "334075",
+        "334889"
+      ],
+      "sourceIdStatus": "sentence_identifier_only",
+      "readingInContext": "unverified",
+      "lexicalStatus": "not_approved"
+    },
+    {
+      "rank": 339,
+      "character": "发",
+      "sentenceIds": [
+        "62",
+        "332427",
+        "332445"
+      ],
+      "sourceIdStatus": "sentence_identifier_only",
+      "readingInContext": "unverified",
+      "lexicalStatus": "not_approved"
+    },
+    {
+      "rank": 342,
+      "character": "台",
+      "sentenceIds": [
+        "333013",
+        "333268",
+        "333460"
+      ],
+      "sourceIdStatus": "sentence_identifier_only",
+      "readingInContext": "unverified",
+      "lexicalStatus": "not_approved"
+    },
+    {
+      "rank": 366,
+      "character": "地",
+      "sentenceIds": [
+        "330589",
+        "332470",
+        "332640"
+      ],
+      "sourceIdStatus": "sentence_identifier_only",
+      "readingInContext": "unverified",
+      "lexicalStatus": "not_approved"
+    },
+    {
+      "rank": 367,
+      "character": "场",
+      "sentenceIds": [
+        "332600",
+        "332776",
+        "332814"
+      ],
+      "sourceIdStatus": "sentence_identifier_only",
+      "readingInContext": "unverified",
+      "lexicalStatus": "not_approved"
+    },
+    {
+      "rank": 368,
+      "character": "扬",
+      "sentenceIds": [
+        "333938",
+        "421234",
+        "461622"
+      ],
+      "sourceIdStatus": "sentence_identifier_only",
+      "readingInContext": "unverified",
+      "lexicalStatus": "not_approved"
+    },
+    {
+      "rank": 377,
+      "character": "机",
+      "sentenceIds": [
+        "332444",
+        "332584",
+        "332724"
+      ],
+      "sourceIdStatus": "sentence_identifier_only",
+      "readingInContext": "unverified",
+      "lexicalStatus": "not_approved"
+    },
+    {
+      "rank": 379,
+      "character": "过",
+      "sentenceIds": [
+        "7166",
+        "332553",
+        "332608"
+      ],
+      "sourceIdStatus": "sentence_identifier_only",
+      "readingInContext": "unverified",
+      "lexicalStatus": "not_approved"
+    },
+    {
+      "rank": 401,
+      "character": "成",
+      "sentenceIds": [
+        "21",
+        "61",
+        "74"
+      ],
+      "sourceIdStatus": "sentence_identifier_only",
+      "readingInContext": "unverified",
+      "lexicalStatus": "not_approved"
+    },
+    {
+      "rank": 402,
+      "character": "夹",
+      "sentenceIds": [
+        "332943",
+        "334795",
+        "353692"
+      ],
+      "sourceIdStatus": "sentence_identifier_only",
+      "readingInContext": "unverified",
+      "lexicalStatus": "not_approved"
+    },
+    {
+      "rank": 407,
+      "character": "划",
+      "sentenceIds": [
+        "332616",
+        "332643",
+        "332700"
+      ],
+      "sourceIdStatus": "sentence_identifier_only",
+      "readingInContext": "unverified",
+      "lexicalStatus": "not_approved"
+    },
+    {
+      "rank": 413,
+      "character": "师",
+      "sentenceIds": [
+        "332503",
+        "332544",
+        "332968"
+      ],
+      "sourceIdStatus": "sentence_identifier_only",
+      "readingInContext": "unverified",
+      "lexicalStatus": "not_approved"
+    },
+    {
+      "rank": 418,
+      "character": "当",
+      "sentenceIds": [
+        "61",
+        "332498",
+        "332507"
+      ],
+      "sourceIdStatus": "sentence_identifier_only",
+      "readingInContext": "unverified",
+      "lexicalStatus": "not_approved"
+    },
+    {
+      "rank": 424,
+      "character": "曲",
+      "sentenceIds": [
+        "335826",
+        "335827",
+        "335828"
+      ],
+      "sourceIdStatus": "sentence_identifier_only",
+      "readingInContext": "unverified",
+      "lexicalStatus": "not_approved"
+    },
+    {
+      "rank": 427,
+      "character": "同",
+      "sentenceIds": [
+        "332440",
+        "332490",
+        "332692"
+      ],
+      "sourceIdStatus": "sentence_identifier_only",
+      "readingInContext": "unverified",
+      "lexicalStatus": "not_approved"
+    },
+    {
+      "rank": 455,
+      "character": "传",
+      "sentenceIds": [
+        "332777",
+        "333788",
+        "334320"
+      ],
+      "sourceIdStatus": "sentence_identifier_only",
+      "readingInContext": "unverified",
+      "lexicalStatus": "not_approved"
+    },
+    {
+      "rank": 460,
+      "character": "伏",
+      "sentenceIds": [
+        "670499",
+        "771994",
+        "784510"
+      ],
+      "sourceIdStatus": "sentence_identifier_only",
+      "readingInContext": "unverified",
+      "lexicalStatus": "not_approved"
+    },
+    {
+      "rank": 467,
+      "character": "任",
+      "sentenceIds": [
+        "21",
+        "332592",
+        "332712"
+      ],
+      "sourceIdStatus": "sentence_identifier_only",
+      "readingInContext": "unverified",
+      "lexicalStatus": "not_approved"
+    },
+    {
+      "rank": 472,
+      "character": "华",
+      "sentenceIds": [
+        "332609",
+        "347829",
+        "347857"
+      ],
+      "sourceIdStatus": "sentence_identifier_only",
+      "readingInContext": "unverified",
+      "lexicalStatus": "not_approved"
+    },
+    {
+      "rank": 480,
+      "character": "向",
+      "sentenceIds": [
+        "119952",
+        "332460",
+        "333332"
+      ],
+      "sourceIdStatus": "sentence_identifier_only",
+      "readingInContext": "unverified",
+      "lexicalStatus": "not_approved"
+    },
+    {
+      "rank": 481,
+      "character": "似",
+      "sentenceIds": [
+        "332774",
+        "333228",
+        "333510"
+      ],
+      "sourceIdStatus": "sentence_identifier_only",
+      "readingInContext": "unverified",
+      "lexicalStatus": "not_approved"
+    },
+    {
+      "rank": 482,
+      "character": "后",
+      "sentenceIds": [
+        "25",
+        "330582",
+        "332421"
+      ],
+      "sourceIdStatus": "sentence_identifier_only",
+      "readingInContext": "unverified",
+      "lexicalStatus": "not_approved"
+    },
+    {
+      "rank": 483,
+      "character": "行",
+      "sentenceIds": [
+        "71",
+        "180700",
+        "180706"
+      ],
+      "sourceIdStatus": "sentence_identifier_only",
+      "readingInContext": "unverified",
+      "lexicalStatus": "not_approved"
+    },
+    {
+      "rank": 486,
+      "character": "会",
+      "sentenceIds": [
+        "25",
+        "27",
+        "54"
+      ],
+      "sourceIdStatus": "sentence_identifier_only",
+      "readingInContext": "unverified",
+      "lexicalStatus": "not_approved"
+    },
+    {
+      "rank": 488,
+      "character": "合",
+      "sentenceIds": [
+        "332456",
+        "332490",
+        "332799"
+      ],
+      "sourceIdStatus": "sentence_identifier_only",
+      "readingInContext": "unverified",
+      "lexicalStatus": "not_approved"
+    },
+    {
+      "rank": 489,
+      "character": "兆",
+      "sentenceIds": [
+        "410874",
+        "540604",
+        "812351"
+      ],
+      "sourceIdStatus": "sentence_identifier_only",
+      "readingInContext": "unverified",
+      "lexicalStatus": "not_approved"
+    },
+    {
+      "rank": 494,
+      "character": "创",
+      "sentenceIds": [
+        "332520",
+        "335873",
+        "346825"
+      ],
+      "sourceIdStatus": "sentence_identifier_only",
+      "readingInContext": "unverified",
+      "lexicalStatus": "not_approved"
+    },
+    {
+      "rank": 511,
+      "character": "冲",
+      "sentenceIds": [
+        "332524",
+        "332804",
+        "334208"
+      ],
+      "sourceIdStatus": "sentence_identifier_only",
+      "readingInContext": "unverified",
+      "lexicalStatus": "not_approved"
+    },
+    {
+      "rank": 514,
+      "character": "庄",
+      "sentenceIds": [
+        "332779",
+        "333396",
+        "336106"
+      ],
+      "sourceIdStatus": "sentence_identifier_only",
+      "readingInContext": "unverified",
+      "lexicalStatus": "not_approved"
+    },
+    {
+      "rank": 518,
+      "character": "齐",
+      "sentenceIds": [
+        "345730",
+        "345956",
+        "346003"
+      ],
+      "sourceIdStatus": "sentence_identifier_only",
+      "readingInContext": "unverified",
+      "lexicalStatus": "not_approved"
+    },
+    {
+      "rank": 544,
+      "character": "兴",
+      "sentenceIds": [
+        "54",
+        "332579",
+        "332685"
+      ],
+      "sourceIdStatus": "sentence_identifier_only",
+      "readingInContext": "unverified",
+      "lexicalStatus": "not_approved"
+    },
+    {
+      "rank": 549,
+      "character": "安",
+      "sentenceIds": [
+        "332589",
+        "333215",
+        "334299"
+      ],
+      "sourceIdStatus": "sentence_identifier_only",
+      "readingInContext": "unverified",
+      "lexicalStatus": "not_approved"
+    },
+    {
+      "rank": 556,
+      "character": "论",
+      "sentenceIds": [
+        "66",
+        "333526",
+        "334737"
+      ],
+      "sourceIdStatus": "sentence_identifier_only",
+      "readingInContext": "unverified",
+      "lexicalStatus": "not_approved"
+    },
+    {
+      "rank": 564,
+      "character": "那",
+      "sentenceIds": [
+        "14",
+        "16",
+        "26"
+      ],
+      "sourceIdStatus": "sentence_identifier_only",
+      "readingInContext": "unverified",
+      "lexicalStatus": "not_approved"
+    },
+    {
+      "rank": 566,
+      "character": "尽",
+      "sentenceIds": [
+        "27",
+        "333121",
+        "333303"
+      ],
+      "sourceIdStatus": "sentence_identifier_only",
+      "readingInContext": "unverified",
+      "lexicalStatus": "not_approved"
+    },
+    {
+      "rank": 575,
+      "character": "阴",
+      "sentenceIds": [
+        "419978",
+        "663230",
+        "761057"
+      ],
+      "sourceIdStatus": "sentence_identifier_only",
+      "readingInContext": "unverified",
+      "lexicalStatus": "not_approved"
+    },
+    {
+      "rank": 581,
+      "character": "好",
+      "sentenceIds": [
+        "11",
+        "50",
+        "119952"
+      ],
+      "sourceIdStatus": "sentence_identifier_only",
+      "readingInContext": "unverified",
+      "lexicalStatus": "not_approved"
+    },
+    {
+      "rank": 586,
+      "character": "观",
+      "sentenceIds": [
+        "67",
+        "332643",
+        "332653"
+      ],
+      "sourceIdStatus": "sentence_identifier_only",
+      "readingInContext": "unverified",
+      "lexicalStatus": "not_approved"
+    },
+    {
+      "rank": 593,
+      "character": "约",
+      "sentenceIds": [
+        "332960",
+        "333344",
+        "333437"
+      ],
+      "sourceIdStatus": "sentence_identifier_only",
+      "readingInContext": "unverified",
+      "lexicalStatus": "not_approved"
+    },
+    {
+      "rank": 595,
+      "character": "纪",
+      "sentenceIds": [
+        "332733",
+        "346075",
+        "347838"
+      ],
+      "sourceIdStatus": "sentence_identifier_only",
+      "readingInContext": "unverified",
+      "lexicalStatus": "not_approved"
+    },
+    {
+      "rank": 600,
+      "character": "弄",
+      "sentenceIds": [
+        "332912",
+        "333023",
+        "333909"
+      ],
+      "sourceIdStatus": "sentence_identifier_only",
+      "readingInContext": "unverified",
+      "lexicalStatus": "not_approved"
+    },
+    {
+      "rank": 632,
+      "character": "折",
+      "sentenceIds": [
+        "344395",
+        "347182",
+        "347852"
+      ],
+      "sourceIdStatus": "sentence_identifier_only",
+      "readingInContext": "unverified",
+      "lexicalStatus": "not_approved"
+    },
+    {
+      "rank": 655,
+      "character": "把",
+      "sentenceIds": [
+        "52",
+        "61",
+        "330588"
+      ],
+      "sourceIdStatus": "sentence_identifier_only",
+      "readingInContext": "unverified",
+      "lexicalStatus": "not_approved"
+    },
+    {
+      "rank": 665,
+      "character": "花",
+      "sentenceIds": [
+        "332702",
+        "333005",
+        "333146"
+      ],
+      "sourceIdStatus": "sentence_identifier_only",
+      "readingInContext": "unverified",
+      "lexicalStatus": "not_approved"
+    },
+    {
+      "rank": 675,
+      "character": "克",
+      "sentenceIds": [
+        "18",
+        "332526",
+        "332917"
+      ],
+      "sourceIdStatus": "sentence_identifier_only",
+      "readingInContext": "unverified",
+      "lexicalStatus": "not_approved"
+    },
+    {
+      "rank": 677,
+      "character": "苏",
+      "sentenceIds": [
+        "332643",
+        "346880",
+        "418528"
+      ],
+      "sourceIdStatus": "sentence_identifier_only",
+      "readingInContext": "unverified",
+      "lexicalStatus": "not_approved"
+    },
+    {
+      "rank": 679,
+      "character": "杠",
+      "sentenceIds": [
+        "899081",
+        "6017398",
+        "8791847"
+      ],
+      "sourceIdStatus": "sentence_identifier_only",
+      "readingInContext": "unverified",
+      "lexicalStatus": "not_approved"
+    },
+    {
+      "rank": 693,
+      "character": "更",
+      "sentenceIds": [
+        "332549",
+        "332576",
+        "332589"
+      ],
+      "sourceIdStatus": "sentence_identifier_only",
+      "readingInContext": "unverified",
+      "lexicalStatus": "not_approved"
+    },
+    {
+      "rank": 704,
+      "character": "还",
+      "sentenceIds": [
+        "332505",
+        "332507",
+        "332553"
+      ],
+      "sourceIdStatus": "sentence_identifier_only",
+      "readingInContext": "unverified",
+      "lexicalStatus": "not_approved"
+    },
+    {
+      "rank": 708,
+      "character": "连",
+      "sentenceIds": [
+        "332966",
+        "333160",
+        "334733"
+      ],
+      "sourceIdStatus": "sentence_identifier_only",
+      "readingInContext": "unverified",
+      "lexicalStatus": "not_approved"
+    },
+    {
+      "rank": 717,
+      "character": "时",
+      "sentenceIds": [
+        "332428",
+        "332453",
+        "332472"
+      ],
+      "sourceIdStatus": "sentence_identifier_only",
+      "readingInContext": "unverified",
+      "lexicalStatus": "not_approved"
+    },
+    {
+      "rank": 721,
+      "character": "里",
+      "sentenceIds": [
+        "15",
+        "58",
+        "136401"
+      ],
+      "sourceIdStatus": "sentence_identifier_only",
+      "readingInContext": "unverified",
+      "lexicalStatus": "not_approved"
+    },
+    {
+      "rank": 739,
+      "character": "听",
+      "sentenceIds": [
+        "332562",
+        "332579",
+        "332601"
+      ],
+      "sourceIdStatus": "sentence_identifier_only",
+      "readingInContext": "unverified",
+      "lexicalStatus": "not_approved"
+    },
+    {
+      "rank": 747,
+      "character": "吧",
+      "sentenceIds": [
+        "32",
+        "48",
+        "332489"
+      ],
+      "sourceIdStatus": "sentence_identifier_only",
+      "readingInContext": "unverified",
+      "lexicalStatus": "not_approved"
+    },
+    {
+      "rank": 751,
+      "character": "别",
+      "sentenceIds": [
+        "332468",
+        "332537",
+        "332959"
+      ],
+      "sourceIdStatus": "sentence_identifier_only",
+      "readingInContext": "unverified",
+      "lexicalStatus": "not_approved"
+    },
+    {
+      "rank": 758,
+      "character": "钉",
+      "sentenceIds": [
+        "414045",
+        "811119",
+        "3709299"
+      ],
+      "sourceIdStatus": "sentence_identifier_only",
+      "readingInContext": "unverified",
+      "lexicalStatus": "not_approved"
+    },
+    {
+      "rank": 763,
+      "character": "利",
+      "sentenceIds": [
+        "332651",
+        "332981",
+        "333109"
+      ],
+      "sourceIdStatus": "sentence_identifier_only",
+      "readingInContext": "unverified",
+      "lexicalStatus": "not_approved"
+    },
+    {
+      "rank": 777,
+      "character": "作",
+      "sentenceIds": [
+        "18",
+        "180706",
+        "332423"
+      ],
+      "sourceIdStatus": "sentence_identifier_only",
+      "readingInContext": "unverified",
+      "lexicalStatus": "not_approved"
+    },
+    {
+      "rank": 778,
+      "character": "伯",
+      "sentenceIds": [
+        "333498",
+        "342710",
+        "347887"
+      ],
+      "sourceIdStatus": "sentence_identifier_only",
+      "readingInContext": "unverified",
+      "lexicalStatus": "not_approved"
+    },
+    {
+      "rank": 795,
+      "character": "余",
+      "sentenceIds": [
+        "333590",
+        "334168",
+        "334391"
+      ],
+      "sourceIdStatus": "sentence_identifier_only",
+      "readingInContext": "unverified",
+      "lexicalStatus": "not_approved"
+    },
+    {
+      "rank": 810,
+      "character": "免",
+      "sentenceIds": [
+        "332814",
+        "334096",
+        "334614"
+      ],
+      "sourceIdStatus": "sentence_identifier_only",
+      "readingInContext": "unverified",
+      "lexicalStatus": "not_approved"
+    },
+    {
+      "rank": 814,
+      "character": "角",
+      "sentenceIds": [
+        "333260",
+        "333711",
+        "333788"
+      ],
+      "sourceIdStatus": "sentence_identifier_only",
+      "readingInContext": "unverified",
+      "lexicalStatus": "not_approved"
+    },
+    {
+      "rank": 821,
+      "character": "刨",
+      "sentenceIds": [],
+      "sourceIdStatus": "sentence_identifier_only",
+      "readingInContext": "unverified",
+      "lexicalStatus": "not_approved"
+    },
+    {
+      "rank": 825,
+      "character": "系",
+      "sentenceIds": [
+        "334648",
+        "334721",
+        "334900"
+      ],
+      "sourceIdStatus": "sentence_identifier_only",
+      "readingInContext": "unverified",
+      "lexicalStatus": "not_approved"
+    },
+    {
+      "rank": 836,
+      "character": "应",
+      "sentenceIds": [
+        "332690",
+        "332816",
+        "332860"
+      ],
+      "sourceIdStatus": "sentence_identifier_only",
+      "readingInContext": "unverified",
+      "lexicalStatus": "not_approved"
+    },
+    {
+      "rank": 841,
+      "character": "辛",
+      "sentenceIds": [
+        "339867",
+        "347829",
+        "347831"
+      ],
+      "sourceIdStatus": "sentence_identifier_only",
+      "readingInContext": "unverified",
+      "lexicalStatus": "not_approved"
+    },
+    {
+      "rank": 847,
+      "character": "间",
+      "sentenceIds": [
+        "119952",
+        "332540",
+        "332581"
+      ],
+      "sourceIdStatus": "sentence_identifier_only",
+      "readingInContext": "unverified",
+      "lexicalStatus": "not_approved"
+    },
+    {
+      "rank": 848,
+      "character": "闷",
+      "sentenceIds": [
+        "420924",
+        "421070",
+        "461516"
+      ],
+      "sourceIdStatus": "sentence_identifier_only",
+      "readingInContext": "unverified",
+      "lexicalStatus": "not_approved"
+    },
+    {
+      "rank": 860,
+      "character": "沙",
+      "sentenceIds": [
+        "335721",
+        "344222",
+        "347220"
+      ],
+      "sourceIdStatus": "sentence_identifier_only",
+      "readingInContext": "unverified",
+      "lexicalStatus": "not_approved"
+    },
+    {
+      "rank": 871,
+      "character": "沉",
+      "sentenceIds": [
+        "334263",
+        "336644",
+        "340097"
+      ],
+      "sourceIdStatus": "sentence_identifier_only",
+      "readingInContext": "unverified",
+      "lexicalStatus": "not_approved"
+    },
+    {
+      "rank": 905,
+      "character": "尾",
+      "sentenceIds": [
+        "349767",
+        "391585",
+        "392328"
+      ],
+      "sourceIdStatus": "sentence_identifier_only",
+      "readingInContext": "unverified",
+      "lexicalStatus": "not_approved"
+    },
+    {
+      "rank": 914,
+      "character": "陈",
+      "sentenceIds": [
+        "347850",
+        "744696",
+        "1216102"
+      ],
+      "sourceIdStatus": "sentence_identifier_only",
+      "readingInContext": "unverified",
+      "lexicalStatus": "not_approved"
+    },
+    {
+      "rank": 926,
+      "character": "劲",
+      "sentenceIds": [
+        "335521",
+        "336952",
+        "419964"
+      ],
+      "sourceIdStatus": "sentence_identifier_only",
+      "readingInContext": "unverified",
+      "lexicalStatus": "not_approved"
+    },
+    {
+      "rank": 934,
+      "character": "纳",
+      "sentenceIds": [
+        "346777",
+        "395632",
+        "420960"
+      ],
+      "sourceIdStatus": "sentence_identifier_only",
+      "readingInContext": "unverified",
+      "lexicalStatus": "not_approved"
+    },
+    {
+      "rank": 945,
+      "character": "环",
+      "sentenceIds": [
+        "332449",
+        "333759",
+        "334046"
+      ],
+      "sourceIdStatus": "sentence_identifier_only",
+      "readingInContext": "unverified",
+      "lexicalStatus": "not_approved"
+    },
+    {
+      "rank": 953,
+      "character": "抹",
+      "sentenceIds": [
+        "503220",
+        "768231",
+        "834543"
+      ],
+      "sourceIdStatus": "sentence_identifier_only",
+      "readingInContext": "unverified",
+      "lexicalStatus": "not_approved"
+    },
+    {
+      "rank": 963,
+      "character": "担",
+      "sentenceIds": [
+        "332983",
+        "333333",
+        "334999"
+      ],
+      "sourceIdStatus": "sentence_identifier_only",
+      "readingInContext": "unverified",
+      "lexicalStatus": "not_approved"
+    }
+  ]
+}
