@@ -6,7 +6,7 @@ The comparison covers all **49 warning pairs** from 48 original Chinese glyphs i
 
 ## Local conflict triage
 
-The browser interface can filter the 49 source pairs to disagreements, matched provisional judgments, either one-sided note set, unobserved pairs, shared evidence references, or either-note shape ambiguity. Presentation order may emphasize conflicts or repeated evidence sources. These controls **never alter or truncate the source-ordered JSON comparison report**. Editing either source export clears stale results immediately and requires validation again. Invalid filter/order selections retain the last accepted view and leave the complete comparison export unchanged. No triage filter changes a source-owner judgment or adjudication status.
+The browser interface can filter the 49 source pairs to disagreements, matched provisional judgments, either one-sided note set, unobserved pairs, shared evidence references, or either-note shape ambiguity. Presentation order may emphasize conflicts or repeated evidence sources. Each displayed row links directly to its source-pinned region in a separate intake tab using only its public trial identifier in the URL fragment; no evidence URL, private note or judgment is included in the link. These controls **never alter or truncate the source-ordered JSON comparison report**. Editing either source export clears stale results immediately and requires validation again. Invalid filter/order selections retain the last accepted view and leave the complete comparison export unchanged. No triage filter changes a source-owner judgment or adjudication status.
 
 ## Important independence boundary
 

@@ -38,8 +38,16 @@ function showRows(){
    row.firstJudgment||"No note",row.secondJudgment||"No note",
    row.comparison,row.sameEvidenceReference===null?"Not comparable":
    row.sameEvidenceReference?"Same reference":"Different references"];
-  for(const value of cells){
-   const td=document.createElement("td");td.textContent=value;tr.appendChild(td);
+  for(let i=0;i<cells.length;i++){
+   const td=document.createElement("td");
+   if(i===0){
+    const anchor=document.createElement("a");
+    anchor.href="component-owner-adjudication.html#"+row.trialId;
+    anchor.target="_blank";anchor.rel="noopener noreferrer";
+    anchor.textContent=cells[i];
+    td.appendChild(anchor);
+   }else td.textContent=cells[i];
+   tr.appendChild(td);
   }
   $("oc-table").appendChild(tr);
  }

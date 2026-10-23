@@ -27,7 +27,7 @@ class Element{
  replaceChildren(...nodes){this.children=nodes;}
  addEventListener(type,handler){this.events[type]=handler;}
 }
-function setup(data=sources){
+function setup(data=sources,hash=""){
  const nodes=Object.fromEntries(ids.map(id=>[id,new Element()]));
  for(const id of ["oa-target","oa-filter","oa-order","oa-save","oa-export","oa-restore"])nodes[id].disabled=true;
  nodes["oa-judgment"].value="unresolved";nodes["oa-size"].value="96";nodes["oa-filter"].value="all";nodes["oa-order"].value="source";
@@ -36,7 +36,7 @@ function setup(data=sources){
   assert.ok(url in data,"Only the five pinned source JSON resources may be fetched");
   return {ok:true,json:async()=>data[url]};
  };
- const ctx={document,fetch,URL,Map,Set,Date,Number,Error};
+ const ctx={document,fetch,URL,Map,Set,Date,Number,Error,location:{hash}};
  ctx.globalThis=ctx;
  for(const script of scripts)vm.runInNewContext(script,ctx);
  return nodes;
@@ -46,6 +46,16 @@ async function settle(nodes){
   !nodes["oa-status"].textContent.startsWith("Cannot");i++)await Promise.resolve();
 }
 const p=setup();await settle(p);
+const publicIDs=sources[
+ "glyphs/research/heldout-identification-target-v0.1/index-v0.1.json"].targets;
+const anchorTarget=publicIDs[12];
+const anchored=setup(sources,"#"+anchorTarget.id);await settle(anchored);
+assert.equal(anchored["oa-target"].value,anchorTarget.id);
+assert.equal(anchored["oa-native"].textContent,anchorTarget.character);
+assert.match(anchored["oa-status"].textContent,/Source-pair fragment selected/);
+const invalidFragment=setup(sources,"#bogus-path");await settle(invalidFragment);
+assert.equal(invalidFragment["oa-target"].value,publicIDs[0].id);
+assert.match(invalidFragment["oa-status"].textContent,/Unknown source-pair fragment ignored/);
 assert.equal(p["oa-target"].children.length,49);
 assert.equal(p["oa-target"].disabled,false);
 assert.equal(p["oa-filter"].disabled,false);

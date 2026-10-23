@@ -110,7 +110,16 @@ async function load(){
   $("oa-order").disabled=false;
   $("oa-save").disabled=false;$("oa-restore").disabled=false;
   updateSize();showCohort("all");
-  status("49 source-pinned regions loaded; independent acceptance remains zero.");
+  const anchor=globalThis.location?.hash||"";
+  if(anchor){
+   const id=anchor.slice(1);
+   if(/^\\d{1,4}-cmp-\\d{4}-cmp-\\d{4}$/.test(id)&&targets.some(t=>t.id===id)){
+    selection(id);
+    status("Source-pair fragment selected; independent acceptance remains zero.");
+   }else{
+    status("Unknown source-pair fragment ignored; independent acceptance remains zero.");
+   }
+  }else status("49 source-pinned regions loaded; independent acceptance remains zero.");
  }catch(e){status("Cannot load or validate original source regions: "+e.message);}
 }
 $("oa-filter").addEventListener("change",()=>{

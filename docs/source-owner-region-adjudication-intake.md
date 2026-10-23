@@ -16,6 +16,10 @@ The [complementary locator generator](../tools/glyph-pipeline/component_owner_co
 
 The intake accepts a **previously exported source-owner JSON note set** through a separate paste-and-restore control. It validates the original 49 pinned source identities, order, SHA-256 fields, permitted provisional judgments, evidence URL shape, rationale length and zero-certification boundary **before** creating any new page-state entries. A successful restore deliberately replaces all current in-memory notes, including unsaved form fields; invalid or certification-claiming records leave the existing notes untouched. The interface states these replacement semantics explicitly. An imported export remains local to the open page; nothing is uploaded, stored in browser persistence, or automatically committed. This restoration path does not imply the claims inside free-form rationales have been independently verified.
 
+## Direct source-region navigation
+
+The intake accepts an optional URL fragment consisting of a strictly source-valid public trial ID (for example, `#12-cmp-0001-cmp-0002`, if that ID exists in the generated manifest). The matched region is selected after the five source manifests are validated, without importing observations or approving the machine key. Unknown fragments are ignored safely. The comparison tool uses these fragments to link directly to matching source regions; note text and evidence references are never placed in the URL.
+
 ## Source-warning review cohorts
 
 The 49 machine-identified warning pairs may be inspected as all pairs, 23 new fold-trained proximity warnings, 21 original warnings resolved in the fold-trained candidate, or five retained warnings. Changing the cohort does not rewrite or delete a valid in-memory provisional observation; an incomplete current observation blocks cohort navigation until resolved. Filtering only prioritizes review and does not certify colors, source ownership or visual discrimination.
