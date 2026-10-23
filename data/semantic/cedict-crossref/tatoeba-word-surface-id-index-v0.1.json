@@ -1,0 +1,161 @@
+{
+  "schema": "chromalect.semantic.tatoeba-word-surface-id-index.v0.1",
+  "status": "literal_multi_character_substrings_not_verified_word_or_reading_attestations",
+  "source": {
+    "corpusExport": "https://downloads.tatoeba.org/exports/per_language/cmn/cmn_sentences_detailed.tsv.bz2",
+    "uncompressedTSVSha256": "7685bc14cf769a63acf7643a5bcd2b19fc3dba6aaf6c12acabd7417752f12338",
+    "dictionaryLeads": "dictionary-word-surface-leads-v0.1.json",
+    "snapshotRetrievedUTC": "2026-10-23",
+    "acquisitionRun": "https://github.com/sguzman/chromalect/actions/runs/39950088781",
+    "originalArtifactId": 12499552722,
+    "originalArtifactZipSha256": "65d20ec5c3e7189a6e17863463d6d615d8ceafbdf3e8d7f31f80d7b97db4020b",
+    "originalArtifactExpiresUTC": "2026-11-22T12:00:25Z",
+    "thisFileContainsSentenceText": false,
+    "thisFileContainsContributorNames": false
+  },
+  "note": "The literal word forms were recorded as publisher dictionary leads; occurrence in Tatoeba is a stronger orthographic filter than a single-character match but is not an independently verified word segmentation, pronunciation, sense or applicable reuse license.",
+  "summary": {
+    "wordLeads": 8,
+    "sourceSentenceRowsScanned": 89190,
+    "rawWordSubstringMatches": 213,
+    "selectedWordSentenceAssociations": 27,
+    "uniqueSentenceIds": 27,
+    "wordLeadsWithCandidateIds": 6,
+    "wordLeadsWithoutCandidateIds": 2,
+    "contextualPronunciationVerifications": 0,
+    "independentLexicalApprovals": 0,
+    "independentPictogramApprovals": 0,
+    "productionVerified": 0
+  },
+  "records": [
+    {
+      "leadId": "ch126-length",
+      "rank": 127,
+      "writtenWordLead": "长度",
+      "rawMatchingSentenceCount": 4,
+      "sentenceIds": [
+        "13970686",
+        "336916",
+        "9972430",
+        "2317127"
+      ],
+      "observedStatus": "literal_substring_candidate_only",
+      "independentWordBoundaryVerified": false,
+      "independentContextualReadingVerified": false,
+      "independentLexicalSenseVerified": false,
+      "approvedPictogram": false
+    },
+    {
+      "leadId": "zhang-growth",
+      "rank": 127,
+      "writtenWordLead": "长大",
+      "rawMatchingSentenceCount": 25,
+      "sentenceIds": [
+        "389974",
+        "8748562",
+        "332981",
+        "1839195",
+        "12687028"
+      ],
+      "observedStatus": "literal_substring_candidate_only",
+      "independentWordBoundaryVerified": false,
+      "independentContextualReadingVerified": false,
+      "independentLexicalSenseVerified": false,
+      "approvedPictogram": false
+    },
+    {
+      "leadId": "hua-row",
+      "rank": 407,
+      "writtenWordLead": "划船",
+      "rawMatchingSentenceCount": 3,
+      "sentenceIds": [
+        "10305694",
+        "336671",
+        "850117"
+      ],
+      "observedStatus": "literal_substring_candidate_only",
+      "independentWordBoundaryVerified": false,
+      "independentContextualReadingVerified": false,
+      "independentLexicalSenseVerified": false,
+      "approvedPictogram": false
+    },
+    {
+      "leadId": "hua-plan",
+      "rank": 407,
+      "writtenWordLead": "计划",
+      "rawMatchingSentenceCount": 120,
+      "sentenceIds": [
+        "733596",
+        "10058523",
+        "2915527",
+        "9968962",
+        "510659"
+      ],
+      "observedStatus": "literal_substring_candidate_only",
+      "independentWordBoundaryVerified": false,
+      "independentContextualReadingVerified": false,
+      "independentLexicalSenseVerified": false,
+      "approvedPictogram": false
+    },
+    {
+      "leadId": "guo-cross",
+      "rank": 379,
+      "writtenWordLead": "经过",
+      "rawMatchingSentenceCount": 30,
+      "sentenceIds": [
+        "9842625",
+        "347817",
+        "501571",
+        "8037882",
+        "343595"
+      ],
+      "observedStatus": "literal_substring_candidate_only",
+      "independentWordBoundaryVerified": false,
+      "independentContextualReadingVerified": false,
+      "independentLexicalSenseVerified": false,
+      "approvedPictogram": false
+    },
+    {
+      "leadId": "guo-aspect",
+      "rank": 379,
+      "writtenWordLead": "看过",
+      "rawMatchingSentenceCount": 31,
+      "sentenceIds": [
+        "10066357",
+        "13972768",
+        "2440828",
+        "13751971",
+        "9409447"
+      ],
+      "observedStatus": "literal_substring_candidate_only",
+      "independentWordBoundaryVerified": false,
+      "independentContextualReadingVerified": false,
+      "independentLexicalSenseVerified": false,
+      "approvedPictogram": false
+    },
+    {
+      "leadId": "pao-dig",
+      "rank": 821,
+      "writtenWordLead": "刨坑",
+      "rawMatchingSentenceCount": 0,
+      "sentenceIds": [],
+      "observedStatus": "literal_substring_candidate_only",
+      "independentWordBoundaryVerified": false,
+      "independentContextualReadingVerified": false,
+      "independentLexicalSenseVerified": false,
+      "approvedPictogram": false
+    },
+    {
+      "leadId": "bao-plane",
+      "rank": 821,
+      "writtenWordLead": "刨木头",
+      "rawMatchingSentenceCount": 0,
+      "sentenceIds": [],
+      "observedStatus": "literal_substring_candidate_only",
+      "independentWordBoundaryVerified": false,
+      "independentContextualReadingVerified": false,
+      "independentLexicalSenseVerified": false,
+      "approvedPictogram": false
+    }
+  ]
+}
