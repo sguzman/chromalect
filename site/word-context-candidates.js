@@ -3,7 +3,7 @@
 "use strict";
 const $=id=>document.getElementById(id);
 if(["word-query","word-scope","word-status","word-stats","word-results"].some(id=>!$(id)))return;
-let entries=[];
+let entries=[],contributorMap=new Map();
 function render(){
  const q=$("word-query").value.trim(),scope=$("word-scope").value;
  const shown=entries.filter(r=>(scope==="all"||(scope==="with"?r.sentenceIds.length>0:r.sentenceIds.length===0))&&
@@ -25,7 +25,11 @@ function render(){
    const li=document.createElement("li"),a=document.createElement("a");
    a.href="https://tatoeba.org/en/sentences/show/"+id;
    a.target="_blank";a.rel="noopener noreferrer";a.textContent="Tatoeba sentence #"+id;
-   li.appendChild(a);list.appendChild(li);
+   const attribution=contributorMap.get(id);
+   if(!attribution)throw Error("Missing contributor attribution for source ID");
+   const by=document.createElement("span");by.className="word-meta";
+   by.textContent=" · contributor: "+attribution.contributor+" (live license check pending)";
+   li.appendChild(a);li.appendChild(by);list.appendChild(li);
   }
   if(!r.sentenceIds.length){
    const note=document.createElement("p");note.className="word-meta";
@@ -40,11 +44,13 @@ function render(){
 }
 async function load(){
  try{
-  const [leadResponse,matchResponse]=await Promise.all([
+  const [leadResponse,matchResponse,creditResponse]=await Promise.all([
    fetch("semantic/dictionary-word-surface-leads-v0.1.json"),
-   fetch("semantic/tatoeba-word-surface-id-index-v0.1.json")]);
-  if(!leadResponse.ok||!matchResponse.ok)throw Error("Missing source data");
-  const [source,match]=await Promise.all([leadResponse.json(),matchResponse.json()]);
+   fetch("semantic/tatoeba-word-surface-id-index-v0.1.json"),
+   fetch("semantic/tatoeba-word-candidate-attribution-v0.1.json")]);
+  if(!leadResponse.ok||!matchResponse.ok||!creditResponse.ok)throw Error("Missing source data");
+  const [source,match,credits]=await Promise.all([
+   leadResponse.json(),matchResponse.json(),creditResponse.json()]);
   if(source.schema!=="chromalect.semantic.dictionary-word-surface-leads.v0.1"||
      source.status!=="publisher_dictionary_word_leads_not_independent_usage_attestations"||
      source.leads.length!==8||
@@ -56,6 +62,19 @@ async function load(){
      match.summary.independentLexicalApprovals!==0||match.summary.independentPictogramApprovals!==0||
      match.summary.productionVerified!==0||match.records.length!==8)
    throw Error("Source identity or approval invariants failed");
+  if(credits.schema!=="chromalect.semantic.tatoeba-word-candidate-attribution.v0.1"||
+     credits.status!=="retrieved_corpus_contributor_metadata_not_individual_license_or_linguistic_approval"||
+     credits.summary.selectedCorpusSentenceIDs!==27||
+     credits.summary.distinctPublicCorpusContributors!==20||
+     credits.summary.individuallyCheckedSentenceLicenses!==0||
+     credits.summary.independentContextualPronunciationsVerified!==0||
+     credits.summary.independentlyAdjudicatedLexicalSenses!==0||
+     credits.summary.approvedPictograms!==0||credits.records.length!==27||
+     credits.records.some(x=>!/^\d+$/.test(x.sentenceId)||!x.contributor||
+       x.individualLicenseStatus!=="pending_live_record_check"||
+       x.wordBoundaryVerified!==false||x.readingVerified!==false||
+       x.lexicalSenseApproved!==false||x.sourceTextCopied!==false))
+   throw Error("Contributor provenance or individual licensing state differs from pinned source");
   const sources=new Map(source.leads.map(x=>[x.id,x])),seen=new Set(),ids=new Set();
   entries=match.records.map(r=>{
    const lead=sources.get(r.leadId);
@@ -73,6 +92,15 @@ async function load(){
     dictionaryHeadingReading:lead.dictionaryHeadingReading};
   });
   if(seen.size!==8||ids.size!==27)throw Error("Wrong source ID cardinality");
+  contributorMap=new Map();
+  for(const credit of credits.records){
+   if(!ids.has(credit.sentenceId)||contributorMap.has(credit.sentenceId)||
+      !match.records.some(r=>r.leadId===credit.leadId&&r.sentenceIds.includes(credit.sentenceId))||
+      credit.sourceURL!=="https://tatoeba.org/en/sentences/show/"+credit.sentenceId)
+     throw Error("Contributor record does not match corpus source ID");
+   contributorMap.set(credit.sentenceId,credit);
+  }
+  if(contributorMap.size!==27)throw Error("Contributor record cardinality mismatch");
   render();
  }catch(error){entries=[];$("word-status").textContent="Unable to validate word-source records: "+error.message;}
 }
