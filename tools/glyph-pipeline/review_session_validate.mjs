@@ -13,6 +13,57 @@ export function validateReviewSession(session,audit,queue,fullQueue=null){
  assert.ok(session&&typeof session==="object"&&!Array.isArray(session));
  assert.equal(session.session?.localOnly,true,"Only explicitly local-only exports are supported");
  assert.ok(typeof session.session?.exportedAt==="string"&&!Number.isNaN(Date.parse(session.session.exportedAt)));
+ if(session.schema==="chromalect.emoji-comprehension-session.v0.2"){
+  assert.equal(session.status,"unverified_exploratory_observations_not_production_review");
+  assert.equal(session.source?.audit,"emoji-visibility-audit-v0.1.json");
+  assert.equal(audit.schema,"chromalect.semantic.emoji-visibility-audit.v0.1");
+  assert.equal(audit.summary.proposedExpressions,897);
+  assert.equal(audit.summary.humanLexicalApproved,0);
+  assert.equal(audit.summary.humanEmojiComprehensionApproved,0);
+  assert.equal(audit.summary.productionVerified,0);
+  assert.ok(Array.isArray(session.answers)&&session.answers.length>=1);
+  assert.equal(session.session.rated,session.answers.length);
+  assert.ok(["all","flagged","events","compositions"].includes(session.session.scope));
+  assert.ok(["distinct","allow"].includes(session.session.repeatPolicy));
+  const pool=audit.records.filter(rec=>
+   session.session.scope==="all"||
+   (session.session.scope==="flagged"&&rec.riskFlags.length>0)||
+   (session.session.scope==="events"&&rec.operators.includes("event"))||
+   (session.session.scope==="compositions"&&rec.emojiCount>1));
+  const maximum=session.session.repeatPolicy==="distinct"
+   ?new Set(pool.map(rec=>rec.emojiDisplay)).size:pool.length;
+  assert.ok(session.session.planned>=session.answers.length&&
+    session.session.planned<=maximum&&maximum<=897);
+  const refs=new Map(pool.map(r=>[r.id,r]));
+  const seen=new Set(),visuals=new Set();
+  for(const x of session.answers){
+   const actual=refs.get(x.trialId);
+   assert.ok(actual,"Unknown emoji trial for declared scope");
+   assert.ok(!seen.has(x.trialId),"Duplicate emoji trial");
+   seen.add(x.trialId);
+   if(session.session.repeatPolicy==="distinct"){
+    assert.ok(!visuals.has(actual.emojiDisplay),
+     "Distinct visual form policy violated by repeated emoji");
+    visuals.add(actual.emojiDisplay);
+   }
+   assert.equal(x.rank,actual.rank);
+   assert.equal(x.character,actual.character);
+   assert.equal(x.displayedEmoji,actual.emojiDisplay);
+   assert.equal(x.proposedMeaning,actual.selectedMeaning);
+   assert.deepEqual(x.automaticRiskFlags,actual.riskFlags);
+   assert.ok(typeof x.blindResponse==="string"&&x.blindResponse.length<=15000);
+   assert.ok(confidence.has(x.confidence));
+   assert.ok(kinds.has(x.predictedKind));
+   assert.equal(x.targetTypedAsEvent,actual.operators.includes("event"));
+   assert.ok(clarity.has(x.clarityRatingAfterReveal));
+   assert.equal(actual.independentLexicalReview,"pending");
+   assert.equal(actual.independentEmojiComprehensionReview,"pending");
+   assert.equal(actual.productionVerified,false);
+   assert.ok(!("productionVerified" in x)&&!("lexicalApproval" in x),
+    "Local exploratory answers must not assert production approval");
+  }
+  return {type:"emoji_comprehension",localObservations:session.answers.length,productionVerified:0};
+ }
  if(session.schema==="chromalect.emoji-comprehension-session.v0.1"){
   assert.equal(session.status,"unverified_exploratory_observations_not_production_review");
   assert.equal(session.source?.audit,"emoji-visibility-audit-v0.1.json");
