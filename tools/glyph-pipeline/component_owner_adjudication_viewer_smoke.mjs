@@ -18,18 +18,18 @@ const scripts=["site/heldout-blind-color-core.js",
  "site/heldout-component-identification-core.js",
  "site/component-owner-adjudication-core.js",
  "site/component-owner-adjudication.js"].map(p=>fs.readFileSync(p,"utf8"));
-const ids=["oa-status","oa-target","oa-meta","oa-source","oa-locator","oa-fold",
+const ids=["oa-status","oa-target","oa-meta","oa-size","oa-grid","oa-source","oa-locator","oa-fold",
  "oa-owner","oa-complement","oa-complement-meta","oa-judgment","oa-evidence","oa-rationale","oa-save","oa-count",
  "oa-export","oa-output"];
 class Element{
- constructor(){this.value="";this.textContent="";this.children=[];this.events={};this.disabled=false;this.src="";}
+ constructor(){this.value="";this.textContent="";this.children=[];this.events={};this.disabled=false;this.src="";this.style={setProperty:(k,v)=>{this.style[k]=v;}};}
  appendChild(node){this.children.push(node);return node;}
  addEventListener(type,handler){this.events[type]=handler;}
 }
 function setup(data=sources){
  const nodes=Object.fromEntries(ids.map(id=>[id,new Element()]));
  for(const id of ["oa-target","oa-save","oa-export"])nodes[id].disabled=true;
- nodes["oa-judgment"].value="unresolved";
+ nodes["oa-judgment"].value="unresolved";nodes["oa-size"].value="96";
  const document={getElementById:id=>nodes[id],createElement:()=>new Element()};
  const fetch=async url=>{
   assert.ok(url in data,"Only the five pinned source JSON resources may be fetched");
@@ -54,6 +54,17 @@ assert.match(p["oa-complement"].src,/owner-complement-locators/);
 assert.match(p["oa-complement-meta"].textContent,/unverified/);
 assert.notEqual(p["oa-locator"].src,p["oa-complement"].src);
 assert.match(p["oa-meta"].textContent,/source paths/);
+assert.equal(p["oa-grid"].style["--oa-glyph-size"],"96px");
+for(const size of [16,24,32,48,64,96,128,160]){
+ p["oa-size"].value=String(size);
+ p["oa-size"].events.change();
+ assert.equal(p["oa-grid"].style["--oa-glyph-size"],size+"px");
+}
+p["oa-size"].value="123";
+p["oa-size"].events.change();
+assert.match(p["oa-status"].textContent,/size rejected/);
+assert.equal(p["oa-grid"].style["--oa-glyph-size"],"160px");
+p["oa-size"].value="96";p["oa-size"].events.change();
 assert.match(p["oa-count"].textContent,/0 provisional notes/);
 const original=p["oa-target"].value;
 p["oa-judgment"].value="provisional_support";

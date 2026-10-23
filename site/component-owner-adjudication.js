@@ -5,10 +5,16 @@ const pairing=globalThis.ChromalectBlindColorRehearsal;
 const identification=globalThis.ChromalectComponentIdentificationRehearsal;
 const audit=globalThis.ChromalectOwnerAdjudication;
 const $=id=>document.getElementById(id);
-const names=["oa-status","oa-target","oa-meta","oa-source","oa-locator","oa-fold",
+const names=["oa-status","oa-target","oa-meta","oa-size","oa-grid","oa-source","oa-locator","oa-fold",
  "oa-owner","oa-complement","oa-complement-meta","oa-judgment","oa-evidence","oa-rationale","oa-save","oa-count","oa-export","oa-output"];
 if(names.some(id=>!$(id)))return;
 const status=x=>{$("oa-status").textContent=x;};
+const pixelSizes=new Set([16,24,32,48,64,96,128,160]);
+function updateSize(){
+ const n=Number($("oa-size").value);
+ if(!pixelSizes.has(n))throw Error("Unrecognized source comparison pixel size");
+ $("oa-grid").style.setProperty("--oa-glyph-size",n+"px");
+}
 let manifest=null,targets=[],selected=null,notes=new Map(),complements=new Map();
 function selection(id){
  selected=targets.find(t=>t.id===id);
@@ -74,7 +80,7 @@ async function load(){
    $("oa-target").appendChild(option);
   }
   $("oa-target").disabled=false;$("oa-save").disabled=false;
-  selection(targets[0].id);
+  updateSize();selection(targets[0].id);
   status("49 source-pinned regions loaded; independent acceptance remains zero.");
  }catch(e){status("Cannot load or validate original source regions: "+e.message);}
 }
@@ -87,6 +93,10 @@ $("oa-target").addEventListener("change",()=>{
   if(selected)$("oa-target").value=selected.id;
   status("Could not retain current draft: "+e.message);
  }
+});
+$("oa-size").addEventListener("change",()=>{
+ try{updateSize();status("Matched source glyph size changed; no perceptual or owner approval.");}
+ catch(e){status("Source inspection size rejected: "+e.message);}
 });
 $("oa-save").addEventListener("click",()=>{
  try{save();status("Provisional source observation held in page memory only.");}

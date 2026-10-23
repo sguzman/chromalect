@@ -12,9 +12,9 @@
 .oa-notice,.oa-form,.oa-panel{background:var(--panel);border:1px solid var(--border);
  border-radius:12px;padding:18px;margin:16px 0}
 .oa-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
-.oa-image{display:flex;justify-content:center;align-items:center;min-height:130px;
+.oa-image{display:flex;justify-content:center;align-items:center;min-height:176px;overflow:auto;
  border-radius:10px;background:#fff;padding:12px}
-.oa-image img{width:96px;height:96px}
+.oa-image img{width:var(--oa-glyph-size,96px);height:var(--oa-glyph-size,96px);max-width:none;object-fit:contain}
 .oa-form label{display:grid;gap:7px;margin:10px 0}
 .oa-form select,.oa-form textarea,.oa-form input,.oa-form button{
  box-sizing:border-box;width:100%;font:inherit;background:var(--tile-bg);
@@ -35,7 +35,12 @@
 <section class="oa-form">
 <label for="oa-target">Source-region observation<select id="oa-target" disabled></select></label>
 <p id="oa-meta" class="oa-meta"></p>
-<div class="oa-grid">
+<label for="oa-size">Matched glyph inspection size
+<select id="oa-size"><option value="16">16 px</option><option value="24">24 px</option>
+<option value="32">32 px</option><option value="48">48 px</option>
+<option value="64">64 px</option><option value="96" selected>96 px</option>
+<option value="128">128 px</option><option value="160">160 px</option></select></label>
+<div id="oa-grid" class="oa-grid">
 <div class="oa-panel"><h2>Original v0.6 glyph</h2><div class="oa-image"><img id="oa-source" alt="Original component-colored source glyph"></div></div>
 <div class="oa-panel"><h2>Neutral region locator</h2><div class="oa-image"><img id="oa-locator" alt="Charcoal machine-assigned region, other strokes gray"></div></div>
 <div class="oa-panel"><h2>Other component locator</h2><div class="oa-image"><img id="oa-complement" alt="Charcoal other source candidate region, remaining strokes gray"></div></div>
