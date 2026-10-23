@@ -47,6 +47,25 @@ for(let i=0;i<5;i++){
  assert.equal(fold.heldOutRanks,200);
  assert.equal(fold.excludedFromOptimizer.length,200);
  assert.equal(fold.paletteCandidateColors,40);
+ assert.equal(fold.sourcePinnedCandidateColors.length,40);
+ assert.equal(new Set(fold.sourcePinnedCandidateColors.map(c=>c.componentId)).size,40);
+ assert.equal(fold.test.reviewPairs.length,
+  fold.test.introducedOptimizedClosePairs+
+  fold.test.resolvedOriginalClosePairs+fold.test.retainedOriginalClosePairs);
+ for(const row of fold.sourcePinnedCandidateColors){
+  const original=palette.components.find(x=>x.id===row.componentId);
+  assert.ok(original&&original.color===row.sourceHex);
+  assert.match(row.optimizedHex,/^#[0-9A-F]{6}$/);
+  assert.equal(row.semanticApproval,false);
+  assert.equal(row.sourceIdentityPreserved,true);
+ }
+ for(const row of fold.test.reviewPairs){
+  assert.equal((row.rank-1)%5,i);
+  assert.equal(row.sourceGeometryChanged,false);
+  assert.equal(row.visualReview,"pending");
+  assert.equal(row.semanticsApproved,false);
+  assert.ok(["introduced","resolved","retained"].includes(row.reviewState));
+ }
  assert.equal(fold.disjointBySourceRank,true);
  assert.equal(fold.independentlyReviewed,false);
  assert.equal(fold.humanDiscriminationTrial,false);
