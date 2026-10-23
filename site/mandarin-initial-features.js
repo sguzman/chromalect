@@ -48,7 +48,7 @@ function render(){
  if(!["featural","pinyin","ipa"].includes(mode))throw Error("Unsupported visual comparison");
  const q=$("initial-filter").value.trim().toLowerCase();
  const filtered=records.filter(r=>!q||r.token.includes(q)||r.place.includes(q)||
-  r.manner.includes(q)||r.workingIPACandidate.includes(q));
+  r.manner.includes(q)||r.aspiration.includes(q)||r.workingIPACandidate.includes(q));
  $("initial-list").replaceChildren();
  for(const r of filtered){
   const card=document.createElement("article"),title=document.createElement("h2"),
