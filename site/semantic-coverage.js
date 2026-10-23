@@ -4,10 +4,11 @@
   "use strict";
   const grammar = globalThis.ChromalectSemanticGrammar;
   const presenter = globalThis.ChromalectLayers;
+  const readingParser = globalThis.ChromalectDictionaryReadings;
   const $ = id => document.getElementById(id);
   const root = $("semantic-coverage-rows");
   const status = $("semantic-coverage-status");
-  if (!grammar || !presenter || !root || !status) return;
+  if (!grammar || !presenter || !readingParser || !root || !status) return;
   const lookup = $("semantic-lookup");
   const filter = $("semantic-filter");
   const lexicalFilter = $("semantic-lexical-filter");
@@ -27,6 +28,7 @@
   let mixedRoleForms = new Set();
   let polysemyRows = new Map();
   let readingAuditRows = new Map();
+  let dictionaryExcerptRows = new Map();
   let strictSummary = null;
   let deskCounts = {analyzed:0,total:248};
   let page = 0;
@@ -215,6 +217,17 @@
     details.appendChild(elem("p","semantic-source",
       "Provisional Unihan kDefinition • "+entry.source.codepoint+
       " • "+entry.source.groupCandidates.length+" candidate definition group(s)"));
+    const dictionaryExcerpt=dictionaryExcerptRows.get(entry.rank);
+    if(dictionaryExcerpt){
+      const readingBlock=elem("div","semantic-dictionary-readings");
+      readingBlock.appendChild(elem("p","semantic-source",
+        "Pinned CC-CEDICT reading sections (CC BY-SA 4.0). These are sourced dictionary excerpts, not approved character senses."));
+      for(const section of readingParser.split(dictionaryExcerpt)){
+        readingBlock.appendChild(elem("p","semantic-reading-label",section.reading));
+        readingBlock.appendChild(elem("p","semantic-reading-gloss",section.gloss));
+      }
+      details.appendChild(readingBlock);
+    }
     for(const cue of visibleCues)if(cue.riskFlags.length) {
       details.appendChild(elem("p","semantic-review-detail",
         "Emoji display for "+cue.selectedMeaning+": "+cue.emojiDisplay+
@@ -338,7 +351,8 @@
 
   async function load() {
     try {
-      const [response,profileResponse,lexicalResponse,auditResponse,reviewResponse,visibilityResponse,readinessResponse,polysemyResponse,readingAuditResponse]=await Promise.all([
+      const excerptBlocks=["0001-0200","0201-0400","0401-0600","0601-0800","0801-1000"];
+      const [response,profileResponse,lexicalResponse,auditResponse,reviewResponse,visibilityResponse,readinessResponse,polysemyResponse,readingAuditResponse,...dictionaryResponses]=await Promise.all([
         fetch("semantic/mandarin-1000-v0.1.json"),
         fetch("profiles/mandarin-1000-v1.json"),
         fetch("semantic/lexical-crossref-v0.1.json"),
@@ -347,13 +361,30 @@
         fetch("semantic/emoji-visibility-audit-v0.1.json"),
         fetch("semantic/lexical-review-readiness-v0.1.json"),
         fetch("semantic/polysemy-review-index-v0.1.json"),
-        fetch("semantic/reading-sensitive-gloss-audit-v0.1.json")
+        fetch("semantic/reading-sensitive-gloss-audit-v0.1.json"),
+        ...excerptBlocks.map(block=>fetch("semantic/dictionary-excerpts-"+block+".json"))
       ]);
-      if(!response.ok || !profileResponse.ok || !lexicalResponse.ok || !auditResponse.ok || !reviewResponse.ok || !visibilityResponse.ok || !readinessResponse.ok || !polysemyResponse.ok || !readingAuditResponse.ok)
+      if(!response.ok || !profileResponse.ok || !lexicalResponse.ok || !auditResponse.ok || !reviewResponse.ok || !visibilityResponse.ok || !readinessResponse.ok || !polysemyResponse.ok || !readingAuditResponse.ok || dictionaryResponses.some(r=>!r.ok))
         throw new Error("Character, dictionary or audit data unavailable");
       const [data,profile,lexical,audit,review,visibility,readiness,polysemy,readingAudit]=await Promise.all([
         response.json(),profileResponse.json(),lexicalResponse.json(),auditResponse.json(),reviewResponse.json(),visibilityResponse.json(),readinessResponse.json(),polysemyResponse.json(),readingAuditResponse.json()
       ]);
+      const dictionaryBlocks=await Promise.all(dictionaryResponses.map(r=>r.json()));
+      const dictionaryRecords=dictionaryBlocks.flatMap((block,i)=>{
+        if(block.schema!=="chromalect.semantic.dictionary-excerpt-block.v0.1"||
+           block.license!=="CC BY-SA 4.0"||
+           block.sourceCommit!=="63c2569948629323b515833930fdd10f285401b6"||
+           !Array.isArray(block.records)||
+           !block.records.length)
+          throw new Error("Dictionary excerpt source was not pinned");
+        return block.records;
+      });
+      if(dictionaryRecords.length!==1000||dictionaryRecords.some((r,i)=>
+         r.rank!==i+1||r.character!==data.characters[i]?.character||
+         !r.sourceBlobSha||!Array.isArray(r.readings)||!r.readings.length))
+       throw new Error("Dictionary excerpts not aligned with 1,000-character inventory");
+      for(const record of dictionaryRecords)readingParser.split(record);
+      dictionaryExcerptRows=new Map(dictionaryRecords.map(r=>[r.rank,r]));
       if(polysemy.schema!=="chromalect.semantic.polysemy-review-index.v0.1" ||
          polysemy.status!=="automated_dictionary_complexity_inventory_not_sense_validation" ||
          polysemy.summary.charactersAudited!==1000 ||

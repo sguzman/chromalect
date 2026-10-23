@@ -218,6 +218,10 @@ jobs:
           cp data/semantic/cedict-crossref/event-role-contrast-audit-v0.1.json site/semantic/event-role-contrast-audit-v0.1.json
           cp data/semantic/cedict-crossref/polysemy-review-index-v0.1.json site/semantic/polysemy-review-index-v0.1.json
           cp data/semantic/cedict-crossref/reading-sensitive-gloss-audit-v0.1.json site/semantic/reading-sensitive-gloss-audit-v0.1.json
+          for section in 0001-0200 0201-0400 0401-0600 0601-0800 0801-1000; do
+            cp "data/semantic/cedict-crossref/dictionary-excerpts-$section.json" "site/semantic/"
+            test -s "site/semantic/dictionary-excerpts-$section.json"
+          done
           test -s site/semantic/emoji-visibility-audit-v0.1.json
           test -s site/semantic/event-role-contrast-audit-v0.1.json
           test -s site/semantic/polysemy-review-index-v0.1.json

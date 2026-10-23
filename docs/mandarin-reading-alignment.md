@@ -22,6 +22,6 @@ The 1,000-character baseline still contains **339** characters with multiple dic
 - Machine-readable audit: [reading-sensitive-gloss-audit-v0.1.json](../data/semantic/cedict-crossref/reading-sensitive-gloss-audit-v0.1.json).
 - Generator: [reading_sensitive_gloss_audit.mjs](../tools/glyph-pipeline/reading_sensitive_gloss_audit.mjs), reproducible with `node tools/glyph-pipeline/reading_sensitive_gloss_audit.mjs --check`.
 - Independent structural invariants: [reading_sensitive_gloss_audit_smoke.mjs](../tools/glyph-pipeline/reading_sensitive_gloss_audit_smoke.mjs).
-- The [semantic coverage browser](../site/semantic-coverage.html) filters the 208 characters whose current candidate gloss appears under only a subset of recorded readings.
+- The [semantic coverage browser](../site/semantic-coverage.html) filters the 208 characters whose current candidate gloss appears under only a subset of recorded readings. It also provides the source-pinned reading sections for **all 1,000** characters, including the **119** whose emoji was deferred; no pictogram is necessary to inspect a source reading.
 
 All source CC-CEDICT excerpts retain **CC BY-SA 4.0** attribution and the pinned revision `63c2569948629323b515833930fdd10f285401b6`. Automatic grouping and matching cannot grant independent lexical review, human pictogram recognition, or production semantic approval.

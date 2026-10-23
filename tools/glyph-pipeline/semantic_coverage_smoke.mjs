@@ -12,6 +12,8 @@ const audit=JSON.parse(fs.readFileSync("data/semantic/cedict-crossref/strict-glo
 const review=JSON.parse(fs.readFileSync("data/semantic/cedict-crossref/sense-review-queue-v0.1.json","utf8"));
 const visibility=JSON.parse(fs.readFileSync("data/semantic/cedict-crossref/emoji-visibility-audit-v0.1.json","utf8"));
 const polysemy=JSON.parse(fs.readFileSync("data/semantic/cedict-crossref/polysemy-review-index-v0.1.json","utf8"));
+const excerpts=["0001-0200","0201-0400","0401-0600","0601-0800","0801-1000"];
+const blocks=Object.fromEntries(excerpts.map(n=>[n,JSON.parse(fs.readFileSync("data/semantic/cedict-crossref/dictionary-excerpts-"+n+".json","utf8"))]));
 const readingAudit=JSON.parse(fs.readFileSync("data/semantic/cedict-crossref/reading-sensitive-gloss-audit-v0.1.json","utf8"));
 const catalog=JSON.parse(fs.readFileSync("data/catalog/characters-0001-1000.json","utf8"));
 const profile={schema:"chromalect.mandarin-character-profile.v1",catalog_count:1000,
@@ -84,11 +86,13 @@ const vmContext={
     if(path==="semantic/lexical-review-readiness-v0.1.json")return {ok:true,json:async()=>readiness};
     if(path==="semantic/polysemy-review-index-v0.1.json")return {ok:true,json:async()=>polysemy};
     if(path==="semantic/reading-sensitive-gloss-audit-v0.1.json")return {ok:true,json:async()=>readingAudit};
+    for(const key of excerpts)if(path==="semantic/dictionary-excerpts-"+key+".json")return {ok:true,json:async()=>blocks[key]};
     throw new Error("Unexpected resource: "+path);
   }
 };
 vmContext.globalThis=vmContext;
 vm.runInNewContext(grammarSource,vmContext);
+vm.runInNewContext(fs.readFileSync("site/dictionary-readings.js","utf8"),vmContext);
 vm.runInNewContext(script,vmContext);
 for(let n=0;n<18&&ids["semantic-coverage-rows"].children.length===0;n++)await Promise.resolve();
 const cards=ids["semantic-coverage-rows"].children;
@@ -96,6 +100,9 @@ assert.equal(cards.length,40,"First page must limit DOM cards");
 assert.ok(cards.every(card=>card.children.some(x=>x.className==="semantic-entry-top" &&
   x.children.some(child=>child.className==="glyph-wrap"))));
 assert.equal(ids["semantic-source-count"].textContent,"1000 / 1000");
+assert.ok(cards.every(card=>card.children.some(x=>x.tagName==="details" &&
+  x.children.some(y=>y.className==="semantic-dictionary-readings"))));
+assert.ok(cards[0].children.flatMap(x=>x.children).some(x=>x.className==="semantic-dictionary-readings"));
 assert.equal(ids["semantic-screened-count"].textContent,"1000 / 1000");
 assert.equal(ids["semantic-candidate-count"].textContent,data.summary.pictogramCandidateCharacters+" / 1000");
 assert.equal(ids["semantic-verified-count"].textContent,"0.0%");
@@ -144,6 +151,9 @@ ids["semantic-layer-character"].events.change();
 ids["semantic-filter"].value="deferred";
 ids["semantic-filter"].events.change();
 assert.match(ids["semantic-coverage-status"].textContent,new RegExp(data.summary.deferredCharacters+" characters match"));
+assert.ok(ids["semantic-coverage-rows"].children[0].children.some(x=>
+ x.tagName==="details"&&x.children.some(y=>y.className==="semantic-dictionary-readings")),
+ "Deferred emoji characters must retain source-reading evidence");
 ids["semantic-filter"].value="candidate";
 ids["semantic-filter"].events.change();
 assert.match(ids["semantic-coverage-status"].textContent,new RegExp(data.summary.pictogramCandidateCharacters+" characters match"));
@@ -239,6 +249,7 @@ assert.equal(data.summary.pendingScreening,0);
 assert.equal(data.initialScreeningReview.experimentalExpressionCount,897);
 assert.match(html,/data-character-layer-controls/);
 assert.match(html,/src="layers.js"/);
+assert.match(html,/src="dictionary-readings.js"/);
 assert.match(html,/id="semantic-lexical-filter"/);
 assert.match(html,/id="semantic-polysemy-progress"/);
 assert.match(html,/value="complex-higher"/);
