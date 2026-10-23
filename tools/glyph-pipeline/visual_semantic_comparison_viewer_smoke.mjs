@@ -60,7 +60,7 @@ class Node{
 }
 function start(glyphs=profile,meanings=semantic,reviews=review,hash=""){
  const ids=["vsc-pick","vsc-focus","vsc-warning","vsc-back","vsc-forward","vsc-sense","vsc-reveal","vsc-operators",
-  "vsc-size","vsc-size-label","vsc-panels","vsc-source","vsc-status","vsc-count"];
+  "vsc-size","vsc-size-label","vsc-gray","vsc-panels","vsc-source","vsc-status","vsc-count"];
  const nodes=Object.fromEntries(ids.map(id=>[id,new Node("div")]));
  nodes["vsc-size"].value="112";nodes["vsc-focus"].value="all";
  const document={
@@ -113,6 +113,14 @@ assert.match(ui["vsc-source"].children[1].textContent,/one; a, an/);
 ui["vsc-size"].value="40";ui["vsc-size"].listeners.input();
 assert.equal(shape(ui["vsc-panels"].children[0]).style["--study-size"],"40px");
 assert.equal(shape(ui["vsc-panels"].children[2]).style["--study-size"],"40px");
+ui["vsc-gray"].checked=true;ui["vsc-gray"].listeners.change();
+assert.equal(shape(ui["vsc-panels"].children[1]).children[0].style.filter,"grayscale(1)");
+assert.equal(shape(ui["vsc-panels"].children[2]).children[0].style.filter,"grayscale(1)");
+assert.equal(shape(ui["vsc-panels"].children[0]).children[0].style.filter,undefined);
+assert.equal(ui["vsc-source"].children[6].children[0].children[0].style.filter,"grayscale(1)");
+ui["vsc-gray"].checked=false;ui["vsc-gray"].listeners.change();
+assert.equal(shape(ui["vsc-panels"].children[1]).children[0].style.filter,undefined);
+
 // Deferred characters must abstain; no arbitrary emoji fallback.
 ui["vsc-pick"].value="2";ui["vsc-pick"].listeners.change();
 assert.equal(ui["vsc-sense"].disabled,true);
@@ -141,6 +149,10 @@ assert.match(ui["vsc-source"].children[7].children[1].children[2].textContent,/Î
 assert.match(ui["vsc-source"].children[7].children[2].children[2].textContent,/Î”OK 0.0200/);
 const pair0=ui["vsc-source"].children[7].children[1].children[0];
 assert.equal(pair0.children[0].style["--swatch"],"#aabbcc");
+ui["vsc-gray"].checked=true;ui["vsc-gray"].listeners.change();
+assert.equal(ui["vsc-source"].children[7].children[1].children[0].children[0].style.filter,
+ "grayscale(1)");
+ui["vsc-gray"].checked=false;ui["vsc-gray"].listeners.change();
 assert.equal(pair0.children[1].textContent.includes("cmp-0001"),true);
 ui["vsc-forward"].listeners.click();
 assert.match(ui["vsc-count"].textContent,/2 \/ 25 in current focus/);
@@ -191,7 +203,7 @@ for(const mutate of [
  assert.match(bad["vsc-status"].textContent,/Cannot verify/);
 }
 for(const id of ["vsc-pick","vsc-focus","vsc-warning","vsc-back","vsc-forward","vsc-sense",
- "vsc-reveal","vsc-operators","vsc-size","vsc-size-label","vsc-panels",
+ "vsc-reveal","vsc-operators","vsc-size","vsc-size-label","vsc-gray","vsc-panels",
  "vsc-source","vsc-status","vsc-count"])
  assert.match(html,new RegExp('id="'+id+'"'));
 assert.ok(!script.includes("innerHTML"));
