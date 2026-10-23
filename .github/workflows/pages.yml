@@ -412,6 +412,12 @@ jobs:
           node tools/glyph-pipeline/semantic_coverage_smoke.mjs
           node --check site/visual-semantic-comparison.js
           node tools/glyph-pipeline/reference_contrast_smoke.mjs
+          node tools/glyph-pipeline/component_palette_background_contrast.mjs --write
+          node tools/glyph-pipeline/component_palette_background_contrast.mjs --check
+          node tools/glyph-pipeline/component_palette_background_contrast_smoke.mjs
+          node tools/glyph-pipeline/color_reference_audit_viewer_smoke.mjs
+          test -s site/color-reference-contrast-v0.1.json
+          test -s site/color-reference-audit.html && test -s site/color-reference-audit.js
           node tools/glyph-pipeline/visual_semantic_comparison_viewer_smoke.mjs
           mkdir -p site/phonetics
           cp data/phonetics/pinyin-citation-orthography-audit-v0.1.json site/phonetics/
