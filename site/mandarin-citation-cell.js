@@ -4,10 +4,10 @@
 "use strict";
 const $=id=>document.getElementById(id);
 const ids=["cell-query","cell-reading","cell-color","cell-initial","cell-final","cell-tone",
- "cell-status","cell-code","cell-native","cell-top","cell-side","cell-bottom","cell-source"];
+ "cell-final-symbols","cell-status","cell-code","cell-native","cell-top","cell-side","cell-bottom","cell-source"];
 if(ids.some(id=>!$(id)))return;
 const NS="http://www.w3.org/2000/svg";
-let entries=[],onsets=new Map(),palette=null,tones=new Map(),selectedIndex=0;
+let entries=[],onsets=new Map(),palette=null,tones=new Map(),finalGlyphs=new Map(),finalPrimitives=[],selectedIndex=0;
 function setMessage(message){$("cell-status").textContent=message;}
 function makeText(value,klass){
  const x=document.createElement("span");x.textContent=value;
@@ -35,6 +35,27 @@ function toneDisplay(tone,color){
  holder.appendChild(makeText("T"+tone+" · "+t.symbol,"cell-caption"));
  return holder;
 }
+
+function finalGeometricSymbols(final){
+ const record=finalGlyphs.get(final);
+ if(!record)throw Error("Missing source written-final geometric control");
+ const svg=document.createElementNS(NS,"svg"),width=record.iconRegistryIndices.length*48;
+ svg.setAttribute("viewBox","0 0 "+width+" 52");
+ svg.setAttribute("role","img");
+ svg.setAttribute("aria-label","Arbitrary geometric written-final code, not a phonetic feature");
+ svg.classList.add("cell-final-svg");
+ for(let i=0;i<record.iconRegistryIndices.length;i++){
+  const group=document.createElementNS(NS,"g"),path=document.createElementNS(NS,"path");
+  const primitive=finalPrimitives[record.iconRegistryIndices[i]];
+  group.setAttribute("transform","translate("+(i*48)+",0)");
+  path.setAttribute("d",primitive.path);
+  path.setAttribute("fill","none");path.setAttribute("stroke","currentColor");
+  path.setAttribute("stroke-width","3.2");path.setAttribute("stroke-linejoin","round");
+  group.appendChild(path);svg.appendChild(group);
+ }
+ return svg;
+}
+
 function decorate(node,color){
  if(color){node.style.borderColor=color;node.style.borderWidth="3px";}
  else{node.style.borderColor="";node.style.borderWidth="";}
@@ -70,6 +91,7 @@ function render(){
   const label=document.createElement("div");label.className="cell-addon";
   decorate(label,colored?palette.final.tokens[r.final]:null);
   label.appendChild(makeText("Final: "+r.final,"cell-token"));
+  if($("cell-final-symbols").checked)label.appendChild(finalGeometricSymbols(r.final));
   label.appendChild(makeText("written spelling remainder; not IPA","cell-caption"));
   $("cell-bottom").appendChild(label);
  }
@@ -94,10 +116,11 @@ async function load(){
   const urls=["pronunciation-citations-0001-1000.json","layers-v0.1.json",
    "phonetics/mandarin-initial-feature-candidates-v0.1.json",
    "phonetics/mandarin-citation-tone-contours-v0.1.json",
-   "phonetics/citation-syllable-orthographic-codec-audit-v0.1.json"];
+   "phonetics/citation-syllable-orthographic-codec-audit-v0.1.json",
+   "phonetics/written-final-symbol-control-v0.1.json"];
   const responses=await Promise.all(urls.map(url=>fetch(url)));
   if(responses.some(r=>!r.ok))throw Error("Source citation or reference data missing");
-  const [citations,layers,initials,contours,audit]=await Promise.all(responses.map(r=>r.json()));
+  const [citations,layers,initials,contours,audit,writtenSymbols]=await Promise.all(responses.map(r=>r.json()));
   if(citations.schema!=="chromalect.pronunciation-citations.v0"||
      citations.tranche!=="0001-1000"||citations.characters.length!==1000||
      layers.schema!=="chromalect.presentation-layers.v0"||
@@ -115,6 +138,33 @@ async function load(){
      audit.counts.humanDecodingTrials!==0||
      audit.counts.educationalEffectMeasurements!==0)
    throw Error("Evidence status or source codec differs from pinned reference");
+  if(writtenSymbols.schema!=="chromalect.phonetics.written-final-symbol-control.v0.1"||
+     writtenSymbols.status!=="arbitrary_geometric_written_letter_control_not_articulatory_or_ipa"||
+     writtenSymbols.source.upstreamBlobSHA!==citations.source.blob_sha||
+     writtenSymbols.source.sourceGlyphStrokesChanged!==false||
+     writtenSymbols.source.spellingPaletteChanged!==false||
+     writtenSymbols.summary.sourceCitationReadings!==1171||
+     writtenSymbols.summary.writtenFinalsEncoded!==33||
+     writtenSymbols.summary.primitiveLetters!==9||
+     writtenSymbols.summary.machineSourceSpellingRoundtrips!==1171||
+     writtenSymbols.summary.independentlyApprovedIPARealizations!==0||
+     writtenSymbols.summary.humanSymbolDecodingTrials!==0||
+     writtenSymbols.summary.learningResults!==0)
+   throw Error("Geometric written-final code not source-backed or approved");
+  finalPrimitives=writtenSymbols.primitives;
+  finalGlyphs=new Map();
+  for(const rec of writtenSymbols.records){
+   if(finalGlyphs.has(rec.token)||rec.symbolLetters.join("")!==rec.token||
+      rec.iconRegistryIndices.length!==rec.symbolLetters.length||
+      rec.independentPhonologicalInterpretationApproved!==false||
+      rec.humanDecodingAccuracyKnown!==false||
+      rec.iconRegistryIndices.some((v,i)=>!Number.isInteger(v)||v<0||v>=9||
+        finalPrimitives[v].letter!==rec.symbolLetters[i]))
+    throw Error("Source written-final primitive decoding mismatch");
+   finalGlyphs.set(rec.token,rec);
+  }
+  if(finalGlyphs.size!==33||finalPrimitives.length!==9)
+   throw Error("Incomplete final spelling graphics");
   palette=layers.palette_domains;
   if(Object.keys(palette.initial.tokens).length!==24||
      Object.keys(palette.final.tokens).length!==33||
@@ -132,7 +182,8 @@ async function load(){
    for(const r of c.readings){
     count++;
     if(!onsets.has(r.initial)||!Object.hasOwn(palette.final.tokens,r.final)||
-      !tones.has(String(r.tone))||r.orthographic_glide!==(r.initial==="y"||r.initial==="w"))
+      !tones.has(String(r.tone))||!finalGlyphs.has(r.final)||
+      r.orthographic_glide!==(r.initial==="y"||r.initial==="w"))
      throw Error("Unrecognized source citation tokens");
    }
   }
@@ -151,7 +202,7 @@ $("cell-query").addEventListener("change",()=>{
  setMessage("Source citation cell selected. Experimental annotations only.");
 });
 $("cell-reading").addEventListener("change",render);
-for(const id of ["cell-color","cell-initial","cell-final","cell-tone"])
+for(const id of ["cell-color","cell-initial","cell-final","cell-final-symbols","cell-tone"])
  $(id).addEventListener("change",render);
 load();
 })();

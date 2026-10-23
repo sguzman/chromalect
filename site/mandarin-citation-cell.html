@@ -22,6 +22,7 @@ display:flex;align-items:center;justify-content:center;flex-direction:column;gap
 padding:10px;max-width:185px;min-width:124px;box-sizing:border-box}
 .cell-token{font-weight:700;font-size:16px}.cell-caption{text-align:center;color:var(--sub);font-size:12px}
 .cell-tone-svg{height:60px;width:145px;max-width:100%}
+.cell-final-svg{height:56px;max-width:150px;width:auto}
 @media(max-width:620px){
  .cell-stage{grid-template-areas:"tone tone" "glyph initial" "final final";
  grid-template-columns:160px minmax(120px,1fr);justify-items:center;max-width:100%}
@@ -42,6 +43,7 @@ padding:10px;max-width:185px;min-width:124px;box-sizing:border-box}
 <div class="cell-toggles">
 <label><input type="checkbox" id="cell-initial" checked> Initial code</label>
 <label><input type="checkbox" id="cell-final" checked> Written final</label>
+<label><input type="checkbox" id="cell-final-symbols"> Arbitrary final symbol control</label>
 <label><input type="checkbox" id="cell-tone" checked> Citation contour</label>
 <label><input type="checkbox" id="cell-color"> Existing color channels</label>
 </div>
@@ -53,7 +55,7 @@ padding:10px;max-width:185px;min-width:124px;box-sizing:border-box}
 <div id="cell-bottom"></div>
 </div>
 <p id="cell-source" class="intro"></p>
-<p>This is a visual layout proof, not a phonetic inventory approval or a comprehension experiment. Citation-tone T3 may not dip fully in connected speech; neutral-tone T0 deliberately has no fixed contour. The final label remains source spelling, not an IPA vowel/coda target.</p>
+<p>This is a visual layout proof, not a phonetic inventory approval or a comprehension experiment. Citation-tone T3 may not dip fully in connected speech; neutral-tone T0 deliberately has no fixed contour. The final label remains source spelling, not an IPA vowel/coda target. Its optional geometric symbol sequence is a reversible *letter-code control*, not an articulatory construction.</p>
 <p><a href="mandarin-syllable-grammar.html">Structured citation grammar</a> ·
 <a href="mandarin-initial-features.html">Working initial code</a> ·
 <a href="mandarin-tone-contours.html">Citation-tone reference</a></p>
