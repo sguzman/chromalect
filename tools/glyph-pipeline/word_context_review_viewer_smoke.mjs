@@ -6,7 +6,7 @@ const html=fs.readFileSync("site/word-context-review.html","utf8");
 const src="data/semantic/cedict-crossref/";
 const names=["dictionary-word-surface-leads","tatoeba-word-surface-id-index",
  "tatoeba-word-candidate-attribution","tatoeba-live-word-record-audit-summary",
- "tatoeba-word-sentence-text-fingerprints"];
+ "tatoeba-word-sentence-text-fingerprints","word-context-review-priority"];
 const data=names.map(n=>JSON.parse(fs.readFileSync(src+n+"-v0.1.json","utf8")));
 class Element{
  constructor(){this.value="";this.textContent="";this.children=[];this.events={};}
@@ -16,7 +16,7 @@ class Element{
 }
 const ids=["review-candidate","review-boundary","review-reading","review-sense","review-evidence",
  "review-rationale","review-source","review-heading","review-status","review-link",
- "review-save","review-export","review-output","review-count"];
+ "review-save","review-export","review-output","review-count","review-triage"];
 function setup(all=data){
  const nodes=Object.fromEntries(ids.map(id=>[id,new Element()]));
  for(const id of ["review-boundary","review-reading","review-sense"])nodes[id].value="undetermined";
@@ -32,6 +32,8 @@ async function settle(x){
 }
 const a=setup();await settle(a);
 assert.equal(a["review-candidate"].children.length,27);
+assert.match(a["review-candidate"].children[0].textContent,/boundary crosses token/);
+assert.match(a["review-triage"].textContent,/no contextual reading or word boundary approved/);
 assert.match(a["review-count"].textContent,/0 local/);
 a["review-boundary"].value="supports";
 a["review-rationale"].value="A preliminary hypothesis without the independent evidence needed for approval.";
@@ -50,6 +52,10 @@ assert.match(a["review-status"].textContent,/JSON prepared locally/);
 a["review-evidence"].value=exported.observations[0].sourceURL;
 a["review-export"].events.click();
 assert.match(a["review-status"].textContent,/Cannot export/);
+const wrongPriority=structuredClone(data);wrongPriority[5].records[0].textSHA256="0".repeat(64);
+const invalidPriority=setup(wrongPriority);await settle(invalidPriority);
+assert.match(invalidPriority["review-status"].textContent,/Unable to validate/);
+assert.equal(invalidPriority["review-candidate"].children.length,0);
 const manipulated=structuredClone(data);manipulated[3].summary.approvedLexicalSenses=1;
 const invalid=setup(manipulated);await settle(invalid);
 assert.match(invalid["review-status"].textContent,/Unable to validate/);

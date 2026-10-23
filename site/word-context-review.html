@@ -15,10 +15,11 @@
 <header class="wrap"><div class="brand"><b>CHROMALECT</b><small>Language, made visible</small></div></header>
 <main class="wrap"><div class="eyebrow">Mandarin evidence research · local only</div>
 <h1>Word-context review intake</h1>
-<p class="intro">Record preliminary assessments for one of 27 source-verified Tatoeba sentence IDs. Open the original sentence for context; do not copy its text into this form. A dictionary heading reading and a matching written substring are research leads, not proof of a sentence reading or word boundary.</p>
+<p class="intro">Record preliminary assessments for one of 27 source-verified Tatoeba sentence IDs. Open the original sentence for context; do not copy its text into this form. A dictionary heading reading and a matching written substring are research leads, not proof of a sentence reading or word boundary. The selector prioritizes source-matched ICU tokenization anomalies, without interpreting them as errors or linguistic approvals.</p>
 <div class="review-form">
 <label for="review-candidate">Pinned word lead and sentence ID<select id="review-candidate"></select></label>
 <p id="review-heading" class="review-meta"></p>
+<p id="review-triage" class="review-meta"></p>
 <p id="review-source" class="review-meta"></p>
 <p><a id="review-link" target="_blank" rel="noopener noreferrer">Open original Tatoeba sentence</a></p>
 <label for="review-boundary">Preliminary word-boundary assessment<select id="review-boundary"><option value="undetermined">Undetermined</option><option value="supports">Supports word unit</option><option value="contradicts">Contradicts word unit</option></select></label>

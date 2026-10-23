@@ -51,6 +51,8 @@ export function derive(surface,seg,reading,live,credit,hash){
   assert.equal(r.independentWordBoundaryVerified,false);
   assert.equal(r.independentSenseApproved,false);
   assert.equal(c.sourceTextCopied,false);
+  assert.ok(typeof c.contributor==="string"&&c.contributor.trim().length>0);
+  assert.equal(r.wordEntryPronunciationAgreement===true||r.wordEntryPronunciationAgreement===null,true);
   assert.match(h.textSha256,/^[a-f0-9]{64}$/);
   assert.ok(Object.hasOwn(priority,s.segmentationHint));
   records.push({leadId:lead.leadId,word:lead.writtenWordLead,sentenceId:id,

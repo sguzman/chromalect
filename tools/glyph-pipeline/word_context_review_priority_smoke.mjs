@@ -22,4 +22,4 @@ mutate(1,v=>v.records[0].contextualReadingVerified=true);
 mutate(3,v=>v.records[0].reuseRightsAdjudicated=true);
 mutate(4,v=>v.records[0].contributor="");
 mutate(0,v=>v.records[0].sentenceIds[0]="1");
-console.log("27 research triage associations checked against 6 independent source ledgers.");
+console.log("27 research triage associations checked against 6 pinned source ledgers.");

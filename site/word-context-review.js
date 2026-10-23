@@ -4,13 +4,13 @@
 const $=id=>document.getElementById(id);
 const ids=["review-candidate","review-boundary","review-reading","review-sense",
  "review-evidence","review-rationale","review-source","review-heading","review-status",
- "review-link","review-save","review-export","review-output","review-count"];
+ "review-link","review-save","review-export","review-output","review-count","review-triage"];
 if(ids.some(id=>!$(id)))return;
 const status=message=>{$("review-status").textContent=message;};
 const files=[
  "dictionary-word-surface-leads-v0.1.json","tatoeba-word-surface-id-index-v0.1.json",
  "tatoeba-word-candidate-attribution-v0.1.json","tatoeba-live-word-record-audit-summary-v0.1.json",
- "tatoeba-word-sentence-text-fingerprints-v0.1.json"];
+ "tatoeba-word-sentence-text-fingerprints-v0.1.json","word-context-review-priority-v0.1.json"];
 const defaults=()=>({wordBoundaryAssessment:"undetermined",readingAssessment:"undetermined",
  senseAssessment:"undetermined",independentEvidenceURL:"",evidenceRationale:""});
 const formFields=["wordBoundaryAssessment","readingAssessment","senseAssessment",
@@ -32,6 +32,10 @@ function select(key){
   " · observed CC BY 2.0 FR label · no reuse clearance";
  $("review-heading").textContent=selection.writtenWordLead+" · dictionary heading "+selection.dictionaryHeadingReading+
   " (not a verified contextual reading)";
+ $("review-triage").textContent="Machine boundary triage: "+selection.reviewTier.replace(/_/g," ")+
+  " · ICU "+selection.machineSourceVersion+
+  " · paired published word reading: "+(selection.publishedWordReadingPair?"located":"not located")+
+  " · no contextual reading or word boundary approved";
  $("review-link").href=selection.sourceURL;
  $("review-count").textContent=drafts.size+" local draft observations (0 approved)";
 }
@@ -75,12 +79,13 @@ async function load(){
  try{
   const responses=await Promise.all(files.map(n=>fetch("semantic/"+n)));
   if(responses.some(r=>!r.ok))throw Error("Missing pinned source data");
-  const [leads,matches,credits,live,hashes]=await Promise.all(responses.map(r=>r.json()));
+  const [leads,matches,credits,live,hashes,priority]=await Promise.all(responses.map(r=>r.json()));
   if(leads.schema!=="chromalect.semantic.dictionary-word-surface-leads.v0.1"||
    matches.schema!=="chromalect.semantic.tatoeba-word-surface-id-index.v0.1"||
    credits.schema!=="chromalect.semantic.tatoeba-word-candidate-attribution.v0.1"||
    live.schema!=="chromalect.semantic.tatoeba-live-word-record-audit-summary.v0.1"||
-   hashes.schema!=="chromalect.semantic.tatoeba-word-sentence-text-fingerprints.v0.1")
+   hashes.schema!=="chromalect.semantic.tatoeba-word-sentence-text-fingerprints.v0.1"||
+   priority.schema!=="chromalect.semantic.word-context-review-priority.v0.1")
    throw Error("Unexpected source schema");
   snapshot=matches.source.uncompressedTSVSha256;
   if(!/^[a-f0-9]{64}$/.test(snapshot)||snapshot!==credits.source.snapshotSHA256||
@@ -92,7 +97,18 @@ async function load(){
     live.summary.liveRecordsRead!==27||
     live.summary.independentlyVerifiedReadings!==0||
     live.summary.approvedLexicalSenses!==0||
-    live.summary.reuseRightsAdjudicated!==0)
+    live.summary.reuseRightsAdjudicated!==0||
+    priority.status!=="source_aligned_research_triage_not_sentence_or_lexical_approval"||
+    priority.source.corpusSnapshotSHA256!==snapshot||
+    priority.source.sourceSentencesCopied!==false||
+    priority.summary.sourceVerifiedAssociations!==27||
+    priority.summary.boundary_crosses_token!==6||
+    priority.summary.multi_token_match!==4||
+    priority.summary.single_token_suggestion!==17||
+    priority.summary.independentlyVerifiedWordBoundaries!==0||
+    priority.summary.independentlyVerifiedContextualReadings!==0||
+    priority.summary.independentlyApprovedLexicalSenses!==0||
+    priority.summary.quotationClearanceGranted!==0)
    throw Error("Source provenance or approval status mismatch");
   const leadMap=new Map(leads.leads.map(x=>[x.id,x]));
   const creditMap=new Map(credits.records.map(x=>[x.sentenceId,x]));
@@ -125,10 +141,34 @@ async function load(){
    }
   }
   if(records.length!==27||found.size!==27)throw Error("Expected 27 distinct candidate records");
+  if(!Array.isArray(priority.records)||priority.records.length!==27)
+   throw Error("Research triage records not available");
+  const order=new Map();
+  const rank={boundary_crosses_token:0,multi_token_match:1,single_token_suggestion:2};
+  for(const r of priority.records){
+   const key=r.leadId+"|"+r.sentenceId;
+   if(!found.has(key)||order.has(key)||!Object.hasOwn(rank,r.reviewTier)||
+      r.wordBoundaryVerified!==false||r.contextualReadingVerified!==false||
+      r.lexicalSenseApproved!==false||r.quotationRightsAdjudicated!==false)
+    throw Error("Research triage cannot establish linguistic approval");
+   const entry=records.find(x=>x.key===key);
+   if(!entry||r.word!==entry.writtenWordLead||r.sourceURL!==entry.sourceURL||
+      r.contributor!==entry.contributor||r.textSHA256!==entry.textSha256||
+      typeof r.publishedWordReadingPair!=="boolean"||
+      !/^[-.\d]+$/.test(r.machineSourceVersion))
+    throw Error("Triage record must preserve the exact pinned provenance");
+   Object.assign(entry,{reviewTier:r.reviewTier,machineSourceVersion:r.machineSourceVersion,
+    publishedWordReadingPair:r.publishedWordReadingPair});
+   order.set(key,true);
+  }
+  if(order.size!==27)throw Error("Incomplete research triage");
+  records.sort((a,b)=>rank[a.reviewTier]-rank[b.reviewTier]||
+   a.leadId.localeCompare(b.leadId,"en")||Number(a.sentenceId)-Number(b.sentenceId));
+
   $("review-candidate").replaceChildren();
   for(const r of records){
    const option=document.createElement("option");
-   option.value=r.key;option.textContent=r.writtenWordLead+" · sentence #"+r.sentenceId;
+   option.value=r.key;option.textContent=r.reviewTier.replace(/_/g," ")+" · "+r.writtenWordLead+" · sentence #"+r.sentenceId;
    $("review-candidate").appendChild(option);
   }
   $("review-candidate").value=records[0].key;
