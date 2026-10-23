@@ -1,0 +1,14 @@
+{
+  "schema": "chromalect.semantic.lexical-review-readiness.v0.1",
+  "status": "source_packets_ready_not_approved",
+  "sourceQueue": "full-lexical-review-queue-v0.1.json",
+  "sourceQueueBlobSha": "c285bc77262a825c9e7a07d6e7ee57e1d72448be",
+  "totalCandidateSenses": 897,
+  "sourcePacketsPrepared": 897,
+  "dictionaryWholeTermMatches": 649,
+  "dictionaryDiscrepancies": 248,
+  "independentLexicalApproved": 0,
+  "independentEmojiApproved": 0,
+  "productionVerified": 0,
+  "notice": "Materials prepared is not independent source validation or human comprehension approval."
+}
