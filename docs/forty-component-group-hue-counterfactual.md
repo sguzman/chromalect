@@ -18,6 +18,11 @@ For every source path, the renderer checks the path owner's original palette ide
 
 This is a stronger *engineering* comparison, but does not prove that the historical hints correspond to appropriate semantic categories, that original individual components remain distinguishable under the alternative, or that a human can interpret the glyph more accurately.
 
+The gallery additionally loads the existing **1,000-character provisional semantic screening source** and typed semantic grammar. A separate optional display toggle adds the **same** selected pictogram hypothesis under the original and experimental glyph, retaining the ability to hide or reveal the source definition and provisional candidate-meaning label. The controls preserve multiple separately proposed senses and explicitly abstain where no semantic pictogram was selected. The glyph-color conditions never differ in their meaning cue, source identity, geometry or character. The semantic-source guards keep all 897 expressions provisional and reject approvals without independent lexical or comprehension evidence.
+
+No pictogram, historical group label, or shared-hue choice is thereby accepted as a verified Mandarin sense or educational benefit. This is a source-aligned visual **presentation** comparison, not a controlled human trial.
+
+
 Run:
 
     node tools/glyph-pipeline/source_glyph_counterfactual_smoke.mjs
