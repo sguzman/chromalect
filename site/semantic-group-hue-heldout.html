@@ -1,0 +1,36 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark">
+<meta name="description" content="Five-fold 800-character training and 200-character held-out evaluations of experimental Mandarin component colors.">
+<title>Color generalization study · Chromalect</title>
+<link rel="stylesheet" href="style.css"><script src="theme.js"></script>
+<script src="semantic-group-hue-heldout.js" defer></script>
+<style>
+.ho-frame{overflow-x:auto;border:1px solid var(--border);border-radius:10px;margin:20px 0}
+.ho-frame table{width:100%;border-collapse:collapse;min-width:650px;font-variant-numeric:tabular-nums}
+.ho-frame th,.ho-frame td{padding:11px 13px;border-bottom:1px solid var(--border);
+ text-align:right;white-space:nowrap}
+.ho-frame th:first-child,.ho-frame td:first-child{text-align:left}
+.ho-frame thead{background:var(--panel)}
+.ho-total{font-weight:700;background:var(--panel)}
+.ho-caution{border-left:3px solid var(--active-border);
+ background:var(--panel);padding:12px 16px;margin:16px 0}
+.ho-details{color:var(--sub)}
+</style></head><body>
+<header class="wrap"><div class="brand"><b>CHROMALECT</b><small>Language, made visible</small></div></header>
+<main class="wrap">
+<div class="eyebrow">Color research · source-ranked held-out character evaluation</div>
+<h1>Do experimental hue groups transfer to unseen characters?</h1>
+<p class="intro">The previous collision-reduced v0.2 experiment used all 1,000 known Chinese glyphs both to optimize and measure component-color proximity. This stricter numerical experiment generates five independently fitted color candidates, each using only 800 original source glyphs; the other 200 are reserved for evaluation. Every Chinese character is held out exactly once.</p>
+<div class="ho-caution"><strong>Research-only controls.</strong> Colors are selected using the original historical mnemonic hints, which are not independently accepted linguistic semantic families. These measurements assess OKLab distances between component color pairs inside source glyphs, not human perception, retention, reading or accessibility compliance. The active v0.6 colors are not changed.</div>
+<p id="ho-status" role="status" aria-live="polite">Validating character rank disjointness and source color data.</p>
+<p id="ho-summary">Loading five-fold held-out source-pair measurements.</p>
+<div class="ho-frame"><table aria-label="Original and experimental color proximity in each held-out character fold">
+<thead><tr><th scope="col">Fold</th><th scope="col">Test glyphs</th><th scope="col">Component pairs</th>
+<th scope="col">Original below 0.07</th><th scope="col">First grouping below 0.07</th>
+<th scope="col">Fold-trained below 0.07</th><th scope="col">Changed swatches</th></tr></thead>
+<tbody id="ho-table"></tbody></table></div>
+<div id="ho-folds" class="ho-details" aria-label="Holdout limitations and methodology"></div>
+<p>The fold rule is <code>(source rank − 1) modulo 5</code>. Each generator call excludes all 200 held-out source ranks from its optimization graph, while preserving identical source geometry and component ownership. The original active palette is compared unchanged in every fold. This is a character-level split; component identities can occur in both sets. Published evidence: <a href="semantic-group-hue-fivefold-heldout-v0.1.json">reproducible fold and per-rank evidence JSON</a> and <a href="glyphs/research/hint-counterfactual-v0.1/optimized-pair-audit-v0.2.json">separate all-1,000-glyph in-sample result</a>.</p>
+</main><footer class="wrap"><a href="mnemonic-group-optimized.html">Optimized color candidates</a> ·
+<a href="hint-hue-glyph-comparison.html">Original glyph comparison</a> ·
+<a href="colors.html">Active color registry</a></footer></body></html>
