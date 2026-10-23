@@ -102,6 +102,10 @@ async function load(){
        row.groupMembershipApproval!=="unverified_historical_mnemonic_hint"||
        row.visuallyDiscriminable!=="unverified"||
        row.semanticFamilyVerified!==false||
+       Object.keys(row).sort().join("|")!==
+        ["componentId","firstTrialHex","form","groupMembershipApproval",
+         "historicalHint","optimizedTrialHex","semanticFamilyVerified",
+         "sourceHex","visuallyDiscriminable"].join("|")||
        !/^#[0-9A-F]{6}$/.test(row.optimizedTrialHex))
      throw Error("Original component source identity or candidate changed unexpectedly");
     ids.add(row.componentId);candidateColors.add(row.optimizedTrialHex);
