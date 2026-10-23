@@ -1,6 +1,8 @@
 import assert from "node:assert/strict";
 import fs from "node:fs";
 import vm from "node:vm";
+const grammarSource=fs.readFileSync("site/semantic-grammar.js","utf8");
+const semantic=JSON.parse(fs.readFileSync("data/semantic/mandarin-1000-v0.1.json","utf8"));
 import {derivePilotGroupCounterfactual} from "./pilot_group_counterfactual.mjs";
 import {deriveSourceGlyphCounterfactual} from "./source_glyph_counterfactual.mjs";
 const source=JSON.parse(fs.readFileSync(
@@ -43,9 +45,10 @@ class Node{
  addEventListener(k,f){this.events[k]=f;}
  setAttribute(k,v){this.attrs[k]=v;}
 }
-function start(g=output,a=counterfactual,p=source,hash=""){
+function start(g=output,a=counterfactual,p=source,hash="",m=semantic){
  const ids=["hg-query","hg-size","hg-size-label","hg-gray","hg-surface",
-  "hg-select","hg-prev","hg-next","hg-compare","hg-count","hg-status","hg-owner"];
+  "hg-select","hg-prev","hg-next","hg-show-meaning","hg-sense","hg-reveal",
+  "hg-compare","hg-count","hg-status","hg-owner","hg-semantic"];
  const ui=Object.fromEntries(ids.map(id=>[id,new Node()]));
  ui["hg-size"].value="112";ui["hg-surface"].value="theme";
  const ctx={document:{getElementById:id=>ui[id],
@@ -53,9 +56,12 @@ function start(g=output,a=counterfactual,p=source,hash=""){
   location:{hash},
   fetch:async path=>({ok:true,json:async()=>
    path.startsWith("glyphs/research/")?g:
-   path.startsWith("palettes/")?p:a}),
+   path.startsWith("palettes/")?p:
+   path.startsWith("semantic/")?m:a}),
   Map,Set,Array,Object,Number,Math,Error,JSON
  };
+ ctx.globalThis=ctx;
+ vm.runInNewContext(grammarSource,ctx);
  vm.runInNewContext(script,ctx);
  return ui;
 }
@@ -77,6 +83,18 @@ assert.equal(ui["hg-owner"].children[2].children.length,1);
 assert.equal(ui["hg-owner"].children[2].children[0].children[1].style["--hg-swatch"],
  c1.color);
 assert.match(ui["hg-owner"].children[1].textContent,/source atlas remains unchanged/);
+assert.match(ui["hg-semantic"].children[1].textContent,/label hidden until revealed/);
+ui["hg-show-meaning"].checked=true;ui["hg-show-meaning"].events.change();
+const originalCue=ui["hg-compare"].children[0].children[1].children[1];
+const proposedCue=ui["hg-compare"].children[1].children[1].children[1];
+assert.equal(originalCue.className,"hg-semantic-cue");
+assert.equal(originalCue.children.length,proposedCue.children.length);
+assert.ok(originalCue.children.length>0);
+assert.equal(originalCue.attrs["aria-label"],proposedCue.attrs["aria-label"]);
+ui["hg-reveal"].checked=true;ui["hg-reveal"].events.change();
+assert.match(ui["hg-semantic"].children[1].textContent,/original source definition/);
+ui["hg-show-meaning"].checked=false;ui["hg-show-meaning"].events.change();
+assert.equal(ui["hg-compare"].children[0].children[1].children.length,1);
 ui["hg-gray"].checked=true;ui["hg-gray"].events.change();
 assert.equal(ui["hg-compare"].children[0].children[1].children[0].style.filter,"grayscale(1)");
 assert.equal(ui["hg-compare"].children[1].children[1].children[0].style.filter,"grayscale(1)");
@@ -102,16 +120,21 @@ for(const modify of [
  (g,a,p)=>{g.glyphs[0].independentGlyphValidation="approved";},
  (g,a,p)=>{a.provenance.activeGlyphsRecolored=true;},
  (g,a,p)=>{a.groups[0].members[0].sourceHex="#ffffff";},
- (g,a,p)=>{p.components[0].color="#123456";}
+ (g,a,p)=>{p.components[0].color="#123456";},
+ (g,a,p,m)=>{m.summary.productionVerifiedCharacters=1;},
+ (g,a,p,m)=>{m.characters[0].rank=2;},
+ (g,a,p,m)=>{m.characters[0].screening.candidates[0].review="approved";}
 ]){
- const g=structuredClone(output),a=structuredClone(counterfactual),p=structuredClone(source);
- modify(g,a,p);
- const invalid=start(g,a,p);await settle(invalid);
+ const g=structuredClone(output),a=structuredClone(counterfactual),p=structuredClone(source),
+  m=structuredClone(semantic);
+ modify(g,a,p,m);
+ const invalid=start(g,a,p,"",m);await settle(invalid);
  assert.equal(invalid["hg-compare"].children.length,0);
  assert.match(invalid["hg-status"].textContent,/Unable to validate/);
 }
 for(const id of ["hg-query","hg-size","hg-size-label","hg-gray","hg-surface",
- "hg-select","hg-prev","hg-next","hg-compare","hg-count","hg-status","hg-owner"])
+ "hg-select","hg-prev","hg-next","hg-show-meaning","hg-sense","hg-reveal",
+ "hg-compare","hg-count","hg-status","hg-owner","hg-semantic"])
  assert.match(html,new RegExp('id="'+id+'"'));
 assert.ok(!script.includes("innerHTML"));
-console.log("Exact original and counterfactual SVG URLs, shared display controls, and 12 fail-closed research guards.");
+console.log("Exact original and counterfactual SVG URLs, shared display controls, and 15 fail-closed research guards.");
