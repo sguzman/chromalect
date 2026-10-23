@@ -1,0 +1,71 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="description" content="A source-aligned visual comparison of monochrome Mandarin glyphs, stable component colors, and provisional semantic pictograms.">
+<title>Color × semantic visual comparison · Chromalect</title>
+<link rel="stylesheet" href="style.css"><script src="theme.js"></script>
+<script src="semantic-grammar.js" defer></script>
+<script src="visual-semantic-comparison.js" defer></script>
+<style>
+.vsc-controls{display:flex;flex-wrap:wrap;align-items:flex-end;gap:14px;padding:18px;
+ background:var(--panel);border:1px solid var(--border);border-radius:12px;margin:18px 0}
+.vsc-controls label{display:grid;gap:6px;min-width:165px}
+.vsc-controls select,.vsc-controls input,.vsc-controls button{font:inherit;
+ color:var(--ink);background:var(--tile-bg);border:1px solid var(--border);border-radius:8px;padding:9px}
+.vsc-controls button{cursor:pointer}
+.vsc-controls button:disabled{opacity:.4;cursor:default}
+.vsc-controls .vsc-check{display:flex;gap:8px;align-items:center}
+.vsc-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.vsc-arm{border:1px solid var(--border);border-radius:12px;background:var(--tile-bg);
+ padding:18px;min-width:0}
+.vsc-arm h2{font-size:19px;margin:0 0 6px}
+.vsc-note,.vsc-caption{font-size:13px;color:var(--sub)}
+.vsc-stage{min-height:205px;display:flex;flex-direction:column;justify-content:center;
+ align-items:center;gap:12px}
+.vsc-shape{width:var(--study-size);height:var(--study-size);max-width:100%;
+ flex-shrink:0;display:block;position:relative}
+.vsc-ink,.vsc-source-svg{width:100%;height:100%;display:block}
+.vsc-ink{background:var(--glyph-ink);-webkit-mask-image:var(--source-mask);
+ mask-image:var(--source-mask);-webkit-mask-size:contain;mask-size:contain;
+ -webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;
+ -webkit-mask-position:center;mask-position:center}
+.vsc-source-svg{object-fit:contain}
+.vsc-meaning-cue{font-family:"Noto Color Emoji","Apple Color Emoji","Segoe UI Emoji",system-ui,sans-serif;
+ font-size:28px;line-height:1.4;text-align:center;min-height:44px;overflow-wrap:anywhere}
+.vsc-emoji{display:inline-block}
+.vsc-source{margin:20px 0;padding:16px;border:1px solid var(--border);border-radius:10px;
+ background:var(--panel);overflow-wrap:anywhere}
+.vsc-source p{margin:8px 0;color:var(--sub)}
+.vsc-note-block{border-left:3px solid var(--active-border);padding:12px 16px;
+ background:var(--panel);margin:16px 0}
+@media(max-width:850px){.vsc-grid{grid-template-columns:1fr}.vsc-stage{min-height:165px}
+.vsc-arm{display:grid;grid-template-columns:1fr auto;align-items:center;gap:6px 12px}
+.vsc-arm h2,.vsc-arm>.vsc-note,.vsc-arm>.vsc-caption{grid-column:1}
+.vsc-arm .vsc-stage{grid-column:2;grid-row:1/4;max-width:45vw}}
+@media(max-width:520px){.vsc-arm{display:block}.vsc-stage{min-height:155px}}
+</style></head><body>
+<header class="wrap"><div class="brand"><b>CHROMALECT</b><small>Language, made visible</small></div></header>
+<main class="wrap">
+<div class="eyebrow">Mandarin · experimental color and meaning</div>
+<h1>Same glyph, three visual conditions</h1>
+<p class="intro">Directly compare an unmodified source-aligned Chinese stroke outline rendered in neutral ink, the same outline with its stable component identity colors, and the same colored outline with a provisional semantic pictogram. All conditions use one pinned character and geometry. Pronunciation and tone overlays are deliberately absent from this experiment.</p>
+<div class="vsc-note-block">This is a reproducible <strong>presentation comparison</strong>, not a human-subject experiment, semantic-family color scheme, or evidence of learning gains. Component identity colors are unchanged across conditions. The third condition is an <strong>unverified meaning proposal</strong> and correctly abstains when no pictogram was selected.</div>
+<div class="vsc-controls" aria-label="Visual comparison controls">
+<label for="vsc-pick">Character (rank and Hanzi)<select id="vsc-pick" aria-label="Source-ranked character"></select></label>
+<button id="vsc-back" type="button">Previous</button>
+<button id="vsc-forward" type="button">Next</button>
+<label for="vsc-sense">Candidate sense<select id="vsc-sense"></select></label>
+<label for="vsc-size">Glyph size: <strong id="vsc-size-label">112 px</strong>
+<input id="vsc-size" type="range" min="40" max="144" value="112" step="8"></label>
+<label class="vsc-check" for="vsc-reveal"><input id="vsc-reveal" type="checkbox">Reveal source meaning</label>
+</div>
+<p id="vsc-status" role="status" aria-live="polite">Loading source-aligned visual comparison.</p>
+<p id="vsc-count"></p>
+<div id="vsc-panels" class="vsc-grid" aria-label="Three source-aligned visual conditions"></div>
+<div id="vsc-source" class="vsc-source" aria-label="Source provenance and candidate meaning"></div>
+<p>Source: <a href="https://github.com/unicode-org/unihan-database/blob/667c2d180a75ddd749b774dbb7588d4786b63222/kDefinition.txt">pinned Unicode Unihan definition records</a>; Mandarin outlines and immutable component assignments are described in the <a href="../docs/component-color-policy.md">component-color policy</a>. No proposed meaning is approved by the source dictionary or by a visual comprehension trial.</p>
+</main>
+<footer class="wrap"><a href="glyph-review-worklist.html">Glyph review priorities</a> ·
+<a href="semantic-coverage.html">Semantic candidates</a> ·
+<a href="colors.html">Component palette</a> ·
+<a href="index.html">Chromalect overview</a></footer></body></html>
