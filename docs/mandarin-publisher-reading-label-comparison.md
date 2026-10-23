@@ -15,4 +15,6 @@ The two publisher-expanded inventories are **过** and **齐**. For 过, the che
 
 **No additional readings have been imported** into the active Mandarin profile. Publisher headings, orthographic capitalization, historical or regional registers and word-level contexts are distinct concepts; a matching label set cannot validate any sense or emoji mapping.
 
+The [semantic coverage browser](../site/semantic-coverage.html) provides a dedicated provisional two-character filter and shows the pinned/external label differences without promoting them to the production profile.
+
 The [reproducible JSON](../data/semantic/cedict-crossref/publisher-reading-label-comparison-v0.1.json), [generator](../tools/glyph-pipeline/publisher_reading_label_comparison.mjs), and [smoke tests](../tools/glyph-pipeline/publisher_reading_label_comparison_smoke.mjs) preserve source links, original numbered labels and separately recorded additions. No external site access is required during CI.

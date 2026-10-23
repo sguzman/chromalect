@@ -18,6 +18,7 @@ const readingAudit=JSON.parse(fs.readFileSync("data/semantic/cedict-crossref/rea
 const casefold=JSON.parse(fs.readFileSync("data/semantic/cedict-crossref/pinyin-reading-label-normalization-v0.1.json","utf8"));
 const externalPilot=JSON.parse(fs.readFileSync("data/semantic/cedict-crossref/external-dictionary-reconnaissance-v0.1.json","utf8"));
 const externalDiscrepancy=JSON.parse(fs.readFileSync("data/semantic/cedict-crossref/external-dictionary-discrepancy-v0.1.json","utf8"));
+const publisherReading=JSON.parse(fs.readFileSync("data/semantic/cedict-crossref/publisher-reading-label-comparison-v0.1.json","utf8"));
 const publisherSources=JSON.parse(fs.readFileSync("data/semantic/cedict-crossref/publisher-page-provenance-v0.2.json","utf8"));
 const catalog=JSON.parse(fs.readFileSync("data/catalog/characters-0001-1000.json","utf8"));
 const profile={schema:"chromalect.mandarin-character-profile.v1",catalog_count:1000,
@@ -96,6 +97,7 @@ const vmContext={
     if(path==="semantic/external-dictionary-reconnaissance-v0.1.json")return {ok:true,json:async()=>externalPilot};
     if(path==="semantic/external-dictionary-discrepancy-v0.1.json")return {ok:true,json:async()=>externalDiscrepancy};
     if(path==="semantic/publisher-page-provenance-v0.2.json")return {ok:true,json:async()=>publisherSources};
+    if(path==="semantic/publisher-reading-label-comparison-v0.1.json")return {ok:true,json:async()=>publisherReading};
     for(const key of excerpts)if(path==="semantic/dictionary-excerpts-"+key+".json")return {ok:true,json:async()=>blocks[key]};
     throw new Error("Unexpected resource: "+path);
   }
@@ -216,7 +218,7 @@ assert.match(ids["semantic-coverage-status"].textContent,new RegExp((1000-lexica
 ids["semantic-lexical-filter"].value="all";
 ids["semantic-lexical-filter"].events.change();
 for(const [kind,expected] of [
- ["multiple-readings",339],["case-only-entries",166],["normalized-readings",173],["complex-higher",142],["reading-subset",208],["one-cue-complex",367]
+ ["multiple-readings",339],["case-only-entries",166],["normalized-readings",173],["complex-higher",142],["reading-subset",208],["publisher-only-readings",2],["one-cue-complex",367]
 ]){
  ids["semantic-lexical-filter"].value=kind;
  ids["semantic-lexical-filter"].events.change();
@@ -272,6 +274,7 @@ assert.match(html,/id="semantic-lexical-filter"/);
 assert.match(html,/id="semantic-polysemy-progress"/);
 assert.match(html,/value="complex-higher"/);
 assert.match(html,/value="reading-subset"/);
+assert.match(html,/value="publisher-only-readings"/);
 assert.match(html,/id="semantic-reading-audit-progress"/);
 assert.match(html,/id="semantic-external-progress"/);
 assert.match(html,/id="semantic-external-source-note"/);

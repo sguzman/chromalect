@@ -29,6 +29,7 @@
   let polysemyRows = new Map();
   let casefoldRows = new Map();
   let readingAuditRows = new Map();
+  let publisherReadingRows = new Map();
   let dictionaryExcerptRows = new Map();
   let strictSummary = null;
   let deskCounts = {analyzed:0,total:248};
@@ -214,6 +215,10 @@
     if(readingDistribution?.hasReadingSubsetLiteralMatch)
       card.appendChild(elem("p","semantic-review-note",
        "Literal gloss for at least one proposed sense appears under only some recorded dictionary readings · automated triage, not lexical approval"));
+    const publisherReading=publisherReadingRows.get(entry.rank);
+    if(publisherReading?.publisherOnlyLabels.length)
+      card.appendChild(elem("p","semantic-review-note",
+       "Additional external dictionary reading labels require review; no new pronunciation or semantic mapping has been approved."));
     const visibleCues=visibilityRows.get(entry.rank)||[];
     if(visibleCues.length) {
       const events=visibleCues.filter(x=>x.operators.includes("event"));
@@ -264,6 +269,13 @@
           candidate.literalMatchingReadings.join(", ")+" of "+
           readingDistribution.dictionaryReadings.join(", ")+
           " · source string comparison only; Mandarin senses not certified."));
+    }
+    if(publisherReading?.publisherOnlyLabels.length){
+      details.appendChild(elem("p","semantic-review-detail",
+       "Pinned numbered Pinyin: "+publisherReading.pinnedNumberedLabels.join(", ")+
+       ". Additional publisher-displayed labels: "+
+       publisherReading.publisherOnlyLabels.join(", ")+
+       ". These are source inventory differences, not verified new readings."));
     }
     for(const item of flagged){
       const msg=item.selectedMeaning+" — "+item.reviewReason.replaceAll("_"," ")+
@@ -332,6 +344,7 @@
           (dictionary==="normalized-readings" && casefoldRows.get(x.rank)?.multipleNormalizedLabels) ||
           (dictionary==="complex-higher" && lexicalComplexity?.triageTier==="higher") ||
           (dictionary==="reading-subset" && readingAuditRows.get(x.rank)?.hasReadingSubsetLiteralMatch) ||
+          (dictionary==="publisher-only-readings" && publisherReadingRows.get(x.rank)?.publisherOnlyLabels.length>0) ||
           (dictionary==="one-cue-complex" && lexicalComplexity?.selectedMeaningCount===1 &&
             (lexicalComplexity.readingCount>1 || lexicalComplexity.definitionFragmentCount>=8)) ||
           (dictionary==="not-crossref" && !crossref) ||
@@ -377,7 +390,7 @@
   async function load() {
     try {
       const excerptBlocks=["0001-0200","0201-0400","0401-0600","0601-0800","0801-1000"];
-      const [response,profileResponse,lexicalResponse,auditResponse,reviewResponse,visibilityResponse,readinessResponse,polysemyResponse,readingAuditResponse,casefoldResponse,externalPilotResponse,externalDiscrepancyResponse,publisherSourceResponse,...dictionaryResponses]=await Promise.all([
+      const [response,profileResponse,lexicalResponse,auditResponse,reviewResponse,visibilityResponse,readinessResponse,polysemyResponse,readingAuditResponse,casefoldResponse,externalPilotResponse,externalDiscrepancyResponse,publisherSourceResponse,publisherReadingResponse,...dictionaryResponses]=await Promise.all([
         fetch("semantic/mandarin-1000-v0.1.json"),
         fetch("profiles/mandarin-1000-v1.json"),
         fetch("semantic/lexical-crossref-v0.1.json"),
@@ -391,12 +404,13 @@
         fetch("semantic/external-dictionary-reconnaissance-v0.1.json"),
         fetch("semantic/external-dictionary-discrepancy-v0.1.json"),
         fetch("semantic/publisher-page-provenance-v0.2.json"),
+        fetch("semantic/publisher-reading-label-comparison-v0.1.json"),
         ...excerptBlocks.map(block=>fetch("semantic/dictionary-excerpts-"+block+".json"))
       ]);
-      if(!response.ok || !profileResponse.ok || !lexicalResponse.ok || !auditResponse.ok || !reviewResponse.ok || !visibilityResponse.ok || !readinessResponse.ok || !polysemyResponse.ok || !readingAuditResponse.ok || !casefoldResponse.ok || !externalPilotResponse.ok || !externalDiscrepancyResponse.ok || !publisherSourceResponse.ok || dictionaryResponses.some(r=>!r.ok))
+      if(!response.ok || !profileResponse.ok || !lexicalResponse.ok || !auditResponse.ok || !reviewResponse.ok || !visibilityResponse.ok || !readinessResponse.ok || !polysemyResponse.ok || !readingAuditResponse.ok || !casefoldResponse.ok || !externalPilotResponse.ok || !externalDiscrepancyResponse.ok || !publisherSourceResponse.ok || !publisherReadingResponse.ok || dictionaryResponses.some(r=>!r.ok))
         throw new Error("Character, dictionary or audit data unavailable");
-      const [data,profile,lexical,audit,review,visibility,readiness,polysemy,readingAudit,casefold,externalPilot,externalDiscrepancy,publisherSources]=await Promise.all([
-        response.json(),profileResponse.json(),lexicalResponse.json(),auditResponse.json(),reviewResponse.json(),visibilityResponse.json(),readinessResponse.json(),polysemyResponse.json(),readingAuditResponse.json(),casefoldResponse.json(),externalPilotResponse.json(),externalDiscrepancyResponse.json(),publisherSourceResponse.json()
+      const [data,profile,lexical,audit,review,visibility,readiness,polysemy,readingAudit,casefold,externalPilot,externalDiscrepancy,publisherSources,publisherReading]=await Promise.all([
+        response.json(),profileResponse.json(),lexicalResponse.json(),auditResponse.json(),reviewResponse.json(),visibilityResponse.json(),readinessResponse.json(),polysemyResponse.json(),readingAuditResponse.json(),casefoldResponse.json(),externalPilotResponse.json(),externalDiscrepancyResponse.json(),publisherSourceResponse.json(),publisherReadingResponse.json()
       ]);
       const dictionaryBlocks=await Promise.all(dictionaryResponses.map(r=>r.json()));
       const dictionaryRecords=dictionaryBlocks.flatMap((block,i)=>{
@@ -486,6 +500,22 @@
        percent(publisherCharacters.size,polysemy.summary.higherPriority)+"). "+
        publisherSources.summary.sourceOnlyCharactersNotDeskReviewed+
        " further characters have source access only; not lexical approval.";
+      if(publisherReading.schema!=="chromalect.semantic.publisher-reading-label-comparison.v0.1"||
+         publisherReading.status!=="mechanical_pinyin_display_comparison_not_lexical_adjudication"||
+         publisherReading.summary.checkedCharacters!==23||
+         publisherReading.summary.matchingProminentLabelSets!==21||
+         publisherReading.summary.publisherAdditionalLabelSets!==2||
+         publisherReading.summary.independentLexicalApproved!==0||
+         publisherReading.summary.emojiComprehensionApproved!==0||
+         publisherReading.summary.productionVerified!==0||
+         publisherReading.records.length!==23||
+         publisherReading.records.some(x=>
+           data.characters[x.rank-1]?.character!==x.character||
+           x.lexicalApproval!==false||x.productionVerified!==false))
+        throw new Error("Publisher reading-label inventory was missing or improperly approved");
+      publisherReadingRows=new Map(publisherReading.records.map(r=>[r.rank,r]));
+      if(publisherReadingRows.size!==23)
+       throw new Error("Publisher reading-label inventory contains repeated character identities");
       if(readingAudit.schema!=="chromalect.semantic.reading-sensitive-literal-gloss-audit.v0.1"||
          readingAudit.status!=="automated_english_gloss_reading_distribution_not_lexical_verification"||
          readingAudit.summary.charactersAudited!==1000||
