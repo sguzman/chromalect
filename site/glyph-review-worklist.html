@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Independent glyph-review worklist · Chromalect</title>
+<link rel="stylesheet" href="style.css"><script src="theme.js"></script><script src="glyph-review-worklist.js" defer></script>
+<style>
+.audit-controls{display:flex;gap:14px;flex-wrap:wrap;margin:20px 0}
+.audit-controls label{display:grid;gap:6px}
+.audit-controls input,.audit-controls select{font:inherit;color:var(--ink);background:var(--panel);padding:10px;border:1px solid var(--border);border-radius:8px}
+.audit-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;margin:20px 0}
+.audit-card{border:1px solid var(--border);border-radius:12px;padding:18px;background:var(--panel)}
+.audit-card h2{font-size:16px;overflow-wrap:anywhere}
+.audit-compare{display:grid;grid-template-columns:1fr 1fr;gap:10px;align-items:center}
+.audit-compare>div{display:flex;flex-direction:column;gap:6px;align-items:center}
+.audit-compare>div>span:last-child{font-size:12px;color:var(--sub);text-align:center}
+.audit-native{font-size:70px;height:105px;line-height:105px}
+.audit-meta{font-size:13px;color:var(--sub);overflow-wrap:anywhere}
+</style></head><body>
+<header class="wrap"><div class="brand"><b>CHROMALECT</b><small>Language, made visible</small></div></header>
+<main class="wrap">
+<div class="eyebrow">Geometry · independent-review preparation</div>
+<h1>1,000-glyph visual review worklist</h1>
+<p class="intro">This is an ordered inspection queue based on the final generated Rust source-aligned SVGs and geometric comparison reports. Every glyph still requires independent visual and linguistic review. Automatic warnings and matching source identities are not certifications, and none of these glyphs has been admitted to the planned learning study.</p>
+<p id="audit-summary">Loading generated source records.</p>
+<div class="audit-controls">
+<label for="audit-tier">Review priority<select id="audit-tier"><option value="all">All review priorities</option></select></label>
+<label for="audit-query">Find character, rank, decomposition, component ID or warning<input id="audit-query" type="search" placeholder="e.g. 100, 氵, nearby"></label>
+</div>
+<p id="audit-status" role="status" aria-live="polite">Loading source-backed report.</p>
+<p id="audit-count"></p>
+<div id="audit-results" class="audit-grid"></div>
+<p><a href="glyphs/review/index.html">Open the full source-versus-font gallery</a> · <a href="glyphs/review/independent-review-worklist-v0.1.json">Machine-readable review priority</a> · <a href="https://github.com/sguzman/chromalect/blob/main/docs/glyph-independent-review-priority.md">Method and qualifications</a>.</p>
+</main>
+<footer class="wrap"><a href="strokes.html">Colored glyphs</a> · <a href="roadmap-status.html">Research progress</a> · <a href="index.html">Overview</a></footer>
+</body></html>
