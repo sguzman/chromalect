@@ -22,6 +22,8 @@ The [full source-linked triage](../data/semantic/cedict-crossref/polysemy-triage
 
 **Important:** a dictionary reading may simply be a surname, a historical usage, a tonal variant, or a grammaticalized function. English entries separated by semicolons may be synonyms, examples, part-of-speech variants, classifier uses, or distinct senses. **Neither reading counts nor semicolon counts measure the number of genuinely distinct modern Mandarin senses.** The threshold of eight fragments is a transparent review-priority heuristic, not a linguistic boundary.
 
+**Source-label qualification:** A [case-insensitive Pinyin audit](mandarin-pinyin-label-casefold.md) finds 166 characters whose multiple dictionary reading entries differ only in capitalization, and 173 characters with multiple distinct lowercased labels. Of the 142 higher-attention records, 55 have only case variants. The original triage is retained; dictionary record counts are not independently verified phonological contrasts.
+
 ## Work queue
 
 - **Higher attention (142):** the source has multiple reading records and at least eight gloss fragments. Inspect current Mandarin reading and sense distinctions first; note whether the proposed emoji matches only one usage.

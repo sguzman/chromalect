@@ -81,6 +81,10 @@ The [high-priority remediation proposals](data/semantic/cedict-crossref/high-pri
 
 Both experimental worksheets export versioned JSON that can be checked by a [no-dependency session validator](tools/glyph-pipeline/review_session_validate.mjs). Review exports are deliberately classified as **unapproved local observations**, not canonical dictionary decisions or accepted semantic mappings. CI validates synthetic exports and rejects tampered identities, repeated trial IDs, and false production-approval claims. No participant data is committed by these tests.
 
+### Reading-label capitalization research
+
+A [CC-CEDICT label-normalization audit](docs/mandarin-pinyin-label-casefold.md) shows that of 339 characters with multiple dictionary reading entries, **166 have only capitalization variants** (such as `Ding1/ding1`) and **173 have multiple distinct lowercased Pinyin labels**. Within the 142 high-attention characters, 55 have case-only differences. Original reading records and research priorities remain unchanged; normalized source labels are not independently approved pronunciations.
+
 ### Polysemy and reusable emoji-role research
 
 The [dictionary-complexity triage](docs/mandarin-polysemy-triage.md) now screens all **1,000 characters (100%)** for multi-reading and multi-gloss evidence without equating English gloss fragments with distinct Chinese senses. **339 characters** have multiple recorded dictionary readings, **142** have both multiple readings and many gloss fragments, and **367** have only one proposed emoji cue despite at least one lexical-complexity indicator. The [semantic browser](site/semantic-coverage.html) filters these research priorities; **0 lexical sense inventories are independently approved**.
