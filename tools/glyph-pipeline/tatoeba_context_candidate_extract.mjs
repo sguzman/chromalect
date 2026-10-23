@@ -103,9 +103,19 @@ export async function extractFile(input,targets,maxPerCharacter,snapshotDate){
  }
  const reader=createInterface({input:inputStream,crlfDelay:Infinity});
  const collect=newCollector(targets,maxPerCharacter);
+ let rowNumber=0;
  for await(const line of reader){
+  rowNumber++;
   if(!line.trim())continue;
-  collect.add(parseDetailedRow(line));
+  try{collect.add(parseDetailedRow(line));}
+  catch(error){
+   const v=line.split("\t");
+   throw new Error("Corpus TSV row "+rowNumber+": "+error.message+
+     " (fields="+v.length+", language="+(v[1]??"missing")+
+     ", contributorPresent="+Boolean(v[3]&&v[3]!=="\\N")+
+     ", addedDatePattern="+/^[0-9]{4}-[0-9]{2}-[0-9]{2}/.test(v[4]??"")+
+     ", modifiedDatePattern="+/^[0-9]{4}-[0-9]{2}-[0-9]{2}/.test(v[5]??"")+")");
+  }
  }
  if(finished)await finished;
  return collect.finish(hash.digest("hex"),snapshotDate);
