@@ -58,8 +58,18 @@ ui["pc-family"].value="labial_written_o";ui["pc-family"].events.change();
 assert.match(ui["pc-count"].textContent,/1 unsaved edits/);
 ui["pc-family"].value="all";ui["pc-family"].events.change();
 assert.match(ui["pc-rationale"].value,/Changed but not yet explicitly saved/);
+// A second reading contains incomplete scratch edits. Export must not
+// silently omit it when the first reading is saved.
+ui["pc-family"].value="labial_written_o";ui["pc-family"].events.change();
+ui["pc-rationale"].value="Other incomplete local scratch note";
+ui["pc-family"].value="all";ui["pc-family"].events.change();
 ui["pc-export"].events.click();
 assert.match(ui["pc-status"].textContent,/Export blocked/);
+// Returning the incomplete note to defaults clears its scratch state.
+ui["pc-family"].value="labial_written_o";ui["pc-family"].events.change();
+assert.match(ui["pc-rationale"].value,/Other incomplete local scratch note/);
+ui["pc-rationale"].value="";
+ui["pc-family"].value="all";ui["pc-family"].events.change();
 ui["pc-save"].events.click();
 assert.match(ui["pc-count"].textContent,/0 unsaved edits/);
 ui["pc-export"].events.click();
