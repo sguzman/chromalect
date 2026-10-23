@@ -3,6 +3,10 @@ import fs from "node:fs";
 import vm from "node:vm";
 const manifest=JSON.parse(fs.readFileSync(
  "site/glyphs/research/heldout-warning-v0.1/index-v0.1.json","utf8"));
+const palette=JSON.parse(fs.readFileSync(
+ "palettes/mandarin-component-identity-v0.6.json","utf8"));
+const folds=JSON.parse(fs.readFileSync(
+ "site/semantic-group-hue-fivefold-heldout-v0.1.json","utf8"));
 const script=fs.readFileSync("site/heldout-color-warning-review.js","utf8");
 const html=fs.readFileSync("site/heldout-color-warning-review.html","utf8");
 class Element {
@@ -15,7 +19,7 @@ class Element {
  addEventListener(event,handler){this.events[event]=handler;}
  setAttribute(k,v){this.attrs[k]=v;}
 }
-function boot(data=manifest){
+function boot(data=manifest,original=palette,study=folds){
  const ids=["hv-status","hv-summary","hv-filter","hv-order","hv-search",
   "hv-size","hv-size-label","hv-gray","hv-surface","hv-select",
   "hv-prev","hv-next","hv-gallery","hv-pairs","hv-count"];
@@ -24,7 +28,9 @@ function boot(data=manifest){
  ui["hv-size"].value="112";ui["hv-surface"].value="theme";
  const ctx={document:{getElementById:id=>ui[id],
   createElement:()=>new Element()},
-  fetch:async()=>({ok:true,json:async()=>data}),
+  fetch:async path=>({ok:true,json:async()=>
+   path.startsWith("glyphs/research/")?data:
+   path.startsWith("palettes/")?original:study}),
   Set,Map,Math,Number,Object,Array,Error,JSON};
  vm.runInNewContext(script,ctx);return ui;
 }
@@ -79,7 +85,9 @@ for(const edit of [
  d=>{d.glyphs[0].pairs[0].semanticsApproved=true;},
  d=>{d.glyphs[0].pairs[0].foldOptimizedDeltaOk=NaN;},
  d=>{d.glyphs[0].pairs[0].componentA.id="cmp-9999";},
- d=>{d.glyphs[0].rank=2000;}
+ d=>{d.glyphs[0].rank=2000;},
+ d=>{d.glyphs[0].pairs[0].componentA.sourceHex="#000000";},
+ d=>{d.glyphs[0].foldIndex=(d.glyphs[0].foldIndex+1)%5;}
 ]){
  const damaged=structuredClone(manifest);
  edit(damaged);const blocked=boot(damaged);await settled(blocked);
@@ -91,4 +99,4 @@ for(const id of ["hv-status","hv-summary","hv-filter","hv-order","hv-search",
  "hv-gallery","hv-pairs","hv-count"])
  assert.match(html,new RegExp('id="'+id+'"'));
 assert.ok(!script.includes("innerHTML"));
-console.log("Source-identical held-out review SVGs; 23 new-warning glyphs and 12 false-source/approval refusals.");
+console.log("Source-identical held-out review SVGs; 23 new-warning glyphs and 14 false-source/approval refusals.");
