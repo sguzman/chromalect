@@ -34,7 +34,7 @@ const state=setup();await settle(state);
 assert.match(state["syllable-summary"].textContent,/673 distinct observed/);
 assert.equal(state["syllable-results"].children.length,60);
 assert.match(state["syllable-count"].textContent,/1171 matching/);
-assert.match(state["syllable-results"].children[0].children[1].children[0].textContent,/Initial/);
+assert.match(state["syllable-results"].children[0].children[1].children[0].children[0].textContent,/Initial/);
 state["syllable-view"].value="colors";state["syllable-view"].events.change();
 assert.ok(state["syllable-results"].children[0].children[1].children[0].children.some(x=>x.className==="syllable-chip"));
 state["syllable-view"].value="plain";state["syllable-view"].events.change();
