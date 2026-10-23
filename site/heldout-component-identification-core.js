@@ -75,7 +75,7 @@ function validateSource(targetManifest,sourcePairs){
    t.otherOwner!==t.machineAssignedOwner&&
    [t.machineAssignedOwner,t.otherOwner].sort().join("|")===
     offered.slice().sort().join("|"),"Target key is not derived from the original source component pair");
-  required(t.machineAssignedOwner===(index%2===0?offered[0].id:offered[1].id),
+  required(t.machineAssignedOwner===(index%2===0?offered[0]:offered[1]),
    "Target owner must follow source-ranked, precommitted A/B sequence");
   if(t.machineAssignedOwner===offered[0].id)targetA++;
   used.add(t.id);counts[t.reviewState]++;
