@@ -1,0 +1,85 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark">
+<meta name="description" content="Local-only source-verified blinded presentation rehearsal for experimental Chinese glyph color variations; no independent human visual certification.">
+<title>Blind color comparison rehearsal · Chromalect</title>
+<link rel="stylesheet" href="style.css"><script src="theme.js"></script>
+<script src="heldout-blind-color-core.js" defer></script>
+<script src="heldout-blind-color-rehearsal.js" defer></script>
+<style>
+.br-caution{border-left:3px solid var(--active-border);background:var(--panel);
+ padding:12px 16px;margin:15px 0}
+.br-controls{display:flex;flex-wrap:wrap;gap:12px;padding:16px;
+ border:1px solid var(--border);border-radius:12px;background:var(--panel);
+ margin:16px 0;align-items:end}
+.br-controls label{display:grid;gap:7px;min-width:150px}
+.br-controls select,.br-controls button,.br-actions button{font:inherit;color:var(--ink);
+ background:var(--tile-bg);padding:10px;border:1px solid var(--border);
+ border-radius:8px;cursor:pointer}
+.br-controls :disabled,.br-actions :disabled{opacity:.45;cursor:default}
+.br-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;
+ margin:20px 0;align-items:center}
+.br-panel{background:var(--br-background,transparent);
+ border:1px solid var(--border);min-height:174px;
+ border-radius:12px;display:flex;align-items:center;justify-content:center}
+.br-stimulus{display:block;object-fit:contain;max-width:100%}
+.br-caption{text-align:center;font-weight:650}
+.br-responses{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px}
+.br-answer,.br-actions button{font:inherit;cursor:pointer;color:var(--ink);
+ border:1px solid var(--border);background:var(--tile-bg);
+ border-radius:8px;padding:12px}
+.br-answer[aria-pressed="true"]{outline:2px solid var(--active-border);
+ outline-offset:2px;font-weight:700}
+.br-actions{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin:14px 0}
+.br-output{width:100%;box-sizing:border-box;min-height:200px;
+ border:1px solid var(--border);background:var(--tile-bg);color:var(--ink);
+ border-radius:8px;padding:14px;font:12px ui-monospace,monospace;
+ resize:vertical}
+.br-secondary{font-size:13px;color:var(--sub)}
+</style></head><body>
+<header class="wrap"><div class="brand"><b>CHROMALECT</b><small>Language, made visible</small></div></header>
+<main class="wrap">
+<div class="eyebrow">Source glyph research · procedural rehearsal only</div>
+<h1>Blind color comparison rehearsal</h1>
+<p class="intro">This technical rehearsal checks a balanced, concealed presentation of the unchanged identity-color glyph and its separately fitted experimental color counterpart. It does <strong>not</strong> run an authorized participant study, score component recognition, establish visual certification, or promote a component-color or semantic interpretation.</p>
+<div class="br-caution">
+<strong>Research gates remain open.</strong> Independent glyph-ownership and visual review: 0/1,000 certified. Human discrimination trials: none completed. Semantic-family adjudications: none approved. A local preference or abstention is not independent evidence of recognition. Trial conditions can be inferred by experienced observers; this is presentation-label masking, not a double-blind clinical experiment.
+</div>
+<p id="br-status" role="status" aria-live="polite">Validating source-owned glyphs and experimental fold boundaries.</p>
+<p id="br-intro">Source-linked 49-pair review cohort is loading.</p>
+<div class="br-controls">
+<label for="br-size">Fixed glyph size<select id="br-size">
+<option value="24">24 px</option><option value="32">32 px</option>
+<option value="48" selected>48 px</option><option value="64">64 px</option>
+<option value="96">96 px</option></select></label>
+<label for="br-surface">Fixed neutral background<select id="br-surface">
+<option value="white" selected>White</option><option value="black">Black</option>
+<option value="theme">Theme</option></select></label>
+<label for="br-appearance">Fixed color treatment<select id="br-appearance">
+<option value="color" selected>Original color channels</option>
+<option value="grayscale">Grayscale diagnostic</option></select></label>
+<button id="br-start" type="button" disabled>Start local rehearsal</button>
+</div>
+<p id="br-progress" class="br-secondary">Presentation not started.</p>
+<div id="br-trial" hidden>
+<div class="br-grid">
+<div><div class="br-caption">Presentation A</div><div id="br-left" class="br-panel" aria-label="Unlabeled left presentation"></div></div>
+<div><div class="br-caption">Presentation B</div><div id="br-right" class="br-panel" aria-label="Unlabeled right presentation"></div></div>
+</div>
+<p id="br-question">Compare visible stroke colors without interpreting meaning.</p>
+<div id="br-respond" class="br-responses" aria-label="Unscored provisional visual responses"></div>
+<div class="br-actions"><button id="br-next" disabled type="button">Next</button></div>
+<p class="br-secondary">One response per source-owned component pair. Some glyphs may recur with different selected pair IDs. The original/experimental condition labels and exact source ranks are concealed during the rehearsal. Answers remain in this page's memory only.</p>
+</div>
+<div id="br-finish" hidden>
+<h2>Local rehearsal finished</h2>
+<p id="br-key" class="br-secondary"></p>
+<div class="br-actions"><button id="br-export" type="button">Prepare provisional JSON for manual copy</button></div>
+<label for="br-output">Unuploaded JSON observation record</label>
+<textarea id="br-output" class="br-output" readonly rows="12" placeholder="The unuploaded research draft appears here after completion."></textarea>
+<p class="br-secondary">No automatic network submissions, cookies, local storage or participant identification. Copying/exporting a rehearsal file does not certify study eligibility, source glyphs, learning outcomes or semantic labels. The source code also includes a strict record validator.</p>
+</div>
+<p>For full-color source and evidence inspection, see the <a href="heldout-color-warning-review.html">unmasked 48-glyph warning review</a>, the <a href="semantic-group-hue-heldout.html">five-fold source study</a>, and the <a href="glyph-review-intake.html">provisional independent-review intake</a>. This rehearsal must not replace the separate visual, accessibility, ethics, or preregistration gates.</p>
+</main><footer class="wrap">
+<a href="colors.html">Original component palette</a> ·
+<a href="heldout-color-warning-review.html">Source-matched research glyphs</a>
+</footer></body></html>
