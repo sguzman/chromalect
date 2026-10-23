@@ -6,7 +6,7 @@ const html=fs.readFileSync("site/emoji-comprehension.html","utf8");
 const source=fs.readFileSync("site/emoji-comprehension.js","utf8");
 const audit=JSON.parse(fs.readFileSync("data/semantic/cedict-crossref/emoji-visibility-audit-v0.1.json","utf8"));
 const ids=[
- "emoji-study-scope","emoji-study-count","emoji-study-start","emoji-study-export",
+ "emoji-study-scope","emoji-study-count","emoji-study-repeat-policy","emoji-study-start","emoji-study-export",
  "emoji-study-status","emoji-study-session","emoji-study-counter","emoji-study-progress",
  "emoji-study-fill","emoji-study-symbol","emoji-study-blind","emoji-study-interpretation","emoji-study-kind",
  "emoji-study-confidence","emoji-study-reveal","emoji-study-post","emoji-study-target",
@@ -26,6 +26,7 @@ class Element {
 const elements=Object.fromEntries(ids.map(id=>[id,new Element()]));
 elements["emoji-study-scope"].value="all";
 elements["emoji-study-count"].value="20";
+elements["emoji-study-repeat-policy"].value="distinct";
 elements["emoji-study-start"].disabled=true;
 elements["emoji-study-export"].disabled=true;
 elements["emoji-study-session"].hidden=true;
@@ -95,7 +96,8 @@ assert.ok(exportedBlob instanceof Blob);
 assert.equal(revoked,true);
 assert.equal(downloaded.download,"chromalect-emoji-blind-study.json");
 const payload=JSON.parse(await exportedBlob.text());
-assert.equal(payload.schema,"chromalect.emoji-comprehension-session.v0.1");
+assert.equal(payload.schema,"chromalect.emoji-comprehension-session.v0.2");
+assert.equal(payload.session.repeatPolicy,"distinct");
 assert.equal(payload.status,"unverified_exploratory_observations_not_production_review");
 assert.equal(payload.session.rated,1);
 assert.equal(payload.session.planned,20);
@@ -107,8 +109,20 @@ assert.equal(typeof payload.answers[0].targetTypedAsEvent,"boolean");
 assert.equal(payload.answers[0].clarityRatingAfterReveal,"partial");
 assert.ok(payload.answers[0].trialId);
 assert.doesNotMatch(JSON.stringify(payload),/productionVerified":true|humanLexicalApproved":\s*[1-9]/);
+// Repeated emoji are legal across character senses, but not within a blind
+// session using the default distinct-form sampling policy.
+const uniqueVisuals=new Set(audit.records.map(r=>r.emojiDisplay)).size;
+assert.equal(uniqueVisuals,388);
+elements["emoji-study-count"].value="all";
+elements["emoji-study-scope"].value="all";
+elements["emoji-study-repeat-policy"].value="distinct";
+elements["emoji-study-start"].click();
+assert.equal(elements["emoji-study-progress"].attributes["aria-valuemax"],String(uniqueVisuals));
+elements["emoji-study-repeat-policy"].value="allow";
+elements["emoji-study-start"].click();
+assert.equal(elements["emoji-study-progress"].attributes["aria-valuemax"],"897");
 assert.match(html,/Nothing is sent to Chromalect or GitHub/);
 assert.match(html,/id="emoji-study-symbol"/);
 assert.match(html,/id="emoji-study-kind"/);
 assert.match(html,/semantic\/emoji-visibility-audit-v0.1\.json/);
-console.log("Blind comprehension: 897 source examples, hidden meaning until answer, required clarity rating, local-only export and 5% session progress.");
+console.log("Blind comprehension: 897 candidate senses, 388 distinct emoji forms, repeat-safe sessions, hidden meanings and local-only v0.2 export.");
