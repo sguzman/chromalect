@@ -4,7 +4,8 @@ import vm from "node:vm";
 const files=[
  "site/pronunciation-citations-0001-1000.json","site/layers-v0.1.json",
  "data/phonetics/mandarin-initial-feature-candidates-v0.1.json",
- "data/phonetics/citation-syllable-orthographic-codec-audit-v0.1.json"];
+ "data/phonetics/citation-syllable-orthographic-codec-audit-v0.1.json",
+ "data/phonetics/mandarin-final-spelling-context-gates-v0.1.json"];
 const fixture=files.map(p=>JSON.parse(fs.readFileSync(p,"utf8")));
 const js=fs.readFileSync("site/mandarin-syllable-grammar.js","utf8");
 const html=fs.readFileSync("site/mandarin-syllable-grammar.html","utf8");
@@ -24,7 +25,8 @@ function setup(data=fixture){
  const fetch=async url=>({ok:true,json:async()=>data[
    ["pronunciation-citations-0001-1000.json","layers-v0.1.json",
     "phonetics/mandarin-initial-feature-candidates-v0.1.json",
-    "phonetics/citation-syllable-orthographic-codec-audit-v0.1.json"].indexOf(url)]});
+    "phonetics/citation-syllable-orthographic-codec-audit-v0.1.json",
+    "phonetics/mandarin-final-spelling-context-gates-v0.1.json"].indexOf(url)]});
  vm.runInNewContext(js,{document:doc,fetch,Map,Set,Object,Math,String,Error});
  return nodes;
 }
@@ -42,8 +44,17 @@ assert.match(state["syllable-results"].children[0].children[1].textContent,/Plai
 state["syllable-query"].value="yī";state["syllable-query"].events.input();
 assert.ok(state["syllable-results"].children.length>0);
 assert.match(state["syllable-results"].children[0].children[0].textContent,/yī/);
+state["syllable-query"].value="4";state["syllable-view"].value="tokens";
+state["syllable-query"].events.input();
+assert.equal(state["syllable-results"].children.length,1);
+assert.ok(state["syllable-results"].children[0].children.some(x=>x.className==="syllable-risk"));
+assert.match(state["syllable-results"].children[0].children.find(x=>x.className==="syllable-risk").textContent,/post|sibilant|initial/i);
 state["syllable-query"].value="";state["syllable-tone"].value="0";state["syllable-tone"].events.change();
 assert.match(state["syllable-count"].textContent,/matching of 1,171/);
+const missingRisk=structuredClone(fixture);missingRisk[4].records[0].independentIPAAnalysisApproved=true;
+const rejectedRisk=setup(missingRisk);await settle(rejectedRisk);
+assert.equal(rejectedRisk["syllable-results"].children.length,0);
+assert.match(rejectedRisk["syllable-status"].textContent,/Unable to validate/);
 const mutated=structuredClone(fixture);mutated[3].counts.exactRoundTrips=1170;
 const invalid=setup(mutated);await settle(invalid);
 assert.equal(invalid["syllable-results"].children.length,0);

@@ -5,7 +5,7 @@ const $=id=>document.getElementById(id);
 const ids=["syllable-query","syllable-tone","syllable-view","syllable-status",
  "syllable-count","syllable-results","syllable-summary"];
 if(ids.some(id=>!$(id)))return;
-let entries=[],palette=null,initialMap=new Map();
+let entries=[],palette=null,initialMap=new Map(),finalGateByTriple=new Map();
 const expectedModes=new Set(["plain","tokens","colors"]);
 function textElement(tag,content,className){
  const x=document.createElement(tag);
@@ -56,6 +56,9 @@ function display(){
     " (citation label)",color?palette.tone.tokens[String(x.tone)]:null));
    card.appendChild(code);
   }
+  const risk=finalGateByTriple.get(JSON.stringify([x.initial,x.final,x.tone]));
+  if(risk)card.appendChild(textElement("p","Final-spelling review: "+risk.description+
+   " · No independent IPA approval.","syllable-risk"));
   card.appendChild(textElement("p","No independently verified contextual pronunciation or phonological analysis.","syllable-note"));
   $("syllable-results").appendChild(card);
  }
@@ -66,10 +69,11 @@ async function load(){
  try{
   const urls=["pronunciation-citations-0001-1000.json",
    "layers-v0.1.json","phonetics/mandarin-initial-feature-candidates-v0.1.json",
-   "phonetics/citation-syllable-orthographic-codec-audit-v0.1.json"];
+   "phonetics/citation-syllable-orthographic-codec-audit-v0.1.json",
+   "phonetics/mandarin-final-spelling-context-gates-v0.1.json"];
   const responses=await Promise.all(urls.map(url=>fetch(url)));
   if(responses.some(r=>!r.ok))throw Error("Published source tranche or codec audit is unavailable");
-  const [citations,layers,initials,audit]=await Promise.all(responses.map(x=>x.json()));
+  const [citations,layers,initials,audit,finalGates]=await Promise.all(responses.map(x=>x.json()));
   if(citations.schema!=="chromalect.pronunciation-citations.v0"||
      citations.tranche!=="0001-1000"||citations.characters.length!==1000||
      layers.schema!=="chromalect.presentation-layers.v0"||
@@ -86,6 +90,33 @@ async function load(){
      audit.counts.humanDecodingTrials!==0||audit.counts.educationalEffectMeasurements!==0||
      audit.sources.externalIndependentPhonologicalReview!==false)
    throw Error("Source codec evidence is not available for presentation");
+  if(finalGates.schema!=="chromalect.phonetics.mandarin-final-spelling-context-gates.v0.1"||
+     finalGates.status!=="contextual_spelling_review_flags_not_verified_ipa_or_phonemic_finals"||
+     finalGates.source.upstreamBlobSHA!==citations.source.blob_sha||
+     finalGates.summary.sourceCitationReadings!==1171||
+     finalGates.summary.flaggedSourceReadings!==197||
+     finalGates.summary.flaggedDistinctWrittenTriples!==97||
+     finalGates.summary.flagCategories!==8||
+     finalGates.summary.independentlyAdjudicatedFinalPhonemes!==0||
+     finalGates.summary.approvedContextualPronunciations!==0||
+     finalGates.summary.approvedAcousticTranscriptions!==0||
+     finalGates.summary.learningStudyResults!==0||
+     !Array.isArray(finalGates.records)||finalGates.records.length!==8)
+   throw Error("Source final-spelling review gates are incomplete");
+  finalGateByTriple=new Map();
+  for(const row of finalGates.records){
+   if(row.independentIPAAnalysisApproved!==false||
+     row.certifiedAcousticRealizations!==0||
+     !Array.isArray(row.observedTokenTriples)||
+     row.observedTokenTriples.length!==row.uniqueCitationTriples)
+    throw Error("Unreviewed final-spelling category was incorrectly approved");
+   for(const t of row.observedTokenTriples){
+    const key=JSON.stringify([t.initial,t.final,t.tone]);
+    if(finalGateByTriple.has(key))throw Error("Overlapping phonetic final risk categories");
+    finalGateByTriple.set(key,row);
+   }
+  }
+  if(finalGateByTriple.size!==97)throw Error("Incomplete source spelling-context worklist");
   palette=layers.palette_domains;
   if(Object.keys(palette.initial.tokens).length!==24||
      Object.keys(palette.final.tokens).length!==33||
@@ -114,6 +145,8 @@ async function load(){
     entries.push({...r,rank:x.rank,character:x.character});
    }
   }
+  if(entries.filter(r=>finalGateByTriple.has(JSON.stringify([r.initial,r.final,r.tone]))).length!==197)
+   throw Error("Final context review flags do not match original reading occurrences");
   if(entries.length!==1171||pairs.size!==673||finals.size!==33)
    throw Error("Published glyph source citation counts changed");
   $("syllable-summary").textContent=
