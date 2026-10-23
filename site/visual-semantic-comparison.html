@@ -38,6 +38,9 @@
 .vsc-source p{margin:8px 0;color:var(--sub)}
 .vsc-source h3{font-size:15px;margin:15px 0 8px}
 .vsc-component-legend{display:flex;flex-wrap:wrap;gap:7px 12px}
+.vsc-color-warnings{border-top:1px solid var(--border);margin-top:15px;padding-top:6px}
+.vsc-warning-row{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:9px 0}
+.vsc-warning-distance,.vsc-warning-summary{font-size:13px;color:var(--sub);overflow-wrap:anywhere}
 .vsc-component{display:inline-flex;align-items:center;gap:7px;background:var(--tile-bg);
  border:1px solid var(--border);padding:6px 9px;border-radius:8px;font:12px ui-monospace,monospace}
 .vsc-swatch{display:inline-block;background:var(--swatch);width:18px;height:18px;
@@ -54,9 +57,16 @@
 <main class="wrap">
 <div class="eyebrow">Mandarin · experimental color and meaning</div>
 <h1>Same glyph, three visual conditions</h1>
-<p class="intro">Directly compare an unmodified source-aligned Chinese stroke outline rendered in neutral ink, the same outline with its stable component identity colors, and the same colored outline with a provisional semantic pictogram. All conditions use one pinned character and geometry. Pronunciation and tone overlays are deliberately absent from this experiment.</p>
+<p class="intro">Directly compare an unmodified source-aligned Chinese stroke outline rendered in neutral ink, the same outline with its stable component identity colors, and the same colored outline with a provisional semantic pictogram. All conditions use one pinned character and geometry. Pronunciation and tone overlays are deliberately absent from this experiment. Filter to the 25 machine-flagged glyphs to inspect all 26 below-threshold component-color pairs, or focus on deferred and multiply proposed meanings.</p>
 <div class="vsc-note-block">This is a reproducible <strong>presentation comparison</strong>, not a human-subject experiment, semantic-family color scheme, or evidence of learning gains. Component identity colors are unchanged across conditions. The third condition is an <strong>unverified meaning proposal</strong> and correctly abstains when no pictogram was selected.</div>
 <div class="vsc-controls" aria-label="Visual comparison controls">
+<label for="vsc-focus">Research focus
+<select id="vsc-focus">
+<option value="all">All 1,000 characters</option>
+<option value="close">Machine-flagged close colors (25 glyphs)</option>
+<option value="deferred">No proposed pictogram (119)</option>
+<option value="polysemy">Multiple proposed meanings (16)</option>
+</select></label>
 <label for="vsc-pick">Character (rank and Hanzi)<select id="vsc-pick" aria-label="Source-ranked character"></select></label>
 <button id="vsc-back" type="button">Previous</button>
 <button id="vsc-forward" type="button">Next</button>
@@ -67,6 +77,7 @@
 </div>
 <p id="vsc-status" role="status" aria-live="polite">Loading source-aligned visual comparison.</p>
 <p id="vsc-count"></p>
+<p id="vsc-warning" class="vsc-warning-summary"></p>
 <div id="vsc-panels" class="vsc-grid" aria-label="Three source-aligned visual conditions"></div>
 <div id="vsc-source" class="vsc-source" aria-label="Source provenance and candidate meaning"></div>
 <p>Source: <a href="https://github.com/unicode-org/unihan-database/blob/667c2d180a75ddd749b774dbb7588d4786b63222/kDefinition.txt">pinned Unicode Unihan definition records</a>; Mandarin outlines and immutable component assignments are described in the <a href="../docs/component-color-policy.md">component-color policy</a>. No proposed meaning is approved by the source dictionary or by a visual comprehension trial.</p>
