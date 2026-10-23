@@ -210,13 +210,13 @@ async function load(){
      riskIndex.status!=="contextual_spelling_review_flags_not_verified_ipa_or_phonemic_finals"||
      riskIndex.source.upstreamBlobSHA!==citations.source.blob_sha||
      riskIndex.summary.sourceCitationReadings!==1171||
-     riskIndex.summary.flaggedSourceReadings!==197||
-     riskIndex.summary.flaggedDistinctWrittenTriples!==97||
+     riskIndex.summary.flaggedSourceReadings!==213||
+     riskIndex.summary.flaggedDistinctWrittenTriples!==108||
      riskIndex.summary.independentlyAdjudicatedFinalPhonemes!==0||
      riskIndex.summary.approvedContextualPronunciations!==0||
      riskIndex.summary.approvedAcousticTranscriptions!==0||
      riskIndex.summary.learningStudyResults!==0||
-     !Array.isArray(riskIndex.records)||riskIndex.records.length!==8)
+     !Array.isArray(riskIndex.records)||riskIndex.records.length!==9)
    throw Error("Final-spelling source gate not validated");
   riskByTriple=new Map();
   for(const row of riskIndex.records){
@@ -231,7 +231,7 @@ async function load(){
     riskByTriple.set(key,row);
    }
   }
-  if(riskByTriple.size!==97)throw Error("Incomplete spelling exception source");
+  if(riskByTriple.size!==108)throw Error("Incomplete spelling exception source");
   finalPrimitives=writtenSymbols.primitives;
   finalGlyphs=new Map();
   for(const rec of writtenSymbols.records){
@@ -278,7 +278,7 @@ async function load(){
   if(count!==1171)throw Error("Incomplete citation sample");
   const flagged=entries.reduce((n,c)=>n+c.readings.filter(r=>
    riskByTriple.has(JSON.stringify([r.initial,r.final,r.tone]))).length,0);
-  if(flagged!==197)throw Error("Source spelling warning occurrence count disagrees with source");
+  if(flagged!==213)throw Error("Source spelling warning occurrence count disagrees with source");
   choose(0);
   setMessage("1,000 characters · 1,171 source readings · independently toggled annotations · no study observations.");
  }catch(e){entries=[];$("cell-top").replaceChildren();$("cell-side").replaceChildren();

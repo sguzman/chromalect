@@ -42,7 +42,7 @@ This is a sequence of **evidence gates**, not a promise to build a large applica
 - [x] Source-link a working 21-consonant Pinyin initial-feature codebook and publish a Pinyin / provisional IPA / featural-shape comparison with 3 nonconsonantal spelling conventions kept separate.
 - [x] Demonstrate an initial-only strict source-token feature codec over all 1,171 cited readings (997 consonantal, 174 orthographic onset conventions), without claiming full phonological or visual-symbol decoding.
 - [x] Round-trip all 1,171 pinned written initial/final/tone combinations through a source-attested orthographic grammar and publish 710 noncertifying written contrast candidates.
-- [x] Flag 197 source citation readings in eight context-dependent final-spelling categories, preserving original spellings and pending IPA adjudication.
+- [x] Flag 213 source citation readings in nine context-dependent final-spelling categories, preserving original spellings and pending IPA adjudication.
 - [x] Publish a 33-final reversible nine-primitive written-letter geometric control and integrate provisional initial shapes, with independent channel toggles and source-linked caution labels; human decoding remains untested.
 - [ ] Freeze the Mandarin phonological contrast inventory and a phonetic reference notation.
 - [ ] Compare Pinyin/IPA labels, initial-final symbols, and constructed featural glyphs.

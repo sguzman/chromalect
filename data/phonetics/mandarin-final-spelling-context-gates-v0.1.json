@@ -31,9 +31,9 @@
   ],
   "summary": {
     "sourceCitationReadings": 1171,
-    "flaggedSourceReadings": 197,
-    "flaggedDistinctWrittenTriples": 97,
-    "flagCategories": 8,
+    "flaggedSourceReadings": 213,
+    "flaggedDistinctWrittenTriples": 108,
+    "flagCategories": 9,
     "independentlyAdjudicatedFinalPhonemes": 0,
     "approvedContextualPronunciations": 0,
     "approvedAcousticTranscriptions": 0,
@@ -944,6 +944,114 @@
           "initial": "q",
           "final": "uan",
           "tone": 2
+        }
+      ],
+      "independentIPAAnalysisApproved": false,
+      "certifiedAcousticRealizations": 0
+    },
+    {
+      "id": "labial_written_o",
+      "sourceFamily": "contextual_vowel_realization",
+      "description": "Written o after b/p/m/f or w may be realized with a uo-like transition; a literal [o] interpretation is not guaranteed.",
+      "observedReadingCount": 16,
+      "uniqueCitationTriples": 11,
+      "observedTokenTriples": [
+        {
+          "initial": "b",
+          "final": "o",
+          "tone": 0
+        },
+        {
+          "initial": "m",
+          "final": "o",
+          "tone": 4
+        },
+        {
+          "initial": "m",
+          "final": "o",
+          "tone": 2
+        },
+        {
+          "initial": "p",
+          "final": "o",
+          "tone": 4
+        },
+        {
+          "initial": "w",
+          "final": "o",
+          "tone": 3
+        },
+        {
+          "initial": "b",
+          "final": "o",
+          "tone": 2
+        },
+        {
+          "initial": "f",
+          "final": "o",
+          "tone": 2
+        },
+        {
+          "initial": "w",
+          "final": "o",
+          "tone": 4
+        },
+        {
+          "initial": "m",
+          "final": "o",
+          "tone": 3
+        },
+        {
+          "initial": "p",
+          "final": "o",
+          "tone": 1
+        },
+        {
+          "initial": "b",
+          "final": "o",
+          "tone": 1
+        }
+      ],
+      "firstSourceExamples": [
+        {
+          "rank": 8,
+          "character": "卜",
+          "display": "bo",
+          "initial": "b",
+          "final": "o",
+          "tone": 0
+        },
+        {
+          "rank": 35,
+          "character": "万",
+          "display": "mò",
+          "initial": "m",
+          "final": "o",
+          "tone": 4
+        },
+        {
+          "rank": 81,
+          "character": "无",
+          "display": "mó",
+          "initial": "m",
+          "final": "o",
+          "tone": 2
+        },
+        {
+          "rank": 193,
+          "character": "末",
+          "display": "mò",
+          "initial": "m",
+          "final": "o",
+          "tone": 4
+        },
+        {
+          "rank": 376,
+          "character": "朴",
+          "display": "pò",
+          "initial": "p",
+          "final": "o",
+          "tone": 4
         }
       ],
       "independentIPAAnalysisApproved": false,

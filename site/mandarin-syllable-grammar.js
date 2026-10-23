@@ -94,14 +94,14 @@ async function load(){
      finalGates.status!=="contextual_spelling_review_flags_not_verified_ipa_or_phonemic_finals"||
      finalGates.source.upstreamBlobSHA!==citations.source.blob_sha||
      finalGates.summary.sourceCitationReadings!==1171||
-     finalGates.summary.flaggedSourceReadings!==197||
-     finalGates.summary.flaggedDistinctWrittenTriples!==97||
+     finalGates.summary.flaggedSourceReadings!==213||
+     finalGates.summary.flaggedDistinctWrittenTriples!==108||
      finalGates.summary.flagCategories!==8||
      finalGates.summary.independentlyAdjudicatedFinalPhonemes!==0||
      finalGates.summary.approvedContextualPronunciations!==0||
      finalGates.summary.approvedAcousticTranscriptions!==0||
      finalGates.summary.learningStudyResults!==0||
-     !Array.isArray(finalGates.records)||finalGates.records.length!==8)
+     !Array.isArray(finalGates.records)||finalGates.records.length!==9)
    throw Error("Source final-spelling review gates are incomplete");
   finalGateByTriple=new Map();
   for(const row of finalGates.records){
@@ -116,7 +116,7 @@ async function load(){
     finalGateByTriple.set(key,row);
    }
   }
-  if(finalGateByTriple.size!==97)throw Error("Incomplete source spelling-context worklist");
+  if(finalGateByTriple.size!==108)throw Error("Incomplete source spelling-context worklist");
   palette=layers.palette_domains;
   if(Object.keys(palette.initial.tokens).length!==24||
      Object.keys(palette.final.tokens).length!==33||

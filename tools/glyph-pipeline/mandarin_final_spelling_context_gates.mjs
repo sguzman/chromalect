@@ -23,7 +23,9 @@ export const deriveContextGates = function deriveContextGates(citations){
  {id:"palatal_written_ue",description:"Written ue following a palatal or y category requires source-aware üe comparison rather than unconditional u+e.",
   sourceFamily:"umlaut_suppression_context",match:r=>r.final==="ue"&&pal.has(r.initial)},
  {id:"palatal_written_uan",description:"Written uan following a palatal or y category requires source-aware üan comparison rather than unconditional u+an.",
-  sourceFamily:"umlaut_suppression_context",match:r=>r.final==="uan"&&pal.has(r.initial)}
+  sourceFamily:"umlaut_suppression_context",match:r=>r.final==="uan"&&pal.has(r.initial)},
+ {id:"labial_written_o",description:"Written o after b/p/m/f or w may be realized with a uo-like transition; a literal [o] interpretation is not guaranteed.",
+  sourceFamily:"contextual_vowel_realization",match:r=>r.final==="o"&&["b","p","m","f","w"].includes(r.initial)}
  ];
  const occurrences=rules.map(()=>[]);let readingTotal=0;
  for(let index=0;index<citations.characters.length;index++){
@@ -50,10 +52,10 @@ export const deriveContextGates = function deriveContextGates(citations){
   certifiedAcousticRealizations:0
  }));
  const flagged=occurrences.flat(),count=flagged.length;
- ensure(records.length===8&&count===197,"Source orthographic risk count drift");
- ensure(records.map(x=>x.observedReadingCount).join(",")==="63,33,24,19,20,18,10,10","Source category counters drifted");
+ ensure(records.length===9&&count===213,"Source orthographic risk count drift");
+ ensure(records.map(x=>x.observedReadingCount).join(",")==="63,33,24,19,20,18,10,10,16","Source category counters drifted");
  const unique=new Set(flagged.map(r=>JSON.stringify([r.initial,r.final,r.tone])));
- ensure(unique.size===97,"Source exceptional triples drifted");
+ ensure(unique.size===108,"Source exceptional triples drifted");
  return {schema:"chromalect.phonetics.mandarin-final-spelling-context-gates.v0.1",
   status:"contextual_spelling_review_flags_not_verified_ipa_or_phonemic_finals",
   source:{citationFile:"site/pronunciation-citations-0001-1000.json",
