@@ -103,7 +103,7 @@ const swap=copy(session);swap.observations[0].dictionaryBlobSha="bad";
 assert.throws(()=>validateReadingInventory(swap,triage,blocks));
 const promoted=copy(session);promoted.observations[0].lexicalApproval="verified";
 assert.throws(()=>validateReadingInventory(promoted,triage,blocks));
-const violated=copy(session);violated.session.scope="unmapped";
+const violated=copy(session);violated.session.scope="baseline"; // Exclusive of the high-attention tier.
 assert.throws(()=>validateReadingInventory(violated,triage,blocks));
 const duplicate=copy(session);duplicate.observations.push(copy(duplicate.observations[0]));duplicate.session.recorded=2;
 assert.throws(()=>validateReadingInventory(duplicate,triage,blocks));
