@@ -1,0 +1,125 @@
+{
+  "schema": "chromalect.semantic.cedict-word-headword-index.v0.1",
+  "status": "exact_snapshot_dictionary_headwords_not_sentence_readings_or_word_boundaries",
+  "source": {
+    "canonicalDownloadURL": "https://www.mdbg.net/chinese/export/cedict/cedict_1_0_ts_utf-8_mdbg.txt.gz",
+    "projectAttribution": "CC-CEDICT project, published by MDBG",
+    "license": "CC BY-SA 4.0",
+    "retrievedUTCDate": "2026-10-23",
+    "acquisitionRun": "https://github.com/sguzman/chromalect/actions/runs/39958182483",
+    "acquisitionArtifactId": 12503900850,
+    "acquisitionArtifactZipSHA256": "9b0de95777962ca3f6b84e1e2bb5bcfd8f3b57735f5bf483f10b4301e74d5f8a",
+    "acquisitionReportSHA256": "d867be8a83fb2c9cff315485da1e9f8eb5f6223ca5aed54ba71a1a86a1a759c2",
+    "sourceCompressedSHA256": "46e34d0555e180873fe88f02c8171cf399accf0709cbaafb0178720565b80409",
+    "sourceUncompressedSHA256": "c9f2181b21d71810a86a37190e2e69d6354878ca19b309fc6bcd39b340791919",
+    "sourceSentenceTextCopied": false,
+    "sourceDefinitionsCopied": false
+  },
+  "summary": {
+    "sourceRowsParsed": 125310,
+    "requestedWordLeads": 8,
+    "wordLeadsWithHeadwords": 5,
+    "wordLeadsWithoutHeadwords": 3,
+    "exactHeadwordRecords": 5,
+    "independentlyVerifiedTatoebaReadings": 0,
+    "independentWordBoundaries": 0,
+    "approvedLexicalSenses": 0,
+    "productionApprovals": 0
+  },
+  "records": [
+    {
+      "leadId": "ch126-length",
+      "simplifiedWord": "长度",
+      "headwords": [
+        {
+          "traditional": "長度",
+          "simplified": "长度",
+          "pinyin": "chang2 du4"
+        }
+      ],
+      "independentSentenceReadingVerified": false,
+      "independentWordBoundaryVerified": false,
+      "independentLexicalSenseApproved": false
+    },
+    {
+      "leadId": "zhang-growth",
+      "simplifiedWord": "长大",
+      "headwords": [
+        {
+          "traditional": "長大",
+          "simplified": "长大",
+          "pinyin": "zhang3 da4"
+        }
+      ],
+      "independentSentenceReadingVerified": false,
+      "independentWordBoundaryVerified": false,
+      "independentLexicalSenseApproved": false
+    },
+    {
+      "leadId": "hua-row",
+      "simplifiedWord": "划船",
+      "headwords": [
+        {
+          "traditional": "划船",
+          "simplified": "划船",
+          "pinyin": "hua2 chuan2"
+        }
+      ],
+      "independentSentenceReadingVerified": false,
+      "independentWordBoundaryVerified": false,
+      "independentLexicalSenseApproved": false
+    },
+    {
+      "leadId": "hua-plan",
+      "simplifiedWord": "计划",
+      "headwords": [
+        {
+          "traditional": "計劃",
+          "simplified": "计划",
+          "pinyin": "ji4 hua4"
+        }
+      ],
+      "independentSentenceReadingVerified": false,
+      "independentWordBoundaryVerified": false,
+      "independentLexicalSenseApproved": false
+    },
+    {
+      "leadId": "guo-cross",
+      "simplifiedWord": "经过",
+      "headwords": [
+        {
+          "traditional": "經過",
+          "simplified": "经过",
+          "pinyin": "jing1 guo4"
+        }
+      ],
+      "independentSentenceReadingVerified": false,
+      "independentWordBoundaryVerified": false,
+      "independentLexicalSenseApproved": false
+    },
+    {
+      "leadId": "guo-aspect",
+      "simplifiedWord": "看过",
+      "headwords": [],
+      "independentSentenceReadingVerified": false,
+      "independentWordBoundaryVerified": false,
+      "independentLexicalSenseApproved": false
+    },
+    {
+      "leadId": "pao-dig",
+      "simplifiedWord": "刨坑",
+      "headwords": [],
+      "independentSentenceReadingVerified": false,
+      "independentWordBoundaryVerified": false,
+      "independentLexicalSenseApproved": false
+    },
+    {
+      "leadId": "bao-plane",
+      "simplifiedWord": "刨木头",
+      "headwords": [],
+      "independentSentenceReadingVerified": false,
+      "independentWordBoundaryVerified": false,
+      "independentLexicalSenseApproved": false
+    }
+  ]
+}
