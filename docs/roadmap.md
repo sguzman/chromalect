@@ -34,6 +34,7 @@ This is a sequence of **evidence gates**, not a promise to build a large applica
 
 ## Phase 2 — phonetic notation experiment [proposed]
 
+- [x] Establish a reversible, source-pinned orthographic Pinyin citation baseline for all 1,171 first-tranche readings, without declaring phonemic or contextual verification.
 - [ ] Freeze the Mandarin phonological contrast inventory and a phonetic reference notation.
 - [ ] Compare Pinyin/IPA labels, initial-final symbols, and constructed featural glyphs.
 - [ ] Specify a decoding grammar and round-trip tests.

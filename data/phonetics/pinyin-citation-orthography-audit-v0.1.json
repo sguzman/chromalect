@@ -1,0 +1,36 @@
+{
+  "schema": "chromalect.phonetics.pinyin-citation-orthography-audit.v0.1",
+  "status": "reversible_pinyin_spelling_baseline_not_phonemic_or_contextual_reading_verification",
+  "source": {
+    "tranche": "site/pronunciation-citations-0001-1000.json",
+    "tokenPalettes": "site/layers-v0.1.json",
+    "contrastInterpretation": "orthographic_pinyin_tokens_only",
+    "sourceAttribution": {
+      "repository": "lqfeng/ChineseCharacters",
+      "file": "通用规范汉字表(2013)一级字表(3500字).txt",
+      "license": "Apache-2.0",
+      "blob_sha": "e38b5d3077f516054ecc5573c9251b3aa3628140"
+    },
+    "independentPhonologicalCertification": false
+  },
+  "counts": {
+    "characters": 1000,
+    "citationReadings": 1171,
+    "roundTripMatches": 1171,
+    "roundTripFailures": 0,
+    "orthographicGlides": 159,
+    "neutralToneLabels": 10,
+    "publishedInitialTokens": 24,
+    "publishedFinalTokens": 33,
+    "publishedToneTokens": 5,
+    "contextualPronunciationApprovals": 0,
+    "verifiedPhonemicContrasts": 0,
+    "learningStudyResults": 0
+  },
+  "unresolved": [
+    "This codec preserves source Pinyin spelling, not physical speech sounds or IPA.",
+    "Pinyin letters y/w are orthographic glide labels in this presentation scheme.",
+    "Citation tone numbers do not encode tone sandhi or sentence-specific pronunciation.",
+    "No new phonemic contrast inventory or constructed featural glyphs are approved."
+  ]
+}

@@ -125,11 +125,15 @@
       "key": "phonetic-notation",
       "label": "Phonetic notation experiment",
       "sourceHeadingPrefix": "Phase 2",
-      "complete": 0,
+      "complete": 1,
       "pending": 5,
-      "total": 5,
-      "checklistPercent": 0,
+      "total": 6,
+      "checklistPercent": 17,
       "checkpoints": [
+        {
+          "description": "Establish a reversible, source-pinned orthographic Pinyin citation baseline for all 1,171 first-tranche readings, without declaring phonemic or contextual verification.",
+          "state": "complete"
+        },
         {
           "description": "Freeze the Mandarin phonological contrast inventory and a phonetic reference notation.",
           "state": "pending"

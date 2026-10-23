@@ -9,7 +9,7 @@ assert.equal(data.status,"document_checklist_completion_not_scientific_validatio
 assert.equal(data.source.independentValidationNotImplied,true);
 assert.equal(data.phases.length,5);
 assert.deepEqual(data.phases.map(x=>[x.key,x.complete,x.total]),[
- ["research-foundation",7,9],["palette-experiment",9,13],["phonetic-notation",0,5],
+ ["research-foundation",7,9],["palette-experiment",9,13],["phonetic-notation",1,6],
  ["mandarin-semantics",18,22],["contextual-fusion",0,4]]);
 for(const phase of data.phases){
  assert.equal(phase.complete+phase.pending,phase.total);
