@@ -385,7 +385,7 @@ async function load(){
   $("hg-risk-summary").textContent="Same-glyph component pairs below ΔOK 0.07: "+
    riskTotals.originalClosePairs+" original · "+
    riskTotals.proposedClosePairs+" first grouped-hue · "+
-   optimizedTotals.optimizedClose+" co-occurrence-optimized · "+
+   secondRisk.summary.optimizedClose+" co-occurrence-optimized · "+
    riskTotals.newlyClosePairs+" newly close · "+
    riskTotals.resolvedClosePairs+" resolved · "+
    riskTotals.affectedGlyphsWithNewClosePairs+
