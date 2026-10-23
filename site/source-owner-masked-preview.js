@@ -13,6 +13,8 @@ const statuses=new Set(["all","introduced","resolved","retained"]);
 const sizes=new Set([16,24,32,48,64,96,128,160]);
 let targets=[],activeCohort="all",selected=null,visibleIds=[];
 let requestVersion=0,objectURLs=[];
+const verifiedMaskCache=new Map();
+const MAX_VERIFIED_MASKS=24; // 24 MiB maximum given the 1 MiB per-SVG cap.
 const message=s=>{$("om-status").textContent=s;};
 function applySize(){
  const s=Number($("om-size").value);
@@ -35,6 +37,12 @@ function retireImages(){
 async function fetchVerifiedMask(candidate){
  if(!globalThis.crypto?.subtle?.digest||!URL.createObjectURL||!URL.revokeObjectURL)
   throw Error("Browser SHA-256 or verified-image display unavailable");
+ const previous=verifiedMaskCache.get(candidate.svg);
+ if(previous&&previous.sha256===candidate.sha256){
+  verifiedMaskCache.delete(candidate.svg);
+  verifiedMaskCache.set(candidate.svg,previous);
+  return previous.bytes;
+ }
  const response=await fetch(candidate.svg);
  if(!response.ok)throw Error("Neutral source SVG unavailable");
  const buffer=await response.arrayBuffer();
@@ -43,6 +51,10 @@ async function fetchVerifiedMask(candidate){
  const digest=await crypto.subtle.digest("SHA-256",buffer);
  const actual=Array.from(new Uint8Array(digest),b=>b.toString(16).padStart(2,"0")).join("");
  if(actual!==candidate.sha256)throw Error("Neutral source SVG SHA-256 mismatch");
+ verifiedMaskCache.delete(candidate.svg);
+ verifiedMaskCache.set(candidate.svg,{sha256:actual,bytes:buffer});
+ while(verifiedMaskCache.size>MAX_VERIFIED_MASKS)
+  verifiedMaskCache.delete(verifiedMaskCache.keys().next().value);
  return buffer;
 }
 async function selectPair(id){

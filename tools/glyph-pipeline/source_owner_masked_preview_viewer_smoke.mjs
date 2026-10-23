@@ -94,9 +94,12 @@ p["om-next"].events.click();await flush();
 assert.equal(p["om-pair"].value,manifest.records[1].id);
 assertImages(state,manifest.records[1]);
 assert.equal(p["om-prev"].disabled,false);
+const seenBeforeReturn=state.fetched.length;
 p["om-prev"].events.click();await flush();
 assert.equal(p["om-pair"].value,manifest.records[0].id);
 assert.equal(p["om-prev"].disabled,true);
+assert.equal(state.fetched.length,seenBeforeReturn,
+ "Returning to a recently verified region must not refetch its two SVGs");
 for(const row of manifest.records){
  p["om-pair"].value=row.id;p["om-pair"].events.change();
  await flush();
@@ -108,6 +111,17 @@ for(const row of manifest.records){
  assertImages(state,row);
 }
 assert.ok(state.revoked.length>=98,"Old mask URLs must be released on each selection");
+const latestPair=manifest.records[48];
+const fetchBeforeRecentVisit=state.fetched.length;
+p["om-pair"].value=latestPair.id;p["om-pair"].events.change();await flush();
+assertImages(state,latestPair);
+assert.equal(state.fetched.length,fetchBeforeRecentVisit,
+ "Most recently verified mask bytes must remain in the bounded LRU cache");
+const fetchBeforeOldVisit=state.fetched.length;
+p["om-pair"].value=manifest.records[0].id;p["om-pair"].events.change();await flush();
+assertImages(state,manifest.records[0]);
+assert.equal(state.fetched.length,fetchBeforeOldVisit+2,
+ "An evicted older pair must be fetched and verified again");
 for(const [cohort,count] of [["introduced",23],["resolved",21],["retained",5],["all",49]]){
  p["om-cohort"].value=cohort;p["om-cohort"].events.change();await flush();
  assert.equal(p["om-pair"].children.length,count);
