@@ -269,7 +269,15 @@ async function load(){
      expressions!==897||meaning.initialScreeningReview.productionVerifiedSenses!==0)
    throw Error("Proposed expression inventory changed");
   profiles=profile.characters;semantic=meaning.characters;reviewRows=reviewed;
-  selected=0;$("vsc-focus").value="all";rebuildPicker();render();
+  selected=0;$("vsc-focus").value="all";
+  // Exact source ranks are linkable; unsupported fragments never create a new reading.
+  const fragment=typeof location!=="undefined"?
+   /^#c(0[0-9]{3}|1000)$/.exec(location.hash):null;
+  if(fragment){
+   const rank=Number(fragment[1]);
+   if(rank>=1&&rank<=1000)selected=rank-1;
+  }
+  rebuildPicker();render();
  }catch(e){
   profiles=[];semantic=[];reviewRows=new Map();focusRanks=[];
   $("vsc-panels").replaceChildren();
