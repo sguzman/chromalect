@@ -39,7 +39,7 @@ class Node{
   this.className="";this.events={};this.disabled=false;this.attrs={};
   this.style={setProperty:(name,value)=>{this.style[name]=value}};}
  appendChild(x){this.children.push(x);return x;}
- replaceChildren(...xs){this.children=xs;}
+ replaceChildren(...xs){this.children=xs.flatMap(x=>x.kind==="fragment"?x.children:[x]);}
  addEventListener(k,f){this.events[k]=f;}
  setAttribute(k,v){this.attrs[k]=v;}
 }
@@ -49,7 +49,7 @@ function start(g=output,a=counterfactual,p=source,hash=""){
  const ui=Object.fromEntries(ids.map(id=>[id,new Node()]));
  ui["hg-size"].value="112";ui["hg-surface"].value="theme";
  const ctx={document:{getElementById:id=>ui[id],
-  createElement:()=>new Node(),createDocumentFragment:()=>new Node()},
+  createElement:()=>new Node(),createDocumentFragment:()=>{const x=new Node();x.kind="fragment";return x;}},
   location:{hash},
   fetch:async path=>({ok:true,json:async()=>
    path.startsWith("glyphs/research/")?g:
@@ -64,7 +64,7 @@ async function settle(x){
  !x["hg-status"].textContent.includes("Unable");i++)await Promise.resolve();
 }
 const ui=start();await settle(ui);
-assert.equal(ui["hg-compare"].children.length,2);
+assert.equal(ui["hg-compare"].children.length,2,ui["hg-status"].textContent);
 assert.equal(ui["hg-select"].children.length,1);
 assert.match(ui["hg-count"].textContent,/1 \/ 1 research-eligible glyphs/);
 assert.match(ui["hg-status"].textContent,/Original SVGs and geometries verified/);
