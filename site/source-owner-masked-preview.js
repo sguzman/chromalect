@@ -12,6 +12,7 @@ if(ids.some(id=>!$(id)))return;
 const statuses=new Set(["all","introduced","resolved","retained"]);
 const sizes=new Set([16,24,32,48,64,96,128,160]);
 let targets=[],activeCohort="all",selected=null,visibleIds=[];
+let requestVersion=0,objectURLs=[];
 const message=s=>{$("om-status").textContent=s;};
 function applySize(){
  const s=Number($("om-size").value);
@@ -25,20 +26,65 @@ function updateNavigation(){
  $("om-position").textContent=index<0?"No pair selected.":
   (index+1)+" of "+visibleIds.length+" in selected warning cohort";
 }
-function selectPair(id){
+function retireImages(){
+ for(const objectURL of objectURLs)URL.revokeObjectURL(objectURL);
+ objectURLs=[];
+ $("om-a").removeAttribute("src");
+ $("om-b").removeAttribute("src");
+}
+async function fetchVerifiedMask(candidate){
+ if(!globalThis.crypto?.subtle?.digest||!URL.createObjectURL||!URL.revokeObjectURL)
+  throw Error("Browser SHA-256 or verified-image display unavailable");
+ const response=await fetch(candidate.svg);
+ if(!response.ok)throw Error("Neutral source SVG unavailable");
+ const buffer=await response.arrayBuffer();
+ if(buffer.byteLength===0||buffer.byteLength>1048576)
+  throw Error("Neutral source SVG size outside safe bounds");
+ const digest=await crypto.subtle.digest("SHA-256",buffer);
+ const actual=Array.from(new Uint8Array(digest),b=>b.toString(16).padStart(2,"0")).join("");
+ if(actual!==candidate.sha256)throw Error("Neutral source SVG SHA-256 mismatch");
+ return buffer;
+}
+async function selectPair(id){
  const target=targets.find(x=>x.id===id);
  if(!target)throw Error("Masked source-region pair unavailable");
  const [a,b]=target.candidates;
+ const version=++requestVersion;
  selected=id;
  $("om-pair").value=id;
+ retireImages();
  $("om-native").textContent=target.character;
- $("om-a").src=a.svg;$("om-b").src=b.svg;
  $("om-a-form").textContent="Source component form: "+a.form;
  $("om-b-form").textContent="Source component form: "+b.form;
  $("om-meta").textContent="Source pair "+target.rank+" · "+target.character+
   " · warning cohort "+target.reviewState+" · two provisional source regions · "+
   "0 independently adjudicated owners.";
  updateNavigation();
+ message("Checking both neutral SVG SHA-256 digests before display.");
+ try{
+  const verified=await Promise.all(target.candidates.map(fetchVerifiedMask));
+  if(version!==requestVersion)return;
+  const urls=[];
+  try{
+   for(const bytes of verified)
+    urls.push(URL.createObjectURL(new Blob([bytes],{type:"image/svg+xml"})));
+  }catch(e){
+   for(const url of urls)URL.revokeObjectURL(url);
+   throw e;
+  }
+  if(version!==requestVersion){
+   for(const url of urls)URL.revokeObjectURL(url);
+   return;
+  }
+  objectURLs=urls;
+  $("om-a").src=urls[0];
+  $("om-b").src=urls[1];
+  message("Two SHA-256-verified neutral region masks displayed; no independent owner certification.");
+ }catch(e){
+  if(version!==requestVersion)return;
+  retireImages();
+  message("Region display blocked: "+e.message+". No unverified SVG displayed.");
+ }
 }
 function showCohort(cohort,preferredId=null){
  if(!statuses.has(cohort))throw Error("Unrecognized warning cohort");
@@ -54,8 +100,8 @@ function showCohort(cohort,preferredId=null){
  }
  $("om-count").textContent=rows.length+" of 49 source-pair presentations · "+
   "0 certified components";
- selectPair(rows.find(x=>x.id===preferredId)?.id||rows[0].id);
  activeCohort=cohort;
+ return selectPair(rows.find(x=>x.id===preferredId)?.id||rows[0].id);
 }
 async function load(){
  try{
@@ -65,20 +111,19 @@ async function load(){
   if(!response.ok)throw Error("Key-separated source stimuli unavailable");
   targets=preview.validate(await response.json());
   applySize();
-  showCohort("all");
-  $("om-cohort").disabled=false;$("om-pair").disabled=false;
   const fragment=globalThis.location?.hash?.slice(1)||"";
-  if(fragment&&targets.some(t=>t.id===fragment))selectPair(fragment);
-  message("49 key-separated source-region displays ready. No review collected or certified.");
+  await showCohort("all",targets.find(t=>t.id===fragment)?.id);
+  $("om-cohort").disabled=false;$("om-pair").disabled=false;
  }catch(e){
+  ++requestVersion;retireImages();
   $("om-cohort").disabled=true;$("om-pair").disabled=true;
+  $("om-prev").disabled=true;$("om-next").disabled=true;
   message("Source-region presentation unavailable: "+e.message);
  }
 }
 $("om-cohort").addEventListener("change",()=>{
  try{
-  showCohort($("om-cohort").value,selected);
-  message("Warning cohort changed; no independent source-owner judgment.");
+  void showCohort($("om-cohort").value,selected);
  }catch(e){
   $("om-cohort").value=activeCohort;
   message("Cohort rejected: "+e.message);
@@ -86,8 +131,7 @@ $("om-cohort").addEventListener("change",()=>{
 });
 $("om-pair").addEventListener("change",()=>{
  try{
-  selectPair($("om-pair").value);
-  message("Provisional source-region presentation changed.");
+  void selectPair($("om-pair").value);
  }catch(e){
   if(selected)$("om-pair").value=selected;
   message("Source pair rejected: "+e.message);
@@ -96,8 +140,7 @@ $("om-pair").addEventListener("change",()=>{
 function move(offset){
  const index=visibleIds.indexOf(selected),next=visibleIds[index+offset];
  if(index<0||!next)return;
- selectPair(next);
- message("Source-region sequence advanced without recording a response.");
+ void selectPair(next);
 }
 $("om-prev").addEventListener("click",()=>move(-1));
 $("om-next").addEventListener("click",()=>move(1));
