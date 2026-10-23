@@ -200,6 +200,7 @@ jobs:
           node tools/glyph-pipeline/emoji_visibility_audit.mjs --check
           node tools/glyph-pipeline/event_role_contrast_audit.mjs --check
           node tools/glyph-pipeline/polysemy_triage.mjs --check
+          node tools/glyph-pipeline/polysemy_review_index.mjs --check
           node tools/glyph-pipeline/high_priority_remediation_smoke.mjs
           node tools/glyph-pipeline/semantic_coverage_smoke.mjs
           mkdir -p site/semantic
@@ -211,8 +212,10 @@ jobs:
           cp data/semantic/cedict-crossref/lexical-review-readiness-v0.1.json site/semantic/lexical-review-readiness-v0.1.json
           cp data/semantic/cedict-crossref/emoji-visibility-audit-v0.1.json site/semantic/emoji-visibility-audit-v0.1.json
           cp data/semantic/cedict-crossref/event-role-contrast-audit-v0.1.json site/semantic/event-role-contrast-audit-v0.1.json
+          cp data/semantic/cedict-crossref/polysemy-review-index-v0.1.json site/semantic/polysemy-review-index-v0.1.json
           test -s site/semantic/emoji-visibility-audit-v0.1.json
           test -s site/semantic/event-role-contrast-audit-v0.1.json
+          test -s site/semantic/polysemy-review-index-v0.1.json
           test -s site/semantic/sense-review-queue-v0.1.json
           test -s site/semantic/full-lexical-review-queue-v0.1.json
           test -s site/semantic/lexical-review-readiness-v0.1.json

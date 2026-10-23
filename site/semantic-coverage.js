@@ -25,6 +25,7 @@
   let reviewRows = new Map();
   let visibilityRows = new Map();
   let mixedRoleForms = new Set();
+  let polysemyRows = new Map();
   let strictSummary = null;
   let deskCounts = {analyzed:0,total:248};
   let page = 0;
@@ -233,6 +234,7 @@
     const visual=visualFilter.value;
     return ledger.characters.filter(x=>{
       const crossref=lexicalRows.get(x.rank);
+      const lexicalComplexity=polysemyRows.get(x.rank);
       const aligned=strictRows.get(x.rank)||[];
       const cues=visibilityRows.get(x.rank)||[];
       return (selected==="all" || selected===state(x)) &&
@@ -249,6 +251,10 @@
           y.deskAnalysis?.provisionalNextAction===action)) &&
         (dictionary==="all" ||
           (dictionary==="crossref" && !!crossref) ||
+          (dictionary==="multiple-readings" && lexicalComplexity?.readingCount>1) ||
+          (dictionary==="complex-higher" && lexicalComplexity?.triageTier==="higher") ||
+          (dictionary==="one-cue-complex" && lexicalComplexity?.selectedMeaningCount===1 &&
+            (lexicalComplexity.readingCount>1 || lexicalComplexity.definitionFragmentCount>=8)) ||
           (dictionary==="not-crossref" && !crossref) ||
           (dictionary==="needs-review" && aligned.some(s=>!s.wholeTermMatch)) ||
           (dictionary==="desk-analyzed" && (reviewRows.get(x.rank)||[]).some(y=>!!y.deskAnalysis)) ||
@@ -291,20 +297,31 @@
 
   async function load() {
     try {
-      const [response,profileResponse,lexicalResponse,auditResponse,reviewResponse,visibilityResponse,readinessResponse]=await Promise.all([
+      const [response,profileResponse,lexicalResponse,auditResponse,reviewResponse,visibilityResponse,readinessResponse,polysemyResponse]=await Promise.all([
         fetch("semantic/mandarin-1000-v0.1.json"),
         fetch("profiles/mandarin-1000-v1.json"),
         fetch("semantic/lexical-crossref-v0.1.json"),
         fetch("semantic/strict-gloss-index-v0.1.json"),
         fetch("semantic/sense-review-queue-v0.1.json"),
         fetch("semantic/emoji-visibility-audit-v0.1.json"),
-        fetch("semantic/lexical-review-readiness-v0.1.json")
+        fetch("semantic/lexical-review-readiness-v0.1.json"),
+        fetch("semantic/polysemy-review-index-v0.1.json")
       ]);
-      if(!response.ok || !profileResponse.ok || !lexicalResponse.ok || !auditResponse.ok || !reviewResponse.ok || !visibilityResponse.ok || !readinessResponse.ok)
+      if(!response.ok || !profileResponse.ok || !lexicalResponse.ok || !auditResponse.ok || !reviewResponse.ok || !visibilityResponse.ok || !readinessResponse.ok || !polysemyResponse.ok)
         throw new Error("Character, dictionary or audit data unavailable");
-      const [data,profile,lexical,audit,review,visibility,readiness]=await Promise.all([
-        response.json(),profileResponse.json(),lexicalResponse.json(),auditResponse.json(),reviewResponse.json(),visibilityResponse.json(),readinessResponse.json()
+      const [data,profile,lexical,audit,review,visibility,readiness,polysemy]=await Promise.all([
+        response.json(),profileResponse.json(),lexicalResponse.json(),auditResponse.json(),reviewResponse.json(),visibilityResponse.json(),readinessResponse.json(),polysemyResponse.json()
       ]);
+      if(polysemy.schema!=="chromalect.semantic.polysemy-review-index.v0.1" ||
+         polysemy.status!=="automated_dictionary_complexity_inventory_not_sense_validation" ||
+         polysemy.summary.charactersAudited!==1000 ||
+         polysemy.summary.independentLexicalApproved!==0 ||
+         polysemy.summary.independentEmojiApproved!==0 ||
+         polysemy.summary.productionVerified!==0 ||
+         polysemy.records.length!==1000 ||
+         polysemy.records.some((r,i)=>r.rank!==i+1 || r.character!==data.characters[i]?.character))
+        throw new Error("Dictionary complexity research index is incomplete or misaligned");
+      polysemyRows=new Map(polysemy.records.map(x=>[x.rank,x]));
       if(readiness.schema!=="chromalect.semantic.lexical-review-readiness.v0.1" ||
          readiness.status!=="source_packets_ready_not_approved" ||
          readiness.sourceQueue!=="full-lexical-review-queue-v0.1.json" ||

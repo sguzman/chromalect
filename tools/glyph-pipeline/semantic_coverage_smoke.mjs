@@ -11,6 +11,7 @@ const readiness=JSON.parse(fs.readFileSync("data/semantic/cedict-crossref/lexica
 const audit=JSON.parse(fs.readFileSync("data/semantic/cedict-crossref/strict-gloss-index-v0.1.json","utf8"));
 const review=JSON.parse(fs.readFileSync("data/semantic/cedict-crossref/sense-review-queue-v0.1.json","utf8"));
 const visibility=JSON.parse(fs.readFileSync("data/semantic/cedict-crossref/emoji-visibility-audit-v0.1.json","utf8"));
+const polysemy=JSON.parse(fs.readFileSync("data/semantic/cedict-crossref/polysemy-review-index-v0.1.json","utf8"));
 const catalog=JSON.parse(fs.readFileSync("data/catalog/characters-0001-1000.json","utf8"));
 const profile={schema:"chromalect.mandarin-character-profile.v1",catalog_count:1000,
   characters:catalog.characters.map(x=>({rank:x.rank,character:x.character}))};
@@ -79,6 +80,7 @@ const vmContext={
     if(path==="semantic/sense-review-queue-v0.1.json")return {ok:true,json:async()=>review};
     if(path==="semantic/emoji-visibility-audit-v0.1.json")return {ok:true,json:async()=>visibility};
     if(path==="semantic/lexical-review-readiness-v0.1.json")return {ok:true,json:async()=>readiness};
+    if(path==="semantic/polysemy-review-index-v0.1.json")return {ok:true,json:async()=>polysemy};
     throw new Error("Unexpected resource: "+path);
   }
 };
@@ -177,6 +179,16 @@ ids["semantic-lexical-filter"].events.change();
 assert.match(ids["semantic-coverage-status"].textContent,new RegExp((1000-lexical.metrics.crossReferenced)+" characters match"));
 ids["semantic-lexical-filter"].value="all";
 ids["semantic-lexical-filter"].events.change();
+for(const [kind,expected] of [
+ ["multiple-readings",339],["complex-higher",142],["one-cue-complex",367]
+]){
+ ids["semantic-lexical-filter"].value=kind;
+ ids["semantic-lexical-filter"].events.change();
+ assert.match(ids["semantic-coverage-status"].textContent,
+   new RegExp(expected+" characters match"));
+}
+ids["semantic-lexical-filter"].value="all";
+ids["semantic-lexical-filter"].events.change();
 for(const [action,expected] of [
   ["inspect_context",161],["reassess_or_defer",69],
   ["redesign_verb_cue",9],["redesign_pictogram",8],
@@ -220,6 +232,7 @@ assert.equal(data.initialScreeningReview.experimentalExpressionCount,897);
 assert.match(html,/data-character-layer-controls/);
 assert.match(html,/src="layers.js"/);
 assert.match(html,/id="semantic-lexical-filter"/);
+assert.match(html,/value="complex-higher"/);
 assert.match(html,/id="semantic-action-filter"/);
 assert.match(html,/id="semantic-visual-filter"/);
 assert.match(html,/value="mixed-role"/);
