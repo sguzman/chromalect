@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Mandarin dictionary reading inventory · Chromalect</title>
+<meta name="description" content="Source-first, local-only research worksheet for recorded Mandarin dictionary readings across the first 1,000 characters. No production approvals.">
+<script src="theme.js"></script>
+<script src="layers.js" defer></script>
+<script src="dictionary-readings.js" defer></script>
+<script src="reading-inventory.js" defer></script>
+<link rel="stylesheet" href="style.css">
+<style>
+.reading-study{max-width:1000px}
+.reading-study p{max-width:880px}
+.reading-setup{display:flex;flex-wrap:wrap;gap:14px;margin:22px 0}
+.reading-setup label,.reading-answer label{display:flex;flex-direction:column;gap:6px;color:var(--sub);font-size:13px}
+.reading-setup label{min-width:230px}
+.reading-study select,.reading-study textarea,.reading-study input[type=text]{font:inherit;color:var(--ink);background:var(--panel);border:1px solid var(--border);border-radius:9px;padding:11px;box-sizing:border-box}
+.reading-study select{max-width:100%}
+.reading-study textarea{width:100%;min-height:115px;resize:vertical}
+.reading-study input[type=text]{width:100%}
+.reading-study button{font:inherit;color:var(--ink);background:var(--panel);border:1px solid var(--border);border-radius:9px;padding:10px 15px;cursor:pointer}
+.reading-study button.primary{background:var(--active-bg);border-color:var(--active-border);font-weight:700}
+.reading-study button:disabled{opacity:.45;cursor:default}
+.reading-actions{display:flex;flex-wrap:wrap;gap:10px;margin:16px 0}
+.reading-panel{border:1px solid var(--border);border-radius:15px;padding:24px;background:var(--tile-bg);margin:18px 0}
+.reading-glyph{min-height:120px;display:flex;align-items:center}
+.reading-glyph .glyph{font-size:64px}
+.reading-source{background:var(--panel2);padding:14px 17px;border-radius:10px;overflow-wrap:anywhere;margin:10px 0}
+.reading-source p{margin:7px 0}
+.reading-answer{display:grid;gap:14px;margin-top:20px}
+.reading-bar{height:12px;border-radius:99px;border:1px solid var(--border);background:var(--panel2);overflow:hidden}
+.reading-bar div{width:0;height:100%;background:var(--accent)}
+.reading-notice{background:var(--panel2);padding:15px;border-left:3px solid var(--active-border);border-radius:0 10px 10px 0}
+.reading-note{font-size:13px;color:var(--sub)}
+.reading-study [hidden]{display:none!important}
+</style>
+</head>
+<body>
+<header class="wrap"><div class="brand"><div><b>CHROMALECT</b><small>Language, made visible</small></div></div></header>
+<main class="wrap reading-study">
+<div class="eyebrow">Research worksheet · source reading inventory</div>
+<h1>Mandarin dictionary reading inventory</h1>
+<p class="intro">Review the <strong>1,393 recorded reading entries across 1,000 characters</strong> independently of any provisional emoji meaning. This includes 173 reading entries for 119 characters with no proposed pictogram. The existing 897-candidate <a href="lexical-review.html">sense-alignment worksheet</a> is a separate instrument.</p>
+<p class="reading-notice"><strong>Preliminary research only.</strong> CC-CEDICT readings include names, specialized uses, historical forms, and graph-component conventions. A reading is not necessarily an independent contemporary lexical sense. These local observations neither verify meanings nor alter published mappings. Starting a new session discards unexported observations.</p>
+<div data-character-layer-controls></div>
+<div class="reading-setup">
+<label>Reading cohort
+<select id="reading-scope">
+<option value="higher">High-attention polysemy (319 reading entries)</option>
+<option value="all">All readings (1,393)</option>
+<option value="multiple">Characters with multiple readings (732 entries)</option>
+<option value="unmapped">Characters without emoji candidates (173 entries)</option>
+<option value="targeted">Targeted complexity (503 entries)</option>
+<option value="deferred">Low-complexity pictogram deferrals (67 entries)</option>
+<option value="baseline">Baseline reading entries (504)</option>
+</select></label>
+<label>Batch size
+<select id="reading-count">
+<option value="20">20 reading entries</option>
+<option value="50">50 reading entries</option>
+<option value="all">All eligible entries</option>
+</select></label>
+</div>
+<div class="reading-actions"><button type="button" class="primary" id="reading-start" disabled>Start reading review</button><button type="button" id="reading-export" disabled>Export local JSON</button></div>
+<p id="reading-status" class="reading-note" role="status" aria-live="polite">Loading pinned dictionary reading evidence.</p>
+<div id="reading-session" hidden>
+<p id="reading-count-label" class="reading-note"></p>
+<div id="reading-progress" class="reading-bar" role="progressbar" aria-label="Preliminary reading observations recorded" aria-valuemin="0" aria-valuemax="20" aria-valuenow="0"><div id="reading-progress-fill"></div></div>
+<section class="reading-panel">
+<div id="reading-glyph" class="reading-glyph" aria-label="Source-aligned Chinese character"></div>
+<p class="reading-note" id="reading-rank"></p>
+<p><strong>Dictionary reading: <span id="reading-current"></span></strong></p>
+<div class="reading-source"><strong>Pinned CC-CEDICT definition text for this reading</strong><p id="reading-gloss"></p></div>
+<details><summary>Other recorded readings and original source excerpt</summary><p id="reading-other" class="reading-note"></p><p id="reading-full" class="reading-source"></p></details>
+<p id="reading-source-id" class="reading-note"></p>
+<div id="reading-form" class="reading-answer">
+<label for="reading-usage">Preliminary usage category
+<select id="reading-usage">
+<option value="">Select a category</option>
+<option value="ordinary">Potential ordinary contemporary use</option>
+<option value="specialized">Specialized or technical use</option>
+<option value="historical">Historical or literary use</option>
+<option value="proper_name">Proper name / surname</option>
+<option value="graphic">Graphic component / radical convention</option>
+<option value="undetermined">Insufficient evidence / undetermined</option>
+</select></label>
+<label for="reading-unit">Contextual unit
+<select id="reading-unit">
+<option value="">Select a contextual scope</option>
+<option value="standalone">Character as independent lexical unit</option>
+<option value="in_word">Usage within a larger word</option>
+<option value="both">Both contexts indicated (unverified)</option>
+<option value="undetermined">Undetermined</option>
+</select></label>
+<label for="reading-example">Illustrative Chinese usage example (optional; provide provenance)
+<input type="text" id="reading-example" maxlength="500" placeholder="Only include an example supported by a source, not an invented one"></label>
+<label for="reading-reference">Additional independent evidence reference (optional)
+<input type="text" id="reading-reference" maxlength="1000" placeholder="Corpus, dictionary entry, publication or stable locator"></label>
+<label for="reading-rationale">Evidence explanation / remaining uncertainty (required; 12+ characters)
+<textarea id="reading-rationale" maxlength="15000" placeholder="Distinguish the pinned dictionary text from independently checked usage."></textarea></label>
+<div class="reading-actions"><button type="button" class="primary" id="reading-commit" disabled>Lock preliminary reading observation</button></div>
+</div>
+<div id="reading-after" hidden><p class="reading-note">This reading observation is stored only in the current browser session until explicitly exported. It confers no independent approval.</p><button type="button" class="primary" id="reading-next">Next reading</button></div>
+</section>
+</div>
+<p class="reading-note">Source: pinned CC-CEDICT per-character mirror, revision <code>63c2569948629323b515833930fdd10f285401b6</code> (CC BY-SA 4.0), with original first-tranche source identities retained. See the <a href="https://github.com/sguzman/chromalect/blob/main/docs/mandarin-reading-inventory-protocol.md">methodology and limitations</a>.</p>
+</main>
+<footer class="wrap"><a href="index.html">Chromalect overview</a> · <a href="semantic-coverage.html">Semantic research</a></footer>
+</body>
+</html>

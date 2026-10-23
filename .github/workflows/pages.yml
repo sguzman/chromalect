@@ -190,9 +190,11 @@ jobs:
           node --check site/emoji-comprehension.js
           node --check site/lexical-review.js
           node --check site/dictionary-readings.js
+          node --check site/reading-inventory.js
           node tools/glyph-pipeline/emoji_comprehension_smoke.mjs
           node tools/glyph-pipeline/lexical_review_workbench_smoke.mjs
           node tools/glyph-pipeline/dictionary_readings_smoke.mjs
+          node tools/glyph-pipeline/reading_inventory_smoke.mjs
           node tools/glyph-pipeline/review_session_validate_smoke.mjs
           node tools/glyph-pipeline/semantic_inventory_smoke.mjs
           node tools/glyph-pipeline/lexical_crossref_smoke.mjs
@@ -218,6 +220,7 @@ jobs:
           cp data/semantic/cedict-crossref/event-role-contrast-audit-v0.1.json site/semantic/event-role-contrast-audit-v0.1.json
           cp data/semantic/cedict-crossref/polysemy-review-index-v0.1.json site/semantic/polysemy-review-index-v0.1.json
           cp data/semantic/cedict-crossref/reading-sensitive-gloss-audit-v0.1.json site/semantic/reading-sensitive-gloss-audit-v0.1.json
+          cp data/semantic/cedict-crossref/polysemy-triage-v0.1.json site/semantic/polysemy-triage-v0.1.json
           for section in 0001-0200 0201-0400 0401-0600 0601-0800 0801-1000; do
             cp "data/semantic/cedict-crossref/dictionary-excerpts-$section.json" "site/semantic/"
             test -s "site/semantic/dictionary-excerpts-$section.json"
@@ -225,6 +228,7 @@ jobs:
           test -s site/semantic/emoji-visibility-audit-v0.1.json
           test -s site/semantic/event-role-contrast-audit-v0.1.json
           test -s site/semantic/polysemy-review-index-v0.1.json
+          test -s site/semantic/polysemy-triage-v0.1.json
           test -s site/semantic/reading-sensitive-gloss-audit-v0.1.json
           test -s site/semantic/sense-review-queue-v0.1.json
           test -s site/semantic/full-lexical-review-queue-v0.1.json
@@ -235,6 +239,7 @@ jobs:
           test -s site/semantic-coverage.html
           test -s site/emoji-comprehension.html && test -s site/emoji-comprehension.js
           test -s site/lexical-review.html && test -s site/lexical-review.js && test -s site/dictionary-readings.js
+          test -s site/reading-inventory.html && test -s site/reading-inventory.js
       - name: Check neutral unknown-component comparisons
         run: test -s site/glyphs/unknown-components/index.html && test -s site/glyphs/unknown-components/records.json
       - name: Check hierarchical source review

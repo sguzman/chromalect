@@ -21,6 +21,7 @@
     semanticLab: { label: "Emoji grammar lab · experimental", path: "semantic-lab.html" },
     emojiComprehension: { label: "Blind emoji comprehension · experimental", path: "emoji-comprehension.html" },
     lexicalReview: { label: "Mandarin sense review worksheet · experimental", path: "lexical-review.html" },
+    readingInventory: { label: "Mandarin reading inventory · experimental", path: "reading-inventory.html" },
     radicals: { label: "Modern radicals", path: "radicals.html" },
     kangxi: { label: "Kangxi radicals", path: "kangxi.html" },
     colors: { label: "Color registry · v0.6", path: "colors.html" },
@@ -59,6 +60,7 @@
     if (rel === "semantic-lab.html") return "semanticLab";
     if (rel === "emoji-comprehension.html") return "emojiComprehension";
     if (rel === "lexical-review.html") return "lexicalReview";
+    if (rel === "reading-inventory.html") return "readingInventory";
     if (rel === "radicals.html") return "radicals";
     if (rel === "kangxi.html") return "kangxi";
     if (rel === "colors.html") return "colors";
@@ -74,7 +76,7 @@
   }
   const active = currentKey();
   const browseKeys = new Set(["radicals", "kangxi", "colors", "curated", "directory"]);
-  const reviewKeys = new Set(["semanticCoverage", "semanticLab", "emojiComprehension", "lexicalReview", "diagnostics", "comparisons", "alternatives",
+  const reviewKeys = new Set(["semanticCoverage", "semanticLab", "emojiComprehension", "lexicalReview", "readingInventory", "diagnostics", "comparisons", "alternatives",
     "unknown", "hierarchy", "unmapped"]);
 
   function element(tag, className, label) {

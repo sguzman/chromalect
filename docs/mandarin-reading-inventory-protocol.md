@@ -1,0 +1,37 @@
+# Mandarin dictionary reading-inventory review
+
+**Status:** research instrument covering **1,393 dictionary reading records associated with all 1,000 first-tranche characters**. It does not validate the sense inventory or grant production approval.
+
+## Purpose and denominator
+
+The [reading-inventory worksheet](../site/reading-inventory.html) complements the [897 selected meaning-candidate worksheet](../site/lexical-review.html). The former begins from independently pinned CC-CEDICT reading strings rather than provisional emoji: it therefore includes all **119 characters** without an initial pictogram (representing **173 recorded reading entries**). A dictionary reading is a headword-level source record, not a counted verified contemporary Mandarin sense.
+
+| Scope | Reading records |
+| --- | ---: |
+| All 1,000 characters | 1,393 |
+| High-attention: multiple readings and at least eight gloss fragments | 319 |
+| Targeted complexity | 503 |
+| Deferred-only low-complexity characters | 67 |
+| Baseline | 504 |
+| Characters with multiple readings (339 characters) | 732 |
+| Characters without emoji candidates (119 characters) | 173 |
+
+These cohorts overlap except for the four exclusive triage tiers. The tiers are defined in [polysemy triage](mandarin-polysemy-triage.md), not by verified senses.
+
+## Review and provenance
+
+The static page loads the five pinned [CC-CEDICT excerpt blocks](../data/semantic/cedict-crossref/) and [polysemy-triage-v0.1.json](../data/semantic/cedict-crossref/polysemy-triage-v0.1.json) already published through Pages. Exact source reading markers are grouped using the shared [dictionary reading parser](../site/dictionary-readings.js). A character's glyph uses the existing source-aligned display; no color, glyph, sound or emoji mapping is altered.
+
+For each selected reading, the worksheet asks for a **preliminary usage category** (ordinary, specialized, historical, name, graphic convention or undetermined), a **contextual unit** (standalone character, in-word use, both or undetermined), and an evidence rationale. An independently sourced example and locator can be included when available, but none is invented or automatically inferred from an English dictionary gloss. The original excerpt and any other source reading spellings remain inspectable.
+
+Session scope and count are frozen when the session begins. Observations remain browser-local until explicitly exported as `chromalect.reading-inventory-observation-session.v0.1`; no participant identity is collected by default. Free-text fields should omit personal information. The export is always marked preliminary; it does not create independent lexical approvals or affect production data.
+
+## Validation
+
+Run `node tools/glyph-pipeline/reading_inventory_validate.mjs <export.json>` on an explicitly exported local file. Its checks confirm immutable reading identity, source path and SHA, dictionary excerpt, selected cohort, unique entry keys, questionnaire values, rationale presence and explicit nonapproval fields. [Smoke tests](../tools/glyph-pipeline/reading_inventory_smoke.mjs) exercise the page and validator with synthetic responses. They test integrity, **not translation accuracy**. No synthetic participant observations are committed.
+
+CC-CEDICT excerpt material remains subject to **CC BY-SA 4.0**, revision `63c2569948629323b515833930fdd10f285401b6`. The original Unihan candidate meanings are separately attributed under the Unicode source license.
+
+## Independence gate
+
+A qualified independent review must separately establish modern reading usage and representative attested contexts, distinguish names or graphic conventions from lexical senses, and adjudicate disagreements. A preliminary local worksheet observation, automated dictionary grouping, or assistant-authored reading summary is not an independently certified linguistic result. The research project still records **0 lexical approvals, 0 independent emoji comprehension approvals, and 0 production semantic approvals**.
