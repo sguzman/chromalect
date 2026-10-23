@@ -1,0 +1,63 @@
+{
+  "schema": "chromalect.glyph.source-owner-independent-adjudication-protocol.v0.1",
+  "status": "planned_not_preregistered_not_executed",
+  "profile": "Mandarin simplified Chinese",
+  "reviewScope": {
+    "targetManifest": "glyphs/research/heldout-identification-target-v0.1/index-v0.1.json",
+    "complementManifest": "glyphs/research/owner-complement-locators-v0.1/index-v0.1.json",
+    "palette": "mandarin-component-identity@0.6.0",
+    "warningPairObservations": 49,
+    "flaggedCharacters": 48,
+    "introducedWarnings": 23,
+    "resolvedWarnings": 21,
+    "retainedWarnings": 5
+  },
+  "prerequisites": {
+    "protocolPreregistered": false,
+    "independentSourceCorpusPinnedForOwnerVerification": false,
+    "qualifiedIndependentReviewersRecruited": false,
+    "minimumIndependentReviewsPerPair": 2,
+    "thirdIndependentReviewOnDisagreementRequired": true,
+    "sourceGeometryChangeWithoutNewVersionAllowed": false,
+    "existingLocalIntakeHidesMachineAssignedKey": false,
+    "independentBlindedReviewInterfaceAvailable": false,
+    "reviewerIndependenceAttestationsCollected": false,
+    "sourceUseAndAttributionReviewComplete": false,
+    "acceptedStudySampleSelected": false
+  },
+  "decisionProcedure": [
+    "Precommit the item set, attribution rules, adjudication criteria, and qualified reviewer inclusion requirements before collecting independent assessments.",
+    "Give at least two independent qualified reviewers the original character, uncolored source geometry, component-form candidates, and pinned reference sources without revealing the machine-assigned owner or another reviewer's decision.",
+    "Record exact source artifact revisions, independently attributable evidence locations, geometry/ownership observations, and alternative interpretations for every provisional item.",
+    "Reconcile agreement against predefined acceptance criteria; an apparent match with the source machine key is not independent certification.",
+    "When independent reviewers disagree, retain unresolved status until a separately qualified reviewer examines the competing evidence; do not silently break ties using machine labels.",
+    "Version every accepted or rejected mapping decision separately with source attribution and an auditable change rationale before considering any effect on an atlas.",
+    "Require separate legibility, accessibility, recruitment, consent and participant-study checks before any learning or color-discrimination efficacy claim."
+  ],
+  "candidateDecisionStates": [
+    "unreviewed",
+    "independent_support_pending_reconciliation",
+    "documented_owner_conflict",
+    "alternative_decomposition_requires_source_review",
+    "disagreement_unresolved",
+    "accepted_after_independent_reconciliation"
+  ],
+  "acceptanceGate": {
+    "automaticPromotionPermitted": false,
+    "independentReviewerReports": 0,
+    "independentlyReconciledPairs": 0,
+    "sourceOwnerCertifications": 0,
+    "certifiedGlyphs": 0,
+    "validatedColorDiscriminationResults": 0,
+    "approvedSemanticMappings": 0,
+    "eligibleLearningStudyItems": 0,
+    "conflictDecisions": 0
+  },
+  "decisions": [],
+  "nonclaims": [
+    "The 49 machine-pinned review targets have not been independently adjudicated.",
+    "The existing local evidence worksheet exposes machine owner labels and is not a reviewer-blind protocol.",
+    "Visual comparison with a font-dependent native glyph is not independent stroke ownership evidence.",
+    "A documented prospective protocol is not completed research or evidence of participant performance."
+  ]
+}

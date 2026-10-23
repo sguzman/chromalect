@@ -2,6 +2,10 @@
 
 Chromalect publishes 49 machine-selected locator regions across 48 first-tranche Chinese glyphs from the five-fold color-warning research. The [source-owner adjudication intake](../site/component-owner-adjudication.html) makes each region independently inspectable alongside the original v0.6 glyph and fold-specific candidate rendering. The locator is derived from the **current source stroke ownership mapping**, not an independently established answer key.
 
+## Independent acceptance remains a separate procedure
+
+The [independent owner-adjudication protocol](source-owner-independent-adjudication-protocol.md) is a prospective draft with an explicit machine-readable blocked gate. The current local worksheet exposes source-owner answers and is not a qualified or blinded expert-review instrument; successful data validation does not award any source-owner certification.
+
 ## Complementary source-owner masks
 
 The paired-region review now shows **both** component candidates independently: the existing 49 original target locators and 49 new complementary source-owner locators. Each complementary image shades only the *other* mapped component charcoal, with every remaining original source path pale gray. Both images preserve all original SVG path geometry, path sequence, component ownership attributes and transforms; neither changes the original glyph or the fold-trained color condition.

@@ -446,6 +446,10 @@ jobs:
           node tools/glyph-pipeline/component_owner_complement_locators.mjs --write
           node tools/glyph-pipeline/component_owner_complement_locators.mjs --check
           node tools/glyph-pipeline/component_owner_complement_locators_smoke.mjs
+          node tools/glyph-pipeline/source_owner_independent_protocol_smoke.mjs
+          mkdir -p site/research
+          cp data/research/source-owner-independent-adjudication-protocol-v0.1.json site/research/
+          test -s site/source-owner-independent-protocol.html
           test -s site/glyphs/research/owner-complement-locators-v0.1/index-v0.1.json
           node --check site/heldout-component-identification-core.js
           node --check site/heldout-component-identification.js
