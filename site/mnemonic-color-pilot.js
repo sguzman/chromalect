@@ -2,7 +2,7 @@
 (() => {
 "use strict";
 const $=id=>document.getElementById(id);
-const needed=["mg-filter","mg-status","mg-summary","mg-count","mg-list"];
+const needed=["mg-filter","mg-status","mg-summary","mg-benchmark","mg-count","mg-list"];
 if(needed.some(id=>!$(id)))return;
 const el=(tag,cls,value)=>{
  const e=document.createElement(tag);
@@ -73,10 +73,11 @@ function show(){
 async function load(){
  try{
   const urls=["semantic-group-color-pilot-v0.1.json",
-   "palettes/mandarin-component-identity-v0.6.json"];
+   "palettes/mandarin-component-identity-v0.6.json",
+   "mnemonic-partition-benchmark-v0.1.json"];
   const responses=await Promise.all(urls.map(u=>fetch(u)));
   if(responses.some(x=>!x.ok))throw Error("Published pilot or palette unavailable");
-  const [study,palette]=await Promise.all(responses.map(r=>r.json()));
+  const [study,palette,benchmark]=await Promise.all(responses.map(r=>r.json()));
   if(study.schema!=="chromalect.palette.mnemonic-hint-color-pilot.v0.1"||
      study.status!=="pilot_hint_color_distance_measurement_not_verified_semantic_families"||
      study.provenance.palette!=="mandarin-component-identity@0.6.0"||
@@ -128,6 +129,38 @@ async function load(){
   if(expectedTotal!==40||pairs!==88||
      palette.components.filter(x=>x.mnemonic_group_hint!==null).length!==40)
    throw Error("Pilot cohort is not source complete");
+  if(benchmark.schema!=="chromalect.palette.mnemonic-partition-benchmark.v0.1"||
+     benchmark.status!=="fixed_palette_random_partition_descriptive_control_not_semantic_or_statistical_approval"||
+     benchmark.provenance.palette!=="mandarin-component-identity@0.6.0"||
+     benchmark.provenance.randomSeedUnsigned!==0xC01A2631||
+     benchmark.provenance.iterations!==10000||
+     benchmark.provenance.paletteRecolored!==false||
+     benchmark.provenance.semanticMembershipAdjudicated!==false||
+     benchmark.provenance.participantStudyConducted!==false||
+     benchmark.scope.pilotComponents!==40||
+     benchmark.scope.withinPairs!==88||
+     benchmark.scope.betweenPairs!==692||
+     benchmark.result.statisticallyValidatedSemanticClustering!==false||
+     benchmark.result.perceptualDiscriminationApproved!==false||
+     benchmark.result.lexicalSemanticFamiliesApproved!==0||
+     Math.abs(benchmark.result.observedWithinHintMeanDeltaOk-
+      study.summary.meanWithinHintDeltaOk)>0.000001||
+     benchmark.result.permutationsAtOrBelowObserved+
+      benchmark.result.permutationsAboveObserved!==10000||
+     !(benchmark.result.quantiles.p025<
+       benchmark.result.observedWithinHintMeanDeltaOk&&
+       benchmark.result.observedWithinHintMeanDeltaOk<
+       benchmark.result.quantiles.p975))
+   throw Error("Descriptive partition control is inconsistent with source hint cohort");
+  $("mg-benchmark").textContent="Fixed-color random-label reference: "+
+   "original within-hint mean ΔOK "+benchmark.result.observedWithinHintMeanDeltaOk.toFixed(4)+
+   " versus mean "+benchmark.result.permutedMeanWithinHintDeltaOk.toFixed(4)+
+   " for 10,000 seeded, fixed-group-size partitions. "+
+   "Central 95% reference interval: "+
+   benchmark.result.quantiles.p025.toFixed(4)+"–"+
+   benchmark.result.quantiles.p975.toFixed(4)+
+   ". Original labels fall inside this descriptive interval. "+
+   "No statistical, semantic-family or human visual-comprehension approval.";
   groups=study.groups;
   $("mg-filter").replaceChildren();
   for(const [value,label] of [["all","All eight hints"],...expectedHints.map(([id,n])=>[id,id.replaceAll("-"," ")+" ("+n+")"])]){
