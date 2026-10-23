@@ -42,7 +42,7 @@ function makeSvg(r){
   stroke:"currentColor","stroke-width":2.8,"stroke-linecap":"round"}));
  return svg;
 }
-let records=[],other=[],mode="featural";
+let records=[],other=[],mode="featural",codecCount=0;
 function render(){
  mode=$("initial-mode").value;
  if(!["featural","pinyin","ipa"].includes(mode))throw Error("Unsupported visual comparison");
@@ -72,13 +72,29 @@ function render(){
  }
  $("initial-count").textContent=filtered.length+" / 21 consonantal source categories shown";
  $("initial-status").textContent="21 candidate contrasts; 3 written onset conventions excluded from the consonant set ("+
-   other.map(r=>r.token).join(", ")+"). No acoustic or learner validation.";
+   other.map(r=>r.token).join(", ")+"). "+codecCount+
+   " machine-only spelling roundtrips; no acoustic, phonemic or learner validation.";
 }
 async function load(){
  try{
-  const response=await fetch("phonetics/mandarin-initial-feature-candidates-v0.1.json");
-  if(!response.ok)throw Error("Missing pinned initial inventory");
-  const data=await response.json();
+  const responses=await Promise.all([
+   fetch("phonetics/mandarin-initial-feature-candidates-v0.1.json"),
+   fetch("phonetics/initial-feature-codec-audit-v0.1.json")]);
+  if(responses.some(r=>!r.ok))throw Error("Missing source inventory or codec audit");
+  const [data,audit]=await Promise.all(responses.map(r=>r.json()));
+  if(audit.schema!=="chromalect.phonetics.initial-feature-codec-audit.v0.1"||
+     audit.status!=="reversible_working_pinyin_initial_features_not_independent_phonological_proof"||
+     audit.counts.sourceCitationReadings!==1171||
+     audit.counts.conventionalOccurrenceRoundtrips!==997||
+     audit.counts.orthographicOccurrenceRoundtrips!==174||
+     audit.counts.roundTripFailures!==0||
+     audit.counts.humanDecodingTrials!==0||
+     audit.counts.independentlyEstablishedPhonemicContrasts!==0||
+     audit.counts.learningStudyResults!==0||
+     audit.source.visualShapeReadabilityAssessed!==false||
+     audit.source.sourcePaletteAssignmentsChanged!==false)
+   throw Error("Published initial-feature roundtrip proof is missing or mismatched");
+  codecCount=audit.counts.sourceCitationReadings;
   if(data.schema!=="chromalect.phonetics.mandarin-initial-feature-candidates.v0.1"||
      data.status!=="working_articulatory_candidate_codebook_not_independently_certified_phoneme_inventory"||
      data.statistics.conventionalInitialTokens!==21||
