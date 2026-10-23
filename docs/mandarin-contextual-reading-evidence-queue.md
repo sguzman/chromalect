@@ -25,3 +25,10 @@ A sentence containing a Chinese character does **not** by itself prove which Pin
 Run `node tools/glyph-pipeline/contextual_reading_evidence_workqueue.mjs --check` to regenerate and compare the pinned input ledgers. The [smoke test](../tools/glyph-pipeline/contextual_reading_evidence_workqueue_smoke.mjs) checks exact source keys, work stages, source-link counts and zero-approval invariants. All records remain local project research metadata; none contains example sentences or private reviewer communications.
 
 **Entry acceptance gates** for future research are a stable actual corpus record identifier, validated reuse rights and attribution, identifiable Chinese sentence context, independently checked reading in its word context, and a separate qualified sense review. Only then may a later version represent attested evidence. Pictogram comprehension is a different blinded review gate.
+
+
+## Pronunciation-search deduplication (casefold only)
+
+The [case-normalized search groups](../data/semantic/cedict-crossref/contextual-pronunciation-search-groups-v0.1.json) deduplicate case-equivalent spelling variants **only for gathering phonetic evidence**. The first 142 high-attention characters have **319 CC-CEDICT source reading entries**, which collapse to **241 distinct lowercased Pinyin labels**; **78** extra entries differ from an existing label only in capitalization. All 319 original source identities remain linked to their groups.
+
+This optimization does **not** merge semantic usages. For example, surname and ordinary-word entries sharing the same phonetic label must retain their distinct contexts, registers and word-sense adjudication. Source acquisition and independent approvals remain pending for every group.

@@ -1,0 +1,5335 @@
+{
+  "schema": "chromalect.semantic.contextual-pronunciation-search-groups.v0.1",
+  "status": "casefolded_pinyin_evidence_search_deduplication_not_sense_merger",
+  "input": {
+    "contextWorkqueue": "contextual-reading-evidence-workqueue-v0.1.json",
+    "canonicalNormalization": "pinyin-reading-label-normalization-v0.1.json"
+  },
+  "interpretation": [
+    "Group Pinyin labels only for pronunciation-evidence search; each original CC-CEDICT reading entry remains independently traceable.",
+    "A capitalized surname entry and its lowercase pronunciation may share a phonetic search group but have different usage and sense evidence requirements.",
+    "Neither casefolding nor apparent phonetic agreement independently verifies a contemporary Mandarin reading, usage, lexeme or approved emoji.",
+    "No grouped record contains an attested example or independently approved sense."
+  ],
+  "summary": {
+    "characters": 142,
+    "rawDictionaryReadingEntries": 319,
+    "caseNormalizedPronunciationLabelGroups": 241,
+    "sourceEntriesSharingCaseNormalizedLabels": 78,
+    "groupsContainingCapitalizedSourceLabels": 82,
+    "sourceGroupContextsRetrieved": 0,
+    "independentlyAdjudicatedContextualPronunciations": 0,
+    "independentlyAdjudicatedLexicalSenses": 0,
+    "approvedEmojiComprehension": 0,
+    "productionVerified": 0
+  },
+  "records": [
+    {
+      "rank": 127,
+      "character": "长",
+      "casefoldedPinyinLabel": "chang2",
+      "evidenceGroupKey": "127|chang2",
+      "sourceReadingKeys": [
+        "127|chang2"
+      ],
+      "originalSourceReadingLabels": [
+        "chang2"
+      ],
+      "sourceEntryCount": 1,
+      "includesNameCapitalization": false,
+      "evidenceAcquisitionPriority": 0,
+      "checkedPublisherLinks": [
+        "https://zdic.net/hans/%E9%95%BF"
+      ],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 127,
+      "character": "长",
+      "casefoldedPinyinLabel": "zhang3",
+      "evidenceGroupKey": "127|zhang3",
+      "sourceReadingKeys": [
+        "127|zhang3"
+      ],
+      "originalSourceReadingLabels": [
+        "zhang3"
+      ],
+      "sourceEntryCount": 1,
+      "includesNameCapitalization": false,
+      "evidenceAcquisitionPriority": 0,
+      "checkedPublisherLinks": [
+        "https://zdic.net/hans/%E9%95%BF"
+      ],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 142,
+      "character": "从",
+      "casefoldedPinyinLabel": "cong2",
+      "evidenceGroupKey": "142|cong2",
+      "sourceReadingKeys": [
+        "142|Cong2",
+        "142|cong2"
+      ],
+      "originalSourceReadingLabels": [
+        "Cong2",
+        "cong2"
+      ],
+      "sourceEntryCount": 2,
+      "includesNameCapitalization": true,
+      "evidenceAcquisitionPriority": 0,
+      "checkedPublisherLinks": [
+        "https://zdic.net/hans/%E4%BB%8E",
+        "https://zdic.net/hans/%E5%BE%9E"
+      ],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 142,
+      "character": "从",
+      "casefoldedPinyinLabel": "zong4",
+      "evidenceGroupKey": "142|zong4",
+      "sourceReadingKeys": [
+        "142|zong4"
+      ],
+      "originalSourceReadingLabels": [
+        "zong4"
+      ],
+      "sourceEntryCount": 1,
+      "includesNameCapitalization": false,
+      "evidenceAcquisitionPriority": 0,
+      "checkedPublisherLinks": [
+        "https://zdic.net/hans/%E4%BB%8E",
+        "https://zdic.net/hans/%E5%BE%9E"
+      ],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 201,
+      "character": "扒",
+      "casefoldedPinyinLabel": "ba1",
+      "evidenceGroupKey": "201|ba1",
+      "sourceReadingKeys": [
+        "201|ba1"
+      ],
+      "originalSourceReadingLabels": [
+        "ba1"
+      ],
+      "sourceEntryCount": 1,
+      "includesNameCapitalization": false,
+      "evidenceAcquisitionPriority": 0,
+      "checkedPublisherLinks": [
+        "https://dict.concised.moe.edu.tw/dictView.jsp?ID=23&la=0&powerMode=0",
+        "https://dict.concised.moe.edu.tw/dictView.jsp?ID=2401&la=0&powerMode=0",
+        "https://zdic.net/hans/%E6%89%92"
+      ],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 201,
+      "character": "扒",
+      "casefoldedPinyinLabel": "pa2",
+      "evidenceGroupKey": "201|pa2",
+      "sourceReadingKeys": [
+        "201|pa2"
+      ],
+      "originalSourceReadingLabels": [
+        "pa2"
+      ],
+      "sourceEntryCount": 1,
+      "includesNameCapitalization": false,
+      "evidenceAcquisitionPriority": 0,
+      "checkedPublisherLinks": [
+        "https://dict.concised.moe.edu.tw/dictView.jsp?ID=23&la=0&powerMode=0",
+        "https://dict.concised.moe.edu.tw/dictView.jsp?ID=2401&la=0&powerMode=0",
+        "https://zdic.net/hans/%E6%89%92"
+      ],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 339,
+      "character": "发",
+      "casefoldedPinyinLabel": "fa1",
+      "evidenceGroupKey": "339|fa1",
+      "sourceReadingKeys": [
+        "339|fa1"
+      ],
+      "originalSourceReadingLabels": [
+        "fa1"
+      ],
+      "sourceEntryCount": 1,
+      "includesNameCapitalization": false,
+      "evidenceAcquisitionPriority": 0,
+      "checkedPublisherLinks": [
+        "https://zdic.net/hans/%E5%8F%91"
+      ],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 339,
+      "character": "发",
+      "casefoldedPinyinLabel": "fa4",
+      "evidenceGroupKey": "339|fa4",
+      "sourceReadingKeys": [
+        "339|fa4"
+      ],
+      "originalSourceReadingLabels": [
+        "fa4"
+      ],
+      "sourceEntryCount": 1,
+      "includesNameCapitalization": false,
+      "evidenceAcquisitionPriority": 0,
+      "checkedPublisherLinks": [
+        "https://zdic.net/hans/%E5%8F%91"
+      ],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 905,
+      "character": "尾",
+      "casefoldedPinyinLabel": "wei3",
+      "evidenceGroupKey": "905|wei3",
+      "sourceReadingKeys": [
+        "905|wei3"
+      ],
+      "originalSourceReadingLabels": [
+        "wei3"
+      ],
+      "sourceEntryCount": 1,
+      "includesNameCapitalization": false,
+      "evidenceAcquisitionPriority": 0,
+      "checkedPublisherLinks": [
+        "https://dict.revised.moe.edu.tw/dictView.jsp?ID=10587&word=%3D%E5%B0%BE",
+        "https://zdic.net/hans/%E5%B0%BE"
+      ],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 905,
+      "character": "尾",
+      "casefoldedPinyinLabel": "yi3",
+      "evidenceGroupKey": "905|yi3",
+      "sourceReadingKeys": [
+        "905|yi3"
+      ],
+      "originalSourceReadingLabels": [
+        "yi3"
+      ],
+      "sourceEntryCount": 1,
+      "includesNameCapitalization": false,
+      "evidenceAcquisitionPriority": 0,
+      "checkedPublisherLinks": [
+        "https://dict.revised.moe.edu.tw/dictView.jsp?ID=10587&word=%3D%E5%B0%BE",
+        "https://zdic.net/hans/%E5%B0%BE"
+      ],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 164,
+      "character": "火",
+      "casefoldedPinyinLabel": "huo3",
+      "evidenceGroupKey": "164|huo3",
+      "sourceReadingKeys": [
+        "164|Huo3",
+        "164|huo3"
+      ],
+      "originalSourceReadingLabels": [
+        "Huo3",
+        "huo3"
+      ],
+      "sourceEntryCount": 2,
+      "includesNameCapitalization": true,
+      "evidenceAcquisitionPriority": 1,
+      "checkedPublisherLinks": [
+        "https://zdic.net/hans/%E7%81%AB"
+      ],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 231,
+      "character": "业",
+      "casefoldedPinyinLabel": "ye4",
+      "evidenceGroupKey": "231|ye4",
+      "sourceReadingKeys": [
+        "231|Ye4",
+        "231|ye4"
+      ],
+      "originalSourceReadingLabels": [
+        "Ye4",
+        "ye4"
+      ],
+      "sourceEntryCount": 2,
+      "includesNameCapitalization": true,
+      "evidenceAcquisitionPriority": 1,
+      "checkedPublisherLinks": [
+        "https://zdic.net/hans/%E4%B8%9A"
+      ],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 379,
+      "character": "过",
+      "casefoldedPinyinLabel": "guo4",
+      "evidenceGroupKey": "379|guo4",
+      "sourceReadingKeys": [
+        "379|Guo4",
+        "379|guo4"
+      ],
+      "originalSourceReadingLabels": [
+        "Guo4",
+        "guo4"
+      ],
+      "sourceEntryCount": 2,
+      "includesNameCapitalization": true,
+      "evidenceAcquisitionPriority": 1,
+      "checkedPublisherLinks": [
+        "https://zdic.net/hans/%E8%BF%87"
+      ],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 379,
+      "character": "过",
+      "casefoldedPinyinLabel": "guo5",
+      "evidenceGroupKey": "379|guo5",
+      "sourceReadingKeys": [
+        "379|guo5"
+      ],
+      "originalSourceReadingLabels": [
+        "guo5"
+      ],
+      "sourceEntryCount": 1,
+      "includesNameCapitalization": false,
+      "evidenceAcquisitionPriority": 1,
+      "checkedPublisherLinks": [
+        "https://zdic.net/hans/%E8%BF%87"
+      ],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 401,
+      "character": "成",
+      "casefoldedPinyinLabel": "cheng2",
+      "evidenceGroupKey": "401|cheng2",
+      "sourceReadingKeys": [
+        "401|Cheng2",
+        "401|cheng2"
+      ],
+      "originalSourceReadingLabels": [
+        "Cheng2",
+        "cheng2"
+      ],
+      "sourceEntryCount": 2,
+      "includesNameCapitalization": true,
+      "evidenceAcquisitionPriority": 1,
+      "checkedPublisherLinks": [
+        "https://zdic.net/hans/%E6%88%90"
+      ],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 407,
+      "character": "划",
+      "casefoldedPinyinLabel": "hua2",
+      "evidenceGroupKey": "407|hua2",
+      "sourceReadingKeys": [
+        "407|hua2"
+      ],
+      "originalSourceReadingLabels": [
+        "hua2"
+      ],
+      "sourceEntryCount": 1,
+      "includesNameCapitalization": false,
+      "evidenceAcquisitionPriority": 1,
+      "checkedPublisherLinks": [
+        "https://zdic.net/hans/%E5%88%92"
+      ],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 407,
+      "character": "划",
+      "casefoldedPinyinLabel": "hua4",
+      "evidenceGroupKey": "407|hua4",
+      "sourceReadingKeys": [
+        "407|hua4"
+      ],
+      "originalSourceReadingLabels": [
+        "hua4"
+      ],
+      "sourceEntryCount": 1,
+      "includesNameCapitalization": false,
+      "evidenceAcquisitionPriority": 1,
+      "checkedPublisherLinks": [
+        "https://zdic.net/hans/%E5%88%92"
+      ],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 418,
+      "character": "当",
+      "casefoldedPinyinLabel": "dang1",
+      "evidenceGroupKey": "418|dang1",
+      "sourceReadingKeys": [
+        "418|dang1"
+      ],
+      "originalSourceReadingLabels": [
+        "dang1"
+      ],
+      "sourceEntryCount": 1,
+      "includesNameCapitalization": false,
+      "evidenceAcquisitionPriority": 1,
+      "checkedPublisherLinks": [
+        "https://zdic.net/hans/%E5%BD%93"
+      ],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 418,
+      "character": "当",
+      "casefoldedPinyinLabel": "dang4",
+      "evidenceGroupKey": "418|dang4",
+      "sourceReadingKeys": [
+        "418|dang4"
+      ],
+      "originalSourceReadingLabels": [
+        "dang4"
+      ],
+      "sourceEntryCount": 1,
+      "includesNameCapitalization": false,
+      "evidenceAcquisitionPriority": 1,
+      "checkedPublisherLinks": [
+        "https://zdic.net/hans/%E5%BD%93"
+      ],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 460,
+      "character": "伏",
+      "casefoldedPinyinLabel": "fu2",
+      "evidenceGroupKey": "460|fu2",
+      "sourceReadingKeys": [
+        "460|Fu2",
+        "460|fu2"
+      ],
+      "originalSourceReadingLabels": [
+        "Fu2",
+        "fu2"
+      ],
+      "sourceEntryCount": 2,
+      "includesNameCapitalization": true,
+      "evidenceAcquisitionPriority": 1,
+      "checkedPublisherLinks": [
+        "https://zdic.net/hans/%E4%BC%8F"
+      ],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 511,
+      "character": "冲",
+      "casefoldedPinyinLabel": "chong1",
+      "evidenceGroupKey": "511|chong1",
+      "sourceReadingKeys": [
+        "511|chong1"
+      ],
+      "originalSourceReadingLabels": [
+        "chong1"
+      ],
+      "sourceEntryCount": 1,
+      "includesNameCapitalization": false,
+      "evidenceAcquisitionPriority": 1,
+      "checkedPublisherLinks": [
+        "https://zdic.net/hans/%E5%86%B2"
+      ],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 511,
+      "character": "冲",
+      "casefoldedPinyinLabel": "chong4",
+      "evidenceGroupKey": "511|chong4",
+      "sourceReadingKeys": [
+        "511|chong4"
+      ],
+      "originalSourceReadingLabels": [
+        "chong4"
+      ],
+      "sourceEntryCount": 1,
+      "includesNameCapitalization": false,
+      "evidenceAcquisitionPriority": 1,
+      "checkedPublisherLinks": [
+        "https://zdic.net/hans/%E5%86%B2"
+      ],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 518,
+      "character": "齐",
+      "casefoldedPinyinLabel": "qi2",
+      "evidenceGroupKey": "518|qi2",
+      "sourceReadingKeys": [
+        "518|Qi2",
+        "518|qi2"
+      ],
+      "originalSourceReadingLabels": [
+        "Qi2",
+        "qi2"
+      ],
+      "sourceEntryCount": 2,
+      "includesNameCapitalization": true,
+      "evidenceAcquisitionPriority": 1,
+      "checkedPublisherLinks": [
+        "https://zdic.net/hans/%E9%BD%90"
+      ],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 549,
+      "character": "安",
+      "casefoldedPinyinLabel": "an1",
+      "evidenceGroupKey": "549|an1",
+      "sourceReadingKeys": [
+        "549|An1",
+        "549|an1"
+      ],
+      "originalSourceReadingLabels": [
+        "An1",
+        "an1"
+      ],
+      "sourceEntryCount": 2,
+      "includesNameCapitalization": true,
+      "evidenceAcquisitionPriority": 1,
+      "checkedPublisherLinks": [
+        "https://zdic.net/hans/%E5%AE%89"
+      ],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 566,
+      "character": "尽",
+      "casefoldedPinyinLabel": "jin3",
+      "evidenceGroupKey": "566|jin3",
+      "sourceReadingKeys": [
+        "566|jin3"
+      ],
+      "originalSourceReadingLabels": [
+        "jin3"
+      ],
+      "sourceEntryCount": 1,
+      "includesNameCapitalization": false,
+      "evidenceAcquisitionPriority": 1,
+      "checkedPublisherLinks": [
+        "https://zdic.net/hans/%E5%B0%BD"
+      ],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 566,
+      "character": "尽",
+      "casefoldedPinyinLabel": "jin4",
+      "evidenceGroupKey": "566|jin4",
+      "sourceReadingKeys": [
+        "566|jin4"
+      ],
+      "originalSourceReadingLabels": [
+        "jin4"
+      ],
+      "sourceEntryCount": 1,
+      "includesNameCapitalization": false,
+      "evidenceAcquisitionPriority": 1,
+      "checkedPublisherLinks": [
+        "https://zdic.net/hans/%E5%B0%BD"
+      ],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 593,
+      "character": "约",
+      "casefoldedPinyinLabel": "yao1",
+      "evidenceGroupKey": "593|yao1",
+      "sourceReadingKeys": [
+        "593|yao1"
+      ],
+      "originalSourceReadingLabels": [
+        "yao1"
+      ],
+      "sourceEntryCount": 1,
+      "includesNameCapitalization": false,
+      "evidenceAcquisitionPriority": 1,
+      "checkedPublisherLinks": [
+        "https://zdic.net/hans/%E7%BA%A6"
+      ],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 593,
+      "character": "约",
+      "casefoldedPinyinLabel": "yue1",
+      "evidenceGroupKey": "593|yue1",
+      "sourceReadingKeys": [
+        "593|yue1"
+      ],
+      "originalSourceReadingLabels": [
+        "yue1"
+      ],
+      "sourceEntryCount": 1,
+      "includesNameCapitalization": false,
+      "evidenceAcquisitionPriority": 1,
+      "checkedPublisherLinks": [
+        "https://zdic.net/hans/%E7%BA%A6"
+      ],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 595,
+      "character": "纪",
+      "casefoldedPinyinLabel": "ji3",
+      "evidenceGroupKey": "595|ji3",
+      "sourceReadingKeys": [
+        "595|Ji3"
+      ],
+      "originalSourceReadingLabels": [
+        "Ji3"
+      ],
+      "sourceEntryCount": 1,
+      "includesNameCapitalization": true,
+      "evidenceAcquisitionPriority": 1,
+      "checkedPublisherLinks": [
+        "https://zdic.net/hans/%E7%BA%AA"
+      ],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 595,
+      "character": "纪",
+      "casefoldedPinyinLabel": "ji4",
+      "evidenceGroupKey": "595|ji4",
+      "sourceReadingKeys": [
+        "595|ji4"
+      ],
+      "originalSourceReadingLabels": [
+        "ji4"
+      ],
+      "sourceEntryCount": 1,
+      "includesNameCapitalization": false,
+      "evidenceAcquisitionPriority": 1,
+      "checkedPublisherLinks": [
+        "https://zdic.net/hans/%E7%BA%AA"
+      ],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 751,
+      "character": "别",
+      "casefoldedPinyinLabel": "bie2",
+      "evidenceGroupKey": "751|bie2",
+      "sourceReadingKeys": [
+        "751|Bie2",
+        "751|bie2"
+      ],
+      "originalSourceReadingLabels": [
+        "Bie2",
+        "bie2"
+      ],
+      "sourceEntryCount": 2,
+      "includesNameCapitalization": true,
+      "evidenceAcquisitionPriority": 1,
+      "checkedPublisherLinks": [
+        "https://zdic.net/hans/%E5%88%AB"
+      ],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 751,
+      "character": "别",
+      "casefoldedPinyinLabel": "bie4",
+      "evidenceGroupKey": "751|bie4",
+      "sourceReadingKeys": [
+        "751|bie4"
+      ],
+      "originalSourceReadingLabels": [
+        "bie4"
+      ],
+      "sourceEntryCount": 1,
+      "includesNameCapitalization": false,
+      "evidenceAcquisitionPriority": 1,
+      "checkedPublisherLinks": [
+        "https://zdic.net/hans/%E5%88%AB"
+      ],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 777,
+      "character": "作",
+      "casefoldedPinyinLabel": "zuo1",
+      "evidenceGroupKey": "777|zuo1",
+      "sourceReadingKeys": [
+        "777|zuo1"
+      ],
+      "originalSourceReadingLabels": [
+        "zuo1"
+      ],
+      "sourceEntryCount": 1,
+      "includesNameCapitalization": false,
+      "evidenceAcquisitionPriority": 1,
+      "checkedPublisherLinks": [
+        "https://zdic.net/hans/%E4%BD%9C"
+      ],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 777,
+      "character": "作",
+      "casefoldedPinyinLabel": "zuo4",
+      "evidenceGroupKey": "777|zuo4",
+      "sourceReadingKeys": [
+        "777|zuo4"
+      ],
+      "originalSourceReadingLabels": [
+        "zuo4"
+      ],
+      "sourceEntryCount": 1,
+      "includesNameCapitalization": false,
+      "evidenceAcquisitionPriority": 1,
+      "checkedPublisherLinks": [
+        "https://zdic.net/hans/%E4%BD%9C"
+      ],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 825,
+      "character": "系",
+      "casefoldedPinyinLabel": "ji4",
+      "evidenceGroupKey": "825|ji4",
+      "sourceReadingKeys": [
+        "825|ji4"
+      ],
+      "originalSourceReadingLabels": [
+        "ji4"
+      ],
+      "sourceEntryCount": 1,
+      "includesNameCapitalization": false,
+      "evidenceAcquisitionPriority": 1,
+      "checkedPublisherLinks": [
+        "https://zdic.net/hans/%E7%B3%BB"
+      ],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 825,
+      "character": "系",
+      "casefoldedPinyinLabel": "xi4",
+      "evidenceGroupKey": "825|xi4",
+      "sourceReadingKeys": [
+        "825|xi4"
+      ],
+      "originalSourceReadingLabels": [
+        "xi4"
+      ],
+      "sourceEntryCount": 1,
+      "includesNameCapitalization": false,
+      "evidenceAcquisitionPriority": 1,
+      "checkedPublisherLinks": [
+        "https://zdic.net/hans/%E7%B3%BB"
+      ],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 848,
+      "character": "闷",
+      "casefoldedPinyinLabel": "men1",
+      "evidenceGroupKey": "848|men1",
+      "sourceReadingKeys": [
+        "848|men1"
+      ],
+      "originalSourceReadingLabels": [
+        "men1"
+      ],
+      "sourceEntryCount": 1,
+      "includesNameCapitalization": false,
+      "evidenceAcquisitionPriority": 1,
+      "checkedPublisherLinks": [
+        "https://zdic.net/hans/%E9%97%B7"
+      ],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 848,
+      "character": "闷",
+      "casefoldedPinyinLabel": "men4",
+      "evidenceGroupKey": "848|men4",
+      "sourceReadingKeys": [
+        "848|men4"
+      ],
+      "originalSourceReadingLabels": [
+        "men4"
+      ],
+      "sourceEntryCount": 1,
+      "includesNameCapitalization": false,
+      "evidenceAcquisitionPriority": 1,
+      "checkedPublisherLinks": [
+        "https://zdic.net/hans/%E9%97%B7"
+      ],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 953,
+      "character": "抹",
+      "casefoldedPinyinLabel": "ma1",
+      "evidenceGroupKey": "953|ma1",
+      "sourceReadingKeys": [
+        "953|ma1"
+      ],
+      "originalSourceReadingLabels": [
+        "ma1"
+      ],
+      "sourceEntryCount": 1,
+      "includesNameCapitalization": false,
+      "evidenceAcquisitionPriority": 1,
+      "checkedPublisherLinks": [
+        "https://zdic.net/hans/%E6%8A%B9"
+      ],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 953,
+      "character": "抹",
+      "casefoldedPinyinLabel": "mo3",
+      "evidenceGroupKey": "953|mo3",
+      "sourceReadingKeys": [
+        "953|mo3"
+      ],
+      "originalSourceReadingLabels": [
+        "mo3"
+      ],
+      "sourceEntryCount": 1,
+      "includesNameCapitalization": false,
+      "evidenceAcquisitionPriority": 1,
+      "checkedPublisherLinks": [
+        "https://zdic.net/hans/%E6%8A%B9"
+      ],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 953,
+      "character": "抹",
+      "casefoldedPinyinLabel": "mo4",
+      "evidenceGroupKey": "953|mo4",
+      "sourceReadingKeys": [
+        "953|mo4"
+      ],
+      "originalSourceReadingLabels": [
+        "mo4"
+      ],
+      "sourceEntryCount": 1,
+      "includesNameCapitalization": false,
+      "evidenceAcquisitionPriority": 1,
+      "checkedPublisherLinks": [
+        "https://zdic.net/hans/%E6%8A%B9"
+      ],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 28,
+      "character": "士",
+      "casefoldedPinyinLabel": "shi4",
+      "evidenceGroupKey": "28|shi4",
+      "sourceReadingKeys": [
+        "28|Shi4",
+        "28|shi4"
+      ],
+      "originalSourceReadingLabels": [
+        "Shi4",
+        "shi4"
+      ],
+      "sourceEntryCount": 2,
+      "includesNameCapitalization": true,
+      "evidenceAcquisitionPriority": 2,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 65,
+      "character": "卫",
+      "casefoldedPinyinLabel": "wei4",
+      "evidenceGroupKey": "65|wei4",
+      "sourceReadingKeys": [
+        "65|Wei4",
+        "65|wei4"
+      ],
+      "originalSourceReadingLabels": [
+        "Wei4",
+        "wei4"
+      ],
+      "sourceEntryCount": 2,
+      "includesNameCapitalization": true,
+      "evidenceAcquisitionPriority": 2,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 71,
+      "character": "叉",
+      "casefoldedPinyinLabel": "cha1",
+      "evidenceGroupKey": "71|cha1",
+      "sourceReadingKeys": [
+        "71|cha1"
+      ],
+      "originalSourceReadingLabels": [
+        "cha1"
+      ],
+      "sourceEntryCount": 1,
+      "includesNameCapitalization": false,
+      "evidenceAcquisitionPriority": 2,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 71,
+      "character": "叉",
+      "casefoldedPinyinLabel": "cha2",
+      "evidenceGroupKey": "71|cha2",
+      "sourceReadingKeys": [
+        "71|cha2"
+      ],
+      "originalSourceReadingLabels": [
+        "cha2"
+      ],
+      "sourceEntryCount": 1,
+      "includesNameCapitalization": false,
+      "evidenceAcquisitionPriority": 2,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 71,
+      "character": "叉",
+      "casefoldedPinyinLabel": "cha3",
+      "evidenceGroupKey": "71|cha3",
+      "sourceReadingKeys": [
+        "71|cha3"
+      ],
+      "originalSourceReadingLabels": [
+        "cha3"
+      ],
+      "sourceEntryCount": 1,
+      "includesNameCapitalization": false,
+      "evidenceAcquisitionPriority": 2,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 79,
+      "character": "夫",
+      "casefoldedPinyinLabel": "fu1",
+      "evidenceGroupKey": "79|fu1",
+      "sourceReadingKeys": [
+        "79|fu1"
+      ],
+      "originalSourceReadingLabels": [
+        "fu1"
+      ],
+      "sourceEntryCount": 1,
+      "includesNameCapitalization": false,
+      "evidenceAcquisitionPriority": 2,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 79,
+      "character": "夫",
+      "casefoldedPinyinLabel": "fu2",
+      "evidenceGroupKey": "79|fu2",
+      "sourceReadingKeys": [
+        "79|fu2"
+      ],
+      "originalSourceReadingLabels": [
+        "fu2"
+      ],
+      "sourceEntryCount": 1,
+      "includesNameCapitalization": false,
+      "evidenceAcquisitionPriority": 2,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 80,
+      "character": "元",
+      "casefoldedPinyinLabel": "yuan2",
+      "evidenceGroupKey": "80|yuan2",
+      "sourceReadingKeys": [
+        "80|Yuan2",
+        "80|yuan2"
+      ],
+      "originalSourceReadingLabels": [
+        "Yuan2",
+        "yuan2"
+      ],
+      "sourceEntryCount": 2,
+      "includesNameCapitalization": true,
+      "evidenceAcquisitionPriority": 2,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 89,
+      "character": "支",
+      "casefoldedPinyinLabel": "zhi1",
+      "evidenceGroupKey": "89|zhi1",
+      "sourceReadingKeys": [
+        "89|Zhi1",
+        "89|zhi1"
+      ],
+      "originalSourceReadingLabels": [
+        "Zhi1",
+        "zhi1"
+      ],
+      "sourceEntryCount": 2,
+      "includesNameCapitalization": true,
+      "evidenceAcquisitionPriority": 2,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 113,
+      "character": "中",
+      "casefoldedPinyinLabel": "zhong1",
+      "evidenceGroupKey": "113|zhong1",
+      "sourceReadingKeys": [
+        "113|Zhong1",
+        "113|zhong1"
+      ],
+      "originalSourceReadingLabels": [
+        "Zhong1",
+        "zhong1"
+      ],
+      "sourceEntryCount": 2,
+      "includesNameCapitalization": true,
+      "evidenceAcquisitionPriority": 2,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 113,
+      "character": "中",
+      "casefoldedPinyinLabel": "zhong4",
+      "evidenceGroupKey": "113|zhong4",
+      "sourceReadingKeys": [
+        "113|zhong4"
+      ],
+      "originalSourceReadingLabels": [
+        "zhong4"
+      ],
+      "sourceEntryCount": 1,
+      "includesNameCapitalization": false,
+      "evidenceAcquisitionPriority": 2,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 133,
+      "character": "仇",
+      "casefoldedPinyinLabel": "chou2",
+      "evidenceGroupKey": "133|chou2",
+      "sourceReadingKeys": [
+        "133|chou2"
+      ],
+      "originalSourceReadingLabels": [
+        "chou2"
+      ],
+      "sourceEntryCount": 1,
+      "includesNameCapitalization": false,
+      "evidenceAcquisitionPriority": 2,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 133,
+      "character": "仇",
+      "casefoldedPinyinLabel": "qiu2",
+      "evidenceGroupKey": "133|qiu2",
+      "sourceReadingKeys": [
+        "133|Qiu2",
+        "133|qiu2"
+      ],
+      "originalSourceReadingLabels": [
+        "Qiu2",
+        "qiu2"
+      ],
+      "sourceEntryCount": 2,
+      "includesNameCapitalization": true,
+      "evidenceAcquisitionPriority": 2,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 146,
+      "character": "分",
+      "casefoldedPinyinLabel": "fen1",
+      "evidenceGroupKey": "146|fen1",
+      "sourceReadingKeys": [
+        "146|fen1"
+      ],
+      "originalSourceReadingLabels": [
+        "fen1"
+      ],
+      "sourceEntryCount": 1,
+      "includesNameCapitalization": false,
+      "evidenceAcquisitionPriority": 2,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 146,
+      "character": "分",
+      "casefoldedPinyinLabel": "fen4",
+      "evidenceGroupKey": "146|fen4",
+      "sourceReadingKeys": [
+        "146|fen4"
+      ],
+      "originalSourceReadingLabels": [
+        "fen4"
+      ],
+      "sourceEntryCount": 1,
+      "includesNameCapitalization": false,
+      "evidenceAcquisitionPriority": 2,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 161,
+      "character": "文",
+      "casefoldedPinyinLabel": "wen2",
+      "evidenceGroupKey": "161|wen2",
+      "sourceReadingKeys": [
+        "161|Wen2",
+        "161|wen2"
+      ],
+      "originalSourceReadingLabels": [
+        "Wen2",
+        "wen2"
+      ],
+      "sourceEntryCount": 2,
+      "includesNameCapitalization": true,
+      "evidenceAcquisitionPriority": 2,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 163,
+      "character": "方",
+      "casefoldedPinyinLabel": "fang1",
+      "evidenceGroupKey": "163|fang1",
+      "sourceReadingKeys": [
+        "163|Fang1",
+        "163|fang1"
+      ],
+      "originalSourceReadingLabels": [
+        "Fang1",
+        "fang1"
+      ],
+      "sourceEntryCount": 2,
+      "includesNameCapitalization": true,
+      "evidenceAcquisitionPriority": 2,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 168,
+      "character": "计",
+      "casefoldedPinyinLabel": "ji4",
+      "evidenceGroupKey": "168|ji4",
+      "sourceReadingKeys": [
+        "168|Ji4",
+        "168|ji4"
+      ],
+      "originalSourceReadingLabels": [
+        "Ji4",
+        "ji4"
+      ],
+      "sourceEntryCount": 2,
+      "includesNameCapitalization": true,
+      "evidenceAcquisitionPriority": 2,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 196,
+      "character": "打",
+      "casefoldedPinyinLabel": "da2",
+      "evidenceGroupKey": "196|da2",
+      "sourceReadingKeys": [
+        "196|da2"
+      ],
+      "originalSourceReadingLabels": [
+        "da2"
+      ],
+      "sourceEntryCount": 1,
+      "includesNameCapitalization": false,
+      "evidenceAcquisitionPriority": 2,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 196,
+      "character": "打",
+      "casefoldedPinyinLabel": "da3",
+      "evidenceGroupKey": "196|da3",
+      "sourceReadingKeys": [
+        "196|da3"
+      ],
+      "originalSourceReadingLabels": [
+        "da3"
+      ],
+      "sourceEntryCount": 1,
+      "includesNameCapitalization": false,
+      "evidenceAcquisitionPriority": 2,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 198,
+      "character": "正",
+      "casefoldedPinyinLabel": "zheng1",
+      "evidenceGroupKey": "198|zheng1",
+      "sourceReadingKeys": [
+        "198|zheng1"
+      ],
+      "originalSourceReadingLabels": [
+        "zheng1"
+      ],
+      "sourceEntryCount": 1,
+      "includesNameCapitalization": false,
+      "evidenceAcquisitionPriority": 2,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 198,
+      "character": "正",
+      "casefoldedPinyinLabel": "zheng4",
+      "evidenceGroupKey": "198|zheng4",
+      "sourceReadingKeys": [
+        "198|zheng4"
+      ],
+      "originalSourceReadingLabels": [
+        "zheng4"
+      ],
+      "sourceEntryCount": 1,
+      "includesNameCapitalization": false,
+      "evidenceAcquisitionPriority": 2,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 206,
+      "character": "世",
+      "casefoldedPinyinLabel": "shi4",
+      "evidenceGroupKey": "206|shi4",
+      "sourceReadingKeys": [
+        "206|Shi4",
+        "206|shi4"
+      ],
+      "originalSourceReadingLabels": [
+        "Shi4",
+        "shi4"
+      ],
+      "sourceEntryCount": 2,
+      "includesNameCapitalization": true,
+      "evidenceAcquisitionPriority": 2,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 234,
+      "character": "归",
+      "casefoldedPinyinLabel": "gui1",
+      "evidenceGroupKey": "234|gui1",
+      "sourceReadingKeys": [
+        "234|Gui1",
+        "234|gui1"
+      ],
+      "originalSourceReadingLabels": [
+        "Gui1",
+        "gui1"
+      ],
+      "sourceEntryCount": 2,
+      "includesNameCapitalization": true,
+      "evidenceAcquisitionPriority": 2,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 275,
+      "character": "白",
+      "casefoldedPinyinLabel": "bai2",
+      "evidenceGroupKey": "275|bai2",
+      "sourceReadingKeys": [
+        "275|Bai2",
+        "275|bai2"
+      ],
+      "originalSourceReadingLabels": [
+        "Bai2",
+        "bai2"
+      ],
+      "sourceEntryCount": 2,
+      "includesNameCapitalization": true,
+      "evidenceAcquisitionPriority": 2,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 294,
+      "character": "处",
+      "casefoldedPinyinLabel": "chu3",
+      "evidenceGroupKey": "294|chu3",
+      "sourceReadingKeys": [
+        "294|chu3"
+      ],
+      "originalSourceReadingLabels": [
+        "chu3"
+      ],
+      "sourceEntryCount": 1,
+      "includesNameCapitalization": false,
+      "evidenceAcquisitionPriority": 2,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 294,
+      "character": "处",
+      "casefoldedPinyinLabel": "chu4",
+      "evidenceGroupKey": "294|chu4",
+      "sourceReadingKeys": [
+        "294|chu4"
+      ],
+      "originalSourceReadingLabels": [
+        "chu4"
+      ],
+      "sourceEntryCount": 1,
+      "includesNameCapitalization": false,
+      "evidenceAcquisitionPriority": 2,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 302,
+      "character": "立",
+      "casefoldedPinyinLabel": "li4",
+      "evidenceGroupKey": "302|li4",
+      "sourceReadingKeys": [
+        "302|Li4",
+        "302|li4"
+      ],
+      "originalSourceReadingLabels": [
+        "Li4",
+        "li4"
+      ],
+      "sourceEntryCount": 2,
+      "includesNameCapitalization": true,
+      "evidenceAcquisitionPriority": 2,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 305,
+      "character": "闪",
+      "casefoldedPinyinLabel": "shan3",
+      "evidenceGroupKey": "305|shan3",
+      "sourceReadingKeys": [
+        "305|Shan3",
+        "305|shan3"
+      ],
+      "originalSourceReadingLabels": [
+        "Shan3",
+        "shan3"
+      ],
+      "sourceEntryCount": 2,
+      "includesNameCapitalization": true,
+      "evidenceAcquisitionPriority": 2,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 413,
+      "character": "师",
+      "casefoldedPinyinLabel": "shi1",
+      "evidenceGroupKey": "413|shi1",
+      "sourceReadingKeys": [
+        "413|Shi1",
+        "413|shi1"
+      ],
+      "originalSourceReadingLabels": [
+        "Shi1",
+        "shi1"
+      ],
+      "sourceEntryCount": 2,
+      "includesNameCapitalization": true,
+      "evidenceAcquisitionPriority": 2,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 455,
+      "character": "传",
+      "casefoldedPinyinLabel": "chuan2",
+      "evidenceGroupKey": "455|chuan2",
+      "sourceReadingKeys": [
+        "455|chuan2"
+      ],
+      "originalSourceReadingLabels": [
+        "chuan2"
+      ],
+      "sourceEntryCount": 1,
+      "includesNameCapitalization": false,
+      "evidenceAcquisitionPriority": 2,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 455,
+      "character": "传",
+      "casefoldedPinyinLabel": "zhuan4",
+      "evidenceGroupKey": "455|zhuan4",
+      "sourceReadingKeys": [
+        "455|zhuan4"
+      ],
+      "originalSourceReadingLabels": [
+        "zhuan4"
+      ],
+      "sourceEntryCount": 1,
+      "includesNameCapitalization": false,
+      "evidenceAcquisitionPriority": 2,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 467,
+      "character": "任",
+      "casefoldedPinyinLabel": "ren4",
+      "evidenceGroupKey": "467|ren4",
+      "sourceReadingKeys": [
+        "467|Ren4",
+        "467|ren4"
+      ],
+      "originalSourceReadingLabels": [
+        "Ren4",
+        "ren4"
+      ],
+      "sourceEntryCount": 2,
+      "includesNameCapitalization": true,
+      "evidenceAcquisitionPriority": 2,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 482,
+      "character": "后",
+      "casefoldedPinyinLabel": "hou4",
+      "evidenceGroupKey": "482|hou4",
+      "sourceReadingKeys": [
+        "482|Hou4",
+        "482|hou4"
+      ],
+      "originalSourceReadingLabels": [
+        "Hou4",
+        "hou4"
+      ],
+      "sourceEntryCount": 2,
+      "includesNameCapitalization": true,
+      "evidenceAcquisitionPriority": 2,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 483,
+      "character": "行",
+      "casefoldedPinyinLabel": "hang2",
+      "evidenceGroupKey": "483|hang2",
+      "sourceReadingKeys": [
+        "483|hang2"
+      ],
+      "originalSourceReadingLabels": [
+        "hang2"
+      ],
+      "sourceEntryCount": 1,
+      "includesNameCapitalization": false,
+      "evidenceAcquisitionPriority": 2,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 483,
+      "character": "行",
+      "casefoldedPinyinLabel": "xing2",
+      "evidenceGroupKey": "483|xing2",
+      "sourceReadingKeys": [
+        "483|xing2"
+      ],
+      "originalSourceReadingLabels": [
+        "xing2"
+      ],
+      "sourceEntryCount": 1,
+      "includesNameCapitalization": false,
+      "evidenceAcquisitionPriority": 2,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 489,
+      "character": "兆",
+      "casefoldedPinyinLabel": "zhao4",
+      "evidenceGroupKey": "489|zhao4",
+      "sourceReadingKeys": [
+        "489|Zhao4",
+        "489|zhao4"
+      ],
+      "originalSourceReadingLabels": [
+        "Zhao4",
+        "zhao4"
+      ],
+      "sourceEntryCount": 2,
+      "includesNameCapitalization": true,
+      "evidenceAcquisitionPriority": 2,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 544,
+      "character": "兴",
+      "casefoldedPinyinLabel": "xing1",
+      "evidenceGroupKey": "544|xing1",
+      "sourceReadingKeys": [
+        "544|Xing1",
+        "544|xing1"
+      ],
+      "originalSourceReadingLabels": [
+        "Xing1",
+        "xing1"
+      ],
+      "sourceEntryCount": 2,
+      "includesNameCapitalization": true,
+      "evidenceAcquisitionPriority": 2,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 544,
+      "character": "兴",
+      "casefoldedPinyinLabel": "xing4",
+      "evidenceGroupKey": "544|xing4",
+      "sourceReadingKeys": [
+        "544|xing4"
+      ],
+      "originalSourceReadingLabels": [
+        "xing4"
+      ],
+      "sourceEntryCount": 1,
+      "includesNameCapitalization": false,
+      "evidenceAcquisitionPriority": 2,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 581,
+      "character": "好",
+      "casefoldedPinyinLabel": "hao3",
+      "evidenceGroupKey": "581|hao3",
+      "sourceReadingKeys": [
+        "581|hao3"
+      ],
+      "originalSourceReadingLabels": [
+        "hao3"
+      ],
+      "sourceEntryCount": 1,
+      "includesNameCapitalization": false,
+      "evidenceAcquisitionPriority": 2,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 581,
+      "character": "好",
+      "casefoldedPinyinLabel": "hao4",
+      "evidenceGroupKey": "581|hao4",
+      "sourceReadingKeys": [
+        "581|hao4"
+      ],
+      "originalSourceReadingLabels": [
+        "hao4"
+      ],
+      "sourceEntryCount": 1,
+      "includesNameCapitalization": false,
+      "evidenceAcquisitionPriority": 2,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 586,
+      "character": "观",
+      "casefoldedPinyinLabel": "guan1",
+      "evidenceGroupKey": "586|guan1",
+      "sourceReadingKeys": [
+        "586|guan1"
+      ],
+      "originalSourceReadingLabels": [
+        "guan1"
+      ],
+      "sourceEntryCount": 1,
+      "includesNameCapitalization": false,
+      "evidenceAcquisitionPriority": 2,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 586,
+      "character": "观",
+      "casefoldedPinyinLabel": "guan4",
+      "evidenceGroupKey": "586|guan4",
+      "sourceReadingKeys": [
+        "586|Guan4",
+        "586|guan4"
+      ],
+      "originalSourceReadingLabels": [
+        "Guan4",
+        "guan4"
+      ],
+      "sourceEntryCount": 2,
+      "includesNameCapitalization": true,
+      "evidenceAcquisitionPriority": 2,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 655,
+      "character": "把",
+      "casefoldedPinyinLabel": "ba3",
+      "evidenceGroupKey": "655|ba3",
+      "sourceReadingKeys": [
+        "655|ba3"
+      ],
+      "originalSourceReadingLabels": [
+        "ba3"
+      ],
+      "sourceEntryCount": 1,
+      "includesNameCapitalization": false,
+      "evidenceAcquisitionPriority": 2,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 655,
+      "character": "把",
+      "casefoldedPinyinLabel": "ba4",
+      "evidenceGroupKey": "655|ba4",
+      "sourceReadingKeys": [
+        "655|ba4"
+      ],
+      "originalSourceReadingLabels": [
+        "ba4"
+      ],
+      "sourceEntryCount": 1,
+      "includesNameCapitalization": false,
+      "evidenceAcquisitionPriority": 2,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 693,
+      "character": "更",
+      "casefoldedPinyinLabel": "geng1",
+      "evidenceGroupKey": "693|geng1",
+      "sourceReadingKeys": [
+        "693|geng1"
+      ],
+      "originalSourceReadingLabels": [
+        "geng1"
+      ],
+      "sourceEntryCount": 1,
+      "includesNameCapitalization": false,
+      "evidenceAcquisitionPriority": 2,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 693,
+      "character": "更",
+      "casefoldedPinyinLabel": "geng4",
+      "evidenceGroupKey": "693|geng4",
+      "sourceReadingKeys": [
+        "693|geng4"
+      ],
+      "originalSourceReadingLabels": [
+        "geng4"
+      ],
+      "sourceEntryCount": 1,
+      "includesNameCapitalization": false,
+      "evidenceAcquisitionPriority": 2,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 704,
+      "character": "还",
+      "casefoldedPinyinLabel": "hai2",
+      "evidenceGroupKey": "704|hai2",
+      "sourceReadingKeys": [
+        "704|hai2"
+      ],
+      "originalSourceReadingLabels": [
+        "hai2"
+      ],
+      "sourceEntryCount": 1,
+      "includesNameCapitalization": false,
+      "evidenceAcquisitionPriority": 2,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 704,
+      "character": "还",
+      "casefoldedPinyinLabel": "huan2",
+      "evidenceGroupKey": "704|huan2",
+      "sourceReadingKeys": [
+        "704|Huan2",
+        "704|huan2"
+      ],
+      "originalSourceReadingLabels": [
+        "Huan2",
+        "huan2"
+      ],
+      "sourceEntryCount": 2,
+      "includesNameCapitalization": true,
+      "evidenceAcquisitionPriority": 2,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 708,
+      "character": "连",
+      "casefoldedPinyinLabel": "lian2",
+      "evidenceGroupKey": "708|lian2",
+      "sourceReadingKeys": [
+        "708|Lian2",
+        "708|lian2"
+      ],
+      "originalSourceReadingLabels": [
+        "Lian2",
+        "lian2"
+      ],
+      "sourceEntryCount": 2,
+      "includesNameCapitalization": true,
+      "evidenceAcquisitionPriority": 2,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 739,
+      "character": "听",
+      "casefoldedPinyinLabel": "ting1",
+      "evidenceGroupKey": "739|ting1",
+      "sourceReadingKeys": [
+        "739|ting1"
+      ],
+      "originalSourceReadingLabels": [
+        "ting1"
+      ],
+      "sourceEntryCount": 1,
+      "includesNameCapitalization": false,
+      "evidenceAcquisitionPriority": 2,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 739,
+      "character": "听",
+      "casefoldedPinyinLabel": "ting4",
+      "evidenceGroupKey": "739|ting4",
+      "sourceReadingKeys": [
+        "739|ting4"
+      ],
+      "originalSourceReadingLabels": [
+        "ting4"
+      ],
+      "sourceEntryCount": 1,
+      "includesNameCapitalization": false,
+      "evidenceAcquisitionPriority": 2,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 739,
+      "character": "听",
+      "casefoldedPinyinLabel": "yin3",
+      "evidenceGroupKey": "739|yin3",
+      "sourceReadingKeys": [
+        "739|yin3"
+      ],
+      "originalSourceReadingLabels": [
+        "yin3"
+      ],
+      "sourceEntryCount": 1,
+      "includesNameCapitalization": false,
+      "evidenceAcquisitionPriority": 2,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 763,
+      "character": "利",
+      "casefoldedPinyinLabel": "li4",
+      "evidenceGroupKey": "763|li4",
+      "sourceReadingKeys": [
+        "763|Li4",
+        "763|li4"
+      ],
+      "originalSourceReadingLabels": [
+        "Li4",
+        "li4"
+      ],
+      "sourceEntryCount": 2,
+      "includesNameCapitalization": true,
+      "evidenceAcquisitionPriority": 2,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 836,
+      "character": "应",
+      "casefoldedPinyinLabel": "ying1",
+      "evidenceGroupKey": "836|ying1",
+      "sourceReadingKeys": [
+        "836|ying1"
+      ],
+      "originalSourceReadingLabels": [
+        "ying1"
+      ],
+      "sourceEntryCount": 1,
+      "includesNameCapitalization": false,
+      "evidenceAcquisitionPriority": 2,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 836,
+      "character": "应",
+      "casefoldedPinyinLabel": "ying4",
+      "evidenceGroupKey": "836|ying4",
+      "sourceReadingKeys": [
+        "836|Ying4",
+        "836|ying4"
+      ],
+      "originalSourceReadingLabels": [
+        "Ying4",
+        "ying4"
+      ],
+      "sourceEntryCount": 2,
+      "includesNameCapitalization": true,
+      "evidenceAcquisitionPriority": 2,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 847,
+      "character": "间",
+      "casefoldedPinyinLabel": "jian1",
+      "evidenceGroupKey": "847|jian1",
+      "sourceReadingKeys": [
+        "847|jian1"
+      ],
+      "originalSourceReadingLabels": [
+        "jian1"
+      ],
+      "sourceEntryCount": 1,
+      "includesNameCapitalization": false,
+      "evidenceAcquisitionPriority": 2,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 847,
+      "character": "间",
+      "casefoldedPinyinLabel": "jian4",
+      "evidenceGroupKey": "847|jian4",
+      "sourceReadingKeys": [
+        "847|jian4"
+      ],
+      "originalSourceReadingLabels": [
+        "jian4"
+      ],
+      "sourceEntryCount": 1,
+      "includesNameCapitalization": false,
+      "evidenceAcquisitionPriority": 2,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 914,
+      "character": "陈",
+      "casefoldedPinyinLabel": "chen2",
+      "evidenceGroupKey": "914|chen2",
+      "sourceReadingKeys": [
+        "914|Chen2",
+        "914|chen2"
+      ],
+      "originalSourceReadingLabels": [
+        "Chen2",
+        "chen2"
+      ],
+      "sourceEntryCount": 2,
+      "includesNameCapitalization": true,
+      "evidenceAcquisitionPriority": 2,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 934,
+      "character": "纳",
+      "casefoldedPinyinLabel": "na4",
+      "evidenceGroupKey": "934|na4",
+      "sourceReadingKeys": [
+        "934|Na4",
+        "934|na4"
+      ],
+      "originalSourceReadingLabels": [
+        "Na4",
+        "na4"
+      ],
+      "sourceEntryCount": 2,
+      "includesNameCapitalization": true,
+      "evidenceAcquisitionPriority": 2,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 945,
+      "character": "环",
+      "casefoldedPinyinLabel": "huan2",
+      "evidenceGroupKey": "945|huan2",
+      "sourceReadingKeys": [
+        "945|Huan2",
+        "945|huan2"
+      ],
+      "originalSourceReadingLabels": [
+        "Huan2",
+        "huan2"
+      ],
+      "sourceEntryCount": 2,
+      "includesNameCapitalization": true,
+      "evidenceAcquisitionPriority": 2,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 963,
+      "character": "担",
+      "casefoldedPinyinLabel": "dan1",
+      "evidenceGroupKey": "963|dan1",
+      "sourceReadingKeys": [
+        "963|dan1"
+      ],
+      "originalSourceReadingLabels": [
+        "dan1"
+      ],
+      "sourceEntryCount": 1,
+      "includesNameCapitalization": false,
+      "evidenceAcquisitionPriority": 2,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 963,
+      "character": "担",
+      "casefoldedPinyinLabel": "dan4",
+      "evidenceGroupKey": "963|dan4",
+      "sourceReadingKeys": [
+        "963|dan4"
+      ],
+      "originalSourceReadingLabels": [
+        "dan4"
+      ],
+      "sourceEntryCount": 1,
+      "includesNameCapitalization": false,
+      "evidenceAcquisitionPriority": 2,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 209,
+      "character": "节",
+      "casefoldedPinyinLabel": "jie1",
+      "evidenceGroupKey": "209|jie1",
+      "sourceReadingKeys": [
+        "209|jie1"
+      ],
+      "originalSourceReadingLabels": [
+        "jie1"
+      ],
+      "sourceEntryCount": 1,
+      "includesNameCapitalization": false,
+      "evidenceAcquisitionPriority": 3,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 209,
+      "character": "节",
+      "casefoldedPinyinLabel": "jie2",
+      "evidenceGroupKey": "209|jie2",
+      "sourceReadingKeys": [
+        "209|jie2"
+      ],
+      "originalSourceReadingLabels": [
+        "jie2"
+      ],
+      "sourceEntryCount": 1,
+      "includesNameCapitalization": false,
+      "evidenceAcquisitionPriority": 3,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 367,
+      "character": "场",
+      "casefoldedPinyinLabel": "chang2",
+      "evidenceGroupKey": "367|chang2",
+      "sourceReadingKeys": [
+        "367|chang2"
+      ],
+      "originalSourceReadingLabels": [
+        "chang2"
+      ],
+      "sourceEntryCount": 1,
+      "includesNameCapitalization": false,
+      "evidenceAcquisitionPriority": 3,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 367,
+      "character": "场",
+      "casefoldedPinyinLabel": "chang3",
+      "evidenceGroupKey": "367|chang3",
+      "sourceReadingKeys": [
+        "367|chang3"
+      ],
+      "originalSourceReadingLabels": [
+        "chang3"
+      ],
+      "sourceEntryCount": 1,
+      "includesNameCapitalization": false,
+      "evidenceAcquisitionPriority": 3,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 368,
+      "character": "扬",
+      "casefoldedPinyinLabel": "yang2",
+      "evidenceGroupKey": "368|yang2",
+      "sourceReadingKeys": [
+        "368|Yang2",
+        "368|yang2"
+      ],
+      "originalSourceReadingLabels": [
+        "Yang2",
+        "yang2"
+      ],
+      "sourceEntryCount": 2,
+      "includesNameCapitalization": true,
+      "evidenceAcquisitionPriority": 3,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 472,
+      "character": "华",
+      "casefoldedPinyinLabel": "hua1",
+      "evidenceGroupKey": "472|hua1",
+      "sourceReadingKeys": [
+        "472|hua1"
+      ],
+      "originalSourceReadingLabels": [
+        "hua1"
+      ],
+      "sourceEntryCount": 1,
+      "includesNameCapitalization": false,
+      "evidenceAcquisitionPriority": 3,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 472,
+      "character": "华",
+      "casefoldedPinyinLabel": "hua2",
+      "evidenceGroupKey": "472|hua2",
+      "sourceReadingKeys": [
+        "472|Hua2",
+        "472|hua2"
+      ],
+      "originalSourceReadingLabels": [
+        "Hua2",
+        "hua2"
+      ],
+      "sourceEntryCount": 2,
+      "includesNameCapitalization": true,
+      "evidenceAcquisitionPriority": 3,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 472,
+      "character": "华",
+      "casefoldedPinyinLabel": "hua4",
+      "evidenceGroupKey": "472|hua4",
+      "sourceReadingKeys": [
+        "472|Hua4"
+      ],
+      "originalSourceReadingLabels": [
+        "Hua4"
+      ],
+      "sourceEntryCount": 1,
+      "includesNameCapitalization": true,
+      "evidenceAcquisitionPriority": 3,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 486,
+      "character": "会",
+      "casefoldedPinyinLabel": "hui4",
+      "evidenceGroupKey": "486|hui4",
+      "sourceReadingKeys": [
+        "486|hui4"
+      ],
+      "originalSourceReadingLabels": [
+        "hui4"
+      ],
+      "sourceEntryCount": 1,
+      "includesNameCapitalization": false,
+      "evidenceAcquisitionPriority": 3,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 486,
+      "character": "会",
+      "casefoldedPinyinLabel": "kuai4",
+      "evidenceGroupKey": "486|kuai4",
+      "sourceReadingKeys": [
+        "486|kuai4"
+      ],
+      "originalSourceReadingLabels": [
+        "kuai4"
+      ],
+      "sourceEntryCount": 1,
+      "includesNameCapitalization": false,
+      "evidenceAcquisitionPriority": 3,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 488,
+      "character": "合",
+      "casefoldedPinyinLabel": "ge3",
+      "evidenceGroupKey": "488|ge3",
+      "sourceReadingKeys": [
+        "488|ge3"
+      ],
+      "originalSourceReadingLabels": [
+        "ge3"
+      ],
+      "sourceEntryCount": 1,
+      "includesNameCapitalization": false,
+      "evidenceAcquisitionPriority": 3,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 488,
+      "character": "合",
+      "casefoldedPinyinLabel": "he2",
+      "evidenceGroupKey": "488|he2",
+      "sourceReadingKeys": [
+        "488|he2"
+      ],
+      "originalSourceReadingLabels": [
+        "he2"
+      ],
+      "sourceEntryCount": 1,
+      "includesNameCapitalization": false,
+      "evidenceAcquisitionPriority": 3,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 575,
+      "character": "阴",
+      "casefoldedPinyinLabel": "yin1",
+      "evidenceGroupKey": "575|yin1",
+      "sourceReadingKeys": [
+        "575|Yin1",
+        "575|yin1"
+      ],
+      "originalSourceReadingLabels": [
+        "Yin1",
+        "yin1"
+      ],
+      "sourceEntryCount": 2,
+      "includesNameCapitalization": true,
+      "evidenceAcquisitionPriority": 3,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 632,
+      "character": "折",
+      "casefoldedPinyinLabel": "she2",
+      "evidenceGroupKey": "632|she2",
+      "sourceReadingKeys": [
+        "632|she2"
+      ],
+      "originalSourceReadingLabels": [
+        "she2"
+      ],
+      "sourceEntryCount": 1,
+      "includesNameCapitalization": false,
+      "evidenceAcquisitionPriority": 3,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 632,
+      "character": "折",
+      "casefoldedPinyinLabel": "zhe1",
+      "evidenceGroupKey": "632|zhe1",
+      "sourceReadingKeys": [
+        "632|zhe1"
+      ],
+      "originalSourceReadingLabels": [
+        "zhe1"
+      ],
+      "sourceEntryCount": 1,
+      "includesNameCapitalization": false,
+      "evidenceAcquisitionPriority": 3,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 632,
+      "character": "折",
+      "casefoldedPinyinLabel": "zhe2",
+      "evidenceGroupKey": "632|zhe2",
+      "sourceReadingKeys": [
+        "632|zhe2"
+      ],
+      "originalSourceReadingLabels": [
+        "zhe2"
+      ],
+      "sourceEntryCount": 1,
+      "includesNameCapitalization": false,
+      "evidenceAcquisitionPriority": 3,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 679,
+      "character": "杠",
+      "casefoldedPinyinLabel": "gang1",
+      "evidenceGroupKey": "679|gang1",
+      "sourceReadingKeys": [
+        "679|gang1"
+      ],
+      "originalSourceReadingLabels": [
+        "gang1"
+      ],
+      "sourceEntryCount": 1,
+      "includesNameCapitalization": false,
+      "evidenceAcquisitionPriority": 3,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 679,
+      "character": "杠",
+      "casefoldedPinyinLabel": "gang4",
+      "evidenceGroupKey": "679|gang4",
+      "sourceReadingKeys": [
+        "679|gang4"
+      ],
+      "originalSourceReadingLabels": [
+        "gang4"
+      ],
+      "sourceEntryCount": 1,
+      "includesNameCapitalization": false,
+      "evidenceAcquisitionPriority": 3,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 721,
+      "character": "里",
+      "casefoldedPinyinLabel": "li3",
+      "evidenceGroupKey": "721|li3",
+      "sourceReadingKeys": [
+        "721|li3",
+        "721|Li3"
+      ],
+      "originalSourceReadingLabels": [
+        "li3",
+        "Li3"
+      ],
+      "sourceEntryCount": 2,
+      "includesNameCapitalization": true,
+      "evidenceAcquisitionPriority": 3,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 778,
+      "character": "伯",
+      "casefoldedPinyinLabel": "ba4",
+      "evidenceGroupKey": "778|ba4",
+      "sourceReadingKeys": [
+        "778|ba4"
+      ],
+      "originalSourceReadingLabels": [
+        "ba4"
+      ],
+      "sourceEntryCount": 1,
+      "includesNameCapitalization": false,
+      "evidenceAcquisitionPriority": 3,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 778,
+      "character": "伯",
+      "casefoldedPinyinLabel": "bai3",
+      "evidenceGroupKey": "778|bai3",
+      "sourceReadingKeys": [
+        "778|bai3"
+      ],
+      "originalSourceReadingLabels": [
+        "bai3"
+      ],
+      "sourceEntryCount": 1,
+      "includesNameCapitalization": false,
+      "evidenceAcquisitionPriority": 3,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 778,
+      "character": "伯",
+      "casefoldedPinyinLabel": "bo2",
+      "evidenceGroupKey": "778|bo2",
+      "sourceReadingKeys": [
+        "778|bo2"
+      ],
+      "originalSourceReadingLabels": [
+        "bo2"
+      ],
+      "sourceEntryCount": 1,
+      "includesNameCapitalization": false,
+      "evidenceAcquisitionPriority": 3,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 810,
+      "character": "免",
+      "casefoldedPinyinLabel": "mian3",
+      "evidenceGroupKey": "810|mian3",
+      "sourceReadingKeys": [
+        "810|mian3"
+      ],
+      "originalSourceReadingLabels": [
+        "mian3"
+      ],
+      "sourceEntryCount": 1,
+      "includesNameCapitalization": false,
+      "evidenceAcquisitionPriority": 3,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 810,
+      "character": "免",
+      "casefoldedPinyinLabel": "wen4",
+      "evidenceGroupKey": "810|wen4",
+      "sourceReadingKeys": [
+        "810|wen4"
+      ],
+      "originalSourceReadingLabels": [
+        "wen4"
+      ],
+      "sourceEntryCount": 1,
+      "includesNameCapitalization": false,
+      "evidenceAcquisitionPriority": 3,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 841,
+      "character": "辛",
+      "casefoldedPinyinLabel": "xin1",
+      "evidenceGroupKey": "841|xin1",
+      "sourceReadingKeys": [
+        "841|Xin1",
+        "841|xin1"
+      ],
+      "originalSourceReadingLabels": [
+        "Xin1",
+        "xin1"
+      ],
+      "sourceEntryCount": 2,
+      "includesNameCapitalization": true,
+      "evidenceAcquisitionPriority": 3,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 2,
+      "character": "乙",
+      "casefoldedPinyinLabel": "yi3",
+      "evidenceGroupKey": "2|yi3",
+      "sourceReadingKeys": [
+        "2|yi3"
+      ],
+      "originalSourceReadingLabels": [
+        "yi3"
+      ],
+      "sourceEntryCount": 1,
+      "includesNameCapitalization": false,
+      "evidenceAcquisitionPriority": 4,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 2,
+      "character": "乙",
+      "casefoldedPinyinLabel": "zhe2",
+      "evidenceGroupKey": "2|zhe2",
+      "sourceReadingKeys": [
+        "2|zhe2"
+      ],
+      "originalSourceReadingLabels": [
+        "zhe2"
+      ],
+      "sourceEntryCount": 1,
+      "includesNameCapitalization": false,
+      "evidenceAcquisitionPriority": 4,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 17,
+      "character": "了",
+      "casefoldedPinyinLabel": "le5",
+      "evidenceGroupKey": "17|le5",
+      "sourceReadingKeys": [
+        "17|le5"
+      ],
+      "originalSourceReadingLabels": [
+        "le5"
+      ],
+      "sourceEntryCount": 1,
+      "includesNameCapitalization": false,
+      "evidenceAcquisitionPriority": 4,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 17,
+      "character": "了",
+      "casefoldedPinyinLabel": "liao3",
+      "evidenceGroupKey": "17|liao3",
+      "sourceReadingKeys": [
+        "17|liao3"
+      ],
+      "originalSourceReadingLabels": [
+        "liao3"
+      ],
+      "sourceEntryCount": 1,
+      "includesNameCapitalization": false,
+      "evidenceAcquisitionPriority": 4,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 17,
+      "character": "了",
+      "casefoldedPinyinLabel": "liao4",
+      "evidenceGroupKey": "17|liao4",
+      "sourceReadingKeys": [
+        "17|liao4"
+      ],
+      "originalSourceReadingLabels": [
+        "liao4"
+      ],
+      "sourceEntryCount": 1,
+      "includesNameCapitalization": false,
+      "evidenceAcquisitionPriority": 4,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 18,
+      "character": "刀",
+      "casefoldedPinyinLabel": "dao1",
+      "evidenceGroupKey": "18|dao1",
+      "sourceReadingKeys": [
+        "18|Dao1",
+        "18|dao1"
+      ],
+      "originalSourceReadingLabels": [
+        "Dao1",
+        "dao1"
+      ],
+      "sourceEntryCount": 2,
+      "includesNameCapitalization": true,
+      "evidenceAcquisitionPriority": 4,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 23,
+      "character": "干",
+      "casefoldedPinyinLabel": "gan1",
+      "evidenceGroupKey": "23|gan1",
+      "sourceReadingKeys": [
+        "23|gan1",
+        "23|Gan1"
+      ],
+      "originalSourceReadingLabels": [
+        "gan1",
+        "Gan1"
+      ],
+      "sourceEntryCount": 2,
+      "includesNameCapitalization": true,
+      "evidenceAcquisitionPriority": 4,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 23,
+      "character": "干",
+      "casefoldedPinyinLabel": "gan4",
+      "evidenceGroupKey": "23|gan4",
+      "sourceReadingKeys": [
+        "23|gan4"
+      ],
+      "originalSourceReadingLabels": [
+        "gan4"
+      ],
+      "sourceEntryCount": 1,
+      "includesNameCapitalization": false,
+      "evidenceAcquisitionPriority": 4,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 24,
+      "character": "于",
+      "casefoldedPinyinLabel": "yu2",
+      "evidenceGroupKey": "24|yu2",
+      "sourceReadingKeys": [
+        "24|Yu2",
+        "24|yu2"
+      ],
+      "originalSourceReadingLabels": [
+        "Yu2",
+        "yu2"
+      ],
+      "sourceEntryCount": 2,
+      "includesNameCapitalization": true,
+      "evidenceAcquisitionPriority": 4,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 27,
+      "character": "土",
+      "casefoldedPinyinLabel": "tu3",
+      "evidenceGroupKey": "27|tu3",
+      "sourceReadingKeys": [
+        "27|Tu3",
+        "27|tu3"
+      ],
+      "originalSourceReadingLabels": [
+        "Tu3",
+        "tu3"
+      ],
+      "sourceEntryCount": 2,
+      "includesNameCapitalization": true,
+      "evidenceAcquisitionPriority": 4,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 32,
+      "character": "大",
+      "casefoldedPinyinLabel": "da4",
+      "evidenceGroupKey": "32|da4",
+      "sourceReadingKeys": [
+        "32|da4"
+      ],
+      "originalSourceReadingLabels": [
+        "da4"
+      ],
+      "sourceEntryCount": 1,
+      "includesNameCapitalization": false,
+      "evidenceAcquisitionPriority": 4,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 32,
+      "character": "大",
+      "casefoldedPinyinLabel": "dai4",
+      "evidenceGroupKey": "32|dai4",
+      "sourceReadingKeys": [
+        "32|dai4"
+      ],
+      "originalSourceReadingLabels": [
+        "dai4"
+      ],
+      "sourceEntryCount": 1,
+      "includesNameCapitalization": false,
+      "evidenceAcquisitionPriority": 4,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 36,
+      "character": "上",
+      "casefoldedPinyinLabel": "shang3",
+      "evidenceGroupKey": "36|shang3",
+      "sourceReadingKeys": [
+        "36|shang3"
+      ],
+      "originalSourceReadingLabels": [
+        "shang3"
+      ],
+      "sourceEntryCount": 1,
+      "includesNameCapitalization": false,
+      "evidenceAcquisitionPriority": 4,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 36,
+      "character": "上",
+      "casefoldedPinyinLabel": "shang4",
+      "evidenceGroupKey": "36|shang4",
+      "sourceReadingKeys": [
+        "36|shang4"
+      ],
+      "originalSourceReadingLabels": [
+        "shang4"
+      ],
+      "sourceEntryCount": 1,
+      "includesNameCapitalization": false,
+      "evidenceAcquisitionPriority": 4,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 55,
+      "character": "门",
+      "casefoldedPinyinLabel": "men2",
+      "evidenceGroupKey": "55|men2",
+      "sourceReadingKeys": [
+        "55|Men2",
+        "55|men2"
+      ],
+      "originalSourceReadingLabels": [
+        "Men2",
+        "men2"
+      ],
+      "sourceEntryCount": 2,
+      "includesNameCapitalization": true,
+      "evidenceAcquisitionPriority": 4,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 57,
+      "character": "义",
+      "casefoldedPinyinLabel": "yi4",
+      "evidenceGroupKey": "57|yi4",
+      "sourceReadingKeys": [
+        "57|Yi4",
+        "57|yi4"
+      ],
+      "originalSourceReadingLabels": [
+        "Yi4",
+        "yi4"
+      ],
+      "sourceEntryCount": 2,
+      "includesNameCapitalization": true,
+      "evidenceAcquisitionPriority": 4,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 64,
+      "character": "子",
+      "casefoldedPinyinLabel": "zi3",
+      "evidenceGroupKey": "64|zi3",
+      "sourceReadingKeys": [
+        "64|zi3"
+      ],
+      "originalSourceReadingLabels": [
+        "zi3"
+      ],
+      "sourceEntryCount": 1,
+      "includesNameCapitalization": false,
+      "evidenceAcquisitionPriority": 4,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 64,
+      "character": "子",
+      "casefoldedPinyinLabel": "zi5",
+      "evidenceGroupKey": "64|zi5",
+      "sourceReadingKeys": [
+        "64|zi5"
+      ],
+      "originalSourceReadingLabels": [
+        "zi5"
+      ],
+      "sourceEntryCount": 1,
+      "includesNameCapitalization": false,
+      "evidenceAcquisitionPriority": 4,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 74,
+      "character": "丰",
+      "casefoldedPinyinLabel": "feng1",
+      "evidenceGroupKey": "74|feng1",
+      "sourceReadingKeys": [
+        "74|feng1",
+        "74|Feng1"
+      ],
+      "originalSourceReadingLabels": [
+        "feng1",
+        "Feng1"
+      ],
+      "sourceEntryCount": 2,
+      "includesNameCapitalization": true,
+      "evidenceAcquisitionPriority": 4,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 85,
+      "character": "扎",
+      "casefoldedPinyinLabel": "za1",
+      "evidenceGroupKey": "85|za1",
+      "sourceReadingKeys": [
+        "85|za1"
+      ],
+      "originalSourceReadingLabels": [
+        "za1"
+      ],
+      "sourceEntryCount": 1,
+      "includesNameCapitalization": false,
+      "evidenceAcquisitionPriority": 4,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 85,
+      "character": "扎",
+      "casefoldedPinyinLabel": "zha1",
+      "evidenceGroupKey": "85|zha1",
+      "sourceReadingKeys": [
+        "85|zha1"
+      ],
+      "originalSourceReadingLabels": [
+        "zha1"
+      ],
+      "sourceEntryCount": 1,
+      "includesNameCapitalization": false,
+      "evidenceAcquisitionPriority": 4,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 85,
+      "character": "扎",
+      "casefoldedPinyinLabel": "zha2",
+      "evidenceGroupKey": "85|zha2",
+      "sourceReadingKeys": [
+        "85|zha2"
+      ],
+      "originalSourceReadingLabels": [
+        "zha2"
+      ],
+      "sourceEntryCount": 1,
+      "includesNameCapitalization": false,
+      "evidenceAcquisitionPriority": 4,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 87,
+      "character": "木",
+      "casefoldedPinyinLabel": "mu4",
+      "evidenceGroupKey": "87|mu4",
+      "sourceReadingKeys": [
+        "87|Mu4",
+        "87|mu4"
+      ],
+      "originalSourceReadingLabels": [
+        "Mu4",
+        "mu4"
+      ],
+      "sourceEntryCount": 2,
+      "includesNameCapitalization": true,
+      "evidenceAcquisitionPriority": 4,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 99,
+      "character": "匹",
+      "casefoldedPinyinLabel": "pi1",
+      "evidenceGroupKey": "99|pi1",
+      "sourceReadingKeys": [
+        "99|pi1"
+      ],
+      "originalSourceReadingLabels": [
+        "pi1"
+      ],
+      "sourceEntryCount": 1,
+      "includesNameCapitalization": false,
+      "evidenceAcquisitionPriority": 4,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 99,
+      "character": "匹",
+      "casefoldedPinyinLabel": "pi3",
+      "evidenceGroupKey": "99|pi3",
+      "sourceReadingKeys": [
+        "99|pi3"
+      ],
+      "originalSourceReadingLabels": [
+        "pi3"
+      ],
+      "sourceEntryCount": 1,
+      "includesNameCapitalization": false,
+      "evidenceAcquisitionPriority": 4,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 100,
+      "character": "车",
+      "casefoldedPinyinLabel": "che1",
+      "evidenceGroupKey": "100|che1",
+      "sourceReadingKeys": [
+        "100|Che1",
+        "100|che1"
+      ],
+      "originalSourceReadingLabels": [
+        "Che1",
+        "che1"
+      ],
+      "sourceEntryCount": 2,
+      "includesNameCapitalization": true,
+      "evidenceAcquisitionPriority": 4,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 100,
+      "character": "车",
+      "casefoldedPinyinLabel": "ju1",
+      "evidenceGroupKey": "100|ju1",
+      "sourceReadingKeys": [
+        "100|ju1"
+      ],
+      "originalSourceReadingLabels": [
+        "ju1"
+      ],
+      "sourceEntryCount": 1,
+      "includesNameCapitalization": false,
+      "evidenceAcquisitionPriority": 4,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 105,
+      "character": "比",
+      "casefoldedPinyinLabel": "bi3",
+      "evidenceGroupKey": "105|bi3",
+      "sourceReadingKeys": [
+        "105|Bi3",
+        "105|bi3"
+      ],
+      "originalSourceReadingLabels": [
+        "Bi3",
+        "bi3"
+      ],
+      "sourceEntryCount": 2,
+      "includesNameCapitalization": true,
+      "evidenceAcquisitionPriority": 4,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 105,
+      "character": "比",
+      "casefoldedPinyinLabel": "bi4",
+      "evidenceGroupKey": "105|bi4",
+      "sourceReadingKeys": [
+        "105|bi4"
+      ],
+      "originalSourceReadingLabels": [
+        "bi4"
+      ],
+      "sourceEntryCount": 1,
+      "includesNameCapitalization": false,
+      "evidenceAcquisitionPriority": 4,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 107,
+      "character": "切",
+      "casefoldedPinyinLabel": "qie1",
+      "evidenceGroupKey": "107|qie1",
+      "sourceReadingKeys": [
+        "107|qie1"
+      ],
+      "originalSourceReadingLabels": [
+        "qie1"
+      ],
+      "sourceEntryCount": 1,
+      "includesNameCapitalization": false,
+      "evidenceAcquisitionPriority": 4,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 107,
+      "character": "切",
+      "casefoldedPinyinLabel": "qie4",
+      "evidenceGroupKey": "107|qie4",
+      "sourceReadingKeys": [
+        "107|qie4"
+      ],
+      "originalSourceReadingLabels": [
+        "qie4"
+      ],
+      "sourceEntryCount": 1,
+      "includesNameCapitalization": false,
+      "evidenceAcquisitionPriority": 4,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 123,
+      "character": "毛",
+      "casefoldedPinyinLabel": "mao2",
+      "evidenceGroupKey": "123|mao2",
+      "sourceReadingKeys": [
+        "123|Mao2",
+        "123|mao2"
+      ],
+      "originalSourceReadingLabels": [
+        "Mao2",
+        "mao2"
+      ],
+      "sourceEntryCount": 2,
+      "includesNameCapitalization": true,
+      "evidenceAcquisitionPriority": 4,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 130,
+      "character": "片",
+      "casefoldedPinyinLabel": "pian1",
+      "evidenceGroupKey": "130|pian1",
+      "sourceReadingKeys": [
+        "130|pian1"
+      ],
+      "originalSourceReadingLabels": [
+        "pian1"
+      ],
+      "sourceEntryCount": 1,
+      "includesNameCapitalization": false,
+      "evidenceAcquisitionPriority": 4,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 130,
+      "character": "片",
+      "casefoldedPinyinLabel": "pian4",
+      "evidenceGroupKey": "130|pian4",
+      "sourceReadingKeys": [
+        "130|pian4"
+      ],
+      "originalSourceReadingLabels": [
+        "pian4"
+      ],
+      "sourceEntryCount": 1,
+      "includesNameCapitalization": false,
+      "evidenceAcquisitionPriority": 4,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 158,
+      "character": "勾",
+      "casefoldedPinyinLabel": "gou1",
+      "evidenceGroupKey": "158|gou1",
+      "sourceReadingKeys": [
+        "158|Gou1",
+        "158|gou1"
+      ],
+      "originalSourceReadingLabels": [
+        "Gou1",
+        "gou1"
+      ],
+      "sourceEntryCount": 2,
+      "includesNameCapitalization": true,
+      "evidenceAcquisitionPriority": 4,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 158,
+      "character": "勾",
+      "casefoldedPinyinLabel": "gou4",
+      "evidenceGroupKey": "158|gou4",
+      "sourceReadingKeys": [
+        "158|gou4"
+      ],
+      "originalSourceReadingLabels": [
+        "gou4"
+      ],
+      "sourceEntryCount": 1,
+      "includesNameCapitalization": false,
+      "evidenceAcquisitionPriority": 4,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 165,
+      "character": "为",
+      "casefoldedPinyinLabel": "wei2",
+      "evidenceGroupKey": "165|wei2",
+      "sourceReadingKeys": [
+        "165|wei2"
+      ],
+      "originalSourceReadingLabels": [
+        "wei2"
+      ],
+      "sourceEntryCount": 1,
+      "includesNameCapitalization": false,
+      "evidenceAcquisitionPriority": 4,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 165,
+      "character": "为",
+      "casefoldedPinyinLabel": "wei4",
+      "evidenceGroupKey": "165|wei4",
+      "sourceReadingKeys": [
+        "165|wei4"
+      ],
+      "originalSourceReadingLabels": [
+        "wei4"
+      ],
+      "sourceEntryCount": 1,
+      "includesNameCapitalization": false,
+      "evidenceAcquisitionPriority": 4,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 166,
+      "character": "斗",
+      "casefoldedPinyinLabel": "dou3",
+      "evidenceGroupKey": "166|dou3",
+      "sourceReadingKeys": [
+        "166|Dou3",
+        "166|dou3"
+      ],
+      "originalSourceReadingLabels": [
+        "Dou3",
+        "dou3"
+      ],
+      "sourceEntryCount": 2,
+      "includesNameCapitalization": true,
+      "evidenceAcquisitionPriority": 4,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 166,
+      "character": "斗",
+      "casefoldedPinyinLabel": "dou4",
+      "evidenceGroupKey": "166|dou4",
+      "sourceReadingKeys": [
+        "166|dou4"
+      ],
+      "originalSourceReadingLabels": [
+        "dou4"
+      ],
+      "sourceEntryCount": 1,
+      "includesNameCapitalization": false,
+      "evidenceAcquisitionPriority": 4,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 178,
+      "character": "巴",
+      "casefoldedPinyinLabel": "ba1",
+      "evidenceGroupKey": "178|ba1",
+      "sourceReadingKeys": [
+        "178|Ba1",
+        "178|ba1"
+      ],
+      "originalSourceReadingLabels": [
+        "Ba1",
+        "ba1"
+      ],
+      "sourceEntryCount": 2,
+      "includesNameCapitalization": true,
+      "evidenceAcquisitionPriority": 4,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 182,
+      "character": "以",
+      "casefoldedPinyinLabel": "yi3",
+      "evidenceGroupKey": "182|yi3",
+      "sourceReadingKeys": [
+        "182|yi3",
+        "182|Yi3"
+      ],
+      "originalSourceReadingLabels": [
+        "yi3",
+        "Yi3"
+      ],
+      "sourceEntryCount": 2,
+      "includesNameCapitalization": true,
+      "evidenceAcquisitionPriority": 4,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 207,
+      "character": "艾",
+      "casefoldedPinyinLabel": "ai4",
+      "evidenceGroupKey": "207|ai4",
+      "sourceReadingKeys": [
+        "207|Ai4",
+        "207|ai4"
+      ],
+      "originalSourceReadingLabels": [
+        "Ai4",
+        "ai4"
+      ],
+      "sourceEntryCount": 2,
+      "includesNameCapitalization": true,
+      "evidenceAcquisitionPriority": 4,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 207,
+      "character": "艾",
+      "casefoldedPinyinLabel": "yi4",
+      "evidenceGroupKey": "207|yi4",
+      "sourceReadingKeys": [
+        "207|yi4"
+      ],
+      "originalSourceReadingLabels": [
+        "yi4"
+      ],
+      "sourceEntryCount": 1,
+      "includesNameCapitalization": false,
+      "evidenceAcquisitionPriority": 4,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 212,
+      "character": "可",
+      "casefoldedPinyinLabel": "ke3",
+      "evidenceGroupKey": "212|ke3",
+      "sourceReadingKeys": [
+        "212|ke3"
+      ],
+      "originalSourceReadingLabels": [
+        "ke3"
+      ],
+      "sourceEntryCount": 1,
+      "includesNameCapitalization": false,
+      "evidenceAcquisitionPriority": 4,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 212,
+      "character": "可",
+      "casefoldedPinyinLabel": "ke4",
+      "evidenceGroupKey": "212|ke4",
+      "sourceReadingKeys": [
+        "212|ke4"
+      ],
+      "originalSourceReadingLabels": [
+        "ke4"
+      ],
+      "sourceEntryCount": 1,
+      "includesNameCapitalization": false,
+      "evidenceAcquisitionPriority": 4,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 214,
+      "character": "左",
+      "casefoldedPinyinLabel": "zuo3",
+      "evidenceGroupKey": "214|zuo3",
+      "sourceReadingKeys": [
+        "214|Zuo3",
+        "214|zuo3"
+      ],
+      "originalSourceReadingLabels": [
+        "Zuo3",
+        "zuo3"
+      ],
+      "sourceEntryCount": 2,
+      "includesNameCapitalization": true,
+      "evidenceAcquisitionPriority": 4,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 216,
+      "character": "石",
+      "casefoldedPinyinLabel": "dan4",
+      "evidenceGroupKey": "216|dan4",
+      "sourceReadingKeys": [
+        "216|dan4"
+      ],
+      "originalSourceReadingLabels": [
+        "dan4"
+      ],
+      "sourceEntryCount": 1,
+      "includesNameCapitalization": false,
+      "evidenceAcquisitionPriority": 4,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 216,
+      "character": "石",
+      "casefoldedPinyinLabel": "shi2",
+      "evidenceGroupKey": "216|shi2",
+      "sourceReadingKeys": [
+        "216|Shi2",
+        "216|shi2"
+      ],
+      "originalSourceReadingLabels": [
+        "Shi2",
+        "shi2"
+      ],
+      "sourceEntryCount": 2,
+      "includesNameCapitalization": true,
+      "evidenceAcquisitionPriority": 4,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 222,
+      "character": "平",
+      "casefoldedPinyinLabel": "ping2",
+      "evidenceGroupKey": "222|ping2",
+      "sourceReadingKeys": [
+        "222|Ping2",
+        "222|ping2"
+      ],
+      "originalSourceReadingLabels": [
+        "Ping2",
+        "ping2"
+      ],
+      "sourceEntryCount": 2,
+      "includesNameCapitalization": true,
+      "evidenceAcquisitionPriority": 4,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 226,
+      "character": "卡",
+      "casefoldedPinyinLabel": "ka3",
+      "evidenceGroupKey": "226|ka3",
+      "sourceReadingKeys": [
+        "226|ka3"
+      ],
+      "originalSourceReadingLabels": [
+        "ka3"
+      ],
+      "sourceEntryCount": 1,
+      "includesNameCapitalization": false,
+      "evidenceAcquisitionPriority": 4,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 226,
+      "character": "卡",
+      "casefoldedPinyinLabel": "qia3",
+      "evidenceGroupKey": "226|qia3",
+      "sourceReadingKeys": [
+        "226|qia3"
+      ],
+      "originalSourceReadingLabels": [
+        "qia3"
+      ],
+      "sourceEntryCount": 1,
+      "includesNameCapitalization": false,
+      "evidenceAcquisitionPriority": 4,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 243,
+      "character": "号",
+      "casefoldedPinyinLabel": "hao2",
+      "evidenceGroupKey": "243|hao2",
+      "sourceReadingKeys": [
+        "243|hao2"
+      ],
+      "originalSourceReadingLabels": [
+        "hao2"
+      ],
+      "sourceEntryCount": 1,
+      "includesNameCapitalization": false,
+      "evidenceAcquisitionPriority": 4,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 243,
+      "character": "号",
+      "casefoldedPinyinLabel": "hao4",
+      "evidenceGroupKey": "243|hao4",
+      "sourceReadingKeys": [
+        "243|hao4"
+      ],
+      "originalSourceReadingLabels": [
+        "hao4"
+      ],
+      "sourceEntryCount": 1,
+      "includesNameCapitalization": false,
+      "evidenceAcquisitionPriority": 4,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 246,
+      "character": "只",
+      "casefoldedPinyinLabel": "zhi1",
+      "evidenceGroupKey": "246|zhi1",
+      "sourceReadingKeys": [
+        "246|zhi1"
+      ],
+      "originalSourceReadingLabels": [
+        "zhi1"
+      ],
+      "sourceEntryCount": 1,
+      "includesNameCapitalization": false,
+      "evidenceAcquisitionPriority": 4,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 246,
+      "character": "只",
+      "casefoldedPinyinLabel": "zhi3",
+      "evidenceGroupKey": "246|zhi3",
+      "sourceReadingKeys": [
+        "246|zhi3"
+      ],
+      "originalSourceReadingLabels": [
+        "zhi3"
+      ],
+      "sourceEntryCount": 1,
+      "includesNameCapitalization": false,
+      "evidenceAcquisitionPriority": 4,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 282,
+      "character": "令",
+      "casefoldedPinyinLabel": "ling2",
+      "evidenceGroupKey": "282|ling2",
+      "sourceReadingKeys": [
+        "282|Ling2",
+        "282|ling2"
+      ],
+      "originalSourceReadingLabels": [
+        "Ling2",
+        "ling2"
+      ],
+      "sourceEntryCount": 2,
+      "includesNameCapitalization": true,
+      "evidenceAcquisitionPriority": 4,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 282,
+      "character": "令",
+      "casefoldedPinyinLabel": "ling3",
+      "evidenceGroupKey": "282|ling3",
+      "sourceReadingKeys": [
+        "282|ling3"
+      ],
+      "originalSourceReadingLabels": [
+        "ling3"
+      ],
+      "sourceEntryCount": 1,
+      "includesNameCapitalization": false,
+      "evidenceAcquisitionPriority": 4,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 282,
+      "character": "令",
+      "casefoldedPinyinLabel": "ling4",
+      "evidenceGroupKey": "282|ling4",
+      "sourceReadingKeys": [
+        "282|ling4"
+      ],
+      "originalSourceReadingLabels": [
+        "ling4"
+      ],
+      "sourceEntryCount": 1,
+      "includesNameCapitalization": false,
+      "evidenceAcquisitionPriority": 4,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 285,
+      "character": "印",
+      "casefoldedPinyinLabel": "yin4",
+      "evidenceGroupKey": "285|yin4",
+      "sourceReadingKeys": [
+        "285|Yin4",
+        "285|yin4"
+      ],
+      "originalSourceReadingLabels": [
+        "Yin4",
+        "yin4"
+      ],
+      "sourceEntryCount": 2,
+      "includesNameCapitalization": true,
+      "evidenceAcquisitionPriority": 4,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 298,
+      "character": "包",
+      "casefoldedPinyinLabel": "bao1",
+      "evidenceGroupKey": "298|bao1",
+      "sourceReadingKeys": [
+        "298|Bao1",
+        "298|bao1"
+      ],
+      "originalSourceReadingLabels": [
+        "Bao1",
+        "bao1"
+      ],
+      "sourceEntryCount": 2,
+      "includesNameCapitalization": true,
+      "evidenceAcquisitionPriority": 4,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 310,
+      "character": "头",
+      "casefoldedPinyinLabel": "tou2",
+      "evidenceGroupKey": "310|tou2",
+      "sourceReadingKeys": [
+        "310|tou2"
+      ],
+      "originalSourceReadingLabels": [
+        "tou2"
+      ],
+      "sourceEntryCount": 1,
+      "includesNameCapitalization": false,
+      "evidenceAcquisitionPriority": 4,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 310,
+      "character": "头",
+      "casefoldedPinyinLabel": "tou5",
+      "evidenceGroupKey": "310|tou5",
+      "sourceReadingKeys": [
+        "310|tou5"
+      ],
+      "originalSourceReadingLabels": [
+        "tou5"
+      ],
+      "sourceEntryCount": 1,
+      "includesNameCapitalization": false,
+      "evidenceAcquisitionPriority": 4,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 312,
+      "character": "宁",
+      "casefoldedPinyinLabel": "ning2",
+      "evidenceGroupKey": "312|ning2",
+      "sourceReadingKeys": [
+        "312|Ning2",
+        "312|ning2"
+      ],
+      "originalSourceReadingLabels": [
+        "Ning2",
+        "ning2"
+      ],
+      "sourceEntryCount": 2,
+      "includesNameCapitalization": true,
+      "evidenceAcquisitionPriority": 4,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 312,
+      "character": "宁",
+      "casefoldedPinyinLabel": "ning4",
+      "evidenceGroupKey": "312|ning4",
+      "sourceReadingKeys": [
+        "312|ning4"
+      ],
+      "originalSourceReadingLabels": [
+        "ning4"
+      ],
+      "sourceEntryCount": 1,
+      "includesNameCapitalization": false,
+      "evidenceAcquisitionPriority": 4,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 318,
+      "character": "礼",
+      "casefoldedPinyinLabel": "li3",
+      "evidenceGroupKey": "318|li3",
+      "sourceReadingKeys": [
+        "318|Li3",
+        "318|li3"
+      ],
+      "originalSourceReadingLabels": [
+        "Li3",
+        "li3"
+      ],
+      "sourceEntryCount": 2,
+      "includesNameCapitalization": true,
+      "evidenceAcquisitionPriority": 4,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 337,
+      "character": "边",
+      "casefoldedPinyinLabel": "bian1",
+      "evidenceGroupKey": "337|bian1",
+      "sourceReadingKeys": [
+        "337|bian1"
+      ],
+      "originalSourceReadingLabels": [
+        "bian1"
+      ],
+      "sourceEntryCount": 1,
+      "includesNameCapitalization": false,
+      "evidenceAcquisitionPriority": 4,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 337,
+      "character": "边",
+      "casefoldedPinyinLabel": "bian5",
+      "evidenceGroupKey": "337|bian5",
+      "sourceReadingKeys": [
+        "337|bian5"
+      ],
+      "originalSourceReadingLabels": [
+        "bian5"
+      ],
+      "sourceEntryCount": 1,
+      "includesNameCapitalization": false,
+      "evidenceAcquisitionPriority": 4,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 342,
+      "character": "台",
+      "casefoldedPinyinLabel": "tai2",
+      "evidenceGroupKey": "342|tai2",
+      "sourceReadingKeys": [
+        "342|Tai2",
+        "342|tai2"
+      ],
+      "originalSourceReadingLabels": [
+        "Tai2",
+        "tai2"
+      ],
+      "sourceEntryCount": 2,
+      "includesNameCapitalization": true,
+      "evidenceAcquisitionPriority": 4,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 366,
+      "character": "地",
+      "casefoldedPinyinLabel": "de5",
+      "evidenceGroupKey": "366|de5",
+      "sourceReadingKeys": [
+        "366|de5"
+      ],
+      "originalSourceReadingLabels": [
+        "de5"
+      ],
+      "sourceEntryCount": 1,
+      "includesNameCapitalization": false,
+      "evidenceAcquisitionPriority": 4,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 366,
+      "character": "地",
+      "casefoldedPinyinLabel": "di4",
+      "evidenceGroupKey": "366|di4",
+      "sourceReadingKeys": [
+        "366|di4"
+      ],
+      "originalSourceReadingLabels": [
+        "di4"
+      ],
+      "sourceEntryCount": 1,
+      "includesNameCapitalization": false,
+      "evidenceAcquisitionPriority": 4,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 377,
+      "character": "机",
+      "casefoldedPinyinLabel": "ji1",
+      "evidenceGroupKey": "377|ji1",
+      "sourceReadingKeys": [
+        "377|Ji1",
+        "377|ji1"
+      ],
+      "originalSourceReadingLabels": [
+        "Ji1",
+        "ji1"
+      ],
+      "sourceEntryCount": 2,
+      "includesNameCapitalization": true,
+      "evidenceAcquisitionPriority": 4,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 402,
+      "character": "夹",
+      "casefoldedPinyinLabel": "jia1",
+      "evidenceGroupKey": "402|jia1",
+      "sourceReadingKeys": [
+        "402|jia1"
+      ],
+      "originalSourceReadingLabels": [
+        "jia1"
+      ],
+      "sourceEntryCount": 1,
+      "includesNameCapitalization": false,
+      "evidenceAcquisitionPriority": 4,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 402,
+      "character": "夹",
+      "casefoldedPinyinLabel": "jia2",
+      "evidenceGroupKey": "402|jia2",
+      "sourceReadingKeys": [
+        "402|jia2"
+      ],
+      "originalSourceReadingLabels": [
+        "jia2"
+      ],
+      "sourceEntryCount": 1,
+      "includesNameCapitalization": false,
+      "evidenceAcquisitionPriority": 4,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 402,
+      "character": "夹",
+      "casefoldedPinyinLabel": "jia4",
+      "evidenceGroupKey": "402|jia4",
+      "sourceReadingKeys": [
+        "402|jia4"
+      ],
+      "originalSourceReadingLabels": [
+        "jia4"
+      ],
+      "sourceEntryCount": 1,
+      "includesNameCapitalization": false,
+      "evidenceAcquisitionPriority": 4,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 424,
+      "character": "曲",
+      "casefoldedPinyinLabel": "qu1",
+      "evidenceGroupKey": "424|qu1",
+      "sourceReadingKeys": [
+        "424|Qu1",
+        "424|qu1"
+      ],
+      "originalSourceReadingLabels": [
+        "Qu1",
+        "qu1"
+      ],
+      "sourceEntryCount": 2,
+      "includesNameCapitalization": true,
+      "evidenceAcquisitionPriority": 4,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 424,
+      "character": "曲",
+      "casefoldedPinyinLabel": "qu3",
+      "evidenceGroupKey": "424|qu3",
+      "sourceReadingKeys": [
+        "424|qu3"
+      ],
+      "originalSourceReadingLabels": [
+        "qu3"
+      ],
+      "sourceEntryCount": 1,
+      "includesNameCapitalization": false,
+      "evidenceAcquisitionPriority": 4,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 427,
+      "character": "同",
+      "casefoldedPinyinLabel": "tong2",
+      "evidenceGroupKey": "427|tong2",
+      "sourceReadingKeys": [
+        "427|tong2"
+      ],
+      "originalSourceReadingLabels": [
+        "tong2"
+      ],
+      "sourceEntryCount": 1,
+      "includesNameCapitalization": false,
+      "evidenceAcquisitionPriority": 4,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 427,
+      "character": "同",
+      "casefoldedPinyinLabel": "tong4",
+      "evidenceGroupKey": "427|tong4",
+      "sourceReadingKeys": [
+        "427|tong4"
+      ],
+      "originalSourceReadingLabels": [
+        "tong4"
+      ],
+      "sourceEntryCount": 1,
+      "includesNameCapitalization": false,
+      "evidenceAcquisitionPriority": 4,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 480,
+      "character": "向",
+      "casefoldedPinyinLabel": "xiang4",
+      "evidenceGroupKey": "480|xiang4",
+      "sourceReadingKeys": [
+        "480|Xiang4",
+        "480|xiang4"
+      ],
+      "originalSourceReadingLabels": [
+        "Xiang4",
+        "xiang4"
+      ],
+      "sourceEntryCount": 2,
+      "includesNameCapitalization": true,
+      "evidenceAcquisitionPriority": 4,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 481,
+      "character": "似",
+      "casefoldedPinyinLabel": "shi4",
+      "evidenceGroupKey": "481|shi4",
+      "sourceReadingKeys": [
+        "481|shi4"
+      ],
+      "originalSourceReadingLabels": [
+        "shi4"
+      ],
+      "sourceEntryCount": 1,
+      "includesNameCapitalization": false,
+      "evidenceAcquisitionPriority": 4,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 481,
+      "character": "似",
+      "casefoldedPinyinLabel": "si4",
+      "evidenceGroupKey": "481|si4",
+      "sourceReadingKeys": [
+        "481|si4"
+      ],
+      "originalSourceReadingLabels": [
+        "si4"
+      ],
+      "sourceEntryCount": 1,
+      "includesNameCapitalization": false,
+      "evidenceAcquisitionPriority": 4,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 494,
+      "character": "创",
+      "casefoldedPinyinLabel": "chuang1",
+      "evidenceGroupKey": "494|chuang1",
+      "sourceReadingKeys": [
+        "494|chuang1"
+      ],
+      "originalSourceReadingLabels": [
+        "chuang1"
+      ],
+      "sourceEntryCount": 1,
+      "includesNameCapitalization": false,
+      "evidenceAcquisitionPriority": 4,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 494,
+      "character": "创",
+      "casefoldedPinyinLabel": "chuang4",
+      "evidenceGroupKey": "494|chuang4",
+      "sourceReadingKeys": [
+        "494|chuang4"
+      ],
+      "originalSourceReadingLabels": [
+        "chuang4"
+      ],
+      "sourceEntryCount": 1,
+      "includesNameCapitalization": false,
+      "evidenceAcquisitionPriority": 4,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 514,
+      "character": "庄",
+      "casefoldedPinyinLabel": "zhuang1",
+      "evidenceGroupKey": "514|zhuang1",
+      "sourceReadingKeys": [
+        "514|zhuang1",
+        "514|Zhuang1"
+      ],
+      "originalSourceReadingLabels": [
+        "zhuang1",
+        "Zhuang1"
+      ],
+      "sourceEntryCount": 2,
+      "includesNameCapitalization": true,
+      "evidenceAcquisitionPriority": 4,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 556,
+      "character": "论",
+      "casefoldedPinyinLabel": "lun2",
+      "evidenceGroupKey": "556|lun2",
+      "sourceReadingKeys": [
+        "556|Lun2"
+      ],
+      "originalSourceReadingLabels": [
+        "Lun2"
+      ],
+      "sourceEntryCount": 1,
+      "includesNameCapitalization": true,
+      "evidenceAcquisitionPriority": 4,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 556,
+      "character": "论",
+      "casefoldedPinyinLabel": "lun4",
+      "evidenceGroupKey": "556|lun4",
+      "sourceReadingKeys": [
+        "556|lun4"
+      ],
+      "originalSourceReadingLabels": [
+        "lun4"
+      ],
+      "sourceEntryCount": 1,
+      "includesNameCapitalization": false,
+      "evidenceAcquisitionPriority": 4,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 564,
+      "character": "那",
+      "casefoldedPinyinLabel": "na1",
+      "evidenceGroupKey": "564|na1",
+      "sourceReadingKeys": [
+        "564|Na1"
+      ],
+      "originalSourceReadingLabels": [
+        "Na1"
+      ],
+      "sourceEntryCount": 1,
+      "includesNameCapitalization": true,
+      "evidenceAcquisitionPriority": 4,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 564,
+      "character": "那",
+      "casefoldedPinyinLabel": "na3",
+      "evidenceGroupKey": "564|na3",
+      "sourceReadingKeys": [
+        "564|na3"
+      ],
+      "originalSourceReadingLabels": [
+        "na3"
+      ],
+      "sourceEntryCount": 1,
+      "includesNameCapitalization": false,
+      "evidenceAcquisitionPriority": 4,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 564,
+      "character": "那",
+      "casefoldedPinyinLabel": "na4",
+      "evidenceGroupKey": "564|na4",
+      "sourceReadingKeys": [
+        "564|na4"
+      ],
+      "originalSourceReadingLabels": [
+        "na4"
+      ],
+      "sourceEntryCount": 1,
+      "includesNameCapitalization": false,
+      "evidenceAcquisitionPriority": 4,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 564,
+      "character": "那",
+      "casefoldedPinyinLabel": "nuo2",
+      "evidenceGroupKey": "564|nuo2",
+      "sourceReadingKeys": [
+        "564|Nuo2",
+        "564|nuo2"
+      ],
+      "originalSourceReadingLabels": [
+        "Nuo2",
+        "nuo2"
+      ],
+      "sourceEntryCount": 2,
+      "includesNameCapitalization": true,
+      "evidenceAcquisitionPriority": 4,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 600,
+      "character": "弄",
+      "casefoldedPinyinLabel": "long4",
+      "evidenceGroupKey": "600|long4",
+      "sourceReadingKeys": [
+        "600|long4"
+      ],
+      "originalSourceReadingLabels": [
+        "long4"
+      ],
+      "sourceEntryCount": 1,
+      "includesNameCapitalization": false,
+      "evidenceAcquisitionPriority": 4,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 600,
+      "character": "弄",
+      "casefoldedPinyinLabel": "nong4",
+      "evidenceGroupKey": "600|nong4",
+      "sourceReadingKeys": [
+        "600|nong4"
+      ],
+      "originalSourceReadingLabels": [
+        "nong4"
+      ],
+      "sourceEntryCount": 1,
+      "includesNameCapitalization": false,
+      "evidenceAcquisitionPriority": 4,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 665,
+      "character": "花",
+      "casefoldedPinyinLabel": "hua1",
+      "evidenceGroupKey": "665|hua1",
+      "sourceReadingKeys": [
+        "665|Hua1",
+        "665|hua1"
+      ],
+      "originalSourceReadingLabels": [
+        "Hua1",
+        "hua1"
+      ],
+      "sourceEntryCount": 2,
+      "includesNameCapitalization": true,
+      "evidenceAcquisitionPriority": 4,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 675,
+      "character": "克",
+      "casefoldedPinyinLabel": "ke4",
+      "evidenceGroupKey": "675|ke4",
+      "sourceReadingKeys": [
+        "675|ke4",
+        "675|Ke4"
+      ],
+      "originalSourceReadingLabels": [
+        "ke4",
+        "Ke4"
+      ],
+      "sourceEntryCount": 2,
+      "includesNameCapitalization": true,
+      "evidenceAcquisitionPriority": 4,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 675,
+      "character": "克",
+      "casefoldedPinyinLabel": "kei1",
+      "evidenceGroupKey": "675|kei1",
+      "sourceReadingKeys": [
+        "675|kei1"
+      ],
+      "originalSourceReadingLabels": [
+        "kei1"
+      ],
+      "sourceEntryCount": 1,
+      "includesNameCapitalization": false,
+      "evidenceAcquisitionPriority": 4,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 677,
+      "character": "苏",
+      "casefoldedPinyinLabel": "su1",
+      "evidenceGroupKey": "677|su1",
+      "sourceReadingKeys": [
+        "677|su1",
+        "677|Su1"
+      ],
+      "originalSourceReadingLabels": [
+        "su1",
+        "Su1"
+      ],
+      "sourceEntryCount": 2,
+      "includesNameCapitalization": true,
+      "evidenceAcquisitionPriority": 4,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 717,
+      "character": "时",
+      "casefoldedPinyinLabel": "shi2",
+      "evidenceGroupKey": "717|shi2",
+      "sourceReadingKeys": [
+        "717|shi2",
+        "717|Shi2"
+      ],
+      "originalSourceReadingLabels": [
+        "shi2",
+        "Shi2"
+      ],
+      "sourceEntryCount": 2,
+      "includesNameCapitalization": true,
+      "evidenceAcquisitionPriority": 4,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 747,
+      "character": "吧",
+      "casefoldedPinyinLabel": "ba1",
+      "evidenceGroupKey": "747|ba1",
+      "sourceReadingKeys": [
+        "747|ba1"
+      ],
+      "originalSourceReadingLabels": [
+        "ba1"
+      ],
+      "sourceEntryCount": 1,
+      "includesNameCapitalization": false,
+      "evidenceAcquisitionPriority": 4,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 747,
+      "character": "吧",
+      "casefoldedPinyinLabel": "ba5",
+      "evidenceGroupKey": "747|ba5",
+      "sourceReadingKeys": [
+        "747|ba5"
+      ],
+      "originalSourceReadingLabels": [
+        "ba5"
+      ],
+      "sourceEntryCount": 1,
+      "includesNameCapitalization": false,
+      "evidenceAcquisitionPriority": 4,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 758,
+      "character": "钉",
+      "casefoldedPinyinLabel": "ding1",
+      "evidenceGroupKey": "758|ding1",
+      "sourceReadingKeys": [
+        "758|ding1"
+      ],
+      "originalSourceReadingLabels": [
+        "ding1"
+      ],
+      "sourceEntryCount": 1,
+      "includesNameCapitalization": false,
+      "evidenceAcquisitionPriority": 4,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 758,
+      "character": "钉",
+      "casefoldedPinyinLabel": "ding4",
+      "evidenceGroupKey": "758|ding4",
+      "sourceReadingKeys": [
+        "758|ding4"
+      ],
+      "originalSourceReadingLabels": [
+        "ding4"
+      ],
+      "sourceEntryCount": 1,
+      "includesNameCapitalization": false,
+      "evidenceAcquisitionPriority": 4,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 795,
+      "character": "余",
+      "casefoldedPinyinLabel": "yu2",
+      "evidenceGroupKey": "795|yu2",
+      "sourceReadingKeys": [
+        "795|Yu2",
+        "795|yu2"
+      ],
+      "originalSourceReadingLabels": [
+        "Yu2",
+        "yu2"
+      ],
+      "sourceEntryCount": 2,
+      "includesNameCapitalization": true,
+      "evidenceAcquisitionPriority": 4,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 814,
+      "character": "角",
+      "casefoldedPinyinLabel": "jiao3",
+      "evidenceGroupKey": "814|jiao3",
+      "sourceReadingKeys": [
+        "814|jiao3"
+      ],
+      "originalSourceReadingLabels": [
+        "jiao3"
+      ],
+      "sourceEntryCount": 1,
+      "includesNameCapitalization": false,
+      "evidenceAcquisitionPriority": 4,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 814,
+      "character": "角",
+      "casefoldedPinyinLabel": "jue2",
+      "evidenceGroupKey": "814|jue2",
+      "sourceReadingKeys": [
+        "814|Jue2",
+        "814|jue2"
+      ],
+      "originalSourceReadingLabels": [
+        "Jue2",
+        "jue2"
+      ],
+      "sourceEntryCount": 2,
+      "includesNameCapitalization": true,
+      "evidenceAcquisitionPriority": 4,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 821,
+      "character": "刨",
+      "casefoldedPinyinLabel": "bao4",
+      "evidenceGroupKey": "821|bao4",
+      "sourceReadingKeys": [
+        "821|bao4"
+      ],
+      "originalSourceReadingLabels": [
+        "bao4"
+      ],
+      "sourceEntryCount": 1,
+      "includesNameCapitalization": false,
+      "evidenceAcquisitionPriority": 4,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 821,
+      "character": "刨",
+      "casefoldedPinyinLabel": "pao2",
+      "evidenceGroupKey": "821|pao2",
+      "sourceReadingKeys": [
+        "821|pao2"
+      ],
+      "originalSourceReadingLabels": [
+        "pao2"
+      ],
+      "sourceEntryCount": 1,
+      "includesNameCapitalization": false,
+      "evidenceAcquisitionPriority": 4,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 860,
+      "character": "沙",
+      "casefoldedPinyinLabel": "sha1",
+      "evidenceGroupKey": "860|sha1",
+      "sourceReadingKeys": [
+        "860|Sha1",
+        "860|sha1"
+      ],
+      "originalSourceReadingLabels": [
+        "Sha1",
+        "sha1"
+      ],
+      "sourceEntryCount": 2,
+      "includesNameCapitalization": true,
+      "evidenceAcquisitionPriority": 4,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 871,
+      "character": "沉",
+      "casefoldedPinyinLabel": "chen1",
+      "evidenceGroupKey": "871|chen1",
+      "sourceReadingKeys": [
+        "871|chen1"
+      ],
+      "originalSourceReadingLabels": [
+        "chen1"
+      ],
+      "sourceEntryCount": 1,
+      "includesNameCapitalization": false,
+      "evidenceAcquisitionPriority": 4,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 871,
+      "character": "沉",
+      "casefoldedPinyinLabel": "chen2",
+      "evidenceGroupKey": "871|chen2",
+      "sourceReadingKeys": [
+        "871|chen2"
+      ],
+      "originalSourceReadingLabels": [
+        "chen2"
+      ],
+      "sourceEntryCount": 1,
+      "includesNameCapitalization": false,
+      "evidenceAcquisitionPriority": 4,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 926,
+      "character": "劲",
+      "casefoldedPinyinLabel": "jin4",
+      "evidenceGroupKey": "926|jin4",
+      "sourceReadingKeys": [
+        "926|jin4"
+      ],
+      "originalSourceReadingLabels": [
+        "jin4"
+      ],
+      "sourceEntryCount": 1,
+      "includesNameCapitalization": false,
+      "evidenceAcquisitionPriority": 4,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 926,
+      "character": "劲",
+      "casefoldedPinyinLabel": "jing4",
+      "evidenceGroupKey": "926|jing4",
+      "sourceReadingKeys": [
+        "926|jing4"
+      ],
+      "originalSourceReadingLabels": [
+        "jing4"
+      ],
+      "sourceEntryCount": 1,
+      "includesNameCapitalization": false,
+      "evidenceAcquisitionPriority": 4,
+      "checkedPublisherLinks": [],
+      "sourceAcquisitionStatus": "pending",
+      "contextualPronunciationVerification": "pending",
+      "lexemeSenseDistinction": "pending",
+      "independentlyAdjudicated": false,
+      "productionVerified": false
+    }
+  ]
+}
