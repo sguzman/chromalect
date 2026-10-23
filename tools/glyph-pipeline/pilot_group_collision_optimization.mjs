@@ -31,7 +31,14 @@ function sRGB(L,C,h){
  return "#"+channels.map(x=>Math.round(255*(x<=.0031308?12.92*x:1.055*x**(1/2.4)-.055))
   .toString(16).padStart(2,"0")).join("").toUpperCase();
 }
-export function deriveCollisionConstrainedPilot(catalog,mappings,palette,riskReport){
+export function deriveCollisionConstrainedPilot(catalog,mappings,palette,riskReport,
+ {trainingRanks=null}={}){
+ if(trainingRanks!==null){
+  assert.ok(trainingRanks instanceof Set,"Training ranks must be a pinned set");
+  assert.equal(trainingRanks.size,800,"Held-out audit requires exactly 800 training characters");
+  for(const rank of trainingRanks)
+   assert.ok(Number.isInteger(rank)&&rank>=1&&rank<=1000);
+ }
  const earlier=derivePilotGroupCounterfactual(palette);
  assert.equal(catalog.schema,"chromalect.character-tranche.v1");
  assert.equal(catalog.characters.length,1000);
@@ -55,6 +62,7 @@ export function deriveCollisionConstrainedPilot(catalog,mappings,palette,riskRep
  // containing that unique component-ID pair. No source stroke is double-counted.
  const edges=new Map();
  for(const ch of catalog.characters){
+  if(trainingRanks!==null&&!trainingRanks.has(ch.rank))continue;
   const glyph=byGlyph.get(ch.character);
   if(!glyph||glyph.independently_visually_certified!==false)
    throw Error("Unmatched or visually promoted source glyph");
