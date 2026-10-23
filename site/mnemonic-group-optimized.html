@@ -1,0 +1,44 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark">
+<meta name="description" content="Original Mandarin component identities compared with two unapproved historical group-hue research variants.">
+<title>Group-hue collision reduction · Chromalect</title>
+<link rel="stylesheet" href="style.css"><script src="theme.js"></script>
+<script src="mnemonic-group-optimized.js" defer></script>
+<style>
+.opt-controls{display:grid;gap:6px;max-width:360px;margin:18px 0}
+.opt-controls select{font:inherit;padding:10px;background:var(--tile-bg);color:var(--ink);
+ border:1px solid var(--border);border-radius:8px}
+.opt-grid{display:grid;gap:16px;margin:18px 0}
+.opt-card{padding:18px;background:var(--panel);border:1px solid var(--border);
+ border-radius:12px}
+.opt-card h2{font-size:20px;text-transform:capitalize;margin:0 0 8px}
+.opt-meta{font-size:13px;color:var(--sub)}
+.opt-members{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:10px}
+.opt-member{padding:12px;border:1px solid var(--border);background:var(--tile-bg);
+ border-radius:10px}
+.opt-color-cards{display:grid;gap:7px;margin:12px 0 0}
+.opt-color-card{display:flex;gap:10px;align-items:center;font:12px ui-monospace,monospace;overflow-wrap:anywhere}
+.opt-swatch{display:inline-block;flex:0 0 auto;width:32px;height:32px;
+ background:var(--opt-color);border:1px solid var(--subtle-outline);border-radius:5px}
+.opt-caution{border-left:3px solid var(--active-border);padding:12px 15px;
+ background:var(--panel);margin:16px 0}
+</style></head><body>
+<header class="wrap"><div class="brand"><b>CHROMALECT</b><small>Language, made visible</small></div></header>
+<main class="wrap">
+<div class="eyebrow">Identity-color research · constrained historical hues</div>
+<h1>Three color assignments, one unchanged source identity</h1>
+<p class="intro">Compare the production v0.6 color, the first historical mnemonic-group hypothesis and the revised source-cooccurrence-constrained candidate for each of the 40 originally hinted components. The other 480 identities remain unassigned in both research-only experiments. No active color or Chinese glyph is changed.</p>
+<div class="opt-caution">The revised colors are optimized against the **same first 1,000 source glyphs used to choose them**. Improvements on that numerical set are not independently validated component recognition, semantic-family correctness, reading comprehension or generalization to unseen characters.</div>
+<p id="opt-summary">Calculating source-aware experimental color separation.</p>
+<p id="opt-status" role="status" aria-live="polite">Validating original and candidate component identities.</p>
+<label class="opt-controls" for="opt-group">Historical mnemonic group
+<select id="opt-group"></select></label>
+<p id="opt-count"></p>
+<div id="opt-swatches" class="opt-grid" aria-label="Original and alternative palette component color swatches"></div>
+<p>The generator retains the eight original historical mnemonic labels, not independently accepted linguistic categories. Candidate colors are bounded in OKLCH hue and constrained by source-owned component co-occurrences. <a href="mnemonic-group-risk-optimized-v0.2.json">Machine-readable optimized research variant</a> ·
+<a href="mnemonic-group-counterfactual-v0.1.json">Original hypothetical grouped hues</a> ·
+<a href="palettes/mandarin-component-identity-v0.6.json">Unmodified production identity palette</a>.</p>
+</main>
+<footer class="wrap"><a href="mnemonic-group-counterfactual.html">First group-hue variant</a> ·
+<a href="hint-hue-glyph-comparison.html">Source glyph comparison and risk audit</a> ·
+<a href="mnemonic-color-pilot.html">Historical hint source audit</a></footer></body></html>
