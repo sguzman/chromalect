@@ -1,0 +1,579 @@
+{
+  "schema": "chromalect.phonetics.written-final-symbol-control.v0.1",
+  "status": "arbitrary_geometric_written_letter_control_not_articulatory_or_ipa",
+  "source": {
+    "citationTranche": "site/pronunciation-citations-0001-1000.json",
+    "paletteReference": "site/layers-v0.1.json",
+    "upstreamBlobSHA": "e38b5d3077f516054ecc5573c9251b3aa3628140",
+    "spellingPaletteChanged": false,
+    "sourceGlyphStrokesChanged": false
+  },
+  "interpretation": {
+    "codebook": "Each geometric primitive codes one printed letter, not one phoneme.",
+    "decodingTarget": "Recover exactly the original final remainder string from the ordered symbol sequence.",
+    "blindSymbolDisplayIsNotExperimentResults": true,
+    "humanComprehensionTestNeeded": true,
+    "noSoundFeatureInference": true
+  },
+  "summary": {
+    "sourceCitationReadings": 1171,
+    "writtenFinalsEncoded": 33,
+    "primitiveLetters": 9,
+    "distinctEncodingSignatures": 33,
+    "machineSourceSpellingRoundtrips": 1171,
+    "independentlyApprovedIPARealizations": 0,
+    "humanSymbolDecodingTrials": 0,
+    "learningResults": 0
+  },
+  "primitives": [
+    {
+      "letter": "a",
+      "path": "M10 39 L25 9 L40 39 Z"
+    },
+    {
+      "letter": "e",
+      "path": "M11 11 H39 V39 H11 Z"
+    },
+    {
+      "letter": "g",
+      "path": "M25 11 A14 14 0 1 1 24.9 11 M34 35 L42 43"
+    },
+    {
+      "letter": "i",
+      "path": "M25 16 V39 M25 7 V9"
+    },
+    {
+      "letter": "n",
+      "path": "M12 39 V25 C12 7 38 7 38 25 V39"
+    },
+    {
+      "letter": "o",
+      "path": "M25 11 A14 14 0 1 0 25.1 11"
+    },
+    {
+      "letter": "r",
+      "path": "M10 39 V11 H27 C41 11 41 25 27 25 L36 39"
+    },
+    {
+      "letter": "u",
+      "path": "M12 11 V26 C12 44 38 44 38 26 V11"
+    },
+    {
+      "letter": "ü",
+      "path": "M12 14 V29 C12 43 38 43 38 29 V14 M17 5 V8 M33 5 V8"
+    }
+  ],
+  "records": [
+    {
+      "token": "a",
+      "sourceOccurrences": 72,
+      "symbolLetters": [
+        "a"
+      ],
+      "iconRegistryIndices": [
+        0
+      ],
+      "machineSpellingRoundtrip": true,
+      "independentPhonologicalInterpretationApproved": false,
+      "humanDecodingAccuracyKnown": false
+    },
+    {
+      "token": "ai",
+      "sourceOccurrences": 38,
+      "symbolLetters": [
+        "a",
+        "i"
+      ],
+      "iconRegistryIndices": [
+        0,
+        3
+      ],
+      "machineSpellingRoundtrip": true,
+      "independentPhonologicalInterpretationApproved": false,
+      "humanDecodingAccuracyKnown": false
+    },
+    {
+      "token": "an",
+      "sourceOccurrences": 60,
+      "symbolLetters": [
+        "a",
+        "n"
+      ],
+      "iconRegistryIndices": [
+        0,
+        4
+      ],
+      "machineSpellingRoundtrip": true,
+      "independentPhonologicalInterpretationApproved": false,
+      "humanDecodingAccuracyKnown": false
+    },
+    {
+      "token": "ang",
+      "sourceOccurrences": 60,
+      "symbolLetters": [
+        "a",
+        "n",
+        "g"
+      ],
+      "iconRegistryIndices": [
+        0,
+        4,
+        2
+      ],
+      "machineSpellingRoundtrip": true,
+      "independentPhonologicalInterpretationApproved": false,
+      "humanDecodingAccuracyKnown": false
+    },
+    {
+      "token": "ao",
+      "sourceOccurrences": 50,
+      "symbolLetters": [
+        "a",
+        "o"
+      ],
+      "iconRegistryIndices": [
+        0,
+        5
+      ],
+      "machineSpellingRoundtrip": true,
+      "independentPhonologicalInterpretationApproved": false,
+      "humanDecodingAccuracyKnown": false
+    },
+    {
+      "token": "e",
+      "sourceOccurrences": 45,
+      "symbolLetters": [
+        "e"
+      ],
+      "iconRegistryIndices": [
+        1
+      ],
+      "machineSpellingRoundtrip": true,
+      "independentPhonologicalInterpretationApproved": false,
+      "humanDecodingAccuracyKnown": false
+    },
+    {
+      "token": "ei",
+      "sourceOccurrences": 25,
+      "symbolLetters": [
+        "e",
+        "i"
+      ],
+      "iconRegistryIndices": [
+        1,
+        3
+      ],
+      "machineSpellingRoundtrip": true,
+      "independentPhonologicalInterpretationApproved": false,
+      "humanDecodingAccuracyKnown": false
+    },
+    {
+      "token": "en",
+      "sourceOccurrences": 42,
+      "symbolLetters": [
+        "e",
+        "n"
+      ],
+      "iconRegistryIndices": [
+        1,
+        4
+      ],
+      "machineSpellingRoundtrip": true,
+      "independentPhonologicalInterpretationApproved": false,
+      "humanDecodingAccuracyKnown": false
+    },
+    {
+      "token": "eng",
+      "sourceOccurrences": 27,
+      "symbolLetters": [
+        "e",
+        "n",
+        "g"
+      ],
+      "iconRegistryIndices": [
+        1,
+        4,
+        2
+      ],
+      "machineSpellingRoundtrip": true,
+      "independentPhonologicalInterpretationApproved": false,
+      "humanDecodingAccuracyKnown": false
+    },
+    {
+      "token": "er",
+      "sourceOccurrences": 5,
+      "symbolLetters": [
+        "e",
+        "r"
+      ],
+      "iconRegistryIndices": [
+        1,
+        6
+      ],
+      "machineSpellingRoundtrip": true,
+      "independentPhonologicalInterpretationApproved": false,
+      "humanDecodingAccuracyKnown": false
+    },
+    {
+      "token": "i",
+      "sourceOccurrences": 168,
+      "symbolLetters": [
+        "i"
+      ],
+      "iconRegistryIndices": [
+        3
+      ],
+      "machineSpellingRoundtrip": true,
+      "independentPhonologicalInterpretationApproved": false,
+      "humanDecodingAccuracyKnown": false
+    },
+    {
+      "token": "ia",
+      "sourceOccurrences": 9,
+      "symbolLetters": [
+        "i",
+        "a"
+      ],
+      "iconRegistryIndices": [
+        3,
+        0
+      ],
+      "machineSpellingRoundtrip": true,
+      "independentPhonologicalInterpretationApproved": false,
+      "humanDecodingAccuracyKnown": false
+    },
+    {
+      "token": "ian",
+      "sourceOccurrences": 31,
+      "symbolLetters": [
+        "i",
+        "a",
+        "n"
+      ],
+      "iconRegistryIndices": [
+        3,
+        0,
+        4
+      ],
+      "machineSpellingRoundtrip": true,
+      "independentPhonologicalInterpretationApproved": false,
+      "humanDecodingAccuracyKnown": false
+    },
+    {
+      "token": "iang",
+      "sourceOccurrences": 11,
+      "symbolLetters": [
+        "i",
+        "a",
+        "n",
+        "g"
+      ],
+      "iconRegistryIndices": [
+        3,
+        0,
+        4,
+        2
+      ],
+      "machineSpellingRoundtrip": true,
+      "independentPhonologicalInterpretationApproved": false,
+      "humanDecodingAccuracyKnown": false
+    },
+    {
+      "token": "iao",
+      "sourceOccurrences": 22,
+      "symbolLetters": [
+        "i",
+        "a",
+        "o"
+      ],
+      "iconRegistryIndices": [
+        3,
+        0,
+        5
+      ],
+      "machineSpellingRoundtrip": true,
+      "independentPhonologicalInterpretationApproved": false,
+      "humanDecodingAccuracyKnown": false
+    },
+    {
+      "token": "ie",
+      "sourceOccurrences": 21,
+      "symbolLetters": [
+        "i",
+        "e"
+      ],
+      "iconRegistryIndices": [
+        3,
+        1
+      ],
+      "machineSpellingRoundtrip": true,
+      "independentPhonologicalInterpretationApproved": false,
+      "humanDecodingAccuracyKnown": false
+    },
+    {
+      "token": "in",
+      "sourceOccurrences": 27,
+      "symbolLetters": [
+        "i",
+        "n"
+      ],
+      "iconRegistryIndices": [
+        3,
+        4
+      ],
+      "machineSpellingRoundtrip": true,
+      "independentPhonologicalInterpretationApproved": false,
+      "humanDecodingAccuracyKnown": false
+    },
+    {
+      "token": "ing",
+      "sourceOccurrences": 45,
+      "symbolLetters": [
+        "i",
+        "n",
+        "g"
+      ],
+      "iconRegistryIndices": [
+        3,
+        4,
+        2
+      ],
+      "machineSpellingRoundtrip": true,
+      "independentPhonologicalInterpretationApproved": false,
+      "humanDecodingAccuracyKnown": false
+    },
+    {
+      "token": "iong",
+      "sourceOccurrences": 5,
+      "symbolLetters": [
+        "i",
+        "o",
+        "n",
+        "g"
+      ],
+      "iconRegistryIndices": [
+        3,
+        5,
+        4,
+        2
+      ],
+      "machineSpellingRoundtrip": true,
+      "independentPhonologicalInterpretationApproved": false,
+      "humanDecodingAccuracyKnown": false
+    },
+    {
+      "token": "iu",
+      "sourceOccurrences": 24,
+      "symbolLetters": [
+        "i",
+        "u"
+      ],
+      "iconRegistryIndices": [
+        3,
+        7
+      ],
+      "machineSpellingRoundtrip": true,
+      "independentPhonologicalInterpretationApproved": false,
+      "humanDecodingAccuracyKnown": false
+    },
+    {
+      "token": "o",
+      "sourceOccurrences": 16,
+      "symbolLetters": [
+        "o"
+      ],
+      "iconRegistryIndices": [
+        5
+      ],
+      "machineSpellingRoundtrip": true,
+      "independentPhonologicalInterpretationApproved": false,
+      "humanDecodingAccuracyKnown": false
+    },
+    {
+      "token": "ong",
+      "sourceOccurrences": 47,
+      "symbolLetters": [
+        "o",
+        "n",
+        "g"
+      ],
+      "iconRegistryIndices": [
+        5,
+        4,
+        2
+      ],
+      "machineSpellingRoundtrip": true,
+      "independentPhonologicalInterpretationApproved": false,
+      "humanDecodingAccuracyKnown": false
+    },
+    {
+      "token": "ou",
+      "sourceOccurrences": 44,
+      "symbolLetters": [
+        "o",
+        "u"
+      ],
+      "iconRegistryIndices": [
+        5,
+        7
+      ],
+      "machineSpellingRoundtrip": true,
+      "independentPhonologicalInterpretationApproved": false,
+      "humanDecodingAccuracyKnown": false
+    },
+    {
+      "token": "u",
+      "sourceOccurrences": 128,
+      "symbolLetters": [
+        "u"
+      ],
+      "iconRegistryIndices": [
+        7
+      ],
+      "machineSpellingRoundtrip": true,
+      "independentPhonologicalInterpretationApproved": false,
+      "humanDecodingAccuracyKnown": false
+    },
+    {
+      "token": "ua",
+      "sourceOccurrences": 11,
+      "symbolLetters": [
+        "u",
+        "a"
+      ],
+      "iconRegistryIndices": [
+        7,
+        0
+      ],
+      "machineSpellingRoundtrip": true,
+      "independentPhonologicalInterpretationApproved": false,
+      "humanDecodingAccuracyKnown": false
+    },
+    {
+      "token": "uai",
+      "sourceOccurrences": 8,
+      "symbolLetters": [
+        "u",
+        "a",
+        "i"
+      ],
+      "iconRegistryIndices": [
+        7,
+        0,
+        3
+      ],
+      "machineSpellingRoundtrip": true,
+      "independentPhonologicalInterpretationApproved": false,
+      "humanDecodingAccuracyKnown": false
+    },
+    {
+      "token": "uan",
+      "sourceOccurrences": 25,
+      "symbolLetters": [
+        "u",
+        "a",
+        "n"
+      ],
+      "iconRegistryIndices": [
+        7,
+        0,
+        4
+      ],
+      "machineSpellingRoundtrip": true,
+      "independentPhonologicalInterpretationApproved": false,
+      "humanDecodingAccuracyKnown": false
+    },
+    {
+      "token": "uang",
+      "sourceOccurrences": 14,
+      "symbolLetters": [
+        "u",
+        "a",
+        "n",
+        "g"
+      ],
+      "iconRegistryIndices": [
+        7,
+        0,
+        4,
+        2
+      ],
+      "machineSpellingRoundtrip": true,
+      "independentPhonologicalInterpretationApproved": false,
+      "humanDecodingAccuracyKnown": false
+    },
+    {
+      "token": "ue",
+      "sourceOccurrences": 10,
+      "symbolLetters": [
+        "u",
+        "e"
+      ],
+      "iconRegistryIndices": [
+        7,
+        1
+      ],
+      "machineSpellingRoundtrip": true,
+      "independentPhonologicalInterpretationApproved": false,
+      "humanDecodingAccuracyKnown": false
+    },
+    {
+      "token": "ui",
+      "sourceOccurrences": 19,
+      "symbolLetters": [
+        "u",
+        "i"
+      ],
+      "iconRegistryIndices": [
+        7,
+        3
+      ],
+      "machineSpellingRoundtrip": true,
+      "independentPhonologicalInterpretationApproved": false,
+      "humanDecodingAccuracyKnown": false
+    },
+    {
+      "token": "un",
+      "sourceOccurrences": 38,
+      "symbolLetters": [
+        "u",
+        "n"
+      ],
+      "iconRegistryIndices": [
+        7,
+        4
+      ],
+      "machineSpellingRoundtrip": true,
+      "independentPhonologicalInterpretationApproved": false,
+      "humanDecodingAccuracyKnown": false
+    },
+    {
+      "token": "uo",
+      "sourceOccurrences": 21,
+      "symbolLetters": [
+        "u",
+        "o"
+      ],
+      "iconRegistryIndices": [
+        7,
+        5
+      ],
+      "machineSpellingRoundtrip": true,
+      "independentPhonologicalInterpretationApproved": false,
+      "humanDecodingAccuracyKnown": false
+    },
+    {
+      "token": "ü",
+      "sourceOccurrences": 3,
+      "symbolLetters": [
+        "ü"
+      ],
+      "iconRegistryIndices": [
+        8
+      ],
+      "machineSpellingRoundtrip": true,
+      "independentPhonologicalInterpretationApproved": false,
+      "humanDecodingAccuracyKnown": false
+    }
+  ]
+}

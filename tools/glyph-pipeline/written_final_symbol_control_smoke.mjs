@@ -1,0 +1,36 @@
+import assert from "node:assert/strict";
+import fs from "node:fs";
+import {buildFinalSymbolBaseline} from "./written_final_symbol_control.mjs";
+const get=p=>JSON.parse(fs.readFileSync(p,"utf8"));
+const source=get("site/pronunciation-citations-0001-1000.json");
+const layers=get("site/layers-v0.1.json");
+const d=get("data/phonetics/written-final-symbol-control-v0.1.json");
+assert.deepEqual(buildFinalSymbolBaseline(source,layers),d);
+assert.equal(d.schema,"chromalect.phonetics.written-final-symbol-control.v0.1");
+assert.equal(d.status,"arbitrary_geometric_written_letter_control_not_articulatory_or_ipa");
+assert.equal(d.summary.sourceCitationReadings,1171);
+assert.equal(d.summary.writtenFinalsEncoded,33);
+assert.equal(d.summary.primitiveLetters,9);
+assert.equal(d.summary.distinctEncodingSignatures,33);
+assert.equal(d.summary.machineSourceSpellingRoundtrips,1171);
+assert.equal(d.summary.independentlyApprovedIPARealizations,0);
+assert.equal(d.summary.humanSymbolDecodingTrials,0);
+assert.equal(d.summary.learningResults,0);
+assert.equal(d.source.spellingPaletteChanged,false);
+assert.equal(d.source.sourceGlyphStrokesChanged,false);
+assert.equal(d.records.length,33);
+const letters=new Map(d.primitives.map((x,i)=>[i,x.letter]));
+const signatures=new Set();
+for(const r of d.records){
+ assert.equal(r.independentPhonologicalInterpretationApproved,false);
+ assert.equal(r.humanDecodingAccuracyKnown,false);
+ assert.equal(r.machineSpellingRoundtrip,true);
+ assert.equal(r.symbolLetters.join(""),r.token);
+ assert.equal(r.iconRegistryIndices.map(i=>letters.get(i)).join(""),r.token);
+ const key=JSON.stringify(r.iconRegistryIndices);
+ assert.ok(!signatures.has(key));signatures.add(key);
+}
+assert.equal(signatures.size,33);
+const altered=structuredClone(layers);delete altered.palette_domains.final.tokens["ian"];
+assert.throws(()=>buildFinalSymbolBaseline(source,altered));
+console.log("33 final remainder strings reconstructed without phonetic or human decoding claims.");
