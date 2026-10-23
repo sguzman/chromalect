@@ -12,6 +12,8 @@ Chromalect contains its own [constitution](CONSTITUTION.md), [agent guidance](AG
 
 Ontological types support writing systems, alphabets, graphemes, phonemes, words, morphology, lexical meaning, prosody, and the relationship between evidence and reversible visual encodings. Types do not imply that corresponding corpora or learning experiments are already complete. The independent repo hosts the ontology and presentation; an external registry may link here but is not a prerequisite.
 
+See the [published research roadmap checkpoint dashboard](https://sguzman.github.io/chromalect/roadmap-status.html) for source-derived phase percentages and outstanding work. These count documentary checkboxes, not scientific acceptance or overall product completion.
+
 ## Starting point
 
 The first research profile is **Mainland Standard Mandarin (Putonghua), modern simplified Chinese, and Hanyu Pinyin**. This scope is deliberately narrow enough to test while the underlying concepts can later be evaluated on Latin alphabets, Arabic, Hangul, other Chinese language varieties, and additional writing systems.

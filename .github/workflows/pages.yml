@@ -232,6 +232,14 @@ jobs:
           node tools/glyph-pipeline/word_context_review_validate_smoke.mjs
           node tools/glyph-pipeline/word_context_review_viewer_smoke.mjs
           node tools/glyph-pipeline/tatoeba_icu_word_segmentation_index_smoke.mjs
+          node tools/glyph-pipeline/roadmap_checkpoint_progress.mjs --check
+          node tools/glyph-pipeline/roadmap_checkpoint_progress_smoke.mjs
+          node --check site/roadmap-status.js
+          node tools/glyph-pipeline/roadmap_status_viewer_smoke.mjs
+          mkdir -p site/progress
+          cp data/progress/roadmap-checkpoints-v0.1.json site/progress/roadmap-checkpoints-v0.1.json
+          test -s site/roadmap-status.html
+          test -s site/progress/roadmap-checkpoints-v0.1.json
           node tools/glyph-pipeline/tatoeba_sentence_id_index_smoke.mjs
           node tools/glyph-pipeline/tatoeba_reading_coverage_upper_bound.mjs --check
           node tools/glyph-pipeline/tatoeba_reading_coverage_upper_bound_smoke.mjs

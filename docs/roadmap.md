@@ -59,6 +59,8 @@ This is a sequence of **evidence gates**, not a promise to build a large applica
 - [x] Publish searchable research-only character and word-candidate browser pages, while blocking unadjudicated pronunciations and senses from approval.
 - [x] Preserve the 27 selected corpus word-source IDs with 20 public contributor usernames and pinned sentence-text fingerprints, without reproducing source sentences.
 - [x] Check 27 of 27 selected Tatoeba word-sentence records against the live API: owner, content hash, written form and observed CC BY 2.0 FR license; preserve a dated audit without republishing sentence text.
+- [x] Build a local-only, source-pinned sentence-context review intake and validator for the 27 selected word matches, with explicit nonapproval export rules.
+- [x] Acquire and preserve dated ICU v78.3 tokenization triage for the 27 source-integrity-matching word examples (17 single-token, 4 multi-token, 6 crossing token boundaries), without calling tool output verified word segmentation.
 - [ ] Independently check sentence-level reuse permissions, and record URLs before any corpus quotation or lexical promotion.
 - [ ] Independently adjudicate attested readings and usage-specific lexical senses, including higher-attention cases.
 - [ ] Conduct independently controlled blind emoji comprehension and accessibility evaluations.
