@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark">
+<title>Mandarin word context leads · Chromalect</title><link rel="stylesheet" href="style.css"><script src="theme.js"></script><script src="word-context-candidates.js" defer></script>
+<style>
+.word-controls{display:flex;flex-wrap:wrap;gap:14px;margin:20px 0}
+.word-controls label{display:grid;gap:6px;color:var(--sub)}
+.word-controls input,.word-controls select{font:inherit;border:1px solid var(--border);border-radius:9px;color:var(--ink);background:var(--panel);padding:9px}
+.word-results{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:13px;margin:22px 0}
+.word-card{border:1px solid var(--border);border-radius:12px;background:var(--tile-bg);padding:16px}
+.word-card h2{font-size:27px;margin:0 0 6px}
+.word-meta{font-size:12px;color:var(--sub)}
+.word-links{list-style:none;padding:0;display:grid;gap:8px}
+</style></head>
+<body><header class="wrap"><div class="brand"><b>CHROMALECT</b><small>Language, made visible</small></div></header>
+<main class="wrap">
+<div class="eyebrow">Mandarin corpus research · source-only</div><h1>Dictionary word-context candidates</h1>
+<p class="intro">A bounded Tatoeba corpus pass found 213 literal occurrences of eight dictionary-documented written word leads and selected 27 sentence IDs for six of them. Exact Chinese text matches are <strong>not</strong> independently verified word boundaries, pronunciations, senses or permissions to quote.</p>
+<div class="word-controls">
+<label for="word-query">Word, character or rank<input id="word-query" type="search" placeholder="计划 or 刨"></label>
+<label for="word-scope">Candidate coverage<select id="word-scope"><option value="all">All eight leads</option><option value="with">With source IDs</option><option value="without">Without source IDs</option></select></label>
+</div>
+<p id="word-status" role="status" aria-live="polite">Loading pinned word-substring records.</p>
+<p id="word-stats" class="word-meta"></p><div id="word-results" class="word-results"></div>
+<p class="word-meta">The <a href="semantic/dictionary-word-surface-leads-v0.1.json">dictionary lead data</a> and <a href="semantic/tatoeba-word-surface-id-index-v0.1.json">selected corpus source-ID index</a> retain provenance. No source sentence text is copied and all independent lexical approvals remain zero.</p>
+</main><footer class="wrap"><a href="context-evidence.html">Character context browser</a> · <a href="semantic-coverage.html">Semantic research</a> · <a href="index.html">Overview</a></footer>
+</body></html>
