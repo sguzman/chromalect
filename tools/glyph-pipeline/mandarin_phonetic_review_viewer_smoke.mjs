@@ -13,7 +13,7 @@ class Element{
  replaceChildren(...x){this.children=x;}
  addEventListener(name,fn){this.events[name]=fn;}
 }
-function setup(source=[gates,citations]){
+function setup(source=[gates,citations],hash=""){
  const names=["pc-family","pc-candidate","pc-source","pc-assessment","pc-evidence",
   "pc-rationale","pc-variety","pc-convention","pc-transcription",
   "pc-save","pc-export","pc-import","pc-import-data","pc-output","pc-count","pc-status"];
@@ -22,7 +22,7 @@ function setup(source=[gates,citations]){
   "pronunciation-citations-0001-1000.json"];
  const doc={getElementById:id=>nodes[id],createElement:()=>new Element()};
  vm.runInNewContext(js,{document:doc,fetch:async url=>({ok:urls.includes(url),
-  json:async()=>source[urls.indexOf(url)]}),URL,Date,Map,Set,Object,Math,Error,JSON});
+  json:async()=>source[urls.indexOf(url)]}),location:{hash},URL,Date,Map,Set,Object,Math,Error,JSON});
  return nodes;
 }
 async function settle(ui){for(let i=0;i<55&&!ui["pc-candidate"].children.length&&
@@ -38,6 +38,22 @@ assert.equal(ui["pc-candidate"].children.length,213);
 assert.equal(ui["pc-family"].children.length,10);
 assert.match(ui["pc-source"].textContent,/source written initial/);
 assert.match(ui["pc-status"].textContent,/213 pinned caution-reading identities/);
+const linkedExample=gates.records[0].firstSourceExamples[0];
+const ordinal=citations.characters[linkedExample.rank-1].readings.findIndex(r=>
+ r.display===linkedExample.display&&r.initial===linkedExample.initial&&
+ r.final===linkedExample.final&&r.tone===linkedExample.tone)+1;
+assert.ok(ordinal>0);
+const direct=setup([gates,citations],
+ "#c"+String(linkedExample.rank).padStart(4,"0")+"-r"+ordinal);
+await settle(direct);
+assert.equal(direct["pc-family"].value,"post_sibilant_i");
+assert.equal(direct["pc-candidate"].children.length,63);
+assert.match(direct["pc-source"].textContent,/Pinned character #4/);
+assert.match(direct["pc-status"].textContent,/Opened exact pinned citation/);
+const malformed=setup([gates,citations],"#c9999-r12");
+await settle(malformed);
+assert.match(malformed["pc-status"].textContent,/213 pinned caution-reading identities/);
+
 ui["pc-assessment"].value="tentative_lead";
 ui["pc-evidence"].value="https://www.polyu.edu.hk/bepth/introduction-to-phonetics/spelling-rules-in-pinyin/?sc_lang=en";
 ui["pc-rationale"].value="Published Pinyin spelling discussion requires separate acoustic and contextual comparison.";
