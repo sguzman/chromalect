@@ -35,6 +35,7 @@ export function deriveSourceGlyphCounterfactual(
  const excludedManifestGlyphs=manifest.glyphs.filter(g=>!catalogKeys.has(g.character));
  assert.equal(excludedManifestGlyphs.length,manifest.glyph_count-expectedGlyphCount);
  let affectedGlyphs=0,affectedStrokes=0,unchangedStrokes=0;
+ let unchangedInAffected=0,unchangedInUnchanged=0;
  const rows=[],outputFiles=new Map(),seen=new Set();
  for(let i=0;i<catalog.characters.length;i++){
   const source=catalog.characters[i],glyph=glyphs.get(source.character);
@@ -85,7 +86,7 @@ export function deriveSourceGlyphCounterfactual(
    throw Error("Unexpected SVG structure after isolated recoloring");
   if(switched===0){
    assert.equal(output,original);
-   unchangedStrokes+=untouched;
+   unchangedStrokes+=untouched;unchangedInUnchanged+=untouched;
    continue;
   }
   // Canonicalize ONLY the source-path fill attribute. All geometry and XML
@@ -95,6 +96,7 @@ export function deriveSourceGlyphCounterfactual(
   if(normalized(output)!==normalized(original)||output===original)
    throw Error("Experimental SVG changed geometry, owners or unrelated markup");
   affectedGlyphs++;affectedStrokes+=switched;unchangedStrokes+=untouched;
+  unchangedInAffected+=untouched;
   const changedIds=[...new Set(sourceMatches
    .map(x=>x[3]).filter(id=>hypothetical.has(id)))].sort();
   const record={rank:source.rank,character:source.character,
@@ -128,6 +130,8 @@ export function deriveSourceGlyphCounterfactual(
    untouchedGlyphs:expectedGlyphCount-affectedGlyphs,
    alteredSourcePathFills:affectedStrokes,
    unchangedSourcePathFills:unchangedStrokes,
+   unchangedSourcePathFillsInAffectedGlyphs:unchangedInAffected,
+   unchangedSourcePathFillsInUnchangedGlyphs:unchangedInUnchanged,
    hypotheticalComponentIds:40,
    humanComprehensionTrials:0,independentVisualAudits:0},
   glyphs:rows
