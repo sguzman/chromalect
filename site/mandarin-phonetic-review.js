@@ -215,7 +215,8 @@ async function load(){
   for(let i=0;i<citations.characters.length;i++){
    const c=citations.characters[i];
    if(c.rank!==i+1)throw Error("Source rank changed");
-   for(const r of c.readings){
+   for(let readingIndex=0;readingIndex<c.readings.length;readingIndex++){
+    const r=c.readings[readingIndex];
     const family=byTriple.get(JSON.stringify([r.initial,r.final,r.tone]));
     if(!family)continue;
     const key=JSON.stringify([c.rank,r.display,r.initial,r.final,r.tone]);
@@ -223,7 +224,8 @@ async function load(){
     seen.add(key);
     counts.set(family,counts.get(family)+1);
     matches.push({key,rank:c.rank,character:c.character,display:r.display,
-     initial:r.initial,final:r.final,tone:r.tone,cautionFamily:family});
+     initial:r.initial,final:r.final,tone:r.tone,cautionFamily:family,
+     readingOrdinal:readingIndex+1});
    }
   }
   if(matches.length!==213||counts.size!==9||
@@ -231,9 +233,19 @@ async function load(){
    throw Error("Incomplete source-aligned phonetic intake candidates");
   sourceSHA=citations.source.blob_sha;candidates=matches;selected=matches[0];
   selectionRendered=false;
-  $("pc-family").value="all";
+  const fragment=typeof location!=="undefined"?
+   /^#c([0-9]{4})-r([1-9][0-9]*)$/.exec(location.hash):null;
+  let linked=null;
+  if(fragment){
+   const rank=Number(fragment[1]),ordinal=Number(fragment[2]);
+   linked=matches.find(x=>x.rank===rank&&x.readingOrdinal===ordinal)||null;
+  }
+  if(linked)selected=linked;
+  $("pc-family").value=linked?linked.cautionFamily:"all";
   filter();
-  status("213 pinned caution-reading identities available; this page does not independently validate exported research notes.");
+  status(linked?
+   "Opened exact pinned citation from the research browser; no phonetic approval.":
+   "213 pinned caution-reading identities available; this page does not independently validate exported research notes.");
  }catch(e){
   candidates=[];selected=null;status("Unable to load source-pinned phonetic review: "+e.message);
  }
