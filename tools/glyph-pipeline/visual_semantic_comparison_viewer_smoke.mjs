@@ -60,9 +60,9 @@ class Node{
 }
 function start(glyphs=profile,meanings=semantic,reviews=review,hash=""){
  const ids=["vsc-pick","vsc-focus","vsc-warning","vsc-back","vsc-forward","vsc-sense","vsc-reveal","vsc-operators",
-  "vsc-size","vsc-size-label","vsc-gray","vsc-panels","vsc-source","vsc-status","vsc-count"];
+  "vsc-size","vsc-size-label","vsc-gray","vsc-surface","vsc-panels","vsc-source","vsc-status","vsc-count"];
  const nodes=Object.fromEntries(ids.map(id=>[id,new Node("div")]));
- nodes["vsc-size"].value="112";nodes["vsc-focus"].value="all";
+ nodes["vsc-size"].value="112";nodes["vsc-focus"].value="all";nodes["vsc-surface"].value="theme";
  const document={
   getElementById:id=>nodes[id],createElement:tag=>new Node(tag),
   createDocumentFragment:()=>new Node("fragment"),
@@ -120,6 +120,18 @@ assert.equal(shape(ui["vsc-panels"].children[0]).children[0].style.filter,undefi
 assert.equal(ui["vsc-source"].children[6].children[0].children[0].style.filter,"grayscale(1)");
 ui["vsc-gray"].checked=false;ui["vsc-gray"].listeners.change();
 assert.equal(shape(ui["vsc-panels"].children[1]).children[0].style.filter,undefined);
+ui["vsc-surface"].value="white";ui["vsc-surface"].listeners.change();
+for(const arm of ui["vsc-panels"].children)
+ assert.equal(arm.children[2].style["--study-surface"],"#ffffff");
+assert.equal(shape(ui["vsc-panels"].children[0]).style["--study-ink"],"#000000");
+ui["vsc-surface"].value="black";ui["vsc-surface"].listeners.change();
+for(const arm of ui["vsc-panels"].children)
+ assert.equal(arm.children[2].style["--study-surface"],"#000000");
+assert.equal(shape(ui["vsc-panels"].children[0]).style["--study-ink"],"#ffffff");
+assert.equal(shape(ui["vsc-panels"].children[1]).children[0].src,colored);
+ui["vsc-surface"].value="theme";ui["vsc-surface"].listeners.change();
+assert.equal(shape(ui["vsc-panels"].children[0]).style["--study-ink"],"var(--glyph-ink)");
+
 
 // Deferred characters must abstain; no arbitrary emoji fallback.
 ui["vsc-pick"].value="2";ui["vsc-pick"].listeners.change();
@@ -203,7 +215,7 @@ for(const mutate of [
  assert.match(bad["vsc-status"].textContent,/Cannot verify/);
 }
 for(const id of ["vsc-pick","vsc-focus","vsc-warning","vsc-back","vsc-forward","vsc-sense",
- "vsc-reveal","vsc-operators","vsc-size","vsc-size-label","vsc-gray","vsc-panels",
+ "vsc-reveal","vsc-operators","vsc-size","vsc-size-label","vsc-gray","vsc-surface","vsc-panels",
  "vsc-source","vsc-status","vsc-count"])
  assert.match(html,new RegExp('id="'+id+'"'));
 assert.ok(!script.includes("innerHTML"));
