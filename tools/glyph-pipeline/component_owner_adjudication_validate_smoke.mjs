@@ -24,7 +24,7 @@ const complements=JSON.parse(fs.readFileSync(
 const complementary=audit.validateComplementaryLocators(complements,targets);
 assert.equal(complementary.size,49);
 for(const m of [
- d=>{d.records[0].complementarySHA256="0".repeat(64);},
+ d=>{d.records[0].complementarySHA256="not-a-sha256";},
  d=>{d.records[0].otherOwner="cmp-9999";},
  d=>{d.records[0].independentOwnershipCertified=true;},
  d=>{d.summary.eligibleStudyItems=1;},
