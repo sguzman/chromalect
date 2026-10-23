@@ -75,6 +75,8 @@ Experimental symbol references are intentionally separate: the [21-initial featu
 
 The broader [final-spelling exception ledger](docs/mandarin-final-spelling-context-gates.md) flags **213** source-reading occurrences across nine context categories; absence of a flag is not phonological approval. A Rust audit independently cross-checks these records and the written-final alphabet against the original source. **Zero source sentences, phonemic interpretations, human symbol-decoding results, or learning-effectiveness results are silently approved.** All future full-final IPA and contextual assignments require independent evidence.
 
+The [nine-family spelling-caution browser](site/mandarin-spelling-cautions.html) now separates seven university-linked **written spelling rules** (134 source uses) from two explicitly unapproved **phonetic research leads** (79 source uses). Both reference types remain independent of accepted IPA analyses. A [local-only citation-specific review intake](site/mandarin-phonetic-review.html) can draft research notes for the 213 flagged source occurrences and export them for a strict [source-pinned validator](docs/mandarin-phonetic-caution-review-intake.md); passing that validator never promotes a phonetic claim.
+
 ## Mandarin semantic research
 
 The first 1,000 Mandarin characters have provisional source-backed meaning records. Initial screening yielded **881 characters with candidate pictograms** and **119 explicit deferrals**, for **897 experimental meaning expressions**. These figures describe research proposals, not validated Mandarin senses or independently tested pictograms.
