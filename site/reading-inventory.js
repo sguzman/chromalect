@@ -18,7 +18,7 @@ const sourceRevision="63c2569948629323b515833930fdd10f285401b6";
 const categories=new Set(["ordinary","specialized","historical","proper_name","graphic","undetermined"]);
 const units=new Set(["standalone","in_word","both","undetermined"]);
 let entries=[],profile=new Map(),externalSources=new Map(),checkedSources=new Map(),checkedDate=null,trials=[],records=[],index=0,locked=false;
-let sessionScope=null,sessionCount=null;
+let sessionScope=null,sessionCount=null,sessionExported=false;
 function status(text){$("reading-status").textContent=text;}
 function shuffle(rows){
  const result=rows.slice();
@@ -135,12 +135,16 @@ function show(){
 }
 function start(){
  if(!entries.length)return;
+ if(records.length&&!sessionExported){
+  status("Export the current preliminary observations before starting a new batch. Existing work was not discarded.");
+  return;
+ }
  sessionScope=$("reading-scope").value;
  sessionCount=$("reading-count").value;
  const matching=entries.filter(r=>eligible(sessionScope,r));
  if(!matching.length){status("No source reading entries for this cohort.");return;}
  trials=shuffle(matching).slice(0,sessionCount==="all"?matching.length:Math.min(matching.length,Number(sessionCount)));
- records=[];index=0;
+ records=[];index=0;sessionExported=false;
  $("reading-session").hidden=false;show();
 }
 function commit(){
@@ -159,6 +163,7 @@ function commit(){
   lexicalApproval:"not_granted",emojiComprehensionApproval:"not_granted",
   productionVerified:false
  });
+ sessionExported=false;
  locked=true;
  $("reading-form").hidden=true;$("reading-after").hidden=false;
  $("reading-export").disabled=false;
@@ -184,6 +189,7 @@ function exportJSON(){
  const url=URL.createObjectURL(blob),a=document.createElement("a");
  a.href=url;a.download="chromalect-reading-inventory-observations.json";
  document.body.appendChild(a);a.click();a.remove();URL.revokeObjectURL(url);
+ sessionExported=true;
 }
 async function load(){
  try{

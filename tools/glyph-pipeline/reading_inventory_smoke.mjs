@@ -88,6 +88,10 @@ assert.equal(elements["reading-after"].hidden,false);
 assert.equal(elements["reading-progress-fill"].style.width,"5.0%");
 elements["reading-scope"].value="unmapped";
 elements["reading-count"].value="all";
+// Changing setup controls cannot discard locked observations before export.
+elements["reading-start"].click();
+assert.match(elements["reading-status"].textContent,/not discarded/);
+assert.equal(elements["reading-progress"].attributes["aria-valuenow"],"1");
 elements["reading-export"].click();
 assert.ok(payloadBlob instanceof Blob);
 const session=JSON.parse(await payloadBlob.text());
