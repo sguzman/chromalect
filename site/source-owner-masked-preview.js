@@ -6,16 +6,24 @@
 const preview=globalThis.ChromalectMaskedSourcePreview;
 const $=id=>document.getElementById(id);
 const ids=["om-status","om-cohort","om-pair","om-size","om-count","om-meta",
- "om-grid","om-native","om-a","om-b","om-a-form","om-b-form"];
+ "om-grid","om-native","om-a","om-b","om-a-form","om-b-form",
+ "om-prev","om-next","om-position"];
 if(ids.some(id=>!$(id)))return;
 const statuses=new Set(["all","introduced","resolved","retained"]);
 const sizes=new Set([16,24,32,48,64,96,128,160]);
-let targets=[],activeCohort="all",selected=null;
+let targets=[],activeCohort="all",selected=null,visibleIds=[];
 const message=s=>{$("om-status").textContent=s;};
 function applySize(){
  const s=Number($("om-size").value);
  if(!sizes.has(s))throw Error("Invalid reading-size control");
  $("om-grid").style.setProperty("--om-glyph-size",s+"px");
+}
+function updateNavigation(){
+ const index=visibleIds.indexOf(selected);
+ $("om-prev").disabled=index<=0;
+ $("om-next").disabled=index<0||index>=visibleIds.length-1;
+ $("om-position").textContent=index<0?"No pair selected.":
+  (index+1)+" of "+visibleIds.length+" in selected warning cohort";
 }
 function selectPair(id){
  const target=targets.find(x=>x.id===id);
@@ -30,11 +38,13 @@ function selectPair(id){
  $("om-meta").textContent="Source pair "+target.rank+" · "+target.character+
   " · warning cohort "+target.reviewState+" · two provisional source regions · "+
   "0 independently adjudicated owners.";
+ updateNavigation();
 }
 function showCohort(cohort,preferredId=null){
  if(!statuses.has(cohort))throw Error("Unrecognized warning cohort");
  const rows=targets.filter(x=>cohort==="all"||x.reviewState===cohort);
  if(!rows.length)throw Error("No source-owned warning pairs");
+ visibleIds=rows.map(x=>x.id);
  $("om-pair").replaceChildren();
  for(const x of rows){
   const option=document.createElement("option");
@@ -83,6 +93,14 @@ $("om-pair").addEventListener("change",()=>{
   message("Source pair rejected: "+e.message);
  }
 });
+function move(offset){
+ const index=visibleIds.indexOf(selected),next=visibleIds[index+offset];
+ if(index<0||!next)return;
+ selectPair(next);
+ message("Source-region sequence advanced without recording a response.");
+}
+$("om-prev").addEventListener("click",()=>move(-1));
+$("om-next").addEventListener("click",()=>move(1));
 $("om-size").addEventListener("change",()=>{
  try{applySize();message("Matched glyph size changed; no human visual result.");}
  catch(e){message("Size rejected: "+e.message);}

@@ -7,7 +7,8 @@ const indexPath="glyphs/research/owner-masked-stimuli-v0.1/index-v0.1.json";
 const scripts=["site/source-owner-masked-preview-core.js",
  "site/source-owner-masked-preview.js"].map(p=>fs.readFileSync(p,"utf8"));
 const ids=["om-status","om-cohort","om-pair","om-size","om-count","om-meta",
- "om-grid","om-native","om-a","om-b","om-a-form","om-b-form"];
+ "om-grid","om-native","om-a","om-b","om-a-form","om-b-form",
+ "om-prev","om-next","om-position"];
 class Element{
  constructor(){
   this.value="";this.textContent="";this.src="";this.children=[];this.events={};
@@ -47,6 +48,15 @@ assert.equal(el["om-cohort"].disabled,false);
 assert.equal(el["om-pair"].disabled,false);
 assert.equal(el["om-grid"].style["--om-glyph-size"],"96px");
 assert.deepEqual(created.fetched,[indexPath]);
+assert.equal(el["om-prev"].disabled,true);
+assert.equal(el["om-next"].disabled,false);
+assert.match(el["om-position"].textContent,/1 of 49/);
+el["om-next"].events.click();
+assert.equal(el["om-pair"].value,manifest.records[1].id);
+assert.match(el["om-position"].textContent,/2 of 49/);
+el["om-prev"].events.click();
+assert.equal(el["om-pair"].value,manifest.records[0].id);
+assert.equal(el["om-prev"].disabled,true);
 for(const t of manifest.records){
  el["om-pair"].value=t.id;
  el["om-pair"].events.change();
@@ -66,6 +76,18 @@ for(const [cohort,count] of [["introduced",23],["resolved",21],["retained",5],["
  el["om-cohort"].value=cohort;el["om-cohort"].events.change();
  assert.equal(el["om-pair"].children.length,count);
  assert.match(el["om-count"].textContent,new RegExp(count+" of 49"));
+ assert.match(el["om-position"].textContent,
+  new RegExp("[0-9]+ of "+count));
+ assert.equal(el["om-pair"].value,el["om-pair"].children[0].value);
+ assert.equal(el["om-prev"].disabled,true);
+ for(let i=1;i<count;i++)el["om-next"].events.click();
+ assert.equal(el["om-pair"].value,el["om-pair"].children[count-1].value);
+ assert.equal(el["om-next"].disabled,true);
+ const last=el["om-pair"].value;
+ el["om-next"].events.click();
+ assert.equal(el["om-pair"].value,last,"Navigation cannot exceed cohort");
+ el["om-prev"].events.click();
+ assert.equal(el["om-pair"].value,el["om-pair"].children[count-2].value);
 }
 el["om-cohort"].value="not-a-cohort";el["om-cohort"].events.change();
 assert.equal(el["om-cohort"].value,"all");
@@ -87,6 +109,8 @@ corrupted.records[0].candidates[0].componentId="cmp-0001";
 const bad=setup(corrupted);await settle(bad);
 assert.equal(bad.elements["om-pair"].children.length,0);
 assert.equal(bad.elements["om-cohort"].disabled,true);
+assert.equal(bad.elements["om-prev"].disabled,true);
+assert.equal(bad.elements["om-next"].disabled,true);
 assert.match(bad.elements["om-status"].textContent,/Source-region presentation unavailable/);
 const html=fs.readFileSync("site/source-owner-masked-preview.html","utf8");
 for(const id of ids)assert.ok(html.includes('id="'+id+'"'),id);

@@ -20,6 +20,10 @@
 .om-native{font-size:var(--om-glyph-size,96px);line-height:1;color:#111;
  font-family:"Noto Sans CJK SC","Noto Sans SC",system-ui,sans-serif}
 .om-hint{font-size:13px;color:var(--sub)}
+.om-nav{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-top:14px}
+.om-nav button{font:inherit;color:var(--ink);background:var(--tile-bg);
+ padding:10px 15px;border:1px solid var(--border);border-radius:8px;cursor:pointer}
+.om-nav button:disabled{opacity:.45;cursor:default}
 @media(max-width:780px){.om-pairs{grid-template-columns:1fr}.om-controls{grid-template-columns:1fr}}
 </style></head><body>
 <header class="wrap"><div class="brand"><b>CHROMALECT</b><small>Language, made visible</small></div></header>
@@ -45,6 +49,11 @@ The page requests a separate key-reduced stimulus manifest and neutral SVGs with
 <option value="64">64 CSS px</option><option value="96" selected>96 CSS px</option>
 <option value="128">128 CSS px</option><option value="160">160 CSS px</option>
 </select></label>
+</div>
+<div class="om-nav" aria-label="Source-region sequence navigation">
+<button id="om-prev" type="button" disabled>Previous region</button>
+<span id="om-position" class="om-hint" aria-live="polite">No pair selected.</span>
+<button id="om-next" type="button" disabled>Next region</button>
 </div>
 <p id="om-count" class="om-hint">Awaiting source data.</p>
 <p id="om-meta" class="om-hint"></p>
