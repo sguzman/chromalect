@@ -56,4 +56,3 @@ assert.ok(page.includes('src="component-owner-adjudication-core.js"'));
 assert.ok(!js.includes("innerHTML"));
 assert.ok(!js.includes("localStorage"));
 console.log("49 original source-owner pairs, 11 negative replay checks, zero certified claims.");
-}
