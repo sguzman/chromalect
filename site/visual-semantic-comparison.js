@@ -3,7 +3,7 @@
 (() => {
 "use strict";
 const $=id=>document.getElementById(id);
-const required=["vsc-pick","vsc-focus","vsc-warning","vsc-back","vsc-forward","vsc-sense","vsc-reveal",
+const required=["vsc-pick","vsc-focus","vsc-warning","vsc-back","vsc-forward","vsc-sense","vsc-reveal","vsc-operators",
  "vsc-size","vsc-size-label","vsc-panels","vsc-source","vsc-status","vsc-count"];
 if(required.some(id=>!$(id)))return;
 const grammar=globalThis.ChromalectSemanticGrammar;
@@ -68,13 +68,21 @@ function buildArm(title,description,profile,candidate,style){
  if(style==="semantic"){
   const expression=make("div","vsc-meaning-cue");
   if(candidate){
+   if($("vsc-operators").checked&&candidate.expression.kind==="event"){
+    const operator=make("span","vsc-semantic-operator","▶");
+    operator.setAttribute("aria-label","Provisional event operator");
+    operator.title="Structural event marker, not a verified Mandarin word sense";
+    expression.appendChild(operator);
+   }
    for(const item of grammar.emojiParts(candidate.expression)){
     const atom=make("span","vsc-emoji",item.text);
     atom.setAttribute("aria-hidden","true");expression.appendChild(atom);
    }
    expression.setAttribute("role","img");
    expression.setAttribute("aria-label","Unverified pictogram proposal for "+
-    candidate.selectedMeaning+": "+grammar.emojiDisplay(candidate.expression));
+    candidate.selectedMeaning+": "+grammar.emojiDisplay(candidate.expression)+
+    ($("vsc-operators").checked&&candidate.expression.kind==="event"?
+     " · technical event marker visible":""));
   }else expression.textContent="No candidate pictogram: semantic layer abstains";
   stage.appendChild(expression);
  }
@@ -301,6 +309,7 @@ $("vsc-forward").addEventListener("click",()=>{
 });
 $("vsc-sense").addEventListener("change",render);
 $("vsc-reveal").addEventListener("change",render);
+$("vsc-operators").addEventListener("change",render);
 $("vsc-size").addEventListener("input",render);
 load();
 })();
