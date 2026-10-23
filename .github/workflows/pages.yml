@@ -207,6 +207,8 @@ jobs:
           node tools/glyph-pipeline/publisher_page_provenance_v02_smoke.mjs
           node tools/glyph-pipeline/publisher_reading_label_comparison.mjs --check
           node tools/glyph-pipeline/publisher_reading_label_comparison_smoke.mjs
+          node tools/glyph-pipeline/contextual_reading_evidence_workqueue.mjs --check
+          node tools/glyph-pipeline/contextual_reading_evidence_workqueue_smoke.mjs
           node tools/glyph-pipeline/review_session_validate_smoke.mjs
           node tools/glyph-pipeline/semantic_inventory_smoke.mjs
           node tools/glyph-pipeline/lexical_crossref_smoke.mjs
@@ -243,6 +245,7 @@ jobs:
           cp data/semantic/cedict-crossref/publisher-page-provenance-v0.1.json site/semantic/publisher-page-provenance-v0.1.json
           cp data/semantic/cedict-crossref/publisher-page-provenance-v0.2.json site/semantic/publisher-page-provenance-v0.2.json
           cp data/semantic/cedict-crossref/publisher-reading-label-comparison-v0.1.json site/semantic/publisher-reading-label-comparison-v0.1.json
+          cp data/semantic/cedict-crossref/contextual-reading-evidence-workqueue-v0.1.json site/semantic/contextual-reading-evidence-workqueue-v0.1.json
           for section in 0001-0200 0201-0400 0401-0600 0601-0800 0801-1000; do
             cp "data/semantic/cedict-crossref/dictionary-excerpts-$section.json" "site/semantic/"
             test -s "site/semantic/dictionary-excerpts-$section.json"
@@ -259,6 +262,7 @@ jobs:
           test -s site/semantic/publisher-page-provenance-v0.1.json
           test -s site/semantic/publisher-page-provenance-v0.2.json
           test -s site/semantic/publisher-reading-label-comparison-v0.1.json
+          test -s site/semantic/contextual-reading-evidence-workqueue-v0.1.json
           test -s site/semantic/reading-sensitive-gloss-audit-v0.1.json
           test -s site/semantic/sense-review-queue-v0.1.json
           test -s site/semantic/full-lexical-review-queue-v0.1.json

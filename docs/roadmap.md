@@ -51,6 +51,7 @@ This is a sequence of **evidence gates**, not a promise to build a large applica
 - [x] Extend source-first review to all 1,393 pinned reading records, including deferred pictograms, with local-only observations and validation.
 - [x] Collect independent dictionary source locations and provisional contrasts for five first-priority characters (11 reading entries).
 - [x] Compare five high-attention dictionary-gloss discrepancies against a third-source character dictionary, retaining an unresolved surname-tone conflict.
+- [x] Build a 319-entry context-evidence acquisition queue with distinct source access, attribution, word-boundary, reading, and adjudication gates; no synthetic attestations.
 - [ ] Independently adjudicate attested readings and usage-specific lexical senses, including higher-attention cases.
 - [ ] Conduct independently controlled blind emoji comprehension and accessibility evaluations.
 - [ ] Promote only after separately demonstrated lexical and pictogram acceptance. Currently approved: 0.
