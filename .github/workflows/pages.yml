@@ -410,6 +410,8 @@ jobs:
           node tools/glyph-pipeline/reading_sensitive_gloss_audit_smoke.mjs
           node tools/glyph-pipeline/high_priority_remediation_smoke.mjs
           node tools/glyph-pipeline/semantic_coverage_smoke.mjs
+          node --check site/visual-semantic-comparison.js
+          node tools/glyph-pipeline/visual_semantic_comparison_viewer_smoke.mjs
           mkdir -p site/phonetics
           cp data/phonetics/pinyin-citation-orthography-audit-v0.1.json site/phonetics/
           cp data/phonetics/cedict-numeric-pinyin-orthography-v0.1.json site/phonetics/
@@ -499,6 +501,7 @@ jobs:
           test -s site/semantic/mandarin-1000-v0.1.json
           test -s site/semantic/lexical-crossref-v0.1.json
           test -s site/semantic-coverage.html
+          test -s site/visual-semantic-comparison.html && test -s site/visual-semantic-comparison.js
           test -s site/emoji-comprehension.html && test -s site/emoji-comprehension.js
           test -s site/lexical-review.html && test -s site/lexical-review.js && test -s site/dictionary-readings.js
           test -s site/reading-inventory.html && test -s site/reading-inventory.js && test -s site/dictionary-reference-cues.js
