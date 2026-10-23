@@ -17,7 +17,7 @@ const blocks=["0001-0200","0201-0400","0401-0600","0601-0800","0801-1000"];
 const sourceRevision="63c2569948629323b515833930fdd10f285401b6";
 const categories=new Set(["ordinary","specialized","historical","proper_name","graphic","undetermined"]);
 const units=new Set(["standalone","in_word","both","undetermined"]);
-let entries=[],profile=new Map(),externalSources=new Map(),trials=[],records=[],index=0,locked=false;
+let entries=[],profile=new Map(),externalSources=new Map(),checkedSources=new Map(),checkedDate=null,trials=[],records=[],index=0,locked=false;
 let sessionScope=null,sessionCount=null;
 function status(text){$("reading-status").textContent=text;}
 function shuffle(rows){
@@ -85,15 +85,22 @@ function show(){
  $("reading-full").textContent=r.excerpt;
  const external=$("reading-external-sources");
  external.replaceChildren();
- const packet=externalSources.get(r.rank);
- if(!packet){
-  external.textContent="No additional dictionary pilot source available for this character.";
+ const packet=externalSources.get(r.rank),checked=checkedSources.get(r.rank)||[];
+ const linked=packet?.sources||[];
+ const combined=[...linked,...checked.filter(c=>!linked.some(s=>s.url===c.url))];
+ if(!combined.length){
+  external.textContent="No additional dictionary source location recorded for this character.";
  }else{
   external.textContent="";
-  for(const item of packet.sources){
-   const p=document.createElement("p"),a=document.createElement("a");
+  for(const item of combined){
+   const p=document.createElement("p"),a=document.createElement("a"),note=document.createElement("span");
+   const verified=checked.find(c=>c.url===item.url);
    a.href=item.url;a.rel="noopener noreferrer";a.textContent=item.publisher;
-   p.appendChild(a);external.appendChild(p);
+   note.textContent=verified?
+    " · Source page checked "+checkedDate+"; displayed readings: "+
+     verified.prominentReadings.join(", ")+". No lexical approval.":
+    " · Exploratory link; page not checked in the current provenance registry.";
+   p.appendChild(a);p.appendChild(note);external.appendChild(p);
   }
  }
  $("reading-source-id").textContent="CC-CEDICT "+r.sourcePath+
@@ -161,11 +168,12 @@ async function load(){
    fetch("semantic/polysemy-triage-v0.1.json"),
    fetch("semantic/external-dictionary-reconnaissance-v0.1.json"),
    fetch("semantic/external-dictionary-discrepancy-v0.1.json"),
+   fetch("semantic/publisher-page-provenance-v0.1.json"),
    ...blocks.map(b=>fetch("semantic/dictionary-excerpts-"+b+".json")),
    fetch("profiles/mandarin-1000-v1.json")
   ]);
   if(responses.some(r=>!r.ok))throw new Error("Missing published source files");
-  const [triage,pilot,discrepancy,...other]=await Promise.all(responses.map(r=>r.json()));
+  const [triage,pilot,discrepancy,pageChecks,...other]=await Promise.all(responses.map(r=>r.json()));
   const glyphs=other.pop();
   if(pilot.schema!=="chromalect.semantic.external-dictionary-reconnaissance.v0.1"||
      pilot.status!=="preliminary_external_dictionary_comparison_not_independent_approval"||
@@ -188,6 +196,24 @@ async function load(){
      discrepancy.records.some(r=>r.independentLexicalApproval!==false||
        r.productionVerified!==false||!r.externalSource?.url?.startsWith("https://")))
    throw new Error("Invalid additional dictionary discrepancy source");
+  if(pageChecks.schema!=="chromalect.semantic.publisher-page-provenance.v0.1"||
+     pageChecks.status!=="source_headword_reading_labels_checked_not_lexical_approval"||
+     pageChecks.summary.publisherPagesChecked!==14||
+     pageChecks.summary.highAttentionCharactersRepresented!==10||
+     pageChecks.summary.independentlyAdjudicatedSenses!==0||
+     pageChecks.summary.emojiApprovals!==0||
+     pageChecks.summary.productionApprovals!==0||
+     !Array.isArray(pageChecks.entries)||pageChecks.entries.length!==14||
+     pageChecks.entries.some(x=>x.verification!=="page_text_opened_and_headword_checked"||
+       !x.url.startsWith("https://")||!x.prominentReadings?.length))
+    throw new Error("Publisher-page provenance is inconsistent");
+  checkedDate=pageChecks.checkedDateUTC;
+  checkedSources=new Map();
+  for(const r of pageChecks.entries){
+    if(!checkedSources.has(r.rank))checkedSources.set(r.rank,[]);
+    checkedSources.get(r.rank).push(r);
+  }
+  if(checkedSources.size!==10)throw new Error("Expected ten separately sourced characters");
   externalSources=new Map([
    ...pilot.records.map(r=>[r.rank,r]),
    ...discrepancy.records.map(r=>[r.rank,{
