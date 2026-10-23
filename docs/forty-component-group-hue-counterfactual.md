@@ -43,6 +43,21 @@ The experimental grouped-hue swatches deliberately decrease same-group color dis
 
 **No claim of human-visible distinctiveness or educational benefit follows from the measured distances.** The historic hint categories must be independently verified before any scheme based on them is called a semantic-family color variant. The counterfactual is only a limited design control and does not close the roadmap's independent semantic-family comparison or human-testing gates.
 
+## Same-glyph component-pair risk audit
+
+The experiment is not evaluated only through source-preserved glyph geometry or visually isolated swatches. The [source-owned pair-audit generator](../tools/glyph-pipeline/glyph_counterfactual_pair_risk.mjs) joins the final source component-to-stroke mapping for each of the first 1,000 glyphs to the original v0.6 palette, the 40-component counterfactual, the existing independent review worklist, and the SVG-isolation manifest.
+
+For every distinct component-ID pair co-occurring in a glyph, the generator calculates **both** Euclidean OKLab distances using the exact source and hypothetical six-digit sRGB values. The hypothetical distance uses the original color for all IDs outside the 40-component research proposal. Each pair is classified as:
+
+- **Introduced:** original distance is at least ΔOK 0.07, hypothetical is below 0.07.
+- **Resolved:** original distance is below 0.07, hypothetical is at least 0.07.
+- **Retained:** both distances are below 0.07.
+- **Not close:** neither falls below 0.07.
+
+The generator checks the **entire original cohort**, including glyphs without any hypothetical colors, against the previously published 26 original warning pairs. It refuses changes to active source IDs, original fill colors, reported original warnings, research-svg ownership or approvals. The separate [pair-risk JSON](../site/glyphs/research/hint-counterfactual-v0.1/pair-risk-v0.1.json) and [two-glyph viewer](../site/hint-hue-glyph-comparison.html) expose the measured changes for affected source glyphs. The viewer can focus on introduced warnings, hypothetical close pairs, original warnings or newly resolved warnings; a selected pair retains source IDs, forms, original/candidate hex and both distances.
+
+The ΔOK cutoff is an **engineering review priority**, not an independently established perceptual threshold, demonstration of color-vision deficiency, or human identity-decoding evidence. A color pair may look distinguishable in isolation but fail inside a small glyph, and the converse may also occur. All original and experimental color assignments remain separate and unapproved.
+
 ## Reproduce and verify
 
     node tools/glyph-pipeline/pilot_group_counterfactual.mjs --write
