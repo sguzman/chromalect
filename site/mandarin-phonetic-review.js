@@ -4,7 +4,7 @@
 const $=id=>document.getElementById(id);
 const ids=["pc-family","pc-candidate","pc-source","pc-assessment","pc-evidence",
  "pc-rationale","pc-variety","pc-convention","pc-transcription",
- "pc-save","pc-export","pc-output","pc-count","pc-status"];
+ "pc-save","pc-export","pc-import","pc-import-data","pc-output","pc-count","pc-status"];
 if(ids.some(id=>!$(id)))return;
 const status=s=>{$("pc-status").textContent=s;};
 const formIds=["pc-assessment","pc-evidence","pc-rationale",
@@ -14,11 +14,23 @@ const fields=["assessment","evidenceURL","evidenceRationale",
 const defaults=()=>({assessment:"undetermined",evidenceURL:"",evidenceRationale:"",
  declaredVariety:"",transcriptionConvention:"",workingTranscription:""});
 const allowedAssessments=new Set(["undetermined","tentative_lead","needs_correction"]);
-let candidates=[],selected=null,sourceSHA="",drafts=new Map();
+let candidates=[],selected=null,sourceSHA="",drafts=new Map(),scratch=new Map();
+function stageCurrent(){
+ if(!selected)return;
+ const value=readForm();
+ const comparison=drafts.get(selected.key)||defaults();
+ if(fields.every(name=>value[name]===comparison[name]))scratch.delete(selected.key);
+ else scratch.set(selected.key,value);
+}
+function count(){
+ $("pc-count").textContent=drafts.size+" locally saved notes · "+scratch.size+
+  " unsaved edits · 0 independently approved";
+}
 function readForm(){
  return Object.fromEntries(formIds.map((id,i)=>[fields[i],$(id).value.trim()]));
 }
 function filter(){
+ stageCurrent();
  const family=$("pc-family").value;
  const found=candidates.filter(r=>family==="all"||r.cautionFamily===family);
  $("pc-candidate").replaceChildren();
@@ -35,13 +47,13 @@ function filter(){
 }
 function showSelection(){
  if(!selected)return;
- const r=selected,values=drafts.get(r.key)||defaults();
+ const r=selected,values=scratch.get(r.key)||drafts.get(r.key)||defaults();
  formIds.forEach((id,i)=>{$(id).value=values[fields[i]];});
  $("pc-source").textContent="Pinned character #"+r.rank+" · "+r.character+" "+r.display+
   " · source written initial "+r.initial+" · final "+r.final+
   " · citation tone "+r.tone+" · caution: "+r.cautionFamily+
   " · no independent phonetic approval";
- $("pc-count").textContent=drafts.size+" local draft notes · 0 independently approved";
+ count();
 }
 function save(){
  if(!selected)throw Error("Citation reading unavailable");
@@ -67,10 +79,12 @@ function save(){
  }
  if(fields.every(key=>values[key]===defaults()[key]))drafts.delete(selected.key);
  else drafts.set(selected.key,values);
- $("pc-count").textContent=drafts.size+" local draft notes · 0 independently approved";
+ scratch.delete(selected.key);
+ count();
 }
 function exportJSON(){
  save();
+ if(scratch.size)throw Error("Other readings have unsaved edits; revisit and save them before export");
  if(!drafts.size)throw Error("Save at least one research note before export");
  const observations=candidates.filter(r=>drafts.has(r.key)).map(r=>({
   rank:r.rank,character:r.character,display:r.display,
@@ -146,16 +160,20 @@ async function load(){
 }
 $("pc-family").addEventListener("change",()=>{try{filter();}catch(e){status(e.message);}});
 $("pc-candidate").addEventListener("change",()=>{
+ stageCurrent();
  selected=candidates.find(r=>r.key===$("pc-candidate").value)||null;showSelection();
 });
 $("pc-save").addEventListener("click",()=>{
- try{save();status("Local draft recorded in page memory only; no review approval.");}
+ try{save();$("pc-output").value="";status("Local draft recorded in page memory only; no review approval.");}
  catch(e){status("Draft not saved: "+e.message);}
 });
 $("pc-export").addEventListener("click",()=>{
  try{$("pc-output").value=JSON.stringify(exportJSON(),null,2);
   status("Local JSON prepared; validate separately using the repository CLI.");}
  catch(e){status("Export blocked: "+e.message);}
+});
+for(const id of formIds)$(id).addEventListener("input",()=>{
+ $("pc-output").value="";
 });
 load();
 })();
