@@ -1,0 +1,61 @@
+<!doctype html><html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light dark"><title>Integrated Mandarin citation cell · Chromalect</title>
+<link rel="stylesheet" href="style.css"><script src="theme.js"></script>
+<script src="mandarin-citation-cell.js" defer></script>
+<style>
+.cell-controls{display:flex;flex-wrap:wrap;gap:12px;align-items:end;margin:20px 0}
+.cell-controls label{display:grid;gap:7px;font-size:14px}
+.cell-controls input,.cell-controls select{font:inherit;color:var(--ink);background:var(--panel);
+border:1px solid var(--border);border-radius:8px;padding:10px}
+.cell-toggles{display:flex;flex-wrap:wrap;gap:16px;margin:18px 0}
+.cell-toggles label{display:flex;align-items:center;gap:6px}
+.cell-stage{display:grid;grid-template-areas:". tone ." "initial glyph ." ". final .";
+grid-template-columns:minmax(135px,1fr) 180px minmax(110px,1fr);
+align-items:center;justify-items:center;gap:14px;margin:22px auto;max-width:780px}
+#cell-top{grid-area:tone;min-height:100px}#cell-side{grid-area:initial}
+#cell-bottom{grid-area:final}
+.cell-native{grid-area:glyph;width:160px;height:160px;display:grid;place-items:center;
+font-size:96px;line-height:1;border:1px solid var(--border);border-radius:14px;background:var(--panel)}
+.cell-addon{border:1px solid var(--border);background:var(--panel);border-radius:10px;
+display:flex;align-items:center;justify-content:center;flex-direction:column;gap:7px;
+padding:10px;max-width:185px;min-width:124px;box-sizing:border-box}
+.cell-token{font-weight:700;font-size:16px}.cell-caption{text-align:center;color:var(--sub);font-size:12px}
+.cell-tone-svg{height:60px;width:145px;max-width:100%}
+@media(max-width:620px){
+ .cell-stage{grid-template-areas:"tone tone" "glyph initial" "final final";
+ grid-template-columns:160px minmax(120px,1fr);justify-items:center;max-width:100%}
+ .cell-addon{min-width:110px}.cell-native{max-width:100%}
+}
+</style></head><body>
+<header class="wrap"><div class="brand"><b>CHROMALECT</b><small>Language, made visible</small></div></header>
+<main class="wrap">
+<div class="eyebrow">Phonetic notation · non-certifying integrated-cell experiment</div>
+<h1>Mandarin citation encoding around one character</h1>
+<p class="intro">Keep the original Unicode Chinese glyph untouched. The source citation's provisional initial code, exact written final and idealized tone contour occupy separate spaces around the character. Turn off channels individually, and compare monochrome against the existing unchanged palette colors. Nothing displayed establishes sentence pronunciation or a validated human-decoding system.</p>
+<div class="cell-controls">
+<label for="cell-query">Character or first-tranche rank
+<input id="cell-query" type="text" placeholder="e.g. 清 or 4"></label>
+<label for="cell-reading">Source citation reading
+<select id="cell-reading"></select></label>
+</div>
+<div class="cell-toggles">
+<label><input type="checkbox" id="cell-initial" checked> Initial code</label>
+<label><input type="checkbox" id="cell-final" checked> Written final</label>
+<label><input type="checkbox" id="cell-tone" checked> Citation contour</label>
+<label><input type="checkbox" id="cell-color"> Existing color channels</label>
+</div>
+<p id="cell-status" role="status" aria-live="polite">Loading source-aligned citation records.</p>
+<p id="cell-code"></p>
+<div class="cell-stage">
+<div id="cell-top"></div><div id="cell-side"></div>
+<div id="cell-native" class="cell-native" lang="zh-Hans" aria-label="Unmodified Chinese glyph"></div>
+<div id="cell-bottom"></div>
+</div>
+<p id="cell-source" class="intro"></p>
+<p>This is a visual layout proof, not a phonetic inventory approval or a comprehension experiment. Citation-tone T3 may not dip fully in connected speech; neutral-tone T0 deliberately has no fixed contour. The final label remains source spelling, not an IPA vowel/coda target.</p>
+<p><a href="mandarin-syllable-grammar.html">Structured citation grammar</a> ·
+<a href="mandarin-initial-features.html">Working initial code</a> ·
+<a href="mandarin-tone-contours.html">Citation-tone reference</a></p>
+</main><footer class="wrap"><a href="roadmap-status.html">Research roadmap</a> · <a href="index.html">Overview</a></footer>
+</body></html>
