@@ -1,0 +1,53 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="description" content="Local-only comparison of two unblinded, non-certifying source-owner observation exports.">
+<title>Provisional owner-note comparison · Chromalect</title>
+<link rel="stylesheet" href="style.css"><script src="theme.js"></script>
+<script src="heldout-blind-color-core.js" defer></script>
+<script src="heldout-component-identification-core.js" defer></script>
+<script src="component-owner-adjudication-core.js" defer></script>
+<script src="component-owner-compare-core.js" defer></script>
+<script src="component-owner-compare.js" defer></script>
+<style>
+.oc-warning,.oc-panel{background:var(--panel);border:1px solid var(--border);border-radius:12px;padding:18px;margin:16px 0}
+.oc-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.oc-grid label{display:grid;gap:8px}
+.oc-grid textarea,.oc-panel textarea{box-sizing:border-box;min-height:180px;width:100%;font:inherit;color:var(--ink);background:var(--tile-bg);border:1px solid var(--border);padding:12px;border-radius:8px}
+.oc-panel button{font:inherit;padding:11px 16px;border:1px solid var(--border);border-radius:8px;cursor:pointer;color:var(--ink);background:var(--tile-bg)}
+.oc-panel button:disabled{opacity:.5;cursor:default}
+.oc-scroller{overflow-x:auto}
+.oc-results{border-collapse:collapse;width:100%;min-width:580px}
+.oc-results td,.oc-results th{padding:9px 12px;border-bottom:1px solid var(--border);text-align:left;overflow-wrap:anywhere}
+.oc-results th{font-weight:650}
+@media(max-width:700px){.oc-grid{grid-template-columns:1fr}}
+</style></head><body>
+<header class="wrap"><div class="brand"><b>CHROMALECT</b><small>Language, made visible</small></div></header>
+<main class="wrap">
+<div class="eyebrow">Mandarin · source-owner research intake</div>
+<h1>Provisional note comparison</h1>
+<p class="intro">Compare two locally exported source-owner note sets across the 49 source-pinned warning pairs. Contradictory notes stay contradictory; matching notes do not become certified owner decisions.</p>
+<div class="oc-warning"><strong>Not an independent expert review.</strong> Both input exports were prepared with the machine source-owner key visible. This tool cannot establish reviewer identity, independence, qualification, blinded conditions, or source accuracy. No data is uploaded or saved to browser storage.</div>
+<p id="oc-status" role="status" aria-live="polite">Validating pinned source manifests.</p>
+<section class="oc-panel">
+<h2>Paste two local provisional exports</h2>
+<div class="oc-grid">
+<label for="oc-first">First exported source-owner notes (JSON)
+<textarea id="oc-first" spellcheck="false" maxlength="250000" placeholder="Paste first provisional observation export"></textarea></label>
+<label for="oc-second">Second exported source-owner notes (JSON)
+<textarea id="oc-second" spellcheck="false" maxlength="250000" placeholder="Paste second provisional observation export"></textarea></label>
+</div>
+<button id="oc-compare" type="button" disabled>Validate and compare locally</button>
+<p id="oc-summary" aria-live="polite"></p>
+</section>
+<section class="oc-panel">
+<h2>Source-ordered comparison</h2>
+<p>Each entry shows provisional categories, not raw evidence URLs or rationales. Unobserved pairs are retained to preserve the 49-item denominator.</p>
+<div class="oc-scroller"><table class="oc-results"><thead><tr><th>Source pair</th><th>First note</th><th>Second note</th><th>Comparison</th></tr></thead><tbody id="oc-table"></tbody></table></div>
+<label for="oc-json">Sanitized local-only JSON (no evidence links or rationale text)</label>
+<textarea id="oc-json" readonly rows="13"></textarea>
+</section>
+<p>See the <a href="component-owner-adjudication.html">source-owner observation intake</a>,
+the <a href="source-owner-independent-protocol.html">independent-adjudication gates</a>
+and the <a href="https://github.com/sguzman/chromalect/blob/main/docs/source-owner-note-comparison.md">method and limitations</a>.</p>
+</main><footer class="wrap"><a href="colors.html">Component color registry</a></footer></body></html>
