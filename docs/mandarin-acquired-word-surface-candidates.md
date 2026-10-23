@@ -18,3 +18,9 @@ The [compact permanent result index](../data/semantic/cedict-crossref/tatoeba-wo
 Neither 刨 lead appears in this Tatoeba snapshot. Alternative publisher dictionary source links remain available in the [unmatched-character escalation](mandarin-unmatched-corpus-character-sources.md), but they are not corpus sentence attestations.
 
 A multi-character literal sequence is not necessarily a correctly segmented word in Chinese. Even when a context is likely, actual reading, lexeme sense, register and source quotation permissions require separate independent review. Accordingly, contextual pronunciation, lexical, and pictogram approvals all remain **0**.
+
+## Cross-cohort source-ID overlap
+
+The [reproducible overlap audit](../data/semantic/cedict-crossref/word-surface-corpus-overlap-audit-v0.1.json) compares this word-surface sample with the previous chronological and hash-selected character-only cohorts. The character cohorts contained **1,015 distinct sentence IDs**. Of the **27** word-stage IDs, **three** appeared earlier under some character, but **none** was previously selected for the same target character. Therefore **24 additional distinct sentence IDs** extend the project-wide source ID union to **1,039**.
+
+These are only research source identifiers. A different sentence ID is not a verified alternative pronunciation, independently accepted sense or validated emoji.

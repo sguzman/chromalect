@@ -1,0 +1,110 @@
+{
+  "schema": "chromalect.semantic.word-surface-corpus-overlap-audit.v0.1",
+  "status": "source_id_collection_cardinality_only_not_linguistic_validation",
+  "source": {
+    "firstThree": "tatoeba-sentence-id-index-v0.1.json",
+    "hashSample": "tatoeba-hash-sample-source-id-index-v0.1.json",
+    "wordSurface": "tatoeba-word-surface-id-index-v0.1.json"
+  },
+  "summary": {
+    "originalCharacterOnlyDistinctSentenceIds": 1015,
+    "wordSelectedDistinctSentenceIds": 27,
+    "wordIdsAlreadyInCharacterResearch": 3,
+    "wordIdsPreviouslyAssignedToSameCharacter": 0,
+    "newDistinctSentenceIdsFromWordSurfaceStage": 24,
+    "distinctSentenceIdsAcrossThreeCohorts": 1039,
+    "independentlyVerifiedContextualReadings": 0,
+    "lexicalSenseApprovals": 0
+  },
+  "records": [
+    {
+      "leadId": "ch126-length",
+      "character": "长度",
+      "rank": 127,
+      "wordSelectedCandidateIds": 4,
+      "previouslySeenInAnyCharacter": 0,
+      "previouslySeenWithSameCharacter": 0,
+      "newGloballyDistinctCorpusSentenceIds": 4,
+      "independentReadingVerification": false,
+      "lexicalSenseApproval": false
+    },
+    {
+      "leadId": "zhang-growth",
+      "character": "长大",
+      "rank": 127,
+      "wordSelectedCandidateIds": 5,
+      "previouslySeenInAnyCharacter": 1,
+      "previouslySeenWithSameCharacter": 0,
+      "newGloballyDistinctCorpusSentenceIds": 4,
+      "independentReadingVerification": false,
+      "lexicalSenseApproval": false
+    },
+    {
+      "leadId": "hua-row",
+      "character": "划船",
+      "rank": 407,
+      "wordSelectedCandidateIds": 3,
+      "previouslySeenInAnyCharacter": 1,
+      "previouslySeenWithSameCharacter": 0,
+      "newGloballyDistinctCorpusSentenceIds": 2,
+      "independentReadingVerification": false,
+      "lexicalSenseApproval": false
+    },
+    {
+      "leadId": "hua-plan",
+      "character": "计划",
+      "rank": 407,
+      "wordSelectedCandidateIds": 5,
+      "previouslySeenInAnyCharacter": 0,
+      "previouslySeenWithSameCharacter": 0,
+      "newGloballyDistinctCorpusSentenceIds": 5,
+      "independentReadingVerification": false,
+      "lexicalSenseApproval": false
+    },
+    {
+      "leadId": "guo-cross",
+      "character": "经过",
+      "rank": 379,
+      "wordSelectedCandidateIds": 5,
+      "previouslySeenInAnyCharacter": 1,
+      "previouslySeenWithSameCharacter": 0,
+      "newGloballyDistinctCorpusSentenceIds": 4,
+      "independentReadingVerification": false,
+      "lexicalSenseApproval": false
+    },
+    {
+      "leadId": "guo-aspect",
+      "character": "看过",
+      "rank": 379,
+      "wordSelectedCandidateIds": 5,
+      "previouslySeenInAnyCharacter": 0,
+      "previouslySeenWithSameCharacter": 0,
+      "newGloballyDistinctCorpusSentenceIds": 5,
+      "independentReadingVerification": false,
+      "lexicalSenseApproval": false
+    },
+    {
+      "leadId": "pao-dig",
+      "character": "刨坑",
+      "rank": 821,
+      "wordSelectedCandidateIds": 0,
+      "previouslySeenInAnyCharacter": 0,
+      "previouslySeenWithSameCharacter": 0,
+      "newGloballyDistinctCorpusSentenceIds": 0,
+      "independentReadingVerification": false,
+      "lexicalSenseApproval": false
+    },
+    {
+      "leadId": "bao-plane",
+      "character": "刨木头",
+      "rank": 821,
+      "wordSelectedCandidateIds": 0,
+      "previouslySeenInAnyCharacter": 0,
+      "previouslySeenWithSameCharacter": 0,
+      "newGloballyDistinctCorpusSentenceIds": 0,
+      "independentReadingVerification": false,
+      "lexicalSenseApproval": false
+    }
+  ],
+  "caution": "Source ID uniqueness does not imply separate phonetic readings or independent validated lexical senses."
+}
