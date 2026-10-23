@@ -1,0 +1,43 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark">
+<meta name="description" content="Color relationships among 40 original component mnemonic-group hints without verified semantic families.">
+<title>Mnemonic group color pilot · Chromalect</title>
+<link rel="stylesheet" href="style.css"><script src="theme.js"></script>
+<script src="mnemonic-color-pilot.js" defer></script>
+<style>
+.mg-select{display:grid;max-width:360px;gap:7px;margin:18px 0}
+.mg-select select{font:inherit;padding:10px;border:1px solid var(--border);
+ background:var(--tile-bg);color:var(--ink);border-radius:8px}
+.mg-list{display:grid;gap:16px;max-width:1050px;margin:18px 0}
+.mg-card{border:1px solid var(--border);background:var(--panel);border-radius:12px;
+ padding:20px;min-width:0}
+.mg-card h2{font-size:21px;margin:0 0 10px;text-transform:capitalize}
+.mg-meta{color:var(--sub);font-size:13px;overflow-wrap:anywhere}
+.mg-members{display:flex;flex-wrap:wrap;gap:7px;margin:15px 0}
+.mg-member{display:inline-flex;align-items:center;gap:7px;padding:6px 9px;
+ border:1px solid var(--border);border-radius:8px;background:var(--tile-bg);
+ font:12px ui-monospace,monospace;overflow-wrap:anywhere}
+.mg-swatch{display:inline-block;flex:0 0 auto;width:24px;height:24px;
+ border-radius:5px;background:var(--group-color);border:1px solid var(--subtle-outline)}
+.mg-details summary{cursor:pointer;color:var(--ink);font-size:13px}
+.mg-pair{display:flex;align-items:center;flex-wrap:wrap;gap:8px;
+ padding:8px 0;border-bottom:1px solid var(--border)}
+.mg-distance{color:var(--sub);font:12px ui-monospace,monospace}
+</style></head><body>
+<header class="wrap"><div class="brand"><b>CHROMALECT</b><small>Language, made visible</small></div></header>
+<main class="wrap">
+<div class="eyebrow">Component colors × provisional mnemonic grouping</div>
+<h1>Original 40-component color-group pilot</h1>
+<p class="intro">The first 40 component identities have eight recorded mnemonic-group hints. The remaining 480 colors have no assigned hint. This page compares existing component-color distances within and between those provisional groups, without changing the palette, interpreting the hints as accepted Chinese semantics, or claiming recognizable visual families.</p>
+<p id="mg-summary">Loading source-pinned color relationship measurements.</p>
+<p id="mg-status" role="status" aria-live="polite">Verifying historical mnemonic hints.</p>
+<label class="mg-select" for="mg-filter">Original mnemonic-hint group
+<select id="mg-filter"></select></label>
+<p id="mg-count"></p>
+<div id="mg-list" class="mg-list" aria-label="Eight pilot mnemonic color groups"></div>
+<p>OKLab distance uses the published <a href="https://bottosson.github.io/posts/oklab/">D65 sRGB conversion and Euclidean Lab distance</a>. A close color pair is not automatically a useful semantic association, and a distant pair is not a bad memory cue without independent evidence. No candidate semantic-family palette has been approved. See the <a href="semantic-group-color-pilot-v0.1.json">machine-readable pair measurements</a> and <a href="palettes/mandarin-component-identity-v0.6.json">immutable source palette</a>.</p>
+</main>
+<footer class="wrap"><a href="colors.html">Color registry</a> ·
+<a href="color-reference-audit.html">White/black contrast audit</a> ·
+<a href="visual-semantic-comparison.html">Color and meaning comparison</a> ·
+<a href="index.html">Chromalect overview</a></footer></body></html>
