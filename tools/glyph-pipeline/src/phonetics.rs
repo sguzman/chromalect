@@ -260,9 +260,105 @@ fn check_written_final_source_evidence() -> Result<(), String> {
     Ok(())
 }
 
+
+fn check_citation_tone_isolation() -> Result<(), String> {
+    let r = root();
+    let citations = load(&r.join("site/pronunciation-citations-0001-1000.json"))?;
+    let reference = load(&r.join("data/phonetics/mandarin-citation-tone-contours-v0.1.json"))?;
+    let audit = load(&r.join("data/phonetics/citation-tone-isolation-audit-v0.1.json"))?;
+    let colors = load(&r.join("site/layers-v0.1.json"))?;
+    if string(&audit, "schema")? != "chromalect.phonetics.citation-tone-isolation-audit.v0.1"
+        || string(&audit, "status")? != "source_citation_labels_and_distinct_idealized_pitches_not_automatic_perceptual_or_contextual_validation"
+        || string(&reference, "schema")? != "chromalect.phonetics.mandarin-citation-tone-contours.v0.1"
+        || string(get(&audit,"sources")?, "sourceBlobSHA")? != string(get(&citations,"source")?, "blob_sha")?
+    {
+        return Err("source tone isolation audit or pin changed".into());
+    }
+    let mut counts = [0usize; 5];
+    for (index, row) in entries(&citations,"characters")?.iter().enumerate() {
+        if get(row, "rank")?.as_u64() != Some(index as u64 + 1) {
+            return Err("citation tone source rank changed".into());
+        }
+        for reading in entries(row,"readings")? {
+            let t = get(reading,"tone")?.as_u64()
+                .ok_or("tone label is not an integer")? as usize;
+            let slot = counts.get_mut(t).ok_or("out-of-range citation tone")?;
+            *slot += 1;
+        }
+    }
+    if counts != [10,304,252,223,382] {
+        return Err("first-tranche citation tone counts differ from pinned source".into());
+    }
+    let summary = get(&audit, "summary")?;
+    if get(summary, "sourceCitationReadings")?.as_u64() != Some(1171)
+        || get(summary, "toneCategories")?.as_u64() != Some(5)
+        || get(summary, "machineDistinctContourShapes")?.as_u64() != Some(4)
+        || get(summary, "independentPhoneticToneCertifications")?.as_u64() != Some(0)
+        || get(summary, "contextualToneApprovals")?.as_u64() != Some(0)
+        || get(summary, "humanToneDiscriminationTrials")?.as_u64() != Some(0)
+        || get(summary, "learningStudyEvidence")?.as_u64() != Some(0)
+    {
+        return Err("tone evidence approval counters were modified".into());
+    }
+    let frequencies = get(summary,"sourceToneCounts")?;
+    let a = entries(&audit,"records")?;
+    let b = entries(&reference,"tones")?;
+    if a.len() != 5 || b.len() != 5 { return Err("five source tone categories required".into()); }
+    let palette = get(get(get(&colors, "palette_domains")?, "tone")?, "symbols")?;
+    let mut unique_contours = BTreeSet::new();
+    for i in 0..5 {
+        let token = i.to_string();
+        let tone = &b[i];
+        let record = &a[i];
+        if string(record,"token")? != token
+            || string(tone,"token")? != token
+            || get(record,"sourceCitationOccurrences")?.as_u64() != Some(counts[i] as u64)
+            || get(frequencies,&token)?.as_u64() != Some(counts[i] as u64)
+            || string(record,"citationToneSymbol")? != string(palette,&token)?
+            || get(record,"idealizedLevels")? != get(tone,"levels")?
+            || get(record,"independentlyAcousticallyCalibrated")?.as_bool() != Some(false)
+            || get(record,"contextualSandhiApproved")?.as_bool() != Some(false)
+            || !get(record,"humanPerceptionAccuracy")?.is_null()
+        {
+            return Err(format!("source tone {i} mismatch or unearned approval"));
+        }
+        let levels = get(tone,"levels")?;
+        if i == 0 {
+            if !levels.is_null() { return Err("neutral citation tone must lack fixed contour".into()); }
+        } else {
+            let values = levels.as_array().ok_or("nonneutral contour not an array")?;
+            if values.len() < 2 || !values.iter().all(|x| matches!(x.as_u64(), Some(1..=5))) {
+                return Err("idealized nonneutral pitch values out of bounds".into());
+            }
+            if !unique_contours.insert(levels.to_string()) {
+                return Err("non-neutral reference contours are not distinct".into());
+            }
+        }
+    }
+    if unique_contours.len() != 4 {
+        return Err("expected four unique idealized nonneutral contours".into());
+    }
+    let separations = get(&audit,"separation")?;
+    for label in ["tonalChannelUsesOnlySourceToneLabel",
+                  "noInitialFeatureClassificationRequired",
+                  "noFinalFeatureClassificationRequired",
+                  "neutralToneHasNoFixedContextFreeContour",
+                  "ChaoScaleIsRelativeNotHertz"] {
+        if get(separations,label)?.as_bool() != Some(true) {
+            return Err(format!("tone source-only separation guarantee {label} invalid"));
+        }
+    }
+    if get(separations,"supportsHumanAcousticEquivalenceClaims")?.as_bool() != Some(false) {
+        return Err("machine tone shapes cannot claim human acoustic equivalence".into());
+    }
+    println!("Rust tone cross-check: 1,171 citation labels, four distinct idealized contours, undefined neutral contour, zero phonetic approvals.");
+    Ok(())
+}
+
 pub(super) fn check() -> Result<(),String> {
     check_atlas_colors()?;
-    check_written_final_source_evidence()
+    check_written_final_source_evidence()?;
+    check_citation_tone_isolation()
 }
 
 #[cfg(test)]
@@ -275,5 +371,9 @@ mod tests {
     #[test]
     fn phonetic_source_final_controls_are_cross_checked_in_rust() {
         check_written_final_source_evidence().unwrap();
+    }
+    #[test]
+    fn pinned_tone_labels_and_idealized_contours_are_separately_verified() {
+        check_citation_tone_isolation().unwrap();
     }
 }
