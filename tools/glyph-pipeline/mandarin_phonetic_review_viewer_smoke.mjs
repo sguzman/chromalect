@@ -16,7 +16,7 @@ class Element{
 function setup(source=[gates,citations]){
  const names=["pc-family","pc-candidate","pc-source","pc-assessment","pc-evidence",
   "pc-rationale","pc-variety","pc-convention","pc-transcription",
-  "pc-save","pc-export","pc-output","pc-count","pc-status"];
+  "pc-save","pc-export","pc-import","pc-import-data","pc-output","pc-count","pc-status"];
  const nodes=Object.fromEntries(names.map(k=>[k,new Element()]));
  const urls=["phonetics/mandarin-final-spelling-context-gates-v0.1.json",
   "pronunciation-citations-0001-1000.json"];
@@ -39,7 +39,7 @@ ui["pc-variety"].value="Mainland Standard Mandarin; provisional";
 ui["pc-convention"].value="Working broad IPA comparison; unapproved";
 ui["pc-transcription"].value="[experimental label]";
 ui["pc-save"].events.click();
-assert.match(ui["pc-count"].textContent,/1 local draft notes/);
+assert.match(ui["pc-count"].textContent,/1 locally saved notes/);
 ui["pc-export"].events.click();
 const session=JSON.parse(ui["pc-output"].value);
 assert.equal(session.observations.length,1);
@@ -50,6 +50,52 @@ assert.deepEqual(validatePhoneticCautionReview(session,gates,citations),
 ui["pc-evidence"].value="http://unverified.invalid";
 ui["pc-save"].events.click();
 assert.match(ui["pc-status"].textContent,/Draft not saved/);
+// Unsubmitted changes stay in page memory on navigation, and cannot disappear
+// into a superficially valid export of only the earlier saved notes.
+ui["pc-rationale"].value="Changed but not yet explicitly saved; provenance still needs separate review.";
+ui["pc-family"].value="labial_written_o";ui["pc-family"].events.change();
+assert.match(ui["pc-count"].textContent,/1 unsaved edits/);
+ui["pc-family"].value="all";ui["pc-family"].events.change();
+assert.match(ui["pc-rationale"].value,/Changed but not yet explicitly saved/);
+ui["pc-export"].events.click();
+assert.match(ui["pc-status"].textContent,/Export blocked/);
+ui["pc-save"].events.click();
+assert.match(ui["pc-count"].textContent,/0 unsaved edits/);
+ui["pc-export"].events.click();
+const revised=JSON.parse(ui["pc-output"].value);
+assert.equal(revised.observations.length,1);
+assert.match(revised.observations[0].evidenceRationale,/Changed but not yet/);
+assert.equal(validatePhoneticCautionReview(revised,gates,citations).localNotes,1);
+
+// A complete exported session may be restored into a new browser instance.
+const restored=setup();await settle(restored);
+restored["pc-import-data"].value=JSON.stringify(revised);
+restored["pc-import"].events.click();
+assert.match(restored["pc-count"].textContent,/1 locally saved notes/);
+assert.match(restored["pc-rationale"].value,/Changed but not yet/);
+restored["pc-export"].events.click();
+const roundtrip=JSON.parse(restored["pc-output"].value);
+assert.equal(validatePhoneticCautionReview(roundtrip,gates,citations).localNotes,1);
+
+// Rejected source drift, extra approval flags and duplicate identities do not
+// mutate the valid in-memory drafts that predated the attempted import.
+for(const mutate of [
+ x=>{x.source.citationBlobSHA="wrong";},
+ x=>{x.observations[0].independentIPAApproved=true;},
+ x=>{x.observations.push(x.observations[0]);x.session.recorded=2;},
+ x=>{x.observations[0].evidenceURL="http://invalid.example";},
+ x=>{x.observations[0].cautionFamily="incorrect";},
+ x=>{x.observations[0].evidenceRationale="too short";}
+]){
+ const invalid=structuredClone(revised);mutate(invalid);
+ restored["pc-import-data"].value=JSON.stringify(invalid);
+ restored["pc-import"].events.click();
+ assert.match(restored["pc-status"].textContent,/Import blocked; existing drafts preserved/);
+ assert.match(restored["pc-count"].textContent,/1 locally saved notes/);
+}
+restored["pc-export"].events.click();
+assert.equal(validatePhoneticCautionReview(
+ JSON.parse(restored["pc-output"].value),gates,citations).localNotes,1);
 ui["pc-family"].value="labial_written_o";ui["pc-family"].events.change();
 assert.equal(ui["pc-candidate"].children.length,16);
 assert.match(ui["pc-source"].textContent,/labial_written_o/);
@@ -60,7 +106,7 @@ assert.match(blocked["pc-status"].textContent,/Unable to load/);
 assert.equal(blocked["pc-candidate"].children.length,0);
 for(const id of ["pc-family","pc-candidate","pc-source","pc-assessment","pc-evidence",
  "pc-rationale","pc-variety","pc-convention","pc-transcription",
- "pc-save","pc-export","pc-output","pc-count","pc-status"])
+ "pc-save","pc-export","pc-import","pc-import-data","pc-output","pc-count","pc-status"])
  assert.match(html,new RegExp('id="'+id+'"'));
 assert.ok(!js.includes("innerHTML"));
-console.log("213 local-only Mandarin phonetic candidates, strict JSON export and refusal paths checked.");
+console.log("213 source-pinned citations, lossless navigation, transactional import, export parity and rejection paths checked.");
