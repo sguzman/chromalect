@@ -1,0 +1,41 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark">
+<title>Mandarin written citation contrast research · Chromalect</title>
+<link rel="stylesheet" href="style.css"><script src="theme.js"></script>
+<script src="mandarin-contrast-controls.js" defer></script>
+<style>
+.contrast-filters{display:flex;flex-wrap:wrap;gap:14px;margin:20px 0}
+.contrast-filters label{display:grid;gap:6px}
+.contrast-filters input,.contrast-filters select{font:inherit;color:var(--ink);background:var(--panel);
+border:1px solid var(--border);padding:10px;border-radius:8px}
+.contrast-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:14px;margin:20px 0}
+.contrast-card{border:1px solid var(--border);background:var(--panel);border-radius:12px;padding:17px}
+.contrast-card h2{font-size:16px;margin:0 0 12px}
+.contrast-pair{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.contrast-half{display:flex;align-items:center;flex-direction:column;gap:5px;padding:10px 4px;border:1px solid var(--border);border-radius:8px}
+.contrast-hanzi{font-size:46px}
+.contrast-half strong{font-size:19px}
+.contrast-half small{color:var(--sub);text-align:center;overflow-wrap:anywhere}
+.contrast-note{font-size:13px;color:var(--sub)}
+</style></head><body><header class="wrap"><div class="brand"><b>CHROMALECT</b>
+<small>Language, made visible</small></div></header>
+<main class="wrap">
+<div class="eyebrow">Source-orthographic research · prospective comparison controls</div>
+<h1>Mandarin citation-label contrasts</h1>
+<p class="intro">Compare source-attested character citation spellings under controlled written-token changes. The cohort includes tone-label, provisional aspiration-initial and single-letter written-final comparisons. These controls are not independently verified minimal spoken-sound pairs, lexical senses, or contextual reading assignments.</p>
+<div class="contrast-filters">
+<label for="contrast-type">Contrast category<select id="contrast-type">
+<option value="all">All controls</option><option value="tone_label">Source citation tone</option>
+<option value="working_aspiration_pair">Working initial aspiration</option>
+<option value="one_letter_written_final">Single written final letter</option></select></label>
+<label for="contrast-search">Search character, Pinyin, rank, initial or final
+<input id="contrast-search" type="search" placeholder="e.g. qī, z, 100"></label></div>
+<p id="contrast-summary">Loading pinned citation-control cohort.</p>
+<p id="contrast-status" role="status" aria-live="polite">Validating source record identities.</p>
+<p id="contrast-count"></p><div id="contrast-results" class="contrast-grid"></div>
+<p>Selection: first-ranked source citation examples for each written token triple. These are unadjudicated source labels, and one-character written-final differences need not be one-phoneme differences. Experiments still require independently verified sound targets, accessible controls, consent and pre-registered analysis.</p>
+<p><a href="phonetics/citation-orthographic-contrast-controls-v0.1.json">Versioned candidate controls</a> ·
+<a href="https://github.com/sguzman/chromalect/blob/main/docs/mandarin-citation-contrast-controls.md">Research construction method</a></p>
+</main><footer class="wrap"><a href="mandarin-syllable-grammar.html">Citation grammar</a> ·
+<a href="mandarin-initial-features.html">Initial features</a> ·
+<a href="roadmap-status.html">Roadmap</a></footer></body></html>
