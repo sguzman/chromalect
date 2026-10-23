@@ -96,7 +96,7 @@ async function load(){
      finalGates.summary.sourceCitationReadings!==1171||
      finalGates.summary.flaggedSourceReadings!==213||
      finalGates.summary.flaggedDistinctWrittenTriples!==108||
-     finalGates.summary.flagCategories!==8||
+     finalGates.summary.flagCategories!==9||
      finalGates.summary.independentlyAdjudicatedFinalPhonemes!==0||
      finalGates.summary.approvedContextualPronunciations!==0||
      finalGates.summary.approvedAcousticTranscriptions!==0||
@@ -145,7 +145,7 @@ async function load(){
     entries.push({...r,rank:x.rank,character:x.character});
    }
   }
-  if(entries.filter(r=>finalGateByTriple.has(JSON.stringify([r.initial,r.final,r.tone]))).length!==197)
+  if(entries.filter(r=>finalGateByTriple.has(JSON.stringify([r.initial,r.final,r.tone]))).length!==213)
    throw Error("Final context review flags do not match original reading occurrences");
   if(entries.length!==1171||pairs.size!==673||finals.size!==33)
    throw Error("Published glyph source citation counts changed");
