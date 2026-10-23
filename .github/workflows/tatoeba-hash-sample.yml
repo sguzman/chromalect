@@ -1,0 +1,58 @@
+name: Acquire hash-sampled Mandarin context candidates
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/tatoeba-hash-sample.yml"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  acquire:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v4
+      - name: Download one Tatoeba Mandarin export
+        shell: bash
+        run: |
+          set -euo pipefail
+          curl --fail --show-error --silent --location --retry 4 --retry-delay 3 --retry-all-errors --max-time 180 \
+            "https://downloads.tatoeba.org/exports/per_language/cmn/cmn_sentences_detailed.tsv.bz2" \
+            -o "$RUNNER_TEMP/cmn-sentence-snapshot.tsv.bz2"
+          test -s "$RUNNER_TEMP/cmn-sentence-snapshot.tsv.bz2"
+      - name: Extract reproducible source-only candidate IDs
+        shell: bash
+        run: |
+          set -euo pipefail
+          node tools/glyph-pipeline/tatoeba_hash_sample_smoke.mjs
+          node tools/glyph-pipeline/tatoeba_hash_sample.mjs \
+            --input "$RUNNER_TEMP/cmn-sentence-snapshot.tsv.bz2" \
+            --snapshot-date "$(date -u +%F)" \
+            --max-per-character 5 \
+            --output "$RUNNER_TEMP/chromalect-tatoeba-hash-sample.json"
+          node --input-type=module - "$RUNNER_TEMP/chromalect-tatoeba-hash-sample.json" <<'NODE'
+          import assert from "node:assert/strict";
+          import fs from "node:fs";
+          const d=JSON.parse(fs.readFileSync(process.argv[2],"utf8"));
+          assert.equal(d.schema,"chromalect.semantic.tatoeba-hash-sampled-candidate-ids.v0.1");
+          assert.equal(d.status,"independently_hosted_surface_matches_not_verified_readings");
+          assert.equal(d.summary.targetCharacters,142);
+          assert.ok(d.summary.selectedCharacterSentenceAssociations>0);
+          assert.ok(d.summary.selectedCharacterSentenceAssociations<=710);
+          assert.equal(d.summary.contextualReadingsVerified,0);
+          assert.equal(d.summary.lexicalSenseApprovals,0);
+          assert.equal(d.summary.pictogramApprovals,0);
+          assert.ok(d.records.every(r=>r.candidates.length<=5&&r.candidates.every(x=>
+            x.readingInContext==="not_checked"&&x.lexicalSense==="not_checked"&&
+            x.license==="requires_individual_check")));
+          console.log("Hash-sampled candidate intake complete.",d.summary);
+          NODE
+      - name: Upload isolated research artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: chromalect-tatoeba-hash-sampled-ids
+          path: ${{ runner.temp }}/chromalect-tatoeba-hash-sample.json
+          if-no-files-found: error
+          retention-days: 30
