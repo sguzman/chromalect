@@ -1,0 +1,264 @@
+{
+  "schema": "chromalect.phonetics.mandarin-simple-final-feature-candidates.v0.1",
+  "status": "six_pedagogical_written_final_feature_hypotheses_not_ipa_or_context_approval",
+  "source": {
+    "citationTranche": "site/pronunciation-citations-0001-1000.json",
+    "finalSpellingPalette": "site/layers-v0.1.json",
+    "contextWarnings": "mandarin-final-spelling-context-gates-v0.1.json",
+    "upstreamBlobSHA": "e38b5d3077f516054ecc5573c9251b3aa3628140",
+    "references": [
+      {
+        "publisher": "Hong Kong Polytechnic University — Mandarin Simple Finals",
+        "url": "https://www.polyu.edu.hk/bepth/introduction-to-phonetics/simple-finals/?sc_lang=en"
+      },
+      {
+        "publisher": "The Open University — Chinese 3 Finals",
+        "url": "https://www.open.edu/openlearn/mod/oucontent/view.php?id=108700&section=1.1"
+      },
+      {
+        "publisher": "LMU Munich — Mandarin Vowels",
+        "url": "https://www.phonetik.uni-muenchen.de/studium/skripten/languagedemos/Demos/mandarin.html"
+      }
+    ],
+    "noSoundRecordingsCopied": true,
+    "noSourceGlossesCopied": true,
+    "paletteChanged": false,
+    "sourceCharacterStrokesChanged": false
+  },
+  "limitations": [
+    "The six feature tuples are coarse working descriptions from pedagogical vowel categories, not accepted IPA or validated phonemic features.",
+    "Context-sensitive written i/u/o realizations are separately flagged and must not inherit the default candidate tuple as an actual measured sound.",
+    "Even unflagged source spellings do not establish an independently verified phonetic or lexical interpretation.",
+    "This limited six-token vowel study does not cover the other twenty-seven source final remainder spellings."
+  ],
+  "summary": {
+    "distinctSimpleFinalLabels": 6,
+    "allSourceFinalLabels": 33,
+    "sourceCitationReadings": 1171,
+    "simpleFinalOccurrences": 432,
+    "flaggedSimpleFinalOccurrences": 112,
+    "unflaggedSimpleFinalOccurrences": 320,
+    "uniqueWorkingFeatureTuples": 6,
+    "independentIPAApprovalCount": 0,
+    "humanVowelFeatureDecodingTrials": 0,
+    "learningOutcomeEvidence": 0
+  },
+  "records": [
+    {
+      "token": "a",
+      "workingHeight": "open",
+      "workingBackness": "central",
+      "workingRounding": "unrounded",
+      "observedSourceCitationReadings": 72,
+      "sourceSpellingContextCautions": 0,
+      "firstSourceExamples": [
+        {
+          "rank": 9,
+          "character": "八",
+          "display": "bā",
+          "initial": "b",
+          "final": "a",
+          "tone": 1
+        },
+        {
+          "rank": 32,
+          "character": "大",
+          "display": "dà",
+          "initial": "d",
+          "final": "a",
+          "tone": 4
+        },
+        {
+          "rank": 56,
+          "character": "丫",
+          "display": "yā",
+          "initial": "y",
+          "final": "a",
+          "tone": 1
+        }
+      ],
+      "articulatoryFeatureStatus": "provisional_pedagogical_candidate_not_independently_adjudicated",
+      "acceptedAsIPAOrContextualPhone": false
+    },
+    {
+      "token": "o",
+      "workingHeight": "mid",
+      "workingBackness": "back",
+      "workingRounding": "rounded",
+      "observedSourceCitationReadings": 16,
+      "sourceSpellingContextCautions": 16,
+      "firstSourceExamples": [
+        {
+          "rank": 8,
+          "character": "卜",
+          "display": "bo",
+          "initial": "b",
+          "final": "o",
+          "tone": 0
+        },
+        {
+          "rank": 35,
+          "character": "万",
+          "display": "mò",
+          "initial": "m",
+          "final": "o",
+          "tone": 4
+        },
+        {
+          "rank": 81,
+          "character": "无",
+          "display": "mó",
+          "initial": "m",
+          "final": "o",
+          "tone": 2
+        }
+      ],
+      "articulatoryFeatureStatus": "provisional_pedagogical_candidate_not_independently_adjudicated",
+      "acceptedAsIPAOrContextualPhone": false
+    },
+    {
+      "token": "e",
+      "workingHeight": "mid",
+      "workingBackness": "back",
+      "workingRounding": "unrounded",
+      "observedSourceCitationReadings": 45,
+      "sourceSpellingContextCautions": 0,
+      "firstSourceExamples": [
+        {
+          "rank": 17,
+          "character": "了",
+          "display": "le",
+          "initial": "l",
+          "final": "e",
+          "tone": 0
+        },
+        {
+          "rank": 45,
+          "character": "个",
+          "display": "gě",
+          "initial": "g",
+          "final": "e",
+          "tone": 3
+        },
+        {
+          "rank": 45,
+          "character": "个",
+          "display": "gè",
+          "initial": "g",
+          "final": "e",
+          "tone": 4
+        }
+      ],
+      "articulatoryFeatureStatus": "provisional_pedagogical_candidate_not_independently_adjudicated",
+      "acceptedAsIPAOrContextualPhone": false
+    },
+    {
+      "token": "i",
+      "workingHeight": "close",
+      "workingBackness": "front",
+      "workingRounding": "unrounded",
+      "observedSourceCitationReadings": 168,
+      "sourceSpellingContextCautions": 63,
+      "firstSourceExamples": [
+        {
+          "rank": 1,
+          "character": "一",
+          "display": "yī",
+          "initial": "y",
+          "final": "i",
+          "tone": 1
+        },
+        {
+          "rank": 2,
+          "character": "乙",
+          "display": "yǐ",
+          "initial": "y",
+          "final": "i",
+          "tone": 3
+        },
+        {
+          "rank": 4,
+          "character": "十",
+          "display": "shí",
+          "initial": "sh",
+          "final": "i",
+          "tone": 2
+        }
+      ],
+      "articulatoryFeatureStatus": "provisional_pedagogical_candidate_not_independently_adjudicated",
+      "acceptedAsIPAOrContextualPhone": false
+    },
+    {
+      "token": "u",
+      "workingHeight": "close",
+      "workingBackness": "back",
+      "workingRounding": "rounded",
+      "observedSourceCitationReadings": 128,
+      "sourceSpellingContextCautions": 33,
+      "firstSourceExamples": [
+        {
+          "rank": 8,
+          "character": "卜",
+          "display": "bǔ",
+          "initial": "b",
+          "final": "u",
+          "tone": 3
+        },
+        {
+          "rank": 11,
+          "character": "入",
+          "display": "rù",
+          "initial": "r",
+          "final": "u",
+          "tone": 4
+        },
+        {
+          "rank": 24,
+          "character": "于",
+          "display": "yú",
+          "initial": "y",
+          "final": "u",
+          "tone": 2
+        }
+      ],
+      "articulatoryFeatureStatus": "provisional_pedagogical_candidate_not_independently_adjudicated",
+      "acceptedAsIPAOrContextualPhone": false
+    },
+    {
+      "token": "ü",
+      "workingHeight": "close",
+      "workingBackness": "front",
+      "workingRounding": "rounded",
+      "observedSourceCitationReadings": 3,
+      "sourceSpellingContextCautions": 0,
+      "firstSourceExamples": [
+        {
+          "rank": 67,
+          "character": "女",
+          "display": "nǚ",
+          "initial": "n",
+          "final": "ü",
+          "tone": 3
+        },
+        {
+          "rank": 426,
+          "character": "吕",
+          "display": "lǚ",
+          "initial": "l",
+          "final": "ü",
+          "tone": 3
+        },
+        {
+          "rank": 941,
+          "character": "驴",
+          "display": "lǘ",
+          "initial": "l",
+          "final": "ü",
+          "tone": 2
+        }
+      ],
+      "articulatoryFeatureStatus": "provisional_pedagogical_candidate_not_independently_adjudicated",
+      "acceptedAsIPAOrContextualPhone": false
+    }
+  ]
+}
