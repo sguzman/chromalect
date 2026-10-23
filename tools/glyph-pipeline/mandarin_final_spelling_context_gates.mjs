@@ -60,8 +60,9 @@ export const deriveContextGates = function deriveContextGates(citations){
    upstreamRepository:citations.source.repository,upstreamBlobSHA:citations.source.blob_sha,
    originalLicense:citations.source.license,
    referenceNotes:[
-    {publisher:"Humanities LibreTexts, Mandarin sound system",url:"https://human.libretexts.org/Bookshelves/Languages/Chinese/CHN101_Elementary_Mandarin_I_Textbook/01:_Introduction/1.01:_The_Sound_System_of_Mandarin"},
-    {publisher:"Chinese lexicon and phonological-orthography analysis, academic reference",url:"https://students.aiu.edu/submissions/profiles/resources/onlineBook/d5F8W2_A_Grammar_of_Mandarin.pdf"}],
+    {publisher:"Hong Kong Polytechnic University — BEPTH Pinyin Spelling Rules",url:"https://www.polyu.edu.hk/bepth/introduction-to-phonetics/spelling-rules-in-pinyin/?sc_lang=en"},
+    {publisher:"The Open University — OpenLearn Pinyin spelling conventions",url:"https://www.open.edu/openlearn/mod/oucontent/view.php?id=108700&section=1.3"},
+    {publisher:"LMU Munich — Mandarin vowel phonetics and tone demonstration",url:"https://www.phonetik.uni-muenchen.de/studium/skripten/languagedemos/Demos/mandarin.html"}
    noSourceSentenceText:true,noSourceDefinitionsCopied:true},
   limitations:[
    "Counts indicate only source written-initial/final spelling contexts; no measured speech token or authorized pronunciation.",

@@ -9,6 +9,9 @@ assert.equal(expected.schema,"chromalect.phonetics.mandarin-final-spelling-conte
 assert.equal(expected.status,"contextual_spelling_review_flags_not_verified_ipa_or_phonemic_finals");
 assert.equal(expected.summary.sourceCitationReadings,1171);
 assert.equal(expected.summary.flaggedSourceReadings,197);
+assert.deepEqual(expected.source.referenceNotes.map(x=>new URL(x.url).hostname),
+ ["www.polyu.edu.hk","www.open.edu","www.phonetik.uni-muenchen.de"]);
+
 assert.equal(expected.summary.flaggedDistinctWrittenTriples,97);
 assert.deepEqual(expected.records.map(x=>[x.id,x.observedReadingCount]),[
  ["post_sibilant_i",63],["palatal_written_u",33],["contracted_iu",24],
