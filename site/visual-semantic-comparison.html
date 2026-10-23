@@ -21,11 +21,11 @@
 .vsc-arm h2{font-size:19px;margin:0 0 6px}
 .vsc-note,.vsc-caption{font-size:13px;color:var(--sub)}
 .vsc-stage{min-height:205px;display:flex;flex-direction:column;justify-content:center;
- align-items:center;gap:12px}
+ align-items:center;gap:12px;background:var(--study-surface,transparent);padding:10px;border-radius:8px}
 .vsc-shape{width:var(--study-size);height:var(--study-size);max-width:100%;
  flex-shrink:0;display:block;position:relative}
 .vsc-ink,.vsc-source-svg{width:100%;height:100%;display:block}
-.vsc-ink{background:var(--glyph-ink);-webkit-mask-image:var(--source-mask);
+.vsc-ink{background:var(--study-ink,var(--glyph-ink));-webkit-mask-image:var(--source-mask);
  mask-image:var(--source-mask);-webkit-mask-size:contain;mask-size:contain;
  -webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;
  -webkit-mask-position:center;mask-position:center}
@@ -77,6 +77,12 @@
 <label class="vsc-check" for="vsc-reveal"><input id="vsc-reveal" type="checkbox">Reveal source meaning</label>
 <label class="vsc-check" for="vsc-operators"><input id="vsc-operators" type="checkbox">Show technical event markers</label>
 <label class="vsc-check" for="vsc-gray"><input id="vsc-gray" type="checkbox">Inspect component colors in grayscale</label>
+<label for="vsc-surface">Comparison surface
+<select id="vsc-surface">
+<option value="theme">Current theme</option>
+<option value="white">Pure white</option>
+<option value="black">Pure black</option>
+</select></label>
 </div>
 <p id="vsc-status" role="status" aria-live="polite">Loading source-aligned visual comparison.</p>
 <p id="vsc-count"></p>
