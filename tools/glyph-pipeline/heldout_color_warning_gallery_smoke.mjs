@@ -65,7 +65,8 @@ assert.equal(introducedGlyphs,23);
 assert.deepEqual({introduced,resolved,retained},
  {introduced:23,resolved:21,retained:5});
 const mutations=[
- (a,b,c,d)=>{a.characters[0].character="X";},
+ (a,b,c,d)=>{const f=d.folds.find(x=>x.test.reviewPairs.length);
+  a.characters[f.test.reviewPairs[0].rank-1].character="X";},
  (a,b,c,d)=>{b.palette_ref="mandarin-component-identity@0.7.0";},
  (a,b,c,d)=>{c.version="0.7.0";},
  (a,b,c,d)=>{d.provenance.independentVisionTrialConducted=true;},
