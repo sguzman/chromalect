@@ -219,6 +219,8 @@ jobs:
           node tools/glyph-pipeline/tatoeba_reading_coverage_upper_bound_smoke.mjs
           node tools/glyph-pipeline/tatoeba_hash_sample_source_id_index_smoke.mjs
           node tools/glyph-pipeline/unmatched_corpus_source_escalation_smoke.mjs
+          node tools/glyph-pipeline/combined_corpus_phonetic_count_upper_bound.mjs --check
+          node tools/glyph-pipeline/combined_corpus_phonetic_count_upper_bound_smoke.mjs
           node --check site/context-evidence.js
           node tools/glyph-pipeline/context_evidence_viewer_smoke.mjs
           node tools/glyph-pipeline/contextual_evidence_readiness_summary.mjs --check
@@ -267,6 +269,7 @@ jobs:
           cp data/semantic/cedict-crossref/tatoeba-reading-coverage-upper-bound-v0.1.json site/semantic/tatoeba-reading-coverage-upper-bound-v0.1.json
           cp data/semantic/cedict-crossref/tatoeba-hash-sample-source-id-index-v0.1.json site/semantic/tatoeba-hash-sample-source-id-index-v0.1.json
           cp data/semantic/cedict-crossref/unmatched-corpus-character-source-escalation-v0.1.json site/semantic/unmatched-corpus-character-source-escalation-v0.1.json
+          cp data/semantic/cedict-crossref/combined-corpus-phonetic-count-upper-bound-v0.1.json site/semantic/combined-corpus-phonetic-count-upper-bound-v0.1.json
           for section in 0001-0200 0201-0400 0401-0600 0601-0800 0801-1000; do
             cp "data/semantic/cedict-crossref/dictionary-excerpts-$section.json" "site/semantic/"
             test -s "site/semantic/dictionary-excerpts-$section.json"
@@ -291,6 +294,7 @@ jobs:
           test -s site/semantic/tatoeba-reading-coverage-upper-bound-v0.1.json
           test -s site/semantic/tatoeba-hash-sample-source-id-index-v0.1.json
           test -s site/semantic/unmatched-corpus-character-source-escalation-v0.1.json
+          test -s site/semantic/combined-corpus-phonetic-count-upper-bound-v0.1.json
           test -s site/semantic/reading-sensitive-gloss-audit-v0.1.json
           test -s site/semantic/sense-review-queue-v0.1.json
           test -s site/semantic/full-lexical-review-queue-v0.1.json

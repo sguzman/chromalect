@@ -1,0 +1,2544 @@
+{
+  "schema": "chromalect.semantic.combined-corpus-phonetic-count-upper-bound.v0.1",
+  "status": "numerical_source_id_parity_only_no_context_reading_assignments",
+  "source": {
+    "firstThree": "tatoeba-sentence-id-index-v0.1.json",
+    "hashSample": "tatoeba-hash-sample-source-id-index-v0.1.json",
+    "readingGroups": "contextual-pronunciation-search-groups-v0.1.json"
+  },
+  "interpretation": [
+    "Only compares the NUMBER of unique source IDs per character to the number of recorded case-normalized Pinyin labels.",
+    "Even for 141 characters with enough IDs numerically, there may be no source example for one or more readings.",
+    "An independently checked contextual word boundary, pronunciation, and licensed sentence quotation remain future evidence gates.",
+    "Capitalization-only source entries remain separate lexical records and none has been adjudicated."
+  ],
+  "summary": {
+    "characters": 142,
+    "recordedPronunciationSearchGroups": 241,
+    "firstSampleCharacterSentenceAssociations": 423,
+    "hashSampleCharacterSentenceAssociations": 701,
+    "sharedCharacterSentenceAssociations": 37,
+    "combinedDistinctCharacterSentenceAssociations": 1087,
+    "distinctCorpusSentenceIdsAcrossBoth": 1015,
+    "charactersWithInsufficientCandidateCount": 1,
+    "minimumAdditionalCharacterSentenceIdsToReachNumericalPerPronunciationParity": 2,
+    "independentlyVerifiedContextualReadings": 0,
+    "independentlyApprovedLexicalSenses": 0,
+    "approvedEmojiMappings": 0
+  },
+  "records": [
+    {
+      "rank": 2,
+      "character": "乙",
+      "pinnedCasefoldedReadingLabels": [
+        "yi3",
+        "zhe2"
+      ],
+      "recordedPronunciationSearchGroups": 2,
+      "firstSampleIds": 3,
+      "hashSampleIds": 3,
+      "combinedDistinctCharacterSentenceIds": 3,
+      "sharedCharacterSentenceAssociations": 3,
+      "minimumAdditionalIdsForHypotheticalOnePerPronunciation": 0,
+      "boundClassification": "enough_ids_but_all_unassigned",
+      "contextToPronunciationAssignments": 0,
+      "independentlyVerifiedReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 17,
+      "character": "了",
+      "pinnedCasefoldedReadingLabels": [
+        "le5",
+        "liao3",
+        "liao4"
+      ],
+      "recordedPronunciationSearchGroups": 3,
+      "firstSampleIds": 3,
+      "hashSampleIds": 5,
+      "combinedDistinctCharacterSentenceIds": 8,
+      "sharedCharacterSentenceAssociations": 0,
+      "minimumAdditionalIdsForHypotheticalOnePerPronunciation": 0,
+      "boundClassification": "enough_ids_but_all_unassigned",
+      "contextToPronunciationAssignments": 0,
+      "independentlyVerifiedReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 18,
+      "character": "刀",
+      "pinnedCasefoldedReadingLabels": [
+        "dao1"
+      ],
+      "recordedPronunciationSearchGroups": 1,
+      "firstSampleIds": 3,
+      "hashSampleIds": 5,
+      "combinedDistinctCharacterSentenceIds": 8,
+      "sharedCharacterSentenceAssociations": 0,
+      "minimumAdditionalIdsForHypotheticalOnePerPronunciation": 0,
+      "boundClassification": "enough_ids_but_all_unassigned",
+      "contextToPronunciationAssignments": 0,
+      "independentlyVerifiedReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 23,
+      "character": "干",
+      "pinnedCasefoldedReadingLabels": [
+        "gan1",
+        "gan4"
+      ],
+      "recordedPronunciationSearchGroups": 2,
+      "firstSampleIds": 3,
+      "hashSampleIds": 5,
+      "combinedDistinctCharacterSentenceIds": 8,
+      "sharedCharacterSentenceAssociations": 0,
+      "minimumAdditionalIdsForHypotheticalOnePerPronunciation": 0,
+      "boundClassification": "enough_ids_but_all_unassigned",
+      "contextToPronunciationAssignments": 0,
+      "independentlyVerifiedReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 24,
+      "character": "于",
+      "pinnedCasefoldedReadingLabels": [
+        "yu2"
+      ],
+      "recordedPronunciationSearchGroups": 1,
+      "firstSampleIds": 3,
+      "hashSampleIds": 5,
+      "combinedDistinctCharacterSentenceIds": 8,
+      "sharedCharacterSentenceAssociations": 0,
+      "minimumAdditionalIdsForHypotheticalOnePerPronunciation": 0,
+      "boundClassification": "enough_ids_but_all_unassigned",
+      "contextToPronunciationAssignments": 0,
+      "independentlyVerifiedReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 27,
+      "character": "土",
+      "pinnedCasefoldedReadingLabels": [
+        "tu3"
+      ],
+      "recordedPronunciationSearchGroups": 1,
+      "firstSampleIds": 3,
+      "hashSampleIds": 5,
+      "combinedDistinctCharacterSentenceIds": 8,
+      "sharedCharacterSentenceAssociations": 0,
+      "minimumAdditionalIdsForHypotheticalOnePerPronunciation": 0,
+      "boundClassification": "enough_ids_but_all_unassigned",
+      "contextToPronunciationAssignments": 0,
+      "independentlyVerifiedReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 28,
+      "character": "士",
+      "pinnedCasefoldedReadingLabels": [
+        "shi4"
+      ],
+      "recordedPronunciationSearchGroups": 1,
+      "firstSampleIds": 3,
+      "hashSampleIds": 5,
+      "combinedDistinctCharacterSentenceIds": 8,
+      "sharedCharacterSentenceAssociations": 0,
+      "minimumAdditionalIdsForHypotheticalOnePerPronunciation": 0,
+      "boundClassification": "enough_ids_but_all_unassigned",
+      "contextToPronunciationAssignments": 0,
+      "independentlyVerifiedReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 32,
+      "character": "大",
+      "pinnedCasefoldedReadingLabels": [
+        "da4",
+        "dai4"
+      ],
+      "recordedPronunciationSearchGroups": 2,
+      "firstSampleIds": 3,
+      "hashSampleIds": 5,
+      "combinedDistinctCharacterSentenceIds": 8,
+      "sharedCharacterSentenceAssociations": 0,
+      "minimumAdditionalIdsForHypotheticalOnePerPronunciation": 0,
+      "boundClassification": "enough_ids_but_all_unassigned",
+      "contextToPronunciationAssignments": 0,
+      "independentlyVerifiedReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 36,
+      "character": "上",
+      "pinnedCasefoldedReadingLabels": [
+        "shang3",
+        "shang4"
+      ],
+      "recordedPronunciationSearchGroups": 2,
+      "firstSampleIds": 3,
+      "hashSampleIds": 5,
+      "combinedDistinctCharacterSentenceIds": 8,
+      "sharedCharacterSentenceAssociations": 0,
+      "minimumAdditionalIdsForHypotheticalOnePerPronunciation": 0,
+      "boundClassification": "enough_ids_but_all_unassigned",
+      "contextToPronunciationAssignments": 0,
+      "independentlyVerifiedReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 55,
+      "character": "门",
+      "pinnedCasefoldedReadingLabels": [
+        "men2"
+      ],
+      "recordedPronunciationSearchGroups": 1,
+      "firstSampleIds": 3,
+      "hashSampleIds": 5,
+      "combinedDistinctCharacterSentenceIds": 8,
+      "sharedCharacterSentenceAssociations": 0,
+      "minimumAdditionalIdsForHypotheticalOnePerPronunciation": 0,
+      "boundClassification": "enough_ids_but_all_unassigned",
+      "contextToPronunciationAssignments": 0,
+      "independentlyVerifiedReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 57,
+      "character": "义",
+      "pinnedCasefoldedReadingLabels": [
+        "yi4"
+      ],
+      "recordedPronunciationSearchGroups": 1,
+      "firstSampleIds": 3,
+      "hashSampleIds": 5,
+      "combinedDistinctCharacterSentenceIds": 8,
+      "sharedCharacterSentenceAssociations": 0,
+      "minimumAdditionalIdsForHypotheticalOnePerPronunciation": 0,
+      "boundClassification": "enough_ids_but_all_unassigned",
+      "contextToPronunciationAssignments": 0,
+      "independentlyVerifiedReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 64,
+      "character": "子",
+      "pinnedCasefoldedReadingLabels": [
+        "zi3",
+        "zi5"
+      ],
+      "recordedPronunciationSearchGroups": 2,
+      "firstSampleIds": 3,
+      "hashSampleIds": 5,
+      "combinedDistinctCharacterSentenceIds": 8,
+      "sharedCharacterSentenceAssociations": 0,
+      "minimumAdditionalIdsForHypotheticalOnePerPronunciation": 0,
+      "boundClassification": "enough_ids_but_all_unassigned",
+      "contextToPronunciationAssignments": 0,
+      "independentlyVerifiedReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 65,
+      "character": "卫",
+      "pinnedCasefoldedReadingLabels": [
+        "wei4"
+      ],
+      "recordedPronunciationSearchGroups": 1,
+      "firstSampleIds": 3,
+      "hashSampleIds": 5,
+      "combinedDistinctCharacterSentenceIds": 8,
+      "sharedCharacterSentenceAssociations": 0,
+      "minimumAdditionalIdsForHypotheticalOnePerPronunciation": 0,
+      "boundClassification": "enough_ids_but_all_unassigned",
+      "contextToPronunciationAssignments": 0,
+      "independentlyVerifiedReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 71,
+      "character": "叉",
+      "pinnedCasefoldedReadingLabels": [
+        "cha1",
+        "cha2",
+        "cha3"
+      ],
+      "recordedPronunciationSearchGroups": 3,
+      "firstSampleIds": 3,
+      "hashSampleIds": 5,
+      "combinedDistinctCharacterSentenceIds": 7,
+      "sharedCharacterSentenceAssociations": 1,
+      "minimumAdditionalIdsForHypotheticalOnePerPronunciation": 0,
+      "boundClassification": "enough_ids_but_all_unassigned",
+      "contextToPronunciationAssignments": 0,
+      "independentlyVerifiedReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 74,
+      "character": "丰",
+      "pinnedCasefoldedReadingLabels": [
+        "feng1"
+      ],
+      "recordedPronunciationSearchGroups": 1,
+      "firstSampleIds": 3,
+      "hashSampleIds": 5,
+      "combinedDistinctCharacterSentenceIds": 8,
+      "sharedCharacterSentenceAssociations": 0,
+      "minimumAdditionalIdsForHypotheticalOnePerPronunciation": 0,
+      "boundClassification": "enough_ids_but_all_unassigned",
+      "contextToPronunciationAssignments": 0,
+      "independentlyVerifiedReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 79,
+      "character": "夫",
+      "pinnedCasefoldedReadingLabels": [
+        "fu1",
+        "fu2"
+      ],
+      "recordedPronunciationSearchGroups": 2,
+      "firstSampleIds": 3,
+      "hashSampleIds": 5,
+      "combinedDistinctCharacterSentenceIds": 8,
+      "sharedCharacterSentenceAssociations": 0,
+      "minimumAdditionalIdsForHypotheticalOnePerPronunciation": 0,
+      "boundClassification": "enough_ids_but_all_unassigned",
+      "contextToPronunciationAssignments": 0,
+      "independentlyVerifiedReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 80,
+      "character": "元",
+      "pinnedCasefoldedReadingLabels": [
+        "yuan2"
+      ],
+      "recordedPronunciationSearchGroups": 1,
+      "firstSampleIds": 3,
+      "hashSampleIds": 5,
+      "combinedDistinctCharacterSentenceIds": 8,
+      "sharedCharacterSentenceAssociations": 0,
+      "minimumAdditionalIdsForHypotheticalOnePerPronunciation": 0,
+      "boundClassification": "enough_ids_but_all_unassigned",
+      "contextToPronunciationAssignments": 0,
+      "independentlyVerifiedReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 85,
+      "character": "扎",
+      "pinnedCasefoldedReadingLabels": [
+        "za1",
+        "zha1",
+        "zha2"
+      ],
+      "recordedPronunciationSearchGroups": 3,
+      "firstSampleIds": 3,
+      "hashSampleIds": 5,
+      "combinedDistinctCharacterSentenceIds": 7,
+      "sharedCharacterSentenceAssociations": 1,
+      "minimumAdditionalIdsForHypotheticalOnePerPronunciation": 0,
+      "boundClassification": "enough_ids_but_all_unassigned",
+      "contextToPronunciationAssignments": 0,
+      "independentlyVerifiedReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 87,
+      "character": "木",
+      "pinnedCasefoldedReadingLabels": [
+        "mu4"
+      ],
+      "recordedPronunciationSearchGroups": 1,
+      "firstSampleIds": 3,
+      "hashSampleIds": 5,
+      "combinedDistinctCharacterSentenceIds": 8,
+      "sharedCharacterSentenceAssociations": 0,
+      "minimumAdditionalIdsForHypotheticalOnePerPronunciation": 0,
+      "boundClassification": "enough_ids_but_all_unassigned",
+      "contextToPronunciationAssignments": 0,
+      "independentlyVerifiedReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 89,
+      "character": "支",
+      "pinnedCasefoldedReadingLabels": [
+        "zhi1"
+      ],
+      "recordedPronunciationSearchGroups": 1,
+      "firstSampleIds": 3,
+      "hashSampleIds": 5,
+      "combinedDistinctCharacterSentenceIds": 8,
+      "sharedCharacterSentenceAssociations": 0,
+      "minimumAdditionalIdsForHypotheticalOnePerPronunciation": 0,
+      "boundClassification": "enough_ids_but_all_unassigned",
+      "contextToPronunciationAssignments": 0,
+      "independentlyVerifiedReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 99,
+      "character": "匹",
+      "pinnedCasefoldedReadingLabels": [
+        "pi1",
+        "pi3"
+      ],
+      "recordedPronunciationSearchGroups": 2,
+      "firstSampleIds": 3,
+      "hashSampleIds": 5,
+      "combinedDistinctCharacterSentenceIds": 8,
+      "sharedCharacterSentenceAssociations": 0,
+      "minimumAdditionalIdsForHypotheticalOnePerPronunciation": 0,
+      "boundClassification": "enough_ids_but_all_unassigned",
+      "contextToPronunciationAssignments": 0,
+      "independentlyVerifiedReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 100,
+      "character": "车",
+      "pinnedCasefoldedReadingLabels": [
+        "che1",
+        "ju1"
+      ],
+      "recordedPronunciationSearchGroups": 2,
+      "firstSampleIds": 3,
+      "hashSampleIds": 5,
+      "combinedDistinctCharacterSentenceIds": 8,
+      "sharedCharacterSentenceAssociations": 0,
+      "minimumAdditionalIdsForHypotheticalOnePerPronunciation": 0,
+      "boundClassification": "enough_ids_but_all_unassigned",
+      "contextToPronunciationAssignments": 0,
+      "independentlyVerifiedReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 105,
+      "character": "比",
+      "pinnedCasefoldedReadingLabels": [
+        "bi3",
+        "bi4"
+      ],
+      "recordedPronunciationSearchGroups": 2,
+      "firstSampleIds": 3,
+      "hashSampleIds": 5,
+      "combinedDistinctCharacterSentenceIds": 8,
+      "sharedCharacterSentenceAssociations": 0,
+      "minimumAdditionalIdsForHypotheticalOnePerPronunciation": 0,
+      "boundClassification": "enough_ids_but_all_unassigned",
+      "contextToPronunciationAssignments": 0,
+      "independentlyVerifiedReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 107,
+      "character": "切",
+      "pinnedCasefoldedReadingLabels": [
+        "qie1",
+        "qie4"
+      ],
+      "recordedPronunciationSearchGroups": 2,
+      "firstSampleIds": 3,
+      "hashSampleIds": 5,
+      "combinedDistinctCharacterSentenceIds": 8,
+      "sharedCharacterSentenceAssociations": 0,
+      "minimumAdditionalIdsForHypotheticalOnePerPronunciation": 0,
+      "boundClassification": "enough_ids_but_all_unassigned",
+      "contextToPronunciationAssignments": 0,
+      "independentlyVerifiedReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 113,
+      "character": "中",
+      "pinnedCasefoldedReadingLabels": [
+        "zhong1",
+        "zhong4"
+      ],
+      "recordedPronunciationSearchGroups": 2,
+      "firstSampleIds": 3,
+      "hashSampleIds": 5,
+      "combinedDistinctCharacterSentenceIds": 8,
+      "sharedCharacterSentenceAssociations": 0,
+      "minimumAdditionalIdsForHypotheticalOnePerPronunciation": 0,
+      "boundClassification": "enough_ids_but_all_unassigned",
+      "contextToPronunciationAssignments": 0,
+      "independentlyVerifiedReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 123,
+      "character": "毛",
+      "pinnedCasefoldedReadingLabels": [
+        "mao2"
+      ],
+      "recordedPronunciationSearchGroups": 1,
+      "firstSampleIds": 3,
+      "hashSampleIds": 5,
+      "combinedDistinctCharacterSentenceIds": 8,
+      "sharedCharacterSentenceAssociations": 0,
+      "minimumAdditionalIdsForHypotheticalOnePerPronunciation": 0,
+      "boundClassification": "enough_ids_but_all_unassigned",
+      "contextToPronunciationAssignments": 0,
+      "independentlyVerifiedReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 127,
+      "character": "长",
+      "pinnedCasefoldedReadingLabels": [
+        "chang2",
+        "zhang3"
+      ],
+      "recordedPronunciationSearchGroups": 2,
+      "firstSampleIds": 3,
+      "hashSampleIds": 5,
+      "combinedDistinctCharacterSentenceIds": 8,
+      "sharedCharacterSentenceAssociations": 0,
+      "minimumAdditionalIdsForHypotheticalOnePerPronunciation": 0,
+      "boundClassification": "enough_ids_but_all_unassigned",
+      "contextToPronunciationAssignments": 0,
+      "independentlyVerifiedReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 130,
+      "character": "片",
+      "pinnedCasefoldedReadingLabels": [
+        "pian1",
+        "pian4"
+      ],
+      "recordedPronunciationSearchGroups": 2,
+      "firstSampleIds": 3,
+      "hashSampleIds": 5,
+      "combinedDistinctCharacterSentenceIds": 8,
+      "sharedCharacterSentenceAssociations": 0,
+      "minimumAdditionalIdsForHypotheticalOnePerPronunciation": 0,
+      "boundClassification": "enough_ids_but_all_unassigned",
+      "contextToPronunciationAssignments": 0,
+      "independentlyVerifiedReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 133,
+      "character": "仇",
+      "pinnedCasefoldedReadingLabels": [
+        "chou2",
+        "qiu2"
+      ],
+      "recordedPronunciationSearchGroups": 2,
+      "firstSampleIds": 3,
+      "hashSampleIds": 5,
+      "combinedDistinctCharacterSentenceIds": 7,
+      "sharedCharacterSentenceAssociations": 1,
+      "minimumAdditionalIdsForHypotheticalOnePerPronunciation": 0,
+      "boundClassification": "enough_ids_but_all_unassigned",
+      "contextToPronunciationAssignments": 0,
+      "independentlyVerifiedReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 142,
+      "character": "从",
+      "pinnedCasefoldedReadingLabels": [
+        "cong2",
+        "zong4"
+      ],
+      "recordedPronunciationSearchGroups": 2,
+      "firstSampleIds": 3,
+      "hashSampleIds": 5,
+      "combinedDistinctCharacterSentenceIds": 8,
+      "sharedCharacterSentenceAssociations": 0,
+      "minimumAdditionalIdsForHypotheticalOnePerPronunciation": 0,
+      "boundClassification": "enough_ids_but_all_unassigned",
+      "contextToPronunciationAssignments": 0,
+      "independentlyVerifiedReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 146,
+      "character": "分",
+      "pinnedCasefoldedReadingLabels": [
+        "fen1",
+        "fen4"
+      ],
+      "recordedPronunciationSearchGroups": 2,
+      "firstSampleIds": 3,
+      "hashSampleIds": 5,
+      "combinedDistinctCharacterSentenceIds": 8,
+      "sharedCharacterSentenceAssociations": 0,
+      "minimumAdditionalIdsForHypotheticalOnePerPronunciation": 0,
+      "boundClassification": "enough_ids_but_all_unassigned",
+      "contextToPronunciationAssignments": 0,
+      "independentlyVerifiedReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 158,
+      "character": "勾",
+      "pinnedCasefoldedReadingLabels": [
+        "gou1",
+        "gou4"
+      ],
+      "recordedPronunciationSearchGroups": 2,
+      "firstSampleIds": 3,
+      "hashSampleIds": 5,
+      "combinedDistinctCharacterSentenceIds": 7,
+      "sharedCharacterSentenceAssociations": 1,
+      "minimumAdditionalIdsForHypotheticalOnePerPronunciation": 0,
+      "boundClassification": "enough_ids_but_all_unassigned",
+      "contextToPronunciationAssignments": 0,
+      "independentlyVerifiedReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 161,
+      "character": "文",
+      "pinnedCasefoldedReadingLabels": [
+        "wen2"
+      ],
+      "recordedPronunciationSearchGroups": 1,
+      "firstSampleIds": 3,
+      "hashSampleIds": 5,
+      "combinedDistinctCharacterSentenceIds": 8,
+      "sharedCharacterSentenceAssociations": 0,
+      "minimumAdditionalIdsForHypotheticalOnePerPronunciation": 0,
+      "boundClassification": "enough_ids_but_all_unassigned",
+      "contextToPronunciationAssignments": 0,
+      "independentlyVerifiedReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 163,
+      "character": "方",
+      "pinnedCasefoldedReadingLabels": [
+        "fang1"
+      ],
+      "recordedPronunciationSearchGroups": 1,
+      "firstSampleIds": 3,
+      "hashSampleIds": 5,
+      "combinedDistinctCharacterSentenceIds": 8,
+      "sharedCharacterSentenceAssociations": 0,
+      "minimumAdditionalIdsForHypotheticalOnePerPronunciation": 0,
+      "boundClassification": "enough_ids_but_all_unassigned",
+      "contextToPronunciationAssignments": 0,
+      "independentlyVerifiedReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 164,
+      "character": "火",
+      "pinnedCasefoldedReadingLabels": [
+        "huo3"
+      ],
+      "recordedPronunciationSearchGroups": 1,
+      "firstSampleIds": 3,
+      "hashSampleIds": 5,
+      "combinedDistinctCharacterSentenceIds": 8,
+      "sharedCharacterSentenceAssociations": 0,
+      "minimumAdditionalIdsForHypotheticalOnePerPronunciation": 0,
+      "boundClassification": "enough_ids_but_all_unassigned",
+      "contextToPronunciationAssignments": 0,
+      "independentlyVerifiedReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 165,
+      "character": "为",
+      "pinnedCasefoldedReadingLabels": [
+        "wei2",
+        "wei4"
+      ],
+      "recordedPronunciationSearchGroups": 2,
+      "firstSampleIds": 3,
+      "hashSampleIds": 5,
+      "combinedDistinctCharacterSentenceIds": 8,
+      "sharedCharacterSentenceAssociations": 0,
+      "minimumAdditionalIdsForHypotheticalOnePerPronunciation": 0,
+      "boundClassification": "enough_ids_but_all_unassigned",
+      "contextToPronunciationAssignments": 0,
+      "independentlyVerifiedReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 166,
+      "character": "斗",
+      "pinnedCasefoldedReadingLabels": [
+        "dou3",
+        "dou4"
+      ],
+      "recordedPronunciationSearchGroups": 2,
+      "firstSampleIds": 3,
+      "hashSampleIds": 5,
+      "combinedDistinctCharacterSentenceIds": 8,
+      "sharedCharacterSentenceAssociations": 0,
+      "minimumAdditionalIdsForHypotheticalOnePerPronunciation": 0,
+      "boundClassification": "enough_ids_but_all_unassigned",
+      "contextToPronunciationAssignments": 0,
+      "independentlyVerifiedReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 168,
+      "character": "计",
+      "pinnedCasefoldedReadingLabels": [
+        "ji4"
+      ],
+      "recordedPronunciationSearchGroups": 1,
+      "firstSampleIds": 3,
+      "hashSampleIds": 5,
+      "combinedDistinctCharacterSentenceIds": 7,
+      "sharedCharacterSentenceAssociations": 1,
+      "minimumAdditionalIdsForHypotheticalOnePerPronunciation": 0,
+      "boundClassification": "enough_ids_but_all_unassigned",
+      "contextToPronunciationAssignments": 0,
+      "independentlyVerifiedReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 178,
+      "character": "巴",
+      "pinnedCasefoldedReadingLabels": [
+        "ba1"
+      ],
+      "recordedPronunciationSearchGroups": 1,
+      "firstSampleIds": 3,
+      "hashSampleIds": 5,
+      "combinedDistinctCharacterSentenceIds": 8,
+      "sharedCharacterSentenceAssociations": 0,
+      "minimumAdditionalIdsForHypotheticalOnePerPronunciation": 0,
+      "boundClassification": "enough_ids_but_all_unassigned",
+      "contextToPronunciationAssignments": 0,
+      "independentlyVerifiedReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 182,
+      "character": "以",
+      "pinnedCasefoldedReadingLabels": [
+        "yi3"
+      ],
+      "recordedPronunciationSearchGroups": 1,
+      "firstSampleIds": 3,
+      "hashSampleIds": 5,
+      "combinedDistinctCharacterSentenceIds": 8,
+      "sharedCharacterSentenceAssociations": 0,
+      "minimumAdditionalIdsForHypotheticalOnePerPronunciation": 0,
+      "boundClassification": "enough_ids_but_all_unassigned",
+      "contextToPronunciationAssignments": 0,
+      "independentlyVerifiedReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 196,
+      "character": "打",
+      "pinnedCasefoldedReadingLabels": [
+        "da2",
+        "da3"
+      ],
+      "recordedPronunciationSearchGroups": 2,
+      "firstSampleIds": 3,
+      "hashSampleIds": 5,
+      "combinedDistinctCharacterSentenceIds": 8,
+      "sharedCharacterSentenceAssociations": 0,
+      "minimumAdditionalIdsForHypotheticalOnePerPronunciation": 0,
+      "boundClassification": "enough_ids_but_all_unassigned",
+      "contextToPronunciationAssignments": 0,
+      "independentlyVerifiedReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 198,
+      "character": "正",
+      "pinnedCasefoldedReadingLabels": [
+        "zheng1",
+        "zheng4"
+      ],
+      "recordedPronunciationSearchGroups": 2,
+      "firstSampleIds": 3,
+      "hashSampleIds": 5,
+      "combinedDistinctCharacterSentenceIds": 8,
+      "sharedCharacterSentenceAssociations": 0,
+      "minimumAdditionalIdsForHypotheticalOnePerPronunciation": 0,
+      "boundClassification": "enough_ids_but_all_unassigned",
+      "contextToPronunciationAssignments": 0,
+      "independentlyVerifiedReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 201,
+      "character": "扒",
+      "pinnedCasefoldedReadingLabels": [
+        "ba1",
+        "pa2"
+      ],
+      "recordedPronunciationSearchGroups": 2,
+      "firstSampleIds": 3,
+      "hashSampleIds": 5,
+      "combinedDistinctCharacterSentenceIds": 6,
+      "sharedCharacterSentenceAssociations": 2,
+      "minimumAdditionalIdsForHypotheticalOnePerPronunciation": 0,
+      "boundClassification": "enough_ids_but_all_unassigned",
+      "contextToPronunciationAssignments": 0,
+      "independentlyVerifiedReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 206,
+      "character": "世",
+      "pinnedCasefoldedReadingLabels": [
+        "shi4"
+      ],
+      "recordedPronunciationSearchGroups": 1,
+      "firstSampleIds": 3,
+      "hashSampleIds": 5,
+      "combinedDistinctCharacterSentenceIds": 7,
+      "sharedCharacterSentenceAssociations": 1,
+      "minimumAdditionalIdsForHypotheticalOnePerPronunciation": 0,
+      "boundClassification": "enough_ids_but_all_unassigned",
+      "contextToPronunciationAssignments": 0,
+      "independentlyVerifiedReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 207,
+      "character": "艾",
+      "pinnedCasefoldedReadingLabels": [
+        "ai4",
+        "yi4"
+      ],
+      "recordedPronunciationSearchGroups": 2,
+      "firstSampleIds": 3,
+      "hashSampleIds": 5,
+      "combinedDistinctCharacterSentenceIds": 8,
+      "sharedCharacterSentenceAssociations": 0,
+      "minimumAdditionalIdsForHypotheticalOnePerPronunciation": 0,
+      "boundClassification": "enough_ids_but_all_unassigned",
+      "contextToPronunciationAssignments": 0,
+      "independentlyVerifiedReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 209,
+      "character": "节",
+      "pinnedCasefoldedReadingLabels": [
+        "jie1",
+        "jie2"
+      ],
+      "recordedPronunciationSearchGroups": 2,
+      "firstSampleIds": 3,
+      "hashSampleIds": 5,
+      "combinedDistinctCharacterSentenceIds": 8,
+      "sharedCharacterSentenceAssociations": 0,
+      "minimumAdditionalIdsForHypotheticalOnePerPronunciation": 0,
+      "boundClassification": "enough_ids_but_all_unassigned",
+      "contextToPronunciationAssignments": 0,
+      "independentlyVerifiedReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 212,
+      "character": "可",
+      "pinnedCasefoldedReadingLabels": [
+        "ke3",
+        "ke4"
+      ],
+      "recordedPronunciationSearchGroups": 2,
+      "firstSampleIds": 3,
+      "hashSampleIds": 5,
+      "combinedDistinctCharacterSentenceIds": 8,
+      "sharedCharacterSentenceAssociations": 0,
+      "minimumAdditionalIdsForHypotheticalOnePerPronunciation": 0,
+      "boundClassification": "enough_ids_but_all_unassigned",
+      "contextToPronunciationAssignments": 0,
+      "independentlyVerifiedReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 214,
+      "character": "左",
+      "pinnedCasefoldedReadingLabels": [
+        "zuo3"
+      ],
+      "recordedPronunciationSearchGroups": 1,
+      "firstSampleIds": 3,
+      "hashSampleIds": 5,
+      "combinedDistinctCharacterSentenceIds": 8,
+      "sharedCharacterSentenceAssociations": 0,
+      "minimumAdditionalIdsForHypotheticalOnePerPronunciation": 0,
+      "boundClassification": "enough_ids_but_all_unassigned",
+      "contextToPronunciationAssignments": 0,
+      "independentlyVerifiedReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 216,
+      "character": "石",
+      "pinnedCasefoldedReadingLabels": [
+        "dan4",
+        "shi2"
+      ],
+      "recordedPronunciationSearchGroups": 2,
+      "firstSampleIds": 3,
+      "hashSampleIds": 5,
+      "combinedDistinctCharacterSentenceIds": 8,
+      "sharedCharacterSentenceAssociations": 0,
+      "minimumAdditionalIdsForHypotheticalOnePerPronunciation": 0,
+      "boundClassification": "enough_ids_but_all_unassigned",
+      "contextToPronunciationAssignments": 0,
+      "independentlyVerifiedReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 222,
+      "character": "平",
+      "pinnedCasefoldedReadingLabels": [
+        "ping2"
+      ],
+      "recordedPronunciationSearchGroups": 1,
+      "firstSampleIds": 3,
+      "hashSampleIds": 5,
+      "combinedDistinctCharacterSentenceIds": 8,
+      "sharedCharacterSentenceAssociations": 0,
+      "minimumAdditionalIdsForHypotheticalOnePerPronunciation": 0,
+      "boundClassification": "enough_ids_but_all_unassigned",
+      "contextToPronunciationAssignments": 0,
+      "independentlyVerifiedReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 226,
+      "character": "卡",
+      "pinnedCasefoldedReadingLabels": [
+        "ka3",
+        "qia3"
+      ],
+      "recordedPronunciationSearchGroups": 2,
+      "firstSampleIds": 3,
+      "hashSampleIds": 5,
+      "combinedDistinctCharacterSentenceIds": 8,
+      "sharedCharacterSentenceAssociations": 0,
+      "minimumAdditionalIdsForHypotheticalOnePerPronunciation": 0,
+      "boundClassification": "enough_ids_but_all_unassigned",
+      "contextToPronunciationAssignments": 0,
+      "independentlyVerifiedReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 231,
+      "character": "业",
+      "pinnedCasefoldedReadingLabels": [
+        "ye4"
+      ],
+      "recordedPronunciationSearchGroups": 1,
+      "firstSampleIds": 3,
+      "hashSampleIds": 5,
+      "combinedDistinctCharacterSentenceIds": 8,
+      "sharedCharacterSentenceAssociations": 0,
+      "minimumAdditionalIdsForHypotheticalOnePerPronunciation": 0,
+      "boundClassification": "enough_ids_but_all_unassigned",
+      "contextToPronunciationAssignments": 0,
+      "independentlyVerifiedReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 234,
+      "character": "归",
+      "pinnedCasefoldedReadingLabels": [
+        "gui1"
+      ],
+      "recordedPronunciationSearchGroups": 1,
+      "firstSampleIds": 3,
+      "hashSampleIds": 5,
+      "combinedDistinctCharacterSentenceIds": 7,
+      "sharedCharacterSentenceAssociations": 1,
+      "minimumAdditionalIdsForHypotheticalOnePerPronunciation": 0,
+      "boundClassification": "enough_ids_but_all_unassigned",
+      "contextToPronunciationAssignments": 0,
+      "independentlyVerifiedReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 243,
+      "character": "号",
+      "pinnedCasefoldedReadingLabels": [
+        "hao2",
+        "hao4"
+      ],
+      "recordedPronunciationSearchGroups": 2,
+      "firstSampleIds": 3,
+      "hashSampleIds": 5,
+      "combinedDistinctCharacterSentenceIds": 8,
+      "sharedCharacterSentenceAssociations": 0,
+      "minimumAdditionalIdsForHypotheticalOnePerPronunciation": 0,
+      "boundClassification": "enough_ids_but_all_unassigned",
+      "contextToPronunciationAssignments": 0,
+      "independentlyVerifiedReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 246,
+      "character": "只",
+      "pinnedCasefoldedReadingLabels": [
+        "zhi1",
+        "zhi3"
+      ],
+      "recordedPronunciationSearchGroups": 2,
+      "firstSampleIds": 3,
+      "hashSampleIds": 5,
+      "combinedDistinctCharacterSentenceIds": 8,
+      "sharedCharacterSentenceAssociations": 0,
+      "minimumAdditionalIdsForHypotheticalOnePerPronunciation": 0,
+      "boundClassification": "enough_ids_but_all_unassigned",
+      "contextToPronunciationAssignments": 0,
+      "independentlyVerifiedReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 275,
+      "character": "白",
+      "pinnedCasefoldedReadingLabels": [
+        "bai2"
+      ],
+      "recordedPronunciationSearchGroups": 1,
+      "firstSampleIds": 3,
+      "hashSampleIds": 5,
+      "combinedDistinctCharacterSentenceIds": 8,
+      "sharedCharacterSentenceAssociations": 0,
+      "minimumAdditionalIdsForHypotheticalOnePerPronunciation": 0,
+      "boundClassification": "enough_ids_but_all_unassigned",
+      "contextToPronunciationAssignments": 0,
+      "independentlyVerifiedReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 282,
+      "character": "令",
+      "pinnedCasefoldedReadingLabels": [
+        "ling2",
+        "ling3",
+        "ling4"
+      ],
+      "recordedPronunciationSearchGroups": 3,
+      "firstSampleIds": 3,
+      "hashSampleIds": 5,
+      "combinedDistinctCharacterSentenceIds": 8,
+      "sharedCharacterSentenceAssociations": 0,
+      "minimumAdditionalIdsForHypotheticalOnePerPronunciation": 0,
+      "boundClassification": "enough_ids_but_all_unassigned",
+      "contextToPronunciationAssignments": 0,
+      "independentlyVerifiedReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 285,
+      "character": "印",
+      "pinnedCasefoldedReadingLabels": [
+        "yin4"
+      ],
+      "recordedPronunciationSearchGroups": 1,
+      "firstSampleIds": 3,
+      "hashSampleIds": 5,
+      "combinedDistinctCharacterSentenceIds": 8,
+      "sharedCharacterSentenceAssociations": 0,
+      "minimumAdditionalIdsForHypotheticalOnePerPronunciation": 0,
+      "boundClassification": "enough_ids_but_all_unassigned",
+      "contextToPronunciationAssignments": 0,
+      "independentlyVerifiedReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 294,
+      "character": "处",
+      "pinnedCasefoldedReadingLabels": [
+        "chu3",
+        "chu4"
+      ],
+      "recordedPronunciationSearchGroups": 2,
+      "firstSampleIds": 3,
+      "hashSampleIds": 5,
+      "combinedDistinctCharacterSentenceIds": 8,
+      "sharedCharacterSentenceAssociations": 0,
+      "minimumAdditionalIdsForHypotheticalOnePerPronunciation": 0,
+      "boundClassification": "enough_ids_but_all_unassigned",
+      "contextToPronunciationAssignments": 0,
+      "independentlyVerifiedReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 298,
+      "character": "包",
+      "pinnedCasefoldedReadingLabels": [
+        "bao1"
+      ],
+      "recordedPronunciationSearchGroups": 1,
+      "firstSampleIds": 3,
+      "hashSampleIds": 5,
+      "combinedDistinctCharacterSentenceIds": 8,
+      "sharedCharacterSentenceAssociations": 0,
+      "minimumAdditionalIdsForHypotheticalOnePerPronunciation": 0,
+      "boundClassification": "enough_ids_but_all_unassigned",
+      "contextToPronunciationAssignments": 0,
+      "independentlyVerifiedReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 302,
+      "character": "立",
+      "pinnedCasefoldedReadingLabels": [
+        "li4"
+      ],
+      "recordedPronunciationSearchGroups": 1,
+      "firstSampleIds": 3,
+      "hashSampleIds": 5,
+      "combinedDistinctCharacterSentenceIds": 8,
+      "sharedCharacterSentenceAssociations": 0,
+      "minimumAdditionalIdsForHypotheticalOnePerPronunciation": 0,
+      "boundClassification": "enough_ids_but_all_unassigned",
+      "contextToPronunciationAssignments": 0,
+      "independentlyVerifiedReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 305,
+      "character": "闪",
+      "pinnedCasefoldedReadingLabels": [
+        "shan3"
+      ],
+      "recordedPronunciationSearchGroups": 1,
+      "firstSampleIds": 3,
+      "hashSampleIds": 5,
+      "combinedDistinctCharacterSentenceIds": 7,
+      "sharedCharacterSentenceAssociations": 1,
+      "minimumAdditionalIdsForHypotheticalOnePerPronunciation": 0,
+      "boundClassification": "enough_ids_but_all_unassigned",
+      "contextToPronunciationAssignments": 0,
+      "independentlyVerifiedReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 310,
+      "character": "头",
+      "pinnedCasefoldedReadingLabels": [
+        "tou2",
+        "tou5"
+      ],
+      "recordedPronunciationSearchGroups": 2,
+      "firstSampleIds": 3,
+      "hashSampleIds": 5,
+      "combinedDistinctCharacterSentenceIds": 8,
+      "sharedCharacterSentenceAssociations": 0,
+      "minimumAdditionalIdsForHypotheticalOnePerPronunciation": 0,
+      "boundClassification": "enough_ids_but_all_unassigned",
+      "contextToPronunciationAssignments": 0,
+      "independentlyVerifiedReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 312,
+      "character": "宁",
+      "pinnedCasefoldedReadingLabels": [
+        "ning2",
+        "ning4"
+      ],
+      "recordedPronunciationSearchGroups": 2,
+      "firstSampleIds": 3,
+      "hashSampleIds": 5,
+      "combinedDistinctCharacterSentenceIds": 8,
+      "sharedCharacterSentenceAssociations": 0,
+      "minimumAdditionalIdsForHypotheticalOnePerPronunciation": 0,
+      "boundClassification": "enough_ids_but_all_unassigned",
+      "contextToPronunciationAssignments": 0,
+      "independentlyVerifiedReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 318,
+      "character": "礼",
+      "pinnedCasefoldedReadingLabels": [
+        "li3"
+      ],
+      "recordedPronunciationSearchGroups": 1,
+      "firstSampleIds": 3,
+      "hashSampleIds": 5,
+      "combinedDistinctCharacterSentenceIds": 8,
+      "sharedCharacterSentenceAssociations": 0,
+      "minimumAdditionalIdsForHypotheticalOnePerPronunciation": 0,
+      "boundClassification": "enough_ids_but_all_unassigned",
+      "contextToPronunciationAssignments": 0,
+      "independentlyVerifiedReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 337,
+      "character": "边",
+      "pinnedCasefoldedReadingLabels": [
+        "bian1",
+        "bian5"
+      ],
+      "recordedPronunciationSearchGroups": 2,
+      "firstSampleIds": 3,
+      "hashSampleIds": 5,
+      "combinedDistinctCharacterSentenceIds": 8,
+      "sharedCharacterSentenceAssociations": 0,
+      "minimumAdditionalIdsForHypotheticalOnePerPronunciation": 0,
+      "boundClassification": "enough_ids_but_all_unassigned",
+      "contextToPronunciationAssignments": 0,
+      "independentlyVerifiedReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 339,
+      "character": "发",
+      "pinnedCasefoldedReadingLabels": [
+        "fa1",
+        "fa4"
+      ],
+      "recordedPronunciationSearchGroups": 2,
+      "firstSampleIds": 3,
+      "hashSampleIds": 5,
+      "combinedDistinctCharacterSentenceIds": 8,
+      "sharedCharacterSentenceAssociations": 0,
+      "minimumAdditionalIdsForHypotheticalOnePerPronunciation": 0,
+      "boundClassification": "enough_ids_but_all_unassigned",
+      "contextToPronunciationAssignments": 0,
+      "independentlyVerifiedReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 342,
+      "character": "台",
+      "pinnedCasefoldedReadingLabels": [
+        "tai2"
+      ],
+      "recordedPronunciationSearchGroups": 1,
+      "firstSampleIds": 3,
+      "hashSampleIds": 5,
+      "combinedDistinctCharacterSentenceIds": 8,
+      "sharedCharacterSentenceAssociations": 0,
+      "minimumAdditionalIdsForHypotheticalOnePerPronunciation": 0,
+      "boundClassification": "enough_ids_but_all_unassigned",
+      "contextToPronunciationAssignments": 0,
+      "independentlyVerifiedReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 366,
+      "character": "地",
+      "pinnedCasefoldedReadingLabels": [
+        "de5",
+        "di4"
+      ],
+      "recordedPronunciationSearchGroups": 2,
+      "firstSampleIds": 3,
+      "hashSampleIds": 5,
+      "combinedDistinctCharacterSentenceIds": 8,
+      "sharedCharacterSentenceAssociations": 0,
+      "minimumAdditionalIdsForHypotheticalOnePerPronunciation": 0,
+      "boundClassification": "enough_ids_but_all_unassigned",
+      "contextToPronunciationAssignments": 0,
+      "independentlyVerifiedReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 367,
+      "character": "场",
+      "pinnedCasefoldedReadingLabels": [
+        "chang2",
+        "chang3"
+      ],
+      "recordedPronunciationSearchGroups": 2,
+      "firstSampleIds": 3,
+      "hashSampleIds": 5,
+      "combinedDistinctCharacterSentenceIds": 8,
+      "sharedCharacterSentenceAssociations": 0,
+      "minimumAdditionalIdsForHypotheticalOnePerPronunciation": 0,
+      "boundClassification": "enough_ids_but_all_unassigned",
+      "contextToPronunciationAssignments": 0,
+      "independentlyVerifiedReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 368,
+      "character": "扬",
+      "pinnedCasefoldedReadingLabels": [
+        "yang2"
+      ],
+      "recordedPronunciationSearchGroups": 1,
+      "firstSampleIds": 3,
+      "hashSampleIds": 5,
+      "combinedDistinctCharacterSentenceIds": 6,
+      "sharedCharacterSentenceAssociations": 2,
+      "minimumAdditionalIdsForHypotheticalOnePerPronunciation": 0,
+      "boundClassification": "enough_ids_but_all_unassigned",
+      "contextToPronunciationAssignments": 0,
+      "independentlyVerifiedReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 377,
+      "character": "机",
+      "pinnedCasefoldedReadingLabels": [
+        "ji1"
+      ],
+      "recordedPronunciationSearchGroups": 1,
+      "firstSampleIds": 3,
+      "hashSampleIds": 5,
+      "combinedDistinctCharacterSentenceIds": 7,
+      "sharedCharacterSentenceAssociations": 1,
+      "minimumAdditionalIdsForHypotheticalOnePerPronunciation": 0,
+      "boundClassification": "enough_ids_but_all_unassigned",
+      "contextToPronunciationAssignments": 0,
+      "independentlyVerifiedReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 379,
+      "character": "过",
+      "pinnedCasefoldedReadingLabels": [
+        "guo4",
+        "guo5"
+      ],
+      "recordedPronunciationSearchGroups": 2,
+      "firstSampleIds": 3,
+      "hashSampleIds": 5,
+      "combinedDistinctCharacterSentenceIds": 8,
+      "sharedCharacterSentenceAssociations": 0,
+      "minimumAdditionalIdsForHypotheticalOnePerPronunciation": 0,
+      "boundClassification": "enough_ids_but_all_unassigned",
+      "contextToPronunciationAssignments": 0,
+      "independentlyVerifiedReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 401,
+      "character": "成",
+      "pinnedCasefoldedReadingLabels": [
+        "cheng2"
+      ],
+      "recordedPronunciationSearchGroups": 1,
+      "firstSampleIds": 3,
+      "hashSampleIds": 5,
+      "combinedDistinctCharacterSentenceIds": 7,
+      "sharedCharacterSentenceAssociations": 1,
+      "minimumAdditionalIdsForHypotheticalOnePerPronunciation": 0,
+      "boundClassification": "enough_ids_but_all_unassigned",
+      "contextToPronunciationAssignments": 0,
+      "independentlyVerifiedReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 402,
+      "character": "夹",
+      "pinnedCasefoldedReadingLabels": [
+        "jia1",
+        "jia2",
+        "jia4"
+      ],
+      "recordedPronunciationSearchGroups": 3,
+      "firstSampleIds": 3,
+      "hashSampleIds": 5,
+      "combinedDistinctCharacterSentenceIds": 6,
+      "sharedCharacterSentenceAssociations": 2,
+      "minimumAdditionalIdsForHypotheticalOnePerPronunciation": 0,
+      "boundClassification": "enough_ids_but_all_unassigned",
+      "contextToPronunciationAssignments": 0,
+      "independentlyVerifiedReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 407,
+      "character": "划",
+      "pinnedCasefoldedReadingLabels": [
+        "hua2",
+        "hua4"
+      ],
+      "recordedPronunciationSearchGroups": 2,
+      "firstSampleIds": 3,
+      "hashSampleIds": 5,
+      "combinedDistinctCharacterSentenceIds": 8,
+      "sharedCharacterSentenceAssociations": 0,
+      "minimumAdditionalIdsForHypotheticalOnePerPronunciation": 0,
+      "boundClassification": "enough_ids_but_all_unassigned",
+      "contextToPronunciationAssignments": 0,
+      "independentlyVerifiedReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 413,
+      "character": "师",
+      "pinnedCasefoldedReadingLabels": [
+        "shi1"
+      ],
+      "recordedPronunciationSearchGroups": 1,
+      "firstSampleIds": 3,
+      "hashSampleIds": 5,
+      "combinedDistinctCharacterSentenceIds": 8,
+      "sharedCharacterSentenceAssociations": 0,
+      "minimumAdditionalIdsForHypotheticalOnePerPronunciation": 0,
+      "boundClassification": "enough_ids_but_all_unassigned",
+      "contextToPronunciationAssignments": 0,
+      "independentlyVerifiedReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 418,
+      "character": "当",
+      "pinnedCasefoldedReadingLabels": [
+        "dang1",
+        "dang4"
+      ],
+      "recordedPronunciationSearchGroups": 2,
+      "firstSampleIds": 3,
+      "hashSampleIds": 5,
+      "combinedDistinctCharacterSentenceIds": 8,
+      "sharedCharacterSentenceAssociations": 0,
+      "minimumAdditionalIdsForHypotheticalOnePerPronunciation": 0,
+      "boundClassification": "enough_ids_but_all_unassigned",
+      "contextToPronunciationAssignments": 0,
+      "independentlyVerifiedReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 424,
+      "character": "曲",
+      "pinnedCasefoldedReadingLabels": [
+        "qu1",
+        "qu3"
+      ],
+      "recordedPronunciationSearchGroups": 2,
+      "firstSampleIds": 3,
+      "hashSampleIds": 5,
+      "combinedDistinctCharacterSentenceIds": 8,
+      "sharedCharacterSentenceAssociations": 0,
+      "minimumAdditionalIdsForHypotheticalOnePerPronunciation": 0,
+      "boundClassification": "enough_ids_but_all_unassigned",
+      "contextToPronunciationAssignments": 0,
+      "independentlyVerifiedReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 427,
+      "character": "同",
+      "pinnedCasefoldedReadingLabels": [
+        "tong2",
+        "tong4"
+      ],
+      "recordedPronunciationSearchGroups": 2,
+      "firstSampleIds": 3,
+      "hashSampleIds": 5,
+      "combinedDistinctCharacterSentenceIds": 8,
+      "sharedCharacterSentenceAssociations": 0,
+      "minimumAdditionalIdsForHypotheticalOnePerPronunciation": 0,
+      "boundClassification": "enough_ids_but_all_unassigned",
+      "contextToPronunciationAssignments": 0,
+      "independentlyVerifiedReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 455,
+      "character": "传",
+      "pinnedCasefoldedReadingLabels": [
+        "chuan2",
+        "zhuan4"
+      ],
+      "recordedPronunciationSearchGroups": 2,
+      "firstSampleIds": 3,
+      "hashSampleIds": 5,
+      "combinedDistinctCharacterSentenceIds": 8,
+      "sharedCharacterSentenceAssociations": 0,
+      "minimumAdditionalIdsForHypotheticalOnePerPronunciation": 0,
+      "boundClassification": "enough_ids_but_all_unassigned",
+      "contextToPronunciationAssignments": 0,
+      "independentlyVerifiedReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 460,
+      "character": "伏",
+      "pinnedCasefoldedReadingLabels": [
+        "fu2"
+      ],
+      "recordedPronunciationSearchGroups": 1,
+      "firstSampleIds": 3,
+      "hashSampleIds": 5,
+      "combinedDistinctCharacterSentenceIds": 7,
+      "sharedCharacterSentenceAssociations": 1,
+      "minimumAdditionalIdsForHypotheticalOnePerPronunciation": 0,
+      "boundClassification": "enough_ids_but_all_unassigned",
+      "contextToPronunciationAssignments": 0,
+      "independentlyVerifiedReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 467,
+      "character": "任",
+      "pinnedCasefoldedReadingLabels": [
+        "ren4"
+      ],
+      "recordedPronunciationSearchGroups": 1,
+      "firstSampleIds": 3,
+      "hashSampleIds": 5,
+      "combinedDistinctCharacterSentenceIds": 8,
+      "sharedCharacterSentenceAssociations": 0,
+      "minimumAdditionalIdsForHypotheticalOnePerPronunciation": 0,
+      "boundClassification": "enough_ids_but_all_unassigned",
+      "contextToPronunciationAssignments": 0,
+      "independentlyVerifiedReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 472,
+      "character": "华",
+      "pinnedCasefoldedReadingLabels": [
+        "hua1",
+        "hua2",
+        "hua4"
+      ],
+      "recordedPronunciationSearchGroups": 3,
+      "firstSampleIds": 3,
+      "hashSampleIds": 5,
+      "combinedDistinctCharacterSentenceIds": 8,
+      "sharedCharacterSentenceAssociations": 0,
+      "minimumAdditionalIdsForHypotheticalOnePerPronunciation": 0,
+      "boundClassification": "enough_ids_but_all_unassigned",
+      "contextToPronunciationAssignments": 0,
+      "independentlyVerifiedReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 480,
+      "character": "向",
+      "pinnedCasefoldedReadingLabels": [
+        "xiang4"
+      ],
+      "recordedPronunciationSearchGroups": 1,
+      "firstSampleIds": 3,
+      "hashSampleIds": 5,
+      "combinedDistinctCharacterSentenceIds": 8,
+      "sharedCharacterSentenceAssociations": 0,
+      "minimumAdditionalIdsForHypotheticalOnePerPronunciation": 0,
+      "boundClassification": "enough_ids_but_all_unassigned",
+      "contextToPronunciationAssignments": 0,
+      "independentlyVerifiedReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 481,
+      "character": "似",
+      "pinnedCasefoldedReadingLabels": [
+        "shi4",
+        "si4"
+      ],
+      "recordedPronunciationSearchGroups": 2,
+      "firstSampleIds": 3,
+      "hashSampleIds": 5,
+      "combinedDistinctCharacterSentenceIds": 8,
+      "sharedCharacterSentenceAssociations": 0,
+      "minimumAdditionalIdsForHypotheticalOnePerPronunciation": 0,
+      "boundClassification": "enough_ids_but_all_unassigned",
+      "contextToPronunciationAssignments": 0,
+      "independentlyVerifiedReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 482,
+      "character": "后",
+      "pinnedCasefoldedReadingLabels": [
+        "hou4"
+      ],
+      "recordedPronunciationSearchGroups": 1,
+      "firstSampleIds": 3,
+      "hashSampleIds": 5,
+      "combinedDistinctCharacterSentenceIds": 8,
+      "sharedCharacterSentenceAssociations": 0,
+      "minimumAdditionalIdsForHypotheticalOnePerPronunciation": 0,
+      "boundClassification": "enough_ids_but_all_unassigned",
+      "contextToPronunciationAssignments": 0,
+      "independentlyVerifiedReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 483,
+      "character": "行",
+      "pinnedCasefoldedReadingLabels": [
+        "hang2",
+        "xing2"
+      ],
+      "recordedPronunciationSearchGroups": 2,
+      "firstSampleIds": 3,
+      "hashSampleIds": 5,
+      "combinedDistinctCharacterSentenceIds": 8,
+      "sharedCharacterSentenceAssociations": 0,
+      "minimumAdditionalIdsForHypotheticalOnePerPronunciation": 0,
+      "boundClassification": "enough_ids_but_all_unassigned",
+      "contextToPronunciationAssignments": 0,
+      "independentlyVerifiedReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 486,
+      "character": "会",
+      "pinnedCasefoldedReadingLabels": [
+        "hui4",
+        "kuai4"
+      ],
+      "recordedPronunciationSearchGroups": 2,
+      "firstSampleIds": 3,
+      "hashSampleIds": 5,
+      "combinedDistinctCharacterSentenceIds": 8,
+      "sharedCharacterSentenceAssociations": 0,
+      "minimumAdditionalIdsForHypotheticalOnePerPronunciation": 0,
+      "boundClassification": "enough_ids_but_all_unassigned",
+      "contextToPronunciationAssignments": 0,
+      "independentlyVerifiedReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 488,
+      "character": "合",
+      "pinnedCasefoldedReadingLabels": [
+        "ge3",
+        "he2"
+      ],
+      "recordedPronunciationSearchGroups": 2,
+      "firstSampleIds": 3,
+      "hashSampleIds": 5,
+      "combinedDistinctCharacterSentenceIds": 7,
+      "sharedCharacterSentenceAssociations": 1,
+      "minimumAdditionalIdsForHypotheticalOnePerPronunciation": 0,
+      "boundClassification": "enough_ids_but_all_unassigned",
+      "contextToPronunciationAssignments": 0,
+      "independentlyVerifiedReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 489,
+      "character": "兆",
+      "pinnedCasefoldedReadingLabels": [
+        "zhao4"
+      ],
+      "recordedPronunciationSearchGroups": 1,
+      "firstSampleIds": 3,
+      "hashSampleIds": 5,
+      "combinedDistinctCharacterSentenceIds": 6,
+      "sharedCharacterSentenceAssociations": 2,
+      "minimumAdditionalIdsForHypotheticalOnePerPronunciation": 0,
+      "boundClassification": "enough_ids_but_all_unassigned",
+      "contextToPronunciationAssignments": 0,
+      "independentlyVerifiedReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 494,
+      "character": "创",
+      "pinnedCasefoldedReadingLabels": [
+        "chuang1",
+        "chuang4"
+      ],
+      "recordedPronunciationSearchGroups": 2,
+      "firstSampleIds": 3,
+      "hashSampleIds": 5,
+      "combinedDistinctCharacterSentenceIds": 8,
+      "sharedCharacterSentenceAssociations": 0,
+      "minimumAdditionalIdsForHypotheticalOnePerPronunciation": 0,
+      "boundClassification": "enough_ids_but_all_unassigned",
+      "contextToPronunciationAssignments": 0,
+      "independentlyVerifiedReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 511,
+      "character": "冲",
+      "pinnedCasefoldedReadingLabels": [
+        "chong1",
+        "chong4"
+      ],
+      "recordedPronunciationSearchGroups": 2,
+      "firstSampleIds": 3,
+      "hashSampleIds": 5,
+      "combinedDistinctCharacterSentenceIds": 8,
+      "sharedCharacterSentenceAssociations": 0,
+      "minimumAdditionalIdsForHypotheticalOnePerPronunciation": 0,
+      "boundClassification": "enough_ids_but_all_unassigned",
+      "contextToPronunciationAssignments": 0,
+      "independentlyVerifiedReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 514,
+      "character": "庄",
+      "pinnedCasefoldedReadingLabels": [
+        "zhuang1"
+      ],
+      "recordedPronunciationSearchGroups": 1,
+      "firstSampleIds": 3,
+      "hashSampleIds": 5,
+      "combinedDistinctCharacterSentenceIds": 7,
+      "sharedCharacterSentenceAssociations": 1,
+      "minimumAdditionalIdsForHypotheticalOnePerPronunciation": 0,
+      "boundClassification": "enough_ids_but_all_unassigned",
+      "contextToPronunciationAssignments": 0,
+      "independentlyVerifiedReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 518,
+      "character": "齐",
+      "pinnedCasefoldedReadingLabels": [
+        "qi2"
+      ],
+      "recordedPronunciationSearchGroups": 1,
+      "firstSampleIds": 3,
+      "hashSampleIds": 5,
+      "combinedDistinctCharacterSentenceIds": 7,
+      "sharedCharacterSentenceAssociations": 1,
+      "minimumAdditionalIdsForHypotheticalOnePerPronunciation": 0,
+      "boundClassification": "enough_ids_but_all_unassigned",
+      "contextToPronunciationAssignments": 0,
+      "independentlyVerifiedReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 544,
+      "character": "兴",
+      "pinnedCasefoldedReadingLabels": [
+        "xing1",
+        "xing4"
+      ],
+      "recordedPronunciationSearchGroups": 2,
+      "firstSampleIds": 3,
+      "hashSampleIds": 5,
+      "combinedDistinctCharacterSentenceIds": 8,
+      "sharedCharacterSentenceAssociations": 0,
+      "minimumAdditionalIdsForHypotheticalOnePerPronunciation": 0,
+      "boundClassification": "enough_ids_but_all_unassigned",
+      "contextToPronunciationAssignments": 0,
+      "independentlyVerifiedReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 549,
+      "character": "安",
+      "pinnedCasefoldedReadingLabels": [
+        "an1"
+      ],
+      "recordedPronunciationSearchGroups": 1,
+      "firstSampleIds": 3,
+      "hashSampleIds": 5,
+      "combinedDistinctCharacterSentenceIds": 8,
+      "sharedCharacterSentenceAssociations": 0,
+      "minimumAdditionalIdsForHypotheticalOnePerPronunciation": 0,
+      "boundClassification": "enough_ids_but_all_unassigned",
+      "contextToPronunciationAssignments": 0,
+      "independentlyVerifiedReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 556,
+      "character": "论",
+      "pinnedCasefoldedReadingLabels": [
+        "lun2",
+        "lun4"
+      ],
+      "recordedPronunciationSearchGroups": 2,
+      "firstSampleIds": 3,
+      "hashSampleIds": 5,
+      "combinedDistinctCharacterSentenceIds": 8,
+      "sharedCharacterSentenceAssociations": 0,
+      "minimumAdditionalIdsForHypotheticalOnePerPronunciation": 0,
+      "boundClassification": "enough_ids_but_all_unassigned",
+      "contextToPronunciationAssignments": 0,
+      "independentlyVerifiedReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 564,
+      "character": "那",
+      "pinnedCasefoldedReadingLabels": [
+        "na1",
+        "na3",
+        "na4",
+        "nuo2"
+      ],
+      "recordedPronunciationSearchGroups": 4,
+      "firstSampleIds": 3,
+      "hashSampleIds": 5,
+      "combinedDistinctCharacterSentenceIds": 8,
+      "sharedCharacterSentenceAssociations": 0,
+      "minimumAdditionalIdsForHypotheticalOnePerPronunciation": 0,
+      "boundClassification": "enough_ids_but_all_unassigned",
+      "contextToPronunciationAssignments": 0,
+      "independentlyVerifiedReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 566,
+      "character": "尽",
+      "pinnedCasefoldedReadingLabels": [
+        "jin3",
+        "jin4"
+      ],
+      "recordedPronunciationSearchGroups": 2,
+      "firstSampleIds": 3,
+      "hashSampleIds": 5,
+      "combinedDistinctCharacterSentenceIds": 8,
+      "sharedCharacterSentenceAssociations": 0,
+      "minimumAdditionalIdsForHypotheticalOnePerPronunciation": 0,
+      "boundClassification": "enough_ids_but_all_unassigned",
+      "contextToPronunciationAssignments": 0,
+      "independentlyVerifiedReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 575,
+      "character": "阴",
+      "pinnedCasefoldedReadingLabels": [
+        "yin1"
+      ],
+      "recordedPronunciationSearchGroups": 1,
+      "firstSampleIds": 3,
+      "hashSampleIds": 5,
+      "combinedDistinctCharacterSentenceIds": 8,
+      "sharedCharacterSentenceAssociations": 0,
+      "minimumAdditionalIdsForHypotheticalOnePerPronunciation": 0,
+      "boundClassification": "enough_ids_but_all_unassigned",
+      "contextToPronunciationAssignments": 0,
+      "independentlyVerifiedReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 581,
+      "character": "好",
+      "pinnedCasefoldedReadingLabels": [
+        "hao3",
+        "hao4"
+      ],
+      "recordedPronunciationSearchGroups": 2,
+      "firstSampleIds": 3,
+      "hashSampleIds": 5,
+      "combinedDistinctCharacterSentenceIds": 8,
+      "sharedCharacterSentenceAssociations": 0,
+      "minimumAdditionalIdsForHypotheticalOnePerPronunciation": 0,
+      "boundClassification": "enough_ids_but_all_unassigned",
+      "contextToPronunciationAssignments": 0,
+      "independentlyVerifiedReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 586,
+      "character": "观",
+      "pinnedCasefoldedReadingLabels": [
+        "guan1",
+        "guan4"
+      ],
+      "recordedPronunciationSearchGroups": 2,
+      "firstSampleIds": 3,
+      "hashSampleIds": 5,
+      "combinedDistinctCharacterSentenceIds": 8,
+      "sharedCharacterSentenceAssociations": 0,
+      "minimumAdditionalIdsForHypotheticalOnePerPronunciation": 0,
+      "boundClassification": "enough_ids_but_all_unassigned",
+      "contextToPronunciationAssignments": 0,
+      "independentlyVerifiedReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 593,
+      "character": "约",
+      "pinnedCasefoldedReadingLabels": [
+        "yao1",
+        "yue1"
+      ],
+      "recordedPronunciationSearchGroups": 2,
+      "firstSampleIds": 3,
+      "hashSampleIds": 5,
+      "combinedDistinctCharacterSentenceIds": 8,
+      "sharedCharacterSentenceAssociations": 0,
+      "minimumAdditionalIdsForHypotheticalOnePerPronunciation": 0,
+      "boundClassification": "enough_ids_but_all_unassigned",
+      "contextToPronunciationAssignments": 0,
+      "independentlyVerifiedReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 595,
+      "character": "纪",
+      "pinnedCasefoldedReadingLabels": [
+        "ji3",
+        "ji4"
+      ],
+      "recordedPronunciationSearchGroups": 2,
+      "firstSampleIds": 3,
+      "hashSampleIds": 5,
+      "combinedDistinctCharacterSentenceIds": 8,
+      "sharedCharacterSentenceAssociations": 0,
+      "minimumAdditionalIdsForHypotheticalOnePerPronunciation": 0,
+      "boundClassification": "enough_ids_but_all_unassigned",
+      "contextToPronunciationAssignments": 0,
+      "independentlyVerifiedReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 600,
+      "character": "弄",
+      "pinnedCasefoldedReadingLabels": [
+        "long4",
+        "nong4"
+      ],
+      "recordedPronunciationSearchGroups": 2,
+      "firstSampleIds": 3,
+      "hashSampleIds": 5,
+      "combinedDistinctCharacterSentenceIds": 8,
+      "sharedCharacterSentenceAssociations": 0,
+      "minimumAdditionalIdsForHypotheticalOnePerPronunciation": 0,
+      "boundClassification": "enough_ids_but_all_unassigned",
+      "contextToPronunciationAssignments": 0,
+      "independentlyVerifiedReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 632,
+      "character": "折",
+      "pinnedCasefoldedReadingLabels": [
+        "she2",
+        "zhe1",
+        "zhe2"
+      ],
+      "recordedPronunciationSearchGroups": 3,
+      "firstSampleIds": 3,
+      "hashSampleIds": 5,
+      "combinedDistinctCharacterSentenceIds": 8,
+      "sharedCharacterSentenceAssociations": 0,
+      "minimumAdditionalIdsForHypotheticalOnePerPronunciation": 0,
+      "boundClassification": "enough_ids_but_all_unassigned",
+      "contextToPronunciationAssignments": 0,
+      "independentlyVerifiedReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 655,
+      "character": "把",
+      "pinnedCasefoldedReadingLabels": [
+        "ba3",
+        "ba4"
+      ],
+      "recordedPronunciationSearchGroups": 2,
+      "firstSampleIds": 3,
+      "hashSampleIds": 5,
+      "combinedDistinctCharacterSentenceIds": 8,
+      "sharedCharacterSentenceAssociations": 0,
+      "minimumAdditionalIdsForHypotheticalOnePerPronunciation": 0,
+      "boundClassification": "enough_ids_but_all_unassigned",
+      "contextToPronunciationAssignments": 0,
+      "independentlyVerifiedReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 665,
+      "character": "花",
+      "pinnedCasefoldedReadingLabels": [
+        "hua1"
+      ],
+      "recordedPronunciationSearchGroups": 1,
+      "firstSampleIds": 3,
+      "hashSampleIds": 5,
+      "combinedDistinctCharacterSentenceIds": 8,
+      "sharedCharacterSentenceAssociations": 0,
+      "minimumAdditionalIdsForHypotheticalOnePerPronunciation": 0,
+      "boundClassification": "enough_ids_but_all_unassigned",
+      "contextToPronunciationAssignments": 0,
+      "independentlyVerifiedReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 675,
+      "character": "克",
+      "pinnedCasefoldedReadingLabels": [
+        "ke4",
+        "kei1"
+      ],
+      "recordedPronunciationSearchGroups": 2,
+      "firstSampleIds": 3,
+      "hashSampleIds": 5,
+      "combinedDistinctCharacterSentenceIds": 8,
+      "sharedCharacterSentenceAssociations": 0,
+      "minimumAdditionalIdsForHypotheticalOnePerPronunciation": 0,
+      "boundClassification": "enough_ids_but_all_unassigned",
+      "contextToPronunciationAssignments": 0,
+      "independentlyVerifiedReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 677,
+      "character": "苏",
+      "pinnedCasefoldedReadingLabels": [
+        "su1"
+      ],
+      "recordedPronunciationSearchGroups": 1,
+      "firstSampleIds": 3,
+      "hashSampleIds": 5,
+      "combinedDistinctCharacterSentenceIds": 8,
+      "sharedCharacterSentenceAssociations": 0,
+      "minimumAdditionalIdsForHypotheticalOnePerPronunciation": 0,
+      "boundClassification": "enough_ids_but_all_unassigned",
+      "contextToPronunciationAssignments": 0,
+      "independentlyVerifiedReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 679,
+      "character": "杠",
+      "pinnedCasefoldedReadingLabels": [
+        "gang1",
+        "gang4"
+      ],
+      "recordedPronunciationSearchGroups": 2,
+      "firstSampleIds": 3,
+      "hashSampleIds": 4,
+      "combinedDistinctCharacterSentenceIds": 4,
+      "sharedCharacterSentenceAssociations": 3,
+      "minimumAdditionalIdsForHypotheticalOnePerPronunciation": 0,
+      "boundClassification": "enough_ids_but_all_unassigned",
+      "contextToPronunciationAssignments": 0,
+      "independentlyVerifiedReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 693,
+      "character": "更",
+      "pinnedCasefoldedReadingLabels": [
+        "geng1",
+        "geng4"
+      ],
+      "recordedPronunciationSearchGroups": 2,
+      "firstSampleIds": 3,
+      "hashSampleIds": 5,
+      "combinedDistinctCharacterSentenceIds": 8,
+      "sharedCharacterSentenceAssociations": 0,
+      "minimumAdditionalIdsForHypotheticalOnePerPronunciation": 0,
+      "boundClassification": "enough_ids_but_all_unassigned",
+      "contextToPronunciationAssignments": 0,
+      "independentlyVerifiedReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 704,
+      "character": "还",
+      "pinnedCasefoldedReadingLabels": [
+        "hai2",
+        "huan2"
+      ],
+      "recordedPronunciationSearchGroups": 2,
+      "firstSampleIds": 3,
+      "hashSampleIds": 5,
+      "combinedDistinctCharacterSentenceIds": 8,
+      "sharedCharacterSentenceAssociations": 0,
+      "minimumAdditionalIdsForHypotheticalOnePerPronunciation": 0,
+      "boundClassification": "enough_ids_but_all_unassigned",
+      "contextToPronunciationAssignments": 0,
+      "independentlyVerifiedReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 708,
+      "character": "连",
+      "pinnedCasefoldedReadingLabels": [
+        "lian2"
+      ],
+      "recordedPronunciationSearchGroups": 1,
+      "firstSampleIds": 3,
+      "hashSampleIds": 5,
+      "combinedDistinctCharacterSentenceIds": 8,
+      "sharedCharacterSentenceAssociations": 0,
+      "minimumAdditionalIdsForHypotheticalOnePerPronunciation": 0,
+      "boundClassification": "enough_ids_but_all_unassigned",
+      "contextToPronunciationAssignments": 0,
+      "independentlyVerifiedReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 717,
+      "character": "时",
+      "pinnedCasefoldedReadingLabels": [
+        "shi2"
+      ],
+      "recordedPronunciationSearchGroups": 1,
+      "firstSampleIds": 3,
+      "hashSampleIds": 5,
+      "combinedDistinctCharacterSentenceIds": 8,
+      "sharedCharacterSentenceAssociations": 0,
+      "minimumAdditionalIdsForHypotheticalOnePerPronunciation": 0,
+      "boundClassification": "enough_ids_but_all_unassigned",
+      "contextToPronunciationAssignments": 0,
+      "independentlyVerifiedReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 721,
+      "character": "里",
+      "pinnedCasefoldedReadingLabels": [
+        "li3"
+      ],
+      "recordedPronunciationSearchGroups": 1,
+      "firstSampleIds": 3,
+      "hashSampleIds": 5,
+      "combinedDistinctCharacterSentenceIds": 8,
+      "sharedCharacterSentenceAssociations": 0,
+      "minimumAdditionalIdsForHypotheticalOnePerPronunciation": 0,
+      "boundClassification": "enough_ids_but_all_unassigned",
+      "contextToPronunciationAssignments": 0,
+      "independentlyVerifiedReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 739,
+      "character": "听",
+      "pinnedCasefoldedReadingLabels": [
+        "ting1",
+        "ting4",
+        "yin3"
+      ],
+      "recordedPronunciationSearchGroups": 3,
+      "firstSampleIds": 3,
+      "hashSampleIds": 5,
+      "combinedDistinctCharacterSentenceIds": 8,
+      "sharedCharacterSentenceAssociations": 0,
+      "minimumAdditionalIdsForHypotheticalOnePerPronunciation": 0,
+      "boundClassification": "enough_ids_but_all_unassigned",
+      "contextToPronunciationAssignments": 0,
+      "independentlyVerifiedReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 747,
+      "character": "吧",
+      "pinnedCasefoldedReadingLabels": [
+        "ba1",
+        "ba5"
+      ],
+      "recordedPronunciationSearchGroups": 2,
+      "firstSampleIds": 3,
+      "hashSampleIds": 5,
+      "combinedDistinctCharacterSentenceIds": 8,
+      "sharedCharacterSentenceAssociations": 0,
+      "minimumAdditionalIdsForHypotheticalOnePerPronunciation": 0,
+      "boundClassification": "enough_ids_but_all_unassigned",
+      "contextToPronunciationAssignments": 0,
+      "independentlyVerifiedReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 751,
+      "character": "别",
+      "pinnedCasefoldedReadingLabels": [
+        "bie2",
+        "bie4"
+      ],
+      "recordedPronunciationSearchGroups": 2,
+      "firstSampleIds": 3,
+      "hashSampleIds": 5,
+      "combinedDistinctCharacterSentenceIds": 8,
+      "sharedCharacterSentenceAssociations": 0,
+      "minimumAdditionalIdsForHypotheticalOnePerPronunciation": 0,
+      "boundClassification": "enough_ids_but_all_unassigned",
+      "contextToPronunciationAssignments": 0,
+      "independentlyVerifiedReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 758,
+      "character": "钉",
+      "pinnedCasefoldedReadingLabels": [
+        "ding1",
+        "ding4"
+      ],
+      "recordedPronunciationSearchGroups": 2,
+      "firstSampleIds": 3,
+      "hashSampleIds": 4,
+      "combinedDistinctCharacterSentenceIds": 4,
+      "sharedCharacterSentenceAssociations": 3,
+      "minimumAdditionalIdsForHypotheticalOnePerPronunciation": 0,
+      "boundClassification": "enough_ids_but_all_unassigned",
+      "contextToPronunciationAssignments": 0,
+      "independentlyVerifiedReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 763,
+      "character": "利",
+      "pinnedCasefoldedReadingLabels": [
+        "li4"
+      ],
+      "recordedPronunciationSearchGroups": 1,
+      "firstSampleIds": 3,
+      "hashSampleIds": 5,
+      "combinedDistinctCharacterSentenceIds": 8,
+      "sharedCharacterSentenceAssociations": 0,
+      "minimumAdditionalIdsForHypotheticalOnePerPronunciation": 0,
+      "boundClassification": "enough_ids_but_all_unassigned",
+      "contextToPronunciationAssignments": 0,
+      "independentlyVerifiedReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 777,
+      "character": "作",
+      "pinnedCasefoldedReadingLabels": [
+        "zuo1",
+        "zuo4"
+      ],
+      "recordedPronunciationSearchGroups": 2,
+      "firstSampleIds": 3,
+      "hashSampleIds": 5,
+      "combinedDistinctCharacterSentenceIds": 8,
+      "sharedCharacterSentenceAssociations": 0,
+      "minimumAdditionalIdsForHypotheticalOnePerPronunciation": 0,
+      "boundClassification": "enough_ids_but_all_unassigned",
+      "contextToPronunciationAssignments": 0,
+      "independentlyVerifiedReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 778,
+      "character": "伯",
+      "pinnedCasefoldedReadingLabels": [
+        "ba4",
+        "bai3",
+        "bo2"
+      ],
+      "recordedPronunciationSearchGroups": 3,
+      "firstSampleIds": 3,
+      "hashSampleIds": 5,
+      "combinedDistinctCharacterSentenceIds": 7,
+      "sharedCharacterSentenceAssociations": 1,
+      "minimumAdditionalIdsForHypotheticalOnePerPronunciation": 0,
+      "boundClassification": "enough_ids_but_all_unassigned",
+      "contextToPronunciationAssignments": 0,
+      "independentlyVerifiedReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 795,
+      "character": "余",
+      "pinnedCasefoldedReadingLabels": [
+        "yu2"
+      ],
+      "recordedPronunciationSearchGroups": 1,
+      "firstSampleIds": 3,
+      "hashSampleIds": 5,
+      "combinedDistinctCharacterSentenceIds": 8,
+      "sharedCharacterSentenceAssociations": 0,
+      "minimumAdditionalIdsForHypotheticalOnePerPronunciation": 0,
+      "boundClassification": "enough_ids_but_all_unassigned",
+      "contextToPronunciationAssignments": 0,
+      "independentlyVerifiedReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 810,
+      "character": "免",
+      "pinnedCasefoldedReadingLabels": [
+        "mian3",
+        "wen4"
+      ],
+      "recordedPronunciationSearchGroups": 2,
+      "firstSampleIds": 3,
+      "hashSampleIds": 5,
+      "combinedDistinctCharacterSentenceIds": 8,
+      "sharedCharacterSentenceAssociations": 0,
+      "minimumAdditionalIdsForHypotheticalOnePerPronunciation": 0,
+      "boundClassification": "enough_ids_but_all_unassigned",
+      "contextToPronunciationAssignments": 0,
+      "independentlyVerifiedReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 814,
+      "character": "角",
+      "pinnedCasefoldedReadingLabels": [
+        "jiao3",
+        "jue2"
+      ],
+      "recordedPronunciationSearchGroups": 2,
+      "firstSampleIds": 3,
+      "hashSampleIds": 5,
+      "combinedDistinctCharacterSentenceIds": 8,
+      "sharedCharacterSentenceAssociations": 0,
+      "minimumAdditionalIdsForHypotheticalOnePerPronunciation": 0,
+      "boundClassification": "enough_ids_but_all_unassigned",
+      "contextToPronunciationAssignments": 0,
+      "independentlyVerifiedReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 821,
+      "character": "刨",
+      "pinnedCasefoldedReadingLabels": [
+        "bao4",
+        "pao2"
+      ],
+      "recordedPronunciationSearchGroups": 2,
+      "firstSampleIds": 0,
+      "hashSampleIds": 0,
+      "combinedDistinctCharacterSentenceIds": 0,
+      "sharedCharacterSentenceAssociations": 0,
+      "minimumAdditionalIdsForHypotheticalOnePerPronunciation": 2,
+      "boundClassification": "insufficient_raw_candidate_ids",
+      "contextToPronunciationAssignments": 0,
+      "independentlyVerifiedReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 825,
+      "character": "系",
+      "pinnedCasefoldedReadingLabels": [
+        "ji4",
+        "xi4"
+      ],
+      "recordedPronunciationSearchGroups": 2,
+      "firstSampleIds": 3,
+      "hashSampleIds": 5,
+      "combinedDistinctCharacterSentenceIds": 8,
+      "sharedCharacterSentenceAssociations": 0,
+      "minimumAdditionalIdsForHypotheticalOnePerPronunciation": 0,
+      "boundClassification": "enough_ids_but_all_unassigned",
+      "contextToPronunciationAssignments": 0,
+      "independentlyVerifiedReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 836,
+      "character": "应",
+      "pinnedCasefoldedReadingLabels": [
+        "ying1",
+        "ying4"
+      ],
+      "recordedPronunciationSearchGroups": 2,
+      "firstSampleIds": 3,
+      "hashSampleIds": 5,
+      "combinedDistinctCharacterSentenceIds": 8,
+      "sharedCharacterSentenceAssociations": 0,
+      "minimumAdditionalIdsForHypotheticalOnePerPronunciation": 0,
+      "boundClassification": "enough_ids_but_all_unassigned",
+      "contextToPronunciationAssignments": 0,
+      "independentlyVerifiedReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 841,
+      "character": "辛",
+      "pinnedCasefoldedReadingLabels": [
+        "xin1"
+      ],
+      "recordedPronunciationSearchGroups": 1,
+      "firstSampleIds": 3,
+      "hashSampleIds": 5,
+      "combinedDistinctCharacterSentenceIds": 8,
+      "sharedCharacterSentenceAssociations": 0,
+      "minimumAdditionalIdsForHypotheticalOnePerPronunciation": 0,
+      "boundClassification": "enough_ids_but_all_unassigned",
+      "contextToPronunciationAssignments": 0,
+      "independentlyVerifiedReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 847,
+      "character": "间",
+      "pinnedCasefoldedReadingLabels": [
+        "jian1",
+        "jian4"
+      ],
+      "recordedPronunciationSearchGroups": 2,
+      "firstSampleIds": 3,
+      "hashSampleIds": 5,
+      "combinedDistinctCharacterSentenceIds": 8,
+      "sharedCharacterSentenceAssociations": 0,
+      "minimumAdditionalIdsForHypotheticalOnePerPronunciation": 0,
+      "boundClassification": "enough_ids_but_all_unassigned",
+      "contextToPronunciationAssignments": 0,
+      "independentlyVerifiedReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 848,
+      "character": "闷",
+      "pinnedCasefoldedReadingLabels": [
+        "men1",
+        "men4"
+      ],
+      "recordedPronunciationSearchGroups": 2,
+      "firstSampleIds": 3,
+      "hashSampleIds": 5,
+      "combinedDistinctCharacterSentenceIds": 8,
+      "sharedCharacterSentenceAssociations": 0,
+      "minimumAdditionalIdsForHypotheticalOnePerPronunciation": 0,
+      "boundClassification": "enough_ids_but_all_unassigned",
+      "contextToPronunciationAssignments": 0,
+      "independentlyVerifiedReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 860,
+      "character": "沙",
+      "pinnedCasefoldedReadingLabels": [
+        "sha1"
+      ],
+      "recordedPronunciationSearchGroups": 1,
+      "firstSampleIds": 3,
+      "hashSampleIds": 5,
+      "combinedDistinctCharacterSentenceIds": 8,
+      "sharedCharacterSentenceAssociations": 0,
+      "minimumAdditionalIdsForHypotheticalOnePerPronunciation": 0,
+      "boundClassification": "enough_ids_but_all_unassigned",
+      "contextToPronunciationAssignments": 0,
+      "independentlyVerifiedReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 871,
+      "character": "沉",
+      "pinnedCasefoldedReadingLabels": [
+        "chen1",
+        "chen2"
+      ],
+      "recordedPronunciationSearchGroups": 2,
+      "firstSampleIds": 3,
+      "hashSampleIds": 5,
+      "combinedDistinctCharacterSentenceIds": 8,
+      "sharedCharacterSentenceAssociations": 0,
+      "minimumAdditionalIdsForHypotheticalOnePerPronunciation": 0,
+      "boundClassification": "enough_ids_but_all_unassigned",
+      "contextToPronunciationAssignments": 0,
+      "independentlyVerifiedReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 905,
+      "character": "尾",
+      "pinnedCasefoldedReadingLabels": [
+        "wei3",
+        "yi3"
+      ],
+      "recordedPronunciationSearchGroups": 2,
+      "firstSampleIds": 3,
+      "hashSampleIds": 5,
+      "combinedDistinctCharacterSentenceIds": 8,
+      "sharedCharacterSentenceAssociations": 0,
+      "minimumAdditionalIdsForHypotheticalOnePerPronunciation": 0,
+      "boundClassification": "enough_ids_but_all_unassigned",
+      "contextToPronunciationAssignments": 0,
+      "independentlyVerifiedReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 914,
+      "character": "陈",
+      "pinnedCasefoldedReadingLabels": [
+        "chen2"
+      ],
+      "recordedPronunciationSearchGroups": 1,
+      "firstSampleIds": 3,
+      "hashSampleIds": 5,
+      "combinedDistinctCharacterSentenceIds": 6,
+      "sharedCharacterSentenceAssociations": 2,
+      "minimumAdditionalIdsForHypotheticalOnePerPronunciation": 0,
+      "boundClassification": "enough_ids_but_all_unassigned",
+      "contextToPronunciationAssignments": 0,
+      "independentlyVerifiedReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 926,
+      "character": "劲",
+      "pinnedCasefoldedReadingLabels": [
+        "jin4",
+        "jing4"
+      ],
+      "recordedPronunciationSearchGroups": 2,
+      "firstSampleIds": 3,
+      "hashSampleIds": 5,
+      "combinedDistinctCharacterSentenceIds": 7,
+      "sharedCharacterSentenceAssociations": 1,
+      "minimumAdditionalIdsForHypotheticalOnePerPronunciation": 0,
+      "boundClassification": "enough_ids_but_all_unassigned",
+      "contextToPronunciationAssignments": 0,
+      "independentlyVerifiedReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 934,
+      "character": "纳",
+      "pinnedCasefoldedReadingLabels": [
+        "na4"
+      ],
+      "recordedPronunciationSearchGroups": 1,
+      "firstSampleIds": 3,
+      "hashSampleIds": 5,
+      "combinedDistinctCharacterSentenceIds": 8,
+      "sharedCharacterSentenceAssociations": 0,
+      "minimumAdditionalIdsForHypotheticalOnePerPronunciation": 0,
+      "boundClassification": "enough_ids_but_all_unassigned",
+      "contextToPronunciationAssignments": 0,
+      "independentlyVerifiedReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 945,
+      "character": "环",
+      "pinnedCasefoldedReadingLabels": [
+        "huan2"
+      ],
+      "recordedPronunciationSearchGroups": 1,
+      "firstSampleIds": 3,
+      "hashSampleIds": 5,
+      "combinedDistinctCharacterSentenceIds": 8,
+      "sharedCharacterSentenceAssociations": 0,
+      "minimumAdditionalIdsForHypotheticalOnePerPronunciation": 0,
+      "boundClassification": "enough_ids_but_all_unassigned",
+      "contextToPronunciationAssignments": 0,
+      "independentlyVerifiedReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 953,
+      "character": "抹",
+      "pinnedCasefoldedReadingLabels": [
+        "ma1",
+        "mo3",
+        "mo4"
+      ],
+      "recordedPronunciationSearchGroups": 3,
+      "firstSampleIds": 3,
+      "hashSampleIds": 5,
+      "combinedDistinctCharacterSentenceIds": 7,
+      "sharedCharacterSentenceAssociations": 1,
+      "minimumAdditionalIdsForHypotheticalOnePerPronunciation": 0,
+      "boundClassification": "enough_ids_but_all_unassigned",
+      "contextToPronunciationAssignments": 0,
+      "independentlyVerifiedReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 963,
+      "character": "担",
+      "pinnedCasefoldedReadingLabels": [
+        "dan1",
+        "dan4"
+      ],
+      "recordedPronunciationSearchGroups": 2,
+      "firstSampleIds": 3,
+      "hashSampleIds": 5,
+      "combinedDistinctCharacterSentenceIds": 7,
+      "sharedCharacterSentenceAssociations": 1,
+      "minimumAdditionalIdsForHypotheticalOnePerPronunciation": 0,
+      "boundClassification": "enough_ids_but_all_unassigned",
+      "contextToPronunciationAssignments": 0,
+      "independentlyVerifiedReadings": 0,
+      "approvedLexicalSenses": 0
+    }
+  ]
+}
