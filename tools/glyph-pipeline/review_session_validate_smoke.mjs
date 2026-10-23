@@ -127,6 +127,9 @@ const highPoly=full.records.find(x=>x.dictionaryReadings.length>1&&
  x.dictionaryExcerpt.split(";").filter(s=>s.trim()).length>=8);
 const single=full.records.find(x=>x.dictionaryReadings.length===1);
 assert.ok(multi&&highPoly&&single);
+const subset=full.records.find(x=>x.matchingDictionaryReadings.length>0&&
+ x.matchingDictionaryReadings.length<x.dictionaryReadings.length);
+assert.ok(subset);
 const v3=(scope,record,readingSelection)=>({
  ...v2(scope,record),
  schema:"chromalect.lexical-review-observation-session.v0.3",
@@ -136,6 +139,7 @@ for(const [scope,record,selection] of [
  ["all",multi,multi.dictionaryReadings[0]],
  ["multiple_readings",multi,"multiple"],
  ["polysemy_high",highPoly,"undetermined"],
+ ["reading_subset",subset,"undetermined"],
  ["all",single,single.dictionaryReadings[0]],
  ["all",single,"undetermined"]
 ])assert.deepEqual(validateReviewSession(v3(scope,record,selection),audit,queue,full),
@@ -144,6 +148,7 @@ for(const invalid of [
  v3("all",single,"multiple"),v3("all",multi,"fictional9"),
  v3("polysemy_high",single,"undetermined"),
  v3("multiple_readings",single,"undetermined"),
+ v3("reading_subset",single,"undetermined"),
  v3("all",single,undefined)
 ])assert.throws(()=>validateReviewSession(invalid,audit,queue,full));
 const approvedReading=clone(v3("all",multi,multi.dictionaryReadings[0]));

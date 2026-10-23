@@ -141,6 +141,11 @@ assert.match(elements["lexical-study-status"].textContent,/Compare the lexical s
 elements["lexical-study-scope"].value="multiple_readings";
 elements["lexical-study-start"].click();
 assert.ok(elements["lexical-study-reading"].children.length>3);
+// Subset-of-reading literal matches are 212 candidates, not approved readings.
+elements["lexical-study-scope"].value="reading_subset";
+elements["lexical-study-start"].click();
+assert.ok(elements["lexical-study-reading"].children.length>3);
+assert.ok(elements["lexical-study-complexity"].textContent.includes("definition fragments"));
 elements["lexical-study-scope"].value="polysemy_high";
 elements["lexical-study-start"].click();
 assert.ok(elements["lexical-study-reading"].children.length>3);
@@ -152,4 +157,5 @@ assert.match(html,/without first seeing the emoji/);
 assert.match(html,/src="layers.js"/);
 assert.match(html,/data-character-layer-controls/);
 assert.match(html,/897 provisional meaning candidates/);
+assert.match(html,/value="reading_subset"/);
 console.log("Lexical worksheet: reading-specific v0.3, 897 pending candidates, polysemy cohorts, rationale+reading gates, local-only export.");

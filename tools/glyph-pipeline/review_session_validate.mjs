@@ -124,7 +124,7 @@ export function validateReviewSession(session,audit,queue,fullQueue=null){
   assert.equal(session.session.recorded,session.observations.length);
   assert.ok(session.session.planned>=session.observations.length&&session.session.planned<=897);
   assert.ok(["all","flagged","matched","high","medium","unclassified",
-    ...(v3?["multiple_readings","polysemy_high"]:[])].includes(session.session.scope));
+    ...(v3?["multiple_readings","polysemy_high","reading_subset"]:[])].includes(session.session.scope));
   const refs=new Map(fullQueue.records.map(r=>[r.rank+"|"+r.selectedMeaning,r]));
   const seen=new Set();
   for(const x of session.observations){
@@ -143,6 +143,9 @@ export function validateReviewSession(session,audit,queue,fullQueue=null){
      x.readingSelection==="undetermined"||
      (x.readingSelection==="multiple"&&actual.dictionaryReadings.length>1),
      "Reading must come from pinned dictionary or be explicitly unresolved");
+    if(session.session.scope==="reading_subset")
+     assert.ok(actual.matchingDictionaryReadings.length>0&&
+      actual.matchingDictionaryReadings.length<actual.dictionaryReadings.length);
     if(session.session.scope==="multiple_readings")
      assert.ok(actual.dictionaryReadings.length>1);
     if(session.session.scope==="polysemy_high")

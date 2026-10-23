@@ -38,6 +38,8 @@ function candidates(){
    (scope==="matched"&&r.strictWholeTermMatch)||
    r.priority===scope||
    (scope==="multiple_readings"&&r.dictionaryReadings.length>1)||
+   (scope==="reading_subset"&&r.matchingDictionaryReadings.length>0&&
+     r.matchingDictionaryReadings.length<r.dictionaryReadings.length)||
    (scope==="polysemy_high"&&r.dictionaryReadings.length>1&&
      r.dictionaryExcerpt.split(";").filter(x=>x.trim()).length>=8));
 }
@@ -221,6 +223,8 @@ async function load(){
    if(!r.rank||!r.character||!r.selectedMeaning||!r.referenceDefinition||
      !r.dictionaryExcerpt||!Array.isArray(r.dictionaryReadings)||!r.dictionaryReadings.length||
     r.dictionaryReadings.some(x=>typeof x!=="string"||!x)||
+    !Array.isArray(r.matchingDictionaryReadings)||
+    r.matchingDictionaryReadings.some(x=>!r.dictionaryReadings.includes(x))||
     r.strictWholeTermMatch!==true&&r.strictWholeTermMatch!==false||
      r.lexicalDecision!=="pending"||
      r.productionVerified!==false)
