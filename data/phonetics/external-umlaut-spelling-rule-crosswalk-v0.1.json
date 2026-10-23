@@ -1,0 +1,81 @@
+{
+  "schema": "chromalect.phonetics.external-umlaut-spelling-rule-crosswalk.v0.1",
+  "status": "research_only_written_spelling_correspondence_not_phonological_adjudication",
+  "source": {
+    "citationBlobSHA": "e38b5d3077f516054ecc5573c9251b3aa3628140",
+    "cautionIndex": "data/phonetics/mandarin-final-spelling-context-gates-v0.1.json",
+    "contractionCrosswalk": "data/phonetics/external-orthographic-spelling-rule-crosswalk-v0.1.json",
+    "noLicensedSentenceTextCopied": true,
+    "componentPaletteChanged": false
+  },
+  "references": [
+    {
+      "id": "polyu-pinyin-spelling",
+      "publisher": "The Hong Kong Polytechnic University, BEPTH",
+      "pageTitle": "Spelling Rules in Pinyin",
+      "url": "https://www.polyu.edu.hk/bepth/introduction-to-phonetics/spelling-rules-in-pinyin/?sc_lang=en",
+      "ruleScope": "Written ü marks are omitted with j, q, x and syllable-initial y; the examples are spelling comparisons only",
+      "accessCheckedDate": "2026-10-23"
+    }
+  ],
+  "summary": {
+    "umlautRuleFamilies": 4,
+    "sourceReadingUsesInThoseFamilies": 71,
+    "combinedDocumentedWarningFamilies": 7,
+    "combinedSourceReadingUses": 134,
+    "remainingWarningFamilies": 2,
+    "remainingSourceUses": 79,
+    "independentPhonologicalApprovals": 0,
+    "humanDecodingTrials": 0
+  },
+  "records": [
+    {
+      "cautionFamily": "palatal_written_u",
+      "writtenFinal": "u",
+      "expandedOrthographicComparison": "ü",
+      "observedSourceReadingUses": 33,
+      "sourceRule": "polyu-pinyin-spelling",
+      "ruleClass": "umlaut_omission_after_j_q_x_or_y",
+      "comparisonStatus": "documented_spelling_rule_only",
+      "phonologicalRepresentation": null,
+      "ipaApproval": false,
+      "contextualReadingApproval": false
+    },
+    {
+      "cautionFamily": "palatal_written_un",
+      "writtenFinal": "un",
+      "expandedOrthographicComparison": "ün",
+      "observedSourceReadingUses": 18,
+      "sourceRule": "polyu-pinyin-spelling",
+      "ruleClass": "umlaut_omission_after_j_q_x_or_y",
+      "comparisonStatus": "documented_spelling_rule_only",
+      "phonologicalRepresentation": null,
+      "ipaApproval": false,
+      "contextualReadingApproval": false
+    },
+    {
+      "cautionFamily": "palatal_written_ue",
+      "writtenFinal": "ue",
+      "expandedOrthographicComparison": "üe",
+      "observedSourceReadingUses": 10,
+      "sourceRule": "polyu-pinyin-spelling",
+      "ruleClass": "umlaut_omission_after_j_q_x_or_y",
+      "comparisonStatus": "documented_spelling_rule_only",
+      "phonologicalRepresentation": null,
+      "ipaApproval": false,
+      "contextualReadingApproval": false
+    },
+    {
+      "cautionFamily": "palatal_written_uan",
+      "writtenFinal": "uan",
+      "expandedOrthographicComparison": "üan",
+      "observedSourceReadingUses": 10,
+      "sourceRule": "polyu-pinyin-spelling",
+      "ruleClass": "umlaut_omission_after_j_q_x_or_y",
+      "comparisonStatus": "documented_spelling_rule_only",
+      "phonologicalRepresentation": null,
+      "ipaApproval": false,
+      "contextualReadingApproval": false
+    }
+  ]
+}
