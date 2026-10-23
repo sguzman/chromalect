@@ -67,6 +67,14 @@ The [first-1,000 Mandarin search interface](site/search.html) uses a [generated 
 
 The [static GitHub Pages prototype](site/index.html) uses independent **off/direct/marker** settings for component identity, orthographic Pinyin initial/final, and tone; semantics are unavailable until source-backed meaning data exists. Direct component mode uses source-aligned colored stroke geometry where available and a cell-level fallback elsewhere. See the [layer architecture](docs/web-layer-architecture.md), [machine-readable layer schema](site/layers-v0.1.json), and [one-time Pages setup](site/README.md). Publication requires GitHub Pages to be enabled for Actions in repository settings.
 
+## Experimental Mandarin phonetic controls
+
+Chromalect has a reversible **source-orthographic**, not phonemically approved, first-tranche grammar: all **1,171** pinned citation readings round-trip across **673** distinct written initial/final/tone triples. The [citation-grammar browser](site/mandarin-syllable-grammar.html) shows the original spelling with separately qualified channels, and the [written-contrast controls](site/mandarin-contrast-controls.html) contain **710** source-label candidate comparisons, not validated spoken minimal pairs.
+
+Experimental symbol references are intentionally separate: the [21-initial feature prototypes](site/mandarin-initial-features.html) are provisional consonantal categories, the [33 written-final geometric controls](site/mandarin-final-symbols.html) encode **letters, not phones**, and the [six-simple-final feature hypotheses](site/mandarin-simple-final-features.html) cover **432** source-reading occurrences, including **112** contextual spelling cautions. The [tone-contour reference](site/mandarin-tone-contours.html) shows idealized citation targets with context-dependent neutral tone. The [integrated citation cell](site/mandarin-citation-cell.html) independently toggles these research displays around an **unchanged native Chinese character**.
+
+The broader [final-spelling exception ledger](docs/mandarin-final-spelling-context-gates.md) flags **213** source-reading occurrences across nine context categories; absence of a flag is not phonological approval. A Rust audit independently cross-checks these records and the written-final alphabet against the original source. **Zero source sentences, phonemic interpretations, human symbol-decoding results, or learning-effectiveness results are silently approved.** All future full-final IPA and contextual assignments require independent evidence.
+
 ## Mandarin semantic research
 
 The first 1,000 Mandarin characters have provisional source-backed meaning records. Initial screening yielded **881 characters with candidate pictograms** and **119 explicit deferrals**, for **897 experimental meaning expressions**. These figures describe research proposals, not validated Mandarin senses or independently tested pictograms.
