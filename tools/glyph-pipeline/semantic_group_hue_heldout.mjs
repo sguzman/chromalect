@@ -26,8 +26,9 @@ const distance=(a,b)=>{
 };
 const summaryOf=rows=>Object.fromEntries(
  ["characters","distinctWithinGlyphPairs","activeClosePairs","firstTrialClosePairs",
-  "optimizedClosePairs","charactersWithFirstClosePairs",
-  "charactersWithOptimizedClosePairs"].map(key=>
+  "optimizedClosePairs","introducedOptimizedClosePairs","resolvedOriginalClosePairs",
+  "retainedOriginalClosePairs","charactersWithFirstClosePairs",
+  "charactersWithOptimizedClosePairs","charactersWithIntroducedClosePairs"].map(key=>
    [key,rows.reduce((sum,row)=>sum+row[key],0)]));
 export function deriveHueHoldoutEvaluation(catalog,mappings,palette,sourceRisk){
  assert.equal(catalog.schema,"chromalect.character-tranche.v1");
@@ -89,9 +90,12 @@ export function deriveHueHoldoutEvaluation(catalog,mappings,palette,sourceRisk){
   function evaluate(rows){
    let distinctWithinGlyphPairs=0,activeClosePairs=0,
     firstTrialClosePairs=0,optimizedClosePairs=0,
-    charactersWithFirstClosePairs=0,charactersWithOptimizedClosePairs=0;
+    introducedOptimizedClosePairs=0,resolvedOriginalClosePairs=0,
+    retainedOriginalClosePairs=0,
+    charactersWithFirstClosePairs=0,charactersWithOptimizedClosePairs=0,
+    charactersWithIntroducedClosePairs=0;
    for(const row of rows){
-    let firstWarnings=0,lastWarnings=0;
+    let firstWarnings=0,lastWarnings=0,introducedInGlyph=0;
     for(let i=0;i<row.components.length;i++)
      for(let j=i+1;j<row.components.length;j++){
       const idA=row.components[i],idB=row.components[j];
@@ -100,21 +104,32 @@ export function deriveHueHoldoutEvaluation(catalog,mappings,palette,sourceRisk){
        firstB=firstHex.get(idB)??origB;
       const optA=optimized.get(idA)??origA,
        optB=optimized.get(idB)??origB;
-      if(distance(origA,origB)<THRESHOLD)activeClosePairs++;
+      const oldFlag=distance(origA,origB)<THRESHOLD,
+       optimizedFlag=distance(optA,optB)<THRESHOLD;
+      if(oldFlag)activeClosePairs++;
+      if(optimizedFlag&&!oldFlag){introducedOptimizedClosePairs++;introducedInGlyph++;}
+      if(oldFlag&&!optimizedFlag)resolvedOriginalClosePairs++;
+      if(oldFlag&&optimizedFlag)retainedOriginalClosePairs++;
       if(distance(firstA,firstB)<THRESHOLD){
        firstTrialClosePairs++;firstWarnings++;
       }
-      if(distance(optA,optB)<THRESHOLD){
+      if(optimizedFlag){
        optimizedClosePairs++;lastWarnings++;
       }
       distinctWithinGlyphPairs++;
      }
     if(firstWarnings)charactersWithFirstClosePairs++;
     if(lastWarnings)charactersWithOptimizedClosePairs++;
+    if(introducedInGlyph)charactersWithIntroducedClosePairs++;
    }
+   assert.equal(activeClosePairs,resolvedOriginalClosePairs+retainedOriginalClosePairs);
+   assert.equal(optimizedClosePairs,introducedOptimizedClosePairs+retainedOriginalClosePairs);
    return {characters:rows.length,distinctWithinGlyphPairs,
     activeClosePairs,firstTrialClosePairs,optimizedClosePairs,
-    charactersWithFirstClosePairs,charactersWithOptimizedClosePairs};
+    introducedOptimizedClosePairs,resolvedOriginalClosePairs,
+    retainedOriginalClosePairs,
+    charactersWithFirstClosePairs,charactersWithOptimizedClosePairs,
+    charactersWithIntroducedClosePairs};
   }
   const train=evaluate(training),test=evaluate(heldOut);
   // Ensure the optimizer changed no source-only co-occurrences in training.
