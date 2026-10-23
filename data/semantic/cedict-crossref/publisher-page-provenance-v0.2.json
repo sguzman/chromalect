@@ -1,0 +1,345 @@
+{
+  "schema": "chromalect.semantic.publisher-page-provenance.v0.2",
+  "status": "source_headword_reading_labels_checked_not_lexical_approval",
+  "checkedDateUTC": "2026-10-23",
+  "scope": "Expanded source-page checks: first ten research-packet characters plus thirteen additional class-one evidence-acquisition characters. The latter are page checks, not full desk-review packets.",
+  "method": "Directly retrieve each external dictionary page and inspect its headword and prominent basic Mandarin reading labels.",
+  "limitations": [
+    "Additional historical or regional readings may appear outside the prominent basic-entry labels.",
+    "Publisher page access does not prove contemporary usage or independently validate meanings.",
+    "Simplified/traditional and Taiwan/Mainland source categories must not be silently conflated."
+  ],
+  "summary": {
+    "publisherPagesChecked": 27,
+    "highAttentionCharactersRepresented": 23,
+    "highAttentionUniverse": 142,
+    "independentlyAdjudicatedSenses": 0,
+    "emojiApprovals": 0,
+    "productionApprovals": 0,
+    "sourceOnlyCharactersNotDeskReviewed": 13
+  },
+  "conflicts": [
+    {
+      "rank": 379,
+      "character": "过",
+      "type": "surname_tone",
+      "pinnedCedict": "Guo4",
+      "externalZdic": "guō",
+      "status": "unresolved"
+    }
+  ],
+  "entries": [
+    {
+      "rank": 127,
+      "character": "长",
+      "publisher": "汉典",
+      "url": "https://zdic.net/hans/%E9%95%BF",
+      "prominentReadings": [
+        "cháng",
+        "zhǎng"
+      ],
+      "verification": "page_text_opened_and_headword_checked"
+    },
+    {
+      "rank": 142,
+      "character": "从",
+      "publisher": "汉典（简体）",
+      "url": "https://zdic.net/hans/%E4%BB%8E",
+      "prominentReadings": [
+        "cóng"
+      ],
+      "verification": "page_text_opened_and_headword_checked"
+    },
+    {
+      "rank": 142,
+      "character": "从",
+      "publisher": "汉典（繁体 從）",
+      "url": "https://zdic.net/hans/%E5%BE%9E",
+      "prominentReadings": [
+        "cóng",
+        "zòng"
+      ],
+      "verification": "page_text_opened_and_headword_checked"
+    },
+    {
+      "rank": 201,
+      "character": "扒",
+      "publisher": "汉典",
+      "url": "https://zdic.net/hans/%E6%89%92",
+      "prominentReadings": [
+        "bā",
+        "pá"
+      ],
+      "verification": "page_text_opened_and_headword_checked"
+    },
+    {
+      "rank": 201,
+      "character": "扒",
+      "publisher": "教育部國語辭典簡編本",
+      "url": "https://dict.concised.moe.edu.tw/dictView.jsp?ID=23&la=0&powerMode=0",
+      "prominentReadings": [
+        "bā"
+      ],
+      "verification": "page_text_opened_and_headword_checked"
+    },
+    {
+      "rank": 201,
+      "character": "扒",
+      "publisher": "教育部國語辭典簡編本",
+      "url": "https://dict.concised.moe.edu.tw/dictView.jsp?ID=2401&la=0&powerMode=0",
+      "prominentReadings": [
+        "pá"
+      ],
+      "verification": "page_text_opened_and_headword_checked"
+    },
+    {
+      "rank": 339,
+      "character": "发",
+      "publisher": "汉典",
+      "url": "https://zdic.net/hans/%E5%8F%91",
+      "prominentReadings": [
+        "fā",
+        "fà"
+      ],
+      "verification": "page_text_opened_and_headword_checked"
+    },
+    {
+      "rank": 905,
+      "character": "尾",
+      "publisher": "汉典",
+      "url": "https://zdic.net/hans/%E5%B0%BE",
+      "prominentReadings": [
+        "wěi",
+        "yǐ"
+      ],
+      "verification": "page_text_opened_and_headword_checked"
+    },
+    {
+      "rank": 905,
+      "character": "尾",
+      "publisher": "教育部重編國語辭典修訂本",
+      "url": "https://dict.revised.moe.edu.tw/dictView.jsp?ID=10587&word=%3D%E5%B0%BE",
+      "prominentReadings": [
+        "wěi",
+        "yǐ"
+      ],
+      "verification": "page_text_opened_and_headword_checked"
+    },
+    {
+      "rank": 164,
+      "character": "火",
+      "publisher": "汉典",
+      "url": "https://zdic.net/hans/%E7%81%AB",
+      "prominentReadings": [
+        "huǒ"
+      ],
+      "verification": "page_text_opened_and_headword_checked"
+    },
+    {
+      "rank": 231,
+      "character": "业",
+      "publisher": "汉典",
+      "url": "https://zdic.net/hans/%E4%B8%9A",
+      "prominentReadings": [
+        "yè"
+      ],
+      "verification": "page_text_opened_and_headword_checked"
+    },
+    {
+      "rank": 379,
+      "character": "过",
+      "publisher": "汉典",
+      "url": "https://zdic.net/hans/%E8%BF%87",
+      "prominentReadings": [
+        "guò",
+        "guo",
+        "guō"
+      ],
+      "verification": "page_text_opened_and_headword_checked"
+    },
+    {
+      "rank": 401,
+      "character": "成",
+      "publisher": "汉典",
+      "url": "https://zdic.net/hans/%E6%88%90",
+      "prominentReadings": [
+        "chéng"
+      ],
+      "verification": "page_text_opened_and_headword_checked"
+    },
+    {
+      "rank": 407,
+      "character": "划",
+      "publisher": "汉典",
+      "url": "https://zdic.net/hans/%E5%88%92",
+      "prominentReadings": [
+        "huá",
+        "huà"
+      ],
+      "verification": "page_text_opened_and_headword_checked"
+    },
+    {
+      "rank": 418,
+      "character": "当",
+      "publisher": "汉典",
+      "url": "https://zdic.net/hans/%E5%BD%93",
+      "prominentReadings": [
+        "dāng",
+        "dàng"
+      ],
+      "verification": "page_text_opened_and_headword_checked"
+    },
+    {
+      "rank": 460,
+      "character": "伏",
+      "publisher": "汉典",
+      "url": "https://zdic.net/hans/%E4%BC%8F",
+      "prominentReadings": [
+        "fú"
+      ],
+      "verification": "page_text_opened_and_headword_checked"
+    },
+    {
+      "rank": 511,
+      "character": "冲",
+      "publisher": "汉典",
+      "url": "https://zdic.net/hans/%E5%86%B2",
+      "prominentReadings": [
+        "chōng",
+        "chòng"
+      ],
+      "verification": "page_text_opened_and_headword_checked"
+    },
+    {
+      "rank": 518,
+      "character": "齐",
+      "publisher": "汉典",
+      "url": "https://zdic.net/hans/%E9%BD%90",
+      "prominentReadings": [
+        "qí",
+        "jì",
+        "zī",
+        "zhāi"
+      ],
+      "verification": "page_text_opened_and_headword_checked"
+    },
+    {
+      "rank": 549,
+      "character": "安",
+      "publisher": "汉典",
+      "url": "https://zdic.net/hans/%E5%AE%89",
+      "prominentReadings": [
+        "ān"
+      ],
+      "verification": "page_text_opened_and_headword_checked"
+    },
+    {
+      "rank": 566,
+      "character": "尽",
+      "publisher": "汉典",
+      "url": "https://zdic.net/hans/%E5%B0%BD",
+      "prominentReadings": [
+        "jìn",
+        "jǐn"
+      ],
+      "verification": "page_text_opened_and_headword_checked"
+    },
+    {
+      "rank": 593,
+      "character": "约",
+      "publisher": "汉典",
+      "url": "https://zdic.net/hans/%E7%BA%A6",
+      "prominentReadings": [
+        "yuē",
+        "yāo"
+      ],
+      "verification": "page_text_opened_and_headword_checked"
+    },
+    {
+      "rank": 595,
+      "character": "纪",
+      "publisher": "汉典",
+      "url": "https://zdic.net/hans/%E7%BA%AA",
+      "prominentReadings": [
+        "jì",
+        "jǐ"
+      ],
+      "verification": "page_text_opened_and_headword_checked"
+    },
+    {
+      "rank": 751,
+      "character": "别",
+      "publisher": "汉典",
+      "url": "https://zdic.net/hans/%E5%88%AB",
+      "prominentReadings": [
+        "bié",
+        "biè"
+      ],
+      "verification": "page_text_opened_and_headword_checked"
+    },
+    {
+      "rank": 777,
+      "character": "作",
+      "publisher": "汉典",
+      "url": "https://zdic.net/hans/%E4%BD%9C",
+      "prominentReadings": [
+        "zuò",
+        "zuō"
+      ],
+      "verification": "page_text_opened_and_headword_checked"
+    },
+    {
+      "rank": 825,
+      "character": "系",
+      "publisher": "汉典",
+      "url": "https://zdic.net/hans/%E7%B3%BB",
+      "prominentReadings": [
+        "xì",
+        "jì"
+      ],
+      "verification": "page_text_opened_and_headword_checked"
+    },
+    {
+      "rank": 848,
+      "character": "闷",
+      "publisher": "汉典",
+      "url": "https://zdic.net/hans/%E9%97%B7",
+      "prominentReadings": [
+        "mèn",
+        "mēn"
+      ],
+      "verification": "page_text_opened_and_headword_checked"
+    },
+    {
+      "rank": 953,
+      "character": "抹",
+      "publisher": "汉典",
+      "url": "https://zdic.net/hans/%E6%8A%B9",
+      "prominentReadings": [
+        "mǒ",
+        "mò",
+        "mā"
+      ],
+      "verification": "page_text_opened_and_headword_checked"
+    }
+  ],
+  "supersedes": "publisher-page-provenance-v0.1.json",
+  "sourceInventoryDifferences": [
+    {
+      "rank": 518,
+      "character": "齐",
+      "type": "external_dictionary_has_additional_recorded_reading_labels",
+      "pinnedReadingLabels": [
+        "Qi2",
+        "qi2"
+      ],
+      "externalProminentReadingLabels": [
+        "qí",
+        "jì",
+        "zī",
+        "zhāi"
+      ],
+      "status": "research_only_not_imported"
+    }
+  ]
+}
