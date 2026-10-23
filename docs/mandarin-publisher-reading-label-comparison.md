@@ -1,6 +1,6 @@
 # Source-pinned vs. publisher-displayed Pinyin labels
 
-**Status: mechanical written-label comparison only.** This audit joins the [publisher page provenance v0.2](publisher-page-provenance-v0.2.json) and [source-reading normalization v0.1](pinyin-reading-label-normalization-v0.1.json), then transforms numbered Pinyin into tone-marked display strings. Capitalized CC-CEDICT proper-name labels are casefolded without erasing their original spellings.
+**Status: mechanical written-label comparison only.** This audit joins the [publisher page provenance v0.2](../data/semantic/cedict-crossref/publisher-page-provenance-v0.2.json) and [source-reading normalization v0.1](../data/semantic/cedict-crossref/pinyin-reading-label-normalization-v0.1.json), then transforms numbered Pinyin into tone-marked display strings. Capitalized CC-CEDICT proper-name labels are casefolded without erasing their original spellings.
 
 | Compared high-attention characters | Count |
 | --- | ---: |
