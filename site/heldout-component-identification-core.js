@@ -38,7 +38,7 @@ function validateSource(targetManifest,sourcePairs){
   Array.isArray(targetManifest.targets)&&targetManifest.targets.length===49&&
   Array.isArray(sourcePairs)&&sourcePairs.length===49,
   "Source count or independent-review boundary mismatch");
- const originalPairs=new Map(sourcePairs.map(r=>[r.id,r]));
+ const originalPairs=new Map(sourcePairs.map(r=>[r.id.replaceAll("|","-"),r]));
  required(originalPairs.size===49,"Duplicate original source warning ID");
  const used=new Set(),counts={introduced:0,resolved:0,retained:0};
  let targetA=0;
