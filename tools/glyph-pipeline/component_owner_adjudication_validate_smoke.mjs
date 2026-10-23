@@ -42,6 +42,14 @@ const report=audit.exportNotes(targets,m,"2026-10-23T00:00:00.000Z");
 assert.equal(report.observations.length,1);
 assert.equal(report.observations[0].sourceOwnerCertified,false);
 assert.equal(validateOwnerNotes(source,report,scripts).certified,0);
+const restored=audit.restoreNotes(JSON.parse(JSON.stringify(report)),source.targets,targets);
+assert.equal(restored.size,1);
+assert.deepEqual(restored.get(t.id),note);
+const restoredAgain=audit.exportNotes(targets,restored,report.session.exportedAtUTC);
+assert.deepEqual(JSON.parse(JSON.stringify(restoredAgain)),JSON.parse(JSON.stringify(report)));
+const badRestore=JSON.parse(JSON.stringify(report));
+badRestore.observations[0].sourceOwnerCertified=true;
+assert.throws(()=>audit.restoreNotes(badRestore,source.targets,targets));
 const rejected=mutate=>{
  const bad=JSON.parse(JSON.stringify(report));mutate(bad);
  assert.throws(()=>validateOwnerNotes(source,bad,scripts));
@@ -63,7 +71,7 @@ const page=fs.readFileSync("site/component-owner-adjudication.html","utf8");
 const js=fs.readFileSync("site/component-owner-adjudication.js","utf8");
 for(const id of ["oa-status","oa-target","oa-meta","oa-source","oa-locator",
  "oa-fold","oa-owner","oa-complement","oa-complement-meta","oa-judgment","oa-evidence","oa-rationale","oa-save",
- "oa-count","oa-export","oa-output"]){
+ "oa-count","oa-export","oa-output","oa-import","oa-restore"]){
  assert.ok(page.includes('id="'+id+'"'),id);
  assert.ok(js.includes('"'+id+'"'),id);
 }

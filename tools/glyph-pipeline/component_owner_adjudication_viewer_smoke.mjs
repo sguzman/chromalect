@@ -20,7 +20,7 @@ const scripts=["site/heldout-blind-color-core.js",
  "site/component-owner-adjudication.js"].map(p=>fs.readFileSync(p,"utf8"));
 const ids=["oa-status","oa-filter","oa-cohort-count","oa-target","oa-meta","oa-size","oa-grid","oa-source","oa-locator","oa-fold",
  "oa-owner","oa-complement","oa-complement-meta","oa-judgment","oa-evidence","oa-rationale","oa-save","oa-count",
- "oa-export","oa-output"];
+ "oa-export","oa-output","oa-import","oa-restore"];
 class Element{
  constructor(){this.value="";this.textContent="";this.children=[];this.events={};this.disabled=false;this.src="";this.style={setProperty:(k,v)=>{this.style[k]=v;}};}
  appendChild(node){this.children.push(node);return node;}
@@ -29,7 +29,7 @@ class Element{
 }
 function setup(data=sources){
  const nodes=Object.fromEntries(ids.map(id=>[id,new Element()]));
- for(const id of ["oa-target","oa-filter","oa-save","oa-export"])nodes[id].disabled=true;
+ for(const id of ["oa-target","oa-filter","oa-save","oa-export","oa-restore"])nodes[id].disabled=true;
  nodes["oa-judgment"].value="unresolved";nodes["oa-size"].value="96";nodes["oa-filter"].value="all";
  const document={getElementById:id=>nodes[id],createElement:()=>new Element()};
  const fetch=async url=>{
@@ -60,6 +60,7 @@ p["oa-filter"].value="not-a-cohort";p["oa-filter"].events.change();
 assert.equal(p["oa-filter"].value,"all");
 assert.match(p["oa-status"].textContent,/Could not change source cohort/);
 assert.equal(p["oa-save"].disabled,false);
+assert.equal(p["oa-restore"].disabled,false);
 assert.match(p["oa-source"].src,/glyphs\//);
 assert.match(p["oa-locator"].src,/heldout-identification-target/);
 assert.match(p["oa-complement"].src,/owner-complement-locators/);
@@ -106,6 +107,30 @@ assert.equal(result.observations[0].trialId,original);
 assert.equal(result.session.sourceOwnerCertifications,0);
 assert.equal(result.observations[0].glyphVisualCertified,false);
 assert.ok(!("reviewerName" in result.session));
+const keep=JSON.stringify(result);
+const corrupt=structuredClone(result);
+corrupt.observations[0].glyphVisualCertified=true;
+p["oa-import"].value=JSON.stringify(corrupt);
+p["oa-restore"].events.click();
+assert.match(p["oa-status"].textContent,/restoration rejected/);
+assert.match(p["oa-count"].textContent,/1 provisional notes/);
+p["oa-import"].value="{bad JSON";
+p["oa-restore"].events.click();
+assert.match(p["oa-status"].textContent,/restoration rejected/);
+assert.match(p["oa-count"].textContent,/1 provisional notes/);
+p["oa-import"].value=keep;
+p["oa-restore"].events.click();
+assert.match(p["oa-status"].textContent,/Restored 1 provisional source notes locally/);
+assert.match(p["oa-count"].textContent,/1 provisional notes/);
+assert.equal(p["oa-output"].value,"");
+p["oa-export"].events.click();
+assert.deepEqual(JSON.parse(p["oa-output"].value).observations,result.observations);
+const empty=setup();await settle(empty);
+empty["oa-import"].value=keep;
+empty["oa-restore"].events.click();
+assert.match(empty["oa-status"].textContent,/Restored 1 provisional source notes locally/);
+empty["oa-filter"].value="retained";empty["oa-filter"].events.change();
+assert.match(empty["oa-count"].textContent,/1 provisional notes/);
 const altered=structuredClone(sources);
 altered["glyphs/research/heldout-identification-target-v0.1/index-v0.1.json"]
  .source.ownerKeyIndependentlyVerified=true;
@@ -113,6 +138,7 @@ const invalid=setup(altered);await settle(invalid);
 assert.match(invalid["oa-status"].textContent,/Cannot load or validate/);
 assert.equal(invalid["oa-target"].children.length,0);
 assert.equal(invalid["oa-save"].disabled,true);
+assert.equal(invalid["oa-restore"].disabled,true);
 assert.equal(invalid["oa-filter"].disabled,true);
 const changedMask=structuredClone(sources);
 changedMask["glyphs/research/owner-complement-locators-v0.1/index-v0.1.json"]

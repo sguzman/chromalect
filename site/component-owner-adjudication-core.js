@@ -172,5 +172,16 @@ function validateExport(data,manifest,targets){
  }
  return {recorded:data.observations.length,certified:0};
 }
-globalThis.ChromalectOwnerAdjudication={validateTargets,validateComplementaryLocators,exportNotes,validateExport};
+function restoreNotes(data,manifest,targets){
+ validateExport(data,manifest,targets);
+ const notes=new Map();
+ for(const row of data.observations)
+  notes.set(row.trialId,{
+   judgment:row.judgment,evidenceURL:row.evidenceURL,
+   technicalRationale:row.technicalRationale});
+ demand(notes.size===data.observations.length,
+  "Duplicate source-owner observation in restored notes");
+ return notes;
+}
+globalThis.ChromalectOwnerAdjudication={validateTargets,validateComplementaryLocators,exportNotes,validateExport,restoreNotes};
 })();

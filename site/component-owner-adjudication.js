@@ -6,7 +6,7 @@ const identification=globalThis.ChromalectComponentIdentificationRehearsal;
 const audit=globalThis.ChromalectOwnerAdjudication;
 const $=id=>document.getElementById(id);
 const names=["oa-status","oa-filter","oa-cohort-count","oa-target","oa-meta","oa-size","oa-grid","oa-source","oa-locator","oa-fold",
- "oa-owner","oa-complement","oa-complement-meta","oa-judgment","oa-evidence","oa-rationale","oa-save","oa-count","oa-export","oa-output"];
+ "oa-owner","oa-complement","oa-complement-meta","oa-judgment","oa-evidence","oa-rationale","oa-save","oa-count","oa-export","oa-output","oa-import","oa-restore"];
 if(names.some(id=>!$(id)))return;
 const status=x=>{$("oa-status").textContent=x;};
 const pixelSizes=new Set([16,24,32,48,64,96,128,160]);
@@ -92,7 +92,7 @@ async function load(){
   complements=audit.validateComplementaryLocators(other,targets);
   manifest=m;
   $("oa-target").disabled=false;$("oa-filter").disabled=false;
-  $("oa-save").disabled=false;
+  $("oa-save").disabled=false;$("oa-restore").disabled=false;
   updateSize();showCohort("all");
   status("49 source-pinned regions loaded; independent acceptance remains zero.");
  }catch(e){status("Cannot load or validate original source regions: "+e.message);}
@@ -126,6 +126,25 @@ $("oa-size").addEventListener("change",()=>{
 $("oa-save").addEventListener("click",()=>{
  try{save();status("Provisional source observation held in page memory only.");}
  catch(e){status("Note rejected: "+e.message);}
+});
+$("oa-restore").addEventListener("click",()=>{
+ try{
+  if(!manifest||!targets.length||!selected)
+   throw Error("Validated source target set unavailable");
+  const raw=$("oa-import").value;
+  if(typeof raw!=="string"||raw.length<2||raw.length>250000)
+   throw Error("A reasonably sized JSON export is required");
+  const parsed=JSON.parse(raw);
+  const replacement=audit.restoreNotes(parsed,manifest,targets);
+  notes=replacement;
+  selection(selected.id);
+  $("oa-export").disabled=false;
+  $("oa-output").value="";
+  status("Restored "+notes.size+" provisional source notes locally; replaced prior drafts. "+
+   "No upload, independent certification, or browser persistence.");
+ }catch(e){
+  status("Local note restoration rejected; existing drafts retained: "+e.message);
+ }
 });
 $("oa-export").addEventListener("click",()=>{
  try{
