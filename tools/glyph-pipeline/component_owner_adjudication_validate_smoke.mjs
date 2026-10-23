@@ -44,7 +44,7 @@ assert.equal(report.observations[0].sourceOwnerCertified,false);
 assert.equal(validateOwnerNotes(source,report,scripts).certified,0);
 const restored=audit.restoreNotes(JSON.parse(JSON.stringify(report)),source.targets,targets);
 assert.equal(restored.size,1);
-assert.deepEqual(restored.get(t.id),note);
+assert.deepEqual(JSON.parse(JSON.stringify(restored.get(t.id))),note);
 const restoredAgain=audit.exportNotes(targets,restored,report.session.exportedAtUTC);
 assert.deepEqual(JSON.parse(JSON.stringify(restoredAgain)),JSON.parse(JSON.stringify(report)));
 const badRestore=JSON.parse(JSON.stringify(report));
