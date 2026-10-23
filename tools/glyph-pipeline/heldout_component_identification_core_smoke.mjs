@@ -22,7 +22,7 @@ const seed=20261023,plan=core.plan(items,seed);
 assert.equal(plan.filter(t=>t.presentation==="original").length,25);
 assert.equal(plan.filter(t=>t.presentation==="experimental").length,24);
 assert.equal(plan.filter(t=>t.correctLeft).length,25);
-assert.deepEqual(plan.map(t=>t.sourceIndex).slice().sort((a,b)=>a-b),
+assert.deepEqual(Array.from(plan,t=>t.sourceIndex).sort((a,b)=>a-b),
  Array.from({length:49},(_,i)=>i));
 assert.deepEqual(JSON.parse(JSON.stringify(plan)),
  JSON.parse(JSON.stringify(core.plan(items,seed))));
