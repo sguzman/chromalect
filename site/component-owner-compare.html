@@ -16,7 +16,7 @@
 .oc-grid textarea,.oc-panel textarea{box-sizing:border-box;min-height:180px;width:100%;font:inherit;color:var(--ink);background:var(--tile-bg);border:1px solid var(--border);padding:12px;border-radius:8px}
 .oc-panel button{font:inherit;padding:11px 16px;border:1px solid var(--border);border-radius:8px;cursor:pointer;color:var(--ink);background:var(--tile-bg)}
 .oc-panel button:disabled{opacity:.5;cursor:default}
-.oc-triage{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.oc-triage{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
 .oc-triage label{display:grid;gap:6px}
 .oc-triage select{width:100%;font:inherit;background:var(--tile-bg);color:var(--ink);
  border:1px solid var(--border);padding:10px;border-radius:8px}
@@ -58,6 +58,13 @@
 <option value="unobserved">Neither note present</option>
 <option value="shared-reference">Shared evidence reference</option>
 <option value="shape-ambiguity">Shape ambiguity in either note</option>
+</select></label>
+<label for="oc-cohort">Color-warning source cohort
+<select id="oc-cohort" disabled>
+<option value="all">All 49 warnings</option>
+<option value="introduced">23 newly close pairs</option>
+<option value="resolved">21 original warnings resolved</option>
+<option value="retained">5 retained warnings</option>
 </select></label>
 <label for="oc-order">Displayed row order
 <select id="oc-order" disabled>

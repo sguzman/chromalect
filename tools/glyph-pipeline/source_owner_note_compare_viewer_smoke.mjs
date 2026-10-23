@@ -45,7 +45,7 @@ class Element{
 }
 function setup(data=sources){
  const ids=["oc-status","oc-first","oc-second","oc-compare","oc-summary","oc-table","oc-json",
- "oc-filter","oc-order","oc-visible"];
+ "oc-filter","oc-order","oc-cohort","oc-visible"];
  const nodes=Object.fromEntries(ids.map(id=>[id,new Element()]));
  nodes["oc-compare"].disabled=true;
  const document={getElementById:id=>nodes[id],createElement:()=>new Element()};
@@ -78,7 +78,25 @@ assert.ok(!deepLink.href.includes("evidence"));
 assert.match(v["oc-visible"].textContent,/49 of 49/);
 assert.equal(v["oc-filter"].disabled,false);
 assert.equal(v["oc-order"].disabled,false);
+assert.equal(v["oc-cohort"].disabled,false);
 const untouchedExport=v["oc-json"].value;
+for(const [cohort,count] of [["introduced",23],["resolved",21],["retained",5],
+ ["all",49]]){
+ v["oc-cohort"].value=cohort;v["oc-cohort"].events.change();
+ assert.equal(v["oc-table"].children.length,count,cohort);
+ assert.equal(v["oc-json"].value,untouchedExport);
+}
+v["oc-cohort"].value="invalid-cohort";v["oc-cohort"].events.change();
+assert.equal(v["oc-cohort"].value,"all");
+assert.match(v["oc-status"].textContent,/Comparison view rejected/);
+const firstCohort=sources[
+ "glyphs/research/heldout-identification-target-v0.1/index-v0.1.json"]
+ .targets[0].reviewState;
+v["oc-filter"].value="disagreeing";v["oc-filter"].events.change();
+v["oc-cohort"].value=firstCohort;v["oc-cohort"].events.change();
+assert.equal(v["oc-table"].children.length,1);
+v["oc-cohort"].value="all";v["oc-cohort"].events.change();
+v["oc-filter"].value="all";v["oc-filter"].events.change();
 for(const [filter,expected] of [["disagreeing",1],["matching",0],
  ["onlyFirst",0],["onlySecond",0],["unobserved",48],
  ["shared-reference",1],["shape-ambiguity",0],["all",49]]){
@@ -113,6 +131,7 @@ v["oc-first"].events.input();
 assert.equal(v["oc-table"].children.length,0);
 assert.equal(v["oc-json"].value,"");
 assert.equal(v["oc-filter"].disabled,true);
+assert.equal(v["oc-cohort"].disabled,true);
 assert.match(v["oc-status"].textContent,/Local input changed/);
 v["oc-second"].value=JSON.stringify({...b,session:{...b.session,sourceOwnerCertifications:1}});
 v["oc-compare"].events.click();
@@ -131,7 +150,7 @@ assert.equal(bad["oc-compare"].disabled,true);
 assert.match(bad["oc-status"].textContent,/Cannot validate source manifests/);
 const html=fs.readFileSync("site/component-owner-compare.html","utf8");
 for(const id of ["oc-status","oc-first","oc-second","oc-compare","oc-summary","oc-table","oc-json",
- "oc-filter","oc-order","oc-visible"])
+ "oc-filter","oc-order","oc-cohort","oc-visible"])
  assert.ok(html.includes('id="'+id+'"'));
 assert.ok(!viewer.includes("innerHTML"));
 assert.ok(!viewer.includes("localStorage"));
