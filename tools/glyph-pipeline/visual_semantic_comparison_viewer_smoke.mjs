@@ -59,7 +59,7 @@ class Node{
  setAttribute(name,val){this.attrs[name]=String(val);}
 }
 function start(glyphs=profile,meanings=semantic,reviews=review,hash=""){
- const ids=["vsc-pick","vsc-focus","vsc-warning","vsc-back","vsc-forward","vsc-sense","vsc-reveal",
+ const ids=["vsc-pick","vsc-focus","vsc-warning","vsc-back","vsc-forward","vsc-sense","vsc-reveal","vsc-operators",
   "vsc-size","vsc-size-label","vsc-panels","vsc-source","vsc-status","vsc-count"];
  const nodes=Object.fromEntries(ids.map(id=>[id,new Node("div")]));
  nodes["vsc-size"].value="112";nodes["vsc-focus"].value="all";
@@ -155,6 +155,16 @@ assert.ok(ui["vsc-pick"].children.length>1);
 assert.equal(ui["vsc-sense"].children.length,2);
 ui["vsc-focus"].value="all";ui["vsc-focus"].listeners.change();
 assert.equal(ui["vsc-pick"].children.length,1000);
+ui["vsc-pick"].value="11";ui["vsc-pick"].listeners.change();
+assert.equal(ui["vsc-panels"].children[2].children[2].children[1].children[0].className,"vsc-emoji");
+ui["vsc-operators"].checked=true;ui["vsc-operators"].listeners.change();
+assert.equal(ui["vsc-panels"].children[2].children[2].children[1].children[0].className,
+ "vsc-semantic-operator");
+assert.equal(ui["vsc-panels"].children[2].children[2].children[1].children[0].textContent,"▶");
+assert.match(ui["vsc-panels"].children[2].children[2].children[1].attrs["aria-label"],/technical event marker visible/);
+ui["vsc-operators"].checked=false;ui["vsc-operators"].listeners.change();
+assert.equal(ui["vsc-panels"].children[2].children[2].children[1].children[0].className,"vsc-emoji");
+
 
 function refuse(change){
  const a=structuredClone(profile),b=structuredClone(semantic),c=structuredClone(review);
@@ -181,7 +191,7 @@ for(const mutate of [
  assert.match(bad["vsc-status"].textContent,/Cannot verify/);
 }
 for(const id of ["vsc-pick","vsc-focus","vsc-warning","vsc-back","vsc-forward","vsc-sense",
- "vsc-reveal","vsc-size","vsc-size-label","vsc-panels",
+ "vsc-reveal","vsc-operators","vsc-size","vsc-size-label","vsc-panels",
  "vsc-source","vsc-status","vsc-count"])
  assert.match(html,new RegExp('id="'+id+'"'));
 assert.ok(!script.includes("innerHTML"));
