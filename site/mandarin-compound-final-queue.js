@@ -73,10 +73,11 @@ async function load(){
   const urls=["phonetics/unadjudicated-compound-final-review-queue-v0.1.json",
    "pronunciation-citations-0001-1000.json",
    "phonetics/mandarin-final-spelling-context-gates-v0.1.json",
-   "phonetics/external-orthographic-spelling-rule-crosswalk-v0.1.json"];
+   "phonetics/external-orthographic-spelling-rule-crosswalk-v0.1.json",
+   "phonetics/external-umlaut-spelling-rule-crosswalk-v0.1.json"];
   const resp=await Promise.all(urls.map(url=>fetch(url)));
   if(resp.some(x=>!x.ok))throw Error("Pinned workqueue or source citations unavailable");
-  const [data,source,warnings,external]=await Promise.all(resp.map(x=>x.json()));
+  const [data,source,warnings,external,umlaut]=await Promise.all(resp.map(x=>x.json()));
   if(data.schema!=="chromalect.phonetics.unadjudicated-compound-final-review-queue.v0.1"||
      data.status!=="research_triage_only_no_proposed_ipa_segmentations_or_accepted_phonemes"||
      source.schema!=="chromalect.pronunciation-citations.v0"||
@@ -111,7 +112,24 @@ async function load(){
      external.references.length!==1||
      external.references[0].id!=="polyu-pinyin-spelling"||
      external.references[0].url!=="https://www.polyu.edu.hk/bepth/introduction-to-phonetics/spelling-rules-in-pinyin/?sc_lang=en"||
-     !Array.isArray(external.records)||external.records.length!==3)
+     !Array.isArray(external.records)||external.records.length!==3||
+     umlaut.schema!=="chromalect.phonetics.external-umlaut-spelling-rule-crosswalk.v0.1"||
+     umlaut.status!=="research_only_written_spelling_correspondence_not_phonological_adjudication"||
+     umlaut.source.citationBlobSHA!==source.source.blob_sha||
+     umlaut.source.noLicensedSentenceTextCopied!==true||
+     umlaut.source.componentPaletteChanged!==false||
+     umlaut.summary.umlautRuleFamilies!==4||
+     umlaut.summary.sourceReadingUsesInThoseFamilies!==71||
+     umlaut.summary.combinedDocumentedWarningFamilies!==7||
+     umlaut.summary.combinedSourceReadingUses!==134||
+     umlaut.summary.remainingWarningFamilies!==2||
+     umlaut.summary.remainingSourceUses!==79||
+     umlaut.summary.independentPhonologicalApprovals!==0||
+     umlaut.summary.humanDecodingTrials!==0||
+     umlaut.references.length!==1||
+     umlaut.references[0].id!=="polyu-pinyin-spelling"||
+     umlaut.references[0].url!==external.references[0].url||
+     !Array.isArray(umlaut.records)||umlaut.records.length!==4)
    throw Error("Workqueue evidence boundary is not valid");
   const warns=new Map();
   for(const r of warnings.records)for(const t of r.observedTokenTriples){
@@ -144,6 +162,34 @@ async function load(){
   if(referenced!==63||
      warnings.records.find(x=>x.id==="palatal_written_un")?.observedReadingCount!==18)
    throw Error("Incomplete separation of written un contexts");
+  const umlautCases=[
+   ["palatal_written_u","u","ü",33],
+   ["palatal_written_un","un","ün",18],
+   ["palatal_written_ue","ue","üe",10],
+   ["palatal_written_uan","uan","üan",10]
+  ];
+  let umlautUses=0;
+  for(let i=0;i<umlautCases.length;i++){
+   const [family,written,expanded,uses]=umlautCases[i],rule=umlaut.records[i];
+   const warning=warnings.records.find(x=>x.id===family);
+   if(!warning||warning.observedReadingCount!==uses||
+      !warning.observedTokenTriples.every(x=>x.final===written&&
+       ["j","q","x","y"].includes(x.initial))||
+      rule.cautionFamily!==family||rule.writtenFinal!==written||
+      rule.expandedOrthographicComparison!==expanded||
+      rule.observedSourceReadingUses!==uses||
+      rule.sourceRule!=="polyu-pinyin-spelling"||
+      rule.ruleClass!=="umlaut_omission_after_j_q_x_or_y"||
+      rule.comparisonStatus!=="documented_spelling_rule_only"||
+      rule.phonologicalRepresentation!==null||
+      rule.ipaApproval!==false||rule.contextualReadingApproval!==false)
+    throw Error("Unverified external umlaut spelling correspondence");
+   umlautUses+=uses;
+  }
+  const covered=new Set([...external.records,...umlaut.records].map(x=>x.cautionFamily));
+  if(umlautUses!==71||covered.size!==7||
+     warnings.records.filter(x=>!covered.has(x.id)).reduce((n,x)=>n+x.observedReadingCount,0)!==79)
+   throw Error("Overlapping or incomplete sourced caution families");
   const counts=new Map();
   for(const c of source.characters)for(const r of c.readings){
    const item=counts.get(r.final)||{total:0,warn:0};
@@ -178,10 +224,10 @@ async function load(){
   if(unique.size!==27||totals.count!==739||totals.warn!==101||
      counts.size!==33)throw Error("Incomplete final source cohort");
   records=data.records;sourceCitation=source.characters;
-  orthographicRules=external.records;sourceRuleURL=external.references[0].url;
+  orthographicRules=[...external.records,...umlaut.records];sourceRuleURL=external.references[0].url;
   $("compound-summary").textContent="27 written final categories deferred · 739 source uses · "+
    "101 explicitly cautioned uses · 0 phonological approvals.";
-  $("compound-status").textContent="All 27 source identities verified; 3 externally sourced spelling patterns linked, with zero sound approvals.";
+  $("compound-status").textContent="All 27 source identities verified; 7 written-spelling warning families linked to a published rule, with zero sound approvals.";
   show();
  }catch(e){
   records=[];$("compound-list").replaceChildren();
