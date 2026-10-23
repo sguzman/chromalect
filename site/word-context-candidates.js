@@ -3,7 +3,7 @@
 "use strict";
 const $=id=>document.getElementById(id);
 if(["word-query","word-scope","word-status","word-stats","word-results"].some(id=>!$(id)))return;
-let entries=[],contributorMap=new Map(),liveAuditMap=new Map(),machineHintMap=new Map(),externalWordMap=new Map();
+let entries=[],contributorMap=new Map(),liveAuditMap=new Map(),machineHintMap=new Map(),externalWordMap=new Map(),orthographyCaveat=null;
 function render(){
  const q=$("word-query").value.trim(),scope=$("word-scope").value;
  const shown=entries.filter(r=>(scope==="all"||(scope==="with"?r.sentenceIds.length>0:r.sentenceIds.length===0))&&
@@ -48,6 +48,14 @@ function render(){
    wordEntry.textContent="Wiktionary word-entry reading: "+external.externalPublishedWordPinyin+
     " · not a sentence pronunciation verification";card.appendChild(wordEntry);
   }
+  if(orthographyCaveat&&r.leadId===orthographyCaveat.application.leadId){
+   const aside=document.createElement("p"),a=document.createElement("a");
+   aside.className="word-meta";
+   aside.textContent="Normative Pinyin orthography: if this occurrence is verb + aspect particle 过, joined spelling applies. The ICU split is not an independent word-boundary judgment. ";
+   a.href=orthographyCaveat.source.officialRegistryURL;a.target="_blank";
+   a.rel="noopener noreferrer";a.textContent="GB/T 16159-2012 (current official standard)";
+   aside.appendChild(a);card.appendChild(aside);
+  }
   $("word-results").appendChild(card);
  }
  $("word-stats").textContent=shown.length+" word leads · "+shown.reduce((n,r)=>n+r.sentenceIds.length,0)+" selected source IDs in view";
@@ -55,16 +63,17 @@ function render(){
 }
 async function load(){
  try{
-  const [leadResponse,matchResponse,creditResponse,auditResponse,hintResponse,externalResponse]=await Promise.all([
+  const [leadResponse,matchResponse,creditResponse,auditResponse,hintResponse,externalResponse,standardResponse]=await Promise.all([
    fetch("semantic/dictionary-word-surface-leads-v0.1.json"),
    fetch("semantic/tatoeba-word-surface-id-index-v0.1.json"),
    fetch("semantic/tatoeba-word-candidate-attribution-v0.1.json"),
    fetch("semantic/tatoeba-live-word-record-audit-summary-v0.1.json"),
    fetch("semantic/tatoeba-icu-word-segmentation-index-v0.1.json"),
-   fetch("semantic/external-word-reading-observations-v0.1.json")]);
-  if(!leadResponse.ok||!matchResponse.ok||!creditResponse.ok||!auditResponse.ok||!hintResponse.ok||!externalResponse.ok)throw Error("Missing source data");
-  const [source,match,credits,audit,hints,externalWords]=await Promise.all([
-   leadResponse.json(),matchResponse.json(),creditResponse.json(),auditResponse.json(),hintResponse.json(),externalResponse.json()]);
+   fetch("semantic/external-word-reading-observations-v0.1.json"),
+   fetch("semantic/mandarin-word-orthography-standard-caveat-v0.1.json")]);
+  if(!leadResponse.ok||!matchResponse.ok||!creditResponse.ok||!auditResponse.ok||!hintResponse.ok||!externalResponse.ok||!standardResponse.ok)throw Error("Missing source data");
+  const [source,match,credits,audit,hints,externalWords,standard]=await Promise.all([
+   leadResponse.json(),matchResponse.json(),creditResponse.json(),auditResponse.json(),hintResponse.json(),externalResponse.json(),standardResponse.json()]);
   if(source.schema!=="chromalect.semantic.dictionary-word-surface-leads.v0.1"||
      source.status!=="publisher_dictionary_word_leads_not_independent_usage_attestations"||
      source.leads.length!==8||
@@ -200,6 +209,30 @@ async function load(){
    externalWordMap.set(r.leadId,r);
   }
   if(externalWordMap.size!==8)throw Error("Incomplete external word-entry reference cohort");
+  if(standard.schema!=="chromalect.semantic.mandarin-word-orthography-standard-caveat.v0.1"||
+     standard.status!=="normative_pinyin_word_spelling_rule_not_attested_sentence_segmentation"||
+     standard.source.standard!=="GB/T 16159-2012"||
+     standard.source.sourceSection!=="1.2.1"||
+     standard.source.currentStatusAsOf!=="2026-10-23"||
+     standard.source.fullStandardTextCopied!==false||
+     standard.application.leadId!=="guo-aspect"||
+     standard.application.writtenLead!=="看过"||
+     standard.application.icuMachineHintNotDispositive!==true||
+     standard.application.wordBoundariesIndependentlyVerified!==0||
+     standard.application.readingsIndependentlyVerified!==0||
+     standard.application.sentenceReusePermissionsCleared!==0||
+     standard.application.lexicalSenseApprovals!==0||
+     standard.application.linkedCorpusSentenceIDs.length!==5)
+    throw Error("Pinyin word-orthography rule provenance or uncertainty was lost");
+  const affected=entries.find(r=>r.leadId===standard.application.leadId);
+  if(!affected||affected.sentenceIds.length!==5||
+     affected.sentenceIds.some(id=>!standard.application.linkedCorpusSentenceIDs.includes(id))||
+     standard.application.linkedCorpusSentenceIDs.some(id=>contributorMap.get(id)?.leadId!==affected.leadId)||
+     standard.application.linkedCorpusSentenceIDs.filter(id=>machineHintMap.get(id).segmentationHint==="multiple_icu_segments").length!==4||
+     standard.application.linkedCorpusSentenceIDs.filter(id=>machineHintMap.get(id).segmentationHint==="cuts_icu_segment").length!==1||
+     !standard.source.officialRegistryURL.startsWith("https://openstd.samr.gov.cn/"))
+    throw Error("Normative source caveat does not match the pinned source cohort");
+  orthographyCaveat=standard;
   render();
  }catch(error){entries=[];$("word-status").textContent="Unable to validate word-source records: "+error.message;}
 }

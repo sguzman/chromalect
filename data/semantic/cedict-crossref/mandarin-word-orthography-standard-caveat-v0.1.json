@@ -1,0 +1,39 @@
+{
+  "schema": "chromalect.semantic.mandarin-word-orthography-standard-caveat.v0.1",
+  "status": "normative_pinyin_word_spelling_rule_not_attested_sentence_segmentation",
+  "source": {
+    "standard": "GB/T 16159-2012",
+    "chineseTitle": "汉语拼音正词法基本规则",
+    "officialRegistryURL": "https://openstd.samr.gov.cn/bzgk/std/newGbInfo?hcno=5645BD8DB9D8D73053AD3A2397E15E74",
+    "ministryNoticeURL": "https://www.moe.gov.cn/jyb_xwfb/gzdt_gzdt/s5987/201207/t20120717_139437.html",
+    "educationalPublicationURL": "https://www.htu.edu.cn/yw/2018/1008/c14029a129573/page.htm",
+    "sourceSection": "1.2.1",
+    "standardizedRuleScope": "Verbs followed by the aspectual particles 着, 了, 过 are joined in Hanyu Pinyin orthography; contextual grammatical analysis is separately required.",
+    "currentStatusAsOf": "2026-10-23",
+    "fullStandardTextCopied": false
+  },
+  "application": {
+    "leadId": "guo-aspect",
+    "writtenLead": "看过",
+    "conditionalInterpretation": "If 看 is a verb and 过 is its aspect particle in a given occurrence, the standard's joined Pinyin spelling rule is relevant. No selected sentence has been independently analysed.",
+    "icuMachineHintNotDispositive": true,
+    "needsHumanWordBoundaryAnalysis": true,
+    "needsIndependentContextualReadingAnalysis": true,
+    "linkedCorpusSentenceIDs": [
+      "10066357",
+      "13972768",
+      "2440828",
+      "13751971",
+      "9409447"
+    ],
+    "observedMachineHints": {
+      "cuts_icu_segment": 1,
+      "multiple_icu_segments": 4,
+      "single_icu_segment": 0
+    },
+    "wordBoundariesIndependentlyVerified": 0,
+    "readingsIndependentlyVerified": 0,
+    "sentenceReusePermissionsCleared": 0,
+    "lexicalSenseApprovals": 0
+  }
+}
