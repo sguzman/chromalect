@@ -4,6 +4,8 @@
 <meta name="description" content="Source-exact held-out Chinese glyph color warning comparison, with original and fold-trained component colors.">
 <title>Held-out glyph color warning review · Chromalect</title>
 <link rel="stylesheet" href="style.css"><script src="theme.js"></script>
+<script src="semantic-grammar.js" defer></script>
+<script src="reference-contrast.js" defer></script>
 <script src="heldout-color-warning-review.js" defer></script>
 <style>
 .hv-controls{display:flex;flex-wrap:wrap;gap:12px;align-items:end;
@@ -21,7 +23,7 @@
  border-radius:12px;padding:16px;margin:0}
 .hv-panel figcaption{font-weight:700;margin-bottom:12px}
 .hv-canvas{background:var(--hv-surface,transparent);
- display:flex;align-items:center;justify-content:center;min-height:185px;border-radius:8px}
+ display:flex;align-items:center;justify-content:center;flex-direction:column;gap:8px;min-height:185px;border-radius:8px}
 .hv-glyph{max-width:100%;object-fit:contain}
 .hv-evidence{background:var(--panel);border:1px solid var(--border);
  border-radius:12px;padding:17px;margin:18px 0}
@@ -32,6 +34,8 @@
 .hv-swatch{background:var(--hv-color);width:24px;height:24px;
  display:inline-block;border-radius:5px;border:1px solid var(--subtle-outline)}
 .hv-code,.hv-metadata{color:var(--sub);font-size:12px;overflow-wrap:anywhere}
+.hv-cue{font:30px/1.5 "Noto Color Emoji","Segoe UI Emoji",system-ui,sans-serif;text-align:center;min-height:40px}
+.hv-cue-atom{display:inline-block}
 .hv-caution{border-left:3px solid var(--active-border);
  padding:12px 16px;background:var(--panel);margin:16px 0}
 </style></head><body>
@@ -40,7 +44,7 @@
 <div class="eyebrow">Color discrimination research · out-of-fold source glyphs</div>
 <h1>Inspect held-out component-color warning pairs</h1>
 <p class="intro">Each experimental color assignment shown here was fitted using 800 Chinese characters without the selected character's 200-member test fold. The original v0.6 colors are retained next to the independently generated test-fold colors. Both SVGs have exactly the same original source paths, component owners and transforms; only source-authorized color fills can differ.</p>
-<div class="hv-caution">The ΔOK 0.07 threshold creates <strong>machine review priorities</strong>, not a verdict on human component distinguishability, color vision, readability, educational benefit or linguistic semantics. No source glyph or production palette has been altered or independently certified.</div>
+<div class="hv-caution">Source-pair luminance contrast ratios are also displayed as ungraded numerical diagnostics; a single ratio cannot certify glyph legibility. Optional provisional semantic pictograms are identical across both color conditions and remain independently unverified. The ΔOK 0.07 threshold creates <strong>machine review priorities</strong>, not a verdict on human component distinguishability, color vision, readability, educational benefit or linguistic semantics. No source glyph or production palette has been altered or independently certified.</div>
 <p id="hv-status" role="status" aria-live="polite">Verifying held-out component colors and unchanged source SVG paths.</p>
 <p id="hv-summary">Loading fold-specific warnings.</p>
 <div class="hv-controls">
@@ -64,10 +68,14 @@
 <option value="theme">System/theme</option><option value="white">White</option>
 <option value="black">Black</option></select></label>
 <label class="hv-check" for="hv-gray"><input id="hv-gray" type="checkbox">Grayscale</label>
+<label class="hv-check" for="hv-show-meaning"><input id="hv-show-meaning" type="checkbox">Same provisional meaning on both</label>
+<label for="hv-sense">Provisional sense<select id="hv-sense"></select></label>
+<label class="hv-check" for="hv-reveal"><input id="hv-reveal" type="checkbox">Reveal meaning labels</label>
 </div>
 <p id="hv-count"></p>
 <div id="hv-gallery" class="hv-comparison" aria-label="Original versus independently fold-trained source-matched Chinese glyph colors"></div>
 <div id="hv-pairs" class="hv-evidence" aria-label="Source component owners and pair distances"></div>
+<div id="hv-semantic" class="hv-evidence" aria-label="Unverified meaning candidate provenance"></div>
 <p>Source-ranked pair evidence includes source and fold-specific component IDs, hex values, measured OKLab distance and introduced/resolved/retained status. The <a href="glyphs/research/heldout-warning-v0.1/index-v0.1.json">generated manifest</a> records byte-level source and candidate SHA-256 checksums, with no visual certification. See the <a href="semantic-group-hue-heldout.html">full five-fold result</a> and <a href="semantic-group-hue-fivefold-heldout-v0.1.json">machine-readable fold exclusions</a>.</p>
 </main><footer class="wrap">
 <a href="semantic-group-hue-heldout.html">Held-out study</a> ·
