@@ -13,13 +13,17 @@ const component=c=>({form:c.shape,component_id:c.id,hex:c.color});
 const manifest={
  schema:"chromalect.component-stroke-mappings.v1",
  palette_ref:"mandarin-component-identity@0.6.0",
- glyph_count:2,
+ glyph_count:3,
  glyphs:[
   {character:"一",svg:"U+4E00.svg",unicode_codepoint:"U+4E00",
    independently_visually_certified:false,
    components:[component(first),component(unhinted)],
    source_path_owner_ids:[first.id,unhinted.id]},
   {character:"二",svg:"U+4E8C.svg",unicode_codepoint:"U+4E8C",
+   independently_visually_certified:false,
+   components:[component(unhinted)],
+   source_path_owner_ids:[unhinted.id]},
+  {character:"三",svg:"U+4E09.svg",unicode_codepoint:"U+4E09",
    independently_visually_certified:false,
    components:[component(unhinted)],
    source_path_owner_ids:[unhinted.id]}
@@ -29,7 +33,8 @@ const shape=(data)=>'<svg viewBox="0 0 1024 1024"><g transform="translate(0,0)">
  '" data-component="'+c.id+'"/>').join("")+'</g></svg>';
 const assets={
  "U+4E00.svg":shape([first,unhinted]),
- "U+4E8C.svg":shape([unhinted])
+ "U+4E8C.svg":shape([unhinted]),
+ "U+4E09.svg":shape([unhinted])
 };
 function run(a=catalog,b=manifest,c=palette,d=assets){
  return deriveSourceGlyphCounterfactual(a,b,c,name=>{
@@ -40,6 +45,8 @@ function run(a=catalog,b=manifest,c=palette,d=assets){
 const original=JSON.stringify(assets),colors=JSON.stringify(palette);
 const {manifest:out,outputFiles}=run();
 assert.equal(out.summary.catalogGlyphs,2);
+assert.equal(out.summary.generatedSourceManifestGlyphs,3);
+assert.equal(out.summary.excludedOutsideActiveTranche,1);
 assert.equal(out.summary.affectedGlyphs,1);
 assert.equal(out.summary.untouchedGlyphs,1);
 assert.equal(out.summary.alteredSourcePathFills,1);
@@ -54,6 +61,7 @@ assert.equal(out.summary.humanComprehensionTrials,0);
 assert.equal(outputFiles.size,1);
 assert.ok(outputFiles.has("U+4E00.svg"));
 assert.ok(!outputFiles.has("U+4E8C.svg"));
+assert.ok(!outputFiles.has("U+4E09.svg"));
 const research=outputFiles.get("U+4E00.svg");
 assert.ok(research.includes('data-component="cmp-0001"'));
 assert.ok(research.includes('fill="'+unhinted.color+'"'));
