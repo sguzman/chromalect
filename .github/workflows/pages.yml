@@ -280,6 +280,9 @@ jobs:
           node tools/glyph-pipeline/mandarin_final_spelling_context_gates_smoke.mjs
           node tools/glyph-pipeline/mandarin_simple_final_features.mjs --check
           node tools/glyph-pipeline/mandarin_simple_final_features_smoke.mjs
+          node --check site/mandarin-simple-final-features.js
+          node tools/glyph-pipeline/mandarin_simple_final_features_viewer_smoke.mjs
+          test -s site/mandarin-simple-final-features.html
           node tools/glyph-pipeline/written_final_symbol_control.mjs --check
           node tools/glyph-pipeline/written_final_symbol_control_smoke.mjs
           node --check site/mandarin-final-symbols.js

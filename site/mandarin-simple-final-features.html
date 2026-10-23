@@ -1,0 +1,36 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark">
+<title>Mandarin simple-final feature proposals · Chromalect</title>
+<link rel="stylesheet" href="style.css"><script src="theme.js"></script>
+<script src="mandarin-simple-final-features.js" defer></script>
+<style>
+.vowel-controls{display:flex;gap:18px;align-items:center;flex-wrap:wrap;margin:20px 0}
+.vowel-controls label{display:flex;gap:8px;align-items:center}
+.vowel-controls select{font:inherit;color:var(--ink);background:var(--panel);border:1px solid var(--border);border-radius:8px;padding:9px}
+.vowel-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:20px 0}
+.vowel-cell{min-height:98px;background:var(--panel);border:1px solid var(--border);border-radius:10px;padding:10px}
+.vowel-axis{color:var(--sub);font-size:12px}
+.vowel-tag{display:inline-flex;gap:8px;align-items:center;margin:6px 8px 0 0}
+.vowel-symbol{font-size:30px;line-height:1}
+.vowel-token{font-weight:700}
+.vowel-records{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;margin:20px 0}
+.vowel-record{border:1px solid var(--border);border-radius:10px;padding:14px;background:var(--panel)}
+.vowel-record h2{font-size:16px;margin:0 0 8px}
+.vowel-caution{font-size:13px;color:var(--sub);margin:6px 0}
+</style></head><body><header class="wrap"><div class="brand"><b>CHROMALECT</b>
+<small>Language, made visible</small></div></header>
+<main class="wrap"><div class="eyebrow">Mandarin vowel research · unapproved feature hypotheses</div>
+<h1>Six simple-final feature proposals</h1>
+<p class="intro">An experimental placement of six conventional written Pinyin simple finals by coarse proposed vowel height and backness. Rings distinguish proposed rounding categories. The source letter spellings, palette colors and character outlines remain unchanged; these locations are research hypotheses rather than a measured Mandarin acoustic space.</p>
+<div class="vowel-controls">
+<label for="vowel-mode">Code display<select id="vowel-mode"><option value="features">Proposed feature markers</option><option value="pinyin">Plain Pinyin letters</option></select></label>
+<label><input type="checkbox" id="vowel-color"> Include existing final identity colors</label></div>
+<p id="vowel-summary">Loading source-citation statistics.</p>
+<p id="vowel-status" role="status" aria-live="polite">Validating provisional vowel categories.</p>
+<div id="vowel-grid" class="vowel-grid"></div>
+<h2>Source evidence and contextual warnings</h2>
+<div id="vowel-list" class="vowel-records"></div>
+<p>Source counts do not establish sounds. In particular, written \`i\` after sibilants, written \`u\` after palatal classes, and written \`o\` in certain labial contexts may not instantiate the default proposed vowel category. The underlying <a href="phonetics/mandarin-simple-final-feature-candidates-v0.1.json">machine-readable ledger</a> retains the original source frequencies, context cautions, and zero approval counters. See the <a href="https://github.com/sguzman/chromalect/blob/main/docs/mandarin-simple-final-features.md">research qualifications</a>.</p>
+</main><footer class="wrap"><a href="mandarin-final-symbols.html">Written-final shapes</a> ·
+<a href="mandarin-citation-cell.html">Integrated citation cell</a> ·
+<a href="roadmap-status.html">Roadmap</a></footer></body></html>
