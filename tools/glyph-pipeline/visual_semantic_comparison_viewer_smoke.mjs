@@ -58,7 +58,7 @@ class Node{
  addEventListener(name,fn){this.listeners[name]=fn;}
  setAttribute(name,val){this.attrs[name]=String(val);}
 }
-function start(glyphs=profile,meanings=semantic,reviews=review){
+function start(glyphs=profile,meanings=semantic,reviews=review,hash=""){
  const ids=["vsc-pick","vsc-focus","vsc-warning","vsc-back","vsc-forward","vsc-sense","vsc-reveal",
   "vsc-size","vsc-size-label","vsc-panels","vsc-source","vsc-status","vsc-count"];
  const nodes=Object.fromEntries(ids.map(id=>[id,new Node("div")]));
@@ -71,7 +71,7 @@ function start(glyphs=profile,meanings=semantic,reviews=review){
    return {src:"https://example.test/chromalect/visual-semantic-comparison.js"};
   },currentScript:null
  };
- const ctx={document,URL,Map,Set,Math,Array,Number,Object,Error,JSON,
+ const ctx={document,location:{hash},URL,Map,Set,Math,Array,Number,Object,Error,JSON,
   fetch:async url=>({ok:true,json:async()=>url.startsWith("profiles/")?glyphs:url.startsWith("glyphs/")?reviews:meanings})};
  ctx.globalThis=ctx;
  vm.runInNewContext(grammar,ctx);
@@ -84,6 +84,11 @@ async function settle(nodes){
   await Promise.resolve();
 }
 const ui=start();await settle(ui);
+const direct=start(profile,semantic,review,"#c0050");await settle(direct);
+assert.match(direct["vsc-count"].textContent,/source rank 50/);
+assert.match(direct["vsc-warning"].textContent,/2 component pairs/);
+const badFragment=start(profile,semantic,review,"#c9999");await settle(badFragment);
+assert.match(badFragment["vsc-count"].textContent,/source rank 1/);
 assert.equal(ui["vsc-panels"].children.length,3);
 assert.equal(ui["vsc-pick"].children.length,1000);
 assert.match(ui["vsc-warning"].textContent,/No close-color source warning/);
@@ -180,4 +185,4 @@ for(const id of ["vsc-pick","vsc-focus","vsc-warning","vsc-back","vsc-forward","
  "vsc-source","vsc-status","vsc-count"])
  assert.match(html,new RegExp('id="'+id+'"'));
 assert.ok(!script.includes("innerHTML"));
-console.log("1,000 source ranks, matched geometry in three visual conditions, provisional semantics and eight fail-closed cases checked.");
+console.log("1,000 source ranks, matched geometry in three visual conditions, provisional semantics and fourteen fail-closed cases checked.");
