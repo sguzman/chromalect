@@ -4,10 +4,10 @@
 "use strict";
 const $=id=>document.getElementById(id);
 const ids=["cell-query","cell-reading","cell-color","cell-initial","cell-final","cell-tone",
- "cell-final-symbols","cell-initial-symbols","cell-status","cell-code","cell-native","cell-top","cell-side","cell-bottom","cell-source"];
+ "cell-final-symbols","cell-initial-symbols","cell-status","cell-code","cell-risk","cell-native","cell-top","cell-side","cell-bottom","cell-source"];
 if(ids.some(id=>!$(id)))return;
 const NS="http://www.w3.org/2000/svg";
-let entries=[],onsets=new Map(),palette=null,tones=new Map(),finalGlyphs=new Map(),finalPrimitives=[],selectedIndex=0;
+let entries=[],onsets=new Map(),palette=null,tones=new Map(),finalGlyphs=new Map(),finalPrimitives=[],riskByTriple=new Map(),selectedIndex=0;
 const placePaths={
  bilabial:"M10 26 C10 8 90 8 90 26 C90 44 10 44 10 26 Z",
  labiodental:"M13 11 H87 V41 H13 Z",
@@ -113,6 +113,10 @@ function render(){
  $("cell-native").textContent=entry.character;
  $("cell-code").textContent="Rank "+entry.rank+" · "+entry.character+" · "+r.display+
   " · source citation spelling only";
+ const risk=riskByTriple.get(JSON.stringify([r.initial,r.final,r.tone]));
+ $("cell-risk").textContent=risk?
+  "Written-final research flag: "+risk.description+" · no independently approved IPA interpretation":
+  "No listed spelling-exception flag; absence is not independent phonological certification.";
  $("cell-top").replaceChildren();
  $("cell-side").replaceChildren();
  $("cell-bottom").replaceChildren();
@@ -167,10 +171,11 @@ async function load(){
    "phonetics/mandarin-initial-feature-candidates-v0.1.json",
    "phonetics/mandarin-citation-tone-contours-v0.1.json",
    "phonetics/citation-syllable-orthographic-codec-audit-v0.1.json",
-   "phonetics/written-final-symbol-control-v0.1.json"];
+   "phonetics/written-final-symbol-control-v0.1.json",
+   "phonetics/mandarin-final-spelling-context-gates-v0.1.json"];
   const responses=await Promise.all(urls.map(url=>fetch(url)));
   if(responses.some(r=>!r.ok))throw Error("Source citation or reference data missing");
-  const [citations,layers,initials,contours,audit,writtenSymbols]=await Promise.all(responses.map(r=>r.json()));
+  const [citations,layers,initials,contours,audit,writtenSymbols,riskIndex]=await Promise.all(responses.map(r=>r.json()));
   if(citations.schema!=="chromalect.pronunciation-citations.v0"||
      citations.tranche!=="0001-1000"||citations.characters.length!==1000||
      layers.schema!=="chromalect.presentation-layers.v0"||
@@ -201,6 +206,32 @@ async function load(){
      writtenSymbols.summary.humanSymbolDecodingTrials!==0||
      writtenSymbols.summary.learningResults!==0)
    throw Error("Geometric written-final code not source-backed or approved");
+  if(riskIndex.schema!=="chromalect.phonetics.mandarin-final-spelling-context-gates.v0.1"||
+     riskIndex.status!=="contextual_spelling_review_flags_not_verified_ipa_or_phonemic_finals"||
+     riskIndex.source.upstreamBlobSHA!==citations.source.blob_sha||
+     riskIndex.summary.sourceCitationReadings!==1171||
+     riskIndex.summary.flaggedSourceReadings!==197||
+     riskIndex.summary.flaggedDistinctWrittenTriples!==97||
+     riskIndex.summary.independentlyAdjudicatedFinalPhonemes!==0||
+     riskIndex.summary.approvedContextualPronunciations!==0||
+     riskIndex.summary.approvedAcousticTranscriptions!==0||
+     riskIndex.summary.learningStudyResults!==0||
+     !Array.isArray(riskIndex.records)||riskIndex.records.length!==8)
+   throw Error("Final-spelling source gate not validated");
+  riskByTriple=new Map();
+  for(const row of riskIndex.records){
+   if(row.independentIPAAnalysisApproved!==false||
+      row.certifiedAcousticRealizations!==0||
+      !Array.isArray(row.observedTokenTriples)||
+      row.observedTokenTriples.length!==row.uniqueCitationTriples)
+    throw Error("Final spelling exception improperly approved or truncated");
+   for(const triple of row.observedTokenTriples){
+    const key=JSON.stringify([triple.initial,triple.final,triple.tone]);
+    if(riskByTriple.has(key))throw Error("Overlapping final spelling exception rules");
+    riskByTriple.set(key,row);
+   }
+  }
+  if(riskByTriple.size!==97)throw Error("Incomplete spelling exception source");
   finalPrimitives=writtenSymbols.primitives;
   finalGlyphs=new Map();
   for(const rec of writtenSymbols.records){
@@ -245,10 +276,13 @@ async function load(){
    }
   }
   if(count!==1171)throw Error("Incomplete citation sample");
+  const flagged=entries.reduce((n,c)=>n+c.readings.filter(r=>
+   riskByTriple.has(JSON.stringify([r.initial,r.final,r.tone]))).length,0);
+  if(flagged!==197)throw Error("Source spelling warning occurrence count disagrees with source");
   choose(0);
   setMessage("1,000 characters · 1,171 source readings · independently toggled annotations · no study observations.");
  }catch(e){entries=[];$("cell-top").replaceChildren();$("cell-side").replaceChildren();
-  $("cell-bottom").replaceChildren();$("cell-native").textContent="";
+  $("cell-bottom").replaceChildren();$("cell-native").textContent="";$("cell-risk").textContent="";
   setMessage("Unable to validate citation-cell research data: "+e.message);}
 }
 $("cell-query").addEventListener("change",()=>{

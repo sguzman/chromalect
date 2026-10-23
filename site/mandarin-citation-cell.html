@@ -23,6 +23,7 @@ padding:10px;max-width:185px;min-width:124px;box-sizing:border-box}
 .cell-token{font-weight:700;font-size:16px}.cell-caption{text-align:center;color:var(--sub);font-size:12px}
 .cell-tone-svg{height:60px;width:145px;max-width:100%}
 .cell-final-svg{height:56px;max-width:150px;width:auto}
+.cell-caution{font-size:13px;padding:10px;border:1px solid var(--border);border-radius:8px;color:var(--sub)}
 .cell-initial-svg{height:55px;width:126px;max-width:100%}
 @media(max-width:620px){
  .cell-stage{grid-template-areas:"tone tone" "glyph initial" "final final";
@@ -51,13 +52,14 @@ padding:10px;max-width:185px;min-width:124px;box-sizing:border-box}
 </div>
 <p id="cell-status" role="status" aria-live="polite">Loading source-aligned citation records.</p>
 <p id="cell-code"></p>
+<p id="cell-risk" class="cell-caution" aria-live="polite"></p>
 <div class="cell-stage">
 <div id="cell-top"></div><div id="cell-side"></div>
 <div id="cell-native" class="cell-native" lang="zh-Hans" aria-label="Unmodified Chinese glyph"></div>
 <div id="cell-bottom"></div>
 </div>
 <p id="cell-source" class="intro"></p>
-<p>This is a visual layout proof, not a phonetic inventory approval or a comprehension experiment. Citation-tone T3 may not dip fully in connected speech; neutral-tone T0 deliberately has no fixed contour. The final label remains source spelling, not an IPA vowel/coda target. Its optional geometric symbol sequence is a reversible *letter-code control*, not an articulatory construction. The initial shape is a separate, unverified place/manner/aspiration coding proposal; written y, w and zero onset have no consonant figure.</p>
+<p>This is a visual layout proof, not a phonetic inventory approval or a comprehension experiment. Citation-tone T3 may not dip fully in connected speech; neutral-tone T0 deliberately has no fixed contour. The final label remains source spelling, not an IPA vowel/coda target. Context-dependent written-final exceptions appear as source research warnings, not assigned sound values. Its optional geometric symbol sequence is a reversible *letter-code control*, not an articulatory construction. The initial shape is a separate, unverified place/manner/aspiration coding proposal; written y, w and zero onset have no consonant figure.</p>
 <p><a href="mandarin-syllable-grammar.html">Structured citation grammar</a> ·
 <a href="mandarin-initial-features.html">Working initial code</a> ·
 <a href="mandarin-tone-contours.html">Citation-tone reference</a></p>
