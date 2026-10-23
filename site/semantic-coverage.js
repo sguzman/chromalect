@@ -377,7 +377,7 @@
   async function load() {
     try {
       const excerptBlocks=["0001-0200","0201-0400","0401-0600","0601-0800","0801-1000"];
-      const [response,profileResponse,lexicalResponse,auditResponse,reviewResponse,visibilityResponse,readinessResponse,polysemyResponse,readingAuditResponse,casefoldResponse,externalPilotResponse,externalDiscrepancyResponse,...dictionaryResponses]=await Promise.all([
+      const [response,profileResponse,lexicalResponse,auditResponse,reviewResponse,visibilityResponse,readinessResponse,polysemyResponse,readingAuditResponse,casefoldResponse,externalPilotResponse,externalDiscrepancyResponse,publisherSourceResponse,...dictionaryResponses]=await Promise.all([
         fetch("semantic/mandarin-1000-v0.1.json"),
         fetch("profiles/mandarin-1000-v1.json"),
         fetch("semantic/lexical-crossref-v0.1.json"),
@@ -390,12 +390,13 @@
         fetch("semantic/pinyin-reading-label-normalization-v0.1.json"),
         fetch("semantic/external-dictionary-reconnaissance-v0.1.json"),
         fetch("semantic/external-dictionary-discrepancy-v0.1.json"),
+        fetch("semantic/publisher-page-provenance-v0.2.json"),
         ...excerptBlocks.map(block=>fetch("semantic/dictionary-excerpts-"+block+".json"))
       ]);
-      if(!response.ok || !profileResponse.ok || !lexicalResponse.ok || !auditResponse.ok || !reviewResponse.ok || !visibilityResponse.ok || !readinessResponse.ok || !polysemyResponse.ok || !readingAuditResponse.ok || !casefoldResponse.ok || !externalPilotResponse.ok || !externalDiscrepancyResponse.ok || dictionaryResponses.some(r=>!r.ok))
+      if(!response.ok || !profileResponse.ok || !lexicalResponse.ok || !auditResponse.ok || !reviewResponse.ok || !visibilityResponse.ok || !readinessResponse.ok || !polysemyResponse.ok || !readingAuditResponse.ok || !casefoldResponse.ok || !externalPilotResponse.ok || !externalDiscrepancyResponse.ok || !publisherSourceResponse.ok || dictionaryResponses.some(r=>!r.ok))
         throw new Error("Character, dictionary or audit data unavailable");
-      const [data,profile,lexical,audit,review,visibility,readiness,polysemy,readingAudit,casefold,externalPilot,externalDiscrepancy]=await Promise.all([
-        response.json(),profileResponse.json(),lexicalResponse.json(),auditResponse.json(),reviewResponse.json(),visibilityResponse.json(),readinessResponse.json(),polysemyResponse.json(),readingAuditResponse.json(),casefoldResponse.json(),externalPilotResponse.json(),externalDiscrepancyResponse.json()
+      const [data,profile,lexical,audit,review,visibility,readiness,polysemy,readingAudit,casefold,externalPilot,externalDiscrepancy,publisherSources]=await Promise.all([
+        response.json(),profileResponse.json(),lexicalResponse.json(),auditResponse.json(),reviewResponse.json(),visibilityResponse.json(),readinessResponse.json(),polysemyResponse.json(),readingAuditResponse.json(),casefoldResponse.json(),externalPilotResponse.json(),externalDiscrepancyResponse.json(),publisherSourceResponse.json()
       ]);
       const dictionaryBlocks=await Promise.all(dictionaryResponses.map(r=>r.json()));
       const dictionaryRecords=dictionaryBlocks.flatMap((block,i)=>{
@@ -458,6 +459,33 @@
         r.productionVerified!==false))
         throw new Error("External dictionary desk packets are duplicated or do not match high-attention characters");
       bindExternalResearch(researchRanks.size,polysemy.summary.higherPriority);
+      if(publisherSources.schema!=="chromalect.semantic.publisher-page-provenance.v0.2"||
+         publisherSources.status!=="source_headword_reading_labels_checked_not_lexical_approval"||
+         publisherSources.summary.publisherPagesChecked!==27||
+         publisherSources.summary.highAttentionCharactersRepresented!==23||
+         publisherSources.summary.sourceOnlyCharactersNotDeskReviewed!==13||
+         publisherSources.summary.independentlyAdjudicatedSenses!==0||
+         publisherSources.summary.emojiApprovals!==0||
+         publisherSources.summary.productionApprovals!==0||
+         !Array.isArray(publisherSources.entries)||publisherSources.entries.length!==27)
+        throw new Error("Published external source-page verification is missing or incorrectly approved");
+      const publisherCharacters=new Set();
+      for(const e of publisherSources.entries){
+        if(!e.url.startsWith("https://")||e.verification!=="page_text_opened_and_headword_checked"||
+           data.characters[e.rank-1]?.character!==e.character||
+           polysemy.records[e.rank-1]?.triageTier!=="higher")
+          throw new Error("Invalid external publisher page identity or research scope");
+        publisherCharacters.add(e.rank);
+      }
+      if(publisherCharacters.size!==23||![...researchRanks].every(x=>publisherCharacters.has(x)))
+        throw new Error("Publisher verification records do not include the existing desk cohorts");
+      $("semantic-external-source-note").textContent=
+       "Publisher-page checks: "+publisherSources.summary.publisherPagesChecked+
+       " pages for "+publisherCharacters.size+" / "+polysemy.summary.higherPriority+
+       " high-attention characters ("+
+       percent(publisherCharacters.size,polysemy.summary.higherPriority)+"). "+
+       publisherSources.summary.sourceOnlyCharactersNotDeskReviewed+
+       " further characters have source access only; not lexical approval.";
       if(readingAudit.schema!=="chromalect.semantic.reading-sensitive-literal-gloss-audit.v0.1"||
          readingAudit.status!=="automated_english_gloss_reading_distribution_not_lexical_verification"||
          readingAudit.summary.charactersAudited!==1000||
