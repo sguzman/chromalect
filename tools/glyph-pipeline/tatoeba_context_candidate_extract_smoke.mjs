@@ -1,6 +1,10 @@
 import assert from "node:assert/strict";
 import {createHash} from "node:crypto";
-import {newCollector,parseDetailedRow} from "./tatoeba_context_candidate_extract.mjs";
+import fs from "node:fs";
+import os from "node:os";
+import path from "node:path";
+import {spawnSync} from "node:child_process";
+import {newCollector,parseDetailedRow,extractFile} from "./tatoeba_context_candidate_extract.mjs";
 const targets=[{rank:127,character:"长"},{rank:339,character:"发"}];
 const rows=[
  "100000001\tcmn\t这是一段含有长字的测试句子。\tcontributor-a\t2026-01-01 00:00:00\t2026-01-03 00:00:00",
@@ -29,4 +33,21 @@ assert.throws(()=>parseDetailedRow("notanid\tcmn\t中文字句\tx\t2026-01-01\t2
 const dup=newCollector(targets,2);
 dup.add(parseDetailedRow(rows[0]));
 assert.throws(()=>dup.add(parseDetailedRow(rows[0])));
+// Both a raw TSV and its actual bzip2 encoding must produce identical, hash-pinned metadata.
+const tmp=fs.mkdtempSync(path.join(os.tmpdir(),"chromalect-cmn-"));
+try{
+ const raw=path.join(tmp,"cmn.tsv"),archive=raw+".bz2";
+ const bytes=Buffer.from(rows.join("\n")+"\n","utf8");
+ fs.writeFileSync(raw,bytes);
+ const zipped=spawnSync("bzip2",["-c",raw],{encoding:null});
+ assert.equal(zipped.status,0);
+ fs.writeFileSync(archive,zipped.stdout);
+ const [plain,packed]=await Promise.all([
+  extractFile(raw,targets,2,"2026-01-05"),
+  extractFile(archive,targets,2,"2026-01-05")
+ ]);
+ assert.deepEqual(packed,plain);
+ assert.equal(plain.summary.matchingCandidateReferences,3);
+ assert.equal(plain.source.uncompressedTSVSha256,createHash("sha256").update(bytes).digest("hex"));
+}finally{fs.rmSync(tmp,{recursive:true,force:true});}
 console.log("Tatoeba offline candidate importer: stable IDs, bounded UTF-8 surface matches, no text redistribution, no approvals.");

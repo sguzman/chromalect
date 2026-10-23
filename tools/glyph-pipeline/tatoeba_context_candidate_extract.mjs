@@ -5,6 +5,7 @@ import fs from "node:fs";
 import {createHash} from "node:crypto";
 import {createReadStream} from "node:fs";
 import {createInterface} from "node:readline";
+import {spawn} from "node:child_process";
 import {pathToFileURL} from "node:url";
 
 export function parseDetailedRow(line){
@@ -84,14 +85,30 @@ export function newCollector(targets,maxPerCharacter){
 }
 
 export async function extractFile(input,targets,maxPerCharacter,snapshotDate){
- const reader=createInterface({input:createReadStream(input,{encoding:"utf8"}),crlfDelay:Infinity});
+ // bzip2 is passed an argument array with no shell and is used only for local files.
+ const compressed=input.endsWith(".bz2");
+ const child=compressed?spawn("bzip2",["-dc","--",input],{
+  stdio:["ignore","pipe","pipe"]}):null;
+ const inputStream=compressed?child.stdout:createReadStream(input);
+ const hash=createHash("sha256");
+ inputStream.on("data",chunk=>hash.update(chunk));
+ let stderr="";
+ let finished=null;
+ if(child){
+  child.stderr.on("data",chunk=>{if(stderr.length<4096)stderr+=chunk.toString("utf8");});
+  finished=new Promise((resolve,reject)=>{
+   child.once("error",reject);
+   child.once("close",code=>code===0?resolve():reject(new Error("bzip2 exited "+code+": "+stderr.slice(0,300))));
+  });
+ }
+ const reader=createInterface({input:inputStream,crlfDelay:Infinity});
  const collect=newCollector(targets,maxPerCharacter);
  for await(const line of reader){
   if(!line.trim())continue;
   collect.add(parseDetailedRow(line));
  }
- const sha=createHash("sha256").update(fs.readFileSync(input)).digest("hex");
- return collect.finish(sha,snapshotDate);
+ if(finished)await finished;
+ return collect.finish(hash.digest("hex"),snapshotDate);
 }
 
 async function main(){
@@ -100,7 +117,7 @@ async function main(){
  };
  const input=get("--input"),output=get("--output"),snapshot=get("--snapshot-date"),size=get("--max-per-character")||"3";
  if(!input||!output||!snapshot||!/^\d+$/.test(size))
-  throw new Error("Usage: node tatoeba_context_candidate_extract.mjs --input <decompressed cmn detailed TSV> --snapshot-date YYYY-MM-DD --output <local JSON> [--max-per-character 3]");
+  throw new Error("Usage: node tatoeba_context_candidate_extract.mjs --input <cmn detailed TSV or .bz2> --snapshot-date YYYY-MM-DD --output <local JSON> [--max-per-character 3]");
  const q=JSON.parse(fs.readFileSync("data/semantic/cedict-crossref/high-attention-evidence-priority-v0.1.json","utf8"));
  assert.equal(q.summary.highAttentionCharacters,142);
  const targets=q.records.map(x=>({rank:x.rank,character:x.character}));
