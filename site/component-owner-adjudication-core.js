@@ -38,6 +38,54 @@ function validateTargets(manifest,targets){
   "Expected complete independent-review candidate set");
  return targets;
 }
+function validateComplementaryLocators(data,targets){
+ demand(exact(data,["schema","status","source","summary","records"])&&
+  data.schema==="chromalect.glyph.owner-complement-locators.v0.1"&&
+  data.status==="source_owned_complementary_region_masks_not_independent_adjudication",
+  "Unrecognized complementary locator research source");
+ const src=data.source,summary=data.summary;
+ demand(exact(src,["identificationTargets","paletteVersion","sourceSVGsChanged",
+  "originalLocatorSVGsChanged","independentKeyApproval"])&&
+  src.identificationTargets===sourcePath&&
+  src.paletteVersion==="mandarin-component-identity@0.6.0"&&
+  src.sourceSVGsChanged===false&&src.originalLocatorSVGsChanged===false&&
+  src.independentKeyApproval===false&&
+  exact(summary,["warningPairs","sourceGlyphs","complementaryMasks",
+   "independentlyApprovedOwners","humanVisualCertifications","eligibleStudyItems"])&&
+  summary.warningPairs===49&&summary.sourceGlyphs===48&&
+  summary.complementaryMasks===49&&summary.independentlyApprovedOwners===0&&
+  summary.humanVisualCertifications===0&&summary.eligibleStudyItems===0&&
+  Array.isArray(data.records)&&data.records.length===49,
+  "Complementary source geometry or approval status mismatch");
+ const fields=["trialId","rank","character","reviewState","sourceSVG","sourceSHA256",
+  "locatorSVG","locatorSHA256","machineAssignedOwner","otherOwner",
+  "complementarySVG","complementarySHA256","originalTargetPaths",
+  "complementaryTargetPaths","totalSourcePaths","unchangedPathGeometry",
+  "independentOwnershipCertified","participantStudyEligible","semanticApproval"];
+ const result=new Map();
+ for(let i=0;i<49;i++){
+  const row=data.records[i],t=targets[i];
+  demand(exact(row,fields)&&row.trialId===t.id&&row.rank===t.rank&&
+   row.character===t.character&&row.reviewState===t.reviewState&&
+   row.sourceSVG===t.sourceSVG&&row.sourceSHA256===t.sourceSHA256&&
+   row.locatorSVG===t.locatorSVG&&row.locatorSHA256===t.locatorSHA256&&
+   row.machineAssignedOwner===t.machineAssignedOwner&&row.otherOwner===t.otherOwner&&
+   row.complementarySVG==="glyphs/research/owner-complement-locators-v0.1/"+
+    t.id+".svg"&&hash.test(row.complementarySHA256)&&
+   row.complementarySHA256!==t.locatorSHA256&&
+   row.originalTargetPaths===t.targetRegionPaths&&
+   Number.isInteger(row.complementaryTargetPaths)&&
+   row.complementaryTargetPaths>0&&
+   row.complementaryTargetPaths<t.sourceStrokePaths&&
+   row.totalSourcePaths===t.sourceStrokePaths&&
+   row.unchangedPathGeometry===true&&row.independentOwnershipCertified===false&&
+   row.participantStudyEligible===false&&row.semanticApproval===false,
+   "Unrecognized or independently approved complementary source owner");
+  result.set(t.id,row);
+ }
+ demand(result.size===49,"Duplicate complementary source owner record");
+ return result;
+}
 function validEvidence(url){
  if(typeof url!=="string"||url.length>1000)return false;
  try{
@@ -124,5 +172,5 @@ function validateExport(data,manifest,targets){
  }
  return {recorded:data.observations.length,certified:0};
 }
-globalThis.ChromalectOwnerAdjudication={validateTargets,exportNotes,validateExport};
+globalThis.ChromalectOwnerAdjudication={validateTargets,validateComplementaryLocators,exportNotes,validateExport};
 })();

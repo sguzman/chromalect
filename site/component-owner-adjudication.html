@@ -11,7 +11,7 @@
 <style>
 .oa-notice,.oa-form,.oa-panel{background:var(--panel);border:1px solid var(--border);
  border-radius:12px;padding:18px;margin:16px 0}
-.oa-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.oa-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
 .oa-image{display:flex;justify-content:center;align-items:center;min-height:130px;
  border-radius:10px;background:#fff;padding:12px}
 .oa-image img{width:96px;height:96px}
@@ -38,9 +38,11 @@
 <div class="oa-grid">
 <div class="oa-panel"><h2>Original v0.6 glyph</h2><div class="oa-image"><img id="oa-source" alt="Original component-colored source glyph"></div></div>
 <div class="oa-panel"><h2>Neutral region locator</h2><div class="oa-image"><img id="oa-locator" alt="Charcoal machine-assigned region, other strokes gray"></div></div>
+<div class="oa-panel"><h2>Other component locator</h2><div class="oa-image"><img id="oa-complement" alt="Charcoal other source candidate region, remaining strokes gray"></div></div>
 <div class="oa-panel"><h2>Held-out candidate</h2><div class="oa-image"><img id="oa-fold" alt="Experimental held-out colors over same geometry"></div></div>
 </div>
 <p id="oa-owner" class="oa-meta"></p>
+<p id="oa-complement-meta" class="oa-meta"></p>
 <label for="oa-judgment">Preliminary owner assessment<select id="oa-judgment">
 <option value="unresolved">Unresolved / no exportable judgment</option>
 <option value="provisional_support">Provisional source-owner support</option>

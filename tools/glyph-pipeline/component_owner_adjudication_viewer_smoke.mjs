@@ -10,14 +10,16 @@ const sources={
  "semantic-group-hue-fivefold-heldout-v0.1.json":
   read("site/semantic-group-hue-fivefold-heldout-v0.1.json"),
  "palettes/mandarin-component-identity-v0.6.json":
-  read("palettes/mandarin-component-identity-v0.6.json")
+  read("palettes/mandarin-component-identity-v0.6.json"),
+ "glyphs/research/owner-complement-locators-v0.1/index-v0.1.json":
+  read("site/glyphs/research/owner-complement-locators-v0.1/index-v0.1.json")
 };
 const scripts=["site/heldout-blind-color-core.js",
  "site/heldout-component-identification-core.js",
  "site/component-owner-adjudication-core.js",
  "site/component-owner-adjudication.js"].map(p=>fs.readFileSync(p,"utf8"));
 const ids=["oa-status","oa-target","oa-meta","oa-source","oa-locator","oa-fold",
- "oa-owner","oa-judgment","oa-evidence","oa-rationale","oa-save","oa-count",
+ "oa-owner","oa-complement","oa-complement-meta","oa-judgment","oa-evidence","oa-rationale","oa-save","oa-count",
  "oa-export","oa-output"];
 class Element{
  constructor(){this.value="";this.textContent="";this.children=[];this.events={};this.disabled=false;this.src="";}
@@ -30,7 +32,7 @@ function setup(data=sources){
  nodes["oa-judgment"].value="unresolved";
  const document={getElementById:id=>nodes[id],createElement:()=>new Element()};
  const fetch=async url=>{
-  assert.ok(url in data,"Only the four pinned source JSON resources may be fetched");
+  assert.ok(url in data,"Only the five pinned source JSON resources may be fetched");
   return {ok:true,json:async()=>data[url]};
  };
  const ctx={document,fetch,URL,Map,Set,Date,Number,Error};
@@ -48,6 +50,9 @@ assert.equal(p["oa-target"].disabled,false);
 assert.equal(p["oa-save"].disabled,false);
 assert.match(p["oa-source"].src,/glyphs\//);
 assert.match(p["oa-locator"].src,/heldout-identification-target/);
+assert.match(p["oa-complement"].src,/owner-complement-locators/);
+assert.match(p["oa-complement-meta"].textContent,/unverified/);
+assert.notEqual(p["oa-locator"].src,p["oa-complement"].src);
 assert.match(p["oa-meta"].textContent,/source paths/);
 assert.match(p["oa-count"].textContent,/0 provisional notes/);
 const original=p["oa-target"].value;
@@ -79,8 +84,15 @@ const invalid=setup(altered);await settle(invalid);
 assert.match(invalid["oa-status"].textContent,/Cannot load or validate/);
 assert.equal(invalid["oa-target"].children.length,0);
 assert.equal(invalid["oa-save"].disabled,true);
+const changedMask=structuredClone(sources);
+changedMask["glyphs/research/owner-complement-locators-v0.1/index-v0.1.json"]
+ .records[0].complementarySHA256="0".repeat(64);
+const invalidMask=setup(changedMask);await settle(invalidMask);
+assert.match(invalidMask["oa-status"].textContent,/Cannot load or validate/);
+assert.equal(invalidMask["oa-target"].children.length,0);
+assert.equal(invalidMask["oa-save"].disabled,true);
 const html=fs.readFileSync("site/component-owner-adjudication.html","utf8");
 for(const id of ids)assert.ok(html.includes('id="'+id+'"'),id);
 assert.ok(!scripts.at(-1).includes("localStorage"));
 assert.ok(!scripts.at(-1).includes("innerHTML"));
-console.log("Local source-owner intake UI: 49 targets, failed-evidence gate, persistence in volatile page state, strict export, poisoned-source refusal.");
+console.log("Local source-owner intake UI: 49 paired regions, independent and complementary locator displays, strict export, poisoned-source refusal.");

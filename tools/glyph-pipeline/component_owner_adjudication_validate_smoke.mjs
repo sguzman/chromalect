@@ -19,6 +19,21 @@ const instrument=ctx.ChromalectComponentIdentificationRehearsal;
 const targets=instrument.validateSource(source.targets,original);
 const audit=ctx.ChromalectOwnerAdjudication;
 assert.equal(audit.validateTargets(source.targets,targets).length,49);
+const complements=JSON.parse(fs.readFileSync(
+ "site/glyphs/research/owner-complement-locators-v0.1/index-v0.1.json","utf8"));
+const complementary=audit.validateComplementaryLocators(complements,targets);
+assert.equal(complementary.size,49);
+for(const m of [
+ d=>{d.records[0].complementarySHA256="0".repeat(64);},
+ d=>{d.records[0].otherOwner="cmp-9999";},
+ d=>{d.records[0].independentOwnershipCertified=true;},
+ d=>{d.summary.eligibleStudyItems=1;},
+ d=>{d.records[1].trialId=d.records[0].trialId;},
+ d=>{d.records[0].complementarySVG="../other.svg";}
+]){
+ const copy=structuredClone(complements);m(copy);
+ assert.throws(()=>audit.validateComplementaryLocators(copy,targets));
+}
 const t=targets[0],note={judgment:"provisional_conflict",
  evidenceURL:"https://example.org/source-evidence",
  technicalRationale:"The outlined owner should be reviewed against the independent glyph diagram and recorded source coordinates."};
@@ -47,7 +62,7 @@ assert.throws(()=>audit.exportNotes(targets,new Map([[t.id,
 const page=fs.readFileSync("site/component-owner-adjudication.html","utf8");
 const js=fs.readFileSync("site/component-owner-adjudication.js","utf8");
 for(const id of ["oa-status","oa-target","oa-meta","oa-source","oa-locator",
- "oa-fold","oa-owner","oa-judgment","oa-evidence","oa-rationale","oa-save",
+ "oa-fold","oa-owner","oa-complement","oa-complement-meta","oa-judgment","oa-evidence","oa-rationale","oa-save",
  "oa-count","oa-export","oa-output"]){
  assert.ok(page.includes('id="'+id+'"'),id);
  assert.ok(js.includes('"'+id+'"'),id);

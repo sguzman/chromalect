@@ -6,16 +6,21 @@ const identification=globalThis.ChromalectComponentIdentificationRehearsal;
 const audit=globalThis.ChromalectOwnerAdjudication;
 const $=id=>document.getElementById(id);
 const names=["oa-status","oa-target","oa-meta","oa-source","oa-locator","oa-fold",
- "oa-owner","oa-judgment","oa-evidence","oa-rationale","oa-save","oa-count","oa-export","oa-output"];
+ "oa-owner","oa-complement","oa-complement-meta","oa-judgment","oa-evidence","oa-rationale","oa-save","oa-count","oa-export","oa-output"];
 if(names.some(id=>!$(id)))return;
 const status=x=>{$("oa-status").textContent=x;};
-let manifest=null,targets=[],selected=null,notes=new Map();
+let manifest=null,targets=[],selected=null,notes=new Map(),complements=new Map();
 function selection(id){
  selected=targets.find(t=>t.id===id);
  if(!selected)throw Error("Unknown source-region pair");
  $("oa-target").value=id;
  $("oa-source").src=selected.sourceSVG;
  $("oa-locator").src=selected.locatorSVG;
+ const complement=complements.get(selected.id);
+ if(!complement)throw Error("Missing opposite source-owner locator");
+ $("oa-complement").src=complement.complementarySVG;
+ $("oa-complement-meta").textContent="Complementary source owner: "+selected.otherOwner+
+  " · "+complement.complementaryTargetPaths+" highlighted source paths · unverified";
  $("oa-fold").src=selected.foldSVG;
  $("oa-meta").textContent="Rank "+selected.rank+" · "+selected.character+
   " · warning "+selected.reviewState+" · fold "+selected.foldIndex+
@@ -53,12 +58,14 @@ async function load(){
    "glyphs/research/heldout-identification-target-v0.1/index-v0.1.json",
    "glyphs/research/heldout-warning-v0.1/index-v0.1.json",
    "semantic-group-hue-fivefold-heldout-v0.1.json",
-   "palettes/mandarin-component-identity-v0.6.json"];
+   "palettes/mandarin-component-identity-v0.6.json",
+   "glyphs/research/owner-complement-locators-v0.1/index-v0.1.json"];
   const fetched=await Promise.all(paths.map(x=>fetch(x)));
   if(fetched.some(x=>!x.ok))throw Error("A generated source manifest is missing");
-  const [m,w,f,p]=await Promise.all(fetched.map(x=>x.json()));
+  const [m,w,f,p,other]=await Promise.all(fetched.map(x=>x.json()));
   const pairs=pairing.validateSource(w,f,p);
   targets=audit.validateTargets(m,identification.validateSource(m,pairs));
+  complements=audit.validateComplementaryLocators(other,targets);
   manifest=m;
   for(const t of targets){
    const option=document.createElement("option");

@@ -443,6 +443,10 @@ jobs:
           node tools/glyph-pipeline/heldout_component_identification_targets.mjs --write
           node tools/glyph-pipeline/heldout_component_identification_targets.mjs --check
           node tools/glyph-pipeline/heldout_component_identification_targets_smoke.mjs
+          node tools/glyph-pipeline/component_owner_complement_locators.mjs --write
+          node tools/glyph-pipeline/component_owner_complement_locators.mjs --check
+          node tools/glyph-pipeline/component_owner_complement_locators_smoke.mjs
+          test -s site/glyphs/research/owner-complement-locators-v0.1/index-v0.1.json
           node --check site/heldout-component-identification-core.js
           node --check site/heldout-component-identification.js
           node tools/glyph-pipeline/heldout_component_identification_core_smoke.mjs
