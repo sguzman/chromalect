@@ -1,0 +1,65 @@
+{
+  "schema": "chromalect.phonetics.external-orthographic-spelling-rule-crosswalk.v0.1",
+  "status": "research_only_written_spelling_correspondence_not_phonological_adjudication",
+  "source": {
+    "citationBlobSHA": "e38b5d3077f516054ecc5573c9251b3aa3628140",
+    "cautionIndex": "data/phonetics/mandarin-final-spelling-context-gates-v0.1.json",
+    "workqueue": "data/phonetics/unadjudicated-compound-final-review-queue-v0.1.json",
+    "noLicensedSentenceTextCopied": true,
+    "componentPaletteChanged": false
+  },
+  "references": [
+    {
+      "id": "polyu-pinyin-spelling",
+      "publisher": "The Hong Kong Polytechnic University, BEPTH",
+      "pageTitle": "Spelling Rules in Pinyin",
+      "url": "https://www.polyu.edu.hk/bepth/introduction-to-phonetics/spelling-rules-in-pinyin/?sc_lang=en",
+      "ruleScope": "Orthographic shortening of iou, uei and uen after a consonantal initial; not IPA or an acoustic measurement",
+      "accessCheckedDate": "2026-10-23"
+    }
+  ],
+  "summary": {
+    "cautionFamiliesInSource": 9,
+    "externallyCrosscheckedSpellingFamilies": 3,
+    "sourceReadingUsesInThoseFamilies": 63,
+    "remainingCautionFamilies": 6,
+    "remainingSourceReadingUses": 150,
+    "independentPhonologicalApprovals": 0,
+    "humanDecodingTrials": 0
+  },
+  "records": [
+    {
+      "cautionFamily": "contracted_iu",
+      "writtenFinal": "iu",
+      "expandedOrthographicComparison": "iou",
+      "observedSourceReadingUses": 24,
+      "sourceRule": "polyu-pinyin-spelling",
+      "comparisonStatus": "documented_spelling_rule_only",
+      "phonologicalRepresentation": null,
+      "ipaApproval": false,
+      "contextualReadingApproval": false
+    },
+    {
+      "cautionFamily": "contracted_ui",
+      "writtenFinal": "ui",
+      "expandedOrthographicComparison": "uei",
+      "observedSourceReadingUses": 19,
+      "sourceRule": "polyu-pinyin-spelling",
+      "comparisonStatus": "documented_spelling_rule_only",
+      "phonologicalRepresentation": null,
+      "ipaApproval": false,
+      "contextualReadingApproval": false
+    },
+    {
+      "cautionFamily": "contracted_un_nonpalatal",
+      "writtenFinal": "un",
+      "expandedOrthographicComparison": "uen",
+      "observedSourceReadingUses": 20,
+      "sourceRule": "polyu-pinyin-spelling",
+      "comparisonStatus": "documented_spelling_rule_only",
+      "phonologicalRepresentation": null,
+      "ipaApproval": false,
+      "contextualReadingApproval": false
+    }
+  ]
+}
