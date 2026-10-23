@@ -153,7 +153,7 @@ assert.match(ui["hg-risk-summary"].textContent,/27 first grouped-hue/);
 assert.match(ui["hg-risk-summary"].textContent,/6 co-occurrence-optimized/);
 assert.match(ui["hg-risk-pairs"].children[1].textContent,/1 newly close/);
 assert.match(ui["hg-risk-pairs"].children[2].children[0].textContent,/introduced/);
-for(const order of ["introduced","candidate_min","deterioration","rank"]){
+for(const order of ["introduced","candidate_min","deterioration","optimized_min","rank"]){
  ui["hg-risk-order"].value=order;
  ui["hg-risk-order"].events.change();
  assert.equal(ui["hg-compare"].children.length,2);
@@ -163,6 +163,12 @@ ui["hg-risk-filter"].value="introduced";ui["hg-risk-filter"].events.change();
 assert.equal(ui["hg-compare"].children.length,2);
 ui["hg-risk-filter"].value="original_close";ui["hg-risk-filter"].events.change();
 assert.equal(ui["hg-compare"].children.length,0);
+ui["hg-risk-filter"].value="all";ui["hg-risk-filter"].events.change();
+assert.equal(ui["hg-compare"].children.length,2);
+for(const focus of ["optimized_close","optimized_new","optimized_resolved"]){
+ ui["hg-risk-filter"].value=focus;ui["hg-risk-filter"].events.change();
+ assert.equal(ui["hg-compare"].children.length,0);
+}
 ui["hg-risk-filter"].value="all";ui["hg-risk-filter"].events.change();
 assert.equal(ui["hg-compare"].children.length,2);
 assert.equal(ui["hg-compare"].children[0].children[1].children[0].src,
