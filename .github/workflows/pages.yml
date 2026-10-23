@@ -239,6 +239,9 @@ jobs:
           node tools/glyph-pipeline/word_entry_reading_agreement_smoke.mjs
           node tools/glyph-pipeline/pinyin_citation_roundtrip.mjs --check
           node tools/glyph-pipeline/pinyin_citation_roundtrip_smoke.mjs
+          node --check site/pinyin-citations.js
+          node tools/glyph-pipeline/pinyin_citations_viewer_smoke.mjs
+          test -s site/pinyin-citations.html
           node tools/glyph-pipeline/roadmap_checkpoint_progress.mjs --check
           node tools/glyph-pipeline/roadmap_checkpoint_progress_smoke.mjs
           node --check site/roadmap-status.js

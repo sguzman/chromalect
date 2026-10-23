@@ -1,0 +1,28 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light dark"><title>Mandarin Pinyin citation spelling · Chromalect</title>
+<link rel="stylesheet" href="style.css"><script src="theme.js"></script><script src="pinyin-citations.js" defer></script>
+<style>
+.pinyin-controls{display:flex;flex-wrap:wrap;gap:16px;margin:20px 0}
+.pinyin-controls label{display:grid;gap:6px;color:var(--sub)}
+.pinyin-controls input,.pinyin-controls select{font:inherit;color:var(--ink);background:var(--panel);border:1px solid var(--border);padding:10px;border-radius:9px}
+.pinyin-results{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:14px;margin:20px 0}
+.pinyin-card{padding:18px;background:var(--panel);border:1px solid var(--border);border-radius:12px}
+.pinyin-card h2{font-size:24px;margin:0 0 9px}
+.pinyin-meta{font-size:13px;color:var(--sub);overflow-wrap:anywhere}
+.pinyin-colors{display:flex;flex-wrap:wrap;gap:12px;font-size:13px;margin:14px 0}
+.pinyin-colors span{display:inline-flex;align-items:center;gap:5px}
+.pinyin-chip{display:inline-block;width:13px;height:13px;border-radius:4px;border:1px solid var(--border)}
+</style></head><body>
+<header class="wrap"><div class="brand"><b>CHROMALECT</b><small>Language, made visible</small></div></header>
+<main class="wrap"><div class="eyebrow">Experimental orthographic pronunciation encoding</div>
+<h1>Mandarin citation Pinyin explorer</h1>
+<p class="intro">Explore reversible Pinyin spelling and its separately colored initial, final, and citation-tone tokens for the original 1,000-character tranche. The source may list more than one pronunciation per character. These are written reference labels, not transcribed speech, independently established Mandarin phonemes, tone sandhi, or word-context pronunciations.</p>
+<div class="pinyin-controls">
+<label for="pinyin-query">Character, Pinyin, rank or token<input id="pinyin-query" type="search" placeholder="一 · yī · 1" autocomplete="off"></label>
+<label for="pinyin-tone">Listed citation tone<select id="pinyin-tone"><option value="all">All tones</option><option value="0">0 · neutral</option><option value="1">1 · level</option><option value="2">2 · rising</option><option value="3">3 · dipping</option><option value="4">4 · falling</option></select></label>
+</div>
+<p id="pinyin-status" role="status" aria-live="polite">Loading pinned Pinyin records.</p>
+<p id="pinyin-stats" class="pinyin-meta"></p><div id="pinyin-results" class="pinyin-results"></div>
+<p class="pinyin-meta">Colors are accompanied by exact textual token labels. Data: <a href="pronunciation-citations-0001-1000.json">source citation readings</a>, <a href="layers-v0.1.json">published token palette</a> and <a href="phonetics/pinyin-citation-orthography-audit-v0.1.json">reversible spelling audit</a>. Read the <a href="https://github.com/sguzman/chromalect/blob/main/docs/pinyin-citation-orthographic-codec.md">codec contract and scientific limits</a>.</p>
+</main><footer class="wrap"><a href="roadmap-status.html">Research roadmap</a> · <a href="search.html">Character search</a> · <a href="index.html">Overview</a></footer>
+</body></html>
