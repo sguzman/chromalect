@@ -258,6 +258,8 @@ jobs:
           node tools/glyph-pipeline/pinyin_citations_viewer_smoke.mjs
           node tools/glyph-pipeline/tone_contour_reference_smoke.mjs
           node tools/glyph-pipeline/mandarin_initial_feature_candidates_smoke.mjs
+          node tools/glyph-pipeline/mandarin_initial_feature_codec.mjs --check
+          node tools/glyph-pipeline/mandarin_initial_feature_codec_smoke.mjs
           node --check site/mandarin-initial-features.js
           node tools/glyph-pipeline/mandarin_initial_features_viewer_smoke.mjs
           test -s site/mandarin-initial-features.html
@@ -268,8 +270,10 @@ jobs:
           mkdir -p site/phonetics
           cp data/phonetics/mandarin-citation-tone-contours-v0.1.json site/phonetics/mandarin-citation-tone-contours-v0.1.json
           cp data/phonetics/mandarin-initial-feature-candidates-v0.1.json site/phonetics/mandarin-initial-feature-candidates-v0.1.json
+          cp data/phonetics/initial-feature-codec-audit-v0.1.json site/phonetics/initial-feature-codec-audit-v0.1.json
           test -s site/phonetics/mandarin-citation-tone-contours-v0.1.json
           test -s site/phonetics/mandarin-initial-feature-candidates-v0.1.json
+          test -s site/phonetics/initial-feature-codec-audit-v0.1.json
           test -s site/pinyin-citations.html
           node tools/glyph-pipeline/roadmap_checkpoint_progress.mjs --check
           node tools/glyph-pipeline/roadmap_checkpoint_progress_smoke.mjs

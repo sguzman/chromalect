@@ -1,0 +1,24 @@
+{
+  "schema": "chromalect.phonetics.initial-feature-codec-audit.v0.1",
+  "status": "reversible_working_pinyin_initial_features_not_independent_phonological_proof",
+  "source": {
+    "candidateFeatures": "mandarin-initial-feature-candidates-v0.1.json",
+    "citationTranche": "site/pronunciation-citations-0001-1000.json",
+    "interpretation": "Machine roundtrip of only source initial spelling tokens. No syllable-final, phoneme, IPA or contextual transcription is reconstructed.",
+    "visualShapeReadabilityAssessed": false,
+    "sourcePaletteAssignmentsChanged": false
+  },
+  "counts": {
+    "sourceCharacters": 1000,
+    "sourceCitationReadings": 1171,
+    "distinctSourceInitialTokens": 24,
+    "sourceConsonantalInitialCategories": 21,
+    "orthographicOnsetConventions": 3,
+    "conventionalOccurrenceRoundtrips": 997,
+    "orthographicOccurrenceRoundtrips": 174,
+    "roundTripFailures": 0,
+    "independentlyEstablishedPhonemicContrasts": 0,
+    "humanDecodingTrials": 0,
+    "learningStudyResults": 0
+  }
+}
