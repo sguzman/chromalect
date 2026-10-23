@@ -280,6 +280,8 @@ jobs:
           node tools/glyph-pipeline/mandarin_final_spelling_context_gates_smoke.mjs
           node tools/glyph-pipeline/mandarin_simple_final_features.mjs --check
           node tools/glyph-pipeline/mandarin_simple_final_features_smoke.mjs
+          node tools/glyph-pipeline/mandarin_encoding_comparison_cohorts.mjs --check
+          node tools/glyph-pipeline/mandarin_encoding_comparison_cohorts_smoke.mjs
           node --check site/mandarin-simple-final-features.js
           node tools/glyph-pipeline/mandarin_simple_final_features_viewer_smoke.mjs
           test -s site/mandarin-simple-final-features.html
@@ -313,6 +315,7 @@ jobs:
           cp data/phonetics/citation-orthographic-contrast-controls-v0.1.json site/phonetics/citation-orthographic-contrast-controls-v0.1.json
           cp data/phonetics/mandarin-final-spelling-context-gates-v0.1.json site/phonetics/mandarin-final-spelling-context-gates-v0.1.json
           cp data/phonetics/mandarin-simple-final-feature-candidates-v0.1.json site/phonetics/mandarin-simple-final-feature-candidates-v0.1.json
+          cp data/phonetics/mandarin-encoding-comparison-cohorts-v0.1.json site/phonetics/mandarin-encoding-comparison-cohorts-v0.1.json
           cp data/phonetics/written-final-symbol-control-v0.1.json site/phonetics/written-final-symbol-control-v0.1.json
           test -s site/phonetics/mandarin-citation-tone-contours-v0.1.json
           test -s site/phonetics/mandarin-initial-feature-candidates-v0.1.json
@@ -321,6 +324,7 @@ jobs:
           test -s site/phonetics/citation-orthographic-contrast-controls-v0.1.json
           test -s site/phonetics/mandarin-final-spelling-context-gates-v0.1.json
           test -s site/phonetics/mandarin-simple-final-feature-candidates-v0.1.json
+          test -s site/phonetics/mandarin-encoding-comparison-cohorts-v0.1.json
           test -s site/phonetics/written-final-symbol-control-v0.1.json
           test -s site/pinyin-citations.html
           node tools/glyph-pipeline/roadmap_checkpoint_progress.mjs --check

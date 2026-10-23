@@ -1,0 +1,386 @@
+{
+  "schema": "chromalect.phonetics.mandarin-encoding-comparison-cohorts.v0.1",
+  "status": "source_attested_visual_research_cohorts_not_approved_sound_encoding_or_learning",
+  "sources": {
+    "citations": "site/pronunciation-citations-0001-1000.json",
+    "sourceBlobSHA": "e38b5d3077f516054ecc5573c9251b3aa3628140",
+    "workingSimpleFinals": "mandarin-simple-final-feature-candidates-v0.1.json",
+    "spellingCautions": "mandarin-final-spelling-context-gates-v0.1.json",
+    "arbitrarySpellingShapes": "written-final-symbol-control-v0.1.json",
+    "componentPaletteChanged": false,
+    "citationSpellingChanged": false,
+    "glyphStrokesChanged": false
+  },
+  "summary": {
+    "sourceCharacters": 1000,
+    "citationReadings": 1171,
+    "distinctWrittenFinals": 33,
+    "letterCodeBaselineReadings": 1171,
+    "workingSimpleFinalSpellingReadings": 432,
+    "unflaggedWorkingFeatureCandidates": 320,
+    "withheldWorkingFeatureCandidates": 112,
+    "noWorkingVowelFeatureCandidate": 739,
+    "totalCautionFlaggedReadings": 213,
+    "independentlyVerifiedSpokenDecodings": 0,
+    "humanSymbolDecodingTrials": 0,
+    "measuredLearningBenefits": 0
+  },
+  "limitations": [
+    "Unflagged feature candidates remain unapproved phonetic hypotheses.",
+    "Additional contextual caution categories may exist outside the flagged 213 source readings.",
+    "A comparison interface is not evidence of human comprehension.",
+    "The orthographic arbitrary-letter control is not an IPA or phoneme encoder."
+  ],
+  "states": [
+    {
+      "key": "working_candidate_without_listed_context_flag",
+      "description": "Simple-final candidate exists; no listed context flag, but its phonetic interpretation remains unapproved.",
+      "sourceReadingCount": 320,
+      "earliestSourceExamples": [
+        {
+          "rank": 1,
+          "character": "一",
+          "display": "yī",
+          "initial": "y",
+          "final": "i",
+          "tone": 1
+        },
+        {
+          "rank": 2,
+          "character": "乙",
+          "display": "yǐ",
+          "initial": "y",
+          "final": "i",
+          "tone": 3
+        },
+        {
+          "rank": 7,
+          "character": "七",
+          "display": "qī",
+          "initial": "q",
+          "final": "i",
+          "tone": 1
+        },
+        {
+          "rank": 8,
+          "character": "卜",
+          "display": "bǔ",
+          "initial": "b",
+          "final": "u",
+          "tone": 3
+        }
+      ]
+    },
+    {
+      "key": "working_candidate_withheld_context_warning",
+      "description": "Simple-final candidate exists but this spelling-context occurrence is explicitly flagged; withhold the vowel-feature marker.",
+      "sourceReadingCount": 112,
+      "earliestSourceExamples": [
+        {
+          "rank": 4,
+          "character": "十",
+          "display": "shí",
+          "initial": "sh",
+          "final": "i",
+          "tone": 2
+        },
+        {
+          "rank": 8,
+          "character": "卜",
+          "display": "bo",
+          "initial": "b",
+          "final": "o",
+          "tone": 0
+        },
+        {
+          "rank": 24,
+          "character": "于",
+          "display": "yú",
+          "initial": "y",
+          "final": "u",
+          "tone": 2
+        },
+        {
+          "rank": 28,
+          "character": "士",
+          "display": "shì",
+          "initial": "sh",
+          "final": "i",
+          "tone": 4
+        }
+      ]
+    },
+    {
+      "key": "no_simple_final_feature_candidate",
+      "description": "Written remainder is one of the other 27 tokens; no vowel-feature assignment is proposed.",
+      "sourceReadingCount": 739,
+      "earliestSourceExamples": [
+        {
+          "rank": 3,
+          "character": "二",
+          "display": "èr",
+          "initial": "∅",
+          "final": "er",
+          "tone": 4
+        },
+        {
+          "rank": 5,
+          "character": "丁",
+          "display": "dīng",
+          "initial": "d",
+          "final": "ing",
+          "tone": 1
+        },
+        {
+          "rank": 6,
+          "character": "厂",
+          "display": "chǎng",
+          "initial": "ch",
+          "final": "ang",
+          "tone": 3
+        },
+        {
+          "rank": 10,
+          "character": "人",
+          "display": "rén",
+          "initial": "r",
+          "final": "en",
+          "tone": 2
+        }
+      ]
+    }
+  ],
+  "writtenFinalTally": [
+    {
+      "token": "a",
+      "total": 72,
+      "unflagged": 72,
+      "flagged": 0,
+      "featureCandidate": true
+    },
+    {
+      "token": "ai",
+      "total": 38,
+      "unflagged": 38,
+      "flagged": 0,
+      "featureCandidate": false
+    },
+    {
+      "token": "an",
+      "total": 60,
+      "unflagged": 60,
+      "flagged": 0,
+      "featureCandidate": false
+    },
+    {
+      "token": "ang",
+      "total": 60,
+      "unflagged": 60,
+      "flagged": 0,
+      "featureCandidate": false
+    },
+    {
+      "token": "ao",
+      "total": 50,
+      "unflagged": 50,
+      "flagged": 0,
+      "featureCandidate": false
+    },
+    {
+      "token": "e",
+      "total": 45,
+      "unflagged": 45,
+      "flagged": 0,
+      "featureCandidate": true
+    },
+    {
+      "token": "ei",
+      "total": 25,
+      "unflagged": 25,
+      "flagged": 0,
+      "featureCandidate": false
+    },
+    {
+      "token": "en",
+      "total": 42,
+      "unflagged": 42,
+      "flagged": 0,
+      "featureCandidate": false
+    },
+    {
+      "token": "eng",
+      "total": 27,
+      "unflagged": 27,
+      "flagged": 0,
+      "featureCandidate": false
+    },
+    {
+      "token": "er",
+      "total": 5,
+      "unflagged": 5,
+      "flagged": 0,
+      "featureCandidate": false
+    },
+    {
+      "token": "i",
+      "total": 168,
+      "unflagged": 105,
+      "flagged": 63,
+      "featureCandidate": true
+    },
+    {
+      "token": "ia",
+      "total": 9,
+      "unflagged": 9,
+      "flagged": 0,
+      "featureCandidate": false
+    },
+    {
+      "token": "ian",
+      "total": 31,
+      "unflagged": 31,
+      "flagged": 0,
+      "featureCandidate": false
+    },
+    {
+      "token": "iang",
+      "total": 11,
+      "unflagged": 11,
+      "flagged": 0,
+      "featureCandidate": false
+    },
+    {
+      "token": "iao",
+      "total": 22,
+      "unflagged": 22,
+      "flagged": 0,
+      "featureCandidate": false
+    },
+    {
+      "token": "ie",
+      "total": 21,
+      "unflagged": 21,
+      "flagged": 0,
+      "featureCandidate": false
+    },
+    {
+      "token": "in",
+      "total": 27,
+      "unflagged": 27,
+      "flagged": 0,
+      "featureCandidate": false
+    },
+    {
+      "token": "ing",
+      "total": 45,
+      "unflagged": 45,
+      "flagged": 0,
+      "featureCandidate": false
+    },
+    {
+      "token": "iong",
+      "total": 5,
+      "unflagged": 5,
+      "flagged": 0,
+      "featureCandidate": false
+    },
+    {
+      "token": "iu",
+      "total": 24,
+      "unflagged": 0,
+      "flagged": 24,
+      "featureCandidate": false
+    },
+    {
+      "token": "o",
+      "total": 16,
+      "unflagged": 0,
+      "flagged": 16,
+      "featureCandidate": true
+    },
+    {
+      "token": "ong",
+      "total": 47,
+      "unflagged": 47,
+      "flagged": 0,
+      "featureCandidate": false
+    },
+    {
+      "token": "ou",
+      "total": 44,
+      "unflagged": 44,
+      "flagged": 0,
+      "featureCandidate": false
+    },
+    {
+      "token": "u",
+      "total": 128,
+      "unflagged": 95,
+      "flagged": 33,
+      "featureCandidate": true
+    },
+    {
+      "token": "ü",
+      "total": 3,
+      "unflagged": 3,
+      "flagged": 0,
+      "featureCandidate": true
+    },
+    {
+      "token": "ua",
+      "total": 11,
+      "unflagged": 11,
+      "flagged": 0,
+      "featureCandidate": false
+    },
+    {
+      "token": "uai",
+      "total": 8,
+      "unflagged": 8,
+      "flagged": 0,
+      "featureCandidate": false
+    },
+    {
+      "token": "uan",
+      "total": 25,
+      "unflagged": 15,
+      "flagged": 10,
+      "featureCandidate": false
+    },
+    {
+      "token": "uang",
+      "total": 14,
+      "unflagged": 14,
+      "flagged": 0,
+      "featureCandidate": false
+    },
+    {
+      "token": "ue",
+      "total": 10,
+      "unflagged": 0,
+      "flagged": 10,
+      "featureCandidate": false
+    },
+    {
+      "token": "ui",
+      "total": 19,
+      "unflagged": 0,
+      "flagged": 19,
+      "featureCandidate": false
+    },
+    {
+      "token": "un",
+      "total": 38,
+      "unflagged": 0,
+      "flagged": 38,
+      "featureCandidate": false
+    },
+    {
+      "token": "uo",
+      "total": 21,
+      "unflagged": 21,
+      "flagged": 0,
+      "featureCandidate": false
+    }
+  ]
+}
