@@ -13,7 +13,7 @@ const sources=[
 const script=fs.readFileSync("site/mandarin-encoding-comparison.js","utf8");
 const html=fs.readFileSync("site/mandarin-encoding-comparison.html","utf8");
 class Element{
- constructor(){this.children=[];this.textContent="";this.value="";this.checked=false;this.style={};this.events={};this.attributes={};this.classList={add:()=>{}};}
+ constructor(){this.children=[];this.textContent="";this.value="";this.checked=false;this.style={};this.events={};this.attributes={};this.className="";this.classList={add:x=>{this.className=x;}};}
  appendChild(x){this.children.push(x);}
  replaceChildren(...xs){this.children=xs;}
  addEventListener(type,fn){this.events[type]=fn;}
