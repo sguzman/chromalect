@@ -35,6 +35,18 @@ The exported `chromalect.glyph.heldout-blind-presentation-rehearsal.v0.1` JSON i
 
 It intentionally has **no personally identifying field**. Exported data remains provisional. The schema validator refuses fabricated certification or participant approval, unexpected fields, changed seed/condition order, duplicate trial IDs, nonstandard choices, or unexplained source modifications.
 
+## Independent offline export verification
+
+The source-linked [offline validator](../tools/glyph-pipeline/heldout_blind_color_export_validate.mjs) checks a manually copied rehearsal JSON against the generated authoritative palette, original 48-glyph warning manifest and fold-training evidence, without sending an observation to a service or printing individual responses.
+
+Its command is:
+
+    node tools/glyph-pipeline/heldout_blind_color_export_validate.mjs --validate /path/to/local-session.json
+
+It requires the source-glyph pipeline's generated site artifacts to exist locally; the checked-in source-only repository by itself does not contain those generated manifests. The validator checks a reproducible permutation from the recorded 32-bit random seed, original-left versus experiment-left assignment for each trial, allowed response categories, position ordering, constant display conditions, exact source trial IDs, and all zero-certification flags. It explicitly refuses arbitrary extra session/participant/observation fields that could accidentally leak private information into a public research package. Successful output is **only a response count and a statement of nonapproval**, not the response text.
+
+It does not establish a study participant's existence, protocol approval, display calibration, reviewer qualification, independence, or truthfulness of visual preferences. It is a deterministic format-and-provenance validator. The [offline-validator smoke test](../tools/glyph-pipeline/heldout_blind_color_export_validate_smoke.mjs) exercises valid and rejected sessions using temporary, automatically deleted local fixtures.
+
 ## Independent acceptance gates
 
 Before interpreting responses as actual evidence of component discrimination, the project would need independent geometry review of all eligible source glyphs, an accessible and ethics-reviewed participant protocol, genuine identification/recognition tasks with independently established ground truth, counterbalanced and appropriately concealed conditions, controlled display/viewing characteristics, prospectively defined exclusions and metrics, and independent replication with appropriately consented participants.
@@ -49,5 +61,6 @@ The existing Pages workflow runs these tests after the source glyph and fivefold
     node --check site/heldout-blind-color-rehearsal.js
     node tools/glyph-pipeline/heldout_blind_color_core_smoke.mjs
     node tools/glyph-pipeline/heldout_blind_color_rehearsal_viewer_smoke.mjs
+    node tools/glyph-pipeline/heldout_blind_color_export_validate_smoke.mjs
 
 The smoke fixtures verify the full original 49-warning source census, 25/24 presentation balance, seed reproducibility, fixed session viewing configuration, all 49 responses, local-only export, and refusals of unsupported provenance or independent approvals.
