@@ -94,6 +94,14 @@ The earlier fifth-batch section and other per-100 observations are historical tr
 
 For the 15 highest-priority flagged cases, a [machine-readable remediation overlay](../data/semantic/cedict-crossref/high-priority-remediation-v0.1.json) now proposes reversibly inspecting alternative senses or pictograms, retaining existing better-supported alternatives, or deferring misleading icons. The [research report](mandarin-high-priority-remediation.md) explains character-by-character limitations. No canonical source meaning or emoji is silently replaced by this overlay. The alternative proposals are not comprehension-approved.
 
+## Complete blind lexical review coverage
+
+The initial [248-item discrepancy study](../data/semantic/cedict-crossref/sense-review-queue-v0.1.json) was intentionally narrow; a dictionary **whole-term match is not independent lexical proof**. The [new full 897-sense source-first queue](../data/semantic/cedict-crossref/full-lexical-review-queue-v0.1.json) now covers **all 897 candidate sense assignments (100% review-material preparation)**: 649 strict whole-term dictionary matches and 248 cases needing alignment. Each record preserves rank, character, selected meaning, the original Unihan source segment, pinned CC-CEDICT headword excerpts/readings, source blob SHA, discrepancy class and any earlier desk note. The records deliberately omit emoji imagery for blind lexical assessment.
+
+Five rank-200 [dictionary evidence blocks](../data/semantic/cedict-crossref/) preserve reproducibility without depending on a live dictionary service. Every review record is still marked `pending` and `productionVerified=false`. The updated [lexical worksheet](../site/lexical-review.html) supports all-sense sampling, whole-term-matched cases, flagged cases, and high/medium/unclassified subsets. It only exports provisional observations locally; **0 independent linguistic approvals and 0 emoji comprehension approvals** are recorded. The [versioned v0.2 export validator](../tools/glyph-pipeline/review_session_validate.mjs) verifies review scope, source identity, non-promotion and no emoji leakage; legacy v0.1 exports remain supported.
+
+This **100%** figure measures *review material prepared*, **not** independent sense verification. The next human research step still requires source/context validation and blinded comprehension trials. It should not be conflated with the existing 100% dictionary headword intake or 100% automated character screening.
+
 ## Approval gates
 
 1. An independent lexical reviewer must determine which **modern Mandarin character senses** exist, and attach context, reading and evidence. The English gloss-matching code cannot approve a meaning.
