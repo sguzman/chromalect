@@ -48,6 +48,7 @@ function draw(){
   flags.textContent=r.automaticGeometryFlags.length?
    "Machine warnings: "+r.automaticGeometryFlags.join(", "):
    "No machine geometry warning; still awaiting independent review";
+  card.appendChild(head);card.appendChild(comparison);card.appendChild(meta);card.appendChild(flags);
   if(r.colorContrastWarnings.length){
    const note=document.createElement("div");note.className="audit-contrast";
    for(const pair of r.colorContrastWarnings){
@@ -65,8 +66,7 @@ function draw(){
    card.appendChild(note);
   }
   link.href="glyphs/"+r.svg;link.textContent="Inspect source SVG";
-  card.appendChild(head);card.appendChild(comparison);card.appendChild(meta);
-  card.appendChild(flags);card.appendChild(link);
+  card.appendChild(link);
   $("audit-results").appendChild(card);
  }
  $("audit-count").textContent=shown.length+" matching of 1,000 pending reviews · showing "+
