@@ -203,6 +203,7 @@ jobs:
           node tools/glyph-pipeline/high_attention_evidence_priority_smoke.mjs
           node tools/glyph-pipeline/external_dictionary_reconnaissance_smoke.mjs
           node tools/glyph-pipeline/external_dictionary_discrepancy_smoke.mjs
+          node tools/glyph-pipeline/publisher_page_provenance_smoke.mjs
           node tools/glyph-pipeline/review_session_validate_smoke.mjs
           node tools/glyph-pipeline/semantic_inventory_smoke.mjs
           node tools/glyph-pipeline/lexical_crossref_smoke.mjs
@@ -236,6 +237,7 @@ jobs:
           cp data/semantic/cedict-crossref/high-attention-evidence-priority-v0.1.json site/semantic/high-attention-evidence-priority-v0.1.json
           cp data/semantic/cedict-crossref/external-dictionary-reconnaissance-v0.1.json site/semantic/external-dictionary-reconnaissance-v0.1.json
           cp data/semantic/cedict-crossref/external-dictionary-discrepancy-v0.1.json site/semantic/external-dictionary-discrepancy-v0.1.json
+          cp data/semantic/cedict-crossref/publisher-page-provenance-v0.1.json site/semantic/publisher-page-provenance-v0.1.json
           for section in 0001-0200 0201-0400 0401-0600 0601-0800 0801-1000; do
             cp "data/semantic/cedict-crossref/dictionary-excerpts-$section.json" "site/semantic/"
             test -s "site/semantic/dictionary-excerpts-$section.json"
@@ -249,6 +251,7 @@ jobs:
           test -s site/semantic/high-attention-evidence-priority-v0.1.json
           test -s site/semantic/external-dictionary-reconnaissance-v0.1.json
           test -s site/semantic/external-dictionary-discrepancy-v0.1.json
+          test -s site/semantic/publisher-page-provenance-v0.1.json
           test -s site/semantic/reading-sensitive-gloss-audit-v0.1.json
           test -s site/semantic/sense-review-queue-v0.1.json
           test -s site/semantic/full-lexical-review-queue-v0.1.json
