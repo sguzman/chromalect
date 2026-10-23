@@ -133,10 +133,10 @@
       "key": "phonetic-notation",
       "label": "Phonetic notation experiment",
       "sourceHeadingPrefix": "Phase 2",
-      "complete": 12,
+      "complete": 13,
       "pending": 4,
-      "total": 16,
-      "checklistPercent": 75,
+      "total": 17,
+      "checklistPercent": 76,
       "checkpoints": [
         {
           "description": "Establish a reversible, source-pinned orthographic Pinyin citation baseline for all 1,171 first-tranche readings, without declaring phonemic or contextual verification.",
@@ -180,6 +180,10 @@
         },
         {
           "description": "Publish an evidence-ranked research workqueue for 27 unadjudicated written-final categories (739 source readings; 101 explicit spelling cautions), without assigning IPA, phonemes or lexical context.",
+          "state": "complete"
+        },
+        {
+          "description": "Verify five isolated source citation-tone labels (1,171 readings) and four unique idealized non-neutral contours in JavaScript and Rust; neutral pitch, contextual realization and human perception remain unapproved.",
           "state": "complete"
         },
         {

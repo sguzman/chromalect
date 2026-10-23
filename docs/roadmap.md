@@ -47,6 +47,7 @@ This is a sequence of **evidence gates**, not a promise to build a large applica
 - [x] Source-link six provisional simple-final height/backness/rounding controls (432 citation readings, 112 context cautions) and test an independently switchable integrated-cell view without IPA approval.
 - [x] Publish a three-way, source-gated comparison of 1,171 plain Pinyin, arbitrary geometric written-letter codes and unapproved feature candidates (320 provisionally displayable, 112 withheld, 739 without a final-feature proposal).
 - [x] Publish an evidence-ranked research workqueue for 27 unadjudicated written-final categories (739 source readings; 101 explicit spelling cautions), without assigning IPA, phonemes or lexical context.
+- [x] Verify five isolated source citation-tone labels (1,171 readings) and four unique idealized non-neutral contours in JavaScript and Rust; neutral pitch, contextual realization and human perception remain unapproved.
 - [ ] Freeze the Mandarin phonological contrast inventory and a phonetic reference notation.
 - [ ] Compare Pinyin/IPA labels, initial-final symbols, and constructed featural glyphs.
 - [ ] Specify a decoding grammar and round-trip tests.
