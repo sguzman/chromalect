@@ -1,0 +1,46 @@
+<!doctype html><html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Mandarin structured citation grammar · Chromalect</title>
+<link rel="stylesheet" href="style.css"><script src="theme.js"></script>
+<script src="mandarin-syllable-grammar.js" defer></script>
+<style>
+.syllable-controls{display:flex;flex-wrap:wrap;gap:14px;margin:18px 0}
+.syllable-controls label{display:grid;gap:6px}
+.syllable-controls input,.syllable-controls select{font:inherit;color:var(--ink);background:var(--panel);
+border:1px solid var(--border);border-radius:8px;padding:10px}
+.syllable-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px;margin:20px 0}
+.syllable-card{padding:18px;border:1px solid var(--border);border-radius:12px;background:var(--panel)}
+.syllable-card h2{font-size:18px;margin:0 0 14px}
+.syllable-code{display:grid;gap:6px}
+.syllable-token{font-size:13px;margin:0;display:flex;align-items:center;flex-wrap:wrap;gap:6px;overflow-wrap:anywhere}
+.syllable-note{color:var(--sub);font-size:13px;margin:10px 0 0}
+.syllable-chip{display:inline-block;width:20px;height:20px;border-radius:5px;border:1px solid var(--border)}
+</style>
+</head><body><header class="wrap"><div class="brand"><b>CHROMALECT</b>
+<small>Language, made visible</small></div></header>
+<main class="wrap"><div class="eyebrow">Mandarin phonetic research · source orthography only</div>
+<h1>Structured citation-syllable grammar</h1>
+<p class="intro">Inspect the published Pinyin initial, written final remainder and citation tone independently. The initial uses a provisional articulatory feature tuple when applicable; y, w and zero-onset markers stay orthographic only. The final is still its original spelling, not an independently established IPA or phonological rhyme. Only source-attested combinations are included.</p>
+<div class="syllable-controls">
+<label for="syllable-query">Find citation, glyph, rank or token
+<input id="syllable-query" type="search" placeholder="e.g. qīng, ian, 100"></label>
+<label for="syllable-tone">Citation tone
+<select id="syllable-tone"><option value="all">All tones</option><option value="0">Neutral T0</option>
+<option value="1">T1</option><option value="2">T2</option><option value="3">T3</option><option value="4">T4</option></select></label>
+<label for="syllable-view">Presentation
+<select id="syllable-view"><option value="tokens">Structured tokens, without color</option>
+<option value="colors">Published identity-color channels</option>
+<option value="plain">Plain Pinyin citation</option></select></label>
+</div>
+<p id="syllable-summary">Loading sourced codec counts.</p>
+<p id="syllable-status" role="status" aria-live="polite">Loading pinned source citation records.</p>
+<p id="syllable-count"></p>
+<div id="syllable-results" class="syllable-grid"></div>
+<p>The underlying codec strictly round-trips 1,171 pinned citation readings through 673 observed token combinations. The graphics and labels do not encode contextual tone sandhi, alternative word-specific readings, measured speech, or validated memory effects.</p>
+<p><a href="phonetics/citation-syllable-orthographic-codec-audit-v0.1.json">Machine-readable proof summary</a> ·
+<a href="https://github.com/sguzman/chromalect/blob/main/docs/mandarin-citation-syllable-orthographic-codec.md">Grammar scope and limitations</a></p>
+</main><footer class="wrap"><a href="mandarin-initial-features.html">Initial contrasts</a> ·
+<a href="mandarin-tone-contours.html">Tone contours</a> ·
+<a href="roadmap-status.html">Roadmap</a> ·
+<a href="index.html">Overview</a></footer></body></html>
