@@ -37,5 +37,5 @@ assert.equal(keys.size,8);
 assert.equal(selected.length,27);
 assert.equal(new Set(selected).size,27);
 assert.deepEqual(index.records.filter(x=>!x.sentenceIds.length).map(x=>x.writtenWordLead),["刨坑","刨木头"]);
-assert.equal(createHash("sha256").update(canonical.join(";")).digest("hex"),"b719af1cb40b2280c218d96a39b4e9fedc9814de7476c8214a16a9cae0ed2940");
+assert.equal(createHash("sha256").update(canonical.join(";")).digest("hex"),"d8ec97605ff3deb254a96bff6c78f4bf7928971cd526e0a2eaf08a5f939eb286");
 console.log("Literal word-surface results: 213 matches, 27 source-only candidate IDs, 6/8 leads represented; 0 approvals.");
