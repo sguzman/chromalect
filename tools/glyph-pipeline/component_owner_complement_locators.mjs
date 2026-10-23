@@ -13,7 +13,7 @@ const SOURCE_PATH="glyphs/research/heldout-identification-target-v0.1/index-v0.1
 const PATH=/<path d="([^"]+)" fill="(#[0-9A-Fa-f]{6})" data-component="(cmp-\d{4})"\/>/g;
 const sha=value=>createHash("sha256").update(value,"utf8").digest("hex");
 const safeSVG=p=>typeof p==="string"&&p.startsWith("glyphs/")&&
- !p.includes("..")&&/^glyphs\/[A-Za-z0-9/_-]+\.svg$/.test(p);
+ !p.includes("..")&&/^glyphs\/[A-Za-z0-9/_+-]+\.svg$/.test(p);
 function mask(source,owner){
  const paths=[...source.matchAll(PATH)];
  assert.ok(paths.length>0,"Source paths are required");
