@@ -214,6 +214,9 @@ jobs:
           node tools/glyph-pipeline/tatoeba_context_candidate_extract_smoke.mjs
           node --check tools/glyph-pipeline/tatoeba_hash_sample.mjs
           node tools/glyph-pipeline/tatoeba_hash_sample_smoke.mjs
+          node --check tools/glyph-pipeline/tatoeba_word_surface_intake.mjs
+          node tools/glyph-pipeline/dictionary_word_surface_leads_smoke.mjs
+          node tools/glyph-pipeline/tatoeba_word_surface_intake_smoke.mjs
           node tools/glyph-pipeline/tatoeba_sentence_id_index_smoke.mjs
           node tools/glyph-pipeline/tatoeba_reading_coverage_upper_bound.mjs --check
           node tools/glyph-pipeline/tatoeba_reading_coverage_upper_bound_smoke.mjs

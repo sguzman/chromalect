@@ -1,0 +1,57 @@
+name: Acquire Mandarin dictionary word surface candidates
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/tatoeba-word-surface-intake.yml"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  acquire:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v4
+      - name: Download the official Tatoeba Mandarin source snapshot
+        shell: bash
+        run: |
+          set -euo pipefail
+          curl --fail --silent --show-error --location --retry 4 --retry-delay 3 --retry-all-errors --max-time 180 \
+            "https://downloads.tatoeba.org/exports/per_language/cmn/cmn_sentences_detailed.tsv.bz2" \
+            -o "$RUNNER_TEMP/cmn-sentences-detailed.tsv.bz2"
+          test -s "$RUNNER_TEMP/cmn-sentences-detailed.tsv.bz2"
+      - name: Select word-substring sentence IDs without promoting readings
+        shell: bash
+        run: |
+          set -euo pipefail
+          node tools/glyph-pipeline/dictionary_word_surface_leads_smoke.mjs
+          node tools/glyph-pipeline/tatoeba_word_surface_intake_smoke.mjs
+          node tools/glyph-pipeline/tatoeba_word_surface_intake.mjs \
+            --input "$RUNNER_TEMP/cmn-sentences-detailed.tsv.bz2" \
+            --snapshot-date "$(date -u +%F)" --max-per-word 5 \
+            --output "$RUNNER_TEMP/chromalect-word-surface-candidates.json"
+          node --input-type=module - "$RUNNER_TEMP/chromalect-word-surface-candidates.json" <<'NODE'
+          import assert from "node:assert/strict";
+          import fs from "node:fs";
+          const report=JSON.parse(fs.readFileSync(process.argv[2],"utf8"));
+          assert.equal(report.schema,"chromalect.semantic.tatoeba-word-surface-intake.v0.1");
+          assert.equal(report.status,"dictionary_word_literal_substring_candidates_not_contextual_reading_validation");
+          assert.equal(report.summary.dictionaryWordLeads,8);
+          assert.equal(report.summary.contextualReadingVerifications,0);
+          assert.equal(report.summary.lexicalSenseApprovals,0);
+          assert.equal(report.summary.pictogramApprovals,0);
+          assert.ok(report.records.every(r=>r.candidates.length<=5&&r.candidates.every(x=>
+            x.exactWrittenSurfaceSequenceObserved===true&&
+            x.independentlyVerifiedWordBoundary===false&&x.independentlyVerifiedReading===false&&
+            x.independentlyVerifiedLexicalSense===false&&x.redistributionPermission==="requires_individual_check")));
+          console.log("Word candidate corpus intake completed:",report.summary);
+          NODE
+      - name: Upload source-ID and contributor research artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: chromalect-dictionary-word-surface-candidates
+          path: ${{ runner.temp }}/chromalect-word-surface-candidates.json
+          if-no-files-found: error
+          retention-days: 30
