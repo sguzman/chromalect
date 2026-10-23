@@ -279,6 +279,7 @@ jobs:
           node tools/glyph-pipeline/mandarin_contrast_controls_viewer_smoke.mjs
           node --check site/mandarin-citation-cell.js
           node tools/glyph-pipeline/mandarin_citation_cell_viewer_smoke.mjs
+          node tools/glyph-pipeline/mandarin_initial_shape_consistency_smoke.mjs
           test -s site/mandarin-citation-cell.html
           test -s site/mandarin-contrast-controls.html
           node --check site/mandarin-syllable-grammar.js

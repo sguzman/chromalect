@@ -19,7 +19,7 @@ class Element{
 }
 function setup(data=sources){
  const ids=["cell-query","cell-reading","cell-color","cell-initial","cell-final","cell-tone",
- "cell-final-symbols","cell-status","cell-code","cell-native","cell-top","cell-side","cell-bottom","cell-source"];
+ "cell-final-symbols","cell-initial-symbols","cell-status","cell-code","cell-native","cell-top","cell-side","cell-bottom","cell-source"];
  const els=Object.fromEntries(ids.map(id=>[id,new Element()]));
  for(const id of ["cell-initial","cell-final","cell-tone"])els[id].checked=true;
  const urls=["pronunciation-citations-0001-1000.json","layers-v0.1.json",
@@ -38,6 +38,15 @@ async function settle(v){for(let i=0;i<35&&!v["cell-native"].textContent&&
 const view=setup();await settle(view);
 assert.equal(view["cell-native"].textContent,"一");
 assert.equal(view["cell-side"].children.length,1);
+view["cell-initial-symbols"].checked=true;view["cell-initial-symbols"].events.change();
+assert.match(view["cell-side"].children[0].children[1].textContent,/No consonant shape/);
+view["cell-query"].value="4";view["cell-query"].events.change();
+assert.equal(view["cell-native"].textContent,"十");
+assert.equal(view["cell-side"].children[0].children[1].attributes.role,"img");
+assert.equal(view["cell-side"].children[0].children[1].children.length,2);
+assert.match(view["cell-side"].children[0].children[1].attributes["aria-label"],/sh provisional/);
+view["cell-initial-symbols"].checked=false;view["cell-initial-symbols"].events.change();
+view["cell-query"].value="1";view["cell-query"].events.change();
 assert.equal(view["cell-bottom"].children.length,1);
 view["cell-final-symbols"].checked=true;view["cell-final-symbols"].events.change();
 assert.equal(view["cell-bottom"].children[0].children[1].attributes.role,"img");
@@ -68,7 +77,7 @@ const rejected=setup(invalid);await settle(rejected);
 assert.equal(rejected["cell-native"].textContent,"");
 assert.match(rejected["cell-status"].textContent,/Unable to validate/);
 for(const id of ["cell-reading","cell-query","cell-initial","cell-final","cell-final-symbols","cell-tone","cell-color",
- "cell-status","cell-code","cell-native","cell-top","cell-side","cell-bottom","cell-source"])
+ "cell-initial-symbols","cell-status","cell-code","cell-native","cell-top","cell-side","cell-bottom","cell-source"])
  assert.match(html,new RegExp('id="'+id+'"'));
 assert.ok(!js.includes("innerHTML"));
 console.log("Unmodified native glyph with independently removable initial/final/tone annotations; zero claimed study outcomes.");

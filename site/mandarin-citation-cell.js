@@ -4,10 +4,27 @@
 "use strict";
 const $=id=>document.getElementById(id);
 const ids=["cell-query","cell-reading","cell-color","cell-initial","cell-final","cell-tone",
- "cell-final-symbols","cell-status","cell-code","cell-native","cell-top","cell-side","cell-bottom","cell-source"];
+ "cell-final-symbols","cell-initial-symbols","cell-status","cell-code","cell-native","cell-top","cell-side","cell-bottom","cell-source"];
 if(ids.some(id=>!$(id)))return;
 const NS="http://www.w3.org/2000/svg";
 let entries=[],onsets=new Map(),palette=null,tones=new Map(),finalGlyphs=new Map(),finalPrimitives=[],selectedIndex=0;
+const placePaths={
+ bilabial:"M10 26 C10 8 90 8 90 26 C90 44 10 44 10 26 Z",
+ labiodental:"M13 11 H87 V41 H13 Z",
+ alveolar:"M50 5 L92 44 H8 Z",
+ velar:"M50 4 L92 26 L50 48 L8 26 Z",
+ alveolopalatal:"M50 5 L90 20 L74 46 L26 46 L10 20 Z",
+ postalveolar:"M25 7 H75 L94 26 L75 45 H25 L6 26 Z"
+};
+const mannerPaths={
+ stop:"M44 18 H56 V33 H44 Z",
+ nasal:"M38 33 V20 Q44 10 50 27 Q56 43 62 20 V33",
+ fricative:"M34 19 L42 32 L50 19 L58 32 L66 19",
+ lateral:"M40 17 V34 H63",
+ affricate:"M38 18 H47 V33 H38 Z M53 19 L60 32 L67 19",
+ approximant:"M34 31 Q50 8 66 31"
+};
+const breathPaths={unaspirated:"M102 19 V33",aspirated:"M100 16 L108 24 L100 32 M110 16 L118 24 L110 32"};
 function setMessage(message){$("cell-status").textContent=message;}
 function makeText(value,klass){
  const x=document.createElement("span");x.textContent=value;
@@ -34,6 +51,34 @@ function toneDisplay(tone,color){
  svg.appendChild(poly);holder.appendChild(svg);
  holder.appendChild(makeText("T"+tone+" · "+t.symbol,"cell-caption"));
  return holder;
+}
+
+
+function initialGeometricSymbol(feature){
+ if(feature.category!=="conventional_pinyin_initial")return null;
+ if(!Object.hasOwn(placePaths,feature.place)||
+    !Object.hasOwn(mannerPaths,feature.manner)||
+    (feature.aspiration!=="none"&&!Object.hasOwn(breathPaths,feature.aspiration)))
+  throw Error("Initial feature is missing geometric code");
+ const element=(name,attributes={})=>{
+  const node=document.createElementNS(NS,name);
+  for(const [key,value] of Object.entries(attributes))node.setAttribute(key,value);
+  return node;
+ };
+ const svg=element("svg",{viewBox:"0 0 126 54",role:"img",
+  "aria-label":feature.token+" provisional source-category shape for "+
+   feature.place+", "+feature.manner+", "+feature.aspiration});
+ svg.classList.add("cell-initial-svg");
+ svg.appendChild(element("path",{d:placePaths[feature.place],fill:"none",
+   stroke:"currentColor","stroke-width":3.2,"stroke-linejoin":"round"}));
+ svg.appendChild(element("path",{d:mannerPaths[feature.manner],
+  fill:["stop","affricate"].includes(feature.manner)?"currentColor":"none",
+  stroke:"currentColor","stroke-width":3.5,
+  "stroke-linecap":"round","stroke-linejoin":"round"}));
+ if(feature.aspiration!=="none")
+  svg.appendChild(element("path",{d:breathPaths[feature.aspiration],fill:"none",
+   stroke:"currentColor","stroke-width":2.8,"stroke-linecap":"round"}));
+ return svg;
 }
 
 function finalGeometricSymbols(final){
@@ -82,6 +127,11 @@ function render(){
   const label=document.createElement("div");label.className="cell-addon";
   decorate(label,colored?palette.initial.tokens[r.initial]:null);
   label.appendChild(makeText("Initial: "+r.initial,"cell-token"));
+  if($("cell-initial-symbols").checked){
+   const geometric=initialGeometricSymbol(feature);
+   if(geometric)label.appendChild(geometric);
+   else label.appendChild(makeText("No consonant shape: written onset convention","cell-caption"));
+  }
   label.appendChild(makeText(feature.category==="conventional_pinyin_initial"?
    feature.place+" · "+feature.manner+" · "+feature.aspiration:
    "orthographic onset only, no consonant tuple","cell-caption"));
@@ -172,6 +222,13 @@ async function load(){
    throw Error("Expected independent palette domains missing");
   onsets=new Map(initials.tokens.map(r=>[r.token,r]));
   tones=new Map(contours.tones.map(r=>[r.token,r]));
+  const consonants=[...onsets.values()].filter(r=>r.category==="conventional_pinyin_initial");
+  if(consonants.length!==21||
+     consonants.some(r=>!Object.hasOwn(placePaths,r.place)||
+       !Object.hasOwn(mannerPaths,r.manner)||
+       (r.aspiration!=="none"&&!Object.hasOwn(breathPaths,r.aspiration)))||
+     [...onsets.values()].filter(r=>r.category==="orthographic_onset_convention_not_independent_consonant").length!==3)
+   throw Error("Source initial shapes or orthographic-only onsets have diverged");
   if(onsets.size!==24||tones.size!==5||
      tones.get("0").levels!==null||
      [1,2,3,4].some(x=>!Array.isArray(tones.get(String(x))?.levels)))
@@ -202,7 +259,7 @@ $("cell-query").addEventListener("change",()=>{
  setMessage("Source citation cell selected. Experimental annotations only.");
 });
 $("cell-reading").addEventListener("change",render);
-for(const id of ["cell-color","cell-initial","cell-final","cell-final-symbols","cell-tone"])
+for(const id of ["cell-color","cell-initial","cell-initial-symbols","cell-final","cell-final-symbols","cell-tone"])
  $(id).addEventListener("change",render);
 load();
 })();

@@ -1,0 +1,12 @@
+import assert from "node:assert/strict";
+import fs from "node:fs";
+const initial=fs.readFileSync("site/mandarin-initial-features.js","utf8");
+const integrated=fs.readFileSync("site/mandarin-citation-cell.js","utf8");
+const pattern=/const placePaths=\{[\s\S]*?\};\nconst mannerPaths=\{[\s\S]*?\};\nconst breathPaths=\{[^\n]*\};/;
+const source=initial.match(pattern);
+const copy=integrated.match(pattern);
+assert.ok(source&&copy,"Working initial shape registries missing");
+assert.equal(copy[0],source[0],"Integrated initial shapes diverged from source comparison view");
+assert.ok(integrated.includes('if(feature.category!=="conventional_pinyin_initial")return null;'));
+assert.ok(!integrated.includes("innerHTML"));
+console.log("Integrated category shapes match the provisional initial-source geometry exactly.");
