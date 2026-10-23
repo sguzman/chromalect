@@ -80,7 +80,190 @@ fn check_atlas_colors() -> Result<(), String> {
     Ok(())
 }
 
-pub(super) fn check() -> Result<(),String> { check_atlas_colors() }
+
+fn is_final_spelling_risk(id: &str, initial: &str, final_spelling: &str) -> bool {
+    let palatal = matches!(initial, "j" | "q" | "x" | "y");
+    match id {
+        "post_sibilant_i" =>
+            final_spelling == "i" && matches!(initial, "z" | "c" | "s" | "zh" | "ch" | "sh" | "r"),
+        "palatal_written_u" => final_spelling == "u" && palatal,
+        "contracted_iu" => final_spelling == "iu",
+        "contracted_ui" => final_spelling == "ui",
+        "contracted_un_nonpalatal" => final_spelling == "un" && !palatal,
+        "palatal_written_un" => final_spelling == "un" && palatal,
+        "palatal_written_ue" => final_spelling == "ue" && palatal,
+        "palatal_written_uan" => final_spelling == "uan" && palatal,
+        "labial_written_o" =>
+            final_spelling == "o" && matches!(initial, "b" | "p" | "m" | "f" | "w"),
+        _ => false,
+    }
+}
+
+/// Independently recounts source-orthographic evidence in Rust.
+/// The source's written symbols are not phonetic or linguistic approvals.
+fn check_written_final_source_evidence() -> Result<(), String> {
+    const RULES: [(&str, usize); 9] = [
+        ("post_sibilant_i", 63),
+        ("palatal_written_u", 33),
+        ("contracted_iu", 24),
+        ("contracted_ui", 19),
+        ("contracted_un_nonpalatal", 20),
+        ("palatal_written_un", 18),
+        ("palatal_written_ue", 10),
+        ("palatal_written_uan", 10),
+        ("labial_written_o", 16),
+    ];
+    let r = root();
+    let source = load(&r.join("site/pronunciation-citations-0001-1000.json"))?;
+    let controls = load(&r.join("data/phonetics/written-final-symbol-control-v0.1.json"))?;
+    let warnings = load(&r.join("data/phonetics/mandarin-final-spelling-context-gates-v0.1.json"))?;
+    if string(&source, "schema")? != "chromalect.pronunciation-citations.v0"
+        || string(&controls, "schema")? != "chromalect.phonetics.written-final-symbol-control.v0.1"
+        || string(&warnings, "schema")? != "chromalect.phonetics.mandarin-final-spelling-context-gates.v0.1"
+    {
+        return Err("phonetic source research schema drift".into());
+    }
+    if string(get(&controls, "source")?, "upstreamBlobSHA")?
+        != string(get(&source, "source")?, "blob_sha")?
+        || string(get(&warnings, "source")?, "upstreamBlobSHA")?
+        != string(get(&source, "source")?, "blob_sha")?
+    {
+        return Err("phonetic research no longer shares pinned citation source".into());
+    }
+    let rows = entries(&source, "characters")?;
+    if rows.len() != 1000 { return Err("phonetic evidence requires 1000 source characters".into()); }
+
+    let mut frequencies = BTreeMap::<String, usize>::new();
+    let mut counts = BTreeMap::<&str, usize>::new();
+    let mut flagged_triples = BTreeMap::<&str, BTreeSet<(String,String,u64)>>::new();
+    let mut reading_count = 0;
+    for (index, row) in rows.iter().enumerate() {
+        if get(row, "rank")?.as_u64() != Some(index as u64 + 1) {
+            return Err("citation source rank order changed".into());
+        }
+        for reading in entries(row, "readings")? {
+            reading_count += 1;
+            let initial = string(reading, "initial")?;
+            let final_token = string(reading, "final")?;
+            let tone = get(reading, "tone")?.as_u64().ok_or("source tone not numeric")?;
+            if tone > 4 { return Err("source tone outside documented citation categories".into()); }
+            *frequencies.entry(final_token.into()).or_default() += 1;
+            let mut matching = 0;
+            for (id, _) in RULES {
+                if is_final_spelling_risk(id, initial, final_token) {
+                    matching += 1;
+                    *counts.entry(id).or_default() += 1;
+                    flagged_triples.entry(id).or_default().insert(
+                        (initial.into(), final_token.into(), tone));
+                }
+            }
+            if matching > 1 { return Err("source phonetic warning classes overlap".into()); }
+        }
+    }
+    if reading_count != 1171 || frequencies.len() != 33 {
+        return Err("source citation final vocabulary or reading count changed".into());
+    }
+
+    let control_data = get(&controls, "summary")?;
+    if get(control_data, "writtenFinalsEncoded")?.as_u64() != Some(33)
+        || get(control_data, "machineSourceSpellingRoundtrips")?.as_u64() != Some(1171)
+        || get(control_data, "independentlyApprovedIPARealizations")?.as_u64() != Some(0)
+        || get(control_data, "humanSymbolDecodingTrials")?.as_u64() != Some(0)
+        || get(control_data, "learningResults")?.as_u64() != Some(0)
+    {
+        return Err("written final control misstates evidence or approvals".into());
+    }
+    let letters = entries(&controls, "primitives")?.iter()
+        .map(|p| string(p,"letter").map(str::to_owned))
+        .collect::<Result<Vec<_>,_>>()?;
+    if letters.len() != 9 || letters.iter().collect::<BTreeSet<_>>().len() != 9 {
+        return Err("written final geometric alphabet not nine unique letters".into());
+    }
+    let mut symbols = BTreeSet::new();
+    for record in entries(&controls, "records")? {
+        let token = string(record,"token")?;
+        let occurrences = get(record,"sourceOccurrences")?.as_u64()
+            .ok_or("written final source occurrence not numeric")? as usize;
+        if frequencies.get(token) != Some(&occurrences)
+            || get(record,"independentPhonologicalInterpretationApproved")?.as_bool() != Some(false)
+            || get(record,"humanDecodingAccuracyKnown")?.as_bool() != Some(false)
+            || get(record,"machineSpellingRoundtrip")?.as_bool() != Some(true)
+            || !symbols.insert(token.to_owned())
+        {
+            return Err(format!("written final {token:?} contains unsupported approval or count"));
+        }
+        let digits = entries(record,"iconRegistryIndices")?;
+        let original = entries(record,"symbolLetters")?;
+        if digits.len() != original.len() || digits.is_empty() {
+            return Err(format!("written final {token}: malformed symbol indices"));
+        }
+        let mut decoded = String::new();
+        for (digit, glyph) in digits.iter().zip(original) {
+            let i = digit.as_u64().ok_or("nonintegral geometric symbol index")? as usize;
+            let letter = letters.get(i).ok_or("geometric primitive index out of bounds")?;
+            if glyph.as_str() != Some(letter) { return Err("geometric letter mismatch".into()); }
+            decoded.push_str(letter);
+        }
+        if decoded != token { return Err("geometric control failed literal final roundtrip".into()); }
+    }
+    if symbols.len() != 33 { return Err("not all 33 source final symbols represented".into()); }
+
+    let flags = get(&warnings,"summary")?;
+    if get(flags,"flaggedSourceReadings")?.as_u64() != Some(213)
+        || get(flags,"flaggedDistinctWrittenTriples")?.as_u64() != Some(108)
+        || get(flags,"flagCategories")?.as_u64() != Some(9)
+        || get(flags,"independentlyAdjudicatedFinalPhonemes")?.as_u64() != Some(0)
+        || get(flags,"approvedContextualPronunciations")?.as_u64() != Some(0)
+        || get(flags,"approvedAcousticTranscriptions")?.as_u64() != Some(0)
+    {
+        return Err("final spelling exception worklist or nonapproval counters disagree".into());
+    }
+    let mut seen_rules = BTreeSet::new();
+    for record in entries(&warnings,"records")? {
+        let id = string(record,"id")?;
+        let expected = RULES.iter().find(|(name,_)| *name == id)
+            .map(|(_, count)| *count).ok_or("unrecognized source phonetic caution")?;
+        if !seen_rules.insert(id)
+            || counts.get(id) != Some(&expected)
+            || get(record,"observedReadingCount")?.as_u64() != Some(expected as u64)
+            || get(record,"independentIPAAnalysisApproved")?.as_bool() != Some(false)
+            || get(record,"certifiedAcousticRealizations")?.as_u64() != Some(0)
+        {
+            return Err(format!("source phonetic caution {id} differs from original citation corpus"));
+        }
+        let independent = flagged_triples.get(id).ok_or("missing source exception triples")?;
+        let stated = entries(record,"observedTokenTriples")?;
+        if stated.len() != independent.len()
+            || get(record,"uniqueCitationTriples")?.as_u64() != Some(independent.len() as u64)
+        {
+            return Err(format!("source phonetic caution {id} distinct token count changed"));
+        }
+        let mut seen = BTreeSet::new();
+        for triple in stated {
+            let item = (
+                string(triple,"initial")?.to_owned(),
+                string(triple,"final")?.to_owned(),
+                get(triple,"tone")?.as_u64().ok_or("source exception tone not numeric")?,
+            );
+            if !independent.contains(&item) || !seen.insert(item) {
+                return Err(format!("source warning {id} has fabricated or duplicated token"));
+            }
+        }
+    }
+    if seen_rules.len() != 9
+        || counts.values().sum::<usize>() != 213
+        || flagged_triples.values().map(BTreeSet::len).sum::<usize>() != 108
+    {
+        return Err("written final exception coverage incomplete".into());
+    }
+    println!("Rust source cross-check: 33 final spellings, 1171 readings, 213 warnings in 9 classes; no IPA approvals.");
+    Ok(())
+}
+
+pub(super) fn check() -> Result<(),String> {
+    check_atlas_colors()?;
+    check_written_final_source_evidence()
+}
 
 #[cfg(test)]
 mod tests {
@@ -88,5 +271,9 @@ mod tests {
     #[test]
     fn all_static_atlas_pages_use_canonical_citation_colors() {
         check_atlas_colors().unwrap();
+    }
+    #[test]
+    fn phonetic_source_final_controls_are_cross_checked_in_rust() {
+        check_written_final_source_evidence().unwrap();
     }
 }
