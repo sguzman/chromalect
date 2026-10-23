@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Local Mandarin word-context research · Chromalect</title>
+<link rel="stylesheet" href="style.css"><script src="theme.js"></script><script src="word-context-review.js" defer></script>
+<style>
+.review-form{display:grid;gap:14px;max-width:860px;padding:20px;border:1px solid var(--border);border-radius:12px;background:var(--panel);margin:20px 0}
+.review-form label{display:grid;gap:6px}
+.review-form select,.review-form input,.review-form textarea{font:inherit;color:var(--ink);background:var(--tile-bg);border:1px solid var(--border);border-radius:9px;padding:10px;width:100%;box-sizing:border-box}
+.review-form textarea{min-height:120px;resize:vertical}
+.review-actions{display:flex;flex-wrap:wrap;gap:12px}
+.review-actions button{font:inherit;border-radius:8px;border:1px solid var(--border);background:var(--tile-bg);color:var(--ink);padding:10px;cursor:pointer}
+.review-meta{color:var(--sub);overflow-wrap:anywhere}
+</style></head><body>
+<header class="wrap"><div class="brand"><b>CHROMALECT</b><small>Language, made visible</small></div></header>
+<main class="wrap"><div class="eyebrow">Mandarin evidence research · local only</div>
+<h1>Word-context review intake</h1>
+<p class="intro">Record preliminary assessments for one of 27 source-verified Tatoeba sentence IDs. Open the original sentence for context; do not copy its text into this form. A dictionary heading reading and a matching written substring are research leads, not proof of a sentence reading or word boundary.</p>
+<div class="review-form">
+<label for="review-candidate">Pinned word lead and sentence ID<select id="review-candidate"></select></label>
+<p id="review-heading" class="review-meta"></p>
+<p id="review-source" class="review-meta"></p>
+<p><a id="review-link" target="_blank" rel="noopener noreferrer">Open original Tatoeba sentence</a></p>
+<label for="review-boundary">Preliminary word-boundary assessment<select id="review-boundary"><option value="undetermined">Undetermined</option><option value="supports">Supports word unit</option><option value="contradicts">Contradicts word unit</option></select></label>
+<label for="review-reading">Preliminary dictionary-heading reading assessment<select id="review-reading"><option value="undetermined">Undetermined</option><option value="supports">Supports heading reading</option><option value="contradicts">Contradicts heading reading</option></select></label>
+<label for="review-sense">Preliminary lexical-sense assessment<select id="review-sense"><option value="undetermined">Undetermined</option><option value="supports">Supports dictionary context hint</option><option value="contradicts">Contradicts dictionary context hint</option></select></label>
+<label for="review-evidence">Additional independent HTTPS evidence URL<input id="review-evidence" type="url" maxlength="1000" autocomplete="off" placeholder="https://..."></label>
+<label for="review-rationale">Technical rationale, without copied sentence text<textarea id="review-rationale" maxlength="3000" placeholder="Record the independently checkable basis and remaining uncertainty."></textarea></label>
+<div class="review-actions"><button id="review-save" type="button">Keep local draft</button><button id="review-export" type="button">Generate local JSON</button></div>
+<p id="review-count" class="review-meta">0 local draft observations (0 approved)</p>
+<p id="review-status" role="status" aria-live="polite">Loading pinned source data.</p>
+<label for="review-output">Local JSON export (copy and validate separately)<textarea id="review-output" readonly spellcheck="false" aria-label="Local JSON export"></textarea></label>
+</div>
+<p class="review-meta">Drafts exist only in this page's memory. They are not uploaded, stored, approved, or independently validated by this interface. The export format and strict Node validator are documented in <a href="../docs/mandarin-word-context-review.md">the word-context review specification</a>. Independent sentence reuse clearance, contextual reading verification, and sense adjudication remain separate gates.</p>
+</main><footer class="wrap"><a href="word-context-candidates.html">Word-context candidate browser</a> · <a href="semantic-coverage.html">Semantic research</a> · <a href="index.html">Overview</a></footer>
+</body></html>

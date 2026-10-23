@@ -227,6 +227,10 @@ jobs:
           node tools/glyph-pipeline/tatoeba_live_word_record_audit_summary_smoke.mjs
           node --check site/word-context-candidates.js
           node tools/glyph-pipeline/word_context_candidates_viewer_smoke.mjs
+          node --check site/word-context-review.js
+          node --check tools/glyph-pipeline/word_context_review_validate.mjs
+          node tools/glyph-pipeline/word_context_review_validate_smoke.mjs
+          node tools/glyph-pipeline/word_context_review_viewer_smoke.mjs
           node tools/glyph-pipeline/tatoeba_sentence_id_index_smoke.mjs
           node tools/glyph-pipeline/tatoeba_reading_coverage_upper_bound.mjs --check
           node tools/glyph-pipeline/tatoeba_reading_coverage_upper_bound_smoke.mjs
