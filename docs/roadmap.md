@@ -25,7 +25,7 @@ This is a sequence of **evidence gates**, not a promise to build a large applica
 - [x] Produce machine-readable source rejection diagnostics and side-by-side SVG/native-font review sheets, with non-certifying checks for component placement and perceptually close co-occurring colors.
 - [x] Recover 73 additional mappings through source-owned subglyph decompositions, exact catalog identity and vector-geometry checks; retain source provenance and pending-review status.
 - [x] Publish portable per-glyph source ownership records and isolated review images for 8 documented alternate decompositions and 27 partial unknown-source cases. Keep incomplete cases out of the active renderer.
-- [x] Define a preregistration-ready three-arm component-color retention protocol with untested outcomes and explicit independent visual, accessibility, and ethical prerequisites.
+- [x] Define a proposed three-arm component-color retention research scaffold with untested outcomes and outstanding visual, accessibility, ethics, and preregistration requirements.
 - [ ] Independently visually audit all 1,000 active stroke ownership mappings and adjudicate retained alternate/partial mapping research cases separately.
 - [ ] Compare plain, identity-only, and independently specified semantic-family variants.
 - [ ] Test legibility, distinctions at real glyph sizes, recall, and transfer.
