@@ -21,7 +21,8 @@ function show(){
  for(const r of shown){
   const card=document.createElement("article"),head=document.createElement("h2"),
    count=document.createElement("p"),state=document.createElement("p"),
-   examples=document.createElement("p"),reference=document.createElement("p");
+   examples=document.createElement("p"),reference=document.createElement("p"),
+   review=document.createElement("p");
   const entry=links.get(r.id);
   card.className="caution-card";
   head.textContent=r.id.replaceAll("_"," ")+" · written final "+entry.token;
@@ -34,6 +35,7 @@ function show(){
    "Phonetic reference lead only · no independently verified acoustic result or IPA";
   examples.className="caution-examples";
   examples.appendChild(document.createTextNode("Pinned reading examples: "));
+  let reviewHref=null;
   for(let i=0;i<r.firstSourceExamples.length&&i<3;i++){
    const e=r.firstSourceExamples[i],c=sources[e.rank-1];
    const index=c?.readings.findIndex(x=>x.display===e.display&&
@@ -44,6 +46,8 @@ function show(){
    a.href="mandarin-encoding-comparison.html#c"+String(e.rank).padStart(4,"0")+
     "-r"+String(index+1);
    a.textContent=e.character+" "+e.display+" (#"+e.rank+")";
+   if(i===0)reviewHref="mandarin-phonetic-review.html#c"+
+    String(e.rank).padStart(4,"0")+"-r"+String(index+1);
    if(i)examples.appendChild(document.createTextNode(" · "));
    examples.appendChild(a);
   }
@@ -53,8 +57,14 @@ function show(){
     " · "+"Source: ":"Source lead: "));
   const a=document.createElement("a");a.href=entry.url;a.textContent=entry.title;
   reference.appendChild(a);
+  if(!reviewHref)throw Error("Missing pinned citation for local review");
+  review.className="caution-meta";
+  const note=document.createElement("a");
+  note.href=reviewHref;
+  note.textContent="Open this exact citation in local research intake";
+  review.appendChild(note);
   card.appendChild(head);card.appendChild(count);card.appendChild(state);
-  card.appendChild(examples);card.appendChild(reference);
+  card.appendChild(examples);card.appendChild(reference);card.appendChild(review);
   $("caution-list").appendChild(card);
  }
  $("caution-count").textContent=shown.length+" / 9 source-specific caution families";
