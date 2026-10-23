@@ -26,6 +26,7 @@ class Element{
 }
 function setup(data=sources){
  const nodes=Object.fromEntries(ids.map(id=>[id,new Element()]));
+ for(const id of ["oa-target","oa-save","oa-export"])nodes[id].disabled=true;
  nodes["oa-judgment"].value="unresolved";
  const document={getElementById:id=>nodes[id],createElement:()=>new Element()};
  const fetch=async url=>{
