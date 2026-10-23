@@ -4,7 +4,7 @@
 
 ## Purpose and denominator
 
-The [reading-inventory worksheet](../site/reading-inventory.html) complements the [897 selected meaning-candidate worksheet](../site/lexical-review.html). The former begins from independently pinned CC-CEDICT reading strings rather than provisional emoji: it therefore includes all **119 characters** without an initial pictogram (representing **173 recorded reading entries**). A dictionary reading is a headword-level source record, not a counted verified contemporary Mandarin sense.
+The [reading-inventory worksheet](../site/reading-inventory.html), available from the site research navigation, complements the [897 selected meaning-candidate worksheet](../site/lexical-review.html). The former begins from independently pinned CC-CEDICT reading strings rather than provisional emoji: it therefore includes all **119 characters** without an initial pictogram (representing **173 recorded reading entries**). A dictionary reading is a headword-level source record, not a counted verified contemporary Mandarin sense.
 
 | Scope | Reading records |
 | --- | ---: |

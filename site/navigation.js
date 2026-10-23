@@ -183,7 +183,7 @@
       { title: "Color and examples", items: ["colors", "curated", "palette"] }
     ], browseKeys));
     primary.appendChild(dropdown("Research & evidence", [
-      { title: "Mandarin semantic research", items: ["semanticCoverage", "semanticLab", "lexicalReview", "emojiComprehension"] },
+      { title: "Mandarin semantic research", items: ["semanticCoverage", "semanticLab", "lexicalReview", "readingInventory", "emojiComprehension"] },
       { title: "Inspect source alignment", items: ["comparisons", "diagnostics", "hierarchy"] },
       { title: "More investigations", items: ["alternatives", "unknown", "unmapped"] },
       { title: "Data and provenance", items: ["coverage", "mapping", "github", "sources"] }
