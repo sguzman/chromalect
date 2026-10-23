@@ -133,10 +133,10 @@
       "key": "phonetic-notation",
       "label": "Phonetic notation experiment",
       "sourceHeadingPrefix": "Phase 2",
-      "complete": 10,
+      "complete": 12,
       "pending": 4,
-      "total": 14,
-      "checklistPercent": 71,
+      "total": 16,
+      "checklistPercent": 75,
       "checkpoints": [
         {
           "description": "Establish a reversible, source-pinned orthographic Pinyin citation baseline for all 1,171 first-tranche readings, without declaring phonemic or contextual verification.",
@@ -172,6 +172,14 @@
         },
         {
           "description": "Source-link six provisional simple-final height/backness/rounding controls (432 citation readings, 112 context cautions) and test an independently switchable integrated-cell view without IPA approval.",
+          "state": "complete"
+        },
+        {
+          "description": "Publish a three-way, source-gated comparison of 1,171 plain Pinyin, arbitrary geometric written-letter codes and unapproved feature candidates (320 provisionally displayable, 112 withheld, 739 without a final-feature proposal).",
+          "state": "complete"
+        },
+        {
+          "description": "Publish an evidence-ranked research workqueue for 27 unadjudicated written-final categories (739 source readings; 101 explicit spelling cautions), without assigning IPA, phonemes or lexical context.",
           "state": "complete"
         },
         {
