@@ -14,6 +14,12 @@ assert.deepEqual(d.tones.map(t=>t.token),["0","1","2","3","4"]);
 assert.deepEqual(d.tones.map(t=>t.levels),[null,[5,5],[3,5],[2,1,4],[5,1]]);
 assert.equal(d.tones[0].status,"no_fixed_context_free_contour");
 for(const t of d.tones){
+ const r=source.characters[t.firstSourceExample.rank-1];
+ assert.equal(r.character,t.firstSourceExample.character);
+ assert.ok(r.readings.some(x=>x.display===t.firstSourceExample.pinyin&&String(x.tone)===t.token));
+}
+
+for(const t of d.tones){
  assert.equal(t.symbol,palette.palette_domains.tone.symbols[t.token]);
  assert.ok(Object.hasOwn(palette.palette_domains.tone.tokens,t.token));
  if(t.levels!==null)assert.ok(t.levels.every(v=>Number.isInteger(v)&&v>=1&&v<=5));

@@ -22,6 +22,8 @@ function setup(ref=tones){
 async function settle(x){for(let i=0;i<30&&!x["tone-results"].children.length&&!x["tone-status"].textContent.includes("Unable");i++)await Promise.resolve();}
 const state=setup();await settle(state);
 assert.equal(state["tone-results"].children.length,5);
+assert.match(state["tone-results"].children[0].children[0].textContent,/卜 bo/);
+assert.match(state["tone-results"].children[3].children[0].textContent,/乙 yǐ/);
 assert.equal(state["tone-results"].children[0].children[1].children[0].textContent,"No fixed neutral contour");
 assert.match(state["tone-results"].children[3].children[1].children[0].attributes["aria-label"],/2–1–4/);
 assert.equal(state["tone-results"].children[3].children[1].children[0].children[0].attributes.points.split(" ").length,3);

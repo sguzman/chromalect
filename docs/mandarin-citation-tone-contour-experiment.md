@@ -11,3 +11,5 @@ Sources:
 The four independent experimental presentation modes are plain tone label, monochrome contour, conventional symbol and pre-existing identity color. The machine-readable record uses the established five tone keys and does not modify colors, glyphs, phonetic transcriptions or any currently published character.
 
 **Limit:** The full T3 dipping contour is a conventional citation form, not a claim about every connected-speech T3. Sandhi, speech rate, prosody, speaker pitch and other contextual realizations remain outside the current reference. A source-grounded visualization is not a human comprehension or learning study, and all experimental outcome counts remain zero.
+
+The demonstrator also uses one documented *citation* example for each tone, selecting the earliest-ranked matching record from the pinned first 1,000 characters: 卜 bo (T0), 一 yī (T1), 十 shí (T2), 乙 yǐ (T3), and 二 èr (T4). These are source labels, not independently verified conversational pronunciations.

@@ -12,7 +12,7 @@ function draw(){
   const card=document.createElement("article"),heading=document.createElement("h2"),
    visual=document.createElement("div"),note=document.createElement("p");
   card.className="tone-card";visual.className="tone-visual";note.className="tone-note";
-  heading.textContent="T"+tone.token+" · "+tone.name;
+  heading.textContent="T"+tone.token+" · "+tone.name+" · "+tone.firstSourceExample.character+" "+tone.firstSourceExample.pinyin;
   note.textContent=tone.note+(tone.levels?" · idealized contour "+tone.levels.join("–"):"");
   if(mode==="plain"||mode==="symbol"||tone.levels===null&&mode==="contour"){
    const p=document.createElement("span");p.className="tone-display";
@@ -67,6 +67,9 @@ async function load(){
      palette.schema!=="chromalect.presentation-layers.v0"||
      !data.tones.every((t,i)=>t.token===String(i)&&
        t.symbol===palette.palette_domains.tone.symbols[t.token]&&
+       t.firstSourceExample&&Number.isInteger(t.firstSourceExample.rank)&&
+       typeof t.firstSourceExample.character==="string"&&
+       typeof t.firstSourceExample.pinyin==="string"&&
        Object.hasOwn(palette.palette_domains.tone.tokens,t.token)&&
        (i===0||Array.isArray(t.levels)&&t.levels.length>=2&&
          t.levels.every(x=>Number.isInteger(x)&&x>=1&&x<=5))))
