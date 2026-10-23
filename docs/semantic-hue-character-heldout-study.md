@@ -29,7 +29,7 @@ The successful first build of the five-fold report found the following **held-ou
 | First historical-hue grouped pilot | 76 |
 | Five fold-trained optimized color assignments | **28** |
 
-There are 28 held-out glyphs with at least one warning under their corresponding fold-trained optimized colors, versus 71 glyphs with at least one warning under the first grouped-hue assignment. Each fold is fitted on the *other 800 glyphs*, so the above 28 is a sum across five independently derived candidate palettes, not the score of the full-sample v0.2 alternative.
+There are 28 held-out glyphs with at least one warning under their corresponding fold-trained optimized colors, versus 71 glyphs with at least one warning under the first grouped-hue assignment. The **28** fold-trained close pair observations comprise **23 newly introduced** versus active v0.6, **21 resolved** original warnings, and **five retained** original warnings (23 + 5 = 28; 21 + 5 = 26). Exactly 23 held-out characters acquire at least one warning not present under v0.6. The identities of individual changed warnings should be inspected rather than treating a net +2 count as evidence that the same colors behave the same way. Each fold is fitted on the *other 800 glyphs*, so the above 28 is a sum across five independently derived candidate palettes, not the score of the full-sample v0.2 alternative.
 
 This is substantial reduction relative to the original historical group-hue hypothesis but **does not improve on the unchanged active identity palette on this held-out warning count**. The apparent full-sample improvement to six warnings should not be treated as independent generalization evidence.
 
