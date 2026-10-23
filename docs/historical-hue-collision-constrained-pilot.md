@@ -16,6 +16,22 @@ The candidate search uses deterministic coordinate descent with a fixed order pr
 
 Local choices minimize the count of below-0.07 distances among source co-occurrence edges first, then shortfall/severity, then near-threshold proximity, then deviation from the previous research swatch. The generator rejects duplicates among the 40 selected hypothetical hex colors. Resulting counts and group-level within/between distances are written into the separate report, never into the active source palette or rendered atlas.
 
+## Verified full-pair census and source-exact third condition
+
+The independently generated [full three-way pair census](../site/glyphs/research/hint-counterfactual-v0.1/optimized-pair-audit-v0.2.json) recounts all **1,020 distinct within-glyph component-ID pair observations** across the 1,000-character tranche:
+
+| Assignment | Same-glyph component pairs below ΔOK 0.07 |
+| --- | ---: |
+| Unchanged v0.6 identity colors | **26** |
+| First historical-hue grouping v0.1 | **76** |
+| Source-cooccurrence-constrained grouping v0.2 | **6** |
+
+Against the initial grouped-hue experiment, the optimized candidate removes **70** warnings and creates **zero** additional ones. Against the unchanged v0.6 source palette, the optimized candidate retains **five** close pair observations, resolves **21**, and introduces **one**. These are build-derived numeric counts and must not be described as independent perception or comprehension results.
+
+The [third-condition SVG generator](../tools/glyph-pipeline/source_glyph_optimized_gallery.mjs) produces a separate source-geometry-identical optimized rendering for each originally affected glyph, under `site/glyphs/research/hint-optimized-v0.2/`. Each source path is checked against the original v0.6 color and the first experimental color; only fill attributes owned by the original 40 experimental components may change, and source+first SHA-256 identifiers are carried into the resulting manifest. A full-byte comparison after normalizing source-path fill values prohibits geometric, ordering, ownership, and unrelated XML changes. The original and first experimental SVGs are not overwritten.
+
+In the [glyph comparison viewer](../site/hint-hue-glyph-comparison.html), a separate third-condition toggle permits a side-by-side view of all three versions at the same size and surface, with an optional identical provisional semantic cue. **The original color palette remains authoritative.**
+
 ## Evidence limits and acceptance boundary
 
 - Optimization is evaluated **on the very same first 1,000 glyphs used to select candidate colors**. No held-out test set, randomized participants, or independent visual adjudication has been completed.
