@@ -1,0 +1,185 @@
+{
+  "schema": "chromalect.semantic.external-dictionary-discrepancy.v0.1",
+  "status": "external_dictionary_desk_comparison_not_independent_lexical_approval",
+  "source": {
+    "priorityQueue": "high-attention-evidence-priority-v0.1.json",
+    "pinnedDictionaryRevision": "63c2569948629323b515833930fdd10f285401b6",
+    "dictionaryLicense": "CC BY-SA 4.0"
+  },
+  "summary": {
+    "recordsPrepared": 5,
+    "readingSlots": 11,
+    "priorityClass": 1,
+    "unresolvedPronunciationConflicts": 1,
+    "independentLexicalApproval": 0,
+    "independentEmojiApproval": 0,
+    "productionVerified": 0
+  },
+  "method": "Compare exact pinned source reading spellings against a separately maintained dictionary source, recording mismatches without changing the canonical ledger.",
+  "caveats": [
+    "Source comparisons are desk notes, not adjudicated modern Mandarin usage.",
+    "The surname pronunciation difference for 过 requires separate expert verification.",
+    "Names and English gloss segments are not necessarily unique Mandarin senses."
+  ],
+  "records": [
+    {
+      "rank": 164,
+      "character": "火",
+      "pinnedDictionaryReadings": [
+        "Huo3",
+        "huo3"
+      ],
+      "externalSource": {
+        "publisher": "汉典 (Zdic)",
+        "url": "https://zdic.net/hans/%E7%81%AB",
+        "reportedReadingLabels": [
+          "huo3"
+        ]
+      },
+      "preliminaryReadingComparisons": [
+        {
+          "reading": "Huo3",
+          "sourceComparison": "Surname appears under huǒ in the external dictionary; capitalization in the pinned English dictionary does not establish a new tone.",
+          "unresolvedCategory": "name_context_not_distinct_tone"
+        },
+        {
+          "reading": "huo3",
+          "sourceComparison": "The external dictionary separates fire from urgency, anger, specialized heat and popularity-related uses.",
+          "unresolvedCategory": "contextual_polysemy"
+        }
+      ],
+      "independentLexicalApproval": false,
+      "independentEmojiApproval": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 231,
+      "character": "业",
+      "pinnedDictionaryReadings": [
+        "Ye4",
+        "ye4"
+      ],
+      "externalSource": {
+        "publisher": "汉典 (Zdic)",
+        "url": "https://zdic.net/hans/%E4%B8%9A",
+        "reportedReadingLabels": [
+          "ye4"
+        ]
+      },
+      "preliminaryReadingComparisons": [
+        {
+          "reading": "Ye4",
+          "sourceComparison": "External dictionary includes surname usage under yè, alongside ordinary uses.",
+          "unresolvedCategory": "name_context_not_distinct_tone"
+        },
+        {
+          "reading": "ye4",
+          "sourceComparison": "The external dictionary distinguishes business, employment, studies, achievements and specialized Buddhist terminology.",
+          "unresolvedCategory": "contextual_polysemy"
+        }
+      ],
+      "independentLexicalApproval": false,
+      "independentEmojiApproval": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 379,
+      "character": "过",
+      "pinnedDictionaryReadings": [
+        "Guo4",
+        "guo4",
+        "guo5"
+      ],
+      "externalSource": {
+        "publisher": "汉典 (Zdic)",
+        "url": "https://zdic.net/hans/%E8%BF%87",
+        "reportedReadingLabels": [
+          "guo1",
+          "guo4",
+          "guo5"
+        ]
+      },
+      "preliminaryReadingComparisons": [
+        {
+          "reading": "Guo4",
+          "sourceComparison": "Pronunciation conflict: pinned CC-CEDICT surname spelling Guo4 (fourth tone) versus external 汉典 surname guō (first tone). Neither source has been independently adjudicated.",
+          "unresolvedCategory": "unresolved_source_pronunciation_conflict"
+        },
+        {
+          "reading": "guo4",
+          "sourceComparison": "External dictionary distinguishes crossing, passage, excess and other full-tone usages.",
+          "unresolvedCategory": "lexical_polysemy"
+        },
+        {
+          "reading": "guo5",
+          "sourceComparison": "External dictionary lists unstressed postverbal experiential/aspectual use separately.",
+          "unresolvedCategory": "grammatical_function"
+        }
+      ],
+      "independentLexicalApproval": false,
+      "independentEmojiApproval": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 401,
+      "character": "成",
+      "pinnedDictionaryReadings": [
+        "Cheng2",
+        "cheng2"
+      ],
+      "externalSource": {
+        "publisher": "汉典 (Zdic)",
+        "url": "https://zdic.net/hans/%E6%88%90",
+        "reportedReadingLabels": [
+          "cheng2"
+        ]
+      },
+      "preliminaryReadingComparisons": [
+        {
+          "reading": "Cheng2",
+          "sourceComparison": "External dictionary includes surname use under chéng; the capital initial in the source is orthographic rather than a separate tonal phoneme.",
+          "unresolvedCategory": "name_context_not_distinct_tone"
+        },
+        {
+          "reading": "cheng2",
+          "sourceComparison": "The external dictionary separates completion, becoming, acceptability and fraction-related uses.",
+          "unresolvedCategory": "contextual_polysemy"
+        }
+      ],
+      "independentLexicalApproval": false,
+      "independentEmojiApproval": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 407,
+      "character": "划",
+      "pinnedDictionaryReadings": [
+        "hua2",
+        "hua4"
+      ],
+      "externalSource": {
+        "publisher": "汉典 (Zdic)",
+        "url": "https://zdic.net/hans/%E5%88%92",
+        "reportedReadingLabels": [
+          "hua2",
+          "hua4"
+        ]
+      },
+      "preliminaryReadingComparisons": [
+        {
+          "reading": "hua2",
+          "sourceComparison": "External dictionary includes rowing, surface cutting, scratching and value-related uses under huá.",
+          "unresolvedCategory": "reading_specific_verb_senses"
+        },
+        {
+          "reading": "hua4",
+          "sourceComparison": "External dictionary describes dividing, delimiting and planning under huà.",
+          "unresolvedCategory": "reading_specific_verb_senses"
+        }
+      ],
+      "independentLexicalApproval": false,
+      "independentEmojiApproval": false,
+      "productionVerified": false
+    }
+  ]
+}
