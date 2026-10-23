@@ -25,7 +25,7 @@ assert.deepEqual(JSON.parse(JSON.stringify(trials)),
  JSON.parse(JSON.stringify(core.permutation(source,seed))));
 assert.notEqual(trials.map(t=>t.id).join("|"),
  core.permutation(source,seed+1).map(t=>t.id).join("|"));
-assert.deepEqual(trials.map(x=>x.position),Array.from({length:49},(_,i)=>i+1));
+assert.deepEqual(Array.from(trials,x=>x.position),Array.from({length:49},(_,i)=>i+1));
 const settings={pixelSize:48,surface:"white",appearance:"color"};
 const when="2026-10-23T21:42:00.000Z";
 let responses=new Map(trials.map((t,i)=>[t.id,i%4===0?"left_clearer":
@@ -75,7 +75,8 @@ for(const alter of [
  (m,f,p)=>{m.glyphs[0].heldoutSVG="/external.svg";},
  (m,f,p)=>{f.folds[0].excludedFromOptimizer[0]=9999;},
  (m,f,p)=>{f.folds[0].sourcePinnedCandidateColors[0].semanticApproval=true;},
- (m,f,p)=>{p.components[0].color="#000000";},
+ (m,f,p)=>{const id=m.glyphs[0].pairs[0].componentA.id;
+  p.components.find(x=>x.id===id).color="#000000";},
  (m,f,p)=>{m.summary.newlyFlaggedGlyphs=24;}
 ]){
  const m=structuredClone(manifest),f=structuredClone(folds),p=structuredClone(palette);
