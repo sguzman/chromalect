@@ -45,8 +45,10 @@ for(const change of [
  d=>{d[4].glyphs[0].pairs[0].visualReview="certified";},
  d=>{d[4].glyphs[0].originalSHA256="0".repeat(64);},
  d=>{d[3].folds[0].sourcePinnedCandidateColors[0].semanticApproval=true;},
- d=>{d[2].components[0].color="#ff00ff";},
- d=>{d[0].characters[0].character="?"}
+ d=>{const owner=d[4].glyphs[0].pairs[0].componentA.id;
+  d[2].components.find(c=>c.id===owner).color="#ff00ff";},
+ d=>{const rank=d[4].glyphs[0].rank;
+  d[0].characters[rank-1].character="?";}
 ]){
  const copied=inputs.map(x=>structuredClone(x));change(copied);
  assert.throws(()=>deriveIdentificationTargets(...copied,source));
