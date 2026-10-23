@@ -35,7 +35,7 @@ const code=view["initial-list"].children[0].children[0].textContent.split(" · "
 assert.equal(view["initial-list"].children[0].children[1].children[0].textContent,code);
 view["initial-filter"].value="aspirated";view["initial-filter"].events.input();
 assert.ok(view["initial-list"].children.length>0&&view["initial-list"].children.length<21);
-const invalid=structuredClone(source);invalid.tokens.find(t=>t.token==="p").place="labiodental";
+const invalid=structuredClone(source);invalid.tokens.find(t=>t.token==="p").aspiration="unaspirated";
 const bad=create(invalid);await settle(bad);
 assert.match(bad["initial-status"].textContent,/Unable to validate/);
 assert.equal(bad["initial-list"].children.length,0);
