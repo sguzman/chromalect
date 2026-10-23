@@ -1,0 +1,3488 @@
+{
+  "schema": "chromalect.semantic.event-non-event-contrast-audit.v0.1",
+  "status": "automated_cross_role_visibility_inventory_not_evidence_of_incorrectness",
+  "source": {
+    "reuse": "visual-form-reuse-v0.1.json",
+    "visibility": "emoji-visibility-audit-v0.1.json",
+    "sourceLicense": "Derived metadata; dictionary data retain CC BY-SA 4.0 provenance"
+  },
+  "interpretation": [
+    "Reused emoji across different Mandarin characters are normal and not a semantic uniqueness failure.",
+    "An expression may be an appropriate cue even when it is used for both an action and an entity elsewhere.",
+    "A typed event is not automatically distinguishable from a non-event in the emoji-only view.",
+    "This inventory flags a contrast that requires controlled interpretation testing, not an incorrect translation.",
+    "Contrast-focus priority is based solely on group size and presence of multiple samples on both sides."
+  ],
+  "summary": {
+    "sourceCandidateExpressions": 897,
+    "distinctVisualForms": 388,
+    "mixedEventNonEventForms": 73,
+    "assignmentsInMixedForms": 341,
+    "eventAssignmentsInMixedForms": 164,
+    "nonEventAssignmentsInMixedForms": 177,
+    "contrastFocusForms": 16,
+    "humanLexicalApproved": 0,
+    "humanEmojiComprehensionApproved": 0,
+    "productionVerified": 0
+  },
+  "forms": [
+    {
+      "emoji": "✅",
+      "assignmentCount": 15,
+      "distinctMeaningCount": 9,
+      "eventAssignments": 8,
+      "nonEventAssignments": 7,
+      "studyPriority": "contrast_focus",
+      "records": [
+        {
+          "id": "r0017-s01",
+          "rank": 17,
+          "character": "了",
+          "selectedMeaning": "finish",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0061-s01",
+          "rank": 61,
+          "character": "已",
+          "selectedMeaning": "finished",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": false
+        },
+        {
+          "id": "r0183-s01",
+          "rank": 183,
+          "character": "允",
+          "selectedMeaning": "allow",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0198-s01",
+          "rank": 198,
+          "character": "正",
+          "selectedMeaning": "correct",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0317-s01",
+          "rank": 317,
+          "character": "让",
+          "selectedMeaning": "allow",
+          "typedEvent": true,
+          "wholeTermDictionaryMatch": false
+        },
+        {
+          "id": "r0341-s01",
+          "rank": 341,
+          "character": "对",
+          "selectedMeaning": "correct",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0363-s01",
+          "rank": 363,
+          "character": "执",
+          "selectedMeaning": "carry out",
+          "typedEvent": true,
+          "wholeTermDictionaryMatch": false
+        },
+        {
+          "id": "r0401-s01",
+          "rank": 401,
+          "character": "成",
+          "selectedMeaning": "finished",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": false
+        },
+        {
+          "id": "r0409-s01",
+          "rank": 409,
+          "character": "毕",
+          "selectedMeaning": "finish",
+          "typedEvent": true,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0523-s01",
+          "rank": 523,
+          "character": "决",
+          "selectedMeaning": "decide",
+          "typedEvent": true,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0554-s01",
+          "rank": 554,
+          "character": "许",
+          "selectedMeaning": "allow",
+          "typedEvent": true,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0799-s01",
+          "rank": 799,
+          "character": "妥",
+          "selectedMeaning": "appropriate",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": false
+        },
+        {
+          "id": "r0877-s01",
+          "rank": 877,
+          "character": "完",
+          "selectedMeaning": "complete",
+          "typedEvent": true,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0961-s01",
+          "rank": 961,
+          "character": "拣",
+          "selectedMeaning": "choose",
+          "typedEvent": true,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0992-s01",
+          "rank": 992,
+          "character": "择",
+          "selectedMeaning": "choose",
+          "typedEvent": true,
+          "wholeTermDictionaryMatch": true
+        }
+      ]
+    },
+    {
+      "emoji": "💪",
+      "assignmentCount": 13,
+      "distinctMeaningCount": 9,
+      "eventAssignments": 2,
+      "nonEventAssignments": 11,
+      "studyPriority": "contrast_focus",
+      "records": [
+        {
+          "id": "r0019-s01",
+          "rank": 19,
+          "character": "力",
+          "selectedMeaning": "power",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0361-s01",
+          "rank": 361,
+          "character": "巩",
+          "selectedMeaning": "strong",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": false
+        },
+        {
+          "id": "r0441-s01",
+          "rank": 441,
+          "character": "刚",
+          "selectedMeaning": "strong",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0495-s01",
+          "rank": 495,
+          "character": "肌",
+          "selectedMeaning": "muscle",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0510-s01",
+          "rank": 510,
+          "character": "壮",
+          "selectedMeaning": "robust",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0610-s01",
+          "rank": 610,
+          "character": "韧",
+          "selectedMeaning": "resilient",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": false
+        },
+        {
+          "id": "r0651-s01",
+          "rank": 651,
+          "character": "志",
+          "selectedMeaning": "determination",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": false
+        },
+        {
+          "id": "r0712-s01",
+          "rank": 712,
+          "character": "坚",
+          "selectedMeaning": "strong",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0806-s01",
+          "rank": 806,
+          "character": "肘",
+          "selectedMeaning": "elbow",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0924-s01",
+          "rank": 924,
+          "character": "努",
+          "selectedMeaning": "strive",
+          "typedEvent": true,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0925-s01",
+          "rank": 925,
+          "character": "忍",
+          "selectedMeaning": "endure",
+          "typedEvent": true,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0926-s01",
+          "rank": 926,
+          "character": "劲",
+          "selectedMeaning": "strong",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0977-s01",
+          "rank": 977,
+          "character": "势",
+          "selectedMeaning": "power",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": true
+        }
+      ]
+    },
+    {
+      "emoji": "↔️",
+      "assignmentCount": 12,
+      "distinctMeaningCount": 6,
+      "eventAssignments": 4,
+      "nonEventAssignments": 8,
+      "studyPriority": "contrast_focus",
+      "records": [
+        {
+          "id": "r0053-s01",
+          "rank": 53,
+          "character": "广",
+          "selectedMeaning": "wide",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0329-s01",
+          "rank": 329,
+          "character": "弘",
+          "selectedMeaning": "expand",
+          "typedEvent": true,
+          "wholeTermDictionaryMatch": false
+        },
+        {
+          "id": "r0364-s01",
+          "rank": 364,
+          "character": "扩",
+          "selectedMeaning": "expand",
+          "typedEvent": true,
+          "wholeTermDictionaryMatch": false
+        },
+        {
+          "id": "r0392-s01",
+          "rank": 392,
+          "character": "而",
+          "selectedMeaning": "but",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0402-s01",
+          "rank": 402,
+          "character": "夹",
+          "selectedMeaning": "between",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0727-s01",
+          "rank": 727,
+          "character": "旷",
+          "selectedMeaning": "wide",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": false
+        },
+        {
+          "id": "r0751-s01",
+          "rank": 751,
+          "character": "别",
+          "selectedMeaning": "separate",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0774-s01",
+          "rank": 774,
+          "character": "但",
+          "selectedMeaning": "but",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0847-s01",
+          "rank": 847,
+          "character": "间",
+          "selectedMeaning": "space",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0879-s01",
+          "rank": 879,
+          "character": "宏",
+          "selectedMeaning": "wide",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": false
+        },
+        {
+          "id": "r0909-s01",
+          "rank": 909,
+          "character": "张",
+          "selectedMeaning": "expand",
+          "typedEvent": true,
+          "wholeTermDictionaryMatch": false
+        },
+        {
+          "id": "r0957-s01",
+          "rank": 957,
+          "character": "拓",
+          "selectedMeaning": "expand",
+          "typedEvent": true,
+          "wholeTermDictionaryMatch": true
+        }
+      ]
+    },
+    {
+      "emoji": "⚖️",
+      "assignmentCount": 11,
+      "distinctMeaningCount": 11,
+      "eventAssignments": 3,
+      "nonEventAssignments": 8,
+      "studyPriority": "contrast_focus",
+      "records": [
+        {
+          "id": "r0057-s01",
+          "rank": 57,
+          "character": "义",
+          "selectedMeaning": "righteousness",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0105-s01",
+          "rank": 105,
+          "character": "比",
+          "selectedMeaning": "compare",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0148-s01",
+          "rank": 148,
+          "character": "公",
+          "selectedMeaning": "fair",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0156-s01",
+          "rank": 156,
+          "character": "匀",
+          "selectedMeaning": "equal",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": false
+        },
+        {
+          "id": "r0351-s01",
+          "rank": 351,
+          "character": "刑",
+          "selectedMeaning": "punishment",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0440-s01",
+          "rank": 440,
+          "character": "则",
+          "selectedMeaning": "law",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": false
+        },
+        {
+          "id": "r0448-s01",
+          "rank": 448,
+          "character": "廷",
+          "selectedMeaning": "court",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": false
+        },
+        {
+          "id": "r0557-s01",
+          "rank": 557,
+          "character": "讼",
+          "selectedMeaning": "litigate",
+          "typedEvent": true,
+          "wholeTermDictionaryMatch": false
+        },
+        {
+          "id": "r0675-s01",
+          "rank": 675,
+          "character": "克",
+          "selectedMeaning": "gram",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0849-s01",
+          "rank": 849,
+          "character": "判",
+          "selectedMeaning": "judge",
+          "typedEvent": true,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0894-s01",
+          "rank": 894,
+          "character": "诉",
+          "selectedMeaning": "sue",
+          "typedEvent": true,
+          "wholeTermDictionaryMatch": true
+        }
+      ]
+    },
+    {
+      "emoji": "🤝",
+      "assignmentCount": 11,
+      "distinctMeaningCount": 10,
+      "eventAssignments": 5,
+      "nonEventAssignments": 6,
+      "studyPriority": "contrast_focus",
+      "records": [
+        {
+          "id": "r0106-s01",
+          "rank": 106,
+          "character": "互",
+          "selectedMeaning": "mutually",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": false
+        },
+        {
+          "id": "r0371-s01",
+          "rank": 371,
+          "character": "共",
+          "selectedMeaning": "together",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0383-s01",
+          "rank": 383,
+          "character": "协",
+          "selectedMeaning": "cooperate",
+          "typedEvent": true,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0412-s01",
+          "rank": 412,
+          "character": "贞",
+          "selectedMeaning": "loyal",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": false
+        },
+        {
+          "id": "r0465-s01",
+          "rank": 465,
+          "character": "仲",
+          "selectedMeaning": "mediator",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": false
+        },
+        {
+          "id": "r0486-s01",
+          "rank": 486,
+          "character": "会",
+          "selectedMeaning": "meet together",
+          "typedEvent": true,
+          "wholeTermDictionaryMatch": false
+        },
+        {
+          "id": "r0593-s01",
+          "rank": 593,
+          "character": "约",
+          "selectedMeaning": "agreement",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": false
+        },
+        {
+          "id": "r0612-s01",
+          "rank": 612,
+          "character": "扶",
+          "selectedMeaning": "help",
+          "typedEvent": true,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0719-s01",
+          "rank": 719,
+          "character": "助",
+          "selectedMeaning": "help",
+          "typedEvent": true,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0772-s01",
+          "rank": 772,
+          "character": "佐",
+          "selectedMeaning": "assist",
+          "typedEvent": true,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0875-s01",
+          "rank": 875,
+          "character": "忱",
+          "selectedMeaning": "sincerity",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": true
+        }
+      ]
+    },
+    {
+      "emoji": "🗣️",
+      "assignmentCount": 10,
+      "distinctMeaningCount": 7,
+      "eventAssignments": 8,
+      "nonEventAssignments": 2,
+      "studyPriority": "contrast_focus",
+      "records": [
+        {
+          "id": "r0082-s02",
+          "rank": 82,
+          "character": "云",
+          "selectedMeaning": "say",
+          "typedEvent": true,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0111-s01",
+          "rank": 111,
+          "character": "曰",
+          "selectedMeaning": "say",
+          "typedEvent": true,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0310-s01",
+          "rank": 310,
+          "character": "头",
+          "selectedMeaning": "head",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0315-s01",
+          "rank": 315,
+          "character": "讨",
+          "selectedMeaning": "discuss",
+          "typedEvent": true,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0320-s01",
+          "rank": 320,
+          "character": "议",
+          "selectedMeaning": "discuss",
+          "typedEvent": true,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0550-s01",
+          "rank": 550,
+          "character": "讲",
+          "selectedMeaning": "explain",
+          "typedEvent": true,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0556-s01",
+          "rank": 556,
+          "character": "论",
+          "selectedMeaning": "discuss",
+          "typedEvent": true,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0659-s01",
+          "rank": 659,
+          "character": "抒",
+          "selectedMeaning": "express",
+          "typedEvent": true,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0735-s01",
+          "rank": 735,
+          "character": "吵",
+          "selectedMeaning": "argue",
+          "typedEvent": true,
+          "wholeTermDictionaryMatch": false
+        },
+        {
+          "id": "r0826-s01",
+          "rank": 826,
+          "character": "言",
+          "selectedMeaning": "speech",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": true
+        }
+      ]
+    },
+    {
+      "emoji": "🎭",
+      "assignmentCount": 8,
+      "distinctMeaningCount": 8,
+      "eventAssignments": 4,
+      "nonEventAssignments": 4,
+      "studyPriority": "contrast_focus",
+      "records": [
+        {
+          "id": "r0476-s01",
+          "rank": 476,
+          "character": "伪",
+          "selectedMeaning": "counterfeit",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": false
+        },
+        {
+          "id": "r0555-s01",
+          "rank": 555,
+          "character": "讹",
+          "selectedMeaning": "cheat",
+          "typedEvent": true,
+          "wholeTermDictionaryMatch": false
+        },
+        {
+          "id": "r0559-s01",
+          "rank": 559,
+          "character": "讽",
+          "selectedMeaning": "satirize",
+          "typedEvent": true,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0577-s01",
+          "rank": 577,
+          "character": "奸",
+          "selectedMeaning": "false",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": false
+        },
+        {
+          "id": "r0584-s01",
+          "rank": 584,
+          "character": "戏",
+          "selectedMeaning": "play",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0636-s01",
+          "rank": 636,
+          "character": "扮",
+          "selectedMeaning": "dress up",
+          "typedEvent": true,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0779-s01",
+          "rank": 779,
+          "character": "伶",
+          "selectedMeaning": "actor",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0893-s01",
+          "rank": 893,
+          "character": "诈",
+          "selectedMeaning": "swindle",
+          "typedEvent": true,
+          "wholeTermDictionaryMatch": true
+        }
+      ]
+    },
+    {
+      "emoji": "👶",
+      "assignmentCount": 8,
+      "distinctMeaningCount": 6,
+      "eventAssignments": 1,
+      "nonEventAssignments": 7,
+      "studyPriority": "standard",
+      "records": [
+        {
+          "id": "r0012-s01",
+          "rank": 12,
+          "character": "儿",
+          "selectedMeaning": "child",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0064-s01",
+          "rank": 64,
+          "character": "子",
+          "selectedMeaning": "child",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0263-s02",
+          "rank": 263,
+          "character": "生",
+          "selectedMeaning": "birth",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0276-s01",
+          "rank": 276,
+          "character": "仔",
+          "selectedMeaning": "child",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": false
+        },
+        {
+          "id": "r0346-s01",
+          "rank": 346,
+          "character": "幼",
+          "selectedMeaning": "young child",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": false
+        },
+        {
+          "id": "r0522-s01",
+          "rank": 522,
+          "character": "产",
+          "selectedMeaning": "give birth",
+          "typedEvent": true,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0570-s01",
+          "rank": 570,
+          "character": "孙",
+          "selectedMeaning": "grandchild",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": false
+        },
+        {
+          "id": "r0947-s02",
+          "rank": 947,
+          "character": "青",
+          "selectedMeaning": "young",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": true
+        }
+      ]
+    },
+    {
+      "emoji": "🪢",
+      "assignmentCount": 8,
+      "distinctMeaningCount": 6,
+      "eventAssignments": 4,
+      "nonEventAssignments": 4,
+      "studyPriority": "contrast_focus",
+      "records": [
+        {
+          "id": "r0209-s01",
+          "rank": 209,
+          "character": "节",
+          "selectedMeaning": "knot",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": false
+        },
+        {
+          "id": "r0634-s01",
+          "rank": 634,
+          "character": "扳",
+          "selectedMeaning": "pull",
+          "typedEvent": true,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0694-s01",
+          "rank": 694,
+          "character": "束",
+          "selectedMeaning": "bind",
+          "typedEvent": true,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0933-s01",
+          "rank": 933,
+          "character": "纲",
+          "selectedMeaning": "rope",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0937-s01",
+          "rank": 937,
+          "character": "纷",
+          "selectedMeaning": "tangled",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": false
+        },
+        {
+          "id": "r0942-s01",
+          "rank": 942,
+          "character": "纽",
+          "selectedMeaning": "knot",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": false
+        },
+        {
+          "id": "r0968-s01",
+          "rank": 968,
+          "character": "拖",
+          "selectedMeaning": "drag",
+          "typedEvent": true,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0981-s01",
+          "rank": 981,
+          "character": "拉",
+          "selectedMeaning": "pull",
+          "typedEvent": true,
+          "wholeTermDictionaryMatch": true
+        }
+      ]
+    },
+    {
+      "emoji": "🚫",
+      "assignmentCount": 8,
+      "distinctMeaningCount": 5,
+      "eventAssignments": 1,
+      "nonEventAssignments": 7,
+      "studyPriority": "standard",
+      "records": [
+        {
+          "id": "r0081-s01",
+          "rank": 81,
+          "character": "无",
+          "selectedMeaning": "no",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0091-s01",
+          "rank": 91,
+          "character": "不",
+          "selectedMeaning": "not",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0152-s01",
+          "rank": 152,
+          "character": "勿",
+          "selectedMeaning": "must not",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": false
+        },
+        {
+          "id": "r0328-s01",
+          "rank": 328,
+          "character": "弗",
+          "selectedMeaning": "not",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0609-s01",
+          "rank": 609,
+          "character": "违",
+          "selectedMeaning": "disobey",
+          "typedEvent": true,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0703-s01",
+          "rank": 703,
+          "character": "否",
+          "selectedMeaning": "not",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0751-s02",
+          "rank": 751,
+          "character": "别",
+          "selectedMeaning": "do not",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": false
+        },
+        {
+          "id": "r0867-s01",
+          "rank": 867,
+          "character": "没",
+          "selectedMeaning": "not",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": true
+        }
+      ]
+    },
+    {
+      "emoji": "🌊",
+      "assignmentCount": 7,
+      "distinctMeaningCount": 5,
+      "eventAssignments": 4,
+      "nonEventAssignments": 3,
+      "studyPriority": "contrast_focus",
+      "records": [
+        {
+          "id": "r0539-s01",
+          "rank": 539,
+          "character": "汛",
+          "selectedMeaning": "flood",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0855-s01",
+          "rank": 855,
+          "character": "汪",
+          "selectedMeaning": "vast",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": false
+        },
+        {
+          "id": "r0863-s01",
+          "rank": 863,
+          "character": "沦",
+          "selectedMeaning": "sink",
+          "typedEvent": true,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0864-s01",
+          "rank": 864,
+          "character": "汹",
+          "selectedMeaning": "turbulent",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": false
+        },
+        {
+          "id": "r0867-s02",
+          "rank": 867,
+          "character": "没",
+          "selectedMeaning": "drown",
+          "typedEvent": true,
+          "wholeTermDictionaryMatch": false
+        },
+        {
+          "id": "r0870-s01",
+          "rank": 870,
+          "character": "沈",
+          "selectedMeaning": "sink",
+          "typedEvent": true,
+          "wholeTermDictionaryMatch": false
+        },
+        {
+          "id": "r0871-s01",
+          "rank": 871,
+          "character": "沉",
+          "selectedMeaning": "sink",
+          "typedEvent": true,
+          "wholeTermDictionaryMatch": true
+        }
+      ]
+    },
+    {
+      "emoji": "🌱",
+      "assignmentCount": 7,
+      "distinctMeaningCount": 7,
+      "eventAssignments": 3,
+      "nonEventAssignments": 4,
+      "studyPriority": "contrast_focus",
+      "records": [
+        {
+          "id": "r0258-s01",
+          "rank": 258,
+          "character": "冉",
+          "selectedMeaning": "tender",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": false
+        },
+        {
+          "id": "r0263-s01",
+          "rank": 263,
+          "character": "生",
+          "selectedMeaning": "life",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0391-s01",
+          "rank": 391,
+          "character": "存",
+          "selectedMeaning": "exist",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0544-s01",
+          "rank": 544,
+          "character": "兴",
+          "selectedMeaning": "flourish",
+          "typedEvent": true,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0664-s01",
+          "rank": 664,
+          "character": "芽",
+          "selectedMeaning": "sprout",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0677-s01",
+          "rank": 677,
+          "character": "苏",
+          "selectedMeaning": "revive",
+          "typedEvent": true,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0959-s01",
+          "rank": 959,
+          "character": "拔",
+          "selectedMeaning": "uproot",
+          "typedEvent": true,
+          "wholeTermDictionaryMatch": false
+        }
+      ]
+    },
+    {
+      "emoji": "📣",
+      "assignmentCount": 7,
+      "distinctMeaningCount": 5,
+      "eventAssignments": 6,
+      "nonEventAssignments": 1,
+      "studyPriority": "standard",
+      "records": [
+        {
+          "id": "r0253-s01",
+          "rank": 253,
+          "character": "叫",
+          "selectedMeaning": "shout",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0334-s01",
+          "rank": 334,
+          "character": "召",
+          "selectedMeaning": "summon",
+          "typedEvent": true,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0433-s01",
+          "rank": 433,
+          "character": "吆",
+          "selectedMeaning": "shout",
+          "typedEvent": true,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0618-s01",
+          "rank": 618,
+          "character": "扰",
+          "selectedMeaning": "disturb",
+          "typedEvent": true,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0738-s01",
+          "rank": 738,
+          "character": "呐",
+          "selectedMeaning": "shout",
+          "typedEvent": true,
+          "wholeTermDictionaryMatch": false
+        },
+        {
+          "id": "r0741-s01",
+          "rank": 741,
+          "character": "吩",
+          "selectedMeaning": "command",
+          "typedEvent": true,
+          "wholeTermDictionaryMatch": false
+        },
+        {
+          "id": "r0760-s01",
+          "rank": 760,
+          "character": "告",
+          "selectedMeaning": "announce",
+          "typedEvent": true,
+          "wholeTermDictionaryMatch": true
+        }
+      ]
+    },
+    {
+      "emoji": "🪞",
+      "assignmentCount": 7,
+      "distinctMeaningCount": 5,
+      "eventAssignments": 1,
+      "nonEventAssignments": 6,
+      "studyPriority": "standard",
+      "records": [
+        {
+          "id": "r0060-s01",
+          "rank": 60,
+          "character": "己",
+          "selectedMeaning": "self",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0474-s01",
+          "rank": 474,
+          "character": "仿",
+          "selectedMeaning": "imitate",
+          "typedEvent": true,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0477-s01",
+          "rank": 477,
+          "character": "自",
+          "selectedMeaning": "self",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0481-s01",
+          "rank": 481,
+          "character": "似",
+          "selectedMeaning": "resemble",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0578-s01",
+          "rank": 578,
+          "character": "如",
+          "selectedMeaning": "like",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": false
+        },
+        {
+          "id": "r0713-s01",
+          "rank": 713,
+          "character": "肖",
+          "selectedMeaning": "resemble",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0812-s01",
+          "rank": 812,
+          "character": "犹",
+          "selectedMeaning": "similar",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": false
+        }
+      ]
+    },
+    {
+      "emoji": "🛠️",
+      "assignmentCount": 7,
+      "distinctMeaningCount": 7,
+      "eventAssignments": 5,
+      "nonEventAssignments": 2,
+      "studyPriority": "contrast_focus",
+      "records": [
+        {
+          "id": "r0026-s01",
+          "rank": 26,
+          "character": "工",
+          "selectedMeaning": "work",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0283-s01",
+          "rank": 283,
+          "character": "用",
+          "selectedMeaning": "use",
+          "typedEvent": true,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0418-s01",
+          "rank": 418,
+          "character": "当",
+          "selectedMeaning": "undertake",
+          "typedEvent": true,
+          "wholeTermDictionaryMatch": false
+        },
+        {
+          "id": "r0494-s01",
+          "rank": 494,
+          "character": "创",
+          "selectedMeaning": "create",
+          "typedEvent": true,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0615-s01",
+          "rank": 615,
+          "character": "技",
+          "selectedMeaning": "skill",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0674-s01",
+          "rank": 674,
+          "character": "劳",
+          "selectedMeaning": "labor",
+          "typedEvent": true,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0777-s01",
+          "rank": 777,
+          "character": "作",
+          "selectedMeaning": "make",
+          "typedEvent": true,
+          "wholeTermDictionaryMatch": false
+        }
+      ]
+    },
+    {
+      "emoji": "🛡️",
+      "assignmentCount": 7,
+      "distinctMeaningCount": 4,
+      "eventAssignments": 6,
+      "nonEventAssignments": 1,
+      "studyPriority": "standard",
+      "records": [
+        {
+          "id": "r0065-s01",
+          "rank": 65,
+          "character": "卫",
+          "selectedMeaning": "protect",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0546-s01",
+          "rank": 546,
+          "character": "守",
+          "selectedMeaning": "protect",
+          "typedEvent": true,
+          "wholeTermDictionaryMatch": false
+        },
+        {
+          "id": "r0576-s01",
+          "rank": 576,
+          "character": "防",
+          "selectedMeaning": "prevent",
+          "typedEvent": true,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0620-s01",
+          "rank": 620,
+          "character": "拒",
+          "selectedMeaning": "defend",
+          "typedEvent": true,
+          "wholeTermDictionaryMatch": false
+        },
+        {
+          "id": "r0649-s01",
+          "rank": 649,
+          "character": "护",
+          "selectedMeaning": "protect",
+          "typedEvent": true,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0773-s01",
+          "rank": 773,
+          "character": "佑",
+          "selectedMeaning": "protect",
+          "typedEvent": true,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0833-s01",
+          "rank": 833,
+          "character": "庇",
+          "selectedMeaning": "shelter",
+          "typedEvent": true,
+          "wholeTermDictionaryMatch": true
+        }
+      ]
+    },
+    {
+      "emoji": "🏃",
+      "assignmentCount": 6,
+      "distinctMeaningCount": 6,
+      "eventAssignments": 5,
+      "nonEventAssignments": 1,
+      "studyPriority": "standard",
+      "records": [
+        {
+          "id": "r0353-s01",
+          "rank": 353,
+          "character": "动",
+          "selectedMeaning": "move",
+          "typedEvent": true,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0529-s01",
+          "rank": 529,
+          "character": "闯",
+          "selectedMeaning": "rush in",
+          "typedEvent": true,
+          "wholeTermDictionaryMatch": false
+        },
+        {
+          "id": "r0543-s01",
+          "rank": 543,
+          "character": "忙",
+          "selectedMeaning": "busy",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0596-s01",
+          "rank": 596,
+          "character": "驰",
+          "selectedMeaning": "hurry",
+          "typedEvent": true,
+          "wholeTermDictionaryMatch": false
+        },
+        {
+          "id": "r0810-s01",
+          "rank": 810,
+          "character": "免",
+          "selectedMeaning": "evade",
+          "typedEvent": true,
+          "wholeTermDictionaryMatch": false
+        },
+        {
+          "id": "r0930-s01",
+          "rank": 930,
+          "character": "驱",
+          "selectedMeaning": "drive away",
+          "typedEvent": true,
+          "wholeTermDictionaryMatch": false
+        }
+      ]
+    },
+    {
+      "emoji": "🔄",
+      "assignmentCount": 6,
+      "distinctMeaningCount": 4,
+      "eventAssignments": 5,
+      "nonEventAssignments": 1,
+      "studyPriority": "standard",
+      "records": [
+        {
+          "id": "r0132-s01",
+          "rank": 132,
+          "character": "化",
+          "selectedMeaning": "change",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0519-s01",
+          "rank": 519,
+          "character": "交",
+          "selectedMeaning": "exchange",
+          "typedEvent": true,
+          "wholeTermDictionaryMatch": false
+        },
+        {
+          "id": "r0635-s01",
+          "rank": 635,
+          "character": "抡",
+          "selectedMeaning": "swing",
+          "typedEvent": true,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0693-s01",
+          "rank": 693,
+          "character": "更",
+          "selectedMeaning": "change",
+          "typedEvent": true,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0908-s01",
+          "rank": 908,
+          "character": "改",
+          "selectedMeaning": "change",
+          "typedEvent": true,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0985-s01",
+          "rank": 985,
+          "character": "拧",
+          "selectedMeaning": "twist",
+          "typedEvent": true,
+          "wholeTermDictionaryMatch": true
+        }
+      ]
+    },
+    {
+      "emoji": "🧵",
+      "assignmentCount": 6,
+      "distinctMeaningCount": 5,
+      "eventAssignments": 1,
+      "nonEventAssignments": 5,
+      "studyPriority": "standard",
+      "records": [
+        {
+          "id": "r0218-s01",
+          "rank": 218,
+          "character": "布",
+          "selectedMeaning": "textiles",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": false
+        },
+        {
+          "id": "r0347-s01",
+          "rank": 347,
+          "character": "丝",
+          "selectedMeaning": "silk",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0736-s01",
+          "rank": 736,
+          "character": "串",
+          "selectedMeaning": "string",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0816-s01",
+          "rank": 816,
+          "character": "条",
+          "selectedMeaning": "string",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": false
+        },
+        {
+          "id": "r0932-s01",
+          "rank": 932,
+          "character": "纱",
+          "selectedMeaning": "gauze",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": false
+        },
+        {
+          "id": "r0940-s01",
+          "rank": 940,
+          "character": "纺",
+          "selectedMeaning": "weave",
+          "typedEvent": true,
+          "wholeTermDictionaryMatch": false
+        }
+      ]
+    },
+    {
+      "emoji": "⏳",
+      "assignmentCount": 5,
+      "distinctMeaningCount": 5,
+      "eventAssignments": 1,
+      "nonEventAssignments": 4,
+      "studyPriority": "standard",
+      "records": [
+        {
+          "id": "r0047-s01",
+          "rank": 47,
+          "character": "久",
+          "selectedMeaning": "long time",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": false
+        },
+        {
+          "id": "r0192-s01",
+          "rank": 192,
+          "character": "未",
+          "selectedMeaning": "not yet",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0453-s01",
+          "rank": 453,
+          "character": "迄",
+          "selectedMeaning": "until",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0464-s01",
+          "rank": 464,
+          "character": "延",
+          "selectedMeaning": "delay",
+          "typedEvent": true,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0704-s01",
+          "rank": 704,
+          "character": "还",
+          "selectedMeaning": "still",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": true
+        }
+      ]
+    },
+    {
+      "emoji": "⚔️",
+      "assignmentCount": 5,
+      "distinctMeaningCount": 3,
+      "eventAssignments": 2,
+      "nonEventAssignments": 3,
+      "studyPriority": "contrast_focus",
+      "records": [
+        {
+          "id": "r0133-s01",
+          "rank": 133,
+          "character": "仇",
+          "selectedMeaning": "enemy",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0199-s01",
+          "rank": 199,
+          "character": "扑",
+          "selectedMeaning": "attack",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": false
+        },
+        {
+          "id": "r0270-s01",
+          "rank": 270,
+          "character": "仗",
+          "selectedMeaning": "fight",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": false
+        },
+        {
+          "id": "r0508-s01",
+          "rank": 508,
+          "character": "争",
+          "selectedMeaning": "fight",
+          "typedEvent": true,
+          "wholeTermDictionaryMatch": false
+        },
+        {
+          "id": "r0630-s01",
+          "rank": 630,
+          "character": "攻",
+          "selectedMeaning": "attack",
+          "typedEvent": true,
+          "wholeTermDictionaryMatch": true
+        }
+      ]
+    },
+    {
+      "emoji": "🎁",
+      "assignmentCount": 5,
+      "distinctMeaningCount": 3,
+      "eventAssignments": 4,
+      "nonEventAssignments": 1,
+      "studyPriority": "standard",
+      "records": [
+        {
+          "id": "r0034-s01",
+          "rank": 34,
+          "character": "与",
+          "selectedMeaning": "give",
+          "typedEvent": true,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0184-s01",
+          "rank": 184,
+          "character": "予",
+          "selectedMeaning": "give",
+          "typedEvent": true,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0269-s01",
+          "rank": 269,
+          "character": "付",
+          "selectedMeaning": "give",
+          "typedEvent": true,
+          "wholeTermDictionaryMatch": false
+        },
+        {
+          "id": "r0627-s01",
+          "rank": 627,
+          "character": "贡",
+          "selectedMeaning": "gifts",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0943-s01",
+          "rank": 943,
+          "character": "奉",
+          "selectedMeaning": "offer",
+          "typedEvent": true,
+          "wholeTermDictionaryMatch": true
+        }
+      ]
+    },
+    {
+      "emoji": "🏋️",
+      "assignmentCount": 5,
+      "distinctMeaningCount": 4,
+      "eventAssignments": 4,
+      "nonEventAssignments": 1,
+      "studyPriority": "standard",
+      "records": [
+        {
+          "id": "r0219-s01",
+          "rank": 219,
+          "character": "夯",
+          "selectedMeaning": "burden",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": false
+        },
+        {
+          "id": "r0354-s01",
+          "rank": 354,
+          "character": "扛",
+          "selectedMeaning": "carry",
+          "typedEvent": true,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0617-s01",
+          "rank": 617,
+          "character": "抠",
+          "selectedMeaning": "lift up",
+          "typedEvent": true,
+          "wholeTermDictionaryMatch": false
+        },
+        {
+          "id": "r0973-s01",
+          "rank": 973,
+          "character": "拎",
+          "selectedMeaning": "lift",
+          "typedEvent": true,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0993-s01",
+          "rank": 993,
+          "character": "抬",
+          "selectedMeaning": "lift",
+          "typedEvent": true,
+          "wholeTermDictionaryMatch": true
+        }
+      ]
+    },
+    {
+      "emoji": "📜",
+      "assignmentCount": 5,
+      "distinctMeaningCount": 4,
+      "eventAssignments": 1,
+      "nonEventAssignments": 4,
+      "studyPriority": "standard",
+      "records": [
+        {
+          "id": "r0095-s02",
+          "rank": 95,
+          "character": "历",
+          "selectedMeaning": "history",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0248-s01",
+          "rank": 248,
+          "character": "史",
+          "selectedMeaning": "history",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0595-s01",
+          "rank": 595,
+          "character": "纪",
+          "selectedMeaning": "historical",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": false
+        },
+        {
+          "id": "r0885-s01",
+          "rank": 885,
+          "character": "证",
+          "selectedMeaning": "prove",
+          "typedEvent": true,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0952-s01",
+          "rank": 952,
+          "character": "规",
+          "selectedMeaning": "rules",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": false
+        }
+      ]
+    },
+    {
+      "emoji": "🔁",
+      "assignmentCount": 5,
+      "distinctMeaningCount": 3,
+      "eventAssignments": 1,
+      "nonEventAssignments": 4,
+      "studyPriority": "standard",
+      "records": [
+        {
+          "id": "r0021-s01",
+          "rank": 21,
+          "character": "又",
+          "selectedMeaning": "again",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0135-s01",
+          "rank": 135,
+          "character": "仍",
+          "selectedMeaning": "again",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": false
+        },
+        {
+          "id": "r0271-s01",
+          "rank": 271,
+          "character": "代",
+          "selectedMeaning": "replace",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0382-s01",
+          "rank": 382,
+          "character": "再",
+          "selectedMeaning": "again",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0850-s01",
+          "rank": 850,
+          "character": "兑",
+          "selectedMeaning": "exchange",
+          "typedEvent": true,
+          "wholeTermDictionaryMatch": true
+        }
+      ]
+    },
+    {
+      "emoji": "🔙",
+      "assignmentCount": 5,
+      "distinctMeaningCount": 3,
+      "eventAssignments": 3,
+      "nonEventAssignments": 2,
+      "studyPriority": "contrast_focus",
+      "records": [
+        {
+          "id": "r0234-s01",
+          "rank": 234,
+          "character": "归",
+          "selectedMeaning": "return",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0438-s01",
+          "rank": 438,
+          "character": "回",
+          "selectedMeaning": "return",
+          "typedEvent": true,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0482-s02",
+          "rank": 482,
+          "character": "后",
+          "selectedMeaning": "behind",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0658-s01",
+          "rank": 658,
+          "character": "却",
+          "selectedMeaning": "retreat",
+          "typedEvent": true,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0794-s01",
+          "rank": 794,
+          "character": "返",
+          "selectedMeaning": "return",
+          "typedEvent": true,
+          "wholeTermDictionaryMatch": true
+        }
+      ]
+    },
+    {
+      "emoji": "🗑️",
+      "assignmentCount": 5,
+      "distinctMeaningCount": 3,
+      "eventAssignments": 3,
+      "nonEventAssignments": 2,
+      "studyPriority": "contrast_focus",
+      "records": [
+        {
+          "id": "r0362-s01",
+          "rank": 362,
+          "character": "圾",
+          "selectedMeaning": "garbage",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": false
+        },
+        {
+          "id": "r0447-s01",
+          "rank": 447,
+          "character": "丢",
+          "selectedMeaning": "discard",
+          "typedEvent": true,
+          "wholeTermDictionaryMatch": false
+        },
+        {
+          "id": "r0815-s01",
+          "rank": 815,
+          "character": "删",
+          "selectedMeaning": "delete",
+          "typedEvent": true,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0842-s01",
+          "rank": 842,
+          "character": "弃",
+          "selectedMeaning": "discard",
+          "typedEvent": true,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0980-s01",
+          "rank": 980,
+          "character": "垃",
+          "selectedMeaning": "garbage",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": false
+        }
+      ]
+    },
+    {
+      "emoji": "🫂",
+      "assignmentCount": 5,
+      "distinctMeaningCount": 5,
+      "eventAssignments": 4,
+      "nonEventAssignments": 1,
+      "studyPriority": "standard",
+      "records": [
+        {
+          "id": "r0309-s01",
+          "rank": 309,
+          "character": "汇",
+          "selectedMeaning": "gather",
+          "typedEvent": true,
+          "wholeTermDictionaryMatch": false
+        },
+        {
+          "id": "r0470-s01",
+          "rank": 470,
+          "character": "伦",
+          "selectedMeaning": "relationships",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": false
+        },
+        {
+          "id": "r0613-s01",
+          "rank": 613,
+          "character": "抚",
+          "selectedMeaning": "comfort",
+          "typedEvent": true,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0974-s01",
+          "rank": 974,
+          "character": "拥",
+          "selectedMeaning": "hug",
+          "typedEvent": true,
+          "wholeTermDictionaryMatch": false
+        },
+        {
+          "id": "r0978-s01",
+          "rank": 978,
+          "character": "抱",
+          "selectedMeaning": "embrace",
+          "typedEvent": true,
+          "wholeTermDictionaryMatch": true
+        }
+      ]
+    },
+    {
+      "emoji": "🙏",
+      "assignmentCount": 5,
+      "distinctMeaningCount": 5,
+      "eventAssignments": 2,
+      "nonEventAssignments": 3,
+      "studyPriority": "contrast_focus",
+      "records": [
+        {
+          "id": "r0042-s01",
+          "rank": 42,
+          "character": "乞",
+          "selectedMeaning": "beg",
+          "typedEvent": true,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0084-s01",
+          "rank": 84,
+          "character": "丐",
+          "selectedMeaning": "beggar",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0318-s01",
+          "rank": 318,
+          "character": "礼",
+          "selectedMeaning": "courtesy",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0796-s01",
+          "rank": 796,
+          "character": "希",
+          "selectedMeaning": "hope",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0891-s01",
+          "rank": 891,
+          "character": "祀",
+          "selectedMeaning": "worship",
+          "typedEvent": true,
+          "wholeTermDictionaryMatch": false
+        }
+      ]
+    },
+    {
+      "emoji": "🚪",
+      "assignmentCount": 5,
+      "distinctMeaningCount": 3,
+      "eventAssignments": 3,
+      "nonEventAssignments": 2,
+      "studyPriority": "contrast_focus",
+      "records": [
+        {
+          "id": "r0055-s01",
+          "rank": 55,
+          "character": "门",
+          "selectedMeaning": "door",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0170-s01",
+          "rank": 170,
+          "character": "户",
+          "selectedMeaning": "door",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0330-s01",
+          "rank": 330,
+          "character": "出",
+          "selectedMeaning": "go out",
+          "typedEvent": true,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0527-s01",
+          "rank": 527,
+          "character": "闭",
+          "selectedMeaning": "close",
+          "typedEvent": true,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0532-s01",
+          "rank": 532,
+          "character": "关",
+          "selectedMeaning": "close",
+          "typedEvent": true,
+          "wholeTermDictionaryMatch": true
+        }
+      ]
+    },
+    {
+      "emoji": "🛑",
+      "assignmentCount": 5,
+      "distinctMeaningCount": 4,
+      "eventAssignments": 4,
+      "nonEventAssignments": 1,
+      "studyPriority": "standard",
+      "records": [
+        {
+          "id": "r0109-s01",
+          "rank": 109,
+          "character": "止",
+          "selectedMeaning": "stop",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0680-s01",
+          "rank": 680,
+          "character": "杜",
+          "selectedMeaning": "prevent",
+          "typedEvent": true,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0915-s01",
+          "rank": 915,
+          "character": "阻",
+          "selectedMeaning": "hinder",
+          "typedEvent": true,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0922-s01",
+          "rank": 922,
+          "character": "妨",
+          "selectedMeaning": "obstruct",
+          "typedEvent": true,
+          "wholeTermDictionaryMatch": false
+        },
+        {
+          "id": "r0982-s01",
+          "rank": 982,
+          "character": "拦",
+          "selectedMeaning": "obstruct",
+          "typedEvent": true,
+          "wholeTermDictionaryMatch": true
+        }
+      ]
+    },
+    {
+      "emoji": "❓",
+      "assignmentCount": 4,
+      "distinctMeaningCount": 4,
+      "eventAssignments": 2,
+      "nonEventAssignments": 2,
+      "studyPriority": "standard",
+      "records": [
+        {
+          "id": "r0322-s01",
+          "rank": 322,
+          "character": "讯",
+          "selectedMeaning": "inquire",
+          "typedEvent": true,
+          "wholeTermDictionaryMatch": false
+        },
+        {
+          "id": "r0432-s01",
+          "rank": 432,
+          "character": "吗",
+          "selectedMeaning": "interrogative",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": false
+        },
+        {
+          "id": "r0528-s01",
+          "rank": 528,
+          "character": "问",
+          "selectedMeaning": "ask",
+          "typedEvent": true,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0771-s01",
+          "rank": 771,
+          "character": "何",
+          "selectedMeaning": "what",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": true
+        }
+      ]
+    },
+    {
+      "emoji": "➕",
+      "assignmentCount": 4,
+      "distinctMeaningCount": 4,
+      "eventAssignments": 1,
+      "nonEventAssignments": 3,
+      "studyPriority": "standard",
+      "records": [
+        {
+          "id": "r0335-s01",
+          "rank": 335,
+          "character": "加",
+          "selectedMeaning": "increase",
+          "typedEvent": true,
+          "wholeTermDictionaryMatch": false
+        },
+        {
+          "id": "r0516-s01",
+          "rank": 516,
+          "character": "亦",
+          "selectedMeaning": "also",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0795-s01",
+          "rank": 795,
+          "character": "余",
+          "selectedMeaning": "surplus",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0845-s01",
+          "rank": 845,
+          "character": "闰",
+          "selectedMeaning": "extra",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": true
+        }
+      ]
+    },
+    {
+      "emoji": "💀",
+      "assignmentCount": 4,
+      "distinctMeaningCount": 2,
+      "eventAssignments": 2,
+      "nonEventAssignments": 2,
+      "studyPriority": "standard",
+      "records": [
+        {
+          "id": "r0054-s01",
+          "rank": 54,
+          "character": "亡",
+          "selectedMeaning": "death",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": false
+        },
+        {
+          "id": "r0400-s01",
+          "rank": 400,
+          "character": "死",
+          "selectedMeaning": "death",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": false
+        },
+        {
+          "id": "r0487-s01",
+          "rank": 487,
+          "character": "杀",
+          "selectedMeaning": "kill",
+          "typedEvent": true,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0517-s01",
+          "rank": 517,
+          "character": "刘",
+          "selectedMeaning": "kill",
+          "typedEvent": true,
+          "wholeTermDictionaryMatch": false
+        }
+      ]
+    },
+    {
+      "emoji": "💧",
+      "assignmentCount": 4,
+      "distinctMeaningCount": 4,
+      "eventAssignments": 2,
+      "nonEventAssignments": 2,
+      "studyPriority": "standard",
+      "records": [
+        {
+          "id": "r0117-s01",
+          "rank": 117,
+          "character": "水",
+          "selectedMeaning": "water",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0859-s01",
+          "rank": 859,
+          "character": "沥",
+          "selectedMeaning": "drip",
+          "typedEvent": true,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0872-s01",
+          "rank": 872,
+          "character": "沁",
+          "selectedMeaning": "seep in",
+          "typedEvent": true,
+          "wholeTermDictionaryMatch": false
+        },
+        {
+          "id": "r0931-s01",
+          "rank": 931,
+          "character": "纯",
+          "selectedMeaning": "pure",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": true
+        }
+      ]
+    },
+    {
+      "emoji": "📋",
+      "assignmentCount": 4,
+      "distinctMeaningCount": 4,
+      "eventAssignments": 2,
+      "nonEventAssignments": 2,
+      "studyPriority": "standard",
+      "records": [
+        {
+          "id": "r0467-s01",
+          "rank": 467,
+          "character": "任",
+          "selectedMeaning": "appoint",
+          "typedEvent": true,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0626-s01",
+          "rank": 626,
+          "character": "抄",
+          "selectedMeaning": "copy",
+          "typedEvent": true,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0830-s01",
+          "rank": 830,
+          "character": "况",
+          "selectedMeaning": "condition",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": false
+        },
+        {
+          "id": "r0948-s01",
+          "rank": 948,
+          "character": "责",
+          "selectedMeaning": "responsibility",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": true
+        }
+      ]
+    },
+    {
+      "emoji": "📦",
+      "assignmentCount": 4,
+      "distinctMeaningCount": 4,
+      "eventAssignments": 1,
+      "nonEventAssignments": 3,
+      "studyPriority": "standard",
+      "records": [
+        {
+          "id": "r0298-s01",
+          "rank": 298,
+          "character": "包",
+          "selectedMeaning": "package",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0466-s01",
+          "rank": 466,
+          "character": "件",
+          "selectedMeaning": "article",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": false
+        },
+        {
+          "id": "r0692-s01",
+          "rank": 692,
+          "character": "匣",
+          "selectedMeaning": "box",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0800-s01",
+          "rank": 800,
+          "character": "含",
+          "selectedMeaning": "contain",
+          "typedEvent": true,
+          "wholeTermDictionaryMatch": true
+        }
+      ]
+    },
+    {
+      "emoji": "🔒",
+      "assignmentCount": 4,
+      "distinctMeaningCount": 4,
+      "eventAssignments": 2,
+      "nonEventAssignments": 2,
+      "studyPriority": "standard",
+      "records": [
+        {
+          "id": "r0641-s01",
+          "rank": 641,
+          "character": "抑",
+          "selectedMeaning": "repress",
+          "typedEvent": true,
+          "wholeTermDictionaryMatch": false
+        },
+        {
+          "id": "r0766-s01",
+          "rank": 766,
+          "character": "私",
+          "selectedMeaning": "private",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0880-s01",
+          "rank": 880,
+          "character": "牢",
+          "selectedMeaning": "prison",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0976-s01",
+          "rank": 976,
+          "character": "拘",
+          "selectedMeaning": "detain",
+          "typedEvent": true,
+          "wholeTermDictionaryMatch": false
+        }
+      ]
+    },
+    {
+      "emoji": "🔥",
+      "assignmentCount": 4,
+      "distinctMeaningCount": 3,
+      "eventAssignments": 3,
+      "nonEventAssignments": 1,
+      "studyPriority": "standard",
+      "records": [
+        {
+          "id": "r0164-s01",
+          "rank": 164,
+          "character": "火",
+          "selectedMeaning": "fire",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0164-s02",
+          "rank": 164,
+          "character": "火",
+          "selectedMeaning": "burn",
+          "typedEvent": true,
+          "wholeTermDictionaryMatch": false
+        },
+        {
+          "id": "r0843-s01",
+          "rank": 843,
+          "character": "冶",
+          "selectedMeaning": "smelt",
+          "typedEvent": true,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0853-s01",
+          "rank": 853,
+          "character": "灼",
+          "selectedMeaning": "burn",
+          "typedEvent": true,
+          "wholeTermDictionaryMatch": true
+        }
+      ]
+    },
+    {
+      "emoji": "🧍",
+      "assignmentCount": 4,
+      "distinctMeaningCount": 3,
+      "eventAssignments": 2,
+      "nonEventAssignments": 2,
+      "studyPriority": "standard",
+      "records": [
+        {
+          "id": "r0302-s01",
+          "rank": 302,
+          "character": "立",
+          "selectedMeaning": "stand",
+          "typedEvent": true,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0435-s01",
+          "rank": 435,
+          "character": "屹",
+          "selectedMeaning": "stand erect",
+          "typedEvent": true,
+          "wholeTermDictionaryMatch": false
+        },
+        {
+          "id": "r0770-s01",
+          "rank": 770,
+          "character": "体",
+          "selectedMeaning": "body",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0786-s01",
+          "rank": 786,
+          "character": "身",
+          "selectedMeaning": "body",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": true
+        }
+      ]
+    },
+    {
+      "emoji": "🧩",
+      "assignmentCount": 4,
+      "distinctMeaningCount": 3,
+      "eventAssignments": 2,
+      "nonEventAssignments": 2,
+      "studyPriority": "standard",
+      "records": [
+        {
+          "id": "r0485-s01",
+          "rank": 485,
+          "character": "全",
+          "selectedMeaning": "whole",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0488-s01",
+          "rank": 488,
+          "character": "合",
+          "selectedMeaning": "combine",
+          "typedEvent": true,
+          "wholeTermDictionaryMatch": false
+        },
+        {
+          "id": "r0531-s01",
+          "rank": 531,
+          "character": "并",
+          "selectedMeaning": "combine",
+          "typedEvent": true,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0652-s01",
+          "rank": 652,
+          "character": "块",
+          "selectedMeaning": "piece",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": true
+        }
+      ]
+    },
+    {
+      "emoji": "✋",
+      "assignmentCount": 3,
+      "distinctMeaningCount": 3,
+      "eventAssignments": 2,
+      "nonEventAssignments": 1,
+      "studyPriority": "standard",
+      "records": [
+        {
+          "id": "r0121-s01",
+          "rank": 121,
+          "character": "手",
+          "selectedMeaning": "hand",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0655-s01",
+          "rank": 655,
+          "character": "把",
+          "selectedMeaning": "hold",
+          "typedEvent": true,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0997-s01",
+          "rank": 997,
+          "character": "取",
+          "selectedMeaning": "take",
+          "typedEvent": true,
+          "wholeTermDictionaryMatch": true
+        }
+      ]
+    },
+    {
+      "emoji": "➡️",
+      "assignmentCount": 3,
+      "distinctMeaningCount": 3,
+      "eventAssignments": 2,
+      "nonEventAssignments": 1,
+      "studyPriority": "standard",
+      "records": [
+        {
+          "id": "r0217-s01",
+          "rank": 217,
+          "character": "右",
+          "selectedMeaning": "right",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0605-s01",
+          "rank": 605,
+          "character": "进",
+          "selectedMeaning": "advance",
+          "typedEvent": true,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0792-s01",
+          "rank": 792,
+          "character": "彻",
+          "selectedMeaning": "penetrate",
+          "typedEvent": true,
+          "wholeTermDictionaryMatch": false
+        }
+      ]
+    },
+    {
+      "emoji": "⬇️",
+      "assignmentCount": 3,
+      "distinctMeaningCount": 3,
+      "eventAssignments": 1,
+      "nonEventAssignments": 2,
+      "studyPriority": "standard",
+      "records": [
+        {
+          "id": "r0030-s01",
+          "rank": 30,
+          "character": "下",
+          "selectedMeaning": "under",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": false
+        },
+        {
+          "id": "r0781-s01",
+          "rank": 781,
+          "character": "低",
+          "selectedMeaning": "low",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0917-s01",
+          "rank": 917,
+          "character": "坠",
+          "selectedMeaning": "fall down",
+          "typedEvent": true,
+          "wholeTermDictionaryMatch": false
+        }
+      ]
+    },
+    {
+      "emoji": "🎒",
+      "assignmentCount": 3,
+      "distinctMeaningCount": 2,
+      "eventAssignments": 2,
+      "nonEventAssignments": 1,
+      "studyPriority": "standard",
+      "records": [
+        {
+          "id": "r0503-s01",
+          "rank": 503,
+          "character": "负",
+          "selectedMeaning": "burden",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": false
+        },
+        {
+          "id": "r0590-s01",
+          "rank": 590,
+          "character": "驮",
+          "selectedMeaning": "carry",
+          "typedEvent": true,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0963-s01",
+          "rank": 963,
+          "character": "担",
+          "selectedMeaning": "carry",
+          "typedEvent": true,
+          "wholeTermDictionaryMatch": true
+        }
+      ]
+    },
+    {
+      "emoji": "🏠",
+      "assignmentCount": 3,
+      "distinctMeaningCount": 3,
+      "eventAssignments": 1,
+      "nonEventAssignments": 2,
+      "studyPriority": "standard",
+      "records": [
+        {
+          "id": "r0545-s01",
+          "rank": 545,
+          "character": "宇",
+          "selectedMeaning": "house",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": false
+        },
+        {
+          "id": "r0547-s01",
+          "rank": 547,
+          "character": "宅",
+          "selectedMeaning": "home",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0783-s01",
+          "rank": 783,
+          "character": "住",
+          "selectedMeaning": "dwell",
+          "typedEvent": true,
+          "wholeTermDictionaryMatch": true
+        }
+      ]
+    },
+    {
+      "emoji": "🐕",
+      "assignmentCount": 3,
+      "distinctMeaningCount": 3,
+      "eventAssignments": 1,
+      "nonEventAssignments": 2,
+      "studyPriority": "standard",
+      "records": [
+        {
+          "id": "r0092-s01",
+          "rank": 92,
+          "character": "犬",
+          "selectedMeaning": "dog",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0592-s01",
+          "rank": 592,
+          "character": "驯",
+          "selectedMeaning": "tame",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0724-s01",
+          "rank": 724,
+          "character": "吠",
+          "selectedMeaning": "bark",
+          "typedEvent": true,
+          "wholeTermDictionaryMatch": true
+        }
+      ]
+    },
+    {
+      "emoji": "👁️",
+      "assignmentCount": 3,
+      "distinctMeaningCount": 2,
+      "eventAssignments": 2,
+      "nonEventAssignments": 1,
+      "studyPriority": "standard",
+      "records": [
+        {
+          "id": "r0236-s01",
+          "rank": 236,
+          "character": "目",
+          "selectedMeaning": "eye",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0716-s01",
+          "rank": 716,
+          "character": "呈",
+          "selectedMeaning": "show",
+          "typedEvent": true,
+          "wholeTermDictionaryMatch": false
+        },
+        {
+          "id": "r0951-s01",
+          "rank": 951,
+          "character": "表",
+          "selectedMeaning": "show",
+          "typedEvent": true,
+          "wholeTermDictionaryMatch": true
+        }
+      ]
+    },
+    {
+      "emoji": "👎",
+      "assignmentCount": 3,
+      "distinctMeaningCount": 3,
+      "eventAssignments": 1,
+      "nonEventAssignments": 2,
+      "studyPriority": "standard",
+      "records": [
+        {
+          "id": "r0386-s01",
+          "rank": 386,
+          "character": "厌",
+          "selectedMeaning": "dislike",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": false
+        },
+        {
+          "id": "r0416-s01",
+          "rank": 416,
+          "character": "劣",
+          "selectedMeaning": "inferior",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0622-s01",
+          "rank": 622,
+          "character": "批",
+          "selectedMeaning": "criticize",
+          "typedEvent": true,
+          "wholeTermDictionaryMatch": true
+        }
+      ]
+    },
+    {
+      "emoji": "💔",
+      "assignmentCount": 3,
+      "distinctMeaningCount": 3,
+      "eventAssignments": 2,
+      "nonEventAssignments": 1,
+      "studyPriority": "standard",
+      "records": [
+        {
+          "id": "r0616-s01",
+          "rank": 616,
+          "character": "坏",
+          "selectedMeaning": "broken",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0632-s01",
+          "rank": 632,
+          "character": "折",
+          "selectedMeaning": "break off",
+          "typedEvent": true,
+          "wholeTermDictionaryMatch": false
+        },
+        {
+          "id": "r0972-s01",
+          "rank": 972,
+          "character": "拆",
+          "selectedMeaning": "split apart",
+          "typedEvent": true,
+          "wholeTermDictionaryMatch": false
+        }
+      ]
+    },
+    {
+      "emoji": "🔗",
+      "assignmentCount": 3,
+      "distinctMeaningCount": 3,
+      "eventAssignments": 1,
+      "nonEventAssignments": 2,
+      "studyPriority": "standard",
+      "records": [
+        {
+          "id": "r0430-s01",
+          "rank": 430,
+          "character": "因",
+          "selectedMeaning": "cause",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0708-s01",
+          "rank": 708,
+          "character": "连",
+          "selectedMeaning": "connect",
+          "typedEvent": true,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0825-s01",
+          "rank": 825,
+          "character": "系",
+          "selectedMeaning": "connection",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": false
+        }
+      ]
+    },
+    {
+      "emoji": "🥣",
+      "assignmentCount": 3,
+      "distinctMeaningCount": 3,
+      "eventAssignments": 1,
+      "nonEventAssignments": 2,
+      "studyPriority": "standard",
+      "records": [
+        {
+          "id": "r0259-s01",
+          "rank": 259,
+          "character": "皿",
+          "selectedMeaning": "shallow container",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0542-s01",
+          "rank": 542,
+          "character": "汤",
+          "selectedMeaning": "soup",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0984-s01",
+          "rank": 984,
+          "character": "拌",
+          "selectedMeaning": "mix",
+          "typedEvent": true,
+          "wholeTermDictionaryMatch": true
+        }
+      ]
+    },
+    {
+      "emoji": "🧠",
+      "assignmentCount": 3,
+      "distinctMeaningCount": 3,
+      "eventAssignments": 1,
+      "nonEventAssignments": 2,
+      "studyPriority": "standard",
+      "records": [
+        {
+          "id": "r0167-s01",
+          "rank": 167,
+          "character": "忆",
+          "selectedMeaning": "remember",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0174-s02",
+          "rank": 174,
+          "character": "心",
+          "selectedMeaning": "mind",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0844-s01",
+          "rank": 844,
+          "character": "忘",
+          "selectedMeaning": "forget",
+          "typedEvent": true,
+          "wholeTermDictionaryMatch": true
+        }
+      ]
+    },
+    {
+      "emoji": "😮‍💨",
+      "assignmentCount": 3,
+      "distinctMeaningCount": 2,
+      "eventAssignments": 1,
+      "nonEventAssignments": 2,
+      "studyPriority": "standard",
+      "records": [
+        {
+          "id": "r0257-s01",
+          "rank": 257,
+          "character": "叹",
+          "selectedMeaning": "sigh",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0420-s01",
+          "rank": 420,
+          "character": "吁",
+          "selectedMeaning": "sigh",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": false
+        },
+        {
+          "id": "r0742-s01",
+          "rank": 742,
+          "character": "呛",
+          "selectedMeaning": "choke",
+          "typedEvent": true,
+          "wholeTermDictionaryMatch": true
+        }
+      ]
+    },
+    {
+      "emoji": "▶️",
+      "assignmentCount": 2,
+      "distinctMeaningCount": 2,
+      "eventAssignments": 1,
+      "nonEventAssignments": 1,
+      "studyPriority": "standard",
+      "records": [
+        {
+          "id": "r0691-s01",
+          "rank": 691,
+          "character": "甫",
+          "selectedMeaning": "begin",
+          "typedEvent": true,
+          "wholeTermDictionaryMatch": false
+        },
+        {
+          "id": "r0889-s01",
+          "rank": 889,
+          "character": "初",
+          "selectedMeaning": "beginning",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": true
+        }
+      ]
+    },
+    {
+      "emoji": "⚠️",
+      "assignmentCount": 2,
+      "distinctMeaningCount": 2,
+      "eventAssignments": 1,
+      "nonEventAssignments": 1,
+      "studyPriority": "standard",
+      "records": [
+        {
+          "id": "r0499-s01",
+          "rank": 499,
+          "character": "危",
+          "selectedMeaning": "dangerous",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": false
+        },
+        {
+          "id": "r0606-s01",
+          "rank": 606,
+          "character": "戒",
+          "selectedMeaning": "warn",
+          "typedEvent": true,
+          "wholeTermDictionaryMatch": true
+        }
+      ]
+    },
+    {
+      "emoji": "✍️",
+      "assignmentCount": 2,
+      "distinctMeaningCount": 2,
+      "eventAssignments": 1,
+      "nonEventAssignments": 1,
+      "studyPriority": "standard",
+      "records": [
+        {
+          "id": "r0161-s01",
+          "rank": 161,
+          "character": "文",
+          "selectedMeaning": "writing",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0316-s01",
+          "rank": 316,
+          "character": "写",
+          "selectedMeaning": "write",
+          "typedEvent": true,
+          "wholeTermDictionaryMatch": true
+        }
+      ]
+    },
+    {
+      "emoji": "🌬️",
+      "assignmentCount": 2,
+      "distinctMeaningCount": 2,
+      "eventAssignments": 1,
+      "nonEventAssignments": 1,
+      "studyPriority": "standard",
+      "records": [
+        {
+          "id": "r0154-s01",
+          "rank": 154,
+          "character": "风",
+          "selectedMeaning": "wind",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0744-s01",
+          "rank": 744,
+          "character": "吹",
+          "selectedMeaning": "blow",
+          "typedEvent": true,
+          "wholeTermDictionaryMatch": true
+        }
+      ]
+    },
+    {
+      "emoji": "🎵",
+      "assignmentCount": 2,
+      "distinctMeaningCount": 2,
+      "eventAssignments": 1,
+      "nonEventAssignments": 1,
+      "studyPriority": "standard",
+      "records": [
+        {
+          "id": "r0287-s02",
+          "rank": 287,
+          "character": "乐",
+          "selectedMeaning": "music",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0740-s01",
+          "rank": 740,
+          "character": "吟",
+          "selectedMeaning": "sing",
+          "typedEvent": true,
+          "wholeTermDictionaryMatch": false
+        }
+      ]
+    },
+    {
+      "emoji": "👂",
+      "assignmentCount": 2,
+      "distinctMeaningCount": 2,
+      "eventAssignments": 1,
+      "nonEventAssignments": 1,
+      "studyPriority": "standard",
+      "records": [
+        {
+          "id": "r0369-s01",
+          "rank": 369,
+          "character": "耳",
+          "selectedMeaning": "ear",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0739-s01",
+          "rank": 739,
+          "character": "听",
+          "selectedMeaning": "hear",
+          "typedEvent": true,
+          "wholeTermDictionaryMatch": true
+        }
+      ]
+    },
+    {
+      "emoji": "👕",
+      "assignmentCount": 2,
+      "distinctMeaningCount": 2,
+      "eventAssignments": 1,
+      "nonEventAssignments": 1,
+      "studyPriority": "standard",
+      "records": [
+        {
+          "id": "r0520-s01",
+          "rank": 520,
+          "character": "衣",
+          "selectedMeaning": "clothes",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0990-s01",
+          "rank": 990,
+          "character": "披",
+          "selectedMeaning": "wear",
+          "typedEvent": true,
+          "wholeTermDictionaryMatch": false
+        }
+      ]
+    },
+    {
+      "emoji": "📊",
+      "assignmentCount": 2,
+      "distinctMeaningCount": 2,
+      "eventAssignments": 1,
+      "nonEventAssignments": 1,
+      "studyPriority": "standard",
+      "records": [
+        {
+          "id": "r0594-s01",
+          "rank": 594,
+          "character": "级",
+          "selectedMeaning": "level",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0887-s01",
+          "rank": 887,
+          "character": "评",
+          "selectedMeaning": "evaluate",
+          "typedEvent": true,
+          "wholeTermDictionaryMatch": false
+        }
+      ]
+    },
+    {
+      "emoji": "📰",
+      "assignmentCount": 2,
+      "distinctMeaningCount": 2,
+      "eventAssignments": 1,
+      "nonEventAssignments": 1,
+      "studyPriority": "standard",
+      "records": [
+        {
+          "id": "r0191-s01",
+          "rank": 191,
+          "character": "刊",
+          "selectedMeaning": "publication",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0656-s01",
+          "rank": 656,
+          "character": "报",
+          "selectedMeaning": "report",
+          "typedEvent": true,
+          "wholeTermDictionaryMatch": true
+        }
+      ]
+    },
+    {
+      "emoji": "🔀",
+      "assignmentCount": 2,
+      "distinctMeaningCount": 2,
+      "eventAssignments": 1,
+      "nonEventAssignments": 1,
+      "studyPriority": "standard",
+      "records": [
+        {
+          "id": "r0568-s01",
+          "rank": 568,
+          "character": "异",
+          "selectedMeaning": "different",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0653-s01",
+          "rank": 653,
+          "character": "扭",
+          "selectedMeaning": "twist",
+          "typedEvent": true,
+          "wholeTermDictionaryMatch": true
+        }
+      ]
+    },
+    {
+      "emoji": "🦯",
+      "assignmentCount": 2,
+      "distinctMeaningCount": 2,
+      "eventAssignments": 1,
+      "nonEventAssignments": 1,
+      "studyPriority": "standard",
+      "records": [
+        {
+          "id": "r0683-s01",
+          "rank": 683,
+          "character": "杖",
+          "selectedMeaning": "walking stick",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0979-s01",
+          "rank": 979,
+          "character": "拄",
+          "selectedMeaning": "lean on",
+          "typedEvent": true,
+          "wholeTermDictionaryMatch": true
+        }
+      ]
+    },
+    {
+      "emoji": "🧊",
+      "assignmentCount": 2,
+      "distinctMeaningCount": 2,
+      "eventAssignments": 1,
+      "nonEventAssignments": 1,
+      "studyPriority": "standard",
+      "records": [
+        {
+          "id": "r0513-s01",
+          "rank": 513,
+          "character": "冰",
+          "selectedMeaning": "ice",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0827-s01",
+          "rank": 827,
+          "character": "冻",
+          "selectedMeaning": "freeze",
+          "typedEvent": true,
+          "wholeTermDictionaryMatch": true
+        }
+      ]
+    },
+    {
+      "emoji": "🧭",
+      "assignmentCount": 2,
+      "distinctMeaningCount": 2,
+      "eventAssignments": 1,
+      "nonEventAssignments": 1,
+      "studyPriority": "standard",
+      "records": [
+        {
+          "id": "r0480-s01",
+          "rank": 480,
+          "character": "向",
+          "selectedMeaning": "direction",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0567-s01",
+          "rank": 567,
+          "character": "导",
+          "selectedMeaning": "guide",
+          "typedEvent": true,
+          "wholeTermDictionaryMatch": true
+        }
+      ]
+    },
+    {
+      "emoji": "🧮",
+      "assignmentCount": 2,
+      "distinctMeaningCount": 2,
+      "eventAssignments": 1,
+      "nonEventAssignments": 1,
+      "studyPriority": "standard",
+      "records": [
+        {
+          "id": "r0349-s01",
+          "rank": 349,
+          "character": "式",
+          "selectedMeaning": "formula",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": false
+        },
+        {
+          "id": "r0769-s01",
+          "rank": 769,
+          "character": "估",
+          "selectedMeaning": "estimate",
+          "typedEvent": true,
+          "wholeTermDictionaryMatch": true
+        }
+      ]
+    },
+    {
+      "emoji": "🪓",
+      "assignmentCount": 2,
+      "distinctMeaningCount": 2,
+      "eventAssignments": 1,
+      "nonEventAssignments": 1,
+      "studyPriority": "standard",
+      "records": [
+        {
+          "id": "r0137-s01",
+          "rank": 137,
+          "character": "斤",
+          "selectedMeaning": "axe",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": false
+        },
+        {
+          "id": "r0463-s01",
+          "rank": 463,
+          "character": "伐",
+          "selectedMeaning": "cut down",
+          "typedEvent": true,
+          "wholeTermDictionaryMatch": true
+        }
+      ]
+    },
+    {
+      "emoji": "🪝",
+      "assignmentCount": 2,
+      "distinctMeaningCount": 2,
+      "eventAssignments": 1,
+      "nonEventAssignments": 1,
+      "studyPriority": "standard",
+      "records": [
+        {
+          "id": "r0158-s01",
+          "rank": 158,
+          "character": "勾",
+          "selectedMeaning": "hook",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0428-s01",
+          "rank": 428,
+          "character": "吊",
+          "selectedMeaning": "hang",
+          "typedEvent": true,
+          "wholeTermDictionaryMatch": true
+        }
+      ]
+    },
+    {
+      "emoji": "🪡",
+      "assignmentCount": 2,
+      "distinctMeaningCount": 2,
+      "eventAssignments": 1,
+      "nonEventAssignments": 1,
+      "studyPriority": "standard",
+      "records": [
+        {
+          "id": "r0597-s01",
+          "rank": 597,
+          "character": "纫",
+          "selectedMeaning": "sew",
+          "typedEvent": true,
+          "wholeTermDictionaryMatch": false
+        },
+        {
+          "id": "r0757-s01",
+          "rank": 757,
+          "character": "针",
+          "selectedMeaning": "needle",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": true
+        }
+      ]
+    },
+    {
+      "emoji": "🫁",
+      "assignmentCount": 2,
+      "distinctMeaningCount": 2,
+      "eventAssignments": 1,
+      "nonEventAssignments": 1,
+      "studyPriority": "standard",
+      "records": [
+        {
+          "id": "r0431-s01",
+          "rank": 431,
+          "character": "吸",
+          "selectedMeaning": "inhale",
+          "typedEvent": true,
+          "wholeTermDictionaryMatch": true
+        },
+        {
+          "id": "r0504-s01",
+          "rank": 504,
+          "character": "匈",
+          "selectedMeaning": "chest",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": false
+        }
+      ]
+    },
+    {
+      "emoji": "😮",
+      "assignmentCount": 2,
+      "distinctMeaningCount": 2,
+      "eventAssignments": 1,
+      "nonEventAssignments": 1,
+      "studyPriority": "standard",
+      "records": [
+        {
+          "id": "r0553-s01",
+          "rank": 553,
+          "character": "讶",
+          "selectedMeaning": "surprised",
+          "typedEvent": false,
+          "wholeTermDictionaryMatch": false
+        },
+        {
+          "id": "r0607-s01",
+          "rank": 607,
+          "character": "吞",
+          "selectedMeaning": "swallow",
+          "typedEvent": true,
+          "wholeTermDictionaryMatch": true
+        }
+      ]
+    }
+  ]
+}
