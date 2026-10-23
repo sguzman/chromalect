@@ -4,7 +4,7 @@
 "use strict";
 const $=id=>document.getElementById(id);
 const required=[
- "emoji-study-scope","emoji-study-count","emoji-study-start","emoji-study-export",
+ "emoji-study-scope","emoji-study-count","emoji-study-repeat-policy","emoji-study-start","emoji-study-export",
  "emoji-study-status","emoji-study-session","emoji-study-counter","emoji-study-progress",
  "emoji-study-fill","emoji-study-symbol","emoji-study-blind","emoji-study-interpretation","emoji-study-kind",
  "emoji-study-confidence","emoji-study-reveal","emoji-study-post","emoji-study-target",
@@ -70,8 +70,21 @@ function start(){
  const pool=selectable();
  if(!pool.length){status("No eligible examples in this group.");return;}
  const wanted=$("emoji-study-count").value;
- const count=wanted==="all"?pool.length:Math.min(pool.length,Number(wanted));
- trials=randomize(pool).slice(0,count);
+ const shuffled=randomize(pool);
+ const repeatPolicy=$("emoji-study-repeat-policy").value;
+ if(!["distinct","allow"].includes(repeatPolicy)){
+  status("Unknown repeat policy; trial cannot begin.");return;
+ }
+ const sampled=repeatPolicy==="distinct" ? (()=> {
+  const seen=new Set();
+  return shuffled.filter(rec=>{
+   if(seen.has(rec.emojiDisplay))return false;
+   seen.add(rec.emojiDisplay);
+   return true;
+  });
+ })() : shuffled;
+ const count=wanted==="all"?sampled.length:Math.min(sampled.length,Number(wanted));
+ trials=sampled.slice(0,count);
  answers=[];current=0;locked=null;
  $("emoji-study-session").hidden=false;
  render();
@@ -115,11 +128,12 @@ function next(){
 function exportJSON(){
  if(!answers.length)return;
  const payload={
-  schema:"chromalect.emoji-comprehension-session.v0.1",
+  schema:"chromalect.emoji-comprehension-session.v0.2",
   status:"unverified_exploratory_observations_not_production_review",
   source:{repository:"sguzman/chromalect",audit:"emoji-visibility-audit-v0.1.json",
     sourceLicenseNote:"Pictogram selections are experimental; lexical corroboration in the audit derives from independently licensed CC-CEDICT evidence."},
   session:{scope:$("emoji-study-scope").value,requestedCount:$("emoji-study-count").value,
+    repeatPolicy:$("emoji-study-repeat-policy").value,
     rated:answers.length,planned:trials.length,localOnly:true,
     exportedAt:new Date().toISOString()},
   answers:answers.map(x=>({...x}))
