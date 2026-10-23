@@ -12,6 +12,7 @@ const ids=[
  "lexical-study-status","lexical-study-session","lexical-study-count-label",
  "lexical-study-progress","lexical-study-fill","lexical-study-character",
  "lexical-study-meaning","lexical-study-unihan","lexical-study-dictionary",
+ "lexical-study-readings","lexical-study-complexity","lexical-study-reading",
  "lexical-study-form","lexical-study-decisions","lexical-study-rationale",
  "lexical-study-commit","lexical-study-after","lexical-study-prior","lexical-study-next"
 ];
@@ -79,6 +80,8 @@ assert.equal(elements["lexical-study-character"].children.length,1);
 assert.equal(elements["lexical-study-character"].children[0].className,"glyph-wrap");
 assert.ok(elements["lexical-study-character"].children[0].textContent);
 assert.ok(elements["lexical-study-dictionary"].textContent);
+assert.ok(elements["lexical-study-readings"].textContent);
+assert.ok(elements["lexical-study-reading"].children.length>=3);
 assert.ok(!/emoji|🪓/.test(elements["lexical-study-dictionary"].textContent),
  "Dictionary excerpt should not expose a selected pictogram");
 assert.equal(elements["lexical-study-progress"].attributes["aria-valuenow"],"0");
@@ -86,6 +89,10 @@ buttons[2].click();
 assert.equal(elements["lexical-study-commit"].disabled,true,"Rationale is required");
 elements["lexical-study-rationale"].value="The reference excerpt needs more contemporary usage evidence.";
 elements["lexical-study-rationale"].events.input();
+assert.equal(elements["lexical-study-commit"].disabled,true,
+ "An explanation without a reading disposition cannot be locked");
+elements["lexical-study-reading"].value="undetermined";
+elements["lexical-study-reading"].events.change();
 assert.equal(elements["lexical-study-commit"].disabled,false);
 elements["lexical-study-commit"].click();
 assert.equal(elements["lexical-study-form"].hidden,true);
@@ -99,7 +106,8 @@ assert.ok(blob instanceof Blob);
 assert.equal(downloaded.download,"chromalect-lexical-source-review.json");
 assert.equal(revoked,true);
 const data=JSON.parse(await blob.text());
-assert.equal(data.schema,"chromalect.lexical-review-observation-session.v0.2");
+assert.equal(data.schema,"chromalect.lexical-review-observation-session.v0.3");
+assert.equal(data.observations[0].readingSelection,"undetermined");
 assert.equal(data.status,"local_preliminary_observations_not_independent_lexical_approval");
 assert.equal(data.observations.length,1);
 assert.equal(data.session.planned,20);
@@ -121,6 +129,13 @@ elements["lexical-study-scope"].value="matched";
 elements["lexical-study-start"].click();
 assert.equal(elements["lexical-study-session"].hidden,false);
 assert.match(elements["lexical-study-status"].textContent,/Compare the lexical sources/);
+elements["lexical-study-scope"].value="multiple_readings";
+elements["lexical-study-start"].click();
+assert.ok(elements["lexical-study-reading"].children.length>3);
+elements["lexical-study-scope"].value="polysemy_high";
+elements["lexical-study-start"].click();
+assert.ok(elements["lexical-study-reading"].children.length>3);
+assert.ok(elements["lexical-study-complexity"].textContent.includes("definition fragments"));
 elements["lexical-study-scope"].value="flagged";
 elements["lexical-study-start"].click();
 assert.ok(elements["lexical-study-meaning"].textContent.length>0);
@@ -128,4 +143,4 @@ assert.match(html,/without first seeing the emoji/);
 assert.match(html,/src="layers.js"/);
 assert.match(html,/data-character-layer-controls/);
 assert.match(html,/897 provisional meaning candidates/);
-console.log("Lexical worksheet: all 897 pending, blind source-first judgment, matched and mismatched cohorts, rationale gate and local-only export.");
+console.log("Lexical worksheet: reading-specific v0.3, 897 pending candidates, polysemy cohorts, rationale+reading gates, local-only export.");

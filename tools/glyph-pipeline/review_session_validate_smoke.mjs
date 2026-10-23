@@ -121,6 +121,34 @@ assert.throws(()=>validateReviewSession(duplicated,audit,queue,full));
 const leaked=clone(v2("all",matched));
 leaked.observations[0].emoji="🍎";
 assert.throws(()=>validateReviewSession(leaked,audit,queue,full));
+// v0.3 reading hypotheses remain unapproved and may be explicitly unresolved.
+const multi=full.records.find(x=>x.dictionaryReadings.length>1);
+const highPoly=full.records.find(x=>x.dictionaryReadings.length>1&&
+ x.dictionaryExcerpt.split(";").filter(s=>s.trim()).length>=8);
+const single=full.records.find(x=>x.dictionaryReadings.length===1);
+assert.ok(multi&&highPoly&&single);
+const v3=(scope,record,readingSelection)=>({
+ ...v2(scope,record),
+ schema:"chromalect.lexical-review-observation-session.v0.3",
+ observations:[{...v2record(record),readingSelection}]
+});
+for(const [scope,record,selection] of [
+ ["all",multi,multi.dictionaryReadings[0]],
+ ["multiple_readings",multi,"multiple"],
+ ["polysemy_high",highPoly,"undetermined"],
+ ["all",single,single.dictionaryReadings[0]],
+ ["all",single,"undetermined"]
+])assert.deepEqual(validateReviewSession(v3(scope,record,selection),audit,queue,full),
+ {type:"lexical_source_observation",localObservations:1,productionVerified:0});
+for(const invalid of [
+ v3("all",single,"multiple"),v3("all",multi,"fictional9"),
+ v3("polysemy_high",single,"undetermined"),
+ v3("multiple_readings",single,"undetermined"),
+ v3("all",single,undefined)
+])assert.throws(()=>validateReviewSession(invalid,audit,queue,full));
+const approvedReading=clone(v3("all",multi,multi.dictionaryReadings[0]));
+approvedReading.observations[0].lexicalApproval="approved";
+assert.throws(()=>validateReviewSession(approvedReading,audit,queue,full));
 // v0.2 blind emoji trials: deduplicate visible emoji forms by default,
 // while preserving legitimate cross-character reuse in the source catalog.
 const casesByEmoji=new Map();
@@ -156,6 +184,6 @@ assert.throws(()=>validateReviewSession(badPolicy,audit,queue,full));
 const forgedVisual=v2Emoji("distinct",[twins[0]]);
 forgedVisual.answers[0].displayedEmoji="🌋";
 assert.throws(()=>validateReviewSession(forgedVisual,audit,queue,full));
-console.log("Review exports: all-sense lexical v0.2, repeat-aware blind emoji v0.2, legacy v0.1, and zero-promotion guards pass.");
+console.log("Review exports: reading-specific lexical v0.3, legacy lexical v0.2/v0.1, repeat-aware emoji v0.2, and zero-promotion guards pass.");
 
 

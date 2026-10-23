@@ -107,7 +107,9 @@ export function validateReviewSession(session,audit,queue,fullQueue=null){
   }
   return {type:"emoji_comprehension",localObservations:session.answers.length,productionVerified:0};
  }
- if(session.schema==="chromalect.lexical-review-observation-session.v0.2"){
+ if(["chromalect.lexical-review-observation-session.v0.2",
+     "chromalect.lexical-review-observation-session.v0.3"].includes(session.schema)){
+  const v3=session.schema.endsWith(".v0.3");
   assert.ok(fullQueue&&fullQueue.schema==="chromalect.semantic.full-lexical-review-queue.v0.1",
    "A pinned all-senses queue is required for v0.2 observations");
   assert.equal(fullQueue.status,"unreviewed_source_first_all_candidate_senses");
@@ -121,7 +123,8 @@ export function validateReviewSession(session,audit,queue,fullQueue=null){
   assert.ok(Array.isArray(session.observations)&&session.observations.length>=1);
   assert.equal(session.session.recorded,session.observations.length);
   assert.ok(session.session.planned>=session.observations.length&&session.session.planned<=897);
-  assert.ok(["all","flagged","matched","high","medium","unclassified"].includes(session.session.scope));
+  assert.ok(["all","flagged","matched","high","medium","unclassified",
+    ...(v3?["multiple_readings","polysemy_high"]:[])].includes(session.session.scope));
   const refs=new Map(fullQueue.records.map(r=>[r.rank+"|"+r.selectedMeaning,r]));
   const seen=new Set();
   for(const x of session.observations){
@@ -134,6 +137,18 @@ export function validateReviewSession(session,audit,queue,fullQueue=null){
    assert.equal(x.dictionarySource,actual.dictionarySource);
    assert.equal(x.priorityAtIntake,actual.priority);
    assert.equal(x.strictWholeTermMatchAtIntake,actual.strictWholeTermMatch);
+   if(v3){
+    assert.ok(Array.isArray(actual.dictionaryReadings)&&actual.dictionaryReadings.length>0);
+    assert.ok(actual.dictionaryReadings.includes(x.readingSelection)||
+     x.readingSelection==="undetermined"||
+     (x.readingSelection==="multiple"&&actual.dictionaryReadings.length>1),
+     "Reading must come from pinned dictionary or be explicitly unresolved");
+    if(session.session.scope==="multiple_readings")
+     assert.ok(actual.dictionaryReadings.length>1);
+    if(session.session.scope==="polysemy_high")
+     assert.ok(actual.dictionaryReadings.length>1&&
+      actual.dictionaryExcerpt.split(";").filter(s=>s.trim()).length>=8);
+   }
    assert.ok(lexical.has(x.preliminaryJudgment));
    assert.ok(typeof x.evidenceRationale==="string"&&
     x.evidenceRationale.trim().length>=12&&x.evidenceRationale.length<=15000);

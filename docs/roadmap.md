@@ -21,11 +21,11 @@ This is a sequence of **evidence gates**, not a promise to build a large applica
 - [x] Compute and document v0.3 with historic protected-40 constraint.
 - [x] Correct that constraint: v0.4 freely reassigns all 513 identities without sacrificing global color separation.
 - [x] Produce a Rust-based source-aligned component-colored compound SVG renderer; validate against pinned stroke-outline records.
-- [x] Expand source-aligned coloring to nested/enclosing structures and single-component atomic glyphs (870 of the first 1,000 characters in the current build).
+- [x] Expand source-aligned coloring to nested/enclosing structures and single-component atomic glyphs (all 1,000 active first-tranche mappings; independent visual inspection remains pending).
 - [x] Produce machine-readable source rejection diagnostics and side-by-side SVG/native-font review sheets, with non-certifying checks for component placement and perceptually close co-occurring colors.
 - [x] Recover 73 additional mappings through source-owned subglyph decompositions, exact catalog identity and vector-geometry checks; retain source provenance and pending-review status.
 - [x] Publish portable per-glyph source ownership records and isolated review images for 8 documented alternate decompositions and 27 partial unknown-source cases. Keep incomplete cases out of the active renderer.
-- [ ] Independently visually audit all stroke ownership mappings and resolve the 130 remaining unmapped catalog entries.
+- [ ] Independently visually audit all 1,000 active stroke ownership mappings and adjudicate retained alternate/partial mapping research cases separately.
 - [ ] Compare plain, identity-only, and independently specified semantic-family variants.
 - [ ] Test legibility, distinctions at real glyph sizes, recall, and transfer.
 - [ ] Document failure cases and iterate with **new palette versions**.
@@ -41,6 +41,16 @@ This is a sequence of **evidence gates**, not a promise to build a large applica
 - [ ] Try one integrated character-cell layout without changing the original strokes.
 
 **Gate:** reliable decoding, not simply an attractive-looking sound diagram.
+
+## Active Mandarin semantic verification [research infrastructure; approval pending]
+
+- [x] Screen 1,000 characters, recording provisional emoji and explicit deferrals.
+- [x] Cross-reference 1,000 CC-CEDICT headwords and triage 897 expression hypotheses (248 whole-term mismatches).
+- [x] Build source-first lexical and blind emoji-comprehension worksheets with local-only exports.
+- [x] Add reading-specific provisional selections, unresolved statuses, and high-attention polysemy cohorts without promotion.
+- [ ] Independently adjudicate attested readings and usage-specific lexical senses, including higher-attention cases.
+- [ ] Conduct independently controlled blind emoji comprehension and accessibility evaluations.
+- [ ] Promote only after separately demonstrated lexical and pictogram acceptance. Currently approved: 0.
 
 ## Phase 3 — fusion and contextual experiments [proposed]
 

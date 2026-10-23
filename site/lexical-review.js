@@ -9,6 +9,7 @@ const required=[
  "lexical-study-status","lexical-study-session","lexical-study-count-label",
  "lexical-study-progress","lexical-study-fill","lexical-study-character",
  "lexical-study-meaning","lexical-study-unihan","lexical-study-dictionary",
+ "lexical-study-readings","lexical-study-complexity","lexical-study-reading",
  "lexical-study-form","lexical-study-decisions","lexical-study-rationale",
  "lexical-study-commit","lexical-study-after","lexical-study-prior","lexical-study-next"
 ];
@@ -32,11 +33,15 @@ function candidates(){
  return queue.records.filter(r=>scope==="all"||
    (scope==="flagged"&&!r.strictWholeTermMatch)||
    (scope==="matched"&&r.strictWholeTermMatch)||
-   r.priority===scope);
+   r.priority===scope||
+   (scope==="multiple_readings"&&r.dictionaryReadings.length>1)||
+   (scope==="polysemy_high"&&r.dictionaryReadings.length>1&&
+     r.dictionaryExcerpt.split(";").filter(x=>x.trim()).length>=8));
 }
 function resetForm(){
  judgment=null;awaitingNext=false;
  $("lexical-study-rationale").value="";
+ $("lexical-study-reading").value="";
  $("lexical-study-commit").disabled=true;
  for(const c of controls)c.setAttribute("aria-pressed","false");
  $("lexical-study-form").hidden=false;
@@ -63,6 +68,23 @@ function show(){
  put("lexical-study-meaning",r.selectedMeaning);
  put("lexical-study-unihan",r.referenceDefinition);
  put("lexical-study-dictionary",r.dictionaryExcerpt);
+ put("lexical-study-readings",r.dictionaryReadings.join(" · "));
+ const fragments=r.dictionaryExcerpt.split(";").filter(x=>x.trim()).length;
+ put("lexical-study-complexity",r.dictionaryReadings.length+
+   " pinned dictionary reading(s); "+fragments+
+   " English definition fragments. Neither count establishes distinct lexical senses.");
+ const selector=$("lexical-study-reading");
+ selector.replaceChildren();
+ for(const [value,label] of [
+   ["","Select reading or unresolved status"],
+   ...r.dictionaryReadings.map(reading=>[reading,reading+" (dictionary spelling)"]),
+   ...(r.dictionaryReadings.length>1?[["multiple","Multiple readings (not yet separated)"]]:[]),
+   ["undetermined","Undetermined / needs usage evidence"]
+ ]){
+   const option=document.createElement("option");
+   option.value=value;option.textContent=label;selector.appendChild(option);
+ }
+ selector.value="";
  // The previous assistant's interpretation is deliberately hidden initially.
  put("lexical-study-prior","");
  resetForm();
@@ -86,13 +108,22 @@ function setJudgment(value){
 }
 function validate(){
  if(awaitingNext)return;
- $("lexical-study-commit").disabled=!(judgment&&$("lexical-study-rationale").value.trim().length>=12);
+ const r=trials[position];
+ const selected=$("lexical-study-reading").value;
+ const valid=selected==="undetermined"||
+   (selected==="multiple"&&r?.dictionaryReadings.length>1)||
+   Boolean(r?.dictionaryReadings.includes(selected));
+ $("lexical-study-commit").disabled=!(judgment&&valid&&$("lexical-study-rationale").value.trim().length>=12);
 }
 function commit(){
  if(awaitingNext||!judgment)return;
  const note=$("lexical-study-rationale").value.trim();
  if(note.length<12)return;
  const r=trials[position];
+ const selected=$("lexical-study-reading").value;
+ if(!(selected==="undetermined"||
+   (selected==="multiple"&&r.dictionaryReadings.length>1)||
+   r.dictionaryReadings.includes(selected)))return;
  recorded.push({
   rank:r.rank,character:r.character,selectedMeaning:r.selectedMeaning,
   originalSourceSegment:r.referenceDefinition,
@@ -100,6 +131,7 @@ function commit(){
   preliminaryJudgment:judgment,
   evidenceRationale:note,
   priorityAtIntake:r.priority,strictWholeTermMatchAtIntake:r.strictWholeTermMatch,
+  readingSelection:selected,
   lexicalApproval:"not_granted",
   emojiComprehensionApproval:"not_granted",
   productionVerified:false
@@ -123,7 +155,7 @@ function next(){
 function exportJSON(){
  if(!recorded.length)return;
  const payload={
-  schema:"chromalect.lexical-review-observation-session.v0.2",
+  schema:"chromalect.lexical-review-observation-session.v0.3",
   status:"local_preliminary_observations_not_independent_lexical_approval",
   source:{queue:"full-lexical-review-queue-v0.1.json",
    ccCedictLicense:"CC BY-SA 4.0",unihanSource:"Unicode Unihan kDefinition",
@@ -167,7 +199,9 @@ async function load(){
     throw new Error("Unexpected source or non-pending approval state");
   for(const r of data.records){
    if(!r.rank||!r.character||!r.selectedMeaning||!r.referenceDefinition||
-     !r.dictionaryExcerpt||r.strictWholeTermMatch!==true&&r.strictWholeTermMatch!==false||
+     !r.dictionaryExcerpt||!Array.isArray(r.dictionaryReadings)||!r.dictionaryReadings.length||
+    r.dictionaryReadings.some(x=>typeof x!=="string"||!x)||
+    r.strictWholeTermMatch!==true&&r.strictWholeTermMatch!==false||
      r.lexicalDecision!=="pending"||
      r.productionVerified!==false)
     throw new Error("Malformed or already accepted lexical source entry");
@@ -182,6 +216,7 @@ async function load(){
 $("lexical-study-start").addEventListener("click",start);
 for(const c of controls)c.addEventListener("click",()=>setJudgment(c.dataset.lexicalJudgment));
 $("lexical-study-rationale").addEventListener("input",validate);
+$("lexical-study-reading").addEventListener("change",validate);
 $("lexical-study-commit").addEventListener("click",commit);
 $("lexical-study-next").addEventListener("click",next);
 $("lexical-study-export").addEventListener("click",exportJSON);

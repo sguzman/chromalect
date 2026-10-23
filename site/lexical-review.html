@@ -41,7 +41,7 @@
 <div class="eyebrow">Research worksheet · character senses</div>
 <h1>Mandarin lexical sense alignment</h1>
 <p class="intro lexical-study-intro">Examine a character's proposed English meaning against the pinned independent dictionary excerpt, <strong>without first seeing the emoji or the assistant's previous analysis</strong>. This worksheet covers all 897 provisional meaning candidates, including 248 dictionary discrepancies and 649 literal wording matches. All still require independent review.</p>
-<div class="lexical-study-fineprint"><strong>Not production approval:</strong> Answers remain local until an explicit JSON export. This interface never changes the source ledger, review counts, or production status. A supported/unsupported choice is a preliminary reviewer observation; independently corroborated lexical evidence and documented adjudication are still needed. Starting a new session discards unexported responses.</div>
+<div class="lexical-study-fineprint"><strong>Not production approval:</strong> Answers remain local until an explicit JSON export. Record a reading-specific hypothesis or leave the reading undetermined; no choice is automatically accepted. This interface never changes the source ledger, review counts, or production status. A supported/unsupported choice is a preliminary reviewer observation; independently corroborated lexical evidence and documented adjudication are still needed. Starting a new session discards unexported responses.</div>
 <div data-character-layer-controls></div>
 <div class="lexical-study-setup">
 <label>Review queue
@@ -52,6 +52,8 @@
 <option value="high">Higher-priority cases</option>
 <option value="medium">Medium-priority cases</option>
 <option value="unclassified">Unclassified cases</option>
+<option value="multiple_readings">Multiple dictionary readings</option>
+<option value="polysemy_high">High-attention polysemy (multiple readings + 8 or more gloss fragments)</option>
 </select></label>
 <label>Review batch size
 <select id="lexical-study-count">
@@ -73,6 +75,7 @@
 <div><p class="lexical-study-note">Chinese character</p><div id="lexical-study-character" class="lexical-study-character" aria-label="Mapped Mandarin character"></div></div>
 <div><p class="lexical-study-note">Proposed character sense (Unverified)</p><strong id="lexical-study-meaning"></strong></div>
 <div><p class="lexical-study-note">Pinned Unihan definition segment</p><p id="lexical-study-unihan" class="lexical-study-source"></p></div>
+<div><p class="lexical-study-note">Dictionary readings (source spellings, not approved senses)</p><p id="lexical-study-readings" class="lexical-study-source"></p><p id="lexical-study-complexity" class="lexical-study-note"></p></div>
 <div><p class="lexical-study-note">Independent CC-CEDICT dictionary excerpt</p><p id="lexical-study-dictionary" class="lexical-study-source"></p></div>
 </div>
 <div id="lexical-study-form">
@@ -83,6 +86,9 @@
 <button type="button" data-lexical-judgment="unsupported" aria-pressed="false">Unsupported / misleading</button>
 <button type="button" data-lexical-judgment="uncertain" aria-pressed="false">Insufficient evidence</button>
 </div>
+<label for="lexical-study-reading">Which pinned dictionary reading applies to this proposed meaning?</label>
+<select id="lexical-study-reading" aria-describedby="lexical-study-reading-note"><option value="">Select reading or unresolved status</option></select>
+<p id="lexical-study-reading-note" class="lexical-study-note">Required for a preliminary observation. Select a source reading, multiple readings if applicable, or undetermined. This does not certify a pronunciation/sense correspondence.</p>
 <label for="lexical-study-rationale">Evidence-based explanation (at least 12 characters)</label>
 <textarea id="lexical-study-rationale" placeholder="Explain the relevant reading, sense, semantic scope, or unresolved question."></textarea>
 <div class="lexical-study-actions"><button id="lexical-study-commit" type="button" class="primary" disabled>Lock preliminary observation</button></div>
