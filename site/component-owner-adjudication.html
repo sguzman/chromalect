@@ -11,10 +11,12 @@
 <style>
 .oa-notice,.oa-form,.oa-panel{background:var(--panel);border:1px solid var(--border);
  border-radius:12px;padding:18px;margin:16px 0}
-.oa-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.oa-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,180px),1fr));gap:16px}
 .oa-image{display:flex;justify-content:center;align-items:center;min-height:176px;overflow:auto;
  border-radius:10px;background:#fff;padding:12px}
 .oa-image img{width:var(--oa-glyph-size,96px);height:var(--oa-glyph-size,96px);max-width:none;object-fit:contain}
+.oa-native{font-size:var(--oa-glyph-size,96px);line-height:1;
+ font-family:"Noto Sans CJK SC","Noto Sans SC",system-ui,sans-serif;color:#111;white-space:nowrap}
 .oa-form label{display:grid;gap:7px;margin:10px 0}
 .oa-form select,.oa-form textarea,.oa-form input,.oa-form button{
  box-sizing:border-box;width:100%;font:inherit;background:var(--tile-bg);
@@ -55,6 +57,9 @@
 <option value="64">64 px</option><option value="96" selected>96 px</option>
 <option value="128">128 px</option><option value="160">160 px</option></select></label>
 <div id="oa-grid" class="oa-grid">
+<div class="oa-panel"><h2>Native font reference</h2><div class="oa-image"><span
+ id="oa-native" class="oa-native" lang="zh-Hans" aria-label="Native Chinese font glyph, font-dependent comparison only"></span></div>
+ <p class="oa-meta">Font-dependent visual context, not independent component evidence</p></div>
 <div class="oa-panel"><h2>Original v0.6 glyph</h2><div class="oa-image"><img id="oa-source" alt="Original component-colored source glyph"></div></div>
 <div class="oa-panel"><h2>Neutral region locator</h2><div class="oa-image"><img id="oa-locator" alt="Charcoal machine-assigned region, other strokes gray"></div></div>
 <div class="oa-panel"><h2>Other component locator</h2><div class="oa-image"><img id="oa-complement" alt="Charcoal other source candidate region, remaining strokes gray"></div></div>

@@ -20,6 +20,10 @@ The 49 machine-identified warning pairs may be inspected as all pairs, 23 new fo
 
 Within any warning cohort, the intake can retain the **canonical source rank** or display pairs ordered by (a) the fewest source-owned stroke paths in either highlighted component, or (b) the greatest number of total source stroke paths. Ties are resolved by the original manifest sequence. These counts come from both SHA-256-linked locator manifests, not subjective shape or language judgments. Sorting is a reversible presentation convenience; it neither changes the canonical export ordering nor estimates error probability, human recognizability or independent owner correctness.
 
+## Font-dependent native shape reference
+
+The intake also shows the selected Chinese character using a locally available font (`lang="zh-Hans"`) at the same selected CSS pixel size as all four source-derived images. Its rendered form depends on the visitor's font installation, shaping engine and fallback configuration. Differences can flag questions for documented follow-up, but a local font glyph does not provide independently adjudicated stroke ownership or a stable cross-platform gold-standard outline. No native-font pixels or font names are recorded in exported notes.
+
 ## Matched reading-size inspection
 
 The review displays the production source glyph, machine-selected component locator, complementary component locator, and fold-trained color candidate at a common **16, 24, 32, 48, 64, 96, 128 or 160 CSS pixels**. The size applies to all four images without changing source path data or palette assignments. Sizes are visual inspection aids; CSS pixels do not calibrate physical viewing distance, visual acuity, color vision, or human recognition results.

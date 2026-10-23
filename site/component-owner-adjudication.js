@@ -5,7 +5,7 @@ const pairing=globalThis.ChromalectBlindColorRehearsal;
 const identification=globalThis.ChromalectComponentIdentificationRehearsal;
 const audit=globalThis.ChromalectOwnerAdjudication;
 const $=id=>document.getElementById(id);
-const names=["oa-status","oa-filter","oa-order","oa-cohort-count","oa-target","oa-meta","oa-size","oa-grid","oa-source","oa-locator","oa-fold",
+const names=["oa-status","oa-filter","oa-order","oa-cohort-count","oa-target","oa-meta","oa-size","oa-grid","oa-native","oa-source","oa-locator","oa-fold",
  "oa-owner","oa-complement","oa-complement-meta","oa-judgment","oa-evidence","oa-rationale","oa-save","oa-count","oa-export","oa-output","oa-import","oa-restore"];
 if(names.some(id=>!$(id)))return;
 const status=x=>{$("oa-status").textContent=x;};
@@ -52,6 +52,7 @@ function selection(id){
  selected=targets.find(t=>t.id===id);
  if(!selected)throw Error("Unknown source-region pair");
  $("oa-target").value=id;
+ $("oa-native").textContent=selected.character;
  $("oa-source").src=selected.sourceSVG;
  $("oa-locator").src=selected.locatorSVG;
  const complement=complements.get(selected.id);

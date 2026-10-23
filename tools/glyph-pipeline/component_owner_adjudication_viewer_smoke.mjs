@@ -18,7 +18,7 @@ const scripts=["site/heldout-blind-color-core.js",
  "site/heldout-component-identification-core.js",
  "site/component-owner-adjudication-core.js",
  "site/component-owner-adjudication.js"].map(p=>fs.readFileSync(p,"utf8"));
-const ids=["oa-status","oa-filter","oa-order","oa-cohort-count","oa-target","oa-meta","oa-size","oa-grid","oa-source","oa-locator","oa-fold",
+const ids=["oa-status","oa-filter","oa-order","oa-cohort-count","oa-target","oa-meta","oa-size","oa-grid","oa-native","oa-source","oa-locator","oa-fold",
  "oa-owner","oa-complement","oa-complement-meta","oa-judgment","oa-evidence","oa-rationale","oa-save","oa-count",
  "oa-export","oa-output","oa-import","oa-restore"];
 class Element{
@@ -83,6 +83,8 @@ assert.equal(p["oa-filter"].value,"all");
 assert.match(p["oa-status"].textContent,/Could not change source cohort/);
 assert.equal(p["oa-save"].disabled,false);
 assert.equal(p["oa-restore"].disabled,false);
+assert.equal(p["oa-native"].textContent,
+ sources["glyphs/research/heldout-identification-target-v0.1/index-v0.1.json"].targets[0].character);
 assert.match(p["oa-source"].src,/glyphs\//);
 assert.match(p["oa-locator"].src,/heldout-identification-target/);
 assert.match(p["oa-complement"].src,/owner-complement-locators/);
@@ -121,6 +123,7 @@ const next=p["oa-target"].children[1].value;
 p["oa-target"].value=next;
 p["oa-target"].events.change();
 assert.equal(p["oa-target"].value,next);
+assert.equal(p["oa-native"].textContent,targetById.get(next).character);
 assert.match(p["oa-count"].textContent,/1 provisional notes/);
 p["oa-export"].events.click();
 const result=JSON.parse(p["oa-output"].value);
@@ -172,6 +175,9 @@ assert.equal(invalidMask["oa-target"].children.length,0);
 assert.equal(invalidMask["oa-save"].disabled,true);
 const html=fs.readFileSync("site/component-owner-adjudication.html","utf8");
 for(const id of ids)assert.ok(html.includes('id="'+id+'"'),id);
+assert.ok(html.includes('id="oa-native"'));
+assert.ok(html.includes('font-size:var(--oa-glyph-size,96px)'));
+assert.ok(html.includes('lang="zh-Hans"'));
 assert.ok(!scripts.at(-1).includes("localStorage"));
 assert.ok(!scripts.at(-1).includes("innerHTML"));
 console.log("Local source-owner intake UI: 49 paired regions, independent and complementary locator displays, strict export, poisoned-source refusal.");
