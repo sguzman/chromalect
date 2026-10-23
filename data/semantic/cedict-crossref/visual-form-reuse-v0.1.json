@@ -1,0 +1,6256 @@
+{
+  "schema": "chromalect.semantic.visual-form-reuse.v0.1",
+  "status": "research_catalog_not_semantic_uniqueness_policy",
+  "source": "emoji-visibility-audit-v0.1.json",
+  "statement": "Emoji are reusable vocabulary. Sharing an emoji expression across Mandarin meanings is allowed. These groups support blind comprehension sampling and ambiguity analysis, not automatic rejection or a unique-code requirement.",
+  "summary": {
+    "candidateSenseExpressions": 897,
+    "distinctVisibleEmojiForms": 388,
+    "formsUsedOnce": 197,
+    "formsUsedMoreThanOnce": 191,
+    "assignmentsUsingRepeatedForms": 700,
+    "maximumAssignmentsOneForm": 15,
+    "independentLexicalApproved": 0,
+    "independentEmojiApproved": 0,
+    "productionVerified": 0
+  },
+  "repeatedForms": [
+    {
+      "emoji": "✅",
+      "assignmentCount": 15,
+      "distinctMeanings": 9,
+      "records": [
+        {
+          "id": "r0017-s01",
+          "rank": 17,
+          "character": "了",
+          "meaning": "finish",
+          "typedEvent": false
+        },
+        {
+          "id": "r0061-s01",
+          "rank": 61,
+          "character": "已",
+          "meaning": "finished",
+          "typedEvent": false
+        },
+        {
+          "id": "r0183-s01",
+          "rank": 183,
+          "character": "允",
+          "meaning": "allow",
+          "typedEvent": false
+        },
+        {
+          "id": "r0198-s01",
+          "rank": 198,
+          "character": "正",
+          "meaning": "correct",
+          "typedEvent": false
+        },
+        {
+          "id": "r0317-s01",
+          "rank": 317,
+          "character": "让",
+          "meaning": "allow",
+          "typedEvent": true
+        },
+        {
+          "id": "r0341-s01",
+          "rank": 341,
+          "character": "对",
+          "meaning": "correct",
+          "typedEvent": false
+        },
+        {
+          "id": "r0363-s01",
+          "rank": 363,
+          "character": "执",
+          "meaning": "carry out",
+          "typedEvent": true
+        },
+        {
+          "id": "r0401-s01",
+          "rank": 401,
+          "character": "成",
+          "meaning": "finished",
+          "typedEvent": false
+        },
+        {
+          "id": "r0409-s01",
+          "rank": 409,
+          "character": "毕",
+          "meaning": "finish",
+          "typedEvent": true
+        },
+        {
+          "id": "r0523-s01",
+          "rank": 523,
+          "character": "决",
+          "meaning": "decide",
+          "typedEvent": true
+        },
+        {
+          "id": "r0554-s01",
+          "rank": 554,
+          "character": "许",
+          "meaning": "allow",
+          "typedEvent": true
+        },
+        {
+          "id": "r0799-s01",
+          "rank": 799,
+          "character": "妥",
+          "meaning": "appropriate",
+          "typedEvent": false
+        },
+        {
+          "id": "r0877-s01",
+          "rank": 877,
+          "character": "完",
+          "meaning": "complete",
+          "typedEvent": true
+        },
+        {
+          "id": "r0961-s01",
+          "rank": 961,
+          "character": "拣",
+          "meaning": "choose",
+          "typedEvent": true
+        },
+        {
+          "id": "r0992-s01",
+          "rank": 992,
+          "character": "择",
+          "meaning": "choose",
+          "typedEvent": true
+        }
+      ]
+    },
+    {
+      "emoji": "💪",
+      "assignmentCount": 13,
+      "distinctMeanings": 9,
+      "records": [
+        {
+          "id": "r0019-s01",
+          "rank": 19,
+          "character": "力",
+          "meaning": "power",
+          "typedEvent": false
+        },
+        {
+          "id": "r0361-s01",
+          "rank": 361,
+          "character": "巩",
+          "meaning": "strong",
+          "typedEvent": false
+        },
+        {
+          "id": "r0441-s01",
+          "rank": 441,
+          "character": "刚",
+          "meaning": "strong",
+          "typedEvent": false
+        },
+        {
+          "id": "r0495-s01",
+          "rank": 495,
+          "character": "肌",
+          "meaning": "muscle",
+          "typedEvent": false
+        },
+        {
+          "id": "r0510-s01",
+          "rank": 510,
+          "character": "壮",
+          "meaning": "robust",
+          "typedEvent": false
+        },
+        {
+          "id": "r0610-s01",
+          "rank": 610,
+          "character": "韧",
+          "meaning": "resilient",
+          "typedEvent": false
+        },
+        {
+          "id": "r0651-s01",
+          "rank": 651,
+          "character": "志",
+          "meaning": "determination",
+          "typedEvent": false
+        },
+        {
+          "id": "r0712-s01",
+          "rank": 712,
+          "character": "坚",
+          "meaning": "strong",
+          "typedEvent": false
+        },
+        {
+          "id": "r0806-s01",
+          "rank": 806,
+          "character": "肘",
+          "meaning": "elbow",
+          "typedEvent": false
+        },
+        {
+          "id": "r0924-s01",
+          "rank": 924,
+          "character": "努",
+          "meaning": "strive",
+          "typedEvent": true
+        },
+        {
+          "id": "r0925-s01",
+          "rank": 925,
+          "character": "忍",
+          "meaning": "endure",
+          "typedEvent": true
+        },
+        {
+          "id": "r0926-s01",
+          "rank": 926,
+          "character": "劲",
+          "meaning": "strong",
+          "typedEvent": false
+        },
+        {
+          "id": "r0977-s01",
+          "rank": 977,
+          "character": "势",
+          "meaning": "power",
+          "typedEvent": false
+        }
+      ]
+    },
+    {
+      "emoji": "↔️",
+      "assignmentCount": 12,
+      "distinctMeanings": 6,
+      "records": [
+        {
+          "id": "r0053-s01",
+          "rank": 53,
+          "character": "广",
+          "meaning": "wide",
+          "typedEvent": false
+        },
+        {
+          "id": "r0329-s01",
+          "rank": 329,
+          "character": "弘",
+          "meaning": "expand",
+          "typedEvent": true
+        },
+        {
+          "id": "r0364-s01",
+          "rank": 364,
+          "character": "扩",
+          "meaning": "expand",
+          "typedEvent": true
+        },
+        {
+          "id": "r0392-s01",
+          "rank": 392,
+          "character": "而",
+          "meaning": "but",
+          "typedEvent": false
+        },
+        {
+          "id": "r0402-s01",
+          "rank": 402,
+          "character": "夹",
+          "meaning": "between",
+          "typedEvent": false
+        },
+        {
+          "id": "r0727-s01",
+          "rank": 727,
+          "character": "旷",
+          "meaning": "wide",
+          "typedEvent": false
+        },
+        {
+          "id": "r0751-s01",
+          "rank": 751,
+          "character": "别",
+          "meaning": "separate",
+          "typedEvent": false
+        },
+        {
+          "id": "r0774-s01",
+          "rank": 774,
+          "character": "但",
+          "meaning": "but",
+          "typedEvent": false
+        },
+        {
+          "id": "r0847-s01",
+          "rank": 847,
+          "character": "间",
+          "meaning": "space",
+          "typedEvent": false
+        },
+        {
+          "id": "r0879-s01",
+          "rank": 879,
+          "character": "宏",
+          "meaning": "wide",
+          "typedEvent": false
+        },
+        {
+          "id": "r0909-s01",
+          "rank": 909,
+          "character": "张",
+          "meaning": "expand",
+          "typedEvent": true
+        },
+        {
+          "id": "r0957-s01",
+          "rank": 957,
+          "character": "拓",
+          "meaning": "expand",
+          "typedEvent": true
+        }
+      ]
+    },
+    {
+      "emoji": "⚖️",
+      "assignmentCount": 11,
+      "distinctMeanings": 11,
+      "records": [
+        {
+          "id": "r0057-s01",
+          "rank": 57,
+          "character": "义",
+          "meaning": "righteousness",
+          "typedEvent": false
+        },
+        {
+          "id": "r0105-s01",
+          "rank": 105,
+          "character": "比",
+          "meaning": "compare",
+          "typedEvent": false
+        },
+        {
+          "id": "r0148-s01",
+          "rank": 148,
+          "character": "公",
+          "meaning": "fair",
+          "typedEvent": false
+        },
+        {
+          "id": "r0156-s01",
+          "rank": 156,
+          "character": "匀",
+          "meaning": "equal",
+          "typedEvent": false
+        },
+        {
+          "id": "r0351-s01",
+          "rank": 351,
+          "character": "刑",
+          "meaning": "punishment",
+          "typedEvent": false
+        },
+        {
+          "id": "r0440-s01",
+          "rank": 440,
+          "character": "则",
+          "meaning": "law",
+          "typedEvent": false
+        },
+        {
+          "id": "r0448-s01",
+          "rank": 448,
+          "character": "廷",
+          "meaning": "court",
+          "typedEvent": false
+        },
+        {
+          "id": "r0557-s01",
+          "rank": 557,
+          "character": "讼",
+          "meaning": "litigate",
+          "typedEvent": true
+        },
+        {
+          "id": "r0675-s01",
+          "rank": 675,
+          "character": "克",
+          "meaning": "gram",
+          "typedEvent": false
+        },
+        {
+          "id": "r0849-s01",
+          "rank": 849,
+          "character": "判",
+          "meaning": "judge",
+          "typedEvent": true
+        },
+        {
+          "id": "r0894-s01",
+          "rank": 894,
+          "character": "诉",
+          "meaning": "sue",
+          "typedEvent": true
+        }
+      ]
+    },
+    {
+      "emoji": "🤝",
+      "assignmentCount": 11,
+      "distinctMeanings": 10,
+      "records": [
+        {
+          "id": "r0106-s01",
+          "rank": 106,
+          "character": "互",
+          "meaning": "mutually",
+          "typedEvent": false
+        },
+        {
+          "id": "r0371-s01",
+          "rank": 371,
+          "character": "共",
+          "meaning": "together",
+          "typedEvent": false
+        },
+        {
+          "id": "r0383-s01",
+          "rank": 383,
+          "character": "协",
+          "meaning": "cooperate",
+          "typedEvent": true
+        },
+        {
+          "id": "r0412-s01",
+          "rank": 412,
+          "character": "贞",
+          "meaning": "loyal",
+          "typedEvent": false
+        },
+        {
+          "id": "r0465-s01",
+          "rank": 465,
+          "character": "仲",
+          "meaning": "mediator",
+          "typedEvent": false
+        },
+        {
+          "id": "r0486-s01",
+          "rank": 486,
+          "character": "会",
+          "meaning": "meet together",
+          "typedEvent": true
+        },
+        {
+          "id": "r0593-s01",
+          "rank": 593,
+          "character": "约",
+          "meaning": "agreement",
+          "typedEvent": false
+        },
+        {
+          "id": "r0612-s01",
+          "rank": 612,
+          "character": "扶",
+          "meaning": "help",
+          "typedEvent": true
+        },
+        {
+          "id": "r0719-s01",
+          "rank": 719,
+          "character": "助",
+          "meaning": "help",
+          "typedEvent": true
+        },
+        {
+          "id": "r0772-s01",
+          "rank": 772,
+          "character": "佐",
+          "meaning": "assist",
+          "typedEvent": true
+        },
+        {
+          "id": "r0875-s01",
+          "rank": 875,
+          "character": "忱",
+          "meaning": "sincerity",
+          "typedEvent": false
+        }
+      ]
+    },
+    {
+      "emoji": "🗣️",
+      "assignmentCount": 10,
+      "distinctMeanings": 7,
+      "records": [
+        {
+          "id": "r0082-s02",
+          "rank": 82,
+          "character": "云",
+          "meaning": "say",
+          "typedEvent": true
+        },
+        {
+          "id": "r0111-s01",
+          "rank": 111,
+          "character": "曰",
+          "meaning": "say",
+          "typedEvent": true
+        },
+        {
+          "id": "r0310-s01",
+          "rank": 310,
+          "character": "头",
+          "meaning": "head",
+          "typedEvent": false
+        },
+        {
+          "id": "r0315-s01",
+          "rank": 315,
+          "character": "讨",
+          "meaning": "discuss",
+          "typedEvent": true
+        },
+        {
+          "id": "r0320-s01",
+          "rank": 320,
+          "character": "议",
+          "meaning": "discuss",
+          "typedEvent": true
+        },
+        {
+          "id": "r0550-s01",
+          "rank": 550,
+          "character": "讲",
+          "meaning": "explain",
+          "typedEvent": true
+        },
+        {
+          "id": "r0556-s01",
+          "rank": 556,
+          "character": "论",
+          "meaning": "discuss",
+          "typedEvent": true
+        },
+        {
+          "id": "r0659-s01",
+          "rank": 659,
+          "character": "抒",
+          "meaning": "express",
+          "typedEvent": true
+        },
+        {
+          "id": "r0735-s01",
+          "rank": 735,
+          "character": "吵",
+          "meaning": "argue",
+          "typedEvent": true
+        },
+        {
+          "id": "r0826-s01",
+          "rank": 826,
+          "character": "言",
+          "meaning": "speech",
+          "typedEvent": false
+        }
+      ]
+    },
+    {
+      "emoji": "🌾",
+      "assignmentCount": 9,
+      "distinctMeanings": 8,
+      "records": [
+        {
+          "id": "r0074-s01",
+          "rank": 74,
+          "character": "丰",
+          "meaning": "abundant",
+          "typedEvent": false
+        },
+        {
+          "id": "r0244-s01",
+          "rank": 244,
+          "character": "田",
+          "meaning": "field",
+          "typedEvent": false
+        },
+        {
+          "id": "r0267-s01",
+          "rank": 267,
+          "character": "禾",
+          "meaning": "grain",
+          "typedEvent": false
+        },
+        {
+          "id": "r0601-s01",
+          "rank": 601,
+          "character": "麦",
+          "meaning": "wheat",
+          "typedEvent": false
+        },
+        {
+          "id": "r0663-s01",
+          "rank": 663,
+          "character": "苇",
+          "meaning": "reed",
+          "typedEvent": false
+        },
+        {
+          "id": "r0672-s01",
+          "rank": 672,
+          "character": "芦",
+          "meaning": "reeds",
+          "typedEvent": false
+        },
+        {
+          "id": "r0809-s01",
+          "rank": 809,
+          "character": "甸",
+          "meaning": "crops",
+          "typedEvent": false
+        },
+        {
+          "id": "r0829-s01",
+          "rank": 829,
+          "character": "亩",
+          "meaning": "fields",
+          "typedEvent": false
+        },
+        {
+          "id": "r0857-s01",
+          "rank": 857,
+          "character": "沛",
+          "meaning": "abundant",
+          "typedEvent": false
+        }
+      ]
+    },
+    {
+      "emoji": "🎭",
+      "assignmentCount": 8,
+      "distinctMeanings": 8,
+      "records": [
+        {
+          "id": "r0476-s01",
+          "rank": 476,
+          "character": "伪",
+          "meaning": "counterfeit",
+          "typedEvent": false
+        },
+        {
+          "id": "r0555-s01",
+          "rank": 555,
+          "character": "讹",
+          "meaning": "cheat",
+          "typedEvent": true
+        },
+        {
+          "id": "r0559-s01",
+          "rank": 559,
+          "character": "讽",
+          "meaning": "satirize",
+          "typedEvent": true
+        },
+        {
+          "id": "r0577-s01",
+          "rank": 577,
+          "character": "奸",
+          "meaning": "false",
+          "typedEvent": false
+        },
+        {
+          "id": "r0584-s01",
+          "rank": 584,
+          "character": "戏",
+          "meaning": "play",
+          "typedEvent": false
+        },
+        {
+          "id": "r0636-s01",
+          "rank": 636,
+          "character": "扮",
+          "meaning": "dress up",
+          "typedEvent": true
+        },
+        {
+          "id": "r0779-s01",
+          "rank": 779,
+          "character": "伶",
+          "meaning": "actor",
+          "typedEvent": false
+        },
+        {
+          "id": "r0893-s01",
+          "rank": 893,
+          "character": "诈",
+          "meaning": "swindle",
+          "typedEvent": true
+        }
+      ]
+    },
+    {
+      "emoji": "👥",
+      "assignmentCount": 8,
+      "distinctMeanings": 8,
+      "records": [
+        {
+          "id": "r0010-s01",
+          "rank": 10,
+          "character": "人",
+          "meaning": "people",
+          "typedEvent": false
+        },
+        {
+          "id": "r0180-s01",
+          "rank": 180,
+          "character": "队",
+          "meaning": "team",
+          "typedEvent": false
+        },
+        {
+          "id": "r0273-s01",
+          "rank": 273,
+          "character": "们",
+          "meaning": "plural",
+          "typedEvent": false
+        },
+        {
+          "id": "r0327-s01",
+          "rank": 327,
+          "character": "民",
+          "meaning": "citizens",
+          "typedEvent": false
+        },
+        {
+          "id": "r0491-s01",
+          "rank": 491,
+          "character": "众",
+          "meaning": "crowd",
+          "typedEvent": false
+        },
+        {
+          "id": "r0890-s01",
+          "rank": 890,
+          "character": "社",
+          "meaning": "society",
+          "typedEvent": false
+        },
+        {
+          "id": "r0969-s01",
+          "rank": 969,
+          "character": "者",
+          "meaning": "those who",
+          "typedEvent": false
+        },
+        {
+          "id": "r0996-s01",
+          "rank": 996,
+          "character": "其",
+          "meaning": "their",
+          "typedEvent": false
+        }
+      ]
+    },
+    {
+      "emoji": "👶",
+      "assignmentCount": 8,
+      "distinctMeanings": 6,
+      "records": [
+        {
+          "id": "r0012-s01",
+          "rank": 12,
+          "character": "儿",
+          "meaning": "child",
+          "typedEvent": false
+        },
+        {
+          "id": "r0064-s01",
+          "rank": 64,
+          "character": "子",
+          "meaning": "child",
+          "typedEvent": false
+        },
+        {
+          "id": "r0263-s02",
+          "rank": 263,
+          "character": "生",
+          "meaning": "birth",
+          "typedEvent": false
+        },
+        {
+          "id": "r0276-s01",
+          "rank": 276,
+          "character": "仔",
+          "meaning": "child",
+          "typedEvent": false
+        },
+        {
+          "id": "r0346-s01",
+          "rank": 346,
+          "character": "幼",
+          "meaning": "young child",
+          "typedEvent": false
+        },
+        {
+          "id": "r0522-s01",
+          "rank": 522,
+          "character": "产",
+          "meaning": "give birth",
+          "typedEvent": true
+        },
+        {
+          "id": "r0570-s01",
+          "rank": 570,
+          "character": "孙",
+          "meaning": "grandchild",
+          "typedEvent": false
+        },
+        {
+          "id": "r0947-s02",
+          "rank": 947,
+          "character": "青",
+          "meaning": "young",
+          "typedEvent": false
+        }
+      ]
+    },
+    {
+      "emoji": "🪢",
+      "assignmentCount": 8,
+      "distinctMeanings": 6,
+      "records": [
+        {
+          "id": "r0209-s01",
+          "rank": 209,
+          "character": "节",
+          "meaning": "knot",
+          "typedEvent": false
+        },
+        {
+          "id": "r0634-s01",
+          "rank": 634,
+          "character": "扳",
+          "meaning": "pull",
+          "typedEvent": true
+        },
+        {
+          "id": "r0694-s01",
+          "rank": 694,
+          "character": "束",
+          "meaning": "bind",
+          "typedEvent": true
+        },
+        {
+          "id": "r0933-s01",
+          "rank": 933,
+          "character": "纲",
+          "meaning": "rope",
+          "typedEvent": false
+        },
+        {
+          "id": "r0937-s01",
+          "rank": 937,
+          "character": "纷",
+          "meaning": "tangled",
+          "typedEvent": false
+        },
+        {
+          "id": "r0942-s01",
+          "rank": 942,
+          "character": "纽",
+          "meaning": "knot",
+          "typedEvent": false
+        },
+        {
+          "id": "r0968-s01",
+          "rank": 968,
+          "character": "拖",
+          "meaning": "drag",
+          "typedEvent": true
+        },
+        {
+          "id": "r0981-s01",
+          "rank": 981,
+          "character": "拉",
+          "meaning": "pull",
+          "typedEvent": true
+        }
+      ]
+    },
+    {
+      "emoji": "🚫",
+      "assignmentCount": 8,
+      "distinctMeanings": 5,
+      "records": [
+        {
+          "id": "r0081-s01",
+          "rank": 81,
+          "character": "无",
+          "meaning": "no",
+          "typedEvent": false
+        },
+        {
+          "id": "r0091-s01",
+          "rank": 91,
+          "character": "不",
+          "meaning": "not",
+          "typedEvent": false
+        },
+        {
+          "id": "r0152-s01",
+          "rank": 152,
+          "character": "勿",
+          "meaning": "must not",
+          "typedEvent": false
+        },
+        {
+          "id": "r0328-s01",
+          "rank": 328,
+          "character": "弗",
+          "meaning": "not",
+          "typedEvent": false
+        },
+        {
+          "id": "r0609-s01",
+          "rank": 609,
+          "character": "违",
+          "meaning": "disobey",
+          "typedEvent": true
+        },
+        {
+          "id": "r0703-s01",
+          "rank": 703,
+          "character": "否",
+          "meaning": "not",
+          "typedEvent": false
+        },
+        {
+          "id": "r0751-s02",
+          "rank": 751,
+          "character": "别",
+          "meaning": "do not",
+          "typedEvent": false
+        },
+        {
+          "id": "r0867-s01",
+          "rank": 867,
+          "character": "没",
+          "meaning": "not",
+          "typedEvent": false
+        }
+      ]
+    },
+    {
+      "emoji": "🌊",
+      "assignmentCount": 7,
+      "distinctMeanings": 5,
+      "records": [
+        {
+          "id": "r0539-s01",
+          "rank": 539,
+          "character": "汛",
+          "meaning": "flood",
+          "typedEvent": false
+        },
+        {
+          "id": "r0855-s01",
+          "rank": 855,
+          "character": "汪",
+          "meaning": "vast",
+          "typedEvent": false
+        },
+        {
+          "id": "r0863-s01",
+          "rank": 863,
+          "character": "沦",
+          "meaning": "sink",
+          "typedEvent": true
+        },
+        {
+          "id": "r0864-s01",
+          "rank": 864,
+          "character": "汹",
+          "meaning": "turbulent",
+          "typedEvent": false
+        },
+        {
+          "id": "r0867-s02",
+          "rank": 867,
+          "character": "没",
+          "meaning": "drown",
+          "typedEvent": true
+        },
+        {
+          "id": "r0870-s01",
+          "rank": 870,
+          "character": "沈",
+          "meaning": "sink",
+          "typedEvent": true
+        },
+        {
+          "id": "r0871-s01",
+          "rank": 871,
+          "character": "沉",
+          "meaning": "sink",
+          "typedEvent": true
+        }
+      ]
+    },
+    {
+      "emoji": "🌱",
+      "assignmentCount": 7,
+      "distinctMeanings": 7,
+      "records": [
+        {
+          "id": "r0258-s01",
+          "rank": 258,
+          "character": "冉",
+          "meaning": "tender",
+          "typedEvent": false
+        },
+        {
+          "id": "r0263-s01",
+          "rank": 263,
+          "character": "生",
+          "meaning": "life",
+          "typedEvent": false
+        },
+        {
+          "id": "r0391-s01",
+          "rank": 391,
+          "character": "存",
+          "meaning": "exist",
+          "typedEvent": false
+        },
+        {
+          "id": "r0544-s01",
+          "rank": 544,
+          "character": "兴",
+          "meaning": "flourish",
+          "typedEvent": true
+        },
+        {
+          "id": "r0664-s01",
+          "rank": 664,
+          "character": "芽",
+          "meaning": "sprout",
+          "typedEvent": false
+        },
+        {
+          "id": "r0677-s01",
+          "rank": 677,
+          "character": "苏",
+          "meaning": "revive",
+          "typedEvent": true
+        },
+        {
+          "id": "r0959-s01",
+          "rank": 959,
+          "character": "拔",
+          "meaning": "uproot",
+          "typedEvent": true
+        }
+      ]
+    },
+    {
+      "emoji": "🏘️",
+      "assignmentCount": 7,
+      "distinctMeanings": 3,
+      "records": [
+        {
+          "id": "r0073-s01",
+          "rank": 73,
+          "character": "乡",
+          "meaning": "village",
+          "typedEvent": false
+        },
+        {
+          "id": "r0103-s01",
+          "rank": 103,
+          "character": "屯",
+          "meaning": "village",
+          "typedEvent": false
+        },
+        {
+          "id": "r0514-s01",
+          "rank": 514,
+          "character": "庄",
+          "meaning": "village",
+          "typedEvent": false
+        },
+        {
+          "id": "r0647-s01",
+          "rank": 647,
+          "character": "坊",
+          "meaning": "neighborhood",
+          "typedEvent": false
+        },
+        {
+          "id": "r0682-s01",
+          "rank": 682,
+          "character": "村",
+          "meaning": "village",
+          "typedEvent": false
+        },
+        {
+          "id": "r0721-s01",
+          "rank": 721,
+          "character": "里",
+          "meaning": "village",
+          "typedEvent": false
+        },
+        {
+          "id": "r0801-s01",
+          "rank": 801,
+          "character": "邻",
+          "meaning": "neighbor",
+          "typedEvent": false
+        }
+      ]
+    },
+    {
+      "emoji": "📣",
+      "assignmentCount": 7,
+      "distinctMeanings": 5,
+      "records": [
+        {
+          "id": "r0253-s01",
+          "rank": 253,
+          "character": "叫",
+          "meaning": "shout",
+          "typedEvent": false
+        },
+        {
+          "id": "r0334-s01",
+          "rank": 334,
+          "character": "召",
+          "meaning": "summon",
+          "typedEvent": true
+        },
+        {
+          "id": "r0433-s01",
+          "rank": 433,
+          "character": "吆",
+          "meaning": "shout",
+          "typedEvent": true
+        },
+        {
+          "id": "r0618-s01",
+          "rank": 618,
+          "character": "扰",
+          "meaning": "disturb",
+          "typedEvent": true
+        },
+        {
+          "id": "r0738-s01",
+          "rank": 738,
+          "character": "呐",
+          "meaning": "shout",
+          "typedEvent": true
+        },
+        {
+          "id": "r0741-s01",
+          "rank": 741,
+          "character": "吩",
+          "meaning": "command",
+          "typedEvent": true
+        },
+        {
+          "id": "r0760-s01",
+          "rank": 760,
+          "character": "告",
+          "meaning": "announce",
+          "typedEvent": true
+        }
+      ]
+    },
+    {
+      "emoji": "🪞",
+      "assignmentCount": 7,
+      "distinctMeanings": 5,
+      "records": [
+        {
+          "id": "r0060-s01",
+          "rank": 60,
+          "character": "己",
+          "meaning": "self",
+          "typedEvent": false
+        },
+        {
+          "id": "r0474-s01",
+          "rank": 474,
+          "character": "仿",
+          "meaning": "imitate",
+          "typedEvent": true
+        },
+        {
+          "id": "r0477-s01",
+          "rank": 477,
+          "character": "自",
+          "meaning": "self",
+          "typedEvent": false
+        },
+        {
+          "id": "r0481-s01",
+          "rank": 481,
+          "character": "似",
+          "meaning": "resemble",
+          "typedEvent": false
+        },
+        {
+          "id": "r0578-s01",
+          "rank": 578,
+          "character": "如",
+          "meaning": "like",
+          "typedEvent": false
+        },
+        {
+          "id": "r0713-s01",
+          "rank": 713,
+          "character": "肖",
+          "meaning": "resemble",
+          "typedEvent": false
+        },
+        {
+          "id": "r0812-s01",
+          "rank": 812,
+          "character": "犹",
+          "meaning": "similar",
+          "typedEvent": false
+        }
+      ]
+    },
+    {
+      "emoji": "🛠️",
+      "assignmentCount": 7,
+      "distinctMeanings": 7,
+      "records": [
+        {
+          "id": "r0026-s01",
+          "rank": 26,
+          "character": "工",
+          "meaning": "work",
+          "typedEvent": false
+        },
+        {
+          "id": "r0283-s01",
+          "rank": 283,
+          "character": "用",
+          "meaning": "use",
+          "typedEvent": true
+        },
+        {
+          "id": "r0418-s01",
+          "rank": 418,
+          "character": "当",
+          "meaning": "undertake",
+          "typedEvent": true
+        },
+        {
+          "id": "r0494-s01",
+          "rank": 494,
+          "character": "创",
+          "meaning": "create",
+          "typedEvent": true
+        },
+        {
+          "id": "r0615-s01",
+          "rank": 615,
+          "character": "技",
+          "meaning": "skill",
+          "typedEvent": false
+        },
+        {
+          "id": "r0674-s01",
+          "rank": 674,
+          "character": "劳",
+          "meaning": "labor",
+          "typedEvent": true
+        },
+        {
+          "id": "r0777-s01",
+          "rank": 777,
+          "character": "作",
+          "meaning": "make",
+          "typedEvent": true
+        }
+      ]
+    },
+    {
+      "emoji": "🛡️",
+      "assignmentCount": 7,
+      "distinctMeanings": 4,
+      "records": [
+        {
+          "id": "r0065-s01",
+          "rank": 65,
+          "character": "卫",
+          "meaning": "protect",
+          "typedEvent": false
+        },
+        {
+          "id": "r0546-s01",
+          "rank": 546,
+          "character": "守",
+          "meaning": "protect",
+          "typedEvent": true
+        },
+        {
+          "id": "r0576-s01",
+          "rank": 576,
+          "character": "防",
+          "meaning": "prevent",
+          "typedEvent": true
+        },
+        {
+          "id": "r0620-s01",
+          "rank": 620,
+          "character": "拒",
+          "meaning": "defend",
+          "typedEvent": true
+        },
+        {
+          "id": "r0649-s01",
+          "rank": 649,
+          "character": "护",
+          "meaning": "protect",
+          "typedEvent": true
+        },
+        {
+          "id": "r0773-s01",
+          "rank": 773,
+          "character": "佑",
+          "meaning": "protect",
+          "typedEvent": true
+        },
+        {
+          "id": "r0833-s01",
+          "rank": 833,
+          "character": "庇",
+          "meaning": "shelter",
+          "typedEvent": true
+        }
+      ]
+    },
+    {
+      "emoji": "✊",
+      "assignmentCount": 6,
+      "distinctMeanings": 5,
+      "records": [
+        {
+          "id": "r0357-s01",
+          "rank": 357,
+          "character": "扣",
+          "meaning": "knock",
+          "typedEvent": true
+        },
+        {
+          "id": "r0619-s01",
+          "rank": 619,
+          "character": "扼",
+          "meaning": "grasp",
+          "typedEvent": true
+        },
+        {
+          "id": "r0633-s01",
+          "rank": 633,
+          "character": "抓",
+          "meaning": "grab",
+          "typedEvent": true
+        },
+        {
+          "id": "r0646-s01",
+          "rank": 646,
+          "character": "抗",
+          "meaning": "resist",
+          "typedEvent": true
+        },
+        {
+          "id": "r0966-s01",
+          "rank": 966,
+          "character": "抽",
+          "meaning": "pull out",
+          "typedEvent": true
+        },
+        {
+          "id": "r0975-s01",
+          "rank": 975,
+          "character": "抵",
+          "meaning": "resist",
+          "typedEvent": true
+        }
+      ]
+    },
+    {
+      "emoji": "🌍",
+      "assignmentCount": 6,
+      "distinctMeanings": 5,
+      "records": [
+        {
+          "id": "r0206-s01",
+          "rank": 206,
+          "character": "世",
+          "meaning": "world",
+          "typedEvent": false
+        },
+        {
+          "id": "r0348-s01",
+          "rank": 348,
+          "character": "邦",
+          "meaning": "country",
+          "typedEvent": false
+        },
+        {
+          "id": "r0366-s01",
+          "rank": 366,
+          "character": "地",
+          "meaning": "earth",
+          "typedEvent": false
+        },
+        {
+          "id": "r0912-s01",
+          "rank": 912,
+          "character": "陆",
+          "meaning": "land",
+          "typedEvent": false
+        },
+        {
+          "id": "r0929-s01",
+          "rank": 929,
+          "character": "纬",
+          "meaning": "latitude",
+          "typedEvent": false
+        },
+        {
+          "id": "r0964-s01",
+          "rank": 964,
+          "character": "坤",
+          "meaning": "earth",
+          "typedEvent": false
+        }
+      ]
+    },
+    {
+      "emoji": "🌸",
+      "assignmentCount": 6,
+      "distinctMeanings": 6,
+      "records": [
+        {
+          "id": "r0306-s01",
+          "rank": 306,
+          "character": "兰",
+          "meaning": "orchid",
+          "typedEvent": false
+        },
+        {
+          "id": "r0472-s01",
+          "rank": 472,
+          "character": "华",
+          "meaning": "flowery",
+          "typedEvent": false
+        },
+        {
+          "id": "r0497-s01",
+          "rank": 497,
+          "character": "朵",
+          "meaning": "flowers",
+          "typedEvent": false
+        },
+        {
+          "id": "r0591-s01",
+          "rank": 591,
+          "character": "纤",
+          "meaning": "delicate",
+          "typedEvent": false
+        },
+        {
+          "id": "r0665-s01",
+          "rank": 665,
+          "character": "花",
+          "meaning": "flower",
+          "typedEvent": false
+        },
+        {
+          "id": "r0765-s01",
+          "rank": 765,
+          "character": "秀",
+          "meaning": "flowering",
+          "typedEvent": false
+        }
+      ]
+    },
+    {
+      "emoji": "🌿",
+      "assignmentCount": 6,
+      "distinctMeanings": 6,
+      "records": [
+        {
+          "id": "r0089-s01",
+          "rank": 89,
+          "character": "支",
+          "meaning": "branch",
+          "typedEvent": false
+        },
+        {
+          "id": "r0200-s01",
+          "rank": 200,
+          "character": "卉",
+          "meaning": "plants",
+          "typedEvent": false
+        },
+        {
+          "id": "r0281-s01",
+          "rank": 281,
+          "character": "丛",
+          "meaning": "bush",
+          "typedEvent": false
+        },
+        {
+          "id": "r0662-s01",
+          "rank": 662,
+          "character": "芜",
+          "meaning": "weeds",
+          "typedEvent": false
+        },
+        {
+          "id": "r0667-s01",
+          "rank": 667,
+          "character": "芥",
+          "meaning": "mustard",
+          "typedEvent": false
+        },
+        {
+          "id": "r0673-s01",
+          "rank": 673,
+          "character": "芯",
+          "meaning": "pith",
+          "typedEvent": false
+        }
+      ]
+    },
+    {
+      "emoji": "🏃",
+      "assignmentCount": 6,
+      "distinctMeanings": 6,
+      "records": [
+        {
+          "id": "r0353-s01",
+          "rank": 353,
+          "character": "动",
+          "meaning": "move",
+          "typedEvent": true
+        },
+        {
+          "id": "r0529-s01",
+          "rank": 529,
+          "character": "闯",
+          "meaning": "rush in",
+          "typedEvent": true
+        },
+        {
+          "id": "r0543-s01",
+          "rank": 543,
+          "character": "忙",
+          "meaning": "busy",
+          "typedEvent": false
+        },
+        {
+          "id": "r0596-s01",
+          "rank": 596,
+          "character": "驰",
+          "meaning": "hurry",
+          "typedEvent": true
+        },
+        {
+          "id": "r0810-s01",
+          "rank": 810,
+          "character": "免",
+          "meaning": "evade",
+          "typedEvent": true
+        },
+        {
+          "id": "r0930-s01",
+          "rank": 930,
+          "character": "驱",
+          "meaning": "drive away",
+          "typedEvent": true
+        }
+      ]
+    },
+    {
+      "emoji": "👀",
+      "assignmentCount": 6,
+      "distinctMeanings": 6,
+      "records": [
+        {
+          "id": "r0118-s01",
+          "rank": 118,
+          "character": "见",
+          "meaning": "see",
+          "typedEvent": true
+        },
+        {
+          "id": "r0473-s01",
+          "rank": 473,
+          "character": "仰",
+          "meaning": "look up",
+          "typedEvent": true
+        },
+        {
+          "id": "r0586-s01",
+          "rank": 586,
+          "character": "观",
+          "meaning": "observe",
+          "typedEvent": true
+        },
+        {
+          "id": "r0715-s01",
+          "rank": 715,
+          "character": "盯",
+          "meaning": "keep eyes on",
+          "typedEvent": true
+        },
+        {
+          "id": "r0892-s01",
+          "rank": 892,
+          "character": "识",
+          "meaning": "recognize",
+          "typedEvent": true
+        },
+        {
+          "id": "r0949-s01",
+          "rank": 949,
+          "character": "现",
+          "meaning": "appear",
+          "typedEvent": true
+        }
+      ]
+    },
+    {
+      "emoji": "📍",
+      "assignmentCount": 6,
+      "distinctMeanings": 6,
+      "records": [
+        {
+          "id": "r0294-s01",
+          "rank": 294,
+          "character": "处",
+          "meaning": "place",
+          "typedEvent": false
+        },
+        {
+          "id": "r0388-s01",
+          "rank": 388,
+          "character": "在",
+          "meaning": "in",
+          "typedEvent": false
+        },
+        {
+          "id": "r0623-s01",
+          "rank": 623,
+          "character": "址",
+          "meaning": "location",
+          "typedEvent": false
+        },
+        {
+          "id": "r0754-s01",
+          "rank": 754,
+          "character": "岗",
+          "meaning": "post",
+          "typedEvent": false
+        },
+        {
+          "id": "r0784-s01",
+          "rank": 784,
+          "character": "位",
+          "meaning": "position",
+          "typedEvent": false
+        },
+        {
+          "id": "r0791-s01",
+          "rank": 791,
+          "character": "近",
+          "meaning": "near",
+          "typedEvent": false
+        }
+      ]
+    },
+    {
+      "emoji": "🔄",
+      "assignmentCount": 6,
+      "distinctMeanings": 4,
+      "records": [
+        {
+          "id": "r0132-s01",
+          "rank": 132,
+          "character": "化",
+          "meaning": "change",
+          "typedEvent": false
+        },
+        {
+          "id": "r0519-s01",
+          "rank": 519,
+          "character": "交",
+          "meaning": "exchange",
+          "typedEvent": true
+        },
+        {
+          "id": "r0635-s01",
+          "rank": 635,
+          "character": "抡",
+          "meaning": "swing",
+          "typedEvent": true
+        },
+        {
+          "id": "r0693-s01",
+          "rank": 693,
+          "character": "更",
+          "meaning": "change",
+          "typedEvent": true
+        },
+        {
+          "id": "r0908-s01",
+          "rank": 908,
+          "character": "改",
+          "meaning": "change",
+          "typedEvent": true
+        },
+        {
+          "id": "r0985-s01",
+          "rank": 985,
+          "character": "拧",
+          "meaning": "twist",
+          "typedEvent": true
+        }
+      ]
+    },
+    {
+      "emoji": "🕳️",
+      "assignmentCount": 6,
+      "distinctMeanings": 5,
+      "records": [
+        {
+          "id": "r0179-s01",
+          "rank": 179,
+          "character": "孔",
+          "meaning": "hole",
+          "typedEvent": false
+        },
+        {
+          "id": "r0260-s01",
+          "rank": 260,
+          "character": "凹",
+          "meaning": "hollow",
+          "typedEvent": false
+        },
+        {
+          "id": "r0313-s01",
+          "rank": 313,
+          "character": "穴",
+          "meaning": "cave",
+          "typedEvent": false
+        },
+        {
+          "id": "r0639-s01",
+          "rank": 639,
+          "character": "坎",
+          "meaning": "hole",
+          "typedEvent": false
+        },
+        {
+          "id": "r0645-s01",
+          "rank": 645,
+          "character": "坑",
+          "meaning": "pit",
+          "typedEvent": false
+        },
+        {
+          "id": "r0868-s01",
+          "rank": 868,
+          "character": "沟",
+          "meaning": "ditch",
+          "typedEvent": false
+        }
+      ]
+    },
+    {
+      "emoji": "🧵",
+      "assignmentCount": 6,
+      "distinctMeanings": 5,
+      "records": [
+        {
+          "id": "r0218-s01",
+          "rank": 218,
+          "character": "布",
+          "meaning": "textiles",
+          "typedEvent": false
+        },
+        {
+          "id": "r0347-s01",
+          "rank": 347,
+          "character": "丝",
+          "meaning": "silk",
+          "typedEvent": false
+        },
+        {
+          "id": "r0736-s01",
+          "rank": 736,
+          "character": "串",
+          "meaning": "string",
+          "typedEvent": false
+        },
+        {
+          "id": "r0816-s01",
+          "rank": 816,
+          "character": "条",
+          "meaning": "string",
+          "typedEvent": false
+        },
+        {
+          "id": "r0932-s01",
+          "rank": 932,
+          "character": "纱",
+          "meaning": "gauze",
+          "typedEvent": false
+        },
+        {
+          "id": "r0940-s01",
+          "rank": 940,
+          "character": "纺",
+          "meaning": "weave",
+          "typedEvent": true
+        }
+      ]
+    },
+    {
+      "emoji": "🪖",
+      "assignmentCount": 6,
+      "distinctMeanings": 4,
+      "records": [
+        {
+          "id": "r0352-s01",
+          "rank": 352,
+          "character": "戎",
+          "meaning": "military",
+          "typedEvent": false
+        },
+        {
+          "id": "r0459-s01",
+          "rank": 459,
+          "character": "伍",
+          "meaning": "troops",
+          "typedEvent": false
+        },
+        {
+          "id": "r0552-s01",
+          "rank": 552,
+          "character": "军",
+          "meaning": "army",
+          "typedEvent": false
+        },
+        {
+          "id": "r0571-s01",
+          "rank": 571,
+          "character": "阵",
+          "meaning": "troops",
+          "typedEvent": false
+        },
+        {
+          "id": "r0768-s01",
+          "rank": 768,
+          "character": "兵",
+          "meaning": "soldier",
+          "typedEvent": false
+        },
+        {
+          "id": "r0946-s01",
+          "rank": 946,
+          "character": "武",
+          "meaning": "military",
+          "typedEvent": false
+        }
+      ]
+    },
+    {
+      "emoji": "🚶",
+      "assignmentCount": 6,
+      "distinctMeanings": 4,
+      "records": [
+        {
+          "id": "r0379-s01",
+          "rank": 379,
+          "character": "过",
+          "meaning": "pass through",
+          "typedEvent": true
+        },
+        {
+          "id": "r0408-s01",
+          "rank": 408,
+          "character": "迈",
+          "meaning": "stride",
+          "typedEvent": true
+        },
+        {
+          "id": "r0483-s01",
+          "rank": 483,
+          "character": "行",
+          "meaning": "walk",
+          "typedEvent": true
+        },
+        {
+          "id": "r0561-s01",
+          "rank": 561,
+          "character": "访",
+          "meaning": "visit",
+          "typedEvent": true
+        },
+        {
+          "id": "r0625-s01",
+          "rank": 625,
+          "character": "走",
+          "meaning": "walk",
+          "typedEvent": true
+        },
+        {
+          "id": "r0710-s02",
+          "rank": 710,
+          "character": "步",
+          "meaning": "walk",
+          "typedEvent": true
+        }
+      ]
+    },
+    {
+      "emoji": "⏳",
+      "assignmentCount": 5,
+      "distinctMeanings": 5,
+      "records": [
+        {
+          "id": "r0047-s01",
+          "rank": 47,
+          "character": "久",
+          "meaning": "long time",
+          "typedEvent": false
+        },
+        {
+          "id": "r0192-s01",
+          "rank": 192,
+          "character": "未",
+          "meaning": "not yet",
+          "typedEvent": false
+        },
+        {
+          "id": "r0453-s01",
+          "rank": 453,
+          "character": "迄",
+          "meaning": "until",
+          "typedEvent": false
+        },
+        {
+          "id": "r0464-s01",
+          "rank": 464,
+          "character": "延",
+          "meaning": "delay",
+          "typedEvent": true
+        },
+        {
+          "id": "r0704-s01",
+          "rank": 704,
+          "character": "还",
+          "meaning": "still",
+          "typedEvent": false
+        }
+      ]
+    },
+    {
+      "emoji": "⚔️",
+      "assignmentCount": 5,
+      "distinctMeanings": 3,
+      "records": [
+        {
+          "id": "r0133-s01",
+          "rank": 133,
+          "character": "仇",
+          "meaning": "enemy",
+          "typedEvent": false
+        },
+        {
+          "id": "r0199-s01",
+          "rank": 199,
+          "character": "扑",
+          "meaning": "attack",
+          "typedEvent": false
+        },
+        {
+          "id": "r0270-s01",
+          "rank": 270,
+          "character": "仗",
+          "meaning": "fight",
+          "typedEvent": false
+        },
+        {
+          "id": "r0508-s01",
+          "rank": 508,
+          "character": "争",
+          "meaning": "fight",
+          "typedEvent": true
+        },
+        {
+          "id": "r0630-s01",
+          "rank": 630,
+          "character": "攻",
+          "meaning": "attack",
+          "typedEvent": true
+        }
+      ]
+    },
+    {
+      "emoji": "⚡",
+      "assignmentCount": 5,
+      "distinctMeanings": 5,
+      "records": [
+        {
+          "id": "r0242-s01",
+          "rank": 242,
+          "character": "电",
+          "meaning": "electricity",
+          "typedEvent": false
+        },
+        {
+          "id": "r0305-s01",
+          "rank": 305,
+          "character": "闪",
+          "meaning": "flash",
+          "typedEvent": false
+        },
+        {
+          "id": "r0565-s01",
+          "rank": 565,
+          "character": "迅",
+          "meaning": "rapid",
+          "typedEvent": false
+        },
+        {
+          "id": "r0876-s01",
+          "rank": 876,
+          "character": "快",
+          "meaning": "fast",
+          "typedEvent": false
+        },
+        {
+          "id": "r0901-s01",
+          "rank": 901,
+          "character": "即",
+          "meaning": "immediately",
+          "typedEvent": false
+        }
+      ]
+    },
+    {
+      "emoji": "⛰️",
+      "assignmentCount": 5,
+      "distinctMeanings": 4,
+      "records": [
+        {
+          "id": "r0039-s01",
+          "rank": 39,
+          "character": "山",
+          "meaning": "mountain",
+          "typedEvent": false
+        },
+        {
+          "id": "r0115-s01",
+          "rank": 115,
+          "character": "冈",
+          "meaning": "hill",
+          "typedEvent": false
+        },
+        {
+          "id": "r0268-s01",
+          "rank": 268,
+          "character": "丘",
+          "meaning": "hill",
+          "typedEvent": false
+        },
+        {
+          "id": "r0753-s01",
+          "rank": 753,
+          "character": "岖",
+          "meaning": "rugged",
+          "typedEvent": false
+        },
+        {
+          "id": "r0989-s01",
+          "rank": 989,
+          "character": "坡",
+          "meaning": "slope",
+          "typedEvent": false
+        }
+      ]
+    },
+    {
+      "emoji": "🌅",
+      "assignmentCount": 5,
+      "distinctMeanings": 5,
+      "records": [
+        {
+          "id": "r0225-s01",
+          "rank": 225,
+          "character": "东",
+          "meaning": "east",
+          "typedEvent": false
+        },
+        {
+          "id": "r0235-s01",
+          "rank": 235,
+          "character": "旦",
+          "meaning": "dawn",
+          "typedEvent": false
+        },
+        {
+          "id": "r0419-s01",
+          "rank": 419,
+          "character": "早",
+          "meaning": "morning",
+          "typedEvent": false
+        },
+        {
+          "id": "r0502-s01",
+          "rank": 502,
+          "character": "旭",
+          "meaning": "rising sun",
+          "typedEvent": false
+        },
+        {
+          "id": "r0701-s01",
+          "rank": 701,
+          "character": "辰",
+          "meaning": "early morning",
+          "typedEvent": false
+        }
+      ]
+    },
+    {
+      "emoji": "🎁",
+      "assignmentCount": 5,
+      "distinctMeanings": 3,
+      "records": [
+        {
+          "id": "r0034-s01",
+          "rank": 34,
+          "character": "与",
+          "meaning": "give",
+          "typedEvent": true
+        },
+        {
+          "id": "r0184-s01",
+          "rank": 184,
+          "character": "予",
+          "meaning": "give",
+          "typedEvent": true
+        },
+        {
+          "id": "r0269-s01",
+          "rank": 269,
+          "character": "付",
+          "meaning": "give",
+          "typedEvent": true
+        },
+        {
+          "id": "r0627-s01",
+          "rank": 627,
+          "character": "贡",
+          "meaning": "gifts",
+          "typedEvent": false
+        },
+        {
+          "id": "r0943-s01",
+          "rank": 943,
+          "character": "奉",
+          "meaning": "offer",
+          "typedEvent": true
+        }
+      ]
+    },
+    {
+      "emoji": "🎨",
+      "assignmentCount": 5,
+      "distinctMeanings": 3,
+      "records": [
+        {
+          "id": "r0086-s01",
+          "rank": 86,
+          "character": "艺",
+          "meaning": "art",
+          "typedEvent": false
+        },
+        {
+          "id": "r0211-s01",
+          "rank": 211,
+          "character": "术",
+          "meaning": "art",
+          "typedEvent": false
+        },
+        {
+          "id": "r0498-s01",
+          "rank": 498,
+          "character": "杂",
+          "meaning": "mixed",
+          "typedEvent": false
+        },
+        {
+          "id": "r0509-s01",
+          "rank": 509,
+          "character": "色",
+          "meaning": "color",
+          "typedEvent": false
+        },
+        {
+          "id": "r0935-s01",
+          "rank": 935,
+          "character": "驳",
+          "meaning": "mixed",
+          "typedEvent": false
+        }
+      ]
+    },
+    {
+      "emoji": "🏋️",
+      "assignmentCount": 5,
+      "distinctMeanings": 4,
+      "records": [
+        {
+          "id": "r0219-s01",
+          "rank": 219,
+          "character": "夯",
+          "meaning": "burden",
+          "typedEvent": false
+        },
+        {
+          "id": "r0354-s01",
+          "rank": 354,
+          "character": "扛",
+          "meaning": "carry",
+          "typedEvent": true
+        },
+        {
+          "id": "r0617-s01",
+          "rank": 617,
+          "character": "抠",
+          "meaning": "lift up",
+          "typedEvent": true
+        },
+        {
+          "id": "r0973-s01",
+          "rank": 973,
+          "character": "拎",
+          "meaning": "lift",
+          "typedEvent": true
+        },
+        {
+          "id": "r0993-s01",
+          "rank": 993,
+          "character": "抬",
+          "meaning": "lift",
+          "typedEvent": true
+        }
+      ]
+    },
+    {
+      "emoji": "👑",
+      "assignmentCount": 5,
+      "distinctMeanings": 5,
+      "records": [
+        {
+          "id": "r0075-s01",
+          "rank": 75,
+          "character": "王",
+          "meaning": "king",
+          "typedEvent": false
+        },
+        {
+          "id": "r0300-s01",
+          "rank": 300,
+          "character": "主",
+          "meaning": "chief",
+          "typedEvent": false
+        },
+        {
+          "id": "r0378-s01",
+          "rank": 378,
+          "character": "权",
+          "meaning": "authority",
+          "typedEvent": false
+        },
+        {
+          "id": "r0482-s01",
+          "rank": 482,
+          "character": "后",
+          "meaning": "empress",
+          "typedEvent": false
+        },
+        {
+          "id": "r0899-s01",
+          "rank": 899,
+          "character": "君",
+          "meaning": "ruler",
+          "typedEvent": false
+        }
+      ]
+    },
+    {
+      "emoji": "👨",
+      "assignmentCount": 5,
+      "distinctMeanings": 4,
+      "records": [
+        {
+          "id": "r0005-s01",
+          "rank": 5,
+          "character": "丁",
+          "meaning": "male adult",
+          "typedEvent": false
+        },
+        {
+          "id": "r0277-s01",
+          "rank": 277,
+          "character": "他",
+          "meaning": "he",
+          "typedEvent": false
+        },
+        {
+          "id": "r0478-s01",
+          "rank": 478,
+          "character": "伊",
+          "meaning": "he",
+          "typedEvent": false
+        },
+        {
+          "id": "r0733-s01",
+          "rank": 733,
+          "character": "男",
+          "meaning": "man",
+          "typedEvent": false
+        },
+        {
+          "id": "r0778-s01",
+          "rank": 778,
+          "character": "伯",
+          "meaning": "older brother",
+          "typedEvent": false
+        }
+      ]
+    },
+    {
+      "emoji": "👩",
+      "assignmentCount": 5,
+      "distinctMeanings": 4,
+      "records": [
+        {
+          "id": "r0067-s01",
+          "rank": 67,
+          "character": "女",
+          "meaning": "woman",
+          "typedEvent": false
+        },
+        {
+          "id": "r0345-s01",
+          "rank": 345,
+          "character": "母",
+          "meaning": "mother",
+          "typedEvent": false
+        },
+        {
+          "id": "r0579-s01",
+          "rank": 579,
+          "character": "妇",
+          "meaning": "woman",
+          "typedEvent": false
+        },
+        {
+          "id": "r0582-s01",
+          "rank": 582,
+          "character": "她",
+          "meaning": "she",
+          "typedEvent": false
+        },
+        {
+          "id": "r0964-s02",
+          "rank": 964,
+          "character": "坤",
+          "meaning": "female",
+          "typedEvent": false
+        }
+      ]
+    },
+    {
+      "emoji": "📅",
+      "assignmentCount": 5,
+      "distinctMeanings": 4,
+      "records": [
+        {
+          "id": "r0095-s01",
+          "rank": 95,
+          "character": "历",
+          "meaning": "calendar",
+          "typedEvent": false
+        },
+        {
+          "id": "r0150-s02",
+          "rank": 150,
+          "character": "月",
+          "meaning": "month",
+          "typedEvent": false
+        },
+        {
+          "id": "r0436-s01",
+          "rank": 436,
+          "character": "岁",
+          "meaning": "year",
+          "typedEvent": false
+        },
+        {
+          "id": "r0444-s01",
+          "rank": 444,
+          "character": "年",
+          "meaning": "year",
+          "typedEvent": false
+        },
+        {
+          "id": "r0500-s01",
+          "rank": 500,
+          "character": "旬",
+          "meaning": "ten-day",
+          "typedEvent": false
+        }
+      ]
+    },
+    {
+      "emoji": "📏",
+      "assignmentCount": 5,
+      "distinctMeanings": 5,
+      "records": [
+        {
+          "id": "r0031-s01",
+          "rank": 31,
+          "character": "寸",
+          "meaning": "inch",
+          "typedEvent": false
+        },
+        {
+          "id": "r0175-s01",
+          "rank": 175,
+          "character": "尺",
+          "meaning": "Chinese measure",
+          "typedEvent": false
+        },
+        {
+          "id": "r0399-s01",
+          "rank": 399,
+          "character": "列",
+          "meaning": "line",
+          "typedEvent": false
+        },
+        {
+          "id": "r0452-s01",
+          "rank": 452,
+          "character": "乔",
+          "meaning": "tall",
+          "typedEvent": false
+        },
+        {
+          "id": "r0671-s01",
+          "rank": 671,
+          "character": "严",
+          "meaning": "strict",
+          "typedEvent": false
+        }
+      ]
+    },
+    {
+      "emoji": "📜",
+      "assignmentCount": 5,
+      "distinctMeanings": 4,
+      "records": [
+        {
+          "id": "r0095-s02",
+          "rank": 95,
+          "character": "历",
+          "meaning": "history",
+          "typedEvent": false
+        },
+        {
+          "id": "r0248-s01",
+          "rank": 248,
+          "character": "史",
+          "meaning": "history",
+          "typedEvent": false
+        },
+        {
+          "id": "r0595-s01",
+          "rank": 595,
+          "character": "纪",
+          "meaning": "historical",
+          "typedEvent": false
+        },
+        {
+          "id": "r0885-s01",
+          "rank": 885,
+          "character": "证",
+          "meaning": "prove",
+          "typedEvent": true
+        },
+        {
+          "id": "r0952-s01",
+          "rank": 952,
+          "character": "规",
+          "meaning": "rules",
+          "typedEvent": false
+        }
+      ]
+    },
+    {
+      "emoji": "📝",
+      "assignmentCount": 5,
+      "distinctMeanings": 5,
+      "records": [
+        {
+          "id": "r0240-s01",
+          "rank": 240,
+          "character": "申",
+          "meaning": "report",
+          "typedEvent": true
+        },
+        {
+          "id": "r0323-s01",
+          "rank": 323,
+          "character": "记",
+          "meaning": "record",
+          "typedEvent": true
+        },
+        {
+          "id": "r0490-s01",
+          "rank": 490,
+          "character": "企",
+          "meaning": "plan",
+          "typedEvent": true
+        },
+        {
+          "id": "r0657-s01",
+          "rank": 657,
+          "character": "拟",
+          "meaning": "draft",
+          "typedEvent": true
+        },
+        {
+          "id": "r0965-s01",
+          "rank": 965,
+          "character": "押",
+          "meaning": "pledge",
+          "typedEvent": true
+        }
+      ]
+    },
+    {
+      "emoji": "🔁",
+      "assignmentCount": 5,
+      "distinctMeanings": 3,
+      "records": [
+        {
+          "id": "r0021-s01",
+          "rank": 21,
+          "character": "又",
+          "meaning": "again",
+          "typedEvent": false
+        },
+        {
+          "id": "r0135-s01",
+          "rank": 135,
+          "character": "仍",
+          "meaning": "again",
+          "typedEvent": false
+        },
+        {
+          "id": "r0271-s01",
+          "rank": 271,
+          "character": "代",
+          "meaning": "replace",
+          "typedEvent": false
+        },
+        {
+          "id": "r0382-s01",
+          "rank": 382,
+          "character": "再",
+          "meaning": "again",
+          "typedEvent": false
+        },
+        {
+          "id": "r0850-s01",
+          "rank": 850,
+          "character": "兑",
+          "meaning": "exchange",
+          "typedEvent": true
+        }
+      ]
+    },
+    {
+      "emoji": "🔙",
+      "assignmentCount": 5,
+      "distinctMeanings": 3,
+      "records": [
+        {
+          "id": "r0234-s01",
+          "rank": 234,
+          "character": "归",
+          "meaning": "return",
+          "typedEvent": false
+        },
+        {
+          "id": "r0438-s01",
+          "rank": 438,
+          "character": "回",
+          "meaning": "return",
+          "typedEvent": true
+        },
+        {
+          "id": "r0482-s02",
+          "rank": 482,
+          "character": "后",
+          "meaning": "behind",
+          "typedEvent": false
+        },
+        {
+          "id": "r0658-s01",
+          "rank": 658,
+          "character": "却",
+          "meaning": "retreat",
+          "typedEvent": true
+        },
+        {
+          "id": "r0794-s01",
+          "rank": 794,
+          "character": "返",
+          "meaning": "return",
+          "typedEvent": true
+        }
+      ]
+    },
+    {
+      "emoji": "🔢",
+      "assignmentCount": 5,
+      "distinctMeanings": 5,
+      "records": [
+        {
+          "id": "r0243-s01",
+          "rank": 243,
+          "character": "号",
+          "meaning": "number",
+          "typedEvent": false
+        },
+        {
+          "id": "r0506-s01",
+          "rank": 506,
+          "character": "各",
+          "meaning": "each",
+          "typedEvent": false
+        },
+        {
+          "id": "r0507-s01",
+          "rank": 507,
+          "character": "多",
+          "meaning": "many",
+          "typedEvent": false
+        },
+        {
+          "id": "r0767-s01",
+          "rank": 767,
+          "character": "每",
+          "meaning": "every",
+          "typedEvent": false
+        },
+        {
+          "id": "r0840-s01",
+          "rank": 840,
+          "character": "序",
+          "meaning": "sequence",
+          "typedEvent": false
+        }
+      ]
+    },
+    {
+      "emoji": "🗑️",
+      "assignmentCount": 5,
+      "distinctMeanings": 3,
+      "records": [
+        {
+          "id": "r0362-s01",
+          "rank": 362,
+          "character": "圾",
+          "meaning": "garbage",
+          "typedEvent": false
+        },
+        {
+          "id": "r0447-s01",
+          "rank": 447,
+          "character": "丢",
+          "meaning": "discard",
+          "typedEvent": true
+        },
+        {
+          "id": "r0815-s01",
+          "rank": 815,
+          "character": "删",
+          "meaning": "delete",
+          "typedEvent": true
+        },
+        {
+          "id": "r0842-s01",
+          "rank": 842,
+          "character": "弃",
+          "meaning": "discard",
+          "typedEvent": true
+        },
+        {
+          "id": "r0980-s01",
+          "rank": 980,
+          "character": "垃",
+          "meaning": "garbage",
+          "typedEvent": false
+        }
+      ]
+    },
+    {
+      "emoji": "🫂",
+      "assignmentCount": 5,
+      "distinctMeanings": 5,
+      "records": [
+        {
+          "id": "r0309-s01",
+          "rank": 309,
+          "character": "汇",
+          "meaning": "gather",
+          "typedEvent": true
+        },
+        {
+          "id": "r0470-s01",
+          "rank": 470,
+          "character": "伦",
+          "meaning": "relationships",
+          "typedEvent": false
+        },
+        {
+          "id": "r0613-s01",
+          "rank": 613,
+          "character": "抚",
+          "meaning": "comfort",
+          "typedEvent": true
+        },
+        {
+          "id": "r0974-s01",
+          "rank": 974,
+          "character": "拥",
+          "meaning": "hug",
+          "typedEvent": true
+        },
+        {
+          "id": "r0978-s01",
+          "rank": 978,
+          "character": "抱",
+          "meaning": "embrace",
+          "typedEvent": true
+        }
+      ]
+    },
+    {
+      "emoji": "🙏",
+      "assignmentCount": 5,
+      "distinctMeanings": 5,
+      "records": [
+        {
+          "id": "r0042-s01",
+          "rank": 42,
+          "character": "乞",
+          "meaning": "beg",
+          "typedEvent": true
+        },
+        {
+          "id": "r0084-s01",
+          "rank": 84,
+          "character": "丐",
+          "meaning": "beggar",
+          "typedEvent": false
+        },
+        {
+          "id": "r0318-s01",
+          "rank": 318,
+          "character": "礼",
+          "meaning": "courtesy",
+          "typedEvent": false
+        },
+        {
+          "id": "r0796-s01",
+          "rank": 796,
+          "character": "希",
+          "meaning": "hope",
+          "typedEvent": false
+        },
+        {
+          "id": "r0891-s01",
+          "rank": 891,
+          "character": "祀",
+          "meaning": "worship",
+          "typedEvent": true
+        }
+      ]
+    },
+    {
+      "emoji": "🚪",
+      "assignmentCount": 5,
+      "distinctMeanings": 3,
+      "records": [
+        {
+          "id": "r0055-s01",
+          "rank": 55,
+          "character": "门",
+          "meaning": "door",
+          "typedEvent": false
+        },
+        {
+          "id": "r0170-s01",
+          "rank": 170,
+          "character": "户",
+          "meaning": "door",
+          "typedEvent": false
+        },
+        {
+          "id": "r0330-s01",
+          "rank": 330,
+          "character": "出",
+          "meaning": "go out",
+          "typedEvent": true
+        },
+        {
+          "id": "r0527-s01",
+          "rank": 527,
+          "character": "闭",
+          "meaning": "close",
+          "typedEvent": true
+        },
+        {
+          "id": "r0532-s01",
+          "rank": 532,
+          "character": "关",
+          "meaning": "close",
+          "typedEvent": true
+        }
+      ]
+    },
+    {
+      "emoji": "🛑",
+      "assignmentCount": 5,
+      "distinctMeanings": 4,
+      "records": [
+        {
+          "id": "r0109-s01",
+          "rank": 109,
+          "character": "止",
+          "meaning": "stop",
+          "typedEvent": false
+        },
+        {
+          "id": "r0680-s01",
+          "rank": 680,
+          "character": "杜",
+          "meaning": "prevent",
+          "typedEvent": true
+        },
+        {
+          "id": "r0915-s01",
+          "rank": 915,
+          "character": "阻",
+          "meaning": "hinder",
+          "typedEvent": true
+        },
+        {
+          "id": "r0922-s01",
+          "rank": 922,
+          "character": "妨",
+          "meaning": "obstruct",
+          "typedEvent": true
+        },
+        {
+          "id": "r0982-s01",
+          "rank": 982,
+          "character": "拦",
+          "meaning": "obstruct",
+          "typedEvent": true
+        }
+      ]
+    },
+    {
+      "emoji": "❓",
+      "assignmentCount": 4,
+      "distinctMeanings": 4,
+      "records": [
+        {
+          "id": "r0322-s01",
+          "rank": 322,
+          "character": "讯",
+          "meaning": "inquire",
+          "typedEvent": true
+        },
+        {
+          "id": "r0432-s01",
+          "rank": 432,
+          "character": "吗",
+          "meaning": "interrogative",
+          "typedEvent": false
+        },
+        {
+          "id": "r0528-s01",
+          "rank": 528,
+          "character": "问",
+          "meaning": "ask",
+          "typedEvent": true
+        },
+        {
+          "id": "r0771-s01",
+          "rank": 771,
+          "character": "何",
+          "meaning": "what",
+          "typedEvent": false
+        }
+      ]
+    },
+    {
+      "emoji": "➕",
+      "assignmentCount": 4,
+      "distinctMeanings": 4,
+      "records": [
+        {
+          "id": "r0335-s01",
+          "rank": 335,
+          "character": "加",
+          "meaning": "increase",
+          "typedEvent": true
+        },
+        {
+          "id": "r0516-s01",
+          "rank": 516,
+          "character": "亦",
+          "meaning": "also",
+          "typedEvent": false
+        },
+        {
+          "id": "r0795-s01",
+          "rank": 795,
+          "character": "余",
+          "meaning": "surplus",
+          "typedEvent": false
+        },
+        {
+          "id": "r0845-s01",
+          "rank": 845,
+          "character": "闰",
+          "meaning": "extra",
+          "typedEvent": false
+        }
+      ]
+    },
+    {
+      "emoji": "🏞️",
+      "assignmentCount": 4,
+      "distinctMeanings": 3,
+      "records": [
+        {
+          "id": "r0043-s01",
+          "rank": 43,
+          "character": "川",
+          "meaning": "river",
+          "typedEvent": false
+        },
+        {
+          "id": "r0538-s01",
+          "rank": 538,
+          "character": "江",
+          "meaning": "river",
+          "typedEvent": false
+        },
+        {
+          "id": "r0540-s01",
+          "rank": 540,
+          "character": "池",
+          "meaning": "pond",
+          "typedEvent": false
+        },
+        {
+          "id": "r0798-s01",
+          "rank": 798,
+          "character": "谷",
+          "meaning": "valley",
+          "typedEvent": false
+        }
+      ]
+    },
+    {
+      "emoji": "🏺",
+      "assignmentCount": 4,
+      "distinctMeanings": 2,
+      "records": [
+        {
+          "id": "r0208-s01",
+          "rank": 208,
+          "character": "古",
+          "meaning": "ancient",
+          "typedEvent": false
+        },
+        {
+          "id": "r0232-s01",
+          "rank": 232,
+          "character": "旧",
+          "meaning": "ancient",
+          "typedEvent": false
+        },
+        {
+          "id": "r0698-s01",
+          "rank": 698,
+          "character": "酉",
+          "meaning": "wine vessel",
+          "typedEvent": false
+        },
+        {
+          "id": "r1000-s01",
+          "rank": 1000,
+          "character": "昔",
+          "meaning": "ancient",
+          "typedEvent": false
+        }
+      ]
+    },
+    {
+      "emoji": "👉",
+      "assignmentCount": 4,
+      "distinctMeanings": 3,
+      "records": [
+        {
+          "id": "r0314-s01",
+          "rank": 314,
+          "character": "它",
+          "meaning": "it",
+          "typedEvent": false
+        },
+        {
+          "id": "r0411-s01",
+          "rank": 411,
+          "character": "此",
+          "meaning": "this",
+          "typedEvent": false
+        },
+        {
+          "id": "r0564-s01",
+          "rank": 564,
+          "character": "那",
+          "meaning": "that",
+          "typedEvent": false
+        },
+        {
+          "id": "r0837-s01",
+          "rank": 837,
+          "character": "这",
+          "meaning": "this",
+          "typedEvent": false
+        }
+      ]
+    },
+    {
+      "emoji": "👋",
+      "assignmentCount": 4,
+      "distinctMeanings": 4,
+      "records": [
+        {
+          "id": "r0562-s01",
+          "rank": 562,
+          "character": "诀",
+          "meaning": "bid farewell",
+          "typedEvent": true
+        },
+        {
+          "id": "r0707-s01",
+          "rank": 707,
+          "character": "来",
+          "meaning": "come",
+          "typedEvent": true
+        },
+        {
+          "id": "r0822-s01",
+          "rank": 822,
+          "character": "迎",
+          "meaning": "welcome",
+          "typedEvent": true
+        },
+        {
+          "id": "r0988-s01",
+          "rank": 988,
+          "character": "招",
+          "meaning": "beckon",
+          "typedEvent": true
+        }
+      ]
+    },
+    {
+      "emoji": "💀",
+      "assignmentCount": 4,
+      "distinctMeanings": 2,
+      "records": [
+        {
+          "id": "r0054-s01",
+          "rank": 54,
+          "character": "亡",
+          "meaning": "death",
+          "typedEvent": false
+        },
+        {
+          "id": "r0400-s01",
+          "rank": 400,
+          "character": "死",
+          "meaning": "death",
+          "typedEvent": false
+        },
+        {
+          "id": "r0487-s01",
+          "rank": 487,
+          "character": "杀",
+          "meaning": "kill",
+          "typedEvent": true
+        },
+        {
+          "id": "r0517-s01",
+          "rank": 517,
+          "character": "刘",
+          "meaning": "kill",
+          "typedEvent": true
+        }
+      ]
+    },
+    {
+      "emoji": "💎",
+      "assignmentCount": 4,
+      "distinctMeanings": 4,
+      "records": [
+        {
+          "id": "r0190-s01",
+          "rank": 190,
+          "character": "玉",
+          "meaning": "precious stone",
+          "typedEvent": false
+        },
+        {
+          "id": "r0602-s01",
+          "rank": 602,
+          "character": "玖",
+          "meaning": "jade",
+          "typedEvent": false
+        },
+        {
+          "id": "r0603-s01",
+          "rank": 603,
+          "character": "玛",
+          "meaning": "agate",
+          "typedEvent": false
+        },
+        {
+          "id": "r0895-s01",
+          "rank": 895,
+          "character": "罕",
+          "meaning": "rare",
+          "typedEvent": false
+        }
+      ]
+    },
+    {
+      "emoji": "💧",
+      "assignmentCount": 4,
+      "distinctMeanings": 4,
+      "records": [
+        {
+          "id": "r0117-s01",
+          "rank": 117,
+          "character": "水",
+          "meaning": "water",
+          "typedEvent": false
+        },
+        {
+          "id": "r0859-s01",
+          "rank": 859,
+          "character": "沥",
+          "meaning": "drip",
+          "typedEvent": true
+        },
+        {
+          "id": "r0872-s01",
+          "rank": 872,
+          "character": "沁",
+          "meaning": "seep in",
+          "typedEvent": true
+        },
+        {
+          "id": "r0931-s01",
+          "rank": 931,
+          "character": "纯",
+          "meaning": "pure",
+          "typedEvent": false
+        }
+      ]
+    },
+    {
+      "emoji": "📋",
+      "assignmentCount": 4,
+      "distinctMeanings": 4,
+      "records": [
+        {
+          "id": "r0467-s01",
+          "rank": 467,
+          "character": "任",
+          "meaning": "appoint",
+          "typedEvent": true
+        },
+        {
+          "id": "r0626-s01",
+          "rank": 626,
+          "character": "抄",
+          "meaning": "copy",
+          "typedEvent": true
+        },
+        {
+          "id": "r0830-s01",
+          "rank": 830,
+          "character": "况",
+          "meaning": "condition",
+          "typedEvent": false
+        },
+        {
+          "id": "r0948-s01",
+          "rank": 948,
+          "character": "责",
+          "meaning": "responsibility",
+          "typedEvent": false
+        }
+      ]
+    },
+    {
+      "emoji": "📦",
+      "assignmentCount": 4,
+      "distinctMeanings": 4,
+      "records": [
+        {
+          "id": "r0298-s01",
+          "rank": 298,
+          "character": "包",
+          "meaning": "package",
+          "typedEvent": false
+        },
+        {
+          "id": "r0466-s01",
+          "rank": 466,
+          "character": "件",
+          "meaning": "article",
+          "typedEvent": false
+        },
+        {
+          "id": "r0692-s01",
+          "rank": 692,
+          "character": "匣",
+          "meaning": "box",
+          "typedEvent": false
+        },
+        {
+          "id": "r0800-s01",
+          "rank": 800,
+          "character": "含",
+          "meaning": "contain",
+          "typedEvent": true
+        }
+      ]
+    },
+    {
+      "emoji": "🔍",
+      "assignmentCount": 4,
+      "distinctMeanings": 3,
+      "records": [
+        {
+          "id": "r0358-s01",
+          "rank": 358,
+          "character": "考",
+          "meaning": "examine",
+          "typedEvent": true
+        },
+        {
+          "id": "r0563-s01",
+          "rank": 563,
+          "character": "寻",
+          "meaning": "search",
+          "typedEvent": true
+        },
+        {
+          "id": "r0621-s01",
+          "rank": 621,
+          "character": "找",
+          "meaning": "search",
+          "typedEvent": true
+        },
+        {
+          "id": "r0881-s01",
+          "rank": 881,
+          "character": "究",
+          "meaning": "investigate",
+          "typedEvent": true
+        }
+      ]
+    },
+    {
+      "emoji": "🔒",
+      "assignmentCount": 4,
+      "distinctMeanings": 4,
+      "records": [
+        {
+          "id": "r0641-s01",
+          "rank": 641,
+          "character": "抑",
+          "meaning": "repress",
+          "typedEvent": true
+        },
+        {
+          "id": "r0766-s01",
+          "rank": 766,
+          "character": "私",
+          "meaning": "private",
+          "typedEvent": false
+        },
+        {
+          "id": "r0880-s01",
+          "rank": 880,
+          "character": "牢",
+          "meaning": "prison",
+          "typedEvent": false
+        },
+        {
+          "id": "r0976-s01",
+          "rank": 976,
+          "character": "拘",
+          "meaning": "detain",
+          "typedEvent": true
+        }
+      ]
+    },
+    {
+      "emoji": "🔥",
+      "assignmentCount": 4,
+      "distinctMeanings": 3,
+      "records": [
+        {
+          "id": "r0164-s01",
+          "rank": 164,
+          "character": "火",
+          "meaning": "fire",
+          "typedEvent": false
+        },
+        {
+          "id": "r0164-s02",
+          "rank": 164,
+          "character": "火",
+          "meaning": "burn",
+          "typedEvent": true
+        },
+        {
+          "id": "r0843-s01",
+          "rank": 843,
+          "character": "冶",
+          "meaning": "smelt",
+          "typedEvent": true
+        },
+        {
+          "id": "r0853-s01",
+          "rank": 853,
+          "character": "灼",
+          "meaning": "burn",
+          "typedEvent": true
+        }
+      ]
+    },
+    {
+      "emoji": "🔮",
+      "assignmentCount": 4,
+      "distinctMeanings": 3,
+      "records": [
+        {
+          "id": "r0008-s01",
+          "rank": 8,
+          "character": "卜",
+          "meaning": "fortune telling",
+          "typedEvent": false
+        },
+        {
+          "id": "r0228-s01",
+          "rank": 228,
+          "character": "占",
+          "meaning": "divine",
+          "typedEvent": false
+        },
+        {
+          "id": "r0489-s01",
+          "rank": 489,
+          "character": "兆",
+          "meaning": "omen",
+          "typedEvent": false
+        },
+        {
+          "id": "r0954-s01",
+          "rank": 954,
+          "character": "卦",
+          "meaning": "fortune telling",
+          "typedEvent": false
+        }
+      ]
+    },
+    {
+      "emoji": "🔴",
+      "assignmentCount": 4,
+      "distinctMeanings": 2,
+      "records": [
+        {
+          "id": "r0445-s01",
+          "rank": 445,
+          "character": "朱",
+          "meaning": "vermilion",
+          "typedEvent": false
+        },
+        {
+          "id": "r0589-s01",
+          "rank": 589,
+          "character": "红",
+          "meaning": "red",
+          "typedEvent": false
+        },
+        {
+          "id": "r0631-s01",
+          "rank": 631,
+          "character": "赤",
+          "meaning": "red",
+          "typedEvent": false
+        },
+        {
+          "id": "r0817-s01",
+          "rank": 817,
+          "character": "彤",
+          "meaning": "red",
+          "typedEvent": false
+        }
+      ]
+    },
+    {
+      "emoji": "🧍",
+      "assignmentCount": 4,
+      "distinctMeanings": 3,
+      "records": [
+        {
+          "id": "r0302-s01",
+          "rank": 302,
+          "character": "立",
+          "meaning": "stand",
+          "typedEvent": true
+        },
+        {
+          "id": "r0435-s01",
+          "rank": 435,
+          "character": "屹",
+          "meaning": "stand erect",
+          "typedEvent": true
+        },
+        {
+          "id": "r0770-s01",
+          "rank": 770,
+          "character": "体",
+          "meaning": "body",
+          "typedEvent": false
+        },
+        {
+          "id": "r0786-s01",
+          "rank": 786,
+          "character": "身",
+          "meaning": "body",
+          "typedEvent": false
+        }
+      ]
+    },
+    {
+      "emoji": "🧩",
+      "assignmentCount": 4,
+      "distinctMeanings": 3,
+      "records": [
+        {
+          "id": "r0485-s01",
+          "rank": 485,
+          "character": "全",
+          "meaning": "whole",
+          "typedEvent": false
+        },
+        {
+          "id": "r0488-s01",
+          "rank": 488,
+          "character": "合",
+          "meaning": "combine",
+          "typedEvent": true
+        },
+        {
+          "id": "r0531-s01",
+          "rank": 531,
+          "character": "并",
+          "meaning": "combine",
+          "typedEvent": true
+        },
+        {
+          "id": "r0652-s01",
+          "rank": 652,
+          "character": "块",
+          "meaning": "piece",
+          "typedEvent": false
+        }
+      ]
+    },
+    {
+      "emoji": "♨️",
+      "assignmentCount": 3,
+      "distinctMeanings": 2,
+      "records": [
+        {
+          "id": "r0122-s01",
+          "rank": 122,
+          "character": "气",
+          "meaning": "steam",
+          "typedEvent": false
+        },
+        {
+          "id": "r0851-s01",
+          "rank": 851,
+          "character": "灶",
+          "meaning": "stove",
+          "typedEvent": false
+        },
+        {
+          "id": "r0861-s01",
+          "rank": 861,
+          "character": "汽",
+          "meaning": "steam",
+          "typedEvent": false
+        }
+      ]
+    },
+    {
+      "emoji": "✋",
+      "assignmentCount": 3,
+      "distinctMeanings": 3,
+      "records": [
+        {
+          "id": "r0121-s01",
+          "rank": 121,
+          "character": "手",
+          "meaning": "hand",
+          "typedEvent": false
+        },
+        {
+          "id": "r0655-s01",
+          "rank": 655,
+          "character": "把",
+          "meaning": "hold",
+          "typedEvent": true
+        },
+        {
+          "id": "r0997-s01",
+          "rank": 997,
+          "character": "取",
+          "meaning": "take",
+          "typedEvent": true
+        }
+      ]
+    },
+    {
+      "emoji": "✨",
+      "assignmentCount": 3,
+      "distinctMeanings": 3,
+      "records": [
+        {
+          "id": "r0699-s01",
+          "rank": 699,
+          "character": "丽",
+          "meaning": "beautiful",
+          "typedEvent": false
+        },
+        {
+          "id": "r0852-s01",
+          "rank": 852,
+          "character": "灿",
+          "meaning": "bright",
+          "typedEvent": false
+        },
+        {
+          "id": "r0919-s01",
+          "rank": 919,
+          "character": "妙",
+          "meaning": "mysterious",
+          "typedEvent": false
+        }
+      ]
+    },
+    {
+      "emoji": "➡️",
+      "assignmentCount": 3,
+      "distinctMeanings": 3,
+      "records": [
+        {
+          "id": "r0217-s01",
+          "rank": 217,
+          "character": "右",
+          "meaning": "right",
+          "typedEvent": false
+        },
+        {
+          "id": "r0605-s01",
+          "rank": 605,
+          "character": "进",
+          "meaning": "advance",
+          "typedEvent": true
+        },
+        {
+          "id": "r0792-s01",
+          "rank": 792,
+          "character": "彻",
+          "meaning": "penetrate",
+          "typedEvent": true
+        }
+      ]
+    },
+    {
+      "emoji": "⬇️",
+      "assignmentCount": 3,
+      "distinctMeanings": 3,
+      "records": [
+        {
+          "id": "r0030-s01",
+          "rank": 30,
+          "character": "下",
+          "meaning": "under",
+          "typedEvent": false
+        },
+        {
+          "id": "r0781-s01",
+          "rank": 781,
+          "character": "低",
+          "meaning": "low",
+          "typedEvent": false
+        },
+        {
+          "id": "r0917-s01",
+          "rank": 917,
+          "character": "坠",
+          "meaning": "fall down",
+          "typedEvent": true
+        }
+      ]
+    },
+    {
+      "emoji": "🌌",
+      "assignmentCount": 3,
+      "distinctMeanings": 2,
+      "records": [
+        {
+          "id": "r0078-s01",
+          "rank": 78,
+          "character": "天",
+          "meaning": "sky",
+          "typedEvent": false
+        },
+        {
+          "id": "r0331-s01",
+          "rank": 331,
+          "character": "辽",
+          "meaning": "distant",
+          "typedEvent": false
+        },
+        {
+          "id": "r0608-s01",
+          "rank": 608,
+          "character": "远",
+          "meaning": "distant",
+          "typedEvent": false
+        }
+      ]
+    },
+    {
+      "emoji": "🌪️",
+      "assignmentCount": 3,
+      "distinctMeanings": 2,
+      "records": [
+        {
+          "id": "r0660-s01",
+          "rank": 660,
+          "character": "劫",
+          "meaning": "disaster",
+          "typedEvent": false
+        },
+        {
+          "id": "r0762-s01",
+          "rank": 762,
+          "character": "乱",
+          "meaning": "chaos",
+          "typedEvent": false
+        },
+        {
+          "id": "r0883-s01",
+          "rank": 883,
+          "character": "灾",
+          "meaning": "disaster",
+          "typedEvent": false
+        }
+      ]
+    },
+    {
+      "emoji": "🌺",
+      "assignmentCount": 3,
+      "distinctMeanings": 3,
+      "records": [
+        {
+          "id": "r0661-s01",
+          "rank": 661,
+          "character": "芙",
+          "meaning": "hibiscus",
+          "typedEvent": false
+        },
+        {
+          "id": "r0668-s01",
+          "rank": 668,
+          "character": "芬",
+          "meaning": "fragrance",
+          "typedEvent": false
+        },
+        {
+          "id": "r0670-s01",
+          "rank": 670,
+          "character": "芳",
+          "meaning": "fragrant",
+          "typedEvent": false
+        }
+      ]
+    },
+    {
+      "emoji": "🍑",
+      "assignmentCount": 3,
+      "distinctMeanings": 3,
+      "records": [
+        {
+          "id": "r0684-s01",
+          "rank": 684,
+          "character": "杏",
+          "meaning": "apricot",
+          "typedEvent": false
+        },
+        {
+          "id": "r0688-s01",
+          "rank": 688,
+          "character": "李",
+          "meaning": "plum",
+          "typedEvent": false
+        },
+        {
+          "id": "r0903-s01",
+          "rank": 903,
+          "character": "屁",
+          "meaning": "buttocks",
+          "typedEvent": false
+        }
+      ]
+    },
+    {
+      "emoji": "🎒",
+      "assignmentCount": 3,
+      "distinctMeanings": 2,
+      "records": [
+        {
+          "id": "r0503-s01",
+          "rank": 503,
+          "character": "负",
+          "meaning": "burden",
+          "typedEvent": false
+        },
+        {
+          "id": "r0590-s01",
+          "rank": 590,
+          "character": "驮",
+          "meaning": "carry",
+          "typedEvent": true
+        },
+        {
+          "id": "r0963-s01",
+          "rank": 963,
+          "character": "担",
+          "meaning": "carry",
+          "typedEvent": true
+        }
+      ]
+    },
+    {
+      "emoji": "🎯",
+      "assignmentCount": 3,
+      "distinctMeanings": 2,
+      "records": [
+        {
+          "id": "r0113-s01",
+          "rank": 113,
+          "character": "中",
+          "meaning": "center",
+          "typedEvent": false
+        },
+        {
+          "id": "r0249-s01",
+          "rank": 249,
+          "character": "央",
+          "meaning": "center",
+          "typedEvent": false
+        },
+        {
+          "id": "r0501-s01",
+          "rank": 501,
+          "character": "旨",
+          "meaning": "purpose",
+          "typedEvent": false
+        }
+      ]
+    },
+    {
+      "emoji": "🏙️",
+      "assignmentCount": 3,
+      "distinctMeanings": 2,
+      "records": [
+        {
+          "id": "r0301-s02",
+          "rank": 301,
+          "character": "市",
+          "meaning": "city",
+          "typedEvent": false
+        },
+        {
+          "id": "r0748-s01",
+          "rank": 748,
+          "character": "邑",
+          "meaning": "city",
+          "typedEvent": false
+        },
+        {
+          "id": "r0869-s01",
+          "rank": 869,
+          "character": "沪",
+          "meaning": "Shanghai",
+          "typedEvent": false
+        }
+      ]
+    },
+    {
+      "emoji": "🏠",
+      "assignmentCount": 3,
+      "distinctMeanings": 3,
+      "records": [
+        {
+          "id": "r0545-s01",
+          "rank": 545,
+          "character": "宇",
+          "meaning": "house",
+          "typedEvent": false
+        },
+        {
+          "id": "r0547-s01",
+          "rank": 547,
+          "character": "宅",
+          "meaning": "home",
+          "typedEvent": false
+        },
+        {
+          "id": "r0783-s01",
+          "rank": 783,
+          "character": "住",
+          "meaning": "dwell",
+          "typedEvent": true
+        }
+      ]
+    },
+    {
+      "emoji": "🐕",
+      "assignmentCount": 3,
+      "distinctMeanings": 3,
+      "records": [
+        {
+          "id": "r0092-s01",
+          "rank": 92,
+          "character": "犬",
+          "meaning": "dog",
+          "typedEvent": false
+        },
+        {
+          "id": "r0592-s01",
+          "rank": 592,
+          "character": "驯",
+          "meaning": "tame",
+          "typedEvent": false
+        },
+        {
+          "id": "r0724-s01",
+          "rank": 724,
+          "character": "吠",
+          "meaning": "bark",
+          "typedEvent": true
+        }
+      ]
+    },
+    {
+      "emoji": "🐚",
+      "assignmentCount": 3,
+      "distinctMeanings": 2,
+      "records": [
+        {
+          "id": "r0114-s01",
+          "rank": 114,
+          "character": "贝",
+          "meaning": "sea shell",
+          "typedEvent": false
+        },
+        {
+          "id": "r0239-s01",
+          "rank": 239,
+          "character": "甲",
+          "meaning": "shell",
+          "typedEvent": false
+        },
+        {
+          "id": "r0650-s01",
+          "rank": 650,
+          "character": "壳",
+          "meaning": "shell",
+          "typedEvent": false
+        }
+      ]
+    },
+    {
+      "emoji": "👁️",
+      "assignmentCount": 3,
+      "distinctMeanings": 2,
+      "records": [
+        {
+          "id": "r0236-s01",
+          "rank": 236,
+          "character": "目",
+          "meaning": "eye",
+          "typedEvent": false
+        },
+        {
+          "id": "r0716-s01",
+          "rank": 716,
+          "character": "呈",
+          "meaning": "show",
+          "typedEvent": true
+        },
+        {
+          "id": "r0951-s01",
+          "rank": 951,
+          "character": "表",
+          "meaning": "show",
+          "typedEvent": true
+        }
+      ]
+    },
+    {
+      "emoji": "👍",
+      "assignmentCount": 3,
+      "distinctMeanings": 2,
+      "records": [
+        {
+          "id": "r0581-s01",
+          "rank": 581,
+          "character": "好",
+          "meaning": "good",
+          "typedEvent": false
+        },
+        {
+          "id": "r0884-s01",
+          "rank": 884,
+          "character": "良",
+          "meaning": "good",
+          "typedEvent": false
+        },
+        {
+          "id": "r0994-s01",
+          "rank": 994,
+          "character": "拇",
+          "meaning": "thumb",
+          "typedEvent": false
+        }
+      ]
+    },
+    {
+      "emoji": "👎",
+      "assignmentCount": 3,
+      "distinctMeanings": 3,
+      "records": [
+        {
+          "id": "r0386-s01",
+          "rank": 386,
+          "character": "厌",
+          "meaning": "dislike",
+          "typedEvent": false
+        },
+        {
+          "id": "r0416-s01",
+          "rank": 416,
+          "character": "劣",
+          "meaning": "inferior",
+          "typedEvent": false
+        },
+        {
+          "id": "r0622-s01",
+          "rank": 622,
+          "character": "批",
+          "meaning": "criticize",
+          "typedEvent": true
+        }
+      ]
+    },
+    {
+      "emoji": "👏",
+      "assignmentCount": 3,
+      "distinctMeanings": 3,
+      "records": [
+        {
+          "id": "r0368-s01",
+          "rank": 368,
+          "character": "扬",
+          "meaning": "praise",
+          "typedEvent": true
+        },
+        {
+          "id": "r0702-s01",
+          "rank": 702,
+          "character": "励",
+          "meaning": "encourage",
+          "typedEvent": true
+        },
+        {
+          "id": "r0970-s01",
+          "rank": 970,
+          "character": "拍",
+          "meaning": "clap",
+          "typedEvent": true
+        }
+      ]
+    },
+    {
+      "emoji": "👤",
+      "assignmentCount": 3,
+      "distinctMeanings": 3,
+      "records": [
+        {
+          "id": "r0695-s01",
+          "rank": 695,
+          "character": "吾",
+          "meaning": "my",
+          "typedEvent": false
+        },
+        {
+          "id": "r0737-s01",
+          "rank": 737,
+          "character": "员",
+          "meaning": "member",
+          "typedEvent": false
+        },
+        {
+          "id": "r0761-s01",
+          "rank": 761,
+          "character": "我",
+          "meaning": "i, me",
+          "typedEvent": false
+        }
+      ]
+    },
+    {
+      "emoji": "💔",
+      "assignmentCount": 3,
+      "distinctMeanings": 3,
+      "records": [
+        {
+          "id": "r0616-s01",
+          "rank": 616,
+          "character": "坏",
+          "meaning": "broken",
+          "typedEvent": false
+        },
+        {
+          "id": "r0632-s01",
+          "rank": 632,
+          "character": "折",
+          "meaning": "break off",
+          "typedEvent": true
+        },
+        {
+          "id": "r0972-s01",
+          "rank": 972,
+          "character": "拆",
+          "meaning": "split apart",
+          "typedEvent": true
+        }
+      ]
+    },
+    {
+      "emoji": "💰",
+      "assignmentCount": 3,
+      "distinctMeanings": 3,
+      "records": [
+        {
+          "id": "r0469-s01",
+          "rank": 469,
+          "character": "价",
+          "meaning": "price",
+          "typedEvent": false
+        },
+        {
+          "id": "r0756-s01",
+          "rank": 756,
+          "character": "财",
+          "meaning": "wealth",
+          "typedEvent": false
+        },
+        {
+          "id": "r0763-s01",
+          "rank": 763,
+          "character": "利",
+          "meaning": "profit",
+          "typedEvent": false
+        }
+      ]
+    },
+    {
+      "emoji": "📥",
+      "assignmentCount": 3,
+      "distinctMeanings": 2,
+      "records": [
+        {
+          "id": "r0573-s01",
+          "rank": 573,
+          "character": "收",
+          "meaning": "collect",
+          "typedEvent": true
+        },
+        {
+          "id": "r0934-s01",
+          "rank": 934,
+          "character": "纳",
+          "meaning": "receive",
+          "typedEvent": true
+        },
+        {
+          "id": "r0958-s01",
+          "rank": 958,
+          "character": "拢",
+          "meaning": "collect",
+          "typedEvent": true
+        }
+      ]
+    },
+    {
+      "emoji": "🔗",
+      "assignmentCount": 3,
+      "distinctMeanings": 3,
+      "records": [
+        {
+          "id": "r0430-s01",
+          "rank": 430,
+          "character": "因",
+          "meaning": "cause",
+          "typedEvent": false
+        },
+        {
+          "id": "r0708-s01",
+          "rank": 708,
+          "character": "连",
+          "meaning": "connect",
+          "typedEvent": true
+        },
+        {
+          "id": "r0825-s01",
+          "rank": 825,
+          "character": "系",
+          "meaning": "connection",
+          "typedEvent": false
+        }
+      ]
+    },
+    {
+      "emoji": "🗺️",
+      "assignmentCount": 3,
+      "distinctMeanings": 3,
+      "records": [
+        {
+          "id": "r0094-s01",
+          "rank": 94,
+          "character": "区",
+          "meaning": "area",
+          "typedEvent": false
+        },
+        {
+          "id": "r0535-s01",
+          "rank": 535,
+          "character": "州",
+          "meaning": "state",
+          "typedEvent": false
+        },
+        {
+          "id": "r0720-s01",
+          "rank": 720,
+          "character": "县",
+          "meaning": "county",
+          "typedEvent": false
+        }
+      ]
+    },
+    {
+      "emoji": "🥄",
+      "assignmentCount": 3,
+      "distinctMeanings": 2,
+      "records": [
+        {
+          "id": "r0013-s01",
+          "rank": 13,
+          "character": "匕",
+          "meaning": "spoon",
+          "typedEvent": false
+        },
+        {
+          "id": "r0049-s01",
+          "rank": 49,
+          "character": "勺",
+          "meaning": "spoon",
+          "typedEvent": false
+        },
+        {
+          "id": "r0166-s01",
+          "rank": 166,
+          "character": "斗",
+          "meaning": "dipper",
+          "typedEvent": false
+        }
+      ]
+    },
+    {
+      "emoji": "🥣",
+      "assignmentCount": 3,
+      "distinctMeanings": 3,
+      "records": [
+        {
+          "id": "r0259-s01",
+          "rank": 259,
+          "character": "皿",
+          "meaning": "shallow container",
+          "typedEvent": false
+        },
+        {
+          "id": "r0542-s01",
+          "rank": 542,
+          "character": "汤",
+          "meaning": "soup",
+          "typedEvent": false
+        },
+        {
+          "id": "r0984-s01",
+          "rank": 984,
+          "character": "拌",
+          "meaning": "mix",
+          "typedEvent": true
+        }
+      ]
+    },
+    {
+      "emoji": "🧑‍🤝‍🧑",
+      "assignmentCount": 3,
+      "distinctMeanings": 2,
+      "records": [
+        {
+          "id": "r0097-s01",
+          "rank": 97,
+          "character": "友",
+          "meaning": "friend",
+          "typedEvent": false
+        },
+        {
+          "id": "r0475-s01",
+          "rank": 475,
+          "character": "伙",
+          "meaning": "companion",
+          "typedEvent": false
+        },
+        {
+          "id": "r0785-s01",
+          "rank": 785,
+          "character": "伴",
+          "meaning": "companion",
+          "typedEvent": false
+        }
+      ]
+    },
+    {
+      "emoji": "🧠",
+      "assignmentCount": 3,
+      "distinctMeanings": 3,
+      "records": [
+        {
+          "id": "r0167-s01",
+          "rank": 167,
+          "character": "忆",
+          "meaning": "remember",
+          "typedEvent": false
+        },
+        {
+          "id": "r0174-s02",
+          "rank": 174,
+          "character": "心",
+          "meaning": "mind",
+          "typedEvent": false
+        },
+        {
+          "id": "r0844-s01",
+          "rank": 844,
+          "character": "忘",
+          "meaning": "forget",
+          "typedEvent": true
+        }
+      ]
+    },
+    {
+      "emoji": "🫵",
+      "assignmentCount": 3,
+      "distinctMeanings": 1,
+      "records": [
+        {
+          "id": "r0286-s01",
+          "rank": 286,
+          "character": "尔",
+          "meaning": "you",
+          "typedEvent": false
+        },
+        {
+          "id": "r0541-s01",
+          "rank": 541,
+          "character": "汝",
+          "meaning": "you",
+          "typedEvent": false
+        },
+        {
+          "id": "r0782-s01",
+          "rank": 782,
+          "character": "你",
+          "meaning": "you",
+          "typedEvent": false
+        }
+      ]
+    },
+    {
+      "emoji": "😮‍💨",
+      "assignmentCount": 3,
+      "distinctMeanings": 2,
+      "records": [
+        {
+          "id": "r0257-s01",
+          "rank": 257,
+          "character": "叹",
+          "meaning": "sigh",
+          "typedEvent": false
+        },
+        {
+          "id": "r0420-s01",
+          "rank": 420,
+          "character": "吁",
+          "meaning": "sigh",
+          "typedEvent": false
+        },
+        {
+          "id": "r0742-s01",
+          "rank": 742,
+          "character": "呛",
+          "meaning": "choke",
+          "typedEvent": true
+        }
+      ]
+    },
+    {
+      "emoji": "🟰",
+      "assignmentCount": 3,
+      "distinctMeanings": 2,
+      "records": [
+        {
+          "id": "r0427-s01",
+          "rank": 427,
+          "character": "同",
+          "meaning": "same",
+          "typedEvent": false
+        },
+        {
+          "id": "r0518-s01",
+          "rank": 518,
+          "character": "齐",
+          "meaning": "equal",
+          "typedEvent": false
+        },
+        {
+          "id": "r0640-s01",
+          "rank": 640,
+          "character": "均",
+          "meaning": "equal",
+          "typedEvent": false
+        }
+      ]
+    },
+    {
+      "emoji": "2️⃣",
+      "assignmentCount": 3,
+      "distinctMeanings": 2,
+      "records": [
+        {
+          "id": "r0003-s01",
+          "rank": 3,
+          "character": "二",
+          "meaning": "two",
+          "typedEvent": false
+        },
+        {
+          "id": "r0187-s01",
+          "rank": 187,
+          "character": "双",
+          "meaning": "pair",
+          "typedEvent": false
+        },
+        {
+          "id": "r0697-s01",
+          "rank": 697,
+          "character": "两",
+          "meaning": "two",
+          "typedEvent": false
+        }
+      ]
+    },
+    {
+      "emoji": "▶️",
+      "assignmentCount": 2,
+      "distinctMeanings": 2,
+      "records": [
+        {
+          "id": "r0691-s01",
+          "rank": 691,
+          "character": "甫",
+          "meaning": "begin",
+          "typedEvent": true
+        },
+        {
+          "id": "r0889-s01",
+          "rank": 889,
+          "character": "初",
+          "meaning": "beginning",
+          "typedEvent": false
+        }
+      ]
+    },
+    {
+      "emoji": "☀️",
+      "assignmentCount": 2,
+      "distinctMeanings": 1,
+      "records": [
+        {
+          "id": "r0112-s01",
+          "rank": 112,
+          "character": "日",
+          "meaning": "sun",
+          "typedEvent": false
+        },
+        {
+          "id": "r0572-s01",
+          "rank": 572,
+          "character": "阳",
+          "meaning": "sun",
+          "typedEvent": false
+        }
+      ]
+    },
+    {
+      "emoji": "⚠️",
+      "assignmentCount": 2,
+      "distinctMeanings": 2,
+      "records": [
+        {
+          "id": "r0499-s01",
+          "rank": 499,
+          "character": "危",
+          "meaning": "dangerous",
+          "typedEvent": false
+        },
+        {
+          "id": "r0606-s01",
+          "rank": 606,
+          "character": "戒",
+          "meaning": "warn",
+          "typedEvent": true
+        }
+      ]
+    },
+    {
+      "emoji": "⛵",
+      "assignmentCount": 2,
+      "distinctMeanings": 2,
+      "records": [
+        {
+          "id": "r0437-s01",
+          "rank": 437,
+          "character": "帆",
+          "meaning": "sail",
+          "typedEvent": false
+        },
+        {
+          "id": "r0484-s01",
+          "rank": 484,
+          "character": "舟",
+          "meaning": "boat",
+          "typedEvent": false
+        }
+      ]
+    },
+    {
+      "emoji": "✂️",
+      "assignmentCount": 2,
+      "distinctMeanings": 2,
+      "records": [
+        {
+          "id": "r0107-s01",
+          "rank": 107,
+          "character": "切",
+          "meaning": "cut",
+          "typedEvent": true
+        },
+        {
+          "id": "r0146-s01",
+          "rank": 146,
+          "character": "分",
+          "meaning": "divide",
+          "typedEvent": true
+        }
+      ]
+    },
+    {
+      "emoji": "✍️",
+      "assignmentCount": 2,
+      "distinctMeanings": 2,
+      "records": [
+        {
+          "id": "r0161-s01",
+          "rank": 161,
+          "character": "文",
+          "meaning": "writing",
+          "typedEvent": false
+        },
+        {
+          "id": "r0316-s01",
+          "rank": 316,
+          "character": "写",
+          "meaning": "write",
+          "typedEvent": true
+        }
+      ]
+    },
+    {
+      "emoji": "❗",
+      "assignmentCount": 2,
+      "distinctMeanings": 1,
+      "records": [
+        {
+          "id": "r0321-s01",
+          "rank": 321,
+          "character": "必",
+          "meaning": "must",
+          "typedEvent": false
+        },
+        {
+          "id": "r0836-s01",
+          "rank": 836,
+          "character": "应",
+          "meaning": "must",
+          "typedEvent": false
+        }
+      ]
+    },
+    {
+      "emoji": "❤️",
+      "assignmentCount": 2,
+      "distinctMeanings": 2,
+      "records": [
+        {
+          "id": "r0128-s01",
+          "rank": 128,
+          "character": "仁",
+          "meaning": "benevolence",
+          "typedEvent": false
+        },
+        {
+          "id": "r0174-s01",
+          "rank": 174,
+          "character": "心",
+          "meaning": "heart",
+          "typedEvent": false
+        }
+      ]
+    },
+    {
+      "emoji": "➰",
+      "assignmentCount": 2,
+      "distinctMeanings": 1,
+      "records": [
+        {
+          "id": "r0424-s01",
+          "rank": 424,
+          "character": "曲",
+          "meaning": "bent",
+          "typedEvent": false
+        },
+        {
+          "id": "r0995-s01",
+          "rank": 995,
+          "character": "拗",
+          "meaning": "bent",
+          "typedEvent": false
+        }
+      ]
+    },
+    {
+      "emoji": "⬅️",
+      "assignmentCount": 2,
+      "distinctMeanings": 2,
+      "records": [
+        {
+          "id": "r0214-s01",
+          "rank": 214,
+          "character": "左",
+          "meaning": "left",
+          "typedEvent": false
+        },
+        {
+          "id": "r0384-s01",
+          "rank": 384,
+          "character": "西",
+          "meaning": "west",
+          "typedEvent": false
+        }
+      ]
+    },
+    {
+      "emoji": "⬆️",
+      "assignmentCount": 2,
+      "distinctMeanings": 1,
+      "records": [
+        {
+          "id": "r0036-s01",
+          "rank": 36,
+          "character": "上",
+          "meaning": "go up",
+          "typedEvent": false
+        },
+        {
+          "id": "r0125-s01",
+          "rank": 125,
+          "character": "升",
+          "meaning": "go up",
+          "typedEvent": false
+        }
+      ]
+    },
+    {
+      "emoji": "⬜",
+      "assignmentCount": 2,
+      "distinctMeanings": 2,
+      "records": [
+        {
+          "id": "r0376-s01",
+          "rank": 376,
+          "character": "朴",
+          "meaning": "simple",
+          "typedEvent": false
+        },
+        {
+          "id": "r0962-s01",
+          "rank": 962,
+          "character": "坦",
+          "meaning": "flat",
+          "typedEvent": false
+        }
+      ]
+    },
+    {
+      "emoji": "🀄",
+      "assignmentCount": 2,
+      "distinctMeanings": 2,
+      "records": [
+        {
+          "id": "r0311-s01",
+          "rank": 311,
+          "character": "汉",
+          "meaning": "Chinese language",
+          "typedEvent": false
+        },
+        {
+          "id": "r0472-s02",
+          "rank": 472,
+          "character": "华",
+          "meaning": "Chinese",
+          "typedEvent": false
+        }
+      ]
+    },
+    {
+      "emoji": "🌊🧱",
+      "assignmentCount": 2,
+      "distinctMeanings": 1,
+      "records": [
+        {
+          "id": "r0629-s01",
+          "rank": 629,
+          "character": "坝",
+          "meaning": "dam",
+          "typedEvent": false
+        },
+        {
+          "id": "r0956-s01",
+          "rank": 956,
+          "character": "坯",
+          "meaning": "dam",
+          "typedEvent": false
+        }
+      ]
+    },
+    {
+      "emoji": "🌬️",
+      "assignmentCount": 2,
+      "distinctMeanings": 2,
+      "records": [
+        {
+          "id": "r0154-s01",
+          "rank": 154,
+          "character": "风",
+          "meaning": "wind",
+          "typedEvent": false
+        },
+        {
+          "id": "r0744-s01",
+          "rank": 744,
+          "character": "吹",
+          "meaning": "blow",
+          "typedEvent": true
+        }
+      ]
+    },
+    {
+      "emoji": "🌳",
+      "assignmentCount": 2,
+      "distinctMeanings": 2,
+      "records": [
+        {
+          "id": "r0087-s01",
+          "rank": 87,
+          "character": "木",
+          "meaning": "tree",
+          "typedEvent": false
+        },
+        {
+          "id": "r0689-s01",
+          "rank": 689,
+          "character": "杨",
+          "meaning": "willow",
+          "typedEvent": false
+        }
+      ]
+    },
+    {
+      "emoji": "🍀",
+      "assignmentCount": 2,
+      "distinctMeanings": 2,
+      "records": [
+        {
+          "id": "r0356-s01",
+          "rank": 356,
+          "character": "吉",
+          "meaning": "lucky",
+          "typedEvent": false
+        },
+        {
+          "id": "r0983-s01",
+          "rank": 983,
+          "character": "幸",
+          "meaning": "luck",
+          "typedEvent": false
+        }
+      ]
+    },
+    {
+      "emoji": "🍋",
+      "assignmentCount": 2,
+      "distinctMeanings": 1,
+      "records": [
+        {
+          "id": "r0841-s01",
+          "rank": 841,
+          "character": "辛",
+          "meaning": "bitter",
+          "typedEvent": false
+        },
+        {
+          "id": "r0999-s01",
+          "rank": 999,
+          "character": "苦",
+          "meaning": "bitter",
+          "typedEvent": false
+        }
+      ]
+    },
+    {
+      "emoji": "🎉",
+      "assignmentCount": 2,
+      "distinctMeanings": 2,
+      "records": [
+        {
+          "id": "r0515-s01",
+          "rank": 515,
+          "character": "庆",
+          "meaning": "celebrate",
+          "typedEvent": true
+        },
+        {
+          "id": "r0936-s01",
+          "rank": 936,
+          "character": "纵",
+          "meaning": "indulge",
+          "typedEvent": true
+        }
+      ]
+    },
+    {
+      "emoji": "🎵",
+      "assignmentCount": 2,
+      "distinctMeanings": 2,
+      "records": [
+        {
+          "id": "r0287-s02",
+          "rank": 287,
+          "character": "乐",
+          "meaning": "music",
+          "typedEvent": false
+        },
+        {
+          "id": "r0740-s01",
+          "rank": 740,
+          "character": "吟",
+          "meaning": "sing",
+          "typedEvent": true
+        }
+      ]
+    },
+    {
+      "emoji": "🏁",
+      "assignmentCount": 2,
+      "distinctMeanings": 1,
+      "records": [
+        {
+          "id": "r0398-s01",
+          "rank": 398,
+          "character": "达",
+          "meaning": "arrive",
+          "typedEvent": true
+        },
+        {
+          "id": "r0410-s01",
+          "rank": 410,
+          "character": "至",
+          "meaning": "arrive",
+          "typedEvent": true
+        }
+      ]
+    },
+    {
+      "emoji": "🏆",
+      "assignmentCount": 2,
+      "distinctMeanings": 2,
+      "records": [
+        {
+          "id": "r0202-s01",
+          "rank": 202,
+          "character": "功",
+          "meaning": "achievement",
+          "typedEvent": false
+        },
+        {
+          "id": "r0461-s01",
+          "rank": 461,
+          "character": "优",
+          "meaning": "excellent",
+          "typedEvent": false
+        }
+      ]
+    },
+    {
+      "emoji": "🏓",
+      "assignmentCount": 2,
+      "distinctMeanings": 1,
+      "records": [
+        {
+          "id": "r0456-s01",
+          "rank": 456,
+          "character": "乒",
+          "meaning": "ping pong",
+          "typedEvent": false
+        },
+        {
+          "id": "r0457-s01",
+          "rank": 457,
+          "character": "乓",
+          "meaning": "ping pong",
+          "typedEvent": false
+        }
+      ]
+    },
+    {
+      "emoji": "🏝️",
+      "assignmentCount": 2,
+      "distinctMeanings": 1,
+      "records": [
+        {
+          "id": "r0434-s01",
+          "rank": 434,
+          "character": "屿",
+          "meaning": "island",
+          "typedEvent": false
+        },
+        {
+          "id": "r0820-s01",
+          "rank": 820,
+          "character": "岛",
+          "meaning": "island",
+          "typedEvent": false
+        }
+      ]
+    },
+    {
+      "emoji": "🏬",
+      "assignmentCount": 2,
+      "distinctMeanings": 2,
+      "records": [
+        {
+          "id": "r0301-s01",
+          "rank": 301,
+          "character": "市",
+          "meaning": "market",
+          "typedEvent": false
+        },
+        {
+          "id": "r0832-s01",
+          "rank": 832,
+          "character": "库",
+          "meaning": "storehouse",
+          "typedEvent": false
+        }
+      ]
+    },
+    {
+      "emoji": "🏭",
+      "assignmentCount": 2,
+      "distinctMeanings": 2,
+      "records": [
+        {
+          "id": "r0006-s01",
+          "rank": 6,
+          "character": "厂",
+          "meaning": "factory",
+          "typedEvent": false
+        },
+        {
+          "id": "r0790-s01",
+          "rank": 790,
+          "character": "囱",
+          "meaning": "chimney",
+          "typedEvent": false
+        }
+      ]
+    },
+    {
+      "emoji": "🏹",
+      "assignmentCount": 2,
+      "distinctMeanings": 2,
+      "records": [
+        {
+          "id": "r0063-s01",
+          "rank": 63,
+          "character": "弓",
+          "meaning": "bow",
+          "typedEvent": false
+        },
+        {
+          "id": "r0264-s01",
+          "rank": 264,
+          "character": "矢",
+          "meaning": "arrow",
+          "typedEvent": false
+        }
+      ]
+    },
+    {
+      "emoji": "🐦",
+      "assignmentCount": 2,
+      "distinctMeanings": 2,
+      "records": [
+        {
+          "id": "r0296-s01",
+          "rank": 296,
+          "character": "鸟",
+          "meaning": "bird",
+          "typedEvent": false
+        },
+        {
+          "id": "r0723-s01",
+          "rank": 723,
+          "character": "吱",
+          "meaning": "chirping",
+          "typedEvent": false
+        }
+      ]
+    },
+    {
+      "emoji": "👂",
+      "assignmentCount": 2,
+      "distinctMeanings": 2,
+      "records": [
+        {
+          "id": "r0369-s01",
+          "rank": 369,
+          "character": "耳",
+          "meaning": "ear",
+          "typedEvent": false
+        },
+        {
+          "id": "r0739-s01",
+          "rank": 739,
+          "character": "听",
+          "meaning": "hear",
+          "typedEvent": true
+        }
+      ]
+    },
+    {
+      "emoji": "👊",
+      "assignmentCount": 2,
+      "distinctMeanings": 1,
+      "records": [
+        {
+          "id": "r0195-s01",
+          "rank": 195,
+          "character": "击",
+          "meaning": "strike",
+          "typedEvent": true
+        },
+        {
+          "id": "r0196-s01",
+          "rank": 196,
+          "character": "打",
+          "meaning": "strike",
+          "typedEvent": true
+        }
+      ]
+    },
+    {
+      "emoji": "👕",
+      "assignmentCount": 2,
+      "distinctMeanings": 2,
+      "records": [
+        {
+          "id": "r0520-s01",
+          "rank": 520,
+          "character": "衣",
+          "meaning": "clothes",
+          "typedEvent": false
+        },
+        {
+          "id": "r0990-s01",
+          "rank": 990,
+          "character": "披",
+          "meaning": "wear",
+          "typedEvent": true
+        }
+      ]
+    },
+    {
+      "emoji": "👴",
+      "assignmentCount": 2,
+      "distinctMeanings": 2,
+      "records": [
+        {
+          "id": "r0360-s01",
+          "rank": 360,
+          "character": "老",
+          "meaning": "old",
+          "typedEvent": false
+        },
+        {
+          "id": "r0492-s01",
+          "rank": 492,
+          "character": "爷",
+          "meaning": "grandfather",
+          "typedEvent": false
+        }
+      ]
+    },
+    {
+      "emoji": "👻",
+      "assignmentCount": 2,
+      "distinctMeanings": 2,
+      "records": [
+        {
+          "id": "r0900-s01",
+          "rank": 900,
+          "character": "灵",
+          "meaning": "spirit",
+          "typedEvent": false
+        },
+        {
+          "id": "r0920-s01",
+          "rank": 920,
+          "character": "妖",
+          "meaning": "supernatural",
+          "typedEvent": false
+        }
+      ]
+    },
+    {
+      "emoji": "💡",
+      "assignmentCount": 2,
+      "distinctMeanings": 2,
+      "records": [
+        {
+          "id": "r0417-s01",
+          "rank": 417,
+          "character": "光",
+          "meaning": "light",
+          "typedEvent": false
+        },
+        {
+          "id": "r0534-s01",
+          "rank": 534,
+          "character": "灯",
+          "meaning": "lamp",
+          "typedEvent": false
+        }
+      ]
+    },
+    {
+      "emoji": "💥",
+      "assignmentCount": 2,
+      "distinctMeanings": 2,
+      "records": [
+        {
+          "id": "r0624-s01",
+          "rank": 624,
+          "character": "扯",
+          "meaning": "tear down",
+          "typedEvent": true
+        },
+        {
+          "id": "r0706-s01",
+          "rank": 706,
+          "character": "歼",
+          "meaning": "annihilate",
+          "typedEvent": true
+        }
+      ]
+    },
+    {
+      "emoji": "📄",
+      "assignmentCount": 2,
+      "distinctMeanings": 2,
+      "records": [
+        {
+          "id": "r0393-s01",
+          "rank": 393,
+          "character": "页",
+          "meaning": "page",
+          "typedEvent": false
+        },
+        {
+          "id": "r0938-s01",
+          "rank": 938,
+          "character": "纸",
+          "meaning": "paper",
+          "typedEvent": false
+        }
+      ]
+    },
+    {
+      "emoji": "📉",
+      "assignmentCount": 2,
+      "distinctMeanings": 1,
+      "records": [
+        {
+          "id": "r0025-s01",
+          "rank": 25,
+          "character": "亏",
+          "meaning": "lose",
+          "typedEvent": false
+        },
+        {
+          "id": "r0265-s01",
+          "rank": 265,
+          "character": "失",
+          "meaning": "lose",
+          "typedEvent": false
+        }
+      ]
+    },
+    {
+      "emoji": "📊",
+      "assignmentCount": 2,
+      "distinctMeanings": 2,
+      "records": [
+        {
+          "id": "r0594-s01",
+          "rank": 594,
+          "character": "级",
+          "meaning": "level",
+          "typedEvent": false
+        },
+        {
+          "id": "r0887-s01",
+          "rank": 887,
+          "character": "评",
+          "meaning": "evaluate",
+          "typedEvent": true
+        }
+      ]
+    },
+    {
+      "emoji": "📖",
+      "assignmentCount": 2,
+      "distinctMeanings": 1,
+      "records": [
+        {
+          "id": "r0188-s01",
+          "rank": 188,
+          "character": "书",
+          "meaning": "book",
+          "typedEvent": false
+        },
+        {
+          "id": "r0290-s01",
+          "rank": 290,
+          "character": "册",
+          "meaning": "book",
+          "typedEvent": false
+        }
+      ]
+    },
+    {
+      "emoji": "📰",
+      "assignmentCount": 2,
+      "distinctMeanings": 2,
+      "records": [
+        {
+          "id": "r0191-s01",
+          "rank": 191,
+          "character": "刊",
+          "meaning": "publication",
+          "typedEvent": false
+        },
+        {
+          "id": "r0656-s01",
+          "rank": 656,
+          "character": "报",
+          "meaning": "report",
+          "typedEvent": true
+        }
+      ]
+    },
+    {
+      "emoji": "🔀",
+      "assignmentCount": 2,
+      "distinctMeanings": 2,
+      "records": [
+        {
+          "id": "r0568-s01",
+          "rank": 568,
+          "character": "异",
+          "meaning": "different",
+          "typedEvent": false
+        },
+        {
+          "id": "r0653-s01",
+          "rank": 653,
+          "character": "扭",
+          "meaning": "twist",
+          "typedEvent": true
+        }
+      ]
+    },
+    {
+      "emoji": "🔓",
+      "assignmentCount": 2,
+      "distinctMeanings": 1,
+      "records": [
+        {
+          "id": "r0076-s01",
+          "rank": 76,
+          "character": "开",
+          "meaning": "open",
+          "typedEvent": true
+        },
+        {
+          "id": "r0886-s01",
+          "rank": 886,
+          "character": "启",
+          "meaning": "open",
+          "typedEvent": true
+        }
+      ]
+    },
+    {
+      "emoji": "🔝",
+      "assignmentCount": 2,
+      "distinctMeanings": 2,
+      "records": [
+        {
+          "id": "r0687-s01",
+          "rank": 687,
+          "character": "极",
+          "meaning": "extreme",
+          "typedEvent": false
+        },
+        {
+          "id": "r0971-s01",
+          "rank": 971,
+          "character": "顶",
+          "meaning": "top",
+          "typedEvent": false
+        }
+      ]
+    },
+    {
+      "emoji": "🔤",
+      "assignmentCount": 2,
+      "distinctMeanings": 2,
+      "records": [
+        {
+          "id": "r0548-s01",
+          "rank": 548,
+          "character": "字",
+          "meaning": "character",
+          "typedEvent": false
+        },
+        {
+          "id": "r0897-s01",
+          "rank": 897,
+          "character": "词",
+          "meaning": "words",
+          "typedEvent": false
+        }
+      ]
+    },
+    {
+      "emoji": "🔪",
+      "assignmentCount": 2,
+      "distinctMeanings": 2,
+      "records": [
+        {
+          "id": "r0018-s01",
+          "rank": 18,
+          "character": "刀",
+          "meaning": "knife",
+          "typedEvent": false
+        },
+        {
+          "id": "r0068-s01",
+          "rank": 68,
+          "character": "刃",
+          "meaning": "knife edge",
+          "typedEvent": false
+        }
+      ]
+    },
+    {
+      "emoji": "🔷",
+      "assignmentCount": 2,
+      "distinctMeanings": 1,
+      "records": [
+        {
+          "id": "r0604-s01",
+          "rank": 604,
+          "character": "形",
+          "meaning": "shape",
+          "typedEvent": false
+        },
+        {
+          "id": "r0828-s01",
+          "rank": 828,
+          "character": "状",
+          "meaning": "shape",
+          "typedEvent": false
+        }
+      ]
+    },
+    {
+      "emoji": "🕊️",
+      "assignmentCount": 2,
+      "distinctMeanings": 1,
+      "records": [
+        {
+          "id": "r0312-s01",
+          "rank": 312,
+          "character": "宁",
+          "meaning": "peaceful",
+          "typedEvent": false
+        },
+        {
+          "id": "r0549-s01",
+          "rank": 549,
+          "character": "安",
+          "meaning": "peaceful",
+          "typedEvent": false
+        }
+      ]
+    },
+    {
+      "emoji": "🗣️🔁",
+      "assignmentCount": 2,
+      "distinctMeanings": 2,
+      "records": [
+        {
+          "id": "r0241-s01",
+          "rank": 241,
+          "character": "叮",
+          "meaning": "repeatedly",
+          "typedEvent": true
+        },
+        {
+          "id": "r0255-s01",
+          "rank": 255,
+          "character": "叨",
+          "meaning": "talkative",
+          "typedEvent": true
+        }
+      ]
+    },
+    {
+      "emoji": "🤏",
+      "assignmentCount": 2,
+      "distinctMeanings": 2,
+      "records": [
+        {
+          "id": "r0037-s01",
+          "rank": 37,
+          "character": "小",
+          "meaning": "small",
+          "typedEvent": false
+        },
+        {
+          "id": "r0110-s01",
+          "rank": 110,
+          "character": "少",
+          "meaning": "few",
+          "typedEvent": false
+        }
+      ]
+    },
+    {
+      "emoji": "🤕",
+      "assignmentCount": 2,
+      "distinctMeanings": 2,
+      "records": [
+        {
+          "id": "r0468-s01",
+          "rank": 468,
+          "character": "伤",
+          "meaning": "injury",
+          "typedEvent": false
+        },
+        {
+          "id": "r0987-s01",
+          "rank": 987,
+          "character": "拙",
+          "meaning": "clumsy",
+          "typedEvent": false
+        }
+      ]
+    },
+    {
+      "emoji": "🤡",
+      "assignmentCount": 2,
+      "distinctMeanings": 2,
+      "records": [
+        {
+          "id": "r0177-s01",
+          "rank": 177,
+          "character": "丑",
+          "meaning": "clown",
+          "typedEvent": false
+        },
+        {
+          "id": "r0526-s01",
+          "rank": 526,
+          "character": "妄",
+          "meaning": "foolish",
+          "typedEvent": false
+        }
+      ]
+    },
+    {
+      "emoji": "🤮",
+      "assignmentCount": 2,
+      "distinctMeanings": 1,
+      "records": [
+        {
+          "id": "r0421-s01",
+          "rank": 421,
+          "character": "吐",
+          "meaning": "vomit",
+          "typedEvent": true
+        },
+        {
+          "id": "r0725-s01",
+          "rank": 725,
+          "character": "呕",
+          "meaning": "vomit",
+          "typedEvent": true
+        }
+      ]
+    },
+    {
+      "emoji": "🤲",
+      "assignmentCount": 2,
+      "distinctMeanings": 2,
+      "records": [
+        {
+          "id": "r0359-s01",
+          "rank": 359,
+          "character": "托",
+          "meaning": "support",
+          "typedEvent": true
+        },
+        {
+          "id": "r0788-s01",
+          "rank": 788,
+          "character": "伺",
+          "meaning": "serve",
+          "typedEvent": true
+        }
+      ]
+    },
+    {
+      "emoji": "🥇",
+      "assignmentCount": 2,
+      "distinctMeanings": 1,
+      "records": [
+        {
+          "id": "r0080-s01",
+          "rank": 80,
+          "character": "元",
+          "meaning": "first",
+          "typedEvent": false
+        },
+        {
+          "id": "r0446-s01",
+          "rank": 446,
+          "character": "先",
+          "meaning": "first",
+          "typedEvent": false
+        }
+      ]
+    },
+    {
+      "emoji": "🥏",
+      "assignmentCount": 2,
+      "distinctMeanings": 1,
+      "records": [
+        {
+          "id": "r0642-s01",
+          "rank": 642,
+          "character": "抛",
+          "meaning": "throw",
+          "typedEvent": true
+        },
+        {
+          "id": "r0643-s01",
+          "rank": 643,
+          "character": "投",
+          "meaning": "throw",
+          "typedEvent": true
+        }
+      ]
+    },
+    {
+      "emoji": "🥤",
+      "assignmentCount": 2,
+      "distinctMeanings": 2,
+      "records": [
+        {
+          "id": "r0752-s01",
+          "rank": 752,
+          "character": "吮",
+          "meaning": "sip",
+          "typedEvent": true
+        },
+        {
+          "id": "r0824-s01",
+          "rank": 824,
+          "character": "饮",
+          "meaning": "drink",
+          "typedEvent": true
+        }
+      ]
+    },
+    {
+      "emoji": "🥷",
+      "assignmentCount": 2,
+      "distinctMeanings": 1,
+      "records": [
+        {
+          "id": "r0396-s01",
+          "rank": 396,
+          "character": "夺",
+          "meaning": "rob",
+          "typedEvent": true
+        },
+        {
+          "id": "r0637-s01",
+          "rank": 637,
+          "character": "抢",
+          "meaning": "rob",
+          "typedEvent": true
+        }
+      ]
+    },
+    {
+      "emoji": "🦯",
+      "assignmentCount": 2,
+      "distinctMeanings": 2,
+      "records": [
+        {
+          "id": "r0683-s01",
+          "rank": 683,
+          "character": "杖",
+          "meaning": "walking stick",
+          "typedEvent": false
+        },
+        {
+          "id": "r0979-s01",
+          "rank": 979,
+          "character": "拄",
+          "meaning": "lean on",
+          "typedEvent": true
+        }
+      ]
+    },
+    {
+      "emoji": "🧊",
+      "assignmentCount": 2,
+      "distinctMeanings": 2,
+      "records": [
+        {
+          "id": "r0513-s01",
+          "rank": 513,
+          "character": "冰",
+          "meaning": "ice",
+          "typedEvent": false
+        },
+        {
+          "id": "r0827-s01",
+          "rank": 827,
+          "character": "冻",
+          "meaning": "freeze",
+          "typedEvent": true
+        }
+      ]
+    },
+    {
+      "emoji": "🧑‍💼",
+      "assignmentCount": 2,
+      "distinctMeanings": 2,
+      "records": [
+        {
+          "id": "r0380-s01",
+          "rank": 380,
+          "character": "臣",
+          "meaning": "minister",
+          "typedEvent": false
+        },
+        {
+          "id": "r0381-s01",
+          "rank": 381,
+          "character": "吏",
+          "meaning": "government official",
+          "typedEvent": false
+        }
+      ]
+    },
+    {
+      "emoji": "🧑‍🔧",
+      "assignmentCount": 2,
+      "distinctMeanings": 2,
+      "records": [
+        {
+          "id": "r0394-s01",
+          "rank": 394,
+          "character": "匠",
+          "meaning": "artisan",
+          "typedEvent": false
+        },
+        {
+          "id": "r0793-s01",
+          "rank": 793,
+          "character": "役",
+          "meaning": "service",
+          "typedEvent": false
+        }
+      ]
+    },
+    {
+      "emoji": "🧭",
+      "assignmentCount": 2,
+      "distinctMeanings": 2,
+      "records": [
+        {
+          "id": "r0480-s01",
+          "rank": 480,
+          "character": "向",
+          "meaning": "direction",
+          "typedEvent": false
+        },
+        {
+          "id": "r0567-s01",
+          "rank": 567,
+          "character": "导",
+          "meaning": "guide",
+          "typedEvent": true
+        }
+      ]
+    },
+    {
+      "emoji": "🧮",
+      "assignmentCount": 2,
+      "distinctMeanings": 2,
+      "records": [
+        {
+          "id": "r0349-s01",
+          "rank": 349,
+          "character": "式",
+          "meaning": "formula",
+          "typedEvent": false
+        },
+        {
+          "id": "r0769-s01",
+          "rank": 769,
+          "character": "估",
+          "meaning": "estimate",
+          "typedEvent": true
+        }
+      ]
+    },
+    {
+      "emoji": "🧹",
+      "assignmentCount": 2,
+      "distinctMeanings": 2,
+      "records": [
+        {
+          "id": "r0365-s01",
+          "rank": 365,
+          "character": "扫",
+          "meaning": "sweep",
+          "typedEvent": true
+        },
+        {
+          "id": "r0986-s01",
+          "rank": 986,
+          "character": "拂",
+          "meaning": "brush away",
+          "typedEvent": true
+        }
+      ]
+    },
+    {
+      "emoji": "🧼",
+      "assignmentCount": 2,
+      "distinctMeanings": 2,
+      "records": [
+        {
+          "id": "r0537-s01",
+          "rank": 537,
+          "character": "污",
+          "meaning": "dirty",
+          "typedEvent": false
+        },
+        {
+          "id": "r0787-s01",
+          "rank": 787,
+          "character": "皂",
+          "meaning": "soap",
+          "typedEvent": false
+        }
+      ]
+    },
+    {
+      "emoji": "🩹",
+      "assignmentCount": 2,
+      "distinctMeanings": 2,
+      "records": [
+        {
+          "id": "r0834-s01",
+          "rank": 834,
+          "character": "疗",
+          "meaning": "heal",
+          "typedEvent": true
+        },
+        {
+          "id": "r0888-s01",
+          "rank": 888,
+          "character": "补",
+          "meaning": "repair",
+          "typedEvent": true
+        }
+      ]
+    },
+    {
+      "emoji": "🪓",
+      "assignmentCount": 2,
+      "distinctMeanings": 2,
+      "records": [
+        {
+          "id": "r0137-s01",
+          "rank": 137,
+          "character": "斤",
+          "meaning": "axe",
+          "typedEvent": false
+        },
+        {
+          "id": "r0463-s01",
+          "rank": 463,
+          "character": "伐",
+          "meaning": "cut down",
+          "typedEvent": true
+        }
+      ]
+    },
+    {
+      "emoji": "🪙",
+      "assignmentCount": 2,
+      "distinctMeanings": 2,
+      "records": [
+        {
+          "id": "r0134-s01",
+          "rank": 134,
+          "character": "币",
+          "meaning": "currency",
+          "typedEvent": false
+        },
+        {
+          "id": "r0835-s01",
+          "rank": 835,
+          "character": "吝",
+          "meaning": "stingy",
+          "typedEvent": false
+        }
+      ]
+    },
+    {
+      "emoji": "🪝",
+      "assignmentCount": 2,
+      "distinctMeanings": 2,
+      "records": [
+        {
+          "id": "r0158-s01",
+          "rank": 158,
+          "character": "勾",
+          "meaning": "hook",
+          "typedEvent": false
+        },
+        {
+          "id": "r0428-s01",
+          "rank": 428,
+          "character": "吊",
+          "meaning": "hang",
+          "typedEvent": true
+        }
+      ]
+    },
+    {
+      "emoji": "🪡",
+      "assignmentCount": 2,
+      "distinctMeanings": 2,
+      "records": [
+        {
+          "id": "r0597-s01",
+          "rank": 597,
+          "character": "纫",
+          "meaning": "sew",
+          "typedEvent": true
+        },
+        {
+          "id": "r0757-s01",
+          "rank": 757,
+          "character": "针",
+          "meaning": "needle",
+          "typedEvent": false
+        }
+      ]
+    },
+    {
+      "emoji": "🪨",
+      "assignmentCount": 2,
+      "distinctMeanings": 2,
+      "records": [
+        {
+          "id": "r0216-s01",
+          "rank": 216,
+          "character": "石",
+          "meaning": "stone",
+          "typedEvent": false
+        },
+        {
+          "id": "r0955-s01",
+          "rank": 955,
+          "character": "坷",
+          "meaning": "clod of earth",
+          "typedEvent": false
+        }
+      ]
+    },
+    {
+      "emoji": "🪵",
+      "assignmentCount": 2,
+      "distinctMeanings": 2,
+      "records": [
+        {
+          "id": "r0678-s01",
+          "rank": 678,
+          "character": "杆",
+          "meaning": "pole",
+          "typedEvent": false
+        },
+        {
+          "id": "r0681-s01",
+          "rank": 681,
+          "character": "材",
+          "meaning": "timber",
+          "typedEvent": false
+        }
+      ]
+    },
+    {
+      "emoji": "🫁",
+      "assignmentCount": 2,
+      "distinctMeanings": 2,
+      "records": [
+        {
+          "id": "r0431-s01",
+          "rank": 431,
+          "character": "吸",
+          "meaning": "inhale",
+          "typedEvent": true
+        },
+        {
+          "id": "r0504-s01",
+          "rank": 504,
+          "character": "匈",
+          "meaning": "chest",
+          "typedEvent": false
+        }
+      ]
+    },
+    {
+      "emoji": "🫳🗑️",
+      "assignmentCount": 2,
+      "distinctMeanings": 1,
+      "records": [
+        {
+          "id": "r0203-s01",
+          "rank": 203,
+          "character": "扔",
+          "meaning": "throw away",
+          "typedEvent": true
+        },
+        {
+          "id": "r0284-s01",
+          "rank": 284,
+          "character": "甩",
+          "meaning": "throw away",
+          "typedEvent": true
+        }
+      ]
+    },
+    {
+      "emoji": "😀",
+      "assignmentCount": 2,
+      "distinctMeanings": 1,
+      "records": [
+        {
+          "id": "r0287-s01",
+          "rank": 287,
+          "character": "乐",
+          "meaning": "happy",
+          "typedEvent": false
+        },
+        {
+          "id": "r0587-s01",
+          "rank": 587,
+          "character": "欢",
+          "meaning": "happy",
+          "typedEvent": false
+        }
+      ]
+    },
+    {
+      "emoji": "😔",
+      "assignmentCount": 2,
+      "distinctMeanings": 2,
+      "records": [
+        {
+          "id": "r0848-s01",
+          "rank": 848,
+          "character": "闷",
+          "meaning": "gloomy",
+          "typedEvent": false
+        },
+        {
+          "id": "r0874-s01",
+          "rank": 874,
+          "character": "忧",
+          "meaning": "sad",
+          "typedEvent": false
+        }
+      ]
+    },
+    {
+      "emoji": "😠",
+      "assignmentCount": 2,
+      "distinctMeanings": 1,
+      "records": [
+        {
+          "id": "r0910-s01",
+          "rank": 910,
+          "character": "忌",
+          "meaning": "jealous",
+          "typedEvent": false
+        },
+        {
+          "id": "r0923-s01",
+          "rank": 923,
+          "character": "妒",
+          "meaning": "jealous",
+          "typedEvent": false
+        }
+      ]
+    },
+    {
+      "emoji": "😮",
+      "assignmentCount": 2,
+      "distinctMeanings": 2,
+      "records": [
+        {
+          "id": "r0553-s01",
+          "rank": 553,
+          "character": "讶",
+          "meaning": "surprised",
+          "typedEvent": false
+        },
+        {
+          "id": "r0607-s01",
+          "rank": 607,
+          "character": "吞",
+          "meaning": "swallow",
+          "typedEvent": true
+        }
+      ]
+    },
+    {
+      "emoji": "🚚",
+      "assignmentCount": 2,
+      "distinctMeanings": 2,
+      "records": [
+        {
+          "id": "r0451-s01",
+          "rank": 451,
+          "character": "迁",
+          "meaning": "relocate",
+          "typedEvent": true
+        },
+        {
+          "id": "r0611-s01",
+          "rank": 611,
+          "character": "运",
+          "meaning": "transport",
+          "typedEvent": true
+        }
+      ]
+    },
+    {
+      "emoji": "🚧",
+      "assignmentCount": 2,
+      "distinctMeanings": 1,
+      "records": [
+        {
+          "id": "r0337-s01",
+          "rank": 337,
+          "character": "边",
+          "meaning": "border",
+          "typedEvent": false
+        },
+        {
+          "id": "r0911-s01",
+          "rank": 911,
+          "character": "际",
+          "meaning": "border",
+          "typedEvent": false
+        }
+      ]
+    },
+    {
+      "emoji": "🛖",
+      "assignmentCount": 2,
+      "distinctMeanings": 1,
+      "records": [
+        {
+          "id": "r0230-s01",
+          "rank": 230,
+          "character": "卢",
+          "meaning": "hut",
+          "typedEvent": false
+        },
+        {
+          "id": "r0839-s01",
+          "rank": 839,
+          "character": "庐",
+          "meaning": "hut",
+          "typedEvent": false
+        }
+      ]
+    },
+    {
+      "emoji": "🛣️",
+      "assignmentCount": 2,
+      "distinctMeanings": 2,
+      "records": [
+        {
+          "id": "r0600-s01",
+          "rank": 600,
+          "character": "弄",
+          "meaning": "alley",
+          "typedEvent": false
+        },
+        {
+          "id": "r0802-s01",
+          "rank": 802,
+          "character": "岔",
+          "meaning": "fork in road",
+          "typedEvent": false
+        }
+      ]
+    },
+    {
+      "emoji": "🛤️",
+      "assignmentCount": 2,
+      "distinctMeanings": 2,
+      "records": [
+        {
+          "id": "r0342-s01",
+          "rank": 342,
+          "character": "台",
+          "meaning": "platform",
+          "typedEvent": false
+        },
+        {
+          "id": "r0404-s01",
+          "rank": 404,
+          "character": "轨",
+          "meaning": "track",
+          "typedEvent": false
+        }
+      ]
+    },
+    {
+      "emoji": "🟢",
+      "assignmentCount": 2,
+      "distinctMeanings": 1,
+      "records": [
+        {
+          "id": "r0669-s01",
+          "rank": 669,
+          "character": "苍",
+          "meaning": "green",
+          "typedEvent": false
+        },
+        {
+          "id": "r0947-s01",
+          "rank": 947,
+          "character": "青",
+          "meaning": "green",
+          "typedEvent": false
+        }
+      ]
+    },
+    {
+      "emoji": "1️⃣",
+      "assignmentCount": 2,
+      "distinctMeanings": 2,
+      "records": [
+        {
+          "id": "r0001-s01",
+          "rank": 1,
+          "character": "一",
+          "meaning": "one",
+          "typedEvent": false
+        },
+        {
+          "id": "r0246-s01",
+          "rank": 246,
+          "character": "只",
+          "meaning": "only",
+          "typedEvent": false
+        }
+      ]
+    },
+    {
+      "emoji": "3️⃣",
+      "assignmentCount": 2,
+      "distinctMeanings": 2,
+      "records": [
+        {
+          "id": "r0022-s01",
+          "rank": 22,
+          "character": "三",
+          "meaning": "three",
+          "typedEvent": false
+        },
+        {
+          "id": "r0213-s01",
+          "rank": 213,
+          "character": "丙",
+          "meaning": "third",
+          "typedEvent": false
+        }
+      ]
+    }
+  ]
+}
