@@ -82,6 +82,10 @@
     <div class="semantic-progress" role="progressbar" id="semantic-polysemy-progress" aria-label="Characters audited for dictionary reading and gloss complexity" aria-valuemin="0" aria-valuemax="1000" aria-valuenow="0"><div id="semantic-polysemy-fill"></div></div>
   </div>
   <div class="semantic-stage">
+    <div class="semantic-stage-heading"><strong>Automated reading-sensitive gloss audit (not lexical approval)</strong><span id="semantic-stage-reading-audit">Loading</span></div>
+    <div class="semantic-progress" role="progressbar" id="semantic-reading-audit-progress" aria-label="Characters audited for distribution of literal English glosses across dictionary readings" aria-valuemin="0" aria-valuemax="1000" aria-valuenow="0"><div id="semantic-reading-audit-fill"></div></div>
+  </div>
+  <div class="semantic-stage">
     <div class="semantic-stage-heading"><strong>Automated gloss-boundary audit (not approval)</strong><span id="semantic-stage-boundary">Loading</span></div>
     <div class="semantic-progress" role="progressbar" id="semantic-boundary-progress" aria-label="Characters audited by automated English term boundaries" aria-valuemin="0" aria-valuemax="1000" aria-valuenow="0"><div id="semantic-boundary-fill"></div></div>
   </div>
@@ -130,6 +134,7 @@
     <option value="not-crossref">Not yet cross-referenced</option>
     <option value="multiple-readings">Multiple dictionary readings (339)</option>
     <option value="complex-higher">Many glosses + multiple readings (142)</option>
+    <option value="reading-subset">Literal gloss matches only some readings (208)</option>
     <option value="one-cue-complex">One emoji candidate despite multiple lexical cues (367)</option>
   </select></label>
   <label>Emoji visual-review signal <select id="semantic-visual-filter">

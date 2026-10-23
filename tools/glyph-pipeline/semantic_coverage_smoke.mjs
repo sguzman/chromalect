@@ -12,6 +12,7 @@ const audit=JSON.parse(fs.readFileSync("data/semantic/cedict-crossref/strict-glo
 const review=JSON.parse(fs.readFileSync("data/semantic/cedict-crossref/sense-review-queue-v0.1.json","utf8"));
 const visibility=JSON.parse(fs.readFileSync("data/semantic/cedict-crossref/emoji-visibility-audit-v0.1.json","utf8"));
 const polysemy=JSON.parse(fs.readFileSync("data/semantic/cedict-crossref/polysemy-review-index-v0.1.json","utf8"));
+const readingAudit=JSON.parse(fs.readFileSync("data/semantic/cedict-crossref/reading-sensitive-gloss-audit-v0.1.json","utf8"));
 const catalog=JSON.parse(fs.readFileSync("data/catalog/characters-0001-1000.json","utf8"));
 const profile={schema:"chromalect.mandarin-character-profile.v1",catalog_count:1000,
   characters:catalog.characters.map(x=>({rank:x.rank,character:x.character}))};
@@ -45,6 +46,7 @@ for(const id of [
   "semantic-candidate-count","semantic-candidate-percent",
   "semantic-verified-count","semantic-progress","semantic-progress-fill",
   "semantic-stage-screened","semantic-stage-dictionary","semantic-stage-polysemy","semantic-polysemy-progress","semantic-polysemy-fill","semantic-stage-boundary",
+  "semantic-stage-reading-audit","semantic-reading-audit-progress","semantic-reading-audit-fill",
   "semantic-stage-desk","semantic-desk-progress","semantic-desk-fill",
   "semantic-stage-readiness","semantic-readiness-progress","semantic-readiness-fill",
   "semantic-boundary-progress","semantic-boundary-fill",
@@ -81,6 +83,7 @@ const vmContext={
     if(path==="semantic/emoji-visibility-audit-v0.1.json")return {ok:true,json:async()=>visibility};
     if(path==="semantic/lexical-review-readiness-v0.1.json")return {ok:true,json:async()=>readiness};
     if(path==="semantic/polysemy-review-index-v0.1.json")return {ok:true,json:async()=>polysemy};
+    if(path==="semantic/reading-sensitive-gloss-audit-v0.1.json")return {ok:true,json:async()=>readingAudit};
     throw new Error("Unexpected resource: "+path);
   }
 };
@@ -102,6 +105,8 @@ assert.equal(ids["semantic-stage-screened"].textContent,"1000 / 1000 (100.0%)");
 assert.equal(ids["semantic-stage-polysemy"].textContent,"1000 / 1000 (100.0%) · source evidence only");
 assert.equal(ids["semantic-polysemy-fill"].style.width,"100.0%");
 assert.equal(ids["semantic-polysemy-progress"].attrs["aria-valuenow"],"1000");
+assert.equal(ids["semantic-stage-reading-audit"].textContent,"1000 / 1000 (100.0%) · literal wording only");
+assert.equal(ids["semantic-reading-audit-fill"].style.width,"100.0%");
 assert.equal(ids["semantic-stage-dictionary"].textContent,lexical.metrics.crossReferenced+" / 1000 ("+(lexical.metrics.crossReferenced/10).toFixed(1)+"%)");
 assert.equal(ids["semantic-stage-lexical"].textContent,"0 / 1000 (0.0%)");
 assert.equal(ids["semantic-stage-desk"].textContent,review.counts.deskAnalyzedTotal+" / 248 (100.0%) · not approval");
@@ -183,7 +188,7 @@ assert.match(ids["semantic-coverage-status"].textContent,new RegExp((1000-lexica
 ids["semantic-lexical-filter"].value="all";
 ids["semantic-lexical-filter"].events.change();
 for(const [kind,expected] of [
- ["multiple-readings",339],["complex-higher",142],["one-cue-complex",367]
+ ["multiple-readings",339],["complex-higher",142],["reading-subset",208],["one-cue-complex",367]
 ]){
  ids["semantic-lexical-filter"].value=kind;
  ids["semantic-lexical-filter"].events.change();
@@ -237,6 +242,8 @@ assert.match(html,/src="layers.js"/);
 assert.match(html,/id="semantic-lexical-filter"/);
 assert.match(html,/id="semantic-polysemy-progress"/);
 assert.match(html,/value="complex-higher"/);
+assert.match(html,/value="reading-subset"/);
+assert.match(html,/id="semantic-reading-audit-progress"/);
 assert.match(html,/id="semantic-action-filter"/);
 assert.match(html,/id="semantic-visual-filter"/);
 assert.match(html,/value="mixed-role"/);

@@ -26,6 +26,7 @@
   let visibilityRows = new Map();
   let mixedRoleForms = new Set();
   let polysemyRows = new Map();
+  let readingAuditRows = new Map();
   let strictSummary = null;
   let deskCounts = {analyzed:0,total:248};
   let page = 0;
@@ -66,6 +67,15 @@
     $("semantic-polysemy-fill").style.width=percent(audited,total);
     $("semantic-stage-polysemy").textContent=
       audited+" / "+total+" ("+percent(audited,total)+") · source evidence only";
+  }
+
+  function bindReadingAudit(metrics) {
+    const count=metrics.charactersAudited,total=1000;
+    $("semantic-reading-audit-progress").setAttribute("aria-valuemax",String(total));
+    $("semantic-reading-audit-progress").setAttribute("aria-valuenow",String(count));
+    $("semantic-reading-audit-fill").style.width=percent(count,total);
+    $("semantic-stage-reading-audit").textContent=
+      count+" / "+total+" ("+percent(count,total)+") · literal wording only";
   }
 
   function bindResearchProgress(metrics, audit) {
@@ -175,6 +185,10 @@
         " English definition fragments · "+complexity.triageTier+
         " research priority, not a verified sense count"));
     }
+    const readingDistribution=readingAuditRows.get(entry.rank);
+    if(readingDistribution?.hasReadingSubsetLiteralMatch)
+      card.appendChild(elem("p","semantic-review-note",
+       "Literal gloss for at least one proposed sense appears under only some recorded dictionary readings · automated triage, not lexical approval"));
     const visibleCues=visibilityRows.get(entry.rank)||[];
     if(visibleCues.length) {
       const events=visibleCues.filter(x=>x.operators.includes("event"));
@@ -206,6 +220,14 @@
         "Emoji display for "+cue.selectedMeaning+": "+cue.emojiDisplay+
         " · automatic visibility flags: "+cue.riskFlags.join(", ").replaceAll("_"," ")+
         ". These are not comprehension judgments."));
+    }
+    for(const candidate of readingDistribution?.candidates||[]){
+      if(candidate.alignment==="subset_of_recorded_readings")
+        details.appendChild(elem("p","semantic-review-detail",
+          "Literal wording for "+candidate.selectedMeaning+" occurs under "+
+          candidate.literalMatchingReadings.join(", ")+" of "+
+          readingDistribution.dictionaryReadings.join(", ")+
+          " · source string comparison only; Mandarin senses not certified."));
     }
     for(const item of flagged){
       const msg=item.selectedMeaning+" — "+item.reviewReason.replaceAll("_"," ")+
@@ -271,6 +293,7 @@
           (dictionary==="crossref" && !!crossref) ||
           (dictionary==="multiple-readings" && lexicalComplexity?.readingCount>1) ||
           (dictionary==="complex-higher" && lexicalComplexity?.triageTier==="higher") ||
+          (dictionary==="reading-subset" && readingAuditRows.get(x.rank)?.hasReadingSubsetLiteralMatch) ||
           (dictionary==="one-cue-complex" && lexicalComplexity?.selectedMeaningCount===1 &&
             (lexicalComplexity.readingCount>1 || lexicalComplexity.definitionFragmentCount>=8)) ||
           (dictionary==="not-crossref" && !crossref) ||
@@ -315,7 +338,7 @@
 
   async function load() {
     try {
-      const [response,profileResponse,lexicalResponse,auditResponse,reviewResponse,visibilityResponse,readinessResponse,polysemyResponse]=await Promise.all([
+      const [response,profileResponse,lexicalResponse,auditResponse,reviewResponse,visibilityResponse,readinessResponse,polysemyResponse,readingAuditResponse]=await Promise.all([
         fetch("semantic/mandarin-1000-v0.1.json"),
         fetch("profiles/mandarin-1000-v1.json"),
         fetch("semantic/lexical-crossref-v0.1.json"),
@@ -323,12 +346,13 @@
         fetch("semantic/sense-review-queue-v0.1.json"),
         fetch("semantic/emoji-visibility-audit-v0.1.json"),
         fetch("semantic/lexical-review-readiness-v0.1.json"),
-        fetch("semantic/polysemy-review-index-v0.1.json")
+        fetch("semantic/polysemy-review-index-v0.1.json"),
+        fetch("semantic/reading-sensitive-gloss-audit-v0.1.json")
       ]);
-      if(!response.ok || !profileResponse.ok || !lexicalResponse.ok || !auditResponse.ok || !reviewResponse.ok || !visibilityResponse.ok || !readinessResponse.ok || !polysemyResponse.ok)
+      if(!response.ok || !profileResponse.ok || !lexicalResponse.ok || !auditResponse.ok || !reviewResponse.ok || !visibilityResponse.ok || !readinessResponse.ok || !polysemyResponse.ok || !readingAuditResponse.ok)
         throw new Error("Character, dictionary or audit data unavailable");
-      const [data,profile,lexical,audit,review,visibility,readiness,polysemy]=await Promise.all([
-        response.json(),profileResponse.json(),lexicalResponse.json(),auditResponse.json(),reviewResponse.json(),visibilityResponse.json(),readinessResponse.json(),polysemyResponse.json()
+      const [data,profile,lexical,audit,review,visibility,readiness,polysemy,readingAudit]=await Promise.all([
+        response.json(),profileResponse.json(),lexicalResponse.json(),auditResponse.json(),reviewResponse.json(),visibilityResponse.json(),readinessResponse.json(),polysemyResponse.json(),readingAuditResponse.json()
       ]);
       if(polysemy.schema!=="chromalect.semantic.polysemy-review-index.v0.1" ||
          polysemy.status!=="automated_dictionary_complexity_inventory_not_sense_validation" ||
@@ -340,6 +364,21 @@
          polysemy.records.some((r,i)=>r.rank!==i+1 || r.character!==data.characters[i]?.character))
         throw new Error("Dictionary complexity research index is incomplete or misaligned");
       polysemyRows=new Map(polysemy.records.map(x=>[x.rank,x]));
+      if(readingAudit.schema!=="chromalect.semantic.reading-sensitive-literal-gloss-audit.v0.1"||
+         readingAudit.status!=="automated_english_gloss_reading_distribution_not_lexical_verification"||
+         readingAudit.summary.charactersAudited!==1000||
+         readingAudit.summary.proposedExpressions!==897||
+         readingAudit.summary.subsetReadingLiteralMatchExpressions!==212||
+         readingAudit.summary.subsetReadingLiteralMatchCharacters!==208||
+         readingAudit.summary.independentLexicalApproved!==0||
+         readingAudit.summary.independentEmojiApproved!==0||
+         readingAudit.summary.productionVerified!==0||
+         readingAudit.records.length!==1000||
+         readingAudit.records.some((r,i)=>r.rank!==i+1||
+          r.character!==data.characters[i]?.character||
+          r.productionVerified!==false))
+       throw new Error("Unapproved reading-sensitive research index is inconsistent");
+      readingAuditRows=new Map(readingAudit.records.map(r=>[r.rank,r]));
       if(readiness.schema!=="chromalect.semantic.lexical-review-readiness.v0.1" ||
          readiness.status!=="source_packets_ready_not_approved" ||
          readiness.sourceQueue!=="full-lexical-review-queue-v0.1.json" ||
@@ -449,6 +488,7 @@
       bindMetrics(data.summary);
       bindResearchProgress(lexical.metrics,audit);
       bindPolysemyProgress(polysemy.summary);
+      bindReadingAudit(readingAudit.summary);
       bindReviewReadiness(readiness);
       bindVisibilityProgress(visibility.summary);
       render();
