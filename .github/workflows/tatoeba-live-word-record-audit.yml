@@ -4,6 +4,7 @@ on:
     branches: [main]
     paths:
       - ".github/workflows/tatoeba-live-word-record-audit.yml"
+      - "tools/glyph-pipeline/tatoeba_live_word_record_audit.mjs"
   workflow_dispatch:
 permissions:
   contents: read

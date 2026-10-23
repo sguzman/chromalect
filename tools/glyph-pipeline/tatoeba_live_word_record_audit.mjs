@@ -9,7 +9,11 @@ export function parseSentence(json,credit,word,originalHash){
  if(!x||typeof x!=="object"||String(x.id)!==credit.sentenceId||
     typeof x.text!=="string"||!x.text||typeof x.lang!=="string"||
     typeof x.owner!=="string"||!x.owner||typeof x.license!=="string"||!x.license)
-  return {sentenceId:credit.sentenceId,leadId:credit.leadId,status:"invalid_record_structure",liveRecordChecked:false};
+  return {sentenceId:credit.sentenceId,leadId:credit.leadId,status:"invalid_record_structure",liveRecordChecked:false,
+   structuralDiagnostic:{topLevelKeys:Object.keys(json??{}).slice(0,25),
+    unwrappedKeys:x&&typeof x==="object"?Object.keys(x).slice(0,35):[],
+    fieldTypes:Object.fromEntries(["id","text","lang","owner","license"].map(k=>[k,typeof x?.[k]])),
+    sourceIdMatches:String(x?.id)===credit.sentenceId}};
  const current=sha(x.text);
  return {sentenceId:credit.sentenceId,leadId:credit.leadId,status:"live_record_read",
   sourceURL:credit.sourceURL,sourceOwner:x.owner,pinnedSnapshotContributor:credit.contributor,
