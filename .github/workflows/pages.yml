@@ -436,6 +436,8 @@ jobs:
           node tools/glyph-pipeline/semantic_group_hue_heldout.mjs --write
           node tools/glyph-pipeline/semantic_group_hue_heldout.mjs --check
           node tools/glyph-pipeline/semantic_group_hue_heldout_smoke.mjs
+          node tools/glyph-pipeline/semantic_group_hue_heldout_viewer_smoke.mjs
+          test -s site/semantic-group-hue-heldout.html && test -s site/semantic-group-hue-heldout.js
           test -s site/semantic-group-hue-fivefold-heldout-v0.1.json
           node tools/glyph-pipeline/optimized_glyph_pair_audit.mjs --write
           node tools/glyph-pipeline/optimized_glyph_pair_audit.mjs --check
