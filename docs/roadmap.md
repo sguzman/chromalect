@@ -26,6 +26,7 @@ This is a sequence of **evidence gates**, not a promise to build a large applica
 - [x] Recover 73 additional mappings through source-owned subglyph decompositions, exact catalog identity and vector-geometry checks; retain source provenance and pending-review status.
 - [x] Publish portable per-glyph source ownership records and isolated review images for 8 documented alternate decompositions and 27 partial unknown-source cases. Keep incomplete cases out of the active renderer.
 - [x] Define a proposed three-arm component-color retention research scaffold with untested outcomes and outstanding visual, accessibility, ethics, and preregistration requirements.
+- [x] Build a reproducible first-1,000-glyph independent-review worklist from final source-backed SVG ownership, sorting 26 OKLab proximity warnings in 25 glyphs without modifying colors or claiming certification.
 - [ ] Independently visually audit all 1,000 active stroke ownership mappings and adjudicate retained alternate/partial mapping research cases separately.
 - [ ] Compare plain, identity-only, and independently specified semantic-family variants.
 - [ ] Test legibility, distinctions at real glyph sizes, recall, and transfer.
@@ -38,6 +39,7 @@ This is a sequence of **evidence gates**, not a promise to build a large applica
 - [x] Establish a reversible, source-pinned orthographic Pinyin citation baseline for all 1,171 first-tranche readings, without declaring phonemic or contextual verification.
 - [x] Decode 1,392/1,393 pinned CC-CEDICT numbered Pinyin labels into the same orthographic tokens, preserving the exceptional r5 record and source capitalization.
 - [x] Publish source-aligned citation-tone contour controls with five pinned example readings, leaving context-dependent neutral tone and all learning outcomes unresolved.
+- [x] Source-link a working 21-consonant Pinyin initial-feature codebook and publish a Pinyin / provisional IPA / featural-shape comparison with 3 nonconsonantal spelling conventions kept separate.
 - [ ] Freeze the Mandarin phonological contrast inventory and a phonetic reference notation.
 - [ ] Compare Pinyin/IPA labels, initial-final symbols, and constructed featural glyphs.
 - [ ] Specify a decoding grammar and round-trip tests.

@@ -62,10 +62,10 @@
       "key": "palette-experiment",
       "label": "Component palette experiment",
       "sourceHeadingPrefix": "Phase 1",
-      "complete": 10,
+      "complete": 11,
       "pending": 4,
-      "total": 14,
-      "checklistPercent": 71,
+      "total": 15,
+      "checklistPercent": 73,
       "checkpoints": [
         {
           "description": "Assign 40 unique exact colors to stable component IDs; preserve them in a 513-identity expanded catalog.",
@@ -108,6 +108,10 @@
           "state": "complete"
         },
         {
+          "description": "Build a reproducible first-1,000-glyph independent-review worklist from final source-backed SVG ownership, sorting 26 OKLab proximity warnings in 25 glyphs without modifying colors or claiming certification.",
+          "state": "complete"
+        },
+        {
           "description": "Independently visually audit all 1,000 active stroke ownership mappings and adjudicate retained alternate/partial mapping research cases separately.",
           "state": "pending"
         },
@@ -129,10 +133,10 @@
       "key": "phonetic-notation",
       "label": "Phonetic notation experiment",
       "sourceHeadingPrefix": "Phase 2",
-      "complete": 3,
+      "complete": 4,
       "pending": 5,
-      "total": 8,
-      "checklistPercent": 38,
+      "total": 9,
+      "checklistPercent": 44,
       "checkpoints": [
         {
           "description": "Establish a reversible, source-pinned orthographic Pinyin citation baseline for all 1,171 first-tranche readings, without declaring phonemic or contextual verification.",
@@ -144,6 +148,10 @@
         },
         {
           "description": "Publish source-aligned citation-tone contour controls with five pinned example readings, leaving context-dependent neutral tone and all learning outcomes unresolved.",
+          "state": "complete"
+        },
+        {
+          "description": "Source-link a working 21-consonant Pinyin initial-feature codebook and publish a Pinyin / provisional IPA / featural-shape comparison with 3 nonconsonantal spelling conventions kept separate.",
           "state": "complete"
         },
         {
