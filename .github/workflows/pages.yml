@@ -295,6 +295,11 @@ jobs:
           node tools/glyph-pipeline/phonetic_caution_review_validate_smoke.mjs
           node tools/glyph-pipeline/external_speech_source_registry.mjs --check
           node tools/glyph-pipeline/external_speech_source_registry_smoke.mjs
+          # Keep source-corpus recordings and archives out of the public repository.
+          if git ls-files -- '*.wav' '*.mp3' '*.flac' '*.ogg' '*.opus' '*.m4a' '*.tgz' '*.tar.gz' | grep -q .; then
+            echo "Public repository contains a raw recording or speech archive"
+            exit 1
+          fi
           node --check site/mandarin-speech-sources.js
           node tools/glyph-pipeline/mandarin_speech_sources_viewer_smoke.mjs
           test -s site/mandarin-speech-sources.html
