@@ -445,6 +445,7 @@ jobs:
           node --check site/heldout-blind-color-rehearsal.js
           node tools/glyph-pipeline/heldout_blind_color_core_smoke.mjs
           node tools/glyph-pipeline/heldout_blind_color_rehearsal_viewer_smoke.mjs
+          node tools/glyph-pipeline/heldout_blind_color_export_validate_smoke.mjs
           test -s site/heldout-blind-color-rehearsal.html
           test -s site/heldout-color-warning-review.html
           test -s site/glyphs/research/heldout-warning-v0.1/index-v0.1.json
