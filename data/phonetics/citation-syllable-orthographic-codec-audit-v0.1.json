@@ -1,0 +1,33 @@
+{
+  "schema": "chromalect.phonetics.citation-syllable-orthographic-codec-audit.v0.1",
+  "status": "source_attested_reversible_orthographic_grammar_not_phonemic_decoding",
+  "sources": {
+    "readingTranche": "site/pronunciation-citations-0001-1000.json",
+    "sourceInitialFeatures": "mandarin-initial-feature-candidates-v0.1.json",
+    "sourcePalette": "site/layers-v0.1.json",
+    "externalIndependentPhonologicalReview": false
+  },
+  "grammar": {
+    "initial": "provisional feature tuple or original spelling-only y/w/zero convention",
+    "final": "exact published written final token, not IPA rhyme or phonetic vowel field",
+    "tone": "source-listed tone category 0 through 4, not a sentence contour",
+    "acceptedCombinations": "only observed source citation spelling triples",
+    "noImplicitNormalization": true
+  },
+  "counts": {
+    "sourceCharacters": 1000,
+    "sourceReadings": 1171,
+    "attestedInitialFinalToneTriples": 673,
+    "initialTokens": 24,
+    "finalTokens": 33,
+    "toneTokens": 5,
+    "consonantalInitialOccurrences": 997,
+    "orthographicOnlyOnsetOccurrences": 174,
+    "exactRoundTrips": 1171,
+    "roundTripFailures": 0,
+    "unreviewedFinalPhonologicalCategories": 33,
+    "independentWordContextReadingApprovals": 0,
+    "humanDecodingTrials": 0,
+    "educationalEffectMeasurements": 0
+  }
+}
