@@ -40,13 +40,15 @@
 <main class="wrap lexical-study">
 <div class="eyebrow">Research worksheet · character senses</div>
 <h1>Mandarin lexical sense alignment</h1>
-<p class="intro lexical-study-intro">Examine a character's proposed English meaning against the pinned independent dictionary excerpt, <strong>without first seeing the emoji or the assistant's previous analysis</strong>. This worksheet is for the 248 flagged meanings awaiting lexical review.</p>
+<p class="intro lexical-study-intro">Examine a character's proposed English meaning against the pinned independent dictionary excerpt, <strong>without first seeing the emoji or the assistant's previous analysis</strong>. This worksheet covers all 897 provisional meaning candidates, including 248 dictionary discrepancies and 649 literal wording matches. All still require independent review.</p>
 <div class="lexical-study-fineprint"><strong>Not production approval:</strong> Answers remain local until an explicit JSON export. This interface never changes the source ledger, review counts, or production status. A supported/unsupported choice is a preliminary reviewer observation; independently corroborated lexical evidence and documented adjudication are still needed. Starting a new session discards unexported responses.</div>
 <div data-character-layer-controls></div>
 <div class="lexical-study-setup">
 <label>Review queue
 <select id="lexical-study-scope">
-<option value="all">All 248 flagged senses</option>
+<option value="all">All 897 candidate senses</option>
+<option value="flagged">248 dictionary discrepancies</option>
+<option value="matched">649 literal wording matches (unverified)</option>
 <option value="high">Higher-priority cases</option>
 <option value="medium">Medium-priority cases</option>
 <option value="unclassified">Unclassified cases</option>
@@ -93,7 +95,7 @@
 </div>
 </section>
 </div>
-<p class="lexical-study-note">Source: <a href="semantic/sense-review-queue-v0.1.json">248-item machine-readable priority queue</a> · <a href="semantic-coverage.html">Mandarin semantic browser</a> · <a href="https://github.com/sguzman/chromalect/blob/main/docs/mandarin-lexical-review-protocol.md">Review methodology</a>. CC-CEDICT excerpt data is CC BY-SA 4.0; Unicode source definitions retain their original licensing. Do not confuse preliminary observations with independently accepted senses.</p>
+<p class="lexical-study-note">Source: <a href="semantic/full-lexical-review-queue-v0.1.json">897-sense blind source-review queue</a> · <a href="semantic/sense-review-queue-v0.1.json">248-item discrepancy subset</a> · <a href="semantic-coverage.html">Mandarin semantic browser</a> · <a href="https://github.com/sguzman/chromalect/blob/main/docs/mandarin-lexical-review-protocol.md">Review methodology</a>. CC-CEDICT excerpt data is CC BY-SA 4.0; Unicode source definitions retain their original licensing. Do not confuse preliminary observations with independently accepted senses.</p>
 </main>
 <footer class="wrap"><a href="index.html">Chromalect overview</a> · <a href="semantic-coverage.html">Semantic research</a></footer>
 </body>
