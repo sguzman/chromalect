@@ -3,7 +3,7 @@
 "use strict";
 const $=id=>document.getElementById(id);
 if(!$("tone-mode")||!$("tone-status")||!$("tone-results"))return;
-let data=null,palette=null;
+let data=null,palette=null,isolation=null;
 function draw(){
  const mode=$("tone-mode").value;
  if(!data?.comparisonModes.includes(mode))throw Error("Invalid presentation mode");
@@ -12,7 +12,7 @@ function draw(){
   const card=document.createElement("article"),heading=document.createElement("h2"),
    visual=document.createElement("div"),note=document.createElement("p");
   card.className="tone-card";visual.className="tone-visual";note.className="tone-note";
-  heading.textContent="T"+tone.token+" · "+tone.name+" · "+tone.firstSourceExample.character+" "+tone.firstSourceExample.pinyin;
+  heading.textContent="T"+tone.token+" · "+tone.name+" · "+tone.firstSourceExample.character+" "+tone.firstSourceExample.pinyin+" · "+isolation.records[Number(tone.token)].sourceCitationOccurrences+" listed source readings";
   note.textContent=tone.note+(tone.levels?" · idealized contour "+tone.levels.join("–"):"");
   if(mode==="plain"||mode==="symbol"||tone.levels===null&&mode==="contour"){
    const p=document.createElement("span");p.className="tone-display";
@@ -48,15 +48,36 @@ function draw(){
   card.appendChild(heading);card.appendChild(visual);card.appendChild(note);
   $("tone-results").appendChild(card);
  }
- $("tone-status").textContent="Five citation-tone categories · "+mode+" presentation · no measured speech or learning outcomes.";
+ $("tone-status").textContent="Five isolated citation-tone labels · 1,171 pinned readings · "+mode+" presentation · 0 verified acoustic or human outcomes.";
 }
 async function load(){
  try{
   const responses=await Promise.all([
    fetch("phonetics/mandarin-citation-tone-contours-v0.1.json"),
-   fetch("layers-v0.1.json")]);
+   fetch("layers-v0.1.json"),
+   fetch("phonetics/citation-tone-isolation-audit-v0.1.json")]);
   if(responses.some(x=>!x.ok))throw Error("Missing source data");
-  [data,palette]=await Promise.all(responses.map(x=>x.json()));
+  [data,palette,isolation]=await Promise.all(responses.map(x=>x.json()));
+  if(isolation.schema!=="chromalect.phonetics.citation-tone-isolation-audit.v0.1"||
+     isolation.status!=="source_citation_labels_and_distinct_idealized_pitches_not_automatic_perceptual_or_contextual_validation"||
+     isolation.summary.sourceCitationReadings!==1171||
+     isolation.summary.toneCategories!==5||
+     isolation.summary.machineDistinctContourShapes!==4||
+     isolation.summary.undefinedNeutralContourCategories!==1||
+     isolation.summary.independentPhoneticToneCertifications!==0||
+     isolation.summary.contextualToneApprovals!==0||
+     isolation.summary.humanToneDiscriminationTrials!==0||
+     isolation.summary.learningStudyEvidence!==0||
+     isolation.separation.noInitialFeatureClassificationRequired!==true||
+     isolation.separation.noFinalFeatureClassificationRequired!==true||
+     !Array.isArray(isolation.records)||isolation.records.length!==5||
+     isolation.records.reduce((n,x)=>n+x.sourceCitationOccurrences,0)!==1171||
+     isolation.records.some((r,i)=>r.token!==String(i)||
+       r.independentlyAcousticallyCalibrated!==false||
+       r.contextualSandhiApproved!==false||
+       r.humanPerceptionAccuracy!==null||
+       JSON.stringify(r.idealizedLevels)!==JSON.stringify(data.tones[i].levels)))
+   throw Error("Isolated source citation tone evidence incomplete");
   if(data.schema!=="chromalect.phonetics.mandarin-citation-tone-contours.v0.1"||
      data.status!=="idealized_pedagogical_citation_pitch_contours_not_acoustic_or_contextual_measurements"||
      !Array.isArray(data.tones)||data.tones.length!==5||
