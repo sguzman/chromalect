@@ -11,7 +11,7 @@ const dataset={
  status:"build_derived_source_review_priority_not_independent_visual_certification",
  provenance:{paletteVersion:"mandarin-component-identity@0.6.0"},
  summary:{catalogCharacters:1000,mappedSourceGlyphs:1000,reviewTiers:Object.fromEntries(priorities.map(k=>[k,0])),
- independentlyVisuallyCertified:0,independentlyLinguisticallyCertified:0,eligibleLearningStudyItems:0},
+ independentlyVisuallyCertified:0,independentlyLinguisticallyCertified:0,eligibleLearningStudyItems:0,colorContrastWarningPairs:4},
  records:[]
 };
 for(let i=1;i<=1000;i++){
@@ -22,6 +22,11 @@ for(let i=1;i<=1000;i++){
   decomposition:"⿰亻也",componentIds:["cmp-0001","cmp-0002"],strokeCount:5,
   sourceAlignmentMethod:"direct_source_decomposition_ownership",
   automaticGeometryFlags:tier==="automatic_geometry_flag"?["nearby_component_colors"]:[],
+  closeColorPairs:tier==="automatic_geometry_flag"?1:0,
+  colorContrastWarnings:tier==="automatic_geometry_flag"?[{
+    componentA:{id:"cmp-0001",form:"木",hex:"#111111"},
+    componentB:{id:"cmp-0002",form:"土",hex:"#151515"},oklabDistance:0.03}]:[],
+  closestOklabDistance:tier==="automatic_geometry_flag"?0.03:null,
   independentVisualReview:"pending",independentLinguisticReview:"pending",eligibleForLearningStudy:false});
 }
 class Element{
@@ -42,6 +47,7 @@ const view=setup();await settle(view);
 assert.equal(view["audit-results"].children.length,48);
 assert.match(view["audit-summary"].textContent,/approvals: zero/);
 assert.match(view["audit-results"].children[0].children[2].textContent,/Source:/);
+assert.match(view["audit-results"].children[0].children[4].children[0].children[4].textContent,/ΔOK 0.0300/);
 assert.equal(view["audit-results"].children[0].children[1].children[1].children[0].src,
  "glyphs/"+dataset.records[0].svg);
 view["audit-tier"].value="automatic_geometry_flag";view["audit-tier"].events.change();

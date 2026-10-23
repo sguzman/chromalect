@@ -20,7 +20,10 @@ const review={schema:"chromalect.geometry-review.v1",total_glyphs:2,
  {character:"一",decomposition:"一",component_ids:["cmp-0171"],stroke_count:1,
  geometry_review_flags:[],component_color_pairs_below_0_07_oklab:[],independently_visually_reviewed:false},
  {character:"好",decomposition:"⿰女子",component_ids:["cmp-0014","cmp-0015"],stroke_count:2,
- geometry_review_flags:["nearby_component_colors"],component_color_pairs_below_0_07_oklab:[{oklab_distance:0.02}],
+ geometry_review_flags:["nearby_component_colors"],component_color_pairs_below_0_07_oklab:[{
+ oklab_distance:0.02,review_only:true,
+ component_a:{id:"cmp-0014",form:"女",hex:"#AABBCC"},
+ component_b:{id:"cmp-0015",form:"子",hex:"#CCAABB"}}],
  independently_visually_reviewed:false}
 ]};
 const coverage={schema:"chromalect.glyph-coverage.v1",palette:"mandarin-component-identity@0.6.0",
@@ -33,6 +36,9 @@ assert.equal(valid.summary.catalogCharacters,2);
 assert.equal(valid.summary.reviewTiers.automatic_geometry_flag,1);
 assert.equal(valid.summary.reviewTiers.atomic_or_single_component,1);
 assert.equal(valid.summary.independentlyVisuallyCertified,0);
+assert.equal(valid.summary.colorContrastWarningPairs,1);
+assert.equal(valid.records[0].closestOklabDistance,0.02);
+assert.equal(valid.records[0].colorContrastWarnings[0].componentA.id,"cmp-0014");
 assert.equal(valid.summary.eligibleLearningStudyItems,0);
 assert.ok(valid.records.every(x=>x.independentVisualReview==="pending"&&!x.eligibleForLearningStudy));
 const reject=(sourceIndex,fn)=>{
@@ -45,4 +51,6 @@ reject(1,d=>d.glyphs[0].source_path_owner_ids=["cmp-9999"]);
 reject(1,d=>d.glyphs[1].alignment_method="unknown");
 reject(2,d=>d.glyphs[1].component_ids=["cmp-0015","cmp-0014"]);
 reject(3,d=>d.unmapped_count=1);
+reject(2,d=>d.glyphs[1].component_color_pairs_below_0_07_oklab[0].oklab_distance=0.071);
+reject(2,d=>d.glyphs[1].component_color_pairs_below_0_07_oklab[0].component_a.id="cmp-9999");
 console.log("Build-generated independent visual review worklist: identities, warnings, priority, no approvals.");

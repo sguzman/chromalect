@@ -73,6 +73,21 @@ export function deriveReviewWorklist(catalog,mappings,report,coverage){
   assert.ok(mapping.source_path_owner_ids.every(x=>owned.has(x)));
   assert.ok(mapping.components.every(x=>/^#[0-9a-f]{6}$/i.test(x.hex)&&/^cmp-\d{4}$/.test(x.component_id)));
   assert.ok(typeof mapping.svg==="string"&&/^[^/\\]+\.svg$/u.test(mapping.svg));
+  const colorWarnings=review.component_color_pairs_below_0_07_oklab.map(pair=>{
+   assert.ok(pair&&pair.review_only===true);
+   const a=pair.component_a,b=pair.component_b;
+   assert.ok(owned.has(a.id)&&owned.has(b.id)&&a.id!==b.id);
+   assert.ok(Number.isFinite(pair.oklab_distance)&&pair.oklab_distance>=0&&pair.oklab_distance<0.07);
+   const itemA=mapping.components.find(x=>x.component_id===a.id);
+   const itemB=mapping.components.find(x=>x.component_id===b.id);
+   assert.equal(a.hex,itemA.hex);assert.equal(a.form,itemA.form);
+   assert.equal(b.hex,itemB.hex);assert.equal(b.form,itemB.form);
+   return {componentA:{id:a.id,form:a.form,hex:a.hex},componentB:{id:b.id,form:b.form,hex:b.hex},
+     oklabDistance:pair.oklab_distance};
+  }).sort((a,b)=>a.oklabDistance-b.oklabDistance);
+  if(review.geometry_review_flags.includes("nearby_component_colors"))
+   assert.ok(colorWarnings.length>0);
+  else assert.equal(colorWarnings.length,0);
   const triage=classify(mapping,review);
   rows.push({rank:source.rank,character:source.character,svg:mapping.svg,
    decomposition:mapping.decomposition,componentIds:mapping.components.map(x=>x.component_id),
@@ -80,12 +95,16 @@ export function deriveReviewWorklist(catalog,mappings,report,coverage){
    sourceCategory:mapping.assignment_status,
    sourceOwnershipProvider:mapping.ownership_provenance?.provider??null,
    automaticGeometryFlags:review.geometry_review_flags,
-   closeColorPairs:review.component_color_pairs_below_0_07_oklab.length,
+   closeColorPairs:colorWarnings.length,
+   colorContrastWarnings:colorWarnings,
+   closestOklabDistance:colorWarnings.length?colorWarnings[0].oklabDistance:null,
    reviewTier:triage.key,reviewPriority:triage.priority,
    independentVisualReview:"pending",independentLinguisticReview:"pending",
    eligibleForLearningStudy:false});
  }
- rows.sort((a,b)=>a.reviewPriority-b.reviewPriority||a.rank-b.rank);
+ rows.sort((a,b)=>a.reviewPriority-b.reviewPriority||
+  (a.reviewTier==="automatic_geometry_flag"&&b.reviewTier==="automatic_geometry_flag"?
+    (a.closestOklabDistance??1)-(b.closestOklabDistance??1):0)||a.rank-b.rank);
  const keys=["automatic_geometry_flag","documented_source_alternative",
   "secondary_chinese_source","subglyph_geometry_reconciliation",
   "standard_multicomponent","atomic_or_single_component"];
@@ -104,7 +123,8 @@ export function deriveReviewWorklist(catalog,mappings,report,coverage){
   summary:{catalogCharacters:coverage.catalog_size,mappedSourceGlyphs:rows.length,
     sourceMappedAtomic:coverage.source_aligned_atomic,
     sourceMappedMulticomponent:coverage.source_aligned_multicomponent,
-    reviewTiers:count,independentlyVisuallyCertified:0,
+    reviewTiers:count,colorContrastWarningPairs:rows.reduce((n,x)=>n+x.closeColorPairs,0),
+    independentlyVisuallyCertified:0,
     independentlyLinguisticallyCertified:0,eligibleLearningStudyItems:0},
   records:rows};
 }

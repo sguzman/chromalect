@@ -48,6 +48,22 @@ function draw(){
   flags.textContent=r.automaticGeometryFlags.length?
    "Machine warnings: "+r.automaticGeometryFlags.join(", "):
    "No machine geometry warning; still awaiting independent review";
+  if(r.colorContrastWarnings.length){
+   const note=document.createElement("div");note.className="audit-contrast";
+   for(const pair of r.colorContrastWarnings){
+    const line=document.createElement("div"),a=document.createElement("span"),
+     b=document.createElement("span"),nameA=document.createElement("span"),nameB=document.createElement("span");
+    a.className="audit-swatch";b.className="audit-swatch";
+    a.style.backgroundColor=pair.componentA.hex;b.style.backgroundColor=pair.componentB.hex;
+    nameA.textContent=pair.componentA.form+" ("+pair.componentA.id+")";
+    nameB.textContent=pair.componentB.form+" ("+pair.componentB.id+")";
+    line.appendChild(a);line.appendChild(nameA);line.appendChild(b);line.appendChild(nameB);
+    const distance=document.createElement("span");
+    distance.textContent="ΔOK "+pair.oklabDistance.toFixed(4)+" · automatic proximity, not a perceptual verdict";
+    line.appendChild(distance);note.appendChild(line);
+   }
+   card.appendChild(note);
+  }
   link.href="glyphs/"+r.svg;link.textContent="Inspect source SVG";
   card.appendChild(head);card.appendChild(comparison);card.appendChild(meta);
   card.appendChild(flags);card.appendChild(link);
@@ -81,10 +97,20 @@ async function load(){
      r.eligibleForLearningStudy!==false||
      !/^[^/\\]+\.svg$/u.test(r.svg)||
      !Array.isArray(r.componentIds)||!r.componentIds.length||
-     !Array.isArray(r.automaticGeometryFlags))
+     !Array.isArray(r.automaticGeometryFlags)||
+     !Array.isArray(r.colorContrastWarnings)||
+     r.colorContrastWarnings.length!==r.closeColorPairs||
+     (r.closestOklabDistance===null)!==(r.closeColorPairs===0)||
+     (r.closeColorPairs>0&&r.colorContrastWarnings.some(p=>
+       !Number.isFinite(p.oklabDistance)||p.oklabDistance<0||p.oklabDistance>=0.07||
+       !/^#[0-9a-f]{6}$/i.test(p.componentA.hex)||
+       !/^#[0-9a-f]{6}$/i.test(p.componentB.hex)||
+       !r.componentIds.includes(p.componentA.id)||!r.componentIds.includes(p.componentB.id))) )
     throw Error("Unverified glyph review record or duplicate source identity");
    seen.add(r.character);ranks.add(r.rank);counts[r.reviewTier]++;
   }
+  if(d.records.reduce((n,r)=>n+r.closeColorPairs,0)!==d.summary.colorContrastWarningPairs)
+   throw Error("Perceptual warning pairs missing or inflated");
   if(allowed.some(k=>counts[k]!==d.summary.reviewTiers[k]))
    throw Error("Review priority counts do not match individual source rows");
   records=d.records;

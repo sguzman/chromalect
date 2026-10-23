@@ -16,3 +16,7 @@ The source-first review order is:
 The same glyph appears only once, even when several review flags are present. Any automatic flag remains non-certifying. No source material is changed, and **all 1,000 glyphs are still pending independent visual and linguistic inspection**. A pipeline-generated list does not make glyphs eligible for participant studies.
 
 The generated index should be checked with `--check` after production and preserved as part of the deployment. Machine-readable group counts are factual checks on the build output, not a completion score for independent review.
+
+## Recorded OKLab proximity measurements
+
+The dated October 23, 2026 source-backed Pages generation reported 25 first-tranche glyphs with 26 distinct component-color proximity pairs below ΔOK 0.07, spanning 0.0224 through 0.0692 in OKLab distance. These are **machine thresholds, not perceptual thresholds established by human subjects**. All warnings in that build are for close colors, not geometry-order flags. The worklist retains each flagged pair's original, immutable v0.6 component IDs, source colors, and recorded distance. Flagged rows are sorted by the smallest observed distance, then by source rank. No palette colors are reassigned.
