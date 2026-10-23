@@ -1,0 +1,586 @@
+{
+  "schema": "chromalect.semantic.publisher-reading-label-comparison.v0.1",
+  "status": "mechanical_pinyin_display_comparison_not_lexical_adjudication",
+  "source": {
+    "publisherPages": "publisher-page-provenance-v0.2.json",
+    "canonicalReadingLabels": "pinyin-reading-label-normalization-v0.1.json"
+  },
+  "caveats": [
+    "Tonemark rendering and case folding compare written pronunciation labels, not usage roles or lexical senses.",
+    "Publisher basic-entry lists are not complete inventories of historical, regional, or specialized readings.",
+    "The surname-tone disagreement for 过 remains unresolved even though ordinary guò is shared by both sources.",
+    "No publisher-only label is imported into the canonical Mandarin profile."
+  ],
+  "summary": {
+    "checkedCharacters": 23,
+    "checkedExternalPages": 27,
+    "matchingProminentLabelSets": 21,
+    "publisherAdditionalLabelSets": 2,
+    "publisherMissingPinnedLabelSets": 0,
+    "independentLexicalApproved": 0,
+    "emojiComprehensionApproved": 0,
+    "productionVerified": 0
+  },
+  "records": [
+    {
+      "rank": 127,
+      "character": "长",
+      "pinnedNumberedLabels": [
+        "chang2",
+        "zhang3"
+      ],
+      "pinnedNormalizedLabels": [
+        "cháng",
+        "zhǎng"
+      ],
+      "publisherProminentLabels": [
+        "cháng",
+        "zhǎng"
+      ],
+      "publisherOnlyLabels": [],
+      "pinnedOnlyLabels": [],
+      "alignment": "same_displayed_reading_labels",
+      "sourceUrls": [
+        "https://zdic.net/hans/%E9%95%BF"
+      ],
+      "lexicalApproval": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 142,
+      "character": "从",
+      "pinnedNumberedLabels": [
+        "Cong2",
+        "cong2",
+        "zong4"
+      ],
+      "pinnedNormalizedLabels": [
+        "cóng",
+        "zòng"
+      ],
+      "publisherProminentLabels": [
+        "cóng",
+        "zòng"
+      ],
+      "publisherOnlyLabels": [],
+      "pinnedOnlyLabels": [],
+      "alignment": "same_displayed_reading_labels",
+      "sourceUrls": [
+        "https://zdic.net/hans/%E4%BB%8E",
+        "https://zdic.net/hans/%E5%BE%9E"
+      ],
+      "lexicalApproval": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 164,
+      "character": "火",
+      "pinnedNumberedLabels": [
+        "Huo3",
+        "huo3"
+      ],
+      "pinnedNormalizedLabels": [
+        "huǒ"
+      ],
+      "publisherProminentLabels": [
+        "huǒ"
+      ],
+      "publisherOnlyLabels": [],
+      "pinnedOnlyLabels": [],
+      "alignment": "same_displayed_reading_labels",
+      "sourceUrls": [
+        "https://zdic.net/hans/%E7%81%AB"
+      ],
+      "lexicalApproval": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 201,
+      "character": "扒",
+      "pinnedNumberedLabels": [
+        "ba1",
+        "pa2"
+      ],
+      "pinnedNormalizedLabels": [
+        "bā",
+        "pá"
+      ],
+      "publisherProminentLabels": [
+        "bā",
+        "pá"
+      ],
+      "publisherOnlyLabels": [],
+      "pinnedOnlyLabels": [],
+      "alignment": "same_displayed_reading_labels",
+      "sourceUrls": [
+        "https://zdic.net/hans/%E6%89%92",
+        "https://dict.concised.moe.edu.tw/dictView.jsp?ID=23&la=0&powerMode=0",
+        "https://dict.concised.moe.edu.tw/dictView.jsp?ID=2401&la=0&powerMode=0"
+      ],
+      "lexicalApproval": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 231,
+      "character": "业",
+      "pinnedNumberedLabels": [
+        "Ye4",
+        "ye4"
+      ],
+      "pinnedNormalizedLabels": [
+        "yè"
+      ],
+      "publisherProminentLabels": [
+        "yè"
+      ],
+      "publisherOnlyLabels": [],
+      "pinnedOnlyLabels": [],
+      "alignment": "same_displayed_reading_labels",
+      "sourceUrls": [
+        "https://zdic.net/hans/%E4%B8%9A"
+      ],
+      "lexicalApproval": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 339,
+      "character": "发",
+      "pinnedNumberedLabels": [
+        "fa1",
+        "fa4"
+      ],
+      "pinnedNormalizedLabels": [
+        "fà",
+        "fā"
+      ],
+      "publisherProminentLabels": [
+        "fà",
+        "fā"
+      ],
+      "publisherOnlyLabels": [],
+      "pinnedOnlyLabels": [],
+      "alignment": "same_displayed_reading_labels",
+      "sourceUrls": [
+        "https://zdic.net/hans/%E5%8F%91"
+      ],
+      "lexicalApproval": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 379,
+      "character": "过",
+      "pinnedNumberedLabels": [
+        "Guo4",
+        "guo4",
+        "guo5"
+      ],
+      "pinnedNormalizedLabels": [
+        "guo",
+        "guò"
+      ],
+      "publisherProminentLabels": [
+        "guo",
+        "guò",
+        "guō"
+      ],
+      "publisherOnlyLabels": [
+        "guō"
+      ],
+      "pinnedOnlyLabels": [],
+      "alignment": "publisher_has_additional_prominent_labels",
+      "sourceUrls": [
+        "https://zdic.net/hans/%E8%BF%87"
+      ],
+      "lexicalApproval": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 401,
+      "character": "成",
+      "pinnedNumberedLabels": [
+        "Cheng2",
+        "cheng2"
+      ],
+      "pinnedNormalizedLabels": [
+        "chéng"
+      ],
+      "publisherProminentLabels": [
+        "chéng"
+      ],
+      "publisherOnlyLabels": [],
+      "pinnedOnlyLabels": [],
+      "alignment": "same_displayed_reading_labels",
+      "sourceUrls": [
+        "https://zdic.net/hans/%E6%88%90"
+      ],
+      "lexicalApproval": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 407,
+      "character": "划",
+      "pinnedNumberedLabels": [
+        "hua2",
+        "hua4"
+      ],
+      "pinnedNormalizedLabels": [
+        "huà",
+        "huá"
+      ],
+      "publisherProminentLabels": [
+        "huà",
+        "huá"
+      ],
+      "publisherOnlyLabels": [],
+      "pinnedOnlyLabels": [],
+      "alignment": "same_displayed_reading_labels",
+      "sourceUrls": [
+        "https://zdic.net/hans/%E5%88%92"
+      ],
+      "lexicalApproval": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 418,
+      "character": "当",
+      "pinnedNumberedLabels": [
+        "dang1",
+        "dang4"
+      ],
+      "pinnedNormalizedLabels": [
+        "dàng",
+        "dāng"
+      ],
+      "publisherProminentLabels": [
+        "dàng",
+        "dāng"
+      ],
+      "publisherOnlyLabels": [],
+      "pinnedOnlyLabels": [],
+      "alignment": "same_displayed_reading_labels",
+      "sourceUrls": [
+        "https://zdic.net/hans/%E5%BD%93"
+      ],
+      "lexicalApproval": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 460,
+      "character": "伏",
+      "pinnedNumberedLabels": [
+        "Fu2",
+        "fu2"
+      ],
+      "pinnedNormalizedLabels": [
+        "fú"
+      ],
+      "publisherProminentLabels": [
+        "fú"
+      ],
+      "publisherOnlyLabels": [],
+      "pinnedOnlyLabels": [],
+      "alignment": "same_displayed_reading_labels",
+      "sourceUrls": [
+        "https://zdic.net/hans/%E4%BC%8F"
+      ],
+      "lexicalApproval": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 511,
+      "character": "冲",
+      "pinnedNumberedLabels": [
+        "chong1",
+        "chong4"
+      ],
+      "pinnedNormalizedLabels": [
+        "chòng",
+        "chōng"
+      ],
+      "publisherProminentLabels": [
+        "chòng",
+        "chōng"
+      ],
+      "publisherOnlyLabels": [],
+      "pinnedOnlyLabels": [],
+      "alignment": "same_displayed_reading_labels",
+      "sourceUrls": [
+        "https://zdic.net/hans/%E5%86%B2"
+      ],
+      "lexicalApproval": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 518,
+      "character": "齐",
+      "pinnedNumberedLabels": [
+        "Qi2",
+        "qi2"
+      ],
+      "pinnedNormalizedLabels": [
+        "qí"
+      ],
+      "publisherProminentLabels": [
+        "jì",
+        "qí",
+        "zhāi",
+        "zī"
+      ],
+      "publisherOnlyLabels": [
+        "jì",
+        "zhāi",
+        "zī"
+      ],
+      "pinnedOnlyLabels": [],
+      "alignment": "publisher_has_additional_prominent_labels",
+      "sourceUrls": [
+        "https://zdic.net/hans/%E9%BD%90"
+      ],
+      "lexicalApproval": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 549,
+      "character": "安",
+      "pinnedNumberedLabels": [
+        "An1",
+        "an1"
+      ],
+      "pinnedNormalizedLabels": [
+        "ān"
+      ],
+      "publisherProminentLabels": [
+        "ān"
+      ],
+      "publisherOnlyLabels": [],
+      "pinnedOnlyLabels": [],
+      "alignment": "same_displayed_reading_labels",
+      "sourceUrls": [
+        "https://zdic.net/hans/%E5%AE%89"
+      ],
+      "lexicalApproval": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 566,
+      "character": "尽",
+      "pinnedNumberedLabels": [
+        "jin3",
+        "jin4"
+      ],
+      "pinnedNormalizedLabels": [
+        "jìn",
+        "jǐn"
+      ],
+      "publisherProminentLabels": [
+        "jìn",
+        "jǐn"
+      ],
+      "publisherOnlyLabels": [],
+      "pinnedOnlyLabels": [],
+      "alignment": "same_displayed_reading_labels",
+      "sourceUrls": [
+        "https://zdic.net/hans/%E5%B0%BD"
+      ],
+      "lexicalApproval": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 593,
+      "character": "约",
+      "pinnedNumberedLabels": [
+        "yao1",
+        "yue1"
+      ],
+      "pinnedNormalizedLabels": [
+        "yuē",
+        "yāo"
+      ],
+      "publisherProminentLabels": [
+        "yuē",
+        "yāo"
+      ],
+      "publisherOnlyLabels": [],
+      "pinnedOnlyLabels": [],
+      "alignment": "same_displayed_reading_labels",
+      "sourceUrls": [
+        "https://zdic.net/hans/%E7%BA%A6"
+      ],
+      "lexicalApproval": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 595,
+      "character": "纪",
+      "pinnedNumberedLabels": [
+        "Ji3",
+        "ji4"
+      ],
+      "pinnedNormalizedLabels": [
+        "jì",
+        "jǐ"
+      ],
+      "publisherProminentLabels": [
+        "jì",
+        "jǐ"
+      ],
+      "publisherOnlyLabels": [],
+      "pinnedOnlyLabels": [],
+      "alignment": "same_displayed_reading_labels",
+      "sourceUrls": [
+        "https://zdic.net/hans/%E7%BA%AA"
+      ],
+      "lexicalApproval": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 751,
+      "character": "别",
+      "pinnedNumberedLabels": [
+        "Bie2",
+        "bie2",
+        "bie4"
+      ],
+      "pinnedNormalizedLabels": [
+        "biè",
+        "bié"
+      ],
+      "publisherProminentLabels": [
+        "biè",
+        "bié"
+      ],
+      "publisherOnlyLabels": [],
+      "pinnedOnlyLabels": [],
+      "alignment": "same_displayed_reading_labels",
+      "sourceUrls": [
+        "https://zdic.net/hans/%E5%88%AB"
+      ],
+      "lexicalApproval": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 777,
+      "character": "作",
+      "pinnedNumberedLabels": [
+        "zuo1",
+        "zuo4"
+      ],
+      "pinnedNormalizedLabels": [
+        "zuò",
+        "zuō"
+      ],
+      "publisherProminentLabels": [
+        "zuò",
+        "zuō"
+      ],
+      "publisherOnlyLabels": [],
+      "pinnedOnlyLabels": [],
+      "alignment": "same_displayed_reading_labels",
+      "sourceUrls": [
+        "https://zdic.net/hans/%E4%BD%9C"
+      ],
+      "lexicalApproval": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 825,
+      "character": "系",
+      "pinnedNumberedLabels": [
+        "xi4",
+        "ji4"
+      ],
+      "pinnedNormalizedLabels": [
+        "jì",
+        "xì"
+      ],
+      "publisherProminentLabels": [
+        "jì",
+        "xì"
+      ],
+      "publisherOnlyLabels": [],
+      "pinnedOnlyLabels": [],
+      "alignment": "same_displayed_reading_labels",
+      "sourceUrls": [
+        "https://zdic.net/hans/%E7%B3%BB"
+      ],
+      "lexicalApproval": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 848,
+      "character": "闷",
+      "pinnedNumberedLabels": [
+        "men1",
+        "men4"
+      ],
+      "pinnedNormalizedLabels": [
+        "mèn",
+        "mēn"
+      ],
+      "publisherProminentLabels": [
+        "mèn",
+        "mēn"
+      ],
+      "publisherOnlyLabels": [],
+      "pinnedOnlyLabels": [],
+      "alignment": "same_displayed_reading_labels",
+      "sourceUrls": [
+        "https://zdic.net/hans/%E9%97%B7"
+      ],
+      "lexicalApproval": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 905,
+      "character": "尾",
+      "pinnedNumberedLabels": [
+        "wei3",
+        "yi3"
+      ],
+      "pinnedNormalizedLabels": [
+        "wěi",
+        "yǐ"
+      ],
+      "publisherProminentLabels": [
+        "wěi",
+        "yǐ"
+      ],
+      "publisherOnlyLabels": [],
+      "pinnedOnlyLabels": [],
+      "alignment": "same_displayed_reading_labels",
+      "sourceUrls": [
+        "https://zdic.net/hans/%E5%B0%BE",
+        "https://dict.revised.moe.edu.tw/dictView.jsp?ID=10587&word=%3D%E5%B0%BE"
+      ],
+      "lexicalApproval": false,
+      "productionVerified": false
+    },
+    {
+      "rank": 953,
+      "character": "抹",
+      "pinnedNumberedLabels": [
+        "ma1",
+        "mo3",
+        "mo4"
+      ],
+      "pinnedNormalizedLabels": [
+        "mò",
+        "mā",
+        "mǒ"
+      ],
+      "publisherProminentLabels": [
+        "mò",
+        "mā",
+        "mǒ"
+      ],
+      "publisherOnlyLabels": [],
+      "pinnedOnlyLabels": [],
+      "alignment": "same_displayed_reading_labels",
+      "sourceUrls": [
+        "https://zdic.net/hans/%E6%8A%B9"
+      ],
+      "lexicalApproval": false,
+      "productionVerified": false
+    }
+  ]
+}
