@@ -83,6 +83,17 @@ ui["vsc-forward"].listeners.click();
 assert.match(ui["vsc-count"].textContent,/3 \/ 1,000/);
 ui["vsc-back"].listeners.click();
 assert.match(ui["vsc-count"].textContent,/2 \/ 1,000/);
+ui["vsc-pick"].value="82";ui["vsc-pick"].listeners.change();
+assert.equal(ui["vsc-sense"].children.length,2);
+assert.match(ui["vsc-sense"].children[0].textContent,/clouds/);
+assert.match(ui["vsc-sense"].children[1].textContent,/say/);
+const originalCue=ui["vsc-panels"].children[2].children[2].children[1].attrs["aria-label"];
+ui["vsc-sense"].value="1";ui["vsc-sense"].listeners.change();
+const alternativeCue=ui["vsc-panels"].children[2].children[2].children[1].attrs["aria-label"];
+assert.notEqual(originalCue,alternativeCue);
+assert.match(alternativeCue,/say/);
+assert.equal(shape(ui["vsc-panels"].children[1]).children[0].src,
+ shape(ui["vsc-panels"].children[2]).children[0].src);
 function refuse(change){
  const a=structuredClone(profile),b=structuredClone(semantic);
  change(a,b);return start(a,b);
