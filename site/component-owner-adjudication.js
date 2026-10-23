@@ -5,7 +5,7 @@ const pairing=globalThis.ChromalectBlindColorRehearsal;
 const identification=globalThis.ChromalectComponentIdentificationRehearsal;
 const audit=globalThis.ChromalectOwnerAdjudication;
 const $=id=>document.getElementById(id);
-const names=["oa-status","oa-target","oa-meta","oa-size","oa-grid","oa-source","oa-locator","oa-fold",
+const names=["oa-status","oa-filter","oa-cohort-count","oa-target","oa-meta","oa-size","oa-grid","oa-source","oa-locator","oa-fold",
  "oa-owner","oa-complement","oa-complement-meta","oa-judgment","oa-evidence","oa-rationale","oa-save","oa-count","oa-export","oa-output"];
 if(names.some(id=>!$(id)))return;
 const status=x=>{$("oa-status").textContent=x;};
@@ -15,7 +15,25 @@ function updateSize(){
  if(!pixelSizes.has(n))throw Error("Unrecognized source comparison pixel size");
  $("oa-grid").style.setProperty("--oa-glyph-size",n+"px");
 }
-let manifest=null,targets=[],selected=null,notes=new Map(),complements=new Map();
+const validCohorts=new Set(["all","introduced","resolved","retained"]);
+let activeCohort="all",manifest=null,targets=[],selected=null,
+ notes=new Map(),complements=new Map();
+function showCohort(cohort){
+ if(!validCohorts.has(cohort))throw Error("Unrecognized source warning cohort");
+ const rows=targets.filter(t=>cohort==="all"||t.reviewState===cohort);
+ if(!rows.length)throw Error("Empty source-owned warning cohort");
+ $("oa-target").replaceChildren();
+ for(const t of rows){
+  const option=document.createElement("option");
+  option.value=t.id;
+  option.textContent="#"+t.rank+" · "+t.character+
+   " · "+t.offeredComponents.map(x=>x.form).join(" / ");
+  $("oa-target").appendChild(option);
+ }
+ $("oa-cohort-count").textContent=rows.length+" of 49 source-pair observations · 0 certifications";
+ selection(rows[0].id);
+ activeCohort=cohort;
+}
 function selection(id){
  selected=targets.find(t=>t.id===id);
  if(!selected)throw Error("Unknown source-region pair");
@@ -73,17 +91,24 @@ async function load(){
   targets=audit.validateTargets(m,identification.validateSource(m,pairs));
   complements=audit.validateComplementaryLocators(other,targets);
   manifest=m;
-  for(const t of targets){
-   const option=document.createElement("option");
-   option.value=t.id;
-   option.textContent="#"+t.rank+" · "+t.character+" · "+t.offeredComponents.map(x=>x.form).join(" / ");
-   $("oa-target").appendChild(option);
-  }
-  $("oa-target").disabled=false;$("oa-save").disabled=false;
-  updateSize();selection(targets[0].id);
+  $("oa-target").disabled=false;$("oa-filter").disabled=false;
+  $("oa-save").disabled=false;
+  updateSize();showCohort("all");
   status("49 source-pinned regions loaded; independent acceptance remains zero.");
  }catch(e){status("Cannot load or validate original source regions: "+e.message);}
 }
+$("oa-filter").addEventListener("change",()=>{
+ try{
+  const next=$("oa-filter").value;
+  if(!validCohorts.has(next))throw Error("Unknown source warning cohort");
+  if(selected)save();
+  showCohort(next);
+  status("Source warning cohort filtered; local notes retained and uncertified.");
+ }catch(e){
+  $("oa-filter").value=activeCohort;
+  status("Could not change source cohort: "+e.message);
+ }
+});
 $("oa-target").addEventListener("change",()=>{
  try{
   const next=$("oa-target").value;

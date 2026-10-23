@@ -8,6 +8,10 @@ The paired-region review now shows **both** component candidates independently: 
 
 The [complementary locator generator](../tools/glyph-pipeline/component_owner_complement_locators.mjs) reconstructs the original machine-selected locator *byte for byte* from pinned source SVGs, compares its checksum to the previously published locator, and rejects changes before deriving its partner. It publishes 49 SVGs and a separate versioned research manifest. Pair masks are checked for disjoint highlighted path ownership, source SHA-256 consistency and zero independent certifications. They represent two views of the same provisional source mapping, not two independent sources confirming it. The browser validates the complementary manifest's schema, source identities, expected image paths and SHA-256 field format; publication tests additionally recompute actual SVG bytes and compare hashes. A syntactically valid substituted digest cannot be detected by the browser manifest validator alone.
 
+## Source-warning review cohorts
+
+The 49 machine-identified warning pairs may be inspected as all pairs, 23 new fold-trained proximity warnings, 21 original warnings resolved in the fold-trained candidate, or five retained warnings. Changing the cohort does not rewrite or delete a valid in-memory provisional observation; an incomplete current observation blocks cohort navigation until resolved. Filtering only prioritizes review and does not certify colors, source ownership or visual discrimination.
+
 ## Matched reading-size inspection
 
 The review displays the production source glyph, machine-selected component locator, complementary component locator, and fold-trained color candidate at a common **16, 24, 32, 48, 64, 96, 128 or 160 CSS pixels**. The size applies to all four images without changing source path data or palette assignments. Sizes are visual inspection aids; CSS pixels do not calibrate physical viewing distance, visual acuity, color vision, or human recognition results.
