@@ -191,6 +191,8 @@ jobs:
           node --check site/lexical-review.js
           node --check site/dictionary-readings.js
           node --check site/reading-inventory.js
+          node --check tools/glyph-pipeline/reading_inventory_validate.mjs
+          node --check tools/glyph-pipeline/high_attention_evidence_priority.mjs
           node --check site/dictionary-reference-cues.js
           node tools/glyph-pipeline/emoji_comprehension_smoke.mjs
           node tools/glyph-pipeline/lexical_review_workbench_smoke.mjs

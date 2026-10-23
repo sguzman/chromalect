@@ -68,7 +68,7 @@ export function validateReadingInventory(session,triage,dictionaryBlocks){
    candidates.set(key,item);tierCounts[t.triageTier]++;
    const scope=session.session.scope;
    const hasAnySourceReferences=sections(r).some(section=>
-    /([\\p{Script=Han}]+(?:\\|[\\p{Script=Han}]+)?)\\[[A-Za-z0-9 ]+\\]/u.test(section.gloss));
+    /([\p{Script=Han}]+(?:\|[\p{Script=Han}]+)?)\[[A-Za-z0-9 ]+\]/u.test(section.gloss));
    if(scope==="all"||scope===t.triageTier||
     (scope==="higher_no_links"&&t.triageTier==="higher"&&!hasAnySourceReferences)||
     (scope==="multiple"&&r.readings.length>1)||
