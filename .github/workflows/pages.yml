@@ -262,6 +262,8 @@ jobs:
           node tools/glyph-pipeline/mandarin_initial_feature_codec_smoke.mjs
           node tools/glyph-pipeline/citation_syllable_orthographic_codec.mjs --check
           node tools/glyph-pipeline/citation_syllable_orthographic_codec_smoke.mjs
+          node tools/glyph-pipeline/citation_orthographic_contrast_controls.mjs --check
+          node tools/glyph-pipeline/citation_orthographic_contrast_controls_smoke.mjs
           node --check site/mandarin-syllable-grammar.js
           node tools/glyph-pipeline/mandarin_syllable_grammar_viewer_smoke.mjs
           test -s site/mandarin-syllable-grammar.html
@@ -277,10 +279,12 @@ jobs:
           cp data/phonetics/mandarin-initial-feature-candidates-v0.1.json site/phonetics/mandarin-initial-feature-candidates-v0.1.json
           cp data/phonetics/initial-feature-codec-audit-v0.1.json site/phonetics/initial-feature-codec-audit-v0.1.json
           cp data/phonetics/citation-syllable-orthographic-codec-audit-v0.1.json site/phonetics/citation-syllable-orthographic-codec-audit-v0.1.json
+          cp data/phonetics/citation-orthographic-contrast-controls-v0.1.json site/phonetics/citation-orthographic-contrast-controls-v0.1.json
           test -s site/phonetics/mandarin-citation-tone-contours-v0.1.json
           test -s site/phonetics/mandarin-initial-feature-candidates-v0.1.json
           test -s site/phonetics/initial-feature-codec-audit-v0.1.json
           test -s site/phonetics/citation-syllable-orthographic-codec-audit-v0.1.json
+          test -s site/phonetics/citation-orthographic-contrast-controls-v0.1.json
           test -s site/pinyin-citations.html
           node tools/glyph-pipeline/roadmap_checkpoint_progress.mjs --check
           node tools/glyph-pipeline/roadmap_checkpoint_progress_smoke.mjs
