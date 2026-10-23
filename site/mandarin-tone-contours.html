@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Mandarin citation-tone encoding comparison · Chromalect</title>
+<link rel="stylesheet" href="style.css"><script src="theme.js"></script><script src="mandarin-tone-contours.js" defer></script>
+<style>
+.tone-control{display:flex;flex-wrap:wrap;align-items:center;gap:12px;margin:18px 0}
+.tone-control select{font:inherit;color:var(--ink);background:var(--panel);border:1px solid var(--border);border-radius:8px;padding:10px}
+.tone-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin:22px 0}
+.tone-card{border:1px solid var(--border);border-radius:12px;background:var(--panel);padding:18px}
+.tone-card h2{font-size:17px;margin:0 0 8px}
+.tone-visual{min-height:114px;display:flex;justify-content:center;align-items:center;gap:15px}
+.tone-svg{width:160px;height:108px;max-width:100%}
+.tone-display{font-size:29px;text-align:center}
+.tone-swatch{width:68px;height:68px;border-radius:9px;border:1px solid var(--border)}
+.tone-note{font-size:13px;color:var(--sub)}
+</style></head><body>
+<header class="wrap"><div class="brand"><b>CHROMALECT</b><small>Language, made visible</small></div></header>
+<main class="wrap"><div class="eyebrow">Phonetic research · independently toggleable experimental controls</div>
+<h1>Mandarin citation-tone encodings</h1>
+<p class="intro">Compare a plain label, monochrome relative-pitch contour, conventional symbol, and the existing tone identity color without changing the underlying characters. The contours are idealized citation targets, not acoustic measurements. Neutral tone has no fixed context-free pitch contour.</p>
+<div class="tone-control"><label for="tone-mode">Encoding to display</label>
+<select id="tone-mode"><option value="contour">Idealized pitch contour (no color)</option><option value="symbol">Conventional symbol</option>
+<option value="color">Published tone color</option><option value="plain">Plain label</option></select></div>
+<p id="tone-status" role="status" aria-live="polite">Loading source references.</p>
+<div id="tone-results" class="tone-grid"></div>
+<p>This page does not measure learning, pronunciation, memory, or word-context disambiguation. Source: <a href="phonetics/mandarin-citation-tone-contours-v0.1.json">versioned reference record</a> and <a href="https://www.polyu.edu.hk/bepth/introduction-to-phonetics/tones/basic-tones/?sc_lang=en">PolyU phonetics reference</a>. Source-aligned Pinyin readings and published colors are unchanged.</p>
+</main>
+<footer class="wrap"><a href="pinyin-citations.html">Pinyin spelling comparison</a> · <a href="roadmap-status.html">Research roadmap</a> · <a href="index.html">Overview</a></footer>
+</body></html>
