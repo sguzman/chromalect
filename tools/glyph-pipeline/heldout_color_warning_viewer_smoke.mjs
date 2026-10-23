@@ -7,7 +7,7 @@ const palette=JSON.parse(fs.readFileSync(
  "palettes/mandarin-component-identity-v0.6.json","utf8"));
 const folds=JSON.parse(fs.readFileSync(
  "site/semantic-group-hue-fivefold-heldout-v0.1.json","utf8"));
-const semantics=JSON.parse(fs.readFileSync("site/semantic/mandarin-1000-v0.1.json","utf8"));
+const semantics=JSON.parse(fs.readFileSync("data/semantic/mandarin-1000-v0.1.json","utf8"));
 const grammarSource=fs.readFileSync("site/semantic-grammar.js","utf8");
 const contrastSource=fs.readFileSync("site/reference-contrast.js","utf8");
 const script=fs.readFileSync("site/heldout-color-warning-review.js","utf8");
