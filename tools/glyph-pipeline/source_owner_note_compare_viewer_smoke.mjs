@@ -71,7 +71,7 @@ v["oc-compare"].events.click();
 assert.match(v["oc-status"].textContent,/Sanitized provisional/);
 assert.equal(v["oc-table"].children.length,49);
 const deepLink=v["oc-table"].children[0].children[0].children[0];
-assert.match(deepLink.href,/^component-owner-adjudication\\.html#\\d+-cmp-\\d{4}-cmp-\\d{4}$/);
+assert.match(deepLink.href,/^component-owner-adjudication[.]html#[0-9]+-cmp-[0-9]{4}-cmp-[0-9]{4}$/);
 assert.equal(deepLink.target,"_blank");
 assert.equal(deepLink.rel,"noopener noreferrer");
 assert.ok(!deepLink.href.includes("evidence"));

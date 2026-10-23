@@ -113,7 +113,7 @@ async function load(){
   const anchor=globalThis.location?.hash||"";
   if(anchor){
    const id=anchor.slice(1);
-   if(/^\\d{1,4}-cmp-\\d{4}-cmp-\\d{4}$/.test(id)&&targets.some(t=>t.id===id)){
+   if(/^[0-9]{1,4}-cmp-[0-9]{4}-cmp-[0-9]{4}$/.test(id)&&targets.some(t=>t.id===id)){
     selection(id);
     status("Source-pair fragment selected; independent acceptance remains zero.");
    }else{
