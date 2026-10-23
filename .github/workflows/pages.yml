@@ -433,6 +433,8 @@ jobs:
           node tools/glyph-pipeline/pilot_group_collision_optimization_smoke.mjs
           node tools/glyph-pipeline/pilot_group_collision_optimization.mjs --write
           node tools/glyph-pipeline/pilot_group_collision_optimization.mjs --check
+          node tools/glyph-pipeline/mnemonic_group_optimized_viewer_smoke.mjs
+          test -s site/mnemonic-group-optimized.html && test -s site/mnemonic-group-optimized.js
           test -s site/mnemonic-group-risk-optimized-v0.2.json
           test -s site/glyphs/research/hint-counterfactual-v0.1/pair-risk-v0.1.json
           node tools/glyph-pipeline/hint_hue_glyph_comparison_viewer_smoke.mjs
