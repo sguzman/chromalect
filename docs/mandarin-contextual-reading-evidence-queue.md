@@ -38,3 +38,9 @@ This optimization does **not** merge semantic usages. For example, surname and o
 The first completed Tatoeba import scanned **89,190** Mandarin sentence records and found **423 source-only character/sentence associations** containing **363 distinct sentence IDs**. There are candidates for **141/142** high-attention characters, with no selected sentence ID for **刨** (rank 821). [Candidate IDs](../data/semantic/cedict-crossref/tatoeba-sentence-id-index-v0.1.json) are now stored without sentence text; the source checksum and original acquisition run are recorded for reproducibility.
 
 [Readiness summary v0.2](../data/semantic/cedict-crossref/contextual-evidence-readiness-summary-v0.2.json) distinguishes ID acquisition from contextual pronunciation verification. Version 0.1 remains the historical pre-acquisition baseline. No contextual reading or lexical sense has been independently adjudicated.
+
+## Structural upper-bound on reading coverage
+
+The [count-only coverage gap report](../data/semantic/cedict-crossref/tatoeba-reading-coverage-upper-bound-v0.1.json) compares the **241 case-normalized Pinyin search groups** with the maximum three selected corpus IDs per character, without assigning any ID to a pronunciation.
+
+Two high-attention characters have fewer candidate source IDs than distinct recorded Pinyin labels: **那** (four labels, three IDs) and **刨** (two labels, zero IDs). Even under ideal one-to-one allocation, at least three additional distinct character/sentence associations would be needed to provide one candidate per recorded phonetic label. This is a *structural bound*, not a claim of corpus attestation or verified pronunciation: all 142 characters still have **0 independently verified contextual readings**.

@@ -1,0 +1,2119 @@
+{
+  "schema": "chromalect.semantic.tatoeba-reading-coverage-upper-bound.v0.1",
+  "status": "count_only_upper_bound_neither_attestation_nor_pronunciation_validation",
+  "sources": {
+    "caseNormalizedSearchGroups": "contextual-pronunciation-search-groups-v0.1.json",
+    "corpusSentenceIds": "tatoeba-sentence-id-index-v0.1.json"
+  },
+  "caution": [
+    "Source IDs were selected by character string occurrence, not independently confirmed contextual pronunciation.",
+    "Even where candidate IDs are at least as numerous as reading labels, all candidates may express one pronunciation.",
+    "Capitalization-only lexical source entries remain separate from their shared phonetic search groups.",
+    "The structural shortfall is a lower bound on additional research, not a measurement of verified reading coverage."
+  ],
+  "summary": {
+    "highAttentionCharacters": 142,
+    "distinctCasefoldedReadingLabels": 241,
+    "characterSentenceAssociations": 423,
+    "charactersBelowHypotheticalOneIdPerReading": 2,
+    "minimumExtraSourceIdAssociationsForHypotheticalCoverage": 3,
+    "independentlyVerifiedContextualReadings": 0,
+    "lexicalSenseApprovals": 0,
+    "distribution": {
+      "2-reading-labels_3-source-ids": 75,
+      "3-reading-labels_3-source-ids": 10,
+      "1-reading-labels_3-source-ids": 55,
+      "4-reading-labels_3-source-ids": 1,
+      "2-reading-labels_0-source-ids": 1
+    }
+  },
+  "records": [
+    {
+      "rank": 2,
+      "character": "乙",
+      "caseNormalizedReadingLabels": [
+        "yi3",
+        "zhe2"
+      ],
+      "caseNormalizedReadingLabelCount": 2,
+      "surfaceCandidateIdCount": 3,
+      "minimumAdditionalDistinctSourceIdsForHypotheticalOnePerLabel": 0,
+      "sourceIdCountBelowReadingLabelCount": false,
+      "contextualReadingAssignment": "not_performed",
+      "independentlyVerifiedContextualReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 17,
+      "character": "了",
+      "caseNormalizedReadingLabels": [
+        "le5",
+        "liao3",
+        "liao4"
+      ],
+      "caseNormalizedReadingLabelCount": 3,
+      "surfaceCandidateIdCount": 3,
+      "minimumAdditionalDistinctSourceIdsForHypotheticalOnePerLabel": 0,
+      "sourceIdCountBelowReadingLabelCount": false,
+      "contextualReadingAssignment": "not_performed",
+      "independentlyVerifiedContextualReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 18,
+      "character": "刀",
+      "caseNormalizedReadingLabels": [
+        "dao1"
+      ],
+      "caseNormalizedReadingLabelCount": 1,
+      "surfaceCandidateIdCount": 3,
+      "minimumAdditionalDistinctSourceIdsForHypotheticalOnePerLabel": 0,
+      "sourceIdCountBelowReadingLabelCount": false,
+      "contextualReadingAssignment": "not_performed",
+      "independentlyVerifiedContextualReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 23,
+      "character": "干",
+      "caseNormalizedReadingLabels": [
+        "gan1",
+        "gan4"
+      ],
+      "caseNormalizedReadingLabelCount": 2,
+      "surfaceCandidateIdCount": 3,
+      "minimumAdditionalDistinctSourceIdsForHypotheticalOnePerLabel": 0,
+      "sourceIdCountBelowReadingLabelCount": false,
+      "contextualReadingAssignment": "not_performed",
+      "independentlyVerifiedContextualReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 24,
+      "character": "于",
+      "caseNormalizedReadingLabels": [
+        "yu2"
+      ],
+      "caseNormalizedReadingLabelCount": 1,
+      "surfaceCandidateIdCount": 3,
+      "minimumAdditionalDistinctSourceIdsForHypotheticalOnePerLabel": 0,
+      "sourceIdCountBelowReadingLabelCount": false,
+      "contextualReadingAssignment": "not_performed",
+      "independentlyVerifiedContextualReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 27,
+      "character": "土",
+      "caseNormalizedReadingLabels": [
+        "tu3"
+      ],
+      "caseNormalizedReadingLabelCount": 1,
+      "surfaceCandidateIdCount": 3,
+      "minimumAdditionalDistinctSourceIdsForHypotheticalOnePerLabel": 0,
+      "sourceIdCountBelowReadingLabelCount": false,
+      "contextualReadingAssignment": "not_performed",
+      "independentlyVerifiedContextualReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 28,
+      "character": "士",
+      "caseNormalizedReadingLabels": [
+        "shi4"
+      ],
+      "caseNormalizedReadingLabelCount": 1,
+      "surfaceCandidateIdCount": 3,
+      "minimumAdditionalDistinctSourceIdsForHypotheticalOnePerLabel": 0,
+      "sourceIdCountBelowReadingLabelCount": false,
+      "contextualReadingAssignment": "not_performed",
+      "independentlyVerifiedContextualReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 32,
+      "character": "大",
+      "caseNormalizedReadingLabels": [
+        "da4",
+        "dai4"
+      ],
+      "caseNormalizedReadingLabelCount": 2,
+      "surfaceCandidateIdCount": 3,
+      "minimumAdditionalDistinctSourceIdsForHypotheticalOnePerLabel": 0,
+      "sourceIdCountBelowReadingLabelCount": false,
+      "contextualReadingAssignment": "not_performed",
+      "independentlyVerifiedContextualReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 36,
+      "character": "上",
+      "caseNormalizedReadingLabels": [
+        "shang3",
+        "shang4"
+      ],
+      "caseNormalizedReadingLabelCount": 2,
+      "surfaceCandidateIdCount": 3,
+      "minimumAdditionalDistinctSourceIdsForHypotheticalOnePerLabel": 0,
+      "sourceIdCountBelowReadingLabelCount": false,
+      "contextualReadingAssignment": "not_performed",
+      "independentlyVerifiedContextualReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 55,
+      "character": "门",
+      "caseNormalizedReadingLabels": [
+        "men2"
+      ],
+      "caseNormalizedReadingLabelCount": 1,
+      "surfaceCandidateIdCount": 3,
+      "minimumAdditionalDistinctSourceIdsForHypotheticalOnePerLabel": 0,
+      "sourceIdCountBelowReadingLabelCount": false,
+      "contextualReadingAssignment": "not_performed",
+      "independentlyVerifiedContextualReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 57,
+      "character": "义",
+      "caseNormalizedReadingLabels": [
+        "yi4"
+      ],
+      "caseNormalizedReadingLabelCount": 1,
+      "surfaceCandidateIdCount": 3,
+      "minimumAdditionalDistinctSourceIdsForHypotheticalOnePerLabel": 0,
+      "sourceIdCountBelowReadingLabelCount": false,
+      "contextualReadingAssignment": "not_performed",
+      "independentlyVerifiedContextualReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 64,
+      "character": "子",
+      "caseNormalizedReadingLabels": [
+        "zi3",
+        "zi5"
+      ],
+      "caseNormalizedReadingLabelCount": 2,
+      "surfaceCandidateIdCount": 3,
+      "minimumAdditionalDistinctSourceIdsForHypotheticalOnePerLabel": 0,
+      "sourceIdCountBelowReadingLabelCount": false,
+      "contextualReadingAssignment": "not_performed",
+      "independentlyVerifiedContextualReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 65,
+      "character": "卫",
+      "caseNormalizedReadingLabels": [
+        "wei4"
+      ],
+      "caseNormalizedReadingLabelCount": 1,
+      "surfaceCandidateIdCount": 3,
+      "minimumAdditionalDistinctSourceIdsForHypotheticalOnePerLabel": 0,
+      "sourceIdCountBelowReadingLabelCount": false,
+      "contextualReadingAssignment": "not_performed",
+      "independentlyVerifiedContextualReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 71,
+      "character": "叉",
+      "caseNormalizedReadingLabels": [
+        "cha1",
+        "cha2",
+        "cha3"
+      ],
+      "caseNormalizedReadingLabelCount": 3,
+      "surfaceCandidateIdCount": 3,
+      "minimumAdditionalDistinctSourceIdsForHypotheticalOnePerLabel": 0,
+      "sourceIdCountBelowReadingLabelCount": false,
+      "contextualReadingAssignment": "not_performed",
+      "independentlyVerifiedContextualReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 74,
+      "character": "丰",
+      "caseNormalizedReadingLabels": [
+        "feng1"
+      ],
+      "caseNormalizedReadingLabelCount": 1,
+      "surfaceCandidateIdCount": 3,
+      "minimumAdditionalDistinctSourceIdsForHypotheticalOnePerLabel": 0,
+      "sourceIdCountBelowReadingLabelCount": false,
+      "contextualReadingAssignment": "not_performed",
+      "independentlyVerifiedContextualReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 79,
+      "character": "夫",
+      "caseNormalizedReadingLabels": [
+        "fu1",
+        "fu2"
+      ],
+      "caseNormalizedReadingLabelCount": 2,
+      "surfaceCandidateIdCount": 3,
+      "minimumAdditionalDistinctSourceIdsForHypotheticalOnePerLabel": 0,
+      "sourceIdCountBelowReadingLabelCount": false,
+      "contextualReadingAssignment": "not_performed",
+      "independentlyVerifiedContextualReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 80,
+      "character": "元",
+      "caseNormalizedReadingLabels": [
+        "yuan2"
+      ],
+      "caseNormalizedReadingLabelCount": 1,
+      "surfaceCandidateIdCount": 3,
+      "minimumAdditionalDistinctSourceIdsForHypotheticalOnePerLabel": 0,
+      "sourceIdCountBelowReadingLabelCount": false,
+      "contextualReadingAssignment": "not_performed",
+      "independentlyVerifiedContextualReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 85,
+      "character": "扎",
+      "caseNormalizedReadingLabels": [
+        "za1",
+        "zha1",
+        "zha2"
+      ],
+      "caseNormalizedReadingLabelCount": 3,
+      "surfaceCandidateIdCount": 3,
+      "minimumAdditionalDistinctSourceIdsForHypotheticalOnePerLabel": 0,
+      "sourceIdCountBelowReadingLabelCount": false,
+      "contextualReadingAssignment": "not_performed",
+      "independentlyVerifiedContextualReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 87,
+      "character": "木",
+      "caseNormalizedReadingLabels": [
+        "mu4"
+      ],
+      "caseNormalizedReadingLabelCount": 1,
+      "surfaceCandidateIdCount": 3,
+      "minimumAdditionalDistinctSourceIdsForHypotheticalOnePerLabel": 0,
+      "sourceIdCountBelowReadingLabelCount": false,
+      "contextualReadingAssignment": "not_performed",
+      "independentlyVerifiedContextualReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 89,
+      "character": "支",
+      "caseNormalizedReadingLabels": [
+        "zhi1"
+      ],
+      "caseNormalizedReadingLabelCount": 1,
+      "surfaceCandidateIdCount": 3,
+      "minimumAdditionalDistinctSourceIdsForHypotheticalOnePerLabel": 0,
+      "sourceIdCountBelowReadingLabelCount": false,
+      "contextualReadingAssignment": "not_performed",
+      "independentlyVerifiedContextualReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 99,
+      "character": "匹",
+      "caseNormalizedReadingLabels": [
+        "pi1",
+        "pi3"
+      ],
+      "caseNormalizedReadingLabelCount": 2,
+      "surfaceCandidateIdCount": 3,
+      "minimumAdditionalDistinctSourceIdsForHypotheticalOnePerLabel": 0,
+      "sourceIdCountBelowReadingLabelCount": false,
+      "contextualReadingAssignment": "not_performed",
+      "independentlyVerifiedContextualReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 100,
+      "character": "车",
+      "caseNormalizedReadingLabels": [
+        "che1",
+        "ju1"
+      ],
+      "caseNormalizedReadingLabelCount": 2,
+      "surfaceCandidateIdCount": 3,
+      "minimumAdditionalDistinctSourceIdsForHypotheticalOnePerLabel": 0,
+      "sourceIdCountBelowReadingLabelCount": false,
+      "contextualReadingAssignment": "not_performed",
+      "independentlyVerifiedContextualReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 105,
+      "character": "比",
+      "caseNormalizedReadingLabels": [
+        "bi3",
+        "bi4"
+      ],
+      "caseNormalizedReadingLabelCount": 2,
+      "surfaceCandidateIdCount": 3,
+      "minimumAdditionalDistinctSourceIdsForHypotheticalOnePerLabel": 0,
+      "sourceIdCountBelowReadingLabelCount": false,
+      "contextualReadingAssignment": "not_performed",
+      "independentlyVerifiedContextualReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 107,
+      "character": "切",
+      "caseNormalizedReadingLabels": [
+        "qie1",
+        "qie4"
+      ],
+      "caseNormalizedReadingLabelCount": 2,
+      "surfaceCandidateIdCount": 3,
+      "minimumAdditionalDistinctSourceIdsForHypotheticalOnePerLabel": 0,
+      "sourceIdCountBelowReadingLabelCount": false,
+      "contextualReadingAssignment": "not_performed",
+      "independentlyVerifiedContextualReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 113,
+      "character": "中",
+      "caseNormalizedReadingLabels": [
+        "zhong1",
+        "zhong4"
+      ],
+      "caseNormalizedReadingLabelCount": 2,
+      "surfaceCandidateIdCount": 3,
+      "minimumAdditionalDistinctSourceIdsForHypotheticalOnePerLabel": 0,
+      "sourceIdCountBelowReadingLabelCount": false,
+      "contextualReadingAssignment": "not_performed",
+      "independentlyVerifiedContextualReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 123,
+      "character": "毛",
+      "caseNormalizedReadingLabels": [
+        "mao2"
+      ],
+      "caseNormalizedReadingLabelCount": 1,
+      "surfaceCandidateIdCount": 3,
+      "minimumAdditionalDistinctSourceIdsForHypotheticalOnePerLabel": 0,
+      "sourceIdCountBelowReadingLabelCount": false,
+      "contextualReadingAssignment": "not_performed",
+      "independentlyVerifiedContextualReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 127,
+      "character": "长",
+      "caseNormalizedReadingLabels": [
+        "chang2",
+        "zhang3"
+      ],
+      "caseNormalizedReadingLabelCount": 2,
+      "surfaceCandidateIdCount": 3,
+      "minimumAdditionalDistinctSourceIdsForHypotheticalOnePerLabel": 0,
+      "sourceIdCountBelowReadingLabelCount": false,
+      "contextualReadingAssignment": "not_performed",
+      "independentlyVerifiedContextualReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 130,
+      "character": "片",
+      "caseNormalizedReadingLabels": [
+        "pian1",
+        "pian4"
+      ],
+      "caseNormalizedReadingLabelCount": 2,
+      "surfaceCandidateIdCount": 3,
+      "minimumAdditionalDistinctSourceIdsForHypotheticalOnePerLabel": 0,
+      "sourceIdCountBelowReadingLabelCount": false,
+      "contextualReadingAssignment": "not_performed",
+      "independentlyVerifiedContextualReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 133,
+      "character": "仇",
+      "caseNormalizedReadingLabels": [
+        "chou2",
+        "qiu2"
+      ],
+      "caseNormalizedReadingLabelCount": 2,
+      "surfaceCandidateIdCount": 3,
+      "minimumAdditionalDistinctSourceIdsForHypotheticalOnePerLabel": 0,
+      "sourceIdCountBelowReadingLabelCount": false,
+      "contextualReadingAssignment": "not_performed",
+      "independentlyVerifiedContextualReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 142,
+      "character": "从",
+      "caseNormalizedReadingLabels": [
+        "cong2",
+        "zong4"
+      ],
+      "caseNormalizedReadingLabelCount": 2,
+      "surfaceCandidateIdCount": 3,
+      "minimumAdditionalDistinctSourceIdsForHypotheticalOnePerLabel": 0,
+      "sourceIdCountBelowReadingLabelCount": false,
+      "contextualReadingAssignment": "not_performed",
+      "independentlyVerifiedContextualReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 146,
+      "character": "分",
+      "caseNormalizedReadingLabels": [
+        "fen1",
+        "fen4"
+      ],
+      "caseNormalizedReadingLabelCount": 2,
+      "surfaceCandidateIdCount": 3,
+      "minimumAdditionalDistinctSourceIdsForHypotheticalOnePerLabel": 0,
+      "sourceIdCountBelowReadingLabelCount": false,
+      "contextualReadingAssignment": "not_performed",
+      "independentlyVerifiedContextualReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 158,
+      "character": "勾",
+      "caseNormalizedReadingLabels": [
+        "gou1",
+        "gou4"
+      ],
+      "caseNormalizedReadingLabelCount": 2,
+      "surfaceCandidateIdCount": 3,
+      "minimumAdditionalDistinctSourceIdsForHypotheticalOnePerLabel": 0,
+      "sourceIdCountBelowReadingLabelCount": false,
+      "contextualReadingAssignment": "not_performed",
+      "independentlyVerifiedContextualReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 161,
+      "character": "文",
+      "caseNormalizedReadingLabels": [
+        "wen2"
+      ],
+      "caseNormalizedReadingLabelCount": 1,
+      "surfaceCandidateIdCount": 3,
+      "minimumAdditionalDistinctSourceIdsForHypotheticalOnePerLabel": 0,
+      "sourceIdCountBelowReadingLabelCount": false,
+      "contextualReadingAssignment": "not_performed",
+      "independentlyVerifiedContextualReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 163,
+      "character": "方",
+      "caseNormalizedReadingLabels": [
+        "fang1"
+      ],
+      "caseNormalizedReadingLabelCount": 1,
+      "surfaceCandidateIdCount": 3,
+      "minimumAdditionalDistinctSourceIdsForHypotheticalOnePerLabel": 0,
+      "sourceIdCountBelowReadingLabelCount": false,
+      "contextualReadingAssignment": "not_performed",
+      "independentlyVerifiedContextualReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 164,
+      "character": "火",
+      "caseNormalizedReadingLabels": [
+        "huo3"
+      ],
+      "caseNormalizedReadingLabelCount": 1,
+      "surfaceCandidateIdCount": 3,
+      "minimumAdditionalDistinctSourceIdsForHypotheticalOnePerLabel": 0,
+      "sourceIdCountBelowReadingLabelCount": false,
+      "contextualReadingAssignment": "not_performed",
+      "independentlyVerifiedContextualReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 165,
+      "character": "为",
+      "caseNormalizedReadingLabels": [
+        "wei2",
+        "wei4"
+      ],
+      "caseNormalizedReadingLabelCount": 2,
+      "surfaceCandidateIdCount": 3,
+      "minimumAdditionalDistinctSourceIdsForHypotheticalOnePerLabel": 0,
+      "sourceIdCountBelowReadingLabelCount": false,
+      "contextualReadingAssignment": "not_performed",
+      "independentlyVerifiedContextualReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 166,
+      "character": "斗",
+      "caseNormalizedReadingLabels": [
+        "dou3",
+        "dou4"
+      ],
+      "caseNormalizedReadingLabelCount": 2,
+      "surfaceCandidateIdCount": 3,
+      "minimumAdditionalDistinctSourceIdsForHypotheticalOnePerLabel": 0,
+      "sourceIdCountBelowReadingLabelCount": false,
+      "contextualReadingAssignment": "not_performed",
+      "independentlyVerifiedContextualReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 168,
+      "character": "计",
+      "caseNormalizedReadingLabels": [
+        "ji4"
+      ],
+      "caseNormalizedReadingLabelCount": 1,
+      "surfaceCandidateIdCount": 3,
+      "minimumAdditionalDistinctSourceIdsForHypotheticalOnePerLabel": 0,
+      "sourceIdCountBelowReadingLabelCount": false,
+      "contextualReadingAssignment": "not_performed",
+      "independentlyVerifiedContextualReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 178,
+      "character": "巴",
+      "caseNormalizedReadingLabels": [
+        "ba1"
+      ],
+      "caseNormalizedReadingLabelCount": 1,
+      "surfaceCandidateIdCount": 3,
+      "minimumAdditionalDistinctSourceIdsForHypotheticalOnePerLabel": 0,
+      "sourceIdCountBelowReadingLabelCount": false,
+      "contextualReadingAssignment": "not_performed",
+      "independentlyVerifiedContextualReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 182,
+      "character": "以",
+      "caseNormalizedReadingLabels": [
+        "yi3"
+      ],
+      "caseNormalizedReadingLabelCount": 1,
+      "surfaceCandidateIdCount": 3,
+      "minimumAdditionalDistinctSourceIdsForHypotheticalOnePerLabel": 0,
+      "sourceIdCountBelowReadingLabelCount": false,
+      "contextualReadingAssignment": "not_performed",
+      "independentlyVerifiedContextualReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 196,
+      "character": "打",
+      "caseNormalizedReadingLabels": [
+        "da2",
+        "da3"
+      ],
+      "caseNormalizedReadingLabelCount": 2,
+      "surfaceCandidateIdCount": 3,
+      "minimumAdditionalDistinctSourceIdsForHypotheticalOnePerLabel": 0,
+      "sourceIdCountBelowReadingLabelCount": false,
+      "contextualReadingAssignment": "not_performed",
+      "independentlyVerifiedContextualReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 198,
+      "character": "正",
+      "caseNormalizedReadingLabels": [
+        "zheng1",
+        "zheng4"
+      ],
+      "caseNormalizedReadingLabelCount": 2,
+      "surfaceCandidateIdCount": 3,
+      "minimumAdditionalDistinctSourceIdsForHypotheticalOnePerLabel": 0,
+      "sourceIdCountBelowReadingLabelCount": false,
+      "contextualReadingAssignment": "not_performed",
+      "independentlyVerifiedContextualReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 201,
+      "character": "扒",
+      "caseNormalizedReadingLabels": [
+        "ba1",
+        "pa2"
+      ],
+      "caseNormalizedReadingLabelCount": 2,
+      "surfaceCandidateIdCount": 3,
+      "minimumAdditionalDistinctSourceIdsForHypotheticalOnePerLabel": 0,
+      "sourceIdCountBelowReadingLabelCount": false,
+      "contextualReadingAssignment": "not_performed",
+      "independentlyVerifiedContextualReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 206,
+      "character": "世",
+      "caseNormalizedReadingLabels": [
+        "shi4"
+      ],
+      "caseNormalizedReadingLabelCount": 1,
+      "surfaceCandidateIdCount": 3,
+      "minimumAdditionalDistinctSourceIdsForHypotheticalOnePerLabel": 0,
+      "sourceIdCountBelowReadingLabelCount": false,
+      "contextualReadingAssignment": "not_performed",
+      "independentlyVerifiedContextualReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 207,
+      "character": "艾",
+      "caseNormalizedReadingLabels": [
+        "ai4",
+        "yi4"
+      ],
+      "caseNormalizedReadingLabelCount": 2,
+      "surfaceCandidateIdCount": 3,
+      "minimumAdditionalDistinctSourceIdsForHypotheticalOnePerLabel": 0,
+      "sourceIdCountBelowReadingLabelCount": false,
+      "contextualReadingAssignment": "not_performed",
+      "independentlyVerifiedContextualReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 209,
+      "character": "节",
+      "caseNormalizedReadingLabels": [
+        "jie1",
+        "jie2"
+      ],
+      "caseNormalizedReadingLabelCount": 2,
+      "surfaceCandidateIdCount": 3,
+      "minimumAdditionalDistinctSourceIdsForHypotheticalOnePerLabel": 0,
+      "sourceIdCountBelowReadingLabelCount": false,
+      "contextualReadingAssignment": "not_performed",
+      "independentlyVerifiedContextualReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 212,
+      "character": "可",
+      "caseNormalizedReadingLabels": [
+        "ke3",
+        "ke4"
+      ],
+      "caseNormalizedReadingLabelCount": 2,
+      "surfaceCandidateIdCount": 3,
+      "minimumAdditionalDistinctSourceIdsForHypotheticalOnePerLabel": 0,
+      "sourceIdCountBelowReadingLabelCount": false,
+      "contextualReadingAssignment": "not_performed",
+      "independentlyVerifiedContextualReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 214,
+      "character": "左",
+      "caseNormalizedReadingLabels": [
+        "zuo3"
+      ],
+      "caseNormalizedReadingLabelCount": 1,
+      "surfaceCandidateIdCount": 3,
+      "minimumAdditionalDistinctSourceIdsForHypotheticalOnePerLabel": 0,
+      "sourceIdCountBelowReadingLabelCount": false,
+      "contextualReadingAssignment": "not_performed",
+      "independentlyVerifiedContextualReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 216,
+      "character": "石",
+      "caseNormalizedReadingLabels": [
+        "dan4",
+        "shi2"
+      ],
+      "caseNormalizedReadingLabelCount": 2,
+      "surfaceCandidateIdCount": 3,
+      "minimumAdditionalDistinctSourceIdsForHypotheticalOnePerLabel": 0,
+      "sourceIdCountBelowReadingLabelCount": false,
+      "contextualReadingAssignment": "not_performed",
+      "independentlyVerifiedContextualReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 222,
+      "character": "平",
+      "caseNormalizedReadingLabels": [
+        "ping2"
+      ],
+      "caseNormalizedReadingLabelCount": 1,
+      "surfaceCandidateIdCount": 3,
+      "minimumAdditionalDistinctSourceIdsForHypotheticalOnePerLabel": 0,
+      "sourceIdCountBelowReadingLabelCount": false,
+      "contextualReadingAssignment": "not_performed",
+      "independentlyVerifiedContextualReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 226,
+      "character": "卡",
+      "caseNormalizedReadingLabels": [
+        "ka3",
+        "qia3"
+      ],
+      "caseNormalizedReadingLabelCount": 2,
+      "surfaceCandidateIdCount": 3,
+      "minimumAdditionalDistinctSourceIdsForHypotheticalOnePerLabel": 0,
+      "sourceIdCountBelowReadingLabelCount": false,
+      "contextualReadingAssignment": "not_performed",
+      "independentlyVerifiedContextualReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 231,
+      "character": "业",
+      "caseNormalizedReadingLabels": [
+        "ye4"
+      ],
+      "caseNormalizedReadingLabelCount": 1,
+      "surfaceCandidateIdCount": 3,
+      "minimumAdditionalDistinctSourceIdsForHypotheticalOnePerLabel": 0,
+      "sourceIdCountBelowReadingLabelCount": false,
+      "contextualReadingAssignment": "not_performed",
+      "independentlyVerifiedContextualReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 234,
+      "character": "归",
+      "caseNormalizedReadingLabels": [
+        "gui1"
+      ],
+      "caseNormalizedReadingLabelCount": 1,
+      "surfaceCandidateIdCount": 3,
+      "minimumAdditionalDistinctSourceIdsForHypotheticalOnePerLabel": 0,
+      "sourceIdCountBelowReadingLabelCount": false,
+      "contextualReadingAssignment": "not_performed",
+      "independentlyVerifiedContextualReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 243,
+      "character": "号",
+      "caseNormalizedReadingLabels": [
+        "hao2",
+        "hao4"
+      ],
+      "caseNormalizedReadingLabelCount": 2,
+      "surfaceCandidateIdCount": 3,
+      "minimumAdditionalDistinctSourceIdsForHypotheticalOnePerLabel": 0,
+      "sourceIdCountBelowReadingLabelCount": false,
+      "contextualReadingAssignment": "not_performed",
+      "independentlyVerifiedContextualReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 246,
+      "character": "只",
+      "caseNormalizedReadingLabels": [
+        "zhi1",
+        "zhi3"
+      ],
+      "caseNormalizedReadingLabelCount": 2,
+      "surfaceCandidateIdCount": 3,
+      "minimumAdditionalDistinctSourceIdsForHypotheticalOnePerLabel": 0,
+      "sourceIdCountBelowReadingLabelCount": false,
+      "contextualReadingAssignment": "not_performed",
+      "independentlyVerifiedContextualReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 275,
+      "character": "白",
+      "caseNormalizedReadingLabels": [
+        "bai2"
+      ],
+      "caseNormalizedReadingLabelCount": 1,
+      "surfaceCandidateIdCount": 3,
+      "minimumAdditionalDistinctSourceIdsForHypotheticalOnePerLabel": 0,
+      "sourceIdCountBelowReadingLabelCount": false,
+      "contextualReadingAssignment": "not_performed",
+      "independentlyVerifiedContextualReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 282,
+      "character": "令",
+      "caseNormalizedReadingLabels": [
+        "ling2",
+        "ling3",
+        "ling4"
+      ],
+      "caseNormalizedReadingLabelCount": 3,
+      "surfaceCandidateIdCount": 3,
+      "minimumAdditionalDistinctSourceIdsForHypotheticalOnePerLabel": 0,
+      "sourceIdCountBelowReadingLabelCount": false,
+      "contextualReadingAssignment": "not_performed",
+      "independentlyVerifiedContextualReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 285,
+      "character": "印",
+      "caseNormalizedReadingLabels": [
+        "yin4"
+      ],
+      "caseNormalizedReadingLabelCount": 1,
+      "surfaceCandidateIdCount": 3,
+      "minimumAdditionalDistinctSourceIdsForHypotheticalOnePerLabel": 0,
+      "sourceIdCountBelowReadingLabelCount": false,
+      "contextualReadingAssignment": "not_performed",
+      "independentlyVerifiedContextualReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 294,
+      "character": "处",
+      "caseNormalizedReadingLabels": [
+        "chu3",
+        "chu4"
+      ],
+      "caseNormalizedReadingLabelCount": 2,
+      "surfaceCandidateIdCount": 3,
+      "minimumAdditionalDistinctSourceIdsForHypotheticalOnePerLabel": 0,
+      "sourceIdCountBelowReadingLabelCount": false,
+      "contextualReadingAssignment": "not_performed",
+      "independentlyVerifiedContextualReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 298,
+      "character": "包",
+      "caseNormalizedReadingLabels": [
+        "bao1"
+      ],
+      "caseNormalizedReadingLabelCount": 1,
+      "surfaceCandidateIdCount": 3,
+      "minimumAdditionalDistinctSourceIdsForHypotheticalOnePerLabel": 0,
+      "sourceIdCountBelowReadingLabelCount": false,
+      "contextualReadingAssignment": "not_performed",
+      "independentlyVerifiedContextualReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 302,
+      "character": "立",
+      "caseNormalizedReadingLabels": [
+        "li4"
+      ],
+      "caseNormalizedReadingLabelCount": 1,
+      "surfaceCandidateIdCount": 3,
+      "minimumAdditionalDistinctSourceIdsForHypotheticalOnePerLabel": 0,
+      "sourceIdCountBelowReadingLabelCount": false,
+      "contextualReadingAssignment": "not_performed",
+      "independentlyVerifiedContextualReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 305,
+      "character": "闪",
+      "caseNormalizedReadingLabels": [
+        "shan3"
+      ],
+      "caseNormalizedReadingLabelCount": 1,
+      "surfaceCandidateIdCount": 3,
+      "minimumAdditionalDistinctSourceIdsForHypotheticalOnePerLabel": 0,
+      "sourceIdCountBelowReadingLabelCount": false,
+      "contextualReadingAssignment": "not_performed",
+      "independentlyVerifiedContextualReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 310,
+      "character": "头",
+      "caseNormalizedReadingLabels": [
+        "tou2",
+        "tou5"
+      ],
+      "caseNormalizedReadingLabelCount": 2,
+      "surfaceCandidateIdCount": 3,
+      "minimumAdditionalDistinctSourceIdsForHypotheticalOnePerLabel": 0,
+      "sourceIdCountBelowReadingLabelCount": false,
+      "contextualReadingAssignment": "not_performed",
+      "independentlyVerifiedContextualReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 312,
+      "character": "宁",
+      "caseNormalizedReadingLabels": [
+        "ning2",
+        "ning4"
+      ],
+      "caseNormalizedReadingLabelCount": 2,
+      "surfaceCandidateIdCount": 3,
+      "minimumAdditionalDistinctSourceIdsForHypotheticalOnePerLabel": 0,
+      "sourceIdCountBelowReadingLabelCount": false,
+      "contextualReadingAssignment": "not_performed",
+      "independentlyVerifiedContextualReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 318,
+      "character": "礼",
+      "caseNormalizedReadingLabels": [
+        "li3"
+      ],
+      "caseNormalizedReadingLabelCount": 1,
+      "surfaceCandidateIdCount": 3,
+      "minimumAdditionalDistinctSourceIdsForHypotheticalOnePerLabel": 0,
+      "sourceIdCountBelowReadingLabelCount": false,
+      "contextualReadingAssignment": "not_performed",
+      "independentlyVerifiedContextualReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 337,
+      "character": "边",
+      "caseNormalizedReadingLabels": [
+        "bian1",
+        "bian5"
+      ],
+      "caseNormalizedReadingLabelCount": 2,
+      "surfaceCandidateIdCount": 3,
+      "minimumAdditionalDistinctSourceIdsForHypotheticalOnePerLabel": 0,
+      "sourceIdCountBelowReadingLabelCount": false,
+      "contextualReadingAssignment": "not_performed",
+      "independentlyVerifiedContextualReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 339,
+      "character": "发",
+      "caseNormalizedReadingLabels": [
+        "fa1",
+        "fa4"
+      ],
+      "caseNormalizedReadingLabelCount": 2,
+      "surfaceCandidateIdCount": 3,
+      "minimumAdditionalDistinctSourceIdsForHypotheticalOnePerLabel": 0,
+      "sourceIdCountBelowReadingLabelCount": false,
+      "contextualReadingAssignment": "not_performed",
+      "independentlyVerifiedContextualReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 342,
+      "character": "台",
+      "caseNormalizedReadingLabels": [
+        "tai2"
+      ],
+      "caseNormalizedReadingLabelCount": 1,
+      "surfaceCandidateIdCount": 3,
+      "minimumAdditionalDistinctSourceIdsForHypotheticalOnePerLabel": 0,
+      "sourceIdCountBelowReadingLabelCount": false,
+      "contextualReadingAssignment": "not_performed",
+      "independentlyVerifiedContextualReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 366,
+      "character": "地",
+      "caseNormalizedReadingLabels": [
+        "de5",
+        "di4"
+      ],
+      "caseNormalizedReadingLabelCount": 2,
+      "surfaceCandidateIdCount": 3,
+      "minimumAdditionalDistinctSourceIdsForHypotheticalOnePerLabel": 0,
+      "sourceIdCountBelowReadingLabelCount": false,
+      "contextualReadingAssignment": "not_performed",
+      "independentlyVerifiedContextualReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 367,
+      "character": "场",
+      "caseNormalizedReadingLabels": [
+        "chang2",
+        "chang3"
+      ],
+      "caseNormalizedReadingLabelCount": 2,
+      "surfaceCandidateIdCount": 3,
+      "minimumAdditionalDistinctSourceIdsForHypotheticalOnePerLabel": 0,
+      "sourceIdCountBelowReadingLabelCount": false,
+      "contextualReadingAssignment": "not_performed",
+      "independentlyVerifiedContextualReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 368,
+      "character": "扬",
+      "caseNormalizedReadingLabels": [
+        "yang2"
+      ],
+      "caseNormalizedReadingLabelCount": 1,
+      "surfaceCandidateIdCount": 3,
+      "minimumAdditionalDistinctSourceIdsForHypotheticalOnePerLabel": 0,
+      "sourceIdCountBelowReadingLabelCount": false,
+      "contextualReadingAssignment": "not_performed",
+      "independentlyVerifiedContextualReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 377,
+      "character": "机",
+      "caseNormalizedReadingLabels": [
+        "ji1"
+      ],
+      "caseNormalizedReadingLabelCount": 1,
+      "surfaceCandidateIdCount": 3,
+      "minimumAdditionalDistinctSourceIdsForHypotheticalOnePerLabel": 0,
+      "sourceIdCountBelowReadingLabelCount": false,
+      "contextualReadingAssignment": "not_performed",
+      "independentlyVerifiedContextualReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 379,
+      "character": "过",
+      "caseNormalizedReadingLabels": [
+        "guo4",
+        "guo5"
+      ],
+      "caseNormalizedReadingLabelCount": 2,
+      "surfaceCandidateIdCount": 3,
+      "minimumAdditionalDistinctSourceIdsForHypotheticalOnePerLabel": 0,
+      "sourceIdCountBelowReadingLabelCount": false,
+      "contextualReadingAssignment": "not_performed",
+      "independentlyVerifiedContextualReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 401,
+      "character": "成",
+      "caseNormalizedReadingLabels": [
+        "cheng2"
+      ],
+      "caseNormalizedReadingLabelCount": 1,
+      "surfaceCandidateIdCount": 3,
+      "minimumAdditionalDistinctSourceIdsForHypotheticalOnePerLabel": 0,
+      "sourceIdCountBelowReadingLabelCount": false,
+      "contextualReadingAssignment": "not_performed",
+      "independentlyVerifiedContextualReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 402,
+      "character": "夹",
+      "caseNormalizedReadingLabels": [
+        "jia1",
+        "jia2",
+        "jia4"
+      ],
+      "caseNormalizedReadingLabelCount": 3,
+      "surfaceCandidateIdCount": 3,
+      "minimumAdditionalDistinctSourceIdsForHypotheticalOnePerLabel": 0,
+      "sourceIdCountBelowReadingLabelCount": false,
+      "contextualReadingAssignment": "not_performed",
+      "independentlyVerifiedContextualReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 407,
+      "character": "划",
+      "caseNormalizedReadingLabels": [
+        "hua2",
+        "hua4"
+      ],
+      "caseNormalizedReadingLabelCount": 2,
+      "surfaceCandidateIdCount": 3,
+      "minimumAdditionalDistinctSourceIdsForHypotheticalOnePerLabel": 0,
+      "sourceIdCountBelowReadingLabelCount": false,
+      "contextualReadingAssignment": "not_performed",
+      "independentlyVerifiedContextualReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 413,
+      "character": "师",
+      "caseNormalizedReadingLabels": [
+        "shi1"
+      ],
+      "caseNormalizedReadingLabelCount": 1,
+      "surfaceCandidateIdCount": 3,
+      "minimumAdditionalDistinctSourceIdsForHypotheticalOnePerLabel": 0,
+      "sourceIdCountBelowReadingLabelCount": false,
+      "contextualReadingAssignment": "not_performed",
+      "independentlyVerifiedContextualReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 418,
+      "character": "当",
+      "caseNormalizedReadingLabels": [
+        "dang1",
+        "dang4"
+      ],
+      "caseNormalizedReadingLabelCount": 2,
+      "surfaceCandidateIdCount": 3,
+      "minimumAdditionalDistinctSourceIdsForHypotheticalOnePerLabel": 0,
+      "sourceIdCountBelowReadingLabelCount": false,
+      "contextualReadingAssignment": "not_performed",
+      "independentlyVerifiedContextualReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 424,
+      "character": "曲",
+      "caseNormalizedReadingLabels": [
+        "qu1",
+        "qu3"
+      ],
+      "caseNormalizedReadingLabelCount": 2,
+      "surfaceCandidateIdCount": 3,
+      "minimumAdditionalDistinctSourceIdsForHypotheticalOnePerLabel": 0,
+      "sourceIdCountBelowReadingLabelCount": false,
+      "contextualReadingAssignment": "not_performed",
+      "independentlyVerifiedContextualReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 427,
+      "character": "同",
+      "caseNormalizedReadingLabels": [
+        "tong2",
+        "tong4"
+      ],
+      "caseNormalizedReadingLabelCount": 2,
+      "surfaceCandidateIdCount": 3,
+      "minimumAdditionalDistinctSourceIdsForHypotheticalOnePerLabel": 0,
+      "sourceIdCountBelowReadingLabelCount": false,
+      "contextualReadingAssignment": "not_performed",
+      "independentlyVerifiedContextualReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 455,
+      "character": "传",
+      "caseNormalizedReadingLabels": [
+        "chuan2",
+        "zhuan4"
+      ],
+      "caseNormalizedReadingLabelCount": 2,
+      "surfaceCandidateIdCount": 3,
+      "minimumAdditionalDistinctSourceIdsForHypotheticalOnePerLabel": 0,
+      "sourceIdCountBelowReadingLabelCount": false,
+      "contextualReadingAssignment": "not_performed",
+      "independentlyVerifiedContextualReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 460,
+      "character": "伏",
+      "caseNormalizedReadingLabels": [
+        "fu2"
+      ],
+      "caseNormalizedReadingLabelCount": 1,
+      "surfaceCandidateIdCount": 3,
+      "minimumAdditionalDistinctSourceIdsForHypotheticalOnePerLabel": 0,
+      "sourceIdCountBelowReadingLabelCount": false,
+      "contextualReadingAssignment": "not_performed",
+      "independentlyVerifiedContextualReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 467,
+      "character": "任",
+      "caseNormalizedReadingLabels": [
+        "ren4"
+      ],
+      "caseNormalizedReadingLabelCount": 1,
+      "surfaceCandidateIdCount": 3,
+      "minimumAdditionalDistinctSourceIdsForHypotheticalOnePerLabel": 0,
+      "sourceIdCountBelowReadingLabelCount": false,
+      "contextualReadingAssignment": "not_performed",
+      "independentlyVerifiedContextualReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 472,
+      "character": "华",
+      "caseNormalizedReadingLabels": [
+        "hua1",
+        "hua2",
+        "hua4"
+      ],
+      "caseNormalizedReadingLabelCount": 3,
+      "surfaceCandidateIdCount": 3,
+      "minimumAdditionalDistinctSourceIdsForHypotheticalOnePerLabel": 0,
+      "sourceIdCountBelowReadingLabelCount": false,
+      "contextualReadingAssignment": "not_performed",
+      "independentlyVerifiedContextualReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 480,
+      "character": "向",
+      "caseNormalizedReadingLabels": [
+        "xiang4"
+      ],
+      "caseNormalizedReadingLabelCount": 1,
+      "surfaceCandidateIdCount": 3,
+      "minimumAdditionalDistinctSourceIdsForHypotheticalOnePerLabel": 0,
+      "sourceIdCountBelowReadingLabelCount": false,
+      "contextualReadingAssignment": "not_performed",
+      "independentlyVerifiedContextualReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 481,
+      "character": "似",
+      "caseNormalizedReadingLabels": [
+        "shi4",
+        "si4"
+      ],
+      "caseNormalizedReadingLabelCount": 2,
+      "surfaceCandidateIdCount": 3,
+      "minimumAdditionalDistinctSourceIdsForHypotheticalOnePerLabel": 0,
+      "sourceIdCountBelowReadingLabelCount": false,
+      "contextualReadingAssignment": "not_performed",
+      "independentlyVerifiedContextualReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 482,
+      "character": "后",
+      "caseNormalizedReadingLabels": [
+        "hou4"
+      ],
+      "caseNormalizedReadingLabelCount": 1,
+      "surfaceCandidateIdCount": 3,
+      "minimumAdditionalDistinctSourceIdsForHypotheticalOnePerLabel": 0,
+      "sourceIdCountBelowReadingLabelCount": false,
+      "contextualReadingAssignment": "not_performed",
+      "independentlyVerifiedContextualReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 483,
+      "character": "行",
+      "caseNormalizedReadingLabels": [
+        "hang2",
+        "xing2"
+      ],
+      "caseNormalizedReadingLabelCount": 2,
+      "surfaceCandidateIdCount": 3,
+      "minimumAdditionalDistinctSourceIdsForHypotheticalOnePerLabel": 0,
+      "sourceIdCountBelowReadingLabelCount": false,
+      "contextualReadingAssignment": "not_performed",
+      "independentlyVerifiedContextualReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 486,
+      "character": "会",
+      "caseNormalizedReadingLabels": [
+        "hui4",
+        "kuai4"
+      ],
+      "caseNormalizedReadingLabelCount": 2,
+      "surfaceCandidateIdCount": 3,
+      "minimumAdditionalDistinctSourceIdsForHypotheticalOnePerLabel": 0,
+      "sourceIdCountBelowReadingLabelCount": false,
+      "contextualReadingAssignment": "not_performed",
+      "independentlyVerifiedContextualReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 488,
+      "character": "合",
+      "caseNormalizedReadingLabels": [
+        "ge3",
+        "he2"
+      ],
+      "caseNormalizedReadingLabelCount": 2,
+      "surfaceCandidateIdCount": 3,
+      "minimumAdditionalDistinctSourceIdsForHypotheticalOnePerLabel": 0,
+      "sourceIdCountBelowReadingLabelCount": false,
+      "contextualReadingAssignment": "not_performed",
+      "independentlyVerifiedContextualReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 489,
+      "character": "兆",
+      "caseNormalizedReadingLabels": [
+        "zhao4"
+      ],
+      "caseNormalizedReadingLabelCount": 1,
+      "surfaceCandidateIdCount": 3,
+      "minimumAdditionalDistinctSourceIdsForHypotheticalOnePerLabel": 0,
+      "sourceIdCountBelowReadingLabelCount": false,
+      "contextualReadingAssignment": "not_performed",
+      "independentlyVerifiedContextualReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 494,
+      "character": "创",
+      "caseNormalizedReadingLabels": [
+        "chuang1",
+        "chuang4"
+      ],
+      "caseNormalizedReadingLabelCount": 2,
+      "surfaceCandidateIdCount": 3,
+      "minimumAdditionalDistinctSourceIdsForHypotheticalOnePerLabel": 0,
+      "sourceIdCountBelowReadingLabelCount": false,
+      "contextualReadingAssignment": "not_performed",
+      "independentlyVerifiedContextualReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 511,
+      "character": "冲",
+      "caseNormalizedReadingLabels": [
+        "chong1",
+        "chong4"
+      ],
+      "caseNormalizedReadingLabelCount": 2,
+      "surfaceCandidateIdCount": 3,
+      "minimumAdditionalDistinctSourceIdsForHypotheticalOnePerLabel": 0,
+      "sourceIdCountBelowReadingLabelCount": false,
+      "contextualReadingAssignment": "not_performed",
+      "independentlyVerifiedContextualReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 514,
+      "character": "庄",
+      "caseNormalizedReadingLabels": [
+        "zhuang1"
+      ],
+      "caseNormalizedReadingLabelCount": 1,
+      "surfaceCandidateIdCount": 3,
+      "minimumAdditionalDistinctSourceIdsForHypotheticalOnePerLabel": 0,
+      "sourceIdCountBelowReadingLabelCount": false,
+      "contextualReadingAssignment": "not_performed",
+      "independentlyVerifiedContextualReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 518,
+      "character": "齐",
+      "caseNormalizedReadingLabels": [
+        "qi2"
+      ],
+      "caseNormalizedReadingLabelCount": 1,
+      "surfaceCandidateIdCount": 3,
+      "minimumAdditionalDistinctSourceIdsForHypotheticalOnePerLabel": 0,
+      "sourceIdCountBelowReadingLabelCount": false,
+      "contextualReadingAssignment": "not_performed",
+      "independentlyVerifiedContextualReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 544,
+      "character": "兴",
+      "caseNormalizedReadingLabels": [
+        "xing1",
+        "xing4"
+      ],
+      "caseNormalizedReadingLabelCount": 2,
+      "surfaceCandidateIdCount": 3,
+      "minimumAdditionalDistinctSourceIdsForHypotheticalOnePerLabel": 0,
+      "sourceIdCountBelowReadingLabelCount": false,
+      "contextualReadingAssignment": "not_performed",
+      "independentlyVerifiedContextualReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 549,
+      "character": "安",
+      "caseNormalizedReadingLabels": [
+        "an1"
+      ],
+      "caseNormalizedReadingLabelCount": 1,
+      "surfaceCandidateIdCount": 3,
+      "minimumAdditionalDistinctSourceIdsForHypotheticalOnePerLabel": 0,
+      "sourceIdCountBelowReadingLabelCount": false,
+      "contextualReadingAssignment": "not_performed",
+      "independentlyVerifiedContextualReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 556,
+      "character": "论",
+      "caseNormalizedReadingLabels": [
+        "lun2",
+        "lun4"
+      ],
+      "caseNormalizedReadingLabelCount": 2,
+      "surfaceCandidateIdCount": 3,
+      "minimumAdditionalDistinctSourceIdsForHypotheticalOnePerLabel": 0,
+      "sourceIdCountBelowReadingLabelCount": false,
+      "contextualReadingAssignment": "not_performed",
+      "independentlyVerifiedContextualReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 564,
+      "character": "那",
+      "caseNormalizedReadingLabels": [
+        "na1",
+        "na3",
+        "na4",
+        "nuo2"
+      ],
+      "caseNormalizedReadingLabelCount": 4,
+      "surfaceCandidateIdCount": 3,
+      "minimumAdditionalDistinctSourceIdsForHypotheticalOnePerLabel": 1,
+      "sourceIdCountBelowReadingLabelCount": true,
+      "contextualReadingAssignment": "not_performed",
+      "independentlyVerifiedContextualReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 566,
+      "character": "尽",
+      "caseNormalizedReadingLabels": [
+        "jin3",
+        "jin4"
+      ],
+      "caseNormalizedReadingLabelCount": 2,
+      "surfaceCandidateIdCount": 3,
+      "minimumAdditionalDistinctSourceIdsForHypotheticalOnePerLabel": 0,
+      "sourceIdCountBelowReadingLabelCount": false,
+      "contextualReadingAssignment": "not_performed",
+      "independentlyVerifiedContextualReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 575,
+      "character": "阴",
+      "caseNormalizedReadingLabels": [
+        "yin1"
+      ],
+      "caseNormalizedReadingLabelCount": 1,
+      "surfaceCandidateIdCount": 3,
+      "minimumAdditionalDistinctSourceIdsForHypotheticalOnePerLabel": 0,
+      "sourceIdCountBelowReadingLabelCount": false,
+      "contextualReadingAssignment": "not_performed",
+      "independentlyVerifiedContextualReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 581,
+      "character": "好",
+      "caseNormalizedReadingLabels": [
+        "hao3",
+        "hao4"
+      ],
+      "caseNormalizedReadingLabelCount": 2,
+      "surfaceCandidateIdCount": 3,
+      "minimumAdditionalDistinctSourceIdsForHypotheticalOnePerLabel": 0,
+      "sourceIdCountBelowReadingLabelCount": false,
+      "contextualReadingAssignment": "not_performed",
+      "independentlyVerifiedContextualReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 586,
+      "character": "观",
+      "caseNormalizedReadingLabels": [
+        "guan1",
+        "guan4"
+      ],
+      "caseNormalizedReadingLabelCount": 2,
+      "surfaceCandidateIdCount": 3,
+      "minimumAdditionalDistinctSourceIdsForHypotheticalOnePerLabel": 0,
+      "sourceIdCountBelowReadingLabelCount": false,
+      "contextualReadingAssignment": "not_performed",
+      "independentlyVerifiedContextualReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 593,
+      "character": "约",
+      "caseNormalizedReadingLabels": [
+        "yao1",
+        "yue1"
+      ],
+      "caseNormalizedReadingLabelCount": 2,
+      "surfaceCandidateIdCount": 3,
+      "minimumAdditionalDistinctSourceIdsForHypotheticalOnePerLabel": 0,
+      "sourceIdCountBelowReadingLabelCount": false,
+      "contextualReadingAssignment": "not_performed",
+      "independentlyVerifiedContextualReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 595,
+      "character": "纪",
+      "caseNormalizedReadingLabels": [
+        "ji3",
+        "ji4"
+      ],
+      "caseNormalizedReadingLabelCount": 2,
+      "surfaceCandidateIdCount": 3,
+      "minimumAdditionalDistinctSourceIdsForHypotheticalOnePerLabel": 0,
+      "sourceIdCountBelowReadingLabelCount": false,
+      "contextualReadingAssignment": "not_performed",
+      "independentlyVerifiedContextualReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 600,
+      "character": "弄",
+      "caseNormalizedReadingLabels": [
+        "long4",
+        "nong4"
+      ],
+      "caseNormalizedReadingLabelCount": 2,
+      "surfaceCandidateIdCount": 3,
+      "minimumAdditionalDistinctSourceIdsForHypotheticalOnePerLabel": 0,
+      "sourceIdCountBelowReadingLabelCount": false,
+      "contextualReadingAssignment": "not_performed",
+      "independentlyVerifiedContextualReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 632,
+      "character": "折",
+      "caseNormalizedReadingLabels": [
+        "she2",
+        "zhe1",
+        "zhe2"
+      ],
+      "caseNormalizedReadingLabelCount": 3,
+      "surfaceCandidateIdCount": 3,
+      "minimumAdditionalDistinctSourceIdsForHypotheticalOnePerLabel": 0,
+      "sourceIdCountBelowReadingLabelCount": false,
+      "contextualReadingAssignment": "not_performed",
+      "independentlyVerifiedContextualReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 655,
+      "character": "把",
+      "caseNormalizedReadingLabels": [
+        "ba3",
+        "ba4"
+      ],
+      "caseNormalizedReadingLabelCount": 2,
+      "surfaceCandidateIdCount": 3,
+      "minimumAdditionalDistinctSourceIdsForHypotheticalOnePerLabel": 0,
+      "sourceIdCountBelowReadingLabelCount": false,
+      "contextualReadingAssignment": "not_performed",
+      "independentlyVerifiedContextualReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 665,
+      "character": "花",
+      "caseNormalizedReadingLabels": [
+        "hua1"
+      ],
+      "caseNormalizedReadingLabelCount": 1,
+      "surfaceCandidateIdCount": 3,
+      "minimumAdditionalDistinctSourceIdsForHypotheticalOnePerLabel": 0,
+      "sourceIdCountBelowReadingLabelCount": false,
+      "contextualReadingAssignment": "not_performed",
+      "independentlyVerifiedContextualReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 675,
+      "character": "克",
+      "caseNormalizedReadingLabels": [
+        "ke4",
+        "kei1"
+      ],
+      "caseNormalizedReadingLabelCount": 2,
+      "surfaceCandidateIdCount": 3,
+      "minimumAdditionalDistinctSourceIdsForHypotheticalOnePerLabel": 0,
+      "sourceIdCountBelowReadingLabelCount": false,
+      "contextualReadingAssignment": "not_performed",
+      "independentlyVerifiedContextualReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 677,
+      "character": "苏",
+      "caseNormalizedReadingLabels": [
+        "su1"
+      ],
+      "caseNormalizedReadingLabelCount": 1,
+      "surfaceCandidateIdCount": 3,
+      "minimumAdditionalDistinctSourceIdsForHypotheticalOnePerLabel": 0,
+      "sourceIdCountBelowReadingLabelCount": false,
+      "contextualReadingAssignment": "not_performed",
+      "independentlyVerifiedContextualReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 679,
+      "character": "杠",
+      "caseNormalizedReadingLabels": [
+        "gang1",
+        "gang4"
+      ],
+      "caseNormalizedReadingLabelCount": 2,
+      "surfaceCandidateIdCount": 3,
+      "minimumAdditionalDistinctSourceIdsForHypotheticalOnePerLabel": 0,
+      "sourceIdCountBelowReadingLabelCount": false,
+      "contextualReadingAssignment": "not_performed",
+      "independentlyVerifiedContextualReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 693,
+      "character": "更",
+      "caseNormalizedReadingLabels": [
+        "geng1",
+        "geng4"
+      ],
+      "caseNormalizedReadingLabelCount": 2,
+      "surfaceCandidateIdCount": 3,
+      "minimumAdditionalDistinctSourceIdsForHypotheticalOnePerLabel": 0,
+      "sourceIdCountBelowReadingLabelCount": false,
+      "contextualReadingAssignment": "not_performed",
+      "independentlyVerifiedContextualReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 704,
+      "character": "还",
+      "caseNormalizedReadingLabels": [
+        "hai2",
+        "huan2"
+      ],
+      "caseNormalizedReadingLabelCount": 2,
+      "surfaceCandidateIdCount": 3,
+      "minimumAdditionalDistinctSourceIdsForHypotheticalOnePerLabel": 0,
+      "sourceIdCountBelowReadingLabelCount": false,
+      "contextualReadingAssignment": "not_performed",
+      "independentlyVerifiedContextualReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 708,
+      "character": "连",
+      "caseNormalizedReadingLabels": [
+        "lian2"
+      ],
+      "caseNormalizedReadingLabelCount": 1,
+      "surfaceCandidateIdCount": 3,
+      "minimumAdditionalDistinctSourceIdsForHypotheticalOnePerLabel": 0,
+      "sourceIdCountBelowReadingLabelCount": false,
+      "contextualReadingAssignment": "not_performed",
+      "independentlyVerifiedContextualReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 717,
+      "character": "时",
+      "caseNormalizedReadingLabels": [
+        "shi2"
+      ],
+      "caseNormalizedReadingLabelCount": 1,
+      "surfaceCandidateIdCount": 3,
+      "minimumAdditionalDistinctSourceIdsForHypotheticalOnePerLabel": 0,
+      "sourceIdCountBelowReadingLabelCount": false,
+      "contextualReadingAssignment": "not_performed",
+      "independentlyVerifiedContextualReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 721,
+      "character": "里",
+      "caseNormalizedReadingLabels": [
+        "li3"
+      ],
+      "caseNormalizedReadingLabelCount": 1,
+      "surfaceCandidateIdCount": 3,
+      "minimumAdditionalDistinctSourceIdsForHypotheticalOnePerLabel": 0,
+      "sourceIdCountBelowReadingLabelCount": false,
+      "contextualReadingAssignment": "not_performed",
+      "independentlyVerifiedContextualReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 739,
+      "character": "听",
+      "caseNormalizedReadingLabels": [
+        "ting1",
+        "ting4",
+        "yin3"
+      ],
+      "caseNormalizedReadingLabelCount": 3,
+      "surfaceCandidateIdCount": 3,
+      "minimumAdditionalDistinctSourceIdsForHypotheticalOnePerLabel": 0,
+      "sourceIdCountBelowReadingLabelCount": false,
+      "contextualReadingAssignment": "not_performed",
+      "independentlyVerifiedContextualReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 747,
+      "character": "吧",
+      "caseNormalizedReadingLabels": [
+        "ba1",
+        "ba5"
+      ],
+      "caseNormalizedReadingLabelCount": 2,
+      "surfaceCandidateIdCount": 3,
+      "minimumAdditionalDistinctSourceIdsForHypotheticalOnePerLabel": 0,
+      "sourceIdCountBelowReadingLabelCount": false,
+      "contextualReadingAssignment": "not_performed",
+      "independentlyVerifiedContextualReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 751,
+      "character": "别",
+      "caseNormalizedReadingLabels": [
+        "bie2",
+        "bie4"
+      ],
+      "caseNormalizedReadingLabelCount": 2,
+      "surfaceCandidateIdCount": 3,
+      "minimumAdditionalDistinctSourceIdsForHypotheticalOnePerLabel": 0,
+      "sourceIdCountBelowReadingLabelCount": false,
+      "contextualReadingAssignment": "not_performed",
+      "independentlyVerifiedContextualReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 758,
+      "character": "钉",
+      "caseNormalizedReadingLabels": [
+        "ding1",
+        "ding4"
+      ],
+      "caseNormalizedReadingLabelCount": 2,
+      "surfaceCandidateIdCount": 3,
+      "minimumAdditionalDistinctSourceIdsForHypotheticalOnePerLabel": 0,
+      "sourceIdCountBelowReadingLabelCount": false,
+      "contextualReadingAssignment": "not_performed",
+      "independentlyVerifiedContextualReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 763,
+      "character": "利",
+      "caseNormalizedReadingLabels": [
+        "li4"
+      ],
+      "caseNormalizedReadingLabelCount": 1,
+      "surfaceCandidateIdCount": 3,
+      "minimumAdditionalDistinctSourceIdsForHypotheticalOnePerLabel": 0,
+      "sourceIdCountBelowReadingLabelCount": false,
+      "contextualReadingAssignment": "not_performed",
+      "independentlyVerifiedContextualReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 777,
+      "character": "作",
+      "caseNormalizedReadingLabels": [
+        "zuo1",
+        "zuo4"
+      ],
+      "caseNormalizedReadingLabelCount": 2,
+      "surfaceCandidateIdCount": 3,
+      "minimumAdditionalDistinctSourceIdsForHypotheticalOnePerLabel": 0,
+      "sourceIdCountBelowReadingLabelCount": false,
+      "contextualReadingAssignment": "not_performed",
+      "independentlyVerifiedContextualReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 778,
+      "character": "伯",
+      "caseNormalizedReadingLabels": [
+        "ba4",
+        "bai3",
+        "bo2"
+      ],
+      "caseNormalizedReadingLabelCount": 3,
+      "surfaceCandidateIdCount": 3,
+      "minimumAdditionalDistinctSourceIdsForHypotheticalOnePerLabel": 0,
+      "sourceIdCountBelowReadingLabelCount": false,
+      "contextualReadingAssignment": "not_performed",
+      "independentlyVerifiedContextualReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 795,
+      "character": "余",
+      "caseNormalizedReadingLabels": [
+        "yu2"
+      ],
+      "caseNormalizedReadingLabelCount": 1,
+      "surfaceCandidateIdCount": 3,
+      "minimumAdditionalDistinctSourceIdsForHypotheticalOnePerLabel": 0,
+      "sourceIdCountBelowReadingLabelCount": false,
+      "contextualReadingAssignment": "not_performed",
+      "independentlyVerifiedContextualReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 810,
+      "character": "免",
+      "caseNormalizedReadingLabels": [
+        "mian3",
+        "wen4"
+      ],
+      "caseNormalizedReadingLabelCount": 2,
+      "surfaceCandidateIdCount": 3,
+      "minimumAdditionalDistinctSourceIdsForHypotheticalOnePerLabel": 0,
+      "sourceIdCountBelowReadingLabelCount": false,
+      "contextualReadingAssignment": "not_performed",
+      "independentlyVerifiedContextualReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 814,
+      "character": "角",
+      "caseNormalizedReadingLabels": [
+        "jiao3",
+        "jue2"
+      ],
+      "caseNormalizedReadingLabelCount": 2,
+      "surfaceCandidateIdCount": 3,
+      "minimumAdditionalDistinctSourceIdsForHypotheticalOnePerLabel": 0,
+      "sourceIdCountBelowReadingLabelCount": false,
+      "contextualReadingAssignment": "not_performed",
+      "independentlyVerifiedContextualReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 821,
+      "character": "刨",
+      "caseNormalizedReadingLabels": [
+        "bao4",
+        "pao2"
+      ],
+      "caseNormalizedReadingLabelCount": 2,
+      "surfaceCandidateIdCount": 0,
+      "minimumAdditionalDistinctSourceIdsForHypotheticalOnePerLabel": 2,
+      "sourceIdCountBelowReadingLabelCount": true,
+      "contextualReadingAssignment": "not_performed",
+      "independentlyVerifiedContextualReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 825,
+      "character": "系",
+      "caseNormalizedReadingLabels": [
+        "ji4",
+        "xi4"
+      ],
+      "caseNormalizedReadingLabelCount": 2,
+      "surfaceCandidateIdCount": 3,
+      "minimumAdditionalDistinctSourceIdsForHypotheticalOnePerLabel": 0,
+      "sourceIdCountBelowReadingLabelCount": false,
+      "contextualReadingAssignment": "not_performed",
+      "independentlyVerifiedContextualReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 836,
+      "character": "应",
+      "caseNormalizedReadingLabels": [
+        "ying1",
+        "ying4"
+      ],
+      "caseNormalizedReadingLabelCount": 2,
+      "surfaceCandidateIdCount": 3,
+      "minimumAdditionalDistinctSourceIdsForHypotheticalOnePerLabel": 0,
+      "sourceIdCountBelowReadingLabelCount": false,
+      "contextualReadingAssignment": "not_performed",
+      "independentlyVerifiedContextualReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 841,
+      "character": "辛",
+      "caseNormalizedReadingLabels": [
+        "xin1"
+      ],
+      "caseNormalizedReadingLabelCount": 1,
+      "surfaceCandidateIdCount": 3,
+      "minimumAdditionalDistinctSourceIdsForHypotheticalOnePerLabel": 0,
+      "sourceIdCountBelowReadingLabelCount": false,
+      "contextualReadingAssignment": "not_performed",
+      "independentlyVerifiedContextualReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 847,
+      "character": "间",
+      "caseNormalizedReadingLabels": [
+        "jian1",
+        "jian4"
+      ],
+      "caseNormalizedReadingLabelCount": 2,
+      "surfaceCandidateIdCount": 3,
+      "minimumAdditionalDistinctSourceIdsForHypotheticalOnePerLabel": 0,
+      "sourceIdCountBelowReadingLabelCount": false,
+      "contextualReadingAssignment": "not_performed",
+      "independentlyVerifiedContextualReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 848,
+      "character": "闷",
+      "caseNormalizedReadingLabels": [
+        "men1",
+        "men4"
+      ],
+      "caseNormalizedReadingLabelCount": 2,
+      "surfaceCandidateIdCount": 3,
+      "minimumAdditionalDistinctSourceIdsForHypotheticalOnePerLabel": 0,
+      "sourceIdCountBelowReadingLabelCount": false,
+      "contextualReadingAssignment": "not_performed",
+      "independentlyVerifiedContextualReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 860,
+      "character": "沙",
+      "caseNormalizedReadingLabels": [
+        "sha1"
+      ],
+      "caseNormalizedReadingLabelCount": 1,
+      "surfaceCandidateIdCount": 3,
+      "minimumAdditionalDistinctSourceIdsForHypotheticalOnePerLabel": 0,
+      "sourceIdCountBelowReadingLabelCount": false,
+      "contextualReadingAssignment": "not_performed",
+      "independentlyVerifiedContextualReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 871,
+      "character": "沉",
+      "caseNormalizedReadingLabels": [
+        "chen1",
+        "chen2"
+      ],
+      "caseNormalizedReadingLabelCount": 2,
+      "surfaceCandidateIdCount": 3,
+      "minimumAdditionalDistinctSourceIdsForHypotheticalOnePerLabel": 0,
+      "sourceIdCountBelowReadingLabelCount": false,
+      "contextualReadingAssignment": "not_performed",
+      "independentlyVerifiedContextualReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 905,
+      "character": "尾",
+      "caseNormalizedReadingLabels": [
+        "wei3",
+        "yi3"
+      ],
+      "caseNormalizedReadingLabelCount": 2,
+      "surfaceCandidateIdCount": 3,
+      "minimumAdditionalDistinctSourceIdsForHypotheticalOnePerLabel": 0,
+      "sourceIdCountBelowReadingLabelCount": false,
+      "contextualReadingAssignment": "not_performed",
+      "independentlyVerifiedContextualReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 914,
+      "character": "陈",
+      "caseNormalizedReadingLabels": [
+        "chen2"
+      ],
+      "caseNormalizedReadingLabelCount": 1,
+      "surfaceCandidateIdCount": 3,
+      "minimumAdditionalDistinctSourceIdsForHypotheticalOnePerLabel": 0,
+      "sourceIdCountBelowReadingLabelCount": false,
+      "contextualReadingAssignment": "not_performed",
+      "independentlyVerifiedContextualReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 926,
+      "character": "劲",
+      "caseNormalizedReadingLabels": [
+        "jin4",
+        "jing4"
+      ],
+      "caseNormalizedReadingLabelCount": 2,
+      "surfaceCandidateIdCount": 3,
+      "minimumAdditionalDistinctSourceIdsForHypotheticalOnePerLabel": 0,
+      "sourceIdCountBelowReadingLabelCount": false,
+      "contextualReadingAssignment": "not_performed",
+      "independentlyVerifiedContextualReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 934,
+      "character": "纳",
+      "caseNormalizedReadingLabels": [
+        "na4"
+      ],
+      "caseNormalizedReadingLabelCount": 1,
+      "surfaceCandidateIdCount": 3,
+      "minimumAdditionalDistinctSourceIdsForHypotheticalOnePerLabel": 0,
+      "sourceIdCountBelowReadingLabelCount": false,
+      "contextualReadingAssignment": "not_performed",
+      "independentlyVerifiedContextualReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 945,
+      "character": "环",
+      "caseNormalizedReadingLabels": [
+        "huan2"
+      ],
+      "caseNormalizedReadingLabelCount": 1,
+      "surfaceCandidateIdCount": 3,
+      "minimumAdditionalDistinctSourceIdsForHypotheticalOnePerLabel": 0,
+      "sourceIdCountBelowReadingLabelCount": false,
+      "contextualReadingAssignment": "not_performed",
+      "independentlyVerifiedContextualReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 953,
+      "character": "抹",
+      "caseNormalizedReadingLabels": [
+        "ma1",
+        "mo3",
+        "mo4"
+      ],
+      "caseNormalizedReadingLabelCount": 3,
+      "surfaceCandidateIdCount": 3,
+      "minimumAdditionalDistinctSourceIdsForHypotheticalOnePerLabel": 0,
+      "sourceIdCountBelowReadingLabelCount": false,
+      "contextualReadingAssignment": "not_performed",
+      "independentlyVerifiedContextualReadings": 0,
+      "approvedLexicalSenses": 0
+    },
+    {
+      "rank": 963,
+      "character": "担",
+      "caseNormalizedReadingLabels": [
+        "dan1",
+        "dan4"
+      ],
+      "caseNormalizedReadingLabelCount": 2,
+      "surfaceCandidateIdCount": 3,
+      "minimumAdditionalDistinctSourceIdsForHypotheticalOnePerLabel": 0,
+      "sourceIdCountBelowReadingLabelCount": false,
+      "contextualReadingAssignment": "not_performed",
+      "independentlyVerifiedContextualReadings": 0,
+      "approvedLexicalSenses": 0
+    }
+  ]
+}
