@@ -1,0 +1,76 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="description" content="Source-exact held-out Chinese glyph color warning comparison, with original and fold-trained component colors.">
+<title>Held-out glyph color warning review · Chromalect</title>
+<link rel="stylesheet" href="style.css"><script src="theme.js"></script>
+<script src="heldout-color-warning-review.js" defer></script>
+<style>
+.hv-controls{display:flex;flex-wrap:wrap;gap:12px;align-items:end;
+ background:var(--panel);border:1px solid var(--border);
+ border-radius:12px;padding:16px;margin:18px 0}
+.hv-controls label{display:grid;gap:6px;min-width:125px;max-width:270px}
+.hv-controls select,.hv-controls input,.hv-controls button{font:inherit;
+ color:var(--ink);background:var(--tile-bg);
+ border:1px solid var(--border);border-radius:8px;padding:9px}
+.hv-controls .hv-check{display:flex;align-items:center;gap:7px}
+.hv-controls button{cursor:pointer}.hv-controls button:disabled{opacity:.4;cursor:default}
+.hv-comparison{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));
+ gap:14px;margin:20px 0}
+.hv-panel{border:1px solid var(--border);background:var(--tile-bg);
+ border-radius:12px;padding:16px;margin:0}
+.hv-panel figcaption{font-weight:700;margin-bottom:12px}
+.hv-canvas{background:var(--hv-surface,transparent);
+ display:flex;align-items:center;justify-content:center;min-height:185px;border-radius:8px}
+.hv-glyph{max-width:100%;object-fit:contain}
+.hv-evidence{background:var(--panel);border:1px solid var(--border);
+ border-radius:12px;padding:17px;margin:18px 0}
+.hv-evidence h2{font-size:20px;margin:0 0 10px}
+.hv-pair{border-top:1px solid var(--border);padding:12px 0;display:grid;gap:8px}
+.hv-owner{display:flex;gap:8px;flex-wrap:wrap;align-items:center;
+ font:12px ui-monospace,monospace}
+.hv-swatch{background:var(--hv-color);width:24px;height:24px;
+ display:inline-block;border-radius:5px;border:1px solid var(--subtle-outline)}
+.hv-code,.hv-metadata{color:var(--sub);font-size:12px;overflow-wrap:anywhere}
+.hv-caution{border-left:3px solid var(--active-border);
+ padding:12px 16px;background:var(--panel);margin:16px 0}
+</style></head><body>
+<header class="wrap"><div class="brand"><b>CHROMALECT</b><small>Language, made visible</small></div></header>
+<main class="wrap">
+<div class="eyebrow">Color discrimination research · out-of-fold source glyphs</div>
+<h1>Inspect held-out component-color warning pairs</h1>
+<p class="intro">Each experimental color assignment shown here was fitted using 800 Chinese characters without the selected character's 200-member test fold. The original v0.6 colors are retained next to the independently generated test-fold colors. Both SVGs have exactly the same original source paths, component owners and transforms; only source-authorized color fills can differ.</p>
+<div class="hv-caution">The ΔOK 0.07 threshold creates <strong>machine review priorities</strong>, not a verdict on human component distinguishability, color vision, readability, educational benefit or linguistic semantics. No source glyph or production palette has been altered or independently certified.</div>
+<p id="hv-status" role="status" aria-live="polite">Verifying held-out component colors and unchanged source SVG paths.</p>
+<p id="hv-summary">Loading fold-specific warnings.</p>
+<div class="hv-controls">
+<label for="hv-filter">Review category<select id="hv-filter">
+<option value="all">All warned glyphs</option>
+<option value="introduced">New warning versus v0.6</option>
+<option value="retained">Warning retained</option>
+<option value="resolved">Original warning resolved</option></select></label>
+<label for="hv-order">Order<select id="hv-order">
+<option value="severity">Introduced warnings first</option>
+<option value="distance">Smallest fold-trained distance</option>
+<option value="rank">Source character rank</option></select></label>
+<label for="hv-search">Rank, glyph or component ID
+<input id="hv-search" type="search" placeholder="e.g. cmp-0001"></label>
+<label for="hv-select">Character<select id="hv-select"></select></label>
+<button id="hv-prev" type="button">Previous</button>
+<button id="hv-next" type="button">Next</button>
+<label for="hv-size">Size: <strong id="hv-size-label">112 px</strong>
+<input id="hv-size" type="range" min="40" max="160" step="8" value="112"></label>
+<label for="hv-surface">Reference surface<select id="hv-surface">
+<option value="theme">System/theme</option><option value="white">White</option>
+<option value="black">Black</option></select></label>
+<label class="hv-check" for="hv-gray"><input id="hv-gray" type="checkbox">Grayscale</label>
+</div>
+<p id="hv-count"></p>
+<div id="hv-gallery" class="hv-comparison" aria-label="Original versus independently fold-trained source-matched Chinese glyph colors"></div>
+<div id="hv-pairs" class="hv-evidence" aria-label="Source component owners and pair distances"></div>
+<p>Source-ranked pair evidence includes source and fold-specific component IDs, hex values, measured OKLab distance and introduced/resolved/retained status. The <a href="glyphs/research/heldout-warning-v0.1/index-v0.1.json">generated manifest</a> records byte-level source and candidate SHA-256 checksums, with no visual certification. See the <a href="semantic-group-hue-heldout.html">full five-fold result</a> and <a href="semantic-group-hue-fivefold-heldout-v0.1.json">machine-readable fold exclusions</a>.</p>
+</main><footer class="wrap">
+<a href="semantic-group-hue-heldout.html">Held-out study</a> ·
+<a href="hint-hue-glyph-comparison.html">Full-sample glyph comparison</a> ·
+<a href="colors.html">Original color registry</a>
+</footer></body></html>
