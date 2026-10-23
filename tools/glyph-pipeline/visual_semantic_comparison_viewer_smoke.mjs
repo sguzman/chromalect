@@ -15,6 +15,39 @@ const profile={schema:"chromalect.mandarin-character-profile.v1",catalog_count:1
   geometry:{status:"source_aligned_visual_review_pending",
    svg:"glyphs/U+"+c.character.codePointAt(0).toString(16).toUpperCase().padStart(4,"0")+".svg"}
  }))};
+// The generated review worklist is pinned to the same 1,000 source glyphs.
+// The fixture's 25 warned glyphs have 26 measured color-pair cautions,
+// all of which remain unapproved. Nonwarned first glyph stays monoswatch.
+const closeRanks=new Set(Array.from({length:25},(_,i)=>i+50));
+for(const rank of closeRanks){
+ const p=profile.characters[rank-1];
+ p.component_instances.push({component_id:"cmp-0002",form:"木",color:"#b0b0b0"});
+ if(rank===50)p.component_instances.push({component_id:"cmp-0003",form:"土",color:"#b2b2b2"});
+}
+const review={
+ schema:"chromalect.glyph-independent-review-worklist.v0.1",
+ status:"build_derived_source_review_priority_not_independent_visual_certification",
+ provenance:{paletteVersion:"mandarin-component-identity@0.6.0"},
+ summary:{catalogCharacters:1000,mappedSourceGlyphs:1000,colorContrastWarningPairs:26,
+  independentlyVisuallyCertified:0,independentlyLinguisticallyCertified:0,eligibleLearningStudyItems:0},
+ records:profile.characters.map(p=>{
+  const flagged=closeRanks.has(p.rank);
+  const pairs=flagged?[{
+   componentA:{id:"cmp-0001",form:p.character,hex:"#aabbcc"},
+   componentB:{id:"cmp-0002",form:"木",hex:"#b0b0b0"},oklabDistance:0.03
+  }]:[];
+  if(p.rank===50)pairs.push({
+   componentA:{id:"cmp-0002",form:"木",hex:"#b0b0b0"},
+   componentB:{id:"cmp-0003",form:"土",hex:"#b2b2b2"},oklabDistance:0.02
+  });
+  return {rank:p.rank,character:p.character,svg:p.geometry.svg.split("/").at(-1),
+   componentIds:p.component_instances.map(c=>c.component_id),
+   closeColorPairs:pairs.length,colorContrastWarnings:pairs,
+   closestOklabDistance:pairs.length?Math.min(...pairs.map(x=>x.oklabDistance)):null,
+   independentVisualReview:"pending",independentLinguisticReview:"pending",
+   eligibleForLearningStudy:false};
+ })
+};
 class Node{
  constructor(tag){this.tag=tag;this.children=[];this.textContent="";this.value="";
   this.checked=false;this.disabled=false;this.attrs={};this.dataset={};
@@ -25,11 +58,11 @@ class Node{
  addEventListener(name,fn){this.listeners[name]=fn;}
  setAttribute(name,val){this.attrs[name]=String(val);}
 }
-function start(glyphs=profile,meanings=semantic){
- const ids=["vsc-pick","vsc-back","vsc-forward","vsc-sense","vsc-reveal",
+function start(glyphs=profile,meanings=semantic,reviews=review){
+ const ids=["vsc-pick","vsc-focus","vsc-warning","vsc-back","vsc-forward","vsc-sense","vsc-reveal",
   "vsc-size","vsc-size-label","vsc-panels","vsc-source","vsc-status","vsc-count"];
  const nodes=Object.fromEntries(ids.map(id=>[id,new Node("div")]));
- nodes["vsc-size"].value="112";
+ nodes["vsc-size"].value="112";nodes["vsc-focus"].value="all";
  const document={
   getElementById:id=>nodes[id],createElement:tag=>new Node(tag),
   createDocumentFragment:()=>new Node("fragment"),
@@ -39,7 +72,7 @@ function start(glyphs=profile,meanings=semantic){
   },currentScript:null
  };
  const ctx={document,URL,Map,Set,Math,Array,Number,Object,Error,JSON,
-  fetch:async url=>({ok:true,json:async()=>url.startsWith("profiles/")?glyphs:meanings})};
+  fetch:async url=>({ok:true,json:async()=>url.startsWith("profiles/")?glyphs:url.startsWith("glyphs/")?reviews:meanings})};
  ctx.globalThis=ctx;
  vm.runInNewContext(grammar,ctx);
  vm.runInNewContext(script,ctx);
@@ -53,6 +86,7 @@ async function settle(nodes){
 const ui=start();await settle(ui);
 assert.equal(ui["vsc-panels"].children.length,3);
 assert.equal(ui["vsc-pick"].children.length,1000);
+assert.match(ui["vsc-warning"].textContent,/No close-color source warning/);
 assert.match(ui["vsc-count"].textContent,/0 approved lexical senses/);
 const arms=ui["vsc-panels"].children;
 assert.deepEqual(arms.map(x=>x.dataset.condition),["plain","identity","semantic"]);
@@ -94,9 +128,32 @@ assert.notEqual(originalCue,alternativeCue);
 assert.match(alternativeCue,/say/);
 assert.equal(shape(ui["vsc-panels"].children[1]).children[0].src,
  shape(ui["vsc-panels"].children[2]).children[0].src);
+ui["vsc-focus"].value="close";ui["vsc-focus"].listeners.change();
+assert.equal(ui["vsc-pick"].children.length,25);
+assert.match(ui["vsc-count"].textContent,/1 \/ 25 in current focus/);
+assert.match(ui["vsc-warning"].textContent,/2 component pairs/);
+assert.match(ui["vsc-source"].children[7].children[1].children[2].textContent,/ΔOK 0.0300/);
+assert.match(ui["vsc-source"].children[7].children[2].children[2].textContent,/ΔOK 0.0200/);
+const pair0=ui["vsc-source"].children[7].children[1].children[0];
+assert.equal(pair0.children[0].style["--swatch"],"#aabbcc");
+assert.equal(pair0.children[1].textContent.includes("cmp-0001"),true);
+ui["vsc-forward"].listeners.click();
+assert.match(ui["vsc-count"].textContent,/2 \/ 25 in current focus/);
+assert.match(ui["vsc-warning"].textContent,/1 component pair/);
+ui["vsc-back"].listeners.click();
+assert.match(ui["vsc-count"].textContent,/1 \/ 25 in current focus/);
+ui["vsc-focus"].value="deferred";ui["vsc-focus"].listeners.change();
+assert.equal(ui["vsc-pick"].children.length,119);
+assert.match(ui["vsc-count"].textContent,/pictogram deferred/);
+ui["vsc-focus"].value="polysemy";ui["vsc-focus"].listeners.change();
+assert.ok(ui["vsc-pick"].children.length>1);
+assert.equal(ui["vsc-sense"].children.length,2);
+ui["vsc-focus"].value="all";ui["vsc-focus"].listeners.change();
+assert.equal(ui["vsc-pick"].children.length,1000);
+
 function refuse(change){
- const a=structuredClone(profile),b=structuredClone(semantic);
- change(a,b);return start(a,b);
+ const a=structuredClone(profile),b=structuredClone(semantic),c=structuredClone(review);
+ change(a,b,c);return start(a,b,c);
 }
 for(const mutate of [
  (a,b)=>{a.characters[0].character="二";},
@@ -106,13 +163,19 @@ for(const mutate of [
  (a,b)=>{b.summary.productionVerifiedCharacters=1;},
  (a,b)=>{b.characters[0].rank=123;},
  (a,b)=>{b.characters[0].screening.candidates[0].review="approved";},
- (a,b)=>{b.summary.pictogramCandidateCharacters=900;}
+ (a,b)=>{b.summary.pictogramCandidateCharacters=900;},
+ (a,b,c)=>{c.status="independent_visual_review_complete";},
+ (a,b,c)=>{c.summary.colorContrastWarningPairs=27;},
+ (a,b,c)=>{c.records[49].colorContrastWarnings[0].componentA.hex="#000000";},
+ (a,b,c)=>{c.records[49].independentVisualReview="approved";},
+ (a,b,c)=>{c.records[49].svg="U+4E00.svg";},
+ (a,b,c)=>{c.records[49].colorContrastWarnings[0].oklabDistance=0.09;}
 ]){
  const bad=refuse(mutate);await settle(bad);
  assert.equal(bad["vsc-panels"].children.length,0);
  assert.match(bad["vsc-status"].textContent,/Cannot verify/);
 }
-for(const id of ["vsc-pick","vsc-back","vsc-forward","vsc-sense",
+for(const id of ["vsc-pick","vsc-focus","vsc-warning","vsc-back","vsc-forward","vsc-sense",
  "vsc-reveal","vsc-size","vsc-size-label","vsc-panels",
  "vsc-source","vsc-status","vsc-count"])
  assert.match(html,new RegExp('id="'+id+'"'));
