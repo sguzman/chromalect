@@ -27,7 +27,7 @@ function setup({source=manifest,hash="",assets=bytes,withCrypto=true}={}){
  const nodes=Object.fromEntries(ids.map(id=>[id,new Element()]));
  nodes["om-size"].value="96";nodes["om-cohort"].value="all";
  for(const id of ["om-cohort","om-pair","om-prev","om-next"])nodes[id].disabled=true;
- const fetched=[],objectURLs=new Map(),revoked=[],delayed=new Map();
+ const fetched=[],objectURLs=new Map(),revoked=[],delayed=new Map(),abortEvents=[];
  let count=0;
  class MockBlob{
   constructor(parts,opts){this.parts=parts;this.type=opts.type;}
@@ -44,21 +44,40 @@ function setup({source=manifest,hash="",assets=bytes,withCrypto=true}={}){
    return Uint8Array.from(createHash("sha256").update(Buffer.from(array)).digest()).buffer;
   }
  }};
- const fetch=async url=>{
+ class MockAbortController{
+  constructor(){
+   const listeners=[];
+   this.signal={aborted:false,
+    addEventListener:(event,cb)=>{if(event==="abort")listeners.push(cb);}
+   };
+   this.listeners=listeners;
+  }
+  abort(){
+   if(this.signal.aborted)return;
+   this.signal.aborted=true;abortEvents.push(this.signal);
+   for(const cb of this.listeners)cb();
+  }
+ }
+ const fetch=async (url,opts)=>{
   fetched.push(url);
   if(url===indexPath)return {ok:true,json:async()=>source};
   assert.ok(assets.has(url),"Viewer must only fetch key-reduced masks");
+  assert.ok(opts?.signal,"All SVG fetches must receive cancellation signals");
   return {ok:true,arrayBuffer:async()=>{
-   if(delayed.has(url))return delayed.get(url).promise;
+   if(opts.signal.aborted)throw Error("AbortError");
+   if(delayed.has(url))return new Promise((resolve,reject)=>{
+    opts.signal.addEventListener("abort",()=>reject(Error("AbortError")));
+    delayed.get(url).promise.then(resolve,reject);
+   });
    return Uint8Array.from(assets.get(url)).buffer;
   }};
  };
  const document={getElementById:id=>nodes[id],createElement:()=>new Element()};
- const ctx={document,fetch,URL:MockURL,Blob:MockBlob,Map,Set,Number,Error,
-  location:{hash},crypto:withCrypto?crypto:undefined};
+ const ctx={document,fetch,URL:MockURL,Blob:MockBlob,AbortController:MockAbortController,
+  Map,Set,Number,Error,location:{hash},crypto:withCrypto?crypto:undefined};
  ctx.globalThis=ctx;
  for(const s of scripts)vm.runInNewContext(s,ctx);
- return {nodes,fetched,objectURLs,revoked,delayed};
+ return {nodes,fetched,objectURLs,revoked,delayed,abortEvents};
 }
 async function loaded(session){
  for(let i=0;i<200&&!session.nodes["om-cohort"].disabled&&false;i++)await Promise.resolve();
@@ -100,6 +119,8 @@ assert.equal(p["om-pair"].value,manifest.records[0].id);
 assert.equal(p["om-prev"].disabled,true);
 assert.equal(state.fetched.length,seenBeforeReturn,
  "Returning to a recently verified region must not refetch its two SVGs");
+assert.ok(state.abortEvents.length>=2,
+ "Navigation should abort superseded requests even when already settled");
 for(const row of manifest.records){
  p["om-pair"].value=row.id;p["om-pair"].events.change();
  await flush();
@@ -192,6 +213,8 @@ assert.equal(race.nodes["om-a"].src,"");
 race.nodes["om-pair"].value=manifest.records[8].id;
 race.nodes["om-pair"].events.change();await flush();
 assertImages(race,manifest.records[8]);
+assert.ok(race.abortEvents.some(signal=>signal.aborted),
+ "Pending older pair must have received a real AbortController cancellation");
 const current=race.nodes["om-a"].src;
 resolveBlocked(Uint8Array.from(bytes.get(blocked)).buffer);
 await flush();

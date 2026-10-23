@@ -12,7 +12,7 @@ if(ids.some(id=>!$(id)))return;
 const statuses=new Set(["all","introduced","resolved","retained"]);
 const sizes=new Set([16,24,32,48,64,96,128,160]);
 let targets=[],activeCohort="all",selected=null,visibleIds=[];
-let requestVersion=0,objectURLs=[];
+let requestVersion=0,objectURLs=[],activeController=null;
 const verifiedMaskCache=new Map();
 const MAX_VERIFIED_MASKS=24; // 24 MiB maximum given the 1 MiB per-SVG cap.
 const message=s=>{$("om-status").textContent=s;};
@@ -34,16 +34,17 @@ function retireImages(){
  $("om-a").removeAttribute("src");
  $("om-b").removeAttribute("src");
 }
-async function fetchVerifiedMask(candidate){
+async function fetchVerifiedMask(candidate,signal){
  if(!globalThis.crypto?.subtle?.digest||!URL.createObjectURL||!URL.revokeObjectURL)
   throw Error("Browser SHA-256 or verified-image display unavailable");
+ if(signal?.aborted)throw Error("Superseded source-region request");
  const previous=verifiedMaskCache.get(candidate.svg);
  if(previous&&previous.sha256===candidate.sha256){
   verifiedMaskCache.delete(candidate.svg);
   verifiedMaskCache.set(candidate.svg,previous);
   return previous.bytes;
  }
- const response=await fetch(candidate.svg);
+ const response=await fetch(candidate.svg,signal?{signal}:undefined);
  if(!response.ok)throw Error("Neutral source SVG unavailable");
  const buffer=await response.arrayBuffer();
  if(buffer.byteLength===0||buffer.byteLength>1048576)
@@ -51,6 +52,7 @@ async function fetchVerifiedMask(candidate){
  const digest=await crypto.subtle.digest("SHA-256",buffer);
  const actual=Array.from(new Uint8Array(digest),b=>b.toString(16).padStart(2,"0")).join("");
  if(actual!==candidate.sha256)throw Error("Neutral source SVG SHA-256 mismatch");
+ if(signal?.aborted)throw Error("Superseded source-region request");
  verifiedMaskCache.delete(candidate.svg);
  verifiedMaskCache.set(candidate.svg,{sha256:actual,bytes:buffer});
  while(verifiedMaskCache.size>MAX_VERIFIED_MASKS)
@@ -62,6 +64,9 @@ async function selectPair(id){
  if(!target)throw Error("Masked source-region pair unavailable");
  const [a,b]=target.candidates;
  const version=++requestVersion;
+ if(activeController)activeController.abort();
+ activeController=typeof AbortController==="function"?new AbortController():null;
+ const signal=activeController?.signal;
  selected=id;
  $("om-pair").value=id;
  retireImages();
@@ -74,7 +79,7 @@ async function selectPair(id){
  updateNavigation();
  message("Checking both neutral SVG SHA-256 digests before display.");
  try{
-  const verified=await Promise.all(target.candidates.map(fetchVerifiedMask));
+  const verified=await Promise.all(target.candidates.map(c=>fetchVerifiedMask(c,signal)));
   if(version!==requestVersion)return;
   const urls=[];
   try{
@@ -127,7 +132,9 @@ async function load(){
   await showCohort("all",targets.find(t=>t.id===fragment)?.id);
   $("om-cohort").disabled=false;$("om-pair").disabled=false;
  }catch(e){
-  ++requestVersion;retireImages();
+  ++requestVersion;
+  if(activeController)activeController.abort();
+  retireImages();
   $("om-cohort").disabled=true;$("om-pair").disabled=true;
   $("om-prev").disabled=true;$("om-next").disabled=true;
   message("Source-region presentation unavailable: "+e.message);
