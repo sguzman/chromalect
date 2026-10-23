@@ -427,6 +427,8 @@ jobs:
           node tools/glyph-pipeline/source_glyph_counterfactual_smoke.mjs
           node tools/glyph-pipeline/source_glyph_counterfactual.mjs --write
           node tools/glyph-pipeline/source_glyph_counterfactual.mjs --check
+          node tools/glyph-pipeline/hint_hue_glyph_comparison_viewer_smoke.mjs
+          test -s site/hint-hue-glyph-comparison.html && test -s site/hint-hue-glyph-comparison.js
           test -s site/glyphs/research/hint-counterfactual-v0.1/index-v0.1.json
           node tools/glyph-pipeline/pilot_group_counterfactual_smoke.mjs
           node tools/glyph-pipeline/mnemonic_group_counterfactual_viewer_smoke.mjs
