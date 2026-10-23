@@ -11,7 +11,7 @@ The [machine-readable source registry](../data/phonetics/external-speech-source-
 | Common Voice Scripted Speech 27.0, zh-CN | [Common Voice dataset catalog](https://commonvoice.mozilla.org/rw/datasets) | CC0-1.0 catalog label; approximately 21.40 GB of community recordings | Mozilla Data Collective publishes additional restrictions against rehosting and speaker reidentification; confirm current per-release access terms before any use |
 | ManDi | [LREC 2022 paper](https://aclanthology.org/2022.lrec-1.213/) | Approximately 9.6 hours of Standard and regional Mandarin speech; paper identifies CC BY-NC 3.0 | Noncommercial restrictions and distinction between Standard and regional varieties must be respected |
 
-These archives have **not** been downloaded or indexed here. Source size describes the full advertised resource, not the cost of any approved research subset. A dataset license label is not permission to bypass the publisher's terms, speaker privacy restrictions or redistribution rules. No audio, transcripts, speaker data or excerpted source text are committed to the public project.
+These archives have **not** been downloaded or indexed here. Source size describes the full advertised resource, not the cost of any approved research subset. A dataset license label is not permission to bypass the publisher's terms, speaker privacy restrictions or redistribution rules. No audio, transcripts, speaker data or excerpted source text are committed to the public project. The publishing workflow also rejects committed audio-file extensions and common corpus-archive formats; metadata and source links are the only corpus materials permitted in the current research registry.
 
 ## Evidence-gated progression
 
