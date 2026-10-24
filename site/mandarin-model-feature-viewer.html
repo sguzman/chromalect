@@ -1,0 +1,71 @@
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light dark"><title>Model feature glyph decoding · Chromalect</title>
+<meta name="description" content="Reversible visual feature shapes for a published external 34-unit Mandarin phonological research model.">
+<link rel="stylesheet" href="style.css"><script src="theme.js"></script>
+<script src="mandarin-model-feature-viewer.js" defer></script>
+<style>
+.model-declaration{padding:14px 18px;border-left:4px solid var(--active-border);
+ background:var(--panel);border-radius:8px;margin:18px 0}
+.model-controls{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+ gap:12px;padding:16px;background:var(--panel);border:1px solid var(--border);
+ border-radius:12px;margin:20px 0}
+.model-controls label{display:grid;gap:6px;font-size:13px}
+.model-controls select{min-width:0;font:inherit;padding:9px;border:1px solid var(--border);
+ color:var(--ink);background:var(--tile-bg);border-radius:8px}
+.model-glyph-surface{padding:12px;border:1px solid var(--border);
+ border-radius:12px;background:var(--panel);overflow-x:auto}
+.model-feature-svg{display:block;width:100%;min-width:410px;max-width:700px;height:auto;
+ color:var(--ink)}
+.model-decoded{padding:12px;margin:12px 0;border:1px dashed var(--border);border-radius:8px}
+.model-decoded strong{font-size:20px}
+.model-inventory{display:grid;grid-template-columns:repeat(auto-fill,minmax(225px,1fr));
+ gap:12px;margin:18px 0}
+.model-feature-card{border:1px solid var(--border);border-radius:12px;
+ background:var(--panel);padding:12px;display:grid;gap:5px;min-width:0}
+.model-feature-card .model-feature-svg{min-width:0}
+.model-feature-card span{font-size:12px;color:var(--sub)}
+.model-notice{font-size:13px;color:var(--sub)}
+</style></head><body>
+<header class="wrap"><div class="brand"><b>CHROMALECT</b><small>Language, made visible</small></div></header>
+<main class="wrap"><div class="eyebrow">Phase 2 · external phonology experiment</div>
+<h1>Compositional sound-model feature glyphs</h1>
+<p class="intro">A constructed, monochrome notation for the <strong>34 research-model units</strong>
+published by Zhao and Li (2009), with six independent slots in the model's
+<strong>C–V–V–V–C–T</strong> scheme. Outer shape represents consonant/vowel
+place; internal markings represent manner or vowel height; a small edge mark
+represents aspiration, voicing or rounding. The final independent stroke is the
+original citation-tone category.</p>
+<div class="model-declaration"><strong>Not a phonemic transcription of Chinese text.</strong>
+This only reconstructs selected source-model units from their assigned feature categories.
+The constructed examples below are <strong>not claimed to be attested Mandarin words or real
+speaker pronunciations</strong>. Human recognition, feature legibility at glyph size, phonemic
+inventory decisions, contextual IPA, and learning effects remain unverified.</div>
+<h2>Build a six-slot research-model sequence</h2>
+<div class="model-controls">
+<label for="model-onset">C: onset model unit<select id="model-onset"></select></label>
+<label for="model-v1">V1: first vowel feature<select id="model-v1"></select></label>
+<label for="model-v2">V2: second vowel feature<select id="model-v2"></select></label>
+<label for="model-v3">V3: third vowel feature<select id="model-v3"></select></label>
+<label for="model-coda">C: coda model unit<select id="model-coda"></select></label>
+<label for="model-tone">T: independent citation tone<select id="model-tone"></select></label>
+</div>
+<div id="model-graphics" class="model-glyph-surface" aria-label="Visual feature grammar"></div>
+<p id="model-status" role="status" aria-live="polite">Validating the original research-model inventory.</p>
+<div id="model-decoded" class="model-decoded" aria-live="polite"></div>
+<h2>All 34 model-unit feature drawings</h2>
+<p class="model-notice">Cards use a constant filler vowel or empty onset where necessary to place
+each feature symbol into the same six-slot layout. The source model unit label is printed
+beneath each drawing for checking; hiding labels would not itself constitute a decoding study.</p>
+<div id="model-inventory" class="model-inventory" aria-label="34 unapproved feature-symbol candidates"></div>
+<p class="model-notice">Source: Xiaowei Zhao and Ping Li,
+<a href="https://link.springer.com/content/pdf/10.3758/BRM.41.2.575.pdf"><em>An online database
+of phonological representations for Mandarin Chinese</em> (2009), Table 2</a>.
+Original model-unit coding and project assumptions are recorded in the
+<a href="https://github.com/sguzman/chromalect/blob/main/docs/zhao-li-34-unit-research-model.md">source analysis</a>
+and the <a href="phonetics/zhao-li-visual-feature-grammar-audit-v0.1.json">machine-reversible feature grammar audit</a>.
+No active Mandarin component identity colors, source text, strokes, or lexical information change.</p>
+</main><footer class="wrap"><a href="mandarin-initial-features.html">Initial comparisons</a> ·
+<a href="mandarin-final-symbols.html">Written final symbols</a> ·
+<a href="mandarin-tone-contours.html">Citation tones</a> · <a href="roadmap-status.html">Roadmap</a></footer>
+</body></html>
