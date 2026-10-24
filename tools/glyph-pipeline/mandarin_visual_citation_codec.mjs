@@ -49,7 +49,8 @@ export function constructVisualCitationDecoder(source,layers,features,symbols){
  }
  assert.equal(byToken.size,33);
  const toneSymbols=layers.palette_domains.tone.symbols;
- assert.deepEqual(Object.keys(toneSymbols).sort(),["0","1","2","3","4"]);
+ assert.deepEqual(toneSymbols,{"0":"·","1":"—","2":"↗","3":"⌄","4":"↘"},
+  "Exact citation tone symbol registry must remain pinned");
 
  function encode(reading){
   const coded=base.encode(reading);
