@@ -37,7 +37,8 @@ function mount(sources=[model,palette,audit]){
  return ui;
 }
 async function settle(ui){
- for(let i=0;i<90&&!ui["mfg-status"].textContent;i++)await Promise.resolve();
+ for(let i=0;i<90&&!ui["mfg-glyphs"].children.length&&
+  !ui["mfg-status"].textContent.includes("Unable");i++)await Promise.resolve();
 }
 const ui=mount();await settle(ui);
 assert.equal(ui["mfg-onset"].children.length,22);
