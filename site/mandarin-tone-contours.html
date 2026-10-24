@@ -2,7 +2,7 @@
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="color-scheme" content="light dark">
 <title>Mandarin citation-tone encoding comparison · Chromalect</title>
-<link rel="stylesheet" href="style.css"><script src="theme.js"></script><script src="mandarin-tone-contours.js" defer></script><script src="mandarin-tone-practice.js" defer></script>
+<link rel="stylesheet" href="style.css"><script src="theme.js"></script><script src="mandarin-tone-contours.js" defer></script><script src="mandarin-tone-practice.js" defer></script><script src="mandarin-tone-blind-assessment.js" defer></script>
 <style>
 .tone-control{display:flex;flex-wrap:wrap;align-items:center;gap:12px;margin:18px 0}
 .tone-control select{font:inherit;color:var(--ink);background:var(--panel);border:1px solid var(--border);border-radius:8px;padding:10px}
@@ -23,6 +23,17 @@
  border:1px solid var(--border);color:var(--ink);background:var(--tile-bg);
  border-radius:8px;padding:10px 16px}
 .tone-practice-area button:disabled{opacity:.5;cursor:default}
+.tone-blind-assessment{border:1px solid var(--border);border-radius:12px;
+ background:var(--panel);padding:18px;margin:20px 0}
+.tone-blind-controls{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin:14px 0}
+.tone-blind-assessment button{font:inherit;padding:10px 16px;color:var(--ink);
+ background:var(--tile-bg);border:1px solid var(--border);border-radius:8px;cursor:pointer}
+.tone-blind-assessment button:disabled{opacity:.5;cursor:default}
+.tone-blind-assessment textarea{width:100%;box-sizing:border-box;min-height:160px;
+ background:var(--tile-bg);color:var(--ink);border:1px solid var(--border);
+ border-radius:8px;padding:12px;font:12px/1.5 ui-monospace,monospace}
+.tone-blind-disclosure{padding:12px;border-left:3px solid var(--active-border);
+ color:var(--sub);background:var(--tile-bg);border-radius:4px;font-size:13px}
 </style></head><body>
 <header class="wrap"><div class="brand"><b>CHROMALECT</b><small>Language, made visible</small></div></header>
 <main class="wrap"><div class="eyebrow">Phonetic research · independently toggleable experimental controls</div>
@@ -46,6 +57,37 @@ data export or retention measurement is provided. Answers exist only in the curr
 <p id="tone-practice-feedback" aria-live="polite"></p>
 <button type="button" id="tone-practice-next" disabled>Next contour</button>
 <p id="tone-practice-status" role="status" aria-live="polite">Validating source-only contours.</p>
+</section>
+<section class="tone-blind-assessment" aria-label="Opt-in blind contour recognition assessment">
+<h2>Blind tone-shape recognition (local-only research instrument)</h2>
+<p>This is a separate <strong>16-trial</strong> recognition assessment, not the feedback-based
+practice above. Each of the four idealized citation contours appears exactly four times in
+randomized blocks of four. Prompts contain no character, Pinyin, initial, final, sound,
+color or semantic cue. Answer ordering is randomized independently. The correct tone
+is <strong>not revealed between trials</strong>; only after all 16 responses is a
+score and locally copyable JSON record produced.</p>
+<p class="tone-blind-disclosure">Optional self-assessment only. It does not collect a name,
+health details, age, identifiers, device fingerprint, response time or IP through an
+experiment submission. Responses are kept in the current page session; the project
+does not upload or save them. There is no validated recruitment, participant verification,
+independent ethics review or control group. This does not yet count as an independently
+controlled human result. Neutral tone remains excluded because no independent
+context-free shape is defined.</p>
+<div class="tone-blind-controls">
+<label for="tone-blind-consent"><input type="checkbox" id="tone-blind-consent">
+I understand this is an optional, unvalidated local-only contour recognition assessment.</label>
+<button id="tone-blind-start" type="button" disabled>Start 16 blind trials / restart</button>
+</div>
+<p id="tone-blind-status" role="status" aria-live="polite">Validating source-only assessment.</p>
+<div id="tone-blind-prompt" class="tone-practice-prompt" aria-label="Unlabeled monochrome pitch-contour assessment stimulus"></div>
+<div id="tone-blind-answers" class="tone-practice-answers" aria-label="Choose one of four source tone categories"></div>
+<p id="tone-blind-summary" aria-live="polite"></p>
+<label for="tone-blind-export">Local JSON response record (populated only at completion)</label>
+<textarea id="tone-blind-export" rows="8" readonly aria-label="Session-only JSON assessment result"></textarea>
+<button id="tone-blind-export-select" type="button" disabled>Select local results to copy</button>
+<p class="tone-note">The JSON is a participant-entered observation only.
+Machine tests simulate responses and cannot count as human discrimination evidence.
+<a href="https://github.com/sguzman/chromalect/blob/main/docs/mandarin-tone-blind-recognition-assessment.md">Protocol and scientific limits</a>.</p>
 </section>
 <p>This page does not measure learning, pronunciation, memory, or word-context disambiguation. Source: <a href="phonetics/mandarin-citation-tone-contours-v0.1.json">versioned reference record</a> and <a href="https://www.polyu.edu.hk/bepth/introduction-to-phonetics/tones/basic-tones/?sc_lang=en">PolyU phonetics reference</a>. Source-aligned Pinyin readings and published colors are unchanged.</p>
 </main>
