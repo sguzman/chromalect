@@ -40,6 +40,15 @@ This is a sequence of **evidence gates**, not a promise to build a large applica
 
 **Held-out v0.7 method evaluation:** The [Rust five-fold source-rank experiment](../tools/glyph-pipeline/src/palette_candidate_cv.rs) trains five separate 520-color permutations on four-fifths of the original source glyphs and evaluates each on the unseen fifth ([method and scope](perceptual-palette-v0.7-fivefold-heldout.md)). The [successful fivefold measurement](perceptual-palette-v0.7-fivefold-heldout.md) reports **26 original versus 29 trained held-out proximity warnings**, including 13 newly introduced, 10 resolved, and 16 retained. Every fold removes all its training warnings, but the tested method **does not improve held-out source-glyph proximity**. Keep v0.7 inactive. This is not human perception and does not complete the palette acceptance gate.
 
+**Exposure-prior method follow-up (still open):** a separate training-only
+component-frequency risk penalty reduced the five-fold machine held-out
+warnings from 26 to 16, versus 29 for the original greedy method
+([full, caveated evidence](perceptual-palette-v0.7-fivefold-heldout.md)).
+This is **post-hoc method selection after seeing the initial five-fold
+result**, not a fresh independently reserved source sample, independent
+human visual judgment, semantic-family validation, or a new active color
+assignment. No Phase 1 scientific checkpoint is promoted.
+
 **Gate:** repeatable, linguistically accurate component rendering and defensible experimental comparisons. Do not mistake complete catalog assignment for complete glyph-level rendering or learning evidence.
 
 ## Phase 2 — phonetic notation experiment [proposed]

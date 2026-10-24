@@ -145,6 +145,60 @@ promising rule requires a separately specified selection procedure within
 the 800 training glyphs and evaluation on a fresh untouched test partition.
 This analysis adds no glyph ownership, color-accessibility or human approval.
 
+## Exploratory training-exposure regularization
+
+The failing original greedy method has a concrete numerical alternative that
+uses **training-only** source glyph-owner frequencies. For each 800-character
+training fold, the Rust evaluator counts each component's presence per training
+glyph, including atomic glyphs with no intra-glyph color pairs. It evaluates
+otherwise-valid warning-reducing swaps with an additional, explicitly
+hypothetical proximity risk:
+
+- For every unordered component identity pair, multiply the two components'
+  **training occurrence counts** when their currently assigned palette
+  colors are separated by less than ΔOK 0.07.
+- Add those products across all 520 identities; the change in that sum
+  estimates the effect of a proposed color swap on potential *unseen*
+  co-occurrences, without looking at the excluded source characters.
+- Rank permitted swaps by **training warning gain minus 0.05 times the change
+  in the hypothetical exposure risk**. Continue enforcing the original
+  strict rule against new warnings on the 800 training glyphs. All 520
+  source palette colors are still only permuted.
+
+The experiment was committed in
+[commit 353dfba](https://github.com/sguzman/chromalect/commit/353dfba6807d997db9c80b0c3722ed3deb8d15a3)
+and passed the [Pages acceptance workflow](https://github.com/sguzman/chromalect/actions/runs/40129538369)
+as well as [Glyph integrity](https://github.com/sguzman/chromalect/actions/runs/40129538389).
+The generated evidence is contained in the versioned fold report's
+`exploratoryExposurePrior` summary and `exploratoryTrainingExposurePrior`
+fold records.
+
+| Held-out fold | Active v0.6 | Original trained v0.7 | Exploratory exposure-prior method | Experimental swaps |
+| --- | ---: | ---: | ---: | ---: |
+| 1 | 5 | 4 | 2 | 17 |
+| 2 | 4 | 5 | 3 | 17 |
+| 3 | 10 | 9 | 6 | 14 |
+| 4 | 6 | 6 | 5 | 16 |
+| 5 | 1 | 5 | 0 | 20 |
+| **Pooled** | **26** | **29** | **16** | **84** |
+
+This alternative resolves eleven baseline warning observations, retains fifteen
+and introduces one, giving **26 → 16** for the chosen exposure-prior setting.
+It reaches zero *training* warnings in all five folds, preserving the entire
+520-color multiset and original source strokes. A held-out warning remains
+a machine-specified distance threshold, never proof of human confusion.
+
+**Essential methodological qualification:** the exposure-prior method and
+coefficient were developed *after inspection of the original five-fold
+held-out failure*. Although each individual fold's training fit uses only
+its 800 permitted glyphs, the *method choice* is post-hoc to these
+same 1,000 source glyphs. Thus the 26 → 16 outcome is an exploratory
+within-corpus ablation, **not fresh, independent generalization evidence**.
+A later holdout must be acquired separately and left untouched during
+candidate selection, and a legitimate active palette change still requires
+independent stroke-owner, human color-discrimination and accessibility review.
+Neither the inactive v0.7 candidate nor active v0.6 is altered.
+
 The [pinned numerical acceptance check](../tools/glyph-pipeline/palette_candidate_cv_observed_smoke.mjs)
 requires the build to reproduce these independently observed per-fold counts
 and conservation identities. The numerical result is a real research deliverable,
