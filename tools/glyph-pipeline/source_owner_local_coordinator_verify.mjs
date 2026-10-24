@@ -6,6 +6,8 @@ import path from "node:path";
 import {pathToFileURL} from "node:url";
 import {deriveMaskedStimuli} from "./source_owner_masked_stimuli.mjs";
 import {verifyOfflinePacket} from "./source_owner_local_packet_verify.mjs";
+import {REPOSITORY_ROOT,requireOutsideRepository,readPinnedSiteFile}
+ from "./source_owner_local_paths.mjs";
 
 const TARGET="glyphs/research/heldout-identification-target-v0.1/index-v0.1.json";
 const exact=(x,keys)=>!!x&&typeof x==="object"&&!Array.isArray(x)&&
@@ -13,16 +15,13 @@ const exact=(x,keys)=>!!x&&typeof x==="object"&&!Array.isArray(x)&&
 function requireShape(ok,message){if(!ok)throw Error(message);}
 const same=(a,b)=>JSON.stringify(a)===JSON.stringify(b);
 export function verifyLocalCoordinator(packetDir,coordinatorFile,readSVG,
- source=JSON.parse(fs.readFileSync("site/"+TARGET,"utf8"))){
+ source=JSON.parse(readPinnedSiteFile(TARGET))){
  requireShape(typeof packetDir==="string"&&path.isAbsolute(packetDir)&&
   typeof coordinatorFile==="string"&&path.isAbsolute(coordinatorFile),
   "Absolute reviewer packet and coordinator file paths are required");
- const working=fs.realpathSync(process.cwd());
  const packetRoot=fs.realpathSync(packetDir);
- const keyParent=fs.realpathSync(path.dirname(coordinatorFile));
- const keyFile=path.join(keyParent,path.basename(coordinatorFile));
- requireShape(keyParent!==working&&!keyParent.startsWith(working+path.sep),
-  "Private coordinator map may not reside in the public repository");
+ const keyFile=requireOutsideRepository(coordinatorFile);
+ const keyParent=path.dirname(keyFile);
  requireShape(keyParent!==packetRoot&&!keyParent.startsWith(packetRoot+path.sep),
   "Private coordinator map must remain outside the reviewer packet");
  const keyStat=fs.lstatSync(keyFile);
@@ -86,7 +85,7 @@ if(process.argv[1]&&import.meta.url===pathToFileURL(process.argv[1]).href){
  assert.equal(args[0],"--packet-dir");
  assert.equal(args[2],"--coordinator-map");
  const result=verifyLocalCoordinator(args[1],args[3],
-  p=>fs.readFileSync("site/"+p,"utf8"));
+  readPinnedSiteFile);
  console.log("Local coordinator source linkage verified: "+result.sourceLinksVerified+
   " provisional pairs, "+result.masks+" neutral masks, no independent approvals.");
 }

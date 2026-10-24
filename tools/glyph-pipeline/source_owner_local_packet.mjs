@@ -6,6 +6,7 @@ import path from "node:path";
 import {randomBytes,randomInt} from "node:crypto";
 import {pathToFileURL} from "node:url";
 import {deriveMaskedStimuli} from "./source_owner_masked_stimuli.mjs";
+import {requireOutsideRepository,readPinnedSiteFile} from "./source_owner_local_paths.mjs";
 
 const TARGET="glyphs/research/heldout-identification-target-v0.1/index-v0.1.json";
 const ID=/^p-[0-9a-f]{32}$/;
@@ -133,17 +134,9 @@ export function deriveOfflineReviewerPacket(source,readSVG,
  return {manifest,coordinatorMap,readme:publicREADME,
   gallery:renderOfflinePacketGallery(manifest),files};
 }
-function allowedOutsideRepository(p){
- assert.ok(path.isAbsolute(p),"Explicit absolute destination required");
- const root=fs.realpathSync(process.cwd());
- const parent=fs.realpathSync(path.dirname(p));
- assert.ok(parent!==root&&!parent.startsWith(root+path.sep),
-  "Reviewer packet and private coordinator file must remain outside the public repository");
- return path.join(parent,path.basename(p));
-}
 export function writeOfflinePacket(packet,reviewerDir,privateCoordinatorFile){
- const review=allowedOutsideRepository(reviewerDir);
- const mapping=allowedOutsideRepository(privateCoordinatorFile);
+ const review=requireOutsideRepository(reviewerDir);
+ const mapping=requireOutsideRepository(privateCoordinatorFile);
  assert.ok(review!==mapping&&mapping!==path.join(review,"index-v0.1.json"));
  assert.ok(mapping!==review&&
   !mapping.startsWith(review+path.sep),"Coordinator map must not reside inside reviewer packet");
@@ -173,10 +166,10 @@ if(process.argv[1]&&import.meta.url===pathToFileURL(process.argv[1]).href){
   "Use --reviewer-dir ABSOLUTE_DIRECTORY --coordinator-map ABSOLUTE_FILE");
  assert.equal(args[0],"--reviewer-dir");
  assert.equal(args[2],"--coordinator-map");
- const reviewer=allowedOutsideRepository(args[1]);
- const mapping=allowedOutsideRepository(args[3]);
- const source=JSON.parse(fs.readFileSync("site/"+TARGET,"utf8"));
- const packet=deriveOfflineReviewerPacket(source,p=>fs.readFileSync("site/"+p,"utf8"));
+ const reviewer=requireOutsideRepository(args[1]);
+ const mapping=requireOutsideRepository(args[3]);
+ const source=JSON.parse(readPinnedSiteFile(TARGET));
+ const packet=deriveOfflineReviewerPacket(source,readPinnedSiteFile);
  writeOfflinePacket(packet,reviewer,mapping);
  console.log("Offline neutral review packet prepared: 49 pairs, 98 masks, no participants or independent approvals. Coordinator file kept separate.");
 }
