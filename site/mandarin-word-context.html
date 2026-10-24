@@ -1,0 +1,103 @@
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="description" content="Experimental Mandarin word boundaries, polyphonic dictionary leads, two-syllable sandhi controls, and source-linked gloss hints without sentence reading approval.">
+<title>Mandarin contextual layers · Chromalect</title>
+<link rel="stylesheet" href="style.css"><script src="theme.js"></script>
+<script src="mandarin-context-sandhi.js" defer></script>
+<script src="mandarin-word-context.js" defer></script>
+<style>
+.wc-controls{display:flex;flex-wrap:wrap;align-items:end;gap:16px;background:var(--panel);
+ border:1px solid var(--border);border-radius:12px;padding:16px;margin:18px 0}
+.wc-controls label{display:grid;gap:6px;min-width:175px;flex:1}
+.wc-controls select{font:inherit;border:1px solid var(--border);border-radius:8px;
+ color:var(--ink);background:var(--tile-bg);padding:10px;max-width:100%}
+.wc-options{border:1px solid var(--border);border-radius:12px;padding:14px;margin:18px 0;
+ display:flex;flex-wrap:wrap;gap:12px 20px}
+.wc-options legend{padding:0 7px;font-weight:700}
+.wc-options label{display:inline-flex;align-items:center;gap:7px}
+.wc-panels{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin:18px 0}
+.wc-panel{background:var(--panel);border:1px solid var(--border);border-radius:12px;padding:16px;min-width:0;overflow-wrap:anywhere}
+.wc-panel h2{font-size:18px;margin-top:0}
+.wc-row{display:flex;flex-wrap:wrap;gap:8px;align-items:start}
+.wc-character{display:grid;justify-items:center;gap:4px;border:1px solid var(--border);
+ border-radius:8px;background:var(--tile-bg);padding:9px;min-width:78px}
+.wc-character strong{font-size:54px;line-height:1.1;font-weight:500}
+.wc-character img{height:64px;width:64px;object-fit:contain}
+.wc-character small{font-size:12px;color:var(--sub);text-align:center}
+.wc-character[aria-current="true"]{outline:2px solid var(--active-border)}
+.wc-muted{color:var(--sub);font-size:13px}
+.wc-word-boundary{border-bottom:3px solid var(--active-border);padding:5px;
+ display:inline-flex;gap:7px;max-width:100%;flex-wrap:wrap}
+.wc-source-list{padding-left:20px}
+.wc-source-list li{margin:7px 0}
+.wc-sandhi{display:grid;gap:7px}
+.wc-sandhi strong{font-size:22px}
+.wc-status{min-height:1.4em}
+.wc-note{border-left:3px solid var(--active-border);padding:10px 14px;background:var(--panel);margin:16px 0}
+@media(max-width:750px){.wc-panels{grid-template-columns:1fr}}
+</style></head><body>
+<header class="wrap"><div class="brand"><b>CHROMALECT</b><small>Language, made visible</small></div></header>
+<main class="wrap">
+<div class="eyebrow">Phase 3 · contextual Mandarin research controls</div>
+<h1>Written-word candidates, polyphones, and conditional tone change</h1>
+<p class="intro">Inspect eight source-linked written-word leads for four potentially polyphonic characters,
+five independently published word-entry Pinyin pairs, 27 verified sentence-ID associations,
+and the difference between machine-proposed token boundaries and human-verified usage.
+No corpus sentence is quoted or pronounced by this viewer.</p>
+<div class="wc-note"><strong>Evidence boundary:</strong> dictionary heading readings belong to dictionary entries,
+not to the selected Tatoeba sentence. A publisher's gloss hint is not a verified contextual meaning.
+ICU segmentation is a machine hint, not Mandarin lexical segmentation.
+Sandhi examples below are narrow two-syllable rule controls, not verified recordings or sentence prosody.</div>
+<div class="wc-controls">
+<label for="wc-lead">Publisher word lead<select id="wc-lead"></select></label>
+<label for="wc-sentence">Source sentence ID (no text copied)<select id="wc-sentence"></select></label>
+<label for="wc-example">Independent sandhi rule control<select id="wc-example"></select></label>
+</div>
+<fieldset class="wc-options"><legend>Removable annotation channels</legend>
+<label><input id="wc-segments" type="checkbox" checked> Candidate written-word boundary</label>
+<label><input id="wc-readings" type="checkbox" checked> Published word-entry reading</label>
+<label><input id="wc-meaning" type="checkbox" checked> Source gloss hint</label>
+<label><input id="wc-geometry" type="checkbox"> Component-colored stroke images</label>
+<label><input id="wc-sandhi" type="checkbox" checked> Conditional sandhi example</label>
+</fieldset>
+<p id="wc-status" class="wc-status" role="status" aria-live="polite">Validating pinned contextual-source records.</p>
+<div class="wc-panels">
+<section class="wc-panel">
+<h2>Publisher word-lead segmentation</h2>
+<div id="wc-word" lang="zh-Hans"></div>
+<p id="wc-reading-note" class="wc-muted"></p>
+<p id="wc-other-readings" class="wc-muted"></p>
+<p id="wc-meaning-note"></p>
+<p id="wc-word-source" class="wc-muted"></p>
+</section>
+<section class="wc-panel">
+<h2>Corpus source occurrence</h2>
+<div id="wc-boundary"></div>
+<p id="wc-corpus-note" class="wc-muted"></p>
+<div id="wc-sentence-link"></div>
+<p class="wc-muted">Linked records identify potential source occurrences; no unlicensed corpus text
+or independent reading, wordhood or meaning approval is inferred.</p>
+</section>
+<section class="wc-panel">
+<h2>Two-syllable sandhi rule control</h2>
+<div id="wc-rule"></div>
+<p id="wc-rule-source" class="wc-muted"></p>
+<p class="wc-muted">The displayed tone-change possibility is conditional on reading, grouping
+and prosody. Citation-tone labels are never overwritten.</p>
+</section>
+<section class="wc-panel">
+<h2>Evidence and limitations</h2>
+<p id="wc-evidence"></p>
+<p id="wc-orthography"></p>
+<p class="wc-muted">Paired published word entries are not independently certified source
+lineages. Three word leads lack paired published word readings; none of the 27 sentences has a
+certified word boundary, contextual pronunciation, lexical sense or quotation clearance.</p>
+</section>
+</div>
+<p><a href="mandarin-fusion.html">Return to single-character layer fusion</a> ·
+<a href="word-context-review.html">Local sentence review intake</a> ·
+<a href="roadmap-status.html">Research roadmap</a></p>
+</main>
+<footer class="wrap"><a href="index.html">Overview</a> · <a href="ontology.html">Ontology</a></footer>
+</body></html>
