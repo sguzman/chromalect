@@ -237,6 +237,12 @@ assert.equal(race.nodes["om-a"].src,current,"Stale asset must not replace newer 
 assertImages(race,manifest.records[8]);
 const html=fs.readFileSync("site/source-owner-masked-preview.html","utf8");
 for(const id of ids)assert.ok(html.includes('id="'+id+'"'),id);
+assert.ok(html.includes('http-equiv="Content-Security-Policy"'));
+for(const directive of ["default-src 'none'","script-src 'self'",
+ "img-src 'self' blob:","connect-src 'self'","object-src 'none'",
+ "frame-src 'none'","base-uri 'none'","form-action 'none'"]){
+ assert.ok(html.includes(directive),"Missing presentation-page CSP policy: "+directive);
+}
 for(const expected of ["not a blinded expert-review instrument","records no judgments",
  "original public source manifests","source-owner-masked-preview-core.js"])
  assert.ok(html.toLowerCase().includes(expected.toLowerCase()),expected);
