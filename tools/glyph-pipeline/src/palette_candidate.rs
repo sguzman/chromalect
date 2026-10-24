@@ -84,6 +84,77 @@ pub(super) fn optimize(edges:&[Edge],dist:&[f64],n:usize)->(Vec<usize>,Vec<(usiz
     }
     (assignment,swaps)
 }
+/// Exploratory training-frequency prior on hypothetical color proximity.
+/// A source glyph's independent visual correctness remains unverified; the
+/// numerical prior is not a proxy for human visual discrimination.
+pub(super) fn optimize_exposure(edges:&[Edge],dist:&[f64],n:usize,
+    frequency:&[usize],lambda:f64)->(Vec<usize>,Vec<(usize,usize,usize)>){
+    assert_eq!(frequency.len(),n,"training owner frequency length must equal palette size");
+    assert!(lambda.is_finite()&&lambda>=0.0);
+    let mut assignment=(0..n).collect::<Vec<_>>();
+    let mut adj=vec![Vec::<usize>::new();n];
+    for (i,e) in edges.iter().enumerate(){
+        adj[e.a].push(i);adj[e.b].push(i);
+    }
+    let originally_good=edges.iter().map(|e|!cost(e,&assignment,dist,n)).collect::<Vec<_>>();
+    let mut swaps=Vec::new();
+    let mut previous=warned(edges,&assignment,dist,n);
+    for _ in 0..64 {
+        let active=edges.iter().filter(|e|cost(e,&assignment,dist,n))
+            .flat_map(|e|[e.a,e.b]).collect::<BTreeSet<_>>();
+        if active.is_empty(){break;}
+        let mut best=None::<(f64,usize,usize,usize)>; // prior score, source warning gain, a, b
+        for &a in &active{
+            for b in 0..n{
+                if a==b {continue;}
+                // Evaluate only edges incident on the swapped identities.
+                let relevant=adj[a].iter().chain(adj[b].iter()).copied()
+                    .collect::<BTreeSet<_>>();
+                assignment.swap(a,b);
+                let mut new_weight=0isize;
+                let mut valid=true;
+                for idx in relevant{
+                    let e=&edges[idx];
+                    let now=cost(e,&assignment,dist,n);
+                    if now && originally_good[idx]{valid=false;break;}
+                    let left=if e.a==a {assignment[b]}
+                        else if e.a==b {assignment[a]} else {assignment[e.a]};
+                    let right=if e.b==a {assignment[b]}
+                        else if e.b==b {assignment[a]} else {assignment[e.b]};
+                    let old=dist[left*n+right]<CUT;
+                    new_weight+=e.weight as isize*(now as isize-old as isize);
+                }
+                assignment.swap(a,b);
+                if !valid||new_weight>=0 {continue;}
+                let gain=(-new_weight) as usize;
+                // Prospective exposure proxy formed from TRAINING GLYPH ownership
+                // counts only. It must never inspect the excluded source ranks.
+                // Swapped colors are unchanged on a-b itself; update all other
+                // hypothetical identity pairs without double-counting.
+                let frequency_difference=frequency[a] as i64-frequency[b] as i64;
+                let mut proximity_change=0i64;
+                for k in 0..n{
+                    if k==a||k==b{continue;}
+                    let before_a=dist[assignment[a]*n+assignment[k]]<CUT;
+                    let before_b=dist[assignment[b]*n+assignment[k]]<CUT;
+                    proximity_change+=frequency_difference*(frequency[k] as i64)
+                         *((before_b as i64)-(before_a as i64));
+                }
+                let value=gain as f64-lambda*(proximity_change as f64);
+                if best.map(|v|value>v.0+1e-9).unwrap_or(true){
+                    best=Some((value,gain,a,b));
+                }
+            }
+        }
+        let Some((_,gain,a,b))=best else{break;};
+        assignment.swap(a,b);
+        let current=warned(edges,&assignment,dist,n);
+        assert_eq!(previous-current,gain,"Local swap delta must match global source pair census");
+        previous=current;
+        swaps.push((a,b,current));
+    }
+    (assignment,swaps)
+}
 fn build()->Result<(Value,Value),String>{
     let r=root();
     let palette=load(&r.join("palettes/mandarin-component-identity-v0.6.json"))?;

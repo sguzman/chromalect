@@ -38,6 +38,17 @@ assert.equal(s.perceptualContrastOrLegibilityValidated,false);
 assert.equal(s.independentlyAdjudicatedOwnerRegions,0);
 assert.equal(s.humanDiscriminationResults,0);
 assert.equal(s.learnerTransferStudies,0);
+assert.equal(report.method.exploratoryExposurePrior.lambda,0.05);
+assert.equal(report.method.exploratoryExposurePrior.notAnActivePalette,true);
+assert.equal(report.method.exploratoryExposurePrior.noIndependentNewSourceHoldout,true);
+assert.equal(s.exploratoryExposurePrior.status,"posthoc_ablation_not_independent_validation");
+assert.equal(s.exploratoryExposurePrior.baselineHeldoutClosePairs,26);
+assert.equal(s.exploratoryExposurePrior.candidateHeldoutClosePairs,16);
+assert.equal(s.exploratoryExposurePrior.newHeldoutClosePairs+
+ s.exploratoryExposurePrior.retainedHeldoutClosePairs,16);
+assert.equal(s.exploratoryExposurePrior.resolvedHeldoutClosePairs+
+ s.exploratoryExposurePrior.retainedHeldoutClosePairs,26);
+assert.equal(s.exploratoryExposurePrior.humanVisualValidation,false);
 assert.ok(s.trainedHeldoutClosePairs>s.baselineHeldoutClosePairs,
  "A previously negative held-out result cannot silently become a success");
 const expected=[
@@ -67,6 +78,16 @@ for(let i=0;i<5;i++){
  assert.equal(row.global520ColorMultisetPreserved,true);
  assert.equal(row.holdoutWarningPairEvidenceCount,
   row.heldoutWarningsIntroduced+row.heldoutWarningsResolved+row.heldoutWarningsRetained);
+ const risk=row.exploratoryTrainingExposurePrior;
+ assert.equal(risk.status,"posthoc_method_development_not_independently_validated");
+ assert.equal(risk.lambda,0.05);
+ assert.equal(risk.ownerFrequencyFromTrainingRanksOnly,true);
+ assert.equal(risk.trainingClosePairsCandidate,0);
+ assert.equal(risk.global520ColorMultisetPreserved,true);
+ assert.equal(risk.heldoutIntroduced+risk.heldoutRetained,
+  risk.heldoutClosePairsCandidate);
+ assert.equal(risk.heldoutResolved+risk.heldoutRetained,
+  row.heldoutClosePairsOriginal);
  assert.equal(row.swapPrefixDiagnosticStatus,
   "post_hoc_outer_holdout_diagnostics_not_parameter_selection");
  assert.equal(row.swapPrefixDiagnostics.length,row.swapCount);

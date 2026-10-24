@@ -1,7 +1,7 @@
 //! Five-fold source-character-held-out check for the existing numerical v0.7 swap algorithm.
 //! Evaluates glyph pairs outside each fitting fold; DOES NOT establish human discrimination.
 use super::*;
-use super::palette_candidate::{Edge,oklab,metric,cost,warned,optimize};
+use super::palette_candidate::{Edge,oklab,metric,cost,warned,optimize,optimize_exposure};
 use serde_json::{json,Value};
 use std::collections::{BTreeMap,BTreeSet};
 
@@ -9,7 +9,7 @@ const CUTOFF:f64=0.07;
 const SCHEMA:&str="chromalect.palette.v07-fivefold-source-heldout.v0.1";
 type Pairs=Vec<Vec<(usize,usize)>>;
 
-fn prepare()->Result<(Pairs,Vec<String>,Vec<String>,Vec<String>,Vec<f64>),String>{
+fn prepare()->Result<(Pairs,Vec<Vec<usize>>,Vec<String>,Vec<String>,Vec<String>,Vec<f64>),String>{
     let base=root();
     let catalog=load(&base.join("data/catalog/characters-0001-1000.json"))?;
     let mapping=load(&base.join("site/glyphs/mappings.json"))?;
@@ -48,6 +48,7 @@ fn prepare()->Result<(Pairs,Vec<String>,Vec<String>,Vec<String>,Vec<f64>),String
     if byGlyph.len()!=get(&mapping,"glyph_count")?.as_u64().unwrap_or(0) as usize
         || byGlyph.len()<1000{return Err("incomplete generated glyph mapping set".into());}
     let mut byCharacter=Vec::new();
+    let mut glyphOwners=Vec::new();
     let mut ranked=Vec::new();
     for (i,x) in entries(&catalog,"characters")?.iter().enumerate(){
         if get(x,"rank")?.as_u64()!=Some(i as u64+1){
@@ -78,12 +79,13 @@ fn prepare()->Result<(Pairs,Vec<String>,Vec<String>,Vec<String>,Vec<f64>),String
             for &b in group.iter().skip(j+1){pairs.push((a,b));}
         }
         ranked.push(ch);
+        glyphOwners.push(group);
         byCharacter.push(pairs);
     }
     if byCharacter.iter().map(Vec::len).sum::<usize>()!=1020{
         return Err("expected 1,020 source-owned intra-glyph pair observations".into());
     }
-    Ok((byCharacter,ranked,originalNames,colors,distance))
+    Ok((byCharacter,glyphOwners,ranked,originalNames,colors,distance))
 }
 fn edgeCounts(pairs:&Pairs,fold:usize,train:bool)->Vec<Edge>{
     let mut counts=BTreeMap::<(usize,usize),usize>::new();
@@ -135,17 +137,37 @@ fn checkHoldout(pairs:&Pairs,fold:usize,assignment:&[usize],dist:&[f64],
     (baseline,candidate,introduced,resolved,retained,pairCount,ranks,evidence)
 }
 fn build()->Result<Value,String>{
-    let (pairs,characters,componentNames,colors,dist)=prepare()?;
+    let (pairs,glyphOwners,characters,componentNames,colors,dist)=prepare()?;
     let mut folds=Vec::new();
     let mut baselineHeldout=0;let mut candidateHeldout=0;let mut introduced=0;
     let mut resolved=0;let mut retained=0;let mut heldoutPairCount=0;
     let mut distinctRanks=BTreeSet::new();let mut totalSwaps=0;
+    let mut exploratoryCandidateWarnings=0usize;
+    let mut exploratoryIntroduced=0usize;
+    let mut exploratoryResolved=0usize;
+    let mut exploratoryRetained=0usize;
+    let mut exploratorySwaps=0usize;
     for fold in 0..5{
         let training=edgeCounts(&pairs,fold,true);
         let heldout=edgeCounts(&pairs,fold,false);
         if heldout.len()>training.len(){return Err("fold heldout larger than training".into());}
         let identity=(0..520).collect::<Vec<_>>();
         let trainBase=warned(&training,&identity,&dist,520);
+        // Isolate every held-out source rank from feature construction.
+        // Include atomic glyph components with no intra-glyph pair.
+        let mut frequency=vec![0usize;520];
+        for (rank,owners) in glyphOwners.iter().enumerate(){
+            if rank%5==fold{continue;}
+            for &owner in owners{frequency[owner]+=1;}
+        }
+        let (exploratory,experimentalSwaps)=
+            optimize_exposure(&training,&dist,520,&frequency,0.05);
+        let exploratoryTrain=warned(&training,&exploratory,&dist,520);
+        if exploratoryTrain!=0{return Err("training exposure prior failed original zero-warning criterion".into());}
+        let (exploratoryBase,exploratoryCount,exploratoryNew,
+             exploratoryRemoved,exploratoryKept,exploratoryPairs,exploratoryRanks,_)=
+            checkHoldout(&pairs,fold,&exploratory,&dist,
+                &characters,&componentNames,&colors);
         let (candidate,swaps)=optimize(&training,&dist,520);
         let trainAfter=warned(&training,&candidate,&dist,520);
         if trainAfter>trainBase{return Err("in-sample warning count increased".into());}
@@ -191,6 +213,12 @@ fn build()->Result<Value,String>{
              !=Some(alternative as u64){
             return Err("swap-prefix replay differs from final fitted candidate".into());
         }
+        if exploratoryBase!=base||exploratoryPairs!=pairCount
+           ||exploratoryRanks!=ranks
+           ||exploratoryNew+exploratoryKept!=exploratoryCount
+           ||exploratoryRemoved+exploratoryKept!=exploratoryBase{
+            return Err("exploratory source-only prior does not conserve heldout warnings".into());
+        }
         if ranks.len()!=200||added+kept!=alternative||removed+kept!=base||
             pairCount!=heldout.iter().map(|e|e.weight).sum::<usize>(){
             return Err("held-out source warning conservation failed".into());
@@ -204,6 +232,11 @@ fn build()->Result<Value,String>{
         baselineHeldout+=base;candidateHeldout+=alternative;
         introduced+=added;resolved+=removed;retained+=kept;
         heldoutPairCount+=pairCount;totalSwaps+=swaps.len();
+        exploratoryCandidateWarnings+=exploratoryCount;
+        exploratoryIntroduced+=exploratoryNew;
+        exploratoryResolved+=exploratoryRemoved;
+        exploratoryRetained+=exploratoryKept;
+        exploratorySwaps+=experimentalSwaps.len();
         folds.push(json!({
             "fold":fold+1,"heldoutModulo":fold,"trainGlyphs":800,"heldoutGlyphs":200,
             "heldoutSourceRanks":ranks,
@@ -211,6 +244,20 @@ fn build()->Result<Value,String>{
             "trainingClosePairsOriginal":trainBase,
             "trainingClosePairsCandidate":trainAfter,
             "swapCount":swaps.len(),
+            "exploratoryTrainingExposurePrior":{
+                "status":"posthoc_method_development_not_independently_validated",
+                "lambda":0.05,
+                "ownerFrequencyFromTrainingRanksOnly":true,
+                "globalHypotheticalNearColorFrequencyProductPenalty":true,
+                "swaps":experimentalSwaps.len(),
+                "trainingClosePairsCandidate":exploratoryTrain,
+                "heldoutClosePairsCandidate":exploratoryCount,
+                "heldoutIntroduced":exploratoryNew,
+                "heldoutResolved":exploratoryRemoved,
+                "heldoutRetained":exploratoryKept,
+                "global520ColorMultisetPreserved":
+                    exploratory.iter().copied().collect::<BTreeSet<_>>().len()==520
+            },
             "holdoutPairObservations":pairCount,
             "heldoutClosePairsOriginal":base,
             "heldoutClosePairsCandidate":alternative,
@@ -225,6 +272,10 @@ fn build()->Result<Value,String>{
             "holdoutWarningPairEvidenceCount":warningEvidence.len(),
             "holdoutWarningPairEvidence":warningEvidence
         }));
+    }
+    if exploratoryIntroduced+exploratoryRetained!=exploratoryCandidateWarnings
+       ||exploratoryResolved+exploratoryRetained!=baselineHeldout{
+        return Err("exploratory candidate aggregate counts inconsistent".into());
     }
     if distinctRanks.len()!=1000||heldoutPairCount!=1020
       ||baselineHeldout!=26||introduced+retained!=candidateHeldout
@@ -251,7 +302,17 @@ fn build()->Result<Value,String>{
             "onlyTrainingPairsSubjectToZeroNewWarningConstraint":true,
             "sourceColorSpace":"OKLab","closePairThreshold":CUTOFF,
             "eachFoldRetainsExactGlobal520ColorMultiset":true,
-            "notTheSingleFullSampleV07Candidate":true
+            "notTheSingleFullSampleV07Candidate":true,
+            "exploratoryExposurePrior":{
+                "status":"method_selected_after_inspecting_original_fivefold_test",
+                "source":"training-only component presence counts including atomic owners",
+                "prior":"hypothetical all-pairs color proximity weighted by training owner frequency products",
+                "swapScore":"training-warning gain minus lambda times global prior delta",
+                "lambda":0.05,
+                "originalGreedyOptimizerUntouched":true,
+                "noIndependentNewSourceHoldout":true,
+                "notAnActivePalette":true
+            }
         },
         "summary":{
             "independentSourceRankHoldoutPredictions":1000,
@@ -262,6 +323,17 @@ fn build()->Result<Value,String>{
             "resolvedHeldoutClosePairs":resolved,
             "retainedHeldoutClosePairs":retained,
             "totalSwapsAcrossFiveIndependentFits":totalSwaps,
+            "exploratoryExposurePrior":{
+                "status":"posthoc_ablation_not_independent_validation",
+                "baselineHeldoutClosePairs":baselineHeldout,
+                "candidateHeldoutClosePairs":exploratoryCandidateWarnings,
+                "newHeldoutClosePairs":exploratoryIntroduced,
+                "resolvedHeldoutClosePairs":exploratoryResolved,
+                "retainedHeldoutClosePairs":exploratoryRetained,
+                "swapsAcrossFiveIndependentFits":exploratorySwaps,
+                "independentSourceRankHoldout":false,
+                "humanVisualValidation":false
+            },
             "perceptualContrastOrLegibilityValidated":false,
             "independentlyAdjudicatedOwnerRegions":0,
             "humanDiscriminationResults":0,"learnerTransferStudies":0
