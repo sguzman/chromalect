@@ -12,7 +12,13 @@ export function readPinnedSiteFile(relative){
  assert.ok(typeof relative==="string"&&
   /^glyphs\/[A-Za-z0-9_.+\/-]+\.(?:svg|json)$/.test(relative)&&
   !relative.split("/").includes(".."),"Invalid pinned research file path");
- return fs.readFileSync(path.join(SITE_ROOT,relative),"utf8");
+ const resolved=fs.realpathSync(path.join(SITE_ROOT,relative));
+ assert.ok(resolved.startsWith(SITE_ROOT+path.sep),
+  "Pinned glyph asset must remain inside the generated site");
+ const stat=fs.lstatSync(resolved);
+ assert.ok(stat.isFile()&&stat.size>0&&stat.size<=1024*1024,
+  "Pinned glyph asset must be a regular bounded file");
+ return fs.readFileSync(resolved,"utf8");
 }
 export function requireOutsideRepository(destination){
  assert.ok(typeof destination==="string"&&path.isAbsolute(destination),

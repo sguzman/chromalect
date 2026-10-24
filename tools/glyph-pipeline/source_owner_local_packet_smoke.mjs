@@ -4,12 +4,19 @@ import os from "node:os";
 import path from "node:path";
 import {spawnSync} from "node:child_process";
 import {createHash} from "node:crypto";
-import {REPOSITORY_ROOT} from "./source_owner_local_paths.mjs";
+import {REPOSITORY_ROOT,readPinnedSiteFile} from "./source_owner_local_paths.mjs";
 import {deriveOfflineReviewerPacket,writeOfflinePacket,
  renderOfflinePacketGallery} from "./source_owner_local_packet.mjs";
 const source=JSON.parse(fs.readFileSync(
  "site/glyphs/research/heldout-identification-target-v0.1/index-v0.1.json","utf8"));
 const read=p=>fs.readFileSync("site/"+p,"utf8");
+for(const forbidden of ["../site/glyphs/glyph.svg",
+ "glyphs/../../private.svg","glyphs/research/../mask.svg",
+ "http://example.test/glyph.svg","glyphs/no-file.js",
+ "glyphs/owner.svg?key=1","/glyphs/research/owner.svg"]){
+ assert.throws(()=>readPinnedSiteFile(forbidden),
+  "Pinned source reads must reject traversal or non-glyph paths");
+}
 let index=0;
 const makeId=()=>"p-"+(++index).toString(16).padStart(32,"0");
 const built=deriveOfflineReviewerPacket(source,read,makeId,n=>n-1);
