@@ -355,10 +355,159 @@ fn check_citation_tone_isolation() -> Result<(), String> {
     Ok(())
 }
 
+
+/// Reconstruct the 1,171 source citation spellings from the combined
+/// initial working-feature key, geometric final indices and citation tone symbol.
+/// This is deliberately orthographic, not a verified phonological IPA decoder.
+fn check_composed_visual_citation_decoder() -> Result<(), String> {
+    let r = root();
+    let source = load(&r.join("site/pronunciation-citations-0001-1000.json"))?;
+    let layers = load(&r.join("site/layers-v0.1.json"))?;
+    let features = load(&r.join("data/phonetics/mandarin-initial-feature-candidates-v0.1.json"))?;
+    let finals = load(&r.join("data/phonetics/written-final-symbol-control-v0.1.json"))?;
+    let audit = load(&r.join("data/phonetics/mandarin-visual-citation-codec-audit-v0.1.json"))?;
+    if string(&audit, "schema")? != "chromalect.phonetics.mandarin-visual-citation-codec-audit.v0.1"
+        || string(&audit, "status")? != "exact_machine_visual_token_decoding_not_phonemic_or_human_verified"
+        || string(&features, "schema")? != "chromalect.phonetics.mandarin-initial-feature-candidates.v0.1"
+        || string(&finals, "schema")? != "chromalect.phonetics.written-final-symbol-control.v0.1"
+        || string(get(&audit,"sources")?,"pinnedCitationBlobSHA")?
+            != string(get(&source,"source")?,"blob_sha")?
+        || string(get(&finals,"source")?,"upstreamBlobSHA")?
+            != string(get(&source,"source")?,"blob_sha")?
+    {
+        return Err("composed visual citation sources diverged".into());
+    }
+    let counts = get(&audit, "counts")?;
+    for field in ["independentlyVerifiedPhonemicMappings", "independentHumanVisualDecodings",
+                  "contextualReadingApprovals", "educationalEffectMeasurements"] {
+        if get(counts, field)?.as_u64() != Some(0) {
+            return Err(format!("unsupported composed citation scientific approval: {field}"));
+        }
+    }
+    if get(counts,"sourceReadings")?.as_u64() != Some(1171)
+        || get(counts,"attestedCitationTriples")?.as_u64() != Some(673)
+        || get(counts,"writtenFinalSymbols")?.as_u64() != Some(33)
+        || get(counts,"primitiveLetters")?.as_u64() != Some(9)
+        || get(counts,"distinctSerializedVisualCodes")?.as_u64() != Some(673)
+        || get(counts,"independentMachineSerializationRoundTrips")?.as_u64() != Some(1171)
+        || get(counts,"failures")?.as_u64() != Some(0)
+    {
+        return Err("composed visual codec audit counts do not match source".into());
+    }
+
+    // A conventional initial is represented by a unique provisional working tuple;
+    // y, w and zero have their own spelling-marker namespace.
+    let mut forward_initial = BTreeMap::<String, String>::new();
+    let mut reverse_initial = BTreeMap::<String, String>::new();
+    for row in entries(&features,"tokens")? {
+        let token = string(row, "token")?;
+        let category = string(row, "category")?;
+        let code = match category {
+            "conventional_pinyin_initial" => format!(
+                "feature:{}|{}|{}",
+                string(row,"place")?,string(row,"manner")?,string(row,"aspiration")?),
+            "orthographic_onset_convention_not_independent_consonant" => {
+                if !matches!(token, "y" | "w" | "∅")
+                    || !get(row,"workingIPACandidate")?.is_null() {
+                    return Err("orthographic-only source onset received phoneme mapping".into());
+                }
+                format!("spelling:{token}")
+            },
+            _ => return Err("unrecognized source initial feature category".into()),
+        };
+        if forward_initial.insert(token.to_owned(), code.clone()).is_some()
+            || reverse_initial.insert(code, token.to_owned()).is_some() {
+            return Err("initial working feature code collides".into());
+        }
+    }
+    if forward_initial.len() != 24 || reverse_initial.len() != 24 {
+        return Err("source initial symbol vocabulary incomplete".into());
+    }
+
+    let alphabet = entries(&finals,"primitives")?.iter()
+        .map(|x| string(x,"letter").map(str::to_owned))
+        .collect::<Result<Vec<_>,_>>()?;
+    if alphabet.len() != 9 || alphabet.iter().collect::<BTreeSet<_>>().len() != 9 {
+        return Err("expected nine distinct geometric letters".into());
+    }
+    let mut forward_final = BTreeMap::<String, Vec<usize>>::new();
+    let mut reverse_final = BTreeMap::<Vec<usize>, String>::new();
+    for row in entries(&finals,"records")? {
+        let token = string(row,"token")?;
+        let indices = entries(row,"iconRegistryIndices")?.iter().map(|n| {
+            n.as_u64().map(|v|v as usize).ok_or("geometric index is not integral".to_owned())
+        }).collect::<Result<Vec<_>,_>>()?;
+        if indices.is_empty() || indices.len() > 4
+            || indices.iter().any(|n|*n >= alphabet.len())
+            || indices.iter().map(|&i|alphabet[i].as_str()).collect::<String>() != token
+            || get(row,"independentPhonologicalInterpretationApproved")?.as_bool()!=Some(false)
+        {
+            return Err(format!("source final {token} has nonreversible visual indices"));
+        }
+        if forward_final.insert(token.to_owned(),indices.clone()).is_some()
+            || reverse_final.insert(indices,token.to_owned()).is_some() {
+            return Err("two source final spellings share geometric code".into());
+        }
+    }
+    if forward_final.len() != 33 || reverse_final.len()!=33 {
+        return Err("expected 33 unambiguous source geometric finals".into());
+    }
+
+    let symbols = get(get(get(&layers,"palette_domains")?,"tone")?,"symbols")?;
+    let mut tone_by_symbol = BTreeMap::<String,u64>::new();
+    for tone in 0..5u64 {
+        let symbol = string(symbols,&tone.to_string())?;
+        if tone_by_symbol.insert(symbol.to_owned(),tone).is_some() {
+            return Err("citation tone symbols collide".into());
+        }
+    }
+    if tone_by_symbol.len()!=5 { return Err("source tone symbols incomplete".into()); }
+
+    let readings = entries(&source,"characters")?;
+    if readings.len()!=1000 { return Err("citation source tranche changed".into()); }
+    let mut observed = BTreeMap::<(String,String,u64), String>::new();
+    let mut encoded = BTreeSet::<(String,Vec<usize>,String)>::new();
+    let mut occurrences = 0usize;
+    for (i,row) in readings.iter().enumerate() {
+        if get(row,"rank")?.as_u64()!=Some(i as u64+1) {
+            return Err("visual citation source rank mismatch".into());
+        }
+        for reading in entries(row,"readings")? {
+            occurrences+=1;
+            let initial = string(reading,"initial")?;
+            let final_token = string(reading,"final")?;
+            let tone = get(reading,"tone")?.as_u64().ok_or("nonintegral citation tone")?;
+            let display = string(reading,"display")?;
+            let visual_initial = forward_initial.get(initial).ok_or("missing working onset visual key")?;
+            let visual_final = forward_final.get(final_token).ok_or("missing geometric final code")?;
+            let visual_tone = string(symbols,&tone.to_string())?;
+            // Reverse using the visual code, rather than the original spelling fields.
+            let decoded_initial = reverse_initial.get(visual_initial).ok_or("unmapped initial feature code")?;
+            let decoded_final = reverse_final.get(visual_final).ok_or("unmapped final symbol sequence")?;
+            let decoded_tone = tone_by_symbol.get(visual_tone).ok_or("unmapped tone contour label")?;
+            if decoded_initial != initial || decoded_final != final_token || *decoded_tone != tone {
+                return Err("visual initial/final/tone reconstruction lost source identity".into());
+            }
+            let triple=(decoded_initial.clone(),decoded_final.clone(),*decoded_tone);
+            if let Some(existing)=observed.insert(triple,display.to_owned()) {
+                if existing!=display { return Err("one source visual code has two Pinyin spellings".into()); }
+            }
+            encoded.insert((visual_initial.clone(),visual_final.clone(),visual_tone.to_owned()));
+        }
+    }
+    if occurrences!=1171 || observed.len()!=673 || encoded.len()!=673 {
+        return Err(format!("composed source visual grammar expected 1171/673, got {occurrences}/{}/{}",
+                           observed.len(),encoded.len()));
+    }
+    println!("Rust composed visual citation decoder: 1,171 orthographic reconstructions, 673 codes, no phonemic approvals.");
+    Ok(())
+}
+
 pub(super) fn check() -> Result<(),String> {
     check_atlas_colors()?;
     check_written_final_source_evidence()?;
-    check_citation_tone_isolation()
+    check_citation_tone_isolation()?;
+    check_composed_visual_citation_decoder()
 }
 
 #[cfg(test)]
@@ -375,5 +524,9 @@ mod tests {
     #[test]
     fn pinned_tone_labels_and_idealized_contours_are_separately_verified() {
         check_citation_tone_isolation().unwrap();
+    }
+    #[test]
+    fn composed_visual_citation_symbols_roundtrip_in_rust() {
+        check_composed_visual_citation_decoder().unwrap();
     }
 }
