@@ -10,7 +10,7 @@ import {deriveMaskedStimuli} from "./source_owner_masked_stimuli.mjs";
 const TARGET="glyphs/research/heldout-identification-target-v0.1/index-v0.1.json";
 const ID=/^p-[0-9a-f]{32}$/;
 const encode=x=>JSON.stringify(x,null,2)+"\n";
-const publicREADME=`# Neutral component-region packet preparation
+export const publicREADME=`# Neutral component-region packet preparation
 
 This file set contains 49 provisional Chinese source-region presentations,
 with two machine-derived neutral masks each. Packet identifiers are randomized
