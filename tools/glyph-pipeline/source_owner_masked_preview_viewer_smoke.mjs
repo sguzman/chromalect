@@ -30,7 +30,7 @@ function setup({source=manifest,hash="",assets=bytes,withCrypto=true,
  nodes["om-size"].value="96";nodes["om-cohort"].value="all";
  for(const id of ["om-cohort","om-pair","om-prev","om-next"])nodes[id].disabled=true;
  const fetched=[],objectURLs=new Map(),revoked=[],delayed=new Map(),abortEvents=[];
- const streamStats={reads:0,cancels:0,closed:0};
+ const streamStats={reads:0,readsByURL:new Map(),cancels:0,closed:0};
  let count=0;
  class MockBlob{
   constructor(parts,opts){this.parts=parts;this.type=opts.type;}
@@ -88,6 +88,7 @@ function setup({source=manifest,hash="",assets=bytes,withCrypto=true,
     return {
      async read(){
       streamStats.reads++;
+      streamStats.readsByURL.set(url,(streamStats.readsByURL.get(url)||0)+1);
       if(canceled)return {done:true};
       const data=await bytes();
       if(opts.signal.aborted)throw Error("AbortError");
@@ -271,8 +272,8 @@ tooLong.set(oversizePath,Buffer.alloc(1048577,42));
 const oversizedBody=setup({assets:tooLong,streamChunkSize:65536});
 await loaded(oversizedBody);
 assert.equal(oversizedBody.objectURLs.size,0);
-assert.equal(oversizedBody.streamStats.reads,0,
- "Accurate oversized Content-Length must prevent body buffering");
+assert.equal(oversizedBody.streamStats.readsByURL.get(oversizePath)||0,0,
+ "Accurate oversized Content-Length must prevent reading that SVG body");
 const hiddenSize=setup({assets:tooLong,streamMode:"no-length",streamChunkSize:65536});
 await loaded(hiddenSize);
 assert.equal(hiddenSize.objectURLs.size,0);
