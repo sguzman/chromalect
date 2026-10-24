@@ -280,6 +280,9 @@ jobs:
           node tools/glyph-pipeline/mandarin_ipa_source_comparison.mjs --check
           node --check site/mandarin-ipa-source-comparison.js
           node tools/glyph-pipeline/mandarin_ipa_source_comparison_smoke.mjs
+          node tools/glyph-pipeline/mandarin_written_final_ipa_crosswalk.mjs --check
+          node --check site/mandarin-written-final-ipa-crosswalk.js
+          node tools/glyph-pipeline/mandarin_written_final_ipa_crosswalk_smoke.mjs
           node tools/glyph-pipeline/mandarin_initial_feature_codec.mjs --check
           node tools/glyph-pipeline/mandarin_initial_feature_codec_smoke.mjs
           node tools/glyph-pipeline/citation_syllable_orthographic_codec.mjs --check
@@ -365,6 +368,7 @@ jobs:
           cp data/phonetics/citation-tone-isolation-audit-v0.1.json site/phonetics/citation-tone-isolation-audit-v0.1.json
           cp data/phonetics/mandarin-initial-feature-candidates-v0.1.json site/phonetics/mandarin-initial-feature-candidates-v0.1.json
           cp data/phonetics/mandarin-pinyin-ipa-source-disagreement-v0.1.json site/phonetics/mandarin-pinyin-ipa-source-disagreement-v0.1.json
+          cp data/phonetics/mandarin-written-final-ipa-source-crosswalk-v0.1.json site/phonetics/mandarin-written-final-ipa-source-crosswalk-v0.1.json
           cp data/phonetics/initial-feature-codec-audit-v0.1.json site/phonetics/initial-feature-codec-audit-v0.1.json
           cp data/phonetics/citation-syllable-orthographic-codec-audit-v0.1.json site/phonetics/citation-syllable-orthographic-codec-audit-v0.1.json
           cp data/phonetics/citation-orthographic-contrast-controls-v0.1.json site/phonetics/citation-orthographic-contrast-controls-v0.1.json

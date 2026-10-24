@@ -2,7 +2,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark">
 <title>Written-final symbol experiment · Chromalect</title>
 <link rel="stylesheet" href="style.css"><script src="theme.js"></script>
-<script src="mandarin-final-symbols.js" defer></script>
+<script src="mandarin-final-symbols.js" defer></script><script src="mandarin-written-final-ipa-crosswalk.js" defer></script>
 <style>
 .final-controls{display:flex;gap:18px;flex-wrap:wrap;margin:18px 0;align-items:center}
 .final-controls label{display:flex;align-items:center;gap:8px}
@@ -17,6 +17,13 @@ border:1px solid var(--border);border-radius:8px;padding:10px}
 .final-code{max-width:100%;height:58px;overflow:visible}
 .final-spelling{font-size:23px;font-weight:700}
 .final-note{font-size:12px;color:var(--sub);text-align:center}
+
+.final-ipa-scroll{overflow-x:auto;border:1px solid var(--border);border-radius:10px;margin:16px 0}
+.final-ipa-table{width:100%;border-collapse:collapse;min-width:690px;font-size:13px}
+.final-ipa-table th,.final-ipa-table td{padding:9px 11px;vertical-align:top;
+ border-bottom:1px solid var(--border);text-align:left}
+.final-ipa-table th{background:var(--panel);font-weight:700}
+.final-ipa-table td:first-child{font-weight:700;font-size:16px}
 </style></head><body>
 <header class="wrap"><div class="brand"><b>CHROMALECT</b><small>Language, made visible</small></div></header>
 <main class="wrap"><div class="eyebrow">Orthographic symbol control · nonphonetic baseline</div>
@@ -31,6 +38,21 @@ border:1px solid var(--border);border-radius:8px;padding:10px}
 <p id="final-status" role="status" aria-live="polite">Loading source-verified alphabet.</p>
 <p id="final-count"></p>
 <div id="final-gallery" class="final-grid"></div>
+<section aria-label="Source IPA options for all written finals">
+<h2>Written Pinyin finals versus published IPA options</h2>
+<p>This cross-reference pairs all 33 source-written finals and their arbitrary geometric
+letter-symbol sequences with candidate IPA headings in a published university diction guide.
+It <strong>does not</strong> transcribe a specific syllable: written <code>i</code>,
+<code>o</code>, <code>u</code>, <code>uan</code>, <code>un</code> and
+<code>ong</code> have multiple candidate reference headings, and other forms
+can require spelling normalization. Only six ordinary final tokens have provisional,
+uncertified single-vowel feature shapes.</p>
+<div id="final-ipa-source-table"></div>
+<p id="final-ipa-status" role="status" aria-live="polite">Checking published IPA crosswalk.</p>
+<p class="final-note">Source: <a href="https://scholarworks.iu.edu/iuswrrest/api/core/bitstreams/9dc66f3c-a3fb-4221-a9a6-815a1c4811a0/content">Hana J. Cai, 2020 dissertation, Table 3 (printed pp. 27–29)</a>.
+Values are the author's singer-oriented editorial labels, not verified IPA sound measurements.
+See the <a href="https://github.com/sguzman/chromalect/blob/main/docs/mandarin-written-final-ipa-crosswalk.md">33-final spelling, IPA and geometry comparison scope</a>.</p>
+</section>
 <p>Hiding the Pinyin labels is only an exploratory presentation toggle, **not a human decoding test**. Some written finals have context-dependent phonetic interpretations, so a literal letter code must not be confused with a genuine Mandarin sound-feature encoding. See the <a href="phonetics/written-final-symbol-control-v0.1.json">versioned symbol registry</a> and <a href="https://github.com/sguzman/chromalect/blob/main/docs/mandarin-written-final-symbol-control.md">design limitations</a>.</p>
 </main><footer class="wrap"><a href="mandarin-syllable-grammar.html">Source citation grammar</a> ·
 <a href="mandarin-citation-cell.html">Integrated character cell</a> ·
