@@ -1,0 +1,97 @@
+{
+  "schema": "chromalect.glyph.source-owner-external-leads.v0.1",
+  "status": "candidate_source_screening_only_not_qualified_owner_evidence",
+  "scope": {
+    "warningPairs": 49,
+    "flaggedCharacters": 48,
+    "palette": "mandarin-component-identity@0.6.0"
+  },
+  "screeningDate": "2026-10-24",
+  "counts": {
+    "candidateSourceFiles": 4,
+    "sourceRecordsCopied": 0,
+    "ownerClaimsIndependentlyCorroborated": 0,
+    "eligibleReviewItems": 0
+  },
+  "sourceFiles": [
+    {
+      "id": "chise-ids-basic",
+      "repository": "chise/ids",
+      "commit": "ac35413635608512f5e10187812cfab3b6ea47c1",
+      "upstreamReadme": "https://github.com/chise/ids/blob/ac35413635608512f5e10187812cfab3b6ea47c1/README.md",
+      "candidatePath": "IDS-UCS-Basic.txt",
+      "provenanceFamily": "chise",
+      "licenseDeclaration": "GPL-2.0-or-later as stated in upstream README; additional CDP-derived upstream content requires source-specific review",
+      "dataRole": "structural ideographic descriptions, not stroke-index ownership",
+      "dependsOn": [
+        "CHISE",
+        "CDP-derived material in some IDS files"
+      ],
+      "licenseClearanceComplete": false,
+      "independentOfPinnedSourceEstablished": false,
+      "anyOwnerPairVerified": false,
+      "redistributionAuthorizedForThisProject": false
+    },
+    {
+      "id": "cjkvi-ids",
+      "repository": "cjkvi/cjkvi-ids",
+      "commit": "86b4d16159f0079437870408f0ca186e529015db",
+      "upstreamReadme": "https://github.com/cjkvi/cjkvi-ids/blob/86b4d16159f0079437870408f0ca186e529015db/README.md",
+      "candidatePath": "ids.txt",
+      "provenanceFamily": "chise",
+      "licenseDeclaration": "README says ids.txt derives from CHISE and follows CHISE terms; other files generally GPLv2, with file-specific exceptions",
+      "dataRole": "ideographic description sequences; cannot establish individual source SVG stroke attribution",
+      "dependsOn": [
+        "CHISE"
+      ],
+      "licenseClearanceComplete": false,
+      "independentOfPinnedSourceEstablished": false,
+      "anyOwnerPairVerified": false,
+      "redistributionAuthorizedForThisProject": false
+    },
+    {
+      "id": "makemeahanzi-dictionary",
+      "repository": "skishore/makemeahanzi",
+      "commit": "bddc96d41bef78427ed0e034e9f7e31d71fd1b92",
+      "upstreamReadme": "https://github.com/skishore/makemeahanzi/blob/bddc96d41bef78427ed0e034e9f7e31d71fd1b92/README.md",
+      "candidatePath": "dictionary.txt",
+      "provenanceFamily": "unihan-cjklib",
+      "licenseDeclaration": "LGPL-3.0-or-later per upstream COPYING, derived from Unihan and CJKlib",
+      "dataRole": "candidate dictionary decomposition/character formation; no accepted stroke-index attribution",
+      "dependsOn": [
+        "Unihan",
+        "CJKlib"
+      ],
+      "licenseClearanceComplete": false,
+      "independentOfPinnedSourceEstablished": false,
+      "anyOwnerPairVerified": false,
+      "redistributionAuthorizedForThisProject": false
+    },
+    {
+      "id": "makemeahanzi-graphics",
+      "repository": "skishore/makemeahanzi",
+      "commit": "bddc96d41bef78427ed0e034e9f7e31d71fd1b92",
+      "upstreamReadme": "https://github.com/skishore/makemeahanzi/blob/bddc96d41bef78427ed0e034e9f7e31d71fd1b92/README.md",
+      "candidatePath": "graphics.txt",
+      "provenanceFamily": "arphic-fonts",
+      "licenseDeclaration": "Arphic Public License per upstream COPYING; rights and redistribution review pending",
+      "dataRole": "alternative font-derived vector stroke geometry; not identical to pinned target source or independent owner adjudication",
+      "dependsOn": [
+        "Arphic PL KaitiM GB",
+        "Arphic PL UKai"
+      ],
+      "licenseClearanceComplete": false,
+      "independentOfPinnedSourceEstablished": false,
+      "anyOwnerPairVerified": false,
+      "redistributionAuthorizedForThisProject": false
+    }
+  ],
+  "researchConstraints": {
+    "neverTreatCHISEAndCJKVIAsIndependentVotes": true,
+    "neverCombineDictionaryAndGraphicsLicenses": true,
+    "sourceLinksDoNotProveQualifiedOwnership": true,
+    "doNotImportThirdPartyDataWithoutApproval": true,
+    "noAutomaticCertification": true,
+    "prospectiveReviewRequiresIndependentQualifiedHumans": true
+  }
+}

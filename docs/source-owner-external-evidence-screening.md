@@ -1,0 +1,16 @@
+# Candidate external evidence sources for source-owner review (v0.1)
+
+This is a **screening inventory**, not an approved independent corpus or accepted expert report. The [machine-readable leads](../data/research/source-owner-external-leads-v0.1.json) pin three upstream repositories and four distinct source files for potential follow-up on Chromalect's 49 machine-selected source-region pairs. No third-party data was downloaded or added to production by this screening. No source-owner decisions, palette assignments, participant records, or study-eligibility decisions were modified.
+
+## Source lineage and licensing
+
+- **CHISE IDS:** [Pinned CHISE README](https://github.com/chise/ids/blob/ac35413635608512f5e10187812cfab3b6ea47c1/README.md) describes ideographic-structure source files and GNU GPL v2-or-later terms. It acknowledges that some entries derive from CDP. A structural decomposition is not per-stroke source ownership evidence.
+- **CJKVI IDS:** [Pinned CJKVI README](https://github.com/cjkvi/cjkvi-ids/blob/86b4d16159f0079437870408f0ca186e529015db/README.md) says `ids.txt` derives from CHISE and follows CHISE terms. Other files have differing licensing. **CHISE and its CJKVI-derived records must never be counted as two independent corroborations.**
+- **Make Me a Hanzi dictionary:** [Pinned upstream README](https://github.com/skishore/makemeahanzi/blob/bddc96d41bef78427ed0e034e9f7e31d71fd1b92/README.md) and [COPYING](https://github.com/skishore/makemeahanzi/blob/bddc96d41bef78427ed0e034e9f7e31d71fd1b92/COPYING) describe `dictionary.txt` as derived from Unihan/CJKlib, under LGPL v3-or-later. This is a possible alternate structural reference, not a reviewed ownership key.
+- **Make Me a Hanzi graphics:** The distinct `graphics.txt` file comes from Arphic-derived font data under the Arphic Public License. Its geometry cannot be substituted into source-pinned SVG masks without separate licensing review, geometric alignment, attribution, and versioning. The dictionary license must not be conflated with the graphics license.
+
+## Acquisition and review gates
+
+Before acquiring any source records, establish file-specific legal reuse and attribution, verify source ancestry against the current Yi Bai / HanziVG-led research pipeline, and document script/region variants and the intended structural granularity. Pin retrieved bytes with dates and hashes in a distinct, explicitly licensed research dataset. Match relevant character records to the 49 warnings and record **candidate agreements, disagreements, missingness, and variant mismatches** without treating mere overlap as adjudication. Any per-stroke ownership conclusion still requires the independently qualified, source-backed reviewers and reconciliation conditions in the [independent adjudication protocol](source-owner-independent-adjudication-protocol.md).
+
+At this stage, **zero records have been incorporated, zero source owner claims independently corroborated, and zero review prerequisites satisfied by this inventory**. The readiness gate `independentSourceCorpusPinnedForOwnerVerification` remains false. No machine-generated cross-reference, site preview, or repeated derived source may raise that gate.
