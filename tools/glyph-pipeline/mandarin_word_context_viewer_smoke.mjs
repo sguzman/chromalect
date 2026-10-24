@@ -85,15 +85,15 @@ for(let i=0;i<expected.length;i++){
  const [id,input,output,rule]=expected[i],sample=sandhi.samples[i];
  assert.equal(sample.id,id);
  const result=sandhi.previewPair(sample.characters,sample.tones);
- assert.deepEqual(result.underlying,input);
- assert.deepEqual(result.conditionalSurface,output);
+ assert.deepEqual(Array.from(result.underlying),input);
+ assert.deepEqual(Array.from(result.conditionalSurface),output);
  assert.equal(result.rule,rule);
  assert.equal(result.contextVerified,false);
  ui["wc-example"].value=id;ui["wc-example"].events.change();
  assert.match(ui["wc-rule"].children[0].children[3].textContent,/no contextual acoustic certification/);
  assert.equal(ui["wc-rule-source"].children[0].href,sample.source);
 }
-assert.deepEqual(sandhi.previewPair("长大",[3,4]).conditionalSurface,[3,4]);
+assert.deepEqual(Array.from(sandhi.previewPair("长大",[3,4]).conditionalSurface),[3,4]);
 assert.equal(sandhi.previewPair("一个",[1,0]).rule,"none");
 assert.throws(()=>sandhi.previewPair("你好了",[3,3,0]));
 assert.throws(()=>sandhi.previewPair("你好",[6,3]));
