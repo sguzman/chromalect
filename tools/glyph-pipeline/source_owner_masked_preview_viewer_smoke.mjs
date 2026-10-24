@@ -215,7 +215,7 @@ const blockedSVG=setup({source:injected,assets:injectedAssets});await loaded(blo
 assert.equal(blockedSVG.nodes["om-a"].src,"");
 assert.equal(blockedSVG.nodes["om-b"].src,"");
 assert.equal(blockedSVG.objectURLs.size,0);
-assert.match(blockedSVG.nodes["om-status"].textContent,/SVG document framing/);
+assert.match(blockedSVG.nodes["om-status"].textContent,/Region display blocked: Neutral SVG/);
 const race=setup();await loaded(race);
 const blocked=manifest.records[7].candidates[0].svg;
 let resolveBlocked;
