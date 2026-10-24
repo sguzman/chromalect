@@ -1,0 +1,79 @@
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="description" content="Noncollecting static-versus-opt-in one-shot motion comparison for provisional semantic-event and articulatory-feature encodings.">
+<title>Reduced-motion research controls · Chromalect</title>
+<link rel="stylesheet" href="style.css"><script src="theme.js"></script>
+<script src="semantic-grammar.js" defer></script>
+<script src="mandarin-motion-pretrial.js" defer></script>
+<style>
+.motion-controls{display:flex;flex-wrap:wrap;align-items:end;gap:14px;margin:18px 0;
+ padding:16px;border:1px solid var(--border);border-radius:12px;background:var(--panel)}
+.motion-controls label{display:grid;gap:6px;min-width:180px;flex:1}
+.motion-controls select,.motion-controls button{font:inherit;color:var(--ink);
+ background:var(--tile-bg);border:1px solid var(--border);border-radius:8px;padding:9px}
+.motion-controls button{cursor:pointer}
+.motion-panels{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px}
+.motion-panel{border:1px solid var(--border);background:var(--panel);
+ border-radius:12px;padding:16px;min-width:0}
+.motion-panel h2{font-size:17px;margin-top:0}
+.motion-stimulus{min-height:185px;display:flex;align-items:center;justify-content:center;
+ flex-wrap:wrap;gap:8px;padding:12px;border:1px solid var(--border);
+ border-radius:10px;background:var(--tile-bg);text-align:center}
+.motion-source{font-size:47px;line-height:1.4}
+.motion-token{display:inline-flex;align-items:center;justify-content:center;
+ border-radius:8px;border:1px solid var(--border);padding:8px;min-height:42px}
+.motion-symbol{font-size:28px;line-height:1.5}
+.motion-word{font-size:15px;line-height:1.6}
+.motion-token-animated{animation:chromalect-cue-once .55s ease-out both}
+@keyframes chromalect-cue-once{from{opacity:.15;transform:translateY(12px)}
+ to{opacity:1;transform:translateY(0)}}
+.motion-caption{font-size:13px;color:var(--sub)}
+.motion-note{border-left:3px solid var(--active-border);padding:12px 14px;
+ background:var(--panel);margin:18px 0}
+@media(max-width:700px){.motion-panels{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){
+ .motion-token-animated{animation:none!important;transition:none!important;transform:none!important}
+}
+</style></head><body>
+<header class="wrap"><div class="brand"><b>CHROMALECT</b><small>Language, made visible</small></div></header>
+<main class="wrap">
+<div class="eyebrow">Phase 3 · reduced-motion comparison stimuli · preparation only</div>
+<h1>Static and single-play animated information cues</h1>
+<p class="intro">Compare unchanged information in a static reference against an optional,
+one-shot sequential reveal. Semantic event cues come from the 1,000-character draft Unihan
+screening; articulatory place, manner and aspiration categories come from the provisional
+21-initial Mandarin source codebook. No glyph ownership, identity colors, transcriptions or
+meaning claims are changed by the animation.</p>
+<div class="motion-note"><strong>No study or evidence of learning gain.</strong> This is a
+prospective comparison stimulus, not an authorized participant trial. It collects no responses,
+stores no session state, and does not upload observations. Motion is never automatic; it is
+disabled when the operating system requests reduced motion. Animations do not depict measured
+tongue, lip, airflow, or acoustic trajectories.</div>
+<div class="motion-controls">
+<label for="motion-domain">Information domain
+<select id="motion-domain"><option value="semantic">Provisional semantic event</option>
+<option value="articulation">Working initial-feature categories</option></select></label>
+<label for="motion-event">Source semantic event
+<select id="motion-event"></select></label>
+<label for="motion-initial">Pinyin initial
+<select id="motion-initial"></select></label>
+<button id="motion-play" type="button">Replay motion once</button>
+</div>
+<p id="motion-status" role="status" aria-live="polite">Validating research candidate sources.</p>
+<div class="motion-panels">
+<section class="motion-panel"><h2>Control: static</h2>
+<div id="motion-static" class="motion-stimulus"></div>
+<p class="motion-caption">All source tokens visible at once; no transitions.</p></section>
+<section class="motion-panel"><h2>Candidate: sequential reveal</h2>
+<div id="motion-dynamic" class="motion-stimulus"></div>
+<p class="motion-caption">Same source tokens and ordering. One short motion sequence only when manually activated.</p></section>
+</div>
+<p id="motion-source-note" class="motion-note"></p>
+<p><a href="mandarin-fusion.html">Integrated character layers</a> ·
+<a href="mandarin-word-context.html">Contextual word research</a> ·
+<a href="mandarin-initial-features.html">Initial feature control inventory</a> ·
+<a href="roadmap-status.html">Research gates</a></p>
+</main>
+<footer class="wrap"><a href="index.html">Overview</a> · <a href="ontology.html">Ontology</a></footer>
+</body></html>
