@@ -3,10 +3,11 @@
 import assert from "node:assert/strict";
 import fs from "node:fs";
 import path from "node:path";
-import {randomBytes,randomInt} from "node:crypto";
+import {createHash,randomBytes,randomInt} from "node:crypto";
 import {pathToFileURL} from "node:url";
 import {deriveMaskedStimuli} from "./source_owner_masked_stimuli.mjs";
 import {requireOutsideRepository,readPinnedSiteFile} from "./source_owner_local_paths.mjs";
+import "../../site/source-owner-neutral-svg-contract.js";
 
 const TARGET="glyphs/research/heldout-identification-target-v0.1/index-v0.1.json";
 const ID=/^p-[0-9a-f]{32}$/;
@@ -134,7 +135,95 @@ export function deriveOfflineReviewerPacket(source,readSVG,
  return {manifest,coordinatorMap,readme:publicREADME,
   gallery:renderOfflinePacketGallery(manifest),files};
 }
+// Reject malformed programmatic packets before creating any public-facing files.
+export function validatePreparedOfflinePacket(packet){
+ const exact=(obj,keys)=>!!obj&&typeof obj==="object"&&!Array.isArray(obj)&&
+  Object.keys(obj).length===keys.length&&keys.every(k=>Object.hasOwn(obj,k));
+ assert.ok(exact(packet,["manifest","coordinatorMap","readme","gallery","files"]));
+ const {manifest,coordinatorMap,readme,gallery,files}=packet;
+ assert.ok(exact(manifest,["schema","status","packetSession","summary","records"]));
+ assert.equal(manifest.schema,"chromalect.glyph.local-keyless-packet.v0.1");
+ assert.equal(manifest.status,"unapproved_local_reviewer_packet_preparation_not_a_blinded_study");
+ assert.match(manifest.packetSession,ID);
+ assert.ok(exact(manifest.summary,["pairs","neutralSVGs","participantResponses",
+  "independentlyCertifiedOwners","approvedStudies"]));
+ assert.deepEqual(manifest.summary,{pairs:49,neutralSVGs:98,participantResponses:0,
+  independentlyCertifiedOwners:0,approvedStudies:0});
+ assert.ok(Array.isArray(manifest.records)&&manifest.records.length===49);
+ assert.equal(readme,publicREADME);
+ assert.equal(gallery,renderOfflinePacketGallery(manifest));
+ assert.ok(files instanceof Map&&files.size===98);
+ const hidden=JSON.stringify(manifest)+readme+gallery;
+ for(const phrase of ["cmp-","machineAssignedOwner","sourceTrialId",
+  "candidateOwnerIds","sourceSHA256","mappedOtherOwner","data-component"]){
+  assert.ok(!hidden.includes(phrase),"Source-owner metadata exposed in reviewer materials");
+ }
+ const ids=new Set([manifest.packetSession]),expectedFiles=new Set();
+ for(const row of manifest.records){
+  assert.ok(exact(row,["packetId","character","sourceStrokePaths","candidates",
+   "sourceOwnerIndependentlyVerified","participantResponseRecorded","studyEligible"]));
+  assert.match(row.packetId,ID);
+  assert.ok(!ids.has(row.packetId),"Duplicate packet token");
+  ids.add(row.packetId);
+  assert.ok(typeof row.character==="string"&&[...row.character].length===1);
+  assert.ok(Number.isInteger(row.sourceStrokePaths)&&row.sourceStrokePaths>=2&&
+   row.sourceStrokePaths<=300);
+  assert.ok(row.sourceOwnerIndependentlyVerified===false&&
+   row.participantResponseRecorded===false&&row.studyEligible===false);
+  assert.ok(Array.isArray(row.candidates)&&row.candidates.length===2);
+  let total=0;
+  for(const [index,candidate] of row.candidates.entries()){
+   const slot=index===0?"A":"B";
+   assert.ok(exact(candidate,["slot","form","file","sha256","highlightedPaths"]));
+   assert.equal(candidate.slot,slot);
+   assert.ok(typeof candidate.form==="string"&&candidate.form.length>0&&
+    candidate.form.length<=24);
+   const filename="masks/"+row.packetId+"--"+slot+".svg";
+   assert.equal(candidate.file,filename);
+   assert.ok(!expectedFiles.has(filename));
+   expectedFiles.add(filename);
+   assert.match(candidate.sha256,/^[a-f0-9]{64}$/);
+   const svg=files.get(filename);
+   assert.ok(typeof svg==="string"&&svg.length>0&&svg.length<=1048576,
+    "Missing or oversized neutral mask");
+   assert.equal(createHash("sha256").update(svg).digest("hex"),candidate.sha256);
+   globalThis.ChromalectNeutralRegionSVG.validate(svg,row.sourceStrokePaths,
+    candidate.highlightedPaths);
+   total+=candidate.highlightedPaths;
+  }
+  assert.ok(total<=row.sourceStrokePaths);
+  assert.notEqual(row.candidates[0].sha256,row.candidates[1].sha256);
+ }
+ assert.equal(ids.size,50);
+ assert.deepEqual(new Set(files.keys()),expectedFiles);
+ assert.ok(exact(coordinatorMap,["schema","status","packetSession",
+  "sourceTargetManifest","records"]));
+ assert.equal(coordinatorMap.schema,"chromalect.glyph.local-packet-coordinator.v0.1");
+ assert.equal(coordinatorMap.status,
+  "private_unapproved_machine_mapping_not_independent_reviewer_evidence");
+ assert.equal(coordinatorMap.packetSession,manifest.packetSession);
+ assert.equal(coordinatorMap.sourceTargetManifest,TARGET);
+ assert.ok(Array.isArray(coordinatorMap.records)&&coordinatorMap.records.length===49);
+ const covered=new Set();
+ for(const entry of coordinatorMap.records){
+  assert.ok(exact(entry,["packetId","sourceTrialId","sourceSHA256",
+   "originalRank","machineAssignedOwner","mappedOtherOwner","candidateOwnerIds"]));
+  assert.ok(ids.has(entry.packetId)&&!covered.has(entry.packetId));
+  covered.add(entry.packetId);
+  assert.match(entry.sourceTrialId,/^\d{1,4}-cmp-\d{4}-cmp-\d{4}$/);
+  assert.match(entry.sourceSHA256,/^[a-f0-9]{64}$/);
+  assert.ok(Number.isInteger(entry.originalRank)&&entry.originalRank>0);
+  assert.match(entry.machineAssignedOwner,/^cmp-\d{4}$/);
+  assert.match(entry.mappedOtherOwner,/^cmp-\d{4}$/);
+  assert.notEqual(entry.machineAssignedOwner,entry.mappedOtherOwner);
+  assert.ok(Array.isArray(entry.candidateOwnerIds)&&entry.candidateOwnerIds.length===2);
+  assert.ok(entry.candidateOwnerIds.every(id=>/^cmp-\d{4}$/.test(id)));
+ }
+ assert.equal(covered.size,49);
+ return true;
+}
 export function writeOfflinePacket(packet,reviewerDir,privateCoordinatorFile){
+ validatePreparedOfflinePacket(packet);
  const review=requireOutsideRepository(reviewerDir);
  const mapping=requireOutsideRepository(privateCoordinatorFile);
  assert.ok(review!==mapping&&mapping!==path.join(review,"index-v0.1.json"));
