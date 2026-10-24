@@ -64,6 +64,25 @@ from the earlier 26-to-zero in-sample result. This does *not* prove that v0.6 is
 perceptually superior—no original stroke-owner mapping has independent visual
 approval, and ΔOK thresholds do not represent measured human discrimination.
 
+## Source-owned failure case coordinates
+
+The versioned fold report now includes one record for **every near-color pair
+observed under either the active assignment or its separately trained candidate**.
+The measured categories comprise **13 introduced + 10 resolved + 16 retained =
+39 source-glyph pair observations**. Each record names the original held-out
+glyph rank/character, two stable component IDs, their before-and-after exact
+sRGB colors, their original and candidate OKLab distances, its
+introduced/resolved/retained classification, and explicit pending ownership
+and human-discrimination status.
+
+This identifies the **actual source components and glyphs** implicated by
+held-out color warnings, rather than merely presenting aggregate counts.
+The generator refuses missing source-glyph geometry ownership, component-color
+mismatches or rank leakage; the JavaScript acceptance test separately verifies
+the original generated mapping and every 39-item classification. The records
+are a numerical **failure case worklist**, not 39 independently observed
+visual errors or approved shapes. No existing glyph color or palette is altered.
+
 The [pinned numerical acceptance check](../tools/glyph-pipeline/palette_candidate_cv_observed_smoke.mjs)
 requires the build to reproduce these independently observed per-fold counts
 and conservation identities. The numerical result is a real research deliverable,
