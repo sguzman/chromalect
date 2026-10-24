@@ -26,7 +26,8 @@ fn prepare()->Result<(Pairs,Vec<String>,Vec<f64>),String>{
     let mut ids=BTreeMap::new();let mut colors=Vec::new();
     let mut colorSet=BTreeSet::new();
     for (i,x) in components.iter().enumerate(){
-        let id=string(x,"id")?.to_owned(),color=string(x,"color")?.to_uppercase();
+        let id=string(x,"id")?.to_owned();
+        let color=string(x,"color")?.to_uppercase();
         if ids.insert(id,i).is_some()||!colorSet.insert(color.clone()){
             return Err("component identity or color reused".into());
         }
@@ -61,7 +62,8 @@ fn prepare()->Result<(Pairs,Vec<String>,Vec<f64>),String>{
             }
             members.insert(n);
         }
-        if !entries(glyph,"source_path_owner_ids")?.iter().all(|v|
+        if entries(glyph,"source_path_owner_ids")?.is_empty()
+           || !entries(glyph,"source_path_owner_ids")?.iter().all(|v|
             v.as_str().and_then(|id|ids.get(id))
             .map(|n|members.contains(n))==Some(true)){
             return Err("glyph source path owner has no v0.6 component".into());
