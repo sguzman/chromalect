@@ -25,7 +25,8 @@ class Element{
 }
 async function flush(){for(let i=0;i<120;i++)await Promise.resolve();}
 function setup({source=manifest,hash="",assets=bytes,withCrypto=true,
- streamChunkSize=Number.MAX_SAFE_INTEGER,streamMode="normal"}={}){
+ streamChunkSize=Number.MAX_SAFE_INTEGER,streamMode="normal",
+ manifestBytes=null}={}){
  const nodes=Object.fromEntries(ids.map(id=>[id,new Element()]));
  nodes["om-size"].value="96";nodes["om-cohort"].value="all";
  for(const id of ["om-cohort","om-pair","om-prev","om-next"])nodes[id].disabled=true;
@@ -63,20 +64,26 @@ function setup({source=manifest,hash="",assets=bytes,withCrypto=true,
  }
  const fetch=async (url,opts)=>{
   fetched.push(url);
-  if(url===indexPath)return {ok:true,json:async()=>source};
-  assert.ok(assets.has(url),"Viewer must only fetch key-reduced masks");
-  assert.ok(opts?.signal,"All SVG fetches must receive cancellation signals");
-  const payload=assets.get(url);
-  if(streamMode==="no-stream")return {ok:true,headers:{get:()=>null}};
-  const header=streamMode==="oversized-header"?
-   String(1048577):streamMode==="no-length"?null:String(payload.byteLength);
+  const isManifest=url===indexPath;
+  if(!isManifest){
+   assert.ok(assets.has(url),"Viewer must only fetch key-reduced masks");
+   assert.ok(opts?.signal,"All SVG fetches must receive cancellation signals");
+  }
+  const payload=isManifest?(manifestBytes||Buffer.from(JSON.stringify(source),"utf8")):
+   assets.get(url);
+  if(streamMode==="no-stream"&&!isManifest)
+   return {ok:true,headers:{get:()=>null}};
+  const header=isManifest?
+   (streamMode==="manifest-no-length"?null:String(payload.byteLength)):
+   (streamMode==="oversized-header"?String(1048577):
+    streamMode==="no-length"?null:String(payload.byteLength));
   return {ok:true,headers:{get:name=>name==="content-length"?header:null},
    body:{getReader(){
     let content=null,index=0,canceled=false;
     async function bytes(){
      if(content!==null)return content;
-     if(opts.signal.aborted)throw Error("AbortError");
-     if(delayed.has(url)){
+     if(opts?.signal?.aborted)throw Error("AbortError");
+     if(!isManifest&&delayed.has(url)){
       const awaited=await new Promise((resolve,reject)=>{
        opts.signal.addEventListener("abort",()=>reject(Error("AbortError")));
        delayed.get(url).promise.then(resolve,reject);
@@ -91,9 +98,10 @@ function setup({source=manifest,hash="",assets=bytes,withCrypto=true,
       streamStats.readsByURL.set(url,(streamStats.readsByURL.get(url)||0)+1);
       if(canceled)return {done:true};
       const data=await bytes();
-      if(opts.signal.aborted)throw Error("AbortError");
+      if(opts?.signal?.aborted)throw Error("AbortError");
       if(index>=data.byteLength)return {done:true};
-      const next=Math.min(data.byteLength,index+streamChunkSize);
+      const next=Math.min(data.byteLength,index+
+       (isManifest?Number.MAX_SAFE_INTEGER:streamChunkSize));
       const value=data.subarray(index,next);
       index=next;
       return {done:false,value};
@@ -280,6 +288,27 @@ assert.equal(hiddenSize.objectURLs.size,0);
 assert.match(hiddenSize.nodes["om-status"].textContent,/size outside safe bounds/);
 assert.ok(hiddenSize.streamStats.cancels>=1,
  "Oversized chunked downloads must cancel readers on overflow");
+const hugeManifest=structuredClone(manifest);
+hugeManifest.unapprovedPadding="x".repeat(262144);
+const deniedManifest=setup({source:hugeManifest});
+await loaded(deniedManifest);
+assert.equal(deniedManifest.objectURLs.size,0);
+assert.equal(deniedManifest.streamStats.readsByURL.get(indexPath)||0,0);
+assert.match(deniedManifest.nodes["om-status"].textContent,/manifest size outside safe bounds/);
+assert.equal(deniedManifest.nodes["om-cohort"].disabled,true);
+const unannouncedManifest=setup({
+ source:hugeManifest,streamMode:"manifest-no-length"
+});
+await loaded(unannouncedManifest);
+assert.equal(unannouncedManifest.objectURLs.size,0);
+assert.ok(unannouncedManifest.streamStats.cancels>=1);
+assert.match(unannouncedManifest.nodes["om-status"].textContent,
+ /manifest size outside safe bounds/);
+const invalidUTF8Manifest=setup({manifestBytes:Buffer.from([0xff,0xfe,0xfd])});
+await loaded(invalidUTF8Manifest);
+assert.equal(invalidUTF8Manifest.objectURLs.size,0);
+assert.match(invalidUTF8Manifest.nodes["om-status"].textContent,
+ /Source-region presentation unavailable/);
 const anchored=setup({hash:"#"+manifest.records[21].id});await loaded(anchored);
 assert.equal(anchored.nodes["om-pair"].value,manifest.records[21].id);
 assertImages(anchored,manifest.records[21]);
@@ -358,7 +387,9 @@ const pageJS=scripts.at(-1);
 assert.ok(html.includes('src="source-owner-neutral-svg-contract.js"'));
 assert.ok(pageJS.includes("checkSVG(buffer)"));
 assert.ok(pageJS.includes("checkSVG(previous.bytes)"));
-assert.ok(pageJS.includes("readBoundedMask(response,signal)"));
+assert.ok(pageJS.includes("readBoundedBytes(response,signal,MAX_MASK_BYTES"));
+assert.ok(pageJS.includes("readBoundedBytes(response,null,MAX_MANIFEST_BYTES"));
+assert.equal(pageJS.includes("response.json()"),false);
 assert.equal(pageJS.includes("response.arrayBuffer()"),false);
 for(const forbidden of ["localStorage","sessionStorage","navigator.sendBeacon",
  "document.cookie","innerHTML","XMLHttpRequest","machineAssignedOwner",

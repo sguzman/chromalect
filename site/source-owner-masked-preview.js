@@ -17,15 +17,16 @@ let requestVersion=0,objectURLs=[],activeController=null;
 const verifiedMaskCache=new Map();
 const MAX_VERIFIED_MASKS=24; // 24 MiB maximum given the 1 MiB per-SVG cap.
 const MAX_MASK_BYTES=1048576;
+const MAX_MANIFEST_BYTES=262144;
 // Browser fetch bodies must be consumed with a hard incremental byte bound.
 // Do not buffer an untrusted full response before checking its size.
-async function readBoundedMask(response,signal){
+async function readBoundedBytes(response,signal,limit,label){
  const header=response.headers?.get?.("content-length");
  if(header!==null&&header!==undefined&&/^\d+$/.test(header)&&
-  Number(header)>MAX_MASK_BYTES)
-  throw Error("Neutral source SVG size outside safe bounds");
+  Number(header)>limit)
+  throw Error(label+" size outside safe bounds");
  if(!response.body||typeof response.body.getReader!=="function")
-  throw Error("Bounded neutral SVG streaming unavailable");
+  throw Error("Bounded "+label+" streaming unavailable");
  const reader=response.body.getReader(),chunks=[];
  let total=0;
  try{
@@ -36,13 +37,13 @@ async function readBoundedMask(response,signal){
    if(result.done)break;
    const part=result.value;
    if(!ArrayBuffer.isView(part)||part.BYTES_PER_ELEMENT!==1)
-    throw Error("Invalid neutral SVG download chunk");
+    throw Error("Invalid "+label+" download chunk");
    total+=part.byteLength;
-   if(total>MAX_MASK_BYTES)
-    throw Error("Neutral source SVG size outside safe bounds");
+   if(total>limit)
+    throw Error(label+" size outside safe bounds");
    chunks.push(new Uint8Array(part.buffer,part.byteOffset,part.byteLength));
   }
-  if(total===0)throw Error("Neutral source SVG size outside safe bounds");
+  if(total===0)throw Error(label+" size outside safe bounds");
   const bytes=new Uint8Array(total);
   let offset=0;
   for(const chunk of chunks){bytes.set(chunk,offset);offset+=chunk.byteLength;}
@@ -98,7 +99,7 @@ async function fetchVerifiedMask(candidate,sourceStrokePaths,signal){
  }
  const response=await fetch(candidate.svg,signal?{signal}:undefined);
  if(!response.ok)throw Error("Neutral source SVG unavailable");
- const buffer=await readBoundedMask(response,signal);
+ const buffer=await readBoundedBytes(response,signal,MAX_MASK_BYTES,"Neutral source SVG");
  const digest=await crypto.subtle.digest("SHA-256",buffer);
  const actual=Array.from(new Uint8Array(digest),b=>b.toString(16).padStart(2,"0")).join("");
  if(actual!==candidate.sha256)throw Error("Neutral source SVG SHA-256 mismatch");
@@ -177,7 +178,10 @@ async function load(){
   const source="glyphs/research/owner-masked-stimuli-v0.1/index-v0.1.json";
   const response=await fetch(source);
   if(!response.ok)throw Error("Key-separated source stimuli unavailable");
-  targets=preview.validate(await response.json());
+  const manifestBuffer=await readBoundedBytes(response,null,MAX_MANIFEST_BYTES,
+   "Neutral source manifest");
+  const manifestText=new TextDecoder("utf-8",{fatal:true}).decode(manifestBuffer);
+  targets=preview.validate(JSON.parse(manifestText));
   applySize();
   const fragment=globalThis.location?.hash?.slice(1)||"";
   await showCohort("all",targets.find(t=>t.id===fragment)?.id);
