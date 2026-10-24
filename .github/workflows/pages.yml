@@ -460,7 +460,11 @@ jobs:
           node tools/glyph-pipeline/source_owner_local_packet_compare_smoke.mjs
           test -s site/glyphs/research/owner-masked-stimuli-v0.1/index-v0.1.json
           node tools/glyph-pipeline/source_owner_independent_protocol_smoke.mjs
+          node --check tools/glyph-pipeline/source_owner_review_readiness.mjs
+          node tools/glyph-pipeline/source_owner_review_readiness_smoke.mjs
           mkdir -p site/research
+          node tools/glyph-pipeline/source_owner_review_readiness.mjs --json > site/research/source-owner-readiness-v0.1.json
+          test -s site/research/source-owner-readiness-v0.1.json
           cp data/research/source-owner-independent-adjudication-protocol-v0.1.json site/research/
           test -s site/source-owner-independent-protocol.html
           test -s site/glyphs/research/owner-complement-locators-v0.1/index-v0.1.json

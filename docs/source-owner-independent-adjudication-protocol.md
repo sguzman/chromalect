@@ -31,6 +31,17 @@ The machine-readable protocol records **0 reviewer reports, 0 independently reco
 
 The [source-owner intake](../site/component-owner-adjudication.html) remains a preparation tool for provisional evidence notes, not an acceptance authority. Its export validator deliberately refuses purported certification claims. Data published by the current pipeline, including original vector geometry and production v0.6 color identities, remain unchanged.
 
+## Current prerequisite and evidence summary
+
+The [machine-readable readiness summary](../site/research/source-owner-readiness-v0.1.json) is generated from this source protocol and the pinned 49-pair and complementary-locator manifests. It records seven explicitly unresolved research prerequisites, a minimum of **98 independent per-pair reports** (two for each of 49 pairs), zero accepted reports, zero independently reconciled pairs, zero owner certifications and zero study-eligible glyphs. The summary is a *source-status inventory*, not a live recruitment record or evidence that participation is approved. No machine output may satisfy an independent-review prerequisite on its own.
+
+To inspect the same information locally:
+
+    node tools/glyph-pipeline/source_owner_review_readiness.mjs --status
+    node tools/glyph-pipeline/source_owner_review_readiness.mjs --json
+
+Until independently attributable source materials, reviewer qualifications, consent and any required ethics or publication approvals have actually been established, these gates remain blocked.
+
 ## Integrity verification
 
 The static research pipeline checks the protocol file against the generated source-owner and complementary-locator manifests:
