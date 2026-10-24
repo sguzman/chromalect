@@ -4,6 +4,7 @@ import os from "node:os";
 import path from "node:path";
 import {spawnSync} from "node:child_process";
 import {createHash} from "node:crypto";
+import {REPOSITORY_ROOT} from "./source_owner_local_paths.mjs";
 import {deriveOfflineReviewerPacket,writeOfflinePacket,
  renderOfflinePacketGallery} from "./source_owner_local_packet.mjs";
 const source=JSON.parse(fs.readFileSync(
@@ -99,7 +100,7 @@ try{
  const cliDir=path.join(tmp,"cli-reviewer"),cliMap=path.join(tmp,"cli-private.json");
  const run=spawnSync(process.execPath,[script,
   "--reviewer-dir",cliDir,"--coordinator-map",cliMap],
-  {encoding:"utf8",timeout:60000});
+  {cwd:tmp,encoding:"utf8",timeout:60000});
  assert.equal(run.status,0,run.stderr);
  assert.ok(fs.existsSync(path.join(cliDir,"index-v0.1.json")));
  assert.ok(fs.existsSync(path.join(cliDir,"index.html")));
@@ -108,6 +109,25 @@ try{
  const live=JSON.parse(fs.readFileSync(path.join(cliDir,"index-v0.1.json"),"utf8"));
  assert.equal(live.records.length,49);
  assert.notEqual(live.packetSession,built.manifest.packetSession);
+ // The source-boundary check must still reject repo outputs when cwd is elsewhere.
+ const forbidden=path.join(REPOSITORY_ROOT,"site","rejected-external-cwd-packet");
+ const refusedRepo=spawnSync(process.execPath,[script,
+  "--reviewer-dir",forbidden,"--coordinator-map",path.join(tmp,"unused-map.json")],
+  {cwd:tmp,encoding:"utf8",timeout:60000});
+ assert.notEqual(refusedRepo.status,0,"Repository output rejected even from external cwd");
+ assert.ok(!fs.existsSync(forbidden));
+ const alias=path.join(tmp,"repo-alias");
+ fs.symlinkSync(REPOSITORY_ROOT,alias,"dir");
+ assert.throws(()=>writeOfflinePacket(built,path.join(alias,"alias-packet"),
+  path.join(tmp,"unused-key.json")),/outside the public repository/);
+ const privateRepoPath=path.join(REPOSITORY_ROOT,"source-owner-rejected-private-map.json");
+ const refusedCoordinator=spawnSync(process.execPath,[script,
+  "--reviewer-dir",path.join(tmp,"unused-packet"),
+  "--coordinator-map",privateRepoPath],
+  {cwd:tmp,encoding:"utf8",timeout:60000});
+ assert.notEqual(refusedCoordinator.status,0,
+  "Coordinator key may never be written inside the repository");
+ assert.ok(!fs.existsSync(privateRepoPath));
  const before=fs.readFileSync(cliMap);
  const refused=spawnSync(process.execPath,[script,
   "--reviewer-dir",cliDir,"--coordinator-map",cliMap],

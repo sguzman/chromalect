@@ -6,7 +6,7 @@ import path from "node:path";
 import {pathToFileURL} from "node:url";
 import {deriveMaskedStimuli} from "./source_owner_masked_stimuli.mjs";
 import {verifyOfflinePacket} from "./source_owner_local_packet_verify.mjs";
-import {REPOSITORY_ROOT,requireOutsideRepository,readPinnedSiteFile}
+import {requireOutsideRepository,readPinnedSiteFile}
  from "./source_owner_local_paths.mjs";
 
 const TARGET="glyphs/research/heldout-identification-target-v0.1/index-v0.1.json";

@@ -3,6 +3,7 @@ import fs from "node:fs";
 import os from "node:os";
 import path from "node:path";
 import {spawnSync} from "node:child_process";
+import {REPOSITORY_ROOT} from "./source_owner_local_paths.mjs";
 import {deriveOfflineReviewerPacket,writeOfflinePacket,
  renderOfflinePacketGallery} from "./source_owner_local_packet.mjs";
 import {verifyOfflinePacket} from "./source_owner_local_packet_verify.mjs";
@@ -39,10 +40,23 @@ try{
  });
  const args=[path.resolve("tools/glyph-pipeline/source_owner_local_coordinator_verify.mjs"),
   "--packet-dir",publicDir,"--coordinator-map",keyFile];
- const cli=spawnSync(process.execPath,args,{encoding:"utf8",timeout:60000});
+ const cli=spawnSync(process.execPath,args,
+  {cwd:base,encoding:"utf8",timeout:60000});
  assert.equal(cli.status,0,cli.stderr);
  assert.match(cli.stdout,/49 provisional pairs/);
  assert.ok(!cli.stdout.includes("cmp-")&&!cli.stdout.includes("sourceTrialId"));
+ // A runner launched outside the Git checkout must still reject a key in that checkout.
+ const invalidKeyPath=path.join(REPOSITORY_ROOT,"private-coordinator-disallowed.json");
+ const rejectedKey=spawnSync(process.execPath,[
+  args[0],"--packet-dir",publicDir,"--coordinator-map",invalidKeyPath],
+  {cwd:base,encoding:"utf8",timeout:60000});
+ assert.notEqual(rejectedKey.status,0);
+ assert.ok(!fs.existsSync(invalidKeyPath));
+ const repoAlias=path.join(base,"repo-alias");
+ fs.symlinkSync(REPOSITORY_ROOT,repoAlias,"dir");
+ const aliasKey=path.join(repoAlias,"private-coordinator-disallowed.json");
+ assert.throws(()=>verifyLocalCoordinator(publicDir,aliasKey,read),
+  /outside the public repository/);
  alterKey(m=>{m.packetSession="p-"+"0".repeat(32);});
  alterKey(m=>{m.status="independently_approved";});
  alterKey(m=>{m.records[0].machineAssignedOwner="cmp-9999";});
