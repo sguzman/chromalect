@@ -231,7 +231,7 @@ export function writeOfflinePacket(packet,reviewerDir,privateCoordinatorFile){
   !mapping.startsWith(review+path.sep),"Coordinator map must not reside inside reviewer packet");
  assert.ok(!fs.existsSync(review)&&!fs.existsSync(mapping),
   "Refuse to overwrite existing reviewer package or coordinator map");
- let created=false;
+ let created=false,keyCreated=false;
  try{
   fs.mkdirSync(review,{mode:0o700});created=true;
   fs.mkdirSync(path.join(review,"masks"),{mode:0o700});
@@ -242,10 +242,23 @@ export function writeOfflinePacket(packet,reviewerDir,privateCoordinatorFile){
   exclusive(path.join(review,"index.html"),packet.gallery);
   for(const [name,svg] of packet.files)
    exclusive(path.join(review,name),svg);
-  // Only the separate explicitly chosen path receives any machine answer key.
-  exclusive(mapping,encode(packet.coordinatorMap));
+  // Create the private key file exclusively; recover even from a partial write.
+  const fd=fs.openSync(mapping,"wx",0o600);
+  keyCreated=true;
+  try{
+   fs.writeFileSync(fd,encode(packet.coordinatorMap),{encoding:"utf8"});
+   fs.fsyncSync(fd);
+  }finally{fs.closeSync(fd);}
  }catch(e){
-  if(created)fs.rmSync(review,{recursive:true,force:true});
+  const errors=[e];
+  if(keyCreated){
+   try{fs.rmSync(mapping,{force:true});}catch(err){errors.push(err);}
+  }
+  if(created){
+   try{fs.rmSync(review,{recursive:true,force:true});}catch(err){errors.push(err);}
+  }
+  if(errors.length>1)throw new AggregateError(errors,
+   "Failed to clean incomplete local reviewer packet output");
   throw e;
  }
 }
