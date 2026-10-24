@@ -2,7 +2,7 @@
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="color-scheme" content="light dark">
 <title>Mandarin citation-tone encoding comparison · Chromalect</title>
-<link rel="stylesheet" href="style.css"><script src="theme.js"></script><script src="mandarin-tone-contours.js" defer></script>
+<link rel="stylesheet" href="style.css"><script src="theme.js"></script><script src="mandarin-tone-contours.js" defer></script><script src="mandarin-tone-practice.js" defer></script>
 <style>
 .tone-control{display:flex;flex-wrap:wrap;align-items:center;gap:12px;margin:18px 0}
 .tone-control select{font:inherit;color:var(--ink);background:var(--panel);border:1px solid var(--border);border-radius:8px;padding:10px}
@@ -14,6 +14,15 @@
 .tone-display{font-size:29px;text-align:center}
 .tone-swatch{width:68px;height:68px;border-radius:9px;border:1px solid var(--border)}
 .tone-note{font-size:13px;color:var(--sub)}
+.tone-practice-area{margin:18px 0;padding:16px;border:1px solid var(--border);
+ background:var(--panel);border-radius:12px}
+.tone-practice-prompt{min-height:136px;display:flex;justify-content:center;
+ align-items:center;background:var(--tile-bg);border-radius:9px;margin:14px 0}
+.tone-practice-answers{display:flex;flex-wrap:wrap;gap:12px;margin:14px 0}
+.tone-practice-answers button,.tone-practice-area button{font:inherit;cursor:pointer;
+ border:1px solid var(--border);color:var(--ink);background:var(--tile-bg);
+ border-radius:8px;padding:10px 16px}
+.tone-practice-area button:disabled{opacity:.5;cursor:default}
 </style></head><body>
 <header class="wrap"><div class="brand"><b>CHROMALECT</b><small>Language, made visible</small></div></header>
 <main class="wrap"><div class="eyebrow">Phonetic research · independently toggleable experimental controls</div>
@@ -24,6 +33,20 @@
 <option value="color">Published tone color</option><option value="plain">Plain label</option></select></div>
 <p id="tone-status" role="status" aria-live="polite">Loading source references.</p>
 <div id="tone-results" class="tone-grid"></div>
+<section class="tone-practice-area" aria-label="Contour-only self-practice">
+<h2>Contour-only decoding practice (non-study)</h2>
+<p>Eight balanced, locally shuffled prompts show only the original <strong>monochrome relative-pitch shape</strong>,
+with no glyph, Pinyin, initial, final, color or contour name in the prompt. Choose T1–T4 to see immediate
+source-label feedback. Neutral tone is excluded because no independent contour is defined.</p>
+<p>This session is not a controlled human study: no consent, sampling, preregistration, calibrated acoustics,
+data export or retention measurement is provided. Answers exist only in the current browser session.</p>
+<button type="button" id="tone-practice-start">Start or restart eight prompts</button>
+<div id="tone-practice-prompt" class="tone-practice-prompt" aria-label="Unlabeled tone contour prompt"></div>
+<div id="tone-practice-answers" class="tone-practice-answers" aria-label="Select source citation tone"></div>
+<p id="tone-practice-feedback" aria-live="polite"></p>
+<button type="button" id="tone-practice-next" disabled>Next contour</button>
+<p id="tone-practice-status" role="status" aria-live="polite">Validating source-only contours.</p>
+</section>
 <p>This page does not measure learning, pronunciation, memory, or word-context disambiguation. Source: <a href="phonetics/mandarin-citation-tone-contours-v0.1.json">versioned reference record</a> and <a href="https://www.polyu.edu.hk/bepth/introduction-to-phonetics/tones/basic-tones/?sc_lang=en">PolyU phonetics reference</a>. Source-aligned Pinyin readings and published colors are unchanged.</p>
 </main>
 <footer class="wrap"><a href="pinyin-citations.html">Pinyin spelling comparison</a> · <a href="roadmap-status.html">Research roadmap</a> · <a href="index.html">Overview</a></footer>
