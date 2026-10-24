@@ -3,6 +3,7 @@
 <title>Mandarin simple-final feature proposals · Chromalect</title>
 <link rel="stylesheet" href="style.css"><script src="theme.js"></script>
 <script src="mandarin-simple-final-features.js" defer></script>
+<script src="mandarin-working-feature-decoder.js" defer></script>
 <style>
 .vowel-controls{display:flex;gap:18px;align-items:center;flex-wrap:wrap;margin:20px 0}
 .vowel-controls label{display:flex;gap:8px;align-items:center}
@@ -17,6 +18,14 @@
 .vowel-record{border:1px solid var(--border);border-radius:10px;padding:14px;background:var(--panel)}
 .vowel-record h2{font-size:16px;margin:0 0 8px}
 .vowel-caution{font-size:13px;color:var(--sub);margin:6px 0}
+.vowel-code-controls{display:flex;flex-wrap:wrap;gap:12px;padding:14px;margin:14px 0;
+ background:var(--panel);border:1px solid var(--border);border-radius:10px}
+.vowel-code-controls label{display:grid;gap:6px;min-width:130px;flex:1}
+.vowel-code-controls select{font:inherit;min-width:0;color:var(--ink);
+ background:var(--tile-bg);padding:8px;border:1px solid var(--border);border-radius:8px}
+.vowel-code-output{border:1px solid var(--border);border-radius:10px;
+ padding:15px;background:var(--panel)}
+.vowel-code-reading{font-size:25px}
 </style></head><body><header class="wrap"><div class="brand"><b>CHROMALECT</b>
 <small>Language, made visible</small></div></header>
 <main class="wrap"><div class="eyebrow">Mandarin vowel research · unapproved feature hypotheses</div>
@@ -28,6 +37,25 @@
 <p id="vowel-summary">Loading source-citation statistics.</p>
 <p id="vowel-status" role="status" aria-live="polite">Validating provisional vowel categories.</p>
 <div id="vowel-grid" class="vowel-grid"></div>
+<section aria-label="Strict provisional feature decoder">
+<h2>Reconstruct a source citation from working features</h2>
+<p>Use the existing onset codebook, six provisional vowel height/backness/rounding tuples,
+and an independent citation-tone symbol. Only <strong>320 original citation occurrences</strong>
+(157 distinct codes) are eligible; <strong>112</strong> context-sensitive occurrences
+are refused and <strong>739</strong> have no final-feature proposal.
+These are provisional *written reading reconstructions*, not demonstrated sound decoding.</p>
+<div class="vowel-code-controls">
+<label for="vowel-code-initial">Working initial feature / onset convention<select id="vowel-code-initial"></select></label>
+<label for="vowel-code-height">Vowel height<select id="vowel-code-height"></select></label>
+<label for="vowel-code-backness">Vowel backness<select id="vowel-code-backness"></select></label>
+<label for="vowel-code-rounding">Vowel rounding<select id="vowel-code-rounding"></select></label>
+<label for="vowel-code-tone">Citation tone<select id="vowel-code-tone"></select></label>
+</div>
+<p id="vowel-code-status" role="status" aria-live="polite">Validating source-aligned featural citation codes.</p>
+<div id="vowel-code-output" class="vowel-code-output" aria-live="polite"></div>
+<p class="vowel-caution">The decoder neither invents an IPA target nor substitutes unverified contextual pronunciations.
+It is machine-tested in Rust against all source observations. <a href="phonetics/working-feature-citation-codec-audit-v0.1.json">Full evidence and exclusion counts</a>.</p>
+</section>
 <h2>Source evidence and contextual warnings</h2>
 <div id="vowel-list" class="vowel-records"></div>
 <p>Source counts do not establish sounds. In particular, written \`i\` after sibilants, written \`u\` after palatal classes, and written \`o\` in certain labial contexts may not instantiate the default proposed vowel category. The underlying <a href="phonetics/mandarin-simple-final-feature-candidates-v0.1.json">machine-readable ledger</a> retains the original source frequencies, context cautions, and zero approval counters. See the <a href="https://github.com/sguzman/chromalect/blob/main/docs/mandarin-simple-final-features.md">research qualifications</a>.</p>
