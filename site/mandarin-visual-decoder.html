@@ -1,0 +1,59 @@
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="description" content="Decode source-attested Mandarin citation spellings from independent working initial, geometric final and citation tone symbols.">
+<title>Visual citation decoder · Chromalect</title>
+<link rel="stylesheet" href="style.css"><script src="theme.js"></script>
+<script src="mandarin-visual-decoder.js" defer></script>
+<style>
+.vd-controls,.vd-pad{display:flex;flex-wrap:wrap;gap:14px;align-items:end;padding:16px;margin:18px 0;
+ border:1px solid var(--border);background:var(--panel);border-radius:12px}
+.vd-controls label{display:grid;gap:6px;flex:1;min-width:170px}
+.vd-controls select,.vd-controls button,.vd-pad button{font:inherit;color:var(--ink);
+ background:var(--tile-bg);padding:10px;border:1px solid var(--border);border-radius:8px;cursor:pointer}
+.vd-letter{min-width:74px;display:grid;gap:4px;justify-items:center}
+.vd-letter svg,.vd-sequence svg{height:50px;width:50px;display:block}
+.vd-letter small{color:var(--sub)}
+.vd-sequence{min-height:100px;border:1px dashed var(--border);padding:15px;display:flex;
+ flex-wrap:wrap;align-items:center;gap:7px;border-radius:12px;background:var(--panel)}
+.vd-result{padding:16px;background:var(--panel);border:1px solid var(--border);
+ border-radius:12px;margin:16px 0}
+.vd-reading{font-size:28px;font-weight:700;display:block}
+.vd-notes{color:var(--sub);font-size:13px}
+.vd-limits{border-left:3px solid var(--active-border);padding:14px;background:var(--panel)}
+</style></head><body>
+<header class="wrap"><div class="brand"><b>CHROMALECT</b><small>Language, made visible</small></div></header>
+<main class="wrap">
+<div class="eyebrow">Phase 2 · strict source-orthographic visual decoding</div>
+<h1>Decode a constructed visual citation code</h1>
+<p class="intro">Choose a source working initial and tone, then assemble an ordered final from the nine published
+geometric letter primitives. The decoder recognizes only the 673 distinct initial/final/tone combinations
+actually observed in the first 1,171 Pinyin citation readings. Each successful decode returns
+the original source spelling and example characters without proposing a phonemic transcription.</p>
+<div class="vd-limits"><strong>Literal orthographic control, not sound decoding.</strong>
+Geometric final primitives represent written letters, not vowels, codas or IPA. Initial categories are
+provisional working features; y, w and zero are orthographic conventions. No independent expert or human
+decoding trial, contextual reading or learning outcome has been established.</div>
+<div class="vd-controls">
+<label for="vd-initial">Working initial / onset convention<select id="vd-initial"></select></label>
+<label for="vd-tone">Original citation tone<select id="vd-tone"></select></label>
+<button type="button" id="vd-back">Remove last final symbol</button>
+<button type="button" id="vd-clear">Clear final symbols</button>
+</div>
+<h2>Source geometric written-letter alphabet</h2>
+<div id="vd-pad" class="vd-pad" aria-label="Add a geometric spelling primitive"></div>
+<h2>Entered final symbol sequence</h2>
+<div id="vd-sequence" class="vd-sequence" aria-live="polite"></div>
+<p id="vd-status" role="status" aria-live="polite">Validating the source visual grammar.</p>
+<section class="vd-result" aria-label="Decoded source citation">
+<div id="vd-result"></div>
+<p id="vd-evidence" class="vd-notes"></p>
+</section>
+<p>For a source-backed complete-code demonstration, select initial <strong>y</strong>, tone <strong>1</strong>
+and add the source symbol for written <strong>i</strong>, reconstructing <strong>yī</strong>.
+The visible source labels here are aids to inspecting a deterministic decoder, not a blinded comprehension test.</p>
+<p><a href="mandarin-syllable-grammar.html">Inspect all original source citation tokens</a> ·
+<a href="mandarin-final-symbols.html">Inspect the geometric spelling alphabet</a> ·
+<a href="https://github.com/sguzman/chromalect/blob/main/docs/mandarin-visual-citation-codec.md">Codec and evidence limits</a></p>
+</main><footer class="wrap"><a href="mandarin-citation-cell.html">Integrated phonetic control</a> ·
+<a href="roadmap-status.html">Research gates</a> · <a href="index.html">Overview</a></footer></body></html>
