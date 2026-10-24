@@ -61,10 +61,11 @@ fn optimize(edges:&[Edge],dist:&[f64],n:usize)->(Vec<usize>,Vec<(usize,usize,usi
                     let e=&edges[idx];
                     let now=cost(e,&assignment,dist,n);
                     if now && originally_good[idx]{valid=false;break;}
-                    let old=if e.a==a {dist[assignment[b]*n+assignment[e.b]]<CUT}
-                        else if e.b==a {dist[assignment[e.a]*n+assignment[b]]<CUT}
-                        else if e.a==b {dist[assignment[a]*n+assignment[e.b]]<CUT}
-                        else {dist[assignment[e.a]*n+assignment[a]]<CUT};
+                    let left=if e.a==a {assignment[b]}
+                        else if e.a==b {assignment[a]} else {assignment[e.a]};
+                    let right=if e.b==a {assignment[b]}
+                        else if e.b==b {assignment[a]} else {assignment[e.b]};
+                    let old=dist[left*n+right]<CUT;
                     new_weight+=e.weight as isize*(now as isize-old as isize);
                 }
                 assignment.swap(a,b);
@@ -255,8 +256,8 @@ mod tests {
     fn greedy_swap_only_removes_preexisting_source_collision(){
         let labs=["#123456","#123457","#ffffff","#ff0000"].iter().map(|s|oklab(s).unwrap())
             .collect::<Vec<_>>();
-        let dist=(0..4).flat_map(|i|(0..4).map(move|j|metric(labs[i],labs[j])))
-            .collect::<Vec<_>>();
+        let mut dist=Vec::new();
+        for i in 0..4 {for j in 0..4 {dist.push(metric(labs[i],labs[j]));}}
         let edges=vec![Edge{a:0,b:1,weight:1},Edge{a:0,b:3,weight:1}];
         assert_eq!(warned(&edges,&[0,1,2,3],&dist,4),1);
         let (order,swaps)=optimize(&edges,&dist,4);
