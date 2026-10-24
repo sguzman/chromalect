@@ -148,7 +148,7 @@ export function audit(model,palette){
   example("S",["^"],null,1)
  ];
  for(const candidate of exampleInputs){
-  assert.deepEqual(grammar.decode(JSON.parse(JSON.stringify(grammar.encode(candidate))),candidate);
+  assert.deepEqual(grammar.decode(JSON.parse(JSON.stringify(grammar.encode(candidate)))),candidate);
   roundTrips++;
  }
  const evidence={
