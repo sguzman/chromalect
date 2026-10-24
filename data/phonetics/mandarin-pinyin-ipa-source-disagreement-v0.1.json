@@ -1,0 +1,379 @@
+{
+  "schema": "chromalect.phonetics.mandarin-pinyin-ipa-source-disagreement.v0.1",
+  "status": "diction_guide_reports_multiple_ipa_conventions_not_a_single_certified_phonemic_inventory",
+  "source": {
+    "author": "Hana J. Cai",
+    "title": "Making Chinese Choral Music Accessible in the United States: A Standardized IPA Guide for Chinese-Language Works",
+    "university": "Indiana University Jacobs School of Music",
+    "year": 2020,
+    "sourceURI": "https://scholarworks.iu.edu/iuswrrest/api/core/bitstreams/9dc66f3c-a3fb-4221-a9a6-815a1c4811a0/content",
+    "table2PDFPagesOneBased": [
+      34,
+      35
+    ],
+    "table3PDFPagesOneBased": [
+      36,
+      37,
+      38
+    ],
+    "sourceInterpretation": "Cai reproduces two other authors' IPA conventions and proposes her own for choral diction; these are not three independently reverified primary sources.",
+    "originalTableImagesRedistributed": false,
+    "authorialExplanatoryTextCopied": false
+  },
+  "scope": {
+    "initialFeatureSource": "mandarin-initial-feature-candidates-v0.1.json",
+    "simpleFinalFeatureSource": "mandarin-simple-final-feature-candidates-v0.1.json",
+    "firstTrancheCitationSource": "pronunciation-citations-0001-1000.json",
+    "glyphOrPaletteChanged": false,
+    "sourceSourceTextCopied": false,
+    "y_w_empty_onsets_not_phonemes": true,
+    "writtenLetterNotGuaranteedPhone": true
+  },
+  "counts": {
+    "originalConsonantalInitials": 21,
+    "sourceReportedInitialComparisons": 21,
+    "initialSourceDisagreementRows": 16,
+    "sourceWorkingInitialExactLinMatches": 19,
+    "originalOnsetSpellingConventionsExcluded": 3,
+    "originalWrittenFinals": 33,
+    "simpleFinalComparisonRows": 6,
+    "simpleFinalAllColumnsMatch": 4,
+    "unaddressedComplexWrittenFinals": 27,
+    "sourceCitationReadings": 1171,
+    "independentPhonemicContrastApprovals": 0,
+    "acousticallyValidatedPhoneMappings": 0,
+    "thirdPartyContextualPronunciationApprovals": 0,
+    "humanDecodingTrials": 0
+  },
+  "initials": [
+    {
+      "pinyinInitial": "b",
+      "linReportedIPA": "p",
+      "meiReportedIPA": "b",
+      "caiSuggestedIPA": "b",
+      "originalWorkingCandidate": "p",
+      "literalAgreementWithLin": true,
+      "disagreementsBetweenReports": true,
+      "publishedTablePrintedPage": 25,
+      "pinyinConsonantal": true,
+      "sourceApproval": "published_comparison_only_not_phonemic_adjudication"
+    },
+    {
+      "pinyinInitial": "p",
+      "linReportedIPA": "pʰ",
+      "meiReportedIPA": "p",
+      "caiSuggestedIPA": "pʰ",
+      "originalWorkingCandidate": "pʰ",
+      "literalAgreementWithLin": true,
+      "disagreementsBetweenReports": true,
+      "publishedTablePrintedPage": 25,
+      "pinyinConsonantal": true,
+      "sourceApproval": "published_comparison_only_not_phonemic_adjudication"
+    },
+    {
+      "pinyinInitial": "m",
+      "linReportedIPA": "m",
+      "meiReportedIPA": "m",
+      "caiSuggestedIPA": "m",
+      "originalWorkingCandidate": "m",
+      "literalAgreementWithLin": true,
+      "disagreementsBetweenReports": false,
+      "publishedTablePrintedPage": 25,
+      "pinyinConsonantal": true,
+      "sourceApproval": "published_comparison_only_not_phonemic_adjudication"
+    },
+    {
+      "pinyinInitial": "f",
+      "linReportedIPA": "f",
+      "meiReportedIPA": "f",
+      "caiSuggestedIPA": "f",
+      "originalWorkingCandidate": "f",
+      "literalAgreementWithLin": true,
+      "disagreementsBetweenReports": false,
+      "publishedTablePrintedPage": 25,
+      "pinyinConsonantal": true,
+      "sourceApproval": "published_comparison_only_not_phonemic_adjudication"
+    },
+    {
+      "pinyinInitial": "d",
+      "linReportedIPA": "t",
+      "meiReportedIPA": "d",
+      "caiSuggestedIPA": "d",
+      "originalWorkingCandidate": "t",
+      "literalAgreementWithLin": true,
+      "disagreementsBetweenReports": true,
+      "publishedTablePrintedPage": 25,
+      "pinyinConsonantal": true,
+      "sourceApproval": "published_comparison_only_not_phonemic_adjudication"
+    },
+    {
+      "pinyinInitial": "t",
+      "linReportedIPA": "tʰ",
+      "meiReportedIPA": "ts",
+      "caiSuggestedIPA": "tʰ",
+      "originalWorkingCandidate": "tʰ",
+      "literalAgreementWithLin": true,
+      "disagreementsBetweenReports": true,
+      "publishedTablePrintedPage": 26,
+      "pinyinConsonantal": true,
+      "sourceApproval": "published_comparison_only_not_phonemic_adjudication"
+    },
+    {
+      "pinyinInitial": "n",
+      "linReportedIPA": "n",
+      "meiReportedIPA": "n",
+      "caiSuggestedIPA": "n",
+      "originalWorkingCandidate": "n",
+      "literalAgreementWithLin": true,
+      "disagreementsBetweenReports": false,
+      "publishedTablePrintedPage": 26,
+      "pinyinConsonantal": true,
+      "sourceApproval": "published_comparison_only_not_phonemic_adjudication"
+    },
+    {
+      "pinyinInitial": "l",
+      "linReportedIPA": "l",
+      "meiReportedIPA": "l",
+      "caiSuggestedIPA": "l",
+      "originalWorkingCandidate": "l",
+      "literalAgreementWithLin": true,
+      "disagreementsBetweenReports": false,
+      "publishedTablePrintedPage": 26,
+      "pinyinConsonantal": true,
+      "sourceApproval": "published_comparison_only_not_phonemic_adjudication"
+    },
+    {
+      "pinyinInitial": "g",
+      "linReportedIPA": "k",
+      "meiReportedIPA": "g",
+      "caiSuggestedIPA": "g",
+      "originalWorkingCandidate": "k",
+      "literalAgreementWithLin": true,
+      "disagreementsBetweenReports": true,
+      "publishedTablePrintedPage": 26,
+      "pinyinConsonantal": true,
+      "sourceApproval": "published_comparison_only_not_phonemic_adjudication"
+    },
+    {
+      "pinyinInitial": "k",
+      "linReportedIPA": "kʰ",
+      "meiReportedIPA": "k",
+      "caiSuggestedIPA": "kʰ",
+      "originalWorkingCandidate": "kʰ",
+      "literalAgreementWithLin": true,
+      "disagreementsBetweenReports": true,
+      "publishedTablePrintedPage": 26,
+      "pinyinConsonantal": true,
+      "sourceApproval": "published_comparison_only_not_phonemic_adjudication"
+    },
+    {
+      "pinyinInitial": "h",
+      "linReportedIPA": "x",
+      "meiReportedIPA": "h",
+      "caiSuggestedIPA": "x",
+      "originalWorkingCandidate": "x",
+      "literalAgreementWithLin": true,
+      "disagreementsBetweenReports": true,
+      "publishedTablePrintedPage": 26,
+      "pinyinConsonantal": true,
+      "sourceApproval": "published_comparison_only_not_phonemic_adjudication"
+    },
+    {
+      "pinyinInitial": "j",
+      "linReportedIPA": "tɕ",
+      "meiReportedIPA": "dʒ",
+      "caiSuggestedIPA": "tɕ",
+      "originalWorkingCandidate": "tɕ",
+      "literalAgreementWithLin": true,
+      "disagreementsBetweenReports": true,
+      "publishedTablePrintedPage": 26,
+      "pinyinConsonantal": true,
+      "sourceApproval": "published_comparison_only_not_phonemic_adjudication"
+    },
+    {
+      "pinyinInitial": "q",
+      "linReportedIPA": "tɕʰ",
+      "meiReportedIPA": "tʃː",
+      "caiSuggestedIPA": "tɕʰ",
+      "originalWorkingCandidate": "tɕʰ",
+      "literalAgreementWithLin": true,
+      "disagreementsBetweenReports": true,
+      "publishedTablePrintedPage": 26,
+      "pinyinConsonantal": true,
+      "sourceApproval": "published_comparison_only_not_phonemic_adjudication"
+    },
+    {
+      "pinyinInitial": "x",
+      "linReportedIPA": "ɕ",
+      "meiReportedIPA": "ʃː",
+      "caiSuggestedIPA": "ɕ",
+      "originalWorkingCandidate": "ɕ",
+      "literalAgreementWithLin": true,
+      "disagreementsBetweenReports": true,
+      "publishedTablePrintedPage": 26,
+      "pinyinConsonantal": true,
+      "sourceApproval": "published_comparison_only_not_phonemic_adjudication"
+    },
+    {
+      "pinyinInitial": "z",
+      "linReportedIPA": "ts",
+      "meiReportedIPA": "dz",
+      "caiSuggestedIPA": "dz",
+      "originalWorkingCandidate": "ts",
+      "literalAgreementWithLin": true,
+      "disagreementsBetweenReports": true,
+      "publishedTablePrintedPage": 26,
+      "pinyinConsonantal": true,
+      "sourceApproval": "published_comparison_only_not_phonemic_adjudication"
+    },
+    {
+      "pinyinInitial": "c",
+      "linReportedIPA": "tsʰ",
+      "meiReportedIPA": "ts",
+      "caiSuggestedIPA": "tsʰ",
+      "originalWorkingCandidate": "tsʰ",
+      "literalAgreementWithLin": true,
+      "disagreementsBetweenReports": true,
+      "publishedTablePrintedPage": 26,
+      "pinyinConsonantal": true,
+      "sourceApproval": "published_comparison_only_not_phonemic_adjudication"
+    },
+    {
+      "pinyinInitial": "s",
+      "linReportedIPA": "s",
+      "meiReportedIPA": "s",
+      "caiSuggestedIPA": "s",
+      "originalWorkingCandidate": "s",
+      "literalAgreementWithLin": true,
+      "disagreementsBetweenReports": false,
+      "publishedTablePrintedPage": 26,
+      "pinyinConsonantal": true,
+      "sourceApproval": "published_comparison_only_not_phonemic_adjudication"
+    },
+    {
+      "pinyinInitial": "zh",
+      "linReportedIPA": "tʂ",
+      "meiReportedIPA": "dʒː",
+      "caiSuggestedIPA": "dʒ",
+      "originalWorkingCandidate": "ʈʂ",
+      "literalAgreementWithLin": false,
+      "disagreementsBetweenReports": true,
+      "publishedTablePrintedPage": 26,
+      "pinyinConsonantal": true,
+      "sourceApproval": "published_comparison_only_not_phonemic_adjudication"
+    },
+    {
+      "pinyinInitial": "ch",
+      "linReportedIPA": "tʂʰ",
+      "meiReportedIPA": "tʃ",
+      "caiSuggestedIPA": "tʃ",
+      "originalWorkingCandidate": "ʈʂʰ",
+      "literalAgreementWithLin": false,
+      "disagreementsBetweenReports": true,
+      "publishedTablePrintedPage": 26,
+      "pinyinConsonantal": true,
+      "sourceApproval": "published_comparison_only_not_phonemic_adjudication"
+    },
+    {
+      "pinyinInitial": "sh",
+      "linReportedIPA": "ʂ",
+      "meiReportedIPA": "ʃ",
+      "caiSuggestedIPA": "ʂ",
+      "originalWorkingCandidate": "ʂ",
+      "literalAgreementWithLin": true,
+      "disagreementsBetweenReports": true,
+      "publishedTablePrintedPage": 26,
+      "pinyinConsonantal": true,
+      "sourceApproval": "published_comparison_only_not_phonemic_adjudication"
+    },
+    {
+      "pinyinInitial": "r",
+      "linReportedIPA": "ɻ",
+      "meiReportedIPA": "r",
+      "caiSuggestedIPA": "ɻ",
+      "originalWorkingCandidate": "ɻ",
+      "literalAgreementWithLin": true,
+      "disagreementsBetweenReports": true,
+      "publishedTablePrintedPage": 26,
+      "pinyinConsonantal": true,
+      "sourceApproval": "published_comparison_only_not_phonemic_adjudication"
+    }
+  ],
+  "simples": [
+    {
+      "writtenFinal": "a",
+      "linReportedIPA": "a",
+      "meiReportedIPA": "a",
+      "caiSuggestedIPA": "a",
+      "contextualQualifier": [],
+      "sourceComparisonNotDefaultAcousticTarget": true,
+      "literalAgreementAllColumns": true,
+      "publishedTablePrintedPage": 27
+    },
+    {
+      "writtenFinal": "o",
+      "linReportedIPA": "ɔ",
+      "meiReportedIPA": "ɔ",
+      "caiSuggestedIPA": "ɔ",
+      "contextualQualifier": [
+        "wɔ"
+      ],
+      "sourceComparisonNotDefaultAcousticTarget": true,
+      "literalAgreementAllColumns": true,
+      "publishedTablePrintedPage": 27
+    },
+    {
+      "writtenFinal": "e",
+      "linReportedIPA": "ɤ",
+      "meiReportedIPA": "ə",
+      "caiSuggestedIPA": "ɤ:ə",
+      "contextualQualifier": [],
+      "sourceComparisonNotDefaultAcousticTarget": true,
+      "literalAgreementAllColumns": false,
+      "publishedTablePrintedPage": 27
+    },
+    {
+      "writtenFinal": "i",
+      "linReportedIPA": "i",
+      "meiReportedIPA": "i",
+      "caiSuggestedIPA": "i",
+      "contextualQualifier": [
+        "ɹ̩ (separate retroflex-i entry)"
+      ],
+      "sourceComparisonNotDefaultAcousticTarget": true,
+      "literalAgreementAllColumns": true,
+      "publishedTablePrintedPage": 27
+    },
+    {
+      "writtenFinal": "u",
+      "linReportedIPA": "u",
+      "meiReportedIPA": "u",
+      "caiSuggestedIPA": "u",
+      "contextualQualifier": [],
+      "sourceComparisonNotDefaultAcousticTarget": true,
+      "literalAgreementAllColumns": true,
+      "publishedTablePrintedPage": 29
+    },
+    {
+      "writtenFinal": "ü",
+      "linReportedIPA": "ɥy",
+      "meiReportedIPA": "y",
+      "caiSuggestedIPA": "y",
+      "contextualQualifier": [
+        "yu alternative spelling"
+      ],
+      "sourceComparisonNotDefaultAcousticTarget": true,
+      "literalAgreementAllColumns": false,
+      "publishedTablePrintedPage": 30
+    }
+  ],
+  "caveats": [
+    "Phonetic bracket symbols in a vocal diction guide are reported options, not a demonstrated phonemic inventory or validated conversational realizations.",
+    "The choral diction author explicitly adapts some symbols for singers; disagreement is not proof that any option is categorically wrong.",
+    "Initial Pinyin b/d/g can be modeled as voiceless unaspirated stops despite singer-friendly voiced-label options.",
+    "The 21-row Lin/Mei/Cai labels are attributed as reported by Cai; no independent examination of all Lin and Mei original publications is claimed.",
+    "Six simple finals are compared, while 27 other written-final categories and 112 context-sensitive simple-final readings remain unresolved.",
+    "i has distinct sibilant-conditioned values outside the plain i row, o may depend on preceding onset, and ü may carry a glide in a source author's notation.",
+    "Zero independent human decoding or acoustic testing is implied by source transcription."
+  ]
+}
