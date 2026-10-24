@@ -1,0 +1,227 @@
+{
+  "schema": "chromalect.phonetics.zhao-li-model-visual-grammar-audit.v0.1",
+  "status": "machine_reversible_external_phonological_model_features_not_verified_speech_or_human_reading",
+  "source": {
+    "model": "data/phonetics/zhao-li-2009-34-unit-reference-model-v0.1.json",
+    "tonePalette": "site/layers-v0.1.json",
+    "paperDOI": "10.3758/BRM.41.2.575",
+    "actualCitationPronunciationCorpusMapped": false,
+    "projectPaletteModified": false,
+    "sourceGlyphGeometryModified": false
+  },
+  "grammar": {
+    "sourceSlots": "CVVVCT",
+    "onset": "0 or 1 of 21 source modeled consonant initials",
+    "vowel": "1 to 3 ordered source modeled vowel feature tuples",
+    "coda": "none, n or N, reconstructed from nasal features",
+    "tone": "five distinct original citation tone symbols",
+    "soundModelTokensPersistInEncodedCode": false,
+    "sourceSpellingRequiredForDecoding": false,
+    "caseSensitiveOriginalSourceUnits": true,
+    "unknownFeatureCombinationsRejected": true,
+    "realWorldSyllablePhonotacticsVerified": false
+  },
+  "counts": {
+    "totalModelUnits": 34,
+    "sourceVowelUnits": 12,
+    "sourceConsonantUnits": 22,
+    "verifiedOnsetCodes": 21,
+    "codaNasalCategories": 2,
+    "unitIsolationMachineRoundTrips": 34,
+    "modelSequenceDemonstrationRoundTrips": 9,
+    "featureCodeCollisions": 0,
+    "machineRoundTripFailures": 0,
+    "firstTrancheContextualIPARealizations": 0,
+    "independentlyCertifiedPhonemeMappings": 0,
+    "humanVisualSymbolDecodingResults": 0,
+    "learningOutcomeMeasurements": 0
+  },
+  "samples": [
+    {
+      "originalModelSequence": {
+        "onset": "m",
+        "vowels": [
+          "a"
+        ],
+        "coda": null,
+        "tone": 1
+      },
+      "decodedByFeatures": {
+        "onset": "m",
+        "vowels": [
+          "a"
+        ],
+        "coda": null,
+        "tone": 1
+      },
+      "originalTokenLettersNotStoredInsideVisualUnits": true,
+      "corpusAttestationClaimed": false
+    },
+    {
+      "originalModelSequence": {
+        "onset": "m",
+        "vowels": [
+          "a"
+        ],
+        "coda": null,
+        "tone": 3
+      },
+      "decodedByFeatures": {
+        "onset": "m",
+        "vowels": [
+          "a"
+        ],
+        "coda": null,
+        "tone": 3
+      },
+      "originalTokenLettersNotStoredInsideVisualUnits": true,
+      "corpusAttestationClaimed": false
+    },
+    {
+      "originalModelSequence": {
+        "onset": "p",
+        "vowels": [
+          "a"
+        ],
+        "coda": null,
+        "tone": 1
+      },
+      "decodedByFeatures": {
+        "onset": "p",
+        "vowels": [
+          "a"
+        ],
+        "coda": null,
+        "tone": 1
+      },
+      "originalTokenLettersNotStoredInsideVisualUnits": true,
+      "corpusAttestationClaimed": false
+    },
+    {
+      "originalModelSequence": {
+        "onset": "P",
+        "vowels": [
+          "a"
+        ],
+        "coda": null,
+        "tone": 1
+      },
+      "decodedByFeatures": {
+        "onset": "P",
+        "vowels": [
+          "a"
+        ],
+        "coda": null,
+        "tone": 1
+      },
+      "originalTokenLettersNotStoredInsideVisualUnits": true,
+      "corpusAttestationClaimed": false
+    },
+    {
+      "originalModelSequence": {
+        "onset": "n",
+        "vowels": [
+          "i"
+        ],
+        "coda": null,
+        "tone": 3
+      },
+      "decodedByFeatures": {
+        "onset": "n",
+        "vowels": [
+          "i"
+        ],
+        "coda": null,
+        "tone": 3
+      },
+      "originalTokenLettersNotStoredInsideVisualUnits": true,
+      "corpusAttestationClaimed": false
+    },
+    {
+      "originalModelSequence": {
+        "onset": null,
+        "vowels": [
+          "i",
+          "a"
+        ],
+        "coda": "n",
+        "tone": 4
+      },
+      "decodedByFeatures": {
+        "onset": null,
+        "vowels": [
+          "i",
+          "a"
+        ],
+        "coda": "n",
+        "tone": 4
+      },
+      "originalTokenLettersNotStoredInsideVisualUnits": true,
+      "corpusAttestationClaimed": false
+    },
+    {
+      "originalModelSequence": {
+        "onset": "q",
+        "vowels": [
+          "i",
+          "o",
+          "u"
+        ],
+        "coda": "N",
+        "tone": 2
+      },
+      "decodedByFeatures": {
+        "onset": "q",
+        "vowels": [
+          "i",
+          "o",
+          "u"
+        ],
+        "coda": "N",
+        "tone": 2
+      },
+      "originalTokenLettersNotStoredInsideVisualUnits": true,
+      "corpusAttestationClaimed": false
+    },
+    {
+      "originalModelSequence": {
+        "onset": "s",
+        "vowels": [
+          "~"
+        ],
+        "coda": null,
+        "tone": 1
+      },
+      "decodedByFeatures": {
+        "onset": "s",
+        "vowels": [
+          "~"
+        ],
+        "coda": null,
+        "tone": 1
+      },
+      "originalTokenLettersNotStoredInsideVisualUnits": true,
+      "corpusAttestationClaimed": false
+    },
+    {
+      "originalModelSequence": {
+        "onset": "S",
+        "vowels": [
+          "^"
+        ],
+        "coda": null,
+        "tone": 1
+      },
+      "decodedByFeatures": {
+        "onset": "S",
+        "vowels": [
+          "^"
+        ],
+        "coda": null,
+        "tone": 1
+      },
+      "originalTokenLettersNotStoredInsideVisualUnits": true,
+      "corpusAttestationClaimed": false
+    }
+  ]
+}
