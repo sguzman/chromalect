@@ -38,6 +38,8 @@ This is a sequence of **evidence gates**, not a promise to build a large applica
 
 **Computational iteration only:** a [separately published v0.7 candidate](https://sguzman.github.io/chromalect/palettes/mandarin-component-identity-v0.7-candidate.json) uses ten source-conditioned swaps of the unchanged 520-color multiset to reduce 26 machine OKLab co-occurrence warnings to zero on the first 1,000 glyphs ([acceptance evidence](https://github.com/sguzman/chromalect/actions/runs/40117569240)). It is in-sample, with no independently certified component owner, human perceptual failure case, user discrimination result or educational assessment; the palette versioning/iteration acceptance checkpoint therefore remains unfinished.
 
+**Held-out v0.7 method evaluation:** The [Rust five-fold source-rank experiment](../tools/glyph-pipeline/src/palette_candidate_cv.rs) trains five separate 520-color permutations on four-fifths of the original source glyphs and evaluates each on the unseen fifth ([method and scope](perceptual-palette-v0.7-fivefold-heldout.md)). This tests source co-occurrence warning transfer, not human perception, and does not promote the original full-tranche v0.7 candidate or complete the palette acceptance gate.
+
 **Gate:** repeatable, linguistically accurate component rendering and defensible experimental comparisons. Do not mistake complete catalog assignment for complete glyph-level rendering or learning evidence.
 
 ## Phase 2 — phonetic notation experiment [proposed]

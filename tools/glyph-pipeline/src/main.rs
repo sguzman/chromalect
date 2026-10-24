@@ -11,6 +11,7 @@ mod unknown;
 mod phonetics;
 mod feature_citation;
 mod palette_candidate;
+mod palette_candidate_cv;
 mod component_audit;
 mod diagnostics;
 mod review;
@@ -300,6 +301,8 @@ fn run() -> Result<(), String> {
         Some("build") => build(&glyphs)?,
         Some("palette-candidate") => palette_candidate::run(false)?,
         Some("palette-candidate-check") => palette_candidate::run(true)?,
+        Some("palette-candidate-heldout") => palette_candidate_cv::run(false)?,
+        Some("palette-candidate-heldout-check") => palette_candidate_cv::run(true)?,
         Some("discover") => {
             let dictionary = args.next().ok_or("usage: glyph-pipeline discover DICTIONARY GRAPHICS")?;
             let graphics = args.next().ok_or("usage: glyph-pipeline discover DICTIONARY GRAPHICS")?;
@@ -316,7 +319,7 @@ fn run() -> Result<(), String> {
                 println!("{}: {} strokes, {} component records, {}", g.character, g.strokes.len(), g.parts.len(), g.decomposition);
             }
         }
-        _ => return Err("usage: glyph-pipeline {check|build|palette-candidate|palette-candidate-check|discover DICTIONARY GRAPHICS|sources|verify-source DIR|report}".into()),
+        _ => return Err("usage: glyph-pipeline {check|build|palette-candidate|palette-candidate-check|palette-candidate-heldout|palette-candidate-heldout-check|discover DICTIONARY GRAPHICS|sources|verify-source DIR|report}".into()),
     }
     Ok(())
 }

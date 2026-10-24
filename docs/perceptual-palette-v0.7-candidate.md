@@ -17,3 +17,7 @@ The source-aligned [candidate palette](https://sguzman.github.io/chromalect/pale
 ## Unresolved acceptance requirements
 
 This is an *in-sample optimization control*, not a held-out validation or an end-user perception study. Source decomposition and owner correctness, semantic-family assignment, near-glyph-size legibility, color-vision accessibility, learning and transfer remain unapproved. A candidate should not replace the active identity palette without external assessment and deliberate adoption of a new version. The roadmap's **"Document failure cases and iterate with new palette versions"** requirement stays pending until actual human-relevant failure cases and iteration evidence are obtained.
+
+## Independent source-glyph partition check
+
+A new [five-fold character-held-out method evaluation](perceptual-palette-v0.7-fivefold-heldout.md) applies the exact v0.7 swap algorithm to 800 original glyphs per fold and evaluates the remaining 200, covering every ranked character once out of sample. Its published [reproducible JSON report](https://sguzman.github.io/chromalect/palettes/mandarin-component-identity-v0.7-fivefold-heldout-v0.1.json) provides baseline, fitted, new, resolved and retained warning counts. Because each fold fits a different permutation, these results must not be conflated with the single full-sample 26-to-zero v0.7 candidate. No official palette replacement or perceptual approval is implied.
