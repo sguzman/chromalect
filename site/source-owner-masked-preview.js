@@ -21,7 +21,7 @@ const MAX_MASK_BYTES=1048576;
 // Do not buffer an untrusted full response before checking its size.
 async function readBoundedMask(response,signal){
  const header=response.headers?.get?.("content-length");
- if(header!==null&&header!==undefined&&/^\\d+$/.test(header)&&
+ if(header!==null&&header!==undefined&&/^\d+$/.test(header)&&
   Number(header)>MAX_MASK_BYTES)
   throw Error("Neutral source SVG size outside safe bounds");
  if(!response.body||typeof response.body.getReader!=="function")

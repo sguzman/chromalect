@@ -24,11 +24,13 @@ class Element{
  removeAttribute(name){if(name==="src")this.src="";}
 }
 async function flush(){for(let i=0;i<120;i++)await Promise.resolve();}
-function setup({source=manifest,hash="",assets=bytes,withCrypto=true}={}){
+function setup({source=manifest,hash="",assets=bytes,withCrypto=true,
+ streamChunkSize=Number.MAX_SAFE_INTEGER,streamMode="normal"}={}){
  const nodes=Object.fromEntries(ids.map(id=>[id,new Element()]));
  nodes["om-size"].value="96";nodes["om-cohort"].value="all";
  for(const id of ["om-cohort","om-pair","om-prev","om-next"])nodes[id].disabled=true;
  const fetched=[],objectURLs=new Map(),revoked=[],delayed=new Map(),abortEvents=[];
+ const streamStats={reads:0,cancels:0,closed:0};
  let count=0;
  class MockBlob{
   constructor(parts,opts){this.parts=parts;this.type=opts.type;}
@@ -64,14 +66,41 @@ function setup({source=manifest,hash="",assets=bytes,withCrypto=true}={}){
   if(url===indexPath)return {ok:true,json:async()=>source};
   assert.ok(assets.has(url),"Viewer must only fetch key-reduced masks");
   assert.ok(opts?.signal,"All SVG fetches must receive cancellation signals");
-  return {ok:true,arrayBuffer:async()=>{
-   if(opts.signal.aborted)throw Error("AbortError");
-   if(delayed.has(url))return new Promise((resolve,reject)=>{
-    opts.signal.addEventListener("abort",()=>reject(Error("AbortError")));
-    delayed.get(url).promise.then(resolve,reject);
-   });
-   return Uint8Array.from(assets.get(url)).buffer;
-  }};
+  const payload=assets.get(url);
+  if(streamMode==="no-stream")return {ok:true,headers:{get:()=>null}};
+  const header=streamMode==="oversized-header"?
+   String(1048577):streamMode==="no-length"?null:String(payload.byteLength);
+  return {ok:true,headers:{get:name=>name==="content-length"?header:null},
+   body:{getReader(){
+    let content=null,index=0,canceled=false;
+    async function bytes(){
+     if(content!==null)return content;
+     if(opts.signal.aborted)throw Error("AbortError");
+     if(delayed.has(url)){
+      const awaited=await new Promise((resolve,reject)=>{
+       opts.signal.addEventListener("abort",()=>reject(Error("AbortError")));
+       delayed.get(url).promise.then(resolve,reject);
+      });
+      content=new Uint8Array(awaited);
+     }else content=Uint8Array.from(payload);
+     return content;
+    }
+    return {
+     async read(){
+      streamStats.reads++;
+      if(canceled)return {done:true};
+      const data=await bytes();
+      if(opts.signal.aborted)throw Error("AbortError");
+      if(index>=data.byteLength)return {done:true};
+      const next=Math.min(data.byteLength,index+streamChunkSize);
+      const value=data.subarray(index,next);
+      index=next;
+      return {done:false,value};
+     },
+     async cancel(){canceled=true;streamStats.cancels++;},
+     releaseLock(){streamStats.closed++;}
+    };
+   }}};
  };
  const keyListeners={};
  const document={getElementById:id=>nodes[id],createElement:()=>new Element(),
@@ -80,7 +109,7 @@ function setup({source=manifest,hash="",assets=bytes,withCrypto=true}={}){
   Map,Set,Number,Error,TextDecoder,location:{hash},crypto:withCrypto?crypto:undefined};
  ctx.globalThis=ctx;
  for(const s of scripts)vm.runInNewContext(s,ctx);
- return {nodes,fetched,objectURLs,revoked,delayed,abortEvents,keyListeners};
+ return {nodes,fetched,objectURLs,revoked,delayed,abortEvents,keyListeners,streamStats};
 }
 async function loaded(session){
  for(let i=0;i<200&&!session.nodes["om-cohort"].disabled&&false;i++)await Promise.resolve();
@@ -220,6 +249,36 @@ assert.equal(decodeFailure.objectURLs.size,0,
  "Stale decoding errors must not reopen or restore revoked objects");
 decodeFailure.nodes["om-next"].events.click();await flush();
 assertImages(decodeFailure,manifest.records[1]);
+const tinyChunks=setup({streamChunkSize:256});
+await loaded(tinyChunks);
+assertImages(tinyChunks,manifest.records[0]);
+assert.ok(tinyChunks.streamStats.reads>4,
+ "Multiple streamed SVG chunks must reassemble into exact verified bytes");
+assert.equal(tinyChunks.streamStats.cancels,0);
+const oversizedHeader=setup({streamMode:"oversized-header"});
+await loaded(oversizedHeader);
+assert.equal(oversizedHeader.objectURLs.size,0);
+assert.equal(oversizedHeader.streamStats.reads,0,
+ "Oversized Content-Length must be rejected before opening the body");
+assert.match(oversizedHeader.nodes["om-status"].textContent,/size outside safe bounds/);
+const noStream=setup({streamMode:"no-stream"});
+await loaded(noStream);
+assert.equal(noStream.objectURLs.size,0);
+assert.match(noStream.nodes["om-status"].textContent,/streaming unavailable/);
+const tooLong=new Map(bytes);
+const oversizePath=manifest.records[0].candidates[0].svg;
+tooLong.set(oversizePath,Buffer.alloc(1048577,42));
+const oversizedBody=setup({assets:tooLong,streamChunkSize:65536});
+await loaded(oversizedBody);
+assert.equal(oversizedBody.objectURLs.size,0);
+assert.equal(oversizedBody.streamStats.reads,0,
+ "Accurate oversized Content-Length must prevent body buffering");
+const hiddenSize=setup({assets:tooLong,streamMode:"no-length",streamChunkSize:65536});
+await loaded(hiddenSize);
+assert.equal(hiddenSize.objectURLs.size,0);
+assert.match(hiddenSize.nodes["om-status"].textContent,/size outside safe bounds/);
+assert.ok(hiddenSize.streamStats.cancels>=1,
+ "Oversized chunked downloads must cancel readers on overflow");
 const anchored=setup({hash:"#"+manifest.records[21].id});await loaded(anchored);
 assert.equal(anchored.nodes["om-pair"].value,manifest.records[21].id);
 assertImages(anchored,manifest.records[21]);
@@ -298,6 +357,8 @@ const pageJS=scripts.at(-1);
 assert.ok(html.includes('src="source-owner-neutral-svg-contract.js"'));
 assert.ok(pageJS.includes("checkSVG(buffer)"));
 assert.ok(pageJS.includes("checkSVG(previous.bytes)"));
+assert.ok(pageJS.includes("readBoundedMask(response,signal)"));
+assert.equal(pageJS.includes("response.arrayBuffer()"),false);
 for(const forbidden of ["localStorage","sessionStorage","navigator.sendBeacon",
  "document.cookie","innerHTML","XMLHttpRequest","machineAssignedOwner",
  "otherOwner","heldout-identification-target-v0.1/index-v0.1.json"])
