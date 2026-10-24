@@ -143,12 +143,10 @@ export function audit(model,palette){
   example("P",["a"],null,1),
   example("n",["i"],null,3),
   example(null,["i","a"],"n",4),
-  example("q",["i","o","N"],null,2) // replaced below: N cannot occupy vowel
+  example("q",["i","o","u"],"N",2),
+  example("s",["~"],null,1),
+  example("S",["^"],null,1)
  ];
- exampleInputs.pop();
- exampleInputs.push(example("q",["i","o","u"],"N",2));
- exampleInputs.push(example("s",["~"],null,1));
- exampleInputs.push(example("S",["^"],null,1));
  for(const candidate of exampleInputs){
   assert.deepEqual(grammar.decode(JSON.parse(JSON.stringify(grammar.encode(candidate))),candidate);
   roundTrips++;
