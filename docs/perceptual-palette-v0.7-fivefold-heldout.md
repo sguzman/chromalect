@@ -75,6 +75,35 @@ sRGB colors, their original and candidate OKLab distances, its
 introduced/resolved/retained classification, and explicit pending ownership
 and human-discrimination status.
 
+### All 13 newly introduced held-out warnings
+
+These are the original character ranks and component identity pairs the
+v0.7 training-fold assignments moved into the below-0.07 OKLab warning
+range **without ever fitting to that character**. Both distances are shown
+as four-place approximations; the generated JSON contains unrounded values
+and is authoritative at the strict cutoff.
+
+| Fold | Unseen source rank and character | Component IDs | Active → fold-candidate ΔOK |
+| --- | --- | --- | ---: |
+| 1 | 651 志 | cmp-0016 / cmp-0341 | 0.0974 → 0.0603 |
+| 2 | 362 圾 | cmp-0025 / cmp-0186 | 0.1882 → 0.0700 |
+| 2 | 642 抛 | cmp-0040 / cmp-0216 | 0.1906 → 0.0632 |
+| 2 | 862 沃 | cmp-0002 / cmp-0438 | 0.3292 → 0.0605 |
+| 3 | 243 号 | cmp-0020 / cmp-0168 | 0.2602 → 0.0491 |
+| 3 | 463 伐 | cmp-0013 / cmp-0150 | 0.1780 → 0.0471 |
+| 3 | 518 齐 | cmp-0351 / cmp-0390 | 0.3095 → 0.0618 |
+| 3 | 858 汰 | cmp-0002 / cmp-0370 | 0.2497 → 0.0617 |
+| 5 | 405 邪 | cmp-0359 / cmp-0427 | 0.2128 → 0.0305 |
+| 5 | 485 全 | cmp-0012 / cmp-0383 | 0.1178 → 0.0599 |
+| 5 | 495 肌 | cmp-0008 / cmp-0188 | 0.2355 → 0.0652 |
+| 5 | 615 技 | cmp-0019 / cmp-0334 | 0.1910 → 0.0631 |
+| 5 | 830 况 | cmp-0003 / cmp-0312 | 0.1232 → 0.0653 |
+
+The 0.0700 displayed for 圾 rounds upward but is **strictly below 0.07
+before rounding**, as verified by the raw generated report and acceptance
+test. These are potential source color **proximity risks**, not confirmed
+reader confusions or source stroke-owner approvals.
+
 This identifies the **actual source components and glyphs** implicated by
 held-out color warnings, rather than merely presenting aggregate counts.
 The generator refuses missing source-glyph geometry ownership, component-color
