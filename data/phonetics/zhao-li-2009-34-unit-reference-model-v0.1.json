@@ -1,0 +1,429 @@
+{
+  "schema": "chromalect.phonetics.zhao-li-2009-source-34-unit-model.v0.1",
+  "status": "transcribed_external_34_unit_feature_model_not_adopted_or_independently_phonetically_adjudicated",
+  "source": {
+    "authors": [
+      "Xiaowei Zhao",
+      "Ping Li"
+    ],
+    "year": 2009,
+    "article": "An online database of phonological representations for Mandarin Chinese",
+    "journal": "Behavior Research Methods",
+    "volume": 41,
+    "issue": 2,
+    "pages": "575–583",
+    "doi": "10.3758/BRM.41.2.575",
+    "originalPDF": "https://link.springer.com/content/pdf/10.3758/BRM.41.2.575.pdf",
+    "sourceTable": "Table 2, printed p. 577, PDF page 3",
+    "sourceNotationPolicy": "ASCII model-unit tokens retain case/punctuation; Unicode IPA display normalizes visible source symbols where possible",
+    "tableOrFiguresReproduced": false
+  },
+  "representation": {
+    "template": "CVVVCT",
+    "sourceType": "research_software_phonological_unit_model",
+    "inventoryStatus": "external_proposal_not_project_frozen",
+    "modelUnits": 34,
+    "modelVowelUnits": 12,
+    "modelConsonantUnits": 22,
+    "nonstandardSourceApicals": [
+      "~",
+      "^"
+    ],
+    "standardIPAForAllUnits": false
+  },
+  "summary": {
+    "distinctModelSymbols": 34,
+    "sourceVowelUnits": 12,
+    "sourceConsonantUnits": 22,
+    "specialNonStandardApicalVowels": 2,
+    "sourceModelDisagreementsUnresolved": 1,
+    "acceptedProjectPhonemeContrasts": 0,
+    "independentlyVerifiedRealizations": 0,
+    "permittedAutomaticPinyinToIPAAssignments": 0,
+    "learnerStudies": 0
+  },
+  "phonologicalUnits": [
+    {
+      "sourceToken": "A",
+      "notation": "ɑ",
+      "segmentClass": "vowel",
+      "articulatoryPlace": "back",
+      "articulatoryHeight": "low",
+      "rounding": "unrounded",
+      "standardIPA": true,
+      "sourceInventoried": true,
+      "independentlyAcousticallyVerifiedByChromalect": false
+    },
+    {
+      "sourceToken": "a",
+      "notation": "a",
+      "segmentClass": "vowel",
+      "articulatoryPlace": "central",
+      "articulatoryHeight": "low",
+      "rounding": "unrounded",
+      "standardIPA": true,
+      "sourceInventoried": true,
+      "independentlyAcousticallyVerifiedByChromalect": false
+    },
+    {
+      "sourceToken": "E",
+      "notation": "ɛ",
+      "segmentClass": "vowel",
+      "articulatoryPlace": "front",
+      "articulatoryHeight": "mid-low",
+      "rounding": "unrounded",
+      "standardIPA": true,
+      "sourceInventoried": true,
+      "independentlyAcousticallyVerifiedByChromalect": false
+    },
+    {
+      "sourceToken": "e",
+      "notation": "e",
+      "segmentClass": "vowel",
+      "articulatoryPlace": "front",
+      "articulatoryHeight": "mid",
+      "rounding": "unrounded",
+      "standardIPA": true,
+      "sourceInventoried": true,
+      "independentlyAcousticallyVerifiedByChromalect": false
+    },
+    {
+      "sourceToken": "o",
+      "notation": "o",
+      "segmentClass": "vowel",
+      "articulatoryPlace": "back",
+      "articulatoryHeight": "mid-high",
+      "rounding": "rounded",
+      "standardIPA": true,
+      "sourceInventoried": true,
+      "independentlyAcousticallyVerifiedByChromalect": false
+    },
+    {
+      "sourceToken": "Y",
+      "notation": "ɤ",
+      "segmentClass": "vowel",
+      "articulatoryPlace": "back",
+      "articulatoryHeight": "mid-high",
+      "rounding": "unrounded",
+      "standardIPA": true,
+      "sourceInventoried": true,
+      "independentlyAcousticallyVerifiedByChromalect": false
+    },
+    {
+      "sourceToken": "@",
+      "notation": "ə",
+      "segmentClass": "vowel",
+      "articulatoryPlace": "central",
+      "articulatoryHeight": "mid-high",
+      "rounding": "unrounded",
+      "standardIPA": true,
+      "sourceInventoried": true,
+      "independentlyAcousticallyVerifiedByChromalect": false
+    },
+    {
+      "sourceToken": "u",
+      "notation": "u",
+      "segmentClass": "vowel",
+      "articulatoryPlace": "back",
+      "articulatoryHeight": "high",
+      "rounding": "rounded",
+      "standardIPA": true,
+      "sourceInventoried": true,
+      "independentlyAcousticallyVerifiedByChromalect": false
+    },
+    {
+      "sourceToken": "y",
+      "notation": "y",
+      "segmentClass": "vowel",
+      "articulatoryPlace": "front",
+      "articulatoryHeight": "high",
+      "rounding": "rounded",
+      "standardIPA": true,
+      "sourceInventoried": true,
+      "independentlyAcousticallyVerifiedByChromalect": false
+    },
+    {
+      "sourceToken": "i",
+      "notation": "i",
+      "segmentClass": "vowel",
+      "articulatoryPlace": "front",
+      "articulatoryHeight": "high",
+      "rounding": "unrounded",
+      "standardIPA": true,
+      "sourceInventoried": true,
+      "independentlyAcousticallyVerifiedByChromalect": false
+    },
+    {
+      "sourceToken": "~",
+      "notation": "ɿ",
+      "segmentClass": "vowel",
+      "articulatoryPlace": "tip-front",
+      "articulatoryHeight": "high",
+      "rounding": "unrounded",
+      "standardIPA": false,
+      "sourceInventoried": true,
+      "independentlyAcousticallyVerifiedByChromalect": false
+    },
+    {
+      "sourceToken": "^",
+      "notation": "ʅ",
+      "segmentClass": "vowel",
+      "articulatoryPlace": "tip-back",
+      "articulatoryHeight": "high",
+      "rounding": "unrounded",
+      "standardIPA": false,
+      "sourceInventoried": true,
+      "independentlyAcousticallyVerifiedByChromalect": false
+    },
+    {
+      "sourceToken": "t",
+      "notation": "t",
+      "segmentClass": "consonant",
+      "articulatoryPlace": "alveolar",
+      "manner": "stop",
+      "voicingAspiration": "voiceless",
+      "standardIPA": true,
+      "sourceInventoried": true,
+      "independentlyAcousticallyVerifiedByChromalect": false
+    },
+    {
+      "sourceToken": "T",
+      "notation": "tʰ",
+      "segmentClass": "consonant",
+      "articulatoryPlace": "alveolar",
+      "manner": "stop",
+      "voicingAspiration": "voiceless_aspirated",
+      "standardIPA": true,
+      "sourceInventoried": true,
+      "independentlyAcousticallyVerifiedByChromalect": false
+    },
+    {
+      "sourceToken": "p",
+      "notation": "p",
+      "segmentClass": "consonant",
+      "articulatoryPlace": "bilabial",
+      "manner": "stop",
+      "voicingAspiration": "voiceless",
+      "standardIPA": true,
+      "sourceInventoried": true,
+      "independentlyAcousticallyVerifiedByChromalect": false
+    },
+    {
+      "sourceToken": "P",
+      "notation": "pʰ",
+      "segmentClass": "consonant",
+      "articulatoryPlace": "bilabial",
+      "manner": "stop",
+      "voicingAspiration": "voiceless_aspirated",
+      "standardIPA": true,
+      "sourceInventoried": true,
+      "independentlyAcousticallyVerifiedByChromalect": false
+    },
+    {
+      "sourceToken": "k",
+      "notation": "k",
+      "segmentClass": "consonant",
+      "articulatoryPlace": "velar",
+      "manner": "stop",
+      "voicingAspiration": "voiceless",
+      "standardIPA": true,
+      "sourceInventoried": true,
+      "independentlyAcousticallyVerifiedByChromalect": false
+    },
+    {
+      "sourceToken": "K",
+      "notation": "kʰ",
+      "segmentClass": "consonant",
+      "articulatoryPlace": "velar",
+      "manner": "stop",
+      "voicingAspiration": "voiceless_aspirated",
+      "standardIPA": true,
+      "sourceInventoried": true,
+      "independentlyAcousticallyVerifiedByChromalect": false
+    },
+    {
+      "sourceToken": "n",
+      "notation": "n",
+      "segmentClass": "consonant",
+      "articulatoryPlace": "alveolar",
+      "manner": "nasal",
+      "voicingAspiration": "voiced",
+      "standardIPA": true,
+      "sourceInventoried": true,
+      "independentlyAcousticallyVerifiedByChromalect": false
+    },
+    {
+      "sourceToken": "m",
+      "notation": "m",
+      "segmentClass": "consonant",
+      "articulatoryPlace": "bilabial",
+      "manner": "nasal",
+      "voicingAspiration": "voiced",
+      "standardIPA": true,
+      "sourceInventoried": true,
+      "independentlyAcousticallyVerifiedByChromalect": false
+    },
+    {
+      "sourceToken": "N",
+      "notation": "ŋ",
+      "segmentClass": "consonant",
+      "articulatoryPlace": "velar",
+      "manner": "nasal",
+      "voicingAspiration": "voiced",
+      "standardIPA": true,
+      "sourceInventoried": true,
+      "independentlyAcousticallyVerifiedByChromalect": false
+    },
+    {
+      "sourceToken": "l",
+      "notation": "l",
+      "segmentClass": "consonant",
+      "articulatoryPlace": "alveolar",
+      "manner": "lateral",
+      "voicingAspiration": "voiced",
+      "standardIPA": true,
+      "sourceInventoried": true,
+      "independentlyAcousticallyVerifiedByChromalect": false
+    },
+    {
+      "sourceToken": "s",
+      "notation": "s",
+      "segmentClass": "consonant",
+      "articulatoryPlace": "alveolar",
+      "manner": "fricative",
+      "voicingAspiration": "voiceless",
+      "standardIPA": true,
+      "sourceInventoried": true,
+      "independentlyAcousticallyVerifiedByChromalect": false
+    },
+    {
+      "sourceToken": "f",
+      "notation": "f",
+      "segmentClass": "consonant",
+      "articulatoryPlace": "labiodental",
+      "manner": "fricative",
+      "voicingAspiration": "voiceless",
+      "standardIPA": true,
+      "sourceInventoried": true,
+      "independentlyAcousticallyVerifiedByChromalect": false
+    },
+    {
+      "sourceToken": "X",
+      "notation": "ɕ",
+      "segmentClass": "consonant",
+      "articulatoryPlace": "palatoalveolar",
+      "manner": "fricative",
+      "voicingAspiration": "voiceless",
+      "standardIPA": true,
+      "sourceInventoried": true,
+      "independentlyAcousticallyVerifiedByChromalect": false
+    },
+    {
+      "sourceToken": "r",
+      "notation": "ʐ",
+      "segmentClass": "consonant",
+      "articulatoryPlace": "retroflex",
+      "manner": "fricative",
+      "voicingAspiration": "voiced",
+      "standardIPA": true,
+      "sourceInventoried": true,
+      "independentlyAcousticallyVerifiedByChromalect": false
+    },
+    {
+      "sourceToken": "S",
+      "notation": "ʂ",
+      "segmentClass": "consonant",
+      "articulatoryPlace": "retroflex",
+      "manner": "fricative",
+      "voicingAspiration": "voiceless",
+      "standardIPA": true,
+      "sourceInventoried": true,
+      "independentlyAcousticallyVerifiedByChromalect": false
+    },
+    {
+      "sourceToken": "x",
+      "notation": "x",
+      "segmentClass": "consonant",
+      "articulatoryPlace": "velar",
+      "manner": "fricative",
+      "voicingAspiration": "voiceless",
+      "standardIPA": true,
+      "sourceInventoried": true,
+      "independentlyAcousticallyVerifiedByChromalect": false
+    },
+    {
+      "sourceToken": "z",
+      "notation": "ts",
+      "segmentClass": "consonant",
+      "articulatoryPlace": "alveolar",
+      "manner": "affricate",
+      "voicingAspiration": "voiceless",
+      "standardIPA": true,
+      "sourceInventoried": true,
+      "independentlyAcousticallyVerifiedByChromalect": false
+    },
+    {
+      "sourceToken": "c",
+      "notation": "tsʰ",
+      "segmentClass": "consonant",
+      "articulatoryPlace": "alveolar",
+      "manner": "affricate",
+      "voicingAspiration": "voiceless_aspirated",
+      "standardIPA": true,
+      "sourceInventoried": true,
+      "independentlyAcousticallyVerifiedByChromalect": false
+    },
+    {
+      "sourceToken": "j",
+      "notation": "tɕ",
+      "segmentClass": "consonant",
+      "articulatoryPlace": "palatoalveolar",
+      "manner": "affricate",
+      "voicingAspiration": "voiceless",
+      "standardIPA": true,
+      "sourceInventoried": true,
+      "independentlyAcousticallyVerifiedByChromalect": false
+    },
+    {
+      "sourceToken": "q",
+      "notation": "tɕʰ",
+      "segmentClass": "consonant",
+      "articulatoryPlace": "palatoalveolar",
+      "manner": "affricate",
+      "voicingAspiration": "voiceless_aspirated",
+      "standardIPA": true,
+      "sourceInventoried": true,
+      "independentlyAcousticallyVerifiedByChromalect": false
+    },
+    {
+      "sourceToken": "Z",
+      "notation": "tʂ",
+      "segmentClass": "consonant",
+      "articulatoryPlace": "retroflex",
+      "manner": "affricate",
+      "voicingAspiration": "voiceless",
+      "standardIPA": true,
+      "sourceInventoried": true,
+      "independentlyAcousticallyVerifiedByChromalect": false
+    },
+    {
+      "sourceToken": "C",
+      "notation": "tʂʰ",
+      "segmentClass": "consonant",
+      "articulatoryPlace": "retroflex",
+      "manner": "affricate",
+      "voicingAspiration": "voiceless_aspirated",
+      "standardIPA": true,
+      "sourceInventoried": true,
+      "independentlyAcousticallyVerifiedByChromalect": false
+    }
+  ],
+  "limits": [
+    "These are paper-specific phonetic coding units, not 34 independently demonstrated Mandarin phonemes in the first-tranche readings.",
+    "The two apical vowels use special original-paper model notation not accepted as standard IPA symbols. The Unicode representation is an explanatory display candidate.",
+    "The paper's use of a voiced retroflex fricative /ʐ/ for Pinyin r conflicts with the current prototype approximant /ɻ/; no phoneme or acoustic decision is made here.",
+    "Source phoneme classification, vowel height/backness and consonant voicing dimensions are recorded as the authors' model, not independently corroborated articulatory measurements.",
+    "No source text, source figure or speech waveform is republished.",
+    "No context-specific decoding grammar or phonological IPA string is derived for any 1,171 first-tranche citation reading."
+  ]
+}
