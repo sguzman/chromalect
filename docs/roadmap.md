@@ -68,6 +68,8 @@ This is a sequence of **evidence gates**, not a promise to build a large applica
 
 **Feature-level decoding (partial):** A [34-unit CVVVCT phonological feature grammar](../tools/glyph-pipeline/zhao_li_visual_feature_grammar.mjs) machine-round-trips published consonant and vowel feature units without storing Pinyin spelling ([machine audit](../data/phonetics/zhao-li-visual-feature-grammar-audit-v0.1.json), [method](zhao-li-visual-feature-grammar.md)). Real source pronunciation assignments, human decoding and measured acoustic validation remain unapproved; this scientific acceptance checkpoint therefore remains pending.
 - [ ] Test tone contours independently from segmental notation.
+
+**Source-isolated, no-feedback recognition instrument (partial):** A [16-trial blinded contour-only assessment](../site/mandarin-tone-contours.html) now balances T1–T4 four times each, hides category feedback until completion, excludes neutral tone and every segmental/lexical cue, and generates participant-optional, locally copyable nonidentifying response JSON ([protocol](mandarin-tone-blind-recognition-assessment.md)). Automated acceptance tests simulate balanced answer records and confirm no fabricated study approval. **Actual independent participants, controlled comparison, acoustically validated tones and measured learning outcomes remain zero**, so the scientific tone-testing checkpoint stays open.
 - [x] Prototype one independently switchable citation-tone, initial and written-final layout around unmodified Chinese characters; human decoding validation remains pending.
 
 **Gate:** reliable decoding, not simply an attractive-looking sound diagram.
