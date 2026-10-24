@@ -325,6 +325,8 @@ jobs:
           test -s site/mandarin-encoding-comparison.html
           node --check site/mandarin-simple-final-features.js
           node tools/glyph-pipeline/mandarin_simple_final_features_viewer_smoke.mjs
+          node --check site/mandarin-working-feature-decoder.js
+          node tools/glyph-pipeline/mandarin_working_feature_decoder_smoke.mjs
           test -s site/mandarin-simple-final-features.html
           node tools/glyph-pipeline/written_final_symbol_control.mjs --check
           node tools/glyph-pipeline/written_final_symbol_control_smoke.mjs
@@ -359,6 +361,7 @@ jobs:
           cp data/phonetics/citation-orthographic-contrast-controls-v0.1.json site/phonetics/citation-orthographic-contrast-controls-v0.1.json
           cp data/phonetics/mandarin-final-spelling-context-gates-v0.1.json site/phonetics/mandarin-final-spelling-context-gates-v0.1.json
           cp data/phonetics/mandarin-simple-final-feature-candidates-v0.1.json site/phonetics/mandarin-simple-final-feature-candidates-v0.1.json
+          cp data/phonetics/working-feature-citation-codec-audit-v0.1.json site/phonetics/working-feature-citation-codec-audit-v0.1.json
           cp data/phonetics/mandarin-encoding-comparison-cohorts-v0.1.json site/phonetics/mandarin-encoding-comparison-cohorts-v0.1.json
           cp data/phonetics/unadjudicated-compound-final-review-queue-v0.1.json site/phonetics/unadjudicated-compound-final-review-queue-v0.1.json
           cp data/phonetics/external-orthographic-spelling-rule-crosswalk-v0.1.json site/phonetics/external-orthographic-spelling-rule-crosswalk-v0.1.json
