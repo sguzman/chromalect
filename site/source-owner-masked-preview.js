@@ -16,6 +16,42 @@ let targets=[],activeCohort="all",selected=null,visibleIds=[];
 let requestVersion=0,objectURLs=[],activeController=null;
 const verifiedMaskCache=new Map();
 const MAX_VERIFIED_MASKS=24; // 24 MiB maximum given the 1 MiB per-SVG cap.
+const MAX_MASK_BYTES=1048576;
+// Browser fetch bodies must be consumed with a hard incremental byte bound.
+// Do not buffer an untrusted full response before checking its size.
+async function readBoundedMask(response,signal){
+ const header=response.headers?.get?.("content-length");
+ if(header!==null&&header!==undefined&&/^\\d+$/.test(header)&&
+  Number(header)>MAX_MASK_BYTES)
+  throw Error("Neutral source SVG size outside safe bounds");
+ if(!response.body||typeof response.body.getReader!=="function")
+  throw Error("Bounded neutral SVG streaming unavailable");
+ const reader=response.body.getReader(),chunks=[];
+ let total=0;
+ try{
+  while(true){
+   if(signal?.aborted)throw Error("Superseded source-region request");
+   const result=await reader.read();
+   if(signal?.aborted)throw Error("Superseded source-region request");
+   if(result.done)break;
+   const part=result.value;
+   if(!ArrayBuffer.isView(part)||part.BYTES_PER_ELEMENT!==1)
+    throw Error("Invalid neutral SVG download chunk");
+   total+=part.byteLength;
+   if(total>MAX_MASK_BYTES)
+    throw Error("Neutral source SVG size outside safe bounds");
+   chunks.push(new Uint8Array(part.buffer,part.byteOffset,part.byteLength));
+  }
+  if(total===0)throw Error("Neutral source SVG size outside safe bounds");
+  const bytes=new Uint8Array(total);
+  let offset=0;
+  for(const chunk of chunks){bytes.set(chunk,offset);offset+=chunk.byteLength;}
+  return bytes.buffer;
+ }catch(e){
+  try{await reader.cancel();}catch{}
+  throw e;
+ }finally{reader.releaseLock();}
+}
 const message=s=>{$("om-status").textContent=s;};
 function applySize(){
  const s=Number($("om-size").value);
@@ -62,9 +98,7 @@ async function fetchVerifiedMask(candidate,sourceStrokePaths,signal){
  }
  const response=await fetch(candidate.svg,signal?{signal}:undefined);
  if(!response.ok)throw Error("Neutral source SVG unavailable");
- const buffer=await response.arrayBuffer();
- if(buffer.byteLength===0||buffer.byteLength>1048576)
-  throw Error("Neutral source SVG size outside safe bounds");
+ const buffer=await readBoundedMask(response,signal);
  const digest=await crypto.subtle.digest("SHA-256",buffer);
  const actual=Array.from(new Uint8Array(digest),b=>b.toString(16).padStart(2,"0")).join("");
  if(actual!==candidate.sha256)throw Error("Neutral source SVG SHA-256 mismatch");
