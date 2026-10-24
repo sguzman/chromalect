@@ -2,15 +2,20 @@ import assert from "node:assert/strict";
 import fs from "node:fs";
 import vm from "node:vm";
 import {validate} from "./mandarin_ipa_source_comparison.mjs";
+import {validateZhaoLi} from "./zhao_li_ipa_reference.mjs";
 const read=p=>JSON.parse(fs.readFileSync(p,"utf8"));
 const report=read("data/phonetics/mandarin-pinyin-ipa-source-disagreement-v0.1.json");
 const initials=read("data/phonetics/mandarin-initial-feature-candidates-v0.1.json");
 const finals=read("data/phonetics/mandarin-simple-final-feature-candidates-v0.1.json");
+const zhao=read("data/phonetics/zhao-li-2009-independent-pinyin-ipa-control-v0.1.json");
 const citations=read("site/pronunciation-citations-0001-1000.json");
 const script=fs.readFileSync("site/mandarin-ipa-source-comparison.js","utf8");
 const initialPage=fs.readFileSync("site/mandarin-initial-features.html","utf8");
 const finalPage=fs.readFileSync("site/mandarin-simple-final-features.html","utf8");
 validate(report,initials,finals,citations);
+validateZhaoLi(zhao,initials,finals);
+assert.equal(zhao.initials.find(x=>x.pinyinInitial==="r").zhaoLiIPA,"ʐ");
+assert.equal(zhao.initials.find(x=>x.pinyinInitial==="r").originalWorkingIPACandidate,"ɻ");
 assert.equal(report.initials.find(x=>x.pinyinInitial==="b").linReportedIPA,"p");
 assert.equal(report.initials.find(x=>x.pinyinInitial==="b").caiSuggestedIPA,"b");
 assert.equal(report.initials.find(x=>x.pinyinInitial==="t").meiReportedIPA,"ts");
@@ -30,14 +35,15 @@ class Node{
  appendChild(x){this.children.push(x);return x;}
  replaceChildren(...xs){this.children=xs;}
 }
-function mount(mode,data=[report,initials,finals]){
+function mount(mode,data=[report,initials,finals,zhao]){
  const elements=Object.fromEntries([
   "ipa-source-compare-status",
   mode==="initial"?"ipa-source-initial-table":"ipa-source-simple-final-table"
  ].map(id=>[id,new Node("div")]));
  const urls=["phonetics/mandarin-pinyin-ipa-source-disagreement-v0.1.json",
   "phonetics/mandarin-initial-feature-candidates-v0.1.json",
-  "phonetics/mandarin-simple-final-feature-candidates-v0.1.json"];
+  "phonetics/mandarin-simple-final-feature-candidates-v0.1.json",
+  "phonetics/zhao-li-2009-independent-pinyin-ipa-control-v0.1.json"];
  const ctx={
   document:{getElementById:id=>elements[id],createElement:t=>new Node(t)},
   fetch:async url=>{
@@ -54,7 +60,7 @@ async function settle(e){
 const ni=mount("initial");await settle(ni);
 const table=ni["ipa-source-initial-table"].children[0].children[0];
 assert.equal(table.tag,"table");
-assert.equal(table.children[0].children[0].children.length,6);
+assert.equal(table.children[0].children[0].children.length,7);
 assert.equal(table.children[1].children.length,21);
 assert.equal(table.children[1].children[0].children[0].textContent,"b");
 assert.equal(table.children[1].children[0].children[1].textContent,"p");
@@ -64,14 +70,14 @@ const finalsTable=nf["ipa-source-simple-final-table"].children[0].children[0];
 assert.equal(finalsTable.children[1].children.length,6);
 assert.equal(finalsTable.children[1].children[0].children[0].textContent,"a");
 assert.equal(finalsTable.children[1].children[2].children[0].textContent,"e");
-assert.match(finalsTable.children[1].children[1].children[5].textContent,/16 \/ 16/);
+assert.match(finalsTable.children[1].children[1].children[6].textContent,/16 \/ 16/);
 const unexpected=structuredClone(report);unexpected.initials[0].originalWorkingCandidate="unsupported";
-const ui=mount("initial",[unexpected,initials,finals]);await settle(ui);
+const ui=mount("initial",[unexpected,initials,finals,zhao]);await settle(ui);
 assert.match(ui["ipa-source-compare-status"].textContent,/Unable to validate/);
 assert.equal(ui["ipa-source-initial-table"].children.length,0);
 const forbidden=structuredClone(report);
 forbidden.counts.humanDecodingTrials=1;
-const rejected=mount("final",[forbidden,initials,finals]);await settle(rejected);
+const rejected=mount("final",[forbidden,initials,finals,zhao]);await settle(rejected);
 assert.match(rejected["ipa-source-compare-status"].textContent,/Unable to validate/);
 for(const html of [initialPage,finalPage]){
  assert.match(html,/mandarin-ipa-source-comparison\.js/);
@@ -81,4 +87,4 @@ for(const html of [initialPage,finalPage]){
 assert.ok(initialPage.includes('id="ipa-source-initial-table"'));
 assert.ok(finalPage.includes('id="ipa-source-simple-final-table"'));
 assert.ok(!script.includes("innerHTML")&&!script.includes("localStorage")&&!script.includes("sendBeacon"));
-console.log("IU IPA comparison: 21 initials, 6 simple finals, 16 reported convention disagreements, and no phonemic promotion.");
+console.log("IU and Zhao–Li IPA comparison: 21 initials, 6 simple finals, 16 reported convention disagreements, and no phonemic promotion.");

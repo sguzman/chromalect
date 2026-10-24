@@ -278,6 +278,7 @@ jobs:
           node tools/glyph-pipeline/citation_tone_isolation_audit_smoke.mjs
           node tools/glyph-pipeline/mandarin_initial_feature_candidates_smoke.mjs
           node tools/glyph-pipeline/mandarin_ipa_source_comparison.mjs --check
+          node tools/glyph-pipeline/zhao_li_ipa_reference.mjs --check
           node --check site/mandarin-ipa-source-comparison.js
           node tools/glyph-pipeline/mandarin_ipa_source_comparison_smoke.mjs
           node tools/glyph-pipeline/mandarin_written_final_ipa_crosswalk.mjs --check
@@ -368,6 +369,7 @@ jobs:
           cp data/phonetics/citation-tone-isolation-audit-v0.1.json site/phonetics/citation-tone-isolation-audit-v0.1.json
           cp data/phonetics/mandarin-initial-feature-candidates-v0.1.json site/phonetics/mandarin-initial-feature-candidates-v0.1.json
           cp data/phonetics/mandarin-pinyin-ipa-source-disagreement-v0.1.json site/phonetics/mandarin-pinyin-ipa-source-disagreement-v0.1.json
+          cp data/phonetics/zhao-li-2009-independent-pinyin-ipa-control-v0.1.json site/phonetics/zhao-li-2009-independent-pinyin-ipa-control-v0.1.json
           cp data/phonetics/mandarin-written-final-ipa-source-crosswalk-v0.1.json site/phonetics/mandarin-written-final-ipa-source-crosswalk-v0.1.json
           cp data/phonetics/initial-feature-codec-audit-v0.1.json site/phonetics/initial-feature-codec-audit-v0.1.json
           cp data/phonetics/citation-syllable-orthographic-codec-audit-v0.1.json site/phonetics/citation-syllable-orthographic-codec-audit-v0.1.json

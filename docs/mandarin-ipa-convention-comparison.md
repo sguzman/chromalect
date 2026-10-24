@@ -54,3 +54,9 @@ criterion through transparent, reproducible, source-qualified notation variants.
 It **does not freeze the phonological inventory**, certify any actual speech sound or
 phonemic contrast, finish context-sensitive finals, or establish human decoding success.
 The broader Phase 2 checklist remains unchanged pending these independent gates.
+
+## Independent phonological-model cross-reference
+
+An independent journal article by Xiaowei Zhao and Ping Li, [*An online database of phonological representations for Mandarin Chinese*](https://link.springer.com/content/pdf/10.3758/BRM.41.2.575.pdf), *Behavior Research Methods* 41(2), 575–583 (2009), DOI **10.3758/BRM.41.2.575**, presents a model-specific Pinyin/IPA lookup in its Table 1. The [separate source record](../data/phonetics/zhao-li-2009-independent-pinyin-ipa-control-v0.1.json) independently cross-checks 21 conventional initial labels and the same six simple-vowel tokens; [acceptance code](../tools/glyph-pipeline/zhao_li_ipa_reference.mjs) rejects source-label substitutions and unsupported scientific approvals.
+
+Its 21 initials match 18 of Chromalect's literal provisional IPA labels. The remaining `zh`, `ch` and `r` records differ in transcription, with `r` particularly significant: Zhao–Li model a voiced retroflex fricative `ʐ`, whereas the existing provisional Chromalect initial code uses approximant `ɻ`. The discrepancy remains **open**; no author is declared the definitive phonemic realization. The paper also assigns context-dependent values to Pinyin `i` and uses a CVVVCT model whose vowel/segment choices are not equivalent to the current written-Pinyin-only grammar. Neither independent citation table supplies human perceptual or acoustically validated Chromalect decoding evidence.

@@ -32,10 +32,11 @@ async function load(){
   const responses=await Promise.all([
    fetch("phonetics/mandarin-pinyin-ipa-source-disagreement-v0.1.json"),
    fetch("phonetics/mandarin-initial-feature-candidates-v0.1.json"),
-   fetch("phonetics/mandarin-simple-final-feature-candidates-v0.1.json")
+   fetch("phonetics/mandarin-simple-final-feature-candidates-v0.1.json"),
+   fetch("phonetics/zhao-li-2009-independent-pinyin-ipa-control-v0.1.json")
   ]);
   if(responses.some(r=>!r.ok))throw Error("Required source comparison missing");
-  const [report,initials,finals]=await Promise.all(responses.map(r=>r.json()));
+  const [report,initials,finals,external]=await Promise.all(responses.map(r=>r.json()));
   if(report.schema!=="chromalect.phonetics.mandarin-pinyin-ipa-source-disagreement.v0.1"||
      report.status!=="diction_guide_reports_multiple_ipa_conventions_not_a_single_certified_phonemic_inventory"||
      report.source.year!==2020||
@@ -53,15 +54,26 @@ async function load(){
      initials.schema!=="chromalect.phonetics.mandarin-initial-feature-candidates.v0.1"||
      initials.statistics.independentlyVerifiedPhonemicContrasts!==0||
      finals.schema!=="chromalect.phonetics.mandarin-simple-final-feature-candidates.v0.1"||
-     finals.summary.independentIPAApprovalCount!==0)
+     finals.summary.independentIPAApprovalCount!==0||
+     external.schema!=="chromalect.phonetics.zhao-li-2009-independent-pinyin-ipa-control.v0.1"||
+     external.summary.literalWorkingCandidateMatches!==18||
+     external.summary.differingWorkingCandidateIPAItems!==3||
+     external.summary.independentlyFrozenPhonemicContrasts!==0||
+     external.summary.independentAcousticMeasurements!==0||
+     external.initials.length!==21||external.simpleFinals.length!==6)
    throw Error("Source comparison or scientific status disagrees");
   const originals=new Map(initials.tokens.filter(r=>
    r.category==="conventional_pinyin_initial").map(r=>[r.token,r]));
   const originalFinals=new Map(finals.records.map(r=>[r.token,r]));
+  const peerInitials=new Map(external.initials.map(r=>[r.pinyinInitial,r]));
+  const peerFinals=new Map(external.simpleFinals.map(r=>[r.writtenFinal,r]));
   const seen=new Set(),seenFinals=new Set();
   for(const r of report.initials){
    const x=originals.get(r.pinyinInitial);
-   if(!x||seen.has(r.pinyinInitial)||x.workingIPACandidate!==r.originalWorkingCandidate||
+   const independent=peerInitials.get(r.pinyinInitial);
+   if(!x||!independent||independent.originalWorkingIPACandidate!==x.workingIPACandidate||
+      independent.externalPhonemeApproved!==false||
+      seen.has(r.pinyinInitial)||x.workingIPACandidate!==r.originalWorkingCandidate||
       r.literalAgreementWithLin!==(r.linReportedIPA===x.workingIPACandidate)||
       r.disagreementsBetweenReports!==(new Set([
        r.linReportedIPA,r.meiReportedIPA,r.caiSuggestedIPA]).size>1)||
@@ -70,7 +82,9 @@ async function load(){
    seen.add(r.pinyinInitial);
   }
   for(const r of report.simples){
-   if(!originalFinals.has(r.writtenFinal)||seenFinals.has(r.writtenFinal)||
+   if(!originalFinals.has(r.writtenFinal)||!peerFinals.has(r.writtenFinal)||
+      peerFinals.get(r.writtenFinal).independentVowelPhonemeApproval!==false||
+      seenFinals.has(r.writtenFinal)||
       r.sourceComparisonNotDefaultAcousticTarget!==true||
       r.literalAgreementAllColumns!==
        (r.linReportedIPA===r.meiReportedIPA&&r.meiReportedIPA===r.caiSuggestedIPA))
@@ -79,23 +93,24 @@ async function load(){
   }
   if(seen.size!==21||seenFinals.size!==6)throw Error("Incomplete IPA source comparison");
   if(initialTarget)renderTable(initialTarget,
-   ["Pinyin","Lin (reported)","Mei (reported)","Cai (proposed)","Project working IPA","Working visual features"],
+   ["Pinyin","Lin (reported)","Mei (reported)","Cai (proposed)","Zhao–Li (2009)","Project working IPA","Working visual features"],
    report.initials,r=>{
     const x=originals.get(r.pinyinInitial);
     return [r.pinyinInitial,r.linReportedIPA,r.meiReportedIPA,r.caiSuggestedIPA,
-     r.originalWorkingCandidate,[x.place,x.manner,x.aspiration].join(" · ")];
+     peerInitials.get(r.pinyinInitial).zhaoLiIPA,r.originalWorkingCandidate,[x.place,x.manner,x.aspiration].join(" · ")];
    });
   if(finalTarget)renderTable(finalTarget,
-   ["Written final","Lin (reported)","Mei (reported)","Cai (proposed)","Unapproved visual vowel features","Context caution"],
+   ["Written final","Lin (reported)","Mei (reported)","Cai (proposed)","Zhao–Li (2009)","Unapproved visual vowel features","Context caution"],
    report.simples,r=>{
     const f=originalFinals.get(r.writtenFinal);
     return [r.writtenFinal,r.linReportedIPA,r.meiReportedIPA,r.caiSuggestedIPA,
-     [f.workingHeight,f.workingBackness,f.workingRounding].join(" · "),
+     peerFinals.get(r.writtenFinal).zhaoLiTable1IPA,[f.workingHeight,f.workingBackness,f.workingRounding].join(" · "),
      f.sourceSpellingContextCautions+" / "+f.observedSourceCitationReadings+" flagged citations"];
    });
   status.textContent="21 published initial comparisons (16 rows differ across traditions)"+
     " and 6 simple-final comparisons (2 rows differ). These are alternative notation"+
-    " choices, not 27 independently accepted phoneme descriptions.";
+    " choices, not 27 independently accepted phoneme descriptions."+
+    " Zhao–Li provides an independent published model (18/21 initial working-symbol matches).";
  }catch(error){
   initialTarget?.replaceChildren();finalTarget?.replaceChildren();
   status.textContent="Unable to validate IPA source comparisons: "+error.message;
