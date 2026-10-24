@@ -5,7 +5,8 @@ import {createHash} from "node:crypto";
 const manifest=JSON.parse(fs.readFileSync(
  "site/glyphs/research/owner-masked-stimuli-v0.1/index-v0.1.json","utf8"));
 const indexPath="glyphs/research/owner-masked-stimuli-v0.1/index-v0.1.json";
-const scripts=["site/source-owner-masked-preview-core.js",
+const scripts=["site/source-owner-neutral-svg-contract.js",
+ "site/source-owner-masked-preview-core.js",
  "site/source-owner-masked-preview.js"].map(p=>fs.readFileSync(p,"utf8"));
 const ids=["om-status","om-cohort","om-pair","om-size","om-count","om-meta",
  "om-grid","om-native","om-a","om-b","om-a-form","om-b-form",
@@ -74,7 +75,7 @@ function setup({source=manifest,hash="",assets=bytes,withCrypto=true}={}){
  };
  const document={getElementById:id=>nodes[id],createElement:()=>new Element()};
  const ctx={document,fetch,URL:MockURL,Blob:MockBlob,AbortController:MockAbortController,
-  Map,Set,Number,Error,location:{hash},crypto:withCrypto?crypto:undefined};
+  Map,Set,Number,Error,TextDecoder,location:{hash},crypto:withCrypto?crypto:undefined};
  ctx.globalThis=ctx;
  for(const s of scripts)vm.runInNewContext(s,ctx);
  return {nodes,fetched,objectURLs,revoked,delayed,abortEvents};
@@ -201,6 +202,20 @@ assert.match(mismatch.nodes["om-status"].textContent,/SHA-256 mismatch/);
 mismatch.nodes["om-pair"].value=manifest.records[5].id;
 mismatch.nodes["om-pair"].events.change();await flush();
 assertImages(mismatch,manifest.records[5]);
+// Checksum agreement alone must not permit active SVG content to be displayed.
+const injected=structuredClone(manifest),injectedAssets=new Map(bytes);
+const hostilePath=injected.records[0].candidates[0].svg;
+const hostile=Buffer.from(
+ injectedAssets.get(hostilePath).toString("utf8").replace(
+  "</g>","<script>alert(1)</script></g>"),"utf8");
+injectedAssets.set(hostilePath,hostile);
+injected.records[0].candidates[0].sha256=
+ createHash("sha256").update(hostile).digest("hex");
+const blockedSVG=setup({source:injected,assets:injectedAssets});await loaded(blockedSVG);
+assert.equal(blockedSVG.nodes["om-a"].src,"");
+assert.equal(blockedSVG.nodes["om-b"].src,"");
+assert.equal(blockedSVG.objectURLs.size,0);
+assert.match(blockedSVG.nodes["om-status"].textContent,/SVG document framing/);
 const race=setup();await loaded(race);
 const blocked=manifest.records[7].candidates[0].svg;
 let resolveBlocked;
@@ -226,9 +241,12 @@ for(const expected of ["not a blinded expert-review instrument","records no judg
  "original public source manifests","source-owner-masked-preview-core.js"])
  assert.ok(html.toLowerCase().includes(expected.toLowerCase()),expected);
 const pageJS=scripts.at(-1);
+assert.ok(html.includes('src="source-owner-neutral-svg-contract.js"'));
+assert.ok(pageJS.includes("checkSVG(buffer)"));
+assert.ok(pageJS.includes("checkSVG(previous.bytes)"));
 for(const forbidden of ["localStorage","sessionStorage","navigator.sendBeacon",
  "document.cookie","innerHTML","XMLHttpRequest","machineAssignedOwner",
  "otherOwner","heldout-identification-target-v0.1/index-v0.1.json"])
  assert.equal(pageJS.includes(forbidden),false,forbidden);
 assert.ok(!html.includes("<form")&&!html.includes('type="submit"'));
-console.log("49 source-pair SHA-256-verified browser masks; corrupted SVG and missing crypto blocked; stale navigation discarded; object URLs revoked; 23/21/5 cohorts.");
+console.log("49 source-pair browser masks SHA-256 and structurally verified; matching-hash active SVG content blocked; stale navigation canceled; verified-mask cache and cohort boundaries checked.");

@@ -471,6 +471,7 @@ jobs:
           test -s site/component-owner-compare.html
           node tools/glyph-pipeline/component_owner_adjudication_validate_smoke.mjs
           node tools/glyph-pipeline/component_owner_adjudication_viewer_smoke.mjs
+          node --check site/source-owner-neutral-svg-contract.js
           node --check site/source-owner-masked-preview-core.js
           node --check site/source-owner-masked-preview.js
           node tools/glyph-pipeline/source_owner_masked_preview_viewer_smoke.mjs

@@ -3,6 +3,8 @@ import fs from "node:fs";
 import vm from "node:vm";
 import {createHash} from "node:crypto";
 import {deriveMaskedStimuli} from "./source_owner_masked_stimuli.mjs";
+import "../../site/source-owner-neutral-svg-contract.js";
+const checkSVG=globalThis.ChromalectNeutralRegionSVG.validate;
 const source=JSON.parse(fs.readFileSync(
  "site/glyphs/research/heldout-identification-target-v0.1/index-v0.1.json","utf8"));
 const read=p=>fs.readFileSync("site/"+p,"utf8");
@@ -36,6 +38,7 @@ for(let i=0;i<49;i++){
  const masks=row.candidates.map(c=>{
   const svg=files.get(t.id+"--"+c.slot+".svg");
   assert.equal(sha(svg),c.sha256);
+  assert.equal(checkSVG(svg,row.sourceStrokePaths,c.highlightedPaths),true);
   assert.ok(!svg.includes("data-component"));
   assert.ok(!/cmp-\d{4}/.test(svg));
   const matched=[...svg.matchAll(exact)];
@@ -83,4 +86,31 @@ mutated.targets[0].locatorSHA256="0".repeat(64);
 assert.throws(()=>deriveMaskedStimuli(mutated,read));
 assert.throws(()=>deriveMaskedStimuli(source,p=>
  read(p).replace('data-component="','data-component="bad')));
-console.log("Neutral A/B stimulus generator: 49 pairs, 98 source-exact masks, stripped SVG owner attributes and manifest keys, 13 integrity refusals, 0 human approvals.");
+const canonical=files.values().next().value;
+const first=manifest.records[0].candidates[0];
+assert.equal(checkSVG(canonical,manifest.records[0].sourceStrokePaths,
+ first.highlightedPaths),true);
+const rejects=[
+ canonical.replace("</g>","<script>alert(1)</script></g>"),
+ canonical.replace("<g transform=", '<g onload="alert(1)" transform='),
+ canonical.replace("<path ", '<path onclick="alert(1)" '),
+ canonical.replace("</g>", '<foreignObject><div>HTML</div></foreignObject></g>'),
+ canonical.replace("</g>", '<image href="https://example.org/tracker"/></g>'),
+ canonical.replace("scale(1,-1)", "scale(2,-1)"),
+ canonical.replace('viewBox="0 0 1024 1024"','viewBox="0 0 1024 1023"'),
+ canonical.replace('fill="#252525"','fill="#FF0000"'),
+ canonical.replace("</svg>","</svg><svg/>"),
+ canonical.replace('d="','d="M0;'),
+ canonical+"<!-- hidden payload -->",
+ canonical.replace('role="img"','role="image"')
+];
+for(const svg of rejects)
+ assert.throws(()=>checkSVG(svg,manifest.records[0].sourceStrokePaths,
+  first.highlightedPaths),"Unexpected SVG content must fail the allowlist");
+assert.throws(()=>checkSVG(canonical,manifest.records[0].sourceStrokePaths+1,
+ first.highlightedPaths));
+assert.throws(()=>checkSVG(canonical,manifest.records[0].sourceStrokePaths,
+ first.highlightedPaths+1));
+assert.throws(()=>checkSVG(canonical,manifest.records[0].sourceStrokePaths,
+ 0));
+console.log("49-pair neutral stimulus regeneration and exact SVG allowlist: 98 valid masks, 12 active-content/markup poisons and 3 path-count poisons rejected.");
