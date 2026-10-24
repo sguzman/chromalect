@@ -5,7 +5,7 @@
 <title>Reduced-motion research controls · Chromalect</title>
 <link rel="stylesheet" href="style.css"><script src="theme.js"></script>
 <script src="semantic-grammar.js" defer></script>
-<script src="mandarin-motion-pretrial.js" defer></script>
+<script src="mandarin-motion-pretrial.js" defer></script><script src="mandarin-motion-recall-trial.js" defer></script>
 <style>
 .motion-controls{display:flex;flex-wrap:wrap;align-items:end;gap:14px;margin:18px 0;
  padding:16px;border:1px solid var(--border);border-radius:12px;background:var(--panel)}
@@ -29,6 +29,14 @@
 @keyframes chromalect-cue-once{from{opacity:.15;transform:translateY(12px)}
  to{opacity:1;transform:translateY(0)}}
 .motion-caption{font-size:13px;color:var(--sub)}
+.motion-trial{margin:22px 0;padding:18px;background:var(--panel);border:1px solid var(--border);border-radius:12px}
+.motion-trial-actions{display:flex;flex-wrap:wrap;align-items:center;gap:12px;margin:16px 0}
+.motion-trial button{font:inherit;color:var(--ink);padding:10px 14px;border:1px solid var(--border);
+ border-radius:8px;background:var(--tile-bg);cursor:pointer}
+.motion-trial button:disabled{opacity:.5;cursor:default}
+.motion-trial #motion-trial-choices{display:flex;flex-wrap:wrap;gap:9px;margin:16px 0}
+.motion-trial textarea{box-sizing:border-box;width:100%;min-height:160px;font:12px/1.5 ui-monospace,monospace;
+ padding:10px;background:var(--tile-bg);color:var(--ink);border:1px solid var(--border);border-radius:8px}
 .motion-note{border-left:3px solid var(--active-border);padding:12px 14px;
  background:var(--panel);margin:18px 0}
 @media(max-width:700px){.motion-panels{grid-template-columns:1fr}}
@@ -70,6 +78,39 @@ tongue, lip, airflow, or acoustic trajectories.</div>
 <p class="motion-caption">Same source tokens and ordering. One short motion sequence only when manually activated.</p></section>
 </div>
 <p id="motion-source-note" class="motion-note"></p>
+<section class="motion-trial" aria-label="Local-only semantic and articulatory visual cue recall trial">
+<h2>Opt-in static versus one-shot motion recall instrument</h2>
+<p>Sixteen randomized exposures compare <strong>identical source-derived information</strong>
+in static and manually activated, single-play sequential-reveal conditions.
+Four distinct draft semantic-event pictograms and four provisional articulatory
+feature cues each appear once per condition. After viewing a cue, hide it and
+identify its proposed meaning or the initial's proposed articulatory place
+from four alternatives. Feedback is withheld until the entire session finishes.</p>
+<p class="motion-caption">This is not a validated user study. Source meanings and
+articulation classifications are provisional. Exposure duration is self-paced,
+randomized assignment does not control participant knowledge, and answers are
+only unverified current-session observations. No demographics, device fingerprints,
+identities, timings, or automatic network uploads/storage are collected.
+A system reduced-motion preference always overrides the one-shot condition,
+which is recorded as a static exposure. One-shot animations never autoplay.</p>
+<label for="motion-trial-consent"><input id="motion-trial-consent" type="checkbox">
+I understand this local-only, unvalidated research instrument is voluntary.</label>
+<div class="motion-trial-actions">
+<button id="motion-trial-start" type="button" disabled>Start or restart 16 balanced trials</button>
+<button id="motion-trial-show" type="button" disabled>Show stimulus once</button>
+<button id="motion-trial-hide" type="button" disabled>Hide stimulus and answer</button>
+</div>
+<p id="motion-trial-status" role="status" aria-live="polite">Validating source cue inventory.</p>
+<div id="motion-trial-stimulus" class="motion-stimulus" aria-label="Hidden until explicitly shown source cue"></div>
+<div id="motion-trial-choices" aria-label="Choose one of four source candidates"></div>
+<p id="motion-trial-score" aria-live="polite"></p>
+<label for="motion-trial-json">Participant-optional local JSON response record</label>
+<textarea id="motion-trial-json" readonly></textarea>
+<button id="motion-trial-copy" type="button" disabled>Select locally generated results</button>
+<p class="motion-caption">Synthetic QA responses are not independently recruited human
+results. Both semantic and articulation source confidence remain unchanged.
+<a href="https://github.com/sguzman/chromalect/blob/main/docs/mandarin-motion-recall-trial.md">Protocol and acceptance limits</a>.</p>
+</section>
 <p><a href="mandarin-fusion.html">Integrated character layers</a> ·
 <a href="mandarin-word-context.html">Contextual word research</a> ·
 <a href="mandarin-initial-features.html">Initial feature control inventory</a> ·
