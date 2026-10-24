@@ -9,8 +9,8 @@ const CUT: f64 = 0.07;
 const CANDIDATE: &str = "0.7.0-candidate.1";
 
 #[derive(Clone)]
-struct Edge { a:usize, b:usize, weight:usize }
-fn oklab(hex:&str)->Result<[f64;3],String> {
+pub(super) struct Edge { pub(super) a:usize, pub(super) b:usize, pub(super) weight:usize }
+pub(super) fn oklab(hex:&str)->Result<[f64;3],String> {
     if hex.len()!=7 || !hex.starts_with('#') {return Err("bad sRGB hex".into());}
     let mut channels=[0.0;3];
     for (i,c) in channels.iter_mut().enumerate(){
@@ -26,16 +26,16 @@ fn oklab(hex:&str)->Result<[f64;3],String> {
         1.9779984951*l-2.4285922050*m+0.4505937099*s,
         0.0259040371*l+0.7827717662*m-0.8086757660*s])
 }
-fn metric(a:[f64;3],b:[f64;3])->f64{
+pub(super) fn metric(a:[f64;3],b:[f64;3])->f64{
     ((a[0]-b[0]).powi(2)+(a[1]-b[1]).powi(2)+(a[2]-b[2]).powi(2)).sqrt()
 }
-fn cost(ed:&Edge,assigned:&[usize],dist:&[f64],n:usize)->bool{
+pub(super) fn cost(ed:&Edge,assigned:&[usize],dist:&[f64],n:usize)->bool{
     dist[assigned[ed.a]*n+assigned[ed.b]]<CUT
 }
-fn warned(edges:&[Edge],assigned:&[usize],dist:&[f64],n:usize)->usize{
+pub(super) fn warned(edges:&[Edge],assigned:&[usize],dist:&[f64],n:usize)->usize{
     edges.iter().filter(|e|cost(e,assigned,dist,n)).map(|e|e.weight).sum()
 }
-fn optimize(edges:&[Edge],dist:&[f64],n:usize)->(Vec<usize>,Vec<(usize,usize,usize)>){
+pub(super) fn optimize(edges:&[Edge],dist:&[f64],n:usize)->(Vec<usize>,Vec<(usize,usize,usize)>){
     let mut assignment=(0..n).collect::<Vec<_>>();
     let mut adj=vec![Vec::<usize>::new();n];
     for (i,e) in edges.iter().enumerate(){
