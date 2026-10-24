@@ -35,6 +35,15 @@ function retireImages(){
  $("om-a").removeAttribute("src");
  $("om-b").removeAttribute("src");
 }
+function failImageDecode(event){
+ // A browser decoder error is not an expert review observation.
+ const current=event?.target?.src;
+ if(!current||!objectURLs.includes(current))return;
+ retireImages();
+ message("Region display blocked: browser could not render a verified neutral mask. Both images cleared; no visual or owner approval recorded.");
+}
+$("om-a").addEventListener("error",failImageDecode);
+$("om-b").addEventListener("error",failImageDecode);
 async function fetchVerifiedMask(candidate,sourceStrokePaths,signal){
  if(!globalThis.crypto?.subtle?.digest||!URL.createObjectURL||!URL.revokeObjectURL)
   throw Error("Browser SHA-256 or verified-image display unavailable");

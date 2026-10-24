@@ -202,6 +202,24 @@ for(const s of [16,24,32,48,64,96,128,160]){
 p["om-size"].value="400";p["om-size"].events.change();
 assert.match(p["om-status"].textContent,/Size rejected/);
 assert.equal(p["om-grid"].style["--om-glyph-size"],"160px");
+const decodeFailure=setup();await loaded(decodeFailure);
+assertImages(decodeFailure,manifest.records[0]);
+assert.ok(typeof decodeFailure.nodes["om-b"].events.error==="function");
+decodeFailure.nodes["om-b"].events.error({
+ target:decodeFailure.nodes["om-b"]
+});
+assert.equal(decodeFailure.nodes["om-a"].src,"");
+assert.equal(decodeFailure.nodes["om-b"].src,"");
+assert.equal(decodeFailure.objectURLs.size,0);
+assert.match(decodeFailure.nodes["om-status"].textContent,/browser could not render/);
+assert.match(decodeFailure.nodes["om-status"].textContent,/no visual or owner approval/);
+decodeFailure.nodes["om-a"].events.error({
+ target:decodeFailure.nodes["om-a"]
+});
+assert.equal(decodeFailure.objectURLs.size,0,
+ "Stale decoding errors must not reopen or restore revoked objects");
+decodeFailure.nodes["om-next"].events.click();await flush();
+assertImages(decodeFailure,manifest.records[1]);
 const anchored=setup({hash:"#"+manifest.records[21].id});await loaded(anchored);
 assert.equal(anchored.nodes["om-pair"].value,manifest.records[21].id);
 assertImages(anchored,manifest.records[21]);
