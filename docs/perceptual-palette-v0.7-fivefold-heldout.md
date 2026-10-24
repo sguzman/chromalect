@@ -121,6 +121,23 @@ final assignment: the last prefix must reproduce the reported outer-fold
 warning counts exactly. The regression checker rejects prefix count
 inconsistencies, non-decreasing training objectives or a replay mismatch.
 
+The completed [Pages build for commit 51da3e6](https://github.com/sguzman/chromalect/actions/runs/40128891895)
+reproduced all five original fold endpoints and exposed all 43 intermediate
+training swaps. Scoring a *common maximum of k swaps per fold* (reusing the
+last score when a fitted fold has only eight swaps) yields:
+
+| Maximum greedy swaps per fold | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| Pooled held-out warnings | **26** | 29 | 30 | 31 | 31 | 33 | 36 | 32 | 30 | 29 |
+
+**Observed failure of simple early stopping:** none of the nonzero common
+swap budgets beats the untouched v0.6 baseline on the measured near-color
+warning criterion. Fold five rises from one baseline warning to two after
+its first training swap and to five after nine swaps. The original full
+fitted method remains 29 warnings, with fold-specific eight/nine swaps.
+This pins a specific failed numerical intervention, not an accessibility
+or linguistic failure certified by people. No palette change is warranted.
+
 These intermediate held-out scores are **post-hoc diagnostic evidence**, not a
 method for choosing a stopping point. Selecting a prefix, algorithm or penalty
 from the excluded 200 glyphs would reuse the test data for tuning. Any

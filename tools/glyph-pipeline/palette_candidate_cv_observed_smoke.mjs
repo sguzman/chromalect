@@ -158,6 +158,23 @@ for(let i=0;i<5;i++){
  retained+=row.heldoutWarningsRetained;
  swaps+=row.swapCount;
 }
+// Frozen, exploratory held-out prefix curve: no nonzero fixed swap budget
+// improves pooled source-glyph proximity on the exact observed folds.
+const expectedBudgetWarnings=[26,29,30,31,31,33,36,32,30,29];
+for(let budget=0;budget<expectedBudgetWarnings.length;budget++){
+ const heldoutTotal=report.folds.reduce((sum,fold)=>{
+  if(budget===0)return sum+fold.heldoutClosePairsOriginal;
+  const applied=Math.min(budget,fold.swapPrefixDiagnostics.length);
+  assert.ok(applied>0);
+  return sum+fold.swapPrefixDiagnostics[applied-1].heldoutClosePairs;
+ },0);
+ assert.equal(heldoutTotal,expectedBudgetWarnings[budget],
+  "Observed held-out swap budget curve changed");
+}
+assert.ok(expectedBudgetWarnings.slice(1)
+ .every(count=>count>expectedBudgetWarnings[0]),
+ "No nonzero fixed budget was a held-out gain on this observed evaluation");
+
 assert.equal(seen.size,1000);
 assert.deepEqual({observations,baseline,candidate,added,resolved,retained,swaps},
  {observations:1020,baseline:26,candidate:29,added:13,resolved:10,
