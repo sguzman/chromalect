@@ -126,14 +126,17 @@ export function verifyOfflinePacket(directory){
 }
 if(process.argv[1]&&import.meta.url===pathToFileURL(process.argv[1]).href){
  const argv=process.argv.slice(2);
- assert.ok((argv.length===2||argv.length===3)&&argv[0]==="--packet-dir"&&
-  (argv.length===2||argv[2]==="--fingerprint"),
-  "Usage: node source_owner_local_packet_verify.mjs --packet-dir ABSOLUTE_DIRECTORY [--fingerprint]");
+ const print=argv.length===3&&argv[2]==="--fingerprint";
+ const expect=argv.length===4&&argv[2]==="--expect-fingerprint"&&
+  /^[a-f0-9]{64}$/.test(argv[3]);
+ assert.ok(argv[0]==="--packet-dir"&&(argv.length===2||print||expect),
+  "Usage: node source_owner_local_packet_verify.mjs --packet-dir ABSOLUTE_DIRECTORY [--fingerprint | --expect-fingerprint SHA256]");
  const result=verifyOfflinePacket(argv[1]);
+ const receipt=JSON.parse(fs.readFileSync(path.join(argv[1],RECEIPT_FILE),"utf8"));
+ if(expect)assert.equal(receipt.rootSHA256,argv[3],
+  "Offline packet differs from the externally preserved content fingerprint");
  console.log("Offline reviewer packet self-consistency verified: "+result.pairs+
   " pairs, "+result.masks+" neutral SVGs, 0 independent source-owner approvals.");
- if(argv.length===3){
-  const receipt=JSON.parse(fs.readFileSync(path.join(argv[1],RECEIPT_FILE),"utf8"));
-  console.log("Packet content fingerprint (not a signature): "+receipt.rootSHA256);
- }
+ if(print)console.log("Packet content fingerprint (not a signature): "+receipt.rootSHA256);
+ if(expect)console.log("Externally supplied SHA-256 fingerprint matches this packet.");
 }

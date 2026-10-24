@@ -26,7 +26,13 @@ The packet includes a canonical, key-free `integrity-v0.1.json` receipt binding 
 
     node tools/glyph-pipeline/source_owner_local_packet_verify.mjs --packet-dir /absolute/local/reviewer-packet --fingerprint
 
-For the root to help detect substitution after distribution, its value must be preserved **outside** the packet before transfer. The receipt is unsigned, is not a source-authenticity attestation, and can be recomputed by anyone who changes the entire packet.
+For the root to help detect substitution after distribution, its value must be preserved **outside** the packet before transfer.
+
+A transferred packet can then be checked against that independently held value:
+
+    node tools/glyph-pipeline/source_owner_local_packet_verify.mjs --packet-dir /absolute/local/copied-packet --expect-fingerprint PUBLISHED_SHA256
+
+A mismatch causes a nonzero exit status. Neither the comparison nor the receipt authenticates who created the packet or verifies any reviewer decisions. The receipt is unsigned, is not a source-authenticity attestation, and can be recomputed by anyone who changes the entire packet.
 
 The verifier establishes **internal packet consistency only**: if someone deliberately regenerates a whole packet and matching manifests, the verifier cannot independently establish the original source provenance, legitimate randomness, reviewer independence, or qualified source ownership. These require separate signed source chain-of-custody and external-review governance before use.
 

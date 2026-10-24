@@ -80,6 +80,16 @@ try{
  assert.equal(fingerprintResult.status,0,fingerprintResult.stderr);
  assert.ok(fingerprintResult.stdout.includes(receipt.rootSHA256));
  assert.ok(!fingerprintResult.stdout.includes("cmp-"));
+ const accepted=spawnSync(process.execPath,[...args,"--expect-fingerprint",
+  receipt.rootSHA256],{encoding:"utf8",timeout:30000});
+ assert.equal(accepted.status,0,accepted.stderr);
+ assert.match(accepted.stdout,/fingerprint matches/);
+ const wrong=spawnSync(process.execPath,[...args,"--expect-fingerprint",
+  "0".repeat(64)],{encoding:"utf8",timeout:30000});
+ assert.notEqual(wrong.status,0,"Incorrect externally held fingerprint must be refused");
+ const malformed=spawnSync(process.execPath,[...args,"--expect-fingerprint",
+  "../invalid"],{encoding:"utf8",timeout:30000});
+ assert.notEqual(malformed.status,0,"Non-SHA-256 reference must be refused");
  assert.throws(()=>verifyOfflinePacket(path.relative(process.cwd(),directory)),
   /absolute/);
  alterManifest(m=>{m.summary.participantResponses=1;});
