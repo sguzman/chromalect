@@ -32,7 +32,7 @@ A transferred packet can then be checked against that independently held value:
 
     node tools/glyph-pipeline/source_owner_local_packet_verify.mjs --packet-dir /absolute/local/copied-packet --expect-fingerprint PUBLISHED_SHA256
 
-A mismatch causes a nonzero exit status. Neither the comparison nor the receipt authenticates who created the packet or verifies any reviewer decisions. The receipt is unsigned, is not a source-authenticity attestation, and can be recomputed by anyone who changes the entire packet.
+A mismatch causes a nonzero exit status. Neither the comparison nor the receipt authenticates who created the packet or verifies any reviewer decisions. The receipt is written **last**, after the private coordinator file has been created and flushed; its presence therefore indicates that a normal export reached its final stage. A sudden process termination or power loss can still leave incomplete files, which must be checked with both verifiers before use. The receipt is unsigned, is not a source-authenticity attestation, and can be recomputed by anyone who changes the entire packet.
 
 The verifier establishes **internal packet consistency only**: if someone deliberately regenerates a whole packet and matching manifests, the verifier cannot independently establish the original source provenance, legitimate randomness, reviewer independence, or qualified source ownership. These require separate signed source chain-of-custody and external-review governance before use.
 

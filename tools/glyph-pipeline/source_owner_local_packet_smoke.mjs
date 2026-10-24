@@ -90,6 +90,25 @@ try{
    "Malformed programmatic packet must be refused before any output");
   assert.ok(!fs.existsSync(output)&&!fs.existsSync(key));
  }
+ const barrierReview=path.join(tmp,"barrier-review");
+ const barrierKey=path.join(tmp,"barrier-private.json");
+ const realOpenSync=fs.openSync;
+ let observed=false;
+ fs.openSync=function(filename,...args){
+  if(filename===barrierKey){
+   observed=true;
+   assert.ok(!fs.existsSync(path.join(barrierReview,"integrity-v0.1.json")),
+    "Receipt must not exist before the source-coordinator key is opened");
+   assert.ok(fs.existsSync(path.join(barrierReview,"index-v0.1.json")));
+  }
+  return realOpenSync(filename,...args);
+ };
+ try{
+  writeOfflinePacket(built,barrierReview,barrierKey);
+ }finally{fs.openSync=realOpenSync;}
+ assert.ok(observed);
+ assert.ok(fs.existsSync(path.join(barrierReview,"integrity-v0.1.json")));
+ assert.ok(fs.existsSync(barrierKey));
  const incompleteReview=path.join(tmp,"incomplete-public");
  const incompleteKey=path.join(tmp,"incomplete-private.json");
  const originalWrite=fs.writeFileSync;

@@ -251,14 +251,19 @@ export function writeOfflinePacket(packet,reviewerDir,privateCoordinatorFile){
    ...packet.files
   ]);
   const receipt=buildOfflinePacketReceipt(packet.manifest.packetSession,parts);
-  exclusive(path.join(review,RECEIPT_FILE),encode(receipt));
-  // Create the private key file exclusively; recover even from a partial write.
+  // The private crosswalk must exist before the reviewer packet receives a
+  // complete receipt marker. Both files are created exclusively.
   const fd=fs.openSync(mapping,"wx",0o600);
   keyCreated=true;
   try{
    fs.writeFileSync(fd,encode(packet.coordinatorMap),{encoding:"utf8"});
    fs.fsyncSync(fd);
   }finally{fs.closeSync(fd);}
+  const receiptFd=fs.openSync(path.join(review,RECEIPT_FILE),"wx",0o600);
+  try{
+   fs.writeFileSync(receiptFd,encode(receipt),{encoding:"utf8"});
+   fs.fsyncSync(receiptFd);
+  }finally{fs.closeSync(receiptFd);}
  }catch(e){
   const errors=[e];
   if(keyCreated){
