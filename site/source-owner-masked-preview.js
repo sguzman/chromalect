@@ -4,6 +4,7 @@
 (() => {
 "use strict";
 const preview=globalThis.ChromalectMaskedSourcePreview;
+const neutralSVG=globalThis.ChromalectNeutralRegionSVG;
 const $=id=>document.getElementById(id);
 const ids=["om-status","om-cohort","om-pair","om-size","om-count","om-meta",
  "om-grid","om-native","om-a","om-b","om-a-form","om-b-form",
@@ -34,12 +35,18 @@ function retireImages(){
  $("om-a").removeAttribute("src");
  $("om-b").removeAttribute("src");
 }
-async function fetchVerifiedMask(candidate,signal){
+async function fetchVerifiedMask(candidate,sourceStrokePaths,signal){
  if(!globalThis.crypto?.subtle?.digest||!URL.createObjectURL||!URL.revokeObjectURL)
   throw Error("Browser SHA-256 or verified-image display unavailable");
+ if(!neutralSVG?.validate||typeof TextDecoder!=="function")
+  throw Error("Neutral SVG safety validator unavailable");
+ const checkSVG=bytes=>neutralSVG.validate(
+  new TextDecoder("utf-8",{fatal:true}).decode(bytes),
+  sourceStrokePaths,candidate.highlightedPaths);
  if(signal?.aborted)throw Error("Superseded source-region request");
  const previous=verifiedMaskCache.get(candidate.svg);
  if(previous&&previous.sha256===candidate.sha256){
+  checkSVG(previous.bytes);
   verifiedMaskCache.delete(candidate.svg);
   verifiedMaskCache.set(candidate.svg,previous);
   return previous.bytes;
@@ -52,6 +59,7 @@ async function fetchVerifiedMask(candidate,signal){
  const digest=await crypto.subtle.digest("SHA-256",buffer);
  const actual=Array.from(new Uint8Array(digest),b=>b.toString(16).padStart(2,"0")).join("");
  if(actual!==candidate.sha256)throw Error("Neutral source SVG SHA-256 mismatch");
+ checkSVG(buffer);
  if(signal?.aborted)throw Error("Superseded source-region request");
  verifiedMaskCache.delete(candidate.svg);
  verifiedMaskCache.set(candidate.svg,{sha256:actual,bytes:buffer});
@@ -79,7 +87,7 @@ async function selectPair(id){
  updateNavigation();
  message("Checking both neutral SVG SHA-256 digests before display.");
  try{
-  const verified=await Promise.all(target.candidates.map(c=>fetchVerifiedMask(c,signal)));
+  const verified=await Promise.all(target.candidates.map(c=>fetchVerifiedMask(c,target.sourceStrokePaths,signal)));
   if(version!==requestVersion)return;
   const urls=[];
   try{

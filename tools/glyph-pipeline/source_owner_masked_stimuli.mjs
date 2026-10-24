@@ -6,6 +6,8 @@ import path from "node:path";
 import {createHash} from "node:crypto";
 import {pathToFileURL} from "node:url";
 import {deriveComplementLocators} from "./component_owner_complement_locators.mjs";
+import "../../site/source-owner-neutral-svg-contract.js";
+const validateNeutral=globalThis.ChromalectNeutralRegionSVG.validate;
 const ROOT="glyphs/research/owner-masked-stimuli-v0.1";
 const TARGET="glyphs/research/heldout-identification-target-v0.1/index-v0.1.json";
 const PATH=/<path d="([^"]+)" fill="(#[0-9A-Fa-f]{6})" data-component="(cmp-\d{4})"\/>/g;
@@ -62,6 +64,7 @@ export function deriveMaskedStimuli(source,readSVG){
    assert.ok(!(highlighted[0][i]&&highlighted[1][i]),
     "Disjoint source owner regions must remain disjoint");
   const candidates=owned.map((x,i)=>{
+   validateNeutral(x.neutral.svg,t.sourceStrokePaths,highlighted[i].filter(Boolean).length);
    const slot=i===0?"A":"B";
    const name=t.id+"--"+slot+".svg";
    files.set(name,x.neutral.svg);
