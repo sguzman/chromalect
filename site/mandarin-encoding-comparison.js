@@ -6,7 +6,7 @@ const $=id=>document.getElementById(id);
 const ns="http://www.w3.org/2000/svg";
 const required=["comparison-rank","comparison-reading","comparison-prev","comparison-next",
  "comparison-color","comparison-ipa","comparison-status","comparison-count","comparison-source",
- "comparison-plain","comparison-letters","comparison-working"];
+ "comparison-plain","comparison-letters","comparison-working","comparison-sourced-ipa"];
 if(required.some(id=>!$(id)))return;
 const placePaths={
  bilabial:"M10 26 C10 8 90 8 90 26 C90 44 10 44 10 26 Z",
@@ -26,7 +26,8 @@ const mannerPaths={
 };
 const breathPaths={unaspirated:"M102 19 V33",aspirated:"M100 16 L108 24 L100 32 M110 16 L118 24 L110 32"};
 let citation=[],initials=new Map(),finals=new Map(),symbols=new Map(),primitive=[],risk=new Map(),
- simple=new Map(),toneSymbols={},palette={},cohort=null,selected=0;
+ simple=new Map(),ipaInitials=new Map(),ipaPeerInitials=new Map(),ipaFinals=new Map(),
+ toneSymbols={},palette={},cohort=null,selected=0;
 const get=(tag,text,klass)=>{
  const e=document.createElement(tag);e.textContent=text;
  if(klass)e.className=klass;return e;
@@ -91,7 +92,7 @@ function render(){
  $("comparison-rank").value=String(c.rank);
  $("comparison-source").textContent="Rank "+c.rank+" · "+c.character+
   " · "+r.display+" · source citation only · T"+r.tone;
- const cards=["comparison-plain","comparison-letters","comparison-working"].map(id=>$(id));
+ const cards=["comparison-plain","comparison-letters","comparison-working","comparison-sourced-ipa"].map(id=>$(id));
  cards.forEach((panel)=>{
   panel.replaceChildren();
   panel.appendChild(get("div",c.character,"comparison-native"));
@@ -142,6 +143,33 @@ function render(){
   " (among 27 deferred final spellings).","comparison-withheld"));
  cards[2].appendChild(get("p","Citation-tone label T"+r.tone+" · "+
   toneSymbols[String(r.tone)]+" · no contextual pitch claim","comparison-note"));
+ const citedInitial=ipaInitials.get(r.initial);
+ const peerInitial=ipaPeerInitials.get(r.initial);
+ const candidates=ipaFinals.get(r.final);
+ if(!candidates)throw Error("No source IPA comparison for written final");
+ const ipaLane=cards[3];
+ ipaLane.appendChild(get("p","These are independent source headings, not a composed syllable IPA transcription.","comparison-note"));
+ if(citedInitial&&peerInitial){
+  ipaLane.appendChild(get("div","Pinyin initial "+r.initial+
+   ": Lin ["+citedInitial.linReportedIPA+"] · Mei ["+citedInitial.meiReportedIPA+
+   "] · Cai ["+citedInitial.caiSuggestedIPA+"] · Zhao–Li ["+peerInitial.zhaoLiIPA+"]",
+   "comparison-ipa-source"));
+ }else ipaLane.appendChild(get("p",
+  "Written onset "+r.initial+" is not an independent consonantal IPA category in these source tables.",
+  "comparison-note"));
+ ipaLane.appendChild(get("div","Written final "+r.final+": "+
+  candidates.sourceTableIPAOptions.map(item=>item.sourceTableRow+
+   " ["+item.caiProposedNotation+"]").join(" · "),"comparison-ipa-source"));
+ if(candidates.sourceTableRowChoiceRequiresPhoneticContext||
+    status==="working_candidate_withheld_context_warning")
+  ipaLane.appendChild(get("p","Context-conditional source notation: no unique IPA final assigned.",
+   "comparison-withheld"));
+ else ipaLane.appendChild(get("p",
+  "A source table-heading option is available; no source-specific acoustic verification.",
+  "comparison-note"));
+ ipaLane.appendChild(get("p",
+  "Cai (2020) choral diction, Zhao–Li (2009) phonological model; source proposal status only.",
+  "comparison-note"));
  const state=cohort.states.find(s=>s.key===status);
  $("comparison-count").textContent=state.sourceReadingCount+" / 1,171 source readings in this "+
   "visual-eligibility state. Zero independently verified speech decodings.";
@@ -169,10 +197,14 @@ async function load(){
    "phonetics/mandarin-initial-feature-candidates-v0.1.json",
    "phonetics/mandarin-simple-final-feature-candidates-v0.1.json",
    "phonetics/mandarin-final-spelling-context-gates-v0.1.json",
-   "phonetics/written-final-symbol-control-v0.1.json","layers-v0.1.json"];
+   "phonetics/written-final-symbol-control-v0.1.json","layers-v0.1.json",
+   "phonetics/mandarin-pinyin-ipa-source-disagreement-v0.1.json",
+   "phonetics/zhao-li-2009-independent-pinyin-ipa-control-v0.1.json",
+   "phonetics/mandarin-written-final-ipa-source-crosswalk-v0.1.json"];
   const res=await Promise.all(urls.map(u=>fetch(u)));
   if(res.some(r=>!r.ok))throw Error("Published citation or experimental source missing");
-  const [cit,groups,onset,six,flags,letters,layers]=await Promise.all(res.map(r=>r.json()));
+  const [cit,groups,onset,six,flags,letters,layers,cai,zhao,ipaFinalsSource]=
+   await Promise.all(res.map(r=>r.json()));
   if(cit.schema!=="chromalect.pronunciation-citations.v0"||
      cit.tranche!=="0001-1000"||cit.characters.length!==1000||
      groups.schema!=="chromalect.phonetics.mandarin-encoding-comparison-cohorts.v0.1"||
@@ -195,10 +227,42 @@ async function load(){
      flags.summary.independentlyAdjudicatedFinalPhonemes!==0||
      letters.schema!=="chromalect.phonetics.written-final-symbol-control.v0.1"||
      letters.summary.humanSymbolDecodingTrials!==0||
-     layers.schema!=="chromalect.presentation-layers.v0")
+     layers.schema!=="chromalect.presentation-layers.v0"||
+     cai.schema!=="chromalect.phonetics.mandarin-pinyin-ipa-source-disagreement.v0.1"||
+     cai.status!=="diction_guide_reports_multiple_ipa_conventions_not_a_single_certified_phonemic_inventory"||
+     cai.initials.length!==21||cai.simples.length!==6||
+     cai.counts.independentPhonemicContrastApprovals!==0||
+     cai.counts.humanDecodingTrials!==0||
+     zhao.schema!=="chromalect.phonetics.zhao-li-2009-independent-pinyin-ipa-control.v0.1"||
+     zhao.initials.length!==21||zhao.summary.independentlyFrozenPhonemicContrasts!==0||
+     zhao.summary.independentAcousticMeasurements!==0||
+     ipaFinalsSource.schema!=="chromalect.phonetics.mandarin-written-final-ipa-source-crosswalk.v0.1"||
+     ipaFinalsSource.status!=="source_editorial_ipa_labels_not_attested_contextual_or_phonemic_realizations"||
+     ipaFinalsSource.summary.sourceWrittenFinalTypes!==33||
+     ipaFinalsSource.summary.sourceCitationOccurrences!==1171||
+     ipaFinalsSource.summary.contextualIPARealizationApprovals!==0||
+     ipaFinalsSource.summary.phonologicalRepresentationApprovals!==0)
     throw Error("Source comparison evidence differs or incorrectly claims approval");
   initials=new Map(onset.tokens.map(x=>[x.token,x]));
   simple=new Map(six.records.map(x=>[x.token,x]));
+  ipaInitials=new Map(cai.initials.map(x=>[x.pinyinInitial,x]));
+  ipaPeerInitials=new Map(zhao.initials.map(x=>[x.pinyinInitial,x]));
+  ipaFinals=new Map(ipaFinalsSource.records.map(x=>[x.writtenFinal,x]));
+  if(ipaInitials.size!==21||ipaPeerInitials.size!==21||ipaFinals.size!==33)
+   throw Error("Incomplete source-qualified IPA comparison");
+  for(const [token,ref] of ipaInitials){
+   if(!ipaPeerInitials.has(token)||!onset.tokens.some(x=>
+    x.token===token&&x.workingIPACandidate===ref.originalWorkingCandidate))
+    throw Error("Source-reported initial differs from existing codebook");
+  }
+  for(const [token,ref] of ipaFinals){
+   if(!letters.records.some(x=>x.token===token&&
+      JSON.stringify(x.symbolLetters)===JSON.stringify(ref.geometricalWrittenLetters))||
+      ref.contextualIPAAdjudication!=="not_done"||
+      ref.candidateFullSyllableIPAAsserted!==false||
+      ref.hasApprovedFeaturalGrapheme!==false)
+    throw Error("IPA written-final comparison conflicts with original source geometry");
+  }
   risk=new Map();
   for(const row of flags.records){
    if(row.independentIPAAnalysisApproved!==false)throw Error("Context source unreviewed status falsified");
@@ -232,7 +296,8 @@ async function load(){
    const c=cit.characters[i];
    if(c.rank!==i+1)throw Error("Source rank changed");
    for(const r of c.readings){
-    if(!initials.has(r.initial)||!symbols.has(r.final)||!Object.hasOwn(toneSymbols,String(r.tone)))
+    if(!initials.has(r.initial)||!symbols.has(r.final)||!ipaFinals.has(r.final)||
+       !Object.hasOwn(toneSymbols,String(r.tone)))
      throw Error("An existing written citation has no source-backed representation");
     const code=classification(r);
     counts.set(code,counts.get(code)+1);total++;
@@ -253,7 +318,7 @@ async function load(){
    else choose(1);
   }else choose(1);
  }catch(e){
-  citation=[];for(const id of ["comparison-plain","comparison-letters","comparison-working"])
+  citation=[];for(const id of ["comparison-plain","comparison-letters","comparison-working","comparison-sourced-ipa"])
    $(id).replaceChildren();
   $("comparison-status").textContent="Unable to verify source comparison: "+e.message;
   $("comparison-count").textContent="No source-verified comparison readings";
