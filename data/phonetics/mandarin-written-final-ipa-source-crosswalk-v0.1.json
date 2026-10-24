@@ -1,0 +1,740 @@
+{
+  "schema": "chromalect.phonetics.mandarin-written-final-ipa-source-crosswalk.v0.1",
+  "status": "source_editorial_ipa_labels_not_attested_contextual_or_phonemic_realizations",
+  "source": {
+    "author": "Hana J. Cai",
+    "reference": "Making Chinese Choral Music Accessible in the United States: A Standardized IPA Guide for Chinese-Language Works",
+    "year": 2020,
+    "publisher": "Indiana University",
+    "documentURI": "https://scholarworks.iu.edu/iuswrrest/api/core/bitstreams/9dc66f3c-a3fb-4221-a9a6-815a1c4811a0/content",
+    "originalTable": "Table 3, printed pp. 27–29, PDF pp. 36–38",
+    "originalTableTextOrImagesRedistributed": false
+  },
+  "bases": {
+    "writtenFinalRegistry": "written-final-symbol-control-v0.1.json",
+    "sourceCitationTranche": "site/pronunciation-citations-0001-1000.json",
+    "experimentalVowelFeatures": "mandarin-simple-final-feature-candidates-v0.1.json",
+    "paletteOrGlyphGeometryChanged": false,
+    "totalFirstTrancheCitations": 1171
+  },
+  "summary": {
+    "sourceWrittenFinalTypes": 33,
+    "sourceCitationOccurrences": 1171,
+    "sourceEditorialIPAOptionEntries": 37,
+    "simpleWrittenVowelFeatureHypotheses": 6,
+    "complexWrittenFinalsWithoutVowelFeatureProposal": 27,
+    "writtenFinalTypesWithMultipleCandidateTableRows": 6,
+    "phonologicalRepresentationApprovals": 0,
+    "contextualIPARealizationApprovals": 0,
+    "humanIPAComprehensionTrials": 0
+  },
+  "records": [
+    {
+      "writtenFinal": "a",
+      "sourceCitationOccurrences": 72,
+      "geometricalWrittenLetters": [
+        "a"
+      ],
+      "hasApprovedFeaturalGrapheme": false,
+      "workingSimpleVowelCandidateAvailable": true,
+      "sourceTableIPAOptions": [
+        {
+          "sourceTableRow": "a",
+          "caiProposedNotation": "a",
+          "sourcePrintedPage": 27
+        }
+      ],
+      "sourceTableRowChoiceRequiresPhoneticContext": false,
+      "contextualIPAAdjudication": "not_done",
+      "candidateFullSyllableIPAAsserted": false
+    },
+    {
+      "writtenFinal": "ai",
+      "sourceCitationOccurrences": 38,
+      "geometricalWrittenLetters": [
+        "a",
+        "i"
+      ],
+      "hasApprovedFeaturalGrapheme": false,
+      "workingSimpleVowelCandidateAvailable": false,
+      "sourceTableIPAOptions": [
+        {
+          "sourceTableRow": "ai",
+          "caiProposedNotation": "a:ɪ",
+          "sourcePrintedPage": 27
+        }
+      ],
+      "sourceTableRowChoiceRequiresPhoneticContext": false,
+      "contextualIPAAdjudication": "not_done",
+      "candidateFullSyllableIPAAsserted": false
+    },
+    {
+      "writtenFinal": "an",
+      "sourceCitationOccurrences": 60,
+      "geometricalWrittenLetters": [
+        "a",
+        "n"
+      ],
+      "hasApprovedFeaturalGrapheme": false,
+      "workingSimpleVowelCandidateAvailable": false,
+      "sourceTableIPAOptions": [
+        {
+          "sourceTableRow": "an",
+          "caiProposedNotation": "an",
+          "sourcePrintedPage": 27
+        }
+      ],
+      "sourceTableRowChoiceRequiresPhoneticContext": false,
+      "contextualIPAAdjudication": "not_done",
+      "candidateFullSyllableIPAAsserted": false
+    },
+    {
+      "writtenFinal": "ang",
+      "sourceCitationOccurrences": 60,
+      "geometricalWrittenLetters": [
+        "a",
+        "n",
+        "g"
+      ],
+      "hasApprovedFeaturalGrapheme": false,
+      "workingSimpleVowelCandidateAvailable": false,
+      "sourceTableIPAOptions": [
+        {
+          "sourceTableRow": "ang",
+          "caiProposedNotation": "aŋ",
+          "sourcePrintedPage": 27
+        }
+      ],
+      "sourceTableRowChoiceRequiresPhoneticContext": false,
+      "contextualIPAAdjudication": "not_done",
+      "candidateFullSyllableIPAAsserted": false
+    },
+    {
+      "writtenFinal": "ao",
+      "sourceCitationOccurrences": 50,
+      "geometricalWrittenLetters": [
+        "a",
+        "o"
+      ],
+      "hasApprovedFeaturalGrapheme": false,
+      "workingSimpleVowelCandidateAvailable": false,
+      "sourceTableIPAOptions": [
+        {
+          "sourceTableRow": "ao",
+          "caiProposedNotation": "ɑ:ʊ",
+          "sourcePrintedPage": 27
+        }
+      ],
+      "sourceTableRowChoiceRequiresPhoneticContext": false,
+      "contextualIPAAdjudication": "not_done",
+      "candidateFullSyllableIPAAsserted": false
+    },
+    {
+      "writtenFinal": "e",
+      "sourceCitationOccurrences": 45,
+      "geometricalWrittenLetters": [
+        "e"
+      ],
+      "hasApprovedFeaturalGrapheme": false,
+      "workingSimpleVowelCandidateAvailable": true,
+      "sourceTableIPAOptions": [
+        {
+          "sourceTableRow": "e",
+          "caiProposedNotation": "ɤ:ə",
+          "sourcePrintedPage": 27
+        }
+      ],
+      "sourceTableRowChoiceRequiresPhoneticContext": false,
+      "contextualIPAAdjudication": "not_done",
+      "candidateFullSyllableIPAAsserted": false
+    },
+    {
+      "writtenFinal": "ei",
+      "sourceCitationOccurrences": 25,
+      "geometricalWrittenLetters": [
+        "e",
+        "i"
+      ],
+      "hasApprovedFeaturalGrapheme": false,
+      "workingSimpleVowelCandidateAvailable": false,
+      "sourceTableIPAOptions": [
+        {
+          "sourceTableRow": "ei",
+          "caiProposedNotation": "e:ɪ",
+          "sourcePrintedPage": 27
+        }
+      ],
+      "sourceTableRowChoiceRequiresPhoneticContext": false,
+      "contextualIPAAdjudication": "not_done",
+      "candidateFullSyllableIPAAsserted": false
+    },
+    {
+      "writtenFinal": "en",
+      "sourceCitationOccurrences": 42,
+      "geometricalWrittenLetters": [
+        "e",
+        "n"
+      ],
+      "hasApprovedFeaturalGrapheme": false,
+      "workingSimpleVowelCandidateAvailable": false,
+      "sourceTableIPAOptions": [
+        {
+          "sourceTableRow": "en",
+          "caiProposedNotation": "ɤn",
+          "sourcePrintedPage": 27
+        }
+      ],
+      "sourceTableRowChoiceRequiresPhoneticContext": false,
+      "contextualIPAAdjudication": "not_done",
+      "candidateFullSyllableIPAAsserted": false
+    },
+    {
+      "writtenFinal": "eng",
+      "sourceCitationOccurrences": 27,
+      "geometricalWrittenLetters": [
+        "e",
+        "n",
+        "g"
+      ],
+      "hasApprovedFeaturalGrapheme": false,
+      "workingSimpleVowelCandidateAvailable": false,
+      "sourceTableIPAOptions": [
+        {
+          "sourceTableRow": "eng",
+          "caiProposedNotation": "ɤŋ",
+          "sourcePrintedPage": 27
+        }
+      ],
+      "sourceTableRowChoiceRequiresPhoneticContext": false,
+      "contextualIPAAdjudication": "not_done",
+      "candidateFullSyllableIPAAsserted": false
+    },
+    {
+      "writtenFinal": "er",
+      "sourceCitationOccurrences": 5,
+      "geometricalWrittenLetters": [
+        "e",
+        "r"
+      ],
+      "hasApprovedFeaturalGrapheme": false,
+      "workingSimpleVowelCandidateAvailable": false,
+      "sourceTableIPAOptions": [
+        {
+          "sourceTableRow": "er",
+          "caiProposedNotation": "ar",
+          "sourcePrintedPage": 27
+        }
+      ],
+      "sourceTableRowChoiceRequiresPhoneticContext": false,
+      "contextualIPAAdjudication": "not_done",
+      "candidateFullSyllableIPAAsserted": false
+    },
+    {
+      "writtenFinal": "i",
+      "sourceCitationOccurrences": 168,
+      "geometricalWrittenLetters": [
+        "i"
+      ],
+      "hasApprovedFeaturalGrapheme": false,
+      "workingSimpleVowelCandidateAvailable": true,
+      "sourceTableIPAOptions": [
+        {
+          "sourceTableRow": "i",
+          "caiProposedNotation": "i",
+          "sourcePrintedPage": 27
+        },
+        {
+          "sourceTableRow": "i-retroflex",
+          "caiProposedNotation": "ɹ̩",
+          "sourcePrintedPage": 27
+        }
+      ],
+      "sourceTableRowChoiceRequiresPhoneticContext": true,
+      "contextualIPAAdjudication": "not_done",
+      "candidateFullSyllableIPAAsserted": false
+    },
+    {
+      "writtenFinal": "ia",
+      "sourceCitationOccurrences": 9,
+      "geometricalWrittenLetters": [
+        "i",
+        "a"
+      ],
+      "hasApprovedFeaturalGrapheme": false,
+      "workingSimpleVowelCandidateAvailable": false,
+      "sourceTableIPAOptions": [
+        {
+          "sourceTableRow": "ia",
+          "caiProposedNotation": "ja",
+          "sourcePrintedPage": 27
+        }
+      ],
+      "sourceTableRowChoiceRequiresPhoneticContext": false,
+      "contextualIPAAdjudication": "not_done",
+      "candidateFullSyllableIPAAsserted": false
+    },
+    {
+      "writtenFinal": "ian",
+      "sourceCitationOccurrences": 31,
+      "geometricalWrittenLetters": [
+        "i",
+        "a",
+        "n"
+      ],
+      "hasApprovedFeaturalGrapheme": false,
+      "workingSimpleVowelCandidateAvailable": false,
+      "sourceTableIPAOptions": [
+        {
+          "sourceTableRow": "ian",
+          "caiProposedNotation": "jɛn",
+          "sourcePrintedPage": 27
+        }
+      ],
+      "sourceTableRowChoiceRequiresPhoneticContext": false,
+      "contextualIPAAdjudication": "not_done",
+      "candidateFullSyllableIPAAsserted": false
+    },
+    {
+      "writtenFinal": "iang",
+      "sourceCitationOccurrences": 11,
+      "geometricalWrittenLetters": [
+        "i",
+        "a",
+        "n",
+        "g"
+      ],
+      "hasApprovedFeaturalGrapheme": false,
+      "workingSimpleVowelCandidateAvailable": false,
+      "sourceTableIPAOptions": [
+        {
+          "sourceTableRow": "iang",
+          "caiProposedNotation": "jɑŋ",
+          "sourcePrintedPage": 28
+        }
+      ],
+      "sourceTableRowChoiceRequiresPhoneticContext": false,
+      "contextualIPAAdjudication": "not_done",
+      "candidateFullSyllableIPAAsserted": false
+    },
+    {
+      "writtenFinal": "iao",
+      "sourceCitationOccurrences": 22,
+      "geometricalWrittenLetters": [
+        "i",
+        "a",
+        "o"
+      ],
+      "hasApprovedFeaturalGrapheme": false,
+      "workingSimpleVowelCandidateAvailable": false,
+      "sourceTableIPAOptions": [
+        {
+          "sourceTableRow": "iao",
+          "caiProposedNotation": "jɑ:ʊ",
+          "sourcePrintedPage": 28
+        }
+      ],
+      "sourceTableRowChoiceRequiresPhoneticContext": false,
+      "contextualIPAAdjudication": "not_done",
+      "candidateFullSyllableIPAAsserted": false
+    },
+    {
+      "writtenFinal": "ie",
+      "sourceCitationOccurrences": 21,
+      "geometricalWrittenLetters": [
+        "i",
+        "e"
+      ],
+      "hasApprovedFeaturalGrapheme": false,
+      "workingSimpleVowelCandidateAvailable": false,
+      "sourceTableIPAOptions": [
+        {
+          "sourceTableRow": "ie",
+          "caiProposedNotation": "jɛ",
+          "sourcePrintedPage": 28
+        }
+      ],
+      "sourceTableRowChoiceRequiresPhoneticContext": false,
+      "contextualIPAAdjudication": "not_done",
+      "candidateFullSyllableIPAAsserted": false
+    },
+    {
+      "writtenFinal": "in",
+      "sourceCitationOccurrences": 27,
+      "geometricalWrittenLetters": [
+        "i",
+        "n"
+      ],
+      "hasApprovedFeaturalGrapheme": false,
+      "workingSimpleVowelCandidateAvailable": false,
+      "sourceTableIPAOptions": [
+        {
+          "sourceTableRow": "in",
+          "caiProposedNotation": "in",
+          "sourcePrintedPage": 28
+        }
+      ],
+      "sourceTableRowChoiceRequiresPhoneticContext": false,
+      "contextualIPAAdjudication": "not_done",
+      "candidateFullSyllableIPAAsserted": false
+    },
+    {
+      "writtenFinal": "ing",
+      "sourceCitationOccurrences": 45,
+      "geometricalWrittenLetters": [
+        "i",
+        "n",
+        "g"
+      ],
+      "hasApprovedFeaturalGrapheme": false,
+      "workingSimpleVowelCandidateAvailable": false,
+      "sourceTableIPAOptions": [
+        {
+          "sourceTableRow": "ing",
+          "caiProposedNotation": "iŋ",
+          "sourcePrintedPage": 28
+        }
+      ],
+      "sourceTableRowChoiceRequiresPhoneticContext": false,
+      "contextualIPAAdjudication": "not_done",
+      "candidateFullSyllableIPAAsserted": false
+    },
+    {
+      "writtenFinal": "iong",
+      "sourceCitationOccurrences": 5,
+      "geometricalWrittenLetters": [
+        "i",
+        "o",
+        "n",
+        "g"
+      ],
+      "hasApprovedFeaturalGrapheme": false,
+      "workingSimpleVowelCandidateAvailable": false,
+      "sourceTableIPAOptions": [
+        {
+          "sourceTableRow": "iong",
+          "caiProposedNotation": "joŋ",
+          "sourcePrintedPage": 28
+        }
+      ],
+      "sourceTableRowChoiceRequiresPhoneticContext": false,
+      "contextualIPAAdjudication": "not_done",
+      "candidateFullSyllableIPAAsserted": false
+    },
+    {
+      "writtenFinal": "iu",
+      "sourceCitationOccurrences": 24,
+      "geometricalWrittenLetters": [
+        "i",
+        "u"
+      ],
+      "hasApprovedFeaturalGrapheme": false,
+      "workingSimpleVowelCandidateAvailable": false,
+      "sourceTableIPAOptions": [
+        {
+          "sourceTableRow": "iou",
+          "caiProposedNotation": "jɔ:ʊ",
+          "sourcePrintedPage": 28
+        }
+      ],
+      "sourceTableRowChoiceRequiresPhoneticContext": false,
+      "contextualIPAAdjudication": "not_done",
+      "candidateFullSyllableIPAAsserted": false
+    },
+    {
+      "writtenFinal": "o",
+      "sourceCitationOccurrences": 16,
+      "geometricalWrittenLetters": [
+        "o"
+      ],
+      "hasApprovedFeaturalGrapheme": false,
+      "workingSimpleVowelCandidateAvailable": true,
+      "sourceTableIPAOptions": [
+        {
+          "sourceTableRow": "o",
+          "caiProposedNotation": "ɔ",
+          "sourcePrintedPage": 28
+        },
+        {
+          "sourceTableRow": "uo",
+          "caiProposedNotation": "wɔ",
+          "sourcePrintedPage": 29
+        }
+      ],
+      "sourceTableRowChoiceRequiresPhoneticContext": true,
+      "contextualIPAAdjudication": "not_done",
+      "candidateFullSyllableIPAAsserted": false
+    },
+    {
+      "writtenFinal": "ong",
+      "sourceCitationOccurrences": 47,
+      "geometricalWrittenLetters": [
+        "o",
+        "n",
+        "g"
+      ],
+      "hasApprovedFeaturalGrapheme": false,
+      "workingSimpleVowelCandidateAvailable": false,
+      "sourceTableIPAOptions": [
+        {
+          "sourceTableRow": "ong",
+          "caiProposedNotation": "oŋ",
+          "sourcePrintedPage": 28
+        },
+        {
+          "sourceTableRow": "iong",
+          "caiProposedNotation": "joŋ",
+          "sourcePrintedPage": 28
+        }
+      ],
+      "sourceTableRowChoiceRequiresPhoneticContext": true,
+      "contextualIPAAdjudication": "not_done",
+      "candidateFullSyllableIPAAsserted": false
+    },
+    {
+      "writtenFinal": "ou",
+      "sourceCitationOccurrences": 44,
+      "geometricalWrittenLetters": [
+        "o",
+        "u"
+      ],
+      "hasApprovedFeaturalGrapheme": false,
+      "workingSimpleVowelCandidateAvailable": false,
+      "sourceTableIPAOptions": [
+        {
+          "sourceTableRow": "ou",
+          "caiProposedNotation": "o:ʊ",
+          "sourcePrintedPage": 28
+        }
+      ],
+      "sourceTableRowChoiceRequiresPhoneticContext": false,
+      "contextualIPAAdjudication": "not_done",
+      "candidateFullSyllableIPAAsserted": false
+    },
+    {
+      "writtenFinal": "u",
+      "sourceCitationOccurrences": 128,
+      "geometricalWrittenLetters": [
+        "u"
+      ],
+      "hasApprovedFeaturalGrapheme": false,
+      "workingSimpleVowelCandidateAvailable": true,
+      "sourceTableIPAOptions": [
+        {
+          "sourceTableRow": "u",
+          "caiProposedNotation": "u",
+          "sourcePrintedPage": 28
+        },
+        {
+          "sourceTableRow": "ü",
+          "caiProposedNotation": "y",
+          "sourcePrintedPage": 29
+        }
+      ],
+      "sourceTableRowChoiceRequiresPhoneticContext": true,
+      "contextualIPAAdjudication": "not_done",
+      "candidateFullSyllableIPAAsserted": false
+    },
+    {
+      "writtenFinal": "ua",
+      "sourceCitationOccurrences": 11,
+      "geometricalWrittenLetters": [
+        "u",
+        "a"
+      ],
+      "hasApprovedFeaturalGrapheme": false,
+      "workingSimpleVowelCandidateAvailable": false,
+      "sourceTableIPAOptions": [
+        {
+          "sourceTableRow": "ua",
+          "caiProposedNotation": "wa",
+          "sourcePrintedPage": 28
+        }
+      ],
+      "sourceTableRowChoiceRequiresPhoneticContext": false,
+      "contextualIPAAdjudication": "not_done",
+      "candidateFullSyllableIPAAsserted": false
+    },
+    {
+      "writtenFinal": "uai",
+      "sourceCitationOccurrences": 8,
+      "geometricalWrittenLetters": [
+        "u",
+        "a",
+        "i"
+      ],
+      "hasApprovedFeaturalGrapheme": false,
+      "workingSimpleVowelCandidateAvailable": false,
+      "sourceTableIPAOptions": [
+        {
+          "sourceTableRow": "uai",
+          "caiProposedNotation": "wa:ɪ",
+          "sourcePrintedPage": 28
+        }
+      ],
+      "sourceTableRowChoiceRequiresPhoneticContext": false,
+      "contextualIPAAdjudication": "not_done",
+      "candidateFullSyllableIPAAsserted": false
+    },
+    {
+      "writtenFinal": "uan",
+      "sourceCitationOccurrences": 25,
+      "geometricalWrittenLetters": [
+        "u",
+        "a",
+        "n"
+      ],
+      "hasApprovedFeaturalGrapheme": false,
+      "workingSimpleVowelCandidateAvailable": false,
+      "sourceTableIPAOptions": [
+        {
+          "sourceTableRow": "uan",
+          "caiProposedNotation": "wan",
+          "sourcePrintedPage": 28
+        },
+        {
+          "sourceTableRow": "üan",
+          "caiProposedNotation": "ɥan",
+          "sourcePrintedPage": 29
+        }
+      ],
+      "sourceTableRowChoiceRequiresPhoneticContext": true,
+      "contextualIPAAdjudication": "not_done",
+      "candidateFullSyllableIPAAsserted": false
+    },
+    {
+      "writtenFinal": "uang",
+      "sourceCitationOccurrences": 14,
+      "geometricalWrittenLetters": [
+        "u",
+        "a",
+        "n",
+        "g"
+      ],
+      "hasApprovedFeaturalGrapheme": false,
+      "workingSimpleVowelCandidateAvailable": false,
+      "sourceTableIPAOptions": [
+        {
+          "sourceTableRow": "uang",
+          "caiProposedNotation": "wɑŋ",
+          "sourcePrintedPage": 28
+        }
+      ],
+      "sourceTableRowChoiceRequiresPhoneticContext": false,
+      "contextualIPAAdjudication": "not_done",
+      "candidateFullSyllableIPAAsserted": false
+    },
+    {
+      "writtenFinal": "ue",
+      "sourceCitationOccurrences": 10,
+      "geometricalWrittenLetters": [
+        "u",
+        "e"
+      ],
+      "hasApprovedFeaturalGrapheme": false,
+      "workingSimpleVowelCandidateAvailable": false,
+      "sourceTableIPAOptions": [
+        {
+          "sourceTableRow": "üe",
+          "caiProposedNotation": "ɥɤ",
+          "sourcePrintedPage": 29
+        }
+      ],
+      "sourceTableRowChoiceRequiresPhoneticContext": false,
+      "contextualIPAAdjudication": "not_done",
+      "candidateFullSyllableIPAAsserted": false
+    },
+    {
+      "writtenFinal": "ui",
+      "sourceCitationOccurrences": 19,
+      "geometricalWrittenLetters": [
+        "u",
+        "i"
+      ],
+      "hasApprovedFeaturalGrapheme": false,
+      "workingSimpleVowelCandidateAvailable": false,
+      "sourceTableIPAOptions": [
+        {
+          "sourceTableRow": "uei",
+          "caiProposedNotation": "we:ɪ",
+          "sourcePrintedPage": 28
+        }
+      ],
+      "sourceTableRowChoiceRequiresPhoneticContext": false,
+      "contextualIPAAdjudication": "not_done",
+      "candidateFullSyllableIPAAsserted": false
+    },
+    {
+      "writtenFinal": "un",
+      "sourceCitationOccurrences": 38,
+      "geometricalWrittenLetters": [
+        "u",
+        "n"
+      ],
+      "hasApprovedFeaturalGrapheme": false,
+      "workingSimpleVowelCandidateAvailable": false,
+      "sourceTableIPAOptions": [
+        {
+          "sourceTableRow": "uen",
+          "caiProposedNotation": "wɤn",
+          "sourcePrintedPage": 28
+        },
+        {
+          "sourceTableRow": "ün",
+          "caiProposedNotation": "ɥyn",
+          "sourcePrintedPage": 29
+        }
+      ],
+      "sourceTableRowChoiceRequiresPhoneticContext": true,
+      "contextualIPAAdjudication": "not_done",
+      "candidateFullSyllableIPAAsserted": false
+    },
+    {
+      "writtenFinal": "uo",
+      "sourceCitationOccurrences": 21,
+      "geometricalWrittenLetters": [
+        "u",
+        "o"
+      ],
+      "hasApprovedFeaturalGrapheme": false,
+      "workingSimpleVowelCandidateAvailable": false,
+      "sourceTableIPAOptions": [
+        {
+          "sourceTableRow": "uo",
+          "caiProposedNotation": "wɔ",
+          "sourcePrintedPage": 29
+        }
+      ],
+      "sourceTableRowChoiceRequiresPhoneticContext": false,
+      "contextualIPAAdjudication": "not_done",
+      "candidateFullSyllableIPAAsserted": false
+    },
+    {
+      "writtenFinal": "ü",
+      "sourceCitationOccurrences": 3,
+      "geometricalWrittenLetters": [
+        "ü"
+      ],
+      "hasApprovedFeaturalGrapheme": false,
+      "workingSimpleVowelCandidateAvailable": true,
+      "sourceTableIPAOptions": [
+        {
+          "sourceTableRow": "ü",
+          "caiProposedNotation": "y",
+          "sourcePrintedPage": 29
+        }
+      ],
+      "sourceTableRowChoiceRequiresPhoneticContext": false,
+      "contextualIPAAdjudication": "not_done",
+      "candidateFullSyllableIPAAsserted": false
+    }
+  ],
+  "cautions": [
+    "Each printed-table label is a singer-oriented editorial IPA proposal, not a phonemic or measured acoustic transcription.",
+    "The first-tranche parsing of y and w reflects written Pinyin conventions and does not guarantee a direct final-row IPA realization.",
+    "Written i includes sibilant-conditioned apical values beyond the explicit retroflex-i row in the dissertation; no automatic value is assigned.",
+    "Written o, ong, u, uan, and un can require initial-dependent normalization or source-table variants, and additional spellings may likewise require context.",
+    "Written iu, ui, and ue are linked to the full-form source headings iou, uei, and üe rather than presumed identical IPA letters.",
+    "No candidate source table option is automatically selected as the IPA for any real first-tranche syllable.",
+    "The source geometric symbol registry remains an arbitrary written-letter code; 27 complex finals still lack a full constructed articulatory-feature candidate."
+  ]
+}
