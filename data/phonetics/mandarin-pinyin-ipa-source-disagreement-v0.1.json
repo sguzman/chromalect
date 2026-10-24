@@ -116,7 +116,8 @@
       "disagreementsBetweenReports": true,
       "publishedTablePrintedPage": 26,
       "pinyinConsonantal": true,
-      "sourceApproval": "published_comparison_only_not_phonemic_adjudication"
+      "sourceApproval": "published_comparison_only_not_phonemic_adjudication",
+      "reportedMeiErrorFlag": "Cai describes Mei's ts symbol for Pinyin t as a likely error"
     },
     {
       "pinyinInitial": "n",
@@ -352,7 +353,7 @@
       "contextualQualifier": [],
       "sourceComparisonNotDefaultAcousticTarget": true,
       "literalAgreementAllColumns": true,
-      "publishedTablePrintedPage": 29
+      "publishedTablePrintedPage": 28
     },
     {
       "writtenFinal": "ü",
@@ -364,7 +365,7 @@
       ],
       "sourceComparisonNotDefaultAcousticTarget": true,
       "literalAgreementAllColumns": false,
-      "publishedTablePrintedPage": 30
+      "publishedTablePrintedPage": 29
     }
   ],
   "caveats": [
@@ -374,6 +375,7 @@
     "The 21-row Lin/Mei/Cai labels are attributed as reported by Cai; no independent examination of all Lin and Mei original publications is claimed.",
     "Six simple finals are compared, while 27 other written-final categories and 112 context-sensitive simple-final readings remain unresolved.",
     "i has distinct sibilant-conditioned values outside the plain i row, o may depend on preceding onset, and ü may carry a glide in a source author's notation.",
-    "Zero independent human decoding or acoustic testing is implied by source transcription."
+    "Zero independent human decoding or acoustic testing is implied by source transcription.",
+    "The exceptional Mei Pinyin t entry is explicitly questioned by Cai; retain it as a reported table item, not an endorsed pronunciation."
   ]
 }
