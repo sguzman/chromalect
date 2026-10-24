@@ -5,6 +5,9 @@ import assert from "node:assert/strict";
 import fs from "node:fs";
 const path="site/palettes/mandarin-component-identity-v0.7-fivefold-heldout-v0.1.json";
 const report=JSON.parse(fs.readFileSync(path,"utf8"));
+const glyphs=JSON.parse(fs.readFileSync("site/glyphs/mappings.json","utf8"));
+assert.equal(glyphs.schema,"chromalect.component-stroke-mappings.v1");
+const byGlyph=new Map(glyphs.glyphs.map(x=>[x.character,x]));
 assert.equal(report.schema,"chromalect.palette.v07-fivefold-source-heldout.v0.1");
 assert.equal(report.status,
  "fivefold_character_heldout_numerical_proximity_check_not_perceptual_validation");
@@ -62,6 +65,47 @@ for(let i=0;i<5;i++){
  assert.equal(row.heldoutGlyphMembershipExcludedFromFitting,true);
  assert.equal(row.noNewWarningRestrictionAppliesOnlyToTrainingPairs,true);
  assert.equal(row.global520ColorMultisetPreserved,true);
+ assert.equal(row.holdoutWarningPairEvidenceCount,
+  row.heldoutWarningsIntroduced+row.heldoutWarningsResolved+row.heldoutWarningsRetained);
+ assert.equal(row.holdoutWarningPairEvidence.length,
+  row.holdoutWarningPairEvidenceCount);
+ const warnedPairKeys=new Set();
+ let newPairs=0,removedPairs=0,retainedPairs=0;
+ for(const item of row.holdoutWarningPairEvidence){
+  assert.ok(Number.isInteger(item.rank)&&item.rank>=1&&item.rank<=1000);
+  assert.equal((item.rank-1)%5,i);
+  assert.ok(row.heldoutSourceRanks.includes(item.rank));
+  assert.ok(typeof item.character==="string"&&item.character.length>0);
+  const source=byGlyph.get(item.character);
+  assert.ok(source,"Unmapped source glyph in heldout warning report");
+  assert.equal(source.character,item.character);
+  assert.equal(item.originalSourceOwnerCertification,"pending");
+  assert.equal(item.independentHumanColorDiscrimination,false);
+  const owners=new Map(source.components.map(c=>[c.component_id,c.hex.toUpperCase()]));
+  assert.ok(owners.has(item.componentA)&&owners.has(item.componentB));
+  assert.notEqual(item.componentA,item.componentB);
+  assert.equal(item.baselineColors[0],owners.get(item.componentA));
+  assert.equal(item.baselineColors[1],owners.get(item.componentB));
+  assert.equal(item.candidateColors.length,2);
+  for(const color of item.candidateColors)
+   assert.match(color,/^#[0-9A-F]{6}$/);
+  assert.ok(Number.isFinite(item.baselineOKLabDistance));
+  assert.ok(Number.isFinite(item.candidateOKLabDistance));
+  const old=item.baselineOKLabDistance<report.method.closePairThreshold;
+  const current=item.candidateOKLabDistance<report.method.closePairThreshold;
+  assert.ok(old||current);
+  const transition=old&&current?"retained":current?"introduced":"resolved";
+  assert.equal(item.transition,transition);
+  if(transition==="introduced")newPairs++;
+  else if(transition==="resolved")removedPairs++;
+  else retainedPairs++;
+  const key=item.rank+"|"+[item.componentA,item.componentB].sort().join("|");
+  assert.ok(!warnedPairKeys.has(key),"Duplicated source glyph near-color pair");
+  warnedPairKeys.add(key);
+ }
+ assert.equal(newPairs,row.heldoutWarningsIntroduced);
+ assert.equal(removedPairs,row.heldoutWarningsResolved);
+ assert.equal(retainedPairs,row.heldoutWarningsRetained);
  assert.deepEqual({
   trainingBefore:row.trainingClosePairsOriginal,
   trainingAfter:row.trainingClosePairsCandidate,
