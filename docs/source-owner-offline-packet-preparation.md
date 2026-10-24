@@ -24,9 +24,18 @@ It enforces the exact unapproved packet schema, unique opaque IDs, 49 pairs, 98 
 
 The verifier establishes **internal packet consistency only**: if someone deliberately regenerates a whole packet and matching manifests, the verifier cannot independently establish the original source provenance, legitimate randomness, reviewer independence, or qualified source ownership. These require separate signed source chain-of-custody and external-review governance before use.
 
+## Private coordinator provenance replay
+
+With access to the original pinned research sources and the separately stored owner-only coordinator key, a second local CLI rederives each expected source mask and verifies all 49 opaque packet identifiers, original trial ranks, source SHA-256 references, machine-mapped owner keys, candidate forms, stroke counts, and individual SVG hashes:
+
+    node tools/glyph-pipeline/source_owner_local_coordinator_verify.mjs --packet-dir /absolute/local/reviewer-packet --coordinator-map /absolute/local/coordinator-private.json
+
+The coordinator validator first runs the key-free packet verifier and then matches the private crosswalk to the pinned original source manifest and regenerated source geometry. It rejects map files inside the public repo or reviewer folder, symlinks, group/world-readable coordinator files, missing or duplicate keys, and attempted changes to the source pairing. It prints only aggregate success counts. The original owner mapping remains machine-derived and is **not independently certified** by this replay.
+
 ## Reproducible verification
 
     node tools/glyph-pipeline/source_owner_local_packet_smoke.mjs
     node tools/glyph-pipeline/source_owner_local_packet_verify_smoke.mjs
+    node tools/glyph-pipeline/source_owner_local_coordinator_verify_smoke.mjs
 
 CI exercises deterministic synthetic packet IDs, the 49/98 generated counts, source mask digests, key omission from all 98 reviewer SVGs and the manifest, static HTML generation, adversarial text-escaping cases, create-only output, private file placement, and a real CLI invocation inside a temporary directory. Test output is discarded. Passing this test verifies engineering isolation under its stated constraints, **not** human independence, linguistic correctness or study readiness.

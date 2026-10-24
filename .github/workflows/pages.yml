@@ -454,6 +454,8 @@ jobs:
           node tools/glyph-pipeline/source_owner_local_packet_smoke.mjs
           node --check tools/glyph-pipeline/source_owner_local_packet_verify.mjs
           node tools/glyph-pipeline/source_owner_local_packet_verify_smoke.mjs
+          node --check tools/glyph-pipeline/source_owner_local_coordinator_verify.mjs
+          node tools/glyph-pipeline/source_owner_local_coordinator_verify_smoke.mjs
           test -s site/glyphs/research/owner-masked-stimuli-v0.1/index-v0.1.json
           node tools/glyph-pipeline/source_owner_independent_protocol_smoke.mjs
           mkdir -p site/research
