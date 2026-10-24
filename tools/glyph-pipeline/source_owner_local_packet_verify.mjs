@@ -22,10 +22,25 @@ const same=(a,b)=>JSON.stringify(sorted(a))===JSON.stringify(sorted(b));
 const digest=value=>createHash("sha256").update(value).digest("hex");
 function readRegular(root,rel,maxBytes){
  const filename=path.join(root,rel);
- const stat=fs.lstatSync(filename);
- requireShape(stat.isFile()&&!stat.isSymbolicLink()&&stat.size<=maxBytes,
-  "Unexpected packet file type or size: "+rel);
- return fs.readFileSync(filename);
+ // Open once: a checked path can otherwise be replaced before readFileSync.
+ // O_NONBLOCK prevents a substituted FIFO from hanging before fstat.
+ const fd=fs.openSync(filename,
+  fs.constants.O_RDONLY|fs.constants.O_NOFOLLOW|fs.constants.O_NONBLOCK);
+ try{
+  const stat=fs.fstatSync(fd);
+  requireShape(stat.isFile()&&stat.size<=maxBytes,
+   "Unexpected packet file type or size: "+rel);
+  // A file can grow after fstat. Never buffer more than the declared cap.
+  const buffer=Buffer.allocUnsafe(maxBytes+1);
+  let total=0;
+  while(total<buffer.length){
+   const count=fs.readSync(fd,buffer,total,buffer.length-total,null);
+   if(count===0)break;
+   total+=count;
+  }
+  requireShape(total<=maxBytes,"Packet file exceeds byte limit: "+rel);
+  return Buffer.from(buffer.subarray(0,total));
+ }finally{fs.closeSync(fd);}
 }
 function decoded(buffer,rel){
  try{return new TextDecoder("utf-8",{fatal:true}).decode(buffer);}
