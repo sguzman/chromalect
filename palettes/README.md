@@ -41,3 +41,7 @@ v0.2 and v0.1 remain unmodified and available.
 - [Methodology and limitations](../docs/perceptual-palette-v0.4.md)
 
 All original first-40 color mappings are free to change in any new version. Previous versions remain unmodified.
+
+## Experimental v0.7 source-cooccurrence candidate
+
+[Versioned method and limitations](../docs/perceptual-palette-v0.7-candidate.md) · [Computed candidate palette](../site/palettes/mandarin-component-identity-v0.7-candidate.json) · [Source warning audit](../site/palettes/mandarin-component-identity-v0.7-candidate-evidence.json). This separate, build-reproduced candidate never replaces the active v0.6 assignments and has no independent visual or learner validation.

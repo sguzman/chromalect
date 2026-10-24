@@ -10,6 +10,7 @@ mod alternatives;
 mod unknown;
 mod phonetics;
 mod feature_citation;
+mod palette_candidate;
 mod component_audit;
 mod diagnostics;
 mod review;
@@ -297,6 +298,8 @@ fn run() -> Result<(), String> {
             println!("Validated {} glyphs and their v0.4 component assignments.", glyphs.len());
         }
         Some("build") => build(&glyphs)?,
+        Some("palette-candidate") => palette_candidate::run(false)?,
+        Some("palette-candidate-check") => palette_candidate::run(true)?,
         Some("discover") => {
             let dictionary = args.next().ok_or("usage: glyph-pipeline discover DICTIONARY GRAPHICS")?;
             let graphics = args.next().ok_or("usage: glyph-pipeline discover DICTIONARY GRAPHICS")?;
@@ -313,7 +316,7 @@ fn run() -> Result<(), String> {
                 println!("{}: {} strokes, {} component records, {}", g.character, g.strokes.len(), g.parts.len(), g.decomposition);
             }
         }
-        _ => return Err("usage: glyph-pipeline {check|build|discover DICTIONARY GRAPHICS|sources|verify-source DIR|report}".into()),
+        _ => return Err("usage: glyph-pipeline {check|build|palette-candidate|palette-candidate-check|discover DICTIONARY GRAPHICS|sources|verify-source DIR|report}".into()),
     }
     Ok(())
 }

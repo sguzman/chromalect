@@ -521,6 +521,10 @@ jobs:
           test -s site/semantic-group-hue-fivefold-heldout-v0.1.json
           node tools/glyph-pipeline/optimized_glyph_pair_audit.mjs --write
           node tools/glyph-pipeline/optimized_glyph_pair_audit.mjs --check
+          cargo run --quiet --locked --manifest-path tools/glyph-pipeline/Cargo.toml -- palette-candidate
+          cargo run --quiet --locked --manifest-path tools/glyph-pipeline/Cargo.toml -- palette-candidate-check
+          test -s site/palettes/mandarin-component-identity-v0.7-candidate.json
+          test -s site/palettes/mandarin-component-identity-v0.7-candidate-evidence.json
           node tools/glyph-pipeline/optimized_glyph_pair_audit_smoke.mjs
           node tools/glyph-pipeline/source_glyph_optimized_gallery_smoke.mjs
           node tools/glyph-pipeline/source_glyph_optimized_gallery.mjs --write
