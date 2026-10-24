@@ -247,6 +247,9 @@ jobs:
           node --check tools/glyph-pipeline/tatoeba_live_word_record_audit.mjs
           node tools/glyph-pipeline/tatoeba_live_word_record_audit_smoke.mjs
           node tools/glyph-pipeline/tatoeba_live_word_record_audit_summary_smoke.mjs
+          node --check tools/glyph-pipeline/tatoeba_text_reuse_conditions.mjs
+          node tools/glyph-pipeline/tatoeba_text_reuse_conditions.mjs --check
+          node tools/glyph-pipeline/tatoeba_text_reuse_conditions_smoke.mjs
           node --check site/word-context-candidates.js
           node tools/glyph-pipeline/word_context_candidates_viewer_smoke.mjs
           node --check site/word-context-review.js
@@ -594,6 +597,7 @@ jobs:
           cp data/semantic/cedict-crossref/word-surface-corpus-overlap-audit-v0.1.json site/semantic/word-surface-corpus-overlap-audit-v0.1.json
           cp data/semantic/cedict-crossref/tatoeba-word-candidate-attribution-v0.1.json site/semantic/tatoeba-word-candidate-attribution-v0.1.json
           cp data/semantic/cedict-crossref/tatoeba-live-word-record-audit-summary-v0.1.json site/semantic/tatoeba-live-word-record-audit-summary-v0.1.json
+          cp data/semantic/cedict-crossref/tatoeba-text-reuse-conditions-v0.1.json site/semantic/tatoeba-text-reuse-conditions-v0.1.json
           cp data/semantic/cedict-crossref/tatoeba-icu-word-segmentation-index-v0.1.json site/semantic/tatoeba-icu-word-segmentation-index-v0.1.json
           cp data/semantic/cedict-crossref/external-word-reading-observations-v0.1.json site/semantic/external-word-reading-observations-v0.1.json
           cp data/semantic/cedict-crossref/cedict-word-headword-index-v0.1.json site/semantic/cedict-word-headword-index-v0.1.json

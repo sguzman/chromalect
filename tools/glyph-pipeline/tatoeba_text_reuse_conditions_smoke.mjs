@@ -1,0 +1,43 @@
+import assert from "node:assert/strict";
+import fs from "node:fs";
+import {assess,policy} from "./tatoeba_text_reuse_conditions.mjs";
+const dir="data/semantic/cedict-crossref/";
+const get=name=>JSON.parse(fs.readFileSync(dir+name,"utf8"));
+const live=get("tatoeba-live-word-record-audit-summary-v0.1.json");
+const authors=get("tatoeba-word-candidate-attribution-v0.1.json");
+const queue=get("word-context-review-priority-v0.1.json");
+const expected=get("tatoeba-text-reuse-conditions-v0.1.json");
+const result=assess(live,authors,queue);
+assert.deepEqual(result,expected);
+assert.equal(result.records.length,27);
+assert.equal(new Set(result.records.map(x=>x.sentenceId)).size,27);
+assert.equal(new Set(result.records.map(x=>x.attribution.contributor)).size,20);
+assert.equal(result.summary.individuallyObservedCompatibleCCLicenses,27);
+assert.equal(result.summary.unconditionalQuotationClearances,0);
+assert.equal(result.summary.independentThirdPartyOwnershipConfirmations,0);
+assert.equal(result.summary.approvedSentenceReadings,0);
+assert.equal(result.summary.approvedLexicalSenses,0);
+assert.equal(result.summary.sourceSentencesReproduced,0);
+assert.equal(policy.checkedUTCDate,"2026-10-24");
+for(const row of result.records){
+ assert.equal(row.attribution.sourceURL,
+  "https://tatoeba.org/en/sentences/show/"+row.sentenceId);
+ assert.equal(row.attribution.licenseURI,"https://creativecommons.org/licenses/by/2.0/fr/");
+ assert.equal(row.evidence.licenseObservedInLiveAPIOn,"2026-10-23");
+ assert.equal(row.determination,"conditional_text_reuse_license_identified_attribution_required");
+ assert.equal(row.limits.independentThirdPartyRightsCheckCompleted,false);
+ assert.equal(row.limits.freshSourceLicenseRecheckBeforeQuotation,true);
+ assert.equal(row.limits.permissionForImmediateUnattributedQuotation,false);
+ assert.equal(row.limits.independentlyAdjudicatedSentenceReading,false);
+ assert.equal(row.limits.independentlyAdjudicatedLexicalSense,false);
+ assert.equal(row.sourceSentenceReproduced,false);
+ assert.deepEqual(Object.values(row.conditions),[true,true,true,true,true]);
+}
+const mutated=(base,fn)=>{const copy=structuredClone(base);fn(copy);return copy;};
+assert.throws(()=>assess(mutated(live,d=>{d.records[0].observedLiveLicense="CC0";}),authors,queue));
+assert.throws(()=>assess(mutated(live,d=>{d.records[0].sourceMarkedUnapproved=true;}),authors,queue));
+assert.throws(()=>assess(live,mutated(authors,d=>{d.records[0].sourceURL="https://example.org";}),queue));
+assert.throws(()=>assess(live,mutated(authors,d=>{d.records[0].contributor="SomeoneElse";}),queue));
+assert.throws(()=>assess(live,authors,mutated(queue,d=>{d.records[0].quotationRightsAdjudicated=true;})));
+assert.throws(()=>assess(live,authors,mutated(queue,d=>{d.summary.independentlyVerifiedContextualReadings=1;})));
+console.log("27 text-license records: publisher/CC conditions, 20 contributors, 27 sentence URLs; zero unconditional quotation clearances or linguistic promotion.");
