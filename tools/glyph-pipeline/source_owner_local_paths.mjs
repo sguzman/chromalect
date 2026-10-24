@@ -10,7 +10,7 @@ export const REPOSITORY_ROOT=fs.realpathSync(
 export const SITE_ROOT=path.join(REPOSITORY_ROOT,"site");
 export function readPinnedSiteFile(relative){
  assert.ok(typeof relative==="string"&&
-  /^glyphs\/research\/[A-Za-z0-9_.+\/-]+$/.test(relative)&&
+  /^glyphs\/[A-Za-z0-9_.+\/-]+\.(?:svg|json)$/.test(relative)&&
   !relative.split("/").includes(".."),"Invalid pinned research file path");
  return fs.readFileSync(path.join(SITE_ROOT,relative),"utf8");
 }
