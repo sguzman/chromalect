@@ -90,6 +90,31 @@ try{
    "Malformed programmatic packet must be refused before any output");
   assert.ok(!fs.existsSync(output)&&!fs.existsSync(key));
  }
+ const incompleteReview=path.join(tmp,"incomplete-public");
+ const incompleteKey=path.join(tmp,"incomplete-private.json");
+ const originalWrite=fs.writeFileSync;
+ fs.writeFileSync=function(target,body,opts){
+  if(typeof target==="number"&&typeof body==="string"&&
+   body.includes("private_unapproved_machine_mapping")){
+   originalWrite(target,body.slice(0,96),opts);
+   throw Error("Injected coordinator write interruption");
+  }
+  return originalWrite(target,body,opts);
+ };
+ try{
+  assert.throws(()=>writeOfflinePacket(built,incompleteReview,incompleteKey),
+   /Injected coordinator write interruption/);
+ }finally{fs.writeFileSync=originalWrite;}
+ assert.ok(!fs.existsSync(incompleteReview)&&!fs.existsSync(incompleteKey),
+  "Interrupted private key write must be removed with incomplete reviewer output");
+ const reservedKey=path.join(tmp,"existing-private.json");
+ const reservedReview=path.join(tmp,"existing-public");
+ fs.writeFileSync(reservedKey,"unrelated pre-existing local file");
+ assert.throws(()=>writeOfflinePacket(built,reservedReview,reservedKey),
+  /Refuse to overwrite/);
+ assert.equal(fs.readFileSync(reservedKey,"utf8"),
+  "unrelated pre-existing local file");
+ assert.ok(!fs.existsSync(reservedReview));
  poisonedPacket(p=>{p.manifest.summary.approvedStudies=1;});
  poisonedPacket(p=>{p.manifest.records[0].machineAssignedOwner="cmp-0001";});
  poisonedPacket(p=>{p.manifest.records[0].candidates[0].sha256="0".repeat(64);});
