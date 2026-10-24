@@ -43,9 +43,13 @@ export function reviewReadiness(protocol,targets,complements){
  assert.equal(pre.thirdIndependentReviewOnDisagreementRequired,true);
  assert.equal(pre.sourceGeometryChangeWithoutNewVersionAllowed,false);
  assert.equal(pre.existingLocalIntakeHidesMachineAssignedKey,false);
+ // The v0.1 protocol explicitly has no accepted source evidence or reviewer
+ // attestations. A true flag without new versioned evidence must fail closed,
+ // not generate a misleading partial completion percentage.
  const statuses=REQUIRED.map(key=>{
-  assert.equal(typeof pre[key],"boolean",key);
-  return {prerequisite:key,satisfied:pre[key]};
+  assert.equal(pre[key],false,
+   key+" requires a new evidence-backed protocol version before promotion");
+  return {prerequisite:key,satisfied:false};
  });
  const missing=statuses.filter(s=>!s.satisfied).map(s=>s.prerequisite);
  assert.equal(gate.automaticPromotionPermitted,false);

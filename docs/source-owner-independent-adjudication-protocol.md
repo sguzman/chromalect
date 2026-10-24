@@ -35,7 +35,7 @@ The [external structural-source screening inventory](source-owner-external-evide
 
 ## Current prerequisite and evidence summary
 
-The [machine-readable readiness summary](https://sguzman.github.io/chromalect/research/source-owner-readiness-v0.1.json) is generated from this source protocol and the pinned 49-pair and complementary-locator manifests. It records seven explicitly unresolved research prerequisites, a minimum of **98 independent per-pair reports** (two for each of 49 pairs), zero accepted reports, zero independently reconciled pairs, zero owner certifications and zero study-eligible glyphs. The summary is a *source-status inventory*, not a live recruitment record or evidence that participation is approved. No machine output may satisfy an independent-review prerequisite on its own.
+The [machine-readable readiness summary](https://sguzman.github.io/chromalect/research/source-owner-readiness-v0.1.json) is generated from this source protocol and the pinned 49-pair and complementary-locator manifests. It records seven explicitly unresolved research prerequisites, a minimum of **98 independent per-pair reports** (two for each of 49 pairs), zero accepted reports, zero independently reconciled pairs, zero owner certifications and zero study-eligible glyphs. The summary is a *source-status inventory*, not a live recruitment record or evidence that participation is approved. No machine output may satisfy an independent-review prerequisite on its own. The unexecuted v0.1 readiness parser rejects even a single newly true prerequisite flag: accepting actual completion requires a separately versioned, evidence-backed protocol with independent source attribution and explicit review.
 
 To inspect the same information locally:
 

@@ -75,7 +75,7 @@
       "candidatePath": "graphics.txt",
       "provenanceFamily": "arphic-fonts",
       "licenseDeclaration": "Arphic Public License per upstream COPYING; rights and redistribution review pending",
-      "dataRole": "alternative font-derived vector stroke geometry; not identical to pinned target source or independent owner adjudication",
+      "dataRole": "alternative font-derived vector stroke geometry; compatibility with pinned source geometry and independent owner evidence has not been established",
       "dependsOn": [
         "Arphic PL KaitiM GB",
         "Arphic PL UKai"

@@ -63,11 +63,7 @@ poison(p=>{p.prerequisites.acceptedStudySampleSelected="approved";});
 const drift=structuredClone(targets);
 drift.summary.warningObservations=50;
 assert.throws(()=>reviewReadiness(protocol,drift,complements));
-const matching=structuredClone(protocol);
-matching.prerequisites.protocolPreregistered=true;
-const partial=reviewReadiness(matching,targets,complements);
-assert.equal(partial.prerequisitesSatisfied,1);
-assert.equal(partial.outstandingPrerequisites.length,6);
-assert.equal(partial.independentReportsAccepted,0);
-assert.equal(partial.canClaimCertification,false);
+for(const key of REQUIRED)poison(p=>{
+ p.prerequisites[key]=true;
+},/requires a new evidence-backed protocol version/);
 console.log("Evidence-gated source-owner readiness: 0/7 documented prerequisites, 0/98 minimum independently qualified reports, 0 certifications; promoted or inconsistent sources refused.");
