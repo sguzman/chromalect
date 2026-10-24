@@ -19,7 +19,7 @@ This document specifies a prospective, non-executed review procedure for Chromal
 5. If two independent reviews materially disagree, retain an unresolved state and require separately qualified adjudication of competing evidence. Never break ties by machine-key concordance, guessed commonness, color difference, or a target's numeric priority.
 6. Preserve the original mapping and palette until a separately versioned, provenance-reviewed update is approved and regression-tested across Direct/Marker representations and all affected source glyphs.
 
-The [presentation-masked rehearsal](source-owner-masked-presentation.md) prepares neutral side-by-side candidate comparisons with no collected responses. The public source manifests remain machine-key-visible and the rehearsal is neither an independently blinded review nor a participant assessment.
+The [presentation-masked rehearsal](source-owner-masked-presentation.md) prepares neutral side-by-side candidate comparisons with no collected responses. The [local-only opaque reviewer packet generator](source-owner-offline-packet-preparation.md) additionally separates the machine source-key mapping into an uncommitted private coordinator file and removes component IDs from packet filenames. Neither mechanism constitutes an approved or independent review collection instrument. The public source manifests remain machine-key-visible and the rehearsal is neither an independently blinded review nor a participant assessment.
 
 A future external review collection interface must be separated from the existing unblinded local source-key worksheet and must pass privacy and reproducibility review before use.
 
