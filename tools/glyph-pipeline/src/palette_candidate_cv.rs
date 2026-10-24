@@ -45,7 +45,8 @@ fn prepare()->Result<(Pairs,Vec<String>,Vec<f64>),String>{
     }
     if byGlyph.len()!=get(&mapping,"glyph_count")?.as_u64().unwrap_or(0) as usize
         || byGlyph.len()<1000{return Err("incomplete generated glyph mapping set".into());}
-    let mut byCharacter=Vec::new(),ranked=Vec::new();
+    let mut byCharacter=Vec::new();
+    let mut ranked=Vec::new();
     for (i,x) in entries(&catalog,"characters")?.iter().enumerate(){
         if get(x,"rank")?.as_u64()!=Some(i as u64+1){
             return Err("ranked source tranche no longer stable".into());
