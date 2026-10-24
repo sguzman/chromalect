@@ -56,7 +56,8 @@ fn optimize(edges:&[Edge],dist:&[f64],n:usize)->(Vec<usize>,Vec<(usize,usize,usi
                 let relevant=adj[a].iter().chain(adj[b].iter()).copied()
                     .collect::<BTreeSet<_>>();
                 assignment.swap(a,b);
-                let mut new_weight=0isize,valid=true;
+                let mut new_weight=0isize;
+                let mut valid=true;
                 for idx in relevant{
                     let e=&edges[idx];
                     let now=cost(e,&assignment,dist,n);
@@ -102,7 +103,8 @@ fn build()->Result<(Value,Value),String>{
     let mut index=BTreeMap::<String,usize>::new();
     let mut colors=BTreeSet::<String>::new();
     for (i,x) in components.iter().enumerate(){
-        let id=string(x,"id")?.to_owned(),hex=string(x,"color")?.to_uppercase();
+        let id=string(x,"id")?.to_owned();
+        let hex=string(x,"color")?.to_uppercase();
         if !colors.insert(hex.clone())||index.insert(id.clone(),i).is_some(){
             return Err("duplicate stable ID or sRGB palette color".into());
         }
@@ -247,7 +249,8 @@ mod tests {
     use super::*;
     #[test]
     fn ok_lab_distance_is_symmetric_and_zero_for_same_color(){
-        let a=oklab("#000000").unwrap(),b=oklab("#FFFFFF").unwrap();
+        let a=oklab("#000000").unwrap();
+        let b=oklab("#FFFFFF").unwrap();
         assert!(metric(a,a)<1e-12);
         assert!((metric(a,b)-metric(b,a)).abs()<1e-12);
         assert!(metric(a,b)>0.5);
