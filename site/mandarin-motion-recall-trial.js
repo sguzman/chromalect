@@ -209,7 +209,7 @@ async function load(){
     if(!display||!candidate.selectedMeaning||
        seenMeanings.has(candidate.selectedMeaning)||seenSymbols.has(display))continue;
     seenMeanings.add(candidate.selectedMeaning);seenSymbols.add(display);
-    eventCandidates.push({domain:"semantic",key:"c"+row.rank,
+    eventCandidates.push({domain:"semantic",key:"c"+row.rank+"-"+eventCandidates.length,
      label:candidate.selectedMeaning,expression:candidate.expression});
     if(eventCandidates.length===4)break;
    }
