@@ -9,7 +9,7 @@ const CUTOFF:f64=0.07;
 const SCHEMA:&str="chromalect.palette.v07-fivefold-source-heldout.v0.1";
 type Pairs=Vec<Vec<(usize,usize)>>;
 
-fn prepare()->Result<(Pairs,Vec<String>,Vec<f64>),String>{
+fn prepare()->Result<(Pairs,Vec<String>,Vec<String>,Vec<String>,Vec<f64>),String>{
     let base=root();
     let catalog=load(&base.join("data/catalog/characters-0001-1000.json"))?;
     let mapping=load(&base.join("site/glyphs/mappings.json"))?;
@@ -24,9 +24,11 @@ fn prepare()->Result<(Pairs,Vec<String>,Vec<f64>),String>{
     let components=entries(&palette,"components")?;
     if components.len()!=520{return Err("expected 520 exact active component colors".into());}
     let mut ids=BTreeMap::new();let mut colors=Vec::new();
+    let mut originalNames=Vec::new();
     let mut colorSet=BTreeSet::new();
     for (i,x) in components.iter().enumerate(){
         let id=string(x,"id")?.to_owned();
+        originalNames.push(id.clone());
         let color=string(x,"color")?.to_uppercase();
         if ids.insert(id,i).is_some()||!colorSet.insert(color.clone()){
             return Err("component identity or color reused".into());
@@ -81,7 +83,7 @@ fn prepare()->Result<(Pairs,Vec<String>,Vec<f64>),String>{
     if byCharacter.iter().map(Vec::len).sum::<usize>()!=1020{
         return Err("expected 1,020 source-owned intra-glyph pair observations".into());
     }
-    Ok((byCharacter,ranked,distance))
+    Ok((byCharacter,ranked,originalNames,colors,distance))
 }
 fn edgeCounts(pairs:&Pairs,fold:usize,train:bool)->Vec<Edge>{
     let mut counts=BTreeMap::<(usize,usize),usize>::new();
@@ -91,10 +93,12 @@ fn edgeCounts(pairs:&Pairs,fold:usize,train:bool)->Vec<Edge>{
     }
     counts.into_iter().map(|((a,b),weight)|Edge{a,b,weight}).collect()
 }
-fn checkHoldout(pairs:&Pairs,fold:usize,assignment:&[usize],dist:&[f64])
-    ->(usize,usize,usize,usize,usize,usize,Vec<usize>){
+fn checkHoldout(pairs:&Pairs,fold:usize,assignment:&[usize],dist:&[f64],
+    characters:&[String],names:&[String],colors:&[String])
+    ->(usize,usize,usize,usize,usize,usize,Vec<usize>,Vec<Value>){
     let mut baseline=0;let mut candidate=0;let mut introduced=0;
     let mut resolved=0;let mut retained=0;let mut pairCount=0;let mut ranks=Vec::new();
+    let mut evidence=Vec::new();
     let identity=(0..520).collect::<Vec<_>>();
     for (rank,obs) in pairs.iter().enumerate(){
         if rank%5!=fold{continue;}
@@ -108,13 +112,30 @@ fn checkHoldout(pairs:&Pairs,fold:usize,assignment:&[usize],dist:&[f64])
             if new&&!old{introduced+=1;}
             if old&&!new{resolved+=1;}
             if old&&new{retained+=1;}
+            if old||new{
+                let kind=if old&&new{"retained"}else if new{"introduced"}else{"resolved"};
+                let sourceDistance=dist[a*520+b];
+                let proposedDistance=dist[assignment[a]*520+assignment[b]];
+                evidence.push(json!({
+                    "rank":rank+1,"character":characters[rank].as_str(),
+                    "componentA":names[a].as_str(),"componentB":names[b].as_str(),
+                    "baselineColors":[colors[a].as_str(),colors[b].as_str()],
+                    "candidateColors":[colors[assignment[a]].as_str(),
+                                       colors[assignment[b]].as_str()],
+                    "baselineOKLabDistance":sourceDistance,
+                    "candidateOKLabDistance":proposedDistance,
+                    "transition":kind,
+                    "originalSourceOwnerCertification":"pending",
+                    "independentHumanColorDiscrimination":false
+                }));
+            }
             pairCount+=1;
         }
     }
-    (baseline,candidate,introduced,resolved,retained,pairCount,ranks)
+    (baseline,candidate,introduced,resolved,retained,pairCount,ranks,evidence)
 }
 fn build()->Result<Value,String>{
-    let (pairs,_characters,dist)=prepare()?;
+    let (pairs,characters,componentNames,colors,dist)=prepare()?;
     let mut folds=Vec::new();
     let mut baselineHeldout=0;let mut candidateHeldout=0;let mut introduced=0;
     let mut resolved=0;let mut retained=0;let mut heldoutPairCount=0;
@@ -130,8 +151,12 @@ fn build()->Result<Value,String>{
         if trainAfter>trainBase{return Err("in-sample warning count increased".into());}
         let paletteMultiset=candidate.iter().copied().collect::<BTreeSet<_>>();
         if paletteMultiset.len()!=520{return Err("palette color permutation lost an identity".into());}
-        let (base,alternative,added,removed,kept,pairCount,ranks)=
-            checkHoldout(&pairs,fold,&candidate,&dist);
+        let (base,alternative,added,removed,kept,pairCount,ranks,warningEvidence)=
+            checkHoldout(&pairs,fold,&candidate,&dist,
+                &characters,&componentNames,&colors);
+        if warningEvidence.len()!=added+removed+kept{
+            return Err("source-pair failure-case evidence differs from measured warnings".into());
+        }
         if ranks.len()!=200||added+kept!=alternative||removed+kept!=base||
             pairCount!=heldout.iter().map(|e|e.weight).sum::<usize>(){
             return Err("held-out source warning conservation failed".into());
@@ -160,7 +185,9 @@ fn build()->Result<Value,String>{
             "heldoutWarningsRetained":kept,
             "noNewWarningRestrictionAppliesOnlyToTrainingPairs":true,
             "heldoutGlyphMembershipExcludedFromFitting":true,
-            "global520ColorMultisetPreserved":true
+            "global520ColorMultisetPreserved":true,
+            "holdoutWarningPairEvidenceCount":warningEvidence.len(),
+            "holdoutWarningPairEvidence":warningEvidence
         }));
     }
     if distinctRanks.len()!=1000||heldoutPairCount!=1020
