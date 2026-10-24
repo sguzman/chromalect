@@ -6,7 +6,7 @@ import {spawnSync} from "node:child_process";
 import {createHash} from "node:crypto";
 import {REPOSITORY_ROOT,readPinnedSiteFile} from "./source_owner_local_paths.mjs";
 import {deriveOfflineReviewerPacket,writeOfflinePacket,
- renderOfflinePacketGallery} from "./source_owner_local_packet.mjs";
+ renderOfflinePacketGallery,validatePreparedOfflinePacket} from "./source_owner_local_packet.mjs";
 const source=JSON.parse(fs.readFileSync(
  "site/glyphs/research/heldout-identification-target-v0.1/index-v0.1.json","utf8"));
 const read=p=>fs.readFileSync("site/"+p,"utf8");
@@ -76,8 +76,34 @@ assert.throws(()=>deriveOfflineReviewerPacket(source,read,
  ()=>"invalid-id",n=>n-1));
 assert.throws(()=>deriveOfflineReviewerPacket(source,read,
  ()=>"p-"+(++next).toString(16).padStart(32,"0"),()=>Number.NaN));
+assert.equal(validatePreparedOfflinePacket(built),true);
 const tmp=fs.mkdtempSync(path.join(os.tmpdir(),"chromalect-review-packet-"));
 try{
+ function poisonedPacket(change){
+  const p={manifest:structuredClone(built.manifest),
+   coordinatorMap:structuredClone(built.coordinatorMap),
+   readme:built.readme,gallery:built.gallery,files:new Map(built.files)};
+  change(p);
+  const output=path.join(tmp,"rejected-public");
+  const key=path.join(tmp,"rejected-private.json");
+  assert.throws(()=>writeOfflinePacket(p,output,key),
+   "Malformed programmatic packet must be refused before any output");
+  assert.ok(!fs.existsSync(output)&&!fs.existsSync(key));
+ }
+ poisonedPacket(p=>{p.manifest.summary.approvedStudies=1;});
+ poisonedPacket(p=>{p.manifest.records[0].machineAssignedOwner="cmp-0001";});
+ poisonedPacket(p=>{p.manifest.records[0].candidates[0].sha256="0".repeat(64);});
+ poisonedPacket(p=>{p.manifest.records[0].candidates[0].file="../secret.svg";});
+ poisonedPacket(p=>{p.manifest.records[0].packetId=p.manifest.records[1].packetId;});
+ poisonedPacket(p=>{p.files.delete(built.manifest.records[0].candidates[0].file);});
+ poisonedPacket(p=>{p.files.set(built.manifest.records[0].candidates[0].file,
+  '<svg onload="alert(1)"></svg>');});
+ poisonedPacket(p=>{p.gallery+="<script>alert(1)</script>";});
+ poisonedPacket(p=>{p.readme+="Approved study";});
+ poisonedPacket(p=>{p.coordinatorMap.packetSession="p-"+"0".repeat(32);});
+ poisonedPacket(p=>{p.coordinatorMap.records[0].sourceTrialId="../bad";});
+ poisonedPacket(p=>{p.coordinatorMap.records[0].mappedOtherOwner=
+  p.coordinatorMap.records[0].machineAssignedOwner;});
  const reviewerDir=path.join(tmp,"reviewer-material");
  const privateMap=path.join(tmp,"coordinator-private.json");
  writeOfflinePacket(built,reviewerDir,privateMap);
