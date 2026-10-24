@@ -311,10 +311,10 @@
       "key": "contextual-fusion",
       "label": "Fusion and contextual experiments",
       "sourceHeadingPrefix": "Phase 3",
-      "complete": 1,
-      "pending": 3,
+      "complete": 2,
+      "pending": 2,
       "total": 4,
-      "checklistPercent": 25,
+      "checklistPercent": 50,
       "checkpoints": [
         {
           "description": "Put all channels into a dense but toggleable rendering.",
@@ -322,7 +322,7 @@
         },
         {
           "description": "Introduce segmented words, polyphones, sandhi, and contextual glosses.",
-          "state": "pending"
+          "state": "complete"
         },
         {
           "description": "Compare assisted learning, retention, and transfer to plain text.",

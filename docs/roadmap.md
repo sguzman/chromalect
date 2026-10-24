@@ -84,11 +84,13 @@ This is a sequence of **evidence gates**, not a promise to build a large applica
 ## Phase 3 — fusion and contextual experiments [proposed]
 
 - [x] Put all channels into a dense but toggleable rendering.
-- [ ] Introduce segmented words, polyphones, sandhi, and contextual glosses.
+- [x] Introduce segmented words, polyphones, sandhi, and contextual glosses.
 - [ ] Compare assisted learning, retention, and transfer to plain text.
 - [ ] Add reduced-motion semantic/articulatory animation trials.
 
 **Functional integration evidence:** The [first-tranche integrated layer viewer](../site/mandarin-fusion.html) combines independently removable source component strokes, written Pinyin initial/final, idealized citation tone and provisional semantic pictograms for 1,000 aligned characters and 1,171 citation readings. The [fusion acceptance test](../tools/glyph-pipeline/mandarin_fusion_viewer_smoke.mjs) passed in [GitHub Pages CI](https://github.com/sguzman/chromalect/actions/runs/40054863964). This is completion of the **rendering checkpoint**, not the Phase 3 learning-effect gate: contextual pronunciations, lexical-sense and glyph certifications, human comprehension, educational gain, and animation remain unapproved or unimplemented.
+
+**Contextual display evidence:** The [word-context research viewer](../site/mandarin-word-context.html) joins eight existing publisher word leads with five paired published word-entry readings and 27 source-identity-checked Tatoeba sentence-ID occurrences. Its source-grounded presentation includes provisional word-span grouping, contrasting heading readings for four polyphonic target characters, versioned ICU boundary hints, conditional gloss/query hints, and four tightly scoped two-syllable citation-versus-sandhi examples. [Interaction tests](../tools/glyph-pipeline/mandarin_word_context_viewer_smoke.mjs) passed in [GitHub Pages CI](https://github.com/sguzman/chromalect/actions/runs/40055563551). This marks implementation of **provisional contextual presentation controls only**: there are still zero independently adjudicated sentence boundaries, pronunciations, lexical glosses, reuse rights or measured learning effects. The viewer neither republishes sentences nor labels research hypotheses as verified usage.
 
 **Gate:** measured gain over simpler visual aids.
 

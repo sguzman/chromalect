@@ -75,7 +75,7 @@ function render(){
    item.appendChild(image);item.appendChild(fallback);
   }else item.appendChild(make("strong",null,char));
   if(reading)item.appendChild(make("small",null,
-   reading[i].base+" · citation T"+reading[i].tone));
+   reading[i].base+" · word-entry T"+reading[i].tone));
   else item.appendChild(make("small",null,
    char===lead.character?"Target · heading "+lead.dictionaryHeadingReading:
     "No word-entry reading displayed"));
