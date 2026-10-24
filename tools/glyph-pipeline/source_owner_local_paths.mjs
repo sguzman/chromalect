@@ -15,10 +15,27 @@ export function readPinnedSiteFile(relative){
  const resolved=fs.realpathSync(path.join(SITE_ROOT,relative));
  assert.ok(resolved.startsWith(SITE_ROOT+path.sep),
   "Pinned glyph asset must remain inside the generated site");
- const stat=fs.lstatSync(resolved);
- assert.ok(stat.isFile()&&stat.size>0&&stat.size<=1024*1024,
-  "Pinned glyph asset must be a regular bounded file");
- return fs.readFileSync(resolved,"utf8");
+ // Keep the verified pathname and the bytes tied to one descriptor. A
+ // replaced symlink or FIFO must not redirect or block a pinned asset read.
+ const fd=fs.openSync(resolved,
+  fs.constants.O_RDONLY|fs.constants.O_NOFOLLOW|fs.constants.O_NONBLOCK);
+ try{
+  const stat=fs.fstatSync(fd);
+  const limit=1024*1024;
+  assert.ok(stat.isFile()&&stat.size>0&&stat.size<=limit,
+   "Pinned glyph asset must be a regular bounded file");
+  const buffer=Buffer.allocUnsafe(limit+1);
+  let total=0;
+  while(total<buffer.length){
+   const count=fs.readSync(fd,buffer,total,buffer.length-total,null);
+   if(count===0)break;
+   total+=count;
+  }
+  assert.ok(total>0&&total<=limit,
+   "Pinned glyph asset exceeded the bounded file limit");
+  return new TextDecoder("utf-8",{fatal:true}).decode(
+   buffer.subarray(0,total));
+ }finally{fs.closeSync(fd);}
 }
 export function requireOutsideRepository(destination){
  assert.ok(typeof destination==="string"&&path.isAbsolute(destination),
