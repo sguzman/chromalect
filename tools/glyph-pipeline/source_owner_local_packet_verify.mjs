@@ -7,6 +7,8 @@ import {createHash} from "node:crypto";
 import {pathToFileURL} from "node:url";
 import "../../site/source-owner-neutral-svg-contract.js";
 import {publicREADME,renderOfflinePacketGallery} from "./source_owner_local_packet.mjs";
+import {buildOfflinePacketReceipt,RECEIPT_FILE}
+ from "./source_owner_local_receipt.mjs";
 
 const SCHEMA="chromalect.glyph.local-keyless-packet.v0.1";
 const STATUS="unapproved_local_reviewer_packet_preparation_not_a_blinded_study";
@@ -36,7 +38,8 @@ export function verifyOfflinePacket(directory){
  requireShape(fs.lstatSync(root).isDirectory()&&!fs.lstatSync(root).isSymbolicLink(),
   "Reviewer packet must be a real directory");
  const rootFiles=fs.readdirSync(root);
- requireShape(same(rootFiles,["README.md","index.html","index-v0.1.json","masks"]),
+ requireShape(same(rootFiles,["README.md","index.html","index-v0.1.json",
+  "masks",RECEIPT_FILE]),
   "Unexpected or missing reviewer packet files");
  const masksPath=path.join(root,"masks");
  requireShape(fs.lstatSync(masksPath).isDirectory()&&
@@ -89,14 +92,18 @@ export function verifyOfflinePacket(directory){
  requireShape(seen.size===50&&characters.size===48,"Duplicate or missing packet identities");
  requireShape(same(fs.readdirSync(masksPath),files)&&new Set(files).size===98,
   "Missing, duplicated or extraneous neutral source SVG");
+ const parts=new Map([["index-v0.1.json",manifestBytes]]);
  const text=decoded(manifestBytes,"index-v0.1.json");
  requireShape(text===JSON.stringify(manifest,null,2)+"\n",
   "Offline packet JSON must use the canonical serialization");
- requireShape(decoded(readRegular(root,"README.md",16*1024),"README.md")===publicREADME,
+ const readme=readRegular(root,"README.md",16*1024);
+ const gallery=readRegular(root,"index.html",512*1024);
+ requireShape(decoded(readme,"README.md")===publicREADME,
   "Packet scope and eligibility notice differs from the source template");
- requireShape(decoded(readRegular(root,"index.html",512*1024),"index.html")===
-  renderOfflinePacketGallery(manifest),
+ requireShape(decoded(gallery,"index.html")===renderOfflinePacketGallery(manifest),
   "Offline presentation differs from the validated, read-only layout");
+ parts.set("README.md",readme);
+ parts.set("index.html",gallery);
  for(const row of manifest.records){
   for(const c of row.candidates){
    const svgBytes=readRegular(root,c.file,1048576);
@@ -105,8 +112,16 @@ export function verifyOfflinePacket(directory){
    const svg=decoded(svgBytes,c.file);
    globalThis.ChromalectNeutralRegionSVG.validate(
     svg,row.sourceStrokePaths,c.highlightedPaths);
+   parts.set(c.file,svgBytes);
   }
  }
+ const actualReceiptBytes=readRegular(root,RECEIPT_FILE,32*1024);
+ const receipt=JSON.parse(decoded(actualReceiptBytes,RECEIPT_FILE));
+ const expectedReceipt=buildOfflinePacketReceipt(manifest.packetSession,parts);
+ requireShape(JSON.stringify(receipt)===JSON.stringify(expectedReceipt)&&
+  decoded(actualReceiptBytes,RECEIPT_FILE)===
+   JSON.stringify(expectedReceipt,null,2)+"\n",
+  "Offline receipt must cover the exact contents of all 101 packet files");
  return {pairs:49,masks:98,independentlyAcceptedOwners:0,participantResponses:0};
 }
 if(process.argv[1]&&import.meta.url===pathToFileURL(process.argv[1]).href){

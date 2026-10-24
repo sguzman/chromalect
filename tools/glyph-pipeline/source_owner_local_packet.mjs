@@ -8,6 +8,8 @@ import {pathToFileURL} from "node:url";
 import {deriveMaskedStimuli} from "./source_owner_masked_stimuli.mjs";
 import {requireOutsideRepository,readPinnedSiteFile} from "./source_owner_local_paths.mjs";
 import "../../site/source-owner-neutral-svg-contract.js";
+import {buildOfflinePacketReceipt,RECEIPT_FILE}
+ from "./source_owner_local_receipt.mjs";
 
 const TARGET="glyphs/research/heldout-identification-target-v0.1/index-v0.1.json";
 const ID=/^p-[0-9a-f]{32}$/;
@@ -242,6 +244,14 @@ export function writeOfflinePacket(packet,reviewerDir,privateCoordinatorFile){
   exclusive(path.join(review,"index.html"),packet.gallery);
   for(const [name,svg] of packet.files)
    exclusive(path.join(review,name),svg);
+  const parts=new Map([
+   ["README.md",packet.readme],
+   ["index.html",packet.gallery],
+   ["index-v0.1.json",encode(packet.manifest)],
+   ...packet.files
+  ]);
+  const receipt=buildOfflinePacketReceipt(packet.manifest.packetSession,parts);
+  exclusive(path.join(review,RECEIPT_FILE),encode(receipt));
   // Create the private key file exclusively; recover even from a partial write.
   const fd=fs.openSync(mapping,"wx",0o600);
   keyCreated=true;
