@@ -1,0 +1,327 @@
+{
+  "schema": "chromalect.phonetics.zhao-li-2009-independent-pinyin-ipa-control.v0.1",
+  "status": "independently_published_research_model_not_frozen_standard_mandarin_phoneme_inventory",
+  "provenance": {
+    "title": "An online database of phonological representations for Mandarin Chinese",
+    "authors": [
+      "Xiaowei Zhao",
+      "Ping Li"
+    ],
+    "journal": "Behavior Research Methods",
+    "volume": 41,
+    "issue": 2,
+    "year": 2009,
+    "pages": "575-583",
+    "doi": "10.3758/BRM.41.2.575",
+    "peerReviewedArticleURI": "https://link.springer.com/content/pdf/10.3758/BRM.41.2.575.pdf",
+    "sourceTable": "Table 1, PDF page 3, printed page 577",
+    "table2Context": "Table 2, 34 phonemic slots / articulatory-feature dimensions, PDF page 3",
+    "originalPDFOrIllustrationsCopied": false,
+    "authorModelPurpose": "computational psycholinguistic representation, not a final dialect-neutral IPA authority"
+  },
+  "sourceWorkings": {
+    "localInitialInventory": "mandarin-initial-feature-candidates-v0.1.json",
+    "localSixVowels": "mandarin-simple-final-feature-candidates-v0.1.json",
+    "datasetReference": "Mandarin first-thousand orthographic Pinyin citations",
+    "sourceGlyphsOrPaletteChanged": false
+  },
+  "summary": {
+    "conventionalPinyinInitials": 21,
+    "externallyPublishedInitialIPAItems": 21,
+    "literalWorkingCandidateMatches": 18,
+    "differingWorkingCandidateIPAItems": 3,
+    "differingInitials": [
+      "zh",
+      "ch",
+      "r"
+    ],
+    "independentSixSimpleFinalReferenceItems": 6,
+    "orthographicYAndWSeparatelyCountedAsConsonants": 0,
+    "independentlyFrozenPhonemicContrasts": 0,
+    "independentAcousticMeasurements": 0,
+    "contextualIPAApprovals": 0,
+    "humanFeatureDecodingTrials": 0
+  },
+  "initials": [
+    {
+      "pinyinInitial": "b",
+      "zhaoLiIPA": "p",
+      "originalWorkingIPACandidate": "p",
+      "identicalToWorkingNotation": true,
+      "workingArticulatoryManner": "stop",
+      "particularlyAnalysisSensitive": false,
+      "externalPhonemeApproved": false,
+      "independentlyMeasuredByChromalect": false
+    },
+    {
+      "pinyinInitial": "p",
+      "zhaoLiIPA": "pʰ",
+      "originalWorkingIPACandidate": "pʰ",
+      "identicalToWorkingNotation": true,
+      "workingArticulatoryManner": "stop",
+      "particularlyAnalysisSensitive": false,
+      "externalPhonemeApproved": false,
+      "independentlyMeasuredByChromalect": false
+    },
+    {
+      "pinyinInitial": "m",
+      "zhaoLiIPA": "m",
+      "originalWorkingIPACandidate": "m",
+      "identicalToWorkingNotation": true,
+      "workingArticulatoryManner": "nasal",
+      "particularlyAnalysisSensitive": false,
+      "externalPhonemeApproved": false,
+      "independentlyMeasuredByChromalect": false
+    },
+    {
+      "pinyinInitial": "f",
+      "zhaoLiIPA": "f",
+      "originalWorkingIPACandidate": "f",
+      "identicalToWorkingNotation": true,
+      "workingArticulatoryManner": "fricative",
+      "particularlyAnalysisSensitive": false,
+      "externalPhonemeApproved": false,
+      "independentlyMeasuredByChromalect": false
+    },
+    {
+      "pinyinInitial": "d",
+      "zhaoLiIPA": "t",
+      "originalWorkingIPACandidate": "t",
+      "identicalToWorkingNotation": true,
+      "workingArticulatoryManner": "stop",
+      "particularlyAnalysisSensitive": false,
+      "externalPhonemeApproved": false,
+      "independentlyMeasuredByChromalect": false
+    },
+    {
+      "pinyinInitial": "t",
+      "zhaoLiIPA": "tʰ",
+      "originalWorkingIPACandidate": "tʰ",
+      "identicalToWorkingNotation": true,
+      "workingArticulatoryManner": "stop",
+      "particularlyAnalysisSensitive": false,
+      "externalPhonemeApproved": false,
+      "independentlyMeasuredByChromalect": false
+    },
+    {
+      "pinyinInitial": "n",
+      "zhaoLiIPA": "n",
+      "originalWorkingIPACandidate": "n",
+      "identicalToWorkingNotation": true,
+      "workingArticulatoryManner": "nasal",
+      "particularlyAnalysisSensitive": false,
+      "externalPhonemeApproved": false,
+      "independentlyMeasuredByChromalect": false
+    },
+    {
+      "pinyinInitial": "l",
+      "zhaoLiIPA": "l",
+      "originalWorkingIPACandidate": "l",
+      "identicalToWorkingNotation": true,
+      "workingArticulatoryManner": "lateral",
+      "particularlyAnalysisSensitive": false,
+      "externalPhonemeApproved": false,
+      "independentlyMeasuredByChromalect": false
+    },
+    {
+      "pinyinInitial": "g",
+      "zhaoLiIPA": "k",
+      "originalWorkingIPACandidate": "k",
+      "identicalToWorkingNotation": true,
+      "workingArticulatoryManner": "stop",
+      "particularlyAnalysisSensitive": false,
+      "externalPhonemeApproved": false,
+      "independentlyMeasuredByChromalect": false
+    },
+    {
+      "pinyinInitial": "k",
+      "zhaoLiIPA": "kʰ",
+      "originalWorkingIPACandidate": "kʰ",
+      "identicalToWorkingNotation": true,
+      "workingArticulatoryManner": "stop",
+      "particularlyAnalysisSensitive": false,
+      "externalPhonemeApproved": false,
+      "independentlyMeasuredByChromalect": false
+    },
+    {
+      "pinyinInitial": "h",
+      "zhaoLiIPA": "x",
+      "originalWorkingIPACandidate": "x",
+      "identicalToWorkingNotation": true,
+      "workingArticulatoryManner": "fricative",
+      "particularlyAnalysisSensitive": false,
+      "externalPhonemeApproved": false,
+      "independentlyMeasuredByChromalect": false
+    },
+    {
+      "pinyinInitial": "j",
+      "zhaoLiIPA": "tɕ",
+      "originalWorkingIPACandidate": "tɕ",
+      "identicalToWorkingNotation": true,
+      "workingArticulatoryManner": "affricate",
+      "particularlyAnalysisSensitive": false,
+      "externalPhonemeApproved": false,
+      "independentlyMeasuredByChromalect": false
+    },
+    {
+      "pinyinInitial": "q",
+      "zhaoLiIPA": "tɕʰ",
+      "originalWorkingIPACandidate": "tɕʰ",
+      "identicalToWorkingNotation": true,
+      "workingArticulatoryManner": "affricate",
+      "particularlyAnalysisSensitive": false,
+      "externalPhonemeApproved": false,
+      "independentlyMeasuredByChromalect": false
+    },
+    {
+      "pinyinInitial": "x",
+      "zhaoLiIPA": "ɕ",
+      "originalWorkingIPACandidate": "ɕ",
+      "identicalToWorkingNotation": true,
+      "workingArticulatoryManner": "fricative",
+      "particularlyAnalysisSensitive": false,
+      "externalPhonemeApproved": false,
+      "independentlyMeasuredByChromalect": false
+    },
+    {
+      "pinyinInitial": "z",
+      "zhaoLiIPA": "ts",
+      "originalWorkingIPACandidate": "ts",
+      "identicalToWorkingNotation": true,
+      "workingArticulatoryManner": "affricate",
+      "particularlyAnalysisSensitive": false,
+      "externalPhonemeApproved": false,
+      "independentlyMeasuredByChromalect": false
+    },
+    {
+      "pinyinInitial": "c",
+      "zhaoLiIPA": "tsʰ",
+      "originalWorkingIPACandidate": "tsʰ",
+      "identicalToWorkingNotation": true,
+      "workingArticulatoryManner": "affricate",
+      "particularlyAnalysisSensitive": false,
+      "externalPhonemeApproved": false,
+      "independentlyMeasuredByChromalect": false
+    },
+    {
+      "pinyinInitial": "s",
+      "zhaoLiIPA": "s",
+      "originalWorkingIPACandidate": "s",
+      "identicalToWorkingNotation": true,
+      "workingArticulatoryManner": "fricative",
+      "particularlyAnalysisSensitive": false,
+      "externalPhonemeApproved": false,
+      "independentlyMeasuredByChromalect": false
+    },
+    {
+      "pinyinInitial": "zh",
+      "zhaoLiIPA": "tʂ",
+      "originalWorkingIPACandidate": "ʈʂ",
+      "identicalToWorkingNotation": false,
+      "workingArticulatoryManner": "affricate",
+      "particularlyAnalysisSensitive": true,
+      "externalPhonemeApproved": false,
+      "independentlyMeasuredByChromalect": false
+    },
+    {
+      "pinyinInitial": "ch",
+      "zhaoLiIPA": "tʂʰ",
+      "originalWorkingIPACandidate": "ʈʂʰ",
+      "identicalToWorkingNotation": false,
+      "workingArticulatoryManner": "affricate",
+      "particularlyAnalysisSensitive": true,
+      "externalPhonemeApproved": false,
+      "independentlyMeasuredByChromalect": false
+    },
+    {
+      "pinyinInitial": "sh",
+      "zhaoLiIPA": "ʂ",
+      "originalWorkingIPACandidate": "ʂ",
+      "identicalToWorkingNotation": true,
+      "workingArticulatoryManner": "fricative",
+      "particularlyAnalysisSensitive": false,
+      "externalPhonemeApproved": false,
+      "independentlyMeasuredByChromalect": false
+    },
+    {
+      "pinyinInitial": "r",
+      "zhaoLiIPA": "ʐ",
+      "originalWorkingIPACandidate": "ɻ",
+      "identicalToWorkingNotation": false,
+      "workingArticulatoryManner": "approximant",
+      "particularlyAnalysisSensitive": true,
+      "externalPhonemeApproved": false,
+      "independentlyMeasuredByChromalect": false
+    }
+  ],
+  "simpleFinals": [
+    {
+      "writtenFinal": "a",
+      "zhaoLiTable1IPA": "a",
+      "sourcePrintedPage": 577,
+      "originalCandidateHeight": "open",
+      "originalCandidateBackness": "central",
+      "originalCandidateRounding": "unrounded",
+      "sourceCitationContextsFlagged": 0,
+      "independentVowelPhonemeApproval": false
+    },
+    {
+      "writtenFinal": "o",
+      "zhaoLiTable1IPA": "o",
+      "sourcePrintedPage": 577,
+      "originalCandidateHeight": "mid",
+      "originalCandidateBackness": "back",
+      "originalCandidateRounding": "rounded",
+      "sourceCitationContextsFlagged": 16,
+      "independentVowelPhonemeApproval": false
+    },
+    {
+      "writtenFinal": "e",
+      "zhaoLiTable1IPA": "ɤ",
+      "sourcePrintedPage": 577,
+      "originalCandidateHeight": "mid",
+      "originalCandidateBackness": "back",
+      "originalCandidateRounding": "unrounded",
+      "sourceCitationContextsFlagged": 0,
+      "independentVowelPhonemeApproval": false
+    },
+    {
+      "writtenFinal": "i",
+      "zhaoLiTable1IPA": "i",
+      "sourcePrintedPage": 577,
+      "originalCandidateHeight": "close",
+      "originalCandidateBackness": "front",
+      "originalCandidateRounding": "unrounded",
+      "sourceCitationContextsFlagged": 63,
+      "independentVowelPhonemeApproval": false
+    },
+    {
+      "writtenFinal": "u",
+      "zhaoLiTable1IPA": "u",
+      "sourcePrintedPage": 577,
+      "originalCandidateHeight": "close",
+      "originalCandidateBackness": "back",
+      "originalCandidateRounding": "rounded",
+      "sourceCitationContextsFlagged": 33,
+      "independentVowelPhonemeApproval": false
+    },
+    {
+      "writtenFinal": "ü",
+      "zhaoLiTable1IPA": "y",
+      "sourcePrintedPage": 577,
+      "originalCandidateHeight": "close",
+      "originalCandidateBackness": "front",
+      "originalCandidateRounding": "rounded",
+      "sourceCitationContextsFlagged": 0,
+      "independentVowelPhonemeApproval": false
+    }
+  ],
+  "limits": [
+    "This independent table comes from one modeling paper and its py2ipa-based pronunciation convention. It does not independently reproduce Lin, Mei or Cai's diction recommendations.",
+    "Pinyin r is represented here as a voiced retroflex fricative /ʐ/; the original Chromalect candidate uses a retroflex approximant notation /ɻ/. Neither is promoted as canonical by this document.",
+    "The retroflex affricate symbols are transcribed without the additional explicit postalveolar tie used in the existing working code; literal divergence is not evidence of a different validated sound.",
+    "The paper explicitly distinguishes contextual apical vowels in written i and notes that its special apical symbols are not ordinary IPA phoneme symbols.",
+    "An IPA reference table is not a verified token-by-token phonemic or acoustic analysis of the 1,171 Chromalect source readings.",
+    "Published computational features and working educational visual glyphs are different proposals; source information does not establish viewer perception or learning outcomes."
+  ]
+}
