@@ -32,6 +32,50 @@ for(const row of leads.sourceFiles){
 assert.deepEqual([...seen].sort(),[
  "chise-ids-basic","cjkvi-ids","makemeahanzi-dictionary","makemeahanzi-graphics"
 ].sort());
+// The screening inventory is revision-specific. A plausible Git SHA or URL is
+// not enough: any replacement source must receive an explicit inventory revision.
+const pinnedSourceFiles=new Map([
+ ["chise-ids-basic",[
+  "chise/ids","ac35413635608512f5e10187812cfab3b6ea47c1",
+  "IDS-UCS-Basic.txt","chise"
+ ]],
+ ["cjkvi-ids",[
+  "cjkvi/cjkvi-ids","86b4d16159f0079437870408f0ca186e529015db",
+  "ids.txt","chise"
+ ]],
+ ["makemeahanzi-dictionary",[
+  "skishore/makemeahanzi","bddc96d41bef78427ed0e034e9f7e31d71fd1b92",
+  "dictionary.txt","unihan-cjklib"
+ ]],
+ ["makemeahanzi-graphics",[
+  "skishore/makemeahanzi","bddc96d41bef78427ed0e034e9f7e31d71fd1b92",
+  "graphics.txt","arphic-fonts"
+ ]]
+]);
+function checkPinnedSourceFiles(rows){
+ assert.equal(rows.length,pinnedSourceFiles.size);
+ for(const row of rows){
+  const expected=pinnedSourceFiles.get(row.id);
+  assert.ok(expected,"Unexpected source lead: "+row.id);
+  assert.deepEqual([
+   row.repository,row.commit,row.candidatePath,row.provenanceFamily
+  ],expected,"Pinned upstream lineage or file changed: "+row.id);
+ }
+}
+checkPinnedSourceFiles(leads.sourceFiles);
+// A substituted repository, revision, file or ancestry must not pass merely
+// because its metadata is syntactically valid.
+for(const [field,replacement] of [
+ ["repository","another/ids"],
+ ["commit","0000000000000000000000000000000000000000"],
+ ["candidatePath","other-ids.txt"],
+ ["provenanceFamily","unrelated"]
+]){
+ const modified=structuredClone(leads.sourceFiles);
+ modified[0][field]=replacement;
+ assert.throws(()=>checkPinnedSourceFiles(modified),
+  /Pinned upstream lineage or file changed/);
+}
 assert.equal(byId.get("chise-ids-basic").provenanceFamily,
  byId.get("cjkvi-ids").provenanceFamily,
  "CHISE-derived CJKVI is not an independent source");
