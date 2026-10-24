@@ -9,6 +9,7 @@ mod manifest;
 mod alternatives;
 mod unknown;
 mod phonetics;
+mod feature_citation;
 mod component_audit;
 mod diagnostics;
 mod review;

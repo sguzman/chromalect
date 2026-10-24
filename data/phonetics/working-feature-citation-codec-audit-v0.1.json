@@ -1,0 +1,39 @@
+{
+  "schema": "chromalect.phonetics.working-feature-citation-codec-audit.v0.1",
+  "status": "machine_reversible_six_provisional_simple_final_features_not_ipa_or_human_decoding",
+  "source": {
+    "citationFile": "site/pronunciation-citations-0001-1000.json",
+    "citationBlobSHA": "e38b5d3077f516054ecc5573c9251b3aa3628140",
+    "initialFeatureInventory": "mandarin-initial-feature-candidates-v0.1.json",
+    "simpleFinalCandidates": "mandarin-simple-final-feature-candidates-v0.1.json",
+    "contextCautions": "mandarin-final-spelling-context-gates-v0.1.json",
+    "originalPaletteUnchanged": true,
+    "sourceGeometryUnchanged": true
+  },
+  "interpretation": {
+    "onset": "Unique preliminary place/manner/aspiration working tuple, or explicit orthographic y/w/zero convention",
+    "final": "Reversible working height/backness/rounding tuple from only six existing simple-final proposal records",
+    "tone": "Exact pinned source citation category symbol",
+    "target": "Recover source-attested written initial/final/tone and original Pinyin spelling, not acoustic realization",
+    "exclusions": "All nine source spelling caution families reject affected citations; 27 further written final categories have no approved proposal",
+    "priorPhoneticReferenceValidated": false,
+    "sourceFeaturesScientificallyAccepted": false
+  },
+  "counts": {
+    "sourceReadings": 1171,
+    "proposedSimpleFinalOccurrences": 432,
+    "eligibleWorkingFeatureRoundTrips": 320,
+    "withheldContextCautions": 112,
+    "withoutFinalFeatureProposal": 739,
+    "distinctSimpleFinalFeatureTuples": 6,
+    "distinctInitialCodes": 24,
+    "toneCategories": 5,
+    "uniqueEligibleVisualCodes": 157,
+    "distinctEligibleSourceTriples": 157,
+    "roundTripFailures": 0,
+    "phonologicalRepresentationApprovals": 0,
+    "humanVisualDecodingTrials": 0,
+    "learningEffectEvidence": 0
+  },
+  "approvedForHumanStudy": false
+}

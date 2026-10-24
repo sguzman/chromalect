@@ -507,7 +507,8 @@ pub(super) fn check() -> Result<(),String> {
     check_atlas_colors()?;
     check_written_final_source_evidence()?;
     check_citation_tone_isolation()?;
-    check_composed_visual_citation_decoder()
+    check_composed_visual_citation_decoder()?;
+    feature_citation::check()
 }
 
 #[cfg(test)]
