@@ -9,7 +9,7 @@
 .comparison-controls input,.comparison-controls select,.comparison-controls button{
 font:inherit;color:var(--ink);background:var(--panel);padding:10px;border:1px solid var(--border);border-radius:8px}
 .comparison-controls .comparison-check{display:flex;align-items:center;gap:8px}
-.comparison-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:20px 0}
+.comparison-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin:20px 0}
 .comparison-card{min-width:0;display:flex;flex-direction:column;gap:10px;border:1px solid var(--border);
 border-radius:12px;background:var(--panel);padding:18px;align-items:center;overflow-wrap:anywhere}
 .comparison-card h2{align-self:stretch;font-size:16px;min-height:50px;margin:0}
@@ -18,6 +18,7 @@ border-radius:12px;background:var(--panel);padding:18px;align-items:center;overf
 .comparison-note{font-size:13px;color:var(--sub);text-align:center;margin:4px 0}
 .comparison-withheld{font-size:13px;padding:10px;border:1px solid var(--border);border-radius:7px;text-align:center}
 .comparison-ipa{font-size:13px;text-align:center;border-bottom:1px dashed var(--border);padding:4px}
+.comparison-ipa-source{font-size:13px;line-height:1.55;text-align:left;padding:12px;border:1px solid var(--border);border-radius:8px;overflow-wrap:anywhere}
 .comparison-initial-svg{height:54px;max-width:100%}
 .comparison-vowel-svg{height:85px;max-width:100%}
 .comparison-letters-svg{height:52px;max-width:100%;overflow:visible}
@@ -25,8 +26,8 @@ border-radius:12px;background:var(--panel);padding:18px;align-items:center;overf
 .comparison-card h2{min-height:auto}.comparison-native{font-size:52px}}
 </style></head><body><header class="wrap"><div class="brand"><b>CHROMALECT</b><small>Language, made visible</small></div></header>
 <main class="wrap"><div class="eyebrow">First-tranche research · source-anchored visual controls</div>
-<h1>Three ways to display the same Mandarin citation</h1>
-<p class="intro">Compare plain Pinyin with an arbitrary reversible written-letter code and provisional articulatory shapes. Each lane retains the original Chinese character and source Pinyin. The optional IPA label, when available, describes the provisional consonantal initial only, never an entire syllable. A written final with a caution flag cannot receive a proposed vowel-feature picture here; unflagged features remain unapproved hypotheses, not measured speech.</p>
+<h1>Four source-qualified ways to inspect a Mandarin citation</h1>
+<p class="intro">Compare plain Pinyin with an arbitrary reversible written-letter code and provisional articulatory shapes. Each lane retains the original Chinese character and source Pinyin. The fourth lane shows independently attributed initial IPA alternatives and conditional published final-headings; no source claims a full-syllable IPA pronunciation. A written final with a caution flag cannot receive a proposed vowel-feature picture here; unflagged features remain unapproved hypotheses, not measured speech.</p>
 <div class="comparison-controls">
 <label for="comparison-rank">Character or rank<input id="comparison-rank" type="text" value="1" placeholder="e.g. 十 or 4"></label>
 <label for="comparison-reading">Source reading<select id="comparison-reading"></select></label>
@@ -41,12 +42,14 @@ border-radius:12px;background:var(--panel);padding:18px;align-items:center;overf
 <section class="comparison-card"><h2>1. Plain source Pinyin</h2><div id="comparison-plain"></div></section>
 <section class="comparison-card"><h2>2. Arbitrary written-letter geometry</h2><div id="comparison-letters"></div></section>
 <section class="comparison-card"><h2>3. Provisional feature encoding</h2><div id="comparison-working"></div></section>
+<section class="comparison-card"><h2>4. Published IPA source options</h2><div id="comparison-sourced-ipa"></div></section>
 </div>
 <p id="comparison-count"></p>
-<p>Zero independently validated phonemic assignments, contextual pronunciations, or human decoding results are asserted. The six-simple-final experiments deliberately exclude 27 written final types, and caution-marked candidate vowels are withheld rather than silently approved. These comparisons are not human study results.</p>
+<p>The source IPA lane reports Lin/Mei/Cai alternatives from Cai (2020) and the independent Zhao–Li (2009) phonological model; it never synthesizes a whole-syllable IPA string or silently resolves the six ambiguous written-final headings. Zero independently validated phonemic assignments, contextual pronunciations, or human decoding results are asserted. The six-simple-final experiments deliberately exclude 27 written final types, and caution-marked candidate vowels are withheld rather than silently approved. These comparisons are not human study results.</p>
 <p><a href="phonetics/mandarin-encoding-comparison-cohorts-v0.1.json">Machine-readable cohort ledger</a> ·
 <a href="https://github.com/sguzman/chromalect/blob/main/docs/mandarin-encoding-comparison-cohorts.md">Evidence rules and study limitations</a> ·
-<a href="mandarin-citation-cell.html">Integrated annotation controls</a></p>
+<a href="mandarin-citation-cell.html">Integrated annotation controls</a> ·
+<a href="mandarin-model-feature-grammar.html">Independent 34-unit visual sound-model grammar</a></p>
 </main><footer class="wrap"><a href="mandarin-final-symbols.html">Written-final controls</a> ·
 <a href="mandarin-simple-final-features.html">Simple-final hypotheses</a> ·
 <a href="roadmap-status.html">Research roadmap</a></footer></body></html>
