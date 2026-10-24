@@ -73,12 +73,14 @@ function setup({source=manifest,hash="",assets=bytes,withCrypto=true}={}){
    return Uint8Array.from(assets.get(url)).buffer;
   }};
  };
- const document={getElementById:id=>nodes[id],createElement:()=>new Element()};
+ const keyListeners={};
+ const document={getElementById:id=>nodes[id],createElement:()=>new Element(),
+  addEventListener:(name,cb)=>{keyListeners[name]=cb;}};
  const ctx={document,fetch,URL:MockURL,Blob:MockBlob,AbortController:MockAbortController,
   Map,Set,Number,Error,TextDecoder,location:{hash},crypto:withCrypto?crypto:undefined};
  ctx.globalThis=ctx;
  for(const s of scripts)vm.runInNewContext(s,ctx);
- return {nodes,fetched,objectURLs,revoked,delayed,abortEvents};
+ return {nodes,fetched,objectURLs,revoked,delayed,abortEvents,keyListeners};
 }
 async function loaded(session){
  for(let i=0;i<200&&!session.nodes["om-cohort"].disabled&&false;i++)await Promise.resolve();
@@ -110,6 +112,34 @@ assert.deepEqual(state.fetched.slice(0,3),
 assertImages(state,manifest.records[0]);
 assert.equal(p["om-prev"].disabled,true);
 assert.equal(p["om-next"].disabled,false);
+assert.equal(typeof state.keyListeners.keydown,"function");
+function keyOf(session,key,{target=null,altKey=false,ctrlKey=false,
+ metaKey=false,defaultPrevented=false}={}){
+ let canceled=false;
+ session.keyListeners.keydown({
+  key,target,altKey,ctrlKey,metaKey,defaultPrevented,
+  preventDefault(){canceled=true;}
+ });
+ return canceled;
+}
+assert.equal(keyOf(state,"ArrowLeft"),false,"Do not wrap before first pair");
+for(const key of ["ArrowRight","ArrowLeft"]){
+ assert.equal(keyOf(state,key,{ctrlKey:true}),false);
+ assert.equal(keyOf(state,key,{altKey:true}),false);
+ assert.equal(keyOf(state,key,{metaKey:true}),false);
+ assert.equal(keyOf(state,key,{defaultPrevented:true}),false);
+ assert.equal(keyOf(state,key,{target:{closest:()=>({})}}),false);
+}
+assert.equal(p["om-pair"].value,manifest.records[0].id);
+assert.equal(keyOf(state,"ArrowRight"),true);
+await flush();
+assert.equal(p["om-pair"].value,manifest.records[1].id);
+assertImages(state,manifest.records[1]);
+assert.equal(keyOf(state,"ArrowLeft"),true);
+await flush();
+assert.equal(p["om-pair"].value,manifest.records[0].id);
+assertImages(state,manifest.records[0]);
+assert.equal(keyOf(state,"Space"),false);
 p["om-next"].events.click();await flush();
 assert.equal(p["om-pair"].value,manifest.records[1].id);
 assertImages(state,manifest.records[1]);

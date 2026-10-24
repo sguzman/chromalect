@@ -171,6 +171,18 @@ function move(offset){
 }
 $("om-prev").addEventListener("click",()=>move(-1));
 $("om-next").addEventListener("click",()=>move(1));
+// Navigation is a non-collecting convenience and preserves native control keys.
+document.addEventListener("keydown",event=>{
+ if(event.defaultPrevented||event.altKey||event.ctrlKey||event.metaKey||
+  (event.key!=="ArrowLeft"&&event.key!=="ArrowRight"))return;
+ if(event.target?.closest?.("input,select,textarea,button,a,[contenteditable]"))return;
+ const index=visibleIds.indexOf(selected);
+ if(index<0)return;
+ const offset=event.key==="ArrowLeft"?-1:1;
+ if(index+offset<0||index+offset>=visibleIds.length)return;
+ event.preventDefault();
+ move(offset);
+});
 $("om-size").addEventListener("change",()=>{
  try{applySize();message("Matched glyph size changed; no human visual result.");}
  catch(e){message("Size rejected: "+e.message);}
