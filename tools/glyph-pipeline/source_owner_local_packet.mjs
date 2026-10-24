@@ -27,6 +27,53 @@ The two masks for a packet have matching glyph path coordinates and grayscale
 fills. They are candidates for prospective protocol development only.
 `;
 
+function escapeHTML(value){
+ return String(value).replace(/[&<>"']/g,c=>
+  ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+}
+export function renderOfflinePacketGallery(manifest){
+ assert.equal(manifest.schema,"chromalect.glyph.local-keyless-packet.v0.1");
+ assert.equal(manifest.summary.pairs,49);
+ assert.equal(manifest.records.length,49);
+ const cards=manifest.records.map((r,i)=>{
+  assert.match(r.packetId,ID);
+  assert.equal(r.candidates.length,2);
+  const regions=r.candidates.map(c=>{
+   assert.match(c.file,new RegExp("^masks/"+r.packetId+"--[AB][.]svg$"));
+   return '<figure><div class="mask"><img loading="lazy" alt="Unverified neutral source region '+
+    escapeHTML(c.slot)+'" src="'+escapeHTML(c.file)+'"></div>'+
+    '<figcaption>Region '+escapeHTML(c.slot)+' · '+escapeHTML(c.form)+'</figcaption></figure>';
+  }).join("");
+  return '<article class="pair"><h2>Pair '+(i+1)+' of 49</h2>'+
+   '<div class="row"><div class="native"><span lang="zh-Hans">'+
+   escapeHTML(r.character)+'</span><small>Font-dependent context</small></div>'+
+   regions+'</div></article>';
+ }).join("\n");
+ const html='<!doctype html><html lang="en"><head><meta charset="utf-8">'+
+  '<meta name="viewport" content="width=device-width,initial-scale=1">'+
+  '<meta name="color-scheme" content="light dark">'+
+  '<title>Local neutral source-region packet · Chromalect</title>'+
+  '<style>:root{font-family:system-ui,sans-serif;color-scheme:light dark}'+
+  'body{max-width:1100px;margin:auto;padding:24px;line-height:1.5}'+
+  '.notice,.pair{border:1px solid #888;border-radius:12px;padding:14px;margin:14px 0}'+
+  '.row{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}'+
+  'figure{margin:0;min-width:0}figcaption,small{display:block;margin-top:8px}'+
+  '.mask,.native{display:flex;flex-direction:column;align-items:center;justify-content:center;'+
+  'min-height:180px;overflow:auto;border:1px solid #aaa;border-radius:8px;padding:8px}'+
+  '.mask{background:#fff;color:#111}.mask img{width:100px;height:100px;max-width:none}'+
+  '.native span{font-size:96px;line-height:1.2}'+
+  '@media(max-width:700px){.row{grid-template-columns:1fr}}</style></head>'+
+  '<body><main><h1>Neutral source-region packet · preparation only</h1>'+
+  '<p class="notice"><strong>Not an approved blinded review or a study.</strong> '+
+  'Both region masks are provisional mappings from the same source. No reviewer results, '+
+  'owner certifications, eligibility decisions, or participant information are recorded. '+
+  'The separate public source project may disclose original machine mappings. '+
+  'This offline gallery does not contact a server.</p>'+cards+
+  '<p>See the accompanying README for scope and limitations.</p></main></body></html>\n';
+ if(html.includes("cmp-")||html.includes("<script")||html.includes("<form"))
+  throw Error("Local gallery includes a source key or collection capability");
+ return html;
+}
 export function deriveOfflineReviewerPacket(source,readSVG,
  makeId=()=> "p-"+randomBytes(16).toString("hex"),
  drawIndex=upper=>randomInt(upper)){
@@ -83,7 +130,8 @@ export function deriveOfflineReviewerPacket(source,readSVG,
  for(const [name,svg] of files){
   assert.ok(!name.includes("cmp-")&&!svg.includes("data-component")&&!svg.includes("cmp-"));
  }
- return {manifest,coordinatorMap,readme:publicREADME,files};
+ return {manifest,coordinatorMap,readme:publicREADME,
+  gallery:renderOfflinePacketGallery(manifest),files};
 }
 function allowedOutsideRepository(p){
  assert.ok(path.isAbsolute(p),"Explicit absolute destination required");
@@ -109,6 +157,7 @@ export function writeOfflinePacket(packet,reviewerDir,privateCoordinatorFile){
    {encoding:"utf8",flag:"wx",mode:0o600});
   exclusive(path.join(review,"index-v0.1.json"),encode(packet.manifest));
   exclusive(path.join(review,"README.md"),packet.readme);
+  exclusive(path.join(review,"index.html"),packet.gallery);
   for(const [name,svg] of packet.files)
    exclusive(path.join(review,name),svg);
   // Only the separate explicitly chosen path receives any machine answer key.

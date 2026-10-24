@@ -4,7 +4,8 @@ import os from "node:os";
 import path from "node:path";
 import {spawnSync} from "node:child_process";
 import {createHash} from "node:crypto";
-import {deriveOfflineReviewerPacket,writeOfflinePacket} from "./source_owner_local_packet.mjs";
+import {deriveOfflineReviewerPacket,writeOfflinePacket,
+ renderOfflinePacketGallery} from "./source_owner_local_packet.mjs";
 const source=JSON.parse(fs.readFileSync(
  "site/glyphs/research/heldout-identification-target-v0.1/index-v0.1.json","utf8"));
 const read=p=>fs.readFileSync("site/"+p,"utf8");
@@ -19,6 +20,19 @@ assert.equal(built.manifest.summary.approvedStudies,0);
 assert.equal(built.manifest.records.length,49);
 assert.equal(built.coordinatorMap.records.length,49);
 assert.equal(built.files.size,98);
+assert.equal((built.gallery.match(/<article class="pair">/g)||[]).length,49);
+assert.equal((built.gallery.match(/<img loading="lazy"/g)||[]).length,98);
+assert.ok(!built.gallery.includes("cmp-"));
+assert.ok(!built.gallery.includes("<script"));
+assert.ok(!built.gallery.includes("<form"));
+const hostile=structuredClone(built.manifest);
+hostile.records[0].character="<img src=x onerror=alert(1)>";
+hostile.records[0].candidates[0].form='<script>alert(1)</script>';
+const escaped=renderOfflinePacketGallery(hostile);
+assert.ok(escaped.includes("&lt;img src=x onerror=alert(1)&gt;"));
+assert.ok(escaped.includes("&lt;script&gt;alert(1)&lt;/script&gt;"));
+assert.ok(!escaped.includes("<script"));
+assert.ok(!escaped.includes("<img src=x"));
 const manifestText=JSON.stringify(built.manifest);
 for(const forbidden of ["cmp-","machineAssignedOwner","sourceTrialId",
  "mappedOtherOwner","sourceSHA256","originalRank","participantName",
@@ -60,6 +74,9 @@ try{
  const privateMap=path.join(tmp,"coordinator-private.json");
  writeOfflinePacket(built,reviewerDir,privateMap);
  assert.equal(fs.readdirSync(path.join(reviewerDir,"masks")).length,98);
+ assert.equal(fs.readFileSync(path.join(reviewerDir,"index.html"),"utf8"),
+  built.gallery);
+ assert.ok(!fs.readFileSync(path.join(reviewerDir,"index.html"),"utf8").includes("cmp-"));
  const published=JSON.parse(fs.readFileSync(
   path.join(reviewerDir,"index-v0.1.json"),"utf8"));
  assert.deepEqual(published,built.manifest);
@@ -85,6 +102,7 @@ try{
   {encoding:"utf8",timeout:60000});
  assert.equal(run.status,0,run.stderr);
  assert.ok(fs.existsSync(path.join(cliDir,"index-v0.1.json")));
+ assert.ok(fs.existsSync(path.join(cliDir,"index.html")));
  assert.ok(fs.existsSync(cliMap));
  assert.ok(!run.stdout.includes("cmp-"));
  const live=JSON.parse(fs.readFileSync(path.join(cliDir,"index-v0.1.json"),"utf8"));
@@ -97,4 +115,4 @@ try{
  assert.notEqual(refused.status,0,"No coordinator or packet overwrite allowed");
  assert.deepEqual(fs.readFileSync(cliMap),before);
 }finally{fs.rmSync(tmp,{recursive:true,force:true});}
-console.log("Local-only reviewer packet: 49 opaque pair IDs, 98 neutral masks, private source map, randomized ordering, create-only output, no participant or certification claims.");
+console.log("Local-only reviewer packet: 49 opaque pairs, 98 neutral masks and a non-collecting offline gallery; private coordinator map and create-only paths verified.");
