@@ -250,6 +250,7 @@ jobs:
           node --check tools/glyph-pipeline/tatoeba_text_reuse_conditions.mjs
           node tools/glyph-pipeline/tatoeba_text_reuse_conditions.mjs --check
           node tools/glyph-pipeline/tatoeba_text_reuse_conditions_smoke.mjs
+          node tools/glyph-pipeline/gf0014_primary_source_locator_smoke.mjs
           node --check site/word-context-candidates.js
           node tools/glyph-pipeline/word_context_candidates_viewer_smoke.mjs
           node --check site/word-context-review.js

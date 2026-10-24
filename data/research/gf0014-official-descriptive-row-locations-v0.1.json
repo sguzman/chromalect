@@ -1,0 +1,456 @@
+{
+  "schema": "chromalect.gf0014.authoritative-descriptive-row-location.v0.1",
+  "status": "source_table_numeric_row_group_crosscheck_complete_drawn_forms_and_geometry_pending",
+  "authority": {
+    "standard": "GF 0014-2009 现代常用字部件及部件名称规范",
+    "issuingBodies": "Ministry of Education of the PRC and State Language Commission",
+    "datedPublication": "2009-03-24",
+    "originalStandardReproductionURI": "https://www.unicode.org/irg/docs/n2739-GF0014-2009.pdf",
+    "sourceHost": "Unicode Ideographic Research Group document archive (IRG N2739)",
+    "officialAnnouncementURI": "https://www.moe.gov.cn/jyb_xwfb/gzdt_gzdt/moe_1485/tnull_45766.html",
+    "publicationReferencePages": "PDF pages 10–23, printed table pages 7–20",
+    "originalStandardRedistributed": false
+  },
+  "thirdPartyCatalog": {
+    "path": "palettes/gf0014-2009-records-v0.4.json",
+    "upstreamTranscriptBlobSHA": "3e1b8f893a5df24c92be76b05084dab964678eb1",
+    "catalogStatus": "third-party transcription; not authoritative verified source",
+    "authoritativelyCertified": false
+  },
+  "pageSpans": [
+    {
+      "firstOrdinal": 1,
+      "lastOrdinal": 36,
+      "pdfPageOneBased": 10,
+      "printedStandardPage": 7
+    },
+    {
+      "firstOrdinal": 37,
+      "lastOrdinal": 73,
+      "pdfPageOneBased": 11,
+      "printedStandardPage": 8
+    },
+    {
+      "firstOrdinal": 74,
+      "lastOrdinal": 110,
+      "pdfPageOneBased": 12,
+      "printedStandardPage": 9
+    },
+    {
+      "firstOrdinal": 111,
+      "lastOrdinal": 147,
+      "pdfPageOneBased": 13,
+      "printedStandardPage": 10
+    },
+    {
+      "firstOrdinal": 148,
+      "lastOrdinal": 184,
+      "pdfPageOneBased": 14,
+      "printedStandardPage": 11
+    },
+    {
+      "firstOrdinal": 185,
+      "lastOrdinal": 221,
+      "pdfPageOneBased": 15,
+      "printedStandardPage": 12
+    },
+    {
+      "firstOrdinal": 222,
+      "lastOrdinal": 258,
+      "pdfPageOneBased": 16,
+      "printedStandardPage": 13
+    },
+    {
+      "firstOrdinal": 259,
+      "lastOrdinal": 295,
+      "pdfPageOneBased": 17,
+      "printedStandardPage": 14
+    },
+    {
+      "firstOrdinal": 296,
+      "lastOrdinal": 332,
+      "pdfPageOneBased": 18,
+      "printedStandardPage": 15
+    },
+    {
+      "firstOrdinal": 333,
+      "lastOrdinal": 369,
+      "pdfPageOneBased": 19,
+      "printedStandardPage": 16
+    },
+    {
+      "firstOrdinal": 370,
+      "lastOrdinal": 406,
+      "pdfPageOneBased": 20,
+      "printedStandardPage": 17
+    },
+    {
+      "firstOrdinal": 407,
+      "lastOrdinal": 443,
+      "pdfPageOneBased": 21,
+      "printedStandardPage": 18
+    },
+    {
+      "firstOrdinal": 444,
+      "lastOrdinal": 480,
+      "pdfPageOneBased": 22,
+      "printedStandardPage": 19
+    },
+    {
+      "firstOrdinal": 481,
+      "lastOrdinal": 514,
+      "pdfPageOneBased": 23,
+      "printedStandardPage": 20
+    }
+  ],
+  "summary": {
+    "catalogRows": 514,
+    "publishedComponentGroups": 441,
+    "printedTableStartOrdinal": 1,
+    "printedTableEndOrdinal": 514,
+    "descriptiveRowsLocatedInAuthoritativeTable": 30,
+    "matchingOrdinalAndGroupColumns": 30,
+    "transcribedDescriptiveTextEquivalenceCertified": 0,
+    "independentlyApprovedDrawnForms": 0,
+    "redistributableGlyphGeometryRecovered": 0,
+    "complete514RowTranscriptionApproved": false
+  },
+  "records": [
+    {
+      "sourceOrdinal": 4,
+      "sourceGroup": 4,
+      "catalogComponentId": "cmp-0044",
+      "transcribedDescription": "{⿱丿𭁨}",
+      "pdfPageOneBased": 10,
+      "printedStandardPage": 7,
+      "ordinalAndGroupMatchedAgainstPDFTable": true,
+      "illustrativeDrawnFormAdjudicated": false,
+      "independentlyApprovedGlyphGeometry": false
+    },
+    {
+      "sourceOrdinal": 10,
+      "sourceGroup": 9,
+      "catalogComponentId": "cmp-0050",
+      "transcribedDescription": "{⿱一丰}",
+      "pdfPageOneBased": 10,
+      "printedStandardPage": 7,
+      "ordinalAndGroupMatchedAgainstPDFTable": true,
+      "illustrativeDrawnFormAdjudicated": false,
+      "independentlyApprovedGlyphGeometry": false
+    },
+    {
+      "sourceOrdinal": 20,
+      "sourceGroup": 18,
+      "catalogComponentId": "cmp-0059",
+      "transcribedDescription": "{⿰二丨}",
+      "pdfPageOneBased": 10,
+      "printedStandardPage": 7,
+      "ordinalAndGroupMatchedAgainstPDFTable": true,
+      "illustrativeDrawnFormAdjudicated": false,
+      "independentlyApprovedGlyphGeometry": false
+    },
+    {
+      "sourceOrdinal": 31,
+      "sourceGroup": 28,
+      "catalogComponentId": "cmp-0070",
+      "transcribedDescription": "{⿻[:-1]艹日}",
+      "pdfPageOneBased": 10,
+      "printedStandardPage": 7,
+      "ordinalAndGroupMatchedAgainstPDFTable": true,
+      "illustrativeDrawnFormAdjudicated": false,
+      "independentlyApprovedGlyphGeometry": false
+    },
+    {
+      "sourceOrdinal": 35,
+      "sourceGroup": 30,
+      "catalogComponentId": "cmp-0073",
+      "transcribedDescription": "{⿻〢𠔼}",
+      "pdfPageOneBased": 10,
+      "printedStandardPage": 7,
+      "ordinalAndGroupMatchedAgainstPDFTable": true,
+      "illustrativeDrawnFormAdjudicated": false,
+      "independentlyApprovedGlyphGeometry": false
+    },
+    {
+      "sourceOrdinal": 36,
+      "sourceGroup": 31,
+      "catalogComponentId": "cmp-0074",
+      "transcribedDescription": "{⿱丷⿴囗⺌}",
+      "pdfPageOneBased": 10,
+      "printedStandardPage": 7,
+      "ordinalAndGroupMatchedAgainstPDFTable": true,
+      "illustrativeDrawnFormAdjudicated": false,
+      "independentlyApprovedGlyphGeometry": false
+    },
+    {
+      "sourceOrdinal": 71,
+      "sourceGroup": 60,
+      "catalogComponentId": "cmp-0107",
+      "transcribedDescription": "{⿹勹丿}",
+      "pdfPageOneBased": 11,
+      "printedStandardPage": 8,
+      "ordinalAndGroupMatchedAgainstPDFTable": true,
+      "illustrativeDrawnFormAdjudicated": false,
+      "independentlyApprovedGlyphGeometry": false
+    },
+    {
+      "sourceOrdinal": 74,
+      "sourceGroup": 62,
+      "catalogComponentId": "cmp-0110",
+      "transcribedDescription": "{⿳亠丷冖}",
+      "pdfPageOneBased": 12,
+      "printedStandardPage": 9,
+      "ordinalAndGroupMatchedAgainstPDFTable": true,
+      "illustrativeDrawnFormAdjudicated": false,
+      "independentlyApprovedGlyphGeometry": false
+    },
+    {
+      "sourceOrdinal": 87,
+      "sourceGroup": 74,
+      "catalogComponentId": "cmp-0123",
+      "transcribedDescription": "{⿷⿻𠂆一二}",
+      "pdfPageOneBased": 12,
+      "printedStandardPage": 9,
+      "ordinalAndGroupMatchedAgainstPDFTable": true,
+      "illustrativeDrawnFormAdjudicated": false,
+      "independentlyApprovedGlyphGeometry": false
+    },
+    {
+      "sourceOrdinal": 101,
+      "sourceGroup": 86,
+      "catalogComponentId": "cmp-0136",
+      "transcribedDescription": "{⿻三丿}",
+      "pdfPageOneBased": 12,
+      "printedStandardPage": 9,
+      "ordinalAndGroupMatchedAgainstPDFTable": true,
+      "illustrativeDrawnFormAdjudicated": false,
+      "independentlyApprovedGlyphGeometry": false
+    },
+    {
+      "sourceOrdinal": 119,
+      "sourceGroup": 103,
+      "catalogComponentId": "cmp-0154",
+      "transcribedDescription": "{⿻人⺕}",
+      "pdfPageOneBased": 13,
+      "printedStandardPage": 10,
+      "ordinalAndGroupMatchedAgainstPDFTable": true,
+      "illustrativeDrawnFormAdjudicated": false,
+      "independentlyApprovedGlyphGeometry": false
+    },
+    {
+      "sourceOrdinal": 151,
+      "sourceGroup": 132,
+      "catalogComponentId": "cmp-0184",
+      "transcribedDescription": "{⿱⿻十日⿰一丶}",
+      "pdfPageOneBased": 14,
+      "printedStandardPage": 11,
+      "ordinalAndGroupMatchedAgainstPDFTable": true,
+      "illustrativeDrawnFormAdjudicated": false,
+      "independentlyApprovedGlyphGeometry": false
+    },
+    {
+      "sourceOrdinal": 156,
+      "sourceGroup": 136,
+      "catalogComponentId": "cmp-0187",
+      "transcribedDescription": "{⿸𢀳丶}",
+      "pdfPageOneBased": 14,
+      "printedStandardPage": 11,
+      "ordinalAndGroupMatchedAgainstPDFTable": true,
+      "illustrativeDrawnFormAdjudicated": false,
+      "independentlyApprovedGlyphGeometry": false
+    },
+    {
+      "sourceOrdinal": 160,
+      "sourceGroup": 138,
+      "catalogComponentId": "cmp-0191",
+      "transcribedDescription": "{⿰𠄌丶}",
+      "pdfPageOneBased": 14,
+      "printedStandardPage": 11,
+      "ordinalAndGroupMatchedAgainstPDFTable": true,
+      "illustrativeDrawnFormAdjudicated": false,
+      "independentlyApprovedGlyphGeometry": false
+    },
+    {
+      "sourceOrdinal": 219,
+      "sourceGroup": 189,
+      "catalogComponentId": "cmp-0244",
+      "transcribedDescription": "{⿱𠂉丶}",
+      "pdfPageOneBased": 15,
+      "printedStandardPage": 12,
+      "ordinalAndGroupMatchedAgainstPDFTable": true,
+      "illustrativeDrawnFormAdjudicated": false,
+      "independentlyApprovedGlyphGeometry": false
+    },
+    {
+      "sourceOrdinal": 234,
+      "sourceGroup": 203,
+      "catalogComponentId": "cmp-0258",
+      "transcribedDescription": "{⿰𱍸刀}",
+      "pdfPageOneBased": 16,
+      "printedStandardPage": 13,
+      "ordinalAndGroupMatchedAgainstPDFTable": true,
+      "illustrativeDrawnFormAdjudicated": false,
+      "independentlyApprovedGlyphGeometry": false
+    },
+    {
+      "sourceOrdinal": 251,
+      "sourceGroup": 220,
+      "catalogComponentId": "cmp-0272",
+      "transcribedDescription": "{⿱𰀉冖}",
+      "pdfPageOneBased": 16,
+      "printedStandardPage": 13,
+      "ordinalAndGroupMatchedAgainstPDFTable": true,
+      "illustrativeDrawnFormAdjudicated": false,
+      "independentlyApprovedGlyphGeometry": false
+    },
+    {
+      "sourceOrdinal": 257,
+      "sourceGroup": 225,
+      "catalogComponentId": "cmp-0278",
+      "transcribedDescription": "{⿱丿⿴#(-𠃌㇉)丶}",
+      "pdfPageOneBased": 16,
+      "printedStandardPage": 13,
+      "ordinalAndGroupMatchedAgainstPDFTable": true,
+      "illustrativeDrawnFormAdjudicated": false,
+      "independentlyApprovedGlyphGeometry": false
+    },
+    {
+      "sourceOrdinal": 262,
+      "sourceGroup": 228,
+      "catalogComponentId": "cmp-0283",
+      "transcribedDescription": "{⿱一八}",
+      "pdfPageOneBased": 17,
+      "printedStandardPage": 14,
+      "ordinalAndGroupMatchedAgainstPDFTable": true,
+      "illustrativeDrawnFormAdjudicated": false,
+      "independentlyApprovedGlyphGeometry": false
+    },
+    {
+      "sourceOrdinal": 280,
+      "sourceGroup": 244,
+      "catalogComponentId": "cmp-0300",
+      "transcribedDescription": "{⿰丿丨}",
+      "pdfPageOneBased": 17,
+      "printedStandardPage": 14,
+      "ordinalAndGroupMatchedAgainstPDFTable": true,
+      "illustrativeDrawnFormAdjudicated": false,
+      "independentlyApprovedGlyphGeometry": false
+    },
+    {
+      "sourceOrdinal": 304,
+      "sourceGroup": 262,
+      "catalogComponentId": "cmp-0320",
+      "transcribedDescription": "{⿻土丷}",
+      "pdfPageOneBased": 18,
+      "printedStandardPage": 15,
+      "ordinalAndGroupMatchedAgainstPDFTable": true,
+      "illustrativeDrawnFormAdjudicated": false,
+      "independentlyApprovedGlyphGeometry": false
+    },
+    {
+      "sourceOrdinal": 308,
+      "sourceGroup": 266,
+      "catalogComponentId": "cmp-0323",
+      "transcribedDescription": "{⿳亠丷冂}",
+      "pdfPageOneBased": 18,
+      "printedStandardPage": 15,
+      "ordinalAndGroupMatchedAgainstPDFTable": true,
+      "illustrativeDrawnFormAdjudicated": false,
+      "independentlyApprovedGlyphGeometry": false
+    },
+    {
+      "sourceOrdinal": 344,
+      "sourceGroup": 297,
+      "catalogComponentId": "cmp-0356",
+      "transcribedDescription": "{⿻口一}",
+      "pdfPageOneBased": 19,
+      "printedStandardPage": 16,
+      "ordinalAndGroupMatchedAgainstPDFTable": true,
+      "illustrativeDrawnFormAdjudicated": false,
+      "independentlyApprovedGlyphGeometry": false
+    },
+    {
+      "sourceOrdinal": 346,
+      "sourceGroup": 299,
+      "catalogComponentId": "cmp-0358",
+      "transcribedDescription": "{⿰冫⿱丿丶}",
+      "pdfPageOneBased": 19,
+      "printedStandardPage": 16,
+      "ordinalAndGroupMatchedAgainstPDFTable": true,
+      "illustrativeDrawnFormAdjudicated": false,
+      "independentlyApprovedGlyphGeometry": false
+    },
+    {
+      "sourceOrdinal": 352,
+      "sourceGroup": 302,
+      "catalogComponentId": "cmp-0362",
+      "transcribedDescription": "{⿱䒑八}",
+      "pdfPageOneBased": 19,
+      "printedStandardPage": 16,
+      "ordinalAndGroupMatchedAgainstPDFTable": true,
+      "illustrativeDrawnFormAdjudicated": false,
+      "independentlyApprovedGlyphGeometry": false
+    },
+    {
+      "sourceOrdinal": 388,
+      "sourceGroup": 338,
+      "catalogComponentId": "cmp-0396",
+      "transcribedDescription": "{⿳𠂉卌一}",
+      "pdfPageOneBased": 20,
+      "printedStandardPage": 17,
+      "ordinalAndGroupMatchedAgainstPDFTable": true,
+      "illustrativeDrawnFormAdjudicated": false,
+      "independentlyApprovedGlyphGeometry": false
+    },
+    {
+      "sourceOrdinal": 393,
+      "sourceGroup": 342,
+      "catalogComponentId": "cmp-0401",
+      "transcribedDescription": "{⿴夂丶}",
+      "pdfPageOneBased": 20,
+      "printedStandardPage": 17,
+      "ordinalAndGroupMatchedAgainstPDFTable": true,
+      "illustrativeDrawnFormAdjudicated": false,
+      "independentlyApprovedGlyphGeometry": false
+    },
+    {
+      "sourceOrdinal": 423,
+      "sourceGroup": 367,
+      "catalogComponentId": "cmp-0429",
+      "transcribedDescription": "{⿹⿺㇉一灬}",
+      "pdfPageOneBased": 21,
+      "printedStandardPage": 18,
+      "ordinalAndGroupMatchedAgainstPDFTable": true,
+      "illustrativeDrawnFormAdjudicated": false,
+      "independentlyApprovedGlyphGeometry": false
+    },
+    {
+      "sourceOrdinal": 432,
+      "sourceGroup": 373,
+      "catalogComponentId": "cmp-0436",
+      "transcribedDescription": "{⿱䒑夫}",
+      "pdfPageOneBased": 21,
+      "printedStandardPage": 18,
+      "ordinalAndGroupMatchedAgainstPDFTable": true,
+      "illustrativeDrawnFormAdjudicated": false,
+      "independentlyApprovedGlyphGeometry": false
+    },
+    {
+      "sourceOrdinal": 493,
+      "sourceGroup": 423,
+      "catalogComponentId": "cmp-0494",
+      "transcribedDescription": "{⿻牛冂}",
+      "pdfPageOneBased": 23,
+      "printedStandardPage": 20,
+      "ordinalAndGroupMatchedAgainstPDFTable": true,
+      "illustrativeDrawnFormAdjudicated": false,
+      "independentlyApprovedGlyphGeometry": false
+    }
+  ],
+  "caveats": [
+    "The standard's scanned table uses drawn component shapes, not the catalog's brace-delimited Unicode IDS descriptions.",
+    "Visual examination established row ordinal and numeric group correspondence only; it did not prove that every brace-delimited expression reproduces the printed outline.",
+    "No outline/stroke geometry, font, official source table text, or scan images are republished.",
+    "All 514 form transcriptions and all 30 descriptive-form geometry matches remain unapproved."
+  ]
+}
