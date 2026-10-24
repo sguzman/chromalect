@@ -311,14 +311,14 @@
       "key": "contextual-fusion",
       "label": "Fusion and contextual experiments",
       "sourceHeadingPrefix": "Phase 3",
-      "complete": 0,
-      "pending": 4,
+      "complete": 1,
+      "pending": 3,
       "total": 4,
-      "checklistPercent": 0,
+      "checklistPercent": 25,
       "checkpoints": [
         {
           "description": "Put all channels into a dense but toggleable rendering.",
-          "state": "pending"
+          "state": "complete"
         },
         {
           "description": "Introduce segmented words, polyphones, sandhi, and contextual glosses.",

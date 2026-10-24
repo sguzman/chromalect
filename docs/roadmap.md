@@ -83,12 +83,12 @@ This is a sequence of **evidence gates**, not a promise to build a large applica
 
 ## Phase 3 — fusion and contextual experiments [proposed]
 
-- [ ] Put all channels into a dense but toggleable rendering.
+- [x] Put all channels into a dense but toggleable rendering.
 - [ ] Introduce segmented words, polyphones, sandhi, and contextual glosses.
 - [ ] Compare assisted learning, retention, and transfer to plain text.
 - [ ] Add reduced-motion semantic/articulatory animation trials.
 
-**Gate:** measured gain over simpler visual aids.
+**Functional integration evidence:** The [first-tranche integrated layer viewer](../site/mandarin-fusion.html) combines independently removable source component strokes, written Pinyin initial/final, idealized citation tone and provisional semantic pictograms for 1,000 aligned characters and 1,171 citation readings. The [fusion acceptance test](../tools/glyph-pipeline/mandarin_fusion_viewer_smoke.mjs) passed in [GitHub Pages CI](https://github.com/sguzman/chromalect/actions/runs/40054863964). This is completion of the **rendering checkpoint**, not the Phase 3 learning-effect gate: contextual pronunciations, lexical-sense and glyph certifications, human comprehension, educational gain, and animation remain unapproved or unimplemented.\n\n**Gate:** measured gain over simpler visual aids.
 
 ## Phase 4 — software decision [deferred]
 
