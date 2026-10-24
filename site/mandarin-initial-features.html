@@ -2,7 +2,7 @@
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="color-scheme" content="light dark">
 <title>Mandarin initial-feature comparison · Chromalect</title>
-<link rel="stylesheet" href="style.css"><script src="theme.js"></script><script src="mandarin-initial-features.js" defer></script>
+<link rel="stylesheet" href="style.css"><script src="theme.js"></script><script src="mandarin-initial-features.js" defer></script><script src="mandarin-ipa-source-comparison.js" defer></script>
 <style>
 .initial-controls{display:flex;flex-wrap:wrap;gap:16px;margin:20px 0}
 .initial-controls label{display:grid;gap:6px}
@@ -14,6 +14,13 @@
 .initial-figure{height:88px;width:200px;max-width:100%}
 .initial-symbol{font-size:44px}
 .initial-note{color:var(--sub);font-size:13px;overflow-wrap:anywhere}
+.ipa-source-scroll{overflow-x:auto;border:1px solid var(--border);border-radius:10px;margin:16px 0}
+.ipa-source-table{width:100%;border-collapse:collapse;min-width:630px;font-size:14px}
+.ipa-source-table th,.ipa-source-table td{padding:10px 12px;text-align:left;
+ border-bottom:1px solid var(--border);vertical-align:top}
+.ipa-source-table th{background:var(--panel);font-weight:700}
+.ipa-source-table td:first-child{font-weight:700}
+.ipa-source-note{font-size:13px;color:var(--sub);line-height:1.6}
 </style></head><body>
 <header class="wrap"><div class="brand"><b>CHROMALECT</b><small>Language, made visible</small></div></header>
 <main class="wrap"><div class="eyebrow">Phonetic research · experimental contrast encoder</div>
@@ -28,6 +35,21 @@
 <p id="initial-status" role="status" aria-live="polite">Loading source-initial inventory.</p>
 <p id="initial-count"></p>
 <div class="initial-list" id="initial-list"></div>
+<section aria-label="Reported published IPA comparison">
+<h2>IPA conventions versus source Pinyin and visual features</h2>
+<p>These 21 Pinyin consonantal initials have three <em>reported</em> notation alternatives
+from a 2020 university dissertation's comparison of Lin, Mei and the author's choral IPA.
+The original 21 working visual-feature shapes above are unchanged; no option is an
+independently adjudicated conversational Mandarin phoneme. The source itself flags
+one likely transcription error in Mei's Pinyin <strong>t</strong> row.</p>
+<div id="ipa-source-initial-table"></div>
+<p id="ipa-source-compare-status" role="status" aria-live="polite">Checking source IPA alternatives.</p>
+<p class="ipa-source-note">Reference: Hana J. Cai, <a href="https://scholarworks.iu.edu/iuswrrest/api/core/bitstreams/9dc66f3c-a3fb-4221-a9a6-815a1c4811a0/content">*Making Chinese Choral Music Accessible in the United States* (2020)</a>,
+Table 2, printed pages 25–26. Lin and Mei are reported through Cai's comparison,
+not reverified from their separate publications. The 3 orthographic written onsets y, w and ∅
+have no separate consonant IPA entries here.
+<a href="https://github.com/sguzman/chromalect/blob/main/docs/mandarin-ipa-convention-comparison.md">Evidence limits and source conventions</a>.</p>
+</section>
 <p>The written onset labels y, w and ∅ are intentionally excluded from consonant-feature glyphs. The Pinyin initial categories must not be conflated with a certified phoneme inventory; some apparent consonant distinctions and IPA realizations depend on the phonological analysis. All codebook assignments remain provisional. Machine-reversible source labels are verified separately for 1,171 citation readings; this does not test human decoding. See <a href="phonetics/initial-feature-codec-audit-v0.1.json">the codec audit</a>, <a href="phonetics/mandarin-initial-feature-candidates-v0.1.json">the source-linked feature inventory</a> and <a href="https://github.com/sguzman/chromalect/blob/main/docs/mandarin-initial-feature-reference.md">the research conventions</a>.</p>
 </main>
 <footer class="wrap"><a href="pinyin-citations.html">Pinyin citations</a> · <a href="mandarin-tone-contours.html">Citation tones</a> · <a href="roadmap-status.html">Roadmap</a></footer>

@@ -56,6 +56,8 @@ This is a sequence of **evidence gates**, not a promise to build a large applica
 - [x] Verify five isolated source citation-tone labels (1,171 readings) and four unique idealized non-neutral contours in JavaScript and Rust; neutral pitch, contextual realization and human perception remain unapproved.
 - [ ] Freeze the Mandarin phonological contrast inventory and a phonetic reference notation.
 - [ ] Compare Pinyin/IPA labels, initial-final symbols, and constructed featural glyphs.
+
+**Published IPA-source comparison (partial):** [Source-qualified Lin/Mei/Cai notation data](../data/phonetics/mandarin-pinyin-ipa-source-disagreement-v0.1.json) compare **21/21 conventional initials** and **6/33 written finals** with existing provisional initial/vowel-feature encoders ([research interpretation](mandarin-ipa-convention-comparison.md)). Sixteen initial rows differ between the three reported traditions. This is a single dissertation's IPA convention comparison, **not** a certified phonemic inventory, full final mapping, contextual realization or human decoding result; the Phase 2 comparison checkpoint remains unfinished.
 - [ ] Specify a decoding grammar and round-trip tests.
 - [ ] Test tone contours independently from segmental notation.
 - [x] Prototype one independently switchable citation-tone, initial and written-final layout around unmodified Chinese characters; human decoding validation remains pending.

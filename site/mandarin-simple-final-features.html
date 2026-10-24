@@ -3,7 +3,7 @@
 <title>Mandarin simple-final feature proposals · Chromalect</title>
 <link rel="stylesheet" href="style.css"><script src="theme.js"></script>
 <script src="mandarin-simple-final-features.js" defer></script>
-<script src="mandarin-working-feature-decoder.js" defer></script>
+<script src="mandarin-working-feature-decoder.js" defer></script><script src="mandarin-ipa-source-comparison.js" defer></script>
 <style>
 .vowel-controls{display:flex;gap:18px;align-items:center;flex-wrap:wrap;margin:20px 0}
 .vowel-controls label{display:flex;gap:8px;align-items:center}
@@ -26,6 +26,13 @@
 .vowel-code-output{border:1px solid var(--border);border-radius:10px;
  padding:15px;background:var(--panel)}
 .vowel-code-reading{font-size:25px}
+.ipa-source-scroll{overflow-x:auto;border:1px solid var(--border);border-radius:10px;margin:16px 0}
+.ipa-source-table{width:100%;border-collapse:collapse;min-width:630px;font-size:14px}
+.ipa-source-table th,.ipa-source-table td{padding:10px 12px;text-align:left;
+ border-bottom:1px solid var(--border);vertical-align:top}
+.ipa-source-table th{background:var(--panel);font-weight:700}
+.ipa-source-table td:first-child{font-weight:700}
+.ipa-source-note{font-size:13px;color:var(--sub);line-height:1.6}
 </style></head><body><header class="wrap"><div class="brand"><b>CHROMALECT</b>
 <small>Language, made visible</small></div></header>
 <main class="wrap"><div class="eyebrow">Mandarin vowel research · unapproved feature hypotheses</div>
@@ -55,6 +62,19 @@ These are provisional *written reading reconstructions*, not demonstrated sound 
 <div id="vowel-code-output" class="vowel-code-output" aria-live="polite"></div>
 <p class="vowel-caution">The decoder neither invents an IPA target nor substitutes unverified contextual pronunciations.
 It is machine-tested in Rust against all source observations. <a href="phonetics/working-feature-citation-codec-audit-v0.1.json">Full evidence and exclusion counts</a>.</p>
+</section>
+<section aria-label="Published IPA alternatives for six working vowel codes">
+<h2>Published IPA notation alternatives for the six simple finals</h2>
+<p>The six written Pinyin finals share a working height, backness and rounding prototype above,
+but published IPA conventions disagree for two of these rows. These are editorial notation
+options, not source-verified phonetic outputs of any particular first-tranche syllable.
+The remaining 27 written finals have no comparable working vowel tuple here.</p>
+<div id="ipa-source-simple-final-table"></div>
+<p id="ipa-source-compare-status" role="status" aria-live="polite">Checking source IPA alternatives.</p>
+<p class="ipa-source-note">Source: <a href="https://scholarworks.iu.edu/iuswrrest/api/core/bitstreams/9dc66f3c-a3fb-4221-a9a6-815a1c4811a0/content">Hana J. Cai (2020), Table 3, printed pages 27–29</a>.
+The source treats certain vowel symbols as conditional on the onset and singing context:
+Pinyin i after sibilants and o after labials must not be forced into a default IPA symbol.
+<a href="https://github.com/sguzman/chromalect/blob/main/docs/mandarin-ipa-convention-comparison.md">Detailed comparison scope</a>.</p>
 </section>
 <h2>Source evidence and contextual warnings</h2>
 <div id="vowel-list" class="vowel-records"></div>
