@@ -1,0 +1,967 @@
+{
+  "schema": "chromalect.semantic.tatoeba-text-reuse-conditions.v0.1",
+  "status": "publisher_policy_and_cc_deed_correlated_with_per_sentence_observations_not_publication_clearance",
+  "source": {
+    "liveRecordAudit": "tatoeba-live-word-record-audit-summary-v0.1.json",
+    "contributorRecords": "tatoeba-word-candidate-attribution-v0.1.json",
+    "researchPriority": "word-context-review-priority-v0.1.json",
+    "corpusSHA256": "7685bc14cf769a63acf7643a5bcd2b19fc3dba6aaf6c12acabd7417752f12338",
+    "liveCheckedUTCDate": "2026-10-23"
+  },
+  "publisherPolicy": {
+    "publisher": "Tatoeba",
+    "publisherTerms": "https://en.wiki.tatoeba.org/articles/show/using-the-tatoeba-corpus",
+    "publisherFAQ": "https://en.wiki.tatoeba.org/articles/show/faq",
+    "ccLicense": "https://creativecommons.org/licenses/by/2.0/fr/",
+    "ccExplanation": "https://creativecommons.org/licenses/by/2.0/fr/deed.en",
+    "checkedUTCDate": "2026-10-24",
+    "scope": "Text only; audio licenses are independently assigned.",
+    "requirements": [
+      "identify contributing author",
+      "link original sentence",
+      "name CC BY 2.0 FR and link the license",
+      "identify modifications when made",
+      "do not imply endorsement"
+    ],
+    "limitations": [
+      "Current policy text does not establish who originally owned every sentence",
+      "Snapshot metadata and a 2026-10-23 live observation do not establish 2026-10-24 license status",
+      "Any subsequent license change, attribution correction, imported-work condition or third-party claim requires renewed assessment",
+      "No source sentence text or audio is redistributed by this record"
+    ]
+  },
+  "summary": {
+    "targetSentenceIDs": 27,
+    "documentedOriginalSentenceURLs": 27,
+    "distinctAttributedContributors": 20,
+    "individuallyObservedCompatibleCCLicenses": 27,
+    "publisherLicensePolicyIndependentlyChecked": 1,
+    "attributedConditionalTextReuseCases": 27,
+    "newLiveLicenseQueries": 0,
+    "independentThirdPartyOwnershipConfirmations": 0,
+    "unconditionalQuotationClearances": 0,
+    "approvedSentenceReadings": 0,
+    "approvedLexicalSenses": 0,
+    "sourceSentencesReproduced": 0
+  },
+  "records": [
+    {
+      "sentenceId": "332981",
+      "leadId": "zhang-growth",
+      "attribution": {
+        "contributor": "fucongcong",
+        "sourceURL": "https://tatoeba.org/en/sentences/show/332981",
+        "sourceTextSHA256": "680f41f5c58114c3ec0fcb1e72323e29ce2eb5394b1c8f89e36555a506948ff5",
+        "license": "CC BY 2.0 FR",
+        "licenseURI": "https://creativecommons.org/licenses/by/2.0/fr/"
+      },
+      "evidence": {
+        "licenseObservedInLiveAPIOn": "2026-10-23",
+        "liveAttributionMatchesSource": true,
+        "liveTextHashMatchesSource": true,
+        "policyTermsCheckedOn": "2026-10-24",
+        "publisherPolicyCompatibleWithObservedLicense": true
+      },
+      "determination": "conditional_text_reuse_license_identified_attribution_required",
+      "conditions": {
+        "creditOriginalContributor": true,
+        "linkSentence": true,
+        "linkLicense": true,
+        "indicateDerivatives": true,
+        "doNotImplyEndorsement": true
+      },
+      "limits": {
+        "independentThirdPartyRightsCheckCompleted": false,
+        "freshSourceLicenseRecheckBeforeQuotation": true,
+        "independentlyAdjudicatedSentenceReading": false,
+        "independentlyAdjudicatedLexicalSense": false,
+        "permissionForImmediateUnattributedQuotation": false
+      },
+      "sourceSentenceReproduced": false
+    },
+    {
+      "sentenceId": "336671",
+      "leadId": "hua-row",
+      "attribution": {
+        "contributor": "fucongcong",
+        "sourceURL": "https://tatoeba.org/en/sentences/show/336671",
+        "sourceTextSHA256": "79af9d8be96f6c325ba39cfdd5ee708ca4d86185e1601580510479faf726d6c6",
+        "license": "CC BY 2.0 FR",
+        "licenseURI": "https://creativecommons.org/licenses/by/2.0/fr/"
+      },
+      "evidence": {
+        "licenseObservedInLiveAPIOn": "2026-10-23",
+        "liveAttributionMatchesSource": true,
+        "liveTextHashMatchesSource": true,
+        "policyTermsCheckedOn": "2026-10-24",
+        "publisherPolicyCompatibleWithObservedLicense": true
+      },
+      "determination": "conditional_text_reuse_license_identified_attribution_required",
+      "conditions": {
+        "creditOriginalContributor": true,
+        "linkSentence": true,
+        "linkLicense": true,
+        "indicateDerivatives": true,
+        "doNotImplyEndorsement": true
+      },
+      "limits": {
+        "independentThirdPartyRightsCheckCompleted": false,
+        "freshSourceLicenseRecheckBeforeQuotation": true,
+        "independentlyAdjudicatedSentenceReading": false,
+        "independentlyAdjudicatedLexicalSense": false,
+        "permissionForImmediateUnattributedQuotation": false
+      },
+      "sourceSentenceReproduced": false
+    },
+    {
+      "sentenceId": "336916",
+      "leadId": "ch126-length",
+      "attribution": {
+        "contributor": "fucongcong",
+        "sourceURL": "https://tatoeba.org/en/sentences/show/336916",
+        "sourceTextSHA256": "1931309564f740a0387bdb8d531aa91d8252fd76d18319ef68b4e1ee35199133",
+        "license": "CC BY 2.0 FR",
+        "licenseURI": "https://creativecommons.org/licenses/by/2.0/fr/"
+      },
+      "evidence": {
+        "licenseObservedInLiveAPIOn": "2026-10-23",
+        "liveAttributionMatchesSource": true,
+        "liveTextHashMatchesSource": true,
+        "policyTermsCheckedOn": "2026-10-24",
+        "publisherPolicyCompatibleWithObservedLicense": true
+      },
+      "determination": "conditional_text_reuse_license_identified_attribution_required",
+      "conditions": {
+        "creditOriginalContributor": true,
+        "linkSentence": true,
+        "linkLicense": true,
+        "indicateDerivatives": true,
+        "doNotImplyEndorsement": true
+      },
+      "limits": {
+        "independentThirdPartyRightsCheckCompleted": false,
+        "freshSourceLicenseRecheckBeforeQuotation": true,
+        "independentlyAdjudicatedSentenceReading": false,
+        "independentlyAdjudicatedLexicalSense": false,
+        "permissionForImmediateUnattributedQuotation": false
+      },
+      "sourceSentenceReproduced": false
+    },
+    {
+      "sentenceId": "343595",
+      "leadId": "guo-cross",
+      "attribution": {
+        "contributor": "fucongcong",
+        "sourceURL": "https://tatoeba.org/en/sentences/show/343595",
+        "sourceTextSHA256": "a5f4e6afaa68a22583074ea48720dcade7efad24a1ae2d3500f1b7dceb31665d",
+        "license": "CC BY 2.0 FR",
+        "licenseURI": "https://creativecommons.org/licenses/by/2.0/fr/"
+      },
+      "evidence": {
+        "licenseObservedInLiveAPIOn": "2026-10-23",
+        "liveAttributionMatchesSource": true,
+        "liveTextHashMatchesSource": true,
+        "policyTermsCheckedOn": "2026-10-24",
+        "publisherPolicyCompatibleWithObservedLicense": true
+      },
+      "determination": "conditional_text_reuse_license_identified_attribution_required",
+      "conditions": {
+        "creditOriginalContributor": true,
+        "linkSentence": true,
+        "linkLicense": true,
+        "indicateDerivatives": true,
+        "doNotImplyEndorsement": true
+      },
+      "limits": {
+        "independentThirdPartyRightsCheckCompleted": false,
+        "freshSourceLicenseRecheckBeforeQuotation": true,
+        "independentlyAdjudicatedSentenceReading": false,
+        "independentlyAdjudicatedLexicalSense": false,
+        "permissionForImmediateUnattributedQuotation": false
+      },
+      "sourceSentenceReproduced": false
+    },
+    {
+      "sentenceId": "347817",
+      "leadId": "guo-cross",
+      "attribution": {
+        "contributor": "zhouj1955",
+        "sourceURL": "https://tatoeba.org/en/sentences/show/347817",
+        "sourceTextSHA256": "0610a1fa45f24bdae471a278ea4963b7fd1d6671b8bd040d0a2fee7cf0d99d70",
+        "license": "CC BY 2.0 FR",
+        "licenseURI": "https://creativecommons.org/licenses/by/2.0/fr/"
+      },
+      "evidence": {
+        "licenseObservedInLiveAPIOn": "2026-10-23",
+        "liveAttributionMatchesSource": true,
+        "liveTextHashMatchesSource": true,
+        "policyTermsCheckedOn": "2026-10-24",
+        "publisherPolicyCompatibleWithObservedLicense": true
+      },
+      "determination": "conditional_text_reuse_license_identified_attribution_required",
+      "conditions": {
+        "creditOriginalContributor": true,
+        "linkSentence": true,
+        "linkLicense": true,
+        "indicateDerivatives": true,
+        "doNotImplyEndorsement": true
+      },
+      "limits": {
+        "independentThirdPartyRightsCheckCompleted": false,
+        "freshSourceLicenseRecheckBeforeQuotation": true,
+        "independentlyAdjudicatedSentenceReading": false,
+        "independentlyAdjudicatedLexicalSense": false,
+        "permissionForImmediateUnattributedQuotation": false
+      },
+      "sourceSentenceReproduced": false
+    },
+    {
+      "sentenceId": "389974",
+      "leadId": "zhang-growth",
+      "attribution": {
+        "contributor": "ver",
+        "sourceURL": "https://tatoeba.org/en/sentences/show/389974",
+        "sourceTextSHA256": "67fd4fb6011be529ad83195652416b173a6b3bf5e480f8bc7e0c06d32bcbaa1f",
+        "license": "CC BY 2.0 FR",
+        "licenseURI": "https://creativecommons.org/licenses/by/2.0/fr/"
+      },
+      "evidence": {
+        "licenseObservedInLiveAPIOn": "2026-10-23",
+        "liveAttributionMatchesSource": true,
+        "liveTextHashMatchesSource": true,
+        "policyTermsCheckedOn": "2026-10-24",
+        "publisherPolicyCompatibleWithObservedLicense": true
+      },
+      "determination": "conditional_text_reuse_license_identified_attribution_required",
+      "conditions": {
+        "creditOriginalContributor": true,
+        "linkSentence": true,
+        "linkLicense": true,
+        "indicateDerivatives": true,
+        "doNotImplyEndorsement": true
+      },
+      "limits": {
+        "independentThirdPartyRightsCheckCompleted": false,
+        "freshSourceLicenseRecheckBeforeQuotation": true,
+        "independentlyAdjudicatedSentenceReading": false,
+        "independentlyAdjudicatedLexicalSense": false,
+        "permissionForImmediateUnattributedQuotation": false
+      },
+      "sourceSentenceReproduced": false
+    },
+    {
+      "sentenceId": "501571",
+      "leadId": "guo-cross",
+      "attribution": {
+        "contributor": "fucongcong",
+        "sourceURL": "https://tatoeba.org/en/sentences/show/501571",
+        "sourceTextSHA256": "ba781db01938079b0e40a50c82047a48b116313ed094c529038b8492e451594d",
+        "license": "CC BY 2.0 FR",
+        "licenseURI": "https://creativecommons.org/licenses/by/2.0/fr/"
+      },
+      "evidence": {
+        "licenseObservedInLiveAPIOn": "2026-10-23",
+        "liveAttributionMatchesSource": true,
+        "liveTextHashMatchesSource": true,
+        "policyTermsCheckedOn": "2026-10-24",
+        "publisherPolicyCompatibleWithObservedLicense": true
+      },
+      "determination": "conditional_text_reuse_license_identified_attribution_required",
+      "conditions": {
+        "creditOriginalContributor": true,
+        "linkSentence": true,
+        "linkLicense": true,
+        "indicateDerivatives": true,
+        "doNotImplyEndorsement": true
+      },
+      "limits": {
+        "independentThirdPartyRightsCheckCompleted": false,
+        "freshSourceLicenseRecheckBeforeQuotation": true,
+        "independentlyAdjudicatedSentenceReading": false,
+        "independentlyAdjudicatedLexicalSense": false,
+        "permissionForImmediateUnattributedQuotation": false
+      },
+      "sourceSentenceReproduced": false
+    },
+    {
+      "sentenceId": "510659",
+      "leadId": "hua-plan",
+      "attribution": {
+        "contributor": "fucongcong",
+        "sourceURL": "https://tatoeba.org/en/sentences/show/510659",
+        "sourceTextSHA256": "63d73c8ae59dda105f9b228a90b2373c0045538cc862678a2a63f9ef011f7212",
+        "license": "CC BY 2.0 FR",
+        "licenseURI": "https://creativecommons.org/licenses/by/2.0/fr/"
+      },
+      "evidence": {
+        "licenseObservedInLiveAPIOn": "2026-10-23",
+        "liveAttributionMatchesSource": true,
+        "liveTextHashMatchesSource": true,
+        "policyTermsCheckedOn": "2026-10-24",
+        "publisherPolicyCompatibleWithObservedLicense": true
+      },
+      "determination": "conditional_text_reuse_license_identified_attribution_required",
+      "conditions": {
+        "creditOriginalContributor": true,
+        "linkSentence": true,
+        "linkLicense": true,
+        "indicateDerivatives": true,
+        "doNotImplyEndorsement": true
+      },
+      "limits": {
+        "independentThirdPartyRightsCheckCompleted": false,
+        "freshSourceLicenseRecheckBeforeQuotation": true,
+        "independentlyAdjudicatedSentenceReading": false,
+        "independentlyAdjudicatedLexicalSense": false,
+        "permissionForImmediateUnattributedQuotation": false
+      },
+      "sourceSentenceReproduced": false
+    },
+    {
+      "sentenceId": "733596",
+      "leadId": "hua-plan",
+      "attribution": {
+        "contributor": "mcq",
+        "sourceURL": "https://tatoeba.org/en/sentences/show/733596",
+        "sourceTextSHA256": "d650353ec7d72fc829184a888bd09a815cd42371cdaf9ce381513808294e07ea",
+        "license": "CC BY 2.0 FR",
+        "licenseURI": "https://creativecommons.org/licenses/by/2.0/fr/"
+      },
+      "evidence": {
+        "licenseObservedInLiveAPIOn": "2026-10-23",
+        "liveAttributionMatchesSource": true,
+        "liveTextHashMatchesSource": true,
+        "policyTermsCheckedOn": "2026-10-24",
+        "publisherPolicyCompatibleWithObservedLicense": true
+      },
+      "determination": "conditional_text_reuse_license_identified_attribution_required",
+      "conditions": {
+        "creditOriginalContributor": true,
+        "linkSentence": true,
+        "linkLicense": true,
+        "indicateDerivatives": true,
+        "doNotImplyEndorsement": true
+      },
+      "limits": {
+        "independentThirdPartyRightsCheckCompleted": false,
+        "freshSourceLicenseRecheckBeforeQuotation": true,
+        "independentlyAdjudicatedSentenceReading": false,
+        "independentlyAdjudicatedLexicalSense": false,
+        "permissionForImmediateUnattributedQuotation": false
+      },
+      "sourceSentenceReproduced": false
+    },
+    {
+      "sentenceId": "850117",
+      "leadId": "hua-row",
+      "attribution": {
+        "contributor": "Martha",
+        "sourceURL": "https://tatoeba.org/en/sentences/show/850117",
+        "sourceTextSHA256": "7ce28bcb7516192ac319545259ff0da2039ed92bde004a8a3a453410e0553215",
+        "license": "CC BY 2.0 FR",
+        "licenseURI": "https://creativecommons.org/licenses/by/2.0/fr/"
+      },
+      "evidence": {
+        "licenseObservedInLiveAPIOn": "2026-10-23",
+        "liveAttributionMatchesSource": true,
+        "liveTextHashMatchesSource": true,
+        "policyTermsCheckedOn": "2026-10-24",
+        "publisherPolicyCompatibleWithObservedLicense": true
+      },
+      "determination": "conditional_text_reuse_license_identified_attribution_required",
+      "conditions": {
+        "creditOriginalContributor": true,
+        "linkSentence": true,
+        "linkLicense": true,
+        "indicateDerivatives": true,
+        "doNotImplyEndorsement": true
+      },
+      "limits": {
+        "independentThirdPartyRightsCheckCompleted": false,
+        "freshSourceLicenseRecheckBeforeQuotation": true,
+        "independentlyAdjudicatedSentenceReading": false,
+        "independentlyAdjudicatedLexicalSense": false,
+        "permissionForImmediateUnattributedQuotation": false
+      },
+      "sourceSentenceReproduced": false
+    },
+    {
+      "sentenceId": "1839195",
+      "leadId": "zhang-growth",
+      "attribution": {
+        "contributor": "sadhen",
+        "sourceURL": "https://tatoeba.org/en/sentences/show/1839195",
+        "sourceTextSHA256": "94bfd652b296c50c2c5d8b19b1839c58ab42dce6ad53acdf83b94a06d7a71767",
+        "license": "CC BY 2.0 FR",
+        "licenseURI": "https://creativecommons.org/licenses/by/2.0/fr/"
+      },
+      "evidence": {
+        "licenseObservedInLiveAPIOn": "2026-10-23",
+        "liveAttributionMatchesSource": true,
+        "liveTextHashMatchesSource": true,
+        "policyTermsCheckedOn": "2026-10-24",
+        "publisherPolicyCompatibleWithObservedLicense": true
+      },
+      "determination": "conditional_text_reuse_license_identified_attribution_required",
+      "conditions": {
+        "creditOriginalContributor": true,
+        "linkSentence": true,
+        "linkLicense": true,
+        "indicateDerivatives": true,
+        "doNotImplyEndorsement": true
+      },
+      "limits": {
+        "independentThirdPartyRightsCheckCompleted": false,
+        "freshSourceLicenseRecheckBeforeQuotation": true,
+        "independentlyAdjudicatedSentenceReading": false,
+        "independentlyAdjudicatedLexicalSense": false,
+        "permissionForImmediateUnattributedQuotation": false
+      },
+      "sourceSentenceReproduced": false
+    },
+    {
+      "sentenceId": "2317127",
+      "leadId": "ch126-length",
+      "attribution": {
+        "contributor": "User5120",
+        "sourceURL": "https://tatoeba.org/en/sentences/show/2317127",
+        "sourceTextSHA256": "ebb9c13c894e414058e75affa7d8490aa4d283dede56fe1b63658a11565ec4be",
+        "license": "CC BY 2.0 FR",
+        "licenseURI": "https://creativecommons.org/licenses/by/2.0/fr/"
+      },
+      "evidence": {
+        "licenseObservedInLiveAPIOn": "2026-10-23",
+        "liveAttributionMatchesSource": true,
+        "liveTextHashMatchesSource": true,
+        "policyTermsCheckedOn": "2026-10-24",
+        "publisherPolicyCompatibleWithObservedLicense": true
+      },
+      "determination": "conditional_text_reuse_license_identified_attribution_required",
+      "conditions": {
+        "creditOriginalContributor": true,
+        "linkSentence": true,
+        "linkLicense": true,
+        "indicateDerivatives": true,
+        "doNotImplyEndorsement": true
+      },
+      "limits": {
+        "independentThirdPartyRightsCheckCompleted": false,
+        "freshSourceLicenseRecheckBeforeQuotation": true,
+        "independentlyAdjudicatedSentenceReading": false,
+        "independentlyAdjudicatedLexicalSense": false,
+        "permissionForImmediateUnattributedQuotation": false
+      },
+      "sourceSentenceReproduced": false
+    },
+    {
+      "sentenceId": "2440828",
+      "leadId": "guo-aspect",
+      "attribution": {
+        "contributor": "fenfang557",
+        "sourceURL": "https://tatoeba.org/en/sentences/show/2440828",
+        "sourceTextSHA256": "525ae759d8836dac22255fc1d495eddd13eae57d9ae8c49a6b5fa410bdb7475b",
+        "license": "CC BY 2.0 FR",
+        "licenseURI": "https://creativecommons.org/licenses/by/2.0/fr/"
+      },
+      "evidence": {
+        "licenseObservedInLiveAPIOn": "2026-10-23",
+        "liveAttributionMatchesSource": true,
+        "liveTextHashMatchesSource": true,
+        "policyTermsCheckedOn": "2026-10-24",
+        "publisherPolicyCompatibleWithObservedLicense": true
+      },
+      "determination": "conditional_text_reuse_license_identified_attribution_required",
+      "conditions": {
+        "creditOriginalContributor": true,
+        "linkSentence": true,
+        "linkLicense": true,
+        "indicateDerivatives": true,
+        "doNotImplyEndorsement": true
+      },
+      "limits": {
+        "independentThirdPartyRightsCheckCompleted": false,
+        "freshSourceLicenseRecheckBeforeQuotation": true,
+        "independentlyAdjudicatedSentenceReading": false,
+        "independentlyAdjudicatedLexicalSense": false,
+        "permissionForImmediateUnattributedQuotation": false
+      },
+      "sourceSentenceReproduced": false
+    },
+    {
+      "sentenceId": "2915527",
+      "leadId": "hua-plan",
+      "attribution": {
+        "contributor": "vicch",
+        "sourceURL": "https://tatoeba.org/en/sentences/show/2915527",
+        "sourceTextSHA256": "b5ef4004fd81fad6b51a4548947d111f90afdf1301e927d6f0f0470c691414fd",
+        "license": "CC BY 2.0 FR",
+        "licenseURI": "https://creativecommons.org/licenses/by/2.0/fr/"
+      },
+      "evidence": {
+        "licenseObservedInLiveAPIOn": "2026-10-23",
+        "liveAttributionMatchesSource": true,
+        "liveTextHashMatchesSource": true,
+        "policyTermsCheckedOn": "2026-10-24",
+        "publisherPolicyCompatibleWithObservedLicense": true
+      },
+      "determination": "conditional_text_reuse_license_identified_attribution_required",
+      "conditions": {
+        "creditOriginalContributor": true,
+        "linkSentence": true,
+        "linkLicense": true,
+        "indicateDerivatives": true,
+        "doNotImplyEndorsement": true
+      },
+      "limits": {
+        "independentThirdPartyRightsCheckCompleted": false,
+        "freshSourceLicenseRecheckBeforeQuotation": true,
+        "independentlyAdjudicatedSentenceReading": false,
+        "independentlyAdjudicatedLexicalSense": false,
+        "permissionForImmediateUnattributedQuotation": false
+      },
+      "sourceSentenceReproduced": false
+    },
+    {
+      "sentenceId": "8037882",
+      "leadId": "guo-cross",
+      "attribution": {
+        "contributor": "Ivanovb",
+        "sourceURL": "https://tatoeba.org/en/sentences/show/8037882",
+        "sourceTextSHA256": "414d103024ba6a6c8a63f63073ba10c472cb1f9ad9017480ead930b3fcd542ae",
+        "license": "CC BY 2.0 FR",
+        "licenseURI": "https://creativecommons.org/licenses/by/2.0/fr/"
+      },
+      "evidence": {
+        "licenseObservedInLiveAPIOn": "2026-10-23",
+        "liveAttributionMatchesSource": true,
+        "liveTextHashMatchesSource": true,
+        "policyTermsCheckedOn": "2026-10-24",
+        "publisherPolicyCompatibleWithObservedLicense": true
+      },
+      "determination": "conditional_text_reuse_license_identified_attribution_required",
+      "conditions": {
+        "creditOriginalContributor": true,
+        "linkSentence": true,
+        "linkLicense": true,
+        "indicateDerivatives": true,
+        "doNotImplyEndorsement": true
+      },
+      "limits": {
+        "independentThirdPartyRightsCheckCompleted": false,
+        "freshSourceLicenseRecheckBeforeQuotation": true,
+        "independentlyAdjudicatedSentenceReading": false,
+        "independentlyAdjudicatedLexicalSense": false,
+        "permissionForImmediateUnattributedQuotation": false
+      },
+      "sourceSentenceReproduced": false
+    },
+    {
+      "sentenceId": "8748562",
+      "leadId": "zhang-growth",
+      "attribution": {
+        "contributor": "cxpadonis",
+        "sourceURL": "https://tatoeba.org/en/sentences/show/8748562",
+        "sourceTextSHA256": "ce7442d3a565ad671ea9507f9264c513b655a75e89b2e1fdab9d4726d7e9514e",
+        "license": "CC BY 2.0 FR",
+        "licenseURI": "https://creativecommons.org/licenses/by/2.0/fr/"
+      },
+      "evidence": {
+        "licenseObservedInLiveAPIOn": "2026-10-23",
+        "liveAttributionMatchesSource": true,
+        "liveTextHashMatchesSource": true,
+        "policyTermsCheckedOn": "2026-10-24",
+        "publisherPolicyCompatibleWithObservedLicense": true
+      },
+      "determination": "conditional_text_reuse_license_identified_attribution_required",
+      "conditions": {
+        "creditOriginalContributor": true,
+        "linkSentence": true,
+        "linkLicense": true,
+        "indicateDerivatives": true,
+        "doNotImplyEndorsement": true
+      },
+      "limits": {
+        "independentThirdPartyRightsCheckCompleted": false,
+        "freshSourceLicenseRecheckBeforeQuotation": true,
+        "independentlyAdjudicatedSentenceReading": false,
+        "independentlyAdjudicatedLexicalSense": false,
+        "permissionForImmediateUnattributedQuotation": false
+      },
+      "sourceSentenceReproduced": false
+    },
+    {
+      "sentenceId": "9409447",
+      "leadId": "guo-aspect",
+      "attribution": {
+        "contributor": "BobbyLee",
+        "sourceURL": "https://tatoeba.org/en/sentences/show/9409447",
+        "sourceTextSHA256": "a25010f03a3f7fd4bfaa751517a9bb329408afad408a64e566261314e72ebb9c",
+        "license": "CC BY 2.0 FR",
+        "licenseURI": "https://creativecommons.org/licenses/by/2.0/fr/"
+      },
+      "evidence": {
+        "licenseObservedInLiveAPIOn": "2026-10-23",
+        "liveAttributionMatchesSource": true,
+        "liveTextHashMatchesSource": true,
+        "policyTermsCheckedOn": "2026-10-24",
+        "publisherPolicyCompatibleWithObservedLicense": true
+      },
+      "determination": "conditional_text_reuse_license_identified_attribution_required",
+      "conditions": {
+        "creditOriginalContributor": true,
+        "linkSentence": true,
+        "linkLicense": true,
+        "indicateDerivatives": true,
+        "doNotImplyEndorsement": true
+      },
+      "limits": {
+        "independentThirdPartyRightsCheckCompleted": false,
+        "freshSourceLicenseRecheckBeforeQuotation": true,
+        "independentlyAdjudicatedSentenceReading": false,
+        "independentlyAdjudicatedLexicalSense": false,
+        "permissionForImmediateUnattributedQuotation": false
+      },
+      "sourceSentenceReproduced": false
+    },
+    {
+      "sentenceId": "9842625",
+      "leadId": "guo-cross",
+      "attribution": {
+        "contributor": "Ivanovb",
+        "sourceURL": "https://tatoeba.org/en/sentences/show/9842625",
+        "sourceTextSHA256": "ce4d1e4294e5659faf901527c193a74ec2849426c26edb19aa9759a622101a52",
+        "license": "CC BY 2.0 FR",
+        "licenseURI": "https://creativecommons.org/licenses/by/2.0/fr/"
+      },
+      "evidence": {
+        "licenseObservedInLiveAPIOn": "2026-10-23",
+        "liveAttributionMatchesSource": true,
+        "liveTextHashMatchesSource": true,
+        "policyTermsCheckedOn": "2026-10-24",
+        "publisherPolicyCompatibleWithObservedLicense": true
+      },
+      "determination": "conditional_text_reuse_license_identified_attribution_required",
+      "conditions": {
+        "creditOriginalContributor": true,
+        "linkSentence": true,
+        "linkLicense": true,
+        "indicateDerivatives": true,
+        "doNotImplyEndorsement": true
+      },
+      "limits": {
+        "independentThirdPartyRightsCheckCompleted": false,
+        "freshSourceLicenseRecheckBeforeQuotation": true,
+        "independentlyAdjudicatedSentenceReading": false,
+        "independentlyAdjudicatedLexicalSense": false,
+        "permissionForImmediateUnattributedQuotation": false
+      },
+      "sourceSentenceReproduced": false
+    },
+    {
+      "sentenceId": "9968962",
+      "leadId": "hua-plan",
+      "attribution": {
+        "contributor": "GlossaMatik",
+        "sourceURL": "https://tatoeba.org/en/sentences/show/9968962",
+        "sourceTextSHA256": "761ccfcee3f0ad13d86ee0c48087275aed96cc0d011a273049b4f3d723ce610e",
+        "license": "CC BY 2.0 FR",
+        "licenseURI": "https://creativecommons.org/licenses/by/2.0/fr/"
+      },
+      "evidence": {
+        "licenseObservedInLiveAPIOn": "2026-10-23",
+        "liveAttributionMatchesSource": true,
+        "liveTextHashMatchesSource": true,
+        "policyTermsCheckedOn": "2026-10-24",
+        "publisherPolicyCompatibleWithObservedLicense": true
+      },
+      "determination": "conditional_text_reuse_license_identified_attribution_required",
+      "conditions": {
+        "creditOriginalContributor": true,
+        "linkSentence": true,
+        "linkLicense": true,
+        "indicateDerivatives": true,
+        "doNotImplyEndorsement": true
+      },
+      "limits": {
+        "independentThirdPartyRightsCheckCompleted": false,
+        "freshSourceLicenseRecheckBeforeQuotation": true,
+        "independentlyAdjudicatedSentenceReading": false,
+        "independentlyAdjudicatedLexicalSense": false,
+        "permissionForImmediateUnattributedQuotation": false
+      },
+      "sourceSentenceReproduced": false
+    },
+    {
+      "sentenceId": "9972430",
+      "leadId": "ch126-length",
+      "attribution": {
+        "contributor": "GlossaMatik",
+        "sourceURL": "https://tatoeba.org/en/sentences/show/9972430",
+        "sourceTextSHA256": "c792ccb60466bc0bcca489aaaf93f8876f27063fbaaa48348c1ff6b5fadb6fd7",
+        "license": "CC BY 2.0 FR",
+        "licenseURI": "https://creativecommons.org/licenses/by/2.0/fr/"
+      },
+      "evidence": {
+        "licenseObservedInLiveAPIOn": "2026-10-23",
+        "liveAttributionMatchesSource": true,
+        "liveTextHashMatchesSource": true,
+        "policyTermsCheckedOn": "2026-10-24",
+        "publisherPolicyCompatibleWithObservedLicense": true
+      },
+      "determination": "conditional_text_reuse_license_identified_attribution_required",
+      "conditions": {
+        "creditOriginalContributor": true,
+        "linkSentence": true,
+        "linkLicense": true,
+        "indicateDerivatives": true,
+        "doNotImplyEndorsement": true
+      },
+      "limits": {
+        "independentThirdPartyRightsCheckCompleted": false,
+        "freshSourceLicenseRecheckBeforeQuotation": true,
+        "independentlyAdjudicatedSentenceReading": false,
+        "independentlyAdjudicatedLexicalSense": false,
+        "permissionForImmediateUnattributedQuotation": false
+      },
+      "sourceSentenceReproduced": false
+    },
+    {
+      "sentenceId": "10058523",
+      "leadId": "hua-plan",
+      "attribution": {
+        "contributor": "slo_oth",
+        "sourceURL": "https://tatoeba.org/en/sentences/show/10058523",
+        "sourceTextSHA256": "1b2dee495b16a2a77cfd0d51dd085103b102731a020ac8dbac031c8b8695ceb2",
+        "license": "CC BY 2.0 FR",
+        "licenseURI": "https://creativecommons.org/licenses/by/2.0/fr/"
+      },
+      "evidence": {
+        "licenseObservedInLiveAPIOn": "2026-10-23",
+        "liveAttributionMatchesSource": true,
+        "liveTextHashMatchesSource": true,
+        "policyTermsCheckedOn": "2026-10-24",
+        "publisherPolicyCompatibleWithObservedLicense": true
+      },
+      "determination": "conditional_text_reuse_license_identified_attribution_required",
+      "conditions": {
+        "creditOriginalContributor": true,
+        "linkSentence": true,
+        "linkLicense": true,
+        "indicateDerivatives": true,
+        "doNotImplyEndorsement": true
+      },
+      "limits": {
+        "independentThirdPartyRightsCheckCompleted": false,
+        "freshSourceLicenseRecheckBeforeQuotation": true,
+        "independentlyAdjudicatedSentenceReading": false,
+        "independentlyAdjudicatedLexicalSense": false,
+        "permissionForImmediateUnattributedQuotation": false
+      },
+      "sourceSentenceReproduced": false
+    },
+    {
+      "sentenceId": "10066357",
+      "leadId": "guo-aspect",
+      "attribution": {
+        "contributor": "CreeperVLin",
+        "sourceURL": "https://tatoeba.org/en/sentences/show/10066357",
+        "sourceTextSHA256": "843ad0970402697b4e9a8beba692a907dd385dd60ded570bed2f0aef6e83370c",
+        "license": "CC BY 2.0 FR",
+        "licenseURI": "https://creativecommons.org/licenses/by/2.0/fr/"
+      },
+      "evidence": {
+        "licenseObservedInLiveAPIOn": "2026-10-23",
+        "liveAttributionMatchesSource": true,
+        "liveTextHashMatchesSource": true,
+        "policyTermsCheckedOn": "2026-10-24",
+        "publisherPolicyCompatibleWithObservedLicense": true
+      },
+      "determination": "conditional_text_reuse_license_identified_attribution_required",
+      "conditions": {
+        "creditOriginalContributor": true,
+        "linkSentence": true,
+        "linkLicense": true,
+        "indicateDerivatives": true,
+        "doNotImplyEndorsement": true
+      },
+      "limits": {
+        "independentThirdPartyRightsCheckCompleted": false,
+        "freshSourceLicenseRecheckBeforeQuotation": true,
+        "independentlyAdjudicatedSentenceReading": false,
+        "independentlyAdjudicatedLexicalSense": false,
+        "permissionForImmediateUnattributedQuotation": false
+      },
+      "sourceSentenceReproduced": false
+    },
+    {
+      "sentenceId": "10305694",
+      "leadId": "hua-row",
+      "attribution": {
+        "contributor": "DaoSeng",
+        "sourceURL": "https://tatoeba.org/en/sentences/show/10305694",
+        "sourceTextSHA256": "5dad550f1b7a6271c5f0610a76d0318e3b2410fe27273a325ad65f2816cfaf2b",
+        "license": "CC BY 2.0 FR",
+        "licenseURI": "https://creativecommons.org/licenses/by/2.0/fr/"
+      },
+      "evidence": {
+        "licenseObservedInLiveAPIOn": "2026-10-23",
+        "liveAttributionMatchesSource": true,
+        "liveTextHashMatchesSource": true,
+        "policyTermsCheckedOn": "2026-10-24",
+        "publisherPolicyCompatibleWithObservedLicense": true
+      },
+      "determination": "conditional_text_reuse_license_identified_attribution_required",
+      "conditions": {
+        "creditOriginalContributor": true,
+        "linkSentence": true,
+        "linkLicense": true,
+        "indicateDerivatives": true,
+        "doNotImplyEndorsement": true
+      },
+      "limits": {
+        "independentThirdPartyRightsCheckCompleted": false,
+        "freshSourceLicenseRecheckBeforeQuotation": true,
+        "independentlyAdjudicatedSentenceReading": false,
+        "independentlyAdjudicatedLexicalSense": false,
+        "permissionForImmediateUnattributedQuotation": false
+      },
+      "sourceSentenceReproduced": false
+    },
+    {
+      "sentenceId": "12687028",
+      "leadId": "zhang-growth",
+      "attribution": {
+        "contributor": "soueihin",
+        "sourceURL": "https://tatoeba.org/en/sentences/show/12687028",
+        "sourceTextSHA256": "74ad633bd3418d3d3869ce0287cbf847cfb4e5b8d97c45ee1bbba84d6abb7115",
+        "license": "CC BY 2.0 FR",
+        "licenseURI": "https://creativecommons.org/licenses/by/2.0/fr/"
+      },
+      "evidence": {
+        "licenseObservedInLiveAPIOn": "2026-10-23",
+        "liveAttributionMatchesSource": true,
+        "liveTextHashMatchesSource": true,
+        "policyTermsCheckedOn": "2026-10-24",
+        "publisherPolicyCompatibleWithObservedLicense": true
+      },
+      "determination": "conditional_text_reuse_license_identified_attribution_required",
+      "conditions": {
+        "creditOriginalContributor": true,
+        "linkSentence": true,
+        "linkLicense": true,
+        "indicateDerivatives": true,
+        "doNotImplyEndorsement": true
+      },
+      "limits": {
+        "independentThirdPartyRightsCheckCompleted": false,
+        "freshSourceLicenseRecheckBeforeQuotation": true,
+        "independentlyAdjudicatedSentenceReading": false,
+        "independentlyAdjudicatedLexicalSense": false,
+        "permissionForImmediateUnattributedQuotation": false
+      },
+      "sourceSentenceReproduced": false
+    },
+    {
+      "sentenceId": "13751971",
+      "leadId": "guo-aspect",
+      "attribution": {
+        "contributor": "_LoLa_",
+        "sourceURL": "https://tatoeba.org/en/sentences/show/13751971",
+        "sourceTextSHA256": "fa27c4b51066a7127a772c7dfd09601d8599161a0cae0e7b4dcd0e2756f1ad4b",
+        "license": "CC BY 2.0 FR",
+        "licenseURI": "https://creativecommons.org/licenses/by/2.0/fr/"
+      },
+      "evidence": {
+        "licenseObservedInLiveAPIOn": "2026-10-23",
+        "liveAttributionMatchesSource": true,
+        "liveTextHashMatchesSource": true,
+        "policyTermsCheckedOn": "2026-10-24",
+        "publisherPolicyCompatibleWithObservedLicense": true
+      },
+      "determination": "conditional_text_reuse_license_identified_attribution_required",
+      "conditions": {
+        "creditOriginalContributor": true,
+        "linkSentence": true,
+        "linkLicense": true,
+        "indicateDerivatives": true,
+        "doNotImplyEndorsement": true
+      },
+      "limits": {
+        "independentThirdPartyRightsCheckCompleted": false,
+        "freshSourceLicenseRecheckBeforeQuotation": true,
+        "independentlyAdjudicatedSentenceReading": false,
+        "independentlyAdjudicatedLexicalSense": false,
+        "permissionForImmediateUnattributedQuotation": false
+      },
+      "sourceSentenceReproduced": false
+    },
+    {
+      "sentenceId": "13970686",
+      "leadId": "ch126-length",
+      "attribution": {
+        "contributor": "jan_OkulaJu",
+        "sourceURL": "https://tatoeba.org/en/sentences/show/13970686",
+        "sourceTextSHA256": "b5639ac970fbdf239b397f5aef34196b513f3baf37c08308753ab5352a92f8be",
+        "license": "CC BY 2.0 FR",
+        "licenseURI": "https://creativecommons.org/licenses/by/2.0/fr/"
+      },
+      "evidence": {
+        "licenseObservedInLiveAPIOn": "2026-10-23",
+        "liveAttributionMatchesSource": true,
+        "liveTextHashMatchesSource": true,
+        "policyTermsCheckedOn": "2026-10-24",
+        "publisherPolicyCompatibleWithObservedLicense": true
+      },
+      "determination": "conditional_text_reuse_license_identified_attribution_required",
+      "conditions": {
+        "creditOriginalContributor": true,
+        "linkSentence": true,
+        "linkLicense": true,
+        "indicateDerivatives": true,
+        "doNotImplyEndorsement": true
+      },
+      "limits": {
+        "independentThirdPartyRightsCheckCompleted": false,
+        "freshSourceLicenseRecheckBeforeQuotation": true,
+        "independentlyAdjudicatedSentenceReading": false,
+        "independentlyAdjudicatedLexicalSense": false,
+        "permissionForImmediateUnattributedQuotation": false
+      },
+      "sourceSentenceReproduced": false
+    },
+    {
+      "sentenceId": "13972768",
+      "leadId": "guo-aspect",
+      "attribution": {
+        "contributor": "Rinrin",
+        "sourceURL": "https://tatoeba.org/en/sentences/show/13972768",
+        "sourceTextSHA256": "ed1dce0c3cda3163114def7b2b1c8b3560144e20b81580a1c66167f51b7a0d96",
+        "license": "CC BY 2.0 FR",
+        "licenseURI": "https://creativecommons.org/licenses/by/2.0/fr/"
+      },
+      "evidence": {
+        "licenseObservedInLiveAPIOn": "2026-10-23",
+        "liveAttributionMatchesSource": true,
+        "liveTextHashMatchesSource": true,
+        "policyTermsCheckedOn": "2026-10-24",
+        "publisherPolicyCompatibleWithObservedLicense": true
+      },
+      "determination": "conditional_text_reuse_license_identified_attribution_required",
+      "conditions": {
+        "creditOriginalContributor": true,
+        "linkSentence": true,
+        "linkLicense": true,
+        "indicateDerivatives": true,
+        "doNotImplyEndorsement": true
+      },
+      "limits": {
+        "independentThirdPartyRightsCheckCompleted": false,
+        "freshSourceLicenseRecheckBeforeQuotation": true,
+        "independentlyAdjudicatedSentenceReading": false,
+        "independentlyAdjudicatedLexicalSense": false,
+        "permissionForImmediateUnattributedQuotation": false
+      },
+      "sourceSentenceReproduced": false
+    }
+  ]
+}
