@@ -22,6 +22,12 @@ A separate read-only verifier checks an existing offline packet **without its pr
 
 It enforces the exact unapproved packet schema, unique opaque IDs, 49 pairs, 98 neutral mask files, source-shape-only SVG grammar, SHA-256 digests, exact read-only gallery output and README notice, rejects unexpected files and symlinks, and refuses any inserted review approval or response counts. It does not modify the packet or access the coordinator mapping.
 
+The packet includes a canonical, key-free `integrity-v0.1.json` receipt binding the exact bytes of the README, manifest, gallery, and 98 masks (101 files). It records each file's SHA-256 and a deterministic root fingerprint. A coordinator can display that root after verification without accessing the private source key:
+
+    node tools/glyph-pipeline/source_owner_local_packet_verify.mjs --packet-dir /absolute/local/reviewer-packet --fingerprint
+
+For the root to help detect substitution after distribution, its value must be preserved **outside** the packet before transfer. The receipt is unsigned, is not a source-authenticity attestation, and can be recomputed by anyone who changes the entire packet.
+
 The verifier establishes **internal packet consistency only**: if someone deliberately regenerates a whole packet and matching manifests, the verifier cannot independently establish the original source provenance, legitimate randomness, reviewer independence, or qualified source ownership. These require separate signed source chain-of-custody and external-review governance before use.
 
 ## Private coordinator provenance replay

@@ -8,6 +8,8 @@ import {deriveOfflineReviewerPacket,writeOfflinePacket,
  renderOfflinePacketGallery} from "./source_owner_local_packet.mjs";
 import {verifyOfflinePacket} from "./source_owner_local_packet_verify.mjs";
 import {verifyLocalCoordinator} from "./source_owner_local_coordinator_verify.mjs";
+import {buildOfflinePacketReceipt,RECEIPT_FILE}
+ from "./source_owner_local_receipt.mjs";
 
 const source=JSON.parse(fs.readFileSync(
  "site/glyphs/research/heldout-identification-target-v0.1/index-v0.1.json","utf8"));
@@ -20,6 +22,20 @@ const publicDir=path.join(base,"packet");
 const keyFile=path.join(base,"coordinator-only.json");
 const manifestPath=path.join(publicDir,"index-v0.1.json");
 const htmlPath=path.join(publicDir,"index.html");
+const receiptPath=path.join(publicDir,RECEIPT_FILE);
+function refreshPacketReceipt(){
+ const manifest=JSON.parse(fs.readFileSync(manifestPath,"utf8"));
+ const parts=new Map([
+  ["README.md",fs.readFileSync(path.join(publicDir,"README.md"))],
+  ["index.html",fs.readFileSync(htmlPath)],
+  ["index-v0.1.json",fs.readFileSync(manifestPath)]
+ ]);
+ for(const row of manifest.records)
+  for(const candidate of row.candidates)
+   parts.set(candidate.file,fs.readFileSync(path.join(publicDir,candidate.file)));
+ fs.writeFileSync(receiptPath,
+  JSON.stringify(buildOfflinePacketReceipt(manifest.packetSession,parts),null,2)+"\n");
+}
 function alterKey(mutator){
  const original=fs.readFileSync(keyFile);
  try{
@@ -72,6 +88,7 @@ try{
  // checks. Only the private source crosswalk detects the owner/form mismatch.
  {
   const manifestBytes=fs.readFileSync(manifestPath);
+  const receiptBytes=fs.readFileSync(receiptPath);
   const first=packet.manifest.records[0],a=first.candidates[0],b=first.candidates[1];
   const af=path.join(publicDir,a.file),bf=path.join(publicDir,b.file);
   const av=fs.readFileSync(af),bv=fs.readFileSync(bf);
@@ -86,6 +103,7 @@ try{
    entries[0].highlightedPaths=oldCounts[1];
    entries[1].highlightedPaths=oldCounts[0];
    fs.writeFileSync(manifestPath,JSON.stringify(manifest,null,2)+"\n");
+   refreshPacketReceipt();
    assert.deepEqual(verifyOfflinePacket(publicDir),{
     pairs:49,masks:98,independentlyAcceptedOwners:0,participantResponses:0
    });
@@ -94,22 +112,26 @@ try{
   }finally{
    fs.writeFileSync(manifestPath,manifestBytes);
    fs.writeFileSync(af,av);fs.writeFileSync(bf,bv);
+   fs.writeFileSync(receiptPath,receiptBytes);
   }
  }
  // Modifying a candidate form and regenerating the public presentation
  // is internally consistent but differs from the original source record.
  {
   const old=fs.readFileSync(manifestPath),oldHTML=fs.readFileSync(htmlPath);
+  const oldReceipt=fs.readFileSync(receiptPath);
   try{
    const altered=JSON.parse(old);
    altered.records[0].candidates[0].form="UNVERIFIED-OTHER";
    fs.writeFileSync(manifestPath,JSON.stringify(altered,null,2)+"\n");
    fs.writeFileSync(htmlPath,renderOfflinePacketGallery(altered));
+   refreshPacketReceipt();
    assert.equal(verifyOfflinePacket(publicDir).masks,98);
    assert.throws(()=>verifyLocalCoordinator(publicDir,keyFile,read),
     /differs from source-pinned neutral mask/);
   }finally{
    fs.writeFileSync(manifestPath,old);fs.writeFileSync(htmlPath,oldHTML);
+   fs.writeFileSync(receiptPath,oldReceipt);
   }
  }
  const permission=fs.statSync(keyFile).mode&0o777;

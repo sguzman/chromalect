@@ -133,6 +133,12 @@ try{
  const privateMap=path.join(tmp,"coordinator-private.json");
  writeOfflinePacket(built,reviewerDir,privateMap);
  assert.equal(fs.readdirSync(path.join(reviewerDir,"masks")).length,98);
+ assert.ok(fs.existsSync(path.join(reviewerDir,"integrity-v0.1.json")));
+ const receipt=JSON.parse(fs.readFileSync(
+  path.join(reviewerDir,"integrity-v0.1.json"),"utf8"));
+ assert.equal(receipt.fileCount,101);
+ assert.equal(receipt.files.length,101);
+ assert.match(receipt.rootSHA256,/^[a-f0-9]{64}$/);
  assert.equal(fs.readFileSync(path.join(reviewerDir,"index.html"),"utf8"),
   built.gallery);
  assert.ok(!fs.readFileSync(path.join(reviewerDir,"index.html"),"utf8").includes("cmp-"));
@@ -162,6 +168,7 @@ try{
  assert.equal(run.status,0,run.stderr);
  assert.ok(fs.existsSync(path.join(cliDir,"index-v0.1.json")));
  assert.ok(fs.existsSync(path.join(cliDir,"index.html")));
+ assert.ok(fs.existsSync(path.join(cliDir,"integrity-v0.1.json")));
  assert.ok(fs.existsSync(cliMap));
  assert.ok(!run.stdout.includes("cmp-"));
  const live=JSON.parse(fs.readFileSync(path.join(cliDir,"index-v0.1.json"),"utf8"));

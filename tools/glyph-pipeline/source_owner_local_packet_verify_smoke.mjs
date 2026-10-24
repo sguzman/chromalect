@@ -7,6 +7,7 @@ import {createHash} from "node:crypto";
 import {deriveOfflineReviewerPacket,writeOfflinePacket,
  renderOfflinePacketGallery} from "./source_owner_local_packet.mjs";
 import {verifyOfflinePacket} from "./source_owner_local_packet_verify.mjs";
+import {buildOfflinePacketReceipt,RECEIPT_FILE} from "./source_owner_local_receipt.mjs";
 
 const source=JSON.parse(fs.readFileSync(
  "site/glyphs/research/heldout-identification-target-v0.1/index-v0.1.json","utf8"));
@@ -21,6 +22,7 @@ const map=path.join(root,"separate-private-coordinator.json");
 const manifestFile=path.join(directory,"index-v0.1.json");
 const galleryFile=path.join(directory,"index.html");
 const readmeFile=path.join(directory,"README.md");
+const receiptFile=path.join(directory,RECEIPT_FILE);
 const svgFile=path.join(directory,packet.manifest.records[0].candidates[0].file);
 function tempEdit(filename,change,shouldReject=true){
  const before=fs.readFileSync(filename);
@@ -49,6 +51,21 @@ try{
  writeOfflinePacket(packet,directory,map);
  assert.deepEqual(verifyOfflinePacket(directory),
   {pairs:49,masks:98,independentlyAcceptedOwners:0,participantResponses:0});
+ const receipt=JSON.parse(fs.readFileSync(receiptFile,"utf8"));
+ assert.equal(receipt.fileCount,101);
+ assert.equal(receipt.files.length,101);
+ assert.match(receipt.rootSHA256,/^[a-f0-9]{64}$/);
+ assert.ok(!JSON.stringify(receipt).includes("cmp-"));
+ const packetContents=new Map([
+  ["index-v0.1.json",fs.readFileSync(manifestFile)],
+  ["index.html",fs.readFileSync(galleryFile)],
+  ["README.md",fs.readFileSync(readmeFile)]
+ ]);
+ for(const row of packet.manifest.records)
+  for(const candidate of row.candidates)
+   packetContents.set(candidate.file,fs.readFileSync(path.join(directory,candidate.file)));
+ assert.deepEqual(receipt,buildOfflinePacketReceipt(packet.manifest.packetSession,
+  packetContents));
  fs.unlinkSync(map);
  assert.deepEqual(verifyOfflinePacket(directory),
   {pairs:49,masks:98,independentlyAcceptedOwners:0,participantResponses:0},
@@ -58,6 +75,11 @@ try{
  let processResult=spawnSync(process.execPath,args,{encoding:"utf8",timeout:30000});
  assert.equal(processResult.status,0,processResult.stderr);
  assert.ok(!processResult.stdout.includes("cmp-"));
+ const fingerprintResult=spawnSync(process.execPath,[...args,"--fingerprint"],
+  {encoding:"utf8",timeout:30000});
+ assert.equal(fingerprintResult.status,0,fingerprintResult.stderr);
+ assert.ok(fingerprintResult.stdout.includes(receipt.rootSHA256));
+ assert.ok(!fingerprintResult.stdout.includes("cmp-"));
  assert.throws(()=>verifyOfflinePacket(path.relative(process.cwd(),directory)),
   /absolute/);
  alterManifest(m=>{m.summary.participantResponses=1;});
@@ -96,6 +118,22 @@ try{
  tempEdit(galleryFile,bytes=>Buffer.concat([bytes,Buffer.from("<script>alert(1)</script>")]));
  tempEdit(readmeFile,bytes=>Buffer.concat([bytes,Buffer.from("Study approved\n")]));
  tempEdit(manifestFile,bytes=>Buffer.concat([bytes,Buffer.from("\n")]));
+ tempEdit(receiptFile,bytes=>Buffer.concat([bytes,Buffer.from(" ") ]));
+ tempEdit(receiptFile,bytes=>{
+  const payload=JSON.parse(bytes);
+  payload.rootSHA256="0".repeat(64);
+  return Buffer.from(JSON.stringify(payload,null,2)+"\n");
+ });
+ tempEdit(receiptFile,bytes=>{
+  const payload=JSON.parse(bytes);
+  payload.files.pop();
+  return Buffer.from(JSON.stringify(payload,null,2)+"\n");
+ });
+ tempEdit(receiptFile,bytes=>{
+  const payload=JSON.parse(bytes);
+  payload.files[0].path="../private-coordinator.json";
+  return Buffer.from(JSON.stringify(payload,null,2)+"\n");
+ });
  const extra=path.join(directory,"coordinator.json");
  fs.writeFileSync(extra,"{}",{flag:"wx"});
  assert.throws(()=>verifyOfflinePacket(directory),/Unexpected or missing reviewer packet files/);

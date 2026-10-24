@@ -126,9 +126,14 @@ export function verifyOfflinePacket(directory){
 }
 if(process.argv[1]&&import.meta.url===pathToFileURL(process.argv[1]).href){
  const argv=process.argv.slice(2);
- assert.ok(argv.length===2&&argv[0]==="--packet-dir",
-  "Usage: node source_owner_local_packet_verify.mjs --packet-dir ABSOLUTE_DIRECTORY");
+ assert.ok((argv.length===2||argv.length===3)&&argv[0]==="--packet-dir"&&
+  (argv.length===2||argv[2]==="--fingerprint"),
+  "Usage: node source_owner_local_packet_verify.mjs --packet-dir ABSOLUTE_DIRECTORY [--fingerprint]");
  const result=verifyOfflinePacket(argv[1]);
  console.log("Offline reviewer packet self-consistency verified: "+result.pairs+
   " pairs, "+result.masks+" neutral SVGs, 0 independent source-owner approvals.");
+ if(argv.length===3){
+  const receipt=JSON.parse(fs.readFileSync(path.join(argv[1],RECEIPT_FILE),"utf8"));
+  console.log("Packet content fingerprint (not a signature): "+receipt.rootSHA256);
+ }
 }
