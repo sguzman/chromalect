@@ -1,0 +1,66 @@
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="description" content="Interactive reversible phonological feature-geometry demonstration for Zhao and Li's 34-unit Mandarin model; no phonemic or human decoding approval.">
+<title>Phonological unit grammar · Chromalect</title>
+<link rel="stylesheet" href="style.css"><script src="theme.js"></script>
+<script src="mandarin-model-feature-grammar.js" defer></script>
+<style>
+.mfg-controls{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;
+ margin:20px 0;padding:16px;border-radius:12px;border:1px solid var(--border);background:var(--panel)}
+.mfg-controls label{display:grid;gap:6px;font-size:14px}
+.mfg-controls select{font:inherit;color:var(--ink);background:var(--tile-bg);
+ border:1px solid var(--border);padding:9px;border-radius:8px;width:100%;min-width:0}
+.mfg-panel{padding:16px;border:1px solid var(--border);border-radius:12px;
+ background:var(--panel);margin:20px 0}
+.mfg-slots{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.mfg-slot{width:96px;min-height:120px;border:1px solid var(--border);border-radius:9px;
+ padding:8px;display:grid;justify-items:center;align-content:center;gap:6px;
+ box-sizing:border-box;background:var(--tile-bg)}
+.mfg-slot svg{width:76px;height:76px;overflow:visible}
+.mfg-slot small{font-size:12px;color:var(--sub)}
+.mfg-slot strong{font-size:22px}
+.mfg-note{font-size:13px;color:var(--sub)}
+.mfg-output{font-weight:600;font-size:20px;overflow-wrap:anywhere}
+@media(max-width:740px){.mfg-controls{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:460px){.mfg-controls{grid-template-columns:1fr}}
+</style></head><body>
+<header class="wrap"><div class="brand"><b>CHROMALECT</b><small>Language, made visible</small></div></header>
+<main class="wrap">
+<div class="eyebrow">Phase 2 · source research-model features · noncertifying</div>
+<h1>Decode phonological features, not Pinyin letters</h1>
+<p class="intro">Construct an ordered CVVVCT sequence using the 34 phonological units in the
+Zhao–Li research model: 21 possible onsets, 12 vowel units, two nasal coda choices and an
+independent citation-tone category. Each segment renders from articulatory feature tuples
+without retaining the source model's unit letters inside its encoded visual shape.</p>
+<p class="mfg-note">The six-slot grammar here is **formal source-model syntax**, not a test of which syllables
+are actually permitted or produced in Mandarin. The input and reconstructed token strings are visible
+for technical inspection; this is not a blinded participant study. The published model is not adopted
+as Chromalect's frozen phonological inventory.</p>
+<div class="mfg-controls">
+<label for="mfg-onset">C: onset consonant<select id="mfg-onset"></select></label>
+<label for="mfg-v1">V₁: required vowel<select id="mfg-v1"></select></label>
+<label for="mfg-v2">V₂: optional second vowel<select id="mfg-v2"></select></label>
+<label for="mfg-v3">V₃: optional third vowel<select id="mfg-v3"></select></label>
+<label for="mfg-coda">C: optional nasal coda<select id="mfg-coda"></select></label>
+<label for="mfg-tone">T: citation-tone symbol<select id="mfg-tone"></select></label>
+</div>
+<p id="mfg-status" role="status" aria-live="polite">Validating source feature units.</p>
+<section class="mfg-panel"><h2>Feature-constructed visual code</h2>
+<div id="mfg-glyphs" class="mfg-slots" aria-label="Feature symbols in CVVVCT order"></div>
+<p class="mfg-note">Consonants use outer place geometry, inner manner marks and
+voicing/aspiration decorations. Vowels use a relative height/backness grid and a
+rounding marker; special apical categories retain separate model features.
+The tone symbol has an independent fixed slot.</p>
+</section>
+<section class="mfg-panel">
+<h2>Machine reconstruction from visual feature tuples</h2>
+<p id="mfg-decoded" class="mfg-output"></p>
+<p id="mfg-evidence" class="mfg-note"></p>
+</section>
+<p><a href="mandarin-initial-features.html">Published initial comparisons</a> ·
+<a href="mandarin-final-symbols.html">Written-final controls</a> ·
+<a href="https://github.com/sguzman/chromalect/blob/main/docs/zhao-li-visual-feature-grammar.md">Rules and evidence limits</a> ·
+<a href="roadmap-status.html">Research roadmap</a></p>
+</main><footer class="wrap"><a href="index.html">Overview</a> ·
+<a href="ontology.html">Ontology</a></footer></body></html>
