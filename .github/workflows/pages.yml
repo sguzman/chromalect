@@ -284,6 +284,13 @@ jobs:
           node tools/glyph-pipeline/zhao_li_visual_feature_grammar.mjs --check
           node tools/glyph-pipeline/zhao_li_visual_feature_grammar_smoke.mjs
           node --check site/mandarin-model-feature-grammar.js
+          node --check site/mandarin-model-feature-viewer.js
+          node tools/glyph-pipeline/mandarin_model_feature_grammar_viewer_smoke.mjs
+          node tools/glyph-pipeline/mandarin_model_feature_viewer_smoke.mjs
+          test -s site/mandarin-model-feature-grammar.html && test -s site/mandarin-model-feature-viewer.html
+          node tools/glyph-pipeline/zhao_li_visual_feature_grammar.mjs --check
+          node tools/glyph-pipeline/zhao_li_visual_feature_grammar_smoke.mjs
+          node --check site/mandarin-model-feature-grammar.js
           node tools/glyph-pipeline/mandarin_model_feature_grammar_viewer_smoke.mjs
           test -s site/mandarin-model-feature-grammar.html
           node --check site/mandarin-ipa-source-comparison.js
@@ -378,6 +385,7 @@ jobs:
           cp data/phonetics/mandarin-pinyin-ipa-source-disagreement-v0.1.json site/phonetics/mandarin-pinyin-ipa-source-disagreement-v0.1.json
           cp data/phonetics/zhao-li-2009-independent-pinyin-ipa-control-v0.1.json site/phonetics/zhao-li-2009-independent-pinyin-ipa-control-v0.1.json
           cp data/phonetics/zhao-li-2009-34-unit-reference-model-v0.1.json site/phonetics/zhao-li-2009-34-unit-reference-model-v0.1.json
+          cp data/phonetics/zhao-li-visual-feature-grammar-audit-v0.1.json site/phonetics/zhao-li-visual-feature-grammar-audit-v0.1.json
           cp data/phonetics/zhao-li-visual-feature-grammar-audit-v0.1.json site/phonetics/zhao-li-visual-feature-grammar-audit-v0.1.json
           cp data/phonetics/mandarin-written-final-ipa-source-crosswalk-v0.1.json site/phonetics/mandarin-written-final-ipa-source-crosswalk-v0.1.json
           cp data/phonetics/initial-feature-codec-audit-v0.1.json site/phonetics/initial-feature-codec-audit-v0.1.json
