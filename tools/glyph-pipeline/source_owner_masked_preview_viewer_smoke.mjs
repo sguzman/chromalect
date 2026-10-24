@@ -267,8 +267,9 @@ assert.equal(tinyChunks.streamStats.cancels,0);
 const oversizedHeader=setup({streamMode:"oversized-header"});
 await loaded(oversizedHeader);
 assert.equal(oversizedHeader.objectURLs.size,0);
-assert.equal(oversizedHeader.streamStats.reads,0,
- "Oversized Content-Length must be rejected before opening the body");
+for(const candidate of manifest.records[0].candidates)
+ assert.equal(oversizedHeader.streamStats.readsByURL.get(candidate.svg)||0,0,
+  "Oversized Content-Length must reject each SVG before opening its body");
 assert.match(oversizedHeader.nodes["om-status"].textContent,/size outside safe bounds/);
 const noStream=setup({streamMode:"no-stream"});
 await loaded(noStream);
