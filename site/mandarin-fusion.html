@@ -1,0 +1,85 @@
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="description" content="Source-aligned Mandarin glyph, orthographic Pinyin, citation tone and provisional meaning in independently switchable layers.">
+<title>Integrated Mandarin visual layers · Chromalect</title>
+<link rel="stylesheet" href="style.css"><script src="theme.js"></script>
+<script src="semantic-grammar.js" defer></script>
+<script src="mandarin-fusion.js" defer></script>
+<style>
+.fusion-controls{display:flex;gap:14px;flex-wrap:wrap;align-items:end;margin:18px 0;padding:16px;
+ background:var(--panel);border:1px solid var(--border);border-radius:12px}
+.fusion-controls label{display:grid;gap:6px;min-width:155px;flex:1}
+.fusion-controls select,.fusion-controls input{font:inherit;padding:9px;border:1px solid var(--border);
+ background:var(--tile-bg);color:var(--ink);border-radius:8px;max-width:100%;min-width:0}
+.fusion-switches{display:flex;flex-wrap:wrap;gap:10px 16px;margin:16px 0;padding:14px;
+ border:1px solid var(--border);border-radius:12px}
+.fusion-switches legend{font-weight:700;padding:0 6px}
+.fusion-switches label{display:inline-flex;align-items:center;gap:6px}
+.fusion-frame{max-width:520px;margin:20px auto;display:grid;gap:10px;
+ grid-template-areas:"tone tone tone" "initial glyph final" "meaning meaning meaning";
+ grid-template-columns:minmax(80px,1fr) minmax(125px,1.6fr) minmax(80px,1fr);
+ justify-items:center;align-items:center}
+.fusion-glyph{grid-area:glyph;width:180px;height:180px;max-width:100%;
+ background:var(--panel);border:1px solid var(--border);border-radius:14px;
+ display:grid;place-items:center;position:relative;padding:12px;box-sizing:border-box}
+.fusion-glyph img{max-width:100%;max-height:100%;width:145px;height:145px;object-fit:contain}
+.fusion-glyph img[hidden],.fusion-glyph span[hidden]{display:none}
+.fusion-native{font-size:110px;line-height:1}
+.fusion-channel{border:1px solid var(--border);background:var(--panel);padding:10px;
+ border-radius:10px;min-width:0;max-width:100%;text-align:center;box-sizing:border-box;overflow-wrap:anywhere}
+.fusion-channel strong,.fusion-channel small{display:block}
+.fusion-channel small{font-size:12px;color:var(--sub)}
+.fusion-initial{grid-area:initial}.fusion-final{grid-area:final}.fusion-tone{grid-area:tone}
+.fusion-meaning{grid-area:meaning;max-width:100%;min-width:min(290px,100%)}
+.fusion-semantic-symbol{font-size:30px;line-height:1.5}
+.fusion-contour{display:block;width:120px;height:56px;margin:3px auto}
+.fusion-evidence{border:1px solid var(--border);border-radius:10px;padding:14px;margin:16px 0;
+ background:var(--panel);overflow-wrap:anywhere}
+.fusion-evidence p{margin:6px 0}
+.fusion-evidence small{color:var(--sub)}
+.fusion-status{min-height:1.6em}
+@media(max-width:530px){.fusion-frame{grid-template-areas:"tone tone" "glyph glyph" "initial final" "meaning meaning";
+grid-template-columns:repeat(2,minmax(0,1fr));max-width:100%}
+.fusion-glyph{width:165px;height:165px}.fusion-channel{width:100%}}
+</style></head><body>
+<header class="wrap"><div class="brand"><b>CHROMALECT</b><small>Language, made visible</small></div></header>
+<main class="wrap">
+<div class="eyebrow">Phase 3 · integrated visual encoding · Mandarin first tranche</div>
+<h1>One character, independently removable layers</h1>
+<p class="intro">The first 1,000 source-ranked Chinese characters can display original component-colored stroke geometry,
+written Pinyin initials and finals, idealized citation-tone contours and provisional character-meaning pictograms
+in a single compact cell. No context-specific pronunciation, word sense or learning benefit is inferred.</p>
+<div class="fusion-controls">
+<label for="fusion-query">Character or first-tranche rank<input id="fusion-query" type="text" placeholder="e.g. 清 or 4"></label>
+<label for="fusion-character">Source character<select id="fusion-character"></select></label>
+<label for="fusion-reading">Citation reading<select id="fusion-reading"></select></label>
+<label for="fusion-sense">Provisional meaning candidate<select id="fusion-sense"></select></label>
+</div>
+<fieldset class="fusion-switches"><legend>Independent visual channels</legend>
+<label><input id="fusion-component" type="checkbox" checked> Component-colored strokes</label>
+<label><input id="fusion-initial" type="checkbox" checked> Written initial</label>
+<label><input id="fusion-final" type="checkbox" checked> Written final</label>
+<label><input id="fusion-tone" type="checkbox" checked> Citation tone</label>
+<label><input id="fusion-semantic" type="checkbox" checked> Provisional pictogram</label>
+</fieldset>
+<p id="fusion-status" class="fusion-status" role="status" aria-live="polite">Validating source-aligned layers.</p>
+<div class="fusion-frame" aria-label="Integrated first-tranche Mandarin character rendering">
+<div id="fusion-tone-output" class="fusion-channel fusion-tone"></div>
+<div id="fusion-initial-output" class="fusion-channel fusion-initial"></div>
+<div id="fusion-glyph" class="fusion-glyph" lang="zh-Hans"></div>
+<div id="fusion-final-output" class="fusion-channel fusion-final"></div>
+<div id="fusion-meaning-output" class="fusion-channel fusion-meaning"></div>
+</div>
+<section class="fusion-evidence" aria-label="Source and uncertainty">
+<p id="fusion-citation"></p><p id="fusion-meaning-note"></p><p id="fusion-component-note"></p>
+<small>Source-aligned component geometry has not received independent visual/linguistic certification.
+Pinyin entries are out-of-context citation spellings, not verified phonemic or word readings. Contours are
+idealized citations; neutral tone has no fixed context-free contour. Semantic candidates are provisional
+and may abstain. Toggling a channel never alters source data or approves a claim.</small>
+</section>
+<p><a href="mandarin-citation-cell.html">Phonetic control experiment</a> ·
+<a href="visual-semantic-comparison.html">Isolated three-arm semantic comparison</a> ·
+<a href="roadmap-status.html">Research acceptance checkpoints</a></p>
+</main><footer class="wrap"><a href="index.html">Overview</a> · <a href="ONTOLOGY.md">Ontology</a></footer>
+</body></html>
