@@ -44,10 +44,19 @@ With access to the original pinned research sources and the separately stored ow
 
 The coordinator validator first runs the key-free packet verifier and then matches the private crosswalk to the pinned original source manifest and regenerated source geometry. It rejects map files inside the public repo or reviewer folder, symlinks, group/world-readable coordinator files, missing or duplicate keys, and attempted changes to the source pairing. It prints only aggregate success counts. The original owner mapping remains machine-derived and is **not independently certified** by this replay.
 
+## Key-free comparison between separately prepared packets
+
+Every packet has new opaque IDs, a randomized viewing order and a different root fingerprint. To compare two generated packets **without opening either private coordinator map**, use:
+
+    node tools/glyph-pipeline/source_owner_local_packet_compare.mjs --left /absolute/local/packet-a --right /absolute/local/packet-b
+
+The comparator independently verifies each packet (including the 101-file receipt) and matches its 49 source-region presentations by Chinese character context, original source-stroke count, candidate forms, neutral SVG SHA-256 and highlighted-path count. Packet IDs, filenames and record order are deliberately ignored. It reports only aggregate match/mismatch counts and fails with a nonzero exit status when the presentations differ. A matching result establishes equivalent machine-generated visual stimuli; it **does not** prove their original source interpretation, independently qualified ownership, valid random allocation, or research blinding. For provenance, the private coordinator replay and external source evidence remain separate requirements.
+
 ## Reproducible verification
 
     node tools/glyph-pipeline/source_owner_local_packet_smoke.mjs
     node tools/glyph-pipeline/source_owner_local_packet_verify_smoke.mjs
     node tools/glyph-pipeline/source_owner_local_coordinator_verify_smoke.mjs
+    node tools/glyph-pipeline/source_owner_local_packet_compare_smoke.mjs
 
 CI exercises deterministic synthetic packet IDs, the 49/98 generated counts, source mask digests, key omission from all 98 reviewer SVGs and the manifest, static HTML generation, adversarial text-escaping cases, create-only output, private file placement, and a real CLI invocation inside a temporary directory. Test output is discarded. Passing this test verifies engineering isolation under its stated constraints, **not** human independence, linguistic correctness or study readiness.
