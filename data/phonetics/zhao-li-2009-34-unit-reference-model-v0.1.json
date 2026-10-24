@@ -36,11 +36,11 @@
     "sourceVowelUnits": 12,
     "sourceConsonantUnits": 22,
     "specialNonStandardApicalVowels": 2,
-    "sourceModelDisagreementsUnresolved": 1,
     "acceptedProjectPhonemeContrasts": 0,
     "independentlyVerifiedRealizations": 0,
     "permittedAutomaticPinyinToIPAAssignments": 0,
-    "learnerStudies": 0
+    "learnerStudies": 0,
+    "workingInitialNotationMismatches": 3
   },
   "phonologicalUnits": [
     {
