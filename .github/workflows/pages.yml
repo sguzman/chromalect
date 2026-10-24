@@ -535,6 +535,10 @@ jobs:
           test -s site/color-reference-audit.html && test -s site/color-reference-audit.js
           node tools/glyph-pipeline/visual_semantic_comparison_viewer_smoke.mjs
           node tools/glyph-pipeline/mandarin_fusion_viewer_smoke.mjs
+          node --check site/mandarin-context-sandhi.js
+          node --check site/mandarin-word-context.js
+          node tools/glyph-pipeline/mandarin_word_context_viewer_smoke.mjs
+          test -s site/mandarin-word-context.html && test -s site/mandarin-word-context.js
           test -s site/mandarin-fusion.html && test -s site/mandarin-fusion.js
           mkdir -p site/phonetics
           cp data/phonetics/pinyin-citation-orthography-audit-v0.1.json site/phonetics/

@@ -89,7 +89,7 @@ function buildPage(route, authored, rootPath = "/chromalect/") {
     "Theme control lost while replacing navigation");
   assert.equal(body.children[0], header, "Navigation must be above the page content");
   const anchors = collect(nav, e => e.tagName === "a");
-  assert.equal(anchors.length, 29, "Expected registered primary and grouped navigation links");
+  assert.equal(anchors.length, 30, "Expected registered primary and grouped navigation links");
   for (const link of anchors) {
     if (!link.href.startsWith("https://github.com")) {
       assert.ok(link.href.startsWith("https://example.test" + rootPath),
@@ -110,6 +110,7 @@ const deep = buildPage("glyphs/by-component/cmp-0001.html", false);
 const root = buildPage("search.html", true, "/");
 const semantics = buildPage("semantic-lab.html", true);
 const fusion = buildPage("mandarin-fusion.html", true);
+const context = buildPage("mandarin-word-context.html", true);
 const semanticBrowser = buildPage("semantic-coverage.html", true);
 const comprehension = buildPage("emoji-comprehension.html", true);
 const lexical = buildPage("lexical-review.html", true);
@@ -122,12 +123,15 @@ assert.deepEqual(destinations(home.anchors), destinations(report.anchors));
 assert.deepEqual(destinations(home.anchors), destinations(deep.anchors));
 assert.deepEqual(destinations(home.anchors), destinations(semantics.anchors));
 assert.deepEqual(destinations(home.anchors), destinations(fusion.anchors));
+assert.deepEqual(destinations(home.anchors), destinations(context.anchors));
 assert.deepEqual(destinations(home.anchors), destinations(comprehension.anchors));
 assert.deepEqual(destinations(home.anchors), destinations(lexical.anchors));
 assert.deepEqual(destinations(home.anchors), destinations(readings.anchors));
 assert.deepEqual(destinations(home.anchors), destinations(owner.anchors));
 assert.ok(owner.anchors.some(a=>a.href.endsWith("/component-owner-adjudication.html")));
 assert.ok(fusion.anchors.some(a=>a.href.endsWith("/mandarin-fusion.html")));
+assert.ok(context.anchors.some(a=>a.href.endsWith("/mandarin-word-context.html")));
+assert.equal(collect(context.nav,e=>e.tagName==="summary"&&e.className.includes("is-active")).length,1);
 assert.equal(collect(fusion.nav,e=>e.tagName==="summary"&&e.className.includes("is-active")).length,1);
 assert.equal(collect(owner.nav,e=>e.tagName==="summary"&&e.className.includes("is-active")).length,1);
 assert.equal(collect(lexical.nav,e=>e.tagName==="summary"&&e.className.includes("is-active")).length,1);
@@ -144,4 +148,4 @@ assert.equal(collect(deep.nav, e => e.tagName === "a" &&
   e.className.includes("is-active")).length, 1, "Nested by-component route must highlight Components");
 assert.equal(root.anchors[0].href, "https://example.test/index.html");
 
-console.log("Navigation smoke: same 29 destinations across home, owner research, atlas and nested pages; active state correct.");
+console.log("Navigation smoke: same 30 destinations across home, owner research, atlas and nested pages; active state correct.");
