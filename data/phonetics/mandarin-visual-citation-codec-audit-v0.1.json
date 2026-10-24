@@ -1,0 +1,38 @@
+{
+  "schema": "chromalect.phonetics.mandarin-visual-citation-codec-audit.v0.1",
+  "status": "exact_machine_visual_token_decoding_not_phonemic_or_human_verified",
+  "sources": {
+    "citations": "site/pronunciation-citations-0001-1000.json",
+    "initialFeatureCodebook": "mandarin-initial-feature-candidates-v0.1.json",
+    "finalGeometry": "written-final-symbol-control-v0.1.json",
+    "orthographicGrammar": "citation-syllable-orthographic-codec-audit-v0.1.json",
+    "tokenPalette": "site/layers-v0.1.json",
+    "pinnedCitationBlobSHA": "e38b5d3077f516054ecc5573c9251b3aa3628140"
+  },
+  "grammar": {
+    "initial": "source working-feature tuple or explicit y/w/zero spelling marker",
+    "final": "ordered integer references into nine geometric written-letter primitives",
+    "tone": "source citation category and the exact original five-symbol registry",
+    "acceptedCombinations": "673 observed first-tranche citation triples only",
+    "unknownFieldsRejected": true,
+    "unobservedTriplesRejected": true,
+    "sourceGlyphGeometryModified": false
+  },
+  "counts": {
+    "sourceCharacters": 1000,
+    "sourceReadings": 1171,
+    "attestedCitationTriples": 673,
+    "writtenFinalSymbols": 33,
+    "primitiveLetters": 9,
+    "toneCategories": 5,
+    "consonantalInitialReadings": 997,
+    "orthographicOnsetReadings": 174,
+    "distinctSerializedVisualCodes": 673,
+    "independentMachineSerializationRoundTrips": 1171,
+    "failures": 0,
+    "independentlyVerifiedPhonemicMappings": 0,
+    "independentHumanVisualDecodings": 0,
+    "contextualReadingApprovals": 0,
+    "educationalEffectMeasurements": 0
+  }
+}

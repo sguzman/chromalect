@@ -276,6 +276,8 @@ jobs:
           node tools/glyph-pipeline/mandarin_initial_feature_codec_smoke.mjs
           node tools/glyph-pipeline/citation_syllable_orthographic_codec.mjs --check
           node tools/glyph-pipeline/citation_syllable_orthographic_codec_smoke.mjs
+          node tools/glyph-pipeline/mandarin_visual_citation_codec.mjs --check
+          node tools/glyph-pipeline/mandarin_visual_citation_codec_smoke.mjs
           node tools/glyph-pipeline/citation_orthographic_contrast_controls.mjs --check
           node tools/glyph-pipeline/citation_orthographic_contrast_controls_smoke.mjs
           node tools/glyph-pipeline/mandarin_final_spelling_context_gates.mjs --check
