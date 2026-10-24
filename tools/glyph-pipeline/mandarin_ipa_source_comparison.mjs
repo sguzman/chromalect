@@ -5,6 +5,23 @@ import fs from "node:fs";
 import {pathToFileURL} from "node:url";
 const read=x=>JSON.parse(fs.readFileSync(x,"utf8"));
 const file="data/phonetics/mandarin-pinyin-ipa-source-disagreement-v0.1.json";
+// Exact table entries are independently pinned to the source PDF's printed
+// pages 25–29. They are reported IPA symbols, not accepted speech phones.
+const table2=new Map([
+ ["b","p","b","b"],["p","pʰ","p","pʰ"],["m","m","m","m"],
+ ["f","f","f","f"],["d","t","d","d"],["t","tʰ","ts","tʰ"],
+ ["n","n","n","n"],["l","l","l","l"],["g","k","g","g"],
+ ["k","kʰ","k","kʰ"],["h","x","h","x"],["j","tɕ","dʒ","tɕ"],
+ ["q","tɕʰ","tʃː","tɕʰ"],["x","ɕ","ʃː","ɕ"],
+ ["z","ts","dz","dz"],["c","tsʰ","ts","tsʰ"],["s","s","s","s"],
+ ["zh","tʂ","dʒː","dʒ"],["ch","tʂʰ","tʃ","tʃ"],
+ ["sh","ʂ","ʃ","ʂ"],["r","ɻ","r","ɻ"]
+].map(([token,lin,mei,cai])=>[token,[lin,mei,cai]]));
+const table3=new Map([
+ ["a","a","a","a"],["o","ɔ","ɔ","ɔ"],["e","ɤ","ə","ɤ:ə"],
+ ["i","i","i","i"],["u","u","u","u"],["ü","ɥy","y","y"]
+].map(([token,lin,mei,cai])=>[token,[lin,mei,cai]]));
+
 export function validate(report,initials,finals,citations){
  assert.equal(report.schema,"chromalect.phonetics.mandarin-pinyin-ipa-source-disagreement.v0.1");
  assert.equal(report.status,
@@ -43,6 +60,9 @@ export function validate(report,initials,finals,citations){
   assert.ok(originalInitials.has(row.pinyinInitial),"Unknown source initial: "+row.pinyinInitial);
   assert.ok(!actualInitials.has(row.pinyinInitial));
   actualInitials.add(row.pinyinInitial);
+  assert.deepEqual(
+   [row.linReportedIPA,row.meiReportedIPA,row.caiSuggestedIPA],
+   table2.get(row.pinyinInitial),"Mismatch against Cai Table 2 published symbols");
   const feature=originalInitials.get(row.pinyinInitial);
   assert.equal(row.originalWorkingCandidate,feature.workingIPACandidate);
   assert.equal(row.literalAgreementWithLin,row.originalWorkingCandidate===row.linReportedIPA);
@@ -67,6 +87,9 @@ export function validate(report,initials,finals,citations){
  for(const row of report.simples){
   assert.ok(finLabels.has(row.writtenFinal)&&!finSeen.has(row.writtenFinal));
   finSeen.add(row.writtenFinal);
+  assert.deepEqual(
+   [row.linReportedIPA,row.meiReportedIPA,row.caiSuggestedIPA],
+   table3.get(row.writtenFinal),"Mismatch against Cai Table 3 published symbols");
   assert.equal(row.sourceComparisonNotDefaultAcousticTarget,true);
   assert.equal(row.literalAgreementAllColumns,
    row.linReportedIPA===row.meiReportedIPA&&row.meiReportedIPA===row.caiSuggestedIPA);
@@ -76,6 +99,8 @@ export function validate(report,initials,finals,citations){
    assert.ok(typeof row[f]==="string"&&row[f].length>0);
  }
  assert.deepEqual(finSeen,finLabels);
+ assert.equal(table2.size,21);
+ assert.equal(table3.size,6);
  assert.equal(report.counts.originalConsonantalInitials,21);
  assert.equal(report.counts.sourceReportedInitialComparisons,21);
  assert.equal(report.counts.initialSourceDisagreementRows,
