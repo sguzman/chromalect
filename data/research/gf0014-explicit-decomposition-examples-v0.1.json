@@ -1,0 +1,106 @@
+{
+  "schema": "chromalect.gf0014.select-tranche-explicit-normative-decomposition-examples.v0.1",
+  "status": "four_explicit_standard_illustrations_crosschecked_no_stroke_ownership_approval",
+  "sources": {
+    "catalog": "data/catalog/characters-0001-1000.json",
+    "authority": "GF 0014-2009 — Specification of Common Modern Chinese Character Components and Component Names",
+    "officialAnnouncement": "https://www.moe.gov.cn/jyb_xwfb/gzdt_gzdt/moe_1485/tnull_45766.html",
+    "primaryStandardReproduction": "https://www.unicode.org/irg/docs/n2739-GF0014-2009.pdf",
+    "scope": "Four examples explicitly printed in the Ministry's account of the standard's split/no-split rules; not all 1,000 selected characters."
+  },
+  "counts": {
+    "sourceRankedCharacters": 1000,
+    "officialRuleExamplesPresentInSourceTranche": 4,
+    "matchedSourceDecompositionCuts": 4,
+    "explicitPositiveSplitExamples": 2,
+    "explicitNoSplitExamples": 2,
+    "independentlyCertifiedSourceStrokeOwnerships": 0,
+    "independentlyCertifiedGeometryAssets": 0
+  },
+  "records": [
+    {
+      "rank": 146,
+      "character": "分",
+      "rule": "explicit_authority_split",
+      "sourceStatement": "分 → 八 + 刀",
+      "sourceComponents": [
+        {
+          "componentId": "cmp-0045",
+          "form": "八",
+          "path": "0"
+        },
+        {
+          "componentId": "cmp-0106",
+          "form": "刀",
+          "path": "1"
+        }
+      ],
+      "selectedCutCorrespondsToPublishedRule": true,
+      "sourceIDSIsNotStrokeGeometry": true,
+      "independentVisualStrokeOwnershipApproved": false,
+      "independentGeometryCertification": false
+    },
+    {
+      "rank": 363,
+      "character": "执",
+      "rule": "explicit_authority_split",
+      "sourceStatement": "执 → 扌 + 丸",
+      "sourceComponents": [
+        {
+          "componentId": "cmp-0019",
+          "form": "扌",
+          "path": "0"
+        },
+        {
+          "componentId": "cmp-0380",
+          "form": "丸",
+          "path": "1"
+        }
+      ],
+      "selectedCutCorrespondsToPublishedRule": true,
+      "sourceIDSIsNotStrokeGeometry": true,
+      "independentVisualStrokeOwnershipApproved": false,
+      "independentGeometryCertification": false
+    },
+    {
+      "rank": 225,
+      "character": "东",
+      "rule": "explicit_authority_no_split",
+      "sourceStatement": "东 is not 七 + 小",
+      "sourceComponents": [
+        {
+          "componentId": "cmp-0119",
+          "form": "东",
+          "path": "root"
+        }
+      ],
+      "selectedCutCorrespondsToPublishedRule": true,
+      "sourceIDSIsNotStrokeGeometry": true,
+      "independentVisualStrokeOwnershipApproved": false,
+      "independentGeometryCertification": false
+    },
+    {
+      "rank": 736,
+      "character": "串",
+      "rule": "explicit_authority_no_split",
+      "sourceStatement": "串 is not 中 + 中",
+      "sourceComponents": [
+        {
+          "componentId": "cmp-0093",
+          "form": "串",
+          "path": "root"
+        }
+      ],
+      "selectedCutCorrespondsToPublishedRule": true,
+      "sourceIDSIsNotStrokeGeometry": true,
+      "independentVisualStrokeOwnershipApproved": false,
+      "independentGeometryCertification": false
+    }
+  ],
+  "limits": [
+    "These four structural examples do not prove that all 1,000 derived component cuts match the original standard.",
+    "Atomic recognizer choice agrees with the two no-split examples but is not a verification of internal IDS text.",
+    "Exact SVG path assignments and image appearance remain independently unreviewed.",
+    "The source standard is limited to its original 3,500 commonly used characters; it is not a universal Hanzi ontology."
+  ]
+}

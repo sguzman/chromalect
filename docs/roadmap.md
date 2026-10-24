@@ -16,6 +16,8 @@ This is a sequence of **evidence gates**, not a promise to build a large applica
 
 **Original standard cross-check (partial):** Unicode IRG N2739 provides the 41-page source standard. Its table contains 514 consecutively numbered components across printed pages 7–20. [Primary-source row evidence](../data/research/gf0014-official-descriptive-row-locations-v0.1.json) identifies all 30 nonfont descriptive catalog entries and confirms their official numeric ordinal/group pairs (30/30); **descriptive graphic shape matches and geometry remain 0/30 independently approved**. No Phase 0 checkpoint is promoted on numeric corroboration alone.
 
+**Published-rule spot check:** Four named first-tranche characters have selected component cuts matching the Ministry's explicit split/no-split examples: 分, 执, 东 and 串 ([source evidence](../data/research/gf0014-explicit-decomposition-examples-v0.1.json)). This corroborates **4/1,000 structural choices**, not any independent SVG stroke ownership or the other 996 analyses.
+
 ## Phase 1 — palette experiment [v0.4 all-identities reassigned; human testing pending]
 
 - [x] Assign 40 unique exact colors to stable component IDs; preserve them in a 513-identity expanded catalog.
