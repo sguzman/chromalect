@@ -32,6 +32,8 @@ This is a sequence of **evidence gates**, not a promise to build a large applica
 - [ ] Test legibility, distinctions at real glyph sizes, recall, and transfer.
 - [ ] Document failure cases and iterate with **new palette versions**.
 
+**Computational iteration only:** a [separately published v0.7 candidate](https://sguzman.github.io/chromalect/palettes/mandarin-component-identity-v0.7-candidate.json) uses ten source-conditioned swaps of the unchanged 520-color multiset to reduce 26 machine OKLab co-occurrence warnings to zero on the first 1,000 glyphs ([acceptance evidence](https://github.com/sguzman/chromalect/actions/runs/40117569240)). It is in-sample, with no independently certified component owner, human perceptual failure case, user discrimination result or educational assessment; the palette versioning/iteration acceptance checkpoint therefore remains unfinished.
+
 **Gate:** repeatable, linguistically accurate component rendering and defensible experimental comparisons. Do not mistake complete catalog assignment for complete glyph-level rendering or learning evidence.
 
 ## Phase 2 — phonetic notation experiment [proposed]
