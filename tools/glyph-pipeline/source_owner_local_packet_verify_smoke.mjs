@@ -158,6 +158,15 @@ try{
  assert.throws(()=>verifyOfflinePacket(directory));
  fs.unlinkSync(svgFile);
  fs.writeFileSync(svgFile,existing);
+ // Non-regular packet files must be rejected without waiting for a FIFO writer.
+ // The production verifier uses O_NONBLOCK before checking fstat.
+ fs.unlinkSync(svgFile);
+ const fifo=spawnSync("mkfifo",[svgFile],{encoding:"utf8",timeout:30000});
+ assert.equal(fifo.status,0,fifo.stderr);
+ assert.throws(()=>verifyOfflinePacket(directory),
+  /Unexpected packet file type or size/);
+ fs.unlinkSync(svgFile);
+ fs.writeFileSync(svgFile,existing);
  const aliases=path.join(root,"alias");
  fs.symlinkSync(directory,aliases,"dir");
  assert.throws(()=>verifyOfflinePacket(aliases),/real directory/);
