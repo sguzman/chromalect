@@ -16,6 +16,8 @@
 - [CJKVI-IDS](https://github.com/cjkvi/cjkvi-ids) — ideographic description sequences with dataset-specific constraints; much data is GPLv2 or derived from CHISE, so do not import wholesale under this repository's MIT license.
 - [CHISE](https://www.chise.org/) — character structure and variant research, with rights needing independent review.
 
+For source-owner adjudication, the [pinned external-source screening](source-owner-external-evidence-screening.md) distinguishes overlapping CHISE/CJKVI provenance and the separate dictionary/graphics licenses in Make Me a Hanzi. The screening is a lead inventory only, not an authorized corpus or independent ownership validation.
+
 ## Source intake protocol
 
 For every third-party dataset actually adopted, record:
