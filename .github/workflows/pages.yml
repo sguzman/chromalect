@@ -589,6 +589,8 @@ jobs:
           node tools/glyph-pipeline/mandarin_word_context_viewer_smoke.mjs
           node --check site/mandarin-motion-pretrial.js
           node tools/glyph-pipeline/mandarin_motion_pretrial_smoke.mjs
+          node --check site/mandarin-motion-recall-trial.js
+          node tools/glyph-pipeline/mandarin_motion_recall_trial_smoke.mjs
           test -s site/mandarin-motion-pretrial.html && test -s site/mandarin-motion-pretrial.js
           test -s site/mandarin-word-context.html && test -s site/mandarin-word-context.js
           test -s site/mandarin-fusion.html && test -s site/mandarin-fusion.js
