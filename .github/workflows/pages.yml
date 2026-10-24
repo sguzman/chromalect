@@ -560,6 +560,7 @@ jobs:
           cargo run --quiet --locked --manifest-path tools/glyph-pipeline/Cargo.toml -- palette-candidate-check
           cargo run --quiet --locked --manifest-path tools/glyph-pipeline/Cargo.toml -- palette-candidate-heldout
           cargo run --quiet --locked --manifest-path tools/glyph-pipeline/Cargo.toml -- palette-candidate-heldout-check
+          node tools/glyph-pipeline/palette_candidate_cv_observed_smoke.mjs
           test -s site/palettes/mandarin-component-identity-v0.7-fivefold-heldout-v0.1.json
           test -s site/palettes/mandarin-component-identity-v0.7-candidate.json
           test -s site/palettes/mandarin-component-identity-v0.7-candidate-evidence.json
