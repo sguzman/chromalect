@@ -17,6 +17,28 @@ for(const forbidden of ["../site/glyphs/glyph.svg",
  assert.throws(()=>readPinnedSiteFile(forbidden),
   "Pinned source reads must reject traversal or non-glyph paths");
 }
+// Pinned site inputs must remain local, regular, bounded and valid UTF-8.
+const inputProbe=fs.mkdtempSync(
+ path.join(REPOSITORY_ROOT,"site/glyphs/.local-pinned-read-"));
+try{
+ const prefix="glyphs/"+path.basename(inputProbe)+"/";
+ const valid=path.join(inputProbe,"valid.svg");
+ fs.writeFileSync(valid,"<svg/>");
+ assert.equal(readPinnedSiteFile(prefix+"valid.svg"),"<svg/>");
+ const invalid=path.join(inputProbe,"invalid.svg");
+ fs.writeFileSync(invalid,Buffer.from([0xff,0xfe]));
+ assert.throws(()=>readPinnedSiteFile(prefix+"invalid.svg"));
+ const oversized=path.join(inputProbe,"oversized.json");
+ fs.writeFileSync(oversized,Buffer.alloc(1024*1024+1,0x20));
+ assert.throws(()=>readPinnedSiteFile(prefix+"oversized.json"),/regular bounded/);
+ const alias=path.join(inputProbe,"escaped.svg");
+ fs.symlinkSync("/etc/hosts",alias);
+ assert.throws(()=>readPinnedSiteFile(prefix+"escaped.svg"),/inside the generated site/);
+ const fifo=path.join(inputProbe,"stream.svg");
+ const created=spawnSync("mkfifo",[fifo],{encoding:"utf8",timeout:30000});
+ assert.equal(created.status,0,created.stderr);
+ assert.throws(()=>readPinnedSiteFile(prefix+"stream.svg"),/regular bounded/);
+}finally{fs.rmSync(inputProbe,{recursive:true,force:true});}
 let index=0;
 const makeId=()=>"p-"+(++index).toString(16).padStart(32,"0");
 const built=deriveOfflineReviewerPacket(source,read,makeId,n=>n-1);
