@@ -112,6 +112,22 @@ the original generated mapping and every 39-item classification. The records
 are a numerical **failure case worklist**, not 39 independently observed
 visual errors or approved shapes. No existing glyph color or palette is altered.
 
+## Exploratory swap-prefix diagnosis
+
+The five-fold report also records the held-out warning count after **every
+successive training-only greedy swap**, along with the strictly decreasing
+training warning count. Replaying the fitted swap sequence does not alter its
+final assignment: the last prefix must reproduce the reported outer-fold
+warning counts exactly. The regression checker rejects prefix count
+inconsistencies, non-decreasing training objectives or a replay mismatch.
+
+These intermediate held-out scores are **post-hoc diagnostic evidence**, not a
+method for choosing a stopping point. Selecting a prefix, algorithm or penalty
+from the excluded 200 glyphs would reuse the test data for tuning. Any
+promising rule requires a separately specified selection procedure within
+the 800 training glyphs and evaluation on a fresh untouched test partition.
+This analysis adds no glyph ownership, color-accessibility or human approval.
+
 The [pinned numerical acceptance check](../tools/glyph-pipeline/palette_candidate_cv_observed_smoke.mjs)
 requires the build to reproduce these independently observed per-fold counts
 and conservation identities. The numerical result is a real research deliverable,

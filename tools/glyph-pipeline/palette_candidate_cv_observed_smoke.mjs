@@ -67,6 +67,30 @@ for(let i=0;i<5;i++){
  assert.equal(row.global520ColorMultisetPreserved,true);
  assert.equal(row.holdoutWarningPairEvidenceCount,
   row.heldoutWarningsIntroduced+row.heldoutWarningsResolved+row.heldoutWarningsRetained);
+ assert.equal(row.swapPrefixDiagnosticStatus,
+  "post_hoc_outer_holdout_diagnostics_not_parameter_selection");
+ assert.equal(row.swapPrefixDiagnostics.length,row.swapCount);
+ let priorTraining=row.trainingClosePairsOriginal;
+ for(let step=0;step<row.swapPrefixDiagnostics.length;step++){
+  const prefix=row.swapPrefixDiagnostics[step];
+  assert.equal(prefix.swapCount,step+1);
+  assert.ok(prefix.trainingWarningsAfterSwap<priorTraining);
+  priorTraining=prefix.trainingWarningsAfterSwap;
+  assert.equal(prefix.heldoutClosePairs,
+   prefix.heldoutIntroduced+prefix.heldoutRetained);
+  assert.equal(row.heldoutClosePairsOriginal,
+   prefix.heldoutResolved+prefix.heldoutRetained);
+ }
+ assert.equal(priorTraining,row.trainingClosePairsCandidate);
+ const lastPrefix=row.swapPrefixDiagnostics.at(-1);
+ assert.ok(lastPrefix,"Expected at least one training swap");
+ assert.deepEqual([
+  lastPrefix.heldoutClosePairs,lastPrefix.heldoutIntroduced,
+  lastPrefix.heldoutResolved,lastPrefix.heldoutRetained
+ ],[
+  row.heldoutClosePairsCandidate,row.heldoutWarningsIntroduced,
+  row.heldoutWarningsResolved,row.heldoutWarningsRetained
+ ]);
  assert.equal(row.holdoutWarningPairEvidence.length,
   row.holdoutWarningPairEvidenceCount);
  const warnedPairKeys=new Set();

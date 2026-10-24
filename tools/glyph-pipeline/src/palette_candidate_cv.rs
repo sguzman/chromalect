@@ -157,6 +157,40 @@ fn build()->Result<Value,String>{
         if warningEvidence.len()!=added+removed+kept{
             return Err("source-pair failure-case evidence differs from measured warnings".into());
         }
+        // Diagnostic, post-hoc swap-prefix scores. NEVER select a stopping rule
+        // from these excluded glyphs: they are the outer test partition.
+        let mut replay=(0..520).collect::<Vec<_>>();
+        let mut prefixDiagnostics=Vec::new();
+        let mut priorTrainingWarnings=trainBase;
+        for (step,&(a,b,trainingWarningsAfter)) in swaps.iter().enumerate(){
+            replay.swap(a,b);
+            if trainingWarningsAfter>=priorTrainingWarnings{
+                return Err("training objective failed to decrease at a swap".into());
+            }
+            priorTrainingWarnings=trainingWarningsAfter;
+            let (prefixBase,prefixHeldout,prefixAdded,prefixResolved,prefixRetained,
+                 prefixPairs,prefixRanks,_)=
+                checkHoldout(&pairs,fold,&replay,&dist,
+                    &characters,&componentNames,&colors);
+            if prefixBase!=base||prefixPairs!=pairCount||prefixRanks!=ranks
+               ||prefixHeldout!=prefixAdded+prefixRetained
+               ||prefixBase!=prefixResolved+prefixRetained{
+                return Err("held-out swap-prefix census inconsistent".into());
+            }
+            prefixDiagnostics.push(json!({
+                "swapCount":step+1,
+                "trainingWarningsAfterSwap":trainingWarningsAfter,
+                "heldoutClosePairs":prefixHeldout,
+                "heldoutIntroduced":prefixAdded,
+                "heldoutResolved":prefixResolved,
+                "heldoutRetained":prefixRetained
+            }));
+        }
+        if replay!=candidate ||
+           prefixDiagnostics.last().and_then(|x|x["heldoutClosePairs"].as_u64())
+             !=Some(alternative as u64){
+            return Err("swap-prefix replay differs from final fitted candidate".into());
+        }
         if ranks.len()!=200||added+kept!=alternative||removed+kept!=base||
             pairCount!=heldout.iter().map(|e|e.weight).sum::<usize>(){
             return Err("held-out source warning conservation failed".into());
@@ -186,6 +220,8 @@ fn build()->Result<Value,String>{
             "noNewWarningRestrictionAppliesOnlyToTrainingPairs":true,
             "heldoutGlyphMembershipExcludedFromFitting":true,
             "global520ColorMultisetPreserved":true,
+            "swapPrefixDiagnosticStatus":"post_hoc_outer_holdout_diagnostics_not_parameter_selection",
+            "swapPrefixDiagnostics":prefixDiagnostics,
             "holdoutWarningPairEvidenceCount":warningEvidence.len(),
             "holdoutWarningPairEvidence":warningEvidence
         }));
