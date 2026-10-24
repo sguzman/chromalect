@@ -538,6 +538,9 @@ jobs:
           node --check site/mandarin-context-sandhi.js
           node --check site/mandarin-word-context.js
           node tools/glyph-pipeline/mandarin_word_context_viewer_smoke.mjs
+          node --check site/mandarin-motion-pretrial.js
+          node tools/glyph-pipeline/mandarin_motion_pretrial_smoke.mjs
+          test -s site/mandarin-motion-pretrial.html && test -s site/mandarin-motion-pretrial.js
           test -s site/mandarin-word-context.html && test -s site/mandarin-word-context.js
           test -s site/mandarin-fusion.html && test -s site/mandarin-fusion.js
           mkdir -p site/phonetics

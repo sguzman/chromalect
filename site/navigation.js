@@ -21,6 +21,7 @@
     semanticLab: { label: "Emoji grammar lab · experimental", path: "semantic-lab.html" },
     fusion: { label: "Integrated visual layers · experimental", path: "mandarin-fusion.html" },
     context: { label: "Mandarin word-context controls · experimental", path: "mandarin-word-context.html" },
+    motion: { label: "Reduced-motion research comparison · pretrial", path: "mandarin-motion-pretrial.html" },
     emojiComprehension: { label: "Blind emoji comprehension · experimental", path: "emoji-comprehension.html" },
     lexicalReview: { label: "Mandarin sense review worksheet · experimental", path: "lexical-review.html" },
     readingInventory: { label: "Mandarin reading inventory · experimental", path: "reading-inventory.html" },
@@ -63,6 +64,7 @@
     if (rel === "semantic-lab.html") return "semanticLab";
     if (rel === "mandarin-fusion.html") return "fusion";
     if (rel === "mandarin-word-context.html") return "context";
+    if (rel === "mandarin-motion-pretrial.html") return "motion";
     if (rel === "emoji-comprehension.html") return "emojiComprehension";
     if (rel === "lexical-review.html") return "lexicalReview";
     if (rel === "reading-inventory.html") return "readingInventory";
@@ -82,7 +84,7 @@
   }
   const active = currentKey();
   const browseKeys = new Set(["radicals", "kangxi", "colors", "curated", "directory"]);
-  const reviewKeys = new Set(["semanticCoverage", "semanticLab", "fusion", "context", "emojiComprehension", "lexicalReview", "readingInventory", "ownerAdjudication", "diagnostics", "comparisons", "alternatives",
+  const reviewKeys = new Set(["semanticCoverage", "semanticLab", "fusion", "context", "motion", "emojiComprehension", "lexicalReview", "readingInventory", "ownerAdjudication", "diagnostics", "comparisons", "alternatives",
     "unknown", "hierarchy", "unmapped"]);
 
   function element(tag, className, label) {
@@ -189,7 +191,7 @@
       { title: "Color and examples", items: ["colors", "curated", "palette"] }
     ], browseKeys));
     primary.appendChild(dropdown("Research & evidence", [
-      { title: "Mandarin semantic research", items: ["semanticCoverage", "semanticLab", "fusion", "context", "lexicalReview", "readingInventory", "emojiComprehension"] },
+      { title: "Mandarin semantic research", items: ["semanticCoverage", "semanticLab", "fusion", "context", "motion", "lexicalReview", "readingInventory", "emojiComprehension"] },
       { title: "Inspect source alignment", items: ["comparisons", "diagnostics", "hierarchy", "ownerAdjudication"] },
       { title: "More investigations", items: ["alternatives", "unknown", "unmapped"] },
       { title: "Data and provenance", items: ["coverage", "mapping", "github", "sources"] }
